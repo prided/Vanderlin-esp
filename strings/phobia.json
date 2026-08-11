@@ -1,100 +1,100 @@
 {
 	"spiders": [
-		"spider",
-		"web",
-		"arachnid"
+		"araña",
+		"telaraña",
+		"arácnido"
 	],
 
 	"lizards": [
-		"lizard",
-		"hiss",
-		"hissed",
-		"hissing",
+		"lagarto",
+		"siseo",
+		"siseó",
+		"siseando",
 		"kobold",
-		"dragon"
+		"dragón"
 	],
 
 	"undead": [
-		"skeleton",
+		"esqueleto",
 		"deadite",
-		"bone",
-		"zombie",
+		"hueso",
+		"zombi",
 		"zizo",
-		"necromancy",
-		"necromancer"
+		"necromancia",
+		"nigromante"
 	],
 
 	"snakes": [
-		"snake",
-		"slither",
-		"fangs",
+		"serpiente",
+		"reptar",
+		"colmillos",
 		"anaconda",
-		"viper",
-		"python"
+		"víbora",
+		"pitón"
 	],
 
 	"robots": [
-		"automation",
-		"heartfelt"
+		"autómata",
+		"sentimental"
 	],
 
 	"doctors": [
-		"quack",
-		"physicker",
+		"curandero",
+		"médico",
 		"feldsher",
-		"clinic",
-		"physician",
-		"chirurgeon",
+		"clínica",
+		"facultativo",
+		"cirujano",
 		"doctor",
-		"healer"
+		"sanador"
 	],
 
 	"strangers": [
-		"unknown"
+		"desconocido"
 	],
 
 	"birds": [
-		"bird",
-		"beak",
-		"wing",
-		"claw",
-		"peck",
-		"flap",
-		"feather",
-		"avian",
-		"aviary",
-		"owl",
-		"griffin",
-		"eagle",
-		"chick",
-		"fowl",
-		"harpy",
+		"ave",
+		"pico",
+		"ala",
+		"garra",
+		"picotear",
+		"aleteo",
+		"pluma",
+		"aviar",
+		"aviario",
+		"búho",
+		"grifo",
+		"águila",
+		"polluelo",
+		"pájaro",
+		"arpía",
 		"medicator"
 	],
 
 	"falling": [
-		"hold on",
-		"hang in there",
-		"chasm",
-		"pit",
-		"hole",
-		"fall",
-		"fell",
-		"let go",
-		"i'll catch you",
-		"slip"
+		"agárrate",
+		"resiste",
+		"abismo",
+		"foso",
+		"agujero",
+		"caer",
+		"cayó",
+		"suéltate",
+		"te atraparé",
+		"resbalar"
 	],
 
 	"religion": [
-		"god",
-		"goddess",
-		"religion",
-		"miracle",
-		"divine",
-		"heaven",
-		"hell",
-		"underworld",
-		"afterlife",
+		"dios",
+		"diosa",
+		"religión",
+		"milagro",
+		"divino",
+		"cielo",
+		"infierno",
+		"inframundo",
+		"más allá",
 		"psydon",
 		"astrata",
 		"noc",
@@ -113,12 +113,12 @@
 	],
 
 	"jesters": [
-		"jesters",
-		"jester",
-		"clown",
-		"clowns",
-		"jokester",
+		"bufones",
+		"bufón",
+		"payaso",
+		"payasos",
+		"bromista",
 		"joker",
-		"joke"
+		"broma"
 	]
 }

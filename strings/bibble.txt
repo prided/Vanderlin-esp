@@ -1,42 +1,42 @@
-Sep 4:2... Psydon's sacrifice inspires us to stand firm through trials and wars, defending what is right, regardless of what we must leave behind.
-Sep 1:5... Necra, the mistress of the boundless tides, cradles us in her eternal care, as life's waves crash around.
-Sep 1:1... Psydon saw artistry in life, and so created Necra, shaped in his own image, and gifted with his power.
-Sep 1:2... Necra, through her devotion to Psydon, created language, and returned his strength twofold with her love.
-Hev 3:18... Embracing the profound silence of night, we find Noc's wisdom—a silent, ever-present guide.
-Hev 8:3... As we gaze upon the starry canvas, Astrata's wisdom reveals itself, illuminating the mysteries of existence.
-Hev 7:1... In the gentle radiance of Astrata's light, we discern our path, her wisdom guiding humanity's journey.
-Hev 2:5... In sacred silence, we embrace wisdom and enlightenment, as Noc's light burns brightly within us, illuminating our path.
-Hev 3:9... Psydon's sorrowful gaze pierces the depths of our hearts, urging us to seek redemption.
-Ast 2:2... Astrata's light, a beacon in the cosmic expanse, guides us through the darkness of the unknown.
-Ast 3:1... Astrata's radiance ignites the heavens, a testament to the brilliance of her divine design.
-Ast 8:4... In the warmth of Astrata's day, we uphold her divine order, and give thanks for her protection.
-Den 1:15... Dendor, the earthshaper, molds the very land beneath our feet, crafting landscapes with patient hands.
-Den 1:12... His gentle touch breathes life into the flora and fauna, nurturing the delicate balance of the natural world.
-Den 2:1... His hands, his earth, and his creatures cradled us through the newly awakening world.
-Nec 1:3... Her precision was surgical, to cut from fading life a future for us all.
-Nec 2:5... Through the ever-living, ever-changing parts of His body, we may cherish blessings across Psydonia.
-Nec 2:3... First there were two, then there were Ten, a body cut into nineths; a dying wish fulfilled; a sacrifice to create more.
-Nec 5:17... There they now stand, at her side, from closest partner to dearest children we may always walk in their light.
-Noc 2:2... Noc's glow illuminates the path to knowledge, shining silver on the weave.
-Noc 8:4... In the embrace of Noc's night, we find solace and wisdom, where the mysteries of existence come to light.
-Noc 1:3... Noc saw the arcane wild and twisted, and wove it into structure, shimmering with stars.
-Mal 1:5... Malum's hammer rings with each strike of the anvil, our own strikes mere echoes of it.
-Mal 5:3... Each masterwork sings a hymn to Malum. Each drop of sweat another line of praise.
-Mal 1:9... Malum cast his gaze over mortal kind, and saw the hard-working dwarves. He claimed them as his own.
-Mal 1:3... Malum held magic cast in stone, unable to be wielded, yet the tools He crafted with it bore Noc's spark instead.
-Rav 5:2... A weapon is an extension of its wielder. Ravox knew this truth well, and passed it to his followers.
-Rav 1:4... Ravox teaches: cruelty is not justice. Offer the penitent a chance of redemption, and put the unrepentant to the blade.
-Rav 3:5... As the forces of cruelty and avarice mustered, Ravox stood beside Astrata. They held the line against the dark.
-Eor 1:2... Eora smiles upon the children, for their love is pure, and the wonder of experiencing the world still fresh.
-Eor 1:3... Nothing pleased Eora as much as souls in love. She offered Her blessings, binding them.
-Eor 4:2... Art and beauty kindled emotion in the beholder. Eora longed for it, and sent a blessing upon the artists and singers of the land.
-Xyl 1:11... So Xylix laughed, mirthful, and the world laughed with them.
-Xyl 3:7... The trapped and imprisoned never laughed, nor sang, so Xylix freed them with a snap of their fingers.
-Xyl 7:77... And so the children were merry, playing theatre with toys, and Xylix smiled upon them.
-Xyl 1:3... Xylix saw the passion overflowing in the mortal bard, and with a nudge, their joy pulled from Noc's weave a thread.
-Pes 3:14... As Necra set down Her tools and turned away, Pestra slithered forth from the remains. She had watched the surgical precision and taken it into Her self.
-Pes 1:32... Pestra bless the tools of the healer, for it is through Her teachings we save lives.
-Pes 5:34... Curiosity is a mark of Pestra, experimentation Her way. She tests the limits of the body. She heals it when it breaks.
-Aby 3:45... The seas rage for the wicked, and settle for the reverent. Abyssor decides our passage.
-Aby 7:14... The winds howl His name. The rains cry His fury. The lightning strikes with His wrath. Remember Him! Let not His name be forgotten!
-Aby 1:68... Abyssor bless our travels, that we pass through His domain safely. Abyssor bless our souls, that our blood remains full of life.
+Sep 4:2... El sacrificio de Psydon nos inspira a mantenernos firmes ante las pruebas y las guerras, defendiendo lo correcto sin importar lo que debamos dejar atrás.
+Sep 1:5... Necra, señora de las mareas sin fin, nos acuna bajo su cuidado eterno mientras las olas de la vida rompen a nuestro alrededor.
+Sep 1:1... Psydon vio arte en la vida, y así creó a Necra, formada a Su propia imagen y dotada de Su poder.
+Sep 1:2... Necra, por su devoción a Psydon, creó el lenguaje y le devolvió Su fuerza por duplicado mediante su amor.
+Hev 3:18... Al abrazar el profundo silencio de la noche, encontramos la sabiduría de Noc: una guía silenciosa y siempre presente.
+Hev 8:3... Al contemplar el lienzo estrellado, la sabiduría de Astrata se revela, iluminando los misterios de la existencia.
+Hev 7:1... Bajo el suave resplandor de la luz de Astrata distinguimos nuestro camino; su sabiduría guía el viaje de la humanidad.
+Hev 2:5... En el silencio sagrado abrazamos la sabiduría y la iluminación, mientras la luz de Noc arde con fuerza en nuestro interior e ilumina nuestro camino.
+Hev 3:9... La mirada afligida de Psydon atraviesa lo más profundo de nuestros corazones y nos impulsa a buscar la redención.
+Ast 2:2... La luz de Astrata, un faro en la vastedad cósmica, nos guía a través de la oscuridad de lo desconocido.
+Ast 3:1... El resplandor de Astrata enciende los cielos, testimonio de la brillantez de su diseño divino.
+Ast 8:4... Bajo la calidez del día de Astrata mantenemos su orden divino y damos gracias por su protección.
+Den 1:15... Dendor, moldeador de la tierra, da forma al suelo bajo nuestros pies y esculpe paisajes con manos pacientes.
+Den 1:12... Su suave toque insufla vida a la flora y la fauna, preservando el delicado equilibrio del mundo natural.
+Den 2:1... Sus manos, su tierra y sus criaturas nos acunaron durante el despertar del nuevo mundo.
+Nec 1:3... Su precisión fue quirúrgica: cortar de una vida que se apagaba un futuro para todos nosotros.
+Nec 2:5... A través de las partes siempre vivas y siempre cambiantes de Su cuerpo, podemos atesorar bendiciones por toda Psydonia.
+Nec 2:3... Primero fueron dos, después fueron Diez; un cuerpo dividido en novenas partes; un último deseo cumplido; un sacrificio para crear más.
+Nec 5:17... Allí permanecen ahora, a su lado; desde su compañero más cercano hasta sus hijos más queridos, para que siempre podamos caminar bajo su luz.
+Noc 2:2... El resplandor de Noc ilumina el sendero hacia el conocimiento, cubriendo de plata la Trama.
+Noc 8:4... En el abrazo de la noche de Noc encontramos consuelo y sabiduría, donde los misterios de la existencia salen a la luz.
+Noc 1:3... Noc vio lo arcano, salvaje y retorcido, y lo tejió hasta darle estructura, reluciente de estrellas.
+Mal 1:5... El martillo de Malum resuena con cada golpe sobre el yunque; nuestros propios golpes no son más que ecos del suyo.
+Mal 5:3... Cada obra maestra entona un himno a Malum. Cada gota de sudor es otra línea de alabanza.
+Mal 1:9... Malum dirigió su mirada hacia los mortales y vio a los laboriosos enanos. Los reclamó como suyos.
+Mal 1:3... Malum sostuvo magia convertida en piedra, imposible de blandir; sin embargo, las herramientas que forjó con ella portaban en cambio la chispa de Noc.
+Rav 5:2... Un arma es una extensión de quien la empuña. Ravox conocía bien esta verdad y se la transmitió a sus seguidores.
+Rav 1:4... Ravox enseña: la crueldad no es justicia. Ofrece al arrepentido una oportunidad de redención y entrega al impenitente a la espada.
+Rav 3:5... Cuando las fuerzas de la crueldad y la avaricia se reunieron, Ravox permaneció junto a Astrata. Ambos mantuvieron la línea frente a la oscuridad.
+Eor 1:2... Eora sonríe a los niños, pues su amor es puro y el asombro de experimentar el mundo aún permanece fresco.
+Eor 1:3... Nada complacía tanto a Eora como las almas enamoradas. Ella les concedió Sus bendiciones y las unió.
+Eor 4:2... El arte y la belleza encendían emociones en quien los contemplaba. Eora las anheló y envió una bendición sobre los artistas y cantores de la tierra.
+Xyl 1:11... Y así Xylix rio con alegría, y el mundo rio con ellos.
+Xyl 3:7... Los atrapados y encarcelados jamás reían ni cantaban, así que Xylix los liberó con un chasquido de sus dedos.
+Xyl 7:77... Y así los niños fueron felices, representando obras con juguetes, y Xylix sonrió sobre ellos.
+Xyl 1:3... Xylix vio la pasión desbordarse en el bardo mortal y, con un pequeño impulso, su alegría arrancó un hilo de la Trama de Noc.
+Pes 3:14... Cuando Necra dejó Sus herramientas y se apartó, Pestra se deslizó desde los restos. Había observado aquella precisión quirúrgica y la hizo parte de Sí misma.
+Pes 1:32... Que Pestra bendiga las herramientas del sanador, pues mediante Sus enseñanzas salvamos vidas.
+Pes 5:34... La curiosidad es una marca de Pestra; la experimentación, Su camino. Ella pone a prueba los límites del cuerpo. Ella lo sana cuando se rompe.
+Aby 3:45... Los mares rugen ante los malvados y se aquietan ante los reverentes. Abyssor decide nuestro paso.
+Aby 7:14... Los vientos aúllan Su nombre. Las lluvias lloran Su furia. Los relámpagos golpean con Su ira. ¡Recuérdenlo! ¡Que Su nombre no sea olvidado!
+Aby 1:68... Que Abyssor bendiga nuestros viajes para que atravesemos Su dominio con seguridad. Que Abyssor bendiga nuestras almas para que nuestra sangre permanezca llena de vida.

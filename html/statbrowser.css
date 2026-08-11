@@ -9,9 +9,9 @@
 }
 
 .light:root {
-  --color-base: #ffffff;
-  --scrollbar-base: #f2f2f2;
-  --scrollbar-thumb: #a7a7a7;
+  --color-base: #000000;
+  --scrollbar-base: #080808;
+  --scrollbar-thumb: #353535;
 }
 
 html,
@@ -60,7 +60,7 @@ img {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.25em 0.25em 0;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 #menu {
@@ -68,7 +68,7 @@ img {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.25em 0.25em 0;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 .menu-wrap {
@@ -103,21 +103,22 @@ img {
   min-width: 2.9em;
   padding: 0.5em 0.5em 0.4em;
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.65);
+  color: #ff0000;
   border: 0;
   border-bottom: 0.1667em solid transparent;
   border-radius: 0.25em 0.25em 0 0;
 }
 
 .button:hover {
-  background-color: #ececec;
+  background-color: #222222;
+  color: #b51f1f;
 }
 
 .button.active {
   cursor: default;
-  background-color: #dfdfdf;
-  color: black;
-  border-bottom-color: #000000;
+  background-color: #222222;
+  color: #b51f1f;
+  border-bottom-color: #888888;
 }
 
 .top-item {
@@ -169,12 +170,12 @@ img {
 
 #under-topbar {
   height: 0.5em;
-  background-color: #eeeeee;
+  background-color: #000000;
 }
 
 #under-menu {
   height: 0.5em;
-  background-color: #eeeeee;
+  background-color: #000000;
 }
 
 #under-content {

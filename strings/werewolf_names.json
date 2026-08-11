@@ -1,27 +1,32 @@
 {
-    "wolf_prefixes":[
-        "Red", "Black", "White", "Silver", "Grey", "Brown",
-        "Dark",
-        "Moon",
-        "Bloody",
-        "Hairy",
-        "Eager",
-        "Sharp",
+    "wolf_prefixes": [
+        "Rojo",
+        "Negro",
+        "Blanco",
+        "Plateado",
+        "Gris",
+        "Marrón",
+        "Oscuro",
+        "Luna",
+        "Sangriento",
+        "Peludo",
+        "Ansioso",
+        "Afilado",
         "Feral",
-        "Primal",
-        "Savage",
-        "Wicked",
-        "Wild",
-        "Bitey"
+        "Primordial",
+        "Salvaje",
+        "Malvado",
+        "Silvestre",
+        "Mordelón"
     ],
-    "wolf_suffixes":[
-        "Moon",
-        "Fang",
-        "Claw",
-        "Stalker",
-        "Prowler",
-        "Roar",
-        "Ripper",
+    "wolf_suffixes": [
+        "Luna",
+        "Colmillo",
+        "Garra",
+        "Acechador",
+        "Merodeador",
+        "Rugido",
+        "Desgarrador",
         "Farkas",
         "Ylva",
         "Lupin",
@@ -29,9 +34,9 @@
         "Zeev",
         "Fenris",
         "Filtiarn",
-        "Beast",
-        "Devourer",
+        "Bestia",
+        "Devorador",
         "Amarok",
-        "Ruby"
+        "Rubí"
     ]
 }

@@ -19,7 +19,7 @@ $include plexora.txt
 SERVERNAME Vanderlin
 
 ## Server subtitle: This appears right after the server name in the BYOND hub.
-SERVERSUBTITLE Dark Medieval Fantasy Roleplay
+SERVERSUBTITLE Rol de fantasía medieval oscura
 
 ## Hosted By: Shows below
 HOSTEDBY Vanderlin
@@ -308,19 +308,19 @@ NOTE_STALE_DAYS 365.2422
 #SOFT_POPCAP 100
 
 ## Message for soft cap
-SOFT_POPCAP_MESSAGE Be warned that the server is currently serving a high number of users, consider using alternative game servers.
+SOFT_POPCAP_MESSAGE Aviso: el servidor tiene actualmente una gran cantidad de usuarios. Considera utilizar otro servidor.
 
 ## Uncomment for 'hard' population caps, players will not be allowed to spawn if the living crew exceeds the listed number, though they may still observe or wait for the living crew to decrease in size.
 HARD_POPCAP 100
 
 ## Message for hard cap
-HARD_POPCAP_MESSAGE Too many people are alive. Wait for those living to die or donate to our patreon for a reserved slot.
+HARD_POPCAP_MESSAGE Hay demasiadas personas con vida. Espera a que disminuya la población o dona a nuestro Patreon para obtener un espacio reservado.
 
 ## Uncomment for 'extreme' population caps, players will not be allowed to join the server if living crew exceeds the listed number.
 #EXTREME_POPCAP 200
 
 ## Message for extreme cap
-EXTREME_POPCAP_MESSAGE The server is currently serving a high number of users, find alternative servers.
+EXTREME_POPCAP_MESSAGE El servidor tiene actualmente una gran cantidad de usuarios. Busca un servidor alternativo.
 
 ## Uncomment to allow BYOND subscribers to bypassing server connection population cap. (Living player population cap still applies.)
 BYOND_MEMBER_BYPASS_POPCAP
@@ -342,14 +342,14 @@ BYOND_MEMBER_BYPASS_POPCAP
 #PANIC_BUNKER
 
 ## The message the Panic Bunker gives when someone is rejected by it
-#PANIC_BUNKER_MESSAGE Sorry, but the server is currently not accepting connections from never before seen players.
+#PANIC_BUNKER_MESSAGE Lo sentimos, pero el servidor no está aceptando conexiones de jugadores que nunca se hayan conectado antes.
 
 ## If panic bunker is on and a player is rejected (see above), attempt to send them to this connected server (see below) instead.
 ##	You probably want this to be the same as CROSS_SERVER_ADDRESS
 #PANIC_SERVER_ADDRESS byond://address:port
 
 ##Name of the place to send people rejected by the bunker
-#PANIC_SERVER_NAME [Put the name here]
+#PANIC_SERVER_NAME [Pon el nombre aquí]
 
 ## Uncomment to have the changelog file automatically open when a user connects and hasn't seen the latest changelog
 AGGRESSIVE_CHANGELOG
@@ -405,9 +405,9 @@ PREFERENCE_MAP_VOTING 0
 ## If CLIENT_WARN_POPUP is uncommented a popup window with the message will be displayed instead
 #CLIENT_WARN_VERSION 511
 #CLIENT_WARN_POPUP
-#CLIENT_WARN_MESSAGE Byond released 511 as the stable release. You can set the framerate your client runs at, which makes the game feel very different and cool. Shortly after its release we will end up using 511 client features and you will be forced to update.
+#CLIENT_WARN_MESSAGE BYOND lanzó la versión 511 como estable. Puedes ajustar la tasa de fotogramas de tu cliente, lo que cambia notablemente la experiencia de juego. Poco después comenzaremos a utilizar funciones de la versión 511 y tendrás que actualizar.
 CLIENT_ERROR_VERSION 511
-CLIENT_ERROR_MESSAGE Your version of byond is not supported. Please upgrade.
+CLIENT_ERROR_MESSAGE Tu versión de BYOND no es compatible. Actualízala.
 ## The minimum build needed for joining the server, if using 512, a good minimum build would be 1421 as that disables the Middle Mouse Button exploit.
 CLIENT_ERROR_BUILD 1421
 
@@ -451,7 +451,7 @@ ERROR_MSG_DELAY 50
 ## Send a message with the station name starting a new game. Also required for the notify function
 #CHAT_ANNOUNCE_NEW_GAME
 
-#CHANNEL_ANNOUNCE_NEW_GAME_MESSAGE A new round is beggining!!
+#CHANNEL_ANNOUNCE_NEW_GAME_MESSAGE ¡¡Está comenzando una nueva ronda!!
 
 ## Allow admin hrefs that don't use the new token system, will eventually be removed
 #DEBUG_ADMIN_HREFS

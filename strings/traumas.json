@@ -1,198 +1,182 @@
 {
-	"brain_damage": [
-		"@pick(semicolon)IM A PONY NEEEEEEIIIIIIIIIGH",
-		"without oxigen blob don't evoluate?",
-		"@pick(semicolon)CAPTAINS A COMDOM",
-		"can u give me @pick(mutations)?",
-		"THe saiyans screwed",
-		"Bi is THE BEST OF BOTH WORLDS>",
-		"@pick(semicolon)I WANNA PET TEH monkeyS",
-		"stop grifing me!!!!",
-		"SOTP IT#",
-		"shiggey diggey!!",
-		"@pick(semicolon)A PIRATE APPEAR",
-		"FUS RO DAH",
-		"fucking 4rries!",
-		"stat me",
-		">my face",
-		"roll it easy!",
-		"waaaaaagh!!!",
-		"red wonz go fasta",
-		"FOR TEH EMPRAH",
-		"lol2cat",
-		"dem dwarfs man, dem dwarfs",
-		"SPESS MAHREENS",
-		"hwee did eet fhor khayosss",
-		"lifelike texture ;_;",
-		"luv can bloooom",
-		"PACKETS!!!",
-		"port ba@pick(y_replacements) med!!!!",
-		"REVIRT GON CHEM!!!!!!!!",
-		"youed call her a toeugh bithc",
-		"closd for merbegging",
-		"@pick(semicolon)pray can u @pick(create_verbs) @pick(create_nouns)???",
-		"GEY AWAY FROM ME U GREIFING PRICK!!!!",
-		"ur a fuckeing autist!",
-		"@pick(semicolon)HELP SHITECIRTY MURDERIN  MEE!!!",
-		"hwat dose tha @pick(random_gibberish) mean?????",
-		"@pick(semicolon)CAL; TEH SHUTTLE!!!!!",
-		"wearnig siNGUARLTY is.... FINE haHAAA",
-		"@pick(semicolon)AI laW 22 Open door",
-		"@pick(semicolon)this SI mY stATIon......",
-		"who the HELL do u thenk u r?!!!!",
-		"geT THE FUCK OUTTTT",
-		"H U G B O X",
-		"@pick(semicolon)CRASHING THIS STTAYTION WITH NIO SURVIVROS",
-		"@pick(servers) is down!! @pick(bug)",
-		"PSHOOOM",
-		"REMOVE SINGULARITY",
-		"INSTLL TEG",
-		"TURBIN IS BEST ENGIENE",
-		"SOLIRS CAN POWER THE HOLE STATION ANEWAY @pick(bug)",
-		"parasteng was best",
-		"@pick(semicolon)Tajaran has warrrres, if you have coin",
-		"@pick(semicolon)I'VE GOT BALLS OF STEEL",
-		"NO I'M ONNA KILL YOU MOTHERFUCKER OLD STYLE",
-		"i will snatch erry motherfucker birthday",
-		"@pick(semicolon)the ai and borgs are mettacomming I think",
-		"u just did the world a little bit more sad place for someone",
-		"WHERES THE SLIP REWRITE WHERE THR FUCK ID IT?",
-		"@pick(semicolon)N-NYAAAAAA~",
-		"@pick(bug)",
-		"@pick(semicolon)wtf??????????? @pick(bug)",
-		"@pick(semicolon)i ran into the supermattre ten i dsappeard @pick(bug)",
-		"DON'T EVER TUCH ME",
-		"@pick(semicolon)GIVE ME FREE ROBUX PLEASE JUST ENOUGH FOR SHIRT AND PANTS",
-		"its gonna be like 9/11 all over again but insitaead is gonna be a bitc",
-		"@pick(semicolon)How do I set up the. SHow do I set u p the Singu. how I the scrungulartiy????"
-	],
-
-	"mutations": [
-		"telikesis",
-		"halk",
-		"eppilapse",
-		"kamelien",
-		"eksrey",
-		"glowey skin",
-		"fungal tb",
-		"stun gloves"
-	],
-
-	"george": [
-		"joerge",
-		"george",
-		"gorge",
-		"gdoruge"
-	],
-
-	"mellens": [
-		"mellens",
-		"melons",
-		"mwrlins"
-	],
-
-	"random_gibberish": [
-		"g",
-		"squid",
-		"r",
-		"carbon dioxide"
-	],
-
-	"y_replacements": [
-		"y",
-		"i",
-		"e"
-	],
-
-	"servers": [
-		"bager",
-		"sybl",
-		"mrs sybil",
-		"mr basil",
-		"mr terry",
-		"berry"
-	],
-
-	"create_verbs": [
-		"spawn",
-		"MAke me",
-		"creat",
-		"tc trade me"
-	],
-
-	"create_nouns": [
-		"zenomorfs",
-		"ayleins",
-		"treaitors",
-		"sheadow lings",
-		"abdoocters",
-		"revinent",
-		"deval",
-		"deth squads",
-		"bleb"
-	],
-
-	"bug": [
-		"",
-		"IS TIS A BUG??",
-		"SI IST A BUGG/",
-		"BUG!!!"
-	],
-
-	"semicolon": [
-		"",
-		";",
-		".h"
-	],
-
-	"god_foe": [
-		"MORTALS",
-		"HERETICS",
-		"INSECTS",
-	"UNBELIEVERS",
-	"BLASPHEMERS",
-	"PARASITES",
-	"WEAKLINGS",
-	"PEASANTS"
-	],
-
-	"god_aggressive": [
-		"BEGONE, @pick(god_foe)!",
-		"DIE, @pick(god_foe)!",
-		"BLEED, @pick(god_foe)!",
-	"BURN, @pick(god_foe)!",
-	"ALL WILL FALL BEFORE ME!",
-	"ENDLESS SUFFERING AWAITS YOU, @pick(god_foe).",
-	"DEATH TO @pick(god_foe)!"
-	],
-
-	"god_neutral": [
-		"STOP",
-	"HALT.",
-		"BE SILENT.",
-		"QUIET",
-	"SEE THE TRUTH BEFORE YOU, MORTALS.",
-	"MORTALS, SAY YOUR NAME",
-	"BEGONE, MORTALS.",
-	"BE HEALED, MORTALS. I AM FEELING MERCIFUL.",
-	"DANCE FOR ME, LITTLE MORTALS.",
-	"YOU. STOP.",
-	"REST, MORTALS, TOMORROW IS A LONG DAY.",
-	"YOU MORTALS MAKE ME SICK.",
-	"HONK..."
-	],
-
-	"god_unstun": [
-	"GET UP. I HAVE NO TIME TO LOSE.",
-	"GET UP, PRIEST.",
-	"GET UP."
-	],
-
-	"god_heal": [
-	"YOU WILL LIVE TO SEE ANOTHER DAY.",
-	"YOU SHALL SURVIVE THIS, MY PRIEST.",
-	"BE HEALED, PRIEST.",
-	"YOUR LIFE IS IMPORTANT. KEEP IT."
-	]
-
+    "brain_damage": [
+        "@pick(semicolon)SOY UN PONI NEEEEEEIIIIIIIIIGH",
+        "sin oxigeno el blob no evolusiona?",
+        "@pick(semicolon)EL CAPITAN ES UN CONDON",
+        "me das @pick(mutations)?",
+        "LOz saiyans valieron",
+        "Bi es LO MEJOR DE LOS DOS MUNDOS>",
+        "@pick(semicolon)KIERO ACARISIAR A LOz monoz",
+        "deja de grifearme!!!!",
+        "PARAA YA#",
+        "shiggey diggey!!",
+        "@pick(semicolon)APARESIO UN PIRATA",
+        "FUS RO DAH",
+        "pinches 4rries!",
+        "ponme stat",
+        ">mi cara",
+        "ruedalo facil!",
+        "waaaaaagh!!!",
+        "loz rojoz van maz rapido",
+        "POR EL EMPRAH",
+        "lol2cat",
+        "esoz enanos men, esoz enanos",
+        "MARINEZ DEL ESPASIO",
+        "lo izimo por el khaozzz",
+        "textura realista ;_;",
+        "el amooor puede floreseeer",
+        "PAQUETES!!!",
+        "puerto ba@pick(y_replacements) med!!!!",
+        "REVIERTAN GON CHEM!!!!!!!!",
+        "dirias ke es una perra dura",
+        "serrao por metagamin",
+        "@pick(semicolon)porfa puedes @pick(create_verbs) @pick(create_nouns)???",
+        "ALEJATE DE MI PINCHE GRIFER!!!!",
+        "eres un puto autista!",
+        "@pick(semicolon)AYUDA SHITECIRTY ME ESTA MATANDOOO!!!",
+        "ke sinifica @pick(random_gibberish)?????",
+        "@pick(semicolon)LLAMA; EL SHUTTLE!!!!!",
+        "avizo siNGULARIDAD esta.... BIEN jaJAAA",
+        "@pick(semicolon)ley de IA 22 Abre puerta",
+        "@pick(semicolon)esta EZ mI estASIon......",
+        "kien MIERDA te crees ke eres?!!!!",
+        "LARGATE A LA MIERDAAAA",
+        "C A J A  D E  A B R A Z O S",
+        "@pick(semicolon)ESTRELLANDO ESTA ESTASION SIN SOBREVIVIENTEZ",
+        "@pick(servers) esta caido!! @pick(bug)",
+        "PSHOOOM",
+        "QUITEN SINGULARIDAD",
+        "INSTALEN TEG",
+        "TURBINA ES MEJOR MOTOR",
+        "LOS SOLARES PUEDEN ALIMENTAR TODA LA ESTASION IGUAL @pick(bug)",
+        "parasteng era mejor",
+        "@pick(semicolon)Tajaran tiene mercansiaaa, si tienes moneda",
+        "@pick(semicolon)TENGO BOLAS DE ACERO",
+        "NO AHORA TE VOY A MATAR HIJO DE PUTA A LA ANTIGUA",
+        "le robare el cumple a cada cabron",
+        "@pick(semicolon)la ia y los borgs estan metacomeando creo",
+        "hiciste el mundo un poquito mas triste para alguien",
+        "DONDE ESTA EL REWRITE DE SLIP DONDE MIERDA ESTA?",
+        "@pick(semicolon)N-NYAAAAAA~",
+        "@pick(bug)",
+        "@pick(semicolon)wtf??????????? @pick(bug)",
+        "@pick(semicolon)me meti en la supermateria y luego desapareci @pick(bug)",
+        "NO ME TOQES NUNCA",
+        "@pick(semicolon)DAME ROBUX GRATIS PORFA SOLO PARA CAMISA Y PANTALON",
+        "va ser como el 9/11 otra vez pero en ves va ser una perra",
+        "@pick(semicolon)Como configuro la. COmo configuro la Singu. como la scrungularidad????"
+    ],
+    "mutations": [
+        "telikinesis",
+        "halk",
+        "epilepsia",
+        "kamelion",
+        "rayoz equis",
+        "piel brillosa",
+        "tb fungica",
+        "guantes de stun"
+    ],
+    "george": [
+        "joerge",
+        "george",
+        "gorge",
+        "gdoruge"
+    ],
+    "mellens": [
+        "mellens",
+        "melons",
+        "mwrlins"
+    ],
+    "random_gibberish": [
+        "g",
+        "calamar",
+        "r",
+        "dióxido de carbono"
+    ],
+    "y_replacements": [
+        "y",
+        "i",
+        "e"
+    ],
+    "servers": [
+        "bager",
+        "sybl",
+        "mrs sybil",
+        "mr basil",
+        "mr terry",
+        "berry"
+    ],
+    "create_verbs": [
+        "spawnea",
+        "HAZme",
+        "crea",
+        "tc tradeame"
+    ],
+    "create_nouns": [
+        "zenomorfos",
+        "alienz",
+        "traidorez",
+        "changelingz sombra",
+        "abductorez",
+        "revenant",
+        "diablo",
+        "escuadrones de muert",
+        "blob"
+    ],
+    "bug": [
+        "",
+        "EZTO ES UN BUG??",
+        "ES UN BUGG/",
+        "BUG!!!"
+    ],
+    "semicolon": [
+        "",
+        ";",
+        ".h"
+    ],
+    "god_foe": [
+        "MORTALES",
+        "HEREJES",
+        "INSECTOS",
+        "INCRÉDULOS",
+        "BLASFEMOS",
+        "PARÁSITOS",
+        "DÉBILES",
+        "CAMPESINOS"
+    ],
+    "god_aggressive": [
+        "¡FUERA, @pick(god_foe)!",
+        "¡MUERE, @pick(god_foe)!",
+        "¡SANGRA, @pick(god_foe)!",
+        "¡ARDE, @pick(god_foe)!",
+        "¡TODOS CAERÁN ANTE MÍ!",
+        "UN SUFRIMIENTO ETERNO TE ESPERA, @pick(god_foe).",
+        "¡MUERTE A @pick(god_foe)!"
+    ],
+    "god_neutral": [
+        "ALTO",
+        "DETENTE.",
+        "GUARDA SILENCIO.",
+        "SILENCIO",
+        "VEAN LA VERDAD ANTE USTEDES, MORTALES.",
+        "MORTALES, DIGAN SU NOMBRE",
+        "FUERA, MORTALES.",
+        "SANEN, MORTALES. HOY ME SIENTO MISERICORDIOSO.",
+        "BAILEN PARA MÍ, PEQUEÑOS MORTALES.",
+        "TÚ. DETENTE.",
+        "DESCANSEN, MORTALES, MAÑANA SERÁ UN DÍA LARGO.",
+        "USTEDES, MORTALES, ME REPUGNAN.",
+        "HONK..."
+    ],
+    "god_unstun": [
+        "LEVÁNTATE. NO TENGO TIEMPO QUE PERDER.",
+        "LEVÁNTATE, SACERDOTE.",
+        "LEVÁNTATE."
+    ],
+    "god_heal": [
+        "VIVIRÁS PARA VER OTRO DÍA.",
+        "SOBREVIVIRÁS A ESTO, MI SACERDOTE.",
+        "SANA, SACERDOTE.",
+        "TU VIDA ES IMPORTANTE. CONSÉRVALA."
+    ]
 }

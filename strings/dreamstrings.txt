@@ -1,44 +1,44 @@
-%A% %ADJECTIVE% familiar face
-%A% %ADJECTIVE% crewmember
-%A% %ADJECTIVE% security officer
+%A% %ADJECTIVE% rostro familiar
+%A% %ADJECTIVE% miembro de la tripulación
+%A% %ADJECTIVE% oficial de seguridad
 %A% %ADJECTIVE% doctor
-%A% %ADJECTIVE% engineer
-%A% %ADJECTIVE% miner
+%A% %ADJECTIVE% ingeniero
+%A% %ADJECTIVE% minero
 %A% %ADJECTIVE% slime
-%A% %ADJECTIVE% alien
-%A% %ADJECTIVE% traitor
-%A% %ADJECTIVE% ally
-%A% %ADJECTIVE% scientist
-%A% %ADJECTIVE% monkey
-%A% %ADJECTIVE% loved one
-%A% %ADJECTIVE% monster
-the %ADJECTIVE% captain
-%A% %ADJECTIVE% hat
-%A% %ADJECTIVE% ID card
-%A% %ADJECTIVE% bottle
-%A% %ADJECTIVE% toolbox
-%A% %ADJECTIVE% gun
-the sun
-the engine
-the station
-%A% %ADJECTIVE% planet
-the medical bay
-the %ADJECTIVE% bridge
-the %ADJECTIVE% brig
-%A% %ADJECTIVE% shuttle
-%A% %ADJECTIVE% laboratory
+%A% %ADJECTIVE% alienígena
+%A% %ADJECTIVE% traidor
+%A% %ADJECTIVE% aliado
+%A% %ADJECTIVE% científico
+%A% %ADJECTIVE% mono
+%A% %ADJECTIVE% ser querido
+%A% %ADJECTIVE% monstruo
+el capitán %ADJECTIVE%
+%A% %ADJECTIVE% sombrero
+%A% %ADJECTIVE% tarjeta de identificación
+%A% %ADJECTIVE% botella
+%A% %ADJECTIVE% caja de herramientas
+%A% %ADJECTIVE% arma
+el sol
+el motor
+la estación
+%A% %ADJECTIVE% planeta
+la enfermería
+el puente %ADJECTIVE%
+el calabozo %ADJECTIVE%
+%A% %ADJECTIVE% transbordador
+%A% %ADJECTIVE% laboratorio
 Nanotrasen
-the Syndicate
-the Wizard Federation
-%ADJECTIVE% blood
-%ADJECTIVE% plasma
-%ADJECTIVE% wind
-%ADJECTIVE% darkness
-%ADJECTIVE% light
-%ADJECTIVE% death
-%ADJECTIVE% blinking lights
-%ADJECTIVE% power
-%ADJECTIVE% riches
-water
-%ADJECTIVE% flames
-some %ADJECTIVE% melons
+el Sindicato
+la Federación de Magos
+sangre %ADJECTIVE%
+plasma %ADJECTIVE%
+viento %ADJECTIVE%
+oscuridad %ADJECTIVE%
+luz %ADJECTIVE%
+muerte %ADJECTIVE%
+luces parpadeantes %ADJECTIVE%
+poder %ADJECTIVE%
+riquezas %ADJECTIVE%
+agua
+llamas %ADJECTIVE%
+algunos melones %ADJECTIVE%

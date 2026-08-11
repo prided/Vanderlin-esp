@@ -1,28 +1,28 @@
 {
     "beginnings":[
-        "Star",
+        "Estrella",
         "Oort",
-        "Comet",
-        "Pulsar",
+        "Cometa",
+        "Púlsar",
         "Plasma",
-        "Void",
-        "Space",
+        "Vacío",
+        "Espacio",
         "Solar",
-        "Laser",
-        "Ion"
+        "Láser",
+        "Ión"
     ],
     "endings":[
-        "keel",
-        "beard",
-        "bilge",
-        "hull",
-        "hook",
-        "flag",
-        "deck",
-        "salt",
-        "knot",
-        "fish",
-        "helm"
+        "quilla",
+        "barba",
+        "sentina",
+        "casco",
+        "garfio",
+        "bandera",
+        "cubierta",
+        "sal",
+        "nudo",
+        "pez",
+        "timón"
     ],
     "ship_names":[
         "Space Queen's Revenge",
