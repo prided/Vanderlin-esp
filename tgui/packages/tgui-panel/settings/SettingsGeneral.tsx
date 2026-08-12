@@ -27,7 +27,7 @@ export function SettingsGeneral(props) {
     <Box>
       <Section fill scrollable height="200px">
         <LabeledList>
-          <LabeledList.Item label="Theme">
+          <LabeledList.Item label="Tema">
             {THEMES.map((THEME) => (
               <Button
                 key={THEME}
@@ -43,7 +43,7 @@ export function SettingsGeneral(props) {
               </Button>
             ))}
           </LabeledList.Item>
-          <LabeledList.Item label="UI sizes">
+          <LabeledList.Item label="tamaños de interfaz de usuario">
             <Stack>
               <Stack.Item>
                 <Button
@@ -61,12 +61,12 @@ export function SettingsGeneral(props) {
               </Stack.Item>
               <Stack.Item>
                 <Button onClick={resetPaneSplitters} icon="refresh" color="bad">
-                  Reset
+                  Reiniciar
                 </Button>
               </Stack.Item>
             </Stack>
           </LabeledList.Item>
-          <LabeledList.Item label="Font style">
+          <LabeledList.Item label="Estilo de fuente">
             <Stack.Item>
               {!freeFont ? (
                 <Collapsible
@@ -80,7 +80,7 @@ export function SettingsGeneral(props) {
                         setFreeFont(!freeFont);
                       }}
                     >
-                      Custom font
+                      Fuente personalizada
                     </Button>
                   }
                 >
@@ -119,13 +119,13 @@ export function SettingsGeneral(props) {
                       setFreeFont(!freeFont);
                     }}
                   >
-                    Custom font
+                    Fuente personalizada
                   </Button>
                 </Stack>
               )}
             </Stack.Item>
           </LabeledList.Item>
-          <LabeledList.Item label="Font size" verticalAlign="middle">
+          <LabeledList.Item label="Tamaño de fuente" verticalAlign="middle">
             <Stack textAlign="center">
               <Stack.Item grow>
                 <Slider
@@ -142,7 +142,7 @@ export function SettingsGeneral(props) {
               </Stack.Item>
             </Stack>
           </LabeledList.Item>
-          <LabeledList.Item label="Line height">
+          <LabeledList.Item label="altura de la línea">
             <Slider
               width="100%"
               step={0.01}
@@ -162,27 +162,27 @@ export function SettingsGeneral(props) {
               <Stack.Item>
                 <Button.Checkbox
                   checked={settings.disableCombine}
-                  tooltip="Disable combining for duplicate messages"
+                  tooltip="Deshabilitar la combinación para mensajes duplicados"
                   onClick={() =>
                     updateSettings({
                       disableCombine: !settings.disableCombine,
                     })
                   }
                 >
-                  Disable combining
+                  Deshabilitar la combinación
                 </Button.Checkbox>
               </Stack.Item>
               <Stack.Item>
                 <Button.Checkbox
                   checked={settings.zebraHighlight}
-                  tooltip="Highlight every other message background"
+                  tooltip="Resalte el fondo de cada otro mensaje"
                   onClick={() =>
                     updateSettings({
                       zebraHighlight: !settings.zebraHighlight,
                     })
                   }
                 >
-                  Zebra Highlight
+                  Resaltado de cebra
                 </Button.Checkbox>
               </Stack.Item>
             </Stack>
@@ -194,47 +194,47 @@ export function SettingsGeneral(props) {
           <Stack.Item mt={0.15}>
             <Button
               icon="compact-disc"
-              tooltip="Export chat settings"
+              tooltip="Exportar configuración de chat"
               onClick={exportChatSettings}
             >
-              Export
+              Exportar
             </Button>
           </Stack.Item>
           <Stack.Item mt={0.15}>
             <Button.File
               accept=".json"
-              tooltip="Import chat settings"
+              tooltip="Importar configuración de chat"
               icon="arrow-up-from-bracket"
               onSelectFiles={importChatSettings}
             >
-              Import
+              Importar
             </Button.File>
           </Stack.Item>
           <Stack.Item mt={0.15}>
             <Button
               icon="arrow-up-from-bracket"
-              tooltip="Import settings from the TG key to the new one"
+              tooltip="Importar configuraciones de la llave TG a la nueva"
               onClick={importTGSettings}
             >
-              Import old
+              Importar configuración anterior
             </Button>
           </Stack.Item>
           <Stack.Item grow mt={0.15}>
             <Button
               icon="save"
-              tooltip="Export current tab history into HTML file"
+              tooltip="Exportar el historial de pestañas actual a un archivo HTML"
               onClick={() => chatRenderer.saveToDisk()}
             >
-              Save chatlog
+              Guardar registro de chat
             </Button>
           </Stack.Item>
           <Stack.Item mt={0.15}>
             <Button.Confirm
               icon="trash"
-              tooltip="Erase current tab history"
+              tooltip="Borrar el historial de pestañas actual"
               onClick={() => chatRenderer.clearChat()}
             >
-              Clear chat
+              Borrar chat
             </Button.Confirm>
           </Stack.Item>
         </Stack>

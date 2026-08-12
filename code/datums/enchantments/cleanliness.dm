@@ -1,5 +1,5 @@
 /datum/enchantment/eternal_clean
-	enchantment_name = "Eternal Cleanliness"
+	enchantment_name = "Limpieza eterna"
 	examine_text = "This item seems to be in a constant state of scrubbing."
 
 	should_process = TRUE

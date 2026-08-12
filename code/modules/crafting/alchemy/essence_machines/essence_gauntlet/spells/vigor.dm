@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/vigor
 	name = "Vigor"
-	desc = "Increases physical strength and endurance temporarily."
+	desc = "Aumenta la fuerza física y la resistencia temporalmente."
 	button_icon_state = "bat_transform"
 	cast_range = 1
 	essences = list(/datum/thaumaturgical_essence/life)
@@ -16,7 +16,7 @@
 
 /atom/movable/screen/alert/status_effect/vigor
 	name = "Vigor"
-	desc = "You feel supernaturally strong and energetic."
+	desc = "Te sientes sobrenaturalmente fuerte y enérgico."
 	icon_state = "buff"
 
 /datum/status_effect/buff/vigor
@@ -31,12 +31,12 @@
 		var/mob/living/L = owner
 		L.adjust_stamina(50)
 		ADD_TRAIT(owner, TRAIT_STRONG_GRABBER, TRAIT_STATUS_EFFECT(id))
-		to_chat(owner, span_notice("You feel invigorated with supernatural strength."))
+		to_chat(owner, span_notice("Te sientes revitalizado con una fuerza sobrenatural."))
 
 /datum/status_effect/buff/vigor/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_STRONG_GRABBER, TRAIT_STATUS_EFFECT(id))
-	to_chat(owner, span_notice("The supernatural vigor fades."))
+	to_chat(owner, span_notice("El vigor sobrenatural se desvanece."))
 
 /datum/action/cooldown/spell/essence/vigor/spell
 	name = "Greater Vigor"

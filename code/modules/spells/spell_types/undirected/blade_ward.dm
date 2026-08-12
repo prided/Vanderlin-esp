@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/blade_ward
 	name = "Blade Ward"
-	desc = "Improves constitution for a brief duration."
+	desc = "Mejora la constitución por un breve período."
 	button_icon_state = "conjure_armor"
 
 	charge_required = FALSE
@@ -32,8 +32,8 @@
 	for(var/mob/living/extra_target in orange(FLOOR(spell_magnitude_modifier, 1), owner))
 		extra_target.apply_status_effect(status, initial(status.duration) + duration_increase)
 		extra_target.visible_message(
-			span_info("[extra_target] has a sigil of warding appear over them."),
-			span_notice("I see a sigil of warding floating over me."),
+			span_info("[extra_target] tiene un sello de protección que aparece sobre ellos."),
+			span_notice("Veo un sello de protección flotando sobre mí."),
 		)
 
 /datum/status_effect/buff/bladeward
@@ -45,7 +45,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/bladeward
 	name = "Blade Ward"
-	desc = "I am resistant to damage."
+	desc = "Soy resistente al daño."
 	icon_state = "buff"
 
 /datum/status_effect/buff/bladeward/on_apply()

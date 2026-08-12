@@ -110,7 +110,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 	return QDEL_HINT_HARDDEL_NOW
 
 /client/proc/cmd_controller_view_ui()
-	set name = "Controller Overview"
+	set name = "Descripción general del controlador"
 	set desc = "View the current states of the Subsystem Controllers."
 	set category = "Debug"
 
@@ -202,7 +202,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 
 			var/datum/controller/subsystem/subsystem = locate(params["ref"]) in subsystems
 			if(isnull(subsystem))
-				to_chat(ui.user, span_warning("Failed to locate subsystem."))
+				to_chat(ui.user, span_warning("No se pudo localizar el subsistema."))
 				return
 
 			ui.user.client.debug_variables(subsystem)

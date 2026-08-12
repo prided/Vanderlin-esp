@@ -1,5 +1,5 @@
 /obj/item/reagent_containers/pill
-	name = "pill"
+	name = "píldora"
 	desc = ""
 	icon = 'icons/obj/medical.dmi'
 	icon_state = "pillb"
@@ -25,11 +25,11 @@
 			return NONE
 
 		if(interacting_with.is_drainable() && !interacting_with.reagents.total_volume)
-			to_chat(user, "<span class='warning'>[interacting_with] is empty! There's nothing to dissolve [src] in.</span>")
+			to_chat(user, "¡<span class='warning'>[interacting_with] está vacío! No hay nada en lo que disolver [src].</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		if(interacting_with.reagents.holder_full())
-			to_chat(user, "<span class='warning'>[interacting_with] is full.</span>")
+			to_chat(user, "<span class='warning'>[interacting_with] está lleno.</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		user.visible_message("<span class='warning'>[user] slips something into [interacting_with]!</span>", "<span class='notice'>I dissolve [src] in [interacting_with].</span>", null, 2)
@@ -45,7 +45,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(M == user)
-		M.visible_message("<span class='notice'>[user] attempts to [apply_method] [src].</span>")
+		M.visible_message("<span class='notice'>[user] intenta [apply_method] [src].</span>")
 		if(self_delay)
 			if(!do_after(user, self_delay, M))
 				return ITEM_INTERACT_BLOCKING
@@ -53,8 +53,8 @@
 		playsound(src, "sound/misc/pillpop.ogg", 100, TRUE)
 
 	else
-		M.visible_message("<span class='danger'>[user] attempts to force [M] to [apply_method] [src].</span>", \
-							"<span class='danger'>[user] attempts to force you to [apply_method] [src].</span>")
+		M.visible_message("<span class='danger'>[user] intenta forzar a [M] a [apply_method] [src].</span>", \
+							"<span class='danger'>[user] intenta forzarte a [apply_method] [src].</span>")
 		if(!do_after(user, 3 SECONDS, M))
 			return ITEM_INTERACT_BLOCKING
 		M.visible_message("<span class='danger'>[user] forces [M] to [apply_method] [src].</span>", \

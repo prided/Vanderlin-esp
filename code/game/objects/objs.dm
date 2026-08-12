@@ -226,14 +226,14 @@
 			usr.client.object_say(src)
 	if(href_list[VV_HK_MASS_DEL_TYPE])
 		if(check_rights(R_DEBUG|R_SERVER))
-			var/action_type = tgui_alert(usr, "Strict type ([type]) or type and all subtypes?", "Type", list("Strict type","Type and subtypes","Cancel"))
+			var/action_type = tgui_alert(usr, "¿Tipo estricto ([type]) o tipo y todos los subtipos?", "Type", list("Strict type","Type and subtypes","Cancel"))
 			if(action_type == "Cancel" || !action_type)
 				return
 
-			if(tgui_alert(usr, "Are you really sure you want to delete all objects of type [type]?", "Mass Delete", list("Yes","No")) != "Yes")
+			if(tgui_alert(usr, "¿Está realmente seguro de que desea eliminar todos los objetos del tipo [type]?", "Mass Delete", list("Yes","No")) != "Yes")
 				return
 
-			if(tgui_alert(usr, "Second confirmation required. Delete?", "Confirm", list("Yes","No")) != "Yes")
+			if(tgui_alert(usr, "Second confirmation required. Delete?", "Confirmar", list("Yes","No")) != "Yes")
 				return
 
 			var/O_type = type
@@ -246,7 +246,7 @@
 							qdel(Obj)
 						CHECK_TICK
 					if(!i)
-						to_chat(usr, "No objects of this type exist")
+						to_chat(usr, "No existen objetos de este tipo.")
 						return
 					log_admin("[key_name(usr)] deleted all objects of type [O_type] ([i] objects deleted) ")
 					message_admins("<span class='notice'>[key_name(usr)] deleted all objects of type [O_type] ([i] objects deleted) </span>")
@@ -258,7 +258,7 @@
 							qdel(Obj)
 						CHECK_TICK
 					if(!i)
-						to_chat(usr, "No objects of this type exist")
+						to_chat(usr, "No existen objetos de este tipo.")
 						return
 					log_admin("[key_name(usr)] deleted all objects of type or subtype of [O_type] ([i] objects deleted) ")
 					message_admins("<span class='notice'>[key_name(usr)] deleted all objects of type or subtype of [O_type] ([i] objects deleted) </span>")

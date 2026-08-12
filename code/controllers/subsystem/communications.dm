@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(communications)
-	name = "Communications"
+	name = "Comunicaciones"
 	flags = SS_NO_INIT | SS_NO_FIRE
 
 	var/message_cooldown
@@ -20,7 +20,7 @@ SUBSYSTEM_DEF(communications)
 		priority_announce(html_decode(user.treat_message(input)), "[user.real_name], [used_title] Decrees", 'sound/misc/alert.ogg', "Captain")
 		message_cooldown = world.time + 5 SECONDS
 	else
-		priority_announce(html_decode(user.treat_message(input)), "[user.real_name], [used_title] Speaks", 'sound/misc/alert.ogg', "Captain")
+		priority_announce(html_decode(user.treat_message(input)), "[user.real_name], [used_title] Habla", 'sound/misc/alert.ogg', "Captain")
 		message_cooldown = world.time + 5 SECONDS
 
 	user.log_talk(input, LOG_SAY, tag="priority announcement")

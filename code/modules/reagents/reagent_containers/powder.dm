@@ -42,7 +42,7 @@
 	var/mob/living/L = eater
 	if(!L.can_smell())
 		if(L == user)
-			to_chat(user, span_warning("I can't use my nose!"))
+			to_chat(user, span_warning("¡No puedo usar mi nariz!"))
 		else
 			to_chat(user, span_warning("[L.p_they(TRUE)] can't use [L.p_their()] nose!"))
 		return FALSE
@@ -70,15 +70,15 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(M == user)
-		M.visible_message(span_notice("[user] sniffs [src]."))
+		M.visible_message(span_notice("[user] huele [src]."))
 	else if(iscarbon(M))
 		var/mob/living/carbon/C = M
 		var/obj/item/bodypart/CH = C.get_bodypart(BODY_ZONE_HEAD)
 		if(!CH)
 			to_chat(user, span_warning("[C.p_theyre(TRUE)] missing their head."))
 			return ITEM_INTERACT_BLOCKING
-		C.visible_message(span_danger("[user] attempts to force [C] to inhale [src]."), \
-						span_danger("[user] attempts to force me to inhale [src]!"))
+		C.visible_message(span_danger("[user] intenta forzar a [C] a inhalar [src]."), \
+						span_danger("¡[user] intenta obligarme a inhalar [src]!"))
 		if(C.cmode)
 			if(!length(CH.grabbedby))
 				to_chat(user, span_info("[C.p_they(TRUE)] steals [C.p_their()] face from it."))
@@ -126,7 +126,7 @@
 
 /obj/item/reagent_containers/powder/spice
 	name = "spice"
-	desc = "A potent powder that opens the mind to previously unseen possibilities..."
+	desc = "Un polvo potente que abre la mente a posibilidades nunca antes vistas..."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "spice"
 	item_state = "spice"
@@ -136,7 +136,7 @@
 /datum/reagent/druqks
 	name = "Drukqs"
 	description = ""
-	taste_description = "something spicy"
+	taste_description = "algo picante"
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 16
 	metabolization_rate = 0.2
@@ -184,7 +184,7 @@
 	. = ..()
 
 /datum/reagent/druqks/overdose_start(mob/living/M)
-	M.visible_message(span_warning("Blood runs from [M]'s nose."))
+	M.visible_message(span_warning("La sangre sale de la nariz de [M]."))
 
 /obj/item/reagent_containers/powder/ozium
 	name = "ozium"
@@ -197,7 +197,7 @@
 /datum/reagent/ozium
 	name = "Ozium"
 	description = ""
-	taste_description = "a flash of white"
+	taste_description = "un destello de blanco"
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 16
 	metabolization_rate = 0.1
@@ -228,7 +228,7 @@
 
 /datum/reagent/ozium/overdose_start(mob/living/M)
 	M.playsound_local(get_turf(M), 'sound/misc/heroin_rush.ogg', 100, FALSE)
-	M.visible_message(span_warning("Blood runs from [M]'s nose."))
+	M.visible_message(span_warning("La sangre sale de la nariz de [M]."))
 
 /obj/item/reagent_containers/powder/moondust
 	name = "moondust"
@@ -276,7 +276,7 @@
 
 /datum/reagent/moondust/overdose_start(mob/living/M)
 	M.playsound_local(get_turf(M), 'sound/misc/heroin_rush.ogg', 100, FALSE)
-	M.visible_message(span_warning("Blood runs from [M]'s nose."))
+	M.visible_message(span_warning("La sangre sale de la nariz de [M]."))
 
 /obj/item/reagent_containers/powder/moondust_purest
 	name = "pure moondust"
@@ -327,10 +327,10 @@
 
 /datum/reagent/moondust_purest/overdose_start(mob/living/M)
 	M.playsound_local(get_turf(M), 'sound/misc/heroin_rush.ogg', 100, FALSE)
-	M.visible_message(span_warning("Blood runs from [M]'s nose."))
+	M.visible_message(span_warning("La sangre sale de la nariz de [M]."))
 
 /obj/item/reagent_containers/powder/manabloom
-	name = "manabloom dust"
+	name = "polvo de manabloom"
 	desc = "Crushed manabloom useful as a combat measure against mages."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "salt"
@@ -342,7 +342,7 @@
 //not as strong as pepper is, meant to be used by peasants and poor people to add some extra flavour
 //feel free to make this be used in anything cooking related
 /obj/item/reagent_containers/powder/herbs
-	name = "herbs and spices"
+	name = "hierbas y especias"
 	desc = "A bunch of herbs and spices mixed together."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "flour"

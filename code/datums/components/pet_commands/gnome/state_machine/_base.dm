@@ -1,6 +1,6 @@
 /datum/action_state
 	var/name = "base_state"
-	var/description = "Base state"
+	var/description = "Estado base"
 	var/datum/action_state_manager/manager
 
 	/// Cached priority from the last evaluate_priority() call.

@@ -35,13 +35,13 @@
 	return ..()
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/church/templar
-	name = "Recruit Templar"
+	name = "Reclutar Templario"
 	button_icon_state = "recruit_templar"
 
 	new_role = JOB_TEMPLAR
 	recruitment_faction = "Church"
 	recruitment_message = "Serve the Ten, %RECRUIT!"
-	accept_message = "FOR THE TEN!"
+	accept_message = "¡POR LOS DIEZ!"
 	refuse_message = "I refuse."
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/church/templar/on_conversion(mob/living/carbon/human/cast_on)
@@ -60,7 +60,7 @@
 	new_role = JOB_ACOLYTE
 	recruitment_faction = "Church"
 	recruitment_message = "Serve the Ten, %RECRUIT!"
-	accept_message = "FOR THE TEN!"
+	accept_message = "¡POR LOS DIEZ!"
 	refuse_message = "I refuse."
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/church/acolyte/on_conversion(mob/living/carbon/human/cast_on)
@@ -78,7 +78,7 @@
 	new_role = JOB_CHURCHLING
 	recruitment_faction = "Church"
 	recruitment_message = "Serve the Ten, %RECRUIT!"
-	accept_message = "FOR THE TEN!"
+	accept_message = "¡POR LOS DIEZ!"
 	refuse_message = "I refuse."
 
 	allow_centrist = TRUE

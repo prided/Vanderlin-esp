@@ -1,5 +1,5 @@
 /datum/round_event_control/abyssors_temperament
-	name = "Abyssor's Temperament"
+	name = "Temperamento de Abyssor"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/abyssors_temperament
 	weight = 10
@@ -53,7 +53,7 @@
 
 	chosen_one.mind.add_personal_objective(abyssor_objective)
 
-	to_chat(chosen_one, span_userdanger("YOU ARE ABYSSOR'S CHOSEN!"))
+	to_chat(chosen_one, span_userdanger("¡ERES EL ELEGIDO DE ABYSSOR!"))
 	if(calm)
 		to_chat(chosen_one, span_notice("Abyssor is calm at the moment. Take a relaxing bath while wearing his amulet to honor him!"))
 	else

@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(pathfinder)
-	name = "Pathfinder"
+	name = "Búsqueda de rutas"
 	init_order = INIT_ORDER_PATH
 	flags = SS_NO_FIRE
 	var/datum/flowcache/mobs

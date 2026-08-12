@@ -47,7 +47,7 @@
 /datum/status_effect/freon/on_remove()
 	. = ..()
 	if(!owner.stat)
-		to_chat(owner, "<span class='notice'>The cube melts!</span>")
+		to_chat(owner, "<span class='notice'>¡El cubo se derrite!</span>")
 	owner.cut_overlay(cube)
 	owner.adjust_bodytemperature(100)
 	UnregisterSignal(owner, COMSIG_LIVING_RESIST)

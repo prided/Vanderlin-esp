@@ -97,7 +97,7 @@
 /mob/living/simple_animal/hostile/deepone/boss
 	wander = FALSE
 /datum/intent/simple/claw/deepone_unarmed
-	attack_verb = list("claws", "strikes")
+	attack_verb = list("claws", "huelgas")
 	blade_class = BCLASS_CHOP
 	animname = "cut"
 	hitsound = 'sound/combat/hits/bladed/smallslash (1).ogg'

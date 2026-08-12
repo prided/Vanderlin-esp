@@ -1,5 +1,5 @@
 /datum/round_event_control/fishing_boon
-	name = "Rainy Day"
+	name = "Día lluvioso"
 	track = EVENT_TRACK_MODERATE
 	typepath = /datum/round_event/fishing_boon
 	weight = 5

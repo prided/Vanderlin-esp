@@ -1,6 +1,6 @@
 
 SUBSYSTEM_DEF(death_arena)
-	name = "Death Arena"
+	name = "Arena de la muerte"
 	wait = 2 SECONDS
 	flags = SS_NO_INIT
 	priority = 1
@@ -191,7 +191,7 @@ SUBSYSTEM_DEF(death_arena)
 
 /obj/structure/table/wood/fine/altar
 	name = "Ravox's sacrifical altar"
-	desc = "It awaits an offering of your triumphs"
+	desc = "Espera una ofrenda de tus triunfos"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "ravox_altar"
 	max_integrity = 1000000000

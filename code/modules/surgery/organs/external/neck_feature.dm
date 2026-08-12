@@ -1,6 +1,6 @@
 /obj/item/organ/neck_feature
 	abstract_type = /obj/item/organ/neck_feature
-	name = "neck feature"
+	name = "característica del cuello"
 	visible_organ = TRUE
 
 	zone = BODY_ZONE_PRECISE_NECK

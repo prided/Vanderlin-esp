@@ -12,8 +12,8 @@
 	buff_to_apply_full = /datum/status_effect/buff/song/recovery/full
 
 /atom/movable/screen/alert/status_effect/buff/song/recovery
-	name = "Musical Recovery"
-	desc = "I breathe deeply. This melody refreshes me - I could run for hours."
+	name = "Recuperación Musical"
+	desc = "Respiro profundamente. Esta melodía me refresca: podría correr durante horas."
 	icon_state = "buff"
 
 /datum/status_effect/buff/song/recovery

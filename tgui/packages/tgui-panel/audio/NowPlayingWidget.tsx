@@ -54,23 +54,23 @@ export function NowPlayingWidget(props) {
                   </Flex.Item>
                 )}
                 <Flex.Item grow={1} color="label">
-                  Duration: {duration}
+                  Duración: {duration}
                 </Flex.Item>
                 {artist !== 'Song Artist Hidden' &&
                   artist !== 'Unknown Artist' && (
                     <Flex.Item grow={1} color="label">
-                      Artist: {artist}
+                      Artista: {artist}
                     </Flex.Item>
                   )}
                 {album !== 'Song Album Hidden' && album !== 'Unknown Album' && (
                   <Flex.Item grow={1} color="label">
-                    Album: {album}
+                    Álbum: {album}
                   </Flex.Item>
                 )}
                 {upload_date !== 'Song Upload Date Hidden' &&
                   upload_date !== 'Unknown Date' && (
                     <Flex.Item grow={1} color="label">
-                      Uploaded: {date}
+                      Subido: {date}
                     </Flex.Item>
                   )}
               </Section>
@@ -79,12 +79,12 @@ export function NowPlayingWidget(props) {
         </Flex.Item>
       ) : (
         <Flex.Item grow={1} color="label">
-          Nothing to play.
+          Nada que reproducir.
         </Flex.Item>
       )}
       {playing && (
         <Flex.Item mx={0.5} fontSize="0.9em">
-          <Button tooltip="Stop" icon="stop" onClick={() => player.stop()} />
+          <Button tooltip="Detener" icon="stop" onClick={() => player.stop()} />
         </Flex.Item>
       )}
       <Flex.Item mx={0.5} fontSize="0.9em">

@@ -10,7 +10,7 @@
 	item_weight = 1.5 KILOGRAMS
 
 /obj/item/statue/gold
-	name = "gold statue"
+	name = "estatua de oro"
 	icon_state = "gstatue1"
 	smeltresult = /obj/item/ingot/gold
 	sellprice = 120
@@ -21,7 +21,7 @@
 	icon_state = "gstatue[pick(1,2)]"
 
 /obj/item/statue/gold/loot
-	name = "gold statuette"
+	name = "estatuilla de oro"
 	icon_state = "lstatue1"
 	sellprice = 45
 	item_weight = 1 KILOGRAMS
@@ -32,7 +32,7 @@
 	icon_state = "lstatue[pick(1,2)]"
 
 /obj/item/statue/silver
-	name = "silver statue"
+	name = "estatua de plata"
 	icon_state = "sstatue1"
 	smeltresult = /obj/item/ingot/silver
 	sellprice = 90
@@ -45,14 +45,14 @@
 
 /*	..................   Misc   ................... */
 /obj/item/statue/silver/gnome
-	name = "petrified gnome"
+	name = "gnomo petrificado"
 	desc = "A literal gnome, turned to stone mid-step and put on a matching stone platform. Rather unsettling."
 	smeltresult = null
 	sellprice = 120
 	item_weight = 2 KILOGRAMS
 
 /obj/item/statue/steel
-	name = "steel statue"
+	name = "estatua de acero"
 	icon_state = "ststatue1"
 	melt_amount = 50
 	melting_material = /datum/material/steel
@@ -64,7 +64,7 @@
 	icon_state = "ststatue[pick(1,2)]"
 
 /obj/item/statue/iron
-	name = "iron statue"
+	name = "estatua de hierro"
 	icon_state = "istatue1"
 	smeltresult = /obj/item/ingot/iron
 	sellprice = 40
@@ -75,8 +75,8 @@
 	icon_state = "istatue[pick(1,2)]"
 
 /obj/item/statue/iron/deformed
-	name = "deformed iron statue"
-	desc = "There's something strange about this statue..."
+	name = "estatua de hierro deformada"
+	desc = "Hay algo extraño en esta estatua..."
 	icon_state = "istatue1"
 	smeltresult = /obj/item/ore/iron
 	sellprice = 10
@@ -96,7 +96,7 @@
 	icon_state = "volf_silv" // whoever designed this system needs to be cursed
 
 /obj/item/statue/silver/finger
-	name = "silver hand"
+	name = "mano de plata"
 	desc = "A silver statue of a humen hand flashing a common Xylixian slight. This offensive item has no value."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "finger_silv"
@@ -108,7 +108,7 @@
 	icon_state = "finger_silv"
 
 /obj/item/statue/silver/urn
-	name = "silver urn"
+	name = "urna de plata"
 	desc = "A large decorative silver urn."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "urn_silv"
@@ -167,7 +167,7 @@
 	icon_state = "figurine_silv"
 
 /obj/item/statue/silver/obelisk
-	name = "silver obelisk"
+	name = "obelisco de plata"
 	desc = "An obelisk made of silver."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "obelisk_silv"
@@ -190,7 +190,7 @@
 	icon_state = "fish_silv"
 
 /obj/item/statue/silver/tablet
-	name = "silver tablet"
+	name = "tableta de plata"
 	desc = "A tablet made out of silver."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "tablet_silv"
@@ -213,7 +213,7 @@
 	icon_state = "cameo_silv"
 
 /obj/item/statue/silver/comb
-	name = "silver comb"
+	name = "peine de plata"
 	desc = "A silver comb, great for combing your hair or lack thereof."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "combs_silv"
@@ -238,7 +238,7 @@
 /*	..................   Gold   ................... */
 /obj/item/statue/gold/volf
 	name = "golden volf bust"
-	desc = "A golden bust resembling a volf's head."
+	desc = "Un busto dorado que se asemeja a la cabeza de un volf."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "volf_gold"
 	dropshrink = 0.7
@@ -250,7 +250,7 @@
 	icon_state = "volf_gold"
 
 /obj/item/statue/gold/finger
-	name = "golden hand"
+	name = "mano dorada"
 	desc = "A golden statue of a humen hand flashing a common Xylixian slight. This offensive item has a measly value."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "finger_gold"
@@ -262,7 +262,7 @@
 	icon_state = "finger_gold"
 
 /obj/item/statue/gold/urn
-	name = "gold urn"
+	name = "urna de oro"
 	desc = "A large decorative gold urn."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "urn_gold"
@@ -298,8 +298,8 @@
 	icon_state = "fancyvase_gold"
 
 /obj/item/statue/gold/bust
-	name = "gold bust"
-	desc = "A bust made out of gold."
+	name = "busto de oro"
+	desc = "Un busto hecho de oro."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "bust_gold"
 	smeltresult = /obj/item/ingot/gold
@@ -332,8 +332,8 @@
 	icon_state = "cameo_gold"
 
 /obj/item/statue/gold/obelisk
-	name = "gold obelisk"
-	desc =  "An obelisk made out of gold."
+	name = "obelisco de oro"
+	desc =  "Un obelisco hecho de oro."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "obelisk_gold"
 	smeltresult = /obj/item/ingot/gold
@@ -344,7 +344,7 @@
 	icon_state = "obelisk_gold"
 
 /obj/item/statue/gold/tablet
-	name = "gold tablet"
+	name = "tableta de oro"
 	desc =  "A tablet made out of gold."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "tablet_gold"
@@ -379,7 +379,7 @@
 	icon_state = "elven_gold"
 
 /obj/item/statue/gold/comb
-	name = "golden comb "
+	name = "peine dorado "
 	desc =  "A golden comb, great for combing your hair or lack thereof."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "comb_gold"
@@ -392,7 +392,7 @@
 /*	.................. Bronze  ................... */
 
 /obj/item/statue/bronze
-	name = "bronze statue"
+	name = "estatua de bronce"
 	icon_state = "bstatue1"
 	smeltresult = /obj/item/ingot/bronze
 	sellprice = 30
@@ -400,14 +400,14 @@
 
 /obj/item/statue/bronze/volf
 	name = "bronze volf bust"
-	desc = "A bronzeen bust resembling a volf's head."
+	desc = "Un busto de bronce que se asemeja a la cabeza de un volf."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "volf_bronze"
 	dropshrink = 0.7
 	sellprice = 60
 
 /obj/item/statue/bronze/urn
-	name = "bronze urn"
+	name = "urna de bronce"
 	desc = "A large decorative bronze urn."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "urn_bronze"
@@ -428,7 +428,7 @@
 	sellprice = 60
 
 /obj/item/statue/bronze/bust
-	name = "bronze bust"
+	name = "busto de bronce"
 	desc = "A bust made out of bronze."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "bust_bronze"
@@ -449,14 +449,14 @@
 	sellprice = 15
 
 /obj/item/statue/bronze/obelisk
-	name = "bronze obelisk"
+	name = "obelisco de bronce"
 	desc =  "An obelisk made out of bronze."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "obelisk_bronze"
 	sellprice = 30
 
 /obj/item/statue/bronze/tablet
-	name = "bronze tablet"
+	name = "tableta de bronce"
 	desc =  "A tablet made out of bronze."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "tablet_bronze"
@@ -477,14 +477,14 @@
 	sellprice = 30
 
 /obj/item/statue/bronze/comb
-	name = "bronze comb"
+	name = "peine de bronce"
 	desc =  "A bronze comb, great for combing your hair or lack thereof."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "comb_bronze"
 	sellprice = 15
 
 /obj/item/statue/stone
-	name = "stone statue"
+	name = "estatua de piedra"
 	icon_state = "svase1"
 	smeltresult = null
 	sellprice = 10

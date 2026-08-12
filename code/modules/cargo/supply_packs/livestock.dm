@@ -13,35 +13,35 @@
 
 
 /datum/supply_pack/livestock/chicken
-	name = "Chicken"
+	name = "Pollo"
 	cost = 25
 	contains = list(
 					/mob/living/simple_animal/hostile/retaliate/chicken,
 				)
 
 /datum/supply_pack/livestock/cow
-	name = "Cow"
+	name = "Vaca"
 	cost = 80
 	contains = list(
 					/mob/living/simple_animal/hostile/retaliate/cow,
 				)
 
 /datum/supply_pack/livestock/goat
-	name = "Goat"
+	name = "Cabra"
 	cost = 45
 	contains = list(
 					/mob/living/simple_animal/hostile/retaliate/goat,
 				)
 
 /datum/supply_pack/livestock/cat
-	name = "Cat"
+	name = "Gato"
 	cost = 25
 	contains = list(
 					/mob/living/simple_animal/pet/cat,
 				)
 
 /datum/supply_pack/livestock/pig
-	name = "Pig"
+	name = "Cerdo"
 	cost = 65
 	contains = list(
 					/mob/living/simple_animal/hostile/retaliate/trufflepig,

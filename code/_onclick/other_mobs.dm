@@ -13,7 +13,7 @@
 		return FALSE
 
 	if(!has_hand_for_held_index(used_hand)) //can't attack without a hand.
-		to_chat(src, span_warning("I can't move this hand."))
+		to_chat(src, span_warning("No puedo mover esta mano."))
 		return FALSE
 
 	var/obj/item/grabbing/arm_grab = check_arm_grabbed(active_hand_index)
@@ -128,7 +128,7 @@
 	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	if(length(user.return_apprentices()) >= user.return_max_apprentices())
-		to_chat(user, span_notice("I have too many apprentices."))
+		to_chat(user, span_notice("Tengo demasiados aprendices."))
 		return
 
 	if(is_apprentice())
@@ -199,7 +199,7 @@
 	var/def_zone = check_zone(user.zone_selected)
 	var/obj/item/bodypart/affecting = get_bodypart(def_zone)
 	if(!affecting)
-		to_chat(user, span_warning("Nothing to bite."))
+		to_chat(user, span_warning("Nada que morder."))
 		return TRUE
 
 	user.do_attack_animation(src, ATTACK_EFFECT_BITE, used_item = FALSE, atom_bounce = TRUE)
@@ -217,9 +217,9 @@
 				var/poison = GET_MOB_ATTRIBUTE_VALUE(user, STAT_CONSTITUTION)/2
 				src.reagents.add_reagent(/datum/reagent/toxin/venom, poison/2)
 				src.reagents.add_reagent(/datum/reagent/medicine/soporpot, poison)
-				to_chat(user, span_warning("Your fangs inject venom into [src]!"))
+				to_chat(user, span_warning("¡Tus colmillos inyectan veneno en [src]!"))
 		else
-			next_attack_msg += span_warning("Armor stops the damage.")
+			next_attack_msg += span_warning("La armadura detiene el daño.")
 
 	visible_message(span_danger("[user] bites [src]'s [parse_zone(user.zone_selected)]![next_attack_msg.Join()]"), \
 					span_userdanger("[user] bites my [parse_zone(user.zone_selected)]![next_attack_msg.Join()]"))
@@ -348,10 +348,10 @@
 			if(stat != CONSCIOUS)
 				return
 			if(is_mouth_covered())
-				to_chat(src, span_warning("My mouth is blocked."))
+				to_chat(src, span_warning("Mi boca está bloqueada."))
 				return
 			if(HAS_TRAIT(src, TRAIT_NO_BITE))
-				to_chat(src, span_warning("I can't bite."))
+				to_chat(src, span_warning("No puedo morder."))
 				return
 			if(iscarbon(src))
 				var/mob/living/carbon/C = src
@@ -398,7 +398,7 @@
 	if(!user.can_interact_with(src))
 		return FALSE
 	if((interaction_flags_atom & INTERACT_ATOM_REQUIRES_DEXTERITY) && !user.IsAdvancedToolUser())
-		to_chat(user, span_warning("I don't have the dexterity to do this!"))
+		to_chat(user, span_warning("¡No tengo la destreza para hacer esto!"))
 		return FALSE
 	if(!(interaction_flags_atom & INTERACT_ATOM_IGNORE_INCAPACITATED))
 		var/ignore_flags = NONE
@@ -474,7 +474,7 @@
 				to_chat(thief, span_warning("I can't pickpocket while my hand is full!"))
 				return
 			if(!(zone_selected in stealablezones))
-				to_chat(thief, span_warning("What am I going to steal from there?"))
+				to_chat(thief, span_warning("¿Qué voy a robar de ahí?"))
 				return
 			//2.5 seconds for those without skill
 			//better skill shortens time, up to one second with legendary
@@ -516,7 +516,7 @@
 
 					victim.dropItemToGround(picked)
 					put_in_active_hand(picked)
-					to_chat(thief, span_green("I stole [picked]!"))
+					to_chat(thief, span_green("¡Robé [picked]!"))
 					log_combat(thief, victim, "stole [picked] from ")
 					exp_to_gain += thief.get_learning_boon(/datum/attribute/skill/misc/stealing) * 5
 					if(victim.client && victim.stat != DEAD)
@@ -535,7 +535,7 @@
 				to_chat(thief, span_warning("I fumbled it!"))
 				log_combat(thief, victim, "tried to steal from ")
 		if(thief_skill_base <= target_skill)
-			to_chat(victim, span_danger("Someone tried pickpocketing me!"))
+			to_chat(victim, span_danger("¡Alguien intentó robarme!"))
 			if(thief_skill_base >= 3)
 				to_chat(thief, span_danger("[victim] probably realized I tried pickpocketing them!"))
 		if(stealroll < target_perception)
@@ -546,7 +546,7 @@
 
 /mob/living/proc/jump_action(atom/A)
 	if(HAS_TRAIT(src, TRAIT_IMMERSED))
-		to_chat(src, span_warning("I can't jump while floating."))
+		to_chat(src, span_warning("No puedo saltar mientras floto."))
 		return
 
 	if(A == src || A == loc)
@@ -556,7 +556,7 @@
 		return
 
 	if(pulledby && pulledby != src)
-		to_chat(src, span_warning("I'm being grabbed."))
+		to_chat(src, span_warning("Me están agarrando."))
 		resist_grab()
 		return
 
@@ -565,7 +565,7 @@
 		return
 
 	if(lying_angle)
-		to_chat(src, span_warning("I should stand up first."))
+		to_chat(src, span_warning("Debería levantarme primero."))
 		return
 
 	if(!isatom(A))
@@ -573,7 +573,7 @@
 
 	if(A.z != z)
 		if(!HAS_TRAIT(src, TRAIT_ZJUMP))
-			to_chat(src, span_warning("That's too high for me..."))
+			to_chat(src, span_warning("Eso es demasiado alto para mí..."))
 			return
 
 	if(has_status_effect(/datum/status_effect/debuff/exposed))
@@ -682,10 +682,10 @@
 			if(istype(AM) && !AM.anchored)
 				var/jadded = max(100-(GET_MOB_ATTRIBUTE_VALUE(src, STAT_STRENGTH)*10),5)
 				if(adjust_stamina(jadded))
-					visible_message(span_info("[src] pushes [AM]."))
+					visible_message(span_info("[src] empuja a [AM]."))
 					PushAM(AM, MOVE_FORCE_STRONG)
 				else
-					visible_message(span_warning("[src] pushes [AM]."))
+					visible_message(span_warning("[src] empuja a [AM]."))
 				return
 
 	A.attack_animal(src)

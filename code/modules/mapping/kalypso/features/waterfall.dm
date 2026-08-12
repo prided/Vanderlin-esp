@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/waterfall
-	name = "Waterfall"
+	name = "Cascada"
 	id = "feature_waterfall"
 	mappath = "_maps/kalypso/waterfall.dmm"
 

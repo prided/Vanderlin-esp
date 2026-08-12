@@ -20,14 +20,14 @@
 		item_type = item_path
 		var/obj/item/sample = new item_path()
 		name = sample.name
-		desc = "Custom stock for [sample.name]. Created by [creator_name]."
+		desc = "Stock personalizado para [sample.name]. Creado por [creator_name]."
 		created_by = creator_name
 		creation_time = world.time
 		qdel(sample)
 	. = ..()
 
 /obj/structure/fake_machine/steward
-	name = "MASTER OF NERVES"
+	name = "MAESTRO DE LOS NERVIOS"
 	desc = ""
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "steward_machine"
@@ -439,11 +439,11 @@
 					found_name = nm
 					break
 			if(!found_name)
-				say("No items found in your inventory to create stock for.")
+				say("No se encontraron artículos en su inventario para crear stock.")
 				return
 			for(var/datum/stock/existing in SStreasury.stockpile_datums)
 				if(existing.item_type == item_path)
-					say("Stock already exists for this item type.")
+					say("Ya existe stock para este tipo de artículo.")
 					return
 			var/datum/stock/stockpile/custom/new_stock = new /datum/stock/stockpile/custom(item_path, usr.real_name)
 			SStreasury.stockpile_datums += new_stock
@@ -456,7 +456,7 @@
 			if(!D || !istype(D, /datum/stock/stockpile/custom))
 				return
 			SStreasury.stockpile_datums -= D
-			say("Custom stock for [D.name] has been deleted.")
+			say("Se ha eliminado el stock personalizado para [D.name].")
 			qdel(D)
 			. = TRUE
 

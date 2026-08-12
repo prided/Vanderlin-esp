@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/projectile/fire_flare
-	name = "Fire Flare"
+	name = "Llamarada de fuego"
 	desc = "Shoot out a low-powered ball of fire that shines brightly on impact, potentially blinding a target."
 	button_icon_state = "fireball_multi"
 	sound = 'sound/magic/whiteflame.ogg'

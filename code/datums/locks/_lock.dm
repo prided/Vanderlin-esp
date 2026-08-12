@@ -80,7 +80,7 @@
 	SIGNAL_HANDLER
 
 	if(tampered)
-		examine_list += span_notice("[source] has been tampered with.")
+		examine_list += span_notice("[source] ha sido manipulado.")
 
 /datum/lock/key/proc/key_act_left(obj/source, mob/living/user, obj/item/tool, list/modifiers)
 	SIGNAL_HANDLER

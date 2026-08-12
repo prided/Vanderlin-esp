@@ -182,7 +182,7 @@
 
 	// Try to spend resources
 	if(!consumed.master.try_spend_resources(total_cost))
-		to_chat(owner, "<span class='warning'>Not enough resources! ([consumed.master.consumed_resource_pool]/[total_cost])</span>")
+		to_chat(owner, "<span class='warning'>¡No hay suficientes recursos! ([consumed.master.consumed_resource_pool]/[total_cost])</span>")
 		return FALSE
 
 	// Spawn the meatvine pieces
@@ -333,7 +333,7 @@
 	return has_adjacent
 
 /datum/action/cooldown/meatvine/spread_wall_multi
-	name = "Spread Wall Line (x3)"
+	name = "Línea de pared extendida (x3)"
 	desc = "Spread 3 meatvine walls in a line perpendicular to your facing direction. Cost: 75 resources."
 	button_icon_state = "wall"
 	resource_cost = 25
@@ -565,7 +565,7 @@
 		return FALSE
 
 	for(var/obj/structure/meatvine/tracking_beacon/existing_beacon in range(5, T))
-		to_chat(owner, "<span class='warning'>Too close to another tracking beacon!</span>")
+		to_chat(owner, "<span class='warning'>¡Demasiado cerca de otra baliza de seguimiento!</span>")
 		return FALSE
 
 	return ..()
@@ -609,7 +609,7 @@
 		if(existing_spike.add_spike())
 			return TRUE
 		else
-			to_chat(owner, span_warning("Maximum spikes reached at [get_area_name(T)]!"))
+			to_chat(owner, span_warning("¡Picos máximos alcanzados en [get_area_name(T)]!"))
 			return FALSE
 
 	var/obj/structure/meatvine/tentacle_spike/new_spike = new spread_type(T)
@@ -635,13 +635,13 @@
 
 	// Check range
 	if(get_dist(user, target_turf) > spread_range)
-		to_chat(user, span_warning("Target is too far away!"))
+		to_chat(user, span_warning("¡El objetivo está demasiado lejos!"))
 		return FALSE
 
 	var/list/construct_turfs = get_build_turfs(target_turf)
 
 	if(!length(construct_turfs))
-		to_chat(user, span_warning("No valid placement locations!"))
+		to_chat(user, span_warning("¡No hay ubicaciones de colocación válidas!"))
 		return FALSE
 
 	var/total_cost = resource_cost * length(construct_turfs)

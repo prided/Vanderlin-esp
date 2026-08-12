@@ -1,7 +1,7 @@
 #define FILE_ANTAG_REP "data/AntagReputation.json"
 
 SUBSYSTEM_DEF(persistence)
-	name = "Persistence"
+	name = "Persistencia"
 	init_order = INIT_ORDER_PERSISTENCE
 	flags = SS_NO_FIRE
 

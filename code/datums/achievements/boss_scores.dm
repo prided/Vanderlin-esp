@@ -34,7 +34,7 @@
 	database_id= LEGION_SCORE
 
 /datum/award/score/legion_score
-	name = "Legions Killed"
+	name = "Legiones asesinadas"
 	desc = ""
 	database_id= LEGION_SCORE
 

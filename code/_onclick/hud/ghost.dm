@@ -30,7 +30,7 @@
 	G.dead_tele()
 
 /atom/movable/screen/ghost/set_final_words
-	name = "Set Final Words"
+	name = "Establecer palabras finales"
 	screen_loc = "SOUTH:6,CENTER:24"
 	icon_state = "set_final_words"
 
@@ -39,7 +39,7 @@
 	G.set_final_words()
 
 /atom/movable/screen/ghost/ghost_up
-	name = "Ghost Up"
+	name = "Fantasma arriba"
 	screen_loc = "SOUTH:6,CENTER+2:24"
 	icon_state = "up"
 
@@ -48,7 +48,7 @@
 	G.up()
 
 /atom/movable/screen/ghost/ghost_down
-	name = "Ghost Down"
+	name = "Fantasma abajo"
 	screen_loc = "SOUTH:6,CENTER+3:24"
 	icon_state = "down"
 

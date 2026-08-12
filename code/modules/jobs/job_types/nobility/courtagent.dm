@@ -70,7 +70,7 @@
 		"Silver Ring" = /obj/item/clothing/ring/courtagent_ring/silver,
 		"Gold Ring" = /obj/item/clothing/ring/courtagent_ring/gold,
 	)
-	spawned.select_equippable(player_client, rings, message = "Choose Your Ring", title = "COURT AGENT")
+	spawned.select_equippable(player_client, rings, message = "Elige tu anillo", title = "COURT AGENT")
 
 /datum/attribute_holder/sheet/job/courtagent/bruiser
 	raw_attribute_list = list(
@@ -130,7 +130,7 @@
 		"Steel Katar" = /obj/item/weapon/katar,
 		"Bare Handed" = /obj/item/clothing/gloves/bandages/pugilist,
 	)
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose Your Specialisation", title = "COURT AGENT")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu especialización", title = "COURT AGENT")
 	if(!weapon_choice)
 		return
 	switch(weapon_choice)
@@ -204,7 +204,7 @@
 		"Shortbow" = /obj/item/gun/ballistic/bow/short,
 		"Crossbow" = /obj/item/gun/ballistic/bow/cross,
 	)
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose Your Specialisation", title = "COURT AGENT")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu especialización", title = "COURT AGENT")
 	if(!weapon_choice)
 		return
 	switch(weapon_choice)
@@ -374,7 +374,7 @@
 		"Flail" = /obj/item/weapon/flail,
 		"Whip" = /obj/item/weapon/whip,
 	)
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose Your Specialisation", title = "COURT AGENT")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu especialización", title = "COURT AGENT")
 	if(!weapon_choice)
 		return
 	switch(weapon_choice)

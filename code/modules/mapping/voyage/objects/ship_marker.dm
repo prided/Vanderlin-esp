@@ -1,5 +1,5 @@
 /obj/effect/landmark/ship_marker
-	name = "ship area marker"
+	name = "marcador de área de barco"
 	desc = "Marks the bottom-left corner of a ship area. Click to dock/undock."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "x2"
@@ -28,7 +28,7 @@
 		else
 			var/list/available_islands = SSterrain_generation.get_all_islands()
 			if(!available_islands.len)
-				to_chat(user, span_warning("No islands available!"))
+				to_chat(user, span_warning("¡No hay islas disponibles!"))
 				return
 
 			var/list/island_choices = list()
@@ -42,11 +42,11 @@
 			island = island_choices[choice]
 
 		if(!island)
-			to_chat(user, span_warning("Island not found!"))
+			to_chat(user, span_warning("¡Isla no encontrada!"))
 			return
 
 		if(SSterrain_generation.dock_ship_to_island(registered_ship, island))
-			to_chat(user, span_notice("Ship docked to [island.island_name]! You can now see the island."))
+			to_chat(user, span_notice("¡Barco atracado en [island.island_name]! Ahora puedes ver la isla."))
 		else
 			to_chat(user, span_warning("Failed to dock ship."))
 

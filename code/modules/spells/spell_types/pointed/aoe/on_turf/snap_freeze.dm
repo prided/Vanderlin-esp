@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/aoe/on_turf/snap_freeze
 	name = "Snap Freeze"
-	desc = "Freeze the air in a small area in an instant."
+	desc = "Congela el aire en un área pequeña en un instante."
 	button_icon_state = "snapfreeze"
 
 	required_form = FORM_ICE
@@ -27,7 +27,7 @@
 	playsound(victim, 'sound/combat/newstuck.ogg', 80, TRUE)
 	for(var/mob/living/L in victim)
 		if(L.can_block_magic(MAGIC_RESISTANCE))
-			L.visible_message(span_warning("The ice fades away around [L]."))
+			L.visible_message(span_warning("El hielo se desvanece alrededor de [L]."))
 			playsound(L, 'sound/magic/magic_nulled.ogg', 100)
 			continue
 		L.adjustFireLoss(35)

@@ -223,8 +223,8 @@
 	return ..()
 
 /obj/item/ingot/gold
-	name = "gold bar"
-	desc = "A bar of glittering gold."
+	name = "barra de oro"
+	desc = "Una barra de oro brillante."
 	icon_state = "ingotgold"
 	smeltresult = /obj/item/ingot/gold
 	melting_material = /datum/material/gold
@@ -232,8 +232,8 @@
 	item_weight = 12.25 KILOGRAMS
 
 /obj/item/ingot/iron
-	name = "iron bar"
-	desc = "A bar of wrought iron."
+	name = "barra de hierro"
+	desc = "Una barra de hierro forjado."
 	icon_state = "ingotiron"
 	smeltresult = /obj/item/ingot/iron
 	melting_material = /datum/material/iron
@@ -242,7 +242,7 @@
 
 /obj/item/ingot/thaumic
 	name = "thaumic iron bar"
-	desc = "A bar of wrought iron tempered with fire essence."
+	desc = "Una barra de hierro forjado templado con esencia de fuego."
 	icon_state = "infused_iron"
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	smeltresult = /obj/item/ingot/thaumic
@@ -251,8 +251,8 @@
 	item_weight = 5 KILOGRAMS
 
 /obj/item/ingot/copper
-	name = "copper bar"
-	desc = "A bar of copper."
+	name = "barra de cobre"
+	desc = "Una barra de cobre."
 	icon_state = "ingotcop"
 	smeltresult = /obj/item/ingot/copper
 	melting_material = /datum/material/copper
@@ -260,7 +260,7 @@
 	item_weight = 5.7 KILOGRAMS
 
 /obj/item/ingot/tin
-	name = "tin bar"
+	name = "barra de estaño"
 	desc = "An ingot of strangely soft and malleable essence."
 	icon_state = "ingottin"
 	smeltresult = /obj/item/ingot/tin
@@ -269,7 +269,7 @@
 	item_weight = 4.6 KILOGRAMS
 
 /obj/item/ingot/bronze
-	name = "bronze bar"
+	name = "barra de bronce"
 	desc = "A hard and durable alloy favored by engineers and followers of Malum alike."
 	icon_state = "ingotbronze"
 	smeltresult = /obj/item/ingot/bronze
@@ -278,7 +278,7 @@
 	item_weight = 5.55 KILOGRAMS
 
 /obj/item/ingot/silver
-	name = "silver bar"
+	name = "barra de plata"
 	desc = "A bar of glistening silver. The bane of nitewalkers."
 	icon_state = "ingotsilv"
 	smeltresult = /obj/item/ingot/silver
@@ -291,8 +291,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/ingot/steel
-	name = "steel bar"
-	desc = "A bar of alloyed steel."
+	name = "barra de acero"
+	desc = "Una barra de acero aleado."
 	icon_state = "ingotsteel"
 	smeltresult = /obj/item/ingot/steel
 	melting_material = /datum/material/steel
@@ -309,7 +309,7 @@
 	item_weight = 5 KILOGRAMS
 
 /obj/item/ingot/silverblessed
-	name = "blessed silver bar"
+	name = "barra de plata bendita"
 	desc = "This bar radiates a divine purity that is treasured by the Psydonic faith. The Psycross and holy liturgies are transcribed on the surface."
 	icon_state = "ingotsilvblessed"
 	smeltresult = /obj/item/ingot/silver
@@ -327,8 +327,8 @@
 	item_weight = 5.2 KILOGRAMS
 
 /obj/item/ingot/steel_slag
-	name = "steel slag"
-	desc = "Slag containing steel, the result of blooming iron and coal."
+	name = "escoria de acero"
+	desc = "Escoria que contiene acero, resultado de la floración del hierro y el carbón."
 	icon_state = "steel_slag"
 	smeltresult = /obj/item/ingot/steel
 	melting_material = /datum/material/steel
@@ -346,7 +346,7 @@
 	item_weight = 5.5 KILOGRAMS
 
 /obj/item/ingot/purifiedaalloy
-	name = "ancient alloy"
+	name = "aleación antigua"
 	desc = "An ingot of polished gilbranze, teeming with forbidden knowledge. The reflection on its surface isn't yours; it smiles back at you with eternal malice."
 	icon_state = "ingotancient"
 	smeltresult = /obj/item/ingot/purifiedaalloy
@@ -355,7 +355,7 @@
 	item_weight = 5.5 KILOGRAMS
 
 /obj/item/ingot/aaslag
-	name = "glimmering slag"
+	name = "escoria brillante"
 	desc = "A mass of wrought bronze, rendered lame from the forge's heat. Sometimes, dead is better. </br>Yet, perhaps alloying it in equal parts with another glimmering piece of ore could resurrect its secrets."
 	icon_state = "ancientslag"
 	smeltresult = /obj/item/ingot/aaslag
@@ -428,7 +428,7 @@
 
 
 /obj/item/ingot/component //Root. Don't use under most circumstances.
-	name = "substanceless presence"
+	name = "presencia sin sustancia"
 	desc = "Something that you were likely never meant to see. Pray to a higher presence for assistance, before rendering it asunder in the forge's flames once more."
 	icon_state = "oreada"
 	smeltresult = /obj/item/ingot/iron
@@ -495,12 +495,12 @@
 
 /obj/item/ingot/component/graggar
 	name = "vicious fragment"
-	desc = "Bleeding fragments of an otherworldly alloy. </br>Murder is nothing more than justice without arbitration."
+	desc = "Fragmentos sangrantes de una aleación de otro mundo. </br>El asesinato no es más que justicia sin arbitraje."
 	icon_state = "component_graggar"
 	dropshrink = 0.7
 
 /obj/item/ingot/component/matthios
-	name = "gilded fragment"
+	name = "fragmento dorado"
 	desc = "Glimmering fragments of an otherworldly alloy. </br>Wealth drags even the noblest souls down to perdition."
 	icon_state = "component_matthios"
 	dropshrink = 0.7

@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/retaliate/swamp_kraken
 	icon = 'icons/roguetown/mob/monster/kraken.dmi'
-	name = "swamp kraken"
+	name = "kraken de pantano"
 	desc = "An ancient horror from the deepest swamps. Its tentacles writhe with malevolent purpose."
 	icon_state = "Gilbert"
 	icon_living = "Gilbert"
@@ -10,7 +10,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	speak_emote = list("gurgles", "bubbles")
 	emote_hear = list("gurgles wetly", "makes bubbling sounds")
-	emote_see = list("writhes its tentacles", "churns the water")
+	emote_see = list("writhes its tentacles", "agita el agua")
 
 	health = 1500
 	maxHealth = 1500
@@ -152,7 +152,7 @@
 	name = "Summon Tentacles"
 	button_icon = 'icons/effects/effects.dmi'
 	button_icon_state = "tentacle_icon"
-	desc = "Summon tentacles from the depths to attack enemies."
+	desc = "Invoca tentáculos desde las profundidades para atacar a los enemigos."
 	cooldown_time = 15 SECONDS
 
 /datum/action/cooldown/mob_cooldown/kraken_summon_tentacles/Activate(atom/target)
@@ -166,15 +166,15 @@
 	return TRUE
 
 /datum/action/cooldown/mob_cooldown/kraken_ink_cloud
-	name = "Ink Cloud"
+	name = "Nube de tinta"
 	button_icon = 'icons/effects/effects.dmi'
 	button_icon_state = "smoke"
-	desc = "Release a cloud of blinding ink."
+	desc = "Libera una nube de tinta cegadora."
 	cooldown_time = 25 SECONDS
 	var/cloud_range = 3
 
 /datum/action/cooldown/mob_cooldown/kraken_ink_cloud/Activate(atom/target)
-	owner.visible_message(span_boldwarning("[owner] releases a thick cloud of ink!"))
+	owner.visible_message(span_boldwarning("¡[owner] libera una espesa nube de tinta!"))
 
 	var/datum/effect_system/smoke_spread/bad/smoke = new
 	smoke.set_up(cloud_range, get_turf(owner))
@@ -184,7 +184,7 @@
 		if(L == owner || L.faction_check_atom(owner, TRUE))
 			continue
 		L.adjust_temp_blindness(6 SECONDS)
-		to_chat(L, span_danger("The ink stings your eyes!"))
+		to_chat(L, span_danger("¡La tinta te pica los ojos!"))
 
 	StartCooldown()
 	return TRUE
@@ -198,7 +198,7 @@
 	var/whirlpool_range = 5
 
 /datum/action/cooldown/mob_cooldown/kraken_whirlpool/Activate(atom/target)
-	owner.visible_message(span_boldwarning("[owner] creates a massive whirlpool!"))
+	owner.visible_message(span_boldwarning("¡[owner] crea un enorme remolino!"))
 
 	var/obj/effect/whirlpool/W = new(get_step_towards(target, owner))
 	W.creator = owner
@@ -270,7 +270,7 @@
 	ai_controller.set_blackboard_key(BB_TARGETED_ACTION, grab)
 
 /datum/action/cooldown/mob_cooldown/tentacle_grab
-	name = "Constrict"
+	name = "Apretar"
 	button_icon = 'icons/effects/effects.dmi'
 	button_icon_state = "grabbing"
 	desc = "Grab and constrict a target, dealing damage over time."
@@ -295,13 +295,13 @@
 
 	new /obj/effect/temp_visual/tentacle_wrap(get_turf(victim))
 
-	to_chat(victim, span_userdanger("The tentacle crushes you!"))
+	to_chat(victim, span_userdanger("¡El tentáculo te aplasta!"))
 
 	StartCooldown()
 	return TRUE
 
 /mob/living/simple_animal/hostile/kraken_tentacle/spitter
-	name = "spitting tentacle"
+	name = "tentáculo escupidor"
 	desc = "This tentacle drips with corrosive venom. Keep your distance!"
 
 	health = 150
@@ -337,7 +337,7 @@
 	if(!start_turf)
 		return FALSE
 
-	owner.visible_message(span_boldwarning("[owner] spits a glob of acid at [target]!"))
+	owner.visible_message(span_boldwarning("¡[owner] escupe una bola de ácido a [target]!"))
 
 	var/obj/projectile/tentacle_acid/proj = new projectile_type(start_turf)
 	proj.firer = owner

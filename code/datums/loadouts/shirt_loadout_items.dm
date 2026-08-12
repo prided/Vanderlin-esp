@@ -1,13 +1,13 @@
 
 /datum/loadout_item/robe
-	name = "Robe"
+	name = "Túnica"
 	item_path = /obj/item/clothing/shirt/robe
 	ui_category = "Shirts"
 
 	triumph_cost_permanent = 25
 
 /datum/loadout_item/shepherdvest
-	name = "Shepherd Vest"
+	name = "Chaleco de pastor"
 	item_path = /obj/item/clothing/shirt/robe/shepherdvest
 	ui_category = "Shirts"
 
@@ -21,21 +21,21 @@
 	triumph_cost_permanent = 0
 
 /datum/loadout_item/shortshirt
-	name = "Short-sleeved Shirt"
+	name = "Camisa de manga corta"
 	item_path = /obj/item/clothing/shirt/shortshirt
 	ui_category = "Shirts"
 
 	triumph_cost_permanent = 0
 
 /datum/loadout_item/sailorshirt
-	name = "Striped Shirt"
+	name = "Camisa a rayas"
 	item_path = /obj/item/clothing/shirt/undershirt/sailor
 	ui_category = "Shirts"
 
 	triumph_cost_permanent = 25
 
 /datum/loadout_item/bottomtunic
-	name = "Low-cut Tunic"
+	name = "Túnica escotada"
 	item_path = /obj/item/clothing/shirt/undershirt/lowcut
 	ui_category = "Shirts"
 
@@ -49,7 +49,7 @@
 	triumph_cost_permanent = 25
 
 /datum/loadout_item/dress
-	name = "Dress"
+	name = "Vestido"
 	item_path = /obj/item/clothing/shirt/dress/gen
 	ui_category = "Shirts"
 
@@ -84,14 +84,14 @@
 	triumph_cost_permanent = 75
 
 /datum/loadout_item/explorer_vest
-	name = "Explorer's Vest"
+	name = "Chaleco de explorador"
 	item_path = /obj/item/clothing/shirt/explorer
 	ui_category = "Shirts"
 
 	triumph_cost_permanent = 75
 
 /datum/loadout_item/fancyjacket
-	name = "Fancy Jacket"
+	name = "Chaqueta elegante"
 	item_path = /obj/item/clothing/shirt/fancyjacket
 	ui_category = "Shirts"
 
@@ -112,21 +112,21 @@
 	triumph_cost_permanent = 125
 
 /datum/loadout_item/velvetdress
-	name = "Velvet Dress"
+	name = "Vestido de terciopelo"
 	item_path = /obj/item/clothing/shirt/dress/velvetdress
 	ui_category = "Shirts"
 
 	triumph_cost_permanent = 150
 
 /datum/loadout_item/nobledress
-	name = "Noble Dress"
+	name = "vestido noble"
 	item_path = /obj/item/clothing/shirt/dress/nobledress
 	ui_category = "Shirts"
 
 	triumph_cost_permanent = 200
 
 /datum/loadout_item/hag
-	name = "Wyrd Robe"
+	name = "Túnica Wyrd"
 	item_path = /obj/item/clothing/shirt/robe/hag
 	ui_category = "Shirts"
 

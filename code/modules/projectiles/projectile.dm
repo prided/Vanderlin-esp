@@ -199,7 +199,7 @@
 					else
 						below = potential
 
-				target.visible_message(span_danger("[src] flies down from above!"), vision_distance = COMBAT_MESSAGE_RANGE)
+				target.visible_message(span_danger("¡[src] vuela desde arriba!"), vision_distance = COMBAT_MESSAGE_RANGE)
 				// Hit the first living or first dense object
 				for(var/atom/movable/AM as anything in target)
 					// Do it like this for target bias

@@ -38,7 +38,7 @@ export const BardRhythmSection = (props: Props) => {
                   })
                 }
               >
-                {rhythm.name} (known)
+                {rhythm.name} (conocido)
               </Button>
             ) : (
               <Button

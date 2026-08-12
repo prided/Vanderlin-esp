@@ -60,7 +60,7 @@
 	)
 
 /datum/job/advclass/pilgrim/rare/masterblacksmith
-	title = "Master Blacksmith"
+	title = "Maestro herrero"
 	tutorial = "Dwarves, and humen who trained extensively under them in the art of smithing, \
 	become the most legendary smiths at their craft, gaining reputation beyond compare."
 	allowed_races = list(\
@@ -82,7 +82,7 @@
 	)
 
 /datum/outfit/pilgrim/masterblacksmith
-	name = "Master Blacksmith (Pilgrim)"
+	name = "Maestro herrero (peregrino)"
 	beltr = /obj/item/weapon/hammer/iron
 	backl = /obj/item/storage/backpack/backpack
 	backr = /obj/item/weapon/hammer/sledgehammer

@@ -62,7 +62,7 @@
 	timer = 10 MINUTES
 
 /datum/stress_event/feet_free
-	desc = span_nicegreen("I can move my feet freely!")
+	desc = span_nicegreen("¡Puedo mover mis pies libremente!")
 	stress_change = -1
 	timer = -1
 

@@ -37,7 +37,7 @@
 
 
 /datum/outfit/mercenary/gloryhound
-	name = "Gloryhound (Mercenary)"
+	name = "Gloryhound (mercenario)"
 	shoes = /obj/item/clothing/shoes/shortboots
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak
 	head = /obj/item/clothing/head/helmet/visored/sallet
@@ -69,7 +69,7 @@
 		"Mace" = list(/obj/item/weapon/mace/steel, /obj/item/weapon/shield/tower/buckleriron), \
 		"Polehammer" = /obj/item/weapon/polearm/eaglebeak, \
 	)
-	var/choice = spawned.select_equippable(player_client, selectable, message = "CHOOSE YOUR WEAPON", title = "FOR FORTUNE AND GLORY!")
+	var/choice = spawned.select_equippable(player_client, selectable, message = "ELIGE TU ARMA", title = "FOR FORTUNE AND GLORY!")
 	switch(choice)
 		if("Sword")
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/swords, 13)

@@ -37,7 +37,7 @@ GLOBAL_LIST_EMPTY(voice_names)
 		var/datum/schizohelp/ticket = new(src)
 		var/display_name = get_schizo_name()
 		ticket.rng_name = display_name
-		var/message = span_notice("<i>[display_name] meditates...</i>\n<b>[msg]</b>")
+		var/message = span_notice("<i>[display_name] medita...</i>\n<b>[msg]</b>")
 		var/message_admins = span_notice("<i>[display_name] ([key || "NO KEY"]) [ADMIN_FLW(src)] [ADMIN_SM(src)] meditates...</i>\n<b>[msg]</b>")
 		log_game("([key || "NO KEY"]) mentorhelped: [msg]")
 
@@ -119,7 +119,7 @@ GLOBAL_LIST_EMPTY(voice_names)
 		tries++
 		if(tries > (length(possible_adjectives) * length(possible_nouns)))
 			// Ran out of unique names
-			name = "Nameless [tries]"
+			name = "Sin nombre [tries]"
 			break
 	GLOB.voice_names[real_name || src.name] = name
 	GLOB.voice_names[name] = TRUE // mark the name itself as taken
@@ -184,7 +184,7 @@ GLOBAL_LIST_EMPTY(voice_names)
 		tries++
 		if(tries > (length(possible_adjectives) * length(possible_nouns)))
 			// Ran out of unique names
-			name = "Nameless [tries]"
+			name = "Sin nombre [tries]"
 			break
 	GLOB.schizo_names[real_name || src.name] = name
 	GLOB.schizo_names[name] = TRUE // mark the name itself as taken
@@ -199,7 +199,7 @@ GLOBAL_LIST_EMPTY(voice_names)
 	if(!schizo_mob)
 		return
 	if(schizo_mob == mob)
-		to_chat(src, span_warning("I can't answer my own meditation!"))
+		to_chat(src, span_warning("¡No puedo responder a mi propia meditación!"))
 		return
 	if(schizo.answers[key] && !ask_again)
 		to_chat(src, span_warning("I have already answered this meditation!"))

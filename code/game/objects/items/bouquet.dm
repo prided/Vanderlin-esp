@@ -12,12 +12,12 @@
 	item_weight = 27 GRAMS
 
 /obj/item/bouquet/rosa
-	name = "rosa bouquet"
+	name = "ramo de rosas"
 	desc =  "A bouquet of rosas, one of Eora's most beautiful flowers. They are a symbol of love and devotion."
 	icon_state = "bouquet_rosa"
 
 /obj/item/bouquet/salvia
-	name = "salvia bouquet"
+	name = "ramo de salvia"
 	desc = "A bouquet of sweet smelling salvia, a beautiful and royal purple flower."
 	icon_state = "bouquet_salvia"
 
@@ -49,7 +49,7 @@
 	item_weight = 22 GRAMS
 
 /obj/item/clothing/head/flowercrown/rosa
-	name = "rosa crown"
+	name = "corona rosa"
 	desc = "A crown of rosas, often worn during weddings officiated by Eoran acolytes."
 	item_state = "rosa_crown"
 	icon_state = "rosa_crown"
@@ -61,23 +61,23 @@
 	icon_state = "cursedrosa_crown"
 
 /obj/item/clothing/head/flowercrown/salvia
-	name = "salvia crown"
+	name = "corona de salvia"
 	desc = "A crown of salvia, often worn by consorts and princesses of particularly joyful royal courts"
 	item_state = "salvia_crown"
 	icon_state = "salvia_crown"
 
 /obj/item/clothing/head/flowercrown/matricaria
-	name = "crown of matricaria"
+	name = "corona de matricaria"
 	item_state = "matricaria_crown"
 	icon_state = "matricaria_crown"
 
 /obj/item/clothing/head/flowercrown/calendula
-	name = "crown of calendula"
+	name = "corona de caléndula"
 	item_state = "calendula_crown"
 	icon_state = "calendula_crown"
 
 /obj/item/clothing/head/flowercrown/manabloom
-	name = "crown of manabloom"
+	name = "corona de manabloom"
 	desc = "A crown formed of manabloom flowers. Often worn by those who find themselves in need of a \
 	deeper attunement to the arcyne; a favourite of young apprentices and faltering old masters both."
 	item_state = "manabloom_crown"

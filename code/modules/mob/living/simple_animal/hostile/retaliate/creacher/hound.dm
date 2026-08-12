@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/retaliate/hound
 	icon = 'icons/roguetown/mob/greyhound.dmi'
-	name = "hound"
+	name = "sabueso"
 	desc = "Loyal beasts, tamed cousins of the common volfs, there is hardly a better friend to have with you in the wild, or lying next to you by a warm fire."
 	icon_state = "hh"
 	icon_living = "hh"

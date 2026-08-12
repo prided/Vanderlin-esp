@@ -8,7 +8,7 @@
 	body_parts_covered = CHEST|ARMS|VITALS
 
 /obj/item/clothing/shirt/undershirt/priest
-	name = "undervestments"
+	name = "ropa interior"
 	desc = ""
 	icon_state = "priestunder"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
@@ -51,7 +51,7 @@
 	return ..()
 
 /obj/item/clothing/shirt/undershirt/puritan
-	name = "formal silks"
+	name = "sedas formales"
 	icon_state = "puritan_shirt"
 	allowed_race = SPECIES_BASE_BODY
 	salvage_result = /obj/item/natural/silk
@@ -67,7 +67,7 @@
 	icon_state = "lowcut"
 
 /obj/item/clothing/shirt/undershirt/fancy
-	name = "fancy tunic"
+	name = "túnica elegante"
 	desc = "A button-down shirt woven from fine silks with a decorated front and cuffs."
 	icon_state = "fancyshirt"
 	icon = 'icons/roguetown/clothing/special/hand.dmi'
@@ -136,8 +136,8 @@
 	return ..()
 
 /obj/item/clothing/shirt/undershirt/formal
-	name = "formal shirt"
-	desc = "A comfortable yet functional dress shirt often worn by the staff of a noble household."
+	name = "camisa formal"
+	desc = "Una camisa de vestir cómoda pero funcional que suele usar el personal de una casa noble."
 	icon_state = "butlershirt"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_maids.dmi'
 

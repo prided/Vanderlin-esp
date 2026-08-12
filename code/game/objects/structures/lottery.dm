@@ -42,7 +42,7 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	if(gamblingprice < 0)
-		say("Your peasant's tithe is NEGATIVE.")
+		say("El diezmo de tu campesino es NEGATIVO.")
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	// Build coin options
@@ -124,7 +124,7 @@
 	if(gamblingprice == 0)
 		say(pick(
 			"Eager fool; you need mammons to gamble your life away.", \
-			"You are missing your tithe.", \
+			"Te falta tu diezmo.", \
 			"A lord without land is no lord at all."\
 		))
 		stopgambling = 1
@@ -137,11 +137,11 @@
 	say(pick(
 		"Around and around I go, where I stop, only I know.",\
 		"Xylix smiles upon your idiocy, child.",\
-		"The wheel of fate spins, and spins.",\
-		"Oh, you poor fool.",\
+		"La rueda del destino gira y gira.",\
+		"Oh, pobre tonto.",\
 		"This is going to hurt for one of us.",\
 		"I laugh, you cry; I weep, you cheer..",\
-		"I will be your fool; I'll perform for you...",\
+		"Seré tu tonto; actuaré para ti...",\
 		"Let's go gambling!",\
 		"Around and around, folly abounds.",\
 		"Dance with ruin and wealth."\
@@ -191,14 +191,14 @@
 
 /obj/structure/fake_machine/lottery_roguetown/proc/handle_loss()
 	say(pick(
-		"TEN, WHEEL OF FORTUNE - inversed.",\
-		"The Castle. O, Omen!",\
-		"A harvest of locusts...!",\
+		"DIEZ, RUEDA DE LA FORTUNA - invertida.",\
+		"El Castillo. ¡Oh, presagio!",\
+		"¡Una cosecha de langostas...!",\
 		"Look into my eyes and whisper your woes.",\
 		"Aw, dangit.",\
 		"Fool. Poor fool.",\
-		"Your eyes leak out of your skull, drool falling from your lips.",\
-		"Divine idiocy.",\
+		"Tus ojos se salen de tu cráneo, la baba cae de tus labios.",\
+		"Divina idiotez.",\
 		"You stand just as I did; loser and a freek."\
 	))
 
@@ -232,7 +232,7 @@
 
 	switch(chatterbox)
 		if(1)
-			say("I still remember the rain on my skin.")
+			say("Todavía recuerdo la lluvia en mi piel.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("The wind in my fur...or was it hair? Either way...")
@@ -246,14 +246,14 @@
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 
 		if(3)
-			say("There are fates worse than death...")
+			say("Hay destinos peores que la muerte...")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("...especially for a lowly fool who thought himself a king.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		if(4)
-			say("She didn't realize Her machine would kill Her, of course.")
+			say("Ella no se dio cuenta de que su máquina la mataría, por supuesto.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("...though 'tis difficult to argue what happened after that didn't benefit Her.")
@@ -267,7 +267,7 @@
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 
 		if(6)
-			say("You know, jester, those Ecclesials have the right idea.")
+			say("Sabes, bufón, esos eclesiales tienen la idea correcta.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("Won't someone think of the deadite-loving, tax-hating, drug-using murderers?!")
@@ -281,14 +281,14 @@
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 
 		if(8)
-			say("Can't you smell the stench in the air? It's terrible.")
+			say("¿No puedes oler el hedor en el aire? Es terrible.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("It wasn't nearly so bad, before. Rot and puss. Oh, well.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		if(9)
-			say("Can't you smell the stench in the air, fool? It's terrible.")
+			say("¿No puedes oler el hedor en el aire, tonto? Es terrible.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("I don't know how you could miss it. Rot and puss. Oh, well.")
@@ -305,7 +305,7 @@
 			say("A father and his son are riding a carriage through a forrest. Suddenly, Z's curse! The axle snaps!")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("The father dies, but the son- the son yet lives! He's brought to the nearby village's physician.")
+			say("El padre muere, pero el hijo... ¡el hijo aún vive! Lo llevan al médico del pueblo cercano.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("Upon seeing him, the physician ga-...what do you mean, you've heard this one before?")

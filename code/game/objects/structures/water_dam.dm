@@ -1,6 +1,6 @@
 /obj/structure/water_dam
-	name = "water dam"
-	desc = "Blocks the flow of water"
+	name = "presa de agua"
+	desc = "Bloquea el flujo de agua"
 
 	icon = 'icons/roguetown/misc/railing.dmi'
 	icon_state = "border"

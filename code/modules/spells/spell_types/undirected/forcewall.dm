@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/forcewall
-	name = "Forcewall"
+	name = "Muro de fuerza"
 	desc = "Conjure a wall of arcyne force, preventing anyone and anything other than you from moving through it."
 	button_icon_state = "forcewall"
 

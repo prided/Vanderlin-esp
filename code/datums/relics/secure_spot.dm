@@ -73,11 +73,11 @@
 
 		// Attempt to give it to the player. If their hands are full, put_in_hands returns FALSE
 		if(user.put_in_hands(dropping))
-			to_chat(user, span_notice("You remove \the [dropping] from \the [src]."))
+			to_chat(user, span_notice("Quitas \the [dropping] de \the [src]."))
 		else
 			// Hands are full! Force drop it at the user's feet instead
 			dropping.forceMove(user.drop_location())
-			to_chat(user, span_warning("Your hands are full, so \the [dropping] tumbles onto the floor!"))
+			to_chat(user, span_warning("¡Tienes las manos ocupadas, así que \the [dropping] cae al suelo!"))
 	else
 		// If called without a user (e.g. blown up, or triggered by a machine), just eject it
 		UnregisterSignal(dropping, list(COMSIG_MOVABLE_MOVED, COMSIG_QDELETING))

@@ -12,7 +12,7 @@
 	name = "wild-kin wings"
 
 /obj/item/organ/wings/flight/night_kin
-	name = "Vampire Wings"
+	name = "Alas de vampiro"
 	accessory_type = /datum/sprite_accessory/wings/large/gargoyle
 
 /datum/customizer/organ/wings/harpy

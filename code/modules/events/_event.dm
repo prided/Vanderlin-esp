@@ -76,7 +76,7 @@
 			to_chat(usr, "<span class='admin'>I am too late to cancel that event</span>")
 			return
 		triggering = FALSE
-		message_admins("[key_name_admin(usr)] cancelled event [name].")
+		message_admins("[key_name_admin(usr)] evento cancelado [name].")
 		log_admin_private("[key_name(usr)] cancelled event [name].")
 		SSblackbox.record_feedback("tally", "event_admin_cancelled", 1, typepath)
 
@@ -393,11 +393,11 @@
 		return
 	switch(href_list["action"])
 		if("schedule")
-			message_admins("[key_name_admin(usr)] scheduled event [src.name].")
+			message_admins("[key_name_admin(usr)] evento programado [src.name].")
 			log_admin_private("[key_name(usr)] scheduled [src.name].")
 			SSgamemode.current_storyteller.buy_event(src, src.track)
 		if("force_next")
-			message_admins("[key_name_admin(usr)] forced scheduled event [src.name].")
+			message_admins("[key_name_admin(usr)] evento programado forzado [src.name].")
 			log_admin_private("[key_name(usr)] forced scheduled event [src.name].")
 			SSgamemode.forced_next_events[src.track] = src
 		if("fire")
@@ -422,7 +422,7 @@ GLOBAL_LIST_INIT(badomens, list())
 
 /datum/round_event_control/proc/badomen(eventreason)
 	var/used = "Zizo."
-	var/title = "Bad Omen"
+	var/title = "Mal presagio"
 	var/sound = 'sound/misc/evilevent.ogg'
 	switch(eventreason)
 		if(OMEN_ROUNDSTART)

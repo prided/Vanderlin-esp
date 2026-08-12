@@ -43,7 +43,7 @@
 	if(!istype(attacked_item, /obj/item/bottle_kit))
 		return FALSE
 	var/name_to_use = secondary_name ? secondary_name : name
-	user.visible_message(span_info("[user] begins bottling [LOWER_TEXT(name_to_use)]."))
+	user.visible_message(span_info("[user] comienza a embotellar [LOWER_TEXT(name_to_use)]."))
 	if(!do_after(user, 5 SECONDS, source))
 		return FALSE
 	return TRUE

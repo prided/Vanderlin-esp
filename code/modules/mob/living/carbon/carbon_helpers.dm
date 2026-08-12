@@ -2,7 +2,7 @@
 /mob/living/carbon/proc/item_heal(mob/user, brute_heal, burn_heal, heal_message_brute, heal_message_burn, required_bodytype, obj/item/item_source)
 	var/obj/item/bodypart/affecting = src.get_bodypart(check_zone(user.zone_selected))
 	if (!affecting || !(affecting.status == required_bodytype))
-		to_chat(user, span_warning("[affecting] is already in good condition!"))
+		to_chat(user, span_warning("¡[affecting] ya está en buenas condiciones!"))
 		return FALSE
 
 	var/brute_damaged = affecting.brute_dam > 0
@@ -10,7 +10,7 @@
 
 	var/nothing_to_heal = (brute_heal <= 0 || !brute_damaged) && (burn_heal <= 0 || !burn_damaged) && !length(affecting.wounds)
 	if (nothing_to_heal)
-		to_chat(user, span_notice("[affecting] is already in good condition!"))
+		to_chat(user, span_notice("¡[affecting] ya está en buenas condiciones!"))
 		return FALSE
 
 	var/message
@@ -21,7 +21,7 @@
 	else if(burn_damaged && burn_heal > 0)
 		message = "[heal_message_burn] on"
 	else
-		message = "damaged metal"
+		message = "metal dañado"
 	if(affecting.heal_damage(brute_heal, burn_heal, required_bodytype))
 		update_damage_overlays()
 	if(length(affecting.wounds))

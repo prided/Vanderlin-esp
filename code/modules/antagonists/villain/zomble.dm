@@ -79,7 +79,7 @@
 		if(!SEND_SIGNAL(examined_datum.owner, COMSIG_DISGUISE_STATUS))
 			return span_boldnotice("Not food, not right..")
 	if(istype(examined_datum, /datum/antagonist/zombie))
-		return span_boldnotice("Another deadite. My ally.")
+		return span_boldnotice("Otro muerto. Mi aliado.")
 	if(istype(examined_datum, /datum/antagonist/skeleton))
 		return span_boldnotice("Another kind of deadite.")
 
@@ -100,7 +100,7 @@
 	transform_zombie()
 
 /datum/antagonist/zombie/greet()
-	to_chat(owner.current, span_userdanger("Death is not the end..."))
+	to_chat(owner.current, span_userdanger("La muerte no es el final..."))
 	return ..()
 
 /datum/antagonist/zombie/on_life(mob/user)
@@ -265,7 +265,7 @@
 
 /mob/living/carbon/human/proc/zombie_seek()
 	set name = "Seek Brains"
-	set category = "RoleUnique.Zizo"
+	set category = "RolÚnico.Zizo"
 
 	if(!IS_DEADITE(src))
 		return FALSE
@@ -303,7 +303,7 @@
 		return
 	if(stat >= DEAD) //do shit the natural way i guess
 		return
-	to_chat(src, "<span class='danger'>I feel horrible... REALLY horrible after that...</span>")
+	to_chat(src, "<span class='danger'>Me siento horrible... REALMENTE horrible después de eso...</span>")
 	if(get_blood_volume())
 		MOBTIMER_SET(src, MT_PUKE)
 		vomit(1, blood = TRUE, stun = FALSE)

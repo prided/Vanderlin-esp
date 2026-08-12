@@ -27,7 +27,7 @@
 
 /datum/objective/personal/baptism/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have been baptized and completed Noc's objective!"))
+	to_chat(owner.current, span_greentext("¡Has sido bautizado y has completado el objetivo de Noc!"))
 	adjust_storyteller_influence(NOC, 20)
 	UnregisterSignal(owner.current, COMSIG_BAPTISM_RECEIVED)
 

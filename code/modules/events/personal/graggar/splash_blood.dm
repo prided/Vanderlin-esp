@@ -1,5 +1,5 @@
 /datum/round_event_control/blood_rite
-	name = "Blood Rite"
+	name = "Rito de sangre"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/blood_rite
 	weight = 10
@@ -45,7 +45,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE GRAGGAR'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE GRAGGAR!"),
 		span_notice("There is power in blood. Splash a bucket full of blood on yourself to honor Graggar!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/misc/gods/graggar_omen.ogg', 100)

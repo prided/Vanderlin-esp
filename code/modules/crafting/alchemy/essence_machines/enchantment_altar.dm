@@ -1,6 +1,6 @@
 /obj/machinery/essence/enchantment_altar
-	name = "enchanting table"
-	desc = "An obsidian focus for binding alchemical essences into an item."
+	name = "mesa encantadora"
+	desc = "Un foco de obsidiana para unir esencias alquímicas en un objeto."
 	icon = 'icons/roguetown/misc/altar.dmi'
 	icon_state = "altar"
 	network_priority = 4
@@ -53,7 +53,7 @@
 
 /obj/machinery/essence/enchantment_altar/attack_hand(mob/living/user)
 	if(enchanting)
-		to_chat(user, span_warning("[src] is currently enchanting."))
+		to_chat(user, span_warning("[src] es actualmente encantador."))
 		return
 	show_main_menu(user)
 
@@ -75,7 +75,7 @@
 	opts["Browse All Recipes"] = "browse"
 	opts["Cancel"] = "cancel"
 
-	var/choice = input(user, "Altar Menu", "[src.name]") in opts
+	var/choice = input(user, "Menú del altar", "[src.name]") in opts
 	if(!choice || choice == "cancel") return
 	switch(opts[choice])
 		if("enchant") begin_enchantment(user)
@@ -129,14 +129,14 @@
 /obj/machinery/essence/enchantment_altar/proc/select_recipe(epath, mob/user)
 	if(placed_item && !SSenchantment.can_enchant(placed_item, epath))
 		var/datum/enchantment/e = SSenchantment.enchantment_types[epath]
-		to_chat(user, span_warning("'[e.enchantment_name]' is not compatible with [placed_item]."))
+		to_chat(user, span_warning("'[e.enchantment_name]' no es compatible con [placed_item]."))
 		return
 
 	if(selected_recipe) qdel(selected_recipe)
 	selected_recipe = new epath
 	if(network) network.invalidate_cache()
 	push_surplus_to_linked(storage)
-	to_chat(user, span_info("Recipe '[selected_recipe.enchantment_name]' selected."))
+	to_chat(user, span_info("Receta '[selected_recipe.enchantment_name]' seleccionada."))
 	show_recipe_details(user, SSenchantment.enchantment_types[epath])
 	update_appearance(UPDATE_OVERLAYS)
 
@@ -174,9 +174,9 @@
 			to_chat(user, span_notice("Requires: [jointext(names, " or ")]"))
 		else
 			var/atom/atom = recipe.required_type
-			to_chat(user, span_notice("Requires: [initial(atom.name)]"))
+			to_chat(user, span_notice("Requiere: [initial(atom.name)]"))
 
-	to_chat(user, span_info("Required essences:"))
+	to_chat(user, span_info("Esencias requeridas:"))
 	for(var/datum/thaumaturgical_essence/etype as anything in recipe.essence_recipe)
 		to_chat(user, span_info(" [initial(etype.name)]: [recipe.essence_recipe[etype]] units"))
 
@@ -211,7 +211,7 @@
 		to_chat(user, span_info("[placed_item] has been enchanted with [enchant_name]!"))
 		add_abstract_elastic_data(ELASCAT_ENCHANTING, "[enchant.enchantment_name]", 1)
 	else
-		to_chat(user, span_warning("Enchantment failed!"))
+		to_chat(user, span_warning("¡El encantamiento falló!"))
 
 	spawn_sparkles(8)
 	if(selected_recipe) qdel(selected_recipe)
@@ -255,7 +255,7 @@
 	if(!placed_item && !enchanting)
 		if(user.transferItemToLoc(I, src))
 			placed_item = I
-			to_chat(user, span_info("You place [I] on [src]."))
+			to_chat(user, span_info("Colocas [I] en [src]."))
 			update_appearance(UPDATE_OVERLAYS)
 		return
 	return ..()
@@ -263,7 +263,7 @@
 /obj/machinery/essence/enchantment_altar/get_mechanics_examine(mob/user)
 	. = ..()
 	if(placed_item)
-		. += span_notice("Item: [placed_item]")
+		. += span_notice("Artículo: [placed_item]")
 	if(selected_recipe)
 		. += span_notice("Enchantment: [selected_recipe.enchantment_name]")
 		for(var/datum/thaumaturgical_essence/etype as anything in selected_recipe.essence_recipe)
@@ -274,7 +274,7 @@
 		if(recipe_complete())
 			. += span_info("<font color='green'>Ready to enchant!</font>")
 	if(enchanting)
-		. += span_warning("Enchanting in progress…")
+		. += span_warning("Encantamiento en progreso…")
 
 /obj/machinery/essence/enchantment_altar/update_overlays()
 	. = ..()

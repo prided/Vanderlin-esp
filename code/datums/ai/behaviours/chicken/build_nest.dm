@@ -20,7 +20,7 @@
 	controller.clear_blackboard_key(found_nest)
 	qdel(target)
 	var/obj/structure/fluff/nest/new_nest = new /obj/structure/fluff/nest(living_pawn.loc)
-	living_pawn.visible_message(span_notice("[living_pawn] builds a nest."))
+	living_pawn.visible_message(span_notice("[living_pawn] construye un nido."))
 
 	controller.set_blackboard_key(found_nest, new_nest)
 	finish_action(controller, TRUE)

@@ -14,7 +14,7 @@
 		STAT_CONSTITUTION = -1
 	)
 /datum/species/medicator
-	name = "Medicator"
+	name = "medicador"
 	id = "medicator"
 	changesource_flags = WABBAJACK
 

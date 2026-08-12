@@ -100,7 +100,7 @@ const TrendSparkline = ({
   if (!data || data.length < 2) {
     return (
       <Box color="label" italic fontSize="0.9em">
-        Stable
+        Estable
       </Box>
     );
   }
@@ -148,7 +148,7 @@ export const CatatomaLedger = (props) => {
       <Window title="Catatoma" width={860} height={620}>
         <Window.Content scrollable align="center">
           <NoticeBox danger>
-            Synchronizing Manifest Ledger Data...
+            Sincronizando datos del libro mayor de manifiesto...
           </NoticeBox>
         </Window.Content>
       </Window>
@@ -210,10 +210,10 @@ export const CatatomaLedger = (props) => {
     <Window title="Catatoma" width={860} height={620}>
       <Window.Content scrollable>
         {/* FACTION OVERVIEW */}
-        <Section title="Faction Clearance">
+        <Section title="Autorización de facción">
           <Table>
             <Table.Row>
-              <Table.Cell bold width="150px">Active Trading Entity:</Table.Cell>
+              <Table.Cell bold width="150px">Entidad comercial activa:</Table.Cell>
               <Table.Cell>{faction_name || "Unknown Entity"}</Table.Cell>
               <Table.Cell width="150px" align="right">
                 <Button
@@ -221,15 +221,15 @@ export const CatatomaLedger = (props) => {
                   selected={showFactionPicker}
                   onClick={() => setShowFactionPicker(!showFactionPicker)}
                 >
-                  Redirect Trade Routes
+                  Redirigir rutas comerciales
                 </Button>
               </Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell bold>Standing:</Table.Cell>
+              <Table.Cell bold>Reputación:</Table.Cell>
               <Table.Cell colSpan={2}>
                 <Stack align="center">
-                  <Stack.Item>Tier {faction_reputation_tier}</Stack.Item>
+                  <Stack.Item>Nivel {faction_reputation_tier}</Stack.Item>
                   <Stack.Item grow>
                     <ProgressBar
                       value={tierProgress}
@@ -243,7 +243,7 @@ export const CatatomaLedger = (props) => {
               </Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell bold>Rotates Out In:</Table.Cell>
+              <Table.Cell bold>Cambia en:</Table.Cell>
               <Table.Cell colSpan={2}>
                 {rotation_seconds_left > 0 ? formatSeconds(rotation_seconds_left) : "Pending rotation..."}
               </Table.Cell>
@@ -282,14 +282,14 @@ export const CatatomaLedger = (props) => {
             selected={currentTab === 'catalog'}
             onClick={() => setCurrentTab('catalog')}
           >
-            Provisions Catalog
+            Catálogo de provisiones
           </Tabs.Tab>
           <Tabs.Tab
             icon="scroll"
             selected={currentTab === 'bounties'}
             onClick={() => setCurrentTab('bounties')}
           >
-            Active Faction Bounties ({active_bounties.length})
+            Recompensas de facciones activas ({active_bounties.length})
           </Tabs.Tab>
         </Tabs>
 
@@ -315,13 +315,13 @@ export const CatatomaLedger = (props) => {
             <Section>
               <Stack justify="space-between" align="center">
                 <Stack.Item color="label">
-                  Showing entries for: <b>{currentCategory}</b>
+                  Mostrando entradas para: <b>{currentCategory}</b>
                 </Stack.Item>
                 <Stack.Item>
                   <Stack align="center">
                     <Stack.Item>
                       <Input
-                        placeholder="Search provisions..."
+                        placeholder="Buscar provisiones..."
                         value={searchQuery}
                         onChange={(e: string) => setSearchQuery(e)}
                         width="200px"
@@ -333,7 +333,7 @@ export const CatatomaLedger = (props) => {
                           icon="times"
                           color="transparent"
                           onClick={() => setSearchQuery('')}
-                          tooltip="Clear Search"
+                          tooltip="Borrar búsqueda"
                         />
                       </Stack.Item>
                     )}
@@ -343,7 +343,7 @@ export const CatatomaLedger = (props) => {
                         selected={showInStock}
                         onClick={() => setShowInStock(!showInStock)}
                       >
-                        In Stock Only
+                        Solo disponibles
                       </Button>
                     </Stack.Item>
                   </Stack>
@@ -352,16 +352,16 @@ export const CatatomaLedger = (props) => {
             </Section>
 
             {/* MARKET CATALOG DISPLAY */}
-            <Section title="Provisions Listing">
+            <Section title="Listado de provisiones">
               <Table>
                 <Table.Row header>
-                  <Table.Cell>Supply Pack</Table.Cell>
-                  <Table.Cell>Market Trend</Table.Cell>
-                  <Table.Cell>Purchase Options</Table.Cell>
+                  <Table.Cell>Paquete de suministros</Table.Cell>
+                  <Table.Cell>Tendencia del mercado</Table.Cell>
+                  <Table.Cell>Opciones de compra</Table.Cell>
                 </Table.Row>
                 {filteredPacks.length === 0 ? (
                   <Table.Row>
-                    <Table.Cell colSpan={4}>No matching provisions found.</Table.Cell>
+                    <Table.Cell colSpan={4}>No se encontraron provisiones coincidentes.</Table.Cell>
                   </Table.Row>
                 ) : (
                   filteredPacks.map((pack) => {
@@ -400,7 +400,7 @@ export const CatatomaLedger = (props) => {
                                   })
                                 }
                               >
-                                Buy ({pack.cost * getQuantity(pack.id)} M)
+                                Comprar ({pack.cost * getQuantity(pack.id)} M)
                               </Button>
                             </Stack.Item>
                           </Stack>
@@ -415,18 +415,18 @@ export const CatatomaLedger = (props) => {
         )}
 
         {currentTab === 'bounties' && (
-          <Section title="Demanded Supply Inquisitions">
+          <Section title="Inquisiciones de suministro exigidas">
             <Table>
               <Table.Row header>
                 <Table.Cell width="25px" />
-                <Table.Cell>Contract Specifications</Table.Cell>
-                <Table.Cell width="120px" align="center">Progress Status</Table.Cell>
-                <Table.Cell width="180px">Compensation Rewards</Table.Cell>
+                <Table.Cell>Especificaciones del contrato</Table.Cell>
+                <Table.Cell width="120px" align="center">Estado de progreso</Table.Cell>
+                <Table.Cell width="180px">Recompensas de compensación</Table.Cell>
               </Table.Row>
               {active_bounties.length === 0 ? (
                 <Table.Row>
                   <Table.Cell colSpan={4} italic color="label">
-                    No active contract allocations or bounties issued by this faction.
+                    No hay asignaciones de contratos activos ni recompensas emitidas por esta facción.
                   </Table.Cell>
                 </Table.Row>
               ) : (
@@ -467,7 +467,7 @@ export const CatatomaLedger = (props) => {
                         </Table.Cell>
                         <Table.Cell verticalAlign="middle">
                           <Box color="amber" bold>+{bounty.reward_currency} Mammons</Box>
-                          <Box color="teal">+{bounty.reward_reputation} Faction Rep</Box>
+                          <Box color="teal">+{bounty.reward_reputation} Reputación de facción</Box>
                           <Button
                             fluid
                             mt={0.5}
@@ -494,30 +494,30 @@ export const CatatomaLedger = (props) => {
                             <Box p={1} style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', borderRadius: '4px' }}>
                               <Stack vertical >
                                 <Stack.Item>
-                                  <Box color="label" bold fontSize="0.9em">Material Demanded Specifically:</Box>
+                                  <Box color="label" bold fontSize="0.9em">Material demandado específicamente:</Box>
                                   <Box pl={1} color="default" italic>
-                                    {bounty.target_item} ({bounty.required_count} needed)
+                                    {bounty.target_item} ({bounty.required_count} necesario)
                                   </Box>
                                 </Stack.Item>
 
                                 <Stack.Item>
-                                  <Box color="label" bold fontSize="0.9em">Completion Manifest Incentives:</Box>
+                                  <Box color="label" bold fontSize="0.9em">Incentivos por completar el manifiesto:</Box>
                                   {bounty.discounts && bounty.discounts.length > 0 ? (
                                     <Table mt={0.5}>
                                       <Table.Row header>
-                                        <Table.Cell fontSize="0.85em">Target Supply Package</Table.Cell>
-                                        <Table.Cell fontSize="0.85em" align="right">Wholesale Rebate</Table.Cell>
+                                        <Table.Cell fontSize="0.85em">Paquete de suministros objetivo</Table.Cell>
+                                        <Table.Cell fontSize="0.85em" align="right">Reembolso mayorista</Table.Cell>
                                       </Table.Row>
                                       {bounty.discounts.map((discount, idx) => (
                                         <Table.Row key={idx}>
                                           <Table.Cell color="default">{discount.pack_name}</Table.Cell>
-                                          <Table.Cell color="success" align="right" bold>{discount.modifier}% Discount</Table.Cell>
+                                          <Table.Cell color="success" align="right" bold>{discount.modifier}% de descuento</Table.Cell>
                                         </Table.Row>
                                       ))}
                                     </Table>
                                   ) : (
                                     <Box pl={1} color="label" italic fontSize="0.9em">
-                                      No additional market provisions or package modifications associated with this contract.
+                                      No hay disposiciones de mercado adicionales ni modificaciones de paquetes asociadas con este contrato.
                                     </Box>
                                   )}
                                 </Stack.Item>
@@ -535,15 +535,15 @@ export const CatatomaLedger = (props) => {
         )}
 
         {/* SHOPPING CART OVERVIEW */}
-        <Section title="Pending Manifest Invoice">
+        <Section title="Factura pendiente del manifiesto">
           {cart.length === 0 ? (
-            <Box color="label">Invoice details empty.</Box>
+            <Box color="label">Detalles de la factura vacíos.</Box>
           ) : (
             <Table>
               <Table.Row header>
-                <Table.Cell>Item Manifest</Table.Cell>
-                <Table.Cell>Qty</Table.Cell>
-                <Table.Cell>Cost Value</Table.Cell>
+                <Table.Cell>Manifiesto de artículo</Table.Cell>
+                <Table.Cell>Cantidad</Table.Cell>
+                <Table.Cell>Valor de costo</Table.Cell>
                 <Table.Cell />
               </Table.Row>
               {cart.map((item) => (
@@ -569,7 +569,7 @@ export const CatatomaLedger = (props) => {
                 <Table.Cell colSpan={4}>
                   <Table>
                     <Table.Row>
-                      <Table.Cell bold>Total Mammons:</Table.Cell>
+                      <Table.Cell bold>Mammons totales:</Table.Cell>
                       <Table.Cell color="amber" bold>{total_mammon_cost} M</Table.Cell>
                     </Table.Row>
                   </Table>
@@ -588,7 +588,7 @@ export const CatatomaLedger = (props) => {
                     icon="trash"
                     onClick={() => act('clear_cart')}
                   >
-                    Void Invoice
+                    Factura anulada
                   </Button>
                 </Stack.Item>
                 <Stack.Item grow>
@@ -598,7 +598,7 @@ export const CatatomaLedger = (props) => {
                     icon="scroll"
                     onClick={() => act('submit_order')}
                   >
-                    Write Order Scroll
+                    Escribir pergamino de orden
                   </Button>
                 </Stack.Item>
               </Stack>

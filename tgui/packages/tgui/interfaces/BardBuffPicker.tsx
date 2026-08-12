@@ -24,7 +24,7 @@ export const BardBuffPicker = () => {
   } = data;
 
   return (
-    <Window width={360} height={280} title="Bardic Buffs">
+    <Window width={360} height={280} title="Mejoras de bardo">
       <Window.Content>
         <BardBuffSection
           buffs={available_buffs}

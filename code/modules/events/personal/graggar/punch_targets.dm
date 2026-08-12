@@ -1,5 +1,5 @@
 /datum/round_event_control/graggar_punch
-	name = "Graggar's Misogyny"
+	name = "La misoginia de Graggar"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/graggar_punch
 	weight = 7
@@ -50,7 +50,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE GRAGGAR'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE GRAGGAR!"),
 		span_biginfo("[new_objective.explanation_text]"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/misc/gods/graggar_omen.ogg', 100)

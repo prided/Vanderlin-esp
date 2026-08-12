@@ -1,5 +1,5 @@
 /atom/movable/screen/alert/status_effect/power_regen
-	name = "Power Regeneration"
+	name = "Regeneración de energía"
 	desc = ""
 	icon_state = "power_regen"
 
@@ -52,7 +52,7 @@
 
 /datum/status_effect/sword_spin/on_remove()
 	. = ..()
-	owner.visible_message("<span class='warning'>[owner]'s inhuman strength dissipates and the sword's runes grow cold!</span>")
+	owner.visible_message("¡La fuerza inhumana de <span class='warning'>[owner] se disipa y las runas de la espada se enfrían!</span>")
 
 //Used by changelings to rapidly heal
 //Heals 10 brute and oxygen damage every second, and 5 fire
@@ -138,7 +138,7 @@
 	examine_text = span_notice("SUBJECTPRONOUN seem to be covered in a dull, grey aura.")
 
 /datum/status_effect/antimagic/on_apply()
-	owner.visible_message("<span class='notice'>[owner] is coated with a dull aura!</span>")
+	owner.visible_message("¡<span class='notice'>[owner] está recubierto con un aura opaca!</span>")
 	ADD_TRAIT(owner, TRAIT_ANTIMAGIC, TRAIT_STATUS_EFFECT(id))
 	//glowing wings overlay
 	playsound(owner, 'sound/blank.ogg', 75, FALSE)

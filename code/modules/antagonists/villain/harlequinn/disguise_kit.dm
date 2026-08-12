@@ -70,7 +70,7 @@
 	return ..()
 
 /obj/item/harlequin_disguise_kit
-	name = "professional disguise kit"
+	name = "kit de disfraz profesional"
 	desc = "A collection of makeup, prosthetics, and costume pieces for mundane disguises."
 	icon = 'icons/roguetown/clothing/storage.dmi'
 	icon_state = "rucksack"
@@ -80,7 +80,7 @@
 
 /obj/item/harlequin_disguise_kit/attack_self(mob/user, list/modifiers)
 	if(!ishuman(user))
-		to_chat(user, span_warning("You don't know how to use this."))
+		to_chat(user, span_warning("No sabes cómo usar esto."))
 		return
 
 	if(user.GetComponent(/datum/component/disguise))
@@ -92,7 +92,7 @@
 		"Detailed Disguise (Pick a person)" = "detailed",
 		"Remove Disguise" = "remove"
 	)
-	var/choice = tgui_input_list(user, "What would you like to do?", "Disguise Kit", options)
+	var/choice = tgui_input_list(user, "What would you like to do?", "Kit de disfraz", options)
 	if(!choice)
 		return
 	switch(options[choice])
@@ -114,7 +114,7 @@
 /obj/item/harlequin_disguise_kit/proc/quick_disguise(mob/living/carbon/human/user)
 	var/list/nearby = get_nearby_humans(user)
 	if(!length(nearby))
-		to_chat(user, span_warning("There's no one nearby to disguise yourself as."))
+		to_chat(user, span_warning("No hay nadie cerca para disfrazarse."))
 		return
 	if(user.GetComponent(/datum/component/disguise))
 		remove_disguise(user)
@@ -137,14 +137,14 @@
 		return
 
 	if(!length(nearby))
-		to_chat(user, span_warning("There's no one nearby to disguise yourself as."))
+		to_chat(user, span_warning("No hay nadie cerca para disfrazarse."))
 		return
 
 	var/list/named = list()
 	for(var/mob/living/carbon/human/H in nearby)
 		named[H.name] = H
 
-	var/choice = tgui_input_list(user, "Who do you want to disguise yourself as?", "Disguise Kit", named)
+	var/choice = tgui_input_list(user, "Who do you want to disguise yourself as?", "Kit de disfraz", named)
 	if(!choice)
 		return
 
@@ -162,7 +162,7 @@
 		return
 
 	user.AddComponent(/datum/component/disguise, target)
-	to_chat(user, span_notice("Your disguise is convincing and should fool most observers."))
+	to_chat(user, span_notice("Tu disfraz es convincente y debería engañar a la mayoría de los observadores."))
 
 /obj/item/harlequin_disguise_kit/proc/remove_disguise(mob/living/carbon/human/user)
 	if(!user.GetComponent(/datum/component/disguise))
@@ -172,4 +172,4 @@
 	if(!do_after(user, 10 SECONDS, target = user))
 		return
 	qdel(user.GetComponent(/datum/component/disguise))
-	to_chat(user, span_notice("You return to your normal appearance."))
+	to_chat(user, span_notice("Vuelves a tu apariencia normal."))

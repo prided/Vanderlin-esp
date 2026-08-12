@@ -21,7 +21,7 @@
 
 /datum/stock/import/wheat
 	name = "Crate of Wheat"
-	desc = "Grains of wheat."
+	desc = "Granos de trigo."
 	item_type = /obj/structure/closet/crate/chest/steward/wheat
 	export_price = 125
 	importexport_amt = 1
@@ -47,7 +47,7 @@
 	new /obj/item/weapon/mace/cudgel(src)
 
 /datum/stock/import/maa
-	name = "Man-at-Arms Equipment Crate"
+	name = "Caja de equipo de hombre de armas"
 	desc = "Starting kit for a new Man-at-Arms."
 	item_type = /obj/structure/closet/crate/chest/steward/manatarms
 	export_price = 350
@@ -86,7 +86,7 @@
 	new /mob/living/simple_animal/hostile/retaliate/saigabuck/tame/saddled(src)
 
 /datum/stock/import/cow
-	name = "Cow"
+	name = "Vaca"
 	desc = "Farmer's best friend, reliable provider of milk and meat."
 	item_type = /obj/structure/closet/crate/chest/steward/cow
 	export_price = 150
@@ -96,7 +96,7 @@
 	new /mob/living/simple_animal/hostile/retaliate/cow(src)
 
 /datum/stock/import/bull
-	name = "Bull"
+	name = "Toro"
 	desc = "Horned and aggressive, required to start a herd."
 	item_type = /obj/structure/closet/crate/chest/steward/bull
 	export_price = 200
@@ -126,8 +126,8 @@
 	new /mob/living/simple_animal/hostile/retaliate/goatmale(src)
 
 /datum/stock/import/chicken
-	name = "Chicken"
-	desc = "A reliable source of egg and meat."
+	name = "Pollo"
+	desc = "Una fuente confiable de huevos y carne."
 	item_type = /obj/structure/closet/crate/chest/steward/chicken
 	export_price = 100
 	importexport_amt = 1

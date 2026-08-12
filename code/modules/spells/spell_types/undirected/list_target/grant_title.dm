@@ -42,7 +42,7 @@
 			reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
-	title = browser_input_text(owner, "What title do you wish to grant?", "[name]", max_length = 42)
+	title = browser_input_text(owner, "¿Qué título desea otorgar?", "[name]", max_length = 42)
 	if(QDELETED(src) || QDELETED(owner) || QDELETED(cast_on) || !can_cast_spell())
 		return . | SPELL_CANCEL_CAST
 

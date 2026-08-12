@@ -37,7 +37,7 @@
  */
 
 /obj/item/toy/snappop
-	name = "powder pack"
+	name = "paquete de polvo"
 	desc = ""
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "snappop"
@@ -49,8 +49,8 @@
 	s.set_up(n, c, src)
 	s.start()
 	new ash_type(loc)
-	visible_message(span_warning("[src] explodes!"),
-		span_hear("I hear an explosion!"))
+	visible_message(span_warning("¡[src] explota!"),
+		span_hear("¡Escucho una explosión!"))
 	playsound(src, 'sound/blank.ogg', 50, TRUE)
 	qdel(src)
 
@@ -69,7 +69,7 @@
 			pop_burst(2, 0)
 
 /obj/item/toy/snappop/phoenix
-	name = "magic powder pack"
+	name = "paquete de polvo mágico"
 	desc = ""
 	ash_type = /obj/item/fertilizer/ash/snappop_phoenix
 
@@ -107,7 +107,7 @@
 		return
 
 /obj/item/toy/cards/deck
-	name = "deck of cards"
+	name = "baraja de cartas"
 	desc = ""
 	icon = 'icons/obj/toy.dmi'
 	deckstyle = "syndicate"
@@ -159,7 +159,7 @@
 	cards -= choice
 	H.pickup(user)
 	user.put_in_hands(H)
-	user.visible_message(span_notice("[user] draws a card from the deck."), span_notice("I draw a card from the deck."))
+	user.visible_message(span_notice("[user] saca una carta del mazo."), span_notice("I draw a card from the deck."))
 	update_appearance(UPDATE_ICON_STATE)
 
 /obj/item/toy/cards/deck/update_icon_state()
@@ -189,7 +189,7 @@
 					user.set_machine(src)
 					interact(user)
 				if("Play fair")
-					to_chat(user, span_notice("I, in a surprising show of good faith, shuffle the deck fairly."))
+					to_chat(user, span_notice("Yo, en una sorprendente muestra de buena fe, barajo la baraja de manera justa."))
 					cards = shuffle(cards)
 		else
 			to_chat(user, span_notice("I shuffle the deck."))
@@ -236,7 +236,7 @@
 			user.visible_message(span_notice("[user] adds a card to the bottom of the deck."), span_notice("I add the card to the bottom of the deck."))
 			qdel(SC)
 		else
-			to_chat(user, span_warning("I can't mix cards from other decks!"))
+			to_chat(user, span_warning("¡No puedo mezclar cartas de otros mazos!"))
 		update_appearance(UPDATE_ICON_STATE)
 		return ITEM_INTERACT_SUCCESS
 
@@ -250,7 +250,7 @@
 			user.visible_message(span_notice("[user] puts [user.p_their()] hand of cards in the deck."), span_notice("I put the hand of cards in the deck."))
 			qdel(CH)
 		else
-			to_chat(user, span_warning("I can't mix cards from other decks!"))
+			to_chat(user, span_warning("¡No puedo mezclar cartas de otros mazos!"))
 		update_appearance(UPDATE_ICON_STATE)
 		return ITEM_INTERACT_SUCCESS
 
@@ -270,12 +270,12 @@
 				to_chat(usr, span_notice("I pick up the deck."))
 
 	else
-		to_chat(usr, span_warning("I can't reach it from here!"))
+		to_chat(usr, span_warning("¡No puedo alcanzarlo desde aquí!"))
 
 
 
 /obj/item/toy/cards/cardhand
-	name = "hand of cards"
+	name = "mano de cartas"
 	desc = ""
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "syndicate_hand2"
@@ -318,7 +318,7 @@
 			C.apply_card_vars(C,O)
 			C.pickup(cardUser)
 			cardUser.put_in_hands(C)
-			cardUser.visible_message(span_notice("[cardUser] draws a card from [cardUser.p_their()] hand."), span_notice("I take the [C.cardname] from your hand."))
+			cardUser.visible_message(span_notice("[cardUser] draws a card from [cardUser.p_their()] hand."), span_notice("Tomo el [C.cardname] de tu mano."))
 
 			interact(cardUser)
 			if(length(currenthand) < 3)
@@ -335,7 +335,7 @@
 				qdel(src)
 				N.pickup(cardUser)
 				cardUser.put_in_hands(N)
-				to_chat(cardUser, span_notice("I also take [currenthand[1]] and hold it."))
+				to_chat(cardUser, span_notice("También tomo [currenthand[1]] y lo sostengo."))
 				cardUser << browse(null, "window=cardhand")
 		return
 
@@ -346,7 +346,7 @@
 	var/obj/item/toy/cards/singlecard/card = tool
 
 	if(card.parentdeck != parentdeck)
-		to_chat(user, span_warning("I can't mix cards from other decks!"))
+		to_chat(user, span_warning("¡No puedo mezclar cartas de otros mazos!"))
 		return ITEM_INTERACT_BLOCKING
 
 	currenthand += card.cardname
@@ -375,7 +375,7 @@
 	newobj.resistance_flags = sourceobj.resistance_flags
 
 /obj/item/toy/cards/singlecard
-	name = "card"
+	name = "tarjeta"
 	desc = ""
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "singlecard_down_syndicate"
@@ -389,7 +389,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/cardUser = user
 		if(cardUser.is_holding(src))
-			cardUser.visible_message(span_notice("[cardUser] checks [cardUser.p_their()] card."), span_notice("The card reads: [cardname]."))
+			cardUser.visible_message(span_notice("[cardUser] checks [cardUser.p_their()] card."), span_notice("La tarjeta dice: [cardname]."))
 		else if(HAS_TRAIT(user, TRAIT_BLACKLEG))
 			. += span_notice("Peeking under the card, you see the card reads: [cardname].")
 		else
@@ -410,12 +410,12 @@
 			name = cardname
 		else
 			icon_state = "sc_Ace of Spades_[deckstyle]"
-			name = "What Card"
+			name = "¿Qué tarjeta?"
 		pixel_x = base_pixel_x + 5
 	else if(flipped)
 		flipped = 0
 		icon_state = "singlecard_down_[deckstyle]"
-		name = "card"
+		name = "tarjeta"
 		pixel_x = base_pixel_x - 5
 
 /obj/item/toy/cards/singlecard/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -427,13 +427,13 @@
 			H.currenthand += cardname
 			H.parentdeck = C.parentdeck
 			H.apply_card_vars(H,C)
-			to_chat(user, span_notice("I combine the [C.cardname] and the [cardname] into a hand."))
+			to_chat(user, span_notice("Combino el [C.cardname] y el [cardname] en una mano."))
 			qdel(C)
 			qdel(src)
 			H.pickup(user)
 			user.put_in_active_hand(H)
 		else
-			to_chat(user, span_warning("I can't mix cards from other decks!"))
+			to_chat(user, span_warning("¡No puedo mezclar cartas de otros mazos!"))
 		return ITEM_INTERACT_SUCCESS
 
 	if(istype(tool, /obj/item/toy/cards/cardhand))
@@ -450,7 +450,7 @@
 			else if(length(H.currenthand) > 2)
 				H.icon_state = "[deckstyle]_hand3"
 		else
-			to_chat(user, span_warning("I can't mix cards from other decks!"))
+			to_chat(user, span_warning("¡No puedo mezclar cartas de otros mazos!"))
 		return ITEM_INTERACT_SUCCESS
 
 /obj/item/toy/cards/singlecard/attack_self(mob/living/carbon/human/user, list/modifiers)
@@ -481,7 +481,7 @@
 */
 
 /obj/item/toy/cards/deck/syndicate
-	name = "cards"
+	name = "tarjetas"
 	desc = "A pack of cards."
 	icon_state = "deck_syndicate_full"
 	deckstyle = "syndicate"

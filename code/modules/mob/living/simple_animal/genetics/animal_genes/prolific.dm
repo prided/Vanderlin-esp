@@ -1,5 +1,5 @@
 /datum/animal_gene/prolific
-	name = "Prolific"
+	name = "Prolífico"
 	desc = "Grants a chance to birth multiple offspring in a single litter."
 	rarity = 4
 	exclusion_group = GENE_GROUP_PROGENY
@@ -67,4 +67,4 @@
 		breed_comp.post_birth?.Invoke(extra_baby, null)
 
 	if(total > 1)
-		mother.visible_message(span_notice("[mother] gives birth to a litter of [total]!"))
+		mother.visible_message(span_notice("¡[mother] da a luz a una camada de [total]!"))

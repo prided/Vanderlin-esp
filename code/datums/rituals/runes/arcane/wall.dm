@@ -1,5 +1,5 @@
 /obj/effect/decal/cleanable/ritual_rune/arcyne/wall
-	name = "wall accession matrix"
+	name = "matriz de adhesión a la pared"
 	desc = "Arcane symbols litter the ground — is that a wall of some sort?"
 	icon_state = "wall"
 	tier = 2
@@ -17,7 +17,7 @@
 /obj/effect/decal/cleanable/ritual_rune/arcyne/wall/attack_hand(mob/living/user)
 	if(active)
 		QDEL_LIST_CONTENTS(barriers)
-		to_chat(user, span_warning("You deactivate the [src]!"))
+		to_chat(user, span_warning("¡Desactivas el [src]!"))
 		playsound(usr, 'sound/magic/teleport_diss.ogg', 75, TRUE)
 		active = FALSE
 		return

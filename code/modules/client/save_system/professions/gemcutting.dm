@@ -1,5 +1,5 @@
 /datum/profession/gemcutter
-	name = "Gemcutter"
+	name = "cortador de gemas"
 	description = "A master of gem cutting and enhancement, able to shape gems to guarantee specific magical properties."
 	max_level = 100
 	xp_multiplier = 1.2

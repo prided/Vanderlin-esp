@@ -19,7 +19,7 @@
 
 /datum/action/cooldown/spell/undirected/conjure_item/summon_trident/miracle
 	name = "Summon Abyssal Trident"
-	desc = "Summon a trident from Abyssor's domain."
+	desc = "Invoca un tridente del dominio de Abyssor."
 	button_icon_state = "lightning"
 	sound = 'sound/foley/jumpland/waterland.ogg'
 
@@ -28,7 +28,7 @@
 	associated_skill = /datum/attribute/skill/magic/holy
 	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/abyssor)
 
-	invocation = "Let Abyssor's wrath be known!"
+	invocation = "¡Que se conozca la ira de Abyssor!"
 	invocation_type = INVOCATION_SHOUT
 
 	cooldown_time = 1 MINUTES
@@ -39,8 +39,8 @@
 	item_duration = 0
 
 /obj/item/fishingrod/abyssor_trident
-	name = "trident of the depths"
-	desc = "An instrument of Abyssor's wrath to claim his bounties and punish the ignorant."
+	name = "tridente de las profundidades"
+	desc = "Un instrumento de la ira de Abyssor para reclamar sus recompensas y castigar a los ignorantes."
 	icon = 'icons/roguetown/weapons/64/polearms.dmi'
 	icon_state = "tridentgold"
 	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
@@ -125,16 +125,16 @@
 	difficultymod = 1
 
 /obj/item/fishing/hook/abytrident
-	name = "trident prong"
+	name = "punta de tridente"
 	fishing_hook_traits = FISHING_HOOK_NO_ESCAPE|FISHING_HOOK_KILL
 
 /obj/item/fishing/line/no_line
-	name = "lack of attachment"
+	name = "falta de apego"
 
 
 /obj/item/fishing/lure/no_bait
-	name = "lack of bait"
-	desc = "A special fishing lure for unique circumstances."
+	name = "falta de cebo"
+	desc = "Un señuelo de pesca especial para circunstancias únicas."
 	icon = 'icons/roguetown/items/fishing.dmi'
 	icon_state = "no_bait"
 	spin_frequency = list(2 SECONDS, 3 SECONDS)
@@ -158,6 +158,6 @@
 	return FALSE
 
 /obj/item/fishingrod/abyssor_trident/arcane
-	name = "Arcane Trident"
+	name = "Tridente Arcano"
 	desc = "A conjured trident, it resonates with arcyne energy."
 	icon_state = "tridentblue"

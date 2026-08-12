@@ -50,7 +50,7 @@
 		if("left_eye_color")
 			if(!allows_heterochromia)
 				return
-			var/new_color = input(user, "Choose your left eye color:", "Character Preference", eyes_entry.left_eye_color) as color|null
+			var/new_color = input(user, "Elige el color de tu ojo izquierdo:", "Character Preference", eyes_entry.left_eye_color) as color|null
 			if(!new_color)
 				return
 			eyes_entry.left_eye_color = sanitize_hexcolor(new_color)

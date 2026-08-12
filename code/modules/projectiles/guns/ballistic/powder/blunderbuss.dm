@@ -66,7 +66,7 @@
 /obj/item/gun/ballistic/powder/wheellock/blunderbuss/attackby(obj/item/attacking_item, mob/living/user, list/modifiers)
 	. = ..()
 	if(!bayonet && istype(attacking_item, /obj/item/weapon/knife/dagger/bayonet))
-		balloon_alert(user, "attached!")
+		balloon_alert(user, "¡adjunto!")
 		user.transferItemToLoc(attacking_item, src)
 		bayonet = attacking_item
 		update_appearance(UPDATE_ICON_STATE)

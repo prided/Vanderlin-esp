@@ -169,7 +169,7 @@
 //SCOMSTONE                 SCOMSTONE
 
 /obj/item/scomstone
-	name = "scomstone ring"
+	name = "anillo de piedra scom"
 	desc = "Gold and glittering green."
 	icon = 'icons/roguetown/clothing/rings.dmi'
 	icon_state = "ring_emerald"
@@ -272,7 +272,7 @@
 			S.repeat_message(raw_message, src, usedcolor, message_language)
 
 /obj/item/scomstone/bad
-	name = "serfstone"
+	name = "piedra de siervo"
 	icon_state = "ring_emerald"
 	listening = FALSE
 	sellprice = 2

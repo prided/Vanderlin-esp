@@ -20,7 +20,7 @@
 
 
 /obj/structure/coral_formation
-	name = "living coral"
+	name = "coral vivo"
 	desc = "A sharp formation of living coral that pulses with an eerie light."
 	icon = 'icons/obj/coral.dmi'  // !TODO Replace with a better icon
 	icon_state = "coral"
@@ -65,12 +65,12 @@
 	. = ..()
 	health -= W.force
 	if(health <= 0)
-		to_chat(user, "<span class='notice'>The coral formation crumbles!</span>")
+		to_chat(user, "<span class='notice'>¡La formación de coral se desmorona!</span>")
 		qdel(src)
 
 /obj/structure/coral_formation/small
-	name = "small coral growth"
-	desc = "A small formation of sharp coral."
+	name = "pequeño crecimiento de coral"
+	desc = "Una pequeña formación de coral afilado."
 	icon_state = "coral_small"  //! TODO Replace with a better icon
 	health = 50
 	max_health = 50

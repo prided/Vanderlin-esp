@@ -34,12 +34,12 @@
 //// these should still be in the round-start/late join specials as well! It's just these are contextually fitting for Sleep Specials as well!
 /datum/special_trait/nothing
 	name = "Nothing"
-	greet_text = span_notice("You're not special")
+	greet_text = span_notice("no eres especial")
 	weight = 7 //As rare as Vengant Bum, just to remind you it could have been it
 
 /datum/special_trait/nightvision
-	name = "Night Vision"
-	greet_text = span_notice("I can easily see in the dark.")
+	name = "Vision nocturna"
+	greet_text = span_notice("Puedo ver facilmente en la oscuridad.")
 	weight = 100
 
 /datum/special_trait/nightvision/on_apply(mob/living/carbon/human/character, silent)
@@ -61,8 +61,8 @@
 	))
 
 /datum/special_trait/curseofcain
-	name = "Flawed Immortality"
-	greet_text = span_notice("I feel like I don't need to eat anymore, and my veins feel empty... Is this normal?")
+	name = "Inmortalidad defectuosa"
+	greet_text = span_notice("Siento que ya no necesito comer y mis venas se sienten vacias... ¿Es esto normal?")
 	weight = 25
 
 /datum/special_trait/curseofcain/on_apply(mob/living/carbon/human/character, silent)
@@ -85,7 +85,7 @@
 	)
 
 /datum/special_trait/latentmagic
-	name = "Magic apprentice"
+	name = "aprendiz de magia"
 	greet_text = span_notice("I have learned basic arcyne but my skills are far from good.")
 	weight = 25
 	req_text = "Have Noc or Zizo as your Patron"
@@ -95,8 +95,8 @@
 	character.attributes?.add_attribute_modifier(/datum/attribute_modifier/latentmagic, TRUE)
 
 /datum/special_trait/value
-	name = "Coin Counter"
-	greet_text = span_notice("I know how to estimate an item's value.")
+	name = "Contador de monedas"
+	greet_text = span_notice("Se como estimar el valor de un articulo.")
 	weight = 100
 	restricted_traits = list(TRAIT_SEEPRICES)
 
@@ -105,7 +105,7 @@
 
 /datum/special_trait/lightstep
 	name = "Light Step"
-	greet_text = span_notice("My steps are light, I will never trip a trap.")
+	greet_text = span_notice("Mis pasos son ligeros, nunca tropezare en una trampa.")
 	weight = 100
 
 /datum/special_trait/lightstep/on_apply(mob/living/carbon/human/character, silent)
@@ -150,7 +150,7 @@
 	)
 
 /datum/special_trait/mule
-	name = "Mule"
+	name = "Mula"
 	greet_text = span_notice("I've been dealing drugs and I have a stash hidden away")
 	weight = 100
 
@@ -161,8 +161,8 @@
 	character.attributes?.add_sheet(/datum/attribute_holder/sheet/job/mule)
 
 /datum/special_trait/corn_fed
-	name = "Corn Fed"
-	greet_text = span_notice("My diet was quite rich in corn.")
+	name = "Alimentado con maiz"
+	greet_text = span_notice("Mi dieta era bastante rica en maiz.")
 	weight = 100
 
 /datum/special_trait/corn_fed/on_apply(mob/living/carbon/human/character, silent)
@@ -172,7 +172,7 @@
 	))
 
 /datum/special_trait/darkmagic
-	name = "Practitioner of forbidden magic"
+	name = "Practicante de magia prohibida"
 	greet_text = span_notice("Noc's path is weak, I have seen the light and practiced magic these fools call forbidden.")
 	weight = 25
 	req_text = "Worship zizo and roll court magician or magician apprentice."
@@ -186,8 +186,8 @@
 	character.add_spell(/datum/action/cooldown/spell/gravemark, silent = TRUE, mastery_spell = TRUE)
 
 /datum/special_trait/too_smart
-	name = "Too smart"
-	greet_text = span_notice("I am too smart for my own good.")
+	name = "demasiado inteligente"
+	greet_text = span_notice("Soy demasiado inteligente para mi propio bien.")
 	weight = 50
 
 /datum/special_trait/too_smart/on_apply(mob/living/carbon/human/character, silent)
@@ -259,7 +259,7 @@
 	new /mob/living/simple_animal/hostile/retaliate/saiga/tame/saddled(get_turf(character))
 
 /datum/special_trait/spring_in_my_step
-	name = "Spring in my Step"
+	name = "Primavera en mi paso"
 	greet_text = span_notice("My legs are quite strong and where most have to climb, I can just jump")
 	weight = 25
 
@@ -268,7 +268,7 @@
 
 /datum/special_trait/tolerant
 	name = "Tolerant"
-	greet_text = span_notice("I dream of an ideal future, one with peace between all species")
+	greet_text = span_notice("Sueño con un futuro ideal, uno con paz entre todas las especies.")
 	weight = 100
 
 /datum/special_trait/tolerant/on_apply(mob/living/carbon/human/character, silent)
@@ -282,7 +282,7 @@
 	)
 
 /datum/special_trait/thief
-	name = "Thief"
+	name = "Ladron"
 	greet_text = span_notice("Life's not easy around here, but I've made mine a little easier by taking things of others")
 	weight = 100
 
@@ -335,7 +335,7 @@
 			character.grant_language(/datum/language/orcish)
 
 /datum/special_trait/languageidiot
-	name = "Somewhat Polyglot"
+	name = "Algo poliglota"
 	greet_text = span_notice("I have always picked up on languages easily, \
 	even those that are forbidden to mortals... except that accursed Imperial chatter. What even is that nonsense?")
 	weight = 50
@@ -368,7 +368,7 @@
 
 /datum/special_trait/tavernbrawler
 	name = "Tavern Brawler"
-	greet_text = span_notice("I love a good pub fight!")
+	greet_text = span_notice("¡Me encanta una buena pelea en un pub!")
 	weight = 50
 
 /datum/special_trait/tavernbrawler/on_apply(mob/living/carbon/human/character)
@@ -391,7 +391,7 @@
 	)
 
 /datum/special_trait/mastercraftsmen
-	name = "Master Craftsman"
+	name = "Maestro artesano"
 	greet_text = "In my youth, I've decided I'd get a grasp on every trade, and pursued the 10 arts of the craft."
 	req_text = "Middle-aged or Old"
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
@@ -406,8 +406,8 @@
 	)
 
 /datum/special_trait/blueblood
-	name = "Noble Lineage"
-	greet_text = span_notice("I come of noble blood.")
+	name = "Linaje noble"
+	greet_text = span_notice("Vengo de sangre noble.")
 	restricted_traits = list(TRAIT_NOBLE_BLOOD)
 	weight = 100
 
@@ -428,7 +428,7 @@
 	)
 
 /datum/special_trait/burdened
-	name = "The Burdened One"
+	name = "El agobiado"
 	greet_text = span_notice("You are a true instrument of creation, the most blessed of Malum, nothing will stop your toil, be it sleep or fatigue.")
 	weight = 10
 	allowed_patrons = list(/datum/patron/divine/malum)
@@ -443,8 +443,8 @@
 	character.cmode_music = 'sound/music/cmode/towner/CombatPrisoner.ogg'  // has a burdened vibe to it
 
 /datum/special_trait/richpouch
-	name = "Rich Pouch"
-	greet_text = span_notice("I've recently found a pouch filled with mammons, probably belonging to some noble.")
+	name = "Bolsa rica"
+	greet_text = span_notice("Recientemente encontre una bolsa llena de mamones, probablemente perteneciente a algun noble.")
 	weight = 100
 
 /datum/special_trait/richpouch/on_apply(mob/living/carbon/human/character, silent)
@@ -480,9 +480,9 @@
 	ADD_TRAIT(character, TRAIT_ROT_EATER, "[type]")
 
 /datum/special_trait/lucky
-	name = "Fortune's Grace"
+	name = "La gracia de la fortuna"
 	greet_text = span_notice("Xylix favor me, I am extremely lucky.")
-	req_text = "Have Xylix as your Patron"
+	req_text = "Tenga Xylix como su patron"
 	allowed_patrons = list(/datum/patron/divine/xylix)
 	weight = 7
 
@@ -492,7 +492,7 @@
 	))
 
 /datum/special_trait/blessed
-	name = "The Blessed One"
+	name = "El Bendito"
 	greet_text = span_notice("I am beloved by the Ten, I have been blessed by all their boons.")
 	req_text = "Be Tennite"
 	weight = 7
@@ -519,7 +519,7 @@
 	name = "Giant"
 	greet_text = span_notice("I've always been called a giant. I am valued for my stature, but, \
 	this world made for smaller folk has forced me to move cautiously.")
-	req_text = "Not a kobold or dwarf"
+	req_text = "No es un kobold ni un enano"
 	restricted_races = list(SPEC_ID_DWARF, SPEC_ID_KOBOLD)
 	weight = 50
 
@@ -537,7 +537,7 @@
 /datum/special_trait/little
 	name = "Clever little guy"
 	greet_text = span_notice("I am a clever little guy, nyehehehehe!")
-	req_text = "Not a kobold or dwarf"
+	req_text = "No es un kobold ni un enano"
 	restricted_races = list(SPEC_ID_DWARF, SPEC_ID_KOBOLD)
 	weight = 50
 
@@ -561,10 +561,10 @@
 	)
 
 /datum/special_trait/war_veteran
-	name = "War Veteran"
+	name = "Veterano de guerra"
 	greet_text = span_boldwarning("I have fought in the goblin wars.. albeit at a cost.")
 	weight = 25
-	req_text = "Be middle-aged or old"
+	req_text = "Ser de mediana edad o mayor"
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 
 /datum/special_trait/war_veteran/on_apply(mob/living/carbon/human/character, silent)
@@ -574,7 +574,7 @@
 	character.attributes?.add_sheet(/datum/attribute_holder/sheet/job/war_veteran)
 
 /datum/special_trait/sadistic
-	name = "Sadistic"
+	name = "Sadico"
 	greet_text = span_boldwarning("You are addicted to seeing limbs fly, to hurting others. You learned the arts of torture to follow your wicked hobby. You have hidden some chains.")
 	weight = 25
 
@@ -594,8 +594,8 @@
 	character.set_hair_style(/datum/sprite_accessory/hair/head/nimrod, FALSE)
 
 /datum/special_trait/nopouch
-	name = "No Pouch"
-	greet_text = span_boldwarning("I lost my pouch recently, I'm without a zenny..")
+	name = "Sin bolsa"
+	greet_text = span_boldwarning("Perdi mi bolsa recientemente, estoy sin zenny.")
 	weight = 100
 
 /datum/special_trait/nopouch/on_apply(mob/living/carbon/human/character, silent)
@@ -609,8 +609,8 @@
 	qdel(pouch)
 
 /datum/special_trait/hussite
-	name = "Known Heretic"
-	greet_text = span_boldwarning("I've been denounced by the church for either reasons legitimate or not!")
+	name = "Hereje conocido"
+	greet_text = span_boldwarning("¡He sido denunciado por la iglesia por razones legitimas o no!")
 	req_text = "Non-church role"
 	weight = 20
 	restricted_jobs = list(/datum/job/priest, /datum/job/monk, /datum/job/undertaker, /datum/job/templar, /datum/job/churchling)
@@ -645,8 +645,8 @@
 	character.gain_trauma(/datum/brain_trauma/mild/phobia/jesters)
 
 /datum/special_trait/wild_night
-	name = "Wild Night"
-	greet_text = span_boldwarning("I don't remember what I did last night, and now I'm lost!")
+	name = "noche salvaje"
+	greet_text = span_boldwarning("¡No recuerdo lo que hice anoche y ahora estoy perdido!")
 	weight = 100
 
 /datum/special_trait/wild_night/on_apply(mob/living/carbon/human/character, silent)
@@ -665,7 +665,7 @@
 
 /datum/special_trait/atrophy
 	name = "Atrophy"
-	greet_text = span_boldwarning("When growing up I could barely feed myself... this left me weak and fragile")
+	greet_text = span_boldwarning("Cuando creci apenas podia alimentarme... esto me dejo debil y fragil.")
 	weight = 50
 
 /datum/special_trait/atrophy/on_apply(mob/living/carbon/human/character)
@@ -677,7 +677,7 @@
 
 /datum/special_trait/lazy
 	name = "Lazy"
-	greet_text = span_boldwarning("I don't care, never did")
+	greet_text = span_boldwarning("No me importa, nunca lo hice")
 	weight = 50
 
 /datum/special_trait/lazy/on_apply(mob/living/carbon/human/character)
@@ -690,7 +690,7 @@
 	))
 
 /datum/special_trait/bad_week
-	name = "Bad Week"
+	name = "Mala semana"
 	greet_text = span_boldwarning("Everything just seems to piss me off")
 	weight = 100
 
@@ -724,7 +724,7 @@
 	)
 
 /datum/special_trait/punkprincess //I think everyone will like the Rebellous Prince-Like Princess. I'd love to do one for the prince as well that gives him princess loadout, but, up to you!
-	name = "Rebellous Daughter"
+	name = "Hija rebelde"
 	greet_text = span_notice("I am quite rebellious for a princess. Screw Noble Customs!")
 	req_text = "Be a princess"
 	allowed_sexes = list(FEMALE)
@@ -793,7 +793,7 @@
 	character.put_in_hands(ring, forced = TRUE)
 
 /datum/special_trait/illicit_merchant
-	name = "Illicit Merchant"
+	name = "Comerciante ilicito"
 	greet_text = span_notice("I'm sick of working as an underling, \
 	I will start my own trade emporium. I've got my hands on a hidden merchant key and a curious magical device")
 	req_text = "Be a Shophand"
@@ -818,7 +818,7 @@
 
 
 /datum/special_trait/thinker
-	name = "The Thinker"
+	name = "El pensador"
 	greet_text = span_notice("Physique, Endurance, Constitution. \
 	The trinity of what builds a great leader and an even greater kingdom... \
 	or whatever those nimrods were yapping about! <b>I cast FIREBALL!!!</b>")
@@ -870,7 +870,7 @@
 	name = "Overcompensating"
 	greet_text = span_boldwarning("I have an enormous sword on my back, I had it crafted specially for me, it left me without even a zenny, but now nobody will mention my small pintle!.")
 	allowed_jobs = list(/datum/job/vagrant)
-	req_text = "Be a Beggar"
+	req_text = "ser un mendigo"
 	weight = 10
 
 /datum/special_trait/overcompensating/on_apply(mob/living/carbon/human/character, silent)
@@ -887,7 +887,7 @@
 
 /datum/special_trait/meow
 	name = "Meow"
-	greet_text = span_boldwarning("What?")
+	greet_text = span_boldwarning("¿Que?")
 	req_text = "???"
 	weight = 1
 
@@ -895,13 +895,13 @@
 	var/mob/living/simple_animal/pet/cat/catte = new(get_turf(character))
 	catte.real_name = character.real_name
 	catte.name = character.real_name
-	catte.desc = "This cat seems a little.. strange..."
+	catte.desc = "Este gato parece un poco... extraño..."
 	catte.ckey = character.ckey
 	qdel(character)
 
 /datum/special_trait/smelly
 	name = "Smelly"
-	greet_text = span_notice("I was born in the sewers and the smell just never went away... ")
+	greet_text = span_notice("Naci en las alcantarillas y el olor nunca desaparecio... ")
 	weight = 25
 
 /datum/special_trait/smelly/on_apply(mob/living/carbon/human/character, silent)
@@ -918,9 +918,9 @@
 
 /datum/special_trait/bestial
 	name = "Bestial"
-	greet_text = span_notice("I am blessed by Dendor I feel closer to beasts than men, I can whisper in their tongue.")
+	greet_text = span_notice("Estoy bendecido por Dendor. Me siento mas cerca de las bestias que de los hombres, puedo susurrar en su lengua.")
 	weight = 50
-	req_text = "Worship Dendor and be an acolyte"
+	req_text = "Adora a Dendor y se un acolito"
 	allowed_jobs = list(/datum/job/monk)
 	allowed_patrons = list(/datum/patron/divine/dendor)
 
@@ -976,7 +976,7 @@
 
 /mob/living/carbon/human/proc/emote_burp_loud()
 	set name = "Gluttonous Burp"
-	set category = "Emotes.Noises"
+	set category = "Emotes.Ruidos"
 
 	emote("burploud", intentional = TRUE)
 
@@ -986,7 +986,7 @@
 	)
 
 /datum/special_trait/musical
-	name = "Musical Legend"
+	name = "Leyenda musical"
 	greet_text = span_notice("I am very good with instruments! though my previous one got stolen..")
 	weight = 50
 
@@ -996,7 +996,7 @@
 	character.attributes?.add_sheet(/datum/attribute_holder/sheet/job/muscial)
 
 /datum/special_trait/baothan
-	name = "Adored by Baotha"
+	name = "Adorado por Baotha"
 	greet_text = span_notice("Baotha adore me so much that she gave me some goodies, dope tbh.")
 	weight = 10
 	allowed_patrons = list(/datum/patron/inhumen/baotha)
@@ -1021,7 +1021,7 @@
 	character.add_quirk(/datum/quirk/black_briar)
 
 /datum/special_trait/king
-	name = "king"
+	name = "rey"
 	greet_text = span_notice("i am king!")
 	weight = 30
 
@@ -1033,7 +1033,7 @@
 
 /datum/special_trait/augmentable
 	name = "Chippin' In"
-	greet_text = span_notice("I crave the certainty of steel.")
+	greet_text = span_notice("Anhelo la certeza del acero.")
 	weight = 15
 
 	req_text = "Be an artificer or a beggar"
@@ -1051,8 +1051,8 @@
 	ADD_TRAIT(character, TRAIT_FAT, BE_SPECIAL_TRAIT)
 
 /datum/special_trait/musclepriest
-	name = "My body is a TEMPLE!"
-	greet_text = span_notice("My body is a beacon for Astrata's light, and it shall be KNOWN")
+	name = "¡Mi cuerpo es un TEMPLO!"
+	greet_text = span_notice("Mi cuerpo es un faro para la luz de Astrata, y sera CONOCIDO")
 	weight = 30
 
 	req_text = "Be the Priest"
@@ -1109,7 +1109,7 @@
 	ADD_TRAIT(character, TRAIT_ANTIMAGIC, BE_SPECIAL_TRAIT)
 
 /datum/special_trait/swordstoplowshares
-	name = "Blood on my hands"
+	name = "Sangre en mis manos"
 	greet_text = span_notice("After much violence in my home and abroad, the very thought of violence disgusts me.")
 	weight = 30
 
@@ -1125,7 +1125,7 @@
 	ADD_TRAIT(character, TRAIT_XYLIX_CURSE, BE_SPECIAL_TRAIT)
 
 /datum/special_trait/hatesaffection
-	name = "Philophobia"
+	name = "filofobia"
 	greet_text = span_notice("I have an intense fear of affection and emotional connection.")
 	weight = 30
 
@@ -1141,7 +1141,7 @@
 	ADD_TRAIT(character, TRAIT_MATTHIOS_CURSE, BE_SPECIAL_TRAIT)
 
 /datum/special_trait/godocrime
-	name = "Go, Do A Crime"
+	name = "Ve, comete un crimen"
 	greet_text = span_notice("Xylix thought it was funny to give a beggar the ability to summon a gun")
 	req_text = "Be a beggar"
 	allowed_jobs = list(/datum/job/vagrant)

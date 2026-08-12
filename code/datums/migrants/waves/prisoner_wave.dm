@@ -106,11 +106,11 @@
 	cmode_music = 'sound/music/cmode/towner/CombatTowner.ogg'
 
 /datum/outfit/mig_prisoner
-	name = "Convoy Prisoner"
+	name = "Prisionero del convoy"
 	pants = /obj/item/clothing/pants/loincloth/colored/brown
 
 /datum/migrant_role/prisoner_guard
-	name = "Convoy Guard"
+	name = "Guardia de convoy"
 	greet_text = "You are a part of a convoy returning prisoners to Vanderlin. Obey the gaoler and ensure the prisoners get back to the dungeons."
 	migrant_job = /datum/job/migrant/mig_guard
 
@@ -132,7 +132,7 @@
 	)
 
 /datum/job/migrant/mig_guard
-	title = "Convoy Guard"
+	title = "Guardia de convoy"
 	tutorial = "You are a part of a convoy returning prisoners to Vanderlin. Obey the gaoler and ensure the prisoners get back to the dungeons."
 	outfit = /datum/outfit/mig_guard
 	is_foreigner = FALSE
@@ -162,7 +162,7 @@
 	add_verb(spawned, /mob/proc/haltyell)
 
 /datum/outfit/mig_guard
-	name = "Convoy Guard"
+	name = "Guardia de convoy"
 	armor = /obj/item/clothing/armor/cuirass
 	shirt = /obj/item/clothing/armor/chainmail
 	neck = /obj/item/clothing/neck/gorget
@@ -180,7 +180,7 @@
 	)
 
 /datum/migrant_wave/prisoner_convoy
-	name = "The Prisoners' Convoy"
+	name = "El convoy de prisioneros"
 	max_spawns = 3
 	shared_wave_type = /datum/migrant_wave/prisoner_convoy
 	downgrade_wave = /datum/migrant_wave/prisoner_convoy_down
@@ -193,7 +193,7 @@
 	greet_text = "Nobody escapes the rule of Vanderlin's monarchs. Some fled to another kingdom and got caught, they are now on their way back."
 
 /datum/migrant_wave/prisoner_convoy_down
-	name = "The Prisoners' Convoy"
+	name = "El convoy de prisioneros"
 	shared_wave_type = /datum/migrant_wave/prisoner_convoy
 	downgrade_wave = /datum/migrant_wave/prisoner_convoy_down_two
 	can_roll = FALSE
@@ -205,7 +205,7 @@
 	greet_text = "Nobody escapes the rule of Vanderlin's monarchs. Some fled to another kingdom and got caught, they are now on their way back."
 
 /datum/migrant_wave/prisoner_convoy_down_two
-	name = "The Prisoner Convoy"
+	name = "El convoy de prisioneros"
 	shared_wave_type = /datum/migrant_wave/prisoner_convoy
 	can_roll = FALSE
 	roles = list(

@@ -36,13 +36,12 @@ export function TextHighlightSettings(props) {
               icon="plus"
               onClick={() => addHighlight()}
             >
-              Add Highlight Setting
+              Agregar configuración de resaltado
             </Button>
             {highlightSettings.length >= WARN_AFTER_HIGHLIGHT_AMT && (
               <Box inline fontSize="0.9em" ml={1} color="red">
                 <Icon mr={1} name="triangle-exclamation" />
-                Large amounts of highlights can potentially cause performance
-                issues!
+                ¡Grandes cantidades de aspectos destacados pueden causar problemas de rendimiento!
               </Box>
             )}
           </Box>
@@ -51,10 +50,10 @@ export function TextHighlightSettings(props) {
       <Divider />
       <Box>
         <Button icon="check" onClick={() => chatRenderer.rebuildChat()}>
-          Apply now
+          Aplicar ahora
         </Button>
         <Box inline fontSize="0.9em" ml={1} color="label">
-          Can freeze the chat for a while.
+          Puede congelar el chat por un tiempo.
         </Box>
       </Box>
     </Section>
@@ -85,13 +84,13 @@ function TextHighlightSetting(props) {
             icon="times"
             onClick={() => removeHighlight(id)}
           >
-            Delete
+            Eliminar
           </Button>
         </Stack.Item>
         <Stack.Item>
           <Button.Checkbox
             checked={highlightWholeMessage}
-            tooltip="If this option is selected, the entire message will be highlighted in yellow."
+            tooltip="Si se selecciona esta opción, todo el mensaje se resaltará en amarillo."
             onClick={() =>
               updateHighlight({
                 id,
@@ -99,14 +98,14 @@ function TextHighlightSetting(props) {
               })
             }
           >
-            Whole Message
+            Mensaje completo
           </Button.Checkbox>
         </Stack.Item>
         <Stack.Item>
           <Button.Checkbox
             checked={matchWord}
             tooltipPosition="bottom-start"
-            tooltip="If this option is selected, only exact matches (no extra letters before or after) will trigger. Not compatible with punctuation. Overriden if regex is used."
+            tooltip="Si se selecciona esta opción, solo se activarán coincidencias exactas (sin letras adicionales antes o después). No compatible con la puntuación. Se anula si se utiliza expresiones regulares."
             onClick={() =>
               updateHighlight({
                 id,
@@ -114,12 +113,12 @@ function TextHighlightSetting(props) {
               })
             }
           >
-            Exact
+            Exacto
           </Button.Checkbox>
         </Stack.Item>
         <Stack.Item>
           <Button.Checkbox
-            tooltip="If this option is selected, the highlight will be case-sensitive."
+            tooltip="Si se selecciona esta opción, el resaltado distinguirá entre mayúsculas y minúsculas."
             checked={matchCase}
             onClick={() =>
               updateHighlight({
@@ -128,7 +127,7 @@ function TextHighlightSetting(props) {
               })
             }
           >
-            Case
+            Caso
           </Button.Checkbox>
         </Stack.Item>
         <Stack.Item>
@@ -151,7 +150,7 @@ function TextHighlightSetting(props) {
         fluid
         height="3em"
         value={highlightText}
-        placeholder="Put words to highlight here. Separate terms with commas, i.e. (term1, term2, term3)"
+        placeholder="Pon palabras a resaltar aquí. Separe los términos con comas, es decir (término1, término2, término3)"
         onBlur={(value) =>
           updateHighlight({
             id: id,

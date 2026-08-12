@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(frenzy_handler)
 	var/list/currentrun = list()
 
 /datum/controller/subsystem/frenzy_handler/stat_entry(msg)
-	msg = "Frenzy:[length(GLOB.frenzy_list)]"
+	msg = "Frenesí:[length(GLOB.frenzy_list)]"
 	return ..()
 
 /datum/controller/subsystem/frenzy_handler/fire(resumed = FALSE)

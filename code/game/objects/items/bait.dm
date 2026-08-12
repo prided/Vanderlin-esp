@@ -1,7 +1,7 @@
 
 /obj/item/bait
-	name = "bag of bait"
-	desc = "Horrid smell to me, wonderful smell to big game."
+	name = "bolsa de cebo"
+	desc = "Olor horrible para mí, olor maravilloso para la caza mayor."
 	icon_state = "bait"
 	icon = 'icons/roguetown/items/misc.dmi'
 	w_class = WEIGHT_CLASS_SMALL
@@ -26,7 +26,7 @@
 
 /obj/item/bait/attack_self(mob/user, list/modifiers)
 	. = ..()
-	user.visible_message("<span class='notice'>[user] begins deploying the bait...</span>", \
+	user.visible_message("<span class='notice'>[user] comienza a desplegar el cebo...</span>", \
 						"<span class='notice'>I begin deploying the bait...</span>")
 	if(do_after(user, deploy_speed * (1/(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/traps) + 1)), src)) //rogtodo hunting skill
 		user.dropItemToGround(src, TRUE)
@@ -37,7 +37,7 @@
 
 /obj/item/bait/attack_hand(mob/user)
 	if(deployed)
-		user.visible_message("<span class='notice'>[user] begins gathering up the bait...</span>", \
+		user.visible_message("<span class='notice'>[user] comienza a recoger el cebo...</span>", \
 							"<span class='notice'>I begin gathering up the bait...</span>")
 		if(do_after(user, deploy_speed * (1/(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/traps) + 1)), src)) //rogtodo hunting skill
 			STOP_PROCESSING(SSobj, src)
@@ -103,7 +103,7 @@
 
 /obj/item/bait/sweet
 	name = "bag of sweetbait"
-	desc = "This bait doesn't smell as bad. I might even try a bite..."
+	desc = "Este cebo no huele tan mal. Incluso podría probar un bocado..."
 	icon_state = "baitp"
 	attracted_types = list(/mob/living/simple_animal/hostile/retaliate/goat = 33,
 							/mob/living/simple_animal/hostile/retaliate/goatmale = 33,
@@ -117,8 +117,8 @@
 	item_weight = 200 GRAMS
 
 /obj/item/bait/bloody
-	name = "bag of bloodbait"
-	desc = "A deployable bag of bait used by hunters to attract predators within the wilds."
+	name = "bolsa de cebo de sangre"
+	desc = "Una bolsa de cebo desplegable utilizada por los cazadores para atraer a los depredadores en la naturaleza."
 	icon_state = "baitb"
 	attracted_types = list(/mob/living/simple_animal/hostile/retaliate/wolf = 33,
 						/mob/living/simple_animal/hostile/retaliate/bigrat = 10,
@@ -144,8 +144,8 @@
 	item_weight = 250 GRAMS
 
 /obj/item/bait/forestdelight
-	name = "meat wrapped in strange herbs"
-	desc = "A piece of rotten and rancid meat wrapped in several herbs. The aroma induces both vomit and a nice herbal odor."
+	name = "carne envuelta en hierbas extrañas"
+	desc = "Un trozo de carne podrida y rancia envuelta en varias hierbas. El aroma induce tanto el vómito como un agradable olor a hierbas."
 	icon_state = "baitbriar"
 	attracted_types = list (/mob/living/simple_animal/hostile/retaliate/mole/briars = 50,
 						/mob/living/simple_animal/pet/cat/cabbit = 5) // cause get rabbited

@@ -8,28 +8,28 @@ export const DetailBlueprint = ({ r, lookup, pickerMap, allRecipes, essenceIndex
     {r.desc && <Box className="RecipeBook__desc" dangerouslySetInnerHTML={{ __html: r.desc }} />}
     {!!r.materials?.length && (
       <>
-        <SectionHead>Materials</SectionHead>
+        <SectionHead>Materiales</SectionHead>
         {r.materials!.map((item, i) => (
           <ItemRow key={i} item={item} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
         ))}
       </>
     )}
-    <SectionHead>Construction</SectionHead>
+    <SectionHead>Construcción</SectionHead>
     <Box className="RecipeBook__step-block">
       <Box className="RecipeBook__step-row">
         <Sprite icon={r.tool_icon} icon_state={r.tool_state} />
-        Tool:{' '}
+        Herramienta:{' '}
         <RecipeLink name={r.tool_name} path={r._tool_path} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
       </Box>
       {r.skill_name && (
         <Box className="RecipeBook__step-row">
-          Skill: <strong>{r.skill_name}</strong>
+          Habilidad: <strong>{r.skill_name}</strong>
           {r.skill_diff !== undefined ? ` (diff ${r.skill_diff})` : ''}
         </Box>
       )}
       <Box className="RecipeBook__step-row">⏱ {r.build_time}s</Box>
-      {!!r.supports_directions && <Box className="RecipeBook__step-row">↻ Supports rotation</Box>}
-      {!!r.floor_object && <Box className="RecipeBook__step-row">▣ Full floor tile</Box>}
+      {!!r.supports_directions && <Box className="RecipeBook__step-row">↻ Soporta rotación</Box>}
+      {!!r.floor_object && <Box className="RecipeBook__step-row">▣ Baldosa completa</Box>}
     </Box>
     {r.output_name && (
       <OutputBanner

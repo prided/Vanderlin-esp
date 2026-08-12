@@ -8,7 +8,7 @@
 		)
 	result_type = /obj/structure/fluff/carving_block
 	craftdiff = 3
-	category = "Statues"
+	category = "estatuas"
 
 /* tallstructure.dmi */
 
@@ -18,7 +18,7 @@
 	step_order = SLAP_ORDER_FIRST_AND_LAST
 	dense_assembly = TRUE
 	repeat_perform_time = 2 SECONDS
-	category = "Statues"
+	category = "estatuas"
 
 /datum/slapcraft_recipe/masonry/structure/statue/gargoyle
 	name = "gargoyle"
@@ -71,7 +71,7 @@
 	craftdiff = 3
 
 /datum/slapcraft_recipe/masonry/structure/statue/bstatue
-	name = "hooded statue"
+	name = "estatua encapuchada"
 	steps = list(
 		/datum/slapcraft_step/structure/carving_block,
 		/datum/slapcraft_step/use_item/masonry/chisel,
@@ -134,7 +134,7 @@
 	craftdiff = 4
 
 /datum/slapcraft_recipe/masonry/structure/statue/knightalt
-	name = "knight statue (alt)"
+	name = "estatua de caballero (alt)"
 	steps = list(
 		/datum/slapcraft_step/structure/carving_block,
 		/datum/slapcraft_step/use_item/masonry/chisel,
@@ -208,11 +208,11 @@
 	result_type = /obj/structure/fluff/statue/femalestatue/clean
 
 /datum/slapcraft_recipe/masonry/structure/statue/fstatue/alt
-	name = "female statue (alt) (LEGENDARY)"
+	name = "estatua femenina (alt) (LEGENDARIO)"
 	result_type = /obj/structure/fluff/statue/femalestatue/alt
 
 /datum/slapcraft_recipe/masonry/structure/statue/fstatue/dancer
-	name = "female statue (dancer) (LEGENDARY)"
+	name = "estatua femenina (bailarina) (LEGENDARIA)"
 	result_type = /obj/structure/fluff/statue/femalestatue/dancer
 
 /datum/slapcraft_recipe/masonry/structure/statue/fstatue/lying

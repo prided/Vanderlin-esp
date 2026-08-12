@@ -1,5 +1,5 @@
 /datum/round_event_control/dendor_taming
-	name = "Taming Challenge"
+	name = "Desafío de domesticación"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/dendor_taming
 	weight = 10
@@ -45,7 +45,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE DENDOR'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE DENDOR!"),
 		span_notice("Dendor calls you to bond with the wild creatures! Tame an animal to earn Dendor's favor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/magic/barbroar.ogg', 100)

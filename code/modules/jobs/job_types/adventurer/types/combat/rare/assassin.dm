@@ -22,7 +22,7 @@
 	)
 
 /datum/job/advclass/combat/assassin
-	title = "Assassin"
+	title = "Asesino"
 	tutorial = "From a young age you have been drawn to blood, to hurting others. Eventually you found others like you, and a god who would bless your actions. Your cursed dagger has never led you astray, and with every stab you feel a little less empty."
 	allowed_sexes = list(MALE, FEMALE)
 	bypass_class_cat_limits = TRUE
@@ -381,7 +381,7 @@
 	picker.equip_to_slot_or_del(head, ITEM_SLOT_HEAD, TRUE)
 
 /datum/job_pack/assassin/assassin_thief
-	name = "Thief"
+	name = "Ladrón"
 
 	pack_contents = list(
 		/obj/item/clothing/shirt/undershirt/colored/black = ITEM_SLOT_SHIRT,

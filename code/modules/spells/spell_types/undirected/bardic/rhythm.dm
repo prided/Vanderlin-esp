@@ -28,7 +28,7 @@
 	return ..()
 
 /datum/action/cooldown/spell/undirected/rhythm
-	name = "Rhythm"
+	name = "Ritmo"
 	desc = "Attune your blade to a rhythm. Your next melee hit within 8 seconds will trigger its effect."
 	button_icon = 'icons/mob/actions/bardsongs.dmi'
 	button_icon_state = "rhythm_resonating"
@@ -157,10 +157,10 @@
 	target.apply_damage(RHYTHM_RESONATING_DAMAGE, BRUTE, def_zone, armor_block, damage_type = BCLASS_CUT)
 	new /obj/effect/temp_visual/kinetic_blast(get_turf(target))
 	var/zone_name = parse_zone(def_zone)
-	target.balloon_alert_to_viewers("resonant strike - [zone_name]!")
+	target.balloon_alert_to_viewers("golpe resonante - [zone_name]!")
 	target.visible_message(
 		span_danger("Rhythmic force reverberates through [target]!"),
-		span_userdanger("Rhythmic force reverberates through my body!"))
+		span_userdanger("¡La fuerza rítmica resuena en mi cuerpo!"))
 	playsound(target, 'sound/magic/blade_burst.ogg', 50, TRUE)
 	..()
 

@@ -24,7 +24,7 @@
 	. = ..()
 
 /obj/structure/kneestingers/fire_act(added, maxstacks)
-	visible_message(span_warning("[src] catches fire!"))
+	visible_message(span_warning("¡[src] se incendia!"))
 	var/turf/T = get_turf(src)
 	qdel(src)
 	new /obj/effect/hotspot(T)

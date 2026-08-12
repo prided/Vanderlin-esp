@@ -1,5 +1,5 @@
 /obj/effect/ebeam/gut
-	name = "intestines"
+	name = "intestinos"
 
 /mob/living/carbon/proc/gut_cut()
 	if(get_chem_effect(CE_PAINKILLER) < 80)

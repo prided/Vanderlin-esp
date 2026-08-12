@@ -28,7 +28,7 @@
 		if( !new_name || !M )
 			return
 
-		message_admins("Admin [key_name_admin(usr)] renamed [key_name_admin(M)] to [new_name].")
+		message_admins("El administrador [key_name_admin(usr)] cambió el nombre de [key_name_admin(M)] a [new_name].")
 		M.fully_replace_character_name(M.real_name,new_name)
 		vv_update_display(M, "name", new_name)
 		vv_update_display(M, "real_name", M.real_name || "No real name")

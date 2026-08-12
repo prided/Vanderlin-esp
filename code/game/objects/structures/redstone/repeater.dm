@@ -236,7 +236,7 @@
 
 /obj/structure/redstone/repeater/attack_hand(mob/user)
 	if(locked)
-		to_chat(user, "<span class='warning'>The repeater is locked!</span>")
+		to_chat(user, "<span class='warning'>¡El repetidor está bloqueado!</span>")
 		return
 	delay_ticks = (delay_ticks % 4) + 1
 	to_chat(user, "<span class='notice'>Delay set to [delay_ticks] tick\s.</span>")

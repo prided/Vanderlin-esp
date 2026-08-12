@@ -3,10 +3,10 @@
 	skillcraft = /datum/attribute/skill/craft/bombs
 	craftdiff = 2
 	minimum_skill_level = 1 // this is what locks the recipes to only bombcrafters
-	category = "Bombs"
+	category = "bombas"
 
 /datum/repeatable_crafting_recipe/bomb/smokebomb
-	name = "smoke bomb"
+	name = "bomba de humo"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/produce/fyritius = 1,
@@ -22,7 +22,7 @@
 	subtypes_allowed = TRUE
 
 /datum/repeatable_crafting_recipe/bomb/poisonbomb
-	name = "poison bomb"
+	name = "bomba venenosa"
 
 	requirements = list(
 		/obj/item/smokebomb = 1,
@@ -38,7 +38,7 @@
 
 
 /datum/repeatable_crafting_recipe/bomb/homemade
-	name = "homemade bottle bomb"
+	name = "bomba de botella casera"
 
 	requirements = list(
 		/obj/item/natural/cloth = 1,
@@ -64,7 +64,7 @@
 		/obj/item/alch/firedust = 1,
 	)
 	tool_usage = list(
-		/obj/item/pestle = list(span_notice("starts to grind together"), span_notice("start to grind together"), 'sound/foley/mortarpestle.ogg'),
+		/obj/item/pestle = list(span_notice("comienza a moler juntos"), span_notice("start to grind together"), 'sound/foley/mortarpestle.ogg'),
 	)
 
 	attacked_atom = /obj/item/reagent_containers/glass/mortar
@@ -88,7 +88,7 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/bomb/pipe_bomb
-	name = "pipe bomb"
+	name = "bomba de tubo"
 
 	requirements = list(
 		/obj/item/natural/fibers = 1,

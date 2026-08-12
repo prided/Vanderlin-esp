@@ -93,7 +93,7 @@ const ActiveQuestsPanel = (props: {
   if (!quests.length) {
     return (
       <Box color="label" italic>
-        No quests are currently in progress.
+        Actualmente no hay misiones en progreso.
       </Box>
     );
   }
@@ -120,20 +120,20 @@ const ActiveQuestsPanel = (props: {
                   <Button
                     icon="arrow-up"
                     color="average"
-                    tooltip="Add to reward from the quest fund"
+                    tooltip="Agregar a la recompensa del fondo de misiones"
                     onClick={() => onBoost(q.ref)}
                   >
-                    Boost
+                    Aumentar
                   </Button>
                 </Stack.Item>
                 <Stack.Item>
                   <Button
                     icon="undo"
                     color="bad"
-                    tooltip="Recall this scroll — quest returns to the notice board"
+                    tooltip="Recuerda este pergamino: la misión vuelve al tablón de anuncios"
                     onClick={() => onRevoke(q.ref)}
                   >
-                    Recall
+                    Recordar
                   </Button>
                 </Stack.Item>
               </Stack>
@@ -143,7 +143,7 @@ const ActiveQuestsPanel = (props: {
               <Stack.Item>
                 <Box>
                   <Box as="span" color="label">
-                    Held by:{' '}
+                    En manos de:{' '}
                   </Box>
                   {q.receiver}
                 </Box>
@@ -152,7 +152,7 @@ const ActiveQuestsPanel = (props: {
                 <Stack.Item>
                   <Box>
                     <Box as="span" color="label">
-                      Region:{' '}
+                      Región:{' '}
                     </Box>
                     {q.region}
                   </Box>
@@ -161,7 +161,7 @@ const ActiveQuestsPanel = (props: {
               <Stack.Item>
                 <Box>
                   <Box as="span" color="label">
-                    Progress:{' '}
+                    Progreso:{' '}
                   </Box>
                   {q.progress} / {q.progress_max}
                 </Box>
@@ -169,14 +169,14 @@ const ActiveQuestsPanel = (props: {
               <Stack.Item>
                 <Box>
                   <Box as="span" color="label">
-                    Reward:{' '}
+                    Recompensa:{' '}
                   </Box>
                   <Box as="span" color="good" bold>
                     {q.reward} mammons
                   </Box>
                   {q.reward_boosted > 0 && (
                     <Box as="span" color="average" fontSize="0.85em" ml={1}>
-                      (+{q.reward_boosted} mammons boosted)
+                      (+{q.reward_boosted} Mammons adicionales)
                     </Box>
                   )}
                 </Box>
@@ -184,7 +184,7 @@ const ActiveQuestsPanel = (props: {
               <Stack.Item>
                 <Box>
                   <Box as="span" color="label">
-                    Time held:{' '}
+                    Tiempo retenido:{' '}
                   </Box>
                   {formatElapsed(q.accepted_time, worldTime)}
                 </Box>
@@ -206,7 +206,7 @@ const ValidatePanel = (props: {
   if (!customQuests.length) {
     return (
       <Box color="label" italic>
-        No custom quests are awaiting validation.
+        No hay misiones personalizadas pendientes de validación.
       </Box>
     );
   }
@@ -232,7 +232,7 @@ const ValidatePanel = (props: {
                 color="good"
                 onClick={() => onValidate(cq.ref)}
               >
-                Validate
+                Validar
               </Button>
             </Stack.Item>
           </Stack>
@@ -263,7 +263,7 @@ export const QuestCounter = () => {
     <Window
       width={520}
       height={isQuestGiver ? 580 : 220}
-      title="Guild Quest Counter"
+      title="Contador de misiones de gremio"
     >
       <Window.Content scrollable>
 
@@ -278,17 +278,17 @@ export const QuestCounter = () => {
             </Stack.Item>
             <Stack.Item grow>
               <Box fontSize="1.2em" bold>
-                Guild Quest Counter
+                Contador de misiones de gremio
               </Box>
               <Box color="label">
-                Quest Fund:{' '}
+                Fondo de misiones:{' '}
                 <Box as="span" color="good" bold>
                   {quest_fund} mammons
                 </Box>
               </Box>
               {isQuestGiver && (
                 <Box color="label" fontSize="0.9em">
-                  Your balance:{' '}
+                  Tu saldo:{' '}
                   <Box as="span" color="good">
                     {steward_balance} mammons
                   </Box>
@@ -298,7 +298,7 @@ export const QuestCounter = () => {
           </Stack>
         </Section>
 
-        <Section title="Contract Filing">
+        <Section title="Presentación de contrato">
           <Stack>
             <Stack.Item grow>
               <Button
@@ -307,7 +307,7 @@ export const QuestCounter = () => {
                 color="good"
                 onClick={() => act('turnin')}
               >
-                Turn In Quest
+                Entregar misión
               </Button>
             </Stack.Item>
             <Stack.Item grow>
@@ -317,18 +317,18 @@ export const QuestCounter = () => {
                 color="bad"
                 onClick={() => act('abandon')}
               >
-                Abandon Quest
+                Abandonar la misión
               </Button>
             </Stack.Item>
           </Stack>
           <Box color="label" italic fontSize="0.85em" mt={1}>
-            Hold your scroll in hand, or place it on the marked area in front of the counter.
+            Sostenga su pergamino en la mano o colóquelo en el área marcada frente al mostrador.
           </Box>
         </Section>
 
         {isQuestGiver && (
           <Section
-            title="Steward Desk"
+            title="Escritorio de mayordomo"
             buttons={
               <Stack>
                 <Stack.Item>
@@ -337,7 +337,7 @@ export const QuestCounter = () => {
                     color="average"
                     onClick={() => act('deposit_fund')}
                   >
-                    Deposit ({steward_balance}m)
+                    Depósito ({steward_balance}m)
                   </Button>
                 </Stack.Item>
                 <Stack.Item>
@@ -346,7 +346,7 @@ export const QuestCounter = () => {
                     color="good"
                     onClick={() => act('issue_custom')}
                   >
-                    Issue Quest
+                    Emitir misión
                   </Button>
                 </Stack.Item>
               </Stack>
@@ -358,14 +358,14 @@ export const QuestCounter = () => {
                 onClick={() => setStewardTab('active')}
               >
                 <Icon name="tasks" mr={1} />
-                Active ({active_quests.length})
+                Activo ({active_quests.length})
               </Tabs.Tab>
               <Tabs.Tab
                 selected={stewardTab === 'validate'}
                 onClick={() => setStewardTab('validate')}
               >
                 <Icon name="check-circle" mr={1} />
-                Validate ({my_custom_quests.length})
+                Validar ({my_custom_quests.length})
               </Tabs.Tab>
             </Tabs>
 

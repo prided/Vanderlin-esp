@@ -1,5 +1,5 @@
 /datum/work_order/tan_leather
-	name = "Tanning Leather"
+	name = "curtido de cuero"
 	work_time_left = 40 SECONDS
 	stamina_cost = 8
 	var/obj/effect/building_node/tannery/tannery

@@ -1,5 +1,5 @@
 /obj/item/explosive/bottle
-	name = "bottle bomb"
+	name = "bomba de botella"
 	desc = "Dangerous explosion, in a bottle."
 	icon = 'icons/obj/bombs.dmi'
 	icon_state = "clear_bomb"

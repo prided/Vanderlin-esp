@@ -1,5 +1,5 @@
 /obj/structure/meatvine/intestine_wormhole
-	name = "pulsating intestinal passage"
+	name = "pasaje intestinal pulsante"
 	desc = "A grotesque tunnel of writhing intestinal tissue. You could probably enter it..."
 	icon_state = "intestine_wormhole"
 	density = FALSE
@@ -108,7 +108,7 @@
 	var/obj/structure/meatvine/intestine_wormhole/current_dest = destinations[current_index]
 	var/area/dest_area = get_area(current_dest)
 
-	to_chat(traveler, "<span class='notice'>Destination [current_index]/[destinations.len]: [dest_area.name]</span>")
+	to_chat(traveler, "<span class='notice'>Destino [current_index]/[destinations.len]: [dest_area.name]</span>")
 
 /datum/wormhole_travel_ui/proc/navigate(direction)
 	current_index += direction
@@ -175,7 +175,7 @@
 	. = ..()
 	if(direction < 0)
 		icon_state = "button_bg"
-		name = "Previous Exit"
+		name = "Salida anterior"
 	else
 		icon_state = "button_bg"
 		name = "Next Exit"

@@ -1355,7 +1355,7 @@
 
 /datum/species/proc/grab(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style)
 	if(target.check_block() || target.has_status_effect(/datum/status_effect/buff/malum_anvil))
-		target.visible_message("<span class='warning'>[target] blocks [user]'s grab!</span>", \
+		target.visible_message("¡<span class='warning'>[target] bloquea el agarre de [user]!</span>", \
 						"<span class='danger'>I block [user]'s grab!</span>", "<span class='hear'>I hear a swoosh!</span>", COMBAT_MESSAGE_RANGE, user)
 		to_chat(user, "<span class='warning'>My grab at [target] was blocked!</span>")
 		return FALSE
@@ -1390,9 +1390,9 @@
 		to_chat(user, "<span class='warning'>I don't want to harm [target]!</span>")
 		return FALSE
 	if(target.check_block())
-		target.visible_message("<span class='warning'>[target] blocks [user]'s attack!</span>", \
-						"<span class='danger'>I block [user]'s attack!</span>", "<span class='hear'>I hear a swoosh!</span>", COMBAT_MESSAGE_RANGE, user)
-		to_chat(user, "<span class='warning'>My attack at [target] was blocked!</span>")
+		target.visible_message("¡<span class='warning'>[target] bloquea el ataque de [user]!</span>", \
+						"<span class='danger'>¡Bloqueo el ataque de [user]!</span>", "<span class='hear'>I hear a swoosh!</span>", COMBAT_MESSAGE_RANGE, user)
+		to_chat(user, "<span class='warning'>¡Mi ataque en [target] fue bloqueado!</span>")
 		return FALSE
 	if(attacker_style && attacker_style.harm_act(user,target))
 		return TRUE
@@ -1478,7 +1478,7 @@
 			message_verb = "[pick(user.used_intent.attack_verb)]"
 		var/message_hit_area = ""
 		if(selzone)
-			message_hit_area = " in the [parse_zone(selzone)]"
+			message_hit_area = " en el [parse_zone(selzone)]"
 		var/attack_message = "[user] [message_verb] [target][message_hit_area]!"
 		var/attack_message_local = "[user] [message_verb] me[message_hit_area]!"
 		target.visible_message("<span class='danger'>[attack_message][target.next_attack_msg.Join()]</span>",\
@@ -1509,9 +1509,9 @@
 
 /datum/species/proc/disarm(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style)
 	if(target.check_block() || target.has_status_effect(/datum/status_effect/buff/malum_anvil))
-		target.visible_message("<span class='warning'>[user]'s shove is blocked by [target]!</span>", \
+		target.visible_message("¡El empujón de <span class='warning'>[user] es bloqueado por [target]!</span>", \
 						"<span class='danger'>I block [user]'s shove!</span>", "<span class='hear'>I hear a swoosh!</span>", COMBAT_MESSAGE_RANGE, user)
-		to_chat(user, "<span class='warning'>My shove at [target] was blocked!</span>")
+		to_chat(user, "<span class='warning'>¡Mi empujón a [target] fue bloqueado!</span>")
 		return FALSE
 	if(attacker_style && attacker_style.disarm_act(user,target))
 		return TRUE
@@ -1581,7 +1581,7 @@
 				log_combat(user, target, "shoved", "knocking them down")
 			else if(target_table)
 				target.Knockdown(SHOVE_KNOCKDOWN_TABLE)
-				target.visible_message("<span class='danger'>[user.name] shoves [target.name] onto \the [target_table]!</span>",
+				target.visible_message("<span class='danger'>[user.name] empuja a [target.name] sobre \the [target_table]!</span>",
 								"<span class='danger'>I'm shoved onto \the [target_table] by [user.name]!</span>", "<span class='hear'>I hear aggressive shuffling followed by a loud thud!</span>", COMBAT_MESSAGE_RANGE, user)
 				to_chat(user, "<span class='danger'>I shove [target.name] onto \the [target_table]!</span>")
 				target.throw_at(target_table, 1, 1, null, FALSE) //1 speed throws with no spin are basically just forcemoves with a hard collision check
@@ -1594,7 +1594,7 @@
 				to_chat(user, "<span class='danger'>I shove [target.name] into [target_collateral_mob.name]!</span>")
 				log_combat(user, target, "shoved", "into [target_collateral_mob.name]")
 		else
-			target.visible_message("<span class='danger'>[user.name] shoves [target.name]!</span>",
+			target.visible_message("<span class='danger'>[user.name] empuja [target.name]!</span>",
 							"<span class='danger'>I'm shoved by [user.name]!</span>", "<span class='hear'>I hear aggressive shuffling!</span>", COMBAT_MESSAGE_RANGE, user)
 			to_chat(user, "<span class='danger'>I shove [target.name]!</span>")
 			var/target_held_item = target.get_active_held_item()
@@ -1605,7 +1605,7 @@
 				target.add_movespeed_modifier(MOVESPEED_ID_SHOVE, multiplicative_slowdown = SHOVE_SLOWDOWN_STRENGTH)
 				if(target_held_item)
 					target.visible_message("<span class='danger'>[target.name]'s grip on \the [target_held_item] loosens!</span>",
-						"<span class='warning'>My grip on \the [target_held_item] loosens!</span>", null, COMBAT_MESSAGE_RANGE)
+						"<span class='warning'>¡Mi agarre en \the [target_held_item] se afloja!</span>", null, COMBAT_MESSAGE_RANGE)
 				addtimer(CALLBACK(target, TYPE_PROC_REF(/mob/living/carbon/human, clear_shove_slowdown)), SHOVE_SLOWDOWN_LENGTH)
 			else if(target_held_item)
 				target.dropItemToGround(target_held_item)
@@ -1635,7 +1635,7 @@
 		return FALSE
 	if(user.check_leg_grabbed(1) || user.check_leg_grabbed(2))
 		if(user.check_leg_grabbed(1) && user.check_leg_grabbed(2))		//If both legs are grabbed
-			to_chat(user, span_notice("I can't move my legs!"))
+			to_chat(user, span_notice("¡No puedo mover las piernas!"))
 			return
 		else															//If only one leg is grabbed
 			to_chat(user, span_notice("I can't move my leg!"))
@@ -1667,7 +1667,7 @@
 			else
 				if(affecting)
 					if(selzone == BODY_ZONE_PRECISE_NECK)
-						to_chat(user, "<span class='danger'>I put my foot on [target]'s neck!</span>")
+						to_chat(user, "<span class='danger'>¡Puse mi pie en el cuello de [target]!</span>")
 						nodmg = TRUE
 						target.emote("gasp")
 						target.adjustOxyLoss(25)
@@ -1801,8 +1801,8 @@
 	if((M != H) && M.used_intent.type != INTENT_HELP && H.check_shields(M, 0, M.name, attack_type = UNARMED_ATTACK))
 		log_combat(M, H, "attempted to touch")
 		H.visible_message("<span class='warning'>[M] attempts to touch [H]!</span>", \
-						"<span class='danger'>[M] attempts to touch you!</span>", "<span class='hear'>I hear a swoosh!</span>", COMBAT_MESSAGE_RANGE, M)
-		to_chat(M, "<span class='warning'>I attempt to touch [H]!</span>")
+						"¡<span class='danger'>[M] intenta tocarte!</span>", "<span class='hear'>I hear a swoosh!</span>", COMBAT_MESSAGE_RANGE, M)
+		to_chat(M, "<span class='warning'>¡Intento tocar [H]!</span>")
 		return 0
 	SEND_SIGNAL(M, COMSIG_MOB_ATTACK_HAND, M, H, attacker_style)
 	switch(M.used_intent.type)
@@ -2230,7 +2230,7 @@
 	stress_change = 1
 
 /datum/stress_event/hot_moderate
-	desc = "<span class='red'>This heat is becoming unbearable.</span>"
+	desc = "<span class='red'>Este calor se está volviendo insoportable.</span>"
 	timer = 60 SECONDS
 	stress_change = 3
 

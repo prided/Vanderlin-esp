@@ -72,13 +72,13 @@
 	crit_message = "Blood sprays from %VICTIM's throat!"
 
 /datum/wound/artery/heart
-	name = "Aortic Dissection"
+	name = "Disección aórtica"
 	severity = WOUND_SEVERITY_FATAL
 	artery_type_override = ARTERY_HEART
 	artery_type_blacklist = list(ARTERY_CHEST)
 	viable_zones = list(BODY_ZONE_CHEST)
 	show_in_book = FALSE
-	crit_message = "A fountain of blood erupts from %VICTIM!"
+	crit_message = "¡Una fuente de sangre brota de %VICTIM!"
 
 /datum/wound/artery/heart/can_apply_to_bodypart(obj/item/bodypart/affected, zone_precise, bclass)
 	if(affected.limb_flags & BODYPART_BONE_ENCASED && !affected.has_wound(/datum/wound/fracture) && !(bclass in ARTERY_HEART_BCLASSES))

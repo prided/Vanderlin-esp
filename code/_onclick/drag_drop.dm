@@ -299,7 +299,7 @@
 			playsound(L, 'sound/magic/charged.ogg', 100, TRUE)
 			L.curplaying.on_mouse_up()
 		if(istype(L.used_intent, /datum/intent/shield/block))
-			L.visible_message("<span class='danger'>[L] prepares to do a shield bash!</span>")
+			L.visible_message("¡<span class='danger'>[L] se prepara para hacer un golpe de escudo!</span>")
 			playsound(L, 'sound/combat/shieldraise.ogg', 100, TRUE)
 
 		return TRUE

@@ -1,5 +1,5 @@
 /datum/gem_cut/storm
-	name = "storm"
+	name = "tormenta"
 
 /datum/gem_cut/storm/setup_cut(multiplier)
 	weapon_effect_type = /datum/rune_effect/damage/lightning

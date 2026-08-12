@@ -204,7 +204,7 @@
 			spawned.change_stat(STAT_STRENGTH, 2)
 			spawned.change_stat(STAT_ENDURANCE, 2)
 			spawned.change_stat(STAT_SPEED, -5)
-			spawned.honorary = "Black Knight"
+			spawned.honorary = "Caballero Negro"
 			to_chat(spawned,span_info("\
 			Forgive me majesty for intruding unannounced. Todae I tilted with a Black Knight from a far land, and unseated him roundly with my lances' blow. I take no credit, because I was sneakily attacked by his ally, and soon dumped in the dirt myself.")
 			)

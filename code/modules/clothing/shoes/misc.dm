@@ -1,5 +1,5 @@
 /obj/item/clothing/shoes/nobleboot
-	name = "noble boots"
+	name = "botas nobles"
 	//dropshrink = 0.75
 	color = "#d5c2aa"
 	desc = "Fine dark leather boots. Offers light protection against melee attacks."
@@ -27,7 +27,7 @@
 /obj/item/clothing/shoes/shortboots
 	name = "shortboots"
 	color = "#d5c2aa"
-	desc = "A shorter format of boots worn by about anyone."
+	desc = "Un formato más corto de botas que usa casi cualquier persona."
 	gender = PLURAL
 	icon_state = "shortboots"
 	item_state = "shortboots"
@@ -37,7 +37,7 @@
 	wetable = FALSE
 
 /obj/item/clothing/shoes/ridingboots
-	name = "riding boots"
+	name = "botas de montar"
 	color = "#d5c2aa"
 	desc = "Boots designed for riding a mount."
 	armor_type = /datum/armor/boots/leather
@@ -50,7 +50,7 @@
 	wetable = FALSE
 
 /obj/item/clothing/shoes/apothboots
-	name = "apothecary boots"
+	name = "botas de boticario"
 	desc = "Boots designed for the toil of tincture gathering and mixing."
 	gender = PLURAL
 	icon_state = "apothboots"
@@ -97,7 +97,7 @@
 
 /obj/item/clothing/shoes/sandals
 	name = "sandals"
-	desc = "Standard sandals."
+	desc = "Sandalias estándar."
 	gender = PLURAL
 	icon_state = "sandals"
 	item_state = "sandals"
@@ -109,7 +109,7 @@
 	abstract_type = /obj/item/clothing/shoes/rare
 
 /obj/item/clothing/shoes/rare/hoplite
-	name = "ancient sandals"
+	name = "sandalias antiguas"
 	desc = "Worn sandals lined with bronze, ready to march ever onwards."
 	icon_state = "aasimarfeet"
 	item_state = "aasimarfeet"
@@ -126,14 +126,14 @@
 	wetable = FALSE
 
 /obj/item/clothing/shoes/tribal
-	name = "primative shoes"
+	name = "zapatos primitivos"
 	desc = "Haphazardly-made slippers of creecher leather worn by those with nothing better, or those who don't care about fashion and just want to protect their feet."
 	icon_state = "tribalshoes"
 	item_state = "tribalshoes"
 	sellprice = 3
 
 /obj/item/clothing/shoes/jester
-	name = "funny shoes"
+	name = "zapatos divertidos"
 	desc = "Shoes typically worn by a Jester."
 	icon_state = "jestershoes"
 	sellprice = 10
@@ -159,8 +159,8 @@
 	max_integrity = ARMOR_INT_SIDE_HARDLEATHER + 50
 
 /obj/item/clothing/shoes/grenzel
-	name = "grenzelhoftian leather boots"
-	desc = "Boots of outstanding craft, your fragile feet have never felt so protected and comfortable before."
+	name = "grenzelhoftian botas de cuero"
+	desc = "Botas de excelente artesanía, tus frágiles pies nunca antes se habían sentido tan protegidos y cómodos."
 	body_parts_covered = FEET
 	icon_state = "fencerboots"
 	item_state = "fencerboots"
@@ -171,7 +171,7 @@
 	wetable = FALSE
 
 /obj/item/clothing/shoes/grenzel/inqboots
-	name = "inquisitorial boots"
+	name = "botas inquisitoriales"
 	examine_name = "boots"
 	desc = "The steel-lined heels click."
 	icon_state = "inqboots"
@@ -184,7 +184,7 @@
 	armor_type = /datum/armor/boots/leather/noble/good
 
 /obj/item/clothing/shoes/psydonboots
-	name = "enduring boots"
+	name = "botas duraderas"
 	examine_name = "boots"
 	desc = "A reliable pair of dark leather boots. Seems like they could endure the world!"
 	color = "#d5c2aa"

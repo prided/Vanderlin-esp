@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/detect_poison
-	name = "Detect Poison"
-	desc = "Reveals the presence of toxins or poisons in nearby objects."
+	name = "Detectar veneno"
+	desc = "Revela la presencia de toxinas o venenos en objetos cercanos."
 	button_icon_state = "detect_poison"
 	cast_range = 2
 	essences = list(/datum/thaumaturgical_essence/poison)
@@ -10,17 +10,17 @@
 	var/turf/target_turf = get_turf(cast_on)
 	if(!target_turf)
 		return FALSE
-	owner.visible_message(span_notice("[owner] scans for toxins in the area."))
+	owner.visible_message(span_notice("[owner] busca toxinas en el área."))
 
 	var/found_poison = FALSE
 	for(var/obj/item/I in range(1, target_turf))
 		if(I.reagents && I.reagents.has_reagent(/datum/reagent/toxin))
-			I.visible_message(span_warning("[I] glows with a sickly light!"))
+			I.visible_message(span_warning("¡[I] brilla con una luz enfermiza!"))
 			new /obj/effect/temp_visual/solosnake(get_turf(I))
 			found_poison = TRUE
 			continue
 		if(I.reagents && I.reagents.has_reagent(/datum/reagent/poison))
-			I.visible_message(span_warning("[I] glows with a sickly light!"))
+			I.visible_message(span_warning("¡[I] brilla con una luz enfermiza!"))
 			new /obj/effect/temp_visual/solosnake(get_turf(I))
 			found_poison = TRUE
 			continue

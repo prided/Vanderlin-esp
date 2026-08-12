@@ -1,5 +1,5 @@
 /datum/material/clay
-	name = "blue gray"
+	name = "gris azul"
 	color = "#7b8183"
 	integrity_modifier = 0.25
 
@@ -8,5 +8,5 @@
 	color = "#997e25"
 
 /datum/material/clay/porcelain
-	name = "porcelain"
+	name = "porcelana"
 	color = "#e9e7e3"

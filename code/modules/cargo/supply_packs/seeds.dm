@@ -7,12 +7,12 @@
 	abstract_type = /datum/supply_pack/seeds
 
 /datum/supply_pack/seeds/spelt
-	name = "Spelt"
+	name = "Espelta"
 	cost = 2
 	contains = /obj/item/neuFarm/seed/wheat
 
 /datum/supply_pack/seeds/apple
-	name = "Apple"
+	name = "Manzana"
 	cost = 10
 	contains = /obj/item/neuFarm/seed/apple
 
@@ -32,37 +32,37 @@
 	contains = /obj/item/neuFarm/seed/berry
 
 /datum/supply_pack/seeds/onion
-	name = "Onion"
+	name = "Cebolla"
 	cost = 2
 	contains = /obj/item/neuFarm/seed/onion
 
 /datum/supply_pack/seeds/cabbage
-	name = "Cabbage"
+	name = "Repollo"
 	cost = 2
 	contains = /obj/item/neuFarm/seed/cabbage
 
 /datum/supply_pack/seeds/potato
-	name = "Potato"
+	name = "Papa"
 	cost = 2
 	contains = /obj/item/neuFarm/seed/potato
 
 /datum/supply_pack/seeds/sunflowers
-	name = "Sunflowers"
+	name = "Girasoles"
 	cost = 8
 	contains = /obj/item/neuFarm/seed/sunflower
 
 /datum/supply_pack/seeds/turnip
-	name = "Turnip"
+	name = "Nabo"
 	cost = 2
 	contains = /obj/item/neuFarm/seed/turnip
 
 /datum/supply_pack/seeds/pear
-	name = "Pear"
+	name = "Pera"
 	cost = 10
 	contains = /obj/item/neuFarm/seed/pear
 
 /datum/supply_pack/seeds/poppy
-	name = "Poppy"
+	name = "Amapola"
 	cost = 15
 	contains = /obj/item/neuFarm/seed/poppy
 
@@ -72,7 +72,7 @@
 	contains = /obj/item/neuFarm/seed/plum
 
 /datum/supply_pack/seeds/lemon
-	name = "Lemon"
+	name = "Limón"
 	cost = 10
 	contains = /obj/item/neuFarm/seed/lemon
 
@@ -82,12 +82,12 @@
 	contains = /obj/item/neuFarm/seed/lime
 
 /datum/supply_pack/seeds/tangerine
-	name = "Tangerine"
+	name = "Mandarina"
 	cost = 10
 	contains = /obj/item/neuFarm/seed/tangerine
 
 /datum/supply_pack/seeds/strawberry
-	name = "Strawberry"
+	name = "Fresa"
 	cost = 15
 	contains = /obj/item/neuFarm/seed/strawberry
 
@@ -102,7 +102,7 @@
 	contains = /obj/item/neuFarm/seed/raspberry
 
 /datum/supply_pack/seeds/sugarcane
-	name = "Sugarcane"
+	name = "Caña de azúcar"
 	cost = 15
 	contains = /obj/item/neuFarm/seed/sugarcane
 
@@ -122,7 +122,7 @@
 	contains = /obj/item/neuFarm/seed/mango
 
 /datum/supply_pack/seeds/mangosteen
-	name = "Mangosteen"
+	name = "mangostán"
 	cost = 10
 	contains = /obj/item/neuFarm/seed/mangosteen
 

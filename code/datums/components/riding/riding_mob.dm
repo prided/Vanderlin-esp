@@ -67,7 +67,7 @@
 		return
 
 	rider.visible_message(span_warning("[rider] falls off of [living_parent]!"), \
-					span_warning("I fall off of [living_parent]!"))
+					span_warning("¡Me caigo de [living_parent]!"))
 	rider.Paralyze(1 SECONDS)
 	rider.Knockdown(4 SECONDS)
 	living_parent.unbuckle_mob(rider)

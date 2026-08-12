@@ -1,5 +1,5 @@
 /datum/award/achievement/boss
-	category = "Bosses"
+	category = "jefes"
 
 /datum/award/achievement/boss/deep
 	name = "Slayer of The Deep"

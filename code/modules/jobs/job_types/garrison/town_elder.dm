@@ -57,7 +57,7 @@
 		"Viola" = /obj/item/instrument/viola
 	)
 
-	spawned.select_equippable(player_client, instruments, message = "Choose your instrument.", title = "XYLIX")
+	spawned.select_equippable(player_client, instruments, message = "Elige tu instrumento.", title = "XYLIX")
 
 /mob/living/carbon/human/proc/townannouncement()
 	set name = "Elder Announcement"
@@ -75,7 +75,7 @@
 	var/inputty = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(src, "Make an announcement to the townsfolk", "Elder Announcement", multiline = TRUE)))
 	if(inputty)
 		if(!istype(get_area(src), /area/indoors/town/tavern))
-			to_chat(src, "<span class='warning'>I need to do this from the tavern.</span>")
+			to_chat(src, "<span class='warning'>Necesito hacer esto desde la taberna.</span>")
 			return FALSE
 		priority_announce("[inputty]", title = "[src.real_name], The Town Elder Speaks", sound = 'sound/misc/bell.ogg')
 		src.log_talk("[TIMETOTEXT4LOGS] [inputty]", LOG_SAY, tag="Town Elder announcement")
@@ -123,7 +123,7 @@
 	)
 
 /datum/job/advclass/town_elder/mayor
-	title = "Mayor"
+	title = "Alcalde"
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	tutorial = "Before politics, you were a bard, your voice stirred hearts, your tales traveled farther than your feet ever could. You carved your name in history not with steel, but with stories that moved kings and commoners alike. In time, your charisma became counsel, your songs gave way to speeches. Decades later, your skill in diplomacy and trade earned you nobility, and with it, the title of Mayor. Now, you lead not from a stage, but from the heart of the people you once sang for."
 	outfit = /datum/outfit/town_elder/mayor
@@ -133,7 +133,7 @@
 		/datum/action/cooldown/spell/projectile/vicious_mockery,
 		// /datum/action/cooldown/spell/bardic_inspiration
 	)
-	honorary = "Mayor"
+	honorary = "Alcalde"
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/town_elder/mayor
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/town_elder/mayor/old
@@ -238,7 +238,7 @@
 	)
 
 /datum/job/advclass/town_elder/master_of_crafts_and_labor //A Job meant to guide and help new players in multiple areas heavy RNG so it can range from Average to Master.
-	title = "Master of Crafts and Labor"
+	title = "Maestro de Oficios y Trabajo"
 	tutorial = "You were one of the hardest-working individuals in the city, there isn't a single job you haven't done. From farming and butchery to alchemy, blacksmithing, cooking, and even medicine, your vast knowledge made you a guiding light for the people. Yet amid your labors, it was your songs that bound the workers together: rhythmic chants in the forge, lullabies in the sick wards, ballads hummed in the fields. Your voice became a beacon of focus and unity. Recognizing both your wisdom and your spirit, the townsfolk turned to you for guidance. Now, as the Master of Crafts and Labor, you oversee and uplift all who contribute to the city's survival. Lead them well."
 	outfit = /datum/outfit/town_elder/master_of_crafts_and_labor
 	category_tags = list(CTAG_TOWN_ELDER)

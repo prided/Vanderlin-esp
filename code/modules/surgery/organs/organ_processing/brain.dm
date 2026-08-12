@@ -12,7 +12,7 @@
 	// Some effects are halved mid-combat.
 	var/determined_mod = owner.get_chem_effect(CE_STIMULANT) ? 0.5 : 1
 
-	var/word = pick("dizzy","woozy","faint")
+	var/word = pick("dizzy","mareado","faint")
 	switch(effective_blood_oxygenation)
 		// Low blood but not a big deal in the immediate
 		if(BLOOD_VOLUME_OKAY to BLOOD_VOLUME_SAFE)

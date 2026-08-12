@@ -26,7 +26,7 @@
 	if(!do_after(user, 3 DECISECONDS, src))
 		return TRUE
 	user.visible_message(span_warning("[user] drinks from [src]!"),\
-	span_warning("I drink from [src]."))
+	span_warning("Bebo de [src]."))
 	playsound(user, 'sound/misc/drink_blood.ogg', 100, FALSE, -4)
 	var/blood_handle = BLOOD_PREFERENCE_RATS
 	if(dead)
@@ -43,12 +43,12 @@
 	dead = TRUE
 
 /obj/item/reagent_containers/food/snacks/friedrat
-	name = "fried rat"
+	name = "rata frita"
 	icon_state = "cookedrat"
 	bitesize = 2
 	nutrition = MINCE_NUTRITION * COOK_MOD
 	w_class = WEIGHT_CLASS_TINY
-	tastes = list("burnt flesh" = 1)
+	tastes = list("carne quemada" = 1)
 	rotprocess = SHELFLIFE_SHORT
 	sellprice = 0
 
@@ -177,7 +177,7 @@
 	melee_damage_upper = 5
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	response_help_continuous = "pets"
+	response_help_continuous = "mascotas"
 	response_help_simple = "pet"
 	density = FALSE
 	ventcrawler = VENTCRAWLER_ALWAYS

@@ -1,6 +1,6 @@
 
 /obj/effect/decal/cleanable/ritual_rune
-	name = "ritual rune"
+	name = "runa ritual"
 	desc = "Strange symbols pulse upon the ground..."
 	anchored = TRUE
 	icon = 'icons/obj/rune.dmi'
@@ -16,7 +16,7 @@
 	var/runesize = 0
 	var/invoker_name = "basic rune"
 	/// Shown to players with the appropriate magic skill when they examine the rune
-	var/invoker_desc = "a basic rune with no function."
+	var/invoker_desc = "una runa básica sin función."
 	/// Words spoken aloud by invokers when the rune fires
 	var/invocation = "Aiy ele-mayo!"
 	/// How many eligible invokers must be standing near the rune for it to fire
@@ -78,7 +78,7 @@
 
 /// Called when the rune fails to activate. Shows a fizzle and resets rune_in_use.
 /obj/effect/decal/cleanable/ritual_rune/proc/fail_invoke()
-	visible_message(span_warning("The markings pulse with a small flash of light, then fall dark."))
+	visible_message(span_warning("Las marcas parpadean con un pequeño destello de luz y luego se oscurecen."))
 	var/oldcolor = color
 	color = rgb(255, 0, 0)
 	animate(src, color = oldcolor, time = 5)
@@ -89,11 +89,11 @@
 	if(!ritual_number && !associated_ritual)
 		return ..() // this is basically are we a type 2 rune
 	if(GET_MOB_SKILL_VALUE(user, magictype) < SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("You aren't able to understand the words of [src]."))
+		to_chat(user, span_warning("No puedes entender las palabras de [src]."))
 		return
 
 	if(rune_in_use)
-		to_chat(user, span_notice("Someone is already using this rune."))
+		to_chat(user, span_notice("Alguien ya está usando esta runa."))
 		return
 	if(.)
 		return
@@ -123,7 +123,7 @@
 		rune_in_use = FALSE
 		return
 	if(chosen.tier > src.tier)
-		to_chat(user, span_hierophant_warning("Your ritual rune is not strong enough to perform this ritual."))
+		to_chat(user, span_hierophant_warning("Tu runa ritual no es lo suficientemente fuerte para realizar este ritual."))
 		rune_in_use = FALSE
 		return
 
@@ -240,7 +240,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne
 	name = "arcane ritual rune"
-	desc = "Subtype used for arcane rituals — you should not be seeing this."
+	desc = "Subtipo utilizado para rituales arcanos; no deberías ver esto."
 	magictype = /datum/attribute/skill/magic/arcane
 	can_be_scribed = FALSE
 

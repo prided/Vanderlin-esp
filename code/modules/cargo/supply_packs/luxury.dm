@@ -24,7 +24,7 @@
 	contains = /obj/item/storage/belt/leather/plaquegold
 
 /datum/supply_pack/luxury/spectacles_golden
-	name = "Golden Spectacles"
+	name = "Gafas doradas"
 	cost = 100
 	contains = /obj/item/clothing/face/spectacles/golden
 

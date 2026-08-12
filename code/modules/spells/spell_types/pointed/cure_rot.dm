@@ -30,7 +30,7 @@
 	for(var/obj/structure/fluff/psycross/S in view(5, owner))
 		if(S)
 			break
-		to_chat(owner, span_warning("I need a holy cross."))
+		to_chat(owner, span_warning("Necesito una santa cruz."))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
@@ -61,7 +61,7 @@
 
 
 	if(!has_rot && !was_zombie)
-		to_chat(owner, span_warning("Nothing happens."))
+		to_chat(owner, span_warning("No pasa nada."))
 		return FALSE
 
 	if(was_zombie)

@@ -18,12 +18,12 @@
 	name = "inquisitorial supply crate"
 
 /obj/structure/closet/crate/chest/inqcrate/articles/
-	name = "inquisitorial article crate"
+	name = "caja de artículos inquisitoriales"
 
 /obj/structure/closet/crate/chest/inqreliquary/relic/
 
 /obj/structure/closet/crate/chest/inqcrate/equipment/
-	name = "inquisitorial equipment crate"
+	name = "caja de equipo inquisitorial"
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/
 	name = "grenzelhoft's finest wardrobe crate"
@@ -50,7 +50,7 @@
 	marquescost = 2
 
 /datum/inqports/supplies/medical
-	name = "5 Rolls of Cloth and Needles"
+	name = "5 rollos de tela y agujas"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/medical
 	marquescost = 4
 
@@ -85,7 +85,7 @@
 	new /obj/item/collar_detonator(src)
 
 /datum/inqports/supplies/redpotions
-	name = "3 Bottles of lifeblood"
+	name = "3 botellas de sangre vital"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/redpots
 	marquescost = 6
 
@@ -94,7 +94,7 @@
 		new /obj/item/reagent_containers/glass/bottle/healthpot(src)
 
 /datum/inqports/supplies/lifebloodvials
-	name = "3 Vials of Strong lifeblood"
+	name = "3 viales de sangre vital fuerte"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sredvials
 	maximum = 4
 	marquescost = 10
@@ -104,7 +104,7 @@
 		new /obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew(src)
 
 /datum/inqports/supplies/bluepotions
-	name = "3 Bottles of mana"
+	name = "3 botellas de maná"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/bluepots
 	marquescost = 8
 
@@ -113,7 +113,7 @@
 		new /obj/item/reagent_containers/glass/bottle/manapot(src)
 
 /datum/inqports/supplies/strongbluevials
-	name = "3 Vials of Strong mana"
+	name = "3 viales de maná fuerte"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sbluevials
 	maximum = 4
 	marquescost = 16
@@ -132,7 +132,7 @@
 		new /obj/item/smokebomb(src)
 
 /datum/inqports/supplies/canister_bomb
-	name = "4 Fragmentation Grenades"
+	name = "4 granadas de fragmentación"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/canister_bomb
 	maximum = 1
 	marquescost = 8
@@ -158,7 +158,7 @@
 		new /obj/item/reagent_containers/glass/bottle/alchemical/blessedwater(src)
 
 /datum/inqports/supplies/bottlebombs
-	name = "3 Bottlebombs"
+	name = "3 bombas de botella"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/bottlebombs
 	marquescost = 12
 
@@ -178,7 +178,7 @@
 //  ARTICLES  RIGHT HERE! THAT'S RIGHT!
 
 /datum/inqports/articles/psycrosssilver
-	name = "1 Silver Psycross"
+	name = "1 Plata Psycross"
 	item_type = /obj/item/clothing/neck/psycross/silver
 	marquescost = 14
 
@@ -221,7 +221,7 @@
 */
 
 /datum/inqports/articles/confessions
-	name = "3 Confessions"
+	name = "3 confesiones"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/articles/confessions
 	marquescost = 4
 
@@ -230,12 +230,12 @@
 		new /obj/item/paper/inqslip/confession(src)
 
 /datum/inqports/articles/bmirror
-	name = "1 Black Mirror"
+	name = "1 espejo negro"
 	item_type = /obj/item/inqarticles/bmirror
 	marquescost = 8
 
 /datum/inqports/articles/listener
-	name = "1 Attentive Ear"
+	name = "1 oído atento"
 	item_type = /obj/item/listeningdevice/inq
 	marquescost = 4
 
@@ -293,7 +293,7 @@
 		new /obj/item/flashlight/flare/torch/lantern(src)
 
 /datum/inqports/equipment/psydonthorns
-	name = "1 Psydonian Thorns"
+	name = "1 Psydonian Espinas"
 	item_type = /obj/item/clothing/wrists/bracers/psythorns
 	marquescost = 16
 
@@ -332,7 +332,7 @@
 		new /obj/item/rope/inqarticles/inquirycord(src)
 
 /datum/inqports/equipment/blackbags
-	name = "3 Black Bags"
+	name = "3 bolsas negras"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/blackbags
 	marquescost = 6
 
@@ -341,7 +341,7 @@
 		new /obj/item/clothing/head/inqarticles/blackbag(src)
 
 /datum/inqports/equipment/javlins
-	name = "Bag Of Silver Javelins"
+	name = "Bolsa de jabalinas de plata"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/javlins
 	marquescost = 12
 
@@ -361,7 +361,7 @@
 	new /obj/item/clothing/head/helmet/heavy/psydonhelm(src)
 
 /datum/inqports/equipment/crankbox
-	name = "The Crankbox"
+	name = "La caja de manivela"
 	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/crankbox
 	marquescost = 16
 	maximum = 1
@@ -417,7 +417,7 @@
 	new /obj/item/clothing/armor/leather/jacket/leathercoat/confessor(src)
 
 /datum/inqports/wardrobe/inspectorcoat
-	name = "The Inquisition's Finest Coats and Hats"
+	name = "Los mejores abrigos y sombreros de la Inquisición"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspectorcoats
 	marquescost = 12
 
@@ -472,7 +472,7 @@
 
 
 /datum/inqports/wardrobe/standarddisguise //basic, cheap disguises for when you are outlawed roundstart.
-	name = "Standard disguise set - contains cloak"
+	name = "Conjunto de disfraz estándar: contiene capa."
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/standarddisguise
 	marquescost = 2
 

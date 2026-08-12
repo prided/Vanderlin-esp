@@ -17,7 +17,7 @@
 	throw_range = 4
 	blade_dulling = DULLING_BASH
 	max_integrity = 80 // Flimsy instruments of wood.
-	destroy_message = "falls apart!"
+	destroy_message = "se desmorona!"
 	dropshrink = 0.8
 	grid_height = 64
 	grid_width = 32
@@ -187,7 +187,7 @@
 		if(I.playing)
 			return
 
-	var/curfile = input(user, "Which song do you want to play?", "Pick a song", name) as null|anything in song_list
+	var/curfile = input(user, "¿Qué canción quieres tocar?", "Elige una canción", name) as null|anything in song_list
 	if(!curfile)
 		return
 	curfile = song_list[curfile]
@@ -373,7 +373,7 @@
 
 /obj/item/instrument/drum
 	name = "drum"
-	desc = "The adopted instrument of Aasimar, used for signaling and rhythmic marches alike."
+	desc = "El instrumento adoptado de Aasimar, utilizado tanto para señalización como para marchas rítmicas."
 	icon_state = "drum"
 	item_state = "drum"
 	song_list = list(
@@ -414,7 +414,7 @@
 	experimental_inhand = TRUE
 
 /obj/item/instrument/vocals
-	name = "vocalist's talisman"
+	name = "talismán del vocalista"
 	desc = "This talisman emanates a small shimmer of light. When held, it can amplify and even change one's voice."
 	icon_state = "vtalisman"
 	song_list = list("Harpy's Call (Feminine)" = 'sound/instruments/vocalsf (1).ogg',

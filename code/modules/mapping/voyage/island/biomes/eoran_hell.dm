@@ -1,6 +1,6 @@
 
 /datum/island_biome/eoran_hell
-	name = "Fleshy"
+	name = "Carnoso"
 	biome_weight = 40
 	terrain_weights = list(
 		/turf/open/floor/grass/red = 70,

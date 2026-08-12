@@ -34,14 +34,14 @@
 	layer = ABOVE_ALL_MOB_LAYER
 
 /obj/structure/statue/bone/rib
-	name = "collosal rib"
+	name = "costilla colosal"
 	desc = ""
 	oreAmount = 4
 	icon = 'icons/obj/statuelarge.dmi'
 	icon_state = "rib"
 
 /obj/structure/statue/bone/skull
-	name = "collosal skull"
+	name = "cráneo colosal"
 	desc = ""
 	oreAmount = 12
 	icon = 'icons/obj/statuelarge.dmi'

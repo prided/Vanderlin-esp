@@ -53,7 +53,7 @@
 		if(isliving(user.pulling))
 			var/mob/living/pushed_mob = user.pulling
 			if(pushed_mob.buckled)
-				to_chat(user, "<span class='warning'>[pushed_mob] is on [pushed_mob.buckled]!</span>")
+				to_chat(user, "¡<span class='warning'>[pushed_mob] está en [pushed_mob.buckled]!</span>")
 				return
 			if(user.used_intent.type == INTENT_GRAB)
 				if(user.grab_state < GRAB_AGGRESSIVE)
@@ -202,7 +202,7 @@
  * Wooden tables
  */
 /obj/structure/table/wood
-	name = "wooden table"
+	name = "mesa de madera"
 	icon = 'icons/roguetown/misc/tables.dmi'
 	icon_state = "tablewood"
 	resistance_flags = FLAMMABLE
@@ -219,7 +219,7 @@
 	icon_state = "tablewood1"
 
 /obj/structure/table/church
-	name = "stone table"
+	name = "mesa de piedra"
 	icon = 'icons/roguetown/misc/tables.dmi'
 	icon_state = "churchtable"
 	max_integrity = 300
@@ -231,7 +231,7 @@
 	icon_state = "churchtable_mid"
 
 /obj/structure/table/stone_small
-	name = "stone table"
+	name = "mesa de piedra"
 	icon = 'icons/roguetown/misc/tables.dmi'
 	icon_state = "stonetable_small"
 	max_integrity = 300
@@ -268,7 +268,7 @@
 	icon_state = "tablewood3"
 
 /obj/structure/table/wood/reinforced
-	name = "reinforced table"
+	name = "mesa reforzada"
 	icon_state = "tablewood"
 
 /obj/structure/table/wood/reinforced_alt
@@ -295,16 +295,16 @@
 /obj/structure/table/map
 	icon = 'icons/roguetown/misc/tables.dmi'
 	icon_state = "map_blank"
-	desc = "A table which probably should have a map covering it."
+	desc = "Una mesa que probablemente debería tener un mapa cubriéndola."
 
 /obj/structure/table/map/enigma
 	icon = 'icons/roguetown/misc/tables.dmi'
 	icon_state = "map_enigma"
-	desc = "A table displaying a map of Enigma."
+	desc = "Una tabla que muestra un mapa de Enigma."
 
 /obj/structure/table/map/vanderlin
 	icon_state = "map_vanderlin"
-	desc = "A table displaying a map of Vanderlin and Daftmarsh."
+	desc = "Una tabla que muestra un mapa de Vanderlin y Daftmarsh."
 
 /obj/structure/table/map/rosewood
 	icon_state = "map_rosewood"
@@ -339,7 +339,7 @@
 	icon_state = "tablefine2"
 
 /obj/structure/table/wood/fancy
-	name = "fancy table"
+	name = "mesa elegante"
 	icon = MAP_SWITCH('icons/obj/smooth_structures/fancy_table.dmi', 'icons/obj/structures.dmi')
 	icon_state = "fancy_table"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_OBJ
@@ -507,7 +507,7 @@
 	SET_BASE_PIXEL(0, 24)
 
 /obj/structure/table/optable
-	name = "operating table"
+	name = "mesa de operaciones"
 	desc = ""
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "optable"

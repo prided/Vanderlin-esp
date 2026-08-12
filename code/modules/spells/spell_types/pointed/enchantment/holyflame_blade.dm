@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/enchantment/holy_flame
 	name = "Imbue Holy Fire"
-	desc = "Enchant a weapon with divine flames."
+	desc = "Encanta un arma con llamas divinas."
 	button_icon_state = "enchant_weapon"
 
 	enchantment_duration = 5 MINUTES
@@ -23,11 +23,11 @@
 			enchant_item = held
 
 	if(!enchant_item)
-		to_chat(owner, span_warning("There is nothing to enchant!"))
+		to_chat(owner, span_warning("¡No hay nada que encantar!"))
 		return FALSE
 
 	if(enchant_item.GetComponent(/datum/component/martyr_weapon))
-		to_chat(owner, span_warning("You cannot imbue such a powerful weapon with any more divine power!"))
+		to_chat(owner, span_warning("¡No puedes imbuir un arma tan poderosa con más poder divino!"))
 		return FALSE
 
 	return TRUE

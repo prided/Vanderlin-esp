@@ -43,22 +43,22 @@ type StorageMeta = {
  */
 const STORAGE_META: Record<string, StorageMeta> = {
   table_pointer_arrays: {
-    label: 'Table pointer arrays',
-    missing: 'not walked',
+    label: 'Matrices de punteros de tabla',
+    missing: 'sin recorrer',
     countless: true,
     note: 'Four bytes per slot of every table this walk reaches, live or not. Counted once here rather than folded into the rows below.',
   },
-  alist_records: { label: 'Alist records', missing: 'not walked' },
-  alist_trees: { label: 'Alist trees', missing: 'not walked' },
-  turf_var_nodes: { label: 'Turf var nodes', missing: 'not walked' },
+  alist_records: { label: 'Registros alist', missing: 'sin recorrer' },
+  alist_trees: { label: 'Árboles alist', missing: 'sin recorrer' },
+  turf_var_nodes: { label: 'Nodos var de turfs', missing: 'sin recorrer' },
   string_table: {
-    label: 'String table',
-    missing: 'not resolved',
+    label: 'tabla de cadenas',
+    missing: 'no resuelto',
     note: "Live entries only. A dead slot is a null pointer with nothing behind it, so it costs nothing here - BYOND's own report charges 32 B for one because it synthesizes a fallback entry rather than reading the raw table.",
   },
   suspended_proc_frames: {
-    label: 'Suspended proc frames',
-    missing: 'not walked',
+    label: 'Marcos de proceso suspendidos',
+    missing: 'sin recorrer',
     note: 'The frame itself only. Its parent_context chain, the proc queue and the destructor table are not walked, and neither is anything currently running.',
   },
 };
@@ -75,8 +75,7 @@ function StorageTable(props: { rows?: StorageRow[] }) {
   if (!rows?.length) {
     return (
       <Box color="label">
-        This census carries no storage breakdown, so what the extension charged
-        beyond instances and lists is unknown.
+        Este censo no incluye un desglose del almacenamiento, por lo que se desconoce cuánto cobró la extensión más allá de instancias y listas.
       </Box>
     );
   }
@@ -84,9 +83,9 @@ function StorageTable(props: { rows?: StorageRow[] }) {
   return (
     <Table>
       <Table.Row header>
-        <Table.Cell>Storage</Table.Cell>
-        <Table.Cell collapsing>Live</Table.Cell>
-        <Table.Cell collapsing>Bytes</Table.Cell>
+        <Table.Cell>Almacenamiento</Table.Cell>
+        <Table.Cell collapsing>Activos</Table.Cell>
+        <Table.Cell collapsing>bytes</Table.Cell>
       </Table.Row>
       {rows.map((row) => {
         const meta = STORAGE_META[row.label];
@@ -130,37 +129,33 @@ export function Honesty(props: { footer: Footer }) {
   const { footer } = props;
 
   return (
-    <Section title="What these numbers leave out">
+    <Section title="Lo que estos números omiten">
       {!footer.bytes_available && (
         <NoticeBox danger>
-          Byte reporting is unavailable on this platform, so every byte count in
-          every report reads as zero. Instance and element counts are still
-          real.
+          Los informes de bytes no están disponibles en esta plataforma, por lo que cada recuento de bytes en cada informe se lee como cero. Los recuentos de instancias y elementos siguen siendo reales.
         </NoticeBox>
       )}
       <LabeledList>
-        <LabeledList.Item label="Not counted">
+        <LabeledList.Item label="No contado">
           {footer.exclusions}
         </LabeledList.Item>
-        <LabeledList.Item label="Orphan sources">
+        <LabeledList.Item label="Fuentes huérfanas">
           {footer.orphan_sources}
         </LabeledList.Item>
         <LabeledList.Item
-          label="Uncosted"
+          label="Sin costo"
           color={exact(footer.uncosted_instances) > 0 ? 'average' : undefined}
         >
-          {count(footer.uncosted_instances)} instances counted with no verified
-          base size to charge. Every kind this walk reaches has one, so anything
-          other than zero is a kind that shipped without a traced size.
+          {count(footer.uncosted_instances)} los casos se contaron sin un tamaño de base verificado para cobrar. Cada tipo al que llega esta caminata tiene uno, por lo que cualquier tipo distinto de cero es un tipo que se envió sin un tamaño rastreado.
         </LabeledList.Item>
-        <LabeledList.Item label="This run">
+        <LabeledList.Item label="Esta ejecución">
           <Flag set={footer.bytes_available}>bytes</Flag>
-          <Flag set={footer.image_base_verified}>image base</Flag>
-          <Flag set={footer.turfs_walked}>turfs walked</Flag>
-          <Flag set={footer.alists_walked}>alists walked</Flag>
+          <Flag set={footer.image_base_verified}>base de imagen</Flag>
+          <Flag set={footer.turfs_walked}>turfs recorridos</Flag>
+          <Flag set={footer.alists_walked}>alists recorridos</Flag>
         </LabeledList.Item>
       </LabeledList>
-      <Section title="Storage charged this run">
+      <Section title="El almacenamiento cargó esta ejecución">
         <StorageTable rows={footer.storage} />
       </Section>
     </Section>

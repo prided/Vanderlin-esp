@@ -374,20 +374,20 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!client)
 		return
 	if(!mind || QDELETED(mind.current))
-		to_chat(src, "<span class='warning'>I have no body.</span>")
+		to_chat(src, "<span class='warning'>No tengo cuerpo.</span>")
 		return
 	if(!forced && !can_reenter_corpse)
 		to_chat(src, "<span class='warning'>I cannot re-enter my body.</span>")
 		return
 	if(istype(src, /mob/dead/observer/profane))
-		to_chat(src, "<span class='warning'>My spirit has been snatched away by Graggar!</span>")
+		to_chat(src, "<span class='warning'>¡Mi espíritu ha sido arrebatado por Graggar!</span>")
 		return
 	if(is_antag_banned(ckey, ROLE_ZOMBIE))
 		if(IS_DEADITE(src))
 			to_chat(src, span_warning("I am banned from playing deadites."))
 			return
 	if(mind.current.key && copytext(mind.current.key,1,2)!="@")	//makes sure we don't accidentally kick any clients
-		to_chat(usr, "<span class='warning'>Another consciousness is in your body... it is resisting you.</span>")
+		to_chat(usr, "<span class='warning'>Otra conciencia está en tu cuerpo... te está resistiendo.</span>")
 		return
 
 	remove_client_colour(/datum/client_colour/monochrome)
@@ -398,12 +398,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/dead/observer/returntolobby(modifier as num)
 	set name = "{RETURN TO LOBBY}"
-	set category = "Preferences.Options"
+	set category = "Preferencias.Opciones"
 	set hidden = 1
 	if (CONFIG_GET(flag/norespawn))
 		return
 	if ((stat != DEAD || !( SSticker )))
-		to_chat(usr, "<span class='boldnotice'>I must be dead to use this!</span>")
+		to_chat(usr, "<span class='boldnotice'>¡Debo estar muerto para usar esto!</span>")
 		return
 
 //	if(mind?.current && (world.time < mind.current.timeofdeath + RESPAWNTIME))
@@ -451,7 +451,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(usr, "<span class='warning'>You're already stuck out of your body!</span>")
 		return FALSE
 
-	var/response = tgui_alert(src, "Are you sure you want to prevent (almost) all means of resuscitation? This cannot be undone. ","Are you sure you want to stay dead?", list("DNR","Save Me"))
+	var/response = tgui_alert(src, "Are you sure you want to prevent (almost) all means of resuscitation? This cannot be undone. ","Are you sure you want to stay dead?", list("DNR","Sálvame"))
 	if(response != "DNR")
 		return
 
@@ -462,14 +462,14 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /// Allows human ghosts to set their mob's final words variable.
 /mob/dead/observer/verb/set_final_words()
 	set category = "Spirit"
-	set name = "Set Final Words"
+	set name = "Establecer palabras finales"
 	set hidden = 1
 
 	if(!isobserver(src) || !client)
 		return
 
 	if(!mind || QDELETED(mind.current))
-		to_chat(src, span_warning("I have no body."))
+		to_chat(src, span_warning("No tengo cuerpo."))
 		return
 	if(!ishuman(mind.current))
 		to_chat(src, span_warning("I am not sophisticated enough to leave final words..."))
@@ -477,10 +477,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	var/mob/living/carbon/human/body = mind.current
 
 	if(body.funeral)
-		to_chat(src, span_warning("My body has already been laid to rest!</span>"))
+		to_chat(src, span_warning("¡Mi cuerpo ya ha sido sepultado!</span>"))
 		return
 
-	var/final_words = tgui_input_text(src, "Set or update the words you shall impart when you are laid to rest... (DO NOT USE THIS TO STATE WHO ATTACKED YOU)", "(OPTIONAL) Final Words", body.final_words, 50, timeout = 30 SECONDS)
+	var/final_words = tgui_input_text(src, "Set or update the words you shall impart when you are laid to rest... (DO NOT USE THIS TO STATE WHO ATTACKED YOU)", "(OPCIONAL) Palabras finales", body.final_words, 50, timeout = 30 SECONDS)
 	if(!final_words || final_words == body.final_words)
 		return
 	body.final_words = final_words
@@ -537,7 +537,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set hidden = 1
 
 	if(!isobserver(src))
-		to_chat(src, span_warning("Not when you're not dead!"))
+		to_chat(src, span_warning("¡No cuando no estás muerto!"))
 		return
 
 	var/area/thearea  = browser_input_list(src, "Area to jump to", "Where?", GLOB.areas)
@@ -550,7 +550,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		L += T
 
 	if(!length(L))
-		to_chat(src, span_warning("No location available!"))
+		to_chat(src, span_warning("¡No hay ubicación disponible!"))
 		return
 
 	forceMove(pick(L))
@@ -688,12 +688,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(T && isturf(T))
 			A.forceMove(T)
 		else
-			to_chat(A, span_warning("This mob is not located in the game world."))
+			to_chat(A, span_warning("Esta mafia no se encuentra en el mundo del juego."))
 
 /mob/dead/observer/verb/change_view_range()
 	set category = "Spirit"
-	set name = "View Range"
-	set desc = "Change your view range."
+	set name = "Ver rango"
+	set desc = "Cambia tu rango de visión."
 
 	var/max_view = GHOST_MAX_VIEW_RANGE
 	if(client.view_size.getView() == client.view_size.default)
@@ -749,7 +749,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	to_chat(usr, "<span class='boldnotice'>I [(ghostvision?"now":"no longer")] have ghost vision.</span>")
 
 /mob/dead/observer/verb/toggle_darkness()
-	set name = "Toggle Darkness"
+	set name = "Alternar oscuridad"
 	set category = "Spirit"
 	set hidden = 1
 	if(!check_rights(0))
@@ -791,7 +791,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 	var/bt = world.time
 	SEND_SOUND(src, sound('sound/misc/notice (2).ogg'))
-	if(tgui_alert(src, "You have been summoned to destroy Vanderlin!", "Join the Horde", list("Yes", "No")) == "Yes")
+	if(tgui_alert(src, "You have been summoned to destroy Vanderlin!", "Únete a la Horda", list("Yes", "No")) == "Yes")
 		if(world.time > bt + 5 MINUTES)
 			to_chat(src, "<span class='warning'>Too late.</span>")
 			return FALSE
@@ -832,7 +832,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(!(L in GLOB.player_list) && !L.mind)
 			possessible += L
 
-	var/mob/living/target = input("Your new life begins today!", "Possess Mob", null, null) as null|anything in sortNames(possessible)
+	var/mob/living/target = input("¡Tu nueva vida comienza hoy!", "Possess Mob", null, null) as null|anything in sortNames(possessible)
 
 	if(!target)
 		return FALSE
@@ -855,7 +855,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "Spirit"
 	if(!..())
 		return FALSE
-	usr.visible_message("<span class='deadsay'><b>[src]</b> points to [A].</span>")
+	usr.visible_message("<span class='deadsay'><b>[src]</b> apunta a [A].</span>")
 	return TRUE
 
 //this is called when a ghost is drag clicked to something.
@@ -934,7 +934,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		health_scan = TRUE
 
 /mob/dead/observer/verb/toggle_gas_scan()
-	set name = "Toggle Gas Scan"
+	set name = "Alternar escaneo de gas"
 	set desc = ""
 	set category = "Spirit"
 	set hidden = 1
@@ -944,11 +944,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, "<span class='notice'>Gas scan disabled.</span>")
 		gas_scan = FALSE
 	else
-		to_chat(src, "<span class='notice'>Gas scan enabled.</span>")
+		to_chat(src, "<span class='notice'>Escaneo de gas habilitado.</span>")
 		gas_scan = TRUE
 
 /mob/dead/observer/verb/restore_ghost_appearance()
-	set name = "Restore Ghost Character"
+	set name = "Restaurar personaje fantasma"
 	set desc = "Sets your deadchat name and ghost appearance to your \
 		roundstart character."
 	set category = "Spirit"

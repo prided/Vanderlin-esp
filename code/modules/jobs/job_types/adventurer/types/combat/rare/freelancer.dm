@@ -13,7 +13,7 @@
 	)
 
 /datum/job/advclass/combat/lancer
-	title = "Lancer"
+	title = "Lancero"
 	tutorial = "Working for many years as a famous mercenary in Zaladin, you have left your country to avoid the skeletons of your past. With your polearm by your side, you can face down any foe."
 	allowed_sexes = list(MALE)
 	allowed_races = list(SPEC_ID_HUMEN)
@@ -41,7 +41,7 @@
 		species.accent_language = species.get_accent(species.native_language)
 
 /datum/outfit/adventurer/lancer
-	name = "Lancer (Adventurer)"
+	name = "Lancero (Aventurero)"
 
 	pants = /obj/item/clothing/pants/tights/colored/black
 	beltl = /obj/item/storage/belt/pouch/coins/mid

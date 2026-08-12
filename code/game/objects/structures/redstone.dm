@@ -19,10 +19,10 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		return ITEM_INTERACT_BLOCKING
 
 	if(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering) < 1)
-		to_chat(user, span_warning("I have no idea how to use [multitool]!"))
+		to_chat(user, span_warning("¡No tengo idea de cómo usar [multitool]!"))
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message("[user] starts tinkering with [src].", "You start tinkering with [src].")
+	user.visible_message("[user] comienza a jugar con [src].", "You start tinkering with [src].")
 	if(!do_after(user, 8 SECONDS, src))
 		return ITEM_INTERACT_BLOCKING
 
@@ -33,7 +33,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	if(isstructure(multitool.buffer))
 		var/obj/structure/buffer_structure = multitool.buffer
 		if(src == buffer_structure)
-			to_chat(user, "You uncalibrate [src] from all its connections.")
+			to_chat(user, "Descalibras [src] de todas sus conexiones.")
 			for(var/obj/structure/O in redstone_attached)
 				LAZYREMOVE(O.redstone_attached, src)
 				LAZYREMOVE(redstone_attached, O)
@@ -43,9 +43,9 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		LAZYOR(redstone_attached, buffer_structure)
 		GLOB.redstone_objs |= src
 		GLOB.redstone_objs |= buffer_structure
-		to_chat(user, "You calibrate [src] to the output of [buffer_structure].")
+		to_chat(user, "Calibra [src] a la salida de [buffer_structure].")
 	else
-		to_chat(user, "You store the internal schematics of [src] on [multitool].")
+		to_chat(user, "Almacena los esquemas internos de [src] en [multitool].")
 		multitool.set_buffer(src)
 	multitool.charge_deduction(src, user, 1)
 
@@ -93,7 +93,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		var/mob/living/L = user
 		L.changeNext_move(CLICK_CD_MELEE)
 		var/used_time = pulltime - (GET_MOB_ATTRIBUTE_VALUE(L, STAT_STRENGTH) * 1 SECONDS)
-		user.visible_message("<span class='warning'>[user] pulls the lever.</span>")
+		user.visible_message("<span class='warning'>[user] tira de la palanca.</span>")
 		user.log_message("pulled the lever with redstone id \"[redstone_id]\"", LOG_GAME)
 		if(HAS_TRAIT(user, TRAIT_GATEKEEPER) || do_after(user, used_time))
 			for(var/obj/structure/structure in redstone_attached)
@@ -107,7 +107,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	if(isliving(user))
 		var/mob/living/L = user
 		L.changeNext_move(CLICK_CD_MELEE)
-		user.visible_message("<span class='warning'>[user] kicks the lever!</span>")
+		user.visible_message("¡<span class='warning'>[user] patea la palanca!</span>")
 		user.log_message("kicked the lever with redstone id \"[redstone_id]\"", LOG_GAME)
 		playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
 		if(prob(GET_MOB_ATTRIBUTE_VALUE(L, STAT_STRENGTH) * 4))
@@ -131,7 +131,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 
 /obj/structure/lever/hidden
 	name = "hidden lever"
-	desc = "If you can see this... how?"
+	desc = "Si puedes ver esto... ¿cómo?"
 	icon = null
 	//the perception DC to use this
 	var/hidden_dc = 10
@@ -147,7 +147,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		if(GET_MOB_ATTRIBUTE_VALUE(L, STAT_PERCEPTION) + bonuses < hidden_dc)
 			return // nothing here!
 	L.changeNext_move(CLICK_CD_MELEE)
-	user.visible_message(span_danger("[user] presses a hidden button."), span_notice("I push a hidden button."))
+	user.visible_message(span_danger("[user] presiona un botón oculto."), span_notice("I push a hidden button."))
 	user.log_message("pulled the lever with redstone id \"[redstone_id]\"", LOG_GAME)
 	for(var/obj/structure/structure in redstone_attached)
 		INVOKE_ASYNC(structure, PROC_REF(redstone_triggered), user)
@@ -203,7 +203,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 /obj/structure/repeater/attack_hand(mob/user)
 	. = ..()
 	if(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering) < 1)
-		to_chat(user, span_warning("I have no idea how to use [src]!"))
+		to_chat(user, span_warning("¡No tengo idea de cómo usar [src]!"))
 		return
 	if(user.used_intent.type == INTENT_HARM)
 		playsound(src, 'sound/combat/hits/punch/punch (1).ogg', 100, FALSE, -1)
@@ -211,15 +211,15 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		switch(mode)
 			if(0)
 				mode = 1
-				say("Mode: REPEATER 5 TIMES")
+				say("Modo: REPETIDOR 5 VECES")
 				playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			if(1)
 				mode = 2
-				say("Mode: REPEATER RANDOM")
+				say("Modo: REPETIDOR ALEATORIO")
 				playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			if(2)
 				mode = 0
-				say("Mode: INDEFINITE, DANGEROUS")
+				say("Modo: INDEFINIDO, PELIGROSO")
 				playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		return
 	playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
@@ -274,7 +274,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		sleep(5)
 
 /obj/structure/pressure_plate
-	name = "pressure plate"
+	name = "placa de presión"
 	desc = "Be careful. Stepping on this could either mean a bomb exploding or a door closing on you."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "pressureplate"
@@ -289,7 +289,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		return
 	if(isliving(AM))
 		var/mob/living/L = AM
-		to_chat(L, "<span class='info'>I feel something click beneath me.</span>")
+		to_chat(L, "<span class='info'>Siento que algo hace clic debajo de mí.</span>")
 		AM.log_message("has activated a pressure plate", LOG_GAME)
 		playsound(src, 'sound/misc/pressurepad_down.ogg', 65, extrarange = 2)
 	if(isstructure(AM))
@@ -501,7 +501,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	delay2close = 10
 
 /obj/structure/kybraxor
-	name = "Kybraxor the Devourer"
+	name = "Kybraxor el Devorador"
 	desc = "Two massive slabs of metal flooring which threaten to swallow you whole. Watch out!"
 	density = FALSE
 	no_over_text = TRUE

@@ -45,7 +45,7 @@
 	else
 		procpath = "/[proctype]/[procname]"
 		if(!text2path(procpath))
-			to_chat(usr, "<span class='warning'>Error: callproc(): [procpath] does not exist.</span>")
+			to_chat(usr, "<span class='warning'>Error: callproc(): [procpath] no existe.</span>")
 			return
 
 	var/list/lst = get_callproc_args()
@@ -54,7 +54,7 @@
 
 	if(targetselected)
 		if(!target)
-			to_chat(usr, "<font color='red'>Error: callproc(): owner of proc no longer exists.</font>")
+			to_chat(usr, "<font color='red'>Error: callproc(): el propietario del proceso ya no existe.</font>")
 			return
 		var/msg = "[key_name(src)] called [target]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"]."
 		log_admin(msg)
@@ -132,7 +132,7 @@ GLOBAL_PROTECT(LastAdminCalledProc)
 	if(!check_rights(R_DEBUG))
 		return
 
-	var/procname = input("Proc name, eg: fake_blood","Proc:", null) as text|null
+	var/procname = input("Proc name, eg: fake_blood","Proceso:", null) as text|null
 	if(!procname)
 		return
 	if(!hascall(A,procname))
@@ -143,7 +143,7 @@ GLOBAL_PROTECT(LastAdminCalledProc)
 		return
 
 	if(!A || !IsValidSrc(A))
-		to_chat(usr, "<span class='warning'>Error: callproc_datum(): owner of proc no longer exists.</span>")
+		to_chat(usr, "<span class='warning'>Error: callproc_datum(): el propietario del proceso ya no existe.</span>")
 		return
 	log_admin("[key_name(src)] called [A]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"].")
 	var/msg = "[key_name(src)] called [A]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"]."
@@ -157,7 +157,7 @@ GLOBAL_PROTECT(LastAdminCalledProc)
 		to_chat(usr, .)
 
 /client/proc/get_callproc_args()
-	var/argnum = input("Number of arguments","Number:",0) as num|null
+	var/argnum = input("Número de argumentos","Número:",0) as num|null
 	if(isnull(argnum))
 		return
 

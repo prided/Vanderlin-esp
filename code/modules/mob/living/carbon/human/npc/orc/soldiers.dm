@@ -106,7 +106,7 @@
 
 // Slightly armored orc with slight facial protection, incomplete chainmail and spear / sword
 /datum/outfit/job/orc/npc/marauder/pre_equip(mob/living/carbon/human/H)
-	name = "Orc Marauder"
+	name = "Merodeador orco"
 	wrists = /obj/item/clothing/wrists/bracers/leather
 	armor = /obj/item/clothing/armor/chainmail
 	shirt = /obj/item/clothing/armor/gambeson/light

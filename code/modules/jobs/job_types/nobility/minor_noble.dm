@@ -104,7 +104,7 @@
 
 
 /datum/outfit/minornoble/former_commander
-	name = "Former Commander (noble)"
+	name = "Ex comandante (noble)"
 	head = /obj/item/clothing/head/helmet/heavy/decorated/bascinet
 	cloak = /obj/item/clothing/cloak/cape
 	shirt = /obj/item/clothing/armor/gambeson/arming
@@ -210,7 +210,7 @@
 	grant_selected_spellbooks(spawned, selectable_books, 2)
 
 /datum/outfit/minornoble/magickal_graduate
-	name = "Magical Graduate (noble)"
+	name = "Graduado Mágico (noble)"
 	head = /obj/item/clothing/head/wizhat/gen
 	shirt = /obj/item/clothing/shirt/tunic/colored/random
 	armor = /obj/item/clothing/armor/basiceast/crafteast
@@ -238,14 +238,14 @@
 	)
 
 /datum/job/advclass/minornoble/herald
-	title = "Lord Herald"
+	title = "Señor Heraldo"
 	tutorial = "Through an aptitude for words, or politicking, you’ve managed to become the Sovereign’s loyal herald. Make sure their word is known by the commoners, and act as their mouthpiece, for surely they still have use for you despite their throne…"
 	outfit = /datum/outfit/minornoble/herald
 	category_tags = list(CTAG_MINOR_NOBLE)
 	give_bank_account = 60
 	knows_the_town = TRUE
 	known_by_the_town = TRUE
-	honorary = "Lord Herald"
+	honorary = "Señor Heraldo"
 	honorary_f = "Lady Herald"
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/herald
@@ -277,7 +277,7 @@
 	)
 
 /datum/job/advclass/minornoble/vassal
-	title = "Vassal"
+	title = "Vasallo"
 	tutorial = "A jack of all trades, in a field with no masters. You are the very ideal of a nobleman, not excelling in any area except your ego. Perhaps your mediocrity will inspire an ambition to push yourself above your peers, or just keep you sitting on your estate."
 	outfit = /datum/outfit/minornoble/vassal
 	category_tags = list(CTAG_MINOR_NOBLE)
@@ -295,7 +295,7 @@
 	)
 
 /datum/outfit/minornoble/vassal
-	name = "Vassal (noble)"
+	name = "Vasallo (noble)"
 	shoes = /obj/item/clothing/shoes/boots/darkboots
 	shirt = /obj/item/clothing/shirt/tunic/colored/random
 	neck = /obj/item/storage/belt/pouch/coins/veryrich
@@ -318,7 +318,7 @@
 		"Cane Blade" = /obj/item/weapon/sword/rapier/caneblade,
 		"Bow" = /obj/item/gun/ballistic/bow
 	)
-	var/choice = spawned.select_equippable(player_client, selectable, time_limit = 1 MINUTES, message = "Choose your weapon", title = JOB_MINOR_NOBLE)
+	var/choice = spawned.select_equippable(player_client, selectable, time_limit = 1 MINUTES, message = "Elige tu arma", title = JOB_MINOR_NOBLE)
 	if(!choice)
 		return
 	switch(choice)
@@ -342,7 +342,7 @@
 			spawned.equip_to_appropriate_slot(new /obj/item/ammo_holder/quiver/arrows(), TRUE)
 
 /datum/outfit/noble
-	name = "Noble Base"
+	name = "Base noble"
 	shoes = /obj/item/clothing/shoes/boots/darkboots
 	neck = /obj/item/storage/belt/pouch/coins/veryrich
 	pants = /obj/item/clothing/pants/tights/colored/black

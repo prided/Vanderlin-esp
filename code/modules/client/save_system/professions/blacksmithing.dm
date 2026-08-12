@@ -1,6 +1,6 @@
 /datum/profession/blacksmith
 	name = "Blacksmith"
-	description = "A profession dedicated to turning ores into useful weapons and armor."
+	description = "Una profesión dedicada a convertir minerales en armas y armaduras útiles."
 
 /datum/profession/blacksmith/initialize_unlocks()
 	level_unlocks[1] = list(

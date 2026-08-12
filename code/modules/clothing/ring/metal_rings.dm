@@ -25,9 +25,9 @@
 	sellprice = 10
 
 /obj/item/clothing/ring/bronze
-	name = "bronze ring"
+	name = "anillo de bronce"
 	icon_state = "ring_b"
-	desc = "A ring of plain bronze."
+	desc = "Un anillo de bronce liso."
 	sellprice = 60
 
 /obj/item/clothing/ring/blacksteel

@@ -90,7 +90,7 @@
 	allows_disabling = TRUE
 
 /datum/customizer_choice/organ/tail/harpy
-	name = "Harpy Plumage"
+	name = "Plumaje de arpía"
 	organ_type = /obj/item/organ/tail
 	generic_random_pick = TRUE
 	allows_accessory_color_customization = FALSE

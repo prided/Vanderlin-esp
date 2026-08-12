@@ -1,5 +1,5 @@
 /obj/item/perfume
-	name = "perfume bottle"
+	name = "botella de perfume"
 	desc = "A bottle of pleasantly smelling fragrance."
 	icon = 'icons/roguetown/items/perfume.dmi'
 	icon_state = "perfume-bottle-empty"
@@ -42,7 +42,7 @@
 		return
 
 	if(!uses_remaining)
-		to_chat(user, span_warning("\The [src] is empty!"))
+		to_chat(user, span_warning("\The [src] está vacío!"))
 		update_appearance(UPDATE_OVERLAYS)
 		return
 
@@ -131,33 +131,33 @@
 	. = ..()
 
 /obj/item/perfume/lavender
-	name = "lavender perfume"
+	name = "perfume de lavanda"
 	fragrance_type = /datum/pollutant/fragrance/lavender
 
 /obj/item/perfume/cherry
-	name = "cherry perfume"
+	name = "perfume de cereza"
 	fragrance_type = /datum/pollutant/fragrance/cherry
 
 /obj/item/perfume/rose
-	name = "rose perfume"
+	name = "perfume de rosa"
 	fragrance_type = /datum/pollutant/fragrance/rose
 
 /obj/item/perfume/jasmine
-	name = "jasmine perfume"
+	name = "perfume de jazmín"
 	fragrance_type = /datum/pollutant/fragrance/jasmine
 
 /obj/item/perfume/mint
-	name = "mint perfume"
+	name = "perfume de menta"
 	fragrance_type = /datum/pollutant/fragrance/mint
 
 /obj/item/perfume/vanilla
-	name = "vanilla perfume"
+	name = "perfume de vainilla"
 	fragrance_type = /datum/pollutant/fragrance/vanilla
 
 /obj/item/perfume/pear
-	name = "pear perfume"
+	name = "perfume de pera"
 	fragrance_type = /datum/pollutant/fragrance/pear
 
 /obj/item/perfume/strawberry
-	name = "strawberry perfume"
+	name = "perfume de fresa"
 	fragrance_type = /datum/pollutant/fragrance/strawberry

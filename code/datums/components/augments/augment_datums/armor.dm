@@ -51,7 +51,7 @@
 
 /datum/augment/armor/copper
 	name = "copper plating"
-	desc = "Less durable than bronze, but more sturdy than tin."
+	desc = "Menos duradero que el bronce, pero más resistente que el estaño."
 	engineering_difficulty = SKILL_RANK_NOVICE
 	armor_type = /datum/armor/maille/iron
 	finish = "B87A3D"
@@ -62,7 +62,7 @@
 
 /datum/augment/armor/bronze
 	name = "bronze plating"
-	desc = "The tried-true standard. Mass-produced and mass-reduced."
+	desc = "El estándar probado y verdadero. Producido en masa y reducido en masa."
 	engineering_difficulty = SKILL_RANK_APPRENTICE
 	armor_type = /datum/armor/maille
 	finish = "89713B"
@@ -70,7 +70,7 @@
 	shutdown_bonus = 10
 
 /datum/augment/armor/iron
-	name = "iron plating"
+	name = "revestimiento de hierro"
 	desc = "Hearfelt was never known for its iron quality. An uncommon but nevertheless usable plating."
 	engineering_difficulty = SKILL_RANK_JOURNEYMAN
 	armor_type = /datum/armor/maille/good
@@ -90,8 +90,8 @@
 	shutdown_bonus = 50
 
 /datum/augment/armor/gold
-	name = "gold plating"
-	desc = "Style over substance."
+	name = "chapado en oro"
+	desc = "Estilo sobre sustancia."
 	engineering_difficulty = SKILL_RANK_MASTER
 	armor_type = /datum/armor/scale
 	finish = "DBC70C"

@@ -1,7 +1,7 @@
 
 /obj/item/clothing/climbing_gear
-	name = "climbing gear"
-	desc = "Lets you do the impossible."
+	name = "equipo de escalada"
+	desc = "Te permite hacer lo imposible."
 	color = null
 	icon = 'icons/roguetown/clothing/storage.dmi'
 	item_state = "climbing_gear" // sprites from lfwb kitbashed with grappler for inventory sprite

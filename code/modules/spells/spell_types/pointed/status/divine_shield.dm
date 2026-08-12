@@ -3,8 +3,8 @@
 #define SHIELD_COOLDOWN ((3 * SHIELD_DURATION) + SHIELD_DURATION)
 
 /datum/action/cooldown/spell/status/divine_shield
-	name = "Divine Shield"
-	desc = "Protect the target from harm, taking their suffering unto yourself."
+	name = "Escudo Divino"
+	desc = "Protege al objetivo del daño, asumiendo su sufrimiento."
 	button_icon_state = "regression"
 	sound = 'sound/magic/holyshield.ogg'
 	charge_sound = 'sound/magic/holycharging.ogg'
@@ -82,8 +82,8 @@
 		COOLDOWN_START(src, message_cooldown, 5 SECONDS)
 
 /atom/movable/screen/alert/status_effect/buff/divine_shield
-	name = "Divine Shield"
-	desc = span_nicegreen("I am shielded by divine energies.")
+	name = "Escudo Divino"
+	desc = span_nicegreen("Estoy protegido por energías divinas.")
 	icon_state = "buff"
 
 
@@ -94,8 +94,8 @@
 	effectedstats = list(STAT_CONSTITUTION = -2)
 
 /atom/movable/screen/alert/status_effect/debuff/divine_shield
-	name = "Divine Shield"
-	desc = span_red("I am channeling divine power to shield my target.")
+	name = "Escudo Divino"
+	desc = span_red("Estoy canalizando poder divino para proteger a mi objetivo.")
 	icon_state = "debuff"
 	alert_group = ALERT_DEBUFF
 

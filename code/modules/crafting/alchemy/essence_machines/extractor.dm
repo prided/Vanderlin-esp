@@ -1,5 +1,5 @@
 /obj/machinery/essence/extractor
-	name = "essence extractor"
+	name = "extractor de esencia"
 	desc = "A slow but efficient machine that draws alchemical essences from a material over time, yielding far more than a standard splitter."
 	icon = 'icons/roguetown/misc/splitter.dmi'
 	icon_state = "extractor"
@@ -48,7 +48,7 @@
 		return ..()
 
 	if(processing)
-		to_chat(user, span_warning("The extractor is already processing an item."))
+		to_chat(user, span_warning("El extractor ya está procesando un artículo."))
 		return
 
 	if(current_item)
@@ -61,7 +61,7 @@
 		return
 
 	if(!user.transferItemToLoc(I, src))
-		to_chat(user, span_warning("[I] is stuck to your hand!"))
+		to_chat(user, span_warning("¡[I] está pegado a tu mano!"))
 		return
 
 	current_item = I
@@ -74,7 +74,7 @@
 		to_chat(user, span_warning("The extractor is currently processing."))
 		return
 	if(!current_item)
-		to_chat(user, span_warning("There's nothing loaded in the extractor."))
+		to_chat(user, span_warning("No hay nada cargado en el extractor."))
 		return
 	begin_extraction(user)
 
@@ -94,7 +94,7 @@
 /obj/machinery/essence/extractor/proc/begin_extraction(mob/user)
 	var/datum/natural_precursor/precursor = get_precursor_data(current_item)
 	if(!precursor)
-		to_chat(user, span_warning("Something went wrong reading the item's data."))
+		to_chat(user, span_warning("Algo salió mal al leer los datos del artículo."))
 		return
 
 	var/efficiency_bonus = GLOB.thaumic_research.get_research_bonus(/datum/thaumic_research_node/splitter_efficiency)
@@ -132,7 +132,7 @@
 /obj/machinery/essence/extractor/examine(mob/user)
 	. = ..()
 	if(current_item)
-		. += span_notice("Loaded: [current_item]")
+		. += span_notice("Cargado: [current_item]")
 		if(processing)
 			. += span_notice("Extracting... [ticks_remaining] ticks remaining.")
 	else

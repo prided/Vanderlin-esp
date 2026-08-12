@@ -169,9 +169,9 @@
 	if(right_click)
 		if(length(target_mob.controller_mind.patrol_points) >= 2)
 			create_patrol_order(target_mob, target_mob.controller_mind.patrol_points.Copy())
-			to_chat(src, span_notice("Patrol created with [length(target_mob.controller_mind.patrol_points)] points for [target_mob.name]."))
+			to_chat(src, span_notice("Patrulla creada con puntos [length(target_mob.controller_mind.patrol_points)] para [target_mob.name]."))
 		else
-			to_chat(src, span_warning("Need at least 2 patrol points to create a patrol."))
+			to_chat(src, span_warning("Necesita al menos 2 puntos de patrulla para crear una patrulla."))
 
 		target_mob.controller_mind.patrol_setup_active = FALSE
 
@@ -316,7 +316,7 @@
 			selected_structure.color = null
 			selected_structure = null
 		else
-			to_chat(src, span_warning("Cannot move structure to that location."))
+			to_chat(src, span_warning("No se puede mover la estructura a esa ubicación."))
 		return
 
 	// First click - select structure
@@ -325,13 +325,13 @@
 		if(is_structure_moveable(S))
 			selected_structure = S
 			S.color = "#ffff00"  // Yellow highlight
-			to_chat(src, span_notice("Selected [S.name]. Click a destination turf to move it there."))
+			to_chat(src, span_notice("Seleccionado [S.name]. Haga clic en un césped de destino para moverlo allí."))
 		else
-			to_chat(src, span_warning("[S.name] cannot be moved."))
+			to_chat(src, span_warning("[S.name] no se puede mover."))
 
 /mob/camera/strategy_controller/proc/create_break_order_single(turf/T)
 	if(!can_break_turf(T))
-		to_chat(src, span_warning("Cannot break [T.name]."))
+		to_chat(src, span_warning("No se puede romper [T.name]."))
 		return
 
 	// Check if there's already a break order for this turf
@@ -446,7 +446,7 @@
 
 	var/datum/queued_workorder/new_queued = new /datum/queued_workorder(/datum/work_order/move_structure, src, S, dest_turf)
 	in_progress_workorders += new_queued
-	to_chat(src, span_notice("Move order created: [S.name] will be moved to [dest_turf.x], [dest_turf.y]."))
+	to_chat(src, span_notice("Orden de movimiento creada: [S.name] se moverá a [dest_turf.x], [dest_turf.y]."))
 
 
 /mob/camera/strategy_controller/process()

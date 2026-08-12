@@ -17,7 +17,7 @@
 
 // Swamp Miasma (area poison)
 /datum/container_craft/cooking/herbal_tea/swamp_miasma
-	name = "Swamp Miasma"
+	name = "Miasma del pantano"
 	created_reagent = /datum/reagent/poison/herbal/swamp_miasma
 	water_conversion = 1
 	requirements = list(

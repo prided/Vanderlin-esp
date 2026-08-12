@@ -8,7 +8,7 @@
 	required_table = TRUE
 
 /datum/repeatable_crafting_recipe/cooking/frybird/potato
-	name = "Frybird and Tatos"
+	name = "Frybird y Tatos"
 	subtypes_allowed = TRUE
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/cooked/frybird = 1,
@@ -43,7 +43,7 @@
 	required_table = TRUE
 
 /datum/repeatable_crafting_recipe/cooking/frysteak/potato
-	name = "Frysteak and Tatos"
+	name = "Frysteak y Tatos"
 	subtypes_allowed = TRUE
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/cooked/frysteak = 1,
@@ -80,9 +80,9 @@
 	crafting_message = "rub some herbs into frysteak"
 
 /datum/repeatable_crafting_recipe/cooking/frysteak/drowsbane
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	subtypes_allowed = TRUE
-	name = "Frysteak and Drowsbane"
+	name = "Frysteak y Drowsbane"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/cooked/frysteak = 1,
@@ -151,7 +151,7 @@
 	crafting_message = "combine some sausage and onion"
 
 /datum/repeatable_crafting_recipe/cooking/wiener/cocaumole
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Wiener with Cocaumole"
 	subtypes_allowed = TRUE
 	requirements = list(

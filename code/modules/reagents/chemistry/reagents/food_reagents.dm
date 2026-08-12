@@ -9,7 +9,7 @@
 
 /datum/reagent/consumable
 	name = "Consumable"
-	taste_description = "generic food"
+	taste_description = "comida genérica"
 	taste_mult = 4
 	metabolization_rate = REAGENTS_METABOLISM
 	var/nutriment_factor = 1
@@ -33,13 +33,13 @@
 			var/favorite_drink_type = HM.culinary_preferences[CULINARY_FAVOURITE_DRINK]
 			if(favorite_drink_type == type)
 				if(HM.add_stress(/datum/stress_event/favourite_drink))
-					to_chat(HM, span_green("Yum! My favorite drink!"))
+					to_chat(HM, span_green("¡Mmm! ¡Mi bebida favorita!"))
 			else if(ispath(type, favorite_drink_type))
 				var/datum/reagent/consumable/favorite_drink_instance = favorite_drink_type
 				var/favorite_drink_name = initial(favorite_drink_instance.name)
 				if(favorite_drink_name == name)
 					if(HM.add_stress(/datum/stress_event/favourite_drink))
-						to_chat(HM, span_green("Yum! My favorite drink!"))
+						to_chat(HM, span_green("¡Mmm! ¡Mi bebida favorita!"))
 
 			var/hated_drink_type = HM.culinary_preferences[CULINARY_HATED_DRINK]
 			if(hated_drink_type == type)
@@ -71,16 +71,16 @@
 						exposed_mob.add_stress(/datum/stress_event/wine_great)
 						exposed_mob.remove_stress(list(/datum/stress_event/noble_desperate, /datum/stress_event/noble_impoverished_food, /datum/stress_event/noble_bland_food, /datum/stress_event/noble_bad_manners, /datum/stress_event/noble_ate_without_table))
 						if (prob(25))
-							to_chat(exposed_mob, span_blue("Absolutely exquisite!"))
+							to_chat(exposed_mob, span_blue("¡Absolutamente exquisito!"))
 					else
 						exposed_mob.add_stress(/datum/stress_event/wine_good)
 						if (prob(25))
-							to_chat(exposed_mob, span_green("Complex, but good."))
+							to_chat(exposed_mob, span_green("Complejo, pero bueno."))
 	return ..()
 
 /datum/reagent/consumable/nutriment
 	name = "Nutriment"
-	description = "All the vitamins, minerals, and carbohydrates the body needs in pure form."
+	description = "Todas las vitaminas, minerales y carbohidratos que el cuerpo necesita en forma pura."
 	reagent_state = SOLID
 	nutriment_factor = 35 //EVERY 1 NUTRIMENT RESTORES 35 NUTRITION
 	color = "#664330" // rgb: 102, 67, 48
@@ -140,8 +140,8 @@
 	return ..()
 
 /datum/reagent/consumable/nutriment/vitamin
-	name = "Vitamin"
-	description = "All the best vitamins, minerals, and carbohydrates the body needs in pure form."
+	name = "Vitamina"
+	description = "Todas las mejores vitaminas, minerales y carbohidratos que el cuerpo necesita en forma pura."
 
 	brute_heal = 1
 	burn_heal = 1
@@ -152,8 +152,8 @@
 		affected_mob.satiety += 15 * delta_time
 
 /datum/reagent/consumable/nutriment/bone_marrow
-	name = "Bone Marrow"
-	description = "Marrow straight from the source."
+	name = "Médula Ósea"
+	description = "Médula directamente de la fuente."
 
 	brute_heal = 1
 	burn_heal = 1
@@ -167,7 +167,7 @@
 	L.remove_chem_effect(CE_BLOODRESTORE, "[type]")
 
 /datum/reagent/consumable/sugar
-	name = "Sugar"
+	name = "Azúcar"
 	description = "The organic compound commonly known as table sugar and sometimes called saccharose. This white, odorless, crystalline powder has a pleasing, sweet taste."
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 255, 255, 255
@@ -175,7 +175,7 @@
 	nutriment_factor = 10 * REAGENTS_METABOLISM
 	metabolization_rate = 2 * REAGENTS_METABOLISM
 	overdose_threshold = 200 // Hyperglycaemic shock
-	taste_description = "sweetness"
+	taste_description = "dulzura"
 
 /datum/reagent/consumable/sugar/overdose_start(mob/living/M)
 	to_chat(M, "<span class='danger'>I go into hyperglycaemic shock! Lay off the twinkies!</span>")
@@ -193,7 +193,7 @@
 	price_per_unit = 0.175
 
 /datum/reagent/consumable/sodiumchloride
-	name = "Sea Salt"
+	name = "Sal marina"
 	description = "Commonly used to season food."
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 255,255,255
@@ -207,20 +207,20 @@
 	new/obj/effect/decal/cleanable/food/salt(T)
 
 /datum/reagent/consumable/blackpepper
-	name = "Black Pepper"
-	description = "A powder ground from peppercorns. *AAAACHOOO*"
+	name = "Pimienta negra"
+	description = "Un polvo molido de granos de pimienta. *AAAACHOOO*"
 	reagent_state = SOLID
 	// no color (ie, black)
-	taste_description = "pepper"
+	taste_description = "pimienta"
 
 /datum/reagent/consumable/ollie_oil
 	name = "Ollie Oil"
 	description = "Vanderlin's preferred way to consume its ollies."
 	color = "#555f41"
-	taste_description = "peppery oil"
+	taste_description = "aceite picante"
 
 /datum/reagent/drug/mushroomhallucinogen
-	name = "Mushroom Hallucinogen"
+	name = "Alucinógeno de hongos"
 	description = "A strong hallucinogenic drug derived from certain species of mushroom."
 	color = "#E700E7" // rgb: 231, 0, 231
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
@@ -251,7 +251,7 @@
 
 /datum/reagent/consumable/eggyolk
 	name = "Egg Yolk"
-	description = "It's full of protein."
+	description = "Está lleno de proteínas."
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#FFB500"
 	taste_description = "egg"
@@ -262,7 +262,7 @@
 	color = "#d3a308"
 	nutriment_factor = 15 * REAGENTS_METABOLISM
 	metabolization_rate = 1 * REAGENTS_METABOLISM
-	taste_description = "sweetness"
+	taste_description = "dulzura"
 
 /datum/reagent/consumable/honey/on_mob_life(mob/living/carbon/M, efficiency)
 	M.reagents.add_reagent(/datum/reagent/consumable/sugar,3)

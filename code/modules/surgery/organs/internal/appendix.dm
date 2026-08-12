@@ -11,8 +11,8 @@
 	high_threshold = STANDARD_ORGAN_THRESHOLD * 0.4
 	low_threshold =  STANDARD_ORGAN_THRESHOLD * 0.1
 	healing_factor = 0
-	now_failing = span_warning("An explosion of pain erupts in my lower right abdomen!")
-	now_fixed = span_info("The pain in my abdomen has subsided.")
+	now_failing = span_warning("¡Una explosión de dolor estalla en mi abdomen inferior derecho!")
+	now_fixed = span_info("El dolor en mi abdomen ha disminuido.")
 
 	organ_volume = 0.5
 	max_blood_storage = 2.5
@@ -28,7 +28,7 @@
 	if(!ishuman(owner))
 		return
 	if(is_failing())
-		examine_list += span_danger("<b>[owner]</b>'s lower right abdomen looks visibly distended and taut.")
+		examine_list += span_danger("El abdomen inferior derecho de <b>[owner]</b> se ve visiblemente distendido y tenso.")
 	else if(inflamation_stage)
 		examine_list += span_warning("<b>[owner]</b>'s lower abdomen appears slightly swollen.")
 

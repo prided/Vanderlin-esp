@@ -55,14 +55,14 @@
 	if(!length(to_grind))
 		return ..()
 
-	balloon_alert(user, "removing items...")
+	balloon_alert(user, "eliminando elementos...")
 	if(!do_after(user, (grind_load() / 2) SECONDS, src))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	for(var/obj/item/I as anything in to_grind)
 		I.forceMove(get_turf(user))
 
-	balloon_alert(user, "items removed.")
+	balloon_alert(user, "elementos eliminados.")
 
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
@@ -77,7 +77,7 @@
 		if(!user.transferItemToLoc(tool, src))
 			balloon_alert(user, "stuck!")
 			return ITEM_INTERACT_BLOCKING
-		balloon_alert(user, "added [tool].")
+		balloon_alert(user, "agregó [tool].")
 		to_grind += tool
 		return ITEM_INTERACT_SUCCESS
 
@@ -85,14 +85,14 @@
 		if(user.try_recipes(src, tool))
 			user.changeNext_move(CLICK_CD_FAST)
 			return ITEM_INTERACT_SUCCESS
-		balloon_alert(user, "nothing to grind!")
+		balloon_alert(user, "nada que moler!")
 		return ITEM_INTERACT_BLOCKING
 
 	var/list/recipes = list()
 	for(var/obj/item/grinding as anything in to_grind)
 		var/datum/alch_grind_recipe/found_recipe = find_recipe(grinding)
 		if(!found_recipe)
-			balloon_alert(user, "can't grind!")
+			balloon_alert(user, "¡No puedo moler!")
 			return ITEM_INTERACT_BLOCKING
 		recipes[grinding] = found_recipe
 

@@ -1,5 +1,5 @@
 /datum/material/weeping
-	name = "Enduring"
+	name = "Duradero"
 	show_as_filling = TRUE
 	color = "#CECA9C"
 	hardness = MAT_VALUE_FLEXIBLE + 10

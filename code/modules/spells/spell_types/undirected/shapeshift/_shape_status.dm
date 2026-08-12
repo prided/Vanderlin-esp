@@ -249,7 +249,7 @@
 
 /atom/movable/screen/alert/status_effect/shapeshifted
 	name = "Shapeshifted"
-	desc = "Your form is not your own... you've shapeshifted into another creature!"
+	desc = "Tu forma no es tuya... ¡te has transformado en otra criatura!"
 	icon_state = "shapeshifted"
 
 /atom/movable/screen/alert/status_effect/shapeshifted/Click(location, control, params)

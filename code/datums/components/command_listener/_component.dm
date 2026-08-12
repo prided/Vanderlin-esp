@@ -166,7 +166,7 @@ GLOBAL_LIST_INIT(automaton_order_jobs, list(JOB_ARTIFICER, "Supreme Artificer"))
 		choices += initial(cmd_name.command_name)
 		choices[initial(cmd_name.command_name)] = cmd_name
 
-	var/choice = tgui_input_list(clicker, "Select a command to issue to [owner]:", "Issue Command", choices)
+	var/choice = tgui_input_list(clicker, "Seleccione un comando para emitir a [owner]:", "Issue Command", choices)
 	if(!choice)
 		return
 	if(QDELETED(clicker) || QDELETED(owner))

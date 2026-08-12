@@ -49,9 +49,9 @@
 	display_results(
 		surgeon,
 		patient,
-		span_notice("I begin to scrape lux from [patient]'s heart..."),
-		span_notice("[surgeon] begins to scrape lux from [patient]'s heart."),
-		span_notice("[surgeon] begins to scrape lux from [patient]'s heart."),
+		span_notice("Empiezo a raspar lux del corazón de [patient]..."),
+		span_notice("[surgeon] comienza a raspar lux del corazón de [patient]."),
+		span_notice("[surgeon] comienza a raspar lux del corazón de [patient]."),
 	)
 
 /datum/surgery_operation/basic/extract_lux/on_success(mob/living/patient, mob/living/surgeon, tool, list/operation_args)
@@ -61,7 +61,7 @@
 			patient,
 			span_notice("You extract a single dose of tainted lux from [patient]'s heart."),
 			span_notice("[surgeon] extracts tainted lux from [patient]'s innards."),
-			span_notice("[surgeon] extracts something from [patient]'s innards."),
+			span_notice("[surgeon] extrae algo de las entrañas de [patient]."),
 		)
 		new /obj/item/reagent_containers/lux_tainted(get_turf(patient))
 	else
@@ -69,8 +69,8 @@
 			surgeon,
 			patient,
 			span_notice("You extract a single dose of lux from [patient]'s heart."),
-			span_notice("[surgeon] extracts lux from [patient]'s innards."),
-			span_notice("[surgeon] extracts something from [patient]'s innards."),
+			span_notice("[surgeon] extrae lux de las entrañas de [patient]."),
+			span_notice("[surgeon] extrae algo de las entrañas de [patient]."),
 		)
 		new /obj/item/reagent_containers/lux(get_turf(patient))
 

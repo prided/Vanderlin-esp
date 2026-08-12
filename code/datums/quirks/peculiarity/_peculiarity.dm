@@ -6,7 +6,7 @@
 
 /datum/quirk/peculiarity/large_sized
 	name = "Large Build"
-	desc = "You're taller and broader than most. This makes you more imposing but also harder to miss."
+	desc = "Eres más alto y más ancho que la mayoría. Esto te hace más imponente pero también más difícil de pasar desapercibido."
 
 /datum/quirk/peculiarity/large_sized/on_spawn()
 	if(!ishuman(owner))
@@ -85,7 +85,7 @@
 	traits_to_add = list(TRAIT_VIRGIN)
 
 /datum/quirk/peculiarity/mystery_box
-	name = "Mystery Box"
+	name = "Caja Misteriosa"
 	desc = "You possess a locked box that you cannot open. Someone in this world knows the code..."
 	point_value = 0
 	var/obj/item/mystery/mystery_box
@@ -131,7 +131,7 @@
 
 		to_chat(box_owner, span_notice("You remember that [keeper.real_name] knows how to open this box..."))
 	else
-		to_chat(box_owner, span_warning("You can't remember who knows the passcode..."))
+		to_chat(box_owner, span_warning("No puedes recordar quién conoce el código de acceso..."))
 
 	RegisterSignal(mystery_box, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine), TRUE)
 
@@ -170,7 +170,7 @@
 	return ..()
 
 /obj/item/mystery
-	name = "locked box"
+	name = "caja cerrada"
 	desc = "A mysterious locked box."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "mysterybox"

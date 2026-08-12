@@ -1,7 +1,7 @@
 
 /datum/chimeric_node/output/blasting
 	name = "blasting"
-	desc = "When activated you explode"
+	desc = "Cuando se activa explotas"
 
 /datum/chimeric_node/output/blasting/trigger_effect(multiplier)
 	. = ..()

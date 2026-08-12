@@ -130,7 +130,7 @@
 	prime_timer_id = null
 	UnregisterSignal(owner, COMSIG_MOB_ITEM_ATTACK_POST_SWINGDELAY)
 	owner.remove_filter(CRESCENDO_FILTER)
-	to_chat(owner, span_warning("My crescendo fades before I could strike..."))
+	to_chat(owner, span_warning("Mi crescendo se desvanece antes de que pueda atacar..."))
 	// Stacks are NOT consumed on fizzle - you can try again
 
 /datum/action/cooldown/spell/crescendo/Remove(mob/remove_from)
@@ -156,7 +156,7 @@
 			var/armor_block = L.run_armor_check(def_zone, "slash", armor_penetration = 0, damage = CRESCENDO_RESONATING_DAMAGE)
 			L.apply_damage(CRESCENDO_RESONATING_DAMAGE, BRUTE, def_zone, armor_block, damage_type = BCLASS_CUT)
 			var/zone_name = parse_zone(def_zone)
-			L.balloon_alert_to_viewers("resonant strike - [zone_name]!")
+			L.balloon_alert_to_viewers("golpe resonante - [zone_name]!")
 			L.visible_message(span_danger("A wave of rhythmic force reverberates through [L]!"))
 
 /datum/action/cooldown/spell/crescendo/proc/crescendo_concussive(mob/living/carbon/human/user)

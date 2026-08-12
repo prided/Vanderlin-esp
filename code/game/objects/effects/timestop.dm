@@ -1,7 +1,7 @@
 /obj/effect/timestop //Ported from Monkestation 2.0 (https://github.com/Monkestation/Monkestation2.0)
 	anchored = TRUE
 	name = "chronofield"
-	desc = "A field where all time seems frozen..."
+	desc = "Un campo donde todo el tiempo parece congelado..."
 	icon = 'icons/effects/160x160.dmi'
 	icon_state = "time"
 	layer = FLY_LAYER

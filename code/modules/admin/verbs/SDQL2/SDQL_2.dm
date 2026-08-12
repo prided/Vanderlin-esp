@@ -440,7 +440,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 /datum/SDQL2_query/proc/admin_halt(user = usr)
 	if(!SDQL2_IS_RUNNING)
 		return
-	var/msg = "[key_name(user)] has halted query #[id]"
+	var/msg = "[key_name(user)] ha detenido la consulta #[id]"
 	message_admins(msg)
 	log_admin(msg)
 	state = SDQL2_STATE_HALTING
@@ -972,7 +972,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 				querys[querys_pos] = parsed_tree
 				querys_pos++
 			else //There was an error so don't run anything, and tell the user which query has errored.
-				to_chat(usr, "<span class='danger'>Parsing error on [querys_pos]\th query. Nothing was executed.</span>")
+				to_chat(usr, "<span class='danger'>Error de análisis en la consulta [querys_pos]\th. No se ejecutó nada.</span>")
 				return list()
 			query_tree = list()
 			do_parse = 0
@@ -1023,7 +1023,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 
 	else if(expression [start] == "{" && long)
 		if(LOWER_TEXT(copytext(expression[start + 1], 1, 3)) != "0x")
-			to_chat(usr, "<span class='danger'>Invalid pointer syntax: [expression[start + 1]]</span>")
+			to_chat(usr, "<span class='danger'>Sintaxis de puntero no válida: [expression[start + 1]]</span>")
 			return null
 		v = locate("\[[expression[start + 1]]]")
 		if(!v)
@@ -1104,7 +1104,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 			var/list/L = v
 			var/index = query.SDQL_expression(source, expression[start + 2])
 			if(isnum(index) && (!ISINTEGER(index) || L.len < index))
-				to_chat(usr, "<span class='danger'>Invalid list index: [index]</span>")
+				to_chat(usr, "<span class='danger'>Índice de lista no válido: [index]</span>")
 				return null
 			return L[index]
 	return v
@@ -1228,7 +1228,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 	Q.action_click()
 
 /obj/effect/statclick/SDQL2_VV_all
-	name = "VIEW VARIABLES"
+	name = "VER VARIABLES"
 
 /obj/effect/statclick/SDQL2_VV_all/Click()
 	usr.client.debug_variables(GLOB.sdql2_queries)

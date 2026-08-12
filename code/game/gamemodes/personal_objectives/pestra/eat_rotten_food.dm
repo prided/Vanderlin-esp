@@ -30,7 +30,7 @@
 
 /datum/objective/personal/rotten_feast/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have consumed enough rotten food to complete Pestra's objective!"))
+	to_chat(owner.current, span_greentext("¡Has consumido suficiente comida podrida para completar el objetivo de Pestra!"))
 	adjust_storyteller_influence(PESTRA, 20)
 	UnregisterSignal(owner.current, COMSIG_ROTTEN_FOOD_EATEN)
 

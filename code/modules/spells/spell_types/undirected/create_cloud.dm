@@ -33,12 +33,12 @@
 		return . | SPELL_CANCEL_CAST
 
 	if(!held_item?.is_open_container())
-		to_chat(owner, span_warning("The cloud can't escape this!"))
+		to_chat(owner, span_warning("¡La nube no puede escapar de esto!"))
 		return . | SPELL_CANCEL_CAST
 
 	var/datum/reagents/reagents = held_item.reagents
 	if(!reagents?.total_volume)
-		to_chat(owner, span_warning("It's empty!"))
+		to_chat(owner, span_warning("¡Está vacío!"))
 		return . | SPELL_CANCEL_CAST
 
 /datum/action/cooldown/spell/undirected/create_cloud/cast(atom/cast_on)

@@ -61,9 +61,9 @@
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_GRAVEROBBER)) // only people who are greenlit to dig out graves can tell if a coffin is consecrated.
 		if(consecrated)
-			. += span_rose("This consecrated coffin hosts a body.")
+			. += span_rose("Este ataúd consagrado alberga un cuerpo.")
 		else if (sealed)
-			. += span_warning("It is sealed, but has no body.")
+			. += span_warning("Está sellado, pero no tiene cuerpo.")
 
 /obj/structure/closet/crate/coffin/attacked_by(obj/item/I, mob/living/user)
 	if(istype(I, /obj/item/inqarticles/tallowpot)) // consecrating and sealing a coffin with tallow.
@@ -73,18 +73,18 @@
 			return
 
 		if(!pot.tallow)
-			to_chat(user, span_warning("I lack tallow in the pot."))
+			to_chat(user, span_warning("Me falta sebo en la olla."))
 			return
 
 		if(!pot.heatedup)
 			to_chat(user, span_warning("The tallow is not warm enough."))
 			return
 
-		to_chat(user, span_info("I start sealing the coffin with tallow.."))
+		to_chat(user, span_info("Empiezo a sellar el ataúd con sebo."))
 		if(!do_after(user, 5 SECONDS, src))
 			return
 		if(pacify_coffin(src, user))
-			user.visible_message(span_rose("[user] seals and consecrates [src]."), span_rose("I seal the coffin, consecrating it. I may bury it to protect it's inhabitant further."))
+			user.visible_message(span_rose("[user] sella y consagra [src]."), span_rose("I seal the coffin, consecrating it. I may bury it to protect it's inhabitant further."))
 			SEND_SIGNAL(user, COMSIG_GRAVE_CONSECRATED, src)
 			record_round_statistic(STATS_GRAVES_CONSECRATED)
 			consecrated = TRUE
@@ -97,9 +97,9 @@
 	if(user.used_intent.type == /datum/intent/dagger/cut && istype(I, /obj/item/weapon/knife)) // unsealing a coffin
 		if(!user.cmode)
 			if(!sealed)
-				to_chat(user, span_info("The coffin has no seal to remove."))
+				to_chat(user, span_info("El ataúd no tiene ningún sello que quitar."))
 			else
-				to_chat(user, span_info("I start unsealing the coffin.."))
+				to_chat(user, span_info("Empiezo a abrir el ataúd."))
 				if(!do_after(user, 5 SECONDS, src))
 					return
 				if(user.patron?.type != /datum/patron/divine/necra) // necrans don't add to the grave robber counts, though they can still get cursed.
@@ -123,7 +123,7 @@
 
 /obj/structure/closet/crate/coffin/vampire
 	name = "sleep casket"
-	desc = "A fancy coffin."
+	desc = "Un ataúd elegante."
 	icon_state = "vcasket"
 	resistance_flags = FLAMMABLE
 	max_integrity = 70

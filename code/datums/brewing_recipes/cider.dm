@@ -1,5 +1,5 @@
 /datum/brewing_recipe/cider
-	name = "Apple Cider"
+	name = "sidra de manzana"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/cider
 	needed_reagents = list(/datum/reagent/water = 100)
 	needed_crops = list(/obj/item/reagent_containers/food/snacks/produce/fruit/apple = 3)
@@ -9,7 +9,7 @@
 	brewing_skill = /datum/attribute/skill/craft/cooking/brewing
 
 /datum/brewing_recipe/cider/pear
-	name = "Pear Cider"
+	name = "Sidra de pera"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/cider/pear
 	needed_crops = list(/obj/item/reagent_containers/food/snacks/produce/fruit/pear = 3)
 

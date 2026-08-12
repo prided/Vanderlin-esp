@@ -15,7 +15,7 @@
 /datum/intent/simple/elemental_unarmed
 	name = "elemental unarmed"
 	icon_state = "instrike"
-	attack_verb = list("punches", "strikes", "rolls on", "crushes")
+	attack_verb = list("punches", "huelgas", "rolls on", "crushes")
 	animname = "blank22"
 	blade_class = BCLASS_BLUNT
 	hitsound = null

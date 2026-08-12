@@ -1,7 +1,7 @@
 
 /obj/item/clothing/armor/regenerating
-	name = "regenerating armour"
-	desc = "Abstract parent. Contact developer if you see this."
+	name = "armadura regeneradora"
+	desc = "Padre abstracto. Póngase en contacto con el desarrollador si ve esto."
 	icon_state = null
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 
@@ -93,7 +93,7 @@
 
 
 /obj/item/clothing/armor/regenerating/skin/disciple
-	name = "disciple's skin"
+	name = "piel de discípulo"
 	desc = "It's far more than just an oath. Mercurial circles of silver are etched into the skin of this person, engraved with fanatic zeal and faithful reverence. May it ward the darkness. It seems to be written in red ink."
 	armor_type = /datum/armor/skin/disciple
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT)
@@ -101,7 +101,7 @@
 	repair_time = 20 SECONDS
 
 /obj/item/clothing/armor/regenerating/skin/easttats
-	name = "bouhoi bujeog tattoos"
+	name = "tatuajes de bouhoi bujeog"
 	desc = "A mystic style of tattoos used to honor the kin that fell generations ago, a sign of companionship and secretive brotherhood. These are styled into the shape of clouds, created by a mystical ink which shifts and moves in ripples like a pond to harden where your skin is struck. Its movement causes you to shudder."
 	icon_state = "easttats"
 	armor_type = /datum/armor/skin/easttats
@@ -110,9 +110,9 @@
 	repair_time = 20 SECONDS
 
 /obj/item/clothing/armor/regenerating/skin/disciple/sunlord
-	name = "The golden tan"
-	desc = "The sun's powerful light has infused my skin with an armor-like denseness."
+	name = "El bronceado dorado"
+	desc = "La poderosa luz del sol ha infundido en mi piel una densidad similar a la de una armadura."
 
 /obj/item/clothing/armor/regenerating/skin/easttats/tribal
-	name = "Tribal Tattoos"
+	name = "Tatuajes Tribales"
 	desc = "Detailed tribal tattoos carved upon half-orc warriors to inspire courage within those who bear them, always on proud display to the world."

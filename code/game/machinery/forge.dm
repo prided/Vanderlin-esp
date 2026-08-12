@@ -19,7 +19,7 @@
 		if(!tongs.held_item)
 			return ITEM_INTERACT_BLOCKING
 		tongs.heat_held_item(source = "tongs", duration = 30 SECONDS, incoming = 150, max_heat = 1500)
-		user.visible_message(span_info("[user] heats [tongs.held_item] with [tongs]."))
+		user.visible_message(span_info("[user] calienta [tongs.held_item] con [tongs]."))
 		return ITEM_INTERACT_SUCCESS
 
 	if(istype(tool, /obj/item/storage/crucible))

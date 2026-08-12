@@ -4,7 +4,7 @@
 #define TROLL_SHAPE_STAGE_4 4
 
 /datum/action/cooldown/spell/undirected/troll_shape
-	name = "Troll Shape"
+	name = "Forma de troll"
 	desc = "Borrow power from the Troll, his favored beast."
 	button_icon_state = "trollshape"
 
@@ -60,7 +60,7 @@
 			next_stage_time = 2 SECONDS
 		if(TROLL_SHAPE_STAGE_4)
 			playsound(druid, 'sound/vo/mobs/troll/idle1.ogg', 100, TRUE)
-			to_chat(druid, span_warning("I manifest the power of a troll!"))
+			to_chat(druid, span_warning("¡Manifiesto el poder de un troll!"))
 			druid.apply_status_effect(/datum/status_effect/buff/trollshape)
 			return
 		else

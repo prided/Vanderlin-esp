@@ -1,7 +1,7 @@
 /*	.................   Luxury dye bin   ................... */
 /obj/structure/dye_bin
 	name = "dye bin"
-	desc = "A wooden barrel with various dyes, used to stain clothes into new colors."
+	desc = "Un barril de madera con varios tintes, utilizado para teñir la ropa con nuevos colores."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "dye_bin"
 	density = TRUE
@@ -79,21 +79,21 @@
 
 	if(ismobholder(I))
 		if(!allow_mobs)
-			to_chat(user, span_warning("I could not fit [I] into [src]."))
+			to_chat(user, span_warning("No pude encajar [I] en [src]."))
 			return
 		var/obj/item/mob_holder/fellow = I
 		fellow.release() //is this not a bug?
 
 	if(inserted)
-		to_chat(user, span_warning("There is already something inside the dye bin."))
+		to_chat(user, span_warning("Ya hay algo dentro del contenedor de tinte."))
 		return
 	if(!user.transferItemToLoc(I, src))
 		to_chat(user, span_warning("I can not let go of [I]!"))
 		return
 
 	user.visible_message( \
-		span_notice("[user] inserts [I] into [src]."), \
-		span_notice("I insert [I] into [src].") \
+		span_notice("[user] inserta [I] en [src]."), \
+		span_notice("Inserto [I] en [src].") \
 	)
 	inserted = I
 	icon_state = "dye_bin_full"
@@ -156,7 +156,7 @@
 			user.visible_message( \
 				null, \
 				null, \
-				span_hear("I hear something moving in water.") \
+				span_hear("Escucho algo moviéndose en el agua.") \
 			)
 			if(do_after(user, 5 SECONDS, src))
 				if(href_list["type"] == "detail" && isitem(inserted))
@@ -177,7 +177,7 @@
 
 			user.put_in_hands(inserted)
 			user.visible_message( \
-				span_notice("[user] removes [inserted] from [src]."), \
+				span_notice("[user] elimina [inserted] de [src]."), \
 				span_notice("I remove [inserted] from [src].") \
 			)
 			inserted = null
@@ -192,7 +192,7 @@
 
 	playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
 	user.visible_message( \
-		span_warning("[user] kicks [src]!"), \
+		span_warning("¡[user] patea a [src]!"), \
 		span_warning("I kick [src]!"), \
 		span_warning("I hear a loud bang!") \
 	)
@@ -212,7 +212,7 @@
 
 /obj/item/dye_pack/examine(mob/user)
 	. = ..()
-	. += span_info("Putting these into a wooden bin will turn it into a dye bin.")
+	. += span_info("Ponerlos en un contenedor de madera lo convertirá en un contenedor de tinte.")
 	. += span_info("Putting these into an existing dye bin will add the colors into it.")
 	var/colors_ref = "byond://?src=[REF(src)];action=colors"
 	. += span_info(span_notice("I could look at the selection of <a href=[colors_ref]>colors</a>...")) //ew
@@ -226,7 +226,7 @@
 				to_chat(usr, span_ooc("<i>This is a bug. Please report this on the GitHub.</i>"))
 				return
 
-			var/list/message_parts = list(span_info("I can discern these colors..."))
+			var/list/message_parts = list(span_info("Puedo discernir estos colores..."))
 			for(var/key in selectable_colors)
 				var/value = selectable_colors[key]
 
@@ -241,7 +241,7 @@
 	qdel(src)
 
 /obj/item/dye_pack/cheap
-	name = "cheap dyes"
+	name = "tintes baratos"
 	desc = "A handful of muted dyes made from natural elements."
 	icon_state = "cheap_dyes"
 	sellprice = 3
@@ -251,7 +251,7 @@
 	. = ..()
 
 /obj/item/dye_pack/luxury
-	name = "luxury dyes"
+	name = "tintes de lujo"
 	desc = "An assortment of rich, colorful dyes, hailing from all across Psydonia. This would certainly cost a pretty zenny."
 	icon_state = "luxury_dyes"
 	sellprice = 30
@@ -261,7 +261,7 @@
 	. = ..()
 
 /obj/item/dye_pack/royal
-	name = "royal dyes"
+	name = "tintes reales"
 	desc = "Dyes with powders hailing from all across Psydonia, from Kingsfield to Heartfelt. \
 		Vibrant and pleasing to the eyes, only the highest in the social hierarchy are seen with these colors."
 	icon_state = "luxury_dyes"

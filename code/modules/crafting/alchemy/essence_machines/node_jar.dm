@@ -35,7 +35,7 @@
 			var/drain_amount = jar_stamina_drain * (contained_node.tier + 1)
 			holder.stamina = max(0, holder.stamina - drain_amount)
 			if(contained_node.tier >= 1 && holder.stamina <= 30)
-				to_chat(holder, span_notice("The contained essence node creates a slight burden."))
+				to_chat(holder, span_notice("El nodo de esencia contenido crea una ligera carga."))
 		last_drain = world.time
 
 /obj/item/essence_node_jar/update_overlays()
@@ -68,7 +68,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(locate(/obj/structure/essence_node) in deploy_turf)
-		to_chat(user, span_warning("There's already an essence node here."))
+		to_chat(user, span_warning("Ya hay un nodo de esencia aquí."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!do_after(user, 3 SECONDS, deploy_turf))
@@ -100,7 +100,7 @@
 
 	if(contained_node)
 		var/datum/thaumaturgical_essence/temp = new contained_node.essence_type.type
-		. += span_info("Contains: [contained_node.name] ([temp.name], Tier [contained_node.tier])")
+		. += span_info("Contiene: [contained_node.name] ([temp.name], nivel [contained_node.tier])")
 		. += span_info("Node essence: [contained_node.current_essence]/[contained_node.max_essence] units")
 		. += span_notice("The contained node still creates a slight burden when carried.")
 		qdel(temp)

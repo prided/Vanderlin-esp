@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/purify_water
 	name = "Purify Water"
-	desc = "Removes all impurities and toxins from water, making it pure and safe."
+	desc = "Elimina todas las impurezas y toxinas del agua, haciéndola pura y segura."
 	button_icon_state = "purify_water"
 	cast_range = 1
 	essences = list(/datum/thaumaturgical_essence/life, /datum/thaumaturgical_essence/water)

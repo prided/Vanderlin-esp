@@ -29,14 +29,14 @@
 	category_tags = list(CTAG_PILGRIM)
 	total_positions = 1
 	roll_chance = 0
-	apprentice_name = "Mason Apprentice"
+	apprentice_name = "Aprendiz de albañil"
 	cmode_music = 'sound/music/cmode/towner/CombatTowner2.ogg'
 	is_recognized = TRUE
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/pilgrim/grandmastermason
 
 /datum/outfit/pilgrim/grandmastermason
-	name = "Grandmaster Mason (Pilgrim)"
+	name = "Gran Maestro Masón (Peregrino)"
 	head = /obj/item/clothing/head/hatblu
 	armor = /obj/item/clothing/armor/leather/vest
 	cloak = /obj/item/clothing/cloak/apron/waist/colored/bar

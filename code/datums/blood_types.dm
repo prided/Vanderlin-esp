@@ -177,21 +177,21 @@ GLOBAL_LIST_INIT_TYPED(blood_types, /datum/blood_type, init_subtypes_w_path_keys
 	used_table = /datum/chimeric_table/cursed_elf
 
 /datum/blood_type/human/triton
-	name = "Triton"
+	name = "Tritón"
 	reagent_type = /datum/reagent/blood
 	contains_lux = TRUE
 	used_table = /datum/chimeric_table/triton
 
 /datum/blood_type/human/medicator
-	name = "Medicator"
+	name = "medicador"
 	used_table = /datum/chimeric_table/medicator
 
 /datum/blood_type/human/dwarf
-	name = "Dwarf"
+	name = "Enano"
 	used_table = /datum/chimeric_table/dwarf
 
 /datum/blood_type/human/dwarf/subterra
-	name = "Jarosite Dwarf"
+	name = "Enano jarosita"
 	used_table = /datum/chimeric_table/random/subterran_dwarf
 
 /datum/blood_type/human/elf
@@ -211,7 +211,7 @@ GLOBAL_LIST_INIT_TYPED(blood_types, /datum/blood_type, init_subtypes_w_path_keys
 	used_table = /datum/chimeric_table/fey
 
 /datum/blood_type/lycan
-	name = "Lycan"
+	name = "licántropo"
 	used_table = /datum/chimeric_table/lycan
 
 /datum/blood_type/human/corrupted
@@ -225,7 +225,7 @@ GLOBAL_LIST_INIT_TYPED(blood_types, /datum/blood_type, init_subtypes_w_path_keys
 	vitae = 750 VITAE
 
 /datum/blood_type/human/corrupted/orc
-	name = "Orc"
+	name = "orco"
 	used_table = /datum/chimeric_table/orc
 	vitae = 1250 VITAE
 

@@ -109,7 +109,7 @@
 
 	// Show attacker feedback
 	if(user.client?.prefs.read_preference(/datum/preference/toggle/showrolls) && attacker_dualwielding)
-		var/attacker_feedback = "Attacking with advantage."
+		var/attacker_feedback = "Atacar con ventaja."
 		if(defender_dualwielding)
 			attacker_feedback += " Cancelled out!"
 		to_chat(user, span_info("[attacker_feedback]"))
@@ -312,14 +312,14 @@
 		if(istype(rmb_intent, /datum/rmb_intent/riposte))
 			src.visible_message("<span class='boldwarning'><b>[src]</b> ripostes [user] with [W]!</span>")
 		else if(istype(W, /obj/item/weapon/shield))
-			src.visible_message("<span class='boldwarning'><b>[src]</b> blocks [user] with [W]!</span>")
+			src.visible_message("<span class='boldwarning'><b>[src]</b> bloquea [user] con [W]!</span>")
 		else
 			src.visible_message("<span class='boldwarning'><b>[src]</b> parries [user] with [W]!</span>")
 
 			// Check shield integrity
 			var/shieldur = round(((W.get_integrity() / W.max_integrity) * 100), 1)
 			if(shieldur <= 30)
-				src.visible_message("<span class='boldwarning'><b>\The [W] is about to break!</b></span>")
+				src.visible_message("<span class='boldwarning'><b>\The [W] está a punto de romperse!</b></span>")
 
 	else
 		// Non-human parry (simpler)

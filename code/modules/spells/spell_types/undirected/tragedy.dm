@@ -6,7 +6,7 @@
 	antimagic_flags = NONE
 
 	invocation_type = INVOCATION_SHOUT
-	invocation = "Death will be laughing in the end."
+	invocation = "La muerte se reirá al final."
 
 	spell_type = NONE
 	associated_skill = null
@@ -23,7 +23,7 @@
 	. = ..()
 	if(. & SPELL_CANCEL_CAST)
 		return
-	message = browser_input_text(owner, "Say something sad!", "XLYIX")
+	message = browser_input_text(owner, "¡Di algo triste!", "XLYIX")
 	if(QDELETED(src) || QDELETED(cast_on) || !can_cast_spell())
 		return . | SPELL_CANCEL_CAST
 	if(!message)

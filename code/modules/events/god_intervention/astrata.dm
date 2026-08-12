@@ -1,5 +1,5 @@
 /datum/round_event_control/astrata_grandeur
-	name = "Astrata's Grandeur"
+	name = "La grandeza de Astrata"
 	track = EVENT_TRACK_INTERVENTION
 	typepath = /datum/round_event/astrata_grandeur
 	weight = 8

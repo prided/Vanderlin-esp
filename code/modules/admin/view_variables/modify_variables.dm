@@ -9,7 +9,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 
 /client/proc/vv_parse_text(O, new_var)
 	if(O && findtext(new_var,"\["))
-		var/process_vars = tgui_alert(usr,"\[] detected in string, process as variables?","Process Variables?",list("Yes","No"))
+		var/process_vars = tgui_alert(usr,"\[] detected in string, process as variables?","¿Variables de proceso?",list("Yes","No"))
 		if(process_vars == "Yes")
 			. = string2listofvars(new_var, O)
 
@@ -95,7 +95,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 
 	L += list(var_value) //var_value could be a list
 
-	switch(tgui_alert(usr,"Would you like to associate a value with the list entry?",,list("Yes","No")))
+	switch(tgui_alert(usr,"¿Le gustaría asociar un valor con la entrada de la lista?",,list("Yes","No")))
 		if("Yes")
 			L[var_value] = mod_list_add_ass(O) //hehe
 	if (O)
@@ -110,7 +110,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 	if(!check_rights(R_VAREDIT))
 		return
 	if(!istype(L, /list))
-		to_chat(src, "Not a List.")
+		to_chat(src, "No es una lista.")
 		return
 
 	if(L.len > 1000)
@@ -176,7 +176,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 	if (index == null)
 		return
 	var/assoc = 0
-	var/prompt = tgui_alert(usr, "Do you want to edit the key or its assigned value?", "Associated List", list("Key", "Assigned Value", "Cancel"))
+	var/prompt = tgui_alert(usr, "¿Quieres editar la clave o su valor asignado?", "Lista asociada", list("Key", "Assigned Value", "Cancel"))
 	if (prompt == "Cancel")
 		return
 	if (prompt == "Assigned Value")
@@ -199,9 +199,9 @@ GLOBAL_PROTECT(VVpixelmovement)
 
 	default = vv_get_class(objectvar, variable)
 
-	to_chat(src, "Variable appears to be <b>[uppertext(default)]</b>.")
+	to_chat(src, "La variable parece ser <b>[uppertext(default)]</b>.")
 
-	to_chat(src, "Variable contains: [variable]")
+	to_chat(src, "La variable contiene: [variable]")
 
 	if(default == VV_NUM)
 		var/dir_text = ""
@@ -295,7 +295,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 
 	if(param_var_name)
 		if(!(param_var_name in O.vars))
-			to_chat(src, "A variable with this name ([param_var_name]) doesn't exist in this datum ([O])")
+			to_chat(src, "Una variable con este nombre ([param_var_name]) no existe en este dato ([O])")
 			return
 		variable = param_var_name
 
@@ -320,11 +320,11 @@ GLOBAL_PROTECT(VVpixelmovement)
 	var/default = vv_get_class(variable, var_value)
 
 	if(isnull(default))
-		to_chat(src, "Unable to determine variable type.")
+		to_chat(src, "No se puede determinar el tipo de variable.")
 	else
-		to_chat(src, "Variable appears to be <b>[uppertext(default)]</b>.")
+		to_chat(src, "La variable parece ser <b>[uppertext(default)]</b>.")
 
-	to_chat(src, "Variable contains: [var_value]")
+	to_chat(src, "La variable contiene: [var_value]")
 
 	if(default == VV_NUM)
 		var/dir_text = ""

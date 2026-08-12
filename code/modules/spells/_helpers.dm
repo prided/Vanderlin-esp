@@ -97,7 +97,7 @@ without going through the click pipeline, so spells can deliver weapon-style str
 			else
 				target.simple_woundcritroll(blade_class, wound_damage, user, def_zone, crit_message = TRUE)
 
-	var/attack_verb = "strikes"
+	var/attack_verb = "huelgas"
 	var/hit_sound
 	switch(blade_class)
 		if(BCLASS_CUT)
@@ -118,7 +118,7 @@ without going through the click pipeline, so spells can deliver weapon-style str
 		var/weapon_name = weapon ? weapon.name : LOWER_TEXT(spell_name)
 		var/armor_msg = ""
 		if(!damage_dealt)
-			armor_msg += span_warning("Armor stops the damage.")
+			armor_msg += span_warning("La armadura detiene el daño.")
 		target.visible_message(
 			span_danger("[user] [attack_verb] \the [target] with [weapon_name] in the [parse_zone(def_zone)]![armor_msg]"),
 			span_danger("[user] [attack_verb] me in the [span_userdanger(parse_zone(def_zone))]![armor_msg]"),

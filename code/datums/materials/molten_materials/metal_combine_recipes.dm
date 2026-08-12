@@ -1,7 +1,7 @@
 /datum/molten_recipe
 	abstract_type = /datum/molten_recipe
 	var/name = "Generic Molten Recipe"
-	var/category = "Metallurgy"
+	var/category = "Metalurgia"
 
 	var/list/materials_required = list()
 	var/list/output = list()
@@ -36,7 +36,7 @@
 
 
 /datum/molten_recipe/bronze
-	name = "Bronze"
+	name = "Bronce"
 	materials_required = list(
 		/datum/material/copper = 9,
 		/datum/material/tin = 1,
@@ -58,7 +58,7 @@
 	)
 
 /datum/molten_recipe/steel
-	name = "Steel"
+	name = "Acero"
 	materials_required = list(
 		/datum/material/iron = 3,
 		/datum/material/coke = 1,

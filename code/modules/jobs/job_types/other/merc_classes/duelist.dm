@@ -18,7 +18,7 @@
 	)
 
 /datum/job/advclass/mercenary/duelist
-	title = "Duelist"
+	title = "Duelista"
 	tutorial = "A swordsman from Valoria, wielding a rapier with deadly precision and driven by honor and a thirst for coin, they duel with unmatched precision, seeking glory and wealth."
 	allowed_races = RACES_PLAYER_NO_KOBOLD
 	outfit = /datum/outfit/mercenary/duelist
@@ -36,7 +36,7 @@
 	spawned.merctype = 8
 
 /datum/outfit/mercenary/duelist
-	name = "Duelist (Mercenary)"
+	name = "Duelista (Mercenario)"
 	head = /obj/item/clothing/head/leather/duelhat
 	cloak = /obj/item/clothing/cloak/half/duelcape
 	armor = /obj/item/clothing/armor/leather/jacket/leathercoat/duelcoat

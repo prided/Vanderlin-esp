@@ -65,7 +65,7 @@
 	return GLOB.player_list.len
 
 /datum/world_topic/pr_announce
-	keyword = "announce"
+	keyword = "anunciar"
 	require_comms_key = TRUE
 	var/static/list/PRcounts = list()	//PR id -> number of times announced this round
 

@@ -1,5 +1,5 @@
 /obj/effect/fun_balloon
-	name = "fun balloon"
+	name = "globo divertido"
 	desc = ""
 	icon = 'icons/obj/balloons.dmi'
 	icon_state = "syndballoon"
@@ -59,13 +59,13 @@
 		var/mob/living/body = pick_n_take(bodies)
 
 		to_chat(body, "<span class='warning'>My mob has been taken over by a ghost!</span>")
-		message_admins("[key_name_admin(C)] has taken control of ([key_name_admin(body)])")
+		message_admins("[key_name_admin(C)] ha tomado el control de ([key_name_admin(body)])")
 		body.ghostize(0)
 		body.key = C.key
 		new /obj/effect/temp_visual/gravpush(get_turf(body))
 
 /obj/effect/fun_balloon/scatter
-	name = "scatter fun balloon"
+	name = "globo divertido disperso"
 	desc = ""
 	var/effect_range = 5
 

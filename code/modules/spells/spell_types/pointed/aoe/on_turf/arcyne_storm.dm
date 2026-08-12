@@ -25,7 +25,7 @@
 	playsound(victim, "genslash", 40, TRUE)
 	for(var/mob/living/L in victim.contents)
 		L.adjustBruteLoss(round(7 * spell_magnitude_modifier), damage_type = BCLASS_CUT)
-		to_chat(L, span_userdanger("I'm cut by an arcyne force!"))
+		to_chat(L, span_userdanger("¡Me corta una fuerza arcyne!"))
 
 /obj/effect/temp_visual/arcyne_storm
 	name = "vortex energy"

@@ -1217,7 +1217,7 @@
 						position.can_assign_positions = !position.can_assign_positions
 						to_chat(user, "<span class='notice'>[position.name] assignment permission [position.can_assign_positions ? "granted" : "removed"]</span>")
 					else
-						to_chat(user, "<span class='warning'>You don't have permission to modify this position.</span>")
+						to_chat(user, "<span class='warning'>No tienes permiso para modificar esta posición.</span>")
 					break
 			refresh_hierarchy()
 
@@ -1230,7 +1230,7 @@
 						selected_position = null
 						to_chat(user, "<span class='notice'>Position removed successfully.</span>")
 					else
-						to_chat(user, "<span class='warning'>You don't have permission to remove this position.</span>")
+						to_chat(user, "<span class='warning'>No tienes permiso para eliminar esta posición.</span>")
 					break
 			refresh_hierarchy()
 
@@ -1246,13 +1246,13 @@
 				selected_position = target_position
 				show_edit_position_dialog()
 			else
-				to_chat(user, "<span class='warning'>You don't have permission to edit this position.</span>")
+				to_chat(user, "<span class='warning'>No tienes permiso para editar esta posición.</span>")
 
 		if("submit_edit_position")
 			if(selected_position && can_manage_position(selected_position))
 				handle_edit_position(href_list)
 			else
-				to_chat(user, "<span class='warning'>You don't have permission to edit this position.</span>")
+				to_chat(user, "<span class='warning'>No tienes permiso para editar esta posición.</span>")
 
 /datum/inquisition_hierarchy_interface/proc/refresh_hierarchy()
 	if(!user_inquisition)
@@ -1293,7 +1293,7 @@
 			break
 
 	if(!superior_position)
-		to_chat(user, "<span class='warning'>Error: Invalid superior position</span>")
+		to_chat(user, "<span class='warning'>Error: Posición superior no válida</span>")
 		return
 
 	if(!can_create_position_under(superior_position))
@@ -1309,11 +1309,11 @@
 		to_chat(user, "<span class='notice'>Position '[position_name]' created successfully!</span>")
 		refresh_hierarchy()
 	else
-		to_chat(user, "<span class='warning'>Error: Failed to create position</span>")
+		to_chat(user, "<span class='warning'>Error: No se pudo crear la posición</span>")
 
 /datum/inquisition_hierarchy_interface/proc/handle_edit_position(list/params)
 	if(!selected_position || !can_manage_position(selected_position))
-		to_chat(user, "<span class='warning'>You don't have permission to edit this position.</span>")
+		to_chat(user, "<span class='warning'>No tienes permiso para editar esta posición.</span>")
 		return
 
 	var/position_name = strip_html(params["position_name"], MAX_NAME_LEN)

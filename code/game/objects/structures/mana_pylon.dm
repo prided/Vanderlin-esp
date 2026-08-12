@@ -33,7 +33,7 @@
 	if(!user.client)
 		return
 	var/datum/mana_pool/mana_pylon/pool = mana_pool
-	var/new_threshold = input(user, "Set the minimum mana reserve for this pylon (current: [pool.transfer_threshold]):", "Pylon Threshold", pool.transfer_threshold) as num|null
+	var/new_threshold = input(user, "Establece la reserva mínima de maná para este pilón (actual: [pool.transfer_threshold]):", "Pylon Threshold", pool.transfer_threshold) as num|null
 	if(isnull(new_threshold))
 		return
 	pool.transfer_threshold = max(0, new_threshold)
@@ -61,7 +61,7 @@
 	var/obj/item/gem/gem = I
 	if(!gem.attuned)
 		return
-	user.visible_message(span_notice("[user] starts to attune [src]."), span_notice("You start to attune [src]."))
+	user.visible_message(span_notice("[user] comienza a sintonizar [src]."), span_notice("Empiezas a sintonizar [src]."))
 	if(!do_after(user, 3 SECONDS, src))
 		return
 	mana_pool.network_attunement = gem.attuned
@@ -139,7 +139,7 @@
 	if(!HAS_TRAIT(user, TRAIT_PYLON_RIDER))
 		return
 	if(get_dist(user, src) > 1)
-		to_chat(user, span_warning("You're too far from the pylon."))
+		to_chat(user, span_warning("Estás demasiado lejos del pilón."))
 		return
 	if(mana_pool.amount < 10)
 		to_chat(user, span_warning("The pylon doesn't have enough mana to carry you."))

@@ -14,7 +14,7 @@
 	return ..()
 
 /obj/item/mana_battery
-	name = "generic mana battery"
+	name = "batería de maná genérica"
 	has_initial_mana_pool = TRUE
 	var/max_allowed_transfer_distance = MANA_BATTERY_MAX_TRANSFER_DISTANCE
 
@@ -58,7 +58,7 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(!user.is_holding(src))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	var/mana_to_send = input(user, "How much mana do you want to send to the battery? Max Capacity: [mana_pool.maximum_mana_capacity]", "Send Mana") as num
+	var/mana_to_send = input(user, "How much mana do you want to send to the battery? Max Capacity: [mana_pool.maximum_mana_capacity]", "Enviar maná") as num
 	mana_to_send = CLAMP(mana_to_send, mana_pool.maximum_mana_capacity, 0)
 	if(!mana_to_send || QDELETED(user) || QDELETED(src) || !user.is_holding(src))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
@@ -68,7 +68,7 @@
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/mana_battery/mana_crystal
-	name = MAGIC_MATERIAL_NAME + " crystal"
+	name = MAGIC_MATERIAL_NAME + " cristal"
 	desc = "Crystalized mana." //placeholder desc
 	icon = 'icons/obj/crystals.dmi' //placeholder
 	grind_results = list(/datum/reagent/toxin/plasma = 40)
@@ -99,13 +99,13 @@
 	if(!(tool.tool_behaviour == TOOL_KNIFE))
 		return NONE
 
-	user.visible_message(span_notice("[user] starts to chop up [src]!"), span_notice("You start to chop up [src]!"))
+	user.visible_message(span_notice("¡[user] comienza a cortar [src]!"), span_notice("¡Empiezas a cortar [src]!"))
 	if(!do_after(user, 3 SECONDS, src))
 		return ITEM_INTERACT_BLOCKING
 
 	new /obj/item/mana_battery/mana_crystal/small (get_turf(src))
 	new /obj/item/mana_battery/mana_crystal/small (get_turf(src))
-	visible_message(span_notice("Mana flows freely into the newly created crystals!"))
+	visible_message(span_notice("¡El maná fluye libremente hacia los cristales recién creados!"))
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS
 
@@ -115,7 +115,7 @@
 /datum/mana_pool/mana_battery/mana_crystal/standard // basically, just, bog standard, none of the variables need to be changed
 
 /obj/item/mana_battery/mana_crystal/small
-	name = "small primordial quartz crystal"
+	name = "pequeño cristal de cuarzo primordial"
 	desc = "A miniaturized Primordial Quartz Crystal, formed using the run-off of cutting larger ones. Able to hold mana still, although not as much as a proper formation."
 	icon_state = "small"
 	w_class = WEIGHT_CLASS_SMALL
@@ -205,7 +205,7 @@
 	if(!gem.attuned)
 		return NONE
 
-	user.visible_message(span_notice("[user] starts to attune [src]."), span_notice("You start to attune [src]."))
+	user.visible_message(span_notice("[user] comienza a sintonizar [src]."), span_notice("Empiezas a sintonizar [src]."))
 	if(!do_after(user, 3 SECONDS, src))
 		return ITEM_INTERACT_BLOCKING
 

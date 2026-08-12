@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/shapeshift/troll_form
-	name = "Troll Form"
+	name = "Forma de troll"
 	desc = "Transform into a troll."
 	button_icon_state = "trollshape"
 

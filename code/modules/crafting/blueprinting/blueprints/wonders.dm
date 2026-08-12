@@ -5,14 +5,14 @@
 		/obj/item/bodypart = 2,
 		/obj/item/organ/stomach = 1,
 	)
-	verbage = "constructs"
+	verbage = "construye"
 	craftsound = 'sound/foley/Building-01.ogg'
 	skillcraft = null
 	requires_learning = TRUE
 	construct_tool = null
 
 /datum/blueprint_recipe/structure/wonder/first
-	name = "first wonder (2 bodyparts, 1 stomach)"
+	name = "primera maravilla (2 partes del cuerpo, 1 estómago)"
 	result_type = /obj/structure/wonder
 	required_materials = list(
 		/obj/item/bodypart = 2,
@@ -21,7 +21,7 @@
 	requires_learning = TRUE
 
 /datum/blueprint_recipe/structure/wonder/second
-	name = "second wonder (2 bodyparts, 2 lungs)"
+	name = "Segunda maravilla (2 partes del cuerpo, 2 pulmones)"
 	result_type = /obj/structure/wonder
 	required_materials = list(
 		/obj/item/bodypart = 2,
@@ -30,7 +30,7 @@
 	requires_learning = TRUE
 
 /datum/blueprint_recipe/structure/wonder/third
-	name = "third wonder (2 bodyparts, 3 heads, 2 stomachs)"
+	name = "tercera maravilla (2 partes del cuerpo, 3 cabezas, 2 estómagos)"
 	result_type = /obj/structure/wonder
 	required_materials = list(
 		/obj/item/bodypart/head = 3,
@@ -40,7 +40,7 @@
 	requires_learning = TRUE
 
 /datum/blueprint_recipe/structure/wonder/fourth
-	name = "fourth wonder (4 tongues, 3 eyes, 4 livers)"
+	name = "cuarta maravilla (4 lenguas, 3 ojos, 4 hígados)"
 	result_type = /obj/structure/wonder
 	required_materials = list(
 		/obj/item/organ/tongue = 4,

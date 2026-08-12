@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/momentum_transfer
 	name = "Momentum Transfer"
-	desc = "Transfers kinetic energy between objects or creatures."
+	desc = "Transfiere energía cinética entre objetos o criaturas."
 	button_icon_state = "longstrider"
 	cast_range = 2
 	has_visual_effects = FALSE
@@ -45,7 +45,7 @@
 	owner.add_movespeed_modifier(MOVESPEED_ID_STATUS_EFFECT(id), multiplicative_slowdown = -0.4)
 	ADD_TRAIT(owner, TRAIT_PUSHIMMUNE, TRAIT_STATUS_EFFECT(id))
 	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
-	to_chat(owner, span_notice("Kinetic energy surges through you!"))
+	to_chat(owner, span_notice("¡La energía cinética surge a través de ti!"))
 
 /datum/status_effect/buff/momentum_boost/on_remove()
 	. = ..()

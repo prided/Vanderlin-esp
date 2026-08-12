@@ -1,12 +1,12 @@
 /datum/coven/siren
-	name = "Siren Blessing"
+	name = "Bendición de sirena"
 	desc = "Typically found in vampires who frequent the seas of Enigma, they've developed the ability to adapt much like sirens."
 	icon_state = "melpominee"
 	power_type = /datum/coven_power/siren
 
 /datum/coven_power/siren
 	name = "Siren power name"
-	desc = "Siren power description"
+	desc = "Descripción del poder de la sirena"
 
 
 //THE MISSING VOICE
@@ -23,14 +23,14 @@
 
 /datum/coven_power/siren/the_missing_voice/activate(atom/movable/target)
 	. = ..()
-	var/new_say = input(owner, "What will [target] say?") as null|text
+	var/new_say = input(owner, "¿Qué dirá [target]?") as null|text
 	if(!new_say)
 		return
 
 	//prevent forceful emoting and whatnot
 	new_say = trim(copytext_char(sanitize(new_say), 1, MAX_MESSAGE_LEN))
 	if (findtext(new_say, "*"))
-		to_chat(owner, span_danger("You can't force others to perform emotes!"))
+		to_chat(owner, span_danger("¡No puedes obligar a otros a realizar gestos!"))
 		return
 
 	if (CHAT_FILTER_CHECK(new_say))
@@ -74,11 +74,11 @@
 
 /datum/coven_power/siren/phantom_speaker/activate()
 	. = ..()
-	var/mob/living/target = input(owner, "Who will you project your voice to?") as null|mob in (GLOB.player_list - owner)
+	var/mob/living/target = input(owner, "¿A quién proyectarás tu voz?") as null|mob in (GLOB.player_list - owner)
 	if(!target)
 		return
 
-	var/input_message = input(owner, "What message will you project to them?") as null|text
+	var/input_message = input(owner, "¿Qué mensaje les proyectarás?") as null|text
 	if (!input_message)
 		return
 
@@ -93,7 +93,7 @@
 	var/message = owner.compose_message(owner, language, input_message, , list())
 	to_chat(target, "<span class='purple'><i>You hear someone's voice in your head...</i></span>")
 	target.Hear(message, target, language, input_message, , , )
-	to_chat(owner, span_notice("You project your voice to [target]'s ears."))
+	to_chat(owner, span_notice("Proyectas tu voz a los oídos de [target]."))
 
 //MADRIGAL
 /datum/coven_power/siren/madrigal

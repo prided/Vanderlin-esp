@@ -466,7 +466,7 @@
 	set waitfor = 0
 	to_chat(C,"<a href='byond://?src=[C];playerlist=1'>* SHOW PLAYER LIST *</a>")
 	to_chat(C,"<a href='byond://?src=[C];commendsomeone=1'>* Commend a Character *</a>")
-	to_chat(C,"<a href='byond://?src=[C];viewstats=1'>* View Statistics *</a>")
+	to_chat(C,"<a href='byond://?src=[C];viewstats=1'>* Ver estadisticas *</a>")
 	C.show_round_stats(pick_assoc(GLOB.featured_stats))
 	C.commendation_popup()
 
@@ -500,7 +500,7 @@
 		if(ply.current.stat == DEAD)
 			text += span_redtext(" died.")
 		else
-			text += span_greentext(" survived.")
+			text += span_greentext(" sobrevivio.")
 	else
 		text += span_redtext(" died.")
 	return text

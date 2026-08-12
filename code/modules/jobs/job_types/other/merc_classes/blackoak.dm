@@ -45,7 +45,7 @@
 		"Spear" = /obj/item/weapon/polearm/spear,
 		"Regal Elven Club" = /obj/item/weapon/mace/elvenclub/steel,
 	)
-	var/choice = spawned.select_equippable(player_client, selectableweapon, message = "Choose Your Weapon", title = "Black Oak's Guardian")
+	var/choice = spawned.select_equippable(player_client, selectableweapon, message = "Elige tu arma", title = "Black Oak's Guardian")
 	switch(choice)
 		if("Spear")
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/polearms, 35)
@@ -53,7 +53,7 @@
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/axesmaces, 35)
 
 /datum/outfit/mercenary/blackoak
-	name = "Black Oak's Guardian (Mercenary)"
+	name = "Guardián de Black Oak (Mercenario)"
 	shoes = /obj/item/clothing/shoes/boots/leather
 	cloak = /obj/item/clothing/cloak/half/colored/red
 	head = /obj/item/clothing/head/helmet/sallet/elven

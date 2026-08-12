@@ -1,6 +1,6 @@
 /// This subsystem handles the object permanence feature of FoV
 SUBSYSTEM_DEF(field_of_vision)
-	name = "Field of Vision"
+	name = "Campo de visión"
 	init_order = INIT_ORDER_XKEYSCORE
 	flags = SS_NO_INIT|SS_BACKGROUND
 	runlevels = RUNLEVEL_GAME|RUNLEVEL_POSTGAME

@@ -1,5 +1,5 @@
 /datum/building_datum/farm
-	name = "Farm"
+	name = "Granja"
 	desc = "This is where food is grown."
 
 	building_template = "farm"

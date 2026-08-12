@@ -11,7 +11,7 @@
 	required_chem_temp = 300 // Low heat for oil infusion
 	pollute_amount = 100
 	wording_choice = "essence of"
-	complete_message = "The oil glistens with herbal essence!"
+	complete_message = "¡El aceite brilla con esencia de hierbas!"
 	used_skill = /datum/attribute/skill/craft/alchemy
 	quality_modifier = 1.0
 
@@ -28,7 +28,7 @@
 
 // Mentha Cooling Oil (muscle relief)
 /datum/container_craft/cooking/herbal_oil/mentha_oil
-	name = "Mentha Cooling Oil"
+	name = "Aceite refrescante de menta"
 	created_reagent = /datum/reagent/medicine/herbal/mentha_oil
 	water_conversion = 1
 	requirements = list(

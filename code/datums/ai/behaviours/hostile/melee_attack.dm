@@ -250,7 +250,7 @@
 		controller.set_blackboard_key(BB_HELLHOUND_FIRE, world.time + 10 SECONDS)
 		target.adjust_fire_stacks(5)
 		target.IgniteMob()
-		target.visible_message(span_danger("[basic_mob] sets [target] on fire!"))
+		target.visible_message(span_danger("¡[basic_mob] prende fuego a [target]!"))
 
 
 /datum/ai_behavior/basic_melee_attack/warden/perform(delta_time, datum/ai_controller/controller, target_key, targetting_datum_key, hiding_location_key)

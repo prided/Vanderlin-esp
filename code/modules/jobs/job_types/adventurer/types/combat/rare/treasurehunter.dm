@@ -22,7 +22,7 @@
 	)
 
 /datum/job/advclass/combat/gravedigger
-	title = "Treasure Hunter"
+	title = "Cazador de tesoros"
 	tutorial = "Grave robbers sell themselves as treasure hunters, but be sure to wipe that \
 	necrotic flesh off of that trinket you found."
 	allowed_sexes = list(MALE, FEMALE)
@@ -39,7 +39,7 @@
 	)
 
 /datum/outfit/adventurer/gravedigger
-	name = "Treasure Hunter (Adventurer)"
+	name = "Cazador de tesoros (aventurero)"
 	pants = /obj/item/clothing/pants/tights/colored/black
 	armor = /obj/item/clothing/armor/leather/vest/colored/black
 	shirt = /obj/item/clothing/shirt/undershirt/colored/black

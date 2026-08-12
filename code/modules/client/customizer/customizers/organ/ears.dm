@@ -10,7 +10,7 @@
 	abstract_type = /datum/customizer_choice/organ/ears
 
 /datum/customizer_choice/organ/ears/elf
-	name = "Elf Ears"
+	name = "Orejas de elfo"
 	organ_type = /obj/item/organ/ears/elf
 	sprite_accessories = list(
 		/datum/sprite_accessory/ears/elf,
@@ -37,7 +37,7 @@
 	allows_disabling = FALSE
 
 /datum/customizer_choice/organ/ears/tiefling
-	name = "Tiefling Ears"
+	name = "Tiefling Orejas"
 	organ_type = /obj/item/organ/ears/elf
 	sprite_accessories = list(
 		/datum/sprite_accessory/ears/elf,
@@ -166,7 +166,7 @@
 	allows_disabling = FALSE
 
 /datum/customizer_choice/organ/ears/harpy
-	name = "Harpy Ears"
+	name = "Orejas de arpía"
 	organ_type = /obj/item/organ/ears
 	generic_random_pick = TRUE
 	sprite_accessories = list(

@@ -146,7 +146,7 @@
 /datum/chemical_reaction/locksmiths_oil
 	name = "Locksmith's Oil"
 	id = "locksmiths_oil"
-	mix_message = "The mixture shimmers with a faint silvery iridescence."
+	mix_message = "La mezcla brilla con una leve iridiscencia plateada."
 	mix_sound = "pour"
 	required_reagents = list(
 		/datum/reagent/buff/perception/concentrated = 4,
@@ -326,7 +326,7 @@
 	results = list(/datum/reagent/skill_elixir/scholars_ink = 10)
 
 /datum/chemical_reaction/hallucinogen_from_extract
-	name = "Refined Hallucinogen"
+	name = "Alucinógeno refinado"
 	id = "hallucinogen_from_extract"
 	mix_message = "The extract shimmers violently and resolves into a deeply purple fluid."
 	mix_sound = "pour"

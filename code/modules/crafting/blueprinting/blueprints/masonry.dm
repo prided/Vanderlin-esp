@@ -1,15 +1,15 @@
 /datum/blueprint_recipe/masonry
 	abstract_type = /datum/blueprint_recipe/masonry
 	skillcraft = /datum/attribute/skill/craft/masonry
-	category = "Masonry"
+	category = "Albañilería"
 	construct_tool = /obj/item/weapon/hammer
 	craftsound = 'sound/foley/Building-01.ogg'
 	verbage = "construct"
-	verbage_tp = "constructs"
+	verbage_tp = "construye"
 
 /datum/blueprint_recipe/masonry/smelter
 	name = "ore furnace"
-	desc = "A furnace for smelting ores into ingots."
+	desc = "Un horno para fundir minerales en lingotes."
 	result_type = /obj/machinery/light/fueled/smelter
 	required_materials = list(
 		/obj/item/ore/coal = 1,
@@ -19,7 +19,7 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/masonry/great_smelter
-	name = "great furnace"
+	name = "gran horno"
 	desc = "A massive furnace for advanced smelting."
 	result_type = /obj/machinery/light/fueled/smelter/great
 	required_materials = list(
@@ -32,7 +32,7 @@
 
 /datum/blueprint_recipe/masonry/forge
 	name = "forge"
-	desc = "A forge for smithing weapons and tools."
+	desc = "Una forja para forjar armas y herramientas."
 	result_type = /obj/machinery/light/fueled/forge
 	required_materials = list(
 		/obj/item/ore/coal = 1,
@@ -55,7 +55,7 @@
 
 /datum/blueprint_recipe/masonry/oven
 	name = "oven"
-	desc = "An oven for baking bread and cooking food."
+	desc = "Un horno para hornear pan y cocinar alimentos."
 	result_type = /obj/machinery/light/fueled/oven
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1,
@@ -65,16 +65,16 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/masonry/stone_door
-	name = "stone door"
-	desc = "A heavy door carved from stone."
+	name = "puerta de piedra"
+	desc = "Una puerta pesada tallada en piedra."
 	result_type = /obj/structure/door/stone
 	required_materials = list(/obj/item/natural/stone = 2)
 	supports_directions = TRUE
 	craftdiff = 1
 
 /datum/blueprint_recipe/masonry/stone_table
-	name = "stone table"
-	desc = "A durable table carved from stone."
+	name = "mesa de piedra"
+	desc = "Una mesa duradera tallada en piedra."
 	result_type = /obj/structure/table/stone_small
 	required_materials = list(/obj/item/natural/stone = 2)
 	supports_directions = TRUE
@@ -93,8 +93,8 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/masonry/stone_stairs_down
-	name = "stone stairs (down)"
-	desc = "Durable stone stairs leading downward."
+	name = "escaleras de piedra (abajo)"
+	desc = "Escaleras de piedra duraderas que conducen hacia abajo."
 	result_type = /obj/structure/stairs/stone/d
 	required_materials = list(/obj/item/natural/stone = 2)
 	supports_directions = TRUE
@@ -108,7 +108,7 @@
 	. = ..()
 
 /datum/blueprint_recipe/masonry/stone_railing
-	name = "stone railing"
+	name = "barandilla de piedra"
 	desc = "A sturdy stone safety railing."
 	result_type = /obj/structure/fluff/railing/stonehedge
 	required_materials = list(/obj/item/natural/stone = 1)

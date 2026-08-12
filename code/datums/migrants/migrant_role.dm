@@ -3,7 +3,7 @@
 	/// Name of the role
 	var/name = "MIGRANT ROLE"
 	/// greet_text for the role
-	var/greet_text = "You are a migrant"
+	var/greet_text = "eres un migrante"
 	/// Reference to a job to apply to the migrant role, vars for this are used to determine if selectable.
 	var/datum/job/migrant/migrant_job = /datum/job/migrant/generic
 	/// Antagonist datum to apply with the migrant be mindful of the job if any.

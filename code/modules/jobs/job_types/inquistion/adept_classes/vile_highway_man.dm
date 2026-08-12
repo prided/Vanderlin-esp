@@ -25,7 +25,7 @@
 
 // Vile Highwayman. Your run of the mill swordsman, albeit fancy, smarter than the other two so he has some non combat related skills.
 /datum/job/advclass/adept/highwayman
-	title = "Vile Renegade"
+	title = "Renegado vil"
 	tutorial = "You were a former outlaw who has been given a chance to redeem yourself by the Inquisitor. You serve him and Psydon with your survival skills."
 	outfit = /datum/outfit/adept/highwayman
 	category_tags = list(CTAG_ADEPT)
@@ -49,7 +49,7 @@
 	GLOB.inquisition.add_member_to_school(spawned, "Order of the Venatari", -10, "Renegade")
 
 /datum/outfit/adept/highwayman
-	name = "Vile Renegade (Adept)"
+	name = "Renegado vil (Adepto)"
 	belt = /obj/item/storage/belt/leather
 	armor = /obj/item/clothing/armor/leather/jacket/leathercoat/renegade
 	head = /obj/item/clothing/head/helmet/leather/tricorn

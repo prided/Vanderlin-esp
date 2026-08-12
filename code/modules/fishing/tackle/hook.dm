@@ -62,7 +62,7 @@
 
 
 /obj/item/fishing/hook/wooden
-	name = "wooden fishing hook"
+	name = "anzuelo de pesca de madera"
 	desc = "A fishing hook consisting of a small piece of wood, carved to points on both ends. More likely to fall out. Struggles with larger specimens."
 	icon_state = "gorgehook"
 	rod_overlay_icon_state = "hook_wooden_overlay"

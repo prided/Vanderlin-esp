@@ -27,7 +27,7 @@
 
 //................ Stone Axe ............... //
 /obj/item/weapon/axe/stone
-	name = "stone axe"
+	name = "hacha de piedra"
 	desc = "Hewn wood, steadfast thread, a chipped stone. A recipe to bend nature to your will."
 	icon_state = "stoneaxe"
 	force = DAMAGE_BAD_AXE
@@ -58,7 +58,7 @@
 
 //................ Battle Axe ............... //
 /obj/item/weapon/axe/battle
-	name = "battle axe"
+	name = "hacha de batalla"
 	desc = "A masterfully constructed ax, with additional weights in the form of ornate spikes and practical edges."
 	icon_state = "battleaxe"
 	force_wielded = DAMAGE_HEAVYAXE_WIELD
@@ -87,7 +87,7 @@
 
 //................ Iron Axe ............... //
 /obj/item/weapon/axe/iron
-	name = "iron axe"
+	name = "hacha de hierro"
 	desc = "Tool, weapon, loyal iron companion."
 	icon_state = "axe"
 	wdefense = MEDIOCRE_PARRY
@@ -142,7 +142,7 @@
 
 //................ Bronze ............... //
 /obj/item/weapon/axe/bronze
-	name = "bronze axe"
+	name = "hacha de bronce"
 	desc = "Tool, weapon, loyal bronze companion."
 	icon_state = "axe_bronze"
 	wdefense = MEDIOCRE_PARRY
@@ -234,7 +234,7 @@
 
 //................ Steel Axe ............... //
 /obj/item/weapon/axe/steel
-	name = "steel axe"
+	name = "hacha de acero"
 	desc = "A bearded steel axe revered by dwarf, humen and elf alike. Performs much better than its iron counterpart."
 	icon_state = "saxe"
 	max_blade_int = 300
@@ -259,7 +259,7 @@
 
 //------------------ Silver Axe ---------------//
 /obj/item/weapon/axe/silver
-	name = "silver axe"
+	name = "hacha de plata"
 	desc = "A silver axe, not as strong as steel but more effective against supernatural foes."
 	icon_state = "silveraxe"
 	max_blade_int = 200
@@ -334,7 +334,7 @@
 
 //................ Copper Hatchet ............... //
 /obj/item/weapon/axe/copper
-	name = "copper hatchet"
+	name = "hacha de cobre"
 	desc = "A simple designed handaxe, an outdated weapon from simpler times."
 	icon_state = "chatchet"
 	force = DAMAGE_BAD_AXE
@@ -364,7 +364,7 @@
 
 //................ Bone Axe ............... //
 /obj/item/weapon/axe/boneaxe
-	name = "bone axe"
+	name = "hacha de hueso"
 	desc = "A rough axe made of bones."
 	icon_state = "boneaxe"
 	force = DAMAGE_BAD_AXE
@@ -390,7 +390,7 @@
 	return ..()
 
 /obj/item/weapon/axe/trollboneaxe
-	name = "troll-horn bone axe"
+	name = "hacha de hueso de cuerno de troll"
 	desc = "A rough axe made of bones, strengthed with an troll's horn."
 	icon_state = "boneaxe"
 	force = DAMAGE_BAD_AXE
@@ -528,7 +528,7 @@
 	item_weight = 2 KILOGRAMS
 
 /obj/item/weapon/greataxe/dreamscape
-	name = "otherworldly axe"
+	name = "hacha de otro mundo"
 	desc = "A strange axe, who knows where it came from. It feels cold and unusually heavy."
 	icon_state = "dreamaxe"
 	force = DAMAGE_AXE - 10

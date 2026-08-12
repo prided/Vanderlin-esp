@@ -1,5 +1,5 @@
 /datum/animal_gene/efficient_metabolism
-	name = "Efficient Metabolism"
+	name = "Metabolismo eficiente"
 	desc = "Processes food slowly and efficiently, requiring fewer calories to sustain itself."
 	rarity = 6
 	exclusion_group = GENE_GROUP_METABOLISM

@@ -1,5 +1,5 @@
 /datum/animal_gene/dominant_lineage
-	name = "Dominant Lineage"
+	name = "Linaje dominante"
 	desc = "A powerful hereditary force that pulls offspring traits strongly toward one bloodline."
 	rarity = 3  // quite rare, strong selective effect
 	exclusion_group = GENE_GROUP_PROGENY

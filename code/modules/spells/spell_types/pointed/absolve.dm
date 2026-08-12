@@ -39,8 +39,8 @@
 			to_chat(user, span_warning("You attempt to revive [H] by ABSOLVING them!"))
 			// Dramatic effect
 			user.visible_message(span_danger("[user] grabs [H] by the wrists, attempting to ABSOLVE them!"))
-			if(tgui_alert(H, "They want to ABSOLVE you. Will you let them?", "ABSOLUTION", list("I'll allow it", "I refuse")) != "I'll allow it")
-				H.visible_message(span_notice("Nothing happens."))
+			if(tgui_alert(H, "They want to ABSOLVE you. Will you let them?", "ABSOLUTION", list("lo permitiré", "me niego")) != "lo permitiré")
+				H.visible_message(span_notice("No pasa nada."))
 				return FALSE
 			// Create visual effects
 			H.apply_status_effect(/datum/status_effect/buff/psyvived)
@@ -58,7 +58,7 @@
 			ADD_TRAIT(H, TRAIT_IWASREVIVED, "[type]")
 			H.apply_status_effect(/datum/status_effect/buff/psyvived)
 			user.apply_status_effect(/datum/status_effect/buff/psyvived)
-			H.visible_message(span_notice("[H] is ABSOLVED!"), span_green("I awake from the void."))
+			H.visible_message(span_notice("[H] is ABSOLVED!"), span_green("Me despierto del vacío."))
 			H.mind.remove_antag_datum(/datum/antagonist/zombie)
 			return TRUE
 		else
@@ -99,7 +99,7 @@
 		H.set_blood_volume(BLOOD_VOLUME_NORMAL)
 		user.adjust_blood_volume(-blood_transfer)
 		to_chat(user, span_warning("You feel your blood drain into [H]!"))
-		to_chat(H, span_notice("You feel your blood replenish!"))
+		to_chat(H, span_notice("¡Sientes que tu sangre se repone!"))
 
 	// Visual effects
 	user.visible_message(span_danger("[user] absolves [H]'s suffering!"))

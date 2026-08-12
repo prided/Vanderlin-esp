@@ -32,19 +32,19 @@
 	excludefromjob = list(JOB_MERCHANT)
 
 /datum/objective_item/steal/rogue/mkey
-	name = "the master key."
+	name = "la llave maestra."
 	targetitem = /obj/item/key/lord
 	difficulty = 3
 	excludefromjob = list(JOB_MONARCH, "Knight")
 
 /datum/objective_item/steal/rogue/spices
-	name = "a pepper mill."
+	name = "un molinillo de pimienta."
 	targetitem = /obj/item/reagent_containers/peppermill
 	difficulty = 1
 	excludefromjob = list(JOB_COOK)
 
 /datum/objective_item/steal/rogue/crown
-	name = "the Lord's crown."
+	name = "la corona del Señor."
 	targetitem = /obj/item/clothing/head/crown/serpcrown
 	difficulty = 3
 	excludefromjob = list(JOB_MONARCH, "Knight")

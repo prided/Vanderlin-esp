@@ -220,7 +220,7 @@
 			</h4>
 			<br />
 			<label for="beaker[i]type">Container type</label>
-			<select name="containertype" id="beaker[i]type"></select>
+			<select name="tipo de contenedor" id="beaker[i]type"></select>
 			<br />
 			<br />
 			<div>
@@ -240,7 +240,7 @@
 				<ul>
 				<li>
 
-					<select class="select-new-reagent"></select><div class="reagent-div"><input style="width: 50%" type="text" name="newreagent" value="40" />&nbsp;&nbsp;<button class="add-reagent">
+					<select class="select-new-reagent"></select><div class="reagent-div"><input style="width: 50%" type="text" name="nuevo reactivo" value="40" />&nbsp;&nbsp;<button class="agregar reactivo">
 				<i class="fas fa-plus"></i>&nbsp;Add
 				</button>
 

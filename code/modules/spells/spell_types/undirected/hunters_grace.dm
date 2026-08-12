@@ -1,12 +1,12 @@
 /datum/action/cooldown/spell/undirected/hunters_grace
-	name = "Hunter's Grace"
+	name = "Gracia del cazador"
 	desc = "Grant yourself and any creatures adjacent to you free movement through rough terrain."
 	button_icon_state = "bush_jaunt"
 
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
 
-	invocation = "The prey will not escape!"
+	invocation = "¡La presa no escapará!"
 	invocation_type = INVOCATION_WHISPER
 
 	charge_time = 4 SECONDS
@@ -50,6 +50,6 @@
 	REMOVE_TRAIT(owner, TRAIT_LONGSTRIDER, MAGIC_TRAIT)
 
 /atom/movable/screen/alert/status_effect/buff/hunters_grace
-	name = "Hunter's Grace"
+	name = "Gracia del cazador"
 	desc = span_nicegreen("I can easily walk through rough terrain.")
 	icon_state = "buff"

@@ -39,7 +39,7 @@
 	)
 
 /datum/outfit/pilgrim/peasant
-	name = "Peasant (Pilgrim)"
+	name = "Campesino (Peregrino)"
 	belt = /obj/item/storage/belt/leather/rope
 	pants = /obj/item/clothing/pants/trou
 	wrists = /obj/item/clothing/wrists/bracers/leather

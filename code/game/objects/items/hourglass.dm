@@ -1,7 +1,7 @@
 #define HOURGLASS_STATES 7 //Remember to update if you change the sprite
 
 /obj/item/hourglass
-	name = "hourglass"
+	name = "reloj de arena"
 	desc = ""
 	item_weight = 300 GRAMS
 	var/obj/effect/countdown/hourglass/countdown
@@ -25,11 +25,11 @@
 	if(!countdown)
 		countdown = new(src)
 	if(!timing_id)
-		to_chat(user, span_notice("I flip \the [src]."))
+		to_chat(user, span_notice("Doy la vuelta a \the [src]."))
 		start()
 		flick("hourglass_flip",src)
 	else
-		to_chat(user, span_notice("I stop \the [src].")) //Sand magically flows back because that's more convinient to use.
+		to_chat(user, span_notice("Dejo de \the [src].")) //Sand magically flows back because that's more convinient to use.
 		stop()
 
 /obj/item/hourglass/update_icon_state()
@@ -58,7 +58,7 @@
 	update_appearance(UPDATE_ICON_STATE)
 
 /obj/item/hourglass/proc/finish()
-	visible_message("<span class='notice'>[src] stops.</span>")
+	visible_message("<span class='notice'>[src] se detiene.</span>")
 	stop()
 
 /obj/item/hourglass/Destroy()

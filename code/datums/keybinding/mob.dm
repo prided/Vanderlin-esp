@@ -118,7 +118,7 @@
 /datum/keybinding/mob/target_neck
 	hotkey_keys = list("Numpad7")
 	name = "target_neck"
-	full_name = "Target: Cycle Neck/Mouth"
+	full_name = "Objetivo: ciclo cuello/boca"
 	description = ""
 
 /datum/keybinding/mob/target_neck/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -140,7 +140,7 @@
 /datum/keybinding/mob/target_r_arm
 	hotkey_keys = list("Numpad4")
 	name = "target_r_arm"
-	full_name = "Target: right arm"
+	full_name = "Objetivo: brazo derecho"
 	description = ""
 
 /datum/keybinding/mob/target_r_arm/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -151,7 +151,7 @@
 /datum/keybinding/mob/target_body_chest
 	hotkey_keys = list("Numpad5")
 	name = "target_body_chest"
-	full_name = "Target: Body"
+	full_name = "Objetivo: Cuerpo"
 	description = ""
 
 /datum/keybinding/mob/target_body_chest/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -162,7 +162,7 @@
 /datum/keybinding/mob/target_left_arm
 	hotkey_keys = list("Numpad6")
 	name = "target_left_arm"
-	full_name = "Target: left arm"
+	full_name = "Objetivo: brazo izquierdo"
 	description = ""
 
 /datum/keybinding/mob/target_left_arm/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -173,7 +173,7 @@
 /datum/keybinding/mob/target_right_leg
 	hotkey_keys = list("Numpad1")
 	name = "target_right_leg"
-	full_name = "Target: Right leg"
+	full_name = "Objetivo: pierna derecha"
 	description = ""
 
 /datum/keybinding/mob/target_right_leg/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -184,7 +184,7 @@
 /datum/keybinding/mob/target_body_groin
 	hotkey_keys = list("Numpad2")
 	name = "target_body_groin"
-	full_name = "Target: Groin"
+	full_name = "Objetivo: ingle"
 	description = ""
 
 /datum/keybinding/mob/target_body_groin/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -195,7 +195,7 @@
 /datum/keybinding/mob/target_left_leg
 	hotkey_keys = list("Numpad3")
 	name = "target_left_leg"
-	full_name = "Target: left leg"
+	full_name = "Objetivo: pierna izquierda"
 	description = ""
 
 /datum/keybinding/mob/target_left_leg/down(client/user, turf/target, mousepos_x, mousepos_y)

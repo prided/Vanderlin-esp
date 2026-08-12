@@ -31,7 +31,7 @@
 				playsound(src, 'sound/combat/shove.ogg', 100, TRUE, -1)
 				M.do_attack_animation(src, ATTACK_EFFECT_DISARM)
 				visible_message("<span class='warning'>[M]'s punch goes through [name]!</span>", \
-								"<span class='warning'>[M]'s punch goes through you!</span>", "<span class='hear'>I hear the sound of scuffling of the damned!</span>", COMBAT_MESSAGE_RANGE, M)
+								"¡El puñetazo de <span class='warning'>[M] te atraviesa!</span>", "<span class='hear'>I hear the sound of scuffling of the damned!</span>", COMBAT_MESSAGE_RANGE, M)
 				to_chat(M, "<span class='danger'>My punch goes through [name]!</span>")
 				return
 			M.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
@@ -47,7 +47,7 @@
 					if(AmountUnconscious() < 100 && health > 0)
 						Unconscious(rand(200, 300))
 						visible_message("<span class='danger'>[M] knocks [name] out!</span>", \
-										"<span class='danger'>[M] knocks you out!</span>", "<span class='hear'>I hear a sickening sound of flesh hitting flesh!</span>", 5, M)
+										"¡<span class='danger'>[M] te noquea!</span>", "<span class='hear'>I hear a sickening sound of flesh hitting flesh!</span>", 5, M)
 						to_chat(M, "<span class='danger'>I knock [name] out!</span>")
 				var/obj/item/bodypart/affecting = get_bodypart(ran_zone(M.zone_selected))
 				if(!affecting)
@@ -59,7 +59,7 @@
 				playsound(src, 'sound/blank.ogg', 25, TRUE, -1)
 				visible_message("<span class='danger'>[M]'s punch misses [name]!</span>", \
 								"<span class='danger'>I avoid [M]'s punch!</span>", "<span class='hear'>I hear a swoosh!</span>", COMBAT_MESSAGE_RANGE, M)
-				to_chat(M, "<span class='warning'>My punch misses [name]!</span>")
+				to_chat(M, "<span class='warning'>¡Mi golpe falla [name]!</span>")
 		if(INTENT_DISARM)
 			if(HAS_TRAIT(M, TRAIT_PACIFISM))
 				playsound(src, 'sound/combat/shove.ogg', 100, TRUE, -1)
@@ -107,7 +107,7 @@
 			if(!(head.resistance_flags & UNACIDABLE))
 				head.acid_act(acidpwr, acid_volume)
 			else
-				to_chat(src, "<span class='warning'>My hat protects you from the acid.</span>")
+				to_chat(src, "<span class='warning'>Mi sombrero te protege del ácido.</span>")
 			return
 	take_bodypart_damage(acidpwr * min(0.6, acid_volume*0.1))
 

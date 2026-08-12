@@ -2,7 +2,7 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 
 /obj/item/reagent_containers/glass/bottle
 	name = "bottle"
-	desc = "A bottle with a cork."
+	desc = "Una botella con corcho."
 	icon = 'icons/roguetown/items/glass_reagent_container.dmi'
 	icon_state = "clear_bottle1"
 	amount_per_transfer_from_this = 5
@@ -57,11 +57,11 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 		return ..()
 
 	if(reagents?.total_volume)
-		balloon_alert(user, "it's full!")
+		balloon_alert(user, "¡está lleno!")
 		return
 
 	if(closed)
-		balloon_alert(user, "it's closed!")
+		balloon_alert(user, "¡está cerrado!")
 		return
 
 	playsound(src, 'sound/items/scroll_open.ogg', 100, FALSE)
@@ -101,12 +101,12 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 		spillable = FALSE
 		GLOB.weather_act_upon_list -= src
 		if(!fancy)
-			desc = "A bottle with a cork."
+			desc = "Una botella con corcho."
 	else
 		reagent_flags |= TRANSFERABLE
 		reagents.flags = reagent_flags
 		playsound(user,'sound/items/uncork.ogg', 100, TRUE)
-		balloon_alert(user, "i thumb off the cork.")
+		balloon_alert(user, "Quito el corcho.")
 		spillable = TRUE
 		GLOB.weather_act_upon_list |= src
 		if(!fancy)
@@ -114,7 +114,7 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/reagent_containers/glass/bottle/toxin
-	name = "toxin bottle"
+	name = "botella de toxina"
 	desc = ""
 	list_reagents = list(/datum/reagent/toxin = 30)
 
@@ -124,12 +124,12 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 	list_reagents = list(/datum/reagent/toxin/plasma = 30)
 
 /obj/item/reagent_containers/glass/bottle/venom
-	name = "venom bottle"
+	name = "botella de veneno"
 	desc = ""
 	list_reagents = list(/datum/reagent/toxin/venom = 30)
 
 /obj/item/reagent_containers/glass/bottle/fentanyl
-	name = "fentanyl bottle"
+	name = "botella de fentanilo"
 	desc = ""
 	list_reagents = list(/datum/reagent/toxin/fentanyl = 30)
 
@@ -139,11 +139,11 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 	list_reagents = list(/datum/reagent/toxin/amanitin = 30)
 
 /obj/item/reagent_containers/glass/bottle/mercury
-	name = "mercury bottle"
+	name = "botella de mercurio"
 	list_reagents = list(/datum/reagent/mercury = 30)
 
 /obj/item/reagent_containers/glass/bottle/water
-	name = "water bottle"
+	name = "botella de agua"
 	list_reagents = list(/datum/reagent/water = 30)
 
 /obj/item/reagent_containers/glass/bottle/ethanol
@@ -155,17 +155,17 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 	list_reagents = list(/datum/reagent/consumable/sugar = 30)
 
 /obj/item/reagent_containers/glass/bottle/sacid
-	name = "sulphuric acid bottle"
+	name = "botella de ácido sulfúrico"
 	list_reagents = list(/datum/reagent/toxin/acid = 30)
 
 /obj/item/reagent_containers/glass/bottle/welding_fuel
-	name = "oil bottle"
+	name = "botella de aceite"
 	list_reagents = list(/datum/reagent/blood/fuel = 30)
 
 // message in a bootl
 
 /obj/item/bottlemessage
-	name = "message bottle"
+	name = "botella de mensaje"
 	desc = "Inside is a scroll, pop it open and read the ancient wisdoms."
 	icon = 'icons/roguetown/items/glass_reagent_container.dmi'
 	dropshrink = 0.8
@@ -237,14 +237,14 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 	else
 		reagent_flags |= TRANSFERABLE
 		reagents.flags = reagent_flags
-		balloon_alert(user, "i thumb off the cork.")
+		balloon_alert(user, "Quito el corcho.")
 		playsound(user,'sound/items/uncork.ogg', 100, TRUE)
-		desc = "An open vial, easy to drink quickly."
+		desc = "Un vial abierto, fácil de beber rápidamente."
 		spillable = TRUE
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/reagent_containers/glass/bottle/black
-	name = "wine pot"
+	name = "olla de vino"
 	desc = "A wine pot made of glazed clay."
 	icon_state = "blackbottle"
 	fill_icon_thresholds = null
@@ -257,5 +257,5 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/reagent_containers/glass/bottle/black/cheese_soup
-	name = "pot of cheese soup"
+	name = "olla de sopa de queso"
 	list_reagents = list(/datum/reagent/consumable/soup/cheese = 75)

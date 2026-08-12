@@ -19,7 +19,7 @@
 	well_climb = "DOWN"
 
 /obj/structure/well/climb_up
-	name = "bucket rope"
+	name = "cuerda de cubo"
 	desc = "A rope at the bottom of a well, you can climb up it if you want."
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "rope"
@@ -28,7 +28,7 @@
 	layer = 4
 
 /obj/structure/well/fountain
-	name = "water fountain"
+	name = "fuente de agua"
 	desc = "An elegant fountain fit for royalty. Not suitable for drinking from."
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "fountain"
@@ -40,7 +40,7 @@
 	if(.)
 		return
 	playsound(user, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 100, FALSE)
-	user.visible_message(span_info("[user] starts to drink from [src]."))
+	user.visible_message(span_info("[user] comienza a beber de [src]."))
 	if(do_after(user, 2.5 SECONDS, src))
 		drink_from(user)
 	return TRUE
@@ -55,7 +55,7 @@
 	if(istype(I, /obj/item/reagent_containers/glass/bucket))
 		var/obj/item/reagent_containers/glass/bucket/W = I
 		if(W.reagents.holder_full())
-			to_chat(user, "<span class='warning'>[W] is full.</span>")
+			to_chat(user, "<span class='warning'>[W] está lleno.</span>")
 			return
 		if(do_after(user, 6 SECONDS, src))
 			var/list/waterl = list(/datum/reagent/water = 100)

@@ -113,7 +113,7 @@
 	var/signed = speaker_language?.flags & SIGNLANG
 
 	if(!signed && !can_speak_vocal(message))
-		to_chat(src, span_warning("I can't talk."))
+		to_chat(src, span_warning("No puedo hablar."))
 		return
 
 	var/message_range = 7
@@ -237,7 +237,7 @@
 	message = compose_message(speaker, message_language, raw_message, radio_freq, spans, message_mods)
 	// voice muffling
 	if(stat == UNCONSCIOUS || stat == HARD_CRIT)
-		message = "<I>... You can almost hear something ...</I>"
+		message = "<I>... Casi se puede escuchar algo...</I>"
 	else if(isliving(speaker))
 		var/mob/living/living_speaker = speaker
 		if(living_speaker != src && living_speaker.client && !HAS_TRAIT(src, TRAIT_DEAF)) //src.client already checked above
@@ -440,7 +440,7 @@
 /mob/living/proc/can_speak_basic(message, ignore_spam = FALSE, forced = FALSE) //Check BEFORE handling of xeno and ling channels
 	if(client)
 		if(client.prefs.muted & MUTE_IC)
-			to_chat(src, "<span class='danger'>I cannot speak in IC (muted).</span>")
+			to_chat(src, "<span class='danger'>No puedo hablar en IC (silenciado).</span>")
 			return FALSE
 		if(!(ignore_spam || forced) && client.handle_spam_prevention(message,MUTE_IC))
 			return FALSE

@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/retaliate
-	response_help_continuous = "pets"
+	response_help_continuous = "mascotas"
 	response_help_simple = "pet"
-	response_disarm_continuous = "gently pushes aside"
+	response_disarm_continuous = "empuja suavemente a un lado"
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"

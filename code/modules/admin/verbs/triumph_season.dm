@@ -9,13 +9,13 @@
 		to_chat(src, span_warning("SStriumphs is not ready to end the season."))
 		return
 
-	if(tgui_alert(src, "This will wipe ALL TRIUMPHS are you sure?", "END SEASON", DEFAULT_INPUT_CONFIRMATIONS) != CHOICE_CONFIRM)
+	if(tgui_alert(src, "Esto borrará TODOS los TRIUNFOS, ¿estás seguro?", "FIN DE TEMPORADA", DEFAULT_INPUT_CONFIRMATIONS) != CHOICE_CONFIRM)
 		return
 
-	if(tgui_alert(src, "Are you REALLY sure?", "END SEASON", DEFAULT_INPUT_CONFIRMATIONS) != CHOICE_CONFIRM)
+	if(tgui_alert(src, "Are you REALLY sure?", "FIN DE TEMPORADA", DEFAULT_INPUT_CONFIRMATIONS) != CHOICE_CONFIRM)
 		return
 
-	var/name = browser_input_text(src, "Give the season a name? (Leave blank for [GLOB.triumph_wipe_season + 1])", "SEASON NAME")
+	var/name = browser_input_text(src, "Give the season a name? (Leave blank for [GLOB.triumph_wipe_season + 1])", "NOMBRE DE LA TEMPORADA")
 
 	SStriumphs.start_new_season(name)
 

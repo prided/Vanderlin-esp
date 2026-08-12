@@ -118,7 +118,7 @@
 	add_verb(C, /mob/living/carbon/human/species/rakshari/verb/emote_purr)
 	var/datum/action/cooldown/keen_nose/action = new(C)
 	action.Grant(C)
-	to_chat(C, "<span class='info'>I can speak Zalad with ,z before my speech.</span>")
+	to_chat(C, "<span class='info'>Puedo hablar Zalad con ,z antes de mi discurso.</span>")
 
 /datum/species/rakshari/check_roundstart_eligible()
 	return TRUE
@@ -185,7 +185,7 @@
 
 /datum/action/cooldown/keen_nose
 	name = "Sniff for scents"
-	desc = "Smell the air to detect living beings at a distance."
+	desc = "Huele el aire para detectar seres vivos a distancia."
 	button_icon_state = "shieldsparkles"
 	cooldown_time = 30 SECONDS
 

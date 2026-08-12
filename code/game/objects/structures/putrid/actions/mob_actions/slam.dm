@@ -71,7 +71,7 @@
 /datum/action/cooldown/meatvine/personal/ground_slam/proc/crush_victim(mob/living/victim, mob/living/user)
 	victim.visible_message(
 		span_danger("[victim] is crushed under [user]'s massive weight!"),
-		span_userdanger("You are crushed under [user]!")
+		span_userdanger("¡Estás aplastado por [user]!")
 	)
 
 	var/target_zone = BODY_ZONE_CHEST
@@ -89,7 +89,7 @@
 		var/mob/living/carbon/human/human_victim = victim
 		var/obj/item/bodypart/crushed_part = human_victim.get_bodypart(target_zone)
 		if(crushed_part)
-			to_chat(victim, span_userdanger("Your [crushed_part.name] is crushed!"))
+			to_chat(victim, span_userdanger("¡Tu [crushed_part.name] está aplastado!"))
 
 	victim.apply_damage(crush_damage, BRUTE, target_zone, damage_type = BCLASS_BLUNT)
 	victim.Paralyze(4 SECONDS)
@@ -109,7 +109,7 @@
 	var/shake_intensity = max(1, 4 - distance)
 	shake_camera(target, shake_intensity, 2)
 
-	to_chat(target, span_danger("The ground shakes violently beneath you!"))
+	to_chat(target, span_danger("¡El suelo tiembla violentamente debajo de ti!"))
 	target.balloon_alert(target, "knocked down!")
 
 	var/shockwave_damage = max(5, 15 - (distance * 3))
@@ -181,6 +181,6 @@
 	return ..()
 
 /atom/movable/screen/alert/status_effect/ground_slam_slow
-	name = "Shockwave"
-	desc = "The ground shook beneath you, slowing your movement!"
+	name = "onda de choque"
+	desc = "¡El suelo tembló debajo de ti, ralentizando tu movimiento!"
 	icon_state = "slowed"

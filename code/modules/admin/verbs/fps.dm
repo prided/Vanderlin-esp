@@ -14,10 +14,10 @@
 		to_chat(src, "<span class='danger'>Error: set_server_fps(): Invalid world.fps value. No changes made.</span>")
 		return
 	if(new_fps > cfg_fps * 1.5)
-		if(tgui_alert(src, "You are setting fps to a high value:\n\t[new_fps] frames-per-second\n\tconfig.fps = [cfg_fps]","Warning!", list("Confirm","ABORT-ABORT-ABORT")) != "Confirm")
+		if(tgui_alert(src, "You are setting fps to a high value:\n\t[new_fps] frames-per-second\n\tconfig.fps = [cfg_fps]","¡Advertencia!", list("Confirmar","ABORT-ABORT-ABORT")) != "Confirmar")
 			return
 
-	var/msg = "[key_name(src)] has modified world.fps to [new_fps]"
+	var/msg = "[key_name(src)] ha modificado world.fps a [new_fps]"
 	log_admin(msg, 0)
 	message_admins(msg, 0)
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Set Server FPS", "[new_fps]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

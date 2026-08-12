@@ -47,7 +47,7 @@
 	display_results(
 		surgeon,
 		limb.owner,
-		span_notice("You begin to sever [limb.owner]'s [parse_zone(limb.body_zone)]..."),
+		span_notice("Comienzas a cortar el [parse_zone(limb.body_zone)] de [limb.owner]..."),
 		span_notice("[surgeon] begins to sever [limb.owner]'s [parse_zone(limb.body_zone)]."),
 		span_notice("[surgeon] begins to sever [limb.owner]'s [parse_zone(limb.body_zone)] with [tool]."),
 	)
@@ -57,8 +57,8 @@
 	display_results(
 		surgeon,
 		limb.owner,
-		span_notice("You successfully amputate [limb.owner]'s [parse_zone(limb.body_zone)]!"),
-		span_notice("[surgeon] successfully amputates [limb.owner]'s [parse_zone(limb.body_zone)]!"),
+		span_notice("¡Has amputado con éxito el [parse_zone(limb.body_zone)] de [limb.owner]!"),
+		span_notice("¡[surgeon] amputa con éxito el [parse_zone(limb.body_zone)] de [limb.owner]!"),
 		span_notice("[surgeon] finishes severing [limb.owner]'s [parse_zone(limb.body_zone)]."),
 	)
 	display_pain(limb.owner, "I can no longer feel my [parse_zone(limb.body_zone)]!")

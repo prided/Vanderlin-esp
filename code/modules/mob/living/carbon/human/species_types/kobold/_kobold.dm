@@ -46,7 +46,7 @@
 	\n\n\
 	WARNING: THIS IS A HEAVILY DISCRIMINATED AGAINST CHALLENGE SPECIES WITH ACTIVE SPECIES DETRIMENTS. YOU CAN AND WILL DIE A LOT; PLAY AT YOUR OWN RISK!"
 
-	skin_tone_wording = "Scale Color"
+	skin_tone_wording = "Color de escala"
 	default_color = "FFFFFF"
 
 	species_traits = list(NO_UNDERWEAR)

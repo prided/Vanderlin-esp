@@ -282,7 +282,7 @@ GLOBAL_LIST_INIT(has_behind_cache, list()) // cheaty hack to avoid repeated list
 
 /client/verb/output_inhands()
 	set category = "INHANDS"
-	set name = "Output Variables"
+	set name = "Variables de salida"
 	set desc = ""
 
 	var/mob/living/carbon/human/LI = mob
@@ -682,7 +682,7 @@ GLOBAL_LIST_INIT(has_behind_cache, list()) // cheaty hack to avoid repeated list
 
 /client/verb/inhand_scaleplus()
 	set category = "INHANDS"
-	set name = "Shrink+0.1"
+	set name = "Reducir+0.1"
 
 	if(!isliving(mob))
 		return
@@ -720,7 +720,7 @@ GLOBAL_LIST_INIT(has_behind_cache, list()) // cheaty hack to avoid repeated list
 
 /client/verb/inhand_scaleminus()
 	set category = "INHANDS"
-	set name = "Shrink-0.1"
+	set name = "Reducir-0.1"
 
 	if(!isliving(mob))
 		return
@@ -757,7 +757,7 @@ GLOBAL_LIST_INIT(has_behind_cache, list()) // cheaty hack to avoid repeated list
 
 /client/verb/give_me_money()
 	set category = "DEBUGTEST"
-	set name = "GiveMeMoney"
+	set name = "Dame Dinero"
 	if(mob)
 		var/turf/T = get_turf(mob)
 		if(T)

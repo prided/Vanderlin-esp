@@ -22,7 +22,7 @@ By using these methods of finding references, you can make your life far, far ea
 */
 
 SUBSYSTEM_DEF(garbage)
-	name = "Garbage"
+	name = "Basura"
 	priority = FIRE_PRIORITY_GARBAGE
 	wait = 1//2 SECONDS
 	flags = SS_POST_FIRE_TIMING|SS_BACKGROUND|SS_NO_INIT

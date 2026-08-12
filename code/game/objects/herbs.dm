@@ -44,14 +44,14 @@
 				if(B)
 					B = new B(user.loc)
 					user.put_in_hands(B)
-					user.visible_message(span_notice("[user] finds [B] in [src]."))
+					user.visible_message(span_notice("[user] encuentra [B] en [src]."))
 					harvested = TRUE
 					if(can_replenish)
 						timerid = addtimer(CALLBACK(src, PROC_REF(loot_replenish)), 8 MINUTES, flags = TIMER_STOPPABLE)
 					add_filter("picked", 1, alpha_mask_filter(icon = icon('icons/effects/picked_overlay.dmi', "picked_overlay_[rand(1,3)]"), flags = MASK_INVERSE))
 					GLOB.harvested_herbs |= src
 					return
-			user.visible_message(span_notice("[user] searches through [src]."))
+			user.visible_message(span_notice("[user] busca en [src]."))
 
 /obj/structure/flora/grass/herb/proc/loot_replenish(forced=FALSE)
 	if(!(can_replenish || forced))
@@ -66,7 +66,7 @@
 
 /obj/structure/flora/grass/herb/random
 	name = "random herb"
-	desc = "Haha, I'm in danger."
+	desc = "Jaja, estoy en peligro."
 	icon_state = "herb_random"
 
 /obj/structure/flora/grass/herb/random/Initialize()

@@ -2,7 +2,7 @@
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "spike"
 	name = "tentacle spike"
-	desc = "A sharp, twisted spike of corrupted flesh."
+	desc = "Una punta afilada y retorcida de carne corrupta."
 	density = FALSE
 	opacity = FALSE
 	pass_flags = LETPASSTHROW

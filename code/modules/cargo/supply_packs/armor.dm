@@ -25,7 +25,7 @@
 	contains = /obj/item/clothing/head/helmet/skullcap
 
 /datum/supply_pack/armor/light/poth
-	name = "Pot Helmet"
+	name = "Casco de olla"
 	cost = 25
 	contains = /obj/item/clothing/head/helmet/ironpot
 
@@ -49,7 +49,7 @@
 // ARMOR
 
 /datum/supply_pack/armor/light/lightleather_armor
-	name = "Leather Armor"
+	name = "Armadura de cuero"
 	cost = 15
 	contains = /obj/item/clothing/armor/leather
 
@@ -59,12 +59,12 @@
 	contains = /obj/item/clothing/armor/leather/splint
 
 /datum/supply_pack/armor/light/studleather
-	name = "Hardened Leather Armor"
+	name = "Armadura de cuero endurecido"
 	cost = 50
 	contains = /obj/item/clothing/armor/leather/advanced
 
 /datum/supply_pack/armor/light/icuirass
-	name = "Iron Cuirass"
+	name = "Coraza de hierro"
 	cost = 50
 	contains = /obj/item/clothing/armor/cuirass/iron
 
@@ -74,7 +74,7 @@
 	contains = /obj/item/clothing/armor/plate/iron
 
 /datum/supply_pack/armor/light/ifull_plate
-	name = "Iron Plate Armor"
+	name = "Armadura de placas de hierro"
 	cost = 80
 	contains = /obj/item/clothing/armor/plate/full/iron
 
@@ -89,7 +89,7 @@
 	contains = /obj/item/clothing/armor/gambeson/light/steppe
 
 /datum/supply_pack/armor/light/steppehidearmor
-	name = "Steppe Hide Armor"
+	name = "Armadura de piel de estepa"
 	cost = 28
 	contains = /obj/item/clothing/armor/leather/hide/steppe
 
@@ -128,7 +128,7 @@
 	contains = /obj/item/clothing/gloves/angle
 
 /datum/supply_pack/armor/light/chain_gloves_iron
-	name = "Iron Chain Gloves"
+	name = "Guantes de cadena de hierro"
 	cost = 25
 	contains = /obj/item/clothing/gloves/chain/iron
 
@@ -147,7 +147,7 @@
 // BOOTS
 
 /datum/supply_pack/armor/light/light_armor_boots
-	name = "Iron Boots"
+	name = "Botas de hierro"
 	cost = 25
 	contains = /obj/item/clothing/shoes/boots/armor/light
 
@@ -188,7 +188,7 @@
 	contains = /obj/item/clothing/head/helmet/visored/sallet
 
 /datum/supply_pack/armor/steel/buckethelm
-	name = "Great Helm"
+	name = "Gran yelmo"
 	cost = 55
 	contains = /obj/item/clothing/head/helmet/heavy/bucket
 
@@ -220,7 +220,7 @@
 	contains = /obj/item/clothing/face/facemask/steel
 
 /datum/supply_pack/armor/steel/steppemask
-	name = "Steppe Mask"
+	name = "Máscara de estepa"
 	cost = 55
 	contains = /obj/item/clothing/face/facemask/steel/steppe
 
@@ -252,7 +252,7 @@
 	contains = /obj/item/clothing/armor/cuirass
 
 /datum/supply_pack/armor/steel/brigandine
-	name = "Brigandine"
+	name = "Brigandina"
 	cost = 125
 	contains = /obj/item/clothing/armor/brigandine
 
@@ -306,7 +306,7 @@
 	contains = /obj/item/clothing/gloves/plate
 
 /datum/supply_pack/armor/steel/beastclaws
-	name = "Beast Claws"
+	name = "Garras de Bestia"
 	cost = 55
 	contains = /obj/item/clothing/gloves/plate/beastclaws
 
@@ -325,7 +325,7 @@
 // BOOTS
 
 /datum/supply_pack/armor/steel/steel_boots
-	name = "Plate Boots"
+	name = "Botas de placas"
 	cost = 50
 	contains = /obj/item/clothing/shoes/boots/armor
 

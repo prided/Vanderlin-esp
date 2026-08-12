@@ -163,19 +163,19 @@
 
 							var/choice
 							if(length(recipe_names) > 1)
-								choice = input(user, "Choose a recipe to make:", "Recipe Selection") as null|anything in recipe_names
+								choice = input(user, "Elige una receta para hacer:", "Selección de recetas") as null|anything in recipe_names
 							else
 								choice = recipe_names[1]
 							if(!choice)
 								return FALSE
 							chosen_recipe = recipe_names[choice]
 
-						user.visible_message("<span class='notice'>[user] starts to cook [W] over [src].</span>")
+						user.visible_message("<span class='notice'>[user] comienza a cocinar [W] sobre [src].</span>")
 						if(do_after(user, chosen_recipe.crafting_time || (4 SECONDS), src))
 							var/obj/item/result
 							if(prob(prob2spoil))
 								var/obj/item/reagent_containers/food/snacks/S = W
-								user.visible_message("<span class='warning'>[user] burns [S].</span>")
+								user.visible_message("<span class='warning'>[user] quema [S].</span>")
 								if(user.client?.prefs.read_preference(/datum/preference/toggle/showrolls))
 									to_chat(user, "<span class='warning'>Critfail... [prob2spoil]%.</span>")
 								result = S.cooking(1000, null)
@@ -197,20 +197,20 @@
 								qdel(W)
 
 								user.put_in_hands(result)
-								user.visible_message("<span class='notice'>[user] finishes cooking [result].</span>")
+								user.visible_message("<span class='notice'>[user] termina de cocinar [result].</span>")
 								to_chat(user, "<span class='notice'>[chosen_recipe.complete_message]</span>")
 								user.nobles_seen_servant_work()
 								return TRUE
 						return FALSE
 
 					// Fall back to normal cooking if no container recipe matches
-					user.visible_message("<span class='notice'>[user] starts to cook [W] over [src].</span>")
+					user.visible_message("<span class='notice'>[user] comienza a cocinar [W] sobre [src].</span>")
 					for(var/i in 1 to 6)
 						if(do_after(user, 3 SECONDS, src))
 							var/obj/item/reagent_containers/food/snacks/S = W
 							var/obj/item/C
 							if(prob(prob2spoil))
-								user.visible_message("<span class='warning'>[user] burns [S].</span>")
+								user.visible_message("<span class='warning'>[user] quema [S].</span>")
 								if(user.client?.prefs.read_preference(/datum/preference/toggle/showrolls))
 									to_chat(user, "<span class='warning'>Critfail... [prob2spoil]%.</span>")
 								C = S.cooking(1000, null)
@@ -238,7 +238,7 @@
 		if(!(W in user.held_items)|| !user.temporarilyRemoveItemFromInventory(W))
 			return
 		qdel(W)
-		user.visible_message(span_warning("[user] feeds [W] to [src]."))
+		user.visible_message(span_warning("[user] alimenta [W] a [src]."))
 		if(initial(fueluse))
 			fueluse = fueluse + W.firefuel
 			if(fueluse > initial(fueluse)) //keep it at the max

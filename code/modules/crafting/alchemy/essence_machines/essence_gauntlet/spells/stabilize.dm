@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/stabilize
-	name = "Stabilize"
+	name = "Estabilizar"
 	desc = "Prevents objects from moving or falling for a short time."
 	button_icon_state = "ravox_tug"
 	cast_range = 2
@@ -15,7 +15,7 @@
 	if(target.anchored)
 		return
 
-	owner.visible_message(span_notice("[owner] stabilizes [target] with magical force."))
+	owner.visible_message(span_notice("[owner] estabiliza [target] con fuerza mágica."))
 	new /obj/effect/temp_visual/solosnake(get_turf(target))
 	target.anchored = TRUE
 	addtimer(VARSET_CALLBACK(target, anchored, FALSE), 30 SECONDS)

@@ -41,8 +41,8 @@
 \-------------*/	// needed so you can prevent cooking combos with rotted food and add gross effects etc. Food not combinable/processable don't need this type. Its clunkly, should be replaced with some sort of check in the procs ROGTODO
 
 /obj/item/reagent_containers/food/snacks/rotten
-	name = "rotten food"
-	desc = "A vile decaying morsel, its last hope is to become food for the soil."
+	name = "comida podrida"
+	desc = "Un vil bocado en descomposición, su última esperanza es convertirse en alimento para el suelo."
 	color = "#6c6897"
 	eat_effect = /datum/status_effect/debuff/rotfood
 	list_reagents = list(/datum/reagent/yuck = 5)
@@ -54,15 +54,15 @@
 	. = ..()
 
 /obj/item/reagent_containers/food/snacks/rotten/meat
-	name = "rotten meat"
+	name = "carne podrida"
 	icon_state = "meat"
 
 /obj/item/reagent_containers/food/snacks/rotten/bacon
-	name = "rotten flesh"
+	name = "carne podrida"
 	icon_state = "pigflesh"
 
 /obj/item/reagent_containers/food/snacks/rotten/sausage
-	name = "rotten sausage"
+	name = "salchicha podrida"
 	icon_state = "raw_wiener"
 
 /obj/item/reagent_containers/food/snacks/rotten/poultry
@@ -70,15 +70,15 @@
 	icon_state = "poultry"
 
 /obj/item/reagent_containers/food/snacks/rotten/chickenleg
-	name = "rotten bird meat"
+	name = "carne de ave podrida"
 	icon_state = "chickencutlet"
 
 /obj/item/reagent_containers/food/snacks/rotten/breadslice
-	name = "moldy bread"
+	name = "pan mohoso"
 	icon_state = "loaf_slice"
 
 /obj/item/reagent_containers/food/snacks/rotten/egg
-	name = "rotten egg"
+	name = "huevo podrido"
 	icon_state = "eggB"
 
 /obj/item/reagent_containers/food/snacks/rotten/egg/throw_impact(atom/hit_atom, datum/thrownthing/thrownthing)
@@ -115,14 +115,14 @@
 	var/base_item
 
 /obj/item/kitchen/spoon
-	name = "wooden spoon"
+	name = "cuchara de madera"
 	desc = "Traditional utensil for shoveling soup into your mouth, or to churn butter with."
 	icon_state = "spoon"
 	smeltresult = /obj/item/fertilizer/ash
 	tool_behaviour = TOOL_SPOON
 
 /obj/item/kitchen/spoon/iron
-	name = "iron spoon"
+	name = "cuchara de hierro"
 	icon_state = "spoon_iron"
 	melting_material = /datum/material/iron
 	melt_amount = 20
@@ -140,7 +140,7 @@
 	smeltresult = /obj/item/fertilizer/ash
 
 /obj/item/kitchen/fork/iron
-	name = "iron fork"
+	name = "tenedor de hierro"
 	icon_state = "fork_iron"
 	melting_material = /datum/material/iron
 	melt_amount = 20
@@ -184,7 +184,7 @@
 	if(dirty)
 		. += span_boldwarning("This bowl is filthy... absolutely disgusting.")
 	else if(cleaned)
-		. += span_notice("This bowl was cleaned recently!")
+		. += span_notice("¡Este cuenco fue limpiado recientemente!")
 	else
 		. += span_notice("This bowl looks clean enough.")
 
@@ -218,7 +218,7 @@
 /obj/item/reagent_containers/glass/bowl/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(!reagents.total_volume && istype(tool, /obj/item/natural/cloth) && user?.used_intent?.type == INTENT_USE)
 		if(!dirty)
-			to_chat(user, span_notice("This platter is already clean."))
+			to_chat(user, span_notice("Este plato ya está limpio."))
 			return ITEM_INTERACT_SUCCESS
 
 		var/obj/item/natural/cloth/cloth_check = tool
@@ -244,7 +244,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 	if(!reagents.total_volume&& istype(tool, /obj/item/reagent_containers/food/snacks/veg/cabbage_sliced))
-		to_chat(user, span_warning("Tossing up a salad..."))
+		to_chat(user, span_warning("Preparando una ensalada..."))
 		short_cooktime = (50 - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/cooking))*8))
 		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
 		if(do_after(user, short_cooktime, src))
@@ -261,14 +261,14 @@
 		return ITEM_INTERACT_SUCCESS
 
 	if(reagents.total_volume && istype(tool, /obj/item/natural/cloth) && user?.used_intent?.type == INTENT_USE)
-		to_chat(user, span_warning("You can't clean the [src] while it has something inside of it!"))
+		to_chat(user, span_warning("¡No puedes limpiar el [src] mientras tenga algo dentro!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!(tool.tool_behaviour == TOOL_SPOON))
 		return ..()
 
 	if(!reagents?.total_volume)
-		to_chat(user, span_warning("[src] is empty!"))
+		to_chat(user, span_warning("¡[src] está vacío!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!do_after(user, 1 SECONDS, src))
@@ -288,7 +288,7 @@
 		qdel(GetComponent(/datum/component/particle_spewer/sparkle/turf_only))
 		update_appearance(UPDATE_OVERLAYS)
 	playsound(src, 'sound/misc/eat.ogg', rand(30, 60), TRUE)
-	user.visible_message(span_info("[user] eats from [src]."), \
+	user.visible_message(span_info("[user] come de [src]."), \
 			span_notice("I swallow a gulp of [src]."))
 	addtimer(CALLBACK(reagents, TYPE_PROC_REF(/datum/reagents, trans_to), user, min(amount_per_transfer_from_this, 5), TRUE, TRUE, FALSE, user, FALSE, INGEST), 5 DECISECONDS)
 
@@ -361,7 +361,7 @@
 	max_usages = 10
 
 /obj/item/reagent_containers/glass/bowl/shell
-	name = "shell bowl"
+	name = "cuenco de concha"
 	desc = "A bowl carved out of shell."
 	icon_state = "bowl_shell"
 	fill_icon_state = "bowl"
@@ -405,7 +405,7 @@
 	qdel(src)
 
 /obj/item/reagent_containers/peppermill // new with some animated art
-	name = "pepper mill"
+	name = "molinillo de pimienta"
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "peppermill"
 	layer = CLOSED_BLASTDOOR_LAYER // obj layer + a little, small obj layering above convenient
@@ -417,7 +417,7 @@
 \-------------*/	// These are for the pot, if more vegetables are added and need to be integrated into the pot brewing you need to add them here
 
 /datum/reagent/consumable/soup // so you get hydrated without the flavor system messing it up. Works like water with less hydration
-	name = "soup"
+	name = "sopa"
 	hydration_factor = 5
 
 /datum/reagent/consumable/soup/on_mob_metabolize(mob/living/L)
@@ -445,7 +445,7 @@
 	taste_description = "sweet and soft sunreed kernels"
 
 /datum/reagent/consumable/soup/veggie
-	name = "vegetable soup"
+	name = "sopa de verduras"
 	description = ""
 	reagent_state = LIQUID
 	nutriment_factor = 7
@@ -454,15 +454,15 @@
 
 /datum/reagent/consumable/soup/veggie/potato
 	color = "#869256"
-	taste_description = "potato broth"
+	taste_description = "caldo de papa"
 
 /datum/reagent/consumable/soup/veggie/pompkaun
 	color = "#df7d0e"
-	taste_description = "pompkaun soup"
+	taste_description = "sopa pompkaun"
 
 /datum/reagent/consumable/soup/veggie/onion
 	color = "#a6b457"
-	taste_description = "boiled onions"
+	taste_description = "cebollas hervidas"
 
 /datum/reagent/consumable/soup/veggie/cabbage
 	color = "#859e56"
@@ -470,7 +470,7 @@
 
 /datum/reagent/consumable/soup/veggie/turnip
 	color = "#becf9d"
-	taste_description = "boiled turnip"
+	taste_description = "nabo hervido"
 
 
 /datum/reagent/consumable/soup/veggie/tamto
@@ -479,25 +479,25 @@
 	taste_description = "tamto soup"
 
 /datum/reagent/consumable/soup/egg
-	name = "egg soup"
+	name = "sopa de huevo"
 	color = "#dedbaf"
-	taste_description = "egg soup"
+	taste_description = "sopa de huevo"
 	nutriment_factor = 12
 
 /datum/reagent/consumable/soup/bone
-	name = "bone broth"
+	name = "caldo de huesos"
 	color = "#978e0d"
 	taste_description = "Savory, and deeply rich."
 	nutriment_factor = 12
 	taste_mult = 4
 
 /datum/reagent/consumable/soup/cheese // A thicker soup, almost on the level of old oatmeal. But less hydration than other soups
-	name = "cheese soup"
+	name = "sopa de queso"
 	description = "A thick cheese soup. Creamy and comforting."
 	color = "#c4be70"
 	reagent_state = LIQUID
 	nutriment_factor = 12
-	taste_description = "creamy cheese"
+	taste_description = "queso cremoso"
 	taste_mult = 4
 	hydration_factor = 4
 
@@ -510,12 +510,12 @@
 
 /datum/reagent/consumable/soup/stew/sinew
 	color = "#6e6116"
-	taste_description = "bone broth"
+	taste_description = "caldo de huesos"
 
 
 /datum/reagent/consumable/soup/stew/bone
 	color = "#8a770c"
-	taste_description = "bone broth"
+	taste_description = "caldo de huesos"
 
 
 /datum/reagent/consumable/soup/stew/chicken
@@ -528,7 +528,7 @@
 
 /datum/reagent/consumable/soup/stew/meat_meagre
 	color = "#80432a"
-	taste_description = "meagre meat stew"
+	taste_description = "estofado de carne magra"
 
 /datum/reagent/consumable/soup/stew/solyanka
 	color = "#b0432a"
@@ -548,14 +548,14 @@
 	taste_description = "hearty borowiki"
 
 /datum/reagent/water/spicy // filler, not important
-	taste_description = "something spicy"
+	taste_description = "algo picante"
 	color = "#ea9f9fc6"
 
 /datum/reagent/consumable/soup/stew/gross // barely edible, but beggars eat it without issue, even getting a little relief
 	name = "beggars stew"
 	color = "#3b4537"
 	nutriment_factor = 8
-	taste_description = "something gross"
+	taste_description = "algo asqueroso"
 	metabolization_rate = 0.3
 
 /datum/reagent/consumable/soup/stew/gross/on_mob_life(mob/living/carbon/M, efficiency)
@@ -579,10 +579,10 @@
 	. = TRUE
 
 /datum/reagent/yuck/cursed_soup	// toxic sludge, though its edible for NASTY_EATERS like orcs, healing them slightly
-	name = "cursed soup"
-	description = "Vile smell."
+	name = "sopa maldita"
+	description = "Olor vil."
 	color = "#5b2b44"
-	taste_description = "something truly vile"
+	taste_description = "algo realmente vil"
 	metabolization_rate = 0.2
 
 /datum/reagent/yuck/cursed_soup/on_mob_life(mob/living/carbon/M, efficiency)
@@ -611,7 +611,7 @@
 // -------------- Flour -----------------
 /obj/item/reagent_containers/powder/flour
 	name = "flour"
-	desc = "With this ambition, we build an empire."
+	desc = "Con esta ambición construimos un imperio."
 	gender = PLURAL
 	icon_state = "flour"
 	list_reagents = list(/datum/reagent/flour = 1)
@@ -663,7 +663,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	name = "wet flour"
-	desc = "Destined for greatness, at your hands."
+	desc = "Destinado a la grandeza, en tus manos."
 	tool.reagents.remove_reagent(/datum/reagent/water, 10)
 	water_added = TRUE
 	color = "#d9d0cb"
@@ -686,7 +686,7 @@
 // -------------- Sunreed Powder -----------------
 /obj/item/reagent_containers/powder/sunreed_flour
 	name = "sunreed powder"
-	desc = "Desperation breeds innovation."
+	desc = "La desesperación genera innovación."
 	gender = PLURAL
 	icon_state = "maize_flour"
 	list_reagents = list(/datum/reagent/flour = 1)

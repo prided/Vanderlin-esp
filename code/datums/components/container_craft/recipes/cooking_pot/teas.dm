@@ -1,5 +1,5 @@
 /datum/container_craft/cooking/tea
-	category = "Teas"
+	category = "Tés"
 	abstract_type = /datum/container_craft/cooking/tea
 	pollute_amount = 100
 	finished_smell = /datum/pollutant/food/teas
@@ -31,7 +31,7 @@
 
 
 /datum/container_craft/cooking/tea/taraxamint
-	name = "Taraxacum-Mentha tea"
+	name = "Té de Taraxacum-Mentha"
 	crafting_time = 50 SECONDS
 	created_reagent = /datum/reagent/consumable/tea/taraxamint
 	requirements = list(
@@ -60,35 +60,35 @@
 	finished_smell = /datum/pollutant/food/druqks
 
 /datum/container_craft/cooking/tea/manabloom
-	name = "Manabloom tea"
+	name = "Té de manabloom"
 	crafting_time = 30 SECONDS
 	created_reagent = /datum/reagent/consumable/tea/manabloom
 	requirements = list(/obj/item/reagent_containers/food/snacks/produce/manabloom = 2)
 	finished_smell = /datum/pollutant/food/druqks
 
 /datum/container_craft/cooking/tea/compot
-	name = "Compot"
+	name = "compota"
 	crafting_time = 60 SECONDS
 	created_reagent = /datum/reagent/consumable/tea/compot
 	requirements = list(/obj/item/reagent_containers/food/snacks/raisins = 2)
 	finished_smell = /datum/pollutant/food/druqks
 
 /datum/container_craft/cooking/tea/tiefbloodtea
-	name = "Tiefing Blood Tea"
+	name = "Té de sangre Tiefing"
 	crafting_time = 80 SECONDS
 	created_reagent = /datum/reagent/consumable/tea/tiefbloodtea
 	requirements = list(/obj/item/reagent_containers/food/snacks/tiefsugar = 1)
 	finished_smell = /datum/pollutant/food/sugar
 
 /datum/container_craft/cooking/tea/exotic
-	name = "Exotic Tea"
+	name = "Té exótico"
 	crafting_time = 30 SECONDS
 	created_reagent = /datum/reagent/consumable/caffeine/tea
 	requirements = list(/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground = 2)
 	finished_smell = /datum/pollutant/food/teas
 
 /datum/container_craft/cooking/tea/coffee
-	name = "Coffee"
+	name = "Café"
 	crafting_time = 30 SECONDS
 	created_reagent = /datum/reagent/consumable/caffeine/coffee
 	requirements = list(/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted = 2)

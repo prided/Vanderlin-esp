@@ -14,7 +14,7 @@
 	)
 
 	var/last_siege
-	var/raid_text = "The skeleton horde approaches."
+	var/raid_text = "La horda de esqueletos se acerca."
 
 /datum/round_event_control/worldsiege/preRunEvent()
 	. = ..()

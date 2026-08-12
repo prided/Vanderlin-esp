@@ -84,7 +84,7 @@
 
 	charger.visible_message(
 		span_danger("[charger] charges forward with tremendous speed!"),
-		span_boldnotice("You charge forward!")
+		span_boldnotice("¡Cargas hacia adelante!")
 	)
 
 	sleep(delay)
@@ -247,7 +247,7 @@
 
 			// Apply damage
 			victim.visible_message(
-				span_danger("[victim] is caught in [user]'s slashing fury!"),
+				span_danger("¡[victim] está atrapado en la furia cortante de [user]!"),
 				span_userdanger("You're caught in [user]'s slashing fury!")
 			)
 

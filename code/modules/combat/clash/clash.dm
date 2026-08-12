@@ -27,7 +27,7 @@
 			visible_message(span_suicide("[src] gores [assailant]'s hands with \the [our_item]!"))
 			affecting?.bodypart_attacked_by(used_intent.blade_class, real_damage, assailant, crit_message = TRUE, incoming_germ = our_item.germ_level, pre_applied = TRUE)
 		else
-			visible_message(span_suicide("[src] clashes into [assailant]'s hands with \the [our_item]!"))
+			visible_message(span_suicide("¡[src] choca en las manos de [assailant] con \the [our_item]!"))
 
 		playsound(src, pick(used_intent.hitsound), 80)
 		assailant.remove_status_effect(/datum/status_effect/buff/clash)
@@ -155,7 +155,7 @@
 
 	visible_message(
 		span_suicide("[src] is disarmed!"),
-		span_boldwarning("I'm disarmed!"),
+		span_boldwarning("¡Estoy desarmado!"),
 	)
 
 	var/turnangle = (prob(50) ? 270 : 90)

@@ -48,7 +48,7 @@
 	first_time_text = "Salem Outpost"
 
 /area/indoors/wilderness
-	name = "indoors - wilderness"
+	name = "interior - desierto"
 	icon = 'icons/turf/areas/forest.dmi'
 	icon_state = "indoorwild"
 	droning_index = DRONING_INDOORS

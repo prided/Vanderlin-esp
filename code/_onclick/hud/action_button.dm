@@ -272,9 +272,9 @@
 /atom/movable/screen/button_palette/update_name(updates)
 	. = ..()
 	if(expanded)
-		name = "Hide Buttons"
+		name = "Ocultar botones"
 	else
-		name = "Show Buttons"
+		name = "Mostrar botones"
 
 /atom/movable/screen/button_palette/proc/refresh_owner()
 	var/mob/viewer = our_hud.mymob

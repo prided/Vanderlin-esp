@@ -57,11 +57,11 @@
 
 	var/datum/natural_precursor/precursor = get_precursor_data(I)
 	if(!precursor)
-		to_chat(user, span_warning("[I] cannot be processed by the essence splitter."))
+		to_chat(user, span_warning("[I] no puede ser procesado por el divisor de esencia."))
 		return
 
 	if(!user.transferItemToLoc(I, src))
-		to_chat(user, span_warning("[I] is stuck to your hand!"))
+		to_chat(user, span_warning("¡[I] está pegado a tu mano!"))
 		return
 
 	current_items += I
@@ -111,7 +111,7 @@
 		return
 
 	processing = TRUE
-	user.visible_message(span_info("[user] activates the essence splitter."))
+	user.visible_message(span_info("[user] activa el divisor de esencia."))
 	update_appearance(UPDATE_OVERLAYS)
 
 	var/speed_divide = GLOB.thaumic_research.get_research_bonus(/datum/thaumic_research_node/splitter_speed)

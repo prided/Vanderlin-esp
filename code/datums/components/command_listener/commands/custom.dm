@@ -3,7 +3,7 @@
 	var/custom_text = ""
 
 /datum/follower_command/custom/post_setup(mob/living/carbon/human/automaton, mob/living/issuer)
-	custom_text = tgui_input_text(issuer, "Enter your command for [automaton]:", "Custom Command", max_length = 256)
+	custom_text = tgui_input_text(issuer, "Ingrese su comando para [automaton]:", "Comando personalizado", max_length = 256)
 	if(QDELETED(automaton) || QDELETED(issuer))
 		return
 	if(!custom_text)

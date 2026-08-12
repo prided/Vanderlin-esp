@@ -1,10 +1,10 @@
 /datum/repeatable_crafting_recipe/projectile
 	abstract_type = /datum/repeatable_crafting_recipe/projectile
-	category = "Projectiles"
+	category = "Proyectiles"
 	skillcraft = /datum/attribute/skill/craft/crafting
 
 /datum/repeatable_crafting_recipe/projectile/arrow
-	name = "stone arrow"
+	name = "flecha de piedra"
 	requirements = list(
 		/obj/item/grown/log/tree/stick= 1,
 		/obj/item/natural/stone = 1,
@@ -16,7 +16,7 @@
 	craft_time = 1 SECONDS
 
 /datum/repeatable_crafting_recipe/projectile/bone_arrow
-	name = "bone arrow"
+	name = "flecha de hueso"
 	requirements = list(
 		/obj/item/grown/log/tree/stick= 1,
 		/obj/item/alch/bone = 1,
@@ -28,7 +28,7 @@
 	craft_time = 1 SECONDS
 
 /datum/repeatable_crafting_recipe/projectile/pyro_arrow
-	name = "pyroclastic arrow"
+	name = "flecha piroclástica"
 	requirements = list(
 		/obj/item/ammo_casing/caseless/arrow = 1,
 		/obj/item/reagent_containers/food/snacks/produce/fyritius = 1,
@@ -56,7 +56,7 @@
 	craft_time = 1 SECONDS
 
 /datum/repeatable_crafting_recipe/projectile/water_arrow
-	name = "water arrow"
+	name = "flecha de agua"
 	requirements = list(
 		/obj/item/ammo_casing/caseless/arrow = 3,
 		/obj/item/alch/waterdust = 1,

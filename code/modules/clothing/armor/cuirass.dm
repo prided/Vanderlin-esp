@@ -1,6 +1,6 @@
 /obj/item/clothing/armor/cuirass
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "steel cuirass"
+	name = "coraza de acero"
 	desc = "A cuirass of steel. Lightweight and highly durable."
 	icon_state = "cuirass"
 	item_state = "cuirass"
@@ -44,7 +44,7 @@
 
 //................ Iron Breastplate ............... //	- A breastplate is a cuirass without its back plate.
 /obj/item/clothing/armor/cuirass/iron
-	name = "iron breastplate"
+	name = "coraza de hierro"
 	desc = "Many cooking pots ended their daes on the anvil to form this protective plate."
 	icon_state = "ibreastplate"
 	item_state = "ibreastplate"
@@ -149,7 +149,7 @@
 			Made to endure."
 
 /obj/item/clothing/armor/cuirass/fluted/gold
-	name = "golden cuirass"
+	name = "coraza dorada"
 	icon_state = "goldcuirass"
 	desc = "A resplendant cuirass of pure gold, fitted with tassets for additional coverage. It is dressed atop a besilked arming jacket to ensure the absolute comfort of its wearer, and the holy sigil has been meticulously formed from its slanted plates."
 	armor_class = AC_HEAVY

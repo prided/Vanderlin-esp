@@ -30,7 +30,7 @@
 
 /* 	.....STATS..... */
 /datum/artificer_recipe/augments/strength_servo
-	name = "Hydraulic Strength Servo"
+	name = "Servo de fuerza hidráulica"
 	created_augment = /datum/augment/stats/strength_servo
 	additional_items = list(/obj/item/gear/metal/steel)
 
@@ -50,12 +50,12 @@
 	additional_items = list(/obj/item/ingot/steel)
 
 /datum/artificer_recipe/augments/pressure_tank
-	name = "Extended Capacity Pressure Tank"
+	name = "Tanque de presión de capacidad extendida"
 	created_augment = /datum/augment/stats/pressure_tank
 	additional_items = list(/obj/item/ingot/bronze)
 
 /datum/artificer_recipe/augments/mobility_actuator
-	name = "High-Efficiency Actuators"
+	name = "Actuadores de alta eficiencia"
 	created_augment = /datum/augment/stats/mobility_actuator
 	additional_items = list(/obj/item/gear/metal/bronze)
 
@@ -65,44 +65,44 @@
 	additional_items = list(/obj/item/ingot/copper)
 
 /datum/artificer_recipe/augments/power_limiter
-	name = "Power Limiter"
+	name = "Limitador de potencia"
 	created_augment = /datum/augment/stats/power_limiter
 	additional_items = list(/obj/item/ingot/copper)
 
 /datum/artificer_recipe/augments/lightweight_frame
-	name = "Lightweight Chassis"
+	name = "Chasis ligero"
 	created_augment = /datum/augment/stats/lightweight_frame
 	additional_items = list(/obj/item/ingot/tin)
 
 /datum/artificer_recipe/augments/efficiency_mode
-	name = "Power Conservation Mode"
+	name = "Modo de conservación de energía"
 	created_augment = /datum/augment/stats/efficiency_mode
 	additional_items = list(/obj/item/ingot/iron)
 
 /datum/artificer_recipe/augments/servo_governor
-	name = "Movement Limiter"
+	name = "Limitador de movimiento"
 	created_augment = /datum/augment/stats/servo_governor
 	additional_items = list(/obj/item/gear/wood)
 
 /datum/artificer_recipe/augments/balanced_matrix
-	name = "Stabilizing Matrix"
+	name = "Matriz estabilizadora"
 	created_augment = /datum/augment/stats/balanced_matrix
 	additional_items = list(/obj/item/ingot/silver)
 
 /datum/artificer_recipe/augments/balanced_matrix
-	name = "Core Stabilizer"
+	name = "Estabilizador central"
 	created_augment = /datum/augment/stats/core_stabilizer
 	additional_items = list(/obj/item/ingot/thaumic)
 
 /* 	.....SKILLS..... */
 
 /datum/artificer_recipe/augments/combat_matrix
-	name = "Combat Analysis Matrix"
+	name = "Matriz de análisis de combate"
 	created_augment = /datum/augment/skill/combat_matrix
 	additional_items = list(/obj/item/ingot/silver)
 
 /datum/artificer_recipe/augments/blade_processor
-	name = "Blade Trajectory Processor"
+	name = "Procesador de trayectoria de la hoja"
 	created_augment = /datum/augment/skill/blade_processor
 	additional_items = list(/obj/item/ingot/silver)
 
@@ -117,7 +117,7 @@
 	additional_items = list(/obj/item/ingot/silver)
 
 /datum/artificer_recipe/augments/shield_actuator
-	name = "Shield Response Actuator"
+	name = "Actuador de respuesta de escudo"
 	created_augment = /datum/augment/skill/shield_actuator
 	additional_items = list(/obj/item/ingot/silver)
 
@@ -132,7 +132,7 @@
 	additional_items = list(/obj/item/ingot/silver)
 
 /datum/artificer_recipe/augments/cooking_guide
-	name = "Culinary Guide"
+	name = "Guía Culinaria"
 	created_augment = /datum/augment/skill/cooking_guide
 	additional_items = list(/obj/item/ingot/bronze)
 
@@ -142,7 +142,7 @@
 	additional_items = list(/obj/item/ingot/iron)
 
 /datum/artificer_recipe/augments/weaponcraft_matrix
-	name = "Weapon Fabrication Matrix"
+	name = "Matriz de fabricación de armas"
 	created_augment = /datum/augment/skill/weaponcraft_matrix
 	additional_items = list(/obj/item/ingot/iron)
 
@@ -152,7 +152,7 @@
 	additional_items = list(/obj/item/ingot/iron)
 
 /datum/artificer_recipe/augments/carpentry_guide
-	name = "Carpentry Guidance System"
+	name = "Sistema de guía de carpintería"
 	created_augment = /datum/augment/skill/carpentry_guide
 	additional_items = list(/obj/item/ingot/iron)
 
@@ -173,12 +173,12 @@
 
 // Skill augments - Labor skills
 /datum/artificer_recipe/augments/mining_efficiency
-	name = "Mining Efficiency Module"
+	name = "Módulo de Eficiencia Minera"
 	created_augment = /datum/augment/skill/mining_efficiency
 	additional_items = list(/obj/item/ingot/bronze)
 
 /datum/artificer_recipe/augments/farming_analyzer
-	name = "Agricultural Analysis System"
+	name = "Sistema de Análisis Agrícola"
 	created_augment = /datum/augment/skill/farming_analyzer
 	additional_items = list(/obj/item/ingot/bronze)
 
@@ -193,7 +193,7 @@
 	additional_items = list(/obj/item/ingot/bronze)
 
 /datum/artificer_recipe/augments/medicine_database
-	name = "Medical Knowledge Database"
+	name = "Base de datos de conocimientos médicos"
 	created_augment = /datum/augment/skill/medicine_database
 	additional_items = list(/obj/item/ingot/bronze)
 
@@ -203,12 +203,12 @@
 	additional_items = list(/obj/item/ingot/bronze)
 
 /datum/artificer_recipe/augments/climbing_optimizer
-	name = "Climbing Optimization Module"
+	name = "Módulo de optimización de escalada"
 	created_augment = /datum/augment/skill/climbing_optimizer
 	additional_items = list(/obj/item/ingot/bronze)
 
 /datum/artificer_recipe/augments/stealth_dampener
-	name = "Acoustic Dampening System"
+	name = "Sistema de amortiguación acústica"
 	created_augment = /datum/augment/skill/stealth_dampener
 	additional_items = list(/obj/item/ingot/bronze)
 
@@ -232,7 +232,7 @@
 	additional_items = list(/obj/item/ingot/tin)
 
 /datum/artificer_recipe/augments/music_box
-	name = "Music Box"
+	name = "Caja de música"
 	created_augment = /datum/augment/music_player
 	additional_items = list(/obj/item/dmusicbox)
 
@@ -255,7 +255,7 @@
 	additional_items = list(/obj/item/ingot/tin = 4)
 
 /datum/artificer_recipe/augments/armor_copper
-	name = "Copper Plating"
+	name = "Revestimiento de cobre"
 	created_augment = /datum/augment/armor/copper
 	additional_items = list(/obj/item/ingot/copper = 4)
 
@@ -265,7 +265,7 @@
 	additional_items = list(/obj/item/ingot/bronze = 4)
 
 /datum/artificer_recipe/augments/armor_iron
-	name = "Iron Plating"
+	name = "Revestimiento de hierro"
 	created_augment = /datum/augment/armor/iron
 	additional_items = list(/obj/item/ingot/iron = 4)
 

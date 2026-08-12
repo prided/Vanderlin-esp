@@ -1,5 +1,5 @@
 /datum/objective/personal/sniff_drugs
-	name = "Sniff Drugs"
+	name = "Oler drogas"
 	category = "Baotha's Chosen"
 	triumph_count = 2
 	rewards = list("2 Triumphs", "Baotha grows stronger", "Ability to recognize alcoholics and junkies on examine", "Baotha blesses you (+1 Fortune)")
@@ -30,7 +30,7 @@
 
 /datum/objective/personal/sniff_drugs/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have sniffed enough drugs to complete Baotha's objective!"))
+	to_chat(owner.current, span_greentext("¡Has olido suficientes drogas para completar el objetivo de Baotha!"))
 	adjust_storyteller_influence(BAOTHA, 20)
 	UnregisterSignal(owner.current, COMSIG_DRUG_SNIFFED)
 

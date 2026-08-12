@@ -1,6 +1,6 @@
 /datum/chimeric_node/input/death
 	name = "mortis"
-	desc = "Triggered when you are killed."
+	desc = "Se activa cuando te matan."
 
 /datum/chimeric_node/input/death/register_triggers(mob/living/carbon/target)
 	if(!target)

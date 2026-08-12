@@ -58,10 +58,10 @@ export const ColorSelector: React.FC<ColorSelectorProps> = React.memo(
             </Stack.Item>
             <Stack.Item mt={3}>
               <Box inline width="100px" height="20px" textAlign="center">
-                New
+                Nuevo
               </Box>
               <Box inline width="100px" height="20px" textAlign="center">
-                Current
+                Actual
               </Box>
               <br />
               <Tooltip content={hexColor} position="bottom">
@@ -113,7 +113,7 @@ export const ColorSelector: React.FC<ColorSelectorProps> = React.memo(
                       icon="chevron-down"
                       onClick={() => setShowPresets(true)}
                     >
-                      Skin Tones and Presets
+                      Tonos de piel y ajustes preestablecidos
                     </Button>
                   </Stack.Item>
                 </Stack>

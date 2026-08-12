@@ -5,7 +5,7 @@
 
 	new_role = "Serjeant-at-Arms"
 	recruitment_faction = "Garrison"
-	recruitment_message = "You are promoted to the rank of Serjeant, %RECRUIT."
+	recruitment_message = "Eres ascendido al rango de Sargento, %RECRUIT."
 	give_choice = FALSE
 	accept_message = null
 	refuse_message = null
@@ -21,7 +21,7 @@
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/serjeant/on_conversion(mob/living/carbon/human/cast_on)
 	. = ..()
-	cast_on.honorary = "Serjeant"
+	cast_on.honorary = "Sargento"
 	cast_on.honorary_suffix = null
 	cast_on.apply_status_effect(/datum/status_effect/buff/promoted_serjeant)
 	var/mob/living/living_owner = owner
@@ -33,5 +33,5 @@
 	effectedstats = list(STAT_ENDURANCE = 1, STAT_PERCEPTION = 1)
 
 /atom/movable/screen/alert/status_effect/buff/promoted_serjeant
-	name = "Serjeant"
-	desc = span_nicegreen("I've been promoted!")
+	name = "Sargento"
+	desc = span_nicegreen("¡Me han ascendido!")

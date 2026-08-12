@@ -1,5 +1,5 @@
 /datum/mob_affix/interconnected
-	name = "Interconnected"
+	name = "interconectados"
 	description = "Mobs are connected via a frozen beam"
 	color = "#00aeff"
 	var/connected_mobs = 2

@@ -247,7 +247,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 		if(!do_after(user, 10 SECONDS, src))
 			return
 		playsound(loc, 'sound/foley/saddledismount.ogg', 100, FALSE)
-		user.visible_message(span_notice("[user] removes the bard from [src]."), span_notice("I remove the bard from [src]."))
+		user.visible_message(span_notice("[user] elimina el bardo de [src]."), span_notice("I remove the bard from [src]."))
 		var/obj/item/clothing/barding/B = bbarding
 		bbarding = null
 		B.forceMove(get_turf(src))
@@ -457,9 +457,9 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 					else
 						randomValue -= speak.len
 						if(emote_see && randomValue <= emote_see.len)
-							emote("me [pick(emote_see)]", 1)
+							emote("yo [pick(emote_see)]", 1)
 						else
-							emote("me [pick(emote_hear)]", 2)
+							emote("yo [pick(emote_hear)]", 2)
 				else
 					say(pick(speak), forced = "poly")
 			else
@@ -929,7 +929,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	..()
 
 /mob/living/simple_animal/hostile/proc/OpenFire(atom/A)
-	visible_message("<span class='danger'><b>[src]</b> [ranged_message] at [A]!</span>")
+	visible_message("<span class='danger'><b>[src]</b> [ranged_message] en [A]!</span>")
 
 
 	if(rapid > 1)
@@ -989,8 +989,8 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	if(MD && !MD.ridethrough)
 		var/strong_thighs = GET_MOB_SKILL_VALUE_OLD(user, (/datum/attribute/skill/misc/riding))
 		if(prob(60 - (strong_thighs * 10))) // Legendary riders do not fall!
-			user.visible_message(span_warning("[user] falls off of [src]!"), \
-				span_warning("I fall off of [src]!"))
+			user.visible_message(span_warning("¡[user] se cae de [src]!"), \
+				span_warning("¡Me caigo de [src]!"))
 			unbuckle_mob(user)
 			user.Paralyze(5 SECONDS)
 			user.Stun(5 SECONDS)

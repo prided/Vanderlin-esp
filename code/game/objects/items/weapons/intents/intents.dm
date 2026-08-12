@@ -1,9 +1,9 @@
 /datum/intent
-	var/name = "intent"
+	var/name = "intención"
 	var/desc = ""
 //	icon = 'icons/mob/roguehud.dmi'		so you can find the icons
 	var/icon_state = "instrike"
-	var/list/attack_verb = list("hits", "strikes")
+	var/list/attack_verb = list("hits", "huelgas")
 	/// Weakref to the item the mastermob is holding
 	var/datum/weakref/masteritem
 	/// Weakref to the master mob or our holder
@@ -271,7 +271,7 @@
 	pointer = 'icons/effects/mousemice/human_jump.dmi'
 
 /datum/intent/steal
-	name = "steal"
+	name = "robar"
 	candodge = FALSE
 	canparry = FALSE
 	chargedrain = 0
@@ -279,7 +279,7 @@
 	noaa = TRUE
 
 /datum/intent/give
-	name = "give"
+	name = "dar"
 	candodge = FALSE
 	canparry = FALSE
 	chargedrain = 0
@@ -438,7 +438,7 @@
 /datum/intent/simple/touch
 	name = "touch"
 	icon_state = "instrike"
-	attack_verb = list("grasps", "touches", "taps")
+	attack_verb = list("agarra", "toca", "taps")
 	animname = "blank22"
 	blade_class = null
 	hitsound = "punch_hard"
@@ -451,7 +451,7 @@
 /datum/intent/unarmed/claw	// defined as attack with some AP
 	name = "claw"
 	icon_state = "inclaw"
-	attack_verb = list("claws", "scratches", "rends", "tears")
+	attack_verb = list("claws", "scratches", "desgarra", "tears")
 	animname = "claw"
 	blade_class = BCLASS_CUT
 	hitsound = "smallslash"
@@ -470,7 +470,7 @@
 /datum/intent/unarmed/ascendedclaw
 	name = "claw"
 	icon_state = "inclaw"
-	attack_verb = list("claws", "mauls", "eviscerates")
+	attack_verb = list("claws", "mauls", "eviscera")
 	animname = "claw"
 	blade_class = BCLASS_CHOP
 	hitsound = "genslash"
@@ -494,7 +494,7 @@
 	swingdelay = 0
 	candodge = FALSE
 	canparry = FALSE
-	miss_text = "stings the air!"
+	miss_text = "¡pica el aire!"
 	item_damage_type = "stab"
 
 /datum/intent/simple/bigbite

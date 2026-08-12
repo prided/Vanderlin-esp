@@ -13,7 +13,7 @@
 	controller.set_blackboard_key(BB_FISHBOSS_DEEP_CALL_COOLDOWN, world.time + 60 SECONDS)
 
 	// Create dramatic effect
-	boss.visible_message("<span class='warning'>[boss] calls forth the power of the depths! The water around you trembles with ancient power!</span>")
+	boss.visible_message("¡<span class='warning'>[boss] invoca el poder de las profundidades! ¡El agua a tu alrededor tiembla con un poder ancestral!</span>")
 	playsound(boss, 'sound/misc/explode/explosion.ogg', 100, TRUE)
 	new /obj/effect/temp_visual/cult/sparks(get_turf(boss))
 
@@ -47,7 +47,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/deep_blessing
 
 /atom/movable/screen/alert/status_effect/deep_blessing
-	name = "Deep Blessing"
+	name = "Bendición profunda"
 	desc = "You've been blessed by the Duke of the Deep. Your power is increased."
 	icon = 'icons/effects/effects.dmi' // Replace with appropriate icon
 	icon_state = "blessing" // Replace with appropriate icon_state

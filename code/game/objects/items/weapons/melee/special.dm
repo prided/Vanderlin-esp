@@ -32,7 +32,7 @@
 	name = "bash"
 	blade_class = BCLASS_BLUNT
 	icon_state = "inbash"
-	attack_verb = list("bashes", "strikes")
+	attack_verb = list("bashes", "huelgas")
 	penfactor = 10
 	item_damage_type = "blunt"
 
@@ -44,7 +44,7 @@
 	noaa = TRUE
 
 /datum/intent/lord_silence
-	name = "silence"
+	name = "silencio"
 	blade_class = null
 	icon_state = "insilence"
 	tranged = TRUE
@@ -71,7 +71,7 @@
 		var/mob/living/carbon/human/HU = user
 
 		if(!is_lord_job(HU.mind?.assigned_role))
-			to_chat(user, span_danger("The rod doesn't obey me."))
+			to_chat(user, span_danger("La vara no me obedece."))
 			return
 
 		if(ishuman(target))
@@ -93,20 +93,20 @@
 				return
 
 			if(istype(user.used_intent, /datum/intent/lord_electrocute))
-				HU.visible_message(span_warning("[HU] electrocutes [H] with \the [src]."))
+				HU.visible_message(span_warning("[HU] electrocuta a [H] con \the [src]."))
 				user.Beam(target, icon_state = "lightning[rand(1, 12)]", time = 0.5 SECONDS) // LIGHTNING
 				playsound(user, 'sound/magic/lightningshock.ogg', 70, TRUE)
 				H.electrocute_act(5, src)
 				HU.log_message("has shocked [H.real_name] with the [src]!", LOG_ATTACK)
-				to_chat(H, span_danger("I'm electrocuted by the scepter!"))
+				to_chat(H, span_danger("¡Estoy electrocutado por el cetro!"))
 				COOLDOWN_START(src, scepter, 20 SECONDS)
 				return
 
 			if(istype(user.used_intent, /datum/intent/lord_silence))
-				HU.visible_message(span_warning("[HU] silences [H] with \the [src]."))
+				HU.visible_message(span_warning("[HU] silencia [H] con \the [src]."))
 				H.set_silence(20 SECONDS)
 				HU.log_message("has silenced [H.real_name] with the [src]!", LOG_ATTACK)
-				to_chat(H, span_danger("I'm silenced by the scepter!"))
+				to_chat(H, span_danger("¡Estoy silenciado por el cetro!"))
 				COOLDOWN_START(src, scepter, 10 SECONDS)
 				return
 
@@ -135,7 +135,7 @@
 	noaa = TRUE
 
 /datum/intent/priest_silence
-	name = "silence"
+	name = "silencio"
 	blade_class = null
 	icon_state = "insilence"
 	tranged = TRUE
@@ -154,13 +154,13 @@
 	var/mob/living/carbon/human/HU = user
 
 	if(!is_priest_job(HU.mind?.assigned_role))
-		to_chat(user, span_danger("The staff doesn't obey me."))
+		to_chat(user, span_danger("El personal no me obedece."))
 		return
 
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 
-		user.visible_message(span_warning("[user] points [src] at [target]."))
+		user.visible_message(span_warning("[user] apunta [src] a [target]."))
 
 		if(H == HU)
 			return
@@ -176,7 +176,7 @@
 			return
 
 		if(istype(user.used_intent, /datum/intent/priest_smite))
-			HU.visible_message(span_warning("[HU] smites [H] with \the [src]."))
+			HU.visible_message(span_warning("[HU] golpea a [H] con \the [src]."))
 			user.Beam(target, icon_state = "solar_beam", time = 0.5 SECONDS) // LIGHTNING
 			playsound(user, 'sound/magic/lightningshock.ogg', 70, TRUE)
 			H.electrocute_act(5, src)
@@ -186,7 +186,7 @@
 			return
 
 		if(istype(user.used_intent, /datum/intent/priest_silence))
-			HU.visible_message(span_warning("[HU] silences [H] with \the [src]."))
+			HU.visible_message(span_warning("[HU] silencia [H] con \the [src]."))
 			H.set_silence(20 SECONDS)
 			HU.log_message("has silenced [H.real_name] with the [src]!", LOG_ATTACK)
 			to_chat(H, span_danger("I'm silenced by the staff!"))
@@ -363,7 +363,7 @@
 	AddComponent(/datum/component/psyblessed, FALSE, 3, FALSE, 50, 1, TRUE)
 
 /obj/item/weapon/katar/psydon/relic
-	name = "\proper anguish"
+	name = "\proper angustia"
 	desc = "An exotic weapon unfamiliar to Grenzelhoft, but taken and given blessings to fit in the Armoury of Psydon. May its blows cause naught but anguish to those who dare raise up arms against you."
 
 /obj/item/weapon/katar/psydon/relic/Initialize(mapload)
@@ -371,7 +371,7 @@
 	AddComponent(/datum/component/psyblessed, TRUE, 5, FALSE, 100, 1, TRUE)
 
 /obj/item/weapon/katar/psydon/relic/alt
-	name = "\proper agony"
+	name = "\proper agonía"
 	desc = "An exotic weapon unfamiliar to Grenzelhoft, but taken and given blessings to fit in the Armoury of Psydon. May the agony it inflicts upon your foes leave a mark, so that they never forget His name."
 
 /obj/item/weapon/katar/abyssor
@@ -384,7 +384,7 @@
 /datum/intent/knuckles/strike
 	name = "punch"
 	blade_class = BCLASS_BLUNT
-	attack_verb = list("punches", "clocks")
+	attack_verb = list("punches", "relojes")
 	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
 	penfactor = AP_CLUB_STRIKE
 	icon_state = "inpunch"
@@ -405,7 +405,7 @@
 	item_damage_type = "blunt"
 
 /obj/item/weapon/knuckles
-	name = "steel knuckles"
+	name = "nudillos de acero"
 	desc = "A mean looking pair of steel knuckles."
 	icon = 'icons/roguetown/weapons/32/fists_claws.dmi'
 	icon_state = "steelknuckle"
@@ -467,7 +467,7 @@
 
 /obj/item/weapon/knuckles/eora
 	name = "close caress"
-	desc = "Some times call for a more intimate approach."
+	desc = "Algunas veces requieren un enfoque más íntimo."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "eoraknuckle"
 	force = DAMAGE_KNUCKLES + 2

@@ -3,29 +3,29 @@
 	slot = MOB_DESCRIPTOR_SLOT_BODY
 
 /datum/mob_descriptor/body/average
-	name = "Average"
+	name = "Promedio"
 
 /datum/mob_descriptor/body/athletic
-	name = "Athletic"
+	name = "Atlético"
 
 /datum/mob_descriptor/body/barrel
-	name = "Barrel-shaped"
+	name = "En forma de barril"
 
 /datum/mob_descriptor/body/broadshoulder
-	name = "Broad-shouldered"
+	name = "De hombros anchos"
 
 /datum/mob_descriptor/body/burly
 	name = "Burly"
 
 /datum/mob_descriptor/body/bulky
-	name = "Bulky"
+	name = "Voluminoso"
 
 
 /datum/mob_descriptor/body/bowleg
 	name = "Bow-legged"
 
 /datum/mob_descriptor/body/decrepit
-	name = "Decrepit"
+	name = "Decrépito"
 
 /datum/mob_descriptor/body/skeletal
 	name = "Emaciated"
@@ -43,7 +43,7 @@
 	name = "Muscular"
 
 /datum/mob_descriptor/body/herculean
-	name = "Herculean"
+	name = "hercúleo"
 
 /datum/mob_descriptor/body/lissome
 	name = "Lissome"
@@ -76,16 +76,16 @@
 	name = "Strong-fat"
 
 /datum/mob_descriptor/body/round
-	name = "Round"
+	name = "Redondo"
 
 /datum/mob_descriptor/body/slender
-	name = "Slender"
+	name = "Esbelto"
 
 /datum/mob_descriptor/body/topheavy
 	name = "Top-Heavy"
 
 /datum/mob_descriptor/body/thin
-	name = "Thin"
+	name = "Delgado"
 
 /datum/mob_descriptor/body/twiggy
 	name = "Twiggy"

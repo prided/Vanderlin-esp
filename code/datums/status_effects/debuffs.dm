@@ -36,7 +36,7 @@
 	return ..()
 
 /atom/movable/screen/alert/status_effect/stun
-	name = "Stunned"
+	name = "Aturdido"
 	desc = ""
 	icon_state = "stun"
 
@@ -106,7 +106,7 @@
 	return ..()
 
 /atom/movable/screen/alert/status_effect/immobilized
-	name = "Immobilized"
+	name = "Inmovilizado"
 	desc = ""
 	icon_state = "immob"
 
@@ -133,7 +133,7 @@
 	return ..()
 
 /atom/movable/screen/alert/status_effect/paralyzed
-	name = "Paralyzed"
+	name = "Paralizado"
 	desc = ""
 	icon_state = "paralyze"
 
@@ -216,7 +216,7 @@
 			owner.emote("snore")
 
 /atom/movable/screen/alert/status_effect/asleep
-	name = "Asleep"
+	name = "Dormido"
 	desc = ""
 	icon_state = "sleeping"
 
@@ -270,7 +270,7 @@
 
 /atom/movable/screen/alert/status_effect/stasis
 	name = "Stasis"
-	desc = "Your biological functions have halted. You could live forever this way, but it's pretty boring."
+	desc = "Tus funciones biológicas se han detenido. Podrías vivir para siempre de esta manera, pero es bastante aburrido."
 	icon_state = "stasis"
 
 //GOLEM GANG

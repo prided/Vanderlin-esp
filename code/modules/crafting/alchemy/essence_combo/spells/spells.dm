@@ -14,7 +14,7 @@
 	granted_spells = list(/datum/action/cooldown/spell/essence/ice_bridge, /datum/action/cooldown/spell/essence/frozen_storage)
 
 /datum/essence_combo/spell/divine_order
-	name = "Orderly Transcription"
+	name = "Transcripción ordenada"
 	required_essences = list(/datum/thaumaturgical_essence/order, /datum/thaumaturgical_essence/light)
 	granted_spells = list(/datum/action/cooldown/spell/essence/transcribe)
 
@@ -24,22 +24,22 @@
 	granted_spells = list(/datum/action/cooldown/spell/essence/healing_spring, /datum/action/cooldown/spell/essence/purify_water)
 
 /datum/essence_combo/spell/wind_step
-	name = "Wind Step"
+	name = "Paso del viento"
 	required_essences = list(/datum/thaumaturgical_essence/motion, /datum/thaumaturgical_essence/air)
 	granted_spells = list(/datum/action/cooldown/spell/essence/wind_step)
 
 /datum/essence_combo/spell/reality_shift
-	name = "Reality Shift"
+	name = "Cambio de realidad"
 	required_essences = list(/datum/thaumaturgical_essence/chaos, /datum/thaumaturgical_essence/void)
 	granted_spells = list(/datum/action/cooldown/spell/essence/probability_warp)
 
 /datum/essence_combo/spell/toxic_cleanse
-	name = "Toxic Cleanse"
+	name = "Limpieza tóxica"
 	required_essences = list(/datum/thaumaturgical_essence/poison, /datum/thaumaturgical_essence/water)
 	granted_spells = list(/datum/action/cooldown/spell/essence/toxic_cleanse)
 
 /datum/essence_combo/spell/arcane_focus
-	name = "Arcane Focus"
+	name = "Enfoque arcano"
 	required_essences = list(/datum/thaumaturgical_essence/magic, /datum/thaumaturgical_essence/crystal)
 	granted_spells = list(/datum/action/cooldown/spell/essence/spell_crystal, /datum/action/cooldown/spell/essence/arcane_focus)
 
@@ -49,7 +49,7 @@
 	granted_spells = list(/datum/action/cooldown/spell/essence/kinetic_burst, /datum/action/cooldown/spell/essence/momentum_transfer)
 
 /datum/essence_combo/spell/regeneration_cycle
-	name = "Regeneration Cycle"
+	name = "Ciclo de regeneración"
 	required_essences = list(/datum/thaumaturgical_essence/cycle, /datum/thaumaturgical_essence/life)
 	granted_spells = list(/datum/action/cooldown/spell/essence/regeneration_cycle, /datum/action/cooldown/spell/essence/growth_acceleration)
 
@@ -61,7 +61,7 @@
 	required_species = SPEC_ID_DWARF
 
 /datum/essence_combo/spell/master_forge
-	name = "Master Forge"
+	name = "Forja maestra"
 	required_essences = list(/datum/thaumaturgical_essence/fire, /datum/thaumaturgical_essence/earth)
 	granted_spells = list(/datum/action/cooldown/spell/essence/ancestral_smithing)
 	required_species = SPEC_ID_DWARF

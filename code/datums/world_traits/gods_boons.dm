@@ -1,14 +1,14 @@
 /datum/world_trait/dendor_fertility
-	name = "Dendor's Blessing"
+	name = "La bendición de Dendor"
 	desc = "Increases the fertility of crops, making them grow faster and heartier."
 
 /datum/world_trait/dendor_drought
-	name = "Dendor's Ire"
+	name = "La ira de Dendor"
 	desc = "Decreases the fertility of crops, making them grow slower."
 
 /datum/world_trait/pestra_mercy
 	name = "Pestra's Mercy"
-	desc = "Corpses rot slower."
+	desc = "Los cadáveres se pudren más lentamente."
 
 /datum/world_trait/matthios_fingers
 	name = "Matthios' Fingers"
@@ -23,17 +23,17 @@
 	desc = "Deadites will rise in the town."
 
 /datum/world_trait/abyssor_rage
-	name = "Abyssor's Rage"
+	name = "La ira de Abyssor"
 	desc = "Drowning is more deadly."
 
 /datum/world_trait/malum_diligence
-	name = "Malum's Diligence"
-	desc = "Mined rocks have additional yields."
+	name = "La diligencia de Malum"
+	desc = "Las rocas extraídas tienen rendimientos adicionales."
 
 /datum/world_trait/noc_wisdom
-	name = "Noc's Wisdom"
-	desc = "All magic actions cost less mana."
+	name = "La sabiduría de Noc"
+	desc = "Todas las acciones mágicas cuestan menos maná."
 
 /datum/world_trait/baotha_revelry
-	name = "Baotha's Revelry"
-	desc = "Alcohol lasts longer."
+	name = "La juerga de Baotha"
+	desc = "El alcohol dura más."

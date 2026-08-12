@@ -1,5 +1,5 @@
 /obj/effect/landmark/terrain_generation_marker
-	name = "terrain generation marker"
+	name = "marcador de generación de terreno"
 	desc = "Marks where terrain should be generated. Bottom-left corner including perimeter."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "x2"

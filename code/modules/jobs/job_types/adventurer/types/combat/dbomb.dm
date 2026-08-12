@@ -19,7 +19,7 @@
 	)
 
 /datum/job/advclass/combat/dbomb
-	title = "Dwarven Bombardier"
+	title = "Bombardero enano"
 	tutorial = "Wandering tinkerers from the Blackpowder clan that specialize in the production of explosives."
 	allowed_races = list(SPEC_ID_DWARF)
 	outfit = /datum/outfit/adventurer/dbomb

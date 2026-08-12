@@ -1,5 +1,5 @@
 /datum/devotion_task/eora_create
-	name = "Create Beauty"
+	name = "crear belleza"
 	desc = "Craft art or beautiful objects"
 	devotion_reward = 40
 	progression_reward = 3

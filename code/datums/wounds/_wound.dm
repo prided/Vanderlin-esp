@@ -12,7 +12,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 /datum/wound
 	abstract_type = /datum/wound
 	var/show_in_book = TRUE
-	var/category = "Wound"
+	var/category = "Herida"
 	/// Name of the wound, visible to players when inspecting a limb and such
 	var/name = "wound"
 	/// Description for books about the wound
@@ -206,14 +206,14 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 		final_message = replacetext(final_message, "%VICTIM", "[affected.name]")
 		final_message = replacetext(final_message, "%P_THEIR", "[affected.p_their()]")
 	else
-		final_message = replacetext(final_message, "%VICTIM", "victim")
+		final_message = replacetext(final_message, "%VICTIM", "víctima")
 		final_message = replacetext(final_message, "%P_THEIR", "their")
 	if(affected_bodypart)
 		final_message = replacetext(final_message, "%BODYPART", "[affected_bodypart.name]")
 	else
 		final_message = replacetext(final_message, "%BODYPART", parse_zone(BODY_ZONE_CHEST))
 	if(critical)
-		final_message = "<span class='crit'><b>Critical hit!</b> [final_message]</span>"
+		final_message = "<span class='crit'><b>¡Golpe crítico!</b> [final_message]</span>"
 	return final_message
 
 /datum/wound/proc/get_crit_prob(bclass, dam, damage_dividend, mob/living/user, obj/item/bodypart/affected, list/modifiers)
@@ -464,7 +464,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 	var/extra_text
 
 	if(was_completed)
-		extra_text = " The wound closes."
+		extra_text = " La herida se cierra."
 
 	if(patient == doctor)
 		doctor.visible_message(span_notice("[doctor] sews \a [name] on [doctor.p_them()]self.[extra_text]"), span_notice("I stitch \a [name] on [affecting ? "my [affecting]" : "myself"].[extra_text]"))
@@ -541,7 +541,7 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 	if(is_type_in_list(human_owner.wear_wrists, silver_items) || is_type_in_list(human_owner.wear_neck, silver_items))
 		if(prob(50))
 			return
-	to_chat(human_owner, span_danger("I feel horrible... REALLY horrible..."))
+	to_chat(human_owner, span_danger("Me siento horrible... REALMENTE horrible..."))
 	MOBTIMER_SET(human_owner, MT_PUKE)
 	werewolf_infection_timer = addtimer(CALLBACK(src, PROC_REF(wake_werewolf)), werewolf_infection_time, TIMER_STOPPABLE)
 	severity = WOUND_SEVERITY_BIOHAZARD

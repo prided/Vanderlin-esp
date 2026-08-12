@@ -1,17 +1,17 @@
 GLOBAL_LIST_EMPTY(vampire_objects)
 
 /datum/antagonist/vampire
-	name = "Vampire"
-	roundend_category = "Vampires"
-	antagpanel_category = "Vampire"
+	name = "Vampiro"
+	roundend_category = "Vampiros"
+	antagpanel_category = "Vampiro"
 	show_name_in_check_antagonists = TRUE
 	job_rank = ROLE_VAMPIRE
 	antag_hud_type = ANTAG_HUD_VAMPIRE
 	antag_hud_name = "vamp"
 	confess_lines = list(
-		"I WANT YOUR BLOOD!",
-		"DRINK THE BLOOD!",
-		"CHILD OF KAIN!",
+		"¡QUIERO TU SANGRE!",
+		"¡BEBE LA SANGRE!",
+		"¡HIJO DE KAIN!",
 	)
 	var/datum/clan/default_clan = /datum/clan/nosferatu
 	// New variables for clan selection
@@ -43,10 +43,10 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	var/datum/blood_type/BT = examined.get_blood_type()
 	if(istype(BT) && BT.vitae)
 		vitae = round(cached_blood_volume * BT.vitae)
-	LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, span_bloody("Blood Volume: [round(cached_blood_volume)] ([vitae] VT)"))
+	LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, span_bloody("Volumen de sangre: [round(cached_blood_volume)] ([vitae] VT)"))
 
 /datum/antagonist/vampire/outcast
-	name = "Outcast Vampire"
+	name = "Vampiro marginado"
 	antag_hud_type = ANTAG_HUD_VAMPIRE
 	antag_hud_name = "vamplesser"
 
@@ -58,17 +58,17 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		examiner.add_stress(/datum/stress_event/its_the_fucking_daewalker)
 		return span_phobia("THE DIABLERIST OF THE SUN QUEEN!!")
 	if(istype(examined_datum, /datum/antagonist/vampire/lord))
-		return span_boldnotice("Kaine's firstborn!")
+		return span_boldnotice("¡El primogénito de Kaine!")
 	if(istype(examined_datum, /datum/antagonist/vampire/lords_spawn))
 		return span_boldnotice("The spawn of the firstborn.")
 	if(istype(examined_datum, /datum/antagonist/vampire))
-		return span_boldnotice("A child of Kaine.")
+		return span_boldnotice("Un hijo de Kaine.")
 	if(istype(examined_datum, /datum/antagonist/vampire/outcast))
 		return span_boldnotice("An outcast child of Kaine.")
 	if(istype(examined_datum, /datum/antagonist/zombie))
-		return span_boldnotice("Another deadite.")
+		return span_boldnotice("Otro muerto.")
 	if(istype(examined_datum, /datum/antagonist/skeleton))
-		return span_boldnotice("Another deadite.")
+		return span_boldnotice("Otro muerto.")
 
 /datum/antagonist/vampire/on_gain()
 	SSmapping.retainer.vampires |= owner
@@ -104,7 +104,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 
 	clan_options["Create Custom Clan"] = "custom"
 
-	var/choice = input(vampdude, "Choose your vampire clan:", "Clan Selection") as null|anything in clan_options
+	var/choice = input(vampdude, "Elige tu clan de vampiros:", "Selección de clan") as null|anything in clan_options
 
 	if(!choice)
 		// Default to nosferatu if no choice made
@@ -148,14 +148,14 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		return
 
 	// Select first coven
-	var/first_choice = input(vampdude, "Choose your first coven:", "Coven Selection") as null|anything in coven_options
+	var/first_choice = input(vampdude, "Elige tu primer aquelarre:", "Coven Selection") as null|anything in coven_options
 	if(first_choice)
 		selected_covens += coven_options[first_choice]
 		coven_options -= first_choice
 
 	// Select second coven
 	if(length(coven_options))
-		var/second_choice = input(vampdude, "Choose your second coven:", "Coven Selection") as null|anything in coven_options
+		var/second_choice = input(vampdude, "Elige tu segundo aquelarre:", "Coven Selection") as null|anything in coven_options
 		if(second_choice)
 			selected_covens += coven_options[second_choice]
 			coven_options -= second_choice
@@ -189,7 +189,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		// Remove the clan when losing antagonist status
 		vampdude.set_clan(null)
 	if(!silent && owner.current)
-		to_chat(owner.current, span_danger("I am no longer a [job_rank]!"))
+		to_chat(owner.current, span_danger("¡Ya no soy un [job_rank]!"))
 	owner.special_role = null
 	return ..()
 
@@ -247,7 +247,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	icon_state = "x2"
 
 /obj/effect/landmark/vteleportdestination
-	name = "Return Destination"
+	name = "Destino de regreso"
 	icon_state = "x2"
 	var/amuletname
 

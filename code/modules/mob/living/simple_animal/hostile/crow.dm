@@ -26,7 +26,7 @@
 	nutrition = MINCE_NUTRITION * COOK_MOD
 	w_class = WEIGHT_CLASS_TINY
 	foodtype = MEAT
-	tastes = list("burnt flesh" = 1)
+	tastes = list("carne quemada" = 1)
 	eat_effect = null
 	rotprocess = SHELFLIFE_SHORT
 	sellprice = 0
@@ -109,5 +109,5 @@
 	if(isturf(loc))
 		dir = pick(GLOB.cardinals)
 		step(src, dir)
-		to_chat(user, "<span class='warning'>[src] gets away!</span>")
+		to_chat(user, "<span class='warning'>[src] se escapa!</span>")
 		playsound(src, 'sound/vo/mobs/bird/birdfly.ogg', 100, TRUE, -1)

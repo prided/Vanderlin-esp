@@ -2,7 +2,7 @@
 
 /datum/repeatable_crafting_recipe/survival
 	abstract_type = /datum/repeatable_crafting_recipe/survival
-	category = "Survival"
+	category = "Supervivencia"
 	subtypes_allowed = TRUE
 	craftdiff = 0
 
@@ -41,10 +41,10 @@
 	starting_atom = /obj/item/natural/fibers
 	attacked_atom = /obj/item/natural/fibers
 	output = /obj/item/rope
-	crafting_message = "starts to braid some fibers"
+	crafting_message = "comienza a trenzar algunas fibras"
 
 /datum/repeatable_crafting_recipe/survival/net
-	name = "rope net"
+	name = "red de cuerda"
 	requirements = list(
 		/obj/item/rope = 2
 	)
@@ -52,17 +52,17 @@
 	starting_atom = /obj/item/rope
 	attacked_atom = /obj/item/rope
 	output = /obj/item/rope/net
-	crafting_message = "starts to braid some rope"
+	crafting_message = "comienza a trenzar una cuerda"
 	skillcraft = /datum/attribute/skill/craft/traps
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/survival/woodenbucket
-	name = "wooden bucket"
+	name = "cubo de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/small = 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -87,19 +87,19 @@
 		/obj/item/grown/log/tree/stick= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/stick
 	starting_atom = /obj/item/weapon/knife
 	output = /obj/item/grown/log/tree/stake
 
 /datum/repeatable_crafting_recipe/survival/wood_hammer
-	name = "wooden hammer"
+	name = "martillo de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -107,12 +107,12 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/survival/fiber_fuse
-	name = "fiber fuse"
+	name = "fusible de fibra"
 	requirements = list(
 		/obj/item/natural/fibers = 2,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to cut"), span_notice("start to cut"), 'sound/items/sharpen_long1.ogg'),
+		/obj/item/weapon/knife = list(span_notice("comienza a cortar"), span_notice("start to cut"), 'sound/items/sharpen_long1.ogg'),
 	)
 	attacked_atom = /obj/item/natural/fibers
 	starting_atom = /obj/item/weapon/knife
@@ -131,12 +131,12 @@
 	output = /obj/item/weapon/mace/woodclub
 
 /datum/repeatable_crafting_recipe/survival/woodstaff
-	name = "wood staff"
+	name = "bastón de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -146,7 +146,7 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/survival/stone_axe
-	name = "stone axe"
+	name = "hacha de piedra"
 	requirements = list(
 		/obj/item/natural/stone = 1,
 		/obj/item/grown/log/tree/small = 1,
@@ -158,7 +158,7 @@
 	output = /obj/item/weapon/axe/stone
 
 /datum/repeatable_crafting_recipe/survival/stone_knife
-	name = "stone knife"
+	name = "cuchillo de piedra"
 	requirements = list(
 		/obj/item/natural/stone = 1,
 		/obj/item/grown/log/tree/stick = 1,
@@ -170,7 +170,7 @@
 	output = /obj/item/weapon/knife/stone
 
 /datum/repeatable_crafting_recipe/survival/stone_sword
-	name = "stone sword"
+	name = "espada de piedra"
 	requirements = list (
 		/obj/item/natural/rock = 1,
 		/obj/item/grown/log/tree/stick = 1,
@@ -181,7 +181,7 @@
 	output = /obj/item/weapon/sword/stone
 
 /datum/repeatable_crafting_recipe/survival/stone_hoe
-	name = "stone hoe"
+	name = "azada de piedra"
 	requirements = list(
 		/obj/item/natural/stone = 2,
 		/obj/item/natural/fibers = 1,
@@ -194,7 +194,7 @@
 	output = /obj/item/weapon/hoe/stone
 
 /datum/repeatable_crafting_recipe/survival/stone_pick
-	name = "stone pick"
+	name = "pico de piedra"
 	requirements = list(
 		/obj/item/natural/stone = 2,
 		/obj/item/grown/log/tree/stick = 1,
@@ -206,7 +206,7 @@
 	output = /obj/item/weapon/pick/stone
 
 /datum/repeatable_crafting_recipe/survival/stone_spear
-	name = "stone spear"
+	name = "lanza de piedra"
 	requirements = list(
 		/obj/item/natural/stone = 1,
 		/obj/item/weapon/polearm/woodstaff = 1,
@@ -227,7 +227,7 @@
 	output = /obj/item/reagent_containers/glass/bucket/pot
 
 /datum/repeatable_crafting_recipe/survival/stone_hammer
-	name = "stone hammer"
+	name = "martillo de piedra"
 	requirements = list(
 		/obj/item/natural/stone = 2,
 		/obj/item/grown/log/tree/stick = 1,
@@ -248,7 +248,7 @@
 	output = /obj/item/weapon/hammer/stone/rock
 
 /datum/repeatable_crafting_recipe/survival/stone_chisel
-	name = "flint chisel"
+	name = "cincel de pedernal"
 	requirements = list(
 		/obj/item/natural/stone = 2,
 	)
@@ -284,7 +284,7 @@
 	skillcraft = /datum/attribute/skill/misc/sewing
 
 /datum/repeatable_crafting_recipe/survival/sack_clothing
-	name = "head sack"
+	name = "saco de cabeza"
 	requirements = list(
 		/obj/item/natural/cloth = 2,
 		/obj/item/natural/fibers = 1,
@@ -332,7 +332,7 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/survival/bone_spear
-	name = "bone spear"
+	name = "lanza de hueso"
 	requirements = list(
 		/obj/item/weapon/polearm/woodstaff = 1,
 		/obj/item/alch/bone= 2,
@@ -344,7 +344,7 @@
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/survival/tbone_spear
-	name = "troll-horn bone spear"
+	name = "lanza de hueso de cuerno de troll"
 	requirements = list(
 		/obj/item/weapon/polearm/spear/bonespear = 1,
 		/obj/item/alch/horn = 1,
@@ -356,7 +356,7 @@
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/survival/bone_axe
-	name = "bone axe"
+	name = "hacha de hueso"
 	requirements = list(
 		/obj/item/grown/log/tree/small = 1,
 		/obj/item/alch/bone= 2,
@@ -369,7 +369,7 @@
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/survival/tbone_axe
-	name = "troll-horn bone axe"
+	name = "hacha de hueso de cuerno de troll"
 	requirements = list(
 		/obj/item/weapon/axe/boneaxe = 1,
 		/obj/item/alch/horn = 1,
@@ -424,7 +424,7 @@
 	output = /obj/item/natural/raw_brick
 
 /datum/repeatable_crafting_recipe/survival/mushmound
-	name = "mushroom mound"
+	name = "montículo de hongos"
 	requirements = list(
 		/obj/item/natural/chaff = 2,
 		/obj/item/natural/poo = 2,

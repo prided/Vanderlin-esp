@@ -81,7 +81,7 @@ export const RecipeDetail = ({ recipe: r, lookup, pickerMap, allRecipes, essence
       case 'spellcraft':          return <DetailSpellcraft {...sharedProps} />;
       case 'spellcraft-item':          return <DetailSpellcraft {...sharedProps} />;
       default:
-        return <Box className="RecipeBook__desc">No details available for type: {r.type}</Box>;
+        return <Box className="RecipeBook__desc">No hay detalles disponibles para el tipo: {r.type}</Box>;
     }
   };
 
@@ -90,7 +90,7 @@ export const RecipeDetail = ({ recipe: r, lookup, pickerMap, allRecipes, essence
       <Box style={{ padding: '8px 12px', height: '100%', display: 'flex', flexDirection: 'column' }}>
         <Box className="RecipeBook__breadcrumb">
           {history.length > 0 && (
-            <span className="RecipeBook__breadcrumb-back" onClick={onBack} title="Go back">
+            <span className="RecipeBook__breadcrumb-back" onClick={onBack} title="Volver">
               ← {history[history.length - 1].name}
             </span>
           )}

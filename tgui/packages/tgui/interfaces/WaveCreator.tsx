@@ -40,12 +40,12 @@ export const WaveCreator = () => {
   const selectedMob = living_subtypes.find((m) => m.path === selectedPath);
 
   return (
-    <Window width={640} height={580} title="Wave Creator">
+    <Window width={640} height={580} title="Creador de oleadas">
       <Window.Content scrollable>
 
-        <Section title="Wave Set">
+        <Section title="Conjunto de oleadas">
           <Stack align="center">
-            <Stack.Item color="label">Set ID:</Stack.Item>
+            <Stack.Item color="label">Establecer ID:</Stack.Item>
             <Stack.Item grow>
               {editingSetId ? (
                 <Input
@@ -77,7 +77,7 @@ export const WaveCreator = () => {
             </Stack.Item>
             <Stack.Item>
               <Button icon="play" color="good" onClick={() => act('launch_wave')}>
-                Launch Wave
+                Lanzar oleada
               </Button>
             </Stack.Item>
           </Stack>
@@ -87,12 +87,12 @@ export const WaveCreator = () => {
           title={`Waypoints (${waypoints.length})`}
           buttons={
             <Button icon="plus" color="good" onClick={() => act('add_waypoint')}>
-              Place at Feet
+              Colocar a los pies
             </Button>
           }
         >
           {waypoints.length === 0 ? (
-            <i>No landmarks for set &quot;{set_id}&quot;. Click &quot;Place at Feet&quot; to create one.</i>
+            <i>No hay puntos de referencia para el conjunto &quot;{set_id}&quot;. Haz clic en &quot;Colocar en pies&quot; para crear uno.</i>
           ) : (
             <Stack vertical>
               {waypoints.map((wp) => (
@@ -116,7 +116,7 @@ export const WaveCreator = () => {
           )}
         </Section>
 
-        <Section title="Wave Mobs">
+        <Section title="Mobs de la oleada">
           <Stack align="center" mb={1}>
             <Stack.Item grow>
               <Dropdown
@@ -135,7 +135,7 @@ export const WaveCreator = () => {
                   act('set_mob_count', { path: selectedPath, count: (existing?.count ?? 0) + 1 });
                 }}
               >
-                Add
+                Agregar
               </Button>
             </Stack.Item>
           </Stack>
@@ -143,8 +143,8 @@ export const WaveCreator = () => {
           {mob_entries.filter((e) => e.count > 0).length > 0 && (
             <Table>
               <Table.Row header>
-                <Table.Cell>Type Path</Table.Cell>
-                <Table.Cell collapsing>Count</Table.Cell>
+                <Table.Cell>Ruta de tipo</Table.Cell>
+                <Table.Cell collapsing>Cantidad</Table.Cell>
                 <Table.Cell collapsing />
               </Table.Row>
               {mob_entries

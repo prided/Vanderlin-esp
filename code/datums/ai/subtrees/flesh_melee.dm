@@ -71,7 +71,7 @@
 
 	switch(attack_type)
 		if("grab")
-			flesh.visible_message("<span class='warning'>[flesh] tries to grab [target] with its massive arms!</span>")
+			flesh.visible_message("¡<span class='warning'>[flesh] intenta agarrar a [target] con sus enormes brazos!</span>")
 			flesh.UnarmedAttack(target)
 			if(prob(40) && ismob(target))
 				var/mob/living/L = target

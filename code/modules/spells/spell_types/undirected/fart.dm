@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/fart
 	name = "Fart"
-	desc = "Unleash a vile sound."
+	desc = "Desata un sonido vil."
 	button_icon_state = "orison"
 
 	antimagic_flags = NONE

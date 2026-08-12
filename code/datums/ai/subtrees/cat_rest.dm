@@ -36,7 +36,7 @@
 /datum/ai_behavior/cat_sit/perform(delta_time, datum/ai_controller/controller)
 	. = ..()
 	var/mob/living/simple_animal/pet/cat/cat_pawn = controller.pawn
-	cat_pawn.emote("me", 1, pick("sits down.", "crouches on its hind legs.", "looks alert."))
+	cat_pawn.emote("me", 1, pick("se sienta.", "se agacha sobre sus patas traseras.", "parece alerta."))
 	cat_pawn.icon_state = "[cat_pawn.icon_living]_sit"
 	cat_pawn.set_resting(TRUE)
 	finish_action(controller, TRUE)
@@ -47,7 +47,7 @@
 /datum/ai_behavior/cat_get_up/perform(delta_time, datum/ai_controller/controller)
 	. = ..()
 	var/mob/living/simple_animal/pet/cat/cat_pawn = controller.pawn
-	cat_pawn.emote("me", 1, pick("gets up and meows.", "walks around.", "stops resting."))
+	cat_pawn.emote("me", 1, pick("se levanta y maúlla.", "walks around.", "deja de descansar."))
 	cat_pawn.icon_state = "[cat_pawn.icon_living]"
 	cat_pawn.set_resting(FALSE, instant = TRUE)
 	finish_action(controller, TRUE)
@@ -58,5 +58,5 @@
 /datum/ai_behavior/cat_groom/perform(delta_time, datum/ai_controller/controller)
 	. = ..()
 	var/mob/living/simple_animal/pet/cat/cat_pawn = controller.pawn
-	cat_pawn.emote("me", 1, pick("grooms its fur.", "twitches its whiskers.", "shakes out its coat."))
+	cat_pawn.emote("me", 1, pick("grooms its fur.", "mueve sus bigotes.", "sacude su pelaje."))
 	finish_action(controller, TRUE)

@@ -56,7 +56,7 @@
 			if(0 to 0.15)
 				msg = "There's just a tiny bit left of what it used to be, you're not sure it'll last much longer."
 			if(0.15 to 0.30)
-				msg = "It's dissolved quite a bit, but there's still some life to it."
+				msg = "Se ha disuelto bastante, pero todavía tiene algo de vida."
 			if(0.30 to 0.50)
 				msg = "It's past its prime, but it's definitely still good."
 			if(0.50 to 0.75)
@@ -101,7 +101,7 @@
 		if(user != target)
 			var/obj/item/grabbing/G = user.get_active_held_item()
 			if(!istype(G) || !ishuman(G.grabbed) || G.grabbed != target) // gotta have the target in your offhand
-				to_chat(user, span_warning("I can't hold them still if I don't grab them!"))
+				to_chat(user, span_warning("¡No puedo mantenerlos quietos si no los agarro!"))
 				return ITEM_INTERACT_BLOCKING
 
 		user.visible_message(
@@ -130,14 +130,14 @@
 	var/turf/T = get_turf(target)
 	if(!istype(T, /turf/open/water))
 		if(istype(T, /turf/open/lava) && user == target) //shits and giggles
-			to_chat(user, span_warning("Why am I doing this..."))
+			to_chat(user, span_warning("¿Por qué estoy haciendo esto...?"))
 		else
-			to_chat(user, span_warning("They must be in water!"))
+			to_chat(user, span_warning("¡Deben estar en agua!"))
 		return ITEM_INTERACT_BLOCKING
 	else
 		var/turf/open/water/bathspot = T
 		if(!bathspot.wash_in)
-			to_chat(user, span_warning("I can't bathe in this..."))
+			to_chat(user, span_warning("No puedo bañarme en esto..."))
 			return ITEM_INTERACT_BLOCKING
 
 	if(istype(target.head, /obj/item/clothing) || istype(target.wear_armor, /obj/item/clothing) || istype(target.wear_shirt, /obj/item/clothing) || istype(target.cloak, /obj/item/clothing))
@@ -174,12 +174,12 @@
 	var/datum/reagents/reagents = interacting_with.reagents
 
 	if(reagents.holder_full())
-		to_chat(user, span_warning("There's no room to add [src]."))
+		to_chat(user, span_warning("No hay espacio para agregar [src]."))
 		return FALSE
 
 	var/datum/reagent/wawa = reagents.get_reagent_amount(/datum/reagent/water)
 	if(!wawa)
-		to_chat(user, span_warning("[interacting_with] needs to have water to dissolve [src]!"))
+		to_chat(user, span_warning("¡[interacting_with] necesita agua para disolver [src]!"))
 		return FALSE
 
 	var/amt2Add = min(10, wawa, reagents.maximum_volume - reagents.total_volume)
@@ -204,7 +204,7 @@
 	target.adjust_fire_stacks(-20)
 
 /obj/item/soap/bath
-	name = "herbal soap"
+	name = "jabón de hierbas"
 	icon_state = "soapherbal"
 	desc = "A combination of ash and animal fats used for cleaning. Typically dissolved in water. This one smells pretty nice."
 	uses = 40
@@ -213,6 +213,6 @@
 /obj/item/soap/bath/scrub_scrub(mob/living/carbon/human/target, mob/living/carbon/user)
 	. = ..()
 	if(target.hygiene == HYGIENE_LEVEL_CLEAN)
-		to_chat(target, span_green("I feel so relaxed and clean!"))
+		to_chat(target, span_green("¡Me siento tan relajada y limpia!"))
 		target.apply_status_effect(/datum/status_effect/buff/clean_plus)
 		user.add_stress(/datum/stress_event/clean_plus)

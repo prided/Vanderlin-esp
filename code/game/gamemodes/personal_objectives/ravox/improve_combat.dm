@@ -1,5 +1,5 @@
 /datum/objective/personal/improve_combat
-	name = "Improve Combat Skills"
+	name = "Mejorar las habilidades de combate"
 	category = "Ravox's Chosen"
 	triumph_count = 2
 	rewards = list("2 Triumphs", "Ravox grows stronger", "Ravox blesses you (+1 Strength)")

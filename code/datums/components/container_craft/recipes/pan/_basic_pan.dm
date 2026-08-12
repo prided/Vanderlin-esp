@@ -44,19 +44,19 @@
 
 
 /datum/container_craft/pan/fried_crow
-	name = "Fried Crow"
+	name = "Cuervo frito"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/crow = 1)
 	output = /obj/item/reagent_containers/food/snacks/friedcrow
 	cooked_smell = /datum/pollutant/food/fried_crow
 
 /datum/container_craft/pan/fried_rat
-	name = "Fried Rat"
+	name = "Rata frita"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/smallrat = 1)
 	output = /obj/item/reagent_containers/food/snacks/friedrat
 	cooked_smell = /datum/pollutant/food/fried_rat
 
 /datum/container_craft/pan/truffle
-	name = "Fried Truffles"
+	name = "Trufas Fritas"
 	wildcard_requirements =  list(/obj/item/reagent_containers/food/snacks/truffles = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/truffle
 	cooked_smell = /datum/pollutant/food/truffles
@@ -79,13 +79,13 @@
 		SEND_SIGNAL(crafter, COMSIG_CONTAINER_CRAFT_COMPLETE, created_output)
 
 /datum/container_craft/pan/fish/swordfish
-	name = "Fried Swordfish"
+	name = "Pez espada frito"
 	requirements = list(/obj/item/reagent_containers/food/snacks/fish/swordfish = 1)
 	output = /obj/item/reagent_containers/food/snacks/fryfish/swordfish
 	cooked_smell = /datum/pollutant/food/baked_swordfish
 
 /datum/container_craft/pan/fish/shrimp
-	name = "Fried Shrimp"
+	name = "Camarones Fritos"
 	requirements = list(/obj/item/reagent_containers/food/snacks/fish/shrimp = 1)
 	output = /obj/item/reagent_containers/food/snacks/fryfish/shrimp
 	cooked_smell = /datum/pollutant/food/baked_shrimp
@@ -98,14 +98,14 @@
 	cooked_smell = /datum/pollutant/food/baked_eel
 
 /datum/container_craft/pan/fish/angler
-	name = "Fried Angler"
+	name = "Pescador frito"
 	requirements = list(/obj/item/reagent_containers/food/snacks/fish/angler = 1)
 	output = /obj/item/reagent_containers/food/snacks/fryfish/angler
 	rare_output = /obj/item/reagent_containers/food/snacks/fryfish/angler/rare
 	cooked_smell = /datum/pollutant/food/baked_angler
 
 /datum/container_craft/pan/fish/clownfish
-	name = "Fried Clownfish"
+	name = "Pez Payaso Frito"
 	requirements = list(/obj/item/reagent_containers/food/snacks/fish/clownfish = 1)
 	output = /obj/item/reagent_containers/food/snacks/fryfish/clownfish
 	rare_output = /obj/item/reagent_containers/food/snacks/fryfish/clownfish/rare
@@ -119,14 +119,14 @@
 	cooked_smell = /datum/pollutant/food/baked_carp
 
 /datum/container_craft/pan/roastseeds
-	name = "Roasted Seeds"
+	name = "Semillas Tostadas"
 	crafting_time = 15 SECONDS
 	wildcard_requirements = list(/obj/item/neuFarm/seed = 1)
 	output = /obj/item/reagent_containers/food/snacks/roastseeds
 	cooked_smell = /datum/pollutant/food/roasted_seeds
 
 /datum/container_craft/pan/egg
-	name = "Fried Egg"
+	name = "Huevo frito"
 	crafting_time = 20 SECONDS
 	requirements = list(/obj/item/reagent_containers/food/snacks/egg = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/egg
@@ -153,13 +153,13 @@
 	cooked_smell = /datum/pollutant/food/baked_potato
 
 /datum/container_craft/pan/fried_cabbage
-	name = "Fried Cabbage"
+	name = "Repollo Frito"
 	requirements = list(/obj/item/reagent_containers/food/snacks/veg/cabbage_sliced = 1)
 	output = /obj/item/reagent_containers/food/snacks/cabbage_fried
 	cooked_smell = /datum/pollutant/food/fried_cabbage
 
 /datum/container_craft/pan/fried_onion
-	name = "Fried Onion"
+	name = "Cebolla frita"
 	requirements = list(/obj/item/reagent_containers/food/snacks/veg/onion_sliced = 1)
 	output = /obj/item/reagent_containers/food/snacks/onion_fried
 	cooked_smell = /datum/pollutant/food/fried_onion
@@ -171,7 +171,7 @@
 	cooked_smell = /datum/pollutant/food/sausage
 
 /datum/container_craft/pan/sausage
-	name = "Fried Sausage"
+	name = "Salchicha Frita"
 	requirements = list(/obj/item/reagent_containers/food/snacks/meat/sausage = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/sausage
 	cooked_smell = /datum/pollutant/food/sausage
@@ -201,13 +201,13 @@
 	cooked_smell = /datum/pollutant/food/fried_chicken
 
 /datum/container_craft/pan/strange
-	name = "Fried Strange Meat"
+	name = "Carne Extraña Frita"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/meat/strange = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/strange
 	cooked_smell = /datum/pollutant/food/fried_meat
 
 /datum/container_craft/pan/ham
-	name = "Ham"
+	name = "Jamón"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/meat/fatty = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/ham
 	cooked_smell = /datum/pollutant/food/bacon
@@ -225,14 +225,14 @@
 	cooked_smell = /datum/pollutant/food/fried_meat
 
 /datum/container_craft/pan/griddle_dog
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 	name = "Griddledog"
 	requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/griddledog_raw = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/griddledog
 	cooked_smell = /datum/pollutant/food/sausage
 
 /datum/container_craft/pan/frybread
-	name = "Frybread"
+	name = "pan frito"
 	requirements = list(/obj/item/reagent_containers/food/snacks/butterdough_slice = 1)
 	output = /obj/item/reagent_containers/food/snacks/frybread
 	cooked_smell = /datum/pollutant/food/pastry
@@ -267,34 +267,34 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/pan/fried_messenger
-	name = "Fried Messenger"
+	name = "Mensajero frito"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/messenger_bird = 1)
 	output = /obj/item/reagent_containers/food/snacks/friedmessenger
 	cooked_smell = /datum/pollutant/food/fried_messenger
 
 /datum/container_craft/pan/fat_render
-	name = "Render Fat"
+	name = "Renderizar grasa"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/fat= 1)
 	output = /obj/item/reagent_containers/food/snacks/tallow
 	cooked_smell = /datum/pollutant/food/fried_messenger
 
 /datum/container_craft/pan/sunreed_grilled
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Grilled Sunreed"
 	requirements = list(/obj/item/natural/chaff/sunreed = 1)
 	output = /obj/item/reagent_containers/food/snacks/produce/vegetable/sunreed_cooked
 	cooked_smell = /datum/pollutant/food/sunreed_grilled
 
 /datum/container_craft/pan/plato
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Sunreed Plato"
 	requirements = list(/obj/item/reagent_containers/food/snacks/masa_flat = 1)
 	output = /obj/item/reagent_containers/food/snacks/tostada
 	cooked_smell = /datum/pollutant/food/sunreed_dough
 
 /datum/container_craft/pan/saigaita
-	category = "Tiefling Cuisine"
-	name = "Fried Saigaita"
+	category = "Tiefling Cocina"
+	name = "Saigaita frita"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/saigaita = 1)
 	output = /obj/item/reagent_containers/food/snacks/saigaita_cooked
 	cooked_smell = /datum/pollutant/food/sunreed_dough

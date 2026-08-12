@@ -5,7 +5,7 @@
 	z_offset = -1
 
 /datum/map_template/wood_house_1
-	name = "House 1"
+	name = "Casa 1"
 	id = "wood_house_1"
 	mappath = "_maps/templates/settlement_pieces/wood_house_1.dmm"
 
@@ -20,7 +20,7 @@
 	z_offset = -1
 
 /datum/map_template/wood_house_2
-	name = "Wood House 2"
+	name = "Casa de madera 2"
 	id = "wood_house_2"
 	mappath = "_maps/templates/settlement_pieces/wood_house_2.dmm"
 
@@ -34,7 +34,7 @@
 	z_offset = -2
 
 /datum/map_template/wood_house_3
-	name = "Wood House 3"
+	name = "Casa de madera 3"
 	id = "wood_house_3"
 	mappath = "_maps/templates/settlement_pieces/wood_house_3.dmm"
 
@@ -47,7 +47,7 @@
 	width = 11
 
 /datum/map_template/wood_house_4
-	name = "Wood House 4"
+	name = "Casa de madera 4"
 	id = "wood_house_4"
 	mappath = "_maps/templates/settlement_pieces/wood_house_4.dmm"
 

@@ -1,6 +1,6 @@
 /datum/chimeric_node/input/revival
 	name = "phoenix"
-	desc = "Triggered when you are revived."
+	desc = "Se activa cuando eres revivido."
 
 /datum/chimeric_node/input/revival/register_triggers(mob/living/carbon/target)
 	if(!target)

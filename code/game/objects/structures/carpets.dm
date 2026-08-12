@@ -13,7 +13,7 @@
 		return
 
 	if(over_object == user && Adjacent(user))
-		user.visible_message(span_notice("[user] starts to roll up [src]."), span_notice("You start to roll up [src]."))
+		user.visible_message(span_notice("[user] comienza a enrollarse [src]."), span_notice("You start to roll up [src]."))
 		if(!do_after(user, 3 SECONDS, src))
 			return
 
@@ -49,7 +49,7 @@
 	carpet_type = /obj/item/natural/carpet_fibers/red
 
 /obj/item/natural/bundle/carpet_roll
-	name = "carpet roll"
+	name = "rollo de alfombra"
 	desc = "A roll of carpet fibers. Use it to place carpet tiles."
 	icon_state = "carpetroll1"
 	possible_item_intents = list(/datum/intent/use)
@@ -134,7 +134,7 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/natural/bundle/carpet_roll/blue
-	name = "blue carpet roll"
+	name = "rollo de alfombra azul"
 	color = "#4169E1"
 	carpet_type = /obj/structure/carpet/blue
 	stacktype = /obj/item/natural/carpet_fibers/blue
@@ -146,26 +146,26 @@
 	stacktype = /obj/item/natural/carpet_fibers/cyan
 
 /obj/item/natural/bundle/carpet_roll/green
-	name = "green carpet roll"
+	name = "rollo de alfombra verde"
 	color = "#228B22"
 	carpet_type = /obj/structure/carpet/green
 	stacktype = /obj/item/natural/carpet_fibers/green
 
 /obj/item/natural/bundle/carpet_roll/purple
-	name = "purple carpet roll"
+	name = "rollo de alfombra morada"
 	color = "#8A2BE2"
 	carpet_type = /obj/structure/carpet/purple
 	stacktype = /obj/item/natural/carpet_fibers/purple
 
 /obj/item/natural/bundle/carpet_roll/red
-	name = "red carpet roll"
+	name = "rollo de alfombra roja"
 	color = "#DC143C"
 	carpet_type = /obj/structure/carpet/red
 	stacktype = /obj/item/natural/carpet_fibers/red
 
 
 /obj/item/natural/carpet_fibers/blue
-	name = "blue carpet"
+	name = "alfombra azul"
 	color = "#4169E1"
 	carpet_type = /obj/structure/carpet/blue
 	bundletype = /obj/item/natural/bundle/carpet_roll/blue
@@ -177,19 +177,19 @@
 	bundletype = /obj/item/natural/bundle/carpet_roll/cyan
 
 /obj/item/natural/carpet_fibers/green
-	name = "green carpet"
+	name = "alfombra verde"
 	color = "#228B22"
 	carpet_type = /obj/structure/carpet/green
 	bundletype = /obj/item/natural/bundle/carpet_roll/green
 
 /obj/item/natural/carpet_fibers/purple
-	name = "purple carpet"
+	name = "alfombra morada"
 	color = "#8A2BE2"
 	carpet_type = /obj/structure/carpet/purple
 	bundletype = /obj/item/natural/bundle/carpet_roll/purple
 
 /obj/item/natural/carpet_fibers/red
-	name = "red carpet"
+	name = "alfombra roja"
 	color = "#DC143C"
 	carpet_type = /obj/structure/carpet/red
 	bundletype = /obj/item/natural/bundle/carpet_roll/red

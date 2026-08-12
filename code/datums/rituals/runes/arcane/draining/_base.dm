@@ -49,12 +49,12 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/mana_siphon/attack_hand(mob/living/user)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("You aren't able to invoke these symbols."))
+		to_chat(user, span_warning("No puedes invocar estos símbolos."))
 		return
 
 	if(siphon_active)
 		deactivate_siphon()
-		to_chat(user, span_cultsmall("The siphon stills."))
+		to_chat(user, span_cultsmall("El sifón se detiene."))
 	else
 		activate_siphon(user)
 	return ..()
@@ -93,7 +93,7 @@
 
 	var/mob/living/L = user
 	if(GET_MOB_SKILL_VALUE(L, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(L, span_warning("You aren't able to commune with these symbols."))
+		to_chat(L, span_warning("No puedes comunicarte con estos símbolos."))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	if(!L.get_bleed_rate())
@@ -107,7 +107,7 @@
 	else
 		subscribers += L
 		playsound(src, 'sound/magic/glass.ogg', 50, TRUE)
-		to_chat(L, span_hierophant_warning("Your blood seals the bond, the siphon will feed you while you remain close."))
+		to_chat(L, span_hierophant_warning("Tu sangre sella el vínculo, el sifón te alimentará mientras permanezcas cerca."))
 
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
@@ -202,7 +202,7 @@
 
 /datum/status_effect/mana_siphon_buff/on_remove()
 	. = ..()
-	to_chat(owner, span_cultsmall("The siphon's warmth fades from you."))
+	to_chat(owner, span_cultsmall("El calor del sifón se desvanece de ti."))
 
 /datum/status_effect/mana_siphon_buff/tick()
 	var/turf/source = source_rune.loc
@@ -216,7 +216,7 @@
 	return
 
 /atom/movable/screen/alert/status_effect/mana_siphon_buff
-	name = "Mana Siphon"
+	name = "Sifón de maná"
 	desc = "You are bound to a mana siphon rune. While near it, you are fed its stolen power."
 	icon = 'icons/mob/screen_alert.dmi'
 	icon_state = "censerbuff" // reuse an existing mana icon; swap as needed

@@ -42,7 +42,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE XYLIX'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE XYLIX!"),
 		span_notice("Xylix demands entertainment! Viciously mock [new_objective.required_count] nobles to prove your wit and earn Xylix's favor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/misc/gods/xylix_omen.ogg', 100)

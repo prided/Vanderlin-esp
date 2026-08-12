@@ -5,7 +5,7 @@
 	power_type = /datum/coven_power/fae_trickery
 
 /datum/coven_power/fae_trickery
-	name = "Fae Trickery power name"
+	name = "Nombre del poder de Fae Trickery"
 	desc = "Fae Trickery power description"
 
 //FEY SIGHT
@@ -87,7 +87,7 @@
 
 /obj/item/clothing/face/goblin_mask
 	name = "goblin"
-	desc = "A green changeling creature."
+	desc = "Una criatura cambiante verde."
 	icon_state = "goblin"
 	var/stat = CONSCIOUS
 	var/strength = 5
@@ -112,7 +112,7 @@
 		var/mob/living/carbon/C = user
 		var/obj/item/bodypart/head = C.get_bodypart(BODY_ZONE_HEAD)
 		head.bodypart_attacked_by(BCLASS_BITE, 5, incoming_germ = 500)
-		to_chat(user, span_warning("[src] bites!"))
+		to_chat(user, span_warning("¡[src] muerde!"))
 		return
 	if((stat == CONSCIOUS))
 		if(Leap(user))
@@ -242,14 +242,14 @@
 
 /datum/action/fae_trickery
 	name = "Mytherceria Traps"
-	desc = "Create a trap."
+	desc = "Crea una trampa."
 	button_icon_state = "mytherceria"
 	check_flags = AB_CHECK_HANDS_BLOCKED|AB_CHECK_IMMOBILE|AB_CHECK_LYING|AB_CHECK_CONSCIOUS
 
 /datum/action/fae_trickery/Trigger(trigger_flags)
 	. = ..()
 	var/mob/living/carbon/human/H = owner
-	var/try_trap = input(H, "Select a Trap:", "Trap") as null|anything in list("Brutal", "Spin", "Drop")
+	var/try_trap = input(H, "Seleccione una trampa:", "Trampa") as null|anything in list("Brutal", "Spin", "Drop")
 	if(try_trap)
 		if(H.bloodpool < 1)
 			to_chat(owner, span_warning("You don't have enough <b>BLOOD</b> to do that!"))
@@ -265,11 +265,11 @@
 			if("Drop")
 				var/obj/fae_trickery_trap/drop/trap = new (get_turf(owner))
 				trap.owner = owner
-		to_chat(owner, span_notice("You've created a trap!"))
+		to_chat(owner, span_notice("¡Has creado una trampa!"))
 
 /obj/fae_trickery_trap
 	name = "fae trap"
-	desc = "Creates a fae trap to protect your domain."
+	desc = "Crea una trampa de hadas para proteger tu dominio."
 	anchored = TRUE
 	density = FALSE
 	alpha = 64
@@ -292,7 +292,7 @@
 
 /obj/fae_trickery_trap/disorient
 	name = "fae trap"
-	desc = "Creates a fae trap to protect your domain."
+	desc = "Crea una trampa de hadas para proteger tu dominio."
 	anchored = TRUE
 	density = FALSE
 	unique = TRUE
@@ -315,7 +315,7 @@
 
 /obj/fae_trickery_trap/drop
 	name = "fae trap"
-	desc = "Creates a fae trap to protect your domain."
+	desc = "Crea una trampa de hadas para proteger tu dominio."
 	anchored = TRUE
 	density = FALSE
 	unique = TRUE
@@ -332,7 +332,7 @@
 //CHANJELIN WARD
 /datum/coven_power/fae_trickery/chanjelin_ward
 	name = "Chanjelin Ward"
-	desc = "Create a symbol that disorientates your victim."
+	desc = "Crea un símbolo que desoriente a tu víctima."
 
 	level = 4
 	check_flags = COVEN_CHECK_CONSCIOUS | COVEN_CHECK_CAPABLE | COVEN_CHECK_IMMOBILE
@@ -390,7 +390,7 @@
 		var/list/riddle_list = list("Create a new riddle...")
 		for(var/datum/riddle/riddle in stored_riddles)
 			riddle_list += riddle.riddle_text
-		var/try_riddle = input(owner, "Select a Riddle:", "Riddle") as null|anything in riddle_list
+		var/try_riddle = input(owner, "Selecciona un acertijo:", "Riddle") as null|anything in riddle_list
 		if(try_riddle)
 			if(try_riddle == "Create a new riddle...")
 				var/datum/riddle/riddle = new ()
@@ -423,7 +423,7 @@
 
 /atom/movable/screen/alert/riddle
 	name = "Riddle"
-	desc = "You have a riddle to solve!"
+	desc = "¡Tienes un acertijo que resolver!"
 	icon_state = "riddle"
 
 	var/datum/riddle/riddle
@@ -446,31 +446,31 @@
 
 /datum/riddle/proc/create_riddle(mob/living/carbon/human/riddler)
 	var/proceed = FALSE
-	var/text_riddle = input(riddler, "Create a riddle:", "Riddle", "Is it something?") as null|text
+	var/text_riddle = input(riddler, "Crea un acertijo:", "Riddle", "¿Es algo?") as null|text
 	if(text_riddle)
 		riddle_text = trim(copytext_char(sanitize(text_riddle), 1, MAX_MESSAGE_LEN))
-		var/right_answer = input(riddler, "Create a right answer:", "Riddle", "Something") as null|text
+		var/right_answer = input(riddler, "Create a right answer:", "Riddle", "Algo") as null|text
 		if(right_answer)
 			riddle_answer = trim(copytext_char(sanitize(right_answer), 1, MAX_MESSAGE_LEN))
 			riddle_options += trim(copytext_char(sanitize(right_answer), 1, MAX_MESSAGE_LEN))
 			proceed = TRUE
-			var/answer1 = input(riddler, "Create another answer:", "Riddle", "Anything") as null|text
+			var/answer1 = input(riddler, "Crea otra respuesta:", "Riddle", "Cualquier cosa") as null|text
 			if(answer1)
 				riddle_options += trim(copytext_char(sanitize(answer1), 1, MAX_MESSAGE_LEN))
-				var/answer2 = input(riddler, "Create another answer:", "Riddle", "Anything") as null|text
+				var/answer2 = input(riddler, "Crea otra respuesta:", "Riddle", "Cualquier cosa") as null|text
 				if(answer2)
 					riddle_options += trim(copytext_char(sanitize(answer2), 1, MAX_MESSAGE_LEN))
-					var/answer3 = input(riddler, "Create another answer:", "Riddle", "Anything") as null|text
+					var/answer3 = input(riddler, "Crea otra respuesta:", "Riddle", "Cualquier cosa") as null|text
 					if(answer3)
 						riddle_options += trim(copytext_char(sanitize(answer3), 1, MAX_MESSAGE_LEN))
-						var/answer4 = input(riddler, "Create another answer:", "Riddle", "Anything") as null|text
+						var/answer4 = input(riddler, "Crea otra respuesta:", "Riddle", "Cualquier cosa") as null|text
 						if(answer4)
 							riddle_options += trim(copytext_char(sanitize(answer4), 1, MAX_MESSAGE_LEN))
 	if(proceed)
-		to_chat(riddler, "New riddle created.")
+		to_chat(riddler, "Nuevo acertijo creado.")
 		return src
 	else
-		to_chat(riddler, span_danger("Your riddle is too complicated."))
+		to_chat(riddler, span_danger("Tu acertijo es demasiado complicado."))
 		return FALSE
 
 /datum/riddle/proc/answer_riddle(mob/living/answerer, the_answer, atom/movable/screen/alert/riddle/alert)

@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(relics)
-	name = "Relics"
+	name = "reliquias"
 	flags = SS_BACKGROUND
 	wait = 0.5 SECONDS
 	var/list/datum/component/relic/active_relics = list()

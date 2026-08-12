@@ -341,7 +341,7 @@
 
 
 /obj/item/organ/brain/automaton
-	name = "soul core"
+	name = "núcleo del alma"
 	desc = "A crystalline matrix containing a trapped soul, bound in service through dark artifice."
 	icon_state = "soul_core"
 	resistance_flags = FIRE_PROOF
@@ -358,7 +358,7 @@
 	food_type = null
 
 /obj/item/organ/eyes/automaton
-	name = "optical sensors"
+	name = "sensores ópticos"
 	desc = "Glowing lenses that allow the automaton to perceive the world."
 	resistance_flags = FIRE_PROOF
 	organ_flags = ORGAN_ROBOTIC
@@ -367,8 +367,8 @@
 	eye_color = "#ff7b00"
 
 /obj/item/organ/ears/automaton
-	name = "audio interface"
-	desc = "The audio processor for automatons to receive orders."
+	name = "interfaz de audio"
+	desc = "El procesador de audio para que los autómatas reciban órdenes."
 	resistance_flags = FIRE_PROOF
 	organ_flags = ORGAN_ROBOTIC
 	icon = 'icons/roguetown/misc/machines.dmi'
@@ -377,6 +377,6 @@
 	dropshrink = 0.7
 
 /datum/blood_type/oil
-	name = "Lubricating Oil"
+	name = "Aceite lubricante"
 	color = "#1C1C1C"
 	reagent_type = /datum/reagent/blood/fuel

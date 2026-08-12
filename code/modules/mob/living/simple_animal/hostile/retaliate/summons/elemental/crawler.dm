@@ -36,8 +36,8 @@
 	retreat_health = 0.3
 
 	attack_sound = list('sound/combat/hits/onstone/wallhit.ogg')
-	attack_verb_continuous = "pounds"
-	attack_verb_simple = "pounds"
+	attack_verb_continuous = "libras"
+	attack_verb_simple = "libras"
 	dodgetime = 0
 
 	base_constitution = 13

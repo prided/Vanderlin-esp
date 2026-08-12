@@ -1,5 +1,5 @@
 /datum/round_event_control/antagonist/migrant_wave/zizo_cultist
-	name = "Wandering Cultist"
+	name = "Cultista errante"
 	wave_type = /datum/migrant_wave/zizo_cultist
 
 	weight = 8
@@ -16,7 +16,7 @@
 	)
 
 /datum/migrant_wave/zizo_cultist
-	name = "The Path to Ascension"
+	name = "El Camino a la Ascensión"
 	max_spawns = 1
 	can_roll = FALSE
 	shared_wave_type = /datum/migrant_wave/zizo_cultist
@@ -28,7 +28,7 @@
 	greet_text = "This is the land that will witness your ascension."
 
 /datum/migrant_wave/zizo_cultist_down
-	name = "The Path to Ascension"
+	name = "El Camino a la Ascensión"
 	shared_wave_type = /datum/migrant_wave/zizo_cultist
 	can_roll = FALSE
 	roles = list(

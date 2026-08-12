@@ -90,7 +90,7 @@
 	)
 
 /datum/job/advclass/archivist/chronicler
-	title = "Chronicler"
+	title = "Cronista"
 	tutorial = "With endless papers and dripping ink, you record the tales of both the mundane and magickal. Simple magicks at your means as a tool to aid your true talent. Let us write the books of the next generation. "
 	outfit = /datum/outfit/archivist/chronicler
 	category_tags = list(CTAG_ARCHIVIST)
@@ -121,7 +121,7 @@
 	grant_selected_spellbooks(spawned, selectable_books, 2)
 
 /datum/outfit/archivist/chronicler
-	name = "Chronicler (Archivist)"
+	name = "Cronista (archivista)"
 	shoes = /obj/item/clothing/shoes/boots/darkboots
 	belt = /obj/item/storage/belt/leather/plaquesilver
 	beltl = /obj/item/storage/keyring/archivist

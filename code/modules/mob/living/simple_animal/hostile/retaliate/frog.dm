@@ -6,7 +6,7 @@
 	icon_dead = "frog_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	speak = list("ribbit","croak")
-	emote_see = list("hops in a circle.", "shakes.")
+	emote_see = list("salta en círculo.", "shakes.")
 	speak_chance = 1
 	maxHealth = 15
 	health = 15
@@ -14,7 +14,7 @@
 	melee_damage_upper = 5
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	response_help_continuous = "pets"
+	response_help_continuous = "mascotas"
 	response_help_simple = "pet"
 	response_disarm_continuous = "pokes"
 	response_disarm_simple = "poke"
@@ -37,7 +37,7 @@
 /mob/living/simple_animal/hostile/retaliate/frog/Initialize()
 	. = ..()
 	if(prob(1))
-		name = "rare frog"
+		name = "rana rara"
 		desc = ""
 		icon_state = "rare_frog"
 		icon_living = "rare_frog"

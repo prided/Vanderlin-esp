@@ -6,7 +6,7 @@
 	REMINDER TO RETEST THE OVERFILL HELPER
 */
 SUBSYSTEM_DEF(role_class_handler)
-	name = "Role Class Handler"
+	name = "Controlador de clase de rol"
 	wait = 1 SECONDS
 	init_order = INIT_ORDER_ROLE_CLASS_HANDLER
 	priority = FIRE_PRIORITY_ROLE_CLASS_HANDLER

@@ -65,7 +65,7 @@
 	icon_state = "sailorpants"
 
 /obj/item/clothing/pants/tights/explorerpants
-	name = "explorer's pants"
+	name = "pantalones de explorador"
 	desc = "Practical and modest, you hope that it will survive the next cavedive."
 	icon_state = "explorerpants"
 	item_state = "explorerpants"

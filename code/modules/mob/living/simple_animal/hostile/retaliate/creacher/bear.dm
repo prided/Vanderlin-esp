@@ -21,7 +21,7 @@
 		C.remove_movespeed_modifier(MOVESPEED_ID_DAMAGE_SLOWDOWN)
 
 /datum/action/cooldown/mob_cooldown/bear_swipe
-	name = "bear swipe"
+	name = "golpe de oso"
 	button_icon = 'icons/effects/effects.dmi'
 	button_icon_state = "explosion"
 	desc = "Swipes at someone with a huge paw"
@@ -59,8 +59,8 @@
 /obj/effect/temp_visual/paw_swipe
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "claw"
-	name = "bear paw"
-	desc = "It's huge!"
+	name = "pata de oso"
+	desc = "¡Es enorme!"
 	layer = FLY_LAYER
 	plane = GAME_PLANE_UPPER
 	randomdir = FALSE

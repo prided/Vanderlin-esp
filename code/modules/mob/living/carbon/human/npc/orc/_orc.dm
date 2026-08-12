@@ -322,7 +322,7 @@
 				head = /obj/item/clothing/head/helmet/orc
 
 /mob/living/carbon/human/species/orc/tribal
-	name = "Tribal Orc"
+	name = "Orco tribal"
 	ai_controller = /datum/ai_controller/human_npc
 	var/loadout = /datum/outfit/npc/orc/tribal
 	ambushable = FALSE
@@ -446,7 +446,7 @@
 				cloak = /obj/item/clothing/cloak/raincloak/colored/brown
 
 /mob/living/carbon/human/species/orc/marauder
-	name = "Marauder Orc"
+	name = "Orco Merodeador"
 	ai_controller = /datum/ai_controller/human_npc
 	var/loadout = /datum/outfit/npc/orc/marauder
 	ambushable = FALSE

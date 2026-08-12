@@ -20,7 +20,7 @@
 		intensity = effects[2]
 
 /datum/rune_effect/status/bleed
-	name = "bleed"
+	name = "sangrar"
 
 /datum/rune_effect/status/bleed/apply_combat_effect(mob/living/target, mob/living/user, damage_dealt)
 	var/status_mod = (target.get_status_mod(status_key) * 0.01)

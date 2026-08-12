@@ -33,9 +33,9 @@
 	invocation = "I AM GRAGGAR'S RAGE MADE MANIFEST!!"
 	var/mob/living/carbon/human/C = cast_on
 	if(C.handcuffed || C.legcuffed)
-		invocation = "THESE CHAINS CANNOT BIND ME!"
+		invocation = "¡ESTAS CADENAS NO ME PUEDEN ATAR!"
 		C.uncuff()
-		C.visible_message(span_danger("[cast_on]'s chains fall to the ground!"))
+		C.visible_message(span_danger("¡Las cadenas de [cast_on] caen al suelo!"))
 
 	if(cast_on.buckled)
 		cast_on.buckled.unbuckle_mob(cast_on)
@@ -49,5 +49,5 @@
 		cast_on.remove_status_effect(effect)
 	cast_on.apply_status_effect(/datum/status_effect/buff/bloodrage)
 
-	cast_on.visible_message(span_danger("[cast_on] rises upward, boiling with immense rage!"))
+	cast_on.visible_message(span_danger("¡[cast_on] se eleva hacia arriba, hirviendo de inmensa rabia!"))
 

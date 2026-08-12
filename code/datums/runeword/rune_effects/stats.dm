@@ -12,7 +12,7 @@
 	return "+[total_increase] [name]"
 
 /datum/rune_effect/stat/force
-	name = "physical damage"
+	name = "daño físico"
 
 /datum/rune_effect/stat/force/apply_stat_effect(datum/component/modifications/source, obj/item/item)
 	item.force += increase
@@ -31,7 +31,7 @@
 	item.rarity_mod += increase
 
 /datum/rune_effect/stat/lightweight
-	name = "reduced weight"
+	name = "peso reducido"
 
 /datum/rune_effect/stat/lightweight/apply_stat_effect(datum/component/modifications/source, obj/item/item)
 	item.item_weight /= 1 + (increase * 0.01)

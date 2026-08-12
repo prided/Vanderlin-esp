@@ -1,9 +1,9 @@
 /datum/quality_calculator/cooking
-	name = "Cooking Quality"
+	name = "Calidad de cocción"
 
 	quality_descriptors = alist(
 		-1 = list(
-			"name_prefix" = list("unappealing", "sloppy", "failed", "woeful", "soggy", "bland"),
+			"name_prefix" = list("poco atractivo", "sloppy", "failed", "woeful", "soggy", "bland"),
 			"description" = list(
 				"It is made without love or care.",
 				"It barely looks like food.",
@@ -28,33 +28,33 @@
 			"tastes" = null
 		),
 		2 = list(
-			"name_prefix" = list("tasty", "well-made", "appealing"),
+			"name_prefix" = list("tasty", "bien hecho", "atractivo"),
 			"description" = "It looks good.",
 			"eat_effect" = /datum/status_effect/buff/foodbuff,
 			"tastes" = null
 		),
 		3 = list(
-			"name_prefix" = list("fine", "tasty", "well-made", "appealing", "appetising", "savory", "flavorful"),
+			"name_prefix" = list("fine", "tasty", "bien hecho", "atractivo", "appetising", "sabroso", "sabroso"),
 			"description" = list(
 				"It looks tasty.",
-				"It smells good.",
-				"This is fine cooking.",
-				"It seem to call out to you.",
+				"Huele bien.",
+				"Esta es una buena cocina.",
+				"Parece llamarte.",
 				"Your mouth waters at the sight.",
-				"It will make a fine meal.",
+				"Será una buena comida.",
 				"It looks like good eating."
 			),
 			"eat_effect" = /datum/status_effect/buff/foodbuff,
 			"tastes" = null
 		),
 		4 = list(
-			"name_prefix" = list("masterful", "exquisite", "perfected", "gourmet", "delicious"),
+			"name_prefix" = list("maestro", "exquisito", "perfeccionado", "gourmet", "delicious"),
 			"description" = list(
-				"It looks perfect.",
-				"It smells like heaven.",
-				"It is a triumph of cooking.",
+				"Parece perfecto.",
+				"Huele a cielo.",
+				"Es un triunfo de la cocina.",
 				"It is fit for royalty.",
-				"It is a masterwork."
+				"Es una obra maestra."
 			),
 			"eat_effect" = /datum/status_effect/buff/foodbuff,
 			"tastes" = null

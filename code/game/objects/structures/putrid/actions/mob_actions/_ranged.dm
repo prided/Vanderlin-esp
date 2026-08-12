@@ -1,5 +1,5 @@
 /datum/action/cooldown/meatvine/personal/ranged
-	name = "Spit Neurotoxin"
+	name = "Escupir neurotoxina"
 	desc = "Spits neurotoxin at someone, exhausting them."
 	personal_resource_cost = 40
 	/// A singular projectile? Use this one and leave acid_casing null
@@ -35,7 +35,7 @@
 		return
 
 	if(refund_cooldown)
-		to_chat(on_who, span_notice("You empty your [projectile_name] gland."))
+		to_chat(on_who, span_notice("Vacías tu glándula [projectile_name]."))
 
 	button_icon_state = "[button_base_icon]_0"
 	build_all_button_icons()
@@ -53,7 +53,7 @@
 
 	user.visible_message(
 		span_danger("[user] spits [projectile_name]!"),
-		span_alertalien("You spit [projectile_name]."),
+		span_alertalien("Escupes [projectile_name]."),
 	)
 
 	if(acid_projectile)

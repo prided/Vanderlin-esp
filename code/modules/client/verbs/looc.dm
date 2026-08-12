@@ -24,7 +24,7 @@
 
 /client/proc/do_looc(msg as text)
 	if(!GLOB.looc_allowed)
-		to_chat(src, "<span class='danger'>OOC is globally muted.</span>")
+		to_chat(src, "<span class='danger'>OOC está silenciado globalmente.</span>")
 		return
 
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
@@ -46,7 +46,7 @@
 		return
 
 	if(mob.stat && !holder)
-		to_chat(src, span_danger("You are unconscious!"))
+		to_chat(src, span_danger("¡Estás inconsciente!"))
 
 	msg = copytext_char(sanitize(msg), 1, MAX_MESSAGE_LEN)
 	if(!msg)

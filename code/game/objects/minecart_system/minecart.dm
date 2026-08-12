@@ -350,7 +350,7 @@
 		visible_message(span_warning("[src] comes to a violent halt!"))
 		throw_contents()
 	else
-		visible_message(span_notice("[src] comes to a slow stop."))
+		visible_message(span_notice("[src] se detiene lentamente."))
 	momentum = 0
 	return MOVELOOP_SKIP_STEP
 
@@ -364,7 +364,7 @@
 			if(momentum >= 8)
 				visible_message(span_notice("[src] comes to a sudden stop."))
 			else
-				visible_message(span_notice("[src] comes to a stop."))
+				visible_message(span_notice("[src] se detiene."))
 			SSmove_manager.stop_looping(src, SSminecarts)
 			obj_flags &= ~BLOCK_Z_OUT_DOWN
 			RemoveElement(/datum/element/give_turf_traits, string_list(list(TRAIT_IMMERSE_STOPPED, TRAIT_CHASM_STOPPED)))
@@ -379,7 +379,7 @@
 		obj_flags &= ~BLOCK_Z_OUT_DOWN
 		RemoveElement(/datum/element/give_turf_traits, string_list(list(TRAIT_IMMERSE_STOPPED, TRAIT_CHASM_STOPPED)))
 		momentum = 0
-		visible_message(span_notice("[src] comes to a slow stop."))
+		visible_message(span_notice("[src] se detiene lentamente."))
 		return
 
 	// Handles slowing down the move loop / cart
@@ -467,7 +467,7 @@
 
 	if(!length(to_yeet))
 		if(!was_open)
-			visible_message(span_warning("[src] breaks open!"))
+			visible_message(span_warning("¡[src] se abre!"))
 		return
 
 	var/throw_distance = clamp(ceil(momentum / 3) - 4, 1, 255)
@@ -477,7 +477,7 @@
 			yeeten.throw_at(some_distant_turf, throw_distance, 3 + FLOOR(momentum * 0.01, 1))
 
 	if(was_open)
-		visible_message(span_warning("[src] spills its contents!"))
+		visible_message(span_warning("¡[src] derrama su contenido!"))
 	else
 		// Update this message if someone allows multiple people to ride one minecart
 		visible_message(span_warning("[src] breaks open, spilling its contents[yeet_rider ? " and throwing its rider":""]!"))

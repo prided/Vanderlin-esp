@@ -41,7 +41,7 @@
 
 /datum/objective/personal/improve_craft/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've improved your craft skills enough to please Malum!"))
+	to_chat(owner.current, span_greentext("¡Has mejorado tus habilidades artesanales lo suficiente como para complacer a Malum!"))
 	adjust_storyteller_influence(MALUM, 20)
 	UnregisterSignal(owner.current, COMSIG_SKILL_RANK_CHANGE)
 

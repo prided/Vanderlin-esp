@@ -50,7 +50,7 @@
 		return
 	if(get_dist(victim, owner) > aoe_radius - 1)
 		playsound(victim, 'sound/items/stunmace_toggle (3).ogg', 100)
-		owner.visible_message(span_warning("The lightning lure fizzles out!"), span_warning("[victim] was too far away!"))
+		owner.visible_message(span_warning("The lightning lure fizzles out!"), span_warning("¡[victim] estaba demasiado lejos!"))
 		return
-	victim.visible_message(span_warning("[victim] is hooked!"), span_userdanger("I'm hooked!"))
+	victim.visible_message(span_warning("¡[victim] está enganchado!"), span_userdanger("¡Estoy enganchado!"))
 	victim.electrocute_act(15, owner)

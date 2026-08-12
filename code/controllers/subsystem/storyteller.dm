@@ -6,7 +6,7 @@
 #define ROUNDSTART_VALID_TIMEFRAME 3 MINUTES
 
 SUBSYSTEM_DEF(gamemode)
-	name = "Gamemode"
+	name = "Modo de juego"
 	init_order = INIT_ORDER_GAMEMODE
 	runlevels = RUNLEVEL_GAME
 	flags = SS_BACKGROUND | SS_KEEP_TIMING
@@ -844,7 +844,7 @@ SUBSYSTEM_DEF(gamemode)
 			to_chat(world, span_boldannounce("The peasant rebels took control of the throne, hail the new community!"))
 			if(ttime >= INITIAL_ROUND_TIMER)
 				reb_end_time = ttime + 15 MINUTES
-				to_chat(world, span_boldwarning("The round will end in 15 minutes."))
+				to_chat(world, span_boldwarning("La ronda terminará en 15 minutos."))
 			else
 				reb_end_time = INITIAL_ROUND_TIMER
 				to_chat(world, span_boldwarning("The round will end at the 2:30 hour mark."))
@@ -1211,7 +1211,7 @@ SUBSYSTEM_DEF(gamemode)
 		if("main")
 			switch(href_list["action"])
 				if("set_storyteller")
-					message_admins("[key_name_admin(usr)] is picking a new Storyteller.")
+					message_admins("[key_name_admin(usr)] está eligiendo un nuevo Narrador.")
 					var/list/name_list = list()
 					for(var/storyteller_type in storytellers)
 						var/datum/storyteller/storyboy = storytellers[storyteller_type]
@@ -1230,25 +1230,25 @@ SUBSYSTEM_DEF(gamemode)
 					var/track = href_list["track"]
 					switch(href_list["var"])
 						if("pts_multiplier")
-							var/new_value = input(usr, "New value:", "Set new value") as num|null
+							var/new_value = input(usr, "Nuevo valor:", "Establecer nuevo valor") as num|null
 							if(isnull(new_value) || new_value < 0)
 								return
 							message_admins("[key_name_admin(usr)] set point gain multiplier for [track] track to [new_value].")
 							point_gain_multipliers[track] = new_value
 						if("roundstart_pts")
-							var/new_value = input(usr, "New value:", "Set new value") as num|null
+							var/new_value = input(usr, "Nuevo valor:", "Establecer nuevo valor") as num|null
 							if(isnull(new_value) || new_value < 0)
 								return
 							message_admins("[key_name_admin(usr)] set roundstart point multiplier for [track] track to [new_value].")
 							roundstart_point_multipliers[track] = new_value
 						if("min_pop")
-							var/new_value = input(usr, "New value:", "Set new value") as num|null
+							var/new_value = input(usr, "Nuevo valor:", "Establecer nuevo valor") as num|null
 							if(isnull(new_value) || new_value < 0)
 								return
 							message_admins("[key_name_admin(usr)] set minimum population for [track] track to [new_value].")
 							min_pop_thresholds[track] = new_value
 						if("pts_threshold")
-							var/new_value = input(usr, "New value:", "Set new value") as num|null
+							var/new_value = input(usr, "Nuevo valor:", "Establecer nuevo valor") as num|null
 							if(isnull(new_value) || new_value < 0)
 								return
 							message_admins("[key_name_admin(usr)] set point threshold of [track] track to [new_value].")
@@ -1280,7 +1280,7 @@ SUBSYSTEM_DEF(gamemode)
 							message_admins("[key_name_admin(usr)] set points of [track] track to [set_pts].")
 							log_admin_private("[key_name(usr)] set points of [track] track to [set_pts].")
 						if("next_event")
-							message_admins("[key_name_admin(usr)] invoked next event for [track] track.")
+							message_admins("[key_name_admin(usr)] invocó el siguiente evento para la pista [track].")
 							log_admin_private("[key_name(usr)] invoked next event for [track] track.")
 							event_track_points[track] = point_thresholds[track]
 							if(current_storyteller)

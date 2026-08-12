@@ -1,6 +1,6 @@
 
 /datum/loadout_item/cane
-	name = "Wooden Cane"
+	name = "Bastón de madera"
 	item_path = /obj/item/weapon/mace/cane
 	ui_category = "Held Item"
 
@@ -14,7 +14,7 @@
 	triumph_cost_permanent = 75
 
 /datum/loadout_item/wooden_sword
-	name = "Training Sword"
+	name = "Espada de entrenamiento"
 	item_path = /obj/item/weapon/mace/woodclub/train_sword
 	ui_category = "Held Item"
 

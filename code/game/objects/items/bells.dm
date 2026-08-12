@@ -1,8 +1,8 @@
 //////////////Church stuff
 
 /obj/item/handheld_bell
-	name = "church bell"
-	desc = "A small bell that can draw a crowd if needed."
+	name = "campana de la iglesia"
+	desc = "Una pequeña campana que puede atraer a una multitud si es necesario."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "churchbell"
 	throw_speed = 2
@@ -66,15 +66,15 @@
 		var/disttext
 		switch(distance)
 			if(0 to 20)
-				disttext = " very close"
+				disttext = " muy cerca"
 			if(20 to 40)
 				disttext = " close"
 			if(40 to 80)
 				disttext = ""
 			if(80 to 160)
-				disttext = " far"
+				disttext = " lejos"
 			else
-				disttext = " very far"
+				disttext = " muy lejos"
 
 		//sound played for other players
 		player.playsound_local(get_turf(player), 'sound/misc/handbell.ogg', 35, FALSE, pressure_affected = FALSE)
@@ -92,8 +92,8 @@
 //////////Stationary Church bell
 
 /obj/structure/bell_barrier
-	name = "invisible barrier"
-	desc = "An invisible barrier that prevents movement."
+	name = "barrera invisible"
+	desc = "Una barrera invisible que impide el movimiento."
 	icon = null
 	icon_state = ""
 	density = TRUE
@@ -102,8 +102,8 @@
 	invisibility = INVISIBILITY_MAXIMUM
 
 /obj/structure/stationary_bell
-	name = "church bell"
-	desc = "A large cast bronze bell that rings out for all to hear."
+	name = "campana de la iglesia"
+	desc = "Una gran campana de bronce fundido que suena para que todos la escuchen."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "churchbell"
 	anchored = TRUE

@@ -20,7 +20,7 @@
 
 /obj/item/clothing/cloak/heartfelt/shit
 	name = "shitstained cloak"
-	desc = "You are the lord of this shithouse."
+	desc = "Eres el señor de esta mierda."
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/head/priesthat/sunlord

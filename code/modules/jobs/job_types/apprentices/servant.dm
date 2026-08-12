@@ -199,7 +199,7 @@
 	)
 
 /datum/job/matron_assistant
-	title = "Orphanage Assistant"
+	title = "Asistente de orfanato"
 	tutorial = "I once was an orphan, the matron took me in and now I am forever in her debt. \
 	That orphanage, those who were like me need guidance, I shall assist the matron in her tasks."
 	department_flag = APPRENTICES

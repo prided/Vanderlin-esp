@@ -15,7 +15,7 @@
 	crafting_message = "skewer the sausage"
 
 /datum/repeatable_crafting_recipe/cooking/raw_griddle_dog
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 	name = "Raw Griddledog"
 
 	requirements = list(
@@ -30,6 +30,6 @@
 	craft_time = 6 SECONDS
 	crafting_sound = 'sound/foley/kneading_alt.ogg'
 	sound_volume = 90
-	crafting_message = "cover the sausage with dough"
+	crafting_message = "cubrir la salchicha con masa"
 	extra_chance = 100
 	skillcraft = /datum/attribute/skill/craft/cooking/baking

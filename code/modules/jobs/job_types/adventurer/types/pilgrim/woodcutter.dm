@@ -28,7 +28,7 @@
 	attribute_sheet = /datum/attribute_holder/sheet/job/pilgrim/woodcutter
 
 /datum/outfit/pilgrim/woodcutter
-	name = "Woodcutter (Pilgrim)"
+	name = "Leñador (peregrino)"
 	belt = /obj/item/storage/belt/leather
 	shirt = /obj/item/clothing/shirt/shortshirt/colored/random
 	pants = /obj/item/clothing/pants/trou

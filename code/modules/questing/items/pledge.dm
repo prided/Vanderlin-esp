@@ -38,9 +38,9 @@
 /obj/item/paper/scroll/quest/pledge/examine(mob/user)
 	. = ..()
 	if(pledge_mode == "assassinate" && pledge_assassin_target)
-		. += span_notice("Target: <b>[pledge_assassin_target]</b>")
+		. += span_notice("Objetivo: <b>[pledge_assassin_target]</b>")
 	if(pledge_mode == "delivery" && pledge_delivery_target)
-		. += span_notice("Recipient: <b>[pledge_delivery_target]</b>")
+		. += span_notice("Destinatario: <b>[pledge_delivery_target]</b>")
 	if(pledge_mode == "delivery" && length(packed_delivery_items))
 		. += span_notice("Packed items:")
 		for(var/obj/item/I in packed_delivery_items)
@@ -52,15 +52,15 @@
 		if(PLEDGE_BLANK)
 			. += span_notice("The parchment is blank. Use it in-hand to fill out a quest commission.")
 		if(PLEDGE_FILLED)
-			. += span_notice("Title: <b>[pledge_title]</b>")
+			. += span_notice("Título: <b>[pledge_title]</b>")
 			. += span_notice("Difficulty: [pledge_difficulty] | Reward offered: [pledge_reward] mammons")
 			if(pledge_mode == "item")
-				. += span_notice("Objective: Bring [pledge_item_count]x [pledge_item_name].")
+				. += span_notice("Objetivo: Traer [pledge_item_count]x [pledge_item_name].")
 			else
-				. += span_notice("Objective: [pledge_objective]")
+				. += span_notice("Objetivo: [pledge_objective]")
 			. += span_warning("Not yet sealed. Coins have not been committed.")
 		if(PLEDGE_SEALED)
-			. += span_notice("Title: <b>[pledge_title]</b>")
+			. += span_notice("Título: <b>[pledge_title]</b>")
 			. += span_notice("Difficulty: [pledge_difficulty] | Reward escrowed: [escrowed_mammons] mammons")
 			. += span_warning("SEALED. Hand to a steward to post, or activate to unseal and reclaim coins.")
 		if(PLEDGE_POSTED)
@@ -209,7 +209,7 @@
 			break
 
 	if(!quest_path)
-		to_chat(steward, span_warning("Unrecognised quest mode \"[pledge_mode]\" in this pledge."))
+		to_chat(steward, span_warning("Modo de misión no reconocido \"[pledge_mode]\" en este compromiso."))
 		return null
 
 	var/datum/quest/custom/CQ = new quest_path()

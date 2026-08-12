@@ -1,5 +1,5 @@
 /datum/plant_def/potato
-	name = "potato plant"
+	name = "planta de papa"
 	icon_state = "potato"
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/vegetable/potato
 	produce_amount_min = 2

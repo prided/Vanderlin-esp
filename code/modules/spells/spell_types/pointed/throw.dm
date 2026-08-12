@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/throw_target
-	name = "Predatory Throw"
+	name = "Lanzamiento depredador"
 	desc = "Hurl whoever you're grabbing at a target location with tremendous force. The victim will be sent flying and take damage on impact."
 
 	spell_type = SPELL_RAGE
@@ -103,7 +103,7 @@
 	victim.throw_at(target_turf, throw_dist, throw_speed, user, spin = TRUE, callback = CALLBACK(src, PROC_REF(throw_impact), victim))
 
 	user.visible_message(
-		span_warning("[user] hurls [victim] through the air!"),
+		span_warning("¡[user] lanza a [victim] por el aire!"),
 		span_warning("You hurl [victim] at [target_atom]!"))
 
 /datum/action/cooldown/spell/throw_target/proc/throw_impact(mob/living/victim)
@@ -128,5 +128,5 @@
 		bystander.adjustBruteLoss(10, damage_type = BCLASS_BLUNT)
 		bystander.Knockdown(1.5 SECONDS)
 		bystander.visible_message(
-			span_warning("[victim] crashes into [bystander]!"),
-			span_userdanger("[victim] crashes into you!"))
+			span_warning("¡[victim] choca contra [bystander]!"),
+			span_userdanger("¡[victim] choca contra ti!"))

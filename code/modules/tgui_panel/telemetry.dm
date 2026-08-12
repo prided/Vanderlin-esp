@@ -44,10 +44,10 @@
  */
 /datum/tgui_panel/proc/analyze_telemetry(payload)
 	if(world.time > telemetry_requested_at + TGUI_TELEMETRY_RESPONSE_WINDOW)
-		message_admins("[key_name(client)] sent telemetry outside of the allocated time window.")
+		message_admins("[key_name(client)] envió telemetría fuera de la ventana de tiempo asignada.")
 		return
 	if(telemetry_analyzed_at)
-		message_admins("[key_name(client)] sent telemetry more than once.")
+		message_admins("[key_name(client)] envió telemetría más de una vez.")
 		return
 	telemetry_analyzed_at = world.time
 	if(!payload)
@@ -57,7 +57,7 @@
 	if(len == 0)
 		return
 	if(len > TGUI_TELEMETRY_MAX_CONNECTIONS)
-		message_admins("[key_name(client)] was kicked for sending a huge telemetry payload")
+		message_admins("[key_name(client)] fue expulsado por enviar una enorme carga útil de telemetría")
 		qdel(client)
 		return
 	var/list/found

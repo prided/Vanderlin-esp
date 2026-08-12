@@ -1,5 +1,5 @@
 /obj/projectile/bullet/glass
-	name = "glass shard"
+	name = "fragmento de vidrio"
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "small"
 	damage = 9
@@ -11,7 +11,7 @@
 	speed = 1
 
 /obj/item/explosive
-	name = "pipe bomb"
+	name = "bomba de tubo"
 	desc = "A bottle filled with an explosive concoction."
 	icon_state = "bottle"
 	icon = 'icons/obj/bombs.dmi'

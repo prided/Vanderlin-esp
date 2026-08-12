@@ -8,7 +8,7 @@
 
 /datum/action/cooldown/spell/essence/ancestral_smithing
 	name = "Ancestral Smithing"
-	desc = "Channels the spirits of ancient dwarven smiths to guide crafting."
+	desc = "Canaliza los espíritus de antiguos herreros enanos para guiar la elaboración."
 	button_icon_state = "ancestral_smithing"
 	cast_range = 0
 	essences = list(/datum/thaumaturgical_essence/earth, /datum/thaumaturgical_essence/fire)
@@ -21,7 +21,7 @@
 
 /atom/movable/screen/alert/status_effect/ancestral_smithing
 	name = "Ancestral Smithing"
-	desc = "The spirits of ancient smiths guide your hands."
+	desc = "Los espíritus de los antiguos herreros guían tus manos."
 	icon_state = "buff"
 /datum/status_effect/buff/ancestral_smithing
 	id = "ancestral_smithing"

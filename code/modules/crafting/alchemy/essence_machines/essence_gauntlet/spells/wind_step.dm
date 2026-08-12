@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/wind_step
-	name = "Wind Step"
+	name = "Paso del viento"
 	desc = "Allows rapid movement by riding currents of air."
 	button_icon_state = "haste"
 	cast_range = 0
@@ -15,7 +15,7 @@
 
 /atom/movable/screen/alert/status_effect/wind_walking
 	name = "Wind Walking"
-	desc = "You move with supernatural speed on air currents."
+	desc = "Te mueves con una velocidad sobrenatural sobre las corrientes de aire."
 	icon_state = "buff"
 
 /datum/status_effect/buff/wind_walking

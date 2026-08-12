@@ -213,7 +213,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 			mask = /obj/item/clothing/face/lordmask/l
 
 /datum/job/exlord //just used to change the lords title
-	title = "Ex-Monarch"
+	title = "Ex-Monarca"
 	department_flag = NOBLEMEN
 	factions = list(FACTION_TOWN)
 	total_positions = 0

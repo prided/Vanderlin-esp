@@ -1,5 +1,5 @@
 /datum/repeatable_crafting_recipe/cooking/masa_honey
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Honeyed Sunreed Dough"
 	subtypes_allowed = TRUE
 	requirements = list(
@@ -19,7 +19,7 @@
 /*	.................   Huskbuns   ................... */
 
 /datum/repeatable_crafting_recipe/cooking/huskbun_husk
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Sunreed Husk"
 	requirements = list(
 		/obj/item/natural/fibers = 1,
@@ -53,7 +53,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/huskbun
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	abstract_type = /datum/repeatable_crafting_recipe/cooking/huskbun
 	attacked_atom = /obj/item/reagent_containers/food/snacks/foodbase/huskbunbase
 	craft_time = 5 SECONDS
@@ -104,12 +104,12 @@
 	)
 	starting_atom = /obj/item/reagent_containers/food/snacks/cheese_wedge
 	output = /obj/item/reagent_containers/food/snacks/foodbase/huskbunraw/cheese
-	crafting_message = "add cheese to the husk"
+	crafting_message = "agregar queso a la cáscara"
 
 /*	.................   Saigaitas   ................... */
 
 /datum/repeatable_crafting_recipe/cooking/saigaita
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	abstract_type = /datum/repeatable_crafting_recipe/cooking/saigaita
 	attacked_atom = /obj/item/reagent_containers/food/snacks/masa_flat
 	craft_time = 5 SECONDS
@@ -117,7 +117,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/saigaita/mince
-	name = "Meat Saigaita"
+	name = "Carne Saigaita"
 	subtypes_allowed = TRUE
 
 	requirements = list(
@@ -140,7 +140,7 @@
 	crafting_message = "add potato to the flat-cake"
 
 /datum/repeatable_crafting_recipe/cooking/saigaita/onion
-	name = "Onion Saigaita"
+	name = "Cebolla Saigaita"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/veg/onion_sliced = 1,
@@ -151,7 +151,7 @@
 	crafting_message = "add onion to the flat-cake"
 
 /datum/repeatable_crafting_recipe/cooking/saigaita/cheese
-	name = "Cheese Saigaita"
+	name = "Queso Saigaita"
 	subtypes_allowed = TRUE
 
 	requirements = list(
@@ -163,7 +163,7 @@
 	crafting_message = "add cheese to the flat-cake"
 
 /datum/repeatable_crafting_recipe/cooking/saigaita/egg
-	name = "Egg Saigaita"
+	name = "Huevo Saigaita"
 	subtypes_allowed = TRUE
 
 	requirements = list(
@@ -177,7 +177,7 @@
 /*	.................   Platos   ................... */
 
 /datum/repeatable_crafting_recipe/cooking/plato_steak
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Steak Plato"
 	subtypes_allowed = TRUE
 	requirements = list(
@@ -195,7 +195,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/plato_frybird
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Frybird Plato"
 	subtypes_allowed = TRUE
 	requirements = list(
@@ -213,7 +213,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/plato_fish
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Fish Plato"
 	subtypes_allowed = TRUE
 	requirements = list(
@@ -231,7 +231,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/plato_egg
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Egg Plato"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/cooked/egg = 1,
@@ -249,7 +249,7 @@
 /*	.................   Sun-Crackers   ................... */
 
 /datum/repeatable_crafting_recipe/cooking/cocaumole_chippile
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Cocaumole Sun-Crackers"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/cocaumole = 1,
@@ -265,7 +265,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/drowsbane_chippile
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Drowsbane Sun-Crackers"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/drowsbanejam = 1,
@@ -281,7 +281,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/cocaumole_chip
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Cocaumole Sun-Cracker"
 	subtypes_allowed = TRUE
 	requirements = list(
@@ -298,7 +298,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/drowsbane_chip
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Drowsbane Sun-Cracker"
 	subtypes_allowed = TRUE
 	requirements = list(
@@ -317,7 +317,7 @@
 /*	.................   Eighthscake   ................... */
 
 /datum/repeatable_crafting_recipe/cooking/eighthscake_unbaked
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Unbaked Eightscake"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/egg = 1,
@@ -334,7 +334,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/lemon_eighthscake_unbaked
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	category = "Cakes"
 	name = "Unbaked Lemon Eighthscake"
 
@@ -352,7 +352,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/lime_eighthscake_unbaked
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	category = "Cakes"
 	name = "Unbaked Lime Eighthscake"
 

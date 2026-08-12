@@ -1,5 +1,5 @@
 /datum/loot_table/fish_barrel
-	name = "fish barrel"
+	name = "barril de pescado"
 	loot_table = list(
 		list(
 			/obj/item/reagent_containers/food/snacks/fish/carp = 25,

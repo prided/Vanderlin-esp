@@ -10,7 +10,7 @@ import { SortType, type SubsystemData } from './types';
 
 export function ControllerOverview(props) {
   return (
-    <Window title="Controller Overview" height={600} width={500}>
+    <Window title="Descripción general del controlador" height={600} width={500}>
       <Window.Content>
         <ControllerContent />
       </Window.Content>
@@ -68,7 +68,7 @@ export function ControllerContent(props) {
                     onChange={(value) =>
                       dispatch({ type: FilterAction.Query, payload: value })
                     }
-                    placeholder="By name"
+                    placeholder="Por nombre"
                     value={state.query}
                     width="85%"
                   />
@@ -77,7 +77,7 @@ export function ControllerContent(props) {
                   <Button
                     disabled={!inDeciseconds}
                     selected={state.smallValues}
-                    tooltip="Hide values under 1"
+                    tooltip="Ocultar valores bajo 1"
                     icon={state.smallValues ? 'eye-slash' : 'eye'}
                     onClick={() =>
                       dispatch({
@@ -86,11 +86,11 @@ export function ControllerContent(props) {
                       })
                     }
                   >
-                    Small
+                    Pequeño
                   </Button>
                   <Button
                     icon={state.inactive ? 'eye-slash' : 'eye'}
-                    tooltip="Hide offline/paused"
+                    tooltip="Ocultar sin conexión/en pausa"
                     selected={state.inactive}
                     onClick={() =>
                       dispatch({
@@ -99,7 +99,7 @@ export function ControllerContent(props) {
                       })
                     }
                   >
-                    Inactive
+                    Inactivo
                   </Button>
                 </Stack.Item>
               </Stack>
@@ -124,7 +124,7 @@ export function ControllerContent(props) {
                       })
                     }
                   >
-                    Ascending
+                    Ascendente
                   </Button>
                   <Button
                     selected={!state.ascending}
@@ -135,7 +135,7 @@ export function ControllerContent(props) {
                       })
                     }
                   >
-                    Descending
+                    Descendente
                   </Button>
                 </Stack.Item>
               </Stack>

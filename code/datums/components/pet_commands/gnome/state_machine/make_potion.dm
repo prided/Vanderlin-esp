@@ -82,7 +82,7 @@
 
 			if(water_container.forceMove(pawn))
 				controller.set_blackboard_key(BB_SIMPLE_CARRY_ITEM, water_container)
-				pawn.visible_message(span_notice("[pawn] picks up [water_container]."))
+				pawn.visible_message(span_notice("[pawn] recoge [water_container]."))
 				current_phase = "filling_water"
 				manager.set_movement_target(controller, well)
 
@@ -98,7 +98,7 @@
 				return ACTION_STATE_CONTINUE
 
 			carried.reagents?.add_reagent(/datum/reagent/water, ALCHEMY_WATER_MIN)
-			pawn.visible_message(span_notice("[pawn] fills [carried] with water."))
+			pawn.visible_message(span_notice("[pawn] llena [carried] con agua."))
 			current_phase = "adding_water"
 			manager.set_movement_target(controller, cauldron)
 			return ACTION_STATE_CONTINUE
@@ -113,7 +113,7 @@
 				return ACTION_STATE_CONTINUE
 
 			carried.reagents.trans_to(cauldron, ALCHEMY_WATER_MIN)
-			pawn.visible_message(span_notice("[pawn] pours water into [cauldron]."))
+			pawn.visible_message(span_notice("[pawn] vierte agua en [cauldron]."))
 			pawn.dropItemToGround(carried)
 			controller.clear_blackboard_key(BB_SIMPLE_CARRY_ITEM)
 			current_phase = "check_cauldron"
@@ -140,7 +140,7 @@
 
 			if(bottle.forceMove(pawn))
 				controller.set_blackboard_key(BB_SIMPLE_CARRY_ITEM, bottle)
-				pawn.visible_message(span_notice("[pawn] picks up [bottle]."))
+				pawn.visible_message(span_notice("[pawn] recoge [bottle]."))
 				current_phase = "bottling"
 				manager.set_movement_target(controller, cauldron)
 
@@ -156,12 +156,12 @@
 				return ACTION_STATE_CONTINUE
 
 			cauldron.reagents.trans_to(bottle, bottle.reagents.maximum_volume - bottle.reagents.total_volume)
-			pawn.visible_message(span_notice("[pawn] fills [bottle] with the finished potion."))
+			pawn.visible_message(span_notice("[pawn] llena [bottle] con la poción terminada."))
 
 			var/turf/bottle_storage = controller.blackboard[BB_GNOME_BOTTLE_STORAGE]
 			if(bottle_storage)
 				bottle.forceMove(bottle_storage)
-				pawn.visible_message(span_notice("[pawn] stores the finished potion."))
+				pawn.visible_message(span_notice("[pawn] almacena la poción terminada."))
 			else
 				pawn.dropItemToGround(bottle)
 

@@ -1,5 +1,5 @@
 /datum/book_entry/gnome_homunculus
-	name = "Working With Gnome Homunculi"
+	name = "Trabajando con homúnculos gnomos"
 
 /datum/book_entry/gnome_homunculus/inner_book_html(mob/user)
 	return {"

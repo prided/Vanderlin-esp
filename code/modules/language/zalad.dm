@@ -4,7 +4,7 @@
 	icon_state = "zalad"
 	spans = list(SPAN_ZALAD)
 	speech_verb = "states"
-	ask_verb = "questions"
+	ask_verb = "preguntas"
 	exclaim_verb = "shouts"
 	key = "z"
 	space_chance = 80

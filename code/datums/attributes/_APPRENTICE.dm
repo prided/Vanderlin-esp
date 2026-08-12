@@ -40,7 +40,7 @@
 	if(parent.stat >= UNCONSCIOUS || youngling.stat >= UNCONSCIOUS)
 		return
 	if(choice != "Yes")
-		to_chat(parent, span_warning("[youngling] has rejected your apprenticeship!"))
+		to_chat(parent, span_warning("¡[youngling] ha rechazado tu aprendizaje!"))
 		return
 
 	LAZYADD(apprentices, WEAKREF(youngling))
@@ -55,7 +55,7 @@
 		title = "[job.get_informed_title(youngling)] Apprentice"
 	youngling.attributes.our_apprentice_name = "[parent.real_name]'s [title]"
 
-	to_chat(parent, span_notice("[youngling.real_name] has become your apprentice."))
+	to_chat(parent, span_notice("[youngling.real_name] se ha convertido en tu aprendiz."))
 	SEND_SIGNAL(parent, COMSIG_APPRENTICE_MADE, youngling)
 
 /**

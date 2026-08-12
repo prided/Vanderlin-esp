@@ -1,5 +1,5 @@
 /datum/material/tin
-	name = "Tin"
+	name = "Estaño"
 	show_as_filling = TRUE
 	color = "#c5c5a8"
 	hardness = MAT_VALUE_FLEXIBLE

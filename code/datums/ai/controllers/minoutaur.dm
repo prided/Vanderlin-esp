@@ -35,5 +35,5 @@
 		playsound(boss, 'sound/misc/explode/explosion.ogg', 30, TRUE)
 
 	if(prob(5))
-		boss.visible_message("<span class='warning'>[boss] stomps the ground!</span>")
+		boss.visible_message("¡<span class='warning'>[boss] pisa el suelo!</span>")
 		playsound(boss, 'sound/combat/hits/kick/stomp.ogg', 30, TRUE)

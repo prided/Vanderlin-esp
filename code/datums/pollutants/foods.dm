@@ -17,44 +17,44 @@
 	scent = "blackberry pie"
 
 /datum/pollutant/food/raspberry_pie
-	name = "raspberry pie"
-	scent = "raspberry pie"
+	name = "pastel de frambuesa"
+	scent = "pastel de frambuesa"
 
 /datum/pollutant/food/pompkaun_pie
-	name = "pompkaun pie"
-	scent = "pompkaun pie"
+	name = "pastel de pompkaun"
+	scent = "pastel de pompkaun"
 
 /datum/pollutant/food/pear_pie
-	name = "pear pie"
-	scent = "pear pie"
+	name = "pastel de pera"
+	scent = "pastel de pera"
 
 /datum/pollutant/food/fish_pie
-	name = "fish pie"
-	scent = "fish pie"
+	name = "pastel de pescado"
+	scent = "pastel de pescado"
 
 /datum/pollutant/food/meat_pie
-	name = "meat pie"
-	scent = "meat pie"
+	name = "pastel de carne"
+	scent = "pastel de carne"
 
 /datum/pollutant/food/pot_pie
 	name = "pot pie"
 	scent = "pot pie"
 
 /datum/pollutant/food/berry_pie
-	name = "berry pie"
-	scent = "berry pie"
+	name = "pastel de bayas"
+	scent = "pastel de bayas"
 
 /datum/pollutant/food/borowiki_pie
-	name = "borowiki pie"
-	scent = "borowiki pie"
+	name = "pastel de borowiki"
+	scent = "pastel de borowiki"
 
 /datum/pollutant/food/bread
-	name = "fresh baked bread"
-	scent = "fresh baked bread"
+	name = "pan recién horneado"
+	scent = "pan recién horneado"
 
 /datum/pollutant/food/bun
-	name = "fresh baked buns"
-	scent = "fresh baked buns"
+	name = "bollos recién horneados"
+	scent = "bollos recién horneados"
 
 /datum/pollutant/food/pastry
 	name = "fresh baked pastry"
@@ -73,8 +73,8 @@
 	scent = "fresh baked tamtoplate"
 
 /datum/pollutant/food/toast
-	name = "cooked toast"
-	scent = "cooked toast"
+	name = "tostadas cocidas"
+	scent = "tostadas cocidas"
 
 /datum/pollutant/food/raisin_bread
 	name = "fresh baked loaf of raisin bread"
@@ -85,35 +85,35 @@
 	scent = "fresh baked cheese buns"
 
 /datum/pollutant/food/biscuit
-	name = "fresh baked biscuits"
-	scent = "fresh baked biscuits"
+	name = "galletas recién horneadas"
+	scent = "galletas recién horneadas"
 
 /datum/pollutant/food/prezzel
-	name = "fresh baked prezzel"
-	scent = "fresh baked prezzel"
+	name = "prezzel recién horneado"
+	scent = "prezzel recién horneado"
 
 /datum/pollutant/food/fritter
 	name = "fresh baked apple fritter"
 	scent = "fresh baked apple fritter"
 
 /datum/pollutant/food/honey_cake
-	name = "fresh baked honey cake"
-	scent = "fresh baked honey cake"
+	name = "pastel de miel recién horneado"
+	scent = "pastel de miel recién horneado"
 
 /datum/pollutant/food/cheese_cake
-	name = "fresh baked cheese cake"
-	scent = "fresh baked cheese cake"
+	name = "pastel de queso recién horneado"
+	scent = "pastel de queso recién horneado"
 
 /datum/pollutant/food/strawberry_cake
-	name = "fresh baked strawberry cake"
-	scent = "fresh baked strawberry cake"
+	name = "pastel de fresa recién horneado"
+	scent = "pastel de fresa recién horneado"
 
 /datum/pollutant/food/crimson_cake
-	name = "fresh baked crimson pine cake"
-	scent = "fresh baked crimson pine cake"
+	name = "pastel de pino carmesí recién horneado"
+	scent = "pastel de pino carmesí recién horneado"
 
 /datum/pollutant/food/tamto_cake
-	name = "fresh baked tamto silk cake"
+	name = "pastel de seda tamto recién horneado"
 	scent = "fresh baked tamto silk caake"
 
 /datum/pollutant/food/scone
@@ -142,8 +142,8 @@
 	scent = "cooked carp"
 
 /datum/pollutant/food/baked_eel
-	name = "cooked eel"
-	scent = "cooked eel"
+	name = "anguila cocida"
+	scent = "anguila cocida"
 
 /datum/pollutant/food/baked_clownfish
 	name = "cooked clownfish"
@@ -162,64 +162,64 @@
 	scent = "cooked shrimp"
 
 /datum/pollutant/food/truffles
-	name = "cooked truffles"
-	scent = "cooked truffles"
+	name = "trufas cocidas"
+	scent = "trufas cocidas"
 
 /datum/pollutant/food/baked_meat
 	name = "baked meat"
 	scent = "baked meat"
 
 /datum/pollutant/food/bacon
-	name = "fried bacon"
-	scent = "fried bacon"
+	name = "tocino frito"
+	scent = "tocino frito"
 
 /datum/pollutant/food/fried_meat
-	name = "fried meat"
-	scent = "fried meat"
+	name = "carne frita"
+	scent = "carne frita"
 
 /datum/pollutant/food/fried_chicken
-	name = "cooked chicken"
-	scent = "cooked chicken"
+	name = "pollo cocido"
+	scent = "pollo cocido"
 
 /datum/pollutant/food/sausage
 	name = "cooked sausage"
 	scent = "cooked sausage"
 
 /datum/pollutant/food/fried_cabbage
-	name = "fried cabbage"
-	scent = "fried cabbage"
+	name = "repollo frito"
+	scent = "repollo frito"
 
 /datum/pollutant/food/fried_onion
-	name = "fried onion"
-	scent = "fried onion"
+	name = "cebolla frita"
+	scent = "cebolla frita"
 
 /datum/pollutant/food/roasted_seeds
 	name = "roasted seeds"
 	scent = "roasted seeds"
 
 /datum/pollutant/food/fried_rat
-	name = "fried rats"
-	scent = "fried rats"
+	name = "ratas fritas"
+	scent = "ratas fritas"
 
 /datum/pollutant/food/fried_crow
-	name = "fried crows"
-	scent = "fried crows"
+	name = "cuervos fritos"
+	scent = "cuervos fritos"
 
 /datum/pollutant/food/oatmeal
-	name = "boiled oats"
-	scent = "boiled oats"
+	name = "avena hervida"
+	scent = "avena hervida"
 
 /datum/pollutant/food/potato_stew
 	name = "potato stew"
 	scent = "potato stew"
 
 /datum/pollutant/food/onion_stew
-	name = "onion soup"
-	scent = "onion soup"
+	name = "sopa de cebolla"
+	scent = "sopa de cebolla"
 
 /datum/pollutant/food/cabbage_stew
-	name = "cabbage soup"
-	scent = "cabbage soup"
+	name = "sopa de repollo"
+	scent = "sopa de repollo"
 
 /datum/pollutant/food/turnip_stew
 	name = "turnip soup"
@@ -230,40 +230,40 @@
 	scent = "fish stew"
 
 /datum/pollutant/food/chicken_stew
-	name = "chicken stew"
-	scent = "chicken stew"
+	name = "estofado de pollo"
+	scent = "estofado de pollo"
 
 /datum/pollutant/food/meat_stew
 	name = "meat stew"
 	scent = "meat stew"
 
 /datum/pollutant/food/egg_soup
-	name = "egg soup"
-	scent = "egg soup"
+	name = "sopa de huevo"
+	scent = "sopa de huevo"
 
 /datum/pollutant/food/tamto_soup
 	name = "tamto soup"
 	scent = "tamto soup"
 
 /datum/pollutant/food/pompkaun_soup
-	name = "pompkaun soup"
-	scent = "pompkaun soup"
+	name = "sopa pompkaun"
+	scent = "sopa pompkaun"
 
 /datum/pollutant/food/truffle_stew
 	name = "truffle stew"
 	scent = "truffle stew"
 
 /datum/pollutant/food/borowiki_stew
-	name = "borowiki stew"
-	scent = "borowiki stew"
+	name = "estofado de borowiki"
+	scent = "estofado de borowiki"
 
 /datum/pollutant/food/bone_broth
-	name = "bone broth"
-	scent = "bone broth"
+	name = "caldo de huesos"
+	scent = "caldo de huesos"
 
 /datum/pollutant/food/cheese_soup
-	name = "cheese soup"
-	scent = "cheese soup"
+	name = "sopa de queso"
+	scent = "sopa de queso"
 
 /datum/pollutant/food/sweet_sunreed
 	name = "sweet sunreed"
@@ -274,41 +274,41 @@
 	scent = "saccharine sweetness"
 
 /datum/pollutant/food/druqks
-	name = "acrid air"
-	scent = "acrid air"
+	name = "aire acre"
+	scent = "aire acre"
 
 /datum/pollutant/food/teas
-	name = "herbal smell"
-	scent = "herbal smell"
+	name = "olor a hierbas"
+	scent = "olor a hierbas"
 
 /datum/pollutant/food/coffee
 	name = "rich smell"
 	scent = "rich smell"
 
 /datum/pollutant/food/fried_eggs
-	name = "fried egg"
-	scent = "fried egg"
+	name = "huevo frito"
+	scent = "huevo frito"
 
 /datum/pollutant/food/bitter
-	name = "bitter smell"
-	scent = "bitter scent"
+	name = "olor amargo"
+	scent = "olor amargo"
 
 /datum/pollutant/food/herb
-	name = "herbal smell"
-	scent = "herbal smell"
+	name = "olor a hierbas"
+	scent = "olor a hierbas"
 
 /datum/pollutant/food/flower
-	name = "floral smell"
-	scent = "floral smell"
+	name = "olor floral"
+	scent = "olor floral"
 
 /datum/pollutant/food/mint
 	name = "minty smell"
 	scent = "minty smell"
 
 /datum/pollutant/food/fried_messenger
-	name = "fried messenger"
-	scent = "fried messenger"
+	name = "mensajero frito"
+	scent = "mensajero frito"
 
 /datum/pollutant/food/waddle
-	name = "meaty smell"
-	scent = "meaty smell"
+	name = "olor a carne"
+	scent = "olor a carne"

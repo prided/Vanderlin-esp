@@ -105,7 +105,7 @@
 	if(!hidden)
 		alpha = 30
 		name = "thing"
-		desc = "What is that thing?.."
+		desc = "¿Qué es esa cosa?..."
 		hidden = TRUE
 		return TRUE
 	alpha = 255
@@ -152,7 +152,7 @@
 */
 
 /obj/item/speaker/inq
-	name = "secret whisperer"
+	name = "susurrador secreto"
 	desc = "Sweet secrets whispered so freely."
 	icon_state = "scomite"
 	slot_flags = ITEM_SLOT_MOUTH|ITEM_SLOT_HIP|ITEM_SLOT_RING
@@ -171,7 +171,7 @@
 
 /obj/item/listeningdevice/inq
 	name = "listener"
-	desc = "An ever-attentive ear..."
+	desc = "Un oído siempre atento..."
 	icon_state = "listenstone"
 
 /obj/item/listeningdevice/inq/examine(mob/user)
@@ -187,7 +187,7 @@
 
 /obj/item/listeningdevice/inq/attack_self(mob/living/user)
 	. = ..()
-	var/input = input(user, "SIX LETTERS", "BEND AN EAR")
+	var/input = input(user, "SEIS LETRAS", "BEND AN EAR")
 	if(!input)
 		label = null
 		fulldesc = "An ever-attentive ear... [span_notice("This ear hasn't been bent. It's unlabelled.")]"
@@ -225,7 +225,7 @@
 
 /obj/item/speaker/agent
 	name = "whispering clam"
-	desc = "Ever whispering secrets into your ears..."
+	desc = "Siempre susurrando secretos en tus oídos..."
 	icon_state = "cosmic_clam"
 	slot_flags = ITEM_SLOT_HIP
 
@@ -246,7 +246,7 @@
 
 /obj/item/listeningdevice/agent
 	name = "listening pearl"
-	desc = "A black pearl..."
+	desc = "Una perla negra..."
 	icon_state = "midnight_pearl"
 
 /obj/item/listeningdevice/agent/examine(mob/user)
@@ -262,7 +262,7 @@
 
 /obj/item/listeningdevice/agent/attack_self(mob/living/user)
 	. = ..()
-	var/input = input(user, "SIX LETTERS", "HEAR ALL SECRETS")
+	var/input = input(user, "SEIS LETRAS", "HEAR ALL SECRETS")
 	if(!input)
 		label = null
 		fulldesc = "A black pearl... [span_notice("This pearl hasn't been activated. It's unlabelled.")]"

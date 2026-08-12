@@ -18,19 +18,19 @@
 	generic_gender_feature_adjust(appearance_list, eyes, bodypart, owner, OFFSET_FACE)
 
 /datum/sprite_accessory/eyes/humanoid
-	name = "Humanoid Eyes"
+	name = "Ojos humanoides"
 	icon_state = "human"
 
 /datum/sprite_accessory/eyes/humanoid/kobold
-	name = "Kobold Eyes"
+	name = "Ojos de kobold"
 	icon_state = "kobold"
 
 /datum/sprite_accessory/eyes/humanoid/triton
-	name = "Triton Eyes"
+	name = "Ojos de Tritón"
 	icon_state = "triton"
 	use_static = TRUE
 
 /datum/sprite_accessory/eyes/humanoid/rakshari
-	name = "Rakshari Eyes"
+	name = "Ojos de Rakshari"
 	icon_state = "rakshari"
 	use_static = TRUE

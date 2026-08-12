@@ -1,6 +1,6 @@
 
 /obj/structure/roguetent
-	name = "tent door"
+	name = "puerta de la tienda"
 	desc = "A door made of sturdy fabric and wooden frames."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "tent_door1"
@@ -27,14 +27,14 @@
 		icon_state = "[base_state]0"
 
 /obj/structure/roguetent/proc/open_up(mob/user)
-	visible_message("<span class='info'>[user] opens [src].</span>")
+	visible_message("<span class='info'>[user] abre [src].</span>")
 	playsound(src, 'sound/foley/equip/rummaging-02.ogg', 100, FALSE)
 	density = FALSE
 	set_opacity(FALSE)
 	update_appearance(UPDATE_ICON_STATE)
 
 /obj/structure/roguetent/proc/close_up(mob/user)
-	visible_message("<span class='info'>[user] closes [src].</span>")
+	visible_message("<span class='info'>[user] cierra [src].</span>")
 	playsound(src, 'sound/foley/equip/rummaging-02.ogg', 100, FALSE)
 	density = TRUE
 	set_opacity(TRUE)

@@ -1,5 +1,5 @@
 /datum/round_event_control/ravox_combat
-	name = "Get Stronger"
+	name = "Hazte más fuerte"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/ravox_combat
 	weight = 10
@@ -44,7 +44,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE RAVOX'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE RAVOX!"),
 		span_notice("Ravox demands you prove your might! Improve your combat skills to earn Ravox's favor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/vo/male/knight/rage (6).ogg', 70)

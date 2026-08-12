@@ -1,5 +1,5 @@
 /datum/work_order/construct_building
-	name = "Constructing "
+	name = "Construyendo "
 	stamina_cost = 15
 	work_time_left = 15 SECONDS
 

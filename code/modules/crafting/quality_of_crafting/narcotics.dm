@@ -39,7 +39,7 @@
 	sellprice = 16
 
 /datum/repeatable_crafting_recipe/narcotics/moondustpurify
-	name = "Purify Moondust"
+	name = "Purificar el polvo lunar"
 	output = /obj/item/reagent_containers/powder/moondust_purest
 	requirements = list(
 		/obj/item/alch/silverdust = 1,

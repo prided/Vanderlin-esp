@@ -79,7 +79,7 @@
 		new /obj/effect/temp_visual/psyheal_rogue(get_turf(H), "#e4e4e4")
 		H.adjustBruteLoss(bruthealval)
 		H.adjustFireLoss(burnhealval)
-		to_chat(H, span_info("In a moment of quiet contemplation, I feel bolstered by my faith."))
+		to_chat(H, span_info("En un momento de tranquila contemplación, me siento fortalecido por mi fe."))
 		if (conditional_buff)
 			to_chat(user, span_info("My pain gives way to a sense of furthered clarity before returning again, dulled."))
 		return TRUE

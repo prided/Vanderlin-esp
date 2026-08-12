@@ -85,7 +85,7 @@
 	if(repair_sound)
 		playsound(parent, repair_sound, 100, TRUE)
 
-	user.visible_message(span_notice("[user] starts repairing [parent]."), span_notice("I start repairing [parent]."))
+	user.visible_message(span_notice("[user] comienza a reparar [parent]."), span_notice("Empiezo a reparar [parent]."))
 	var/repair_time = 10 SECONDS
 	if(repair_skill)
 		repair_time = 30 SECONDS / max(GET_MOB_SKILL_VALUE_OLD(user, repair_skill), 1)  // 1 skill = 30 secs, 2 skill = 15 secs etc.
@@ -98,7 +98,7 @@
 	if(repair_sound)
 		playsound(parent, repair_sound, 100, TRUE)
 
-	user.visible_message(span_notice("[user] finishes repairing [parent]."), span_notice("I finished repairing [parent]."))
+	user.visible_message(span_notice("[user] termina de reparar [parent]."), span_notice("I finished repairing [parent]."))
 
 	if(broken_parent)
 		var/repair_amount = (atom_parent.integrity_failure * atom_parent.max_integrity) - atom_parent.get_integrity() + 1

@@ -1,5 +1,5 @@
 /obj/effect/spawner/trap
-	name = "random trap"
+	name = "trampa aleatoria"
 	icon = 'icons/obj/hand_of_god_structures.dmi'
 	icon_state = "trap_rand"
 

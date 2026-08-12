@@ -35,7 +35,7 @@
 	icon_state = "throne"
 
 /area/indoors/town/keep/lord_appt
-	name = "Lord's Appartment"
+	name = "Apartamento del Señor"
 	icon_state = "lord_appt"
 
 /area/indoors/town/keep/captain
@@ -83,11 +83,11 @@
 	icon_state = "heir"
 
 /area/indoors/town/keep/heir/heir1
-	name = "First Heir's Room"
+	name = "Habitación del primer heredero"
 	icon_state = "heir1"
 
 /area/indoors/town/keep/heir/heir2
-	name = "Second Heir's Room"
+	name = "Habitación del segundo heredero"
 	icon_state = "heir2"
 
 /area/indoors/town/keep/knight
@@ -95,7 +95,7 @@
 	icon_state = "knight"
 
 /area/indoors/town/keep/knight/knight1
-	name = "First Knight's Quarters"
+	name = "Cuartos del primer caballero"
 	icon_state = "knight1"
 
 /area/indoors/town/keep/knight/knight2
@@ -147,7 +147,7 @@
 	icon_state = "dungeoneer"
 
 /area/indoors/town/keep/jester
-	name = "Jester's Quarters"
+	name = "Cuartos del bufón"
 	icon_state = "jester"
 
 /area/indoors/town/keep/guest
@@ -163,7 +163,7 @@
 	icon_state = "guest2"
 
 /area/indoors/town/keep/guest/guest3
-	name = "Keep Guest Room 3"
+	name = "Mantenga la habitación de invitados 3"
 	icon_state = "guest3"
 
 /area/indoors/town/keep/guest/meeting
@@ -268,11 +268,11 @@
 	icon_state = "noble_out"
 
 /area/indoors/town/noble_manor/blue
-	name = "Blue Noble Manor"
+	name = "Mansión Noble Azul"
 	icon_state = "noble1"
 
 /area/outdoors/town/noble_manor/blue
-	first_time_text = "Blue Noble Manor"
+	first_time_text = "Mansión Noble Azul"
 	icon_state = "noble1_out"
 
 /area/indoors/town/noble_manor/yellow

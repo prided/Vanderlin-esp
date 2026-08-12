@@ -16,7 +16,7 @@
 	)
 
 /datum/job/advclass/combat/rare/sentinel
-	title = "Sentinel"
+	title = "Centinela"
 	tutorial = "Your overseers have sent you to this distant land as a scout. Your trusted steed, longbow, and spear will allow you to overcome any challenges on the road ahead."
 	allowed_races = RACES_PLAYER_ELF_ALL
 	outfit = /datum/outfit/adventurer/sentinel

@@ -1,13 +1,13 @@
 
 /obj/item/clothing/wrists/wrappings
-	name = "solar wrappings"
-	desc = "Common Astratan vestments for the forearms."
+	name = "envolturas solares"
+	desc = "Vestimentas comunes Astratan para los antebrazos."
 	slot_flags = ITEM_SLOT_WRISTS
 	icon_state = "wrappings"
 	item_state = "wrappings"
 
 /obj/item/clothing/wrists/nocwrappings
-	name = "moon wrappings"
+	name = "envolturas lunares"
 	slot_flags = ITEM_SLOT_WRISTS
 	icon_state = "nocwrappings"
 	item_state = "nocwrappings"
@@ -108,7 +108,7 @@
 //copper bracers
 
 /obj/item/clothing/wrists/bracers/copper
-	name = "copper bracers"
+	name = "brazaletes de cobre"
 	desc = "Copper forearm guards that offer some protection while looking rather stylish."
 	body_parts_covered = ARMS
 	icon_state = "copperarm"
@@ -123,7 +123,7 @@
 
 //Queensleeves
 /obj/item/clothing/wrists/royalsleeves
-	name = "royal sleeves"
+	name = "mangas reales"
 	desc = "Sleeves befitting an elaborate gown."
 	slot_flags = ITEM_SLOT_WRISTS
 	icon_state = "royalsleeves"

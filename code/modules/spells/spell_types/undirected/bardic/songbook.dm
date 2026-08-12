@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(learnable_songs, list(
 
 /mob/living/carbon/human/proc/open_songbook()
 	set name = "Songbook"
-	set category = "Inspiration"
+	set category = "Inspiración"
 
 	if(!mind)
 		return
@@ -249,7 +249,7 @@ GLOBAL_LIST_INIT(learnable_songs, list(
 			var/datum/action/cooldown/spell/undirected/rhythm/new_rhythm = new rhythm_path()
 			new_rhythm.tracker = owner.inspiration.rhythm_tracker
 			new_rhythm.Grant(owner)
-			to_chat(owner, span_info("I attune my blade to the [new_rhythm.name] rhythm."))
+			to_chat(owner, span_info("Sintonizo mi espada con el ritmo [new_rhythm.name]."))
 
 			// Grant Crescendo to T2 bards after all rhythm picks
 			if((existing_count + 1) >= max_picks)
@@ -264,7 +264,7 @@ GLOBAL_LIST_INIT(learnable_songs, list(
 			if(!owner?.mind || !owner.inspiration)
 				return TRUE
 			if(!can_unlearn())
-				to_chat(owner, span_warning("I need more time before I can forget another rhythm."))
+				to_chat(owner, span_warning("Necesito más tiempo antes de poder olvidar otro ritmo."))
 				return TRUE
 			var/rhythm_path = text2path(params["type_path"])
 			if(!rhythm_path)
@@ -285,7 +285,7 @@ GLOBAL_LIST_INIT(learnable_songs, list(
 					owner.inspiration.rhythm_tracker.crescendo_action.Remove(owner)
 					owner.inspiration.rhythm_tracker.crescendo_action = null
 				QDEL_NULL(owner.inspiration.rhythm_tracker)
-			to_chat(owner, span_info("I forget the rhythm..."))
+			to_chat(owner, span_info("Me olvido del ritmo..."))
 			return TRUE
 
 #undef SONGBOOK_UNLEARN_COOLDOWN

@@ -24,12 +24,12 @@ export function ReconnectButton() {
           Byond.command('.reconnect');
         }}
       >
-        Reconnect
+        Reconectar
       </Button>
       <Button
         color="white"
         icon="power-off"
-        tooltip="Relaunch game"
+        tooltip="Reiniciar el juego"
         tooltipPosition="bottom-end"
         onClick={() => {
           location.href = `byond://${url}`;

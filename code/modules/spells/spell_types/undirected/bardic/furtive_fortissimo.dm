@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/song/furtive_fortissimo
-	name = "Furtive Fortissimo"
+	name = "Fortissimo furtivo"
 	desc = "With cat like tread, apply light steps to audience members."
 	button_icon_state = "bardsong_t1_base"
 	invocation = "plays a sneaky, playful tune. The world draws closer to listen, in on the joke."
@@ -11,7 +11,7 @@
 	buff_to_apply = /datum/status_effect/buff/song/furtive_fortissimo
 
 /atom/movable/screen/alert/status_effect/buff/song/furtive_fortissimo
-	name = "Furtive Fortissimo"
+	name = "Fortissimo furtivo"
 	desc = "With cat like tread, the sneaking song begins."
 	icon_state = "buff"
 

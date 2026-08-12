@@ -15,7 +15,7 @@
 		)
 
 /datum/body_marking_set/belly
-	name = "Belly"
+	name = "Barriga"
 	body_marking_list = list(
 		/datum/body_marking/belly
 		)
@@ -47,13 +47,13 @@
 	)
 
 /datum/body_marking_set/tiger
-	name = "Tiger"
+	name = "Tigre"
 	body_marking_list = list(
 		/datum/body_marking/tiger
 	)
 
 /datum/body_marking_set/tiger_dark
-	name = "Tiger (Dark)"
+	name = "Tigre (oscuro)"
 	body_marking_list = list(
 		/datum/body_marking/tiger/dark
 	)

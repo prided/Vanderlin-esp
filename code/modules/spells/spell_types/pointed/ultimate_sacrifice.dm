@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice
-	name = "Ultimate Sacrifice"
+	name = "Sacrificio definitivo"
 	button_icon_state = "revive"
 	sound = null
 	has_visual_effects = FALSE
@@ -31,7 +31,7 @@
 		to_chat(owner, span_warning("Necra holds tight to this one."))
 		return
 
-	var/confirm = tgui_alert(owner, "Your life will be sacrificed to revive [cast_on.real_name]. You CANNOT be revived after this. Are you absolutely sure?", "Ultimate Sacrifice", list("Sacrifice Myself", "Cancel"))
+	var/confirm = tgui_alert(owner, "Your life will be sacrificed to revive [cast_on.real_name]. You CANNOT be revived after this. Are you absolutely sure?", "Sacrificio definitivo", list("Sacrifice Myself", "Cancel"))
 	if(QDELETED(src) || QDELETED(owner) || QDELETED(cast_on) || !can_cast_spell())
 		return
 
@@ -39,12 +39,12 @@
 		return
 
 	owner.visible_message(
-		span_userdanger("[owner] begins chanting Ravox's sacrificial rites!"),
-		span_userdanger("You feel Ravox's presence around you as you prepare to give your life..."),
+		span_userdanger("¡[owner] comienza a cantar los ritos de sacrificio de Ravox!"),
+		span_userdanger("Sientes la presencia de Ravox a tu alrededor mientras te preparas para dar tu vida..."),
 	)
 
 	if(!do_after(owner, 10 SECONDS, owner))
-		to_chat(owner, span_warning("The ritual was interrupted!"))
+		to_chat(owner, span_warning("¡El ritual fue interrumpido!"))
 		return
 
 	if(cast_on.stat != DEAD || QDELETED(cast_on))

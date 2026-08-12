@@ -4,20 +4,20 @@
 
 #define GOREFEAST_UNWORTHY list(\
 	span_danger("Unworthy..."),\
-	span_danger("You are far too weak to be wielding me."),\
+	span_danger("Eres demasiado débil para manejarme."),\
 	span_danger("How did you get your hands on me?"),\
 	span_danger("Find the nearest orc, and hand me to them."),\
-	span_danger("You are not prepared."),\
+	span_danger("No estás preparado."),\
 )
 
 #define GOREFEAST_WORTHY list(\
 	span_danger("A worthy one!"),\
 	span_danger("Bathe me in their blood."),\
-	span_danger("You can smell their fear can't you?"),\
+	span_danger("Puedes oler su miedo, ¿no?"),\
 	span_danger("Unleash your fury, soak the soil in their blood."),\
 	span_danger("Feast on their organs."),\
 	span_danger("Cull the world of the weak!"),\
-	span_danger("Fools to challenge us, warlord."),\
+	span_danger("Tontos por desafiarnos, señor de la guerra."),\
 )
 
 //┌─────────────── GOREFEAST ───────────────┐//
@@ -55,13 +55,13 @@
 		user.playsound_local(user, pick('sound/misc/godweapons/gorefeast1.ogg', 'sound/misc/godweapons/gorefeast2.ogg', 'sound/misc/godweapons/gorefeast3.ogg'), 70)
 		message = pick(GOREFEAST_UNWORTHY)
 	else
-		to_chat(user, span_danger("Gorefeast begins to thump ecstatically upon your touch on the boney shaft."))
+		to_chat(user, span_danger("Gorefeast comienza a golpear extasiado al tocar el eje óseo."))
 		user.playsound_local(user, pick('sound/misc/godweapons/gorefeast4.ogg', 'sound/misc/godweapons/gorefeast5.ogg', 'sound/misc/godweapons/gorefeast6.ogg'), 70)
 		message = pick(GOREFEAST_WORTHY)
 	addtimer(CALLBACK(src, PROC_REF(do_message), message), 2 SECONDS)
 
 /obj/item/weapon/polearm/halberd/bardiche/woodcutter/gorefeast/proc/do_message(message)
-	audible_message("Gorefeast speaks, \"[message]\"", hearing_distance = 5)
+	audible_message("Gorefeast habla, \"[message]\"", hearing_distance = 5)
 
 /obj/item/weapon/polearm/halberd/bardiche/woodcutter/gorefeast/pre_attack(atom/A, mob/living/user, list/modifiers)
 	if(!HAS_TRAIT(user, TRAIT_ORGAN_EATER))
@@ -208,7 +208,7 @@
 	COOLDOWN_START(src, fire_projectile, 4 SECONDS)
 
 /obj/projectile/bullet/neant
-	name = "Profane Evisceration"
+	name = "Evisceración profana"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "neantprojectile"
 	hitsound = 'sound/combat/hits/hi_arrow2.ogg'
@@ -379,7 +379,7 @@
 	var/turf/starting = get_turf(user)
 	var/list/affected_turfs = get_line(starting, target) - starting
 	if(!LAZYLEN(affected_turfs))
-		to_chat(user, span_notice("There is nothing to cut through!"))
+		to_chat(user, span_notice("¡No hay nada que cortar!"))
 		return
 	user.visible_message(span_warning("[user] blinks through space!"),
 		span_notice("I tear through space with Pleonexia."))
@@ -414,7 +414,7 @@
 //┌─────────────── TENNITE PANTHEON WEAPONS BELOW ───────────────┐
 
 /obj/item/weapon/sword/long/grandmaster
-	name = "divine longsword"
+	name = "espada larga divina"
 	desc = "The Blade of Saint Altierre. A holy sword forged of silver, said to represent her will to fight for us all, and the Justice she stood for."
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	icon_state = "martyrsword"
@@ -502,7 +502,7 @@
 	blade_class = BCLASS_SMASH
 
 /obj/item/weapon/polearm/spear/grandmaster
-	name = "divine trident"
+	name = "tridente divino"
 	desc = "The Trident of Saint Altierre. A holy spear forged of silver in the form of a holy weapon of Abyssor, said to represent her unfathomable Rage against the inhumen gods."
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	icon_state = "martyrtrident"

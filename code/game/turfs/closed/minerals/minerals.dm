@@ -2,7 +2,7 @@
 
 /turf/closed/mineral //wall piece
 	name = "rock"
-	desc = "Seems barren."
+	desc = "Parece estéril."
 	icon = 'icons/turf/smooth/walls/mineral.dmi'
 	icon_state = MAP_SWITCH("mineral", "mineral-0")
 	smoothing_flags = SMOOTH_BITMASK
@@ -71,7 +71,7 @@
 
 /turf/closed/mineral/attackby(obj/item/I, mob/user, list/modifiers)
 	if (!user.IsAdvancedToolUser())
-		to_chat(user, span_warning("I don't have the dexterity to do this!"))
+		to_chat(user, span_warning("¡No tengo la destreza para hacer esto!"))
 		return
 	lastminer = user
 	var/olddam = atom_integrity
@@ -211,7 +211,7 @@
 
 /turf/closed/mineral/random
 	name = "rock"
-	desc = "Seems barren."
+	desc = "Parece estéril."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/mineral.dmi', 'icons/turf/mining/mining.dmi')
 	icon_state = MAP_SWITCH("mineral", "rand_low")
 	smoothing_flags = SMOOTH_BITMASK
@@ -416,7 +416,7 @@
 
 /turf/closed/mineral/bedrock
 	name = "rock"
-	desc = "Seems barren, and nigh-indestructible."
+	desc = "Parece estéril y casi indestructible."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/mineral.dmi', 'icons/turf/mining/mining.dmi')
 	icon_state = MAP_SWITCH("mineral", "bedrock")
 	max_integrity = 10000000

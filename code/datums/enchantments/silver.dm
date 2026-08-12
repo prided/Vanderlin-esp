@@ -53,7 +53,7 @@
 
 	var/datum/antagonist/vampire/vamp_datum = target.mind?.has_antag_datum(/datum/antagonist/vampire)
 
-	to_chat(target, span_userdanger("I am struck by my BANE!"))
+	to_chat(target, span_userdanger("¡Estoy golpeado por mi BANE!"))
 
 	target.apply_status_effect(/datum/status_effect/debuff/silver_bane, null, affected)
 
@@ -73,7 +73,7 @@
 	var/affected = affected_by_bane(user)
 	if(!affected)
 		return
-	to_chat(user, span_userdanger("I have worn my BANE!"))
+	to_chat(user, span_userdanger("¡He usado mi BANE!"))
 	user.apply_status_effect(/datum/status_effect/debuff/silver_bane, null, affected)
 	if(affected != AFFECTED_VLORD)
 		user.adjustFireLoss(25)
@@ -127,7 +127,7 @@
 	return TRUE
 
 /datum/status_effect/debuff/silver_bane/on_remove()
-	to_chat(owner, span_notice("The silver's overwhelming curse fades..."))
+	to_chat(owner, span_notice("La abrumadora maldición de la plata se desvanece..."))
 	REMOVE_TRAIT(owner, TRAIT_COVEN_BANE, VAMPIRE_TRAIT)
 	. = ..()
 
@@ -155,7 +155,7 @@
 		return
 
 	is_stunned = TRUE
-	to_chat(owner, span_userdanger("The silver's curse overwhelms me!"))
+	to_chat(owner, span_userdanger("¡La maldición de la plata me abruma!"))
 
 	if(affected_type == AFFECTED_VLORD)
 		// Vampire lords get lighter punishment

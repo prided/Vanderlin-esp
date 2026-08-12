@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/howl
-	name = "Howl"
+	name = "Aullido"
 	desc = "!"
 	button_icon_state = "howl"
 	has_visual_effects = FALSE
@@ -68,7 +68,7 @@
 	if(extended)
 		for(var/obj/item/weapon/werewolf_claw/claw in owner.held_items)
 			qdel(claw)
-		to_chat(owner, "You feel your claws retracting.")
+		to_chat(owner, "Sientes que tus garras se retraen.")
 		//owner.visible_message("Your claws retract.", "You feel your claws retracting.", "You hear a sound of claws retracting.")
 	else
 		left_claw = new()
@@ -77,12 +77,12 @@
 			qdel(left_claw)
 		if(!owner.put_in_r_hand(right_claw))
 			qdel(right_claw)
-		to_chat(owner, "You feel your claws extending.")
+		to_chat(owner, "Sientes que tus garras se extienden.")
 		//owner.visible_message("Your claws extend.", "You feel your claws extending.", "You hear a sound of claws extending.")
 	extended = !extended
 
 /datum/action/cooldown/spell/woundlick
-	name = "Lick the wounds"
+	name = "lamer las heridas"
 	desc = "Heal the wounds of somebody"
 	button_icon_state = "diagnose"
 

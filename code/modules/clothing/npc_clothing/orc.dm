@@ -33,7 +33,7 @@
 	max_integrity = INTEGRITY_POOR
 
 /obj/item/clothing/head/helmet/orc
-	name = "Orc Marauder Helmet"
+	name = "Casco de merodeador orco"
 	icon_state = "marauder_helm"
 	item_state = "marauder_helm"
 	allowed_race = list(SPEC_ID_ORC)
@@ -56,7 +56,7 @@
 
 /obj/item/clothing/head/helmet/leather/orc
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
-	name = "leather helmet"
+	name = "casco de cuero"
 	desc = ""
 	body_parts_covered = HEAD|HAIR|EARS|NOSE
 	icon_state = "leatherhelm"

@@ -189,7 +189,7 @@
 		frag.fire()
 
 /obj/projectile/magic/boulder
-	name = "boulder"
+	name = "roca"
 	icon = 'icons/obj/magic_projectiles.dmi'
 	icon_state = "boulder"
 	damage = 100

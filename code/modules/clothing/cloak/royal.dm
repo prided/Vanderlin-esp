@@ -1,5 +1,5 @@
 /obj/item/clothing/cloak/lordcloak
-	name = "lordly cloak"
+	name = "capa señorial"
 	desc = "Ermine trimmed, handed down."
 	color = null
 	icon_state = "lord_cloak"

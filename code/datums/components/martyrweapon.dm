@@ -246,7 +246,7 @@
 		return
 
 	var/string = "You pray to your god. How many minutes will you ask for? (Shorter length means greater boons)"
-	var/choice = tgui_alert(user, string, "OATH", list("Six", "Two", "It's not time"))
+	var/choice = tgui_alert(user, string, "OATH", list("Six", "Two", "no es el momento"))
 	if(!choice || QDELETED(src) || QDELETED(user))
 		return
 
@@ -260,7 +260,7 @@
 /datum/component/martyr_weapon/proc/activate(mob/living/user, status_flag = STATE_SAFE)
 	user.visible_message(
 		span_notice("[user] begins invoking [user.p_their()] Oath!"),
-		span_notice("You begin to invoke your oath."),
+		span_notice("Comienzas a invocar tu juramento."),
 	)
 	if(!do_after(user, 5 SECONDS, parent))
 		return
@@ -341,7 +341,7 @@
 
 	user.playsound_local(user, 'sound/magic/ahh1.ogg', 100)
 	user.visible_message(
-		span_info("[user] fades away."),
+		span_info("[user] se desvanece."),
 		span_info("Your life led up to this moment. In the face of the decay of the world, you endured. Now you rest. You feel your soul shed from its mortal coils, and the embrace of [user.patron.name]")
 	)
 

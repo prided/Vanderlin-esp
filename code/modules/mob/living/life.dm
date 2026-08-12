@@ -105,7 +105,7 @@
 		MOBTIMER_SET(src, MT_PAINSTUN)
 		Immobilize(10)
 		INVOKE_ASYNC(src, PROC_REF(emote), "painscream")
-		visible_message("<span class='warning'>[src] freezes in pain!</span>",
+		visible_message("¡<span class='warning'>[src] se congela de dolor!</span>",
 					"<span class='warning'>I'm frozen in pain!</span>")
 		addtimer(CALLBACK(src, PROC_REF(Stun), 11 SECONDS), 1 SECONDS)
 		addtimer(CALLBACK(src, PROC_REF(Knockdown), 1 SECONDS, 1 SECONDS))

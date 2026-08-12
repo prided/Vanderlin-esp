@@ -1,5 +1,5 @@
 /datum/enchantment/hydrophobic
-	enchantment_name = "Hydrophobic"
+	enchantment_name = "Hidrofóbico"
 	examine_text = "This item seems to be constantly trying to push water away from it."
 
 	essence_recipe = list(
@@ -31,4 +31,4 @@
 	if(active_item)
 		active_item = FALSE
 		REMOVE_TRAIT(user, TRAIT_SWIMMER, "[REF(i)]")
-		to_chat(user, span_notice("I feel mundane once more."))
+		to_chat(user, span_notice("Me siento mundano una vez más."))

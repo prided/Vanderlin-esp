@@ -78,7 +78,7 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/crafting/skull_mask
-	name = "skull mask"
+	name = "máscara de calavera"
 	requirements = list(
 		/obj/item/alch/bone= 3,
 		/obj/item/natural/fibers = 1,
@@ -103,7 +103,7 @@
 	blacklisted_paths = subtypesof(/obj/item/natural/hide)
 
 /datum/repeatable_crafting_recipe/crafting/short_bow
-	name = "short bow"
+	name = "arco corto"
 	requirements = list(
 		/obj/item/grown/log/tree/small = 1,
 		/obj/item/natural/fibers = 3,
@@ -114,7 +114,7 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/bow
-	name = "wooden bow"
+	name = "arco de madera"
 	requirements = list(
 		/obj/item/natural/wood/plank = 1,
 		/obj/item/natural/bowstring = 1,
@@ -126,7 +126,7 @@
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/crafting/long_bow
-	name = "long bow"
+	name = "arco largo"
 	requirements = list(
 		/obj/item/natural/wood/plank = 1,
 		/obj/item/natural/bowstring = 2,
@@ -149,7 +149,7 @@
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/crafting/wsword
-	name = "wooden sword"
+	name = "espada de madera"
 	requirements = list(
 		/obj/item/natural/wood/plank = 1,
 		/obj/item/grown/log/tree/stick = 1,
@@ -161,7 +161,7 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/crafting/wshield
-	name = "wooden shield"
+	name = "escudo de madera"
 	requirements = list(
 		/obj/item/natural/wood/plank = 2,
 	)
@@ -215,7 +215,7 @@
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -233,7 +233,7 @@
 	output_amount = 2
 
 /datum/repeatable_crafting_recipe/crafting/imp_saw
-	name = "improvised saw"
+	name = "sierra improvisada"
 	requirements = list(
 		/obj/item/grown/log/tree/stick = 1,
 		/obj/item/natural/stone = 1,
@@ -256,7 +256,7 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/imp_retractor
-	name = "improvised retractor"
+	name = "retractor improvisado"
 	requirements = list(
 		/obj/item/grown/log/tree/stick = 2,
 		/obj/item/natural/fibers = 1,
@@ -267,7 +267,7 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/stone_mortar
-	name = "stone mortar"
+	name = "mortero de piedra"
 	requirements = list(
 		/obj/item/natural/stone = 1,
 	)
@@ -291,7 +291,7 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/crafting/stone_tongs
-	name = "stone tongs"
+	name = "pinzas de piedra"
 	requirements = list(
 		/obj/item/natural/stone = 1,
 		/obj/item/grown/log/tree/stick = 2,
@@ -308,7 +308,7 @@
 		/obj/item/grown/log/tree= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree
 	starting_atom = /obj/item/weapon/knife
@@ -349,7 +349,7 @@
 		/obj/item/grown/log/tree/stick= 2,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/stick
 	starting_atom = /obj/item/weapon/knife
@@ -358,12 +358,12 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/crafting/cane
-	name = "wooden cane"
+	name = "bastón de madera"
 	requirements = list(
 		/obj/item/grown/log/tree= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree
 	starting_atom = /obj/item/weapon/knife
@@ -373,12 +373,12 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/naturalcane
-	name = "natural wooden cane"
+	name = "bastón de madera natural"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -388,12 +388,12 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/spoon
-	name = "wooden spoon"
+	name = "cuchara de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/stick= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/stick
 	starting_atom = /obj/item/weapon/knife
@@ -421,7 +421,7 @@
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -442,12 +442,12 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/woodbowl
-	name = "wooden bowl"
+	name = "cuenco de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -457,12 +457,12 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/woodcup
-	name = "wooden cup"
+	name = "taza de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -472,12 +472,12 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/woodtray
-	name = "wooden tray"
+	name = "bandeja de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -487,12 +487,12 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/woodplatter
-	name = "wooden platter"
+	name = "plato de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -513,12 +513,12 @@
 	craft_time = 2 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/pipe
-	name = "wooden pipe"
+	name = "tubo de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/stick= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/stick
 	starting_atom = /obj/item/weapon/knife
@@ -542,7 +542,7 @@
 		/obj/item/natural/fibers = 2,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/stick
 	starting_atom = /obj/item/weapon/knife
@@ -556,7 +556,7 @@
 		/obj/item/clothing/neck/psycross/unfinished= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/clothing/neck/psycross/unfinished
 	starting_atom = /obj/item/weapon/knife
@@ -565,43 +565,43 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/divine
-	name = "wooden amulet of the Ten"
+	name = "amuleto de madera de los diez"
 	output = /obj/item/clothing/neck/psycross/divine
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/astrata
-	name = "wooden amulet of Astrata"
+	name = "amuleto de madera de Astrata"
 	output = /obj/item/clothing/neck/psycross/divine/astrata
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/noc
-	name = "wooden amulet of Noc"
+	name = "amuleto de madera de Noc"
 	output = /obj/item/clothing/neck/psycross/divine/noc
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/dendor
-	name = "wooden amulet of Dendor"
+	name = "amuleto de madera de Dendor"
 	output = /obj/item/clothing/neck/psycross/divine/dendor
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/abyssor
-	name = "wooden amulet of Abyssor"
+	name = "amuleto de madera de Abyssor"
 	output = /obj/item/clothing/neck/psycross/divine/abyssor
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/necra
-	name = "wooden amulet of Necra"
+	name = "amuleto de madera de Necra"
 	output = /obj/item/clothing/neck/psycross/divine/necra
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/ravox
-	name = "wooden amulet of Ravox"
+	name = "amuleto de madera de Ravox"
 	output = /obj/item/clothing/neck/psycross/divine/ravox
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/xylix
-	name = "wooden amulet of Xylix"
+	name = "amuleto de madera de Xylix"
 	output = /obj/item/clothing/neck/psycross/divine/xylix
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/eora
-	name = "wooden amulet of Eora"
+	name = "amuleto de madera de Eora"
 	output = /obj/item/clothing/neck/psycross/divine/eora
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/pestra
-	name = "wooden amulet of Pestra"
+	name = "amuleto de madera de Pestra"
 	output = /obj/item/clothing/neck/psycross/divine/pestra
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/malum
@@ -609,29 +609,29 @@
 	output = /obj/item/clothing/neck/psycross/divine/malum
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/zizo
-	name = "wooden amulet of Zizo"
+	name = "amuleto de madera de Zizo"
 	output = /obj/item/clothing/neck/psycross/zizo/wood
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/graggar
-	name = "wooden amulet of Graggar"
+	name = "amuleto de madera de Graggar"
 	output = /obj/item/clothing/neck/psycross/graggar/wood
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/boatha
-	name = "wooden amulet of Baotha"
+	name = "amuleto de madera de Baotha"
 	output = /obj/item/clothing/neck/psycross/baotha/wood
 
 /datum/repeatable_crafting_recipe/crafting/woodamulet/matthios
-	name = "wooden amulet of Matthios"
+	name = "amuleto de madera de Matthios"
 	output = /obj/item/clothing/neck/psycross/matthios/wood
 
 /datum/repeatable_crafting_recipe/crafting/bone_amulet
-	name = "bone amulet"
+	name = "amuleto de hueso"
 	requirements = list(
 		/obj/item/alch/bone = 2,
 		/obj/item/alch/sinew = 3,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/alch/bone
 	starting_atom = /obj/item/alch/sinew
@@ -639,7 +639,7 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/bottle_kit
-	name = "bottle kit"
+	name = "kit de botella"
 	requirements = list(
 		/obj/item/reagent_containers/glass/bottle = 2,
 		/obj/item/paper = 2,
@@ -755,7 +755,7 @@
 	blacklisted_paths = subtypesof(/obj/item/paper)
 
 /datum/repeatable_crafting_recipe/crafting/pledge
-	name = "pledge scroll"
+	name = "pergamino de promesa"
 	requirements = list(
 		/obj/item/paper/scroll = 1,
 		/obj/item/natural/fibers = 1,
@@ -772,7 +772,7 @@
 		/obj/item/natural/wood/plank= 2,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/natural/wood/plank
 	starting_atom = /obj/item/weapon/knife
@@ -850,7 +850,7 @@
 
 //carveable glass? Sure why not
 /datum/repeatable_crafting_recipe/crafting/alchemical_vial
-	name = "Alchemical Vial"
+	name = "Vial alquímico"
 	output = /obj/item/reagent_containers/glass/alchemical
 	requirements = list(
 		/obj/item/natural/glass = 1,
@@ -865,7 +865,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/alchemical_bottle
-	name = "Glass Bottle"
+	name = "botella de vidrio"
 	output = /obj/item/reagent_containers/glass/bottle
 	requirements = list(
 		/obj/item/natural/glass = 1,
@@ -879,7 +879,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/zigbox
-	name = "Empty Zig Box"
+	name = "Caja Zig Vacía"
 	output = /obj/item/storage/fancy/cigarettes/zig/empty
 	requirements = list(
 		/obj/item/paper = 1,
@@ -900,7 +900,7 @@
 		/obj/item/natural/fibers = 2
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 
 	attacked_atom = /obj/item/grown/log/tree/stick
@@ -914,7 +914,7 @@
 		/obj/item/natural/fibers = 6
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 
 	attacked_atom = /obj/item/grown/log/tree/small
@@ -929,7 +929,7 @@
 		/obj/item/natural/fibers = 5
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 
 	attacked_atom = /obj/item/grown/log/tree/small
@@ -942,7 +942,7 @@
 		/obj/item/instrument/lute = 1
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 
 	attacked_atom = /obj/item/instrument/lute
@@ -958,7 +958,7 @@
 		/obj/item/alch/bone = 1
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 
 	attacked_atom = /obj/item/grown/log/tree/small
@@ -972,7 +972,7 @@
 		/obj/item/natural/hide/cured = 2
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 
 	attacked_atom = /obj/item/grown/log/tree/small
@@ -986,7 +986,7 @@
 		/obj/item/natural/fibers = 6
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 
 	attacked_atom = /obj/item/grown/log/tree/stick
@@ -1001,20 +1001,20 @@
 		/obj/item/natural/fibers = 4
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
 
 /datum/repeatable_crafting_recipe/crafting/instrument_vocals
-	name = "Vocalist's Talisman"
+	name = "Talismán del vocalista"
 	output = /obj/item/instrument/vocals
 	requirements = list(
 		/obj/item/natural/cloth = 2,
 		/obj/item/natural/fibers = 3
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/natural/cloth
 	starting_atom = /obj/item/weapon/knife

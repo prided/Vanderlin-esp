@@ -32,7 +32,7 @@
 	)
 
 /datum/job/advclass/mercenary/porter
-	title = "Porter"
+	title = "Portero"
 	tutorial = "You are a jack-of-all-trades from the dank depth of subterra, You've survived by being useful. Whether it's carrying someone's burdens, mending their gears, stitching wounds, or even cooking a surprisingly edible meal, For a price, of course."
 	allowed_races = list(SPEC_ID_KOBOLD, SPEC_ID_HALFLING)
 	blacklisted_species = list(SPEC_ID_DWARF_SUBTERRAN)
@@ -57,7 +57,7 @@
 	spawned.merctype = 9
 
 /datum/outfit/mercenary/porter
-	name = "Porter (Mercenary)"
+	name = "Portero (mercenario)"
 	head = /obj/item/clothing/head/articap/porter
 	armor = /obj/item/clothing/armor/leather/jacket/artijacket/porter
 	pants = /obj/item/clothing/pants/trou

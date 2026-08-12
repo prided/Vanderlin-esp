@@ -1,6 +1,6 @@
 /datum/thaumic_research_node/splitter_speed
-	name = "Swift Division"
-	desc = "Techniques to accelerate the essence splitting process through optimized channeling patterns and improved focus methods."
+	name = "División rápida"
+	desc = "Técnicas para acelerar el proceso de división de la esencia a través de patrones de canalización optimizados y métodos de enfoque mejorados."
 	prerequisites = list(/datum/thaumic_research_node/splitter_efficiency)
 	required_essences = list(
 		/datum/thaumaturgical_essence/motion = 10,
@@ -14,7 +14,7 @@
 	bonus_value = 0.4
 
 /datum/thaumic_research_node/splitter_speed/two
-	name = "Rapid Separation"
+	name = "Separación rápida"
 	desc = "Further acceleration of splitting processes through advanced magical circuitry and enhanced essence flow control."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/splitter_speed)

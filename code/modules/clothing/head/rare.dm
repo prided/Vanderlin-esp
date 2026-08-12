@@ -1,5 +1,5 @@
 /obj/item/clothing/head/rare
-	name = "rare helmet template"
+	name = "plantilla de casco raro"
 	icon_state = "elfhead"
 	icon = 'icons/roguetown/clothing/Racial_Armour.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/onmob_racial.dmi'
@@ -71,7 +71,7 @@
 
 //............... Hoplite Helmet ............... //
 /obj/item/clothing/head/rare/hoplite // Unique Hoplite kit
-	name = "ancient helmet"
+	name = "casco antiguo"
 	desc = "A weathered bronze helmet topped with a symbol of Astrata's sun."
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'

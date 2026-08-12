@@ -1,10 +1,10 @@
 // Language
 /datum/language/gronnic
 	name = "Osslandic"
-	desc = "The harsh tongue of the Northern Highlands."
+	desc = "La lengua dura de las Tierras Altas del Norte."
 	speech_verb = "remarks"
 	ask_verb = "inquires"
-	exclaim_verb = "asserts"
+	exclaim_verb = "afirma"
 	key = "s"
 	space_chance = 45
 	default_priority = 90

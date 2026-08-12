@@ -1,7 +1,7 @@
 /datum/preference/color/underwear_color
 	savefile_key = "underwear_color"
 	savefile_identifier = PREF_CHARACTER
-	category = "appearance"
+	category = "apariencia"
 	allows_nulls = TRUE
 	default_null = TRUE
 	can_randomize = TRUE

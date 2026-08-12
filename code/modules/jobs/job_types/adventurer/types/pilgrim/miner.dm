@@ -40,7 +40,7 @@
 		spawned.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'
 
 /datum/outfit/pilgrim/miner
-	name = "Miner (Pilgrim)"
+	name = "Minero (peregrino)"
 	pants = /obj/item/clothing/pants/trou
 	armor = /obj/item/clothing/armor/gambeson/light/striped
 	shoes = /obj/item/clothing/shoes/boots/leather

@@ -134,7 +134,7 @@ const SpellCard = (props: {
             {spell.desc}
           </Box>
           <Box fontSize="0.85em" color="label">
-            Cost: {costLabel(spell)}
+            Costo: {costLabel(spell)}
             {spell.level > 0 &&
               (spell.form || spell.technique) &&
               ` · Requires ${spell.form || spell.technique} ${spell.level}`}
@@ -143,7 +143,7 @@ const SpellCard = (props: {
         <Stack.Item>
           {unlearnMode ? (
             <Button
-              content="Unlearn"
+              content="Desaprender"
               color="bad"
               disabled={!spell.canUnlearn}
               onClick={() => onUnlearn(spell.path)}
@@ -152,7 +152,7 @@ const SpellCard = (props: {
             <Icon name="check" color="good" />
           ) : (
             <Button
-              content="Learn"
+              content="Aprender"
               disabled={!spell.canLearn}
               onClick={() => onLearn(spell.path)}
             />
@@ -188,7 +188,7 @@ const InvestRow = (props: {
       <Stack.Item grow>
         <Box bold>{track.name}</Box>
         <Box color="label" fontSize="0.9em">
-          {track.rank} - Level {track.level}
+          {track.rank} - Nivel {track.level}
         </Box>
         {modifierText && (
           <Box color="average" fontSize="0.85em">
@@ -198,7 +198,7 @@ const InvestRow = (props: {
       </Stack.Item>
       <Stack.Item>
         <Button
-          content="Invest 1 point"
+          content="Invierte 1 punto"
           disabled={disabled}
           onClick={() => onInvest(track.id)}
         />
@@ -226,7 +226,7 @@ const StatsPage = (props: {
     <Stack fill mt={1}>
       <Stack.Item grow>
         <Section
-          title="Techniques"
+          title="Técnicas"
           fill
           scrollable
           buttons={
@@ -247,7 +247,7 @@ const StatsPage = (props: {
       </Stack.Item>
       <Stack.Item grow>
         <Section
-          title="Forms"
+          title="Formularios"
           fill
           scrollable
           buttons={
@@ -345,7 +345,7 @@ const LearnPage = (props: {
       <Stack.Item grow style={{ minHeight: 0 }}>
         <Stack fill>
           <Stack.Item grow={3} style={{ minHeight: 0 }}>
-            <Section title="Techniques" fill>
+            <Section title="Técnicas" fill>
               <Stack vertical fill>
 
                 <Stack.Item>
@@ -371,7 +371,7 @@ const LearnPage = (props: {
                 <Stack.Item grow style={{ minHeight: 0, overflowY: 'auto' }}>
                   {visibleTechniqueSpells.length === 0 && (
                     <Box color="label" italic>
-                      No technique-gated spells here yet.
+                      Aquí todavía no hay hechizos controlados por técnicas.
                     </Box>
                   )}
                   {visibleTechniqueSpells.map((spell) => (
@@ -393,7 +393,7 @@ const LearnPage = (props: {
             <Section title={`Techniqueless ${activeForm}`} fill scrollable>
               {techniquelessSpells.length === 0 && (
                 <Box color="label" italic>
-                  No techniqueless {activeForm} spells.
+                  Sin técnicas {activeForm} hechizos.
                 </Box>
               )}
               {techniquelessSpells.map((spell) => (
@@ -429,22 +429,22 @@ export const SpellBook = () => {
   const [page, setPage] = useState<'learn' | 'stats'>('learn');
 
   return (
-    <Window width={780} height={640} title="Spellcraft">
+    <Window width={780} height={640} title="Hechicería">
       <Window.Content scrollable={false}>
         <Stack vertical fill>
           <Stack.Item>
             <Section
-              title="Spellcraft"
+              title="Hechicería"
               buttons={
                 <Stack>
                   <Stack.Item>
                     <Box bold color={unspentFormPoints > 0 ? 'good' : 'label'}>
-                      Form: {unspentFormPoints}
+                      Forma: {unspentFormPoints}
                     </Box>
                   </Stack.Item>
                   <Stack.Item>
                     <Box bold color={unspentTechniquePoints > 0 ? 'good' : 'label'}>
-                      Technique: {unspentTechniquePoints}
+                      Técnica: {unspentTechniquePoints}
                     </Box>
                   </Stack.Item>
                 </Stack>
@@ -453,11 +453,11 @@ export const SpellBook = () => {
               <Tabs>
                 <Tabs.Tab selected={page === 'learn'} onClick={() => setPage('learn')}>
                   <Icon name="book-open" mr={1} />
-                  Learn
+                  Aprender
                 </Tabs.Tab>
                 <Tabs.Tab selected={page === 'stats'} onClick={() => setPage('stats')}>
                   <Icon name="chart-simple" mr={1} />
-                  Stats
+                  Estadísticas
                 </Tabs.Tab>
               </Tabs>
             </Section>

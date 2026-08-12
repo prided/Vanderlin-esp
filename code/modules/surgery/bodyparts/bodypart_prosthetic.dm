@@ -3,7 +3,7 @@
 		return
 
 	if(user.zone_selected != body_zone) //so we can't replace a leg with an arm, or a human arm with a monkey arm.
-		to_chat(user, span_warning("[src] isn't the right type for [parse_zone(user.zone_selected)]."))
+		to_chat(user, span_warning("[src] no es el tipo correcto para [parse_zone(user.zone_selected)]."))
 		return -1
 
 	var/obj/item/bodypart/affecting = H.get_bodypart(check_zone(user.zone_selected))
@@ -72,8 +72,8 @@
 // --------- WOOD PROSTHETICS -----------
 
 /obj/item/bodypart/l_arm/prosthetic/wood
-	name = "left wooden arm"
-	desc = "A left arm of wood."
+	name = "brazo de madera izquierdo"
+	desc = "Un brazo izquierdo de madera."
 	icon_state = "prarm"
 	resistance_flags = FLAMMABLE
 	max_damage = 100
@@ -84,8 +84,8 @@
 	anvilrepair = /datum/attribute/skill/craft/carpentry
 
 /obj/item/bodypart/r_arm/prosthetic/wood
-	name = "right wooden arm"
-	desc = "A right arm of wood."
+	name = "brazo de madera derecho"
+	desc = "Un brazo derecho de madera."
 	icon_state = "prarm"
 	resistance_flags = FLAMMABLE
 	max_damage = 100
@@ -110,7 +110,7 @@
 
 /obj/item/bodypart/r_leg/prosthetic/wood
 	name = "right wooden leg"
-	desc = "A right leg of wood."
+	desc = "Una pierna derecha de madera."
 	icon_state = "pleg"
 	resistance_flags = FLAMMABLE
 	max_damage = 100
@@ -125,8 +125,8 @@
 
 
 /obj/item/bodypart/l_arm/prosthetic/iron
-	name = "iron left arm"
-	desc = "A left arm of iron."
+	name = "brazo izquierdo de hierro"
+	desc = "Un brazo izquierdo de hierro."
 	icon_state = "prarm"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_NORMAL
@@ -139,8 +139,8 @@
 	punch_modifier = 1.2
 
 /obj/item/bodypart/r_arm/prosthetic/iron
-	name = "iron right arm"
-	desc = "A right arm of iron."
+	name = "brazo derecho de hierro"
+	desc = "Un brazo derecho de hierro."
 	icon_state = "prarm"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_NORMAL
@@ -153,8 +153,8 @@
 	punch_modifier = 1.2
 
 /obj/item/bodypart/l_leg/prosthetic/iron
-	name = "iron left leg"
-	desc = "A left leg of iron."
+	name = "pierna izquierda de hierro"
+	desc = "Una pierna izquierda de hierro."
 	icon_state = "pleg"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_NORMAL
@@ -167,8 +167,8 @@
 	smeltresult = /obj/item/ingot/iron
 
 /obj/item/bodypart/r_leg/prosthetic/iron
-	name = "iron right leg"
-	desc = "A right leg of iron."
+	name = "pierna derecha de hierro"
+	desc = "Una pierna derecha de hierro."
 	icon_state = "pleg"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_NORMAL
@@ -184,8 +184,8 @@
 // --------- STEEL PROSTHETICS -----------
 
 /obj/item/bodypart/l_arm/prosthetic/steel
-	name = "steel left arm"
-	desc = "A left arm of steel."
+	name = "brazo izquierdo de acero"
+	desc = "Un brazo izquierdo de acero."
 	icon_state = "prarm"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_NORMAL
@@ -199,8 +199,8 @@
 	punch_modifier = 1.4
 
 /obj/item/bodypart/r_arm/prosthetic/steel
-	name = "steel right arm"
-	desc = "A right arm of steel."
+	name = "brazo derecho de acero"
+	desc = "Un brazo derecho de acero."
 	icon_state = "prarm"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_NORMAL
@@ -214,8 +214,8 @@
 	punch_modifier = 1.4
 
 /obj/item/bodypart/l_leg/prosthetic/steel
-	name = "steel left leg"
-	desc = "A left leg of steel."
+	name = "pierna izquierda de acero"
+	desc = "Una pierna izquierda de acero."
 	icon_state = "pleg"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_NORMAL
@@ -229,8 +229,8 @@
 	melting_material = /datum/material/steel
 
 /obj/item/bodypart/r_leg/prosthetic/steel
-	name = "steel right leg"
-	desc = "A right leg of steel."
+	name = "pierna derecha de acero"
+	desc = "Una pierna derecha de acero."
 	icon_state = "pleg"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_NORMAL
@@ -246,8 +246,8 @@
 // --------- GOLD PROSTHETICS -----------
 
 /obj/item/bodypart/l_arm/prosthetic/gold
-	name = "golden left arm"
-	desc = "A left arm of cogs and gold."
+	name = "brazo izquierdo dorado"
+	desc = "Un brazo izquierdo de engranajes y oro."
 	icon_state = "bprarm"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_BULKY
@@ -258,8 +258,8 @@
 	smeltresult = /obj/item/ingot/gold
 
 /obj/item/bodypart/r_arm/prosthetic/gold
-	name = "golden right arm"
-	desc = "A right arm of cogs and gold."
+	name = "brazo derecho dorado"
+	desc = "Un brazo derecho de engranajes y oro."
 	icon_state = "bprarm"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_BULKY
@@ -270,8 +270,8 @@
 	smeltresult = /obj/item/ingot/gold
 
 /obj/item/bodypart/l_leg/prosthetic/gold
-	name = "golden left leg"
-	desc = "A left leg of cogs and gold."
+	name = "pierna izquierda dorada"
+	desc = "Una pierna izquierda de engranajes y oro."
 	icon_state = "bpleg"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_BULKY
@@ -282,8 +282,8 @@
 	smeltresult = /obj/item/ingot/gold
 
 /obj/item/bodypart/r_leg/prosthetic/gold
-	name = "golden right leg"
-	desc = "A right leg of cogs and gold."
+	name = "pierna derecha dorada"
+	desc = "Una pierna derecha de engranajes y oro."
 	icon_state = "bpleg"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_BULKY
@@ -296,7 +296,7 @@
 // --------- BRONZE PROSTHETICS -----------
 
 /obj/item/bodypart/l_arm/prosthetic/bronze
-	name = "bronze left arm"
+	name = "brazo izquierdo de bronce"
 	desc = "A replacement left arm, engineered out of bronze."
 	icon_state = "bprarm"
 	resistance_flags = FIRE_PROOF
@@ -308,7 +308,7 @@
 	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/bodypart/r_arm/prosthetic/bronze
-	name = "bronze right arm"
+	name = "brazo derecho de bronce"
 	desc = "A replacement right arm, engineered out of bronze."
 	icon_state = "bprarm"
 	resistance_flags = FIRE_PROOF

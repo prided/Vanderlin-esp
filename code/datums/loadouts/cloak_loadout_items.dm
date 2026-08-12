@@ -7,7 +7,7 @@
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/tabard
-	name = "Sleeved Tabard"
+	name = "Tabardo con mangas"
 	item_path = /obj/item/clothing/cloak/sleevedtabard
 	ui_category = "Cloaks"
 
@@ -21,7 +21,7 @@
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/toga
-	name = "Black Toga"
+	name = "Toga Negra"
 	item_path = /obj/item/clothing/cloak/psydontabard/black
 	ui_category = "Cloaks"
 
@@ -63,7 +63,7 @@
 	triumph_cost_permanent = 75
 
 /datum/loadout_item/halfcloak
-	name = "Halfcloak"
+	name = "media capa"
 	item_path = /obj/item/clothing/cloak/half
 	ui_category = "Cloaks"
 
@@ -84,21 +84,21 @@
 	triumph_cost_permanent = 25
 
 /datum/loadout_item/poncho
-	name = "Cloth Poncho"
+	name = "Poncho de tela"
 	item_path = /obj/item/clothing/cloak/poncho
 	ui_category = "Cloaks"
 
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/vest
-	name = "Cloth Vest"
+	name = "Chaleco de tela"
 	item_path = /obj/item/clothing/shirt/clothvest/colored/random
 	ui_category = "Cloaks"
 
 	triumph_cost_permanent = 25
 
 /datum/loadout_item/wicker
-	name = "Wicker Cloak"
+	name = "Capa de mimbre"
 	item_path = /obj/item/clothing/cloak/wickercloak
 	ui_category = "Cloaks"
 
@@ -118,7 +118,7 @@
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/bandolier
-	name = "Bandolier"
+	name = "Bandolera"
 	item_path = /obj/item/clothing/cloak/bandolier
 	ui_category = "Cloaks"
 	triumph_cost_permanent = 100

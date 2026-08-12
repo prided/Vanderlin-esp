@@ -77,7 +77,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/troll/broodmother/proc/frenzy_on()
 	if(!frenzy_ready)
-		to_chat(src, span_danger("Not ready!"))
+		to_chat(src, span_danger("¡No estoy listo!"))
 		return FALSE
 
 	frenzy_ready = FALSE
@@ -109,7 +109,7 @@
 	mother.frenzy_on()
 
 /datum/action/cooldown/spell/projectile/acid_splash_broodmother
-	name = "Acid Vomit"
+	name = "Vómito ácido"
 	desc = "A slow-moving glob of acid that sprays over an area upon impact."
 	button_icon_state = "acidsplash"
 	sound = 'sound/magic/whiteflame.ogg'
@@ -244,7 +244,7 @@
 
 /obj/structure/broodmother_egg
 	name = "egg"
-	desc = "An egg..."
+	desc = "Un huevo..."
 	abstract_type = /obj/structure/broodmother_egg
 	icon = 'icons/obj/broodmother_32x.dmi'
 	var/hatched = FALSE
@@ -262,7 +262,7 @@
 /obj/structure/broodmother_egg/proc/hatch()
 	hatched = TRUE
 	icon_state = "[icon_state]_hatched"
-	name = "hatched " + name
+	name = "eclosionado " + name
 	playsound(src, 'sound/foley/eggbreak.ogg', 70, TRUE)
 	animate(src, tag = "hatching_animation", flags = ANIMATION_END_NOW)
 	var/mob/living/spawned = new type_to_spawn(get_turf(src))
@@ -283,12 +283,12 @@
 	addtimer(CALLBACK(src, PROC_REF(crack)), cracking_speed)
 
 /obj/structure/broodmother_egg/goblin
-	name = "small egg"
+	name = "huevo pequeño"
 	icon_state = "goblin_egg"
 	type_to_spawn = /mob/living/carbon/human/species/goblin/slaved
 
 /obj/structure/broodmother_egg/orc
-	name = "medium egg"
+	name = "huevo mediano"
 	icon_state = "orc_egg"
 	type_to_spawn = /mob/living/carbon/human/species/orc/slaved
 	hatch_time = 3 MINUTES
@@ -296,7 +296,7 @@
 	cracking_speed = 6 SECONDS
 
 /obj/structure/broodmother_egg/troll
-	name = "large egg"
+	name = "huevo grande"
 	icon_state = "troll_egg"
 	type_to_spawn = /mob/living/simple_animal/hostile/retaliate/troll/slaved
 	hatch_time = 5 MINUTES

@@ -116,11 +116,11 @@ export const AdminTicketGranter = () => {
   };
 
   return (
-    <Window height={640} title="Admin Ticket Granter" width={520}>
+    <Window height={640} title="Otorgante de tickets de administrador" width={520}>
       <Window.Content scrollable>
         <Stack vertical fill>
         {templates.length > 0 && (
-            <Section title="Templates">
+            <Section title="Plantillas">
               <Stack wrap>
                 {templates.map((tpl) => (
                   <Stack.Item key={tpl.label} mb={1} mr={1}>
@@ -136,7 +136,7 @@ export const AdminTicketGranter = () => {
               </Stack>
             </Section>
           )}
-          <Section title="Ticket Type">
+          <Section title="Tipo de ticket">
             <Stack wrap>
               {type_schemas.map((s) => (
                 <Stack.Item key={s.ticket_type} mb={1} mr={1}>
@@ -153,9 +153,9 @@ export const AdminTicketGranter = () => {
             </Stack>
           </Section>
 
-          <Section title="Target & Details">
+          <Section title="Objetivo y detalles">
             <LabeledList>
-              <LabeledList.Item label="Target Ckey">
+              <LabeledList.Item label="Ckey objetivo">
                 <Input
                   fluid
                   placeholder="player_ckey"
@@ -163,27 +163,27 @@ export const AdminTicketGranter = () => {
                   onChange={(val) => setTargetCkey(val)}
                 />
               </LabeledList.Item>
-              <LabeledList.Item label="Ticket Name">
+              <LabeledList.Item label="Nombre del ticket">
                 <Input
                   fluid
-                  placeholder="e.g. Artificer Boost"
+                  placeholder="p.ej. Impulso de artífice"
                   value={ticketName}
                   onChange={(val) => setTicketName(val)}
                 />
               </LabeledList.Item>
-              <LabeledList.Item label="Description">
+              <LabeledList.Item label="Descripción">
                 <TextArea
                   fluid
                   height={3}
-                  placeholder="Shown to the player in trade/use panels…"
+                  placeholder="Se muestra al jugador en los paneles de comercio/uso..."
                   value={ticketDesc}
                   onChange={(val) => setTicketDesc(val)}
                 />
               </LabeledList.Item>
-              <LabeledList.Item label="Grant Reason">
+              <LabeledList.Item label="Motivo de la concesión">
                 <Input
                   fluid
-                  placeholder="Logged to game log"
+                  placeholder="Registrado en el historial del juego"
                   value={grantReason}
                   onChange={(val) => setGrantReason(val)}
                 />
@@ -246,10 +246,10 @@ export const AdminTicketGranter = () => {
 
           {anyTouched && !canSubmit && (
             <NoticeBox danger>
-              {!targetCkey.trim() && <div>Target ckey is required.</div>}
-              {!ticketName.trim() && <div>Ticket name is required.</div>}
+              {!targetCkey.trim() && <div>Se requiere el ckey objetivo.</div>}
+              {!ticketName.trim() && <div>Se requiere el nombre del ticket.</div>}
               {missingFields.map((f) => (
-                <div key={f}>Required field missing: {f}</div>
+                <div key={f}>Falta el campo obligatorio: {f}</div>
               ))}
             </NoticeBox>
           )}
@@ -261,7 +261,7 @@ export const AdminTicketGranter = () => {
               <Stack.Item>
                 {schema && targetCkey && (
                   <span style={{ color: 'var(--color-label)', fontSize: '12px' }}>
-                    Granting: <b>{schema.label}</b> → <b>{targetCkey}</b>
+                    Otorgamiento: <b>{schema.label}</b> → <b>{targetCkey}</b>
                   </span>
                 )}
               </Stack.Item>

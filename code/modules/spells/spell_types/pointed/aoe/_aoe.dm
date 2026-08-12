@@ -76,4 +76,4 @@
 /// Generic feedback after the target gathering
 /datum/action/cooldown/spell/aoe/proc/feedback(had_targets)
 	if(!had_targets)
-		to_chat(owner, span_warning("Nothing to cast on!"))
+		to_chat(owner, span_warning("¡Nada que lanzar!"))

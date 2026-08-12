@@ -9,8 +9,8 @@
 	var/scan_desc = "" //description when detected by a health scanner
 	var/mob/living/carbon/owner //the poor bastard
 	var/obj/item/organ/brain/brain //the poor bastard's brain
-	var/gain_text = span_notice("I feel traumatized.")
-	var/lose_text = span_notice("I no longer feel traumatized.")
+	var/gain_text = span_notice("Me siento traumatizado.")
+	var/lose_text = span_notice("Ya no me siento traumatizado.")
 	var/can_gain = TRUE
 	var/random_gain = TRUE //can this be gained through random traumas?
 	var/resilience = TRAUMA_RESILIENCE_BASIC //how hard is this to cure?

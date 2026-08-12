@@ -193,7 +193,7 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 	return 0
 
 /datum/attunement/fire
-	name = "Pyromancy"
+	name = "Piromancia"
 	desc = "Perhaps the most well-known, and often many a mage's first study of the elements, pyromancy covers any heat or other flame related magic."
 
 	alignments = list(
@@ -204,7 +204,7 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 	)
 
 /datum/attunement/ice
-	name = "Cryomancy"
+	name = "criomancia"
 	desc = "Sibling and eternal rival of Pyromancy, Cryomancy centers on the manipulation of the cold, far beyond just water."
 
 	alignments = list(
@@ -213,8 +213,8 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 	)
 
 /datum/attunement/electric
-	name = "Electric"
-	desc = "An element typically associated with weather, sometimes with divinity, and often technology."
+	name = "Eléctrico"
+	desc = "Un elemento típicamente asociado con el clima, a veces con la divinidad y, a menudo, con la tecnología."
 
 	alignments = list(
 		/datum/patron/divine/noc = 0.25,
@@ -223,7 +223,7 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 	)
 
 /datum/attunement/blood
-	name = "Hydrosophy"
+	name = "hidrosofía"
 	desc = "The lifeblood of all organics, water is ubiquitous with any land, and is a core aspect of any town."
 
 	alignments = list(
@@ -235,7 +235,7 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 	)
 
 /datum/attunement/life
-	name = "Life"
+	name = "Vida"
 	desc = "The driving force of, and most effectively seen in, all living matter. Life is the most far-reaching of all elements, with its effects seen across the lands."
 
 	alignments = list(
@@ -245,7 +245,7 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 	)
 
 /datum/attunement/death
-	name = "Death"
+	name = "Muerte"
 	desc = "The energy that fuels the end of effectively all living matter."
 
 	alignments = list(
@@ -255,8 +255,8 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 
 
 /datum/attunement/earth
-	name = "Earth"
-	desc = "The very ground you stand on, a raging earthquake, or a paved road, earth is all encompassing."
+	name = "Tierra"
+	desc = "El mismo suelo en el que estás, un terremoto furioso o un camino pavimentado, la tierra lo abarca todo."
 
 	alignments = list(
 		/datum/patron/divine/dendor = 1.2,
@@ -266,7 +266,7 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 
 /datum/attunement/light
 	name = "Light"
-	desc = "Light is the natural enemy of the dark."
+	desc = "La luz es el enemigo natural de la oscuridad."
 
 	alignments = list(
 		/datum/patron/divine/astrata = 0.15,
@@ -299,8 +299,8 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 	)
 
 /datum/attunement/aeromancy
-	name = "Aeromancy"
-	desc =  "Air, breathing, motion, and atmosphere. These are all products of aeromancy."
+	name = "Aeromancia"
+	desc =  "Aire, respiración, movimiento y atmósfera. Todos estos son productos de la aeromancia."
 
 	alignments = list(
 		/datum/patron/divine/abyssor = 0.5

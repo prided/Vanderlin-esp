@@ -25,10 +25,10 @@
 // Called when the on-screen button is clicked
 /datum/action/cooldown/spell/lunge/PreActivate(atom/target)
 	if(!QDELETED(owner.pulledby) && owner.pulledby.grab_state >= GRAB_AGGRESSIVE)
-		owner.balloon_alert(owner, "grabbed!")
+		owner.balloon_alert(owner, "¡agarrado!")
 		return FALSE
 	if(!QDELETED(owner.pulling))
-		owner.balloon_alert(owner, "grabbing someone!")
+		owner.balloon_alert(owner, "¡agarrando a alguien!")
 		return FALSE
 	. = ..()
 
@@ -98,7 +98,7 @@
 				break
 			sleep(1)
 	else
-		owner.balloon_alert(owner, "too far away!")
+		owner.balloon_alert(owner, "¡demasiado lejos!")
 
 	lunge_end(hit_atom, targeted_turf)
 	sleep(0.5 SECONDS)

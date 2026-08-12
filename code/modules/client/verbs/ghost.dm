@@ -1,5 +1,5 @@
 /mob/dead/observer/verb/ghost_upward()
-	set name = "Ghost Up"
+	set name = "Fantasma arriba"
 	set category = "Spirit"
 
 	if(!isobserver(usr))
@@ -7,7 +7,7 @@
 	up()
 
 /mob/dead/observer/verb/ghost_downward()
-	set name = "Ghost Down"
+	set name = "Fantasma abajo"
 	set category = "Spirit"
 
 	if(!isobserver(usr))
@@ -15,14 +15,14 @@
 	down()
 
 /mob/verb/descend_to_underworld()
-	set name = "Journey to the Underworld"
+	set name = "Viaje al inframundo"
 	set category = "IC"
 
 	if(can_enter_underworld())
 		enter_underworld()
 
 /mob/dead/observer/verb/dead_to_underworld()
-	set name = "Journey to the Underworld"
+	set name = "Viaje al inframundo"
 	set category = "Spirit"
 
 	if(can_enter_underworld())
@@ -73,7 +73,7 @@
 
 /mob/proc/can_enter_underworld()
 	if(stat < DEAD && !IS_DEADITE(src))
-		to_chat(src, span_danger("You are not dead!"))
+		to_chat(src, span_danger("¡No estás muerto!"))
 		return FALSE
 
 	if(!length(GLOB.underworldspiritspawns)) //That cant be good.
@@ -94,7 +94,7 @@
 	if(!answer || QDELETED(src))
 		return FALSE
 	if(answer == CHOICE_NO)
-		to_chat(src, span_warning("You have second thoughts."))
+		to_chat(src, span_warning("Tienes dudas."))
 		return FALSE
 
 	return TRUE
@@ -108,7 +108,7 @@
 	if(!answer || QDELETED(src))
 		return FALSE
 	if(answer == CHOICE_NO)
-		to_chat(src, span_warning("You have second thoughts."))
+		to_chat(src, span_warning("Tienes dudas."))
 		return FALSE
 
 	return TRUE

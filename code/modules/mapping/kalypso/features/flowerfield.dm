@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/flowerfield
-	name = "Flower Field"
+	name = "campo de flores"
 	id = "feature_flowerfield"
 	mappath = "_maps/kalypso/flowerfield.dmm"
 

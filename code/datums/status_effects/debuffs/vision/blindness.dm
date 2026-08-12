@@ -82,7 +82,7 @@
 	return ..()
 
 /atom/movable/screen/alert/status_effect/blind
-	name = "Blind"
+	name = "Ciego"
 	desc = "You can't see! This may be caused by a genetic defect, eye trauma, being unconscious, or something covering your eyes."
 	icon_state = "blind"
 

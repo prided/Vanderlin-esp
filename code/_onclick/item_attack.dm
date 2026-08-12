@@ -10,7 +10,7 @@
 /obj/item/proc/melee_attack_chain(mob/user, atom/target, list/modifiers)
 	var/obj/item/grabbing/arm_grab = user.check_arm_grabbed(user.active_hand_index)
 	if(arm_grab)
-		to_chat(user, span_notice("I can't move my arm!"))
+		to_chat(user, span_notice("¡No puedo mover el brazo!"))
 		if(HAS_TRAIT(src, TRAIT_WIELDED))
 			if(iscarbon(user))
 				var/mob/living/carbon/carbon_user = user
@@ -23,7 +23,7 @@
 		return TRUE
 	if(!istype(src, /obj/item/grabbing))
 		if(HAS_TRAIT(user, TRAIT_CHUNKYFINGERS))
-			to_chat(user, span_warning("...What?"))
+			to_chat(user, span_warning("...¿Qué?"))
 			return TRUE
 
 	var/is_right_clicking = LAZYACCESS(modifiers, RIGHT_CLICK)
@@ -248,7 +248,7 @@
 		return FALSE
 
 	if(force && HAS_TRAIT(user, TRAIT_PACIFISM))
-		to_chat(user, "<span class='warning'>I don't want to harm other living beings!</span>")
+		to_chat(user, "<span class='warning'>¡No quiero dañar a otros seres vivos!</span>")
 		return FALSE
 
 	M.lastattacker = user.real_name
@@ -398,7 +398,7 @@
 			damage_verb = "ineffectively hits"
 			newforce = 1
 
-	user.visible_message(span_danger("[user] [damage_verb] [src] with [attacking_item]!"))
+	user.visible_message(span_danger("[user] [damage_verb] [src] con [attacking_item]!"))
 	take_damage(newforce, attacking_item.damtype, attacking_item.damage_type, TRUE)
 	log_combat(user, src, "attacked", attacking_item)
 	return TRUE
@@ -674,7 +674,7 @@
 	next_attack_msg.Cut()
 	if(armor > 0)
 		nodmg = TRUE
-		next_attack_msg += span_warning("Armor stops the damage.")
+		next_attack_msg += span_warning("La armadura detiene el daño.")
 	apply_damage(newforce, I.damtype, hitlim, armor)
 	if(newforce)
 		SEND_SIGNAL(I, COMSIG_ITEM_POST_ATTACK_SIMPLE, src, user, newforce)
@@ -821,9 +821,9 @@
 
 	var/message_hit_area = ""
 	if(hit_area)
-		message_hit_area = " in the [hit_area]"
+		message_hit_area = " en el [hit_area]"
 
-	var/attack_message = "[user] [message_verb] [src][message_hit_area] with [I]!"
+	var/attack_message = "[user] [message_verb] [src][message_hit_area] con [I]!"
 	var/attack_message_local = "[user] [message_verb] me[message_hit_area] with [I]!"
 	visible_message(
 		span_danger("[attack_message][next_attack_msg.Join()]"),

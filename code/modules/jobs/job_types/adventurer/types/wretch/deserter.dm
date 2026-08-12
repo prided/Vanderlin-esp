@@ -22,7 +22,7 @@
 	)
 
 /datum/job/advclass/wretch/disgraced
-	title = "Disgraced Knight"
+	title = "Caballero deshonrado"
 	tutorial = "You were once a venerated and revered knight - now, a traitor who abandoned your liege. You live the life of an outlaw, shunned and looked down upon by society."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
@@ -52,7 +52,7 @@
 /datum/job/advclass/wretch/disgraced/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 
-	if(tgui_alert(spawned, "Do you wish to be recognized as a non-foreigner?", "Foreigner", list("Yes", "No")) == "Yes")
+	if(tgui_alert(spawned, "¿Desea ser reconocido como no extranjero?", "Foreigner", list("Yes", "No")) == "Yes")
 		REMOVE_TRAIT(spawned, TRAIT_FOREIGNER, TRAIT_GENERIC)
 
 	// Weapon selection
@@ -66,7 +66,7 @@
 		"Mace" = /obj/item/weapon/mace/goden/steel,
 	)
 
-	var/weaponchoice = spawned.select_equippable(player_client, selectableweapon, message = "Choose Your Specialisation", title = "DISGRACED KNIGHT")
+	var/weaponchoice = spawned.select_equippable(player_client, selectableweapon, message = "Elige tu especialización", title = "CABALLERO DESGRACIADO")
 	if(!weaponchoice)
 		return
 
@@ -109,7 +109,7 @@
 		"None" = /obj/item/clothing/head/roguehood/colored/uncolored,
 	)
 
-	var/helmetchoice = spawned.select_equippable(player_client, selectablehelmets, message = "Choose Your Helmet", title = "DISGRACED KNIGHT")
+	var/helmetchoice = spawned.select_equippable(player_client, selectablehelmets, message = "Elige tu casco", title = "CABALLERO DESGRACIADO")
 	if(!helmetchoice)
 		return
 

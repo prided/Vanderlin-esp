@@ -4,7 +4,7 @@
 	severity = WOUND_SEVERITY_FATAL
 	crit_message = list(
 		"%VICTIM spills %P_THEIR organs!",
-		"%VICTIM spills %P_THEIR entrails!",
+		"%VICTIM derrama %P_¡SUS entrañas!",
 	)
 	sound_effect = 'sound/combat/crit2.ogg'
 	whp = 100

@@ -1,6 +1,6 @@
 /obj/item/canvas
 	name = "canvas"
-	desc = "A perfect place to capture Psydonia through art."
+	desc = "Un lugar perfecto para capturar Psydonia a través del arte."
 
 	icon = 'icons/paint_supplies/canvas_32.dmi'
 	icon_state = "canvas"
@@ -59,7 +59,7 @@
 /obj/item/canvas/attack_hand(mob/user)
 	. = ..()
 	if(anchored)
-		to_chat(user, "I start unmounting [src]...")
+		to_chat(user, "Empiezo a desmontar [src]...")
 		if(!do_after(user, 3 SECONDS, src))
 			return
 		anchored = FALSE
@@ -86,7 +86,7 @@
 		if(title)
 			name = title
 		if(author)
-			desc = "Painted by: [author]."
+			desc = "Pintado por: [author]."
 
 		return ITEM_INTERACT_SUCCESS
 

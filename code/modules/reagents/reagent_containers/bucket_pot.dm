@@ -114,10 +114,10 @@
 		return ..()
 
 	if(tool.reagents?.holder_full())
-		balloon_alert(user, "the [tool] is full!")
+		balloon_alert(user, "¡el [tool] está lleno!")
 		return ITEM_INTERACT_BLOCKING
 
-	balloon_alert(user, "filling [tool].")
+	balloon_alert(user, "llenando [tool].")
 
 	playsound(user, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 70, FALSE)
 

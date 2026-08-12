@@ -1,5 +1,5 @@
 /datum/gem_cut/radiant
-	name = "radiant"
+	name = "radiante"
 
 /datum/gem_cut/radiant/setup_cut(multiplier)
 	weapon_effect_type = /datum/rune_effect/damage/holy

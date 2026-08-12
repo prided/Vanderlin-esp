@@ -45,7 +45,7 @@ GLOBAL_LIST_INIT(hedgeknight_aggro, file2list("strings/rt/hedgeknightaggrolines.
 
 /mob/living/carbon/human/species/human/northern/deranged_knight/after_creation()
 	..()
-	job = "Ascendant Knight"
+	job = "Caballero Ascendente"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_LEECHIMMUNE, INNATE_TRAIT)

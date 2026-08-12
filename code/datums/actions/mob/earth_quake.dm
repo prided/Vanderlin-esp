@@ -1,5 +1,5 @@
 /datum/action/cooldown/mob_cooldown/earth_quake
-	name = "Earth Quake"
+	name = "Terremoto"
 	button_icon = 'icons/effects/effects.dmi'
 	button_icon_state = "explosion"
 	desc = "Quake the earth beneath you, throwing others away."

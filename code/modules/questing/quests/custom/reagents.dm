@@ -14,7 +14,7 @@
 	if(!fill_common_fields(user))
 		return FALSE
 
-	var/search_query = tgui_input_text(user, "Search for the reagent:", "Reagent Search", "", 60)
+	var/search_query = tgui_input_text(user, "Search for the reagent:", "Búsqueda de reactivos", "", 60)
 	if(!search_query)
 		return FALSE
 
@@ -22,7 +22,7 @@
 	if(!length(results))
 		return FALSE // caller displays "no results"
 
-	var/chosen_name = tgui_input_list(user, "Select the reagent:", "Reagent Search Results", results)
+	var/chosen_name = tgui_input_list(user, "Seleccione el reactivo:", "Reagent Search Results", results)
 	if(!chosen_name)
 		return FALSE
 
@@ -41,7 +41,7 @@
 	quest_giver_name = user.real_name
 
 	var/auto_title = get_title()
-	var/custom_title = tgui_input_text(user, "Give this quest a title (blank = auto):", "Quest Title", "", 80)
+	var/custom_title = tgui_input_text(user, "Dale un título a esta misión (en blanco = automático):", "Título de la misión", "", 80)
 	title = custom_title ? custom_title : auto_title
 	return TRUE
 

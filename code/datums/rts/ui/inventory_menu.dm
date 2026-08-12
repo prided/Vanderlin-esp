@@ -126,7 +126,7 @@
 		add_overlay(MA)
 		name = "[parent_menu.get_slot_display_name(slot_type)]: [item.name]"
 	else
-		name = "[parent_menu.get_slot_display_name(slot_type)]: Empty"
+		name = "[parent_menu.get_slot_display_name(slot_type)]: Vacío"
 
 /atom/movable/screen/worker_inventory_slot/Click(location, control, params)
 	. = ..()
@@ -172,7 +172,7 @@
 	for(var/obj/effect/building_node/node in available_nodes)
 		node_options[node.name] = node
 
-	var/choice = input(user, "Select storage location:", "Store Gear") as null|anything in node_options
+	var/choice = input(user, "Seleccione la ubicación de almacenamiento:", "Store Gear") as null|anything in node_options
 	if(!choice)
 		return
 

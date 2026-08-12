@@ -51,7 +51,7 @@
 			H.update_inv_armor()
 
 /obj/item/clothing/cloak/psydontabard/black
-	name = "blessed tabard"
+	name = "tabardo bendito"
 	desc = "A tabard worn by the worshippers of Psydon. A funeral shroud for the paradise that could've been, and a solemn vow to continue the struggle towards salvation."
 	icon_state = "blackpsydontabard"
 	item_state = "blackpsydontabard"
@@ -77,7 +77,7 @@
 			flags_inv = NONE
 			to_chat(usr, span_warning("You pull back the threaded burlap, baring your heart to Psydonia's eyes."))
 		if(TRUE)
-			name = "blessed tabard"
+			name = "tabardo bendito"
 			desc = "A tabard worn by the worshippers of Psydon. A funeral shroud for the paradise that could've been, and a solemn vow to continue the struggle towards salvation."
 			body_parts_covered = CHEST|GROIN
 			icon_state = "blackpsydontabard"
@@ -107,7 +107,7 @@
 	. += span_info("Right-clicking this cloak allows for it to be dynamically worn as a traditional tabard, or as a sleeveless robe that partially exposes the chest.")
 
 /obj/item/clothing/cloak/tabard/toga/alt
-	name = "opened toga"
+	name = "toga abierta"
 	desc = "The ancestral predecessor to Psydonia's many tabards, parted to reveal what lies beneath its cloth."
 	body_parts_covered = GROIN
 	icon_state = "whitepsydontabardalt"
@@ -121,7 +121,7 @@
 /obj/item/clothing/cloak/tabard/toga/attack_hand_secondary(mob/user)
 	switch(open_wear)
 		if(FALSE)
-			name = "opened toga"
+			name = "toga abierta"
 			desc = "The ancestral predecessor to Psydonia's many tabards, parted to reveal what lies beneath its cloth."
 			body_parts_covered = GROIN
 			icon_state = "whitepsydontabardalt"

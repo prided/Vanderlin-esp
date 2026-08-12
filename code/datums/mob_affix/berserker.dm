@@ -1,6 +1,6 @@
 /datum/mob_affix/berserker
 	name = "Berserker"
-	description = "Becomes more dangerous when wounded"
+	description = "Se vuelve más peligroso cuando está herido."
 	color = "#FF4444"
 
 /datum/mob_affix/berserker/apply_affix(mob/living/simple_animal/hostile/retaliate/target)

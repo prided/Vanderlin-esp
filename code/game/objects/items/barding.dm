@@ -51,7 +51,7 @@
 	animal.bbarding = src
 	forceMove(animal)
 	animal.update_appearance(UPDATE_ICON)
-	user.visible_message(span_notice("[user] fits a bard onto [animal]."), span_notice("I fit a bard onto [animal]."))
+	user.visible_message(span_notice("[user] encaja un bardo en [animal]."), span_notice("I fit a bard onto [animal]."))
 
 	return ITEM_INTERACT_SUCCESS
 
@@ -83,7 +83,7 @@
 
 /obj/item/clothing/barding/honse
 	name = "padded barding"
-	desc = "A set of padded body armor for a Honse, designed to protect your mount's vital organs."
+	desc = "Un conjunto de armadura acolchada para un Honse, diseñada para proteger los órganos vitales de tu montura."
 	icon_state = "sewingkit"
 	barding_icon = 'icons/mob/monster/fogbeast.dmi'
 	barding_state = "barding"

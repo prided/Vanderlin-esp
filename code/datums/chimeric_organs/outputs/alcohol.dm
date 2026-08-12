@@ -1,6 +1,6 @@
 /datum/chimeric_node/output/alcoholic
-	name = "Distillery"
-	desc = "Adds anti toxin in relation to the alcohol inside you."
+	name = "Destilería"
+	desc = "Agrega antitoxina en relación con el alcohol dentro de ti."
 	tier = 4
 	node_purity = 100
 
@@ -27,7 +27,7 @@
 		carbons_liver.applyOrganDamage(3) //this hurts but you can still drink it
 
 /datum/reagent/distillery
-	name = "Distillery Juice"
+	name = "Jugo de destilería"
 	description = "Heals toxin damage and liver damage"
 	reagent_state = LIQUID
 	color = "#00a000"

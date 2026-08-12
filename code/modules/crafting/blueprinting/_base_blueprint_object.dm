@@ -1,7 +1,7 @@
 
 /obj/structure/blueprint
 	name = "construction blueprint"
-	desc = "A holographic blueprint for construction."
+	desc = "Un plano holográfico para la construcción."
 	icon = 'icons/effects/alphacolors.dmi'
 	icon_state = "white"
 	alpha = 0 // Keep parent invisible
@@ -96,7 +96,7 @@
 		var/needed = recipe.required_materials[mat_type]
 		var/already_stored = count_stored_of_type(mat_type)
 		if(already_stored >= needed)
-			to_chat(user, span_warning("The blueprint already has enough [initial(mat_type.name)]."))
+			to_chat(user, span_warning("El plano ya tiene suficiente [initial(mat_type.name)]."))
 			return TRUE
 
 		if(I in user.get_active_held_items())
@@ -154,7 +154,7 @@
 
 	if(recipe.construct_tool)
 		var/obj/item/tool = new recipe.construct_tool
-		desc_lines += span_notice("Required tool: [initial(tool.name)]")
+		desc_lines += span_notice("Herramienta necesaria: [initial(tool.name)]")
 		qdel(tool)
 
 	if(length(recipe.required_materials))
@@ -167,10 +167,10 @@
 		var/datum/attribute/skill/recipe_skill = recipe.skillcraft
 		var/difficulty_text = ""
 		if(recipe.craftdiff > 0)
-			difficulty_text = " (Difficulty: [recipe.craftdiff])"
-		desc_lines += span_notice("Required skill: [initial(recipe_skill.name)][difficulty_text]")
+			difficulty_text = " (Dificultad: [recipe.craftdiff])"
+		desc_lines += span_notice("Habilidad requerida: [initial(recipe_skill.name)][difficulty_text]")
 
-	desc_lines += span_notice("Construction time: [recipe.build_time * 0.1] seconds")
+	desc_lines += span_notice("Tiempo de construcción: [recipe.build_time * 0.1] segundos")
 
 	if(recipe.supports_directions)
 		desc_lines += "Can be rotated during construction"
@@ -282,7 +282,7 @@
 			return FALSE
 
 	user.face_atom(src)
-	to_chat(user, span_notice("You begin constructing \the [recipe.name]..."))
+	to_chat(user, span_notice("Comienzas a construir \the [recipe.name]..."))
 
 	for(var/i = 1 to 100)
 		var/time_to_do = recipe.build_time
@@ -300,7 +300,7 @@
 			var/available_amount = available_materials[mat_type] || 0
 			if(available_amount < needed_amount)
 				var/atom/temp = mat_type
-				to_chat(user, "<span class='warning'>Missing [needed_amount - available_amount] [initial(temp.name)]!</span>")
+				to_chat(user, "<span class='warning'>Falta [needed_amount - available_amount] [initial(temp.name)]!</span>")
 				return FALSE
 
 		var/prob2craft = 25
@@ -377,7 +377,7 @@
 		qdel(src)
 		return TRUE
 
-	to_chat(user, "<span class='danger'>After many attempts, I cannot manage to construct \the [recipe.name].</span>")
+	to_chat(user, "<span class='danger'>Después de muchos intentos, no puedo construir \the [recipe.name].</span>")
 	return FALSE
 
 /obj/structure/blueprint/proc/get_materials_in_range(mob/user, range = 3)

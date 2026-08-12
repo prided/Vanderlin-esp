@@ -7,7 +7,7 @@
 	)
 
 /datum/building_datum/simple/bomb
-	name = "Bomb Trap"
+	name = "Trampa de bomba"
 	created_atom = /obj/structure/trap/bomb
 
 	resource_cost = list(
@@ -15,7 +15,7 @@
 	)
 
 /datum/building_datum/simple/saw
-	name = "Sawblade Trap"
+	name = "Trampa de hoja de sierra"
 	created_atom = /obj/structure/trap/saw_blades
 
 	resource_cost = list(
@@ -31,7 +31,7 @@
 	)
 
 /datum/building_datum/simple/wall_fire
-	name = "Fireball Trap"
+	name = "Trampa de bola de fuego"
 	created_atom = /obj/structure/trap/wall_projectile/fireball
 
 	resource_cost = list(
@@ -47,7 +47,7 @@
 	)
 
 /datum/building_datum/simple/poison
-	name = "Poison Trap"
+	name = "Trampa de veneno"
 	created_atom = /obj/structure/trap/poison
 
 	resource_cost = list(

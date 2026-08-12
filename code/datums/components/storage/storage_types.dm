@@ -148,7 +148,7 @@
 					return TRUE
 			if(user.used_intent.type == INTENT_FILL)
 				RG.reagents.add_reagent(/datum/reagent/water/gross, min(RG.volume - RG.reagents.total_volume, RG.amount_per_transfer_from_this))
-				to_chat(user, span_notice("I fill [RG] from the toilet."))
+				to_chat(user, span_notice("Lleno [RG] desde el inodoro."))
 			else if(user.used_intent.type == INTENT_POUR && RG.reagents.total_volume > 0)
 				RG.reagents.remove_all(RG.amount_per_transfer_from_this)
 				to_chat(user, span_notice("I pour [RG] down the toilet."))
@@ -169,7 +169,7 @@
 	if(!isturf(host.loc))
 		return FALSE
 	if(I.w_class > max_w_class)
-		to_chat(M, span_warning("[I] does not fit!"))
+		to_chat(M, span_warning("¡[I] no encaja!"))
 		return FALSE
 	if(real_location.contents.len >= max_items)
 		to_chat(M, span_warning("The toilet is full!"))
@@ -178,10 +178,10 @@
 	for(var/obj/item/_I in real_location)
 		sum_w_class += _I.w_class //Adds up the combined w_classes which will be in the storage item if the item is added to it.
 	if(sum_w_class > max_combined_w_class)
-		to_chat(M, span_warning("The toilet is too full to fit [I]!"))
+		to_chat(M, span_warning("¡El inodoro está demasiado lleno para que quepa [I]!"))
 		return FALSE
 	if(HAS_TRAIT(I, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
-		to_chat(M, span_warning("\the [I] is stuck to your hand, you can't put it in \the [host]!"))
+		to_chat(M, span_warning("\the [I] está pegado a tu mano, ¡no puedes ponerlo en \the [host]!"))
 		return FALSE
 	return TRUE
 

@@ -1,6 +1,6 @@
 
 /datum/bar_item
-	var/name = "Beer"
+	var/name = "Cerveza"
 	var/stamina_restore = 10
 	var/joy = 5
 	var/created_amount = 1
@@ -13,7 +13,7 @@
 	)
 
 /datum/bar_item/beer
-	name = "Beer"
+	name = "Cerveza"
 	stamina_restore = 10
 	joy = 10
 

@@ -1,6 +1,6 @@
 /datum/book_entry/plant_families
 	name = "Plant Family Classifications"
-	category = "Agriculture"
+	category = "Agricultura"
 
 /datum/book_entry/plant_families/inner_book_html(mob/user)
 	return {"

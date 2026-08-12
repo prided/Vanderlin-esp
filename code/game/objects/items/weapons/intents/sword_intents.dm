@@ -106,7 +106,7 @@
 /datum/intent/sword/bash
 	name = "pommel bash"
 	icon_state = "inbash"
-	attack_verb = list("bashes", "strikes")
+	attack_verb = list("bashes", "huelgas")
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
 	blade_class = BCLASS_BLUNT
 	clickcd = 14
@@ -195,7 +195,7 @@
 /datum/intent/katana/arc
 	name = "arc slash"
 	icon_state = "inarc"
-	attack_verb = list("sweeps", "arcs")
+	attack_verb = list("sweeps", "arcos")
 	animname = "cut"
 	blade_class = BCLASS_CHOP
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
@@ -205,9 +205,9 @@
 	misscost = 14
 
 /datum/intent/katana/precision_cut
-	name = "precision cut"
+	name = "corte de precisión"
 	icon_state = "incut"
-	attack_verb = list("precision-cuts", "clean-slashes")
+	attack_verb = list("cortes de precisión", "clean-slashes")
 	animname = "cut"
 	blade_class = BCLASS_CUT
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')

@@ -185,7 +185,7 @@ GLOBAL_LIST_EMPTY(biggates)
 /obj/structure/winch/attack_hand(mob/user)
 	. = ..()
 	if(!length(redstone_attached))
-		to_chat(user, span_warning("The chain is not attached to anything."))
+		to_chat(user, span_warning("La cadena no está unida a nada."))
 		return
 
 	if(!isliving(user))

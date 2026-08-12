@@ -174,7 +174,7 @@
 		switch(talisman_interaction)
 			if (RUNE_CAN_ATTUNE)
 				playsound(src, 'sound/effects/vampire/talisman_attune.ogg', 50, 0, -5)
-				to_chat(user, span_notice("\The [src] can now remotely trigger the [initial(spell.name)] rune.") )
+				to_chat(user, span_notice("\The [src] ahora puede activar de forma remota la runa [initial(spell.name)].") )
 				attuned_rune = R
 			if (RUNE_CAN_IMBUE)
 				playsound(src, 'sound/effects/vampire/talisman_imbue.ogg', 50, 0, -5)

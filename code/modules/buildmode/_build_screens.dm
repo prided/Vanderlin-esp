@@ -29,7 +29,7 @@
 
 /atom/movable/screen/buildmode/help
 	icon_state = "buildhelp"
-	name = "Buildmode Help"
+	name = "Ayuda del modo de construcción"
 	screen_loc = "NORTH,WEST+1"
 
 /atom/movable/screen/buildmode/help/Click()
@@ -37,7 +37,7 @@
 
 /atom/movable/screen/buildmode/bdir
 	icon_state = "builddir"
-	name = "Change Direction"
+	name = "Cambiar dirección"
 	screen_loc = "NORTH,WEST+2"
 
 /atom/movable/screen/buildmode/bdir/update_icon()
@@ -49,7 +49,7 @@
 
 /atom/movable/screen/buildmode/quit
 	icon_state = "buildquit"
-	name = "Quit Buildmode"
+	name = "Salir del modo de construcción"
 	screen_loc = "NORTH,WEST+3"
 
 /atom/movable/screen/buildmode/quit/Click()
@@ -98,7 +98,7 @@
 				deselect_region()
 				return TRUE
 		else
-			to_chat(client, span_boldnotice("Region selection canceled!"))
+			to_chat(client, span_boldnotice("¡Selección de región cancelada!"))
 			deselect_region()
 			return TRUE
 

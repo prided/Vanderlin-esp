@@ -52,10 +52,10 @@
 		"Sabre" = /obj/item/weapon/sword/sabre/dec,
 	)
 
-	spawned.select_equippable(player_client, weapons, message = "Choose your WEAPON.", title = "MAY YOUR AIM BE TRUE.")
+	spawned.select_equippable(player_client, weapons, message = "Elige tu ARMA.", title = "MAY YOUR AIM BE TRUE.")
 
 	var/static/list/armors = list(
 		"Fencing Cuirass" = /obj/item/clothing/armor/cuirass/fencer,
 		"Fencing Jacket" = /obj/item/clothing/armor/leather/fencer,
 	)
-	spawned.select_equippable(player_client, armors, message = "Choose your ARMOR.", title = "MAY YOUR GUARD BE UNBREAKABLE.")
+	spawned.select_equippable(player_client, armors, message = "Elige tu ARMADURA.", title = "MAY YOUR GUARD BE UNBREAKABLE.")

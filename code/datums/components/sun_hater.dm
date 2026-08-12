@@ -32,7 +32,7 @@
 		if(T.can_see_sky())
 			if(!in_sunlight)
 				in_sunlight = TRUE
-				to_chat(H, span_danger("The sunlight burns my flesh!"))
+				to_chat(H, span_danger("¡La luz del sol quema mi carne!"))
 
 			apply_sunlight_damage(H)
 		else
@@ -47,7 +47,7 @@
 		if(H.bloodpool > disguise_comp.min_bloodpool * 2)
 			return
 		disguise_comp.force_undisguise(H)
-		to_chat(H, span_warning("The sunlight breaks my disguise!"))
+		to_chat(H, span_warning("¡La luz del sol rompe mi disfraz!"))
 
 	// Apply fire damage
 	H.fire_act(1, burn_damage)

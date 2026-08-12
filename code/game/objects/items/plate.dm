@@ -67,7 +67,7 @@
 				to_chat(user, ("You cleaned the [src]"))
 				return
 		else
-			to_chat(user, span_notice("This platter is already clean."))
+			to_chat(user, span_notice("Este plato ya está limpio."))
 			return
 	if(length(contents) && istype(I, /obj/item/natural/cloth) && user?.used_intent?.type == INTENT_USE)
 		to_chat(user, span_warning("You can't clean the [src] while it has food on it!."))
@@ -93,7 +93,7 @@
 			I.pixel_y += 8
 		if(istype(I, /obj/item/reagent_containers/glass/cup/glassware/wineglass))
 			I.pixel_y += 6
-		to_chat(user, span_notice("You place [I] on [src]."))
+		to_chat(user, span_notice("Colocas [I] en [src]."))
 		AddToPlate(I, user)
 	else
 		return ..()
@@ -158,14 +158,14 @@
 	if(contents.len) // If the tray isn't empty
 		for(var/obj/item/scattered_item as anything in contents)
 			scattered_item.forceMove(drop_location())
-		user.visible_message(span_notice("[user] empties [src] on the floor."))
+		user.visible_message(span_notice("[user] vacía [src] en el suelo."))
 
 /obj/item/plate/examine(mob/user)
 	. = ..()
 	if(dirty)
 		. += span_boldwarning("This platter is filthy... absolutely disgusting.")
 	else if(cleaned)
-		. += span_info("This platter was cleaned recently!")
+		. += span_info("¡Este plato fue limpiado recientemente!")
 	else
 		. += span_info("This platter looks clean enough.")
 
@@ -189,7 +189,7 @@
 
 
 /obj/item/plate/copper
-	name = "copper platter"
+	name = "plato de cobre"
 	desc = "A platter made from a sheet of copper. Known to impart a metallic taste when eating certain foods."
 	icon_state = "platter_copper"
 	resistance_flags = FIRE_PROOF
@@ -254,7 +254,7 @@
 
 /obj/item/plate/shell
 	name = "shell platter"
-	desc = "A fancy platter carved out of shell."
+	desc = "Un plato elegante tallado en concha."
 	icon_state = "platter_shell"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -284,7 +284,7 @@
 
 /obj/item/plate/opal
 	name = "opaloise platter"
-	desc = "A fancy platter carved out of opaloise."
+	desc = "Un plato elegante tallado en opaloise."
 	icon_state = "platter_opal"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -294,7 +294,7 @@
 
 /obj/item/plate/coral
 	name = "aoetal platter"
-	desc = "A fancy platter carved out of aoetal."
+	desc = "Un plato elegante tallado en aoetal."
 	icon_state = "platter_coral"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'

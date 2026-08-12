@@ -36,7 +36,7 @@
 	contains = /obj/item/reagent_containers/powder/moondust
 
 /datum/supply_pack/narcotics/soap
-	name = "Herbal Soap"
+	name = "Jabón de hierbas"
 	cost = 10
 	contains = /obj/item/soap/bath
 
@@ -51,6 +51,6 @@
 	contains = /obj/item/reagent_containers/glass/bottle/poison
 
 /datum/supply_pack/narcotics/spoison
-	name = "Stamina Poison"
+	name = "Veneno de resistencia"
 	cost = 22
 	contains = /obj/item/reagent_containers/glass/bottle/stampoison

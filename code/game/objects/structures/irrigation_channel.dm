@@ -1,5 +1,5 @@
 /obj/structure/irrigation_channel
-	name = "irrigation channel"
+	name = "canal de riego"
 	icon = 'icons/effects/snow.dmi'
 	icon_state = "trench_base"
 
@@ -115,14 +115,14 @@
 	if((user.used_intent.type == /datum/intent/shovelscoop) || (user.used_intent.type == /datum/intent/irrigate))
 		var/obj/item/weapon/shovel/shovel = I
 		if(!shovel.heldclod)
-			user.visible_message("[user] starts digging a trench.", "I start digging a trench.")
+			user.visible_message("[user] comienza a cavar una zanja.", "Empiezo a cavar una zanja.")
 			if(!do_after(user, 10 SECONDS * shovel.toolspeed, src))
 				return
 			new /obj/structure/trench(get_turf(src))
 			qdel(src)
 			return TRUE
 
-		user.visible_message("[user] starts filling [src].", "You start filling [src].")
+		user.visible_message("[user] comienza a llenar [src].", "You start filling [src].")
 		if(!do_after(user, 4 SECONDS * shovel.toolspeed, src))
 			return
 		QDEL_NULL(shovel.heldclod)

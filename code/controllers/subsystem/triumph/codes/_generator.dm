@@ -8,7 +8,7 @@ GLOBAL_LIST_INIT(redeemed_codes, list())
 
 /client/proc/generate_codes()
 	set category = "GameMaster.Codes"
-	set name = "Generate Code"
+	set name = "Generar código"
 
 	generate_redemption_code()
 
@@ -20,7 +20,7 @@ GLOBAL_LIST_INIT(redeemed_codes, list())
 
 /client/proc/generate_custom_code()
 	set category = "GameMaster.Codes"
-	set name = "Generate Custom Code"
+	set name = "Generar código personalizado"
 
 	generate_custom_redemption_code()
 
@@ -28,20 +28,20 @@ GLOBAL_LIST_INIT(redeemed_codes, list())
 	if(!check_rights(R_FUN))
 		return
 
-	var/custom_code = input(usr, "Enter your custom code (e.g., 2025MONKE)", "Custom Code") as text|null
+	var/custom_code = input(usr, "Enter your custom code (e.g., 2025MONKE)", "Código personalizado") as text|null
 	if(!custom_code)
 		return
 
 	custom_code = uppertext(trim(custom_code))
 
 	if(length(custom_code) < 3 || length(custom_code) > 50)
-		to_chat(usr, span_warning("Code must be between 3 and 50 characters long."))
+		to_chat(usr, span_warning("El código debe tener entre 3 y 50 caracteres."))
 		return
 
 	// Check if code already exists
 	reload_global_stored_codes()
 	if(GLOB.stored_codes["[custom_code]"])
-		to_chat(usr, span_warning("This code already exists!"))
+		to_chat(usr, span_warning("¡Este código ya existe!"))
 		return
 
 	var/restrictions = browser_input_list(usr, "Add restrictions to this code?", "Code Restrictions", list("None", "Time Limited", "Use Limited", "Both"))

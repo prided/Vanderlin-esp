@@ -39,7 +39,7 @@
 
 	// Check if adjacent
 	if(!user.Adjacent(victim))
-		to_chat(user, span_warning("Target must be adjacent!"))
+		to_chat(user, span_warning("¡El objetivo debe estar adyacente!"))
 		return FALSE
 
 	// Check if target can be flung (not too heavy, not anchored, etc)
@@ -92,7 +92,7 @@
 	var/distance_traveled = get_dist(start_turf, end_turf)
 	if(distance_traveled < fling_distance)
 		victim.visible_message(
-			span_danger("[victim] slams into an obstacle!"),
+			span_danger("¡[victim] choca contra un obstáculo!"),
 			span_userdanger("You slam into something!")
 		)
 
@@ -117,8 +117,8 @@
 
 		if(hit_wall)
 			victim.visible_message(
-				span_danger("[victim] crashes into a wall with tremendous force!"),
-				span_userdanger("You crash into a wall!")
+				span_danger("¡[victim] choca contra una pared con una fuerza tremenda!"),
+				span_userdanger("¡Te chocas contra una pared!")
 			)
 
 /datum/action/cooldown/meatvine/personal/fling/evaluate_ai_score(datum/ai_controller/controller)

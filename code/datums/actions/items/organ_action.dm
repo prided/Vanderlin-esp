@@ -17,7 +17,7 @@
 	name = "Toggle [organ_target.name]"
 
 /datum/action/item_action/organ_action/use
-	name = "Use Organ"
+	name = "Usar órgano"
 
 /datum/action/item_action/organ_action/use/New(Target)
 	..()

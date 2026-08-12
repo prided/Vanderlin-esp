@@ -214,7 +214,7 @@
 		var/mob/mob_puller = mob.pulledby
 		if(HAS_TRAIT(mob, TRAIT_INCAPACITATED))
 			COOLDOWN_START(src, move_delay, 1 SECONDS)
-			to_chat(src, span_warning("I can't move!"))
+			to_chat(src, span_warning("¡No puedo moverme!"))
 			return TRUE
 		else if(HAS_TRAIT(mob, TRAIT_RESTRAINED))
 			COOLDOWN_START(src, move_delay, 1 SECONDS)
@@ -335,7 +335,7 @@
 					to_chat(L, "<span class='warning'>Some strange aura is blocking the way.</span>")
 					return
 				if (locate(/obj/effect/blessing, stepTurf))
-					to_chat(L, "<span class='warning'>Holy energies block your path!</span>")
+					to_chat(L, "<span class='warning'>¡Las energías sagradas bloquean tu camino!</span>")
 					return
 
 				L.forceMove(stepTurf)
@@ -362,7 +362,7 @@
  * (bound to 8) - repeated presses toggles through head - eyes - nose - mouth
  */
 /client/verb/body_toggle_head()
-	set name = "body-toggle-head"
+	set name = "cuerpo-alternar-cabeza"
 	set hidden = 1
 
 	if(!check_has_body_select())
@@ -384,7 +384,7 @@
 
 ///Hidden verb to target the neck, bound to 7
 /client/verb/body_neck()
-	set name = "body-neck"
+	set name = "cuerpo-cuello"
 	set hidden = 1
 
 	if(!check_has_body_select())
@@ -422,7 +422,7 @@
 
 ///Hidden verb to target the right arm, bound to 4
 /client/verb/body_r_arm()
-	set name = "body-r-arm"
+	set name = "cuerpo-r-brazo"
 	set hidden = 1
 
 	if(!check_has_body_select())
@@ -476,7 +476,7 @@
 
 ///Hidden verb to target the right leg, bound to 1
 /client/verb/body_r_leg()
-	set name = "body-r-leg"
+	set name = "cuerpo-r-pierna"
 	set hidden = 1
 
 	if(!check_has_body_select())
@@ -494,7 +494,7 @@
 
 ///Hidden verb to target the groin, bound to 2
 /client/verb/body_groin()
-	set name = "body-groin"
+	set name = "cuerpo-ingle"
 	set hidden = 1
 
 	if(!check_has_body_select())
@@ -523,7 +523,7 @@
 
 ///Verb to toggle the walk or run status
 /client/verb/toggle_walk_run()
-	set name = "toggle-walk-run"
+	set name = "alternar-caminar-correr"
 	set hidden = TRUE
 	set instant = TRUE
 	if(mob)
@@ -611,7 +611,7 @@
 	prefs.preference_toggle_flag(/datum/preference/bitwise/chat_toggles, CHAT_GHOSTWHISPER)
 	prefs.save_preferences()
 	if(prefs.preference_has_flag(/datum/preference/bitwise/chat_toggles, CHAT_GHOSTWHISPER))
-		to_chat(src, span_info("I will hear all whispers now."))
+		to_chat(src, span_info("Escucharé todos los susurros ahora."))
 	else
 		to_chat(src, span_info("I will hear like a mortal."))
 
@@ -625,9 +625,9 @@
 	prefs.preference_toggle_flag(/datum/preference/bitwise/chat_toggles, CHAT_GHOSTSIGHT)
 	prefs.save_preferences()
 	if(prefs.preference_has_flag(/datum/preference/bitwise/chat_toggles, CHAT_GHOSTSIGHT))
-		to_chat(src, span_info("I will see all whispers now."))
+		to_chat(src, span_info("Veré todos los susurros ahora."))
 	else
-		to_chat(src, span_info("I will see like a mortal."))
+		to_chat(src, span_info("Veré como un mortal."))
 
 
 /client/proc/ghost_up()
@@ -674,11 +674,11 @@
 
 	if(!can_z_move(UP, current_turf, null, ZMOVE_CAN_FLY_CHECKS|ZMOVE_FEEDBACK))
 		return
-	balloon_alert(src, "moving up...")
+	balloon_alert(src, "subiendo...")
 	if(!do_after(src, 1 SECONDS, hidden = TRUE))
 		return
 	if(zMove(UP, z_move_flags = ZMOVE_FLIGHT_FLAGS|ZMOVE_FEEDBACK))
-		to_chat(src, span_notice("You move upwards."))
+		to_chat(src, span_notice("Te mueves hacia arriba."))
 
 ///Moves a mob down a z level
 /mob/verb/down()
@@ -706,9 +706,9 @@
 
 	if(!can_z_move(DOWN, current_turf, null, ZMOVE_CAN_FLY_CHECKS|ZMOVE_FEEDBACK))
 		return
-	balloon_alert(src, "moving down...")
+	balloon_alert(src, "bajando...")
 	if(!do_after(src, 1 SECONDS, hidden = TRUE))
 		return
 	if(zMove(DOWN, z_move_flags = ZMOVE_FLIGHT_FLAGS|ZMOVE_FEEDBACK))
-		to_chat(src, span_notice("You move downwards."))
+		to_chat(src, span_notice("Te mueves hacia abajo."))
 	return FALSE

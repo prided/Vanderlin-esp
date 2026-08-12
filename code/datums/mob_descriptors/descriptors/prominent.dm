@@ -61,7 +61,7 @@
 	verbage = "is"
 
 /datum/mob_descriptor/prominent/crooked_nose
-	name = "Crooked Nose"
+	name = "Nariz torcida"
 	verbage = "%HAVE%"
 	prefix = "a"
 
@@ -79,11 +79,11 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/baggy_eye
-	name = "Baggy Eyes"
+	name = "Ojeras"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/deadfish_eye
-	name = "Dead Fish Eyes"
+	name = "Ojos de pez muerto"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/twitchy
@@ -91,19 +91,19 @@
 	verbage = "is"
 
 /datum/mob_descriptor/prominent/clumsy
-	name = "Clumsy"
+	name = "Torpe"
 	verbage = "is"
 
 /datum/mob_descriptor/prominent/unkempt
-	name = "Unkempt"
+	name = "Desaliñado"
 	verbage = "is"
 
 /datum/mob_descriptor/prominent/tidy
-	name = "Tidy"
+	name = "Ordenado"
 	verbage = "is"
 
 /datum/mob_descriptor/prominent/eloquent
-	name = "Eloquent"
+	name = "Elocuente"
 	verbage = "is"
 
 /datum/mob_descriptor/prominent/thick_tail/can_describe(mob/living/described)
@@ -115,20 +115,20 @@
 	return TRUE
 
 /datum/mob_descriptor/prominent/cleft_lip
-	name = "Cleft Lip"
+	name = "labio hendido"
 	verbage = "%HAVE%"
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/physically_deformed
-	name = "Physically Deformed"
+	name = "físicamente deformado"
 	verbage = "is"
 
 /datum/mob_descriptor/prominent/extensive_scars
-	name = "Extensive Scarring"
+	name = "Cicatrices extensas"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/move_strange
-	name = "Moves Strangely"
+	name = "Se mueve extrañamente"
 
 /datum/mob_descriptor/prominent/ghoulish_appearance
 	name = "Ghoulish Appearance"
@@ -141,7 +141,7 @@
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/prominent_bottom
-	name = "Prominent Posterior"
+	name = "Posterior prominente"
 	verbage = "%HAVE%"
 	prefix = "a"
 
@@ -155,7 +155,7 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/prominent_shoulders
-	name = "Broad Shoulders"
+	name = "Hombros anchos"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/prominent_jawline
@@ -164,22 +164,22 @@
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/cold_gaze
-	name = "Cold Gaze"
+	name = "mirada fría"
 	verbage = "%HAVE%"
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/piercing_gaze
-	name = "Piercing Gaze"
+	name = "Mirada penetrante"
 	verbage = "%HAVE%"
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/innocent_gaze
-	name = "Innocent Gaze"
+	name = "Mirada inocente"
 	verbage = "%HAVE%"
 	prefix = "an"
 
 /datum/mob_descriptor/prominent/intimidating_presence
-	name = "Intimidating Presence"
+	name = "Presencia intimidante"
 	verbage = "%HAVE%"
 	prefix = "an"
 
@@ -189,17 +189,17 @@
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/adorable_presence
-	name = "Adorable Presence"
+	name = "Presencia adorable"
 	verbage = "%HAVE%"
 	prefix = "an"
 
 /datum/mob_descriptor/prominent/lordly_presence
-	name = "Lordly Presence"
+	name = "Presencia Señorial"
 	verbage = "%HAVE%"
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/doting_presence
-	name = "Doting Presence"
+	name = "Presencia cariñosa"
 	verbage = "%HAVE%"
 	prefix = "a"
 
@@ -213,15 +213,15 @@
 	verbage = "is"
 
 /datum/mob_descriptor/prominent/elaborate_tattoos
-	name = "Elaborate Tattoos"
+	name = "Tatuajes elaborados"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/ritual_tattoos
-	name = "Ritual Tattoos"
+	name = "Tatuajes Rituales"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/tribal_tattoos
-	name = "Tribal Tattoos"
+	name = "Tatuajes Tribales"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/slave_tattoos
@@ -229,7 +229,7 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/enigmatic_tattoos
-	name = "Enigmatic Tattoos"
+	name = "Tatuajes Enigmáticos"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/mean_look
@@ -243,14 +243,14 @@
 
 /datum/mob_descriptor/prominent/untrustworthy
 	name = "Untrustworthy"
-	verbage = "appears"
+	verbage = "aparece"
 
 /datum/mob_descriptor/prominent/ratty_hair
 	name = "Ratty Hair"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/predatory_look
-	name = "Predatory Look"
+	name = "Mirada depredadora"
 	verbage = "%HAVE%"
 	prefix = "a"
 
@@ -276,7 +276,7 @@
 
 
 /datum/mob_descriptor/prominent/presence_stoic
-	name = "Stoic Prescence"
+	name = "Presencia estoica"
 	verbage = "%HAVE%"
 	prefix = "a"
 
@@ -285,7 +285,7 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/hands_delicate
-	name = "Delicate hands"
+	name = "manos delicadas"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/fingers_long
@@ -293,11 +293,11 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/teeth_fine
-	name = "Fine Teeth"
+	name = "Dientes finos"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/teeth_rotting
-	name = "Rotting Teeth"
+	name = "Dientes podridos"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/teeth_missing
@@ -305,7 +305,7 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/teeth_fine
-	name = "Fine Teeth"
+	name = "Dientes finos"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/laugh_donkey
@@ -314,12 +314,12 @@
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/nose_crooked
-	name = "Crooked Nose"
+	name = "Nariz torcida"
 	verbage = "%HAVE%"
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/nose_broken
-	name = "Broken Nose"
+	name = "nariz rota"
 	verbage = "%HAVE%"
 	prefix = "a"
 
@@ -329,26 +329,26 @@
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/nose_hawk
-	name = "Hawkish Nose"
+	name = "Nariz de halcón"
 	verbage = "%HAVE%"
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/nose_aquiline
-	name = "Aquiline Nose"
+	name = "Nariz aguileña"
 	verbage = "%HAVE%"
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/neck_bull
-	name = "Bull Neck"
+	name = "Cuello de toro"
 	verbage = "%HAVE%"
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/hair_perfumed
-	name = "Perfumed Hair"
+	name = "Cabello Perfumado"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/hair_oiled
-	name = "Oiled Hair"
+	name = "Cabello aceitado"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/hair_curly
@@ -356,7 +356,7 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/hair_coarse
-	name = "Coarse Hair"
+	name = "Pelo Grueso"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/hair_thin
@@ -364,6 +364,6 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/ears_large
-	name = "Large Ears"
+	name = "orejas grandes"
 	verbage = "%HAVE%"
 

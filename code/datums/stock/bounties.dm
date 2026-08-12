@@ -5,7 +5,7 @@
 */
 
 /datum/stock/bounty/treasure
-	name = "Collectable Treasures"
+	name = "Tesoros coleccionables"
 	desc = "Treasures are sent to the vault, where they accrue value over time. Payout is a percentage is based on the price of the treasure, with taxes removed from the payout after."
 	item_type = /obj/item
 	payout_price = 10

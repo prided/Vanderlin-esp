@@ -1,6 +1,6 @@
 /datum/supply_pack
 	abstract_type = /datum/supply_pack
-	var/name = "Crate"
+	var/name = "Caja"
 	var/group = ""
 	var/hidden = FALSE
 	var/contraband = FALSE
@@ -53,10 +53,10 @@
 	var/obj/structure/closet/crate/C
 	if(paying_account)
 		C = new /obj/structure/closet/crate(A)
-		C.name = "[crate_name] - Purchased by [paying_account.account_holder]"
+		C.name = "[crate_name] - Comprado por [paying_account.account_holder]"
 	else
 		C = new crate_type(A)
-		C.name = "[crate_name] of [LOWER_TEXT(name)]"
+		C.name = "[crate_name] de [LOWER_TEXT(name)]"
 
 	fill(C)
 	return C

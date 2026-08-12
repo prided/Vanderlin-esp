@@ -49,7 +49,7 @@ GLOBAL_LIST_INIT(container_craft_to_singleton, init_container_crafts())
 	///do we show up in recipe guides
 	var/hides_from_books = FALSE
 	///our completed message
-	var/complete_message = "Something smells good!"
+	var/complete_message = "¡Algo huele bien!"
 	var/datum/attribute/skill/used_skill = /datum/attribute/skill/craft/cooking
 	var/quality_modifier = 1.0  // Default modifier, recipes can override this
 	///Path of looping_sound to use while cooking

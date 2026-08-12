@@ -73,7 +73,7 @@
 	exp_type = list(EXP_TYPE_GARRISON)
 	exp_types_granted  = list(EXP_TYPE_COMBAT, EXP_TYPE_GARRISON, EXP_TYPE_LEADERSHIP)
 	exp_requirements = list(EXP_TYPE_GARRISON = 900)
-	honorary = "Lieutenant"
+	honorary = "Teniente"
 	job_bitflag = BITFLAG_GARRISON
 	starting_wage = 35
 
@@ -96,7 +96,7 @@
 		"Sword" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/scabbard/sword, /obj/item/weapon/sword/iron), \
 		"Warhammer" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer), \
 	)
-	var/choice = spawned.select_equippable(player_client, selectable, message = "CHOOSE YOUR SECONDARY WEAPON", title = "LIEUTENANT")
+	var/choice = spawned.select_equippable(player_client, selectable, message = "ELIGE TU ARMA SECUNDARIA", title = "LIEUTENANT")
 	if(!choice)
 		choice = pick(selectable)
 	switch(choice)

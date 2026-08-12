@@ -1,6 +1,6 @@
 /datum/book_entry/soil_management
-	name = "Soil Health and Nutrients"
-	category = "Agriculture"
+	name = "Salud del suelo y nutrientes"
+	category = "Agricultura"
 
 /datum/book_entry/soil_management/inner_book_html(mob/user)
 	return {"

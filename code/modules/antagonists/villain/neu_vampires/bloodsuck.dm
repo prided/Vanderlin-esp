@@ -17,12 +17,12 @@
 	if(!force && !COOLDOWN_FINISHED(src, drinkblood_use))
 		return 0
 	if(HAS_TRAIT(victim, TRAIT_HUSK) || !CAN_HAVE_BLOOD(victim) || !victim.get_blood_volume())
-		to_chat(src, span_warning("Sigh. No blood."))
+		to_chat(src, span_warning("Suspiro. Sin sangre."))
 		return 0
 	var/datum/antagonist/vampire/VDrinker = mind?.has_antag_datum(/datum/antagonist/vampire)
 	var/datum/antagonist/vampire/VVictim = victim.mind?.has_antag_datum(/datum/antagonist/vampire)
 	if(ingest && reagents.total_volume >= reagents.maximum_volume)
-		to_chat(src, span_warning("Can't drink any more..."))
+		to_chat(src, span_warning("No puedo beber más..."))
 		return 0
 
 	COOLDOWN_START(src, drinkblood_use, 1 SECONDS)
@@ -45,7 +45,7 @@
 			if(victim.bloodpool <= 0 && clan)
 				message_admins("[ADMIN_LOOKUPFLW(src)] successfully Diablerized [ADMIN_LOOKUPFLW(victim)]")
 				log_attack("[key_name(src)] successfully Diablerized [key_name(victim)].")
-				to_chat(src, span_danger("I have consumed my kindred!"))
+				to_chat(src, span_danger("¡He consumido a mis parientes!"))
 				victim.death()
 				return 0
 			else
@@ -94,7 +94,7 @@
 		return
 
 	var/datum/clan/C = sire.clan
-	var/choice = tgui_alert(client_victim, "You have been offered the immortal blessing. Take it, or perish.", "THE CURSE OF KAIN", list("I ACCEPT", "TO NECRA"), timeout = 15 SECONDS)
+	var/choice = tgui_alert(client_victim, "You have been offered the immortal blessing. Take it, or perish.", "LA MALDICIÓN DE KAIN", list("I ACCEPT", "TO NECRA"), timeout = 15 SECONDS)
 	if(QDELETED(src))
 		return
 	if(choice != "I ACCEPT")
@@ -103,11 +103,11 @@
 		B?.brain_death = TRUE
 		death()
 		if(!QDELETED(sire)) // sire coulda gibbed or some shit
-			to_chat(sire, span_warning("[src] has refused your blessing."))
+			to_chat(sire, span_warning("[src] ha rechazado tu bendición."))
 		return
 	grab_ghost(TRUE, TRUE)
 	revive((HEAL_DAMAGE|HEAL_AFFLICTIONS|HEAL_LIMBS|HEAL_WOUNDS|HEAL_ORGANS), 500, TRUE)
 	mind.add_antag_datum(new /datum/antagonist/vampire(C, TRUE))
 	set_bloodpool(500)
 	visible_message(span_danger("Some dark energy begins to flow into [src]..."))
-	visible_message(span_red("[src] rises as a new spawn!"))
+	visible_message(span_red("¡[src] surge como un nuevo engendro!"))

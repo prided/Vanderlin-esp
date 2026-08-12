@@ -112,7 +112,7 @@
 			var/new_name = tgui_input_text(
 				owner,
 				"Enter the exact character name of your designated spouse, or leave blank to clear.",
-				"Designated Spouse",
+				"Cónyuge designado",
 				prefs.read_preference(/datum/preference/text/setspouse),
 				MAX_NAME_LEN,
 			)
@@ -203,7 +203,7 @@
 			var/new_name = tgui_input_text(
 				owner,
 				"Enter the exact character name of your designated child, or leave blank to clear.",
-				"Designated Child",
+				"Niño designado",
 				prefs.read_preference(/datum/preference/text/setchild),
 				MAX_NAME_LEN,
 			)
@@ -219,7 +219,7 @@
 			var/new_name = tgui_input_text(
 				owner,
 				"Enter the exact character name of your designated parent, or leave blank to clear.",
-				"Designated Parent",
+				"Padre designado",
 				prefs.read_preference(/datum/preference/text/setparent),
 				MAX_NAME_LEN,
 			)

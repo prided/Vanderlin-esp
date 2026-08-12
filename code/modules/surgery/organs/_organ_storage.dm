@@ -262,7 +262,7 @@
 		return FALSE //Means the item is already in the storage
 	if(is_type_in_typecache(I, cant_hold)) //Check for specific items which this container can't hold.
 		if(!stop_messages)
-			to_chat(user, span_warning("[host] cannot hold [I]!"))
+			to_chat(user, span_warning("¡[host] no puede contener [I]!"))
 		return FALSE
 	if(HAS_TRAIT(I, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
 		to_chat(user, span_warning("\The [I] is stuck to your hand, you can't put it in \the [host]!"))

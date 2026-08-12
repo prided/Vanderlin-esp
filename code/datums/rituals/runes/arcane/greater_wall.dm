@@ -1,5 +1,5 @@
 /obj/effect/decal/cleanable/ritual_rune/arcyne/wallgreater
-	name = "fortress accession matrix"
+	name = "matriz de acceso a la fortaleza"
 	desc = "A massive sigil — is that a wall in the center?"
 	icon = 'icons/effects/160x160.dmi'
 	icon_state = "wall"

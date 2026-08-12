@@ -246,7 +246,7 @@
 	if(!metal)
 		return
 
-	user.visible_message("[user] starts pouring molten metal into [src].", "You start pouring molten metal into [src]")
+	user.visible_message("[user] comienza a verter metal fundido en [src].", "Empiezas a verter metal fundido en [src]")
 	if(!do_after(user, 2 SECONDS, src))
 		return
 	group_reagents.add_reagent(/datum/reagent/molten_metal, metal.volume, data = metal.data, reagtemp = I.reagents.chem_temp)

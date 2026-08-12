@@ -1,5 +1,5 @@
 /datum/mob_affix/vampiric
-	name = "Vampiric"
+	name = "vampírico"
 	description = "Drains life from enemies"
 	color = "#CC0000"
 
@@ -13,4 +13,4 @@
 		var/heal_amount = round(3 * intensity)
 		source.adjustBruteLoss(-heal_amount)
 		source.adjustFireLoss(-heal_amount)
-		source.visible_message(span_danger("[source] seems to heal from the attack!"))
+		source.visible_message(span_danger("¡[source] parece recuperarse del ataque!"))

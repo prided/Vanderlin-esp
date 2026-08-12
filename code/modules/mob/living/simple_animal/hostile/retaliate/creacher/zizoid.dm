@@ -1,5 +1,5 @@
 /mob/living/simple_animal/hostile/retaliate/blood
-	name = "FLESH HOMUNCULUS"
+	name = "HOMÚNCULO DE CARNE"
 	desc = null
 	hud_type = /datum/hud/human
 	icon = 'icons/mob/mob.dmi'

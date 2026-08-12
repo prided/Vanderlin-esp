@@ -46,7 +46,7 @@
 	background_track = 'sound/music/area/Fulminate.ogg'
 
 /area/indoors/town/tavern/saiga
-	first_time_text = "The Drunken Saiga"
+	first_time_text = "El Borracho Saiga"
 	background_track = 'sound/music/area/Folia1490.ogg'
 	background_track_night = 'sound/music/area/LeTourdion.ogg'
 	converted_type = /area/outdoors/exposed/tavern/saiga
@@ -89,7 +89,7 @@
 	converted_type = /area/outdoors/exposed/tavern
 
 /area/outdoors/exposed/tavern
-	name = "tavern exterior"
+	name = "exterior de la taberna"
 	icon_state = "tavern"
 
 /area/indoors/town/church
@@ -102,7 +102,7 @@
 	burial_grounds = TRUE
 
 /area/outdoors/exposed/church
-	name = "church exterior"
+	name = "exterior de la iglesia"
 	icon_state = "church"
 	background_track = 'sound/music/area/church.ogg'
 	background_track_dusk = null
@@ -110,19 +110,19 @@
 	burial_grounds = TRUE
 
 /area/outdoors/exposed/church/graveyard
-	name = "church graveyard"
+	name = "cementerio de la iglesia"
 	icon_state = "graveyard"
 	first_time_text = "THE GRAVEYARD"
 
 /area/indoors/town/church/chapel
-	name = "prayer hall"
+	name = "sala de oración"
 	icon_state = "chapel"
-	first_time_text = "THE HOUSE OF THE TEN"
+	first_time_text = "LA CASA DE LOS DIEZ"
 
 /area/indoors/town/church/crypt
-	name = "royal crypt"
+	name = "cripta real"
 	icon_state = "crypt"
-	first_time_text = "THE ROYAL CRYPT"
+	first_time_text = "LA CRIPTA REAL"
 
 /area/indoors/town/church/inquisition
 	name = "inquisition"
@@ -130,7 +130,7 @@
 	first_time_text = "INQUISITIONS LAIR"
 
 /area/indoors/town/fire_chamber
-	name = "incinerator"
+	name = "incinerador"
 	icon_state = "fire_chamber"
 
 /area/indoors/town/fire_chamber/can_craft_here()
@@ -151,19 +151,19 @@
 	return FALSE
 
 /area/indoors/town/clocktower
-	name = "Clocktower"
-	first_time_text = "Clocktower"
+	name = "Torre del Reloj"
+	first_time_text = "Torre del Reloj"
 	icon_state = "clocktower"
 	background_track = 'sound/music/area/clocktower_ambience.ogg'
 
 /area/indoors/town/orphanage
 	name = "Orphanage"
-	first_time_text = "The Orphanage"
+	first_time_text = "El orfanato"
 	icon_state = "orphanage"
 
 /area/indoors/town/clinic_large
-	name = "The Clinic"
-	first_time_text = "The Clinic"
+	name = "La clínica"
+	first_time_text = "La clínica"
 	icon_state = "clinic_large"
 
 /area/indoors/town/clinic_large/apothecary
@@ -180,29 +180,29 @@
 	icon_state = "thieves_guild"
 
 /area/indoors/town/merc_guild
-	name = "Mercenary Guild"
-	first_time_text = "Mercenary Guild"
+	name = "Gremio de Mercenarios"
+	first_time_text = "Gremio de Mercenarios"
 	icon_state = "merc_guild"
 	background_track = 'sound/music/area/shop.ogg'
 	background_track_dusk = null
 	background_track_night = null
 
 /area/indoors/town/adv_guild
-	name = "Adventurer's Guild"
-	first_time_text = "Adventurer's Guild"
+	name = "Gremio de aventureros"
+	first_time_text = "Gremio de aventureros"
 	icon_state = "adv_guild"
 	background_track = 'sound/music/area/shop.ogg'
 	background_track_dusk = null
 	background_track_night = null
 
 /area/indoors/town/train_station
-	name = "Train Station"
+	name = "Estación de tren"
 	first_time_text = "Vanderlin Train Station"
 	icon_state = "train_station"
 
 /area/indoors/town/steward
-	name = "Steward's Office"
-	first_time_text = "Steward's Office"
+	name = "Oficina del mayordomo"
+	first_time_text = "Oficina del mayordomo"
 	icon_state = "steward"
 
 /area/indoors/town/smithy

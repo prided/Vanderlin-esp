@@ -3,7 +3,7 @@
 	desc = "You were once married to this person."
 	symmetric = FALSE // each side holds their own copy
 	incompatible = list(/datum/relation/family/spouse)
-	category = "Family"
+	category = "Familia"
 
 /datum/relation/divorced/get_desc_string()
 	SHOULD_CALL_PARENT(FALSE)

@@ -1,6 +1,6 @@
 /datum/animal_gene/productive
-	name = "Productive"
-	desc = "High-yield. Produces milk, wool, or eggs more frequently."
+	name = "Productivo"
+	desc = "Alto rendimiento. Produce leche, lana o huevos con mayor frecuencia."
 	rarity = 4
 
 /datum/animal_gene/productive/apply_to(mob/living/simple_animal/hostile/target)

@@ -1,5 +1,5 @@
 /datum/work_order/farm_food
-	name = "Farming "
+	name = "Agricultura "
 	work_time_left = 30 SECONDS
 	stamina_cost = 10
 

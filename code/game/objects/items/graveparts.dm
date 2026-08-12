@@ -1,6 +1,6 @@
 /obj/item/gravedecor
 	name = "grave decoration"
-	desc = "If you're seeing this, yell at coders."
+	desc = "Si estás viendo esto, grita a los codificadores."
 	icon = 'icons/roguetown/items/graveitems.dmi'
 	icon_state = "headstone_basic"
 	gripped_intents = null
@@ -24,40 +24,40 @@
 	. = ..()
 
 	if(decorationquality == 1)
-		. += span_info("This is a crude decoration.")
+		. += span_info("Esta es una decoración tosca.")
 	if(decorationquality == 2)
-		. += span_info("This is a middling decoration.")
+		. += span_info("Esta es una decoración mediana.")
 	if(decorationquality == 3)
-		. += span_info("This decoration is of the highest quality.")
+		. += span_info("Esta decoración es de la más alta calidad.")
 	if(length(patrons))
 		if(/datum/patron/divine/astrata in patrons)
-			. += SPAN_GOD_ASTRATA("This decoration venerates Astrata, the Sun Tyrant.")
+			. += SPAN_GOD_ASTRATA("Esta decoración venera a Astrata, el Tirano del Sol.")
 		if(/datum/patron/divine/noc in patrons)
-			. += SPAN_GOD_NOC("This decoration venerates Noc, the Moon Prince.")
+			. += SPAN_GOD_NOC("Esta decoración venera a Noc, el Príncipe de la Luna.")
 		if(/datum/patron/divine/abyssor in patrons)
-			. += SPAN_GOD_ABYSSOR("This decoration venerates Abyssor, Lord of the Deep.")
+			. += SPAN_GOD_ABYSSOR("Esta decoración venera a Abyssor, Señor de las Profundidades.")
 		if(/datum/patron/divine/dendor in patrons)
 			. += SPAN_GOD_DENDOR("This decoration venerates Dendor, the Beastfather.")
 		if(/datum/patron/divine/necra in patrons)
 			. += SPAN_GOD_NECRA("This decoration venerates Necra, the Undermaiden.")
 		if(/datum/patron/divine/ravox in patrons)
-			. += SPAN_GOD_RAVOX("This decoration venerates Ravox, the Embodiment of Justice.")
+			. += SPAN_GOD_RAVOX("Esta decoración venera a Ravox, la Encarnación de la Justicia.")
 		if(/datum/patron/divine/xylix in patrons)
 			. += SPAN_GOD_XYLIX("This decoration venerates Xylix, the Silvertongued.")
 		if((/datum/patron/divine/pestra || /datum/patron/alternate/wurm) in patrons)
 			. += SPAN_GOD_PESTRA("This decoration venerates Pestra, the Plaguebearer.")
 		if(/datum/patron/divine/malum in patrons)
-			. += SPAN_GOD_MALUM("This decoration venerates Malum, the Great Artisan.")
+			. += SPAN_GOD_MALUM("Esta decoración venera a Malum, el Gran Artesano.")
 		if(/datum/patron/divine/eora in patrons)
-			. += SPAN_GOD_EORA("This decoration venerates Eora, the Patron of Love.")
+			. += SPAN_GOD_EORA("Esta decoración venera a Eora, el Patrón del Amor.")
 		if(/datum/patron/alternate/great_hunt in patrons)
 			. += SPAN_GOD_GREATHUNT("This decoration venerates the Great Hunt.")
 		if(/datum/patron/psydon in patrons)
-			. += SPAN_GOD_PSYDON("This decoration venerates Psydon, the Old God.")
+			. += SPAN_GOD_PSYDON("Esta decoración venera a Psydon, el Dios Antiguo.")
 
 /obj/item/gravedecor/headstone
 	name = "peaked headstone"
-	desc = "A headstone with a sharp peak, and plenty of room for an inscription."
+	desc = "Una lápida con un pico afilado y mucho espacio para una inscripción."
 	icon_state = "headstone_basic"
 	decorationquality = 2
 
@@ -87,11 +87,11 @@
 	if(!(tool.get_sharpness()))
 		return NONE
 
-	var/new_message = tgui_input_text(user, "What would you like to be inscribed on \the [src]?", "Custom Inscription", custom_message, 150, TRUE)
+	var/new_message = tgui_input_text(user, "What would you like to be inscribed on \the [src]?", "Inscripción personalizada", custom_message, 150, TRUE)
 	if(!new_message || new_message == custom_message)
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_info("[user] begins to engrave a message into \the [src] with \a [tool]."), span_info("You begin to engrave a message into \the [src]."), span_info("You hear someone cutting into stone."))
+	user.visible_message(span_info("[user] comienza a grabar un mensaje en \the [src] con \a [tool]."), span_info("You begin to engrave a message into \the [src]."), span_info("You hear someone cutting into stone."))
 	playsound(src, pick('sound/combat/hits/onrock/onrock (1).ogg', 'sound/combat/hits/onrock/onrock (2).ogg', 'sound/combat/hits/onrock/onrock (3).ogg', 'sound/combat/hits/onrock/onrock (4).ogg'), 100)
 	if(!do_after(user, 5 SECONDS, src, progress=TRUE, display_over_user=TRUE))
 		return ITEM_INTERACT_BLOCKING
@@ -109,7 +109,7 @@
 
 /obj/item/gravedecor/headstone/obelisk
 	name = "headstone obelisk"
-	desc = "A tall headstone with iron inlay, so your works are never forgotten."
+	desc = "Una lápida alta con incrustaciones de hierro, para que tus obras nunca sean olvidadas."
 	icon_state = "headstone_obelisk"
 	dropshrink = 0.8
 	decorationquality = 3
@@ -124,7 +124,7 @@
 
 /obj/item/gravedecor/headstone/astrata
 	name = "astratan headstone"
-	desc = "The golden cross of Astrata, nothing less for the Sun Tyrant."
+	desc = "La cruz dorada de Astrata, nada menos que para el Tirano del Sol."
 	icon_state = "headstone_astrata"
 	dropshrink = 0.8
 	decorationquality = 3

@@ -615,7 +615,7 @@
 						position.can_assign_positions = !position.can_assign_positions
 						to_chat(user, "<span class='notice'>[position.name] assignment permission [position.can_assign_positions ? "granted" : "removed"]</span>")
 					else
-						to_chat(user, "<span class='warning'>You don't have permission to modify this position.</span>")
+						to_chat(user, "<span class='warning'>No tienes permiso para modificar esta posición.</span>")
 					break
 			refresh_hierarchy()
 
@@ -628,7 +628,7 @@
 						selected_position = null
 						to_chat(user, "<span class='notice'>Position removed successfully.</span>")
 					else
-						to_chat(user, "<span class='warning'>You don't have permission to remove this position.</span>")
+						to_chat(user, "<span class='warning'>No tienes permiso para eliminar esta posición.</span>")
 					break
 			refresh_hierarchy()
 
@@ -644,13 +644,13 @@
 				selected_position = target_position
 				show_edit_position_dialog()
 			else
-				to_chat(user, "<span class='warning'>You don't have permission to edit this position.</span>")
+				to_chat(user, "<span class='warning'>No tienes permiso para editar esta posición.</span>")
 
 		if("submit_edit_position")
 			if(selected_position && can_manage_position(selected_position))
 				handle_edit_position(href_list)
 			else
-				to_chat(user, "<span class='warning'>You don't have permission to edit this position.</span>")
+				to_chat(user, "<span class='warning'>No tienes permiso para editar esta posición.</span>")
 
 
 /datum/clan_hierarchy_interface/proc/refresh_hierarchy()
@@ -831,7 +831,7 @@
 
 /datum/clan_hierarchy_interface/proc/handle_edit_position(list/params)
 	if(!selected_position || !can_manage_position(selected_position))
-		to_chat(user, "<span class='warning'>You don't have permission to edit this position.</span>")
+		to_chat(user, "<span class='warning'>No tienes permiso para editar esta posición.</span>")
 		return
 
 	var/position_name = strip_html(params["position_name"], MAX_NAME_LEN)
@@ -889,7 +889,7 @@
 			break
 
 	if(!superior_position)
-		to_chat(user, "<span class='warning'>Error: Invalid superior position</span>")
+		to_chat(user, "<span class='warning'>Error: Posición superior no válida</span>")
 		return
 
 	// Check if user can create position under this superior
@@ -906,7 +906,7 @@
 		to_chat(user, "<span class='notice'>Position '[position_name]' created successfully!</span>")
 		refresh_hierarchy()
 	else
-		to_chat(user, "<span class='warning'>Error: Failed to create position</span>")
+		to_chat(user, "<span class='warning'>Error: No se pudo crear la posición</span>")
 
 /datum/clan_hierarchy_interface/proc/handle_assign_member(list/params)
 	if(!selected_position || !can_manage_position(selected_position))
@@ -928,16 +928,16 @@
 			break
 
 	if(!target_member)
-		to_chat(user, "<span class='warning'>Error: Invalid member selection</span>")
+		to_chat(user, "<span class='warning'>Error: Selección de miembro no válida</span>")
 		return
 
 	// Check if the member currently has a position we can't manage
 	if(target_member.clan_position && !can_manage_position(target_member.clan_position))
-		to_chat(user, "<span class='warning'>Error: You don't have permission to reassign [target_member.real_name] from their current position</span>")
+		to_chat(user, "<span class='warning'>Error: No tienes permiso para reasignar [target_member.real_name] desde su posición actual</span>")
 		return
 
 	if(selected_position.assign_member(target_member))
-		to_chat(user, "<span class='notice'>[target_member.real_name] assigned to [selected_position.name]</span>")
+		to_chat(user, "<span class='notice'>[target_member.real_name] asignado a [selected_position.name]</span>")
 		refresh_hierarchy()
 	else
 		to_chat(user, "<span class='warning'>Error: Failed to assign member</span>")

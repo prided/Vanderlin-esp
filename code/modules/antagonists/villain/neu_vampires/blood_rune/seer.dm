@@ -1,5 +1,5 @@
 /datum/rune_spell/seer
-	name = "Seer"
+	name = "Vidente"
 	desc = "See the invisible, the dead, the concealed, and the propensity of the living to serve our agenda."
 	desc_talisman = "For a whole minute, you may see the invisible, the dead, the concealed, and the propensity of the living to serve our agenda."
 	invocation = "Rash'tla sektath mal'zua. Zasan therium viortia."
@@ -41,7 +41,7 @@
 	if (locate(/obj/effect/blood_ritual/seer) in M)
 		var/obj/item/talisman/T = spell_holder
 		T.uses++
-		to_chat(M, span_warning("You are still under the effects of a Seer talisman.") )
+		to_chat(M, span_warning("Todavía estás bajo los efectos de un talismán Vidente.") )
 		qdel(src)
 		return
 

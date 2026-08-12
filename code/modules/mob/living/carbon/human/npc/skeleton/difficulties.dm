@@ -158,7 +158,7 @@
 
 /datum/outfit/job/skeleton/npc/pirate/pre_equip(mob/living/carbon/human/H)
 	..()
-	name = "Skeleton Pirate"
+	name = "Pirata esqueleto"
 	head = /obj/item/clothing/head/helmet/leather/tricorn
 	wrists = /obj/item/clothing/wrists/bracers/ancient
 	shirt = /obj/item/clothing/armor/chainmail/iron
@@ -175,7 +175,7 @@
 
 /datum/outfit/job/skeleton/npc/medium/pre_equip(mob/living/carbon/human/H)
 	..()
-	name = "Skeleton Soldier"
+	name = "Soldado esqueleto"
 	cloak = /obj/item/clothing/cloak/heartfelt
 	head = /obj/item/clothing/head/helmet/heavy/ancient
 	armor = /obj/item/clothing/armor/cuirass/copperchest

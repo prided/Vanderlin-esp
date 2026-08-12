@@ -31,7 +31,7 @@
 	crafting_message = "mix dried apple into the gelatine"
 
 /datum/repeatable_crafting_recipe/cooking/jellycake/tangerine
-	name = "Tangerine Jellycake"
+	name = "Pastel de gelatina de mandarina"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/produce/fruit/tangerine = 1,
@@ -97,7 +97,7 @@
 	crafting_message = "mix dried pear into the gelatine"
 
 /datum/repeatable_crafting_recipe/cooking/jellycake/lime
-	name = "Lime Jellycake"
+	name = "Pastel de gelatina de lima"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/produce/fruit/lime = 1,

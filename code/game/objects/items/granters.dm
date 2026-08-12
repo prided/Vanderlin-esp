@@ -16,7 +16,7 @@
 		if(remarks.len)
 			to_chat(user, "<span class='notice'>[pick(remarks)]</span>")
 		else
-			to_chat(user, "<span class='notice'>I keep reading...</span>")
+			to_chat(user, "<span class='notice'>Sigo leyendo...</span>")
 		return TRUE
 	return FALSE
 
@@ -46,7 +46,7 @@
 		to_chat(user, span_notice("I struggle to study my arcane notes more. Perhaps a good rest would help."))
 		return FALSE
 	if(reading)
-		to_chat(user, span_notice("I am already reading this!"))
+		to_chat(user, span_notice("¡Ya estoy leyendo esto!"))
 		return FALSE
 	if(!user.can_read(src))
 		return FALSE
@@ -155,21 +155,21 @@
 		user.visible_message(span_warning("[src] has had its magic ink ripped from the scroll!"))
 
 /obj/item/book/granter/spell/magick/fireball
-	name = "Scroll of Fireball"
+	name = "Pergamino de bola de fuego"
 	spell = /datum/action/cooldown/spell/projectile/fireball
 	spellname = "fireball"
 	icon_state = "scrollred"
 	remarks = list("Ignis et oleum..", "Flammam continere ad momentum..", "Flammam iactare..", "Sit flamma constructum..")
 
 /obj/item/book/granter/spell/magick/greaterfireball
-	name = "Scroll of Greater Fireball"
+	name = "Pergamino de bola de fuego mayor"
 	spell =  /datum/action/cooldown/spell/projectile/fireball/greater
 	spellname = "greater fireball"
 	icon_state = "scrolldarkred"
 	remarks = list("Ignis et oleum..", "Flammam continere ad momentum..", "Flammam iactare..", "Sit flamma constructum..")
 
 /obj/item/book/granter/spell/magick/lightning
-	name = "Scroll of Lightning"
+	name = "Pergamino de relámpago"
 	spell =  /datum/action/cooldown/spell/projectile/lightning
 	spellname = "lightning"
 	icon_state = "scrollyellow"
@@ -183,14 +183,14 @@
 	remarks = list("Returnus Revico..", "Manus de reverti..", "Menus de returnus..")
 
 /obj/item/book/granter/spell/magick/blindness
-	name = "Scroll of Blindness"
+	name = "Pergamino de ceguera"
 	spell = /datum/action/cooldown/spell/blindness
 	spellname = "blindness"
 	icon_state = "scrollpurple"
 	remarks = list("Occultare oculos..", "Vivus amoevtar..", "Visioner removan..")
 
 /obj/item/book/granter/spell/magick/invisibility
-	name = "Scroll of Invisibility"
+	name = "Pergamino de invisibilidad"
 	spell = /datum/action/cooldown/spell/status/invisibility
 	spellname = "invisibility"
 	icon_state = "scrollpurple"
@@ -208,7 +208,7 @@
 /obj/item/book/granter/spell_points/on_reading_finished(mob/living/user)
 	var/arcaneskill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane)
 	if(arcaneskill >= SKILL_LEVEL_NOVICE) //Required arcane skill of NOVICE or higher to use the granter
-		to_chat(user, span_notice("I absorb the insights on the scroll, and feel more adept at spellcraft!"))
+		to_chat(user, span_notice("¡Asimilo los conocimientos del pergamino y me siento más hábil en la hechicería!"))
 		user.adjust_form_mastery_points(1)
 		onlearned(user)
 	else

@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/spell_crystal
 	name = "Spell Crystal"
-	desc = "Creates a crystal that can store and later release a spell."
+	desc = "Crea un cristal que puede almacenar y luego liberar un hechizo."
 	button_icon_state = "quartz"
 	button_icon = 'icons/roguetown/items/gems.dmi'
 	cast_range = 1
@@ -12,14 +12,14 @@
 	var/turf/target_turf = get_turf(cast_on)
 	if(!target_turf)
 		return FALSE
-	owner.visible_message(span_notice("[owner] creates a crystal capable of storing magical energy."))
+	owner.visible_message(span_notice("[owner] crea un cristal capaz de almacenar energía mágica."))
 
 	new /obj/item/spell_crystal(target_turf)
 
 
 /obj/item/spell_crystal
-	name = "spell storage crystal"
-	desc = "A crystal capable of storing magical energy for later use."
+	name = "cristal de almacenamiento de hechizos"
+	desc = "Un cristal capaz de almacenar energía mágica para su uso posterior."
 	icon_state = "quartz"
 	icon = 'icons/roguetown/items/gems.dmi'
 	w_class = WEIGHT_CLASS_SMALL
@@ -35,7 +35,7 @@
 	if(stored_spell_type)
 		. += span_notice("It hums with stored energy — [stored_spell_name].")
 	else
-		. += span_warning("It is dormant, waiting to be filled.")
+		. += span_warning("Está inactivo, esperando ser llenado.")
 
 /obj/item/spell_crystal/Destroy()
 	if(granted_spell)
@@ -52,7 +52,7 @@
 
 /obj/item/spell_crystal/proc/attune_crystal(mob/user)
 	if(stored_spell_type)
-		to_chat(user, span_warning("The crystal already holds [stored_spell_name]."))
+		to_chat(user, span_warning("El cristal ya contiene [stored_spell_name]."))
 		return
 
 	var/list/eligible = list()
@@ -67,10 +67,10 @@
 		eligible[S.name] = S
 
 	if(!eligible.len)
-		to_chat(user, span_warning("You have no storable spells."))
+		to_chat(user, span_warning("No tienes hechizos almacenables."))
 		return
 
-	var/chosen_name = tgui_input_list(user, "Choose a spell to store:", "Attune Crystal", eligible)
+	var/chosen_name = tgui_input_list(user, "Elige un hechizo para almacenar:", "Sintonizar cristal", eligible)
 	if(!chosen_name || !eligible[chosen_name])
 		return
 	if(stored_spell_type) // race guard
@@ -80,7 +80,7 @@
 	stored_spell_type = chosen.type
 	stored_spell_name = chosen.name
 	name = "[chosen.name] crystal"
-	desc = "A crystal storing [chosen.name]."
+	desc = "Un cristal que almacena [chosen.name]."
 	update_appearance(UPDATE_OVERLAYS)
 
 	user.visible_message(

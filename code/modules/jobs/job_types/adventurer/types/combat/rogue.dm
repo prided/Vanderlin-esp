@@ -24,7 +24,7 @@
 	)
 
 /datum/job/advclass/combat/rogue
-	title = "Thief"
+	title = "Ladrón"
 	tutorial = "A wandering thief, capable of breaking in and out of just about any secure location, and born to meet the sharp end of the guillotine. Just remember, murder is the mark of an amateur."
 	allowed_sexes = list(MALE, FEMALE)
 	outfit = /datum/outfit/adventurer/rogue
@@ -67,7 +67,7 @@
 
 	var/obj/item/clothing/cloak/raincloak/thiefcloak = spawned.get_item_by_slot(ITEM_SLOT_CLOAK)
 
-	var/choice = tgui_input_list(player_client, "Pick your cloak color.", "Thief", thiefcloak_colors, "Chestnut")
+	var/choice = tgui_input_list(player_client, "Elige el color de tu capa.", "Ladrón", thiefcloak_colors, "Chestnut")
 	if(!choice)
 		return
 
@@ -77,7 +77,7 @@
 	thiefcloak.color = thiefcloak_colors[choice]
 
 /datum/outfit/adventurer/rogue
-	name = "Thief (Adventurer)"
+	name = "Ladrón (Aventurero)"
 	shirt = /obj/item/clothing/shirt/undershirt/colored/black
 	gloves = /obj/item/clothing/gloves/fingerless
 	pants = /obj/item/clothing/pants/trou/leather

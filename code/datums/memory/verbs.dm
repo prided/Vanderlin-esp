@@ -22,7 +22,7 @@
 		to_chat(src, span_warning("byond_memprofile is unavailable: [MemProfiler.error || "unknown reason"]"), type = MESSAGE_TYPE_DEBUG)
 		return
 
-	if(tgui_alert(src, "A census walks the entire heap. The server will freeze for several seconds. Continue?", "Memory Census", list("Run it", "Cancel")) != "Run it")
+	if(tgui_alert(src, "Un censo recorre todo el montón. El servidor se congelará durante varios segundos. ¿Continuar?", "Censo de Memoria", list("Run it", "Cancel")) != "Run it")
 		return
 
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Memory Census (Text)")
@@ -34,7 +34,7 @@
 	for(var/line in splittext(report, "\n"))
 		SEND_TEXT(world.log, line)
 
-	to_chat(src, fieldset_block("Memory Census", "<pre>[html_encode(report)]</pre>", "boxed_message purple_box"), avoid_highlighting = TRUE, type = MESSAGE_TYPE_DEBUG)
+	to_chat(src, fieldset_block("Censo de Memoria", "<pre>[html_encode(report)]</pre>", "boxed_message purple_box"), avoid_highlighting = TRUE, type = MESSAGE_TYPE_DEBUG)
 
 
 /client/proc/memory_profile_dump()
@@ -49,7 +49,7 @@
 		to_chat(src, span_warning("byond_memprofile is unavailable: [MemProfiler.error || "unknown reason"]"), type = MESSAGE_TYPE_DEBUG)
 		return
 
-	var/kind = tgui_alert(src, "Dump which report? A census dump is always complete; a list dump is capped unless you pick \"all\".", "Memory Profile Dump", list("Census", "Lists", "Cancel"))
+	var/kind = tgui_alert(src, "Dump which report? A census dump is always complete; a list dump is capped unless you pick \"all\".", "Memory Profile Dump", list("Censo", "Lists", "Cancel"))
 	if(!kind || kind == "Cancel")
 		return
 

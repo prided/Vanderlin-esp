@@ -1,5 +1,5 @@
 /datum/repeatable_crafting_recipe/dryleaf
-	name = "dry swampweed"
+	name = "hierba pantanosa seca"
 	output = /obj/item/reagent_containers/food/snacks/produce/swampweed_dried
 	starting_atom = /obj/item/reagent_containers/food/snacks/produce/swampweed
 	requirements = list(/obj/item/reagent_containers/food/snacks/produce/swampweed = 1)
@@ -18,7 +18,7 @@
 	craftdiff = 0
 
 	craft_time = 2 SECONDS
-	crafting_message = "starts drying some westleach leaves"
+	crafting_message = "comienza a secar algunas hojas de westleach"
 
 /datum/repeatable_crafting_recipe/salami
 	name = "salumoi"
@@ -61,11 +61,11 @@
 	attacked_atom = /obj/machinery/tanningrack
 
 	craft_time = 1.5 SECONDS
-	crafting_message = "starts drying some fat"
+	crafting_message = "comienza a secar algo de grasa"
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/saltfish
-	name = "saltfish"
+	name = "pescado salado"
 	output = /obj/item/reagent_containers/food/snacks/saltfish
 	starting_atom = /obj/item/reagent_containers/food/snacks/fish
 	requirements = list(
@@ -93,14 +93,14 @@
 	subtypes_allowed = TRUE //poison berries
 
 	craft_time = 1.5 SECONDS
-	crafting_message = "starts drying some jacksberries"
+	crafting_message = "comienza a secar algunas jacksberries"
 	craftdiff = 0
 	pass_types_in_end = list(
 		/obj/item/reagent_containers/food/snacks/produce/fruit/jacksberry, //old craft blacklisted poison berries, cowards
 	)
 
 /datum/repeatable_crafting_recipe/driedstrawberry
-	name = "dried strawberries"
+	name = "fresas secas"
 	output = /obj/item/reagent_containers/food/snacks/strawberry_dried
 	starting_atom = /obj/item/reagent_containers/food/snacks/produce/fruit/strawberry
 	requirements = list(
@@ -109,7 +109,7 @@
 	attacked_atom = /obj/machinery/tanningrack
 
 	craft_time = 1.5 SECONDS
-	crafting_message = "starts drying some strawberries"
+	crafting_message = "comienza a secar algunas fresas"
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/driedtangerine
@@ -126,7 +126,7 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/driedplum
-	name = "dried plum"
+	name = "ciruela seca"
 	output = /obj/item/reagent_containers/food/snacks/plum_dried
 	starting_atom = /obj/item/reagent_containers/food/snacks/produce/fruit/plum
 	requirements = list(
@@ -135,11 +135,11 @@
 	attacked_atom = /obj/machinery/tanningrack
 
 	craft_time = 1.5 SECONDS
-	crafting_message = "starts drying a plum"
+	crafting_message = "comienza a secar una ciruela"
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/driedapple
-	name = "dried apple"
+	name = "manzana seca"
 	output = /obj/item/reagent_containers/food/snacks/apple_dried
 	starting_atom = /obj/item/reagent_containers/food/snacks/produce/fruit/apple
 	requirements = list(
@@ -148,11 +148,11 @@
 	attacked_atom = /obj/machinery/tanningrack
 
 	craft_time = 1.5 SECONDS
-	crafting_message = "starts drying an apple"
+	crafting_message = "comienza a secar una manzana"
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/driedpear
-	name = "dried pear"
+	name = "pera seca"
 	output = /obj/item/reagent_containers/food/snacks/pear_dried
 	starting_atom = /obj/item/reagent_containers/food/snacks/produce/fruit/pear
 	requirements = list(
@@ -161,11 +161,11 @@
 	attacked_atom = /obj/machinery/tanningrack
 
 	craft_time = 1.5 SECONDS
-	crafting_message = "starts drying a pear"
+	crafting_message = "comienza a secar una pera"
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/driedtea
-	name = "dried tea"
+	name = "té seco"
 	output = /obj/item/reagent_containers/food/snacks/produce/tealeaves_dry
 	starting_atom = /obj/item/reagent_containers/food/snacks/produce/tea
 	requirements = list(
@@ -200,7 +200,7 @@
 	blacklisted_paths = list(/obj/item/natural/hide/cured)
 
 /datum/repeatable_crafting_recipe/parchment/wood
-	name = "parchment (timber)"
+	name = "pergamino (madera)"
 	output = /obj/item/paper
 	output_amount = 4
 	starting_atom = /obj/item/weapon/knife
@@ -220,12 +220,12 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/parchment/fuse
-	name = "parchment fuse"
+	name = "fusible de pergamino"
 	requirements = list(
 		/obj/item/paper = 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to cut"), span_notice("start to cut"), 'sound/items/sharpen_long1.ogg'),
+		/obj/item/weapon/knife = list(span_notice("comienza a cortar"), span_notice("start to cut"), 'sound/items/sharpen_long1.ogg'),
 	)
 	reagent_requirements = null
 	attacked_atom = /obj/item/paper
@@ -247,7 +247,7 @@
 	attacked_atom = /obj/machinery/tanningrack
 
 	craft_time = 2.5 SECONDS
-	crafting_message = "starts mixing the blood"
+	crafting_message = "comienza a mezclar la sangre"
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/capillusfiber
@@ -261,7 +261,7 @@
 	attacked_atom = /obj/machinery/tanningrack
 
 	craft_time = 1.5 SECONDS
-	crafting_message = "starts extracting some fibers"
+	crafting_message = "comienza a extraer algunas fibras"
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/driedwaddle

@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/pressure
-	name = "Arcane Tides"
+	name = "Mareas Arcanas"
 	desc = "Drown one with arcane tides"
 	sound = 'sound/foley/jumpland/waterland.ogg'
 

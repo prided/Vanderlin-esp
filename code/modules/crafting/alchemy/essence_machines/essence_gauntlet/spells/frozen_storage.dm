@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/frozen_storage
-	name = "Fridigitation"
+	name = "fridigitación"
 	desc = "Prevents rot from ever touching."
 	button_icon_state = "fridigitation"
 	cast_range = 1
@@ -17,7 +17,7 @@
 			T.add_overlay(chilly)
 			addtimer(CALLBACK(T, TYPE_PROC_REF(/atom, cut_overlay), chilly), 1 SECONDS)
 		to_chat(user, "The [F.name] is frozen, greatly extending its shelf life.")
-		F.name = "[F.name] (frozen)"
+		F.name = "[F.name] (congelado)"
 		return TRUE
 	else
 		to_chat(user, span_warning("That is not a valid target for Fridigitation."))

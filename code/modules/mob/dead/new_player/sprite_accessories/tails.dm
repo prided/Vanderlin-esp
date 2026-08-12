@@ -30,13 +30,13 @@
 #endif
 
 /datum/sprite_accessory/tail/cat
-	name = "Cat"
+	name = "Gato"
 	icon_state = "cat"
 	relevant_layers = list(BODY_FRONT_LAYER)
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/monkey
-	name = "Monkey"
+	name = "Mono"
 	icon_state = "monkey"
 
 /datum/sprite_accessory/tail/axolotl
@@ -44,32 +44,32 @@
 	icon_state = "axolotl"
 
 /datum/sprite_accessory/tail/batl
-	name = "Bat (Long)"
+	name = "Murciélago (largo)"
 	icon_state = "batl"
 	color_keys = 2
 	color_key_names = list("Tail", "Tip")
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/bats
-	name = "Bat (Short)"
+	name = "Murciélago (corto)"
 	icon_state = "bats"
 	color_keys = 2
 	color_key_names = list("Tail", "Tip")
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/bee
-	name = "Bee"
+	name = "Abeja"
 	icon_state = "bee"
 	color_keys = 2
 	color_key_names = list("Abdomen", "Stripes")
 
 /datum/sprite_accessory/tail/catbig
-	name = "Cat, Big"
+	name = "gato, grande"
 	icon_state = "catbig"
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/twocat
-	name = "Cat, Double"
+	name = "Gato, Doble"
 	icon_state = "twocat"
 	can_wag = TRUE
 
@@ -78,7 +78,7 @@
 	icon_state = "crow"
 
 /datum/sprite_accessory/tail/cow
-	name = "Cow"
+	name = "Vaca"
 	icon_state = "cow"
 
 /datum/sprite_accessory/tail/eevee
@@ -108,7 +108,7 @@
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/fox2
-	name = "Fox 2"
+	name = "zorro 2"
 	icon_state = "fox2"
 
 /datum/sprite_accessory/tail/hawk
@@ -117,7 +117,7 @@
 	color_key_defaults = list(KEY_HAIR_COLOR)
 
 /datum/sprite_accessory/tail/horse
-	name = "Horse"
+	name = "Caballo"
 	icon_state = "horse"
 
 /datum/sprite_accessory/tail/husky
@@ -128,7 +128,7 @@
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/insect
-	name = "Insect"
+	name = "Insecto"
 	icon_state = "insect"
 
 /datum/sprite_accessory/tail/kangaroo
@@ -155,17 +155,17 @@
 	icon_state = "orca"
 
 /datum/sprite_accessory/tail/otie
-	name = "Otusian"
+	name = "otusiano"
 	icon_state = "otie"
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/rabbit
-	name = "Rabbit"
+	name = "Conejo"
 	icon_state = "rabbit"
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/redpanda
-	name = "Red Panda"
+	name = "panda rojo"
 	icon_state = "wah"
 	color_keys = 2
 	color_key_names = list("Tail", "Stripes")
@@ -184,19 +184,19 @@
 	color_key_names = list("Tail", "Inner")
 
 /datum/sprite_accessory/tail/shark
-	name = "Shark"
+	name = "Tiburón"
 	icon_state = "shark"
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/shepherd
-	name = "Shepherd"
+	name = "Pastor"
 	icon_state = "shepherd"
 	color_keys = 2
 	color_key_names = list("Tail", "Inner")
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/australian_shepherd
-	name = "Australian Shepherd"
+	name = "pastor australiano"
 	icon_state = "australianshepherd"
 	color_keys = 2
 	color_key_names = list("Tail", "Inner")
@@ -215,12 +215,12 @@
 	color_key_names = list("Tail", "Inner")
 
 /datum/sprite_accessory/tail/straighttail
-	name = "Straight Tail"
+	name = "Cola recta"
 	icon_state = "straighttail"
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/squirrel
-	name = "Squirrel"
+	name = "Ardilla"
 	icon_state = "squirrel"
 	can_wag = TRUE
 
@@ -231,14 +231,14 @@
 	color_key_names = list("Tails", "Tips")
 
 /datum/sprite_accessory/tail/tiger
-	name = "Tiger"
+	name = "Tigre"
 	icon_state = "tiger"
 	color_keys = 3
 	color_key_names = list("Tail", "Tip", "Stripes")
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/wolf
-	name = "Wolf"
+	name = "Lobo"
 	icon_state = "wolf"
 	can_wag = TRUE
 
@@ -268,7 +268,7 @@
 	icon_state = "spade"
 
 /datum/sprite_accessory/tail/leopard
-	name = "Leopard"
+	name = "Leopardo"
 	icon_state = "leopard"
 	color_keys = 2
 	color_key_names = list("Tail", "Spots")
@@ -303,7 +303,7 @@
 	icon_state = "smooth"
 
 /datum/sprite_accessory/tail/lizard/dtiger
-	name = "Dark Tiger"
+	name = "tigre oscuro"
 	icon_state = "dtiger"
 
 /datum/sprite_accessory/tail/lizard/ltiger
@@ -326,14 +326,14 @@
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/tiefling/heart
-	name = "Succubus"
+	name = "súcubo"
 	icon = 'icons/mob/sprite_accessory/tails/tiefling.dmi'
 	icon_state = "hearttail"
 	color_key_defaults = list(KEY_SKIN_COLOR)
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/rattlesnake
-	name = "Rattlesnake"
+	name = "Serpiente de cascabel"
 	icon_state = "rattlesnake"
 	color_keys = 2
 	color_key_names = list("Tail", "Tip")
@@ -354,7 +354,7 @@
 	color_key_defaults = list(KEY_SKIN_COLOR)
 
 /datum/sprite_accessory/tail/kobold
-	name = "Kobold Curly"
+	name = "Kobold rizado"
 	icon = 'icons/mob/sprite_accessory/tails/lizard.dmi'
 	icon_state = "kobold"
 	specuse = list(SPEC_ID_KOBOLD)

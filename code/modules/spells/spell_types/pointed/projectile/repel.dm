@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/projectile/repel
-	name = "Repel"
+	name = "Repeler"
 	desc = "Shoot out a magical bolt that pushes out the target struck away from the caster. If in throw mode, throw your held item with the same force."
 	button_icon_state = "fetch"
 	cast_range = 10
@@ -7,7 +7,7 @@
 
 	required_form = FORM_AIR
 
-	invocation = "Repel!"
+	invocation = "¡Repeler!"
 	invocation_type = INVOCATION_SHOUT
 
 	charge_time = 3 SECONDS
@@ -30,7 +30,7 @@
 	if(ismob(target))
 		var/mob/M = target
 		if(M.can_block_magic(MAGIC_RESISTANCE) || !firer)
-			M.visible_message(span_warning("[src] vanishes on contact with [target]!"))
+			M.visible_message(span_warning("¡[src] desaparece al entrar en contacto con [target]!"))
 			return BULLET_ACT_BLOCK
 		M.safe_throw_at(throw_target, 7, 4)
 		return

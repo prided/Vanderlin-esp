@@ -157,7 +157,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 	// voice muffling
 	if(stat == UNCONSCIOUS)
 		if(type & MSG_AUDIBLE) //audio
-			to_chat(src, "<I>... You can almost hear something ...</I>")
+			to_chat(src, "<I>... Casi se puede escuchar algo...</I>")
 		return
 	to_chat(src, msg)
 
@@ -316,7 +316,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 		if(qdel_on_fail)
 			qdel(W)
 		else if(!disable_warning)
-			to_chat(src, span_warning("I can't equip that!"))
+			to_chat(src, span_warning("¡No puedo equipar eso!"))
 		return FALSE
 
 	equip_to_slot(W, slot, initial, redraw_mob) //This proc should not ever fail.
@@ -453,7 +453,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 		else if(isliving(examinify))
 			var/mob/living/examaniee = examinify
 			if(examaniee.peek_examine_check(src))
-				to_chat(src, span_info("My peeking went unnoticed.."))
+				to_chat(src, span_info("Mi mirada pasó desapercibida."))
 			else
 				to_chat(src, span_warning("[examaniee] noticed me peeking!"))
 
@@ -530,7 +530,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 	if(examined_mob.can_eye_contact() && SEND_SIGNAL(src, COMSIG_MOB_EYECONTACT, examined_mob, TRUE) != COMSIG_BLOCK_EYECONTACT)
 		var/obj/item/clothing/eye_cover = examined_mob.is_eyes_covered()
 		if (!eye_cover || (!eye_cover.tint && !eye_cover.flash_protect))
-			var/msg = span_smallnotice("I make eye contact with [examined_mob].")
+			var/msg = span_smallnotice("Hago contacto visual con [examined_mob].")
 			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), src, msg), 0.3 SECONDS) // so the examine signal has time to fire and this will print after
 
 	if(!imagined_eye_contact && can_eye_contact() && !examined_mob.is_blind() && SEND_SIGNAL(examined_mob, COMSIG_MOB_EYECONTACT, src, FALSE) != COMSIG_BLOCK_EYECONTACT)
@@ -638,7 +638,7 @@ GLOBAL_VAR_INIT(mobids, 1)
  * This actually gets the mind datums notes
  */
 /mob/verb/memory()
-	set name = "Memories"
+	set name = "Recuerdos"
 	set category = "IC"
 	set desc = ""
 	if(mind)
@@ -1187,7 +1187,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 	if(href_list[VV_HK_GIVE_CONTROL_TO_PLAYER])
 		if(!check_rights(NONE))
 			return
-		usr.client.cmd_give_control_to_player(src, input(usr, "Choose player.", "Player:") as anything in GLOB.clients)
+		usr.client.cmd_give_control_to_player(src, input(usr, "Elige jugador.", "Jugador:") as anything in GLOB.clients)
 	if(href_list[VV_HK_OFFER_GHOSTS])
 		if(!check_rights(NONE))
 			return
@@ -1208,7 +1208,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 
 ///Show the language menu for this mob
 /mob/verb/open_language_menu()
-	set name = "Open Language Menu"
+	set name = "Abrir menú de idioma"
 	set category = "IC"
 	set hidden = 1
 

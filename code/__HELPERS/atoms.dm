@@ -177,7 +177,7 @@ rough example of the "cone" made by the 3 dirs checked
 ///Returns a chosen path that is the closest to a list of matches
 /proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
 	if (value == FALSE) //nothing should be calling us with a number, so this is safe
-		value = input("Enter type to find (blank for all, cancel to cancel)", "Search for type") as null|text
+		value = input("Ingrese el tipo para buscar (en blanco para todos, cancelar para cancelar)", "Buscar tipo") as null|text
 		if (isnull(value))
 			return
 	value = trim(value)

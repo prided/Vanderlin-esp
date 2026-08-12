@@ -68,7 +68,7 @@
 	backpack_contents = list(/obj/item/storage/belt/pouch/coins/veryrich)
 
 /datum/migrant_role/grenzelhoft_countess
-	name = "Grenzelhoft Countess"
+	name = "Grenzelhoft Condesa"
 	greet_text = "A Countess hailing from the Grenzelhoft Imperiate, here on an official visit to Vanderlin alongside her beloved convoy and husband."
 	migrant_job = /datum/job/migrant/grenzelhoft_countess
 
@@ -91,7 +91,7 @@
 	)
 
 /datum/job/migrant/grenzelhoft_countess
-	title = "Grenzelhoft Countess"
+	title = "Grenzelhoft Condesa"
 	tutorial = "A Countess hailing from the Grenzelhoft Imperiate, here on an official visit to Vanderlin alongside her beloved convoy and husband."
 	outfit = /datum/outfit/grenzelhoft_countess
 	allowed_sexes = list(FEMALE)
@@ -137,7 +137,7 @@
 	backpack_contents = list(/obj/item/storage/belt/pouch/coins/veryrich)
 
 /datum/migrant_role/grenzelhoft_knight
-	name = "Grenzelhoft Knight"
+	name = "Grenzelhoft Caballero"
 	greet_text = "Your liege, the count and the countess have both took the duty given by the council to voyage to Vanderlin, ensure their survival and obey their orders."
 	migrant_job = /datum/job/migrant/grenzelhoft_knight
 
@@ -156,7 +156,7 @@
 	)
 
 /datum/job/migrant/grenzelhoft_knight
-	title = "Grenzelhoft Knight"
+	title = "Grenzelhoft Caballero"
 	tutorial = "Your liege, the count and the countess have both took the duty given by the council to voyage to Vanderlin, ensure their survival and obey their orders."
 	outfit = /datum/outfit/grenzelhoft_knight
 	allowed_races = RACES_PLAYER_GRENZ
@@ -196,7 +196,7 @@
 	neck = /obj/item/clothing/neck/chaincoif
 
 /datum/migrant_role/grenzelhoft_man_at_arms
-	name = "Grenzelhoft Man-at-Arms"
+	name = "Grenzelhoft Hombre de armas"
 	greet_text = "You and your fellows are men at arms from Grenzelhoft, following your count with pride. Obey the count and make sure the nobles you arrived with survive."
 	migrant_job = /datum/job/migrant/grenzelhoft_man_at_arms
 
@@ -222,7 +222,7 @@
 	)
 
 /datum/job/migrant/grenzelhoft_man_at_arms
-	title = "Grenzelhoft Man-at-Arms"
+	title = "Grenzelhoft Hombre de armas"
 	tutorial = "You and your fellows are men at arms from Grenzelhoft, following your count with pride. Obey the count and make sure the nobles you arrived with survive."
 	outfit = /datum/outfit/grenzelhoft_man_at_arms
 	allowed_races = RACES_PLAYER_GRENZ
@@ -266,7 +266,7 @@
 		equipped_human.underwear_color = CLOTHING_SOOT_BLACK
 
 /datum/migrant_wave/grenzelhoft_visit
-	name = "The Grenzelhoft visit"
+	name = "La visita Grenzelhoft"
 	max_spawns = 1
 	shared_wave_type = list(/datum/migrant_wave/grenzelhoft_visit,/datum/migrant_wave/zalad_wave,/datum/migrant_wave/rockhill_wave,/datum/migrant_wave/heartfelt)
 	weight = 25
@@ -279,7 +279,7 @@
 	greet_text = "The council of the Grenzelhoft Imperiate has sent a diplomatic envoy to engage into diplomacy within the Kingdom of Vanderlin."
 
 /datum/migrant_wave/grenzelhoft_visit_down
-	name = "The Grenzelhoft visit"
+	name = "La visita Grenzelhoft"
 	max_spawns = 1
 	shared_wave_type = list(/datum/migrant_wave/grenzelhoft_visit,/datum/migrant_wave/zalad_wave,/datum/migrant_wave/rockhill_wave,/datum/migrant_wave/heartfelt)
 	can_roll = FALSE

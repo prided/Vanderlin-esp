@@ -1,5 +1,5 @@
 /datum/round_event_control/pain_relief
-	name = "Pain Relief"
+	name = "Alivio del dolor"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/pain_relief
 	weight = 7
@@ -51,7 +51,7 @@
 	chosen_one.add_spell(/datum/action/cooldown/spell/transfer_pain)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE PESTRA'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE PESTRA!"),
 		span_notice("Pestra calls you to ease the suffering of others! Find those in pain and take their suffering upon yourself."),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/magic/cosmic_expansion.ogg', 100)

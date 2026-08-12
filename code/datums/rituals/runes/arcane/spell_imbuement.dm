@@ -20,7 +20,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/spellobject_imbue/attack_hand(mob/living/user)
 	if(animating)
-		to_chat(user, span_notice("The seal is already working..."))
+		to_chat(user, span_notice("El sello ya está funcionando..."))
 		return
 	if(!user.get_active_held_item())
 		if(staged_object && staged_focus)
@@ -29,12 +29,12 @@
 			var/missing = list()
 			if(!staged_object) missing += "a spell object"
 			if(!staged_focus)  missing += "a spell focus"
-			to_chat(user, span_hierophant_warning("The seal needs [english_list(missing)] to proceed."))
+			to_chat(user, span_hierophant_warning("El sello necesita [english_list(missing)] para continuar."))
 		return
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/spellobject_imbue/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(animating)
-		to_chat(user, span_notice("The seal is already working..."))
+		to_chat(user, span_notice("El sello ya está funcionando..."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(istype(tool, /obj/item/arcyne_spellobject))
@@ -47,7 +47,7 @@
 		tool.anchored = TRUE
 		staged_object = tool
 		animate(tool, pixel_x = -16, pixel_y = 0, time = 0.5 SECONDS, flags = ANIMATION_END_NOW)
-		to_chat(user, span_cultsmall("The [tool.name] settles onto the seal..."))
+		to_chat(user, span_cultsmall("El [tool.name] se asienta sobre el sello..."))
 		playsound(src, 'sound/magic/glass.ogg', 60, TRUE)
 		return ITEM_INTERACT_SUCCESS
 
@@ -61,16 +61,16 @@
 		tool.anchored = TRUE
 		staged_focus = tool
 		animate(tool, pixel_x = 16, pixel_y = 0, time = 0.5 SECONDS, flags = ANIMATION_END_NOW)
-		to_chat(user, span_cultsmall("The [tool.name] settles onto the seal..."))
+		to_chat(user, span_cultsmall("El [tool.name] se asienta sobre el sello..."))
 		playsound(src, 'sound/magic/glass.ogg', 60, TRUE)
 		return ITEM_INTERACT_SUCCESS
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/spellobject_imbue/proc/try_invoke(mob/living/user)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("You aren't able to invoke these symbols."))
+		to_chat(user, span_warning("No puedes invocar estos símbolos."))
 		return
 	if(rune_in_use)
-		to_chat(user, span_notice("The seal is already active."))
+		to_chat(user, span_notice("El sello ya está activo."))
 		return
 	rune_in_use = TRUE
 	animating = TRUE

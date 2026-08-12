@@ -33,7 +33,7 @@ export function ChatPageSettings(props) {
             <Button
               color="bad"
               icon="angles-left"
-              tooltip="Reorder tab to the left"
+              tooltip="Reordenar pestaña a la izquierda"
               onClick={moveChatLeft}
             />
           </Stack.Item>
@@ -54,7 +54,7 @@ export function ChatPageSettings(props) {
             <Button
               color="bad"
               icon="angles-right"
-              tooltip="Reorder tab to the right"
+              tooltip="Reordenar pestaña a la derecha"
               onClick={moveChatRight}
             />
           </Stack.Item>
@@ -63,26 +63,26 @@ export function ChatPageSettings(props) {
           <Button.Checkbox
             checked={page.hideUnreadCount}
             icon={page.hideUnreadCount ? 'bell-slash' : 'bell'}
-            tooltip="Disables unread counter"
+            tooltip="Desactiva el contador no leído"
             onClick={() =>
               updateChatPage({
                 hideUnreadCount: !page.hideUnreadCount,
               })
             }
           >
-            Mute
+            Silenciar
           </Button.Checkbox>
         </Stack.Item>
         {!page.isMain && (
           <Stack.Item>
             <Button color="bad" icon="times" onClick={removeChatPage}>
-              Remove
+              Eliminar
             </Button>
           </Stack.Item>
         )}
       </Stack>
       <Divider />
-      <Section title="Messages to display">
+      <Section title="Mensajes para mostrar">
         {MESSAGE_TYPES.filter(
           (typeDef) => !typeDef.important && !typeDef.admin,
         ).map((typeDef) => (
@@ -94,7 +94,7 @@ export function ChatPageSettings(props) {
             {typeDef.name}
           </Button.Checkbox>
         ))}
-        <Collapsible mt={1} color="transparent" title="Admin stuff">
+        <Collapsible mt={1} color="transparent" title="cosas administrativas">
           {MESSAGE_TYPES.filter(
             (typeDef) => !typeDef.important && typeDef.admin,
           ).map((typeDef) => (

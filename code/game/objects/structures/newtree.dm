@@ -90,7 +90,7 @@
 	new /obj/item/grown/log/tree(loc)
 
 /obj/structure/flora/newtree/proc/burn_tree()
-	name = "burnt tree"
+	name = "árbol quemado"
 	icon_state = "burnt"
 	burnt = TRUE
 
@@ -363,7 +363,7 @@
 ///BRANCHES
 
 /obj/structure/flora/newbranch
-	name = "branch"
+	name = "rama"
 	desc = "A stable branch, should be safe to walk on."
 	icon = 'icons/roguetown/misc/tree.dmi'
 	icon_state = "branch-end1"
@@ -407,10 +407,10 @@
 	underlay_base = null
 
 /obj/structure/flora/newbranch/leafless/scorched
-	name = "burnt branch"
+	name = "rama quemada"
 	icon_state = "branchburnt-end1"
 	base_icon_state = "branchburnt-end"
-	desc = "Cracked and hardened from a terrible fire."
+	desc = "Agrietado y endurecido por un terrible incendio."
 
 /obj/structure/flora/newbranch/leafless/scorched/atom_deconstruct(disassembled)
 	return
@@ -425,14 +425,14 @@
 	num_underlay_icons = 1
 
 /obj/structure/flora/newbranch/connector/scorched
-	name = "burnt branch"
-	desc = "Cracked and hardened from a terrible fire."
+	name = "rama quemada"
+	desc = "Agrietado y endurecido por un terrible incendio."
 	icon_state = "branchburnt-extend"
 	underlay_base = null
 	num_underlay_icons = 0
 
 /obj/structure/flora/newleaf
-	name = "leaves"
+	name = "hojas"
 	icon = 'icons/roguetown/misc/tree.dmi'
 	icon_state = "center-leaf1"
 	base_icon_state = "center-leaf"

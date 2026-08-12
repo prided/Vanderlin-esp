@@ -44,7 +44,7 @@
 
 /datum/job/advclass/pilgrim/hunter
 	title = JOB_HUNTER
-	f_title = "Huntress"
+	f_title = "Cazadora"
 	tutorial = "Peasants that thrive on the woods, hunting creechers for pelt and hide, \
 				or the boons of Dendor for their meat to sell, or consume."
 	allowed_sexes = list(MALE, FEMALE)
@@ -62,7 +62,7 @@
 	)
 
 /datum/outfit/pilgrim/hunter
-	name = "Hunter (Pilgrim)"
+	name = "Cazador (peregrino)"
 	pants = /obj/item/clothing/pants/tights/colored/random
 	neck = /obj/item/storage/belt/pouch/coins/poor
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/colored/brown

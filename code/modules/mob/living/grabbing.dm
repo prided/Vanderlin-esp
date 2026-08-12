@@ -16,7 +16,7 @@
 
 /atom/movable/screen/alert/status_effect/oiled
 	name = "Oiled"
-	desc = "I'm covered in oil, making me slippery and harder to grab!"
+	desc = "¡Estoy cubierto de aceite, lo que me hace resbaladizo y más difícil de agarrar!"
 	icon_state = "debuff"
 
 /datum/status_effect/buff/oiled/on_apply()
@@ -330,14 +330,14 @@
 					var/mob/living/carbon/human/H = M
 					var/mob/living/carbon/human/U = user
 					if(!U.cmode)
-						to_chat(U, span_warning("You need to be in combat mode first!"))
+						to_chat(U, span_warning("¡Primero debes estar en modo combate!"))
 						return
 					if(U.GetComponent(/datum/component/hostage))
-						to_chat(U, span_warning("You already have someone hostage!"))
+						to_chat(U, span_warning("¡Ya tienes a alguien como rehén!"))
 						return
 					var/obj/item/offhand_item = U.get_inactive_held_item()
 					if(!isitem(offhand_item) || !offhand_item.force)
-						to_chat(U, span_warning("You need to hold a weapon in the other hand!"))
+						to_chat(U, span_warning("¡Necesitas sostener un arma en la otra mano!"))
 						return
 					U.swap_hand() // Swaps hand to weapon so you can attack instantly if hostage decides to resist
 					U.AddComponent(/datum/component/hostage, H, U.get_active_held_item())
@@ -361,11 +361,11 @@
 				user.stop_pulling()
 		if(/datum/intent/grab/shove)
 			if(user.body_position == LYING_DOWN)
-				to_chat(user, span_warning("I must stand up first."))
+				to_chat(user, span_warning("Primero debo levantarme."))
 				return
 			if(M.body_position == LYING_DOWN)
 				if(user.loc != M.loc)
-					to_chat(user, span_warning("I must be on top of them."))
+					to_chat(user, span_warning("Debo estar encima de ellos."))
 					return
 				if(src == user.r_grab)
 					if(!user.l_grab || user.l_grab.grabbed != M)
@@ -391,12 +391,12 @@
 						M.visible_message(span_danger("[user] throws [M] to the ground!"), \
 						span_userdanger("[user] throws me to the ground!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE)
 					else
-						M.visible_message(span_danger("[user] tackles [M] to the ground!"), \
+						M.visible_message(span_danger("¡[user] derriba a [M] al suelo!"), \
 						span_userdanger("[user] tackles me to the ground!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE)
 						user.Knockdown(tackle_time / 2)
 				else
 					M.visible_message(span_warning("[user] tries to shove [M]!"), \
-									span_danger("[user] tries to shove me!"), span_hear("I hear aggressive shuffling!"), COMBAT_MESSAGE_RANGE)
+									span_danger("¡[user] intenta empujarme!"), span_hear("I hear aggressive shuffling!"), COMBAT_MESSAGE_RANGE)
 					downgrade_grab(silent = TRUE)
 				user.changeNext_move(CLICK_CD_GRABBING)
 		if(/datum/intent/grab/disarm)
@@ -422,7 +422,7 @@
 					if(prob(probby))
 						if(!QDELETED(I))
 							user.put_in_active_hand(I)
-							M.visible_message(span_danger("[user] takes [I] from [M]'s hand!"), \
+							M.visible_message(span_danger("¡[user] toma [I] de la mano de [M]!"), \
 										span_userdanger("[user] takes [I] from my hand!"), span_hear("I hear aggressive shuffling!"), COMBAT_MESSAGE_RANGE)
 							playsound(src, 'sound/combat/weaponr1.ogg', 100, FALSE, -1) //sound queue to let them know that they got disarmed
 						user.changeNext_move(CLICK_CD_MELEE)//avoids instantly attacking with the new weapon
@@ -433,12 +433,12 @@
 				else
 					user.Immobilize(10)
 					M.Immobilize(6)
-					M.visible_message(span_warning("[user.name] struggles to disarm [M.name]!"), COMBAT_MESSAGE_RANGE)
+					M.visible_message(span_warning("¡[user.name] lucha por desarmar a [M.name]!"), COMBAT_MESSAGE_RANGE)
 					playsound(src, 'sound/foley/struggle.ogg', 100, FALSE, -1)
 					downgrade_grab(silent = TRUE)
 					user.changeNext_move(CLICK_CD_GRABBING)
 			else
-				to_chat(user, span_warning("They aren't holding anything in that hand!"))
+				to_chat(user, span_warning("¡No tienen nada en esa mano!"))
 				return
 		if(/datum/intent/grab/armdrag)
 			var/obj/item/I
@@ -458,12 +458,12 @@
 				else
 					user.Immobilize(10)
 					M.Immobilize(6)
-					M.visible_message(span_warning("[user.name] struggles to disarm [M.name]!"), COMBAT_MESSAGE_RANGE)
+					M.visible_message(span_warning("¡[user.name] lucha por desarmar a [M.name]!"), COMBAT_MESSAGE_RANGE)
 					playsound(src, 'sound/foley/struggle.ogg', 100, FALSE, -1)
 					downgrade_grab(silent = TRUE)
 					user.changeNext_move(CLICK_CD_GRABBING)
 			else
-				to_chat(user, span_warning("They aren't holding anything in that hand!"))
+				to_chat(user, span_warning("¡No tienen nada en esa mano!"))
 				return
 	user.do_attack_animation(M, used_item = src, item_animation_override = ATTACK_ANIMATION_THRUST)
 
@@ -685,7 +685,7 @@
 	icon_state = "inchoke"
 
 /datum/intent/grab/hostage
-	name = "hostage"
+	name = "rehén"
 	desc = ""
 	icon_state = "inhostage"
 
@@ -784,7 +784,7 @@
 						if(HE.brain)
 							QDEL_NULL(HE.brain)
 							C.visible_message(span_danger("[user] consumes [C]'s brain!"), \
-								span_userdanger("[user] consumes my brain!"), span_hear("I hear a sickening sound of chewing!"), COMBAT_MESSAGE_RANGE, user)
+								span_userdanger("¡[user] consume mi cerebro!"), span_hear("I hear a sickening sound of chewing!"), COMBAT_MESSAGE_RANGE, user)
 							to_chat(user, span_boldnotice("Braaaaaains!"))
 							if(!MOBTIMER_EXISTS(user, MT_ZOMBIETRIUMPH))
 								user.adjust_triumphs(1)
@@ -798,11 +798,11 @@
 				var/poison = GET_MOB_ATTRIBUTE_VALUE(user, STAT_CONSTITUTION)/2 //more peak species level, more poison
 				C.reagents.add_reagent(/datum/reagent/toxin/venom, poison/2)
 				C.reagents.add_reagent(/datum/reagent/medicine/soporpot, poison)
-				to_chat(user, span_warning("Your fangs inject venom into [C]!"))
+				to_chat(user, span_warning("¡Tus colmillos inyectan veneno en [C]!"))
 	else
 		C.next_attack_msg += " <span class='warning'>Armor stops the damage.</span>"
 	C.visible_message(span_danger("[user] bites [C]'s [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]"), \
-					span_userdanger("[user] bites my [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]"), span_hear("I hear a sickening sound of chewing!"), COMBAT_MESSAGE_RANGE, user)
+					span_userdanger("¡[user] muerde mi [parse_zone(sublimb_grabbed)]![C.next_attack_msg.Join()]"), span_hear("I hear a sickening sound of chewing!"), COMBAT_MESSAGE_RANGE, user)
 	to_chat(user, span_danger("I bite [C]'s [parse_zone(sublimb_grabbed)].[C.next_attack_msg.Join()]"))
 	C.next_attack_msg.Cut()
 	if(C.client && C.stat != DEAD)

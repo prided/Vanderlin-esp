@@ -17,12 +17,12 @@
 	owner.say("NECRA, I AM READY!", forced = "necra_ritual")
 
 	owner.visible_message(
-		span_warning("[owner] begins chanting Necra's last rites!"), \
+		span_warning("¡[owner] comienza a cantar los últimos ritos de Necra!"), \
 		span_warning("You feel Necra's presence as you start the ritual...")
 	)
 
 	if(!do_after(owner, 10 SECONDS, owner))
-		to_chat(owner, span_warning("The ritual was interrupted!"))
+		to_chat(owner, span_warning("¡El ritual fue interrumpido!"))
 		return
 
 	if(QDELETED(src) || QDELETED(owner))

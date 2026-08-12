@@ -199,7 +199,7 @@
 	return new_mob
 
 /obj/screen/evolution_choice
-	name = "Evolution Choice"
+	name = "Elección de evolución"
 	icon = 'icons/obj/cellular/putrid_abilities.dmi'
 	icon_state = "button_bg"
 	plane = HUD_PLANE
@@ -237,7 +237,7 @@
 
 /obj/screen/evolution_choice/Click()
 	if(!available)
-		to_chat(usr, span_warning("This evolution is not available!"))
+		to_chat(usr, span_warning("¡Esta evolución no está disponible!"))
 		return
 
 	if(!picker)

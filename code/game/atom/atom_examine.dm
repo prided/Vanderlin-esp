@@ -82,7 +82,7 @@
 				is_not_closed = !A.closed
 			if(is_not_closed && reagents.total_volume) // if the container is open, and there's liquids in there
 				user.visible_message(span_info("[user] takes a whiff of [src]."))
-				. += span_notice("I smell [src.reagents.generate_scent_message()].")
+				. += span_notice("Huelo [src.reagents.generate_scent_message()].")
 				if(HAS_TRAIT(user, TRAIT_LEGENDARY_ALCHEMIST))
 					var/list/full_reagents = list()
 					for(var/datum/reagent/R in reagents.reagent_list)

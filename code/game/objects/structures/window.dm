@@ -81,7 +81,7 @@
 	icon_state = "stained-yellow"
 
 /obj/structure/window/openclose
-	desc = "It opens and closes."
+	desc = "Se abre y se cierra."
 	icon_state = MAP_SWITCH("woodwindow", "woodwindowdir")
 	max_integrity = 100
 	integrity_failure = 0.5
@@ -140,7 +140,7 @@
 
 /obj/structure/window/openclose/attackby(obj/item/attacking_item, mob/user, list/modifiers)
 	if(istype(attacking_item, /obj/item/weapon/knife/dagger) && !climbable && !user.cmode)
-		to_chat(user, span_notice("I start trying to pry the window open..."))
+		to_chat(user, span_notice("Empiezo a intentar abrir la ventana..."))
 		if(do_after(user, 6 SECONDS, src))
 			playsound(src, 'sound/foley/doors/windowup.ogg', 100, FALSE)
 			src.force_open()
@@ -157,7 +157,7 @@
 
 /obj/structure/window/proc/open_up(mob/user)
 	if(user)
-		visible_message("<span class='info'>[user] opens [src].</span>")
+		visible_message("<span class='info'>[user] abre [src].</span>")
 	playsound(src, 'sound/foley/doors/windowup.ogg', 100, FALSE)
 	climbable = TRUE
 	update_appearance(UPDATE_ICON_STATE)
@@ -166,7 +166,7 @@
 
 /obj/structure/window/proc/close_up(mob/user)
 	if(user)
-		visible_message("<span class='info'>[user] closes [src].</span>")
+		visible_message("<span class='info'>[user] cierra [src].</span>")
 	playsound(src, 'sound/foley/doors/windowdown.ogg', 100, FALSE)
 	climbable = FALSE
 	update_appearance(UPDATE_ICON_STATE)
@@ -220,7 +220,7 @@
 	if(obj_broken)
 		return
 	if( user.used_intent.type == /datum/intent/unarmed/claw )
-		to_chat(user, "<span class='warning'>[user] smashes the window!!</span>")
+		to_chat(user, "¡¡<span class='warning'>[user] rompe la ventana!!</span>")
 		atom_break()
 		return
 	user.changeNext_move(CLICK_CD_MELEE)

@@ -1,6 +1,6 @@
 //this item is intended to give the effect of entering the mine, so that light gradually fades
 /obj/effect/light_emitter
-	name = "Light emitter"
+	name = "Emisor de luz"
 	anchored = TRUE
 	invisibility = 101
 	var/set_luminosity = 8

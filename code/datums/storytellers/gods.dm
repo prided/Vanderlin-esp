@@ -33,8 +33,8 @@
 
 /datum/storyteller/noc
 	name = NOC
-	desc = "Noc will try to send more magical events."
-	welcome_text = "The veil between realms shimmers in your presence."
+	desc = "Noc intentará enviar más eventos mágicos."
+	welcome_text = "El velo entre reinos brilla en tu presencia."
 	weight = 4
 	always_votable = TRUE
 	roundstart_prob = 70
@@ -113,7 +113,7 @@
 /datum/storyteller/abyssor
 	name = ABYSSOR
 	desc = "Abyssor likes to send water and trade-related events."
-	welcome_text = "The tides of fate shift in your favor."
+	welcome_text = "Las mareas del destino cambian a tu favor."
 	weight = 4
 	always_votable = TRUE
 	color_theme = "#3366CC"
@@ -197,7 +197,7 @@
 /datum/storyteller/necra
 	name = NECRA
 	desc = "Necra takes things very slow, rarely bringing in newcomers."
-	welcome_text = "The grave whispers, patience is virtue."
+	welcome_text = "La tumba susurra: la paciencia es virtud."
 	weight = 4
 	always_votable = TRUE
 	color_theme = "#888888"
@@ -240,7 +240,7 @@
 /datum/storyteller/pestra
 	name = PESTRA
 	desc = "Pestra keeps things simple, with a slight bias towards alchemy."
-	welcome_text = "The balance of life and craft tilts in your favor."
+	welcome_text = "El equilibrio entre la vida y el oficio se inclina a tu favor."
 	color_theme = "#AADDAA"
 
 	tag_multipliers = list(
@@ -356,7 +356,7 @@
 
 /datum/storyteller/dendor
 	name = DENDOR
-	desc = "Dendor likes to send nature-themed events."
+	desc = "A Dendor le gusta enviar eventos con temas de naturaleza."
 	welcome_text = "The wilds whisper your name."
 	weight = 4
 	always_votable = TRUE
@@ -450,7 +450,7 @@
 /datum/storyteller/baotha
 	name = BAOTHA
 	desc = "Baotha revels in chaos, making events and reality unpredictable."
-	welcome_text = "The world bends to my whims."
+	welcome_text = "El mundo se doblega a mis caprichos."
 	weight = 4
 	always_votable = TRUE
 	follower_modifier = STANDARD_INHUMEN_MODIFIER
@@ -497,7 +497,7 @@
 /datum/storyteller/graggar
 	name = GRAGGAR
 	desc = "Graggar encourages war and conquest, making combat the solution to all."
-	welcome_text = "Victory or death!"
+	welcome_text = "¡Victoria o muerte!"
 	weight = 4
 	always_votable = TRUE
 	follower_modifier = STANDARD_INHUMEN_MODIFIER
@@ -545,8 +545,8 @@
 
 /datum/storyteller/matthios
 	name = MATTHIOS
-	desc = "Matthios manipulates wealth and corruption, rewarding those who make deals."
-	welcome_text = "Fortune favors the cunning."
+	desc = "Matthios manipula la riqueza y la corrupción, recompensando a quienes hacen tratos."
+	welcome_text = "La fortuna favorece a los astutos."
 	weight = 4
 	always_votable = TRUE
 	follower_modifier = LOWER_INHUMEN_FOLLOWER_MODIFIER

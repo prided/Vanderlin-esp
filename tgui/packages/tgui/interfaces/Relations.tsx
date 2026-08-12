@@ -107,7 +107,7 @@ export const Relations = () => {
     });
 
   return (
-    <Window width={380} height={560} title="Relations">
+    <Window width={380} height={560} title="Relaciones">
       <Window.Content scrollable>
         <Tabs>
           {tabs.map((t) => (
@@ -119,19 +119,19 @@ export const Relations = () => {
         <Box mb={1}>
           <Input
             fluid
-            placeholder="Search name, job, or species..."
+            placeholder="Buscar nombre, trabajo o especie..."
             value={search ?? ''}
             onChange={(value) => setSearch(value ?? '')}
           />
         </Box>
         <Box mb={1} color="label">
-          Rivals: {rival_count} / {rival_pref} preferred
+          Rivales: {rival_count} / {rival_pref} preferred
         </Box>
         <Stack vertical>
           {visible.length === 0 && (
             <Stack.Item>
               <Box color="gray" italic>
-                No relations match.
+                Ninguna relación coincide.
               </Box>
             </Stack.Item>
           )}
@@ -201,7 +201,7 @@ const RelationCard = ({ rel }: { rel: RelationEntry }) => {
         </Stack.Item>
         {open && grudges.length > 0 && (
           <Stack.Item>
-            <Section title="History">
+            <Section title="Historia">
               <Stack vertical>
                 {grudges.map((g, i) => (
                   <Stack.Item key={i}>
@@ -215,7 +215,7 @@ const RelationCard = ({ rel }: { rel: RelationEntry }) => {
                         <Stack.Item>
                           <Button
                             icon="comment"
-                            tooltip="Say this gossip aloud"
+                            tooltip="Di este chisme en voz alta"
                             onClick={() =>
                               act('say_gossip', {
                                 text: g.say_string,

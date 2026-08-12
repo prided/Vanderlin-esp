@@ -8,7 +8,7 @@
 	var/triggered = 0
 
 /obj/effect/mine/proc/mineEffect(mob/victim)
-	to_chat(victim, "<span class='danger'>*click*</span>")
+	to_chat(victim, "<span class='danger'>*clic*</span>")
 
 /obj/effect/mine/Crossed(AM as mob|obj)
 	if(isturf(loc))
@@ -32,7 +32,7 @@
 
 
 /obj/effect/mine/explosive
-	name = "explosive mine"
+	name = "mina explosiva"
 	var/range_devastation = 0
 	var/range_heavy = 1
 	var/range_light = 2

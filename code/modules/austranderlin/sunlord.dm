@@ -1,5 +1,5 @@
 /obj/effect/landmark/start/sunlord
-	name = "Sunlord"
+	name = "señor del sol"
 	icon_state = "arrow"
 
 
@@ -18,7 +18,7 @@
 	)
 
 /datum/job/sunlord
-	title = "Sunlord"
+	title = "señor del sol"
 	tutorial = "The morning sun shines upon you as you wake, \
 	glorious subjects await your orders, those blessed to live with you in the basking sunlight. \
 	The cave-dwellers from below envy your paradise, drool over the thoughts of using your precious sunlight for their own means. \
@@ -31,15 +31,15 @@
 	spawn_positions = 0
 	bypass_lastclass = TRUE
 	banned_leprosy = FALSE
-	honorary = "God-Lord"
-	honorary_suffix = "the Sun"
+	honorary = "Dios-Señor"
+	honorary_suffix = "el sol"
 
 	allowed_races = RACES_PLAYER_ALL
 
 	outfit = /datum/outfit/sunlord
 	can_random = FALSE
 	can_have_apprentices = TRUE
-	apprentice_name = "Sunpeasant"
+	apprentice_name = "campesino del sol"
 
 	exp_type = list(EXP_TYPE_LEADERSHIP, EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_LEADERSHIP)
@@ -86,7 +86,7 @@
 	add_verb(spawned, /mob/living/carbon/human/proc/sunlordannouncement)
 
 /datum/outfit/sunlord
-	name = "Sunlord"
+	name = "señor del sol"
 	cloak = /obj/item/clothing/cloak/heartfelt/shit
 	ring = /obj/item/clothing/ring/dragon_ring
 	neck = /obj/item/clothing/neck/amberamulet
@@ -97,8 +97,8 @@
 	beltr = /obj/item/weapon/sword/stone
 
 /mob/living/carbon/human/proc/sunlordannouncement()
-	set name = "Sunlord Announcement"
-	set category = "RoleUnique.Sunlord"
+	set name = "Anuncio del Señor del Sol"
+	set category = "RolÚnico.Señor del Sol"
 	if(stat)
 		return
 
@@ -121,7 +121,7 @@
 
 
 /datum/action/cooldown/spell/projectile/fireball/greater/sunlord
-	name = "Sunlord's Fireball"
+	name = "Bola de fuego del Señor del Sol"
 	desc = "Shoot out an immense ball of fire that explodes on impact."
 	invocation = "LIGHTNING BOLT!!!"
 	spell_cost = 0
@@ -132,7 +132,7 @@
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/sundweller
 	name = "Recruit Sundweller"
-	desc = "Recruit someone to your cause."
+	desc = "Recluta a alguien para tu causa."
 	button_icon_state = "recruit_bog"
 	new_role = "Sundweller"
 	recruitment_faction = "Sundwellers"
@@ -145,10 +145,10 @@
 	cast_on.set_patron(/datum/patron/godless/sunlord)
 
 /datum/patron/godless/sunlord
-	name = "The Sunlord"
+	name = "El Señor del Sol"
 	desc = "I don't know what an Aristrata or any of that other shit is. There's only one god and it's the SUNLORD."
 	boons = "You regain stamina faster in the presence of your Sunlord."
-	domain = "The Surface, the Sun, the Sunlord, whatever the Sunlord wants, the Sunlord's will, the Sunlord's well-being, the S"
+	domain = "La Superficie, el Sol, el Señor del Sol, lo que quiera el Señor del Sol, la voluntad del Señor del Sol, el bienestar del Señor del Sol, el S."
 	flaws = "You are a fucking knave"
 	worshippers = "Knaves"
 	sins = "Underdwelling, lying to the Sunlord, failing the Sunlord, being better than the Sunlord at something, doubting the Sunlo"

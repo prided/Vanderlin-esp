@@ -153,7 +153,7 @@ export const ListInputModal = (props: ListInputModalProps) => {
             fluid
             onEnter={() => on_selected(filteredItems[selected])}
             onChange={onSearch}
-            placeholder="Search..."
+            placeholder="Buscar..."
             value={searchQuery}
           />
         )}

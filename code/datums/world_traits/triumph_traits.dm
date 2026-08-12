@@ -1,9 +1,9 @@
 /datum/world_trait/orphanage_renovated
-	name = "Orphanage Renovated"
+	name = "Orfanato renovado"
 	desc = "Orphans and their Matron have more money, better clothes and wider variety of skills."
 
 /datum/world_trait/longer_week
-	name = "Longer Week"
+	name = "Semana más larga"
 	desc = "Working week has been extended by 2 daes! Rejoice, peasants!"
 
 /datum/world_trait/exotic_tastes

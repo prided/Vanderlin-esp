@@ -1,5 +1,5 @@
 /obj/structure/channel_connector/furnace
-	name = "channel furnace"
+	name = "horno de canal"
 	desc = "A large furnace that connects to metal channels, acting like a crucible to melt items and output molten metal. The storage can be opened and closed with RMB."
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
@@ -110,7 +110,7 @@
 			return
 
 		on = TRUE
-		user.visible_message("[user] lights [src].", "You light [src].")
+		user.visible_message("[user] lights [src].", "Enciendes [src].")
 		update_appearance(UPDATE_OVERLAYS)
 		return
 

@@ -10,7 +10,7 @@
 	classic_keys = list("F3")
 	name = "admin_say"
 	full_name = "Admin say"
-	description = "Talk with other admins."
+	description = "Habla con otros administradores."
 
 /datum/keybinding/admin/admin_say/down(client/user, turf/target, mousepos_x, mousepos_y)
 	. = ..()
@@ -57,7 +57,7 @@
 	hotkey_keys = list("CtrlF8")
 	classic_keys = list("CtrlF8")
 	name = "stealth_mode"
-	full_name = "Stealth mode"
+	full_name = "Modo sigiloso"
 	description = "Enters stealth mode"
 
 /datum/keybinding/admin/stealthmode/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -68,7 +68,7 @@
 /datum/keybinding/admin/invisimin
 	hotkey_keys = list("F8")
 	name = "invisimin"
-	full_name = "Admin invisibility"
+	full_name = "Invisibilidad del administrador"
 	description = "Toggles ghost-like invisibility (Don't abuse this)"
 
 /datum/keybinding/admin/invisimin/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -78,7 +78,7 @@
 
 /datum/keybinding/admin/deadsay
 	hotkey_keys = list("F10")
-	name = "dsay"
+	name = "decir"
 	full_name = "deadsay"
 	description = "Allows you to send a message to dead chat"
 

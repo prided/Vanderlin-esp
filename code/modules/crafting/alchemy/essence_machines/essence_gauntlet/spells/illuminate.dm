@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/illuminate
-	name = "Illuminate"
-	desc = "Creates a small, temporary light source."
+	name = "Iluminar"
+	desc = "Crea una pequeña fuente de luz temporal."
 	button_icon_state = "light"
 	//sound = 'sound/magic/staff_healing.ogg'
 	cast_range = 0

@@ -326,7 +326,7 @@
 	var/obj/item/equipped_back = get_item_by_slot(slot_id)
 	if(!equipped_back) // We also let you equip a backpack like this
 		if(!thing)
-			to_chat(src, span_warning("I have no backpack to take something out of!"))
+			to_chat(src, span_warning("¡No tengo mochila para sacar algo!"))
 			return
 		if(equip_to_slot_if_possible(thing, slot_id))
 			update_inv_hands()
@@ -334,7 +334,7 @@
 	// Since you have to take off /obj/item/storage/backpack/backpack to access the inventory we handle it differently:
 	if(istype(equipped_back, /obj/item/storage/backpack/backpack))
 		if(thing) // Check for held item, if there is one, don't let them insert it in the backpack
-			to_chat(src, span_warning("I need to take my backpack off first"))
+			to_chat(src, span_warning("Primero necesito quitarme la mochila."))
 			return
 		equipped_back.attack_hand(src) // If there is no held item, take off the backpack by invoking attack_hand
 		return
@@ -342,14 +342,14 @@
 		if(!thing)
 			equipped_back.attack_hand(src)
 		else
-			to_chat(src, span_warning("I can't fit anything in!"))
+			to_chat(src, span_warning("¡No puedo meter nada!"))
 		return
 	if(thing) // put thing in backpack
 		if(!SEND_SIGNAL(equipped_back, COMSIG_TRY_STORAGE_INSERT, thing, src))
-			to_chat(src, span_warning("I can't fit anything in!"))
+			to_chat(src, span_warning("¡No puedo meter nada!"))
 		return
 	if(!equipped_back.contents.len) // nothing to take out
-		to_chat(src, span_warning("There's nothing in your backpack to take out!"))
+		to_chat(src, span_warning("¡No hay nada en tu mochila para sacar!"))
 		return
 	var/obj/item/stored = equipped_back.contents[equipped_back.contents.len]
 	if(!stored || stored.on_found(src))
@@ -380,7 +380,7 @@
 			to_chat(src, "<span class='warning'>I can't fit anything in!</span>")
 		return
 	if(!equipped_belt.contents.len) // nothing to take out
-		to_chat(src, "<span class='warning'>There's nothing in your belt to take out!</span>")
+		to_chat(src, "<span class='warning'>¡No hay nada en tu cinturón para sacar!</span>")
 		return
 	var/obj/item/stored = equipped_belt.contents[equipped_belt.contents.len]
 	if(!stored || stored.on_found(src))

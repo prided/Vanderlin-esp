@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/talent_trees
 	name = "Open Talent Trees"
-	desc = "View and learn talents"
+	desc = "Ver y aprender talentos"
 	button_icon_state = "book1"
 	sound = null
 

@@ -24,7 +24,7 @@
 		STAT_SPEED = -1,
 	)
 /datum/job/advclass/combat/monk
-	title = "Monk"
+	title = "Monje"
 	allowed_races = RACES_PLAYER_NONHERETICAL
 	allowed_patrons = ALL_TEMPLE_PATRONS
 	tutorial = "A traveling monk of the Ten, unmatched in the unarmed arts, with an unwavering devotion to their patron God's Justice."
@@ -53,7 +53,7 @@
 		spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/monk/kobold)
 
 /datum/outfit/adventurer/monk
-	name = "Monk (Adventurer)"
+	name = "Monje (aventurero)"
 
 	head = /obj/item/clothing/head/roguehood/colored/brown
 	shoes = /obj/item/clothing/shoes/shortboots

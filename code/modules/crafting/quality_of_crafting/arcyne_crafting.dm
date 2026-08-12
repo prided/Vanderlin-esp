@@ -1,7 +1,7 @@
 
 /datum/arcyne_crafting_recipe
 	abstract_type = /datum/arcyne_crafting_recipe
-	var/name = "unnamed recipe"
+	var/name = "receta sin nombre"
 	/// Unordered list of item typepaths required (one entry per item needed)
 	var/list/ingredients = list()
 	/// The typepath of the item produced
@@ -12,7 +12,7 @@
 	var/mana_cost = 0
 
 /datum/arcyne_crafting_recipe/amethyst_transmutation
-	name = "amethyst transmutation"
+	name = "transmutación de amatista"
 	ingredients = list(
 		/obj/item/natural/stone,
 	)
@@ -21,7 +21,7 @@
 	mana_cost = 20
 
 /datum/arcyne_crafting_recipe/infernal_feather
-	name = "infernal feather"
+	name = "pluma infernal"
 	ingredients = list(
 		/obj/item/natural/infernalash,
 		/obj/item/natural/infernalash,
@@ -63,7 +63,7 @@
 	required_skill = SKILL_LEVEL_JOURNEYMAN
 
 /datum/arcyne_crafting_recipe/temporal_hourglass
-	name = "temporal hourglass"
+	name = "reloj de arena temporal"
 	ingredients = list(
 		/obj/item/natural/wood/plank,
 		/obj/item/natural/wood/plank,
@@ -77,7 +77,7 @@
 	required_skill = SKILL_LEVEL_JOURNEYMAN
 
 /datum/arcyne_crafting_recipe/shimmering_lens
-	name = "shimmering lens"
+	name = "lente brillante"
 	ingredients = list(
 		/obj/item/natural/melded/t1,
 		/obj/item/natural/leyline,
@@ -154,7 +154,7 @@
 	required_skill =  SKILL_LEVEL_APPRENTICE
 
 /datum/arcyne_crafting_recipe/t3_meld
-	name = "sorcerous weave"
+	name = "tejido hechicero"
 	ingredients = list(
 		/obj/item/natural/moltencore,
 		/obj/item/natural/heartwoodcore,
@@ -164,7 +164,7 @@
 	required_skill =  SKILL_LEVEL_APPRENTICE
 
 /datum/arcyne_crafting_recipe/t4_meld
-	name = "magical confluence"
+	name = "confluencia mágica"
 	ingredients = list(
 		/obj/item/natural/abyssalflame,
 		/obj/item/natural/sylvanessence,
@@ -183,7 +183,7 @@
 	required_skill = SKILL_LEVEL_JOURNEYMAN
 
 /datum/arcyne_crafting_recipe/ley_linker
-	name = "ley linker"
+	name = "enlazador de ley"
 	ingredients = list(
 		/obj/item/gem/amethyst,
 		/obj/item/natural/infernalash,
@@ -273,7 +273,7 @@
 	required_skill = SKILL_LEVEL_NOVICE
 
 /datum/arcyne_crafting_recipe/elemental_t3_to_t4
-	name = "elemental relic synthesis"
+	name = "síntesis de reliquias elementales"
 	ingredients = list(
 		/obj/item/natural/elementalfragment,
 		/obj/item/natural/elementalfragment,

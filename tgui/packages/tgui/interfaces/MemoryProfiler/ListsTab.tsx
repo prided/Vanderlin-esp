@@ -45,7 +45,7 @@ export function ListsTab() {
       <Stack.Item>
         <Section>
           <ReportHeader
-            label="Capture lists"
+            label="Capturar listas"
             busy={busy}
             onCapture={() =>
               act('capture_lists', { rows: panel_row_options[1] })
@@ -53,7 +53,7 @@ export function ListsTab() {
             meta={metaFor(report_meta, 'lists')}
           >
             <Stack align="center">
-              <Stack.Item color="label">Top</Stack.Item>
+              <Stack.Item color="label">Principales</Stack.Item>
               {panel_row_options.map((option) => (
                 <Stack.Item key={option}>
                   <Button
@@ -71,9 +71,7 @@ export function ListsTab() {
       {!lists_report ? (
         <Stack.Item>
           <EmptyState>
-            This is usually the one you want. Every list is named by the datum
-            var, global or containing list that holds it, so a bloated list
-            points straight at the code holding it.
+            Este suele ser el que quieres. Cada lista recibe el nombre de la var de datos, la lista global o contenedora que la contiene, por lo que una lista inflada apunta directamente al código que la contiene.
           </EmptyState>
         </Stack.Item>
       ) : (
@@ -81,18 +79,17 @@ export function ListsTab() {
           <Stack.Item>
             <Section>
               <LabeledList>
-                <LabeledList.Item label="Live lists">
+                <LabeledList.Item label="Listas en vivo">
                   {count(lists_report.lists_total)} holding{' '}
                   {bytes(lists_report.list_bytes)}
                 </LabeledList.Item>
                 <LabeledList.Item
-                  label="Orphans"
+                  label="Huérfanos"
                   color={
                     exact(lists_report.orphan_lists) > 0 ? 'average' : undefined
                   }
                 >
-                  {count(lists_report.orphan_lists)} reached by no named root,
-                  either a real leak or a storage class this walk misses
+                  {count(lists_report.orphan_lists)} alcanzado por una raíz sin nombre, ya sea una fuga real o una clase de almacenamiento que esta caminata pasa por alto
                 </LabeledList.Item>
                 <SkipBreakdown skipped={lists_report.skipped} />
               </LabeledList>
@@ -107,14 +104,14 @@ export function ListsTab() {
                 selected={view === VIEW.PerList}
                 onClick={() => setView(VIEW.PerList)}
               >
-                Per list
+                Por lista
               </Tabs.Tab>
               <Tabs.Tab
                 icon="layer-group"
                 selected={view === VIEW.ByVar}
                 onClick={() => setView(VIEW.ByVar)}
               >
-                By type var ({count(lists_report.groups_total)})
+                Por tipo var ({count(lists_report.groups_total)})
               </Tabs.Tab>
             </Tabs>
           </Stack.Item>

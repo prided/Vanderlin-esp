@@ -67,8 +67,8 @@
 	importexport_amt = 10
 
 /datum/stock/stockpile/salt
-	name = "Salt"
-	desc = "Rock salt useful for curing and cooking."
+	name = "Sal"
+	desc = "Sal de roca útil para curar y cocinar."
 	item_type = /obj/item/reagent_containers/powder/salt
 	held_items = 5
 	payout_price = 4
@@ -89,7 +89,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/oat
-	name = "Oat"
+	name = "Avena"
 	desc = "Oat grains primed for milling."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/grain/oat
 	held_items = 5
@@ -101,7 +101,7 @@
 
 /datum/stock/stockpile/sunreed
 	name = "Sunreed"
-	desc = "An extremely hard grain primed for milling."
+	desc = "Un grano extremadamente duro preparado para la molienda."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/grain/sunreed
 	held_items = 5
 	payout_price = 2
@@ -111,8 +111,8 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/apple
-	name = "Apples"
-	desc = "A sweet and nutritious fruit."
+	name = "manzanas"
+	desc = "Una fruta dulce y nutritiva."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/fruit/apple
 	held_items = 2
 	payout_price = 2
@@ -122,7 +122,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/pear
-	name = "Pears"
+	name = "peras"
 	desc = "Very sweet, oblong fruits."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/fruit/pear
 	held_items = 2
@@ -133,7 +133,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/lemon
-	name = "Lemons"
+	name = "limones"
 	desc = "Sour fruit that is often added to other dishes."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/fruit/lemon
 	held_items = 2
@@ -276,7 +276,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/strawberry
-	name = "Strawberries"
+	name = "fresas"
 	desc = "A variety of sweet berry native to Wintermare."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/fruit/strawberry
 	held_items = 2
@@ -298,7 +298,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/blackberry
-	name = "Blackberries"
+	name = "Moras"
 	desc = "A variety of earthy berry formerly common in Vanderlin."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/fruit/blackberry
 	held_items = 2
@@ -321,7 +321,7 @@
 
 /datum/stock/stockpile/swampweed
 	name = "Swampweed"
-	desc = "A weed that can be dried and smoked to induce a relaxed state."
+	desc = "Una hierba que se puede secar y fumar para inducir un estado de relajación."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/swampweed
 	held_items = 2
 	payout_price = 2
@@ -331,7 +331,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/westleach
-	name = "Westleach Leaves"
+	name = "Hojas de Westleach"
 	desc = "A common, strong-smelling leaf that is often dried and smoked."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/westleach
 	held_items = 2
@@ -342,7 +342,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/sunflower
-	name = "Sunflowers"
+	name = "Girasoles"
 	desc = "Astratas favoured flower, said to carry some of her warmth and radiance."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/sunflower
 	held_items = 2
@@ -353,7 +353,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/turnip
-	name = "Turnips"
+	name = "nabos"
 	desc = "A hearty root vegetable fit for soup."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/vegetable/turnip
 	held_items = 2
@@ -387,7 +387,7 @@
 
 /datum/stock/stockpile/onion
 	name = "Onions"
-	desc = "A wonderful vegetable with many layers and a broad flavor profile."
+	desc = "Una verdura maravillosa con muchas capas y un amplio perfil de sabor."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/vegetable/onion
 	held_items = 2
 	payout_price = 2
@@ -442,7 +442,7 @@
 
 /datum/stock/stockpile/drowsbane
 	name = "Drowsbane"
-	desc = "A type of lichen known for its fiery effects on the palate."
+	desc = "Un tipo de liquen conocido por sus efectos ardientes en el paladar."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/mushroom/drowsbane
 	held_items = 2
 	payout_price = 2
@@ -453,7 +453,7 @@
 
 /datum/stock/stockpile/meat
 	name = "Meat"
-	desc = "A cut of red meat."
+	desc = "Un corte de carne roja."
 	item_type = /obj/item/reagent_containers/food/snacks/meat/steak
 	held_items = 2
 	payout_price = 4
@@ -463,7 +463,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/poultry
-	name = "Poultry"
+	name = "Aves de corral"
 	desc = "A whole plucked bird."
 	item_type = /obj/item/reagent_containers/food/snacks/meat/poultry
 	held_items = 2
@@ -474,7 +474,7 @@
 	stockpile_id = STOCK_FOOD
 
 /datum/stock/stockpile/egg
-	name = "Egg"
+	name = "Huevo"
 	desc = "An essential part of many breakfast and baking recipes."
 	item_type = /obj/item/reagent_containers/food/snacks/egg
 	held_items = 2
@@ -486,7 +486,7 @@
 
 /datum/stock/stockpile/fat
 	name = "Fat"
-	desc = "The parts of an animal best used for greasing and frying."
+	desc = "Las partes de un animal que se utilizan mejor para engrasar y freír."
 	item_type = /obj/item/reagent_containers/food/snacks/fat
 	held_items = 2
 	payout_price = 2
@@ -518,7 +518,7 @@
 	stockpile_id = STOCK_METAL
 
 /datum/stock/stockpile/tin
-	name = "Tin Ore"
+	name = "Mineral de estaño"
 	desc = "Raw tin fit for alloying."
 	item_type = /obj/item/ore/tin
 	held_items = 4
@@ -529,8 +529,8 @@
 	stockpile_id = STOCK_METAL
 
 /datum/stock/stockpile/iron
-	name = "Iron Ore"
-	desc = "Raw unrefined iron."
+	name = "mineral de hierro"
+	desc = "Hierro crudo sin refinar."
 	item_type = /obj/item/ore/iron
 	held_items = 2
 	payout_price = 4
@@ -540,8 +540,8 @@
 	stockpile_id = STOCK_METAL
 
 /datum/stock/stockpile/silver
-	name = "Silver Ore"
-	desc = "Raw unrefined silver."
+	name = "Mineral de plata"
+	desc = "Plata cruda sin refinar."
 	item_type = /obj/item/ore/silver
 	held_items = 4
 	payout_price = 6
@@ -551,7 +551,7 @@
 	stockpile_id = STOCK_METAL
 
 /datum/stock/stockpile/gold
-	name = "Gold Ore"
+	name = "mineral de oro"
 	desc = "Raw unrefined gold."
 	item_type = /obj/item/ore/gold
 	held_items = 4

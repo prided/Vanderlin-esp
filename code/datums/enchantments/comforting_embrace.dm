@@ -1,5 +1,5 @@
 /datum/enchantment/comforting_embrace
-	enchantment_name = "Comforting Embrace"
+	enchantment_name = "Abrazo reconfortante"
 	examine_text = "It feels so comforting."
 
 	should_process = TRUE

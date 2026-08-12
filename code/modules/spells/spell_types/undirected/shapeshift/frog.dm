@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/shapeshift/frog
-	name = "Frog Form"
+	name = "Forma de rana"
 	desc = "Transform into a frog. Damage is not inherited between forms."
 
 

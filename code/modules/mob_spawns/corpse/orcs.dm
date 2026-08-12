@@ -8,11 +8,11 @@
 	randomise_dna = FALSE
 
 /obj/effect/mob_spawn/corpse/orc/savage
-	name = "Savage Orc"
+	name = "Orco salvaje"
 	outfit = /datum/outfit/savageorc2
 
 /datum/outfit/savageorc
-	name = "Savage Orc"
+	name = "Orco salvaje"
 	shirt = /obj/item/clothing/shirt/tribalrag
 	pants =	/obj/item/clothing/pants/loincloth/colored/brown
 	shoes = /obj/item/clothing/shoes/boots/furlinedanklets
@@ -21,18 +21,18 @@
 	outfit = /datum/outfit/savageorc2
 
 /datum/outfit/savageorc2
-	name = "Savage Orc (Helmet)"
+	name = "Orco salvaje (casco)"
 	shirt = /obj/item/clothing/shirt/tribalrag
 	pants =	/obj/item/clothing/pants/loincloth/colored/brown
 	shoes = /obj/item/clothing/shoes/boots/furlinedanklets
 	head = /obj/item/clothing/head/helmet/leather
 
 /obj/effect/mob_spawn/corpse/orc/marauder
-	name = "Orc Marauder"
+	name = "Merodeador orco"
 	outfit = /datum/outfit/orcmarauder
 
 /datum/outfit/orcmarauder
-	name = "Orc Marauder"
+	name = "Merodeador orco"
 	armor = /obj/item/clothing/armor/chainmail
 	pants =	/obj/item/clothing/pants/chainlegs
 	shoes = /obj/item/clothing/shoes/boots/furlinedboots

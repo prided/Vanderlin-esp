@@ -96,7 +96,7 @@
 
 /*	.................   Base Blessing of Dendor   ................... */
 /obj/item/dendor_blessing
-	name = "blank blessing of Dendor"
+	name = "bendición en blanco de Dendor"
 	icon = 'icons/roguetown/misc/magick.dmi'
 	icon_state = ""
 	layer = 4.2
@@ -115,7 +115,7 @@
 		return NONE
 
 	if(!istype(user.patron, /datum/patron/divine/dendor) || !check_blessing_requirements(user))
-		to_chat(user, span_warning("Dendor finds me unworthy of his blessings..."))
+		to_chat(user, span_warning("Dendor me encuentra indigno de sus bendiciones..."))
 		return ITEM_INTERACT_BLOCKING
 
 	icon_state = "[icon_state]_end"
@@ -132,7 +132,7 @@
 			return ITEM_INTERACT_BLOCKING
 
 	if(required_trait && !HAS_TRAIT(user, required_trait))
-		to_chat(user, span_warning("I am not yet attuned to this path..."))
+		to_chat(user, span_warning("Todavía no estoy en sintonía con este camino..."))
 		icon_state = initial(icon_state)
 		return ITEM_INTERACT_BLOCKING
 
@@ -150,7 +150,7 @@
 		user.mind.teach_crafting_recipe(unlocks_recipe)
 		var/datum/blueprint_recipe/R = unlocks_recipe
 		if(R && initial(R.name))
-			to_chat(user, span_good("I have learned how to make [initial(R.name)]!"))
+			to_chat(user, span_good("¡He aprendido a hacer [initial(R.name)]!"))
 
 	record_round_statistic(STATS_DENDOR_SACRIFICES)
 
@@ -169,7 +169,7 @@
 
 /*	.................   Green Blessings of Dendor   ................... */
 /obj/item/dendor_blessing/growing
-	name = "growing blessing of Dendor"
+	name = "bendición creciente de Dendor"
 	icon_state = "dendor_grow"
 	associated_shrine = /obj/structure/fluff/psycross/crafted/shrine/dendor_gote
 	path_trait = TRAIT_DENDOR_GROWING
@@ -196,7 +196,7 @@
 /obj/item/dendor_blessing/tending/give_blessing(mob/living/carbon/human/user)
 	playsound(user, 'sound/vo/smokedrag.ogg', 100, TRUE)
 	playsound(user, 'sound/misc/wind.ogg', 100, TRUE, -1)
-	to_chat(user, span_good("You find seeds more easily."))
+	to_chat(user, span_good("Encuentras semillas más fácilmente."))
 	user.emote("smile")
 	ADD_TRAIT(user, TRAIT_SEED_FINDER, TRAIT_GENERIC)
 	user.add_spell(/datum/action/cooldown/spell/conjure/garden_fae, source = user.cleric)
@@ -247,7 +247,7 @@
 
 /obj/item/dendor_blessing/devouring/check_blessing_requirements(mob/living/user)
 	if(!user.get_spell(/datum/action/cooldown/spell/undirected/bless_crops))
-		to_chat(user, span_warning("My faith to Dendor is insufficient..."))
+		to_chat(user, span_warning("Mi fe en Dendor es insuficiente..."))
 		return FALSE
 	return ..()
 
@@ -262,7 +262,7 @@
 	playsound(user, 'sound/combat/fracture/fracturewet (1).ogg', 70, TRUE, -1)
 	user.Immobilize(30)
 	sleep(3.5 SECONDS)
-	to_chat(user, span_warning("My incisors transform to predatory fangs!"))
+	to_chat(user, span_warning("¡Mis incisivos se transforman en colmillos depredadores!"))
 	playsound(user, 'sound/combat/fracture/fracturewet (1).ogg', 70, TRUE, -1)
 	user.emote("rage", forced = TRUE)
 	ADD_TRAIT(user, TRAIT_STRONGBITE, TRAIT_GENERIC)
@@ -286,7 +286,7 @@
 /obj/item/dendor_blessing/falconing/give_blessing(mob/living/carbon/human/user)
 	playsound(user, 'sound/vo/mobs/bird/birdfly.ogg', 100, TRUE)
 	playsound(user, 'sound/misc/wind.ogg', 100, TRUE, -1)
-	to_chat(user, span_good("You feel winged beings guide you from above."))
+	to_chat(user, span_good("Sientes que seres alados te guían desde arriba."))
 	user.emote("smile")
 	user.add_spell(/datum/action/cooldown/spell/projectile/falcon_disrupt, source = user.cleric)
 	user.apply_status_effect(/datum/status_effect/buff/calm)
@@ -301,7 +301,7 @@
 
 /obj/item/dendor_blessing/lording/check_blessing_requirements(mob/living/user)
 	if(!user.get_spell(/datum/action/cooldown/spell/healing))
-		to_chat(user, span_warning("My faith to Dendor is insufficient..."))
+		to_chat(user, span_warning("Mi fe en Dendor es insuficiente..."))
 		return FALSE
 	return ..()
 

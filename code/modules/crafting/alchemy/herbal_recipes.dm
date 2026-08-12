@@ -13,8 +13,8 @@
 	name = "Symphitum Tea"
 	description = "A mild healing tea made from symphitum leaves."
 	color = "#8fbc8f"
-	taste_description = "earthy herbs"
-	scent_description = "green leaves"
+	taste_description = "hierbas terrosas"
+	scent_description = "hojas verdes"
 
 /datum/reagent/medicine/herbal/symphitum_tea/on_mob_life(mob/living/carbon/M, efficiency)
 	if(volume > 0.99)
@@ -26,10 +26,10 @@
 	..()
 
 /datum/reagent/medicine/herbal/taraxacum_extract
-	name = "Taraxacum Extract"
-	description = "A bitter extract that cleanses minor toxins."
+	name = "Extracto de Taraxacum"
+	description = "Un extracto amargo que limpia toxinas menores."
 	color = "#daa520"
-	taste_description = "bitter dandelion"
+	taste_description = "diente de león amargo"
 	scent_description = "weeds"
 
 /datum/reagent/medicine/herbal/taraxacum_extract/on_mob_metabolize(mob/living/L)
@@ -48,10 +48,10 @@
 
 /datum/reagent/medicine/herbal/urtica_brew
 	name = "Urtica Brew"
-	description = "A stinging nettle brew that restores blood and energy."
+	description = "Una infusión de ortiga que restaura la sangre y la energía."
 	color = "#4d6b3d"
 	taste_description = "stinging greens"
-	scent_description = "nettles"
+	scent_description = "ortigas"
 
 /datum/reagent/medicine/herbal/urtica_brew/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -69,10 +69,10 @@
 	..()
 
 /datum/reagent/medicine/herbal/calendula_salve
-	name = "Calendula Salve"
+	name = "Ungüento de caléndula"
 	description = "A soothing salve that promotes healing when applied to areas."
 	color = "#ff8c00"
-	taste_description = "bitter flowers"
+	taste_description = "flores amargas"
 	scent_description = "marigold"
 
 /datum/reagent/medicine/herbal/calendula_salve/on_bodypart_absorb(mob/living/carbon/affected_mob, obj/item/bodypart/affected_bodypart, amount_to_transfer)
@@ -94,10 +94,10 @@
 // Weak Mana/Stamina Potions (based on hypericum/benedictus/mentha)
 /datum/reagent/medicine/herbal/hypericum_tonic
 	name = "Hypericum Tonic"
-	description = "A tonic that restores minor energy and stamina."
+	description = "Un tónico que restaura la energía y la resistencia menores."
 	color = "#ffff99"
-	taste_description = "bitter herbs"
-	scent_description = "St. John's wort"
+	taste_description = "hierbas amargas"
+	scent_description = "hierba de san juan"
 
 /datum/reagent/medicine/herbal/hypericum_tonic/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -116,11 +116,11 @@
 	..()
 
 /datum/reagent/medicine/herbal/mentha_tea
-	name = "Mentha Tea"
+	name = "Té de menta"
 	description = "A refreshing mint tea that clears the mind."
 	color = "#90ee90"
 	taste_description = "cooling mint"
-	scent_description = "mint"
+	scent_description = "menta"
 
 /datum/reagent/medicine/herbal/mentha_tea/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -147,11 +147,11 @@
 	overdose_threshold = 20
 
 /datum/reagent/buff/herbal/salvia_wisdom
-	name = "Salvia Wisdom Tea"
-	description = "A tea that slightly enhances constitution."
+	name = "Té de sabiduría de salvia"
+	description = "Un té que mejora ligeramente la constitución."
 	color = "#9caf88"
 	taste_description = "sage"
-	scent_description = "wise herbs"
+	scent_description = "hierbas sabias"
 
 /datum/reagent/buff/herbal/salvia_wisdom/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -173,7 +173,7 @@
 
 /datum/reagent/buff/herbal/artemisia_luck
 	name = "Artemisia Fortune Tea"
-	description = "A tea that slightly improves fortune and speed."
+	description = "Un té que mejora ligeramente la fortuna y la velocidad."
 	color = "#c0c0c0"
 	taste_description = "wormwood"
 	scent_description = "artemisia"
@@ -203,7 +203,7 @@
 	name = "Euphorbia Strength Tea"
 	description = "A bitter tea that infuses the body with strength."
 	color = "#6ca22a"
-	taste_description = "latex"
+	taste_description = "látex"
 	scent_description = "sharp herbs"
 
 /datum/reagent/buff/herbal/euphorbia_strength/on_mob_metabolize(mob/living/L)
@@ -227,13 +227,13 @@
 
 // Very Mild Poisons (based on atropa/matricaria/paris but much weaker)
 /datum/reagent/poison/herbal
-	description = "A mildly irritating plant extract."
+	description = "Un extracto de planta ligeramente irritante."
 	reagent_state = LIQUID
 	metabolization_rate = REAGENTS_METABOLISM
 	overdose_threshold = 15
 
 /datum/reagent/poison/herbal/weak_atropa
-	name = "Dilute Atropa Extract"
+	name = "Extracto de atropa diluido"
 	description = "A very diluted extract that causes mild discomfort."
 	color = "#8b0000"
 	taste_description = "bitter nightshade"
@@ -250,7 +250,7 @@
 	description = "Causes mild stomach upset and drowsiness."
 	color = "#90ee90"
 	taste_description = "bitter chamomile"
-	scent_description = "sour flowers"
+	scent_description = "flores agrias"
 
 /datum/reagent/poison/herbal/matricaria_irritant/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -279,7 +279,7 @@
 	description = "Simple rose petal water with very mild healing."
 	color = "#ffb6c1"
 	taste_description = "floral"
-	scent_description = "roses"
+	scent_description = "rosas"
 
 /datum/reagent/medicine/herbal/simple_rosa/on_mob_life(mob/living/carbon/M, efficiency)
 	if(volume > 0.99)
@@ -292,8 +292,8 @@
 	name = "Euphrasia Eye Wash"
 	description = "An eye wash that slightly improves perception."
 	color = "#e6e6fa"
-	taste_description = "eyebright"
-	scent_description = "clean herbs"
+	taste_description = "eufrasia"
+	scent_description = "hierbas limpias"
 
 /datum/reagent/medicine/herbal/euphrasia_eye_wash/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -326,7 +326,7 @@
 	color = "#4a3c5f"
 	metabolization_rate = 0.5
 	overdose_threshold = 40
-	taste_description = "deeply relaxing herbs"
+	taste_description = "hierbas profundamente relajantes"
 	var/sleep_power = 60 SECONDS
 
 /datum/reagent/medicine/herbal/valeriana_draught/on_mob_metabolize(mob/living/M)
@@ -395,7 +395,7 @@
 	color = "#556b2f"
 	metabolization_rate = 0.2
 	overdose_threshold = 30
-	taste_description = "bitter numbness"
+	taste_description = "amargo entumecimiento"
 
 /datum/reagent/medicine/herbal/paris_poultice/on_bodypart_absorb(mob/living/carbon/affected_mob, obj/item/bodypart/affected_bodypart, amount_to_transfer)
 	if(affected_bodypart.heal_damage(0.5, 0.75, TRUE, required_status = BODYPART_ORGANIC))
@@ -413,7 +413,7 @@
 
 /datum/reagent/medicine/herbal/herbalist_panacea
 	name = "Herbalist's Panacea"
-	description = "A potent blend of multiple healing herbs that provides comprehensive restoration."
+	description = "Una potente mezcla de múltiples hierbas curativas que proporciona una restauración integral."
 	reagent_state = LIQUID
 	color = "#228b22"
 	metabolization_rate = 0.6
@@ -452,7 +452,7 @@
 	color = "#dc143c"
 	metabolization_rate = 0.5
 	overdose_threshold = 45
-	taste_description = "floral purification"
+	taste_description = "purificación floral"
 
 /datum/reagent/medicine/herbal/witches_bane/on_mob_life(mob/living/carbon/M, efficiency)
 	M.adjustToxLoss(-2)
@@ -506,8 +506,8 @@
 	M.add_stress(/datum/stress_event/pleasant_scent)
 
 /datum/reagent/medicine/herbal/mentha_oil
-	name = "Mentha Cooling Oil"
-	description = "A cooling oil that provides relief to sore muscles and joints."
+	name = "Aceite refrescante de menta"
+	description = "Un aceite refrescante que proporciona alivio a los músculos y articulaciones doloridos."
 	reagent_state = LIQUID
 	color = "#90ee90"
 	metabolization_rate = 0.3
@@ -526,12 +526,12 @@
 
 /datum/reagent/poison/herbal/atropa_concentrate
 	name = "Atropa Death Draught"
-	description = "A concentrated poison derived from deadly nightshade. Extremely lethal."
+	description = "Un veneno concentrado derivado de la belladona. Extremadamente letal."
 	reagent_state = LIQUID
 	color = "#2f1b2c"
 	metabolization_rate = REAGENTS_SLOW_METABOLISM
 	overdose_threshold = 10
-	taste_description = "bitter death"
+	taste_description = "muerte amarga"
 
 /datum/reagent/poison/herbal/atropa_concentrate/on_mob_life(mob/living/carbon/M, efficiency)
 	M.adjustToxLoss(3 * efficiency)
@@ -548,12 +548,12 @@
 	. = ..()
 
 /datum/reagent/poison/herbal/swamp_miasma
-	name = "Swamp Miasma"
+	name = "Miasma del pantano"
 	description = "A noxious concoction that creates poisonous vapors in the surrounding area."
 	reagent_state = LIQUID
 	color = "#556b2f"
 	metabolization_rate = 0.6
-	taste_description = "swamp rot"
+	taste_description = "podredumbre del pantano"
 
 /datum/reagent/poison/herbal/swamp_miasma/on_mob_metabolize(mob/living/M)
 	. = ..()
@@ -578,7 +578,7 @@
 
 /datum/reagent/buff/herbal/moonwater_elixir
 	name = "Moonwater Elixir"
-	description = "A mystical elixir that enhances magical abilities and spiritual awareness."
+	description = "Un elixir místico que mejora las habilidades mágicas y la conciencia espiritual."
 	reagent_state = LIQUID
 	color = "#c0c0c0"
 	metabolization_rate = 0.3
@@ -587,7 +587,7 @@
 
 /datum/reagent/buff/herbal/moonwater_elixir/on_mob_add(mob/living/L)
 	. = ..()
-	to_chat(L, span_notice("Your understanding of magical runes deepens!"))
+	to_chat(L, span_notice("¡Tu comprensión de las runas mágicas se profundiza!"))
 	ADD_TRAIT(L, TRAIT_MOONWATER_ELIXIR, "[type]")
 
 /datum/reagent/buff/herbal/moonwater_elixir/on_mob_delete(mob/living/L)
@@ -606,8 +606,8 @@
 // Combat Enhancement
 
 /datum/reagent/buff/herbal/battle_stim
-	name = "Warrior's Battle Broth"
-	description = "A combat stimulant that enhances physical prowess while maintaining mental clarity."
+	name = "Caldo de batalla del guerrero"
+	description = "Un estimulante de combate que mejora la destreza física mientras mantiene la claridad mental."
 	reagent_state = LIQUID
 	color = "#8b0000"
 	metabolization_rate = 0.5
@@ -639,17 +639,17 @@
 // Knowledge Enhancement
 
 /datum/reagent/buff/herbal/alchemist_insight
-	name = "Alchemist's Insight"
+	name = "Perspicacia del alquimista"
 	description = "A brew that reveals the hidden properties of herbs and enhances alchemical knowledge."
 	reagent_state = LIQUID
 	color = "#daa520"
 	metabolization_rate = 0.4
 	overdose_threshold = 35
-	taste_description = "enlightening herbs"
+	taste_description = "hierbas iluminadoras"
 
 /datum/reagent/buff/herbal/alchemist_insight/on_mob_add(mob/living/L)
 	. = ..()
-	to_chat(L, span_notice("Your understanding of herbal properties deepens!"))
+	to_chat(L, span_notice("¡Tu comprensión de las propiedades de las hierbas se profundiza!"))
 	ADD_TRAIT(L, TRAIT_LEGENDARY_ALCHEMIST, "[type]")
 
 /datum/reagent/buff/herbal/alchemist_insight/on_mob_delete(mob/living/L)
@@ -690,7 +690,7 @@
 // Mood Events for Herbal Effects
 
 /datum/stress_event/herbal_calm
-	desc = "I feel deeply relaxed and at peace."
+	desc = "Me siento profundamente relajado y en paz."
 	stress_change = -3
 	timer = 10 MINUTES
 
@@ -720,6 +720,6 @@
 	timer = 15 MINUTES
 
 /datum/stress_event/battle_stim
-	desc = "I feel ready for battle!"
+	desc = "¡Me siento listo para la batalla!"
 	stress_change = -2
 	timer = 10 MINUTES

@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/mansion_portal
-	name = "Mansion Portal"
-	desc = "Create a portal to return to MY mansion"
+	name = "Portal de la mansión"
+	desc = "Crea un portal para regresar a MI mansión"
 	has_visual_effects = FALSE
 
 	charge_required = TRUE
@@ -11,7 +11,7 @@
 /datum/action/cooldown/spell/undirected/mansion_portal/cast(atom/cast_on)
 	. = ..()
 	if(SSmapping.config.map_name == "Voyage")
-		to_chat(owner, span_warning("It cannot be, Nothing happens."))
+		to_chat(owner, span_warning("No puede ser, no pasa nada."))
 		return
 
 	var/obj/structure/vampire/portalmaker/destination
@@ -19,7 +19,7 @@
 		destination = P
 		break
 	if(!destination)
-		to_chat(owner, span_warning("It cannot be, Nothing happens."))
+		to_chat(owner, span_warning("No puede ser, no pasa nada."))
 		return
 
 	var/obj/effect/portal/vampire/portal = new /obj/effect/portal/vampire(get_turf(owner), owner, 15 MINUTES, null, FALSE, get_turf(destination), FALSE)

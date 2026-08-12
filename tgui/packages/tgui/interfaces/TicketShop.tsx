@@ -136,7 +136,7 @@ const TicketCard = ({
             {ticket.name}
             {locked && (
               <Box as="span" color="average" fontSize="0.75em" ml={1}>
-                (in trade)
+                (en el comercio)
               </Box>
             )}
           </Box>
@@ -149,7 +149,7 @@ const TicketCard = ({
             </Box>
           )}
           <Box fontSize="0.65em" style={{ color: typeColor }}>
-            {ticket.ui_type_label} &mdash; from {ticket.granted_by} on {ticket.granted_at}
+            {ticket.ui_type_label} &mdash; de {ticket.granted_by} on {ticket.granted_at}
             {!!ticket.grant_reason && ` (${ticket.grant_reason})`}
           </Box>
         </Stack.Item>
@@ -176,7 +176,7 @@ const TicketCard = ({
                   onUse(ticket.ticket_id);
                 }}
               >
-                Use
+                Usar
               </Button>
             )}
           </Stack.Item>
@@ -235,7 +235,7 @@ const BasketSummary = ({
         <Stack.Item grow basis="50%">
           <Box fontSize="0.75em" color="good" bold mb={0.5}>
             <Icon name="arrow-right" mr={0.5} />
-            You give to {targetCkey || '…'}
+            Tú le das a {targetCkey || '…'}
           </Box>
           {hasOffer ? (
             <Box>
@@ -245,7 +245,7 @@ const BasketSummary = ({
             </Box>
           ) : (
             <Box color="label" fontSize="0.8em">
-              Nothing
+              Nada
             </Box>
           )}
         </Stack.Item>
@@ -256,7 +256,7 @@ const BasketSummary = ({
         <Stack.Item grow basis="50%">
           <Box fontSize="0.75em" color="average" bold mb={0.5}>
             <Icon name="arrow-left" mr={0.5} />
-            You get from {targetCkey || '…'}
+            Obtienes de {targetCkey || '…'}
           </Box>
           {hasRequest ? (
             <Box>
@@ -266,7 +266,7 @@ const BasketSummary = ({
             </Box>
           ) : (
             <Box color="label" fontSize="0.8em">
-              Nothing
+              Nada
             </Box>
           )}
         </Stack.Item>
@@ -303,7 +303,7 @@ const IncomingTradeCard = ({
         <Stack.Item grow>
           <Box bold fontSize="0.9em">
             <Icon name="exchange-alt" mr={0.5} color="average" />
-            Trade offer from <b>{trade.from_ckey}</b>
+            Oferta comercial de <b>{trade.from_ckey}</b>
           </Box>
           <Box fontSize="0.75em" color="label" mt={0.25}>
             {hasOffered
@@ -317,7 +317,7 @@ const IncomingTradeCard = ({
           {isCancelling && (
             <Box fontSize="0.75em" color="average" mt={0.25}>
               <Icon name="hourglass-half" mr={0.5} />
-              Sender is cancelling
+              El remitente está cancelando
             </Box>
           )}
         </Stack.Item>
@@ -342,15 +342,15 @@ const IncomingTradeCard = ({
               }
               onClick={() => onAccept(trade.trade_id)}
             >
-              Accept
+              Aceptar
             </Button>
             <Button
               icon="times"
               color="bad"
-              tooltip="Decline this offer"
+              tooltip="Rechazar esta oferta"
               onClick={() => onDecline(trade.trade_id)}
             >
-              Decline
+              Rechazar
             </Button>
           </Stack>
         </Stack.Item>
@@ -361,7 +361,7 @@ const IncomingTradeCard = ({
             <Stack.Item grow basis="50%">
               <Box fontSize="0.75em" color="good" bold mb={0.5}>
                 <Icon name="arrow-down" mr={0.5} />
-                You receive
+                Recibes
               </Box>
               {hasOffered ? (
                 trade.offered_tickets.map((t) => (
@@ -369,7 +369,7 @@ const IncomingTradeCard = ({
                 ))
               ) : (
                 <Box color="label" fontSize="0.8em">
-                  Nothing
+                  Nada
                 </Box>
               )}
             </Stack.Item>
@@ -383,7 +383,7 @@ const IncomingTradeCard = ({
             <Stack.Item grow basis="50%">
               <Box fontSize="0.75em" color="average" bold mb={0.5}>
                 <Icon name="arrow-up" mr={0.5} />
-                They take from you
+                te quitan
               </Box>
               {hasRequested ? (
                 trade.requested_tickets.map((t) => (
@@ -391,7 +391,7 @@ const IncomingTradeCard = ({
                 ))
               ) : (
                 <Box color="label" fontSize="0.8em">
-                  Nothing
+                  Nada
                 </Box>
               )}
             </Stack.Item>
@@ -477,7 +477,7 @@ const TradeComposerPanel = ({
     <Box>
       <Box mb={1}>
         <Box fontSize="0.8em" bold color="label" mb={0.5}>
-          Who are you trading with?
+          ¿Con quién estás negociando?
         </Box>
         <Stack mb={0.5}>
           <Stack.Item>
@@ -490,7 +490,7 @@ const TradeComposerPanel = ({
                 setRequestIds(new Set());
               }}
             >
-              Online
+              En línea
             </Button>
           </Stack.Item>
           <Stack.Item>
@@ -503,7 +503,7 @@ const TradeComposerPanel = ({
                 setRequestIds(new Set());
               }}
             >
-              Offline (exact ckey)
+              Desconectado (ckey exacto)
             </Button>
           </Stack.Item>
         </Stack>
@@ -511,7 +511,7 @@ const TradeComposerPanel = ({
         {targetMode === 'online' ? (
           onlineCkeys.length === 0 ? (
             <Box color="label" fontSize="0.8em">
-              No other players online.
+              No hay otros jugadores en línea.
             </Box>
           ) : (
             <Stack wrap>
@@ -537,7 +537,7 @@ const TradeComposerPanel = ({
             <Stack.Item grow>
               <Input
                 fluid
-                placeholder="Enter exact ckey…"
+                placeholder="Ingresa el ckey exacto…"
                 value={offlineInput}
                 onChange={(v: string) => setOfflineInput(v)}
               />
@@ -551,7 +551,7 @@ const TradeComposerPanel = ({
                   onLookupCkey(offlineInput.trim().toLowerCase());
                 }}
               >
-                Look up
+                Buscar
               </Button>
             </Stack.Item>
           </Stack>
@@ -560,16 +560,16 @@ const TradeComposerPanel = ({
 
       <Box mb={1}>
         <Box fontSize="0.8em" bold color="label" mb={0.5}>
-          Tickets you are offering{' '}
+          Tickets que ofreces{' '}
           {offerIds.size > 0 && (
             <Box as="span" color="good">
-              ({offerIds.size} selected)
+              ({offerIds.size} seleccionado)
             </Box>
           )}
         </Box>
         {ownedTickets.length === 0 ? (
           <Box color="label" fontSize="0.8em">
-            You have no tickets to offer.
+            No tienes tickets para ofrecer.
           </Box>
         ) : (
           ownedTickets.map((t) => (
@@ -590,23 +590,23 @@ const TradeComposerPanel = ({
             mt={0.5}
             onClick={() => setOfferIds(new Set())}
           >
-            Clear offer selection
+            Borrar selección de oferta
           </Button>
         )}
       </Box>
 
       <Box mb={1}>
         <Box fontSize="0.8em" bold color="label" mb={0.5}>
-          Tickets you want in return{' '}
+          Tickets que quieres a cambio{' '}
           {requestIds.size > 0 && (
             <Box as="span" color="average">
-              ({requestIds.size} selected)
+              ({requestIds.size} seleccionado)
             </Box>
           )}
         </Box>
         {!effectiveCkey ? (
           <Box color="label" fontSize="0.8em">
-            Select a player first to see their tickets.
+            Primero selecciona a un jugador para ver sus tickets.
           </Box>
         ) : !lookupIsFresh ? (
           <Box color="label" fontSize="0.8em">
@@ -616,7 +616,7 @@ const TradeComposerPanel = ({
           </Box>
         ) : !lookupResultTickets || lookupResultTickets.length === 0 ? (
           <Box color="label" fontSize="0.8em">
-            {lookupResultCkey} has no tickets.
+            {lookupResultCkey} no tiene tickets.
           </Box>
         ) : (
           lookupResultTickets.map((t) => (
@@ -636,7 +636,7 @@ const TradeComposerPanel = ({
             mt={0.5}
             onClick={() => setRequestIds(new Set())}
           >
-            Clear request selection
+            Borrar selección de solicitud
           </Button>
         )}
       </Box>
@@ -664,13 +664,13 @@ const TradeComposerPanel = ({
           }
           onClick={handleSend}
         >
-          Send Trade Offer
+          Enviar oferta comercial
         </Button>
       </Box>
       {outgoingTrades.length > 0 && (
         <Box mt={1}>
           <Box fontSize="0.8em" bold color="label" mb={0.5}>
-            Your pending outgoing trades:
+            Sus operaciones salientes pendientes:
           </Box>
           {outgoingTrades.map((tr) => (
             <Box
@@ -686,10 +686,10 @@ const TradeComposerPanel = ({
                 <Stack.Item grow>
                   <Box fontSize="0.85em">
                     <Icon name="exchange-alt" mr={0.5} color="label" />
-                    To <b>{tr.to_ckey}</b>
+                    A <b>{tr.to_ckey}</b>
                     {!!tr.cancelling && (
                       <Box as="span" color="average" fontSize="0.8em" ml={1}>
-                        (cancelling…)
+                        (cancelado…)
                       </Box>
                     )}
                   </Box>
@@ -714,7 +714,7 @@ const TradeComposerPanel = ({
                     }
                     onClick={() => onCancelTrade(tr.trade_id)}
                   >
-                    Cancel
+                    Cancelar
                   </Button>
                 </Stack.Item>
               </Stack>
@@ -754,7 +754,7 @@ const HistoryView = ({ history }: { history: HistoryEntry[] }) => {
   if (!sorted.length) {
     return (
       <NoticeBox>
-        No history yet, use or trade a ticket to see it here.
+        Aún no hay historial. Usa o intercambia un ticket para verlo aquí.
       </NoticeBox>
     );
   }
@@ -862,7 +862,7 @@ export const TicketShopView = ({
               onClick={() => setSubTab('inventory')}
             >
               <Icon name="ticket-alt" mr={1} />
-              My Tickets
+              Mis tickets
               {ownedTickets.length > 0 && (
                 <Box
                   as="span"
@@ -883,7 +883,7 @@ export const TicketShopView = ({
               onClick={() => setSubTab('trade')}
             >
               <Icon name="exchange-alt" mr={1} />
-              Trade
+              Intercambiar
               {incomingTrades.length > 0 && (
                 <Box
                   as="span"
@@ -904,18 +904,17 @@ export const TicketShopView = ({
               onClick={() => setSubTab('history')}
             >
               <Icon name="history" mr={1} />
-              History
+              Historia
             </Tabs.Tab>
           </Tabs>
         </Section>
       </Stack.Item>
       <Stack.Item grow>
         {subTab === 'inventory' && (
-          <Section fill scrollable title="My Tickets">
+          <Section fill scrollable title="Mis tickets">
             {ownedTickets.length === 0 ? (
               <NoticeBox>
-                You have no tickets. Tickets are granted by admins and server
-                events.
+                No tienes tickets. Los administradores y los eventos del servidor los otorgan.
               </NoticeBox>
             ) : (
               ownedTickets.map((t) => (
@@ -949,7 +948,7 @@ export const TicketShopView = ({
               </Stack.Item>
             )}
             <Stack.Item grow>
-              <Section fill scrollable title="Compose a Trade Offer">
+              <Section fill scrollable title="Redactar una oferta comercial">
                 <TradeComposerPanel
                   ownedTickets={ownedTickets}
                   lockedOfferingIds={lockedSet}
@@ -967,7 +966,7 @@ export const TicketShopView = ({
         )}
 
         {subTab === 'history' && (
-          <Section fill scrollable title="Ticket History">
+          <Section fill scrollable title="Historial de tickets">
             <HistoryView history={ticketHistory} />
           </Section>
         )}

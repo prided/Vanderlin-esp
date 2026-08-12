@@ -29,7 +29,7 @@
 	name = bd.selected_recipe.name
 
 /atom/movable/screen/blueprint/direction
-	name = "Direction: South"
+	name = "Dirección: Sur"
 	icon_state = "build"
 	screen_loc = "NORTH,WEST+1"
 
@@ -40,7 +40,7 @@
 /atom/movable/screen/blueprint/direction/update_appearance()
 	. = ..()
 	if(!bd || !bd.selected_recipe)
-		name = "Direction: None"
+		name = "Dirección: Ninguna"
 		color = "#666666"
 		dir = SOUTH
 		return
@@ -51,11 +51,11 @@
 		color = "#666666"
 		return
 
-	name = "Direction: [dir2text(bd.build_dir)]"
+	name = "Dirección: [dir2text(bd.build_dir)]"
 	color = "#FFFFFF"
 
 /atom/movable/screen/blueprint/pixel_mode
-	name = "Pixel Mode: OFF"
+	name = "Modo de píxel: APAGADO"
 	icon_state = "template"
 	screen_loc = "NORTH,WEST+2"
 
@@ -72,7 +72,7 @@
 		name = "Pixel Mode: ON"
 		color = "#00FFFF"
 	else
-		name = "Pixel Mode: OFF"
+		name = "Modo de píxel: APAGADO"
 		color = "#FFFFFF"
 
 /atom/movable/screen/blueprint/help
@@ -101,7 +101,7 @@
 		bd.quit()
 
 /atom/movable/blueprint_pixel_dummy
-	name = "pixel positioning tracker"
+	name = "rastreador de posicionamiento de píxeles"
 	icon = 'icons/effects/alphacolors.dmi'
 	icon_state = "white"
 	alpha = 1

@@ -17,7 +17,7 @@
 	var/obj/machinery/essence/machine = resolve_essence_machine(interacting_with)
 	if(!machine)
 		if(connecting)
-			to_chat(user, span_warning("[interacting_with] is not an essence device."))
+			to_chat(user, span_warning("[interacting_with] no es un dispositivo de esencia."))
 			return ITEM_INTERACT_BLOCKING
 		return NONE
 
@@ -46,17 +46,17 @@
 	connecting = FALSE
 
 	if(target == from)
-		to_chat(user, span_warning("Cannot connect a device to itself."))
+		to_chat(user, span_warning("No se puede conectar un dispositivo consigo mismo."))
 		return
 
 	for(var/datum/essence_link/existing in from.links)
 		if(existing.source == from && existing.sink == target)
-			to_chat(user, span_warning("These devices are already linked in that direction."))
+			to_chat(user, span_warning("Estos dispositivos ya están vinculados en esa dirección."))
 			return
 
 	var/datum/essence_link/link = essence_create_link(from, target)
 	if(!link)
-		to_chat(user, span_warning("Could not create link, check that both machines accept connections in that direction."))
+		to_chat(user, span_warning("No se pudo crear el enlace, verifique que ambas máquinas acepten conexiones en esa dirección."))
 		return
 
 	to_chat(user, span_info("Linked [get_display_name(from)] → [get_display_name(target)]."))
@@ -149,7 +149,7 @@
 	return ..()
 
 /obj/effect/essence_orb
-	name = "essence orb"
+	name = "orbe de esencia"
 	desc = "Alchemical essence in transit along a silver thread."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "phasein"

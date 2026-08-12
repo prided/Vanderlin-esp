@@ -35,7 +35,7 @@
 	smeltresult = /obj/item/fertilizer/ash
 
 /obj/item/clothing/armor/leather/advanced/rousman
-	name = "rous assassin armor"
+	name = "armadura de asesino rous"
 	icon_state = "assassin_armour"
 	item_state = "assassin_armour"
 	icon = 'icons/roguetown/mob/monster/rousman.dmi'
@@ -44,7 +44,7 @@
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/head/roguehood/rousman
-	name = "rous assassin mask"
+	name = "máscara de asesino rous"
 	icon_state = "assassin_mask"
 	item_state = "assassin_mask"
 	icon = 'icons/roguetown/mob/monster/rousman.dmi'

@@ -31,7 +31,7 @@
 		return NONE
 
 	if(opened)
-		to_chat(user, span_info("The reliquary box has already been opened..."))
+		to_chat(user, span_info("La caja del relicario ya ha sido abierta..."))
 		return ITEM_INTERACT_BLOCKING
 
 	qdel(tool)
@@ -39,7 +39,7 @@
 	playsound(src, 'sound/foley/doors/woodlock.ogg', 60)
 	to_chat(user,)
 	var/relics = list("Melancholic Crankbox - Antimagic", "Daybreak - Silver Whip", "Sanctum - Silver Halberd", "Crusade - Silver Greatsword", "Censer of Penitence")
-	var/relicchoice = tgui_input_list(user, "Choose your tool", "RELICS", relics)
+	var/relicchoice = tgui_input_list(user, "Elige tu herramienta", "RELICS", relics)
 	var/obj/choice
 	switch(relicchoice)
 		if("Melancholic Crankbox - Antimagic")
@@ -54,7 +54,7 @@
 			user.clamped_adjust_skill_level(/datum/attribute/skill/combat/swords, 40, 40, TRUE)		//Ditto.
 		if("Censer of Penitence")
 			choice = /obj/item/flashlight/flare/torch/lantern/psycenser
-	to_chat(user, span_info("I have chosen the relic, may HE guide my hand."))
+	to_chat(user, span_info("He elegido la reliquia, que ÉL guíe mi mano."))
 	var/obj/structure/closet/crate/chest/inqreliquary/realchest = new /obj/structure/closet/crate/chest/inqreliquary(get_turf(src))
 	realchest.populate_contents()
 	choice = new choice(realchest)
@@ -137,22 +137,22 @@
 /// Called by burial_rites, gives some fluff messages before deleting the box.
 /obj/item/psydonmusicbox/proc/free_souls(mob/living/savior)
 	var/list/soul_lines = list(
-		SPAN_GOD_ASTRATA("Her light once more... thank you..."),
-		SPAN_GOD_ASTRATA("Warmth at last..."),
-		SPAN_GOD_NOC("I can see them... the stars..."),
-		SPAN_GOD_NECRA("Finally... peace..."),
+		SPAN_GOD_ASTRATA("Su luz una vez más... gracias..."),
+		SPAN_GOD_ASTRATA("Calor por fin..."),
+		SPAN_GOD_NOC("Puedo verlas... las estrellas..."),
+		SPAN_GOD_NECRA("Finalmente... paz..."),
 		SPAN_GOD_NECRA("You have done a noble service kin..."),
 		SPAN_GOD_NECRA("I will make sure to inform the Undermaiden of your service..."),
-		SPAN_GOD_ABYSSOR("May the sea treat you well..."),
+		SPAN_GOD_ABYSSOR("Que el mar te trate bien..."),
 		SPAN_GOD_RAVOX("Freedom at last! May justice be done for what I have suffered..."),
-		SPAN_GOD_PESTRA("The suffering has ended..."),
+		SPAN_GOD_PESTRA("El sufrimiento ha terminado..."),
 		SPAN_GOD_EORA("Peace at last! May you find love stranger..."),
 		SPAN_GOD_DENDOR("THOSE GRENZEL SCUM SHALL PAY FOR WHAT THEY HAVE DONE!"),
 		SPAN_GOD_XYLIX("Finally! That audience was getting boring anyways..."),
-		SPAN_GOD_MALUM("I have been freed! I must find my apprentice..."),
+		SPAN_GOD_MALUM("¡He sido liberado! Debo encontrar a mi aprendiz..."),
 		SPAN_GOD_MALUM("May Malum curse the creator of that cursed craft... thank you..."),
-		SPAN_GOD_MATTHIOS("Thanks pal, I owe you one..."),
-		SPAN_GOD_ZIZO("Thanks IDIOT! Time to cause some chaos~"),
+		SPAN_GOD_MATTHIOS("Gracias amigo, te debo una..."),
+		SPAN_GOD_ZIZO("Gracias IDIOTA! Es hora de causar algo de caos ~"),
 		SPAN_GOD_GRAGGAR("I WILL TEAR THOSE GRENZELS LIMB FROM LIMB!"),
 		SPAN_GOD_BAOTHA("What a horrid experience... I need a drink..."),
 		SPAN_GOD_PSYDON("Don't expect thanks from me, servant of the betrayer...")
@@ -225,7 +225,7 @@
 						H.add_stress(/datum/stress_event/soulchurner)
 						if(!H.has_status_effect(/datum/status_effect/buff/churnernegative))
 							H.apply_status_effect(/datum/status_effect/buff/churnernegative)
-					to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
+					to_chat(H, (span_hypnophrase("Una voz te llama desde la canción...")))
 					to_chat(H, (span_cultsmall(pick(lines))))
 
 /atom/movable/screen/alert/status_effect/buff/censerbuff
@@ -253,14 +253,14 @@
 	duration = 8
 
 /datum/intent/bless
-	name = "bless"
+	name = "bendecir"
 	icon_state = "inbless"
 	no_attack = TRUE
 	candodge = TRUE
 	canparry = TRUE
 
 /datum/intent/weep
-	name = "weep"
+	name = "llorar"
 	icon_state = "inweep"
 	no_attack = TRUE
 	candodge = FALSE
@@ -290,7 +290,7 @@
 		. += span_info("If opened, it may bless Psydon weapons and those of Psydon faith.")
 		. += span_warning("Smashing a creature with it open will create a devastating explosion and render it useless.")
 	if(fuel <= 0)
-		. += span_info("It is gone.")
+		. += span_info("Se ha ido.")
 
 /obj/item/flashlight/flare/torch/lantern/psycenser/getonmobprop(tag)
 	. = ..()
@@ -319,7 +319,7 @@
 				M.update_inv_hands()
 			START_PROCESSING(SSobj, src)
 	else if(fuel <= 0 && user.used_intent.type == /datum/intent/weep)
-		to_chat(user, span_info("It is gone. You weep."))
+		to_chat(user, span_info("Se ha ido. Lloras."))
 		user.emote("cry")
 
 /obj/item/flashlight/flare/torch/lantern/psycenser/process()
@@ -343,7 +343,7 @@
 /obj/item/flashlight/flare/torch/lantern/psycenser/afterattack(atom/movable/A, mob/user, proximity, list/modifiers)
 	. = ..()	//We smashed a guy with it turned on. Bad idea!
 	if(ismob(A) && on && (user.used_intent.type == /datum/intent/flail/strike/smash/golgotha) && user.cmode)
-		user.visible_message(span_warningbig("You see an oddly bright spark before it detonates!"))
+		user.visible_message(span_warningbig("¡Ves una chispa extrañamente brillante antes de que detone!"))
 		cell_explosion(get_turf(A), 40, 2)
 		explosion(get_turf(A),devastation_range = -1, heavy_impact_range = -1, light_impact_range = -1, flame_range = 2, flash_range = 4, smoke = FALSE)
 		fuel = 0
@@ -364,7 +364,7 @@
 					CP.try_bless()
 					new /obj/effect/temp_visual/censer_dust(get_turf(A))
 			else
-				to_chat(user, span_info("It has already been blessed."))
+				to_chat(user, span_info("Ya ha sido bendecido."))
 	if(ishuman(A) && on && (user.used_intent.type == /datum/intent/bless))
 		var/mob/living/carbon/human/H = A
 		if(istype(H.patron, /datum/patron/psydon))
@@ -377,10 +377,10 @@
 					playsound(H, 'sound/magic/holyshield.ogg', 100)
 					new /obj/effect/temp_visual/censer_dust(get_turf(H))
 			else
-				to_chat(user, span_warning("They've already been blessed."))
+				to_chat(user, span_warning("Ya han sido bendecidos."))
 
 		else
-			to_chat(user, span_warning("They do not share our faith."))
+			to_chat(user, span_warning("No comparten nuestra fe."))
 
 
 /datum/component/psyblessed
@@ -407,7 +407,7 @@
 	if(!is_blessed)
 		examine_list += span_info("<font color = '#cfa446'>This object may be blessed by the lingering fragment of Psydon. Until then, its impure alloying of silver-and-steel cannot blight inhumen foes on its own.</font>")
 	if(is_blessed)
-		examine_list += span_info("<font color = '#46bacf'>This object has been blessed by the fragment of Psydon.</font>")
+		examine_list += span_info("<font color = '#46bacf'>Este objeto ha sido bendecido por el fragmento de Psydon.</font>")
 		if(silver)
 			examine_list += span_info("It has been imbued with <b>silver</b>.")
 
@@ -436,7 +436,7 @@
 			I.max_blade_int += added_blade_int
 			I.blade_int = I.max_blade_int
 		I.modify_max_integrity(I.max_integrity + added_int)
-		I.name = "blessed [I.name]"
+		I.name = "bendito [I.name]"
 		if(silver)
 			I.enchant(/datum/enchantment/silver)
 
@@ -577,7 +577,7 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(tgui_alert(user, "EMPTY THE INDEXER?", "INDEXING...", list("YES", "NO")) != "NO")
 		playsound(src, 'sound/items/indexer_empty.ogg', 75, FALSE, 3)
-		visible_message(span_warning("[src] boils its contents away!"))
+		visible_message(span_warning("¡[src] hierve su contenido!"))
 		fullreset(user)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
@@ -588,14 +588,14 @@
 		full = TRUE
 		visible_message(span_warning("[src] finishes drawing blood!"))
 		active = FALSE
-		desc += span_notice(" It's full!")
+		desc += span_notice(" ¡Está lleno!")
 		if(cursedblood)
 			playsound(src, 'sound/items/indexer_cursed.ogg', 100, FALSE, 3)
 			possible_item_intents = list(/datum/intent/use)
 			user.update_a_intents()
 			active = FALSE
 			update_appearance(UPDATE_ICON_STATE)
-			say("CURSED BLOOD!")
+			say("¡SANGRE MALDITA!")
 			return
 		update_appearance(UPDATE_ICON_STATE)
 		return
@@ -612,7 +612,7 @@
 					M.emote("painmoan")
 			desc = initial(desc)
 			subject = WEAKREF(M)
-			desc += span_notice(" It contains the blood of [M.real_name]!")
+			desc += span_notice(" ¡Contiene la sangre de [M.real_name]!")
 			visible_message(span_warning("[src] draws from [M]!"))
 			playsound(M, 'sound/combat/hits/bladed/genstab (1).ogg', 30, FALSE, -1)
 			timestaken++
@@ -640,15 +640,15 @@
 		return NONE
 
 	if(!HAS_TRAIT(user, TRAIT_INQUISITION))
-		to_chat(user, span_warning("I don't know how to use this."))
+		to_chat(user, span_warning("No sé cómo usar esto."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!active)
-		to_chat(user, span_warning("It's not primed."))
+		to_chat(user, span_warning("No está preparado."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(full)
-		to_chat(user, span_warning("It's full."))
+		to_chat(user, span_warning("Está lleno."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/mob/living/L = interacting_with
@@ -657,7 +657,7 @@
 		to_chat(user, span_warning("[L] has no blood to sample."))
 		return ITEM_INTERACT_BLOCKING
 
-	visible_message(span_warning("[user] goes to jab [L] with [src]!"))
+	visible_message(span_warning("¡[user] va a golpear a [L] con [src]!"))
 
 	if(!do_after(user, 2 SECONDS, L))
 		return ITEM_INTERACT_BLOCKING
@@ -750,7 +750,7 @@
 
 	if((istype(target, /obj/machinery/light/fueled) || istype(target, /obj/item/flashlight/flare/torch)) && F.on)
 		heatedup = 28
-		visible_message(span_info("[user] warms [src] using [target]."))
+		visible_message(span_info("[user] calienta [src] usando [target]."))
 		update_appearance(UPDATE_ICON_STATE)
 
 
@@ -954,7 +954,7 @@
 		*/
 		// THROAT TARGET RESTRICTION. HEAVILY REQUESTED.
 		if(user.zone_selected != "neck")
-			to_chat(user, span_warning("I need to wrap it around their throat."))
+			to_chat(user, span_warning("Necesito envolverlo alrededor de su garganta."))
 			return
 		if(user.pulling)
 			user.stop_pulling()
@@ -970,13 +970,13 @@
 			I.icon_state = null
 			currentgrab = I
 		playsound(loc, 'sound/items/garrotegrab.ogg', 100, TRUE)
-		user.visible_message(span_danger("[user] wraps the [src] around [target]'s throat!"))
+		user.visible_message(span_danger("¡[user] envuelve el [src] alrededor de la garganta de [target]!"))
 		user.adjust_stamina(25)
 		user.changeNext_move(CLICK_CD_MELEE)
 
 	if(istype(user.used_intent, /datum/intent/garrote/choke))	// Get started.
 		if(!garrote_victim)
-			to_chat(user, span_warning("Who am I choking? What?"))
+			to_chat(user, span_warning("¿A quién estoy asfixiando? ¿Qué?"))
 			return
 		if(!proximity_flag)
 			return
@@ -1078,7 +1078,7 @@
 	var/mob/living/carbon/M = interacting_with
 
 	if(HAS_TRAIT(M, TRAIT_BAGGED))
-		to_chat(user, span_warning("They've already been bagged."))
+		to_chat(user, span_warning("Ya han sido embolsados."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/obj/item/headgear = M.get_item_by_slot(ITEM_SLOT_HEAD)
@@ -1156,7 +1156,7 @@
 
 
 /obj/item/inqarticles/bmirror
-	name = "black mirror"
+	name = "espejo negro"
 	desc = ""
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "bmirror"
@@ -1241,7 +1241,7 @@
 		return
 
 	if(!opened)
-		to_chat(user, span_warning("It's not open."))
+		to_chat(user, span_warning("No está abierto."))
 		return
 
 	if(broken && bloody)
@@ -1253,7 +1253,7 @@
 	if(broken && !bloody)
 		to_chat(user, span_warning("The mirror has shattered, rendering it unusable. It's clean, at the very least."))
 		if(HAS_TRAIT(user, TRAIT_INQUISITION))
-			to_chat(user, span_notice("It's returnable via the HERMES now. I should get two Marques back."))
+			to_chat(user, span_notice("Ahora se puede devolver a través de HERMES. Debería recuperar dos Marques."))
 		return
 
 	if(bloody)
@@ -1261,7 +1261,7 @@
 		return
 
 	if(!fedblood)
-		to_chat(user, span_warning("It looks like it needs blood to work properly."))
+		to_chat(user, span_warning("Parece que necesita sangre para funcionar correctamente."))
 		return
 
 	if(!active)
@@ -1274,7 +1274,7 @@
 		if(!input || QDELETED(user) || QDELETED(src))
 			return
 		if(input == "FIXATION")
-			var/name = html_decode(browser_input_text(user, "WHO DO YOU SEEK?", "THE PRICE IS PAID"))
+			var/name = html_decode(browser_input_text(user, "¿A QUIÉN BUSCAS?", "THE PRICE IS PAID"))
 			if(!name)
 				return
 			for(var/mob/living/carbon/human/HL as anything in GLOB.player_list)
@@ -1335,7 +1335,7 @@
 	var/mob/living/attacked = interacting_with
 
 	if(!opened)
-		to_chat(user, span_warning("I need to open it first."))
+		to_chat(user, span_warning("Necesito abrirlo primero."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(feeder)
@@ -1343,17 +1343,17 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(broken)
-		to_chat(user, span_warning("It's broken."))
+		to_chat(user, span_warning("Está roto."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(bloody)
-		to_chat(user, span_warning("The mirror is fogged over. I need to clean it with cloth before reuse."))
+		to_chat(user, span_warning("El espejo está empañado. Necesito limpiarlo con un paño antes de volver a usarlo."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/time_taken = 3 SECONDS
 
 	if(attacked == user)
-		user.visible_message(span_notice("[user] presses upon [src]'s needle."))
+		user.visible_message(span_notice("[user] presiona sobre la aguja de [src]."))
 	else
 		user.visible_message(span_notice("[user] goes to press [attacked] with [src]'s needle."))
 		time_taken *= 2
@@ -1378,12 +1378,12 @@
 		return
 
 	if(broken && bloody && do_after(user, 3 SECONDS, user))
-		user.visible_message(span_info("[user] cleans [src] with [I]."))
+		user.visible_message(span_info("[user] limpia [src] con [I]."))
 		openstate = "cleaned"
 		bloody = FALSE
 		update_appearance(UPDATE_ICON_STATE)
 	else if(bloody && do_after(user, 3 SECONDS, user))
-		user.visible_message(span_info("[user] cleans the fog and blood from [src] with [I]."))
+		user.visible_message(span_info("[user] limpia la niebla y la sangre de [src] con [I]."))
 		openstate = "open"
 		bloody = FALSE
 		update_appearance(UPDATE_ICON_STATE)
@@ -1428,7 +1428,7 @@
 
 /atom/movable/screen/alert/blackmirror
 	name = "BLACK EYE"
-	desc = "LOOK AT ME. I SEE YOU."
+	desc = "MÍRAME. TE VEO."
 	icon_state = "blackeye"
 	var/obj/item/inqarticles/bmirror/source
 

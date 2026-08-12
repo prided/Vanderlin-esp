@@ -7,7 +7,7 @@ export const DetailEssenceCombination = ({ r, lookup, pickerMap, allRecipes, ess
   <>
     {!!r.inputs?.length && (
       <>
-        <SectionHead>Input Essences</SectionHead>
+        <SectionHead>Esencias de entrada</SectionHead>
         {r.inputs!.map((e, i) => (
           <Box key={i} className="RecipeBook__item-row">
             {e.amount} parts{' '}
@@ -28,7 +28,7 @@ export const DetailEssenceCombination = ({ r, lookup, pickerMap, allRecipes, ess
       />
     )}
     {r.skill_required && typeof r.skill_required === 'string' && (
-      <Box className="RecipeBook__hint">Skill required: {r.skill_required}</Box>
+      <Box className="RecipeBook__hint">Habilidad requerida: {r.skill_required}</Box>
     )}
   </>
 );

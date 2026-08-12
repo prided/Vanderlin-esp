@@ -10,7 +10,7 @@
 
 /datum/emote/brain/alarm
 	key = "alarm"
-	message = "sounds an alarm."
+	message = "suena una alarma."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/brain/alert
@@ -20,7 +20,7 @@
 
 /datum/emote/brain/flash
 	key = "flash"
-	message = "blinks their lights."
+	message = "parpadea sus luces."
 
 /datum/emote/brain/notice
 	key = "notice"
@@ -30,5 +30,5 @@
 /datum/emote/brain/whistle
 	key = "whistle"
 	key_third_person = "whistles"
-	message = "whistles."
+	message = "silbidos."
 	emote_type = EMOTE_AUDIBLE

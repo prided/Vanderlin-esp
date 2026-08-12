@@ -1,8 +1,8 @@
 /datum/action/cooldown/spell/undirected/song/intellectual_interval
 	name = "Intellectual Interval"
 	desc = "A song for thinkers that sharpens the mind. Grants INT to audience members."
-	invocation = "plays a stimulating tune."
-	invocation_self_message = "you play a stimulating tune."
+	invocation = "toca una melodía estimulante."
+	invocation_self_message = "tocas una melodía estimulante."
 	button_icon_state = "melody_t1_base"
 	song_effect = /datum/status_effect/buff/playing_melody/intellectual_interval
 

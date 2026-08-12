@@ -413,7 +413,7 @@ SUBSYSTEM_DEF(plexora)
 	var/from = input["from"]
 	// the topic params do contain "encode" (boolean) for html but since we dont have "send_formatted_announcement" it'll skip encoding anyway.
 
-	var/admin_name = span_adminannounce_big("[from] Announces:")
+	var/admin_name = span_adminannounce_big("[from] anuncia:")
 	var/message_to_announce = ("[span_adminannounce(message)]")
 	to_chat(world, announcement_block("[admin_name] \n \n [message_to_announce]"))
 
@@ -436,7 +436,7 @@ SUBSYSTEM_DEF(plexora)
 		if("failsafe")
 			new /datum/controller/failsafe()
 			SSblackbox.record_feedback("tally", "admin_verb", 1, "PLX: Restart Failsafe Controller")
-	message_admins("PLEXORA: @[username] ([userid]) has restarted the [controller] controller from the Discord.")
+	message_admins("PLEXORA: @[username] ([userid]) ha reiniciado el controlador [controller] desde Discord.")
 
 /datum/world_topic/plx_globalnarrate
 	keyword = "PLX_globalnarrate"
@@ -685,7 +685,7 @@ SUBSYSTEM_DEF(plexora)
 	qdel(client)
 
 	log_admin("Discord: [key_name(mockadmin)] has kicked [key_name(client)] from the server! Reason: [reason]")
-	message_admins("Discord: [key_name_admin(mockadmin)] has kicked [key_name_admin(client)] from the server! Reason: [reason]")
+	message_admins("Discord: ¡[key_name_admin(mockadmin)] ha expulsado a [key_name_admin(client)] del servidor! Razón: [reason]")
 
 /datum/world_topic/plx_ticketaction
 	keyword = "PLX_ticketaction"
@@ -770,7 +770,7 @@ SUBSYSTEM_DEF(plexora)
 	// The ckey of our recipient, with their mob if one exists. No link
 	var/recipient_name = key_name_admin(recipient)
 
-	message_admins("External message from [sender] to [recipient_name_linked] : [message]")
+	message_admins("Mensaje externo de [sender] a [recipient_name_linked]: [message]")
 	log_admin_private("External PM: [sender] -> [recipient_name] : [message]")
 
 	to_chat(recipient, html = "<font color='red' size='4'><b>-- Administrator private message --</b></font>")
@@ -780,7 +780,7 @@ SUBSYSTEM_DEF(plexora)
 		message,
 	)
 
-	to_chat(recipient, html = span_adminsay("<i>Click on the administrator's name to reply.</i>"))
+	to_chat(recipient, html = span_adminsay("<i>Haga clic en el nombre del administrador para responder.</i>"))
 
 	admin_ticket_log(recipient, "<font color='purple'>PM From [adminname]: [message]</font>", player_message = "<font color='purple'>PM From [adminname]: [message]</font>")
 
@@ -933,7 +933,7 @@ SUBSYSTEM_DEF(plexora)
 	return FALSE
 
 /datum/client_interface/proc/punish_log(whom, punishment)
-	var/msg = "[key_name_admin(src)] punished [key_name_admin(whom)] with [punishment]."
+	var/msg = "[key_name_admin(src)] castigó a [key_name_admin(whom)] con [punishment]."
 	message_admins(msg)
 	admin_ticket_log(whom, msg)
 	log_admin("[key_name(src)] punished [key_name(whom)] with [punishment].")

@@ -28,7 +28,7 @@
 	allowed_races = RACES_PLAYER_ALL
 	outfit = /datum/outfit/pilgrim/mason
 	category_tags = list(CTAG_PILGRIM)
-	apprentice_name = "Mason Apprentice"
+	apprentice_name = "Aprendiz de albañil"
 	cmode_music = 'sound/music/cmode/towner/CombatBeggar.ogg'
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/pilgrim/mason

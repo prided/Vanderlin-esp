@@ -25,7 +25,7 @@
 				new /datum/ambush_config/mirespiders_aragn = 10,
 				new /datum/ambush_config/mirespiders_unfair = 5)
 
-	first_time_text = "THE TERRORBOG"
+	first_time_text = "EL TERRORBOG"
 	custom_area_sound = 'sound/misc/stings/BogSting.ogg'
 	converted_type = /area/indoors/shelter/bog
 	threat_region = THREAT_REGION_TERRORBOG
@@ -47,7 +47,7 @@
 	custom_area_sound = 'sound/misc/stings/RosewoodSting.ogg'
 
 /area/indoors/shelter/bog/e_highroad_camp
-	name = "the eastern highroad camp"
+	name = "el campamento de la carretera oriental"
 
 // ###############
 /area/outdoors/bog/w_highroad
@@ -57,7 +57,7 @@
 
 // ###############
 /area/outdoors/bog/witch
-	name = "bog witch's isle"
+	name = "isla de la bruja del pantano"
 	icon_state = "bog_witch"
 	first_time_text = "Bog Witch's Hut"
 
@@ -67,12 +67,12 @@
 
 // ###############
 /area/outdoors/bog/lich
-	name = "Dark Tower"
+	name = "Torre Oscura"
 	icon_state = "lichtower"
-	first_time_text = "Dark Tower"
+	first_time_text = "Torre Oscura"
 
 /area/indoors/shelter/bog/lich
-	name = "Dark Tower"
+	name = "Torre Oscura"
 	icon_state = "lichtower_indoors"
 
 // ###############
@@ -85,19 +85,19 @@
 
 /area/outdoors/bog/west
 	icon_state = "bog_west"
-	name = "Western Terrorbog"
+	name = "Occidental Terrorbog"
 
 // ###############
 /area/outdoors/bog/north
-	name = "Northern Terrorbog"
+	name = "Norte Terrorbog"
 
 /area/outdoors/bog/north/east
 	icon_state = "bog_east"
-	name = "North-Eastern Terrorbog"
+	name = "Noreste Terrorbog"
 
 /area/outdoors/bog/north/west
 	icon_state = "bog_west"
-	name = "North-Western Terrorbog"
+	name = "Noroeste Terrorbog"
 
 // ###############
 /area/outdoors/bog/south
@@ -105,7 +105,7 @@
 
 /area/outdoors/bog/south/east
 	icon_state = "bog_east"
-	name = "South-Eastern Terrorbog"
+	name = "Sudeste Terrorbog"
 
 /area/outdoors/bog/south/west
 	icon_state = "bog_west"
@@ -113,12 +113,12 @@
 
 // ###############
 /area/outdoors/bog/beach
-	name = "Terrorbog Coast"
+	name = "Terrorbog Costa"
 	icon_state = "bog_beach"
 	first_time_text = "THE TERRORBOG COAST"
 
 /area/outdoors/bog/beach/east
-	name = "Eastern Terrorbog Coast"
+	name = "Costa Este Terrorbog"
 
 /area/outdoors/bog/beach/west
-	name = "Western Terrorbog Coast"
+	name = "Costa occidental Terrorbog"

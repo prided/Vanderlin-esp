@@ -25,8 +25,8 @@
 	button_icon = 'icons/mob/actions/bardsongs.dmi'
 	button_icon_state = "dirge_t1_base"
 	sound = 'sound/magic/buffrollaccent.ogg'
-	invocation = "plays a song."
-	invocation_self_message = "you play a song."
+	invocation = "toca una canción."
+	invocation_self_message = "tocas una canción."
 
 	click_to_activate = FALSE
 	self_cast_possible = TRUE
@@ -108,7 +108,7 @@
 	for(var/mob/living/carbon/human/guy in owner.inspiration.audience)
 		for(var/datum/status_effect/buff/song/song2remove in guy.status_effects)
 			guy.remove_status_effect(song2remove)
-	to_chat(owner, span_warning("I lost my instrument - my song fades."))
+	to_chat(owner, span_warning("Perdí mi instrumento, mi canción se desvanece."))
 	return FALSE
 
 /datum/status_effect/buff/playing_dirge

@@ -62,7 +62,7 @@
 
 /obj/structure/pillory/pre_lock_interact(mob/living/user)
 	if(user in buckled_mobs)
-		to_chat(user, span_warning("I can't reach the lock!"))
+		to_chat(user, span_warning("¡No puedo alcanzar la cerradura!"))
 		return FALSE
 	if(!latched)
 		to_chat(user, span_warning("\The [src] is not latched shut!"))
@@ -72,7 +72,7 @@
 /obj/structure/pillory/proc/togglelatch(mob/living/user, silent)
 	user.changeNext_move(CLICK_CD_MELEE)
 	if(locked())
-		to_chat(user, span_info("\The [src] is locked."))
+		to_chat(user, span_info("\The [src] está bloqueado."))
 		return
 	latched = !latched
 	user.visible_message( \
@@ -85,11 +85,11 @@
 		return FALSE
 
 	if(locked())
-		to_chat(usr, span_warning("Unlock it first!"))
+		to_chat(usr, span_warning("¡Desbloquéalo primero!"))
 		return FALSE
 
 	if (!istype(M, /mob/living/carbon/human))
-		to_chat(usr, span_warning("It doesn't look like [M.p_they()] can fit into this properly!"))
+		to_chat(usr, span_warning("¡No parece que [M.p_they()] pueda encajar correctamente en esto!"))
 		return FALSE // Can't hold non-humanoids
 
 	if(iscarbon(M))

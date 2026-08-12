@@ -86,11 +86,11 @@
 	icon_state = "chaiseloungeright"
 
 /obj/structure/chair/bench/throne
-	name = "small throne"
+	name = "pequeño trono"
 	icon_state = "thronechair"
 
 /obj/structure/chair/bench/throne/stone
-	name = "stone throne"
+	name = "trono de piedra"
 	icon_state = "stonethrone"
 
 // dirtier sofa
@@ -267,7 +267,7 @@
 
 
 /obj/item/chair/stool/bar/fancyplush
-	name = "fancy stool"
+	name = "taburete elegante"
 	icon_state = "fancystoolover"
 	origin_type = /obj/structure/chair/stool/bar/fancyplush
 
@@ -301,8 +301,8 @@
 
 // ------------ DECENT BEDS ----------------------
 /obj/structure/bed/wool
-	name = "wool bed"
-	desc = "A comfy bed, made from soft cloth"
+	name = "cama de lana"
+	desc = "Una cama cómoda, hecha de tela suave."
 	icon_state = "woolbed"
 	sleepy = 2
 
@@ -328,8 +328,8 @@
 
 // ------------ ACCEPTABLE BEDS ----------------------
 /obj/structure/bed/hay
-	name = "hay bed"
-	desc = "A bed padded with hay. At least you're not sleeping on the floor."
+	name = "cama de heno"
+	desc = "Una cama acolchada con heno. Al menos no estás durmiendo en el suelo."
 	icon_state = "haybed"
 	sleepy = 1
 	debris = list(/obj/item/grown/log/tree/small = 1)
@@ -348,13 +348,13 @@
 
 // ------------ UNCOMFORTABLE BEDS ----------------------
 /obj/structure/bed/shit
-	name = "uncomfortable bed"
+	name = "cama incómoda"
 	desc = "Slightly better than a patch of grass."
 	icon_state = "shitbed"
 	sleepy = 0.75
 
 /obj/structure/bed/stone
-	name = "stone bed"
+	name = "cama de piedra"
 	desc = "A bed made of stone.  The face of it is intricately carved, but it doesn't look very comfortable."
 	icon_state = "stonebed"
 	sleepy = 0.75
@@ -385,7 +385,7 @@
 
 /obj/item/sleepingbag
 	name = "rolled-up bedroll"
-	desc = "A quick and simple way to create a resting place on the ground."
+	desc = "Una forma rápida y sencilla de crear un lugar de descanso en el suelo."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "sleepingcloth_rolled"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -404,7 +404,7 @@
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
 			to_chat(user, "<span class='warning'>There is already something here!</span>")
 			return
-	user.visible_message("<span class='notice'>[user] begins placing \the [src] down on the ground.</span>")
+	user.visible_message("<span class='notice'>[user] comienza a colocar \the [src] en el suelo.</span>")
 	if(do_after(user, 2 SECONDS, src, (IGNORE_HELD_ITEM)))
 		var/obj/structure/new_bedroll = new bed_path(get_turf(src))
 		new_bedroll.color = color

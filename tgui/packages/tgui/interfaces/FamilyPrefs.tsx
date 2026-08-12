@@ -59,7 +59,7 @@ export const FamilyPrefs = () => {
   const [tab, setTab] = useState<'bonds' | 'filters' | 'relations'>('bonds');
 
   return (
-    <Window title="Family & Bonds" width={520} height={620}>
+    <Window title="Familia y vínculos" width={520} height={620}>
       <Window.Content scrollable>
         <Tabs fluid>
           <Tabs.Tab
@@ -67,14 +67,14 @@ export const FamilyPrefs = () => {
             icon="link"
             onClick={() => setTab('bonds')}
           >
-            Bonds
+            Vínculos
           </Tabs.Tab>
           <Tabs.Tab
             selected={tab === 'filters'}
             icon="filter"
             onClick={() => setTab('filters')}
           >
-            Filters
+            Filtros
           </Tabs.Tab>
         </Tabs>
 
@@ -101,7 +101,7 @@ const BondsTab = () => {
   return (
     <Stack vertical fill>
       <Stack.Item>
-        <Section title="Family Mode">
+        <Section title="Modo familiar">
           <Stack vertical spacing={0.5}>
             {familyModes.map((mode) => {
               const active = data.family_mode === mode.key;
@@ -130,9 +130,9 @@ const BondsTab = () => {
       {/* Compare against the active found data token instead of a hardcoded string */}
       {currentModeConfig && currentModeConfig.label !== 'None' && (
         <Stack.Item>
-          <Section title="Spousal Preference Settings">
+          <Section title="Configuración de preferencias conyugales">
             <LabeledList mb={1}>
-              <LabeledList.Item label="Partner Gender">
+              <LabeledList.Item label="Género de la pareja">
                 <Flex gap={0.5}>
                   {genderPreferences.map((pref) => {
                     const isSelected = data.gender_choice === pref.key;
@@ -150,7 +150,7 @@ const BondsTab = () => {
                   })}
                 </Flex>
               </LabeledList.Item>
-              <LabeledList.Item label="Designated Spouse">
+              <LabeledList.Item label="Cónyuge designado">
                 <Flex align="center" gap={1}>
                   <Box flex={1} italic={!data.setspouse}>
                     {data.setspouse || 'No target name set'}
@@ -160,7 +160,7 @@ const BondsTab = () => {
                     compact
                     onClick={() => act('edit_setspouse')}
                   >
-                    Edit
+                    Editar
                   </Button>
                   {data.setspouse && (
                     <Button
@@ -171,7 +171,7 @@ const BondsTab = () => {
                   )}
                 </Flex>
               </LabeledList.Item>
-              <LabeledList.Item label="Designated Child">
+              <LabeledList.Item label="Niño designado">
                 <Flex align="center" gap={1}>
                   <Box flex={1} italic={!data.setchild}>
                     {data.setchild || 'No target name set'}
@@ -181,7 +181,7 @@ const BondsTab = () => {
                     compact
                     onClick={() => act('edit_setchild')}
                   >
-                    Edit
+                    Editar
                   </Button>
                   {data.setchild && (
                     <Button
@@ -192,7 +192,7 @@ const BondsTab = () => {
                   )}
                 </Flex>
               </LabeledList.Item>
-              <LabeledList.Item label="Designated Parent">
+              <LabeledList.Item label="Padre designado">
                 <Flex align="center" gap={1}>
                   <Box flex={1} italic={!data.setparent}>
                     {data.setparent || 'No target name set'}
@@ -202,7 +202,7 @@ const BondsTab = () => {
                     compact
                     onClick={() => act('edit_setparent')}
                   >
-                    Edit
+                    Editar
                   </Button>
                   {data.setparent && (
                     <Button
@@ -224,7 +224,7 @@ const BondsTab = () => {
       )}
 
       <Stack.Item>
-        <Section title="Marital History">
+        <Section title="Historia matrimonial">
           <Flex align="center" justify="space-between">
             <Box>
               <Icon
@@ -245,13 +245,12 @@ const BondsTab = () => {
             </Button>
           </Flex>
           <Box mt={1} color="label" fontSize="0.82em">
-            Stamps a divorced relation on your character at round-start so your
-            history is visible to others.
+            Estampa una relación divorciada en tu personaje al inicio de la ronda para que tu historia sea visible para los demás.
           </Box>
         </Section>
       </Stack.Item>
       <Stack.Item>
-        <Section title="Adoption Preference">
+        <Section title="Preferencia de adopción">
           <Flex align="center" justify="space-between">
             <Box>
               <Icon
@@ -272,7 +271,7 @@ const BondsTab = () => {
             </Button>
           </Flex>
           <Box mt={1} color="label" fontSize="0.82em">
-            Allows the matchmaking system to establish adopted bonds (e.g., adopted child or parent) at round-start.
+            Permite que el sistema de emparejamiento establezca vínculos adoptados (por ejemplo, niño o padre adoptado) al inicio de la ronda.
           </Box>
         </Section>
       </Stack.Item>
@@ -294,27 +293,27 @@ const FiltersTab = () => {
       {noFiltersActive && (
         <Stack.Item>
           <NoticeBox info>
-            No filters active, you may be assigned to any compatible family.
+            No hay filtros activos, es posible que te asignen a cualquier familia compatible.
           </NoticeBox>
         </Stack.Item>
       )}
 
       <Stack.Item>
         <Section
-          title="Species"
+          title="Especies"
           buttons={
             data.same_species_family ? (
               <Button
                 compact
                 icon="lock"
-                tooltip="Same-species lock is on, species list ignored"
+                tooltip="El bloqueo de la misma especie está activado, la lista de especies se ignora"
                 tooltipPosition="left"
               />
             ) : null
           }
         >
           <Flex align="center" justify="space-between" mb={1}>
-            <Box bold>Same species only</Box>
+            <Box bold>Solo la misma especie</Box>
             <Button
               icon={data.same_species_family ? 'toggle-on' : 'toggle-off'}
               selected={data.same_species_family}
@@ -328,7 +327,7 @@ const FiltersTab = () => {
           {!data.same_species_family && (
             <>
               <Box color="label" fontSize="0.82em" mb={1}>
-                Toggle entries below to accept or exclude specific species.
+                Cambie las entradas a continuación para aceptar o excluir especies específicas.
               </Box>
               <SelectionGrid
                 items={data.all_species}
@@ -343,9 +342,9 @@ const FiltersTab = () => {
       </Stack.Item>
 
       <Stack.Item>
-        <Section title="Patron Faiths">
+        <Section title="Creencias patronales">
           <Box color="label" fontSize="0.82em" mb={1}>
-            Toggle entries below to accept or exclude specific faiths.
+            Cambie las entradas a continuación para aceptar o excluir religiones específicas.
           </Box>
           <SelectionGrid
             items={data.all_faiths}
@@ -358,9 +357,9 @@ const FiltersTab = () => {
       </Stack.Item>
 
       <Stack.Item>
-        <Section title="Job Groups">
+        <Section title="Grupos de trabajo">
           <Box color="label" fontSize="0.82em" mb={1}>
-            Toggle entries below to restrict placement to specific social strata.
+            Cambie las entradas a continuación para restringir la ubicación a estratos sociales específicos.
           </Box>
           <SelectionGrid
             items={data.all_job_groups}
@@ -379,7 +378,7 @@ const FiltersTab = () => {
             icon="broom"
             onClick={() => act('clear_all_filters')}
           >
-            Clear All Filters
+            Borrar todos los filtros
           </Button>
         </Stack.Item>
       )}
@@ -405,7 +404,7 @@ const SelectionGrid = ({
   if (!items || items.length === 0) {
     return (
       <Box color="label" fontSize="0.85em">
-        No options available.
+        No hay opciones disponibles.
       </Box>
     );
   }

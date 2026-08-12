@@ -3,7 +3,7 @@
 	description = "."
 	reagent_state = GAS
 	color = "#801E28" // rgb: 128, 30, 40
-	taste_description = "ugly"
+	taste_description = "feo"
 	metabolization_rate = 1
 
 /datum/reagent/miasmagas/on_mob_life(mob/living/carbon/M, efficiency)
@@ -16,7 +16,7 @@
 	return ..()
 
 /datum/reagent/rogueacid
-	name = "Acid"
+	name = "Ácido"
 	description = "."
 	reagent_state = LIQUID
 	color = "#5eff00"

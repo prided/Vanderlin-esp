@@ -24,8 +24,8 @@
 	aura_field.recalculate_field(full_recalc = TRUE)
 
 	user.visible_message(
-		span_danger("[user] begins radiating a powerful aura!"),
-		span_boldnotice("You activate your aura!")
+		span_danger("¡[user] comienza a irradiar un aura poderosa!"),
+		span_boldnotice("¡Activas tu aura!")
 	)
 
 	for(var/mob/living/simple_animal/hostile/retaliate/meatvine/ally in range(aura_range, user))
@@ -40,7 +40,7 @@
 /datum/action/cooldown/meatvine/personal/emit_aura/proc/deactivate_aura()
 	var/mob/living/simple_animal/hostile/retaliate/meatvine/user = owner
 	if(istype(user))
-		to_chat(user, span_warning("Your aura fades."))
+		to_chat(user, span_warning("Tu aura se desvanece."))
 	QDEL_NULL(aura_field)
 
 /datum/proximity_monitor/advanced/meatvine_aura
@@ -77,7 +77,7 @@
 	duration = 20 SECONDS
 
 /atom/movable/screen/alert/status_effect/buff/meatvine_speed
-	name = "Speed Aura"
+	name = "Aura de velocidad"
 	desc = "Your speed is enhanced by a nearby ally's aura!"
 	icon_state = "buff_speed"
 
@@ -88,7 +88,7 @@
 	duration = 20 SECONDS
 
 /atom/movable/screen/alert/status_effect/buff/meatvine_endurance
-	name = "Endurance Aura"
+	name = "Aura de resistencia"
 	desc = "Your endurance and constitution are enhanced by a nearby ally's aura!"
 	icon_state = "buff_endurance"
 
@@ -111,7 +111,7 @@
 	target.maxHealth *= 2
 	target.health *= 2
 
-	to_chat(target, span_nicegreen("You feel your body swell with power!"))
+	to_chat(target, span_nicegreen("¡Sientes que tu cuerpo se hincha de poder!"))
 	return TRUE
 
 /datum/status_effect/buff/meatvine_gigantism/on_remove()

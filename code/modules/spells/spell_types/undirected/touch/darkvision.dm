@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/touch/darkvision
 	name = "Darkvision"
-	desc = "Enhance the night vision of a target you touch for half a dae."
+	desc = "Mejora la visión nocturna de un objetivo que tocas durante medio día."
 	button_icon_state = "darkvision"
 	can_cast_on_self = TRUE
 
@@ -10,7 +10,7 @@
 	cooldown_time = 6 MINUTES
 
 	hand_path = /obj/item/melee/touch_attack/darkvision
-	draw_message = "I prepare to grant Darkvision."
+	draw_message = "Me preparo para otorgar Darkvision."
 	drop_message = "I release my arcyne focus."
 	charges = 3
 
@@ -33,12 +33,12 @@
 	if(victim != caster)
 		caster.visible_message("[caster] draws a glyph in the air and touches [victim] with an arcyne focus.")
 	else
-		caster.visible_message("[caster] draws a glyph in the air and touches themselves with an arcyne focus.")
+		caster.visible_message("[caster] dibuja un glifo en el aire y se toca con un foco arcyne.")
 
 	victim.apply_status_effect(/datum/status_effect/buff/darkvision, 10 MINUTES + duration_increase)
 	return TRUE
 
 /obj/item/melee/touch_attack/darkvision
-	name = "\improper arcyne focus"
+	name = "\improper arcyne enfoque"
 	desc = "Touch a creature to grant them Darkvision for half a dae."
 	color = "#3FBAFD"

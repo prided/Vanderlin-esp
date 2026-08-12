@@ -11,7 +11,7 @@
 
 //EMPATHIC BOND
 /datum/coven_power/eora/empathic_bond
-	name = "Empathic Bond"
+	name = "Vínculo empático"
 	desc = "Touch someone to sense their emotional state and immediate needs, making you obsessed with them for a short time."
 
 	level = 1
@@ -24,7 +24,7 @@
 /datum/coven_power/eora/empathic_bond/activate(mob/living/target)
 	. = ..()
 	if(!ishuman(target))
-		to_chat(owner, span_warning("You can only sense the emotions of other people."))
+		to_chat(owner, span_warning("Solo puedes sentir las emociones de otras personas."))
 		return
 
 	var/mob/living/carbon/human/victim = target
@@ -59,14 +59,14 @@
 	var/emotion_text = english_list(emotions)
 	var/needs_text = english_list(needs)
 
-	to_chat(owner, span_notice("You sense [victim]'s emotional state: [emotion_text]. They seem to need: [needs_text]."))
+	to_chat(owner, span_notice("Sientes el estado emocional de [victim]: [emotion_text]. Parecen necesitar: [needs_text]."))
 	to_chat(victim, span_info("You feel [owner] understanding your inner state with surprising clarity."))
 	owner.AddComponent(/datum/component/empathic_obsession, victim, 2 MINUTES)
 
 //ARTISTIC INSPIRATION
 /datum/coven_power/eora/artistic_inspiration
-	name = "Artistic Inspiration"
-	desc = "Inspire others with divine creativity, enhancing their artistic abilities and mood."
+	name = "Inspiración artística"
+	desc = "Inspira a otros con creatividad divina, mejorando sus habilidades artísticas y su estado de ánimo."
 
 	level = 2
 	check_flags = COVEN_CHECK_CONSCIOUS | COVEN_CHECK_CAPABLE | COVEN_CHECK_SPEAK
@@ -79,12 +79,12 @@
 /datum/coven_power/eora/artistic_inspiration/activate(mob/living/target)
 	. = ..()
 	if(!ishuman(target))
-		to_chat(owner, span_warning("Only humans can receive artistic inspiration."))
+		to_chat(owner, span_warning("Solo los humanos pueden recibir inspiración artística."))
 		return
 
 	var/mob/living/carbon/human/inspired = target
 
-	to_chat(owner, span_notice("You whisper words of divine inspiration to [inspired]."))
+	to_chat(owner, span_notice("Susurras palabras de inspiración divina a [inspired]."))
 	to_chat(inspired, span_purple("You feel a surge of creative energy flow through you, your mind buzzing with artistic possibilities!"))
 
 	// Visual effect
@@ -101,11 +101,11 @@
 /datum/coven_power/eora/artistic_inspiration/deactivate(mob/living/carbon/human/target)
 	. = ..()
 	target.remove_overlay(MUTATIONS_LAYER)
-	to_chat(target, span_info("The divine inspiration fades, but the memory of it remains."))
+	to_chat(target, span_info("La inspiración divina se desvanece, pero el recuerdo de ella permanece."))
 
 //FAMILIAL BOND
 /datum/coven_power/eora/familial_bond
-	name = "Familial Bond"
+	name = "Vínculo familiar"
 	desc = "Create a temporary spiritual connection between two people, allowing them to sense each other's location and well-being."
 
 	level = 3
@@ -120,7 +120,7 @@
 /datum/coven_power/eora/familial_bond/activate(mob/living/target)
 	. = ..()
 	if(!ishuman(target))
-		to_chat(owner, span_warning("You can only bond with other people."))
+		to_chat(owner, span_warning("Solo puedes vincularte con otras personas."))
 		return
 
 	var/mob/living/carbon/human/bonded = target
@@ -128,7 +128,7 @@
 	// Get second target
 	var/mob/living/carbon/human/second_target = input(owner, "Who will you bond [bonded] with?") as null|mob in (oviewers(5, owner) - bonded)
 	if(!second_target || !ishuman(second_target))
-		to_chat(owner, span_warning("You need a second person to create a familial bond."))
+		to_chat(owner, span_warning("Necesitas una segunda persona para crear un vínculo familiar."))
 		return
 
 	to_chat(owner, span_notice("You weave a spiritual connection between [bonded] and [second_target]."))
@@ -141,7 +141,7 @@
 
 //BEAUTY'S RESTORATION
 /datum/coven_power/eora/beautys_restoration
-	name = "Beauty's Restoration"
+	name = "Restauración de la belleza"
 	desc = "Channel Eora's power to restore physical beauty and heal disfigurements."
 
 	level = 4
@@ -160,7 +160,7 @@
 
 	var/mob/living/carbon/human/patient = target
 
-	to_chat(owner, span_notice("You channel Eora's restorative power into [patient]."))
+	to_chat(owner, span_notice("Canalizas el poder restaurador de Eora en [patient]."))
 	to_chat(patient, span_purple("You feel divine energy coursing through you, restoring your natural beauty!"))
 
 	// Visual effect
@@ -183,13 +183,13 @@
 
 // Helper mood events (these would need to be defined in your mood system)
 /datum/stress_event/artistic_inspiration
-	desc = "I feel divinely inspired to create something beautiful!"
+	desc = "¡Me siento divinamente inspirada para crear algo hermoso!"
 	stress_change = -3
 	timer = 5 MINUTES
 	quality_modifier = 4
 
 /datum/stress_event/beautiful
-	desc = "I feel beautiful and radiant!"
+	desc = "¡Me siento hermosa y radiante!"
 	stress_change = -2
 	timer = 10 MINUTES
 
@@ -273,7 +273,7 @@
 
 	// Emergency health alerts
 	if(bonded_health_percent <= emergency_threshold)
-		to_chat(parent_mob, span_danger("You feel a sharp pain in your chest - [bonded_with] is in serious danger!"))
+		to_chat(parent_mob, span_danger("Sientes un dolor agudo en el pecho: ¡[bonded_with] está en grave peligro!"))
 		// Add a subtle screen effect
 		parent_mob.overlay_fullscreen("familial_pain", /atom/movable/screen/fullscreen/painflash, 1)
 		addtimer(CALLBACK(parent_mob, TYPE_PROC_REF(/mob, clear_fullscreen), "familial_pain"), 3 SECONDS)
@@ -281,7 +281,7 @@
 	// Mutual health awareness at close range
 	if(get_dist(parent_mob, bonded_with) <= 7 && parent_mob.z == bonded_with.z)
 		if(bonded_health_percent <= 50)
-			to_chat(parent_mob, span_warning("You sense [bonded_with] is hurt."))
+			to_chat(parent_mob, span_warning("Sientes que [bonded_with] está herido."))
 		else if(bonded_health_percent >= 90)
 			to_chat(parent_mob, span_notice("You sense [bonded_with] is in good health."))
 
@@ -292,7 +292,7 @@
 
 	// Different z-levels
 	if(parent_mob.z != bonded_with.z)
-		to_chat(parent_mob, span_info("You sense [bonded_with] is on a different level of existence."))
+		to_chat(parent_mob, span_info("Sientes que [bonded_with] está en un nivel diferente de existencia."))
 		return
 
 	var/distance = get_dist(parent_mob, bonded_with)
@@ -310,15 +310,15 @@
 
 	switch(distance)
 		if(0 to 3)
-			distance_desc = "very close"
+			distance_desc = "muy cerca"
 		if(4 to 7)
 			distance_desc = "nearby"
 		if(8 to 15)
 			distance_desc = "some distance away"
 		if(16 to 25)
-			distance_desc = "far"
+			distance_desc = "lejos"
 		if(26 to INFINITY)
-			distance_desc = "very far"
+			distance_desc = "muy lejos"
 
 	// Add emotional context based on bond strength
 	var/bond_feeling = ""
@@ -355,21 +355,21 @@
 
 	// Chance to feel movement of bonded person when very close
 	if(get_dist(source, bonded_with) <= 3 && prob(30))
-		to_chat(bonded_with, span_info("You sense [source] moving nearby."))
+		to_chat(bonded_with, span_info("Sientes que [source] se mueve cerca."))
 
 /datum/component/familial_bond/proc/strengthen_bond(amount = 10)
 	bond_strength = min(bond_strength + amount, 100)
 	var/mob/living/carbon/human/parent_mob = parent
-	to_chat(parent_mob, span_purple("Your familial bond grows stronger."))
+	to_chat(parent_mob, span_purple("Su vínculo familiar se fortalece."))
 	if(bonded_with)
-		to_chat(bonded_with, span_purple("Your familial bond grows stronger."))
+		to_chat(bonded_with, span_purple("Su vínculo familiar se fortalece."))
 
 /datum/component/familial_bond/proc/weaken_bond(amount = 15)
 	bond_strength = max(bond_strength - amount, 10)
 	var/mob/living/carbon/human/parent_mob = parent
-	to_chat(parent_mob, span_warning("Your familial bond weakens."))
+	to_chat(parent_mob, span_warning("Tu vínculo familiar se debilita."))
 	if(bonded_with)
-		to_chat(bonded_with, span_warning("Your familial bond weakens."))
+		to_chat(bonded_with, span_warning("Tu vínculo familiar se debilita."))
 
 	if(bond_strength <= 10)
 		to_chat(parent_mob, span_danger("Your familial bond is nearly broken!"))
@@ -381,11 +381,11 @@
 	var/mob/living/carbon/human/parent_mob = parent
 
 	if(parent_mob)
-		to_chat(parent_mob, span_info("Your familial bond fades away, but the memory of connection remains."))
+		to_chat(parent_mob, span_info("Su vínculo familiar se desvanece, pero el recuerdo de la conexión permanece."))
 		parent_mob.add_stress(/datum/stress_event/bond_ended)
 
 	if(bonded_with)
-		to_chat(bonded_with, span_info("Your familial bond fades away, but the memory of connection remains."))
+		to_chat(bonded_with, span_info("Su vínculo familiar se desvanece, pero el recuerdo de la conexión permanece."))
 		bonded_with.add_stress(/datum/stress_event/bond_ended)
 
 	STOP_PROCESSING(SSprocessing, src)
@@ -397,7 +397,7 @@
 	timer = 30 MINUTES
 
 /datum/stress_event/bond_ended
-	desc = "A familial bond has ended, but I feel grateful for the connection we shared."
+	desc = "Un vínculo familiar ha terminado, pero me siento agradecido por la conexión que compartimos."
 	stress_change = -1
 	timer = 10 MINUTES
 
@@ -476,7 +476,7 @@
 
 	// React to health changes
 	if(health_change < -15) // Significant health loss
-		to_chat(parent_mob, span_danger("You feel a wave of distress - [obsession_target] is being hurt!"))
+		to_chat(parent_mob, span_danger("Sientes una ola de angustia: ¡[obsession_target] está siendo herido!"))
 		parent_mob.add_stress(/datum/stress_event/obsession_target_hurt)
 
 		// Visual distress effect
@@ -530,7 +530,7 @@
 
 	// Provide feedback on obsession level changes
 	if(obsession_intensity >= 120 && prob(5))
-		to_chat(parent_mob, span_warning("Your thoughts keep returning to [obsession_target]. You can't stop thinking about them."))
+		to_chat(parent_mob, span_warning("Tus pensamientos siguen volviendo a [obsession_target]. No puedes dejar de pensar en ellos."))
 	else if(obsession_intensity <= 60 && prob(5))
 		to_chat(parent_mob, span_notice("You feel slightly more at ease about [obsession_target]."))
 
@@ -606,7 +606,7 @@
 	var/mob/living/carbon/human/parent_mob = parent
 
 	if(parent_mob)
-		to_chat(parent_mob, span_info("Your intense emotional connection to [obsession_target] gradually fades, though the memory remains."))
+		to_chat(parent_mob, span_info("Tu intensa conexión emocional con [obsession_target] se desvanece gradualmente, aunque el recuerdo permanece."))
 		parent_mob.add_stress(/datum/stress_event/obsession_ended)
 
 		// Clear all obsession-related mood events
@@ -628,7 +628,7 @@
 // Missing mood events for the empathic obsession component
 
 /datum/stress_event/empathic_bond_formed
-	desc = "I feel a deep emotional connection with someone special."
+	desc = "Siento una profunda conexión emocional con alguien especial."
 	stress_change = -3
 	timer = 30 MINUTES
 
@@ -638,7 +638,7 @@
 	timer = 10 MINUTES
 
 /datum/stress_event/obsession_target_healed
-	desc = "I feel relief knowing someone important to me is recovering."
+	desc = "Siento alivio al saber que alguien importante para mí se está recuperando."
 	stress_change = -2
 	timer = 5 MINUTES
 
@@ -653,7 +653,7 @@
 	timer = 5 MINUTES
 
 /datum/stress_event/obsession_panic
-	desc = "I'm overwhelmed with panic about someone's safety!"
+	desc = "¡Estoy abrumado por el pánico por la seguridad de alguien!"
 	stress_change = 6
 	timer = 0 // Persistent while active
 

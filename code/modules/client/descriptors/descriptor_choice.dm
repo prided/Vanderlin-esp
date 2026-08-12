@@ -78,7 +78,7 @@
 	)
 
 /datum/descriptor_choice/body
-	name = "Body"
+	name = "Cuerpo"
 	default_descriptor = /datum/mob_descriptor/body/average
 	descriptors = list(
 		/datum/mob_descriptor/body/average,
@@ -113,7 +113,7 @@
 	)
 
 /datum/descriptor_choice/stature
-	name = "Stature"
+	name = "Estatura"
 	default_descriptor = /datum/mob_descriptor/stature/man
 	descriptors = list(
 		/datum/mob_descriptor/stature/man,
@@ -174,7 +174,7 @@
 	)
 
 /datum/descriptor_choice/skin
-	name = "Skin"
+	name = "Piel"
 	default_descriptor = /datum/mob_descriptor/skin/normal
 	descriptors = list(
 		/datum/mob_descriptor/skin/normal,
@@ -199,7 +199,7 @@
 	)
 
 /datum/descriptor_choice/height
-	name = "Height"
+	name = "Altura"
 	default_descriptor = /datum/mob_descriptor/height/moderate
 	descriptors = list(
 		/datum/mob_descriptor/height/moderate,
@@ -283,42 +283,42 @@
 	/datum/mob_descriptor/prominent/custom/two
 
 /datum/descriptor_choice/prominent_one
-	name = "Prominent #1"
+	name = "Prominente #1"
 	default_descriptor = /datum/mob_descriptor/prominent/unkempt
 	descriptors = list(PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_two
-	name = "Prominent #2"
+	name = "Prominente #2"
 	default_descriptor = /datum/mob_descriptor/prominent/dim_look
 	descriptors = list(PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_three
-	name = "Prominent #3"
+	name = "Prominente #3"
 	default_descriptor = /datum/mob_descriptor/prominent/none
 	descriptors = list(/datum/mob_descriptor/prominent/none, PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_four
-	name = "Prominent #4"
+	name = "Prominente #4"
 	default_descriptor = /datum/mob_descriptor/prominent/none
 	descriptors = list(/datum/mob_descriptor/prominent/none, PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_one_wild
-	name = "Prominent #1"
+	name = "Prominente #1"
 	default_descriptor = /datum/mob_descriptor/prominent/unkempt
 	descriptors = list(PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_two_wild
-	name = "Prominent #2"
+	name = "Prominente #2"
 	default_descriptor = /datum/mob_descriptor/prominent/dim_look
 	descriptors = list(PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_three_wild
-	name = "Prominent #3"
+	name = "Prominente #3"
 	default_descriptor = /datum/mob_descriptor/prominent/none
 	descriptors = list(/datum/mob_descriptor/prominent/none, PROMINENT_DESCRIPTORS)
 
 /datum/descriptor_choice/prominent_four_wild
-	name = "Prominent #4"
+	name = "Prominente #4"
 	default_descriptor = /datum/mob_descriptor/prominent/none
 	descriptors = list(/datum/mob_descriptor/prominent/none, PROMINENT_DESCRIPTORS)
 

@@ -1,6 +1,6 @@
 /obj/structure/steam_recharger
-	name = "steam injector"
-	desc = "Fills objects with steam. Can also recharge automatons."
+	name = "inyector de vapor"
+	desc = "Llena objetos con vapor. También puede recargar autómatas."
 	icon = 'icons/obj/structures/rotation_devices/steam_recharger.dmi'
 	icon_state = "rechargetable"
 	accepts_water_input = TRUE
@@ -21,10 +21,10 @@
 /obj/structure/steam_recharger/examine(mob/user)
 	. = ..()
 	if(placed_atom)
-		. += span_notice("Contains an object:")
+		. += span_notice("Contiene un objeto:")
 		. += placed_atom.examine(user)
 	else if(placed_mob)
-		. += span_notice("Contains:")
+		. += span_notice("Contiene:")
 		. += placed_mob.examine(user)
 	else
 		. += span_notice("Empty. Place an item or an automaton here to recharge.")
@@ -47,7 +47,7 @@
 	if(!ispath(input.carrying_reagent, /datum/reagent/steam))
 		return
 	if(placed_atom.obj_broken)
-		visible_message(span_notice("[placed_atom] is broken."))
+		visible_message(span_notice("[placed_atom] está roto."))
 		remove_placed()
 		return
 
@@ -56,7 +56,7 @@
 	picked_provider?.taking_from?.use_water_pressure(taking_pressure)
 
 	if(!SEND_SIGNAL(placed_atom, COMSIG_ATOM_STEAM_INCREASE, taking_pressure))
-		visible_message(span_notice("[placed_atom] is fully charged."))
+		visible_message(span_notice("[placed_atom] está completamente cargado."))
 		remove_placed()
 
 /obj/structure/steam_recharger/proc/process_mob_charging()
@@ -66,7 +66,7 @@
 		return
 
 	if(!ishuman(placed_mob))
-		visible_message(span_warning("[src] ejects its occupant - incompatible lifeform!"))
+		visible_message(span_warning("[src] expulsa a su ocupante: ¡forma de vida incompatible!"))
 		remove_placed_mob()
 		return
 
@@ -77,7 +77,7 @@
 		return
 
 	if(H.stat == DEAD)
-		visible_message(span_notice("[H] is non-functional."))
+		visible_message(span_notice("[H] no funciona."))
 		return
 
 	var/taking_pressure = min(100, input.water_pressure)
@@ -85,7 +85,7 @@
 	picked_provider?.taking_from?.use_water_pressure(taking_pressure)
 
 	if(!SEND_SIGNAL(H, COMSIG_ATOM_STEAM_INCREASE, taking_pressure))
-		visible_message(span_notice("[H] is fully charged."))
+		visible_message(span_notice("[H] está completamente cargado."))
 
 /obj/structure/steam_recharger/return_rotation_chat()
 	if(!input || !ispath(input.carrying_reagent, /datum/reagent/steam))
@@ -127,16 +127,16 @@
 	placed_atom = placer
 	placer.forceMove(src)
 	update_appearance(UPDATE_OVERLAYS)
-	user.visible_message(span_notice("[user] places [placer] on [src]."), span_notice("You place [placer] on [src]."))
+	user.visible_message(span_notice("[user] coloca [placer] en [src]."), span_notice("You place [placer] on [src]."))
 	return TRUE
 
 /obj/structure/steam_recharger/proc/add_placed_mob(mob/user, mob/living/carbon/human/automaton)
 	if(placed_atom || placed_mob)
-		to_chat(user, span_warning("[src] is already occupied!"))
+		to_chat(user, span_warning("¡[src] ya está ocupado!"))
 		return FALSE
 
 	if(!automaton.GetComponent(/datum/component/steam_life))
-		to_chat(user, span_warning("[automaton] cannot use [src]!"))
+		to_chat(user, span_warning("¡[automaton] no puede usar [src]!"))
 		return FALSE
 
 	placed_mob = automaton
@@ -147,12 +147,12 @@
 
 	if(user == automaton)
 		user.visible_message(
-			span_notice("[user] climbs onto [src]."),
+			span_notice("[user] sube a [src]."),
 			span_notice("You climb onto [src] for recharging.")
 		)
 	else
 		user.visible_message(
-			span_notice("[user] places [automaton] on [src]."),
+			span_notice("[user] coloca [automaton] en [src]."),
 			span_notice("You place [automaton] on [src].")
 		)
 
@@ -176,7 +176,7 @@
 	// Handle removing item
 	if(placed_atom)
 		user.visible_message(
-			span_danger("[user] starts to lift [placed_atom] from [src]!"),
+			span_danger("¡[user] comienza a levantar [placed_atom] de [src]!"),
 			span_notice("You start to remove [placed_atom] from [src]!")
 		)
 		if(!do_after(user, 1.6 SECONDS, src))
@@ -188,13 +188,13 @@
 	if(placed_mob)
 		if(user == placed_mob)
 			user.visible_message(
-				span_notice("[user] starts to climb out of [src]."),
+				span_notice("[user] comienza a salir de [src]."),
 				span_notice("You start to climb out of [src].")
 			)
 		else
 			user.visible_message(
 				span_danger("[user] starts to pull [placed_mob] from [src]!"),
-				span_notice("You start to remove [placed_mob] from [src]!")
+				span_notice("¡Empiezas a eliminar [placed_mob] de [src]!")
 			)
 
 		if(!do_after(user, 1.6 SECONDS, src))
@@ -208,7 +208,7 @@
 
 	. = TRUE
 	user.visible_message(
-		span_danger("[user] starts to place [I] onto [src]!"),
+		span_danger("¡[user] comienza a colocar [I] en [src]!"),
 		span_notice("You start to place [I] onto [src]!")
 	)
 	if(!do_after(user, 1.6 SECONDS, src))
@@ -222,11 +222,11 @@
 		return
 
 	if(!istype(automaton.dna?.species, /datum/species/automaton))
-		to_chat(user, span_warning("[automaton] is not an automaton!"))
+		to_chat(user, span_warning("¡[automaton] no es un autómata!"))
 		return
 
 	if(placed_atom || placed_mob)
-		to_chat(user, span_warning("[src] is already occupied!"))
+		to_chat(user, span_warning("¡[src] ya está ocupado!"))
 		return
 
 	if(!user.Adjacent(src) || !user.Adjacent(automaton))
@@ -239,8 +239,8 @@
 		)
 	else
 		user.visible_message(
-			span_notice("[user] starts to place [automaton] on [src]."),
-			span_notice("You start to place [automaton] on [src].")
+			span_notice("[user] comienza a colocar [automaton] en [src]."),
+			span_notice("Comienzas a colocar [automaton] en [src].")
 		)
 
 	if(!do_after(user, 2 SECONDS, src))
@@ -254,7 +254,7 @@
 	if(doing)
 		return
 	user.visible_message(
-		span_notice("[user] starts to climb out of [src]."),
+		span_notice("[user] comienza a salir de [src]."),
 		span_notice("You start to climb out of [src].")
 	)
 	doing = TRUE

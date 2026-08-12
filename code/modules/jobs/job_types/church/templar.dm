@@ -174,7 +174,7 @@
 				"Moonlight Khopesh" = /obj/item/weapon/sword/sabre/noc,
 				"Lunar Flail" = /obj/item/weapon/flail/silver/noc,
 			)
-			var/choice = spawned.select_equippable(player_client, selectable, message = "Choose Your Specialisation", title = "TEMPLAR")
+			var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu especialización", title = "TEMPLAR")
 			if(!choice)
 				return
 			switch(choice)
@@ -194,7 +194,7 @@
 				"Necran Battleshovel (Polearm)" = /obj/item/weapon/shovel/necran,
 				"Swift Journey (Flail)" = /obj/item/weapon/flail/sflail/necraflail,
 			)
-			var/choice = spawned.select_equippable(player_client, selectable, message = "Choose Your Specialisation", title = "TEMPLAR")
+			var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu especialización", title = "TEMPLAR")
 			if(!choice)
 				return
 			switch(choice)
@@ -214,7 +214,7 @@
 				"Heartstring (Rapier)" = /obj/item/weapon/sword/rapier/eora,
 				"Close Caress (Knuckles)" = /obj/item/weapon/knuckles/eora,
 			)
-			var/choice = spawned.select_equippable(player_client, selectable, message = "Choose Your Specialisation", title = "TEMPLAR")
+			var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu especialización", title = "TEMPLAR")
 			if(!choice)
 				return
 			switch(choice)
@@ -235,7 +235,7 @@
 				"DepthSeeker (Spear)" = /obj/item/weapon/polearm/spear/abyssor,
 				"Barotrauma (Katars)" = /obj/item/weapon/katar/abyssor,
 			)
-			var/choice = spawned.select_equippable(player_client, selectable, message = "Choose Your Specialisation", title = "TEMPLAR")
+			var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu especialización", title = "TEMPLAR")
 			if(!choice)
 				return
 			switch(choice)

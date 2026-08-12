@@ -26,7 +26,7 @@
 	total_positions = 1
 
 	pack_title = "Fledgling Origins"
-	pack_message = "Choose your past"
+	pack_message = "Elige tu pasado"
 	outfit = /datum/outfit/bloodsucker
 	attribute_sheet = /datum/attribute_holder/sheet/job/bloodsucker
 	cmode_music = 'sound/music/cmode/antag/CombatBeest.ogg'

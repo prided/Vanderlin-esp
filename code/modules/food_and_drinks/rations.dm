@@ -23,7 +23,7 @@
 	if(istype(I, /obj/item/reagent_containers/food/snacks))
 		var/obj/item/reagent_containers/food/snacks/F = I
 		if(food)
-			to_chat(user, span_warning("There is already something wrapped in [src]."))
+			to_chat(user, span_warning("Ya hay algo envuelto en [src]."))
 			return
 		if(do_after(user, 2 SECONDS, target = src))
 			user.transferItemToLoc(F, src)
@@ -32,14 +32,14 @@
 			playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
 			F.rotprocess = null
 			if(I.w_class >= WEIGHT_CLASS_NORMAL)
-				name = "large ration pack ([food.name])"
-				desc = "A large ration pack containing a [food.name]."
+				name = "paquete de ración grande ([food.name])"
+				desc = "Un paquete de ración grande que contiene un [food.name]."
 				icon_state = "ration_large"
 				dropshrink = 1
 				// No need to change grid size cuz cakes are 1x1 huh??
 			else
 				name = "small ration pack ([food.name])"
-				desc = "A small ration pack containing a [food.name]."
+				desc = "Un pequeño paquete de ración que contiene un [food.name]."
 				icon_state = "ration_small"
 				dropshrink = 1
 

@@ -25,7 +25,7 @@
 	contains = /obj/item/clothing/head/crown/nyle
 
 /datum/supply_pack/jewelry/psycross // PSYDON LIVESSS RAHHHHHH
-	name = "Silver Psycross"
+	name = "Plata Psycross"
 	cost = 55
 	contains = /obj/item/clothing/neck/psycross/silver
 
@@ -35,12 +35,12 @@
 	contains = /obj/item/clothing/face/spectacles/sglasses
 
 /datum/supply_pack/jewelry/gmask
-	name = "Golden Halfmask"
+	name = "Media máscara dorada"
 	cost = 100
 	contains = /obj/item/clothing/face/lordmask
 
 /datum/supply_pack/jewelry/scom
-	name = "SCOM ring"
+	name = "anillo SCOM"
 	cost = 200
 	contains = /obj/item/scomstone
 
@@ -80,6 +80,6 @@
 	contains = /obj/item/clothing/head/crown/nyle/consortcrown
 
 /datum/supply_pack/jewelry/mercatoreye
-	name = "Mercator's Eye"
+	name = "Ojo de Mercator"
 	cost = 100
 	contains = /obj/item/clothing/neck/mercator

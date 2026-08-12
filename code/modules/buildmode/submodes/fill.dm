@@ -12,16 +12,16 @@
 	to_chat(c, "<span class='notice'>***********************************************************</span>")
 
 /datum/buildmode_mode/fill/change_settings(client/c)
-	var/target_path = input(c, "Enter typepath:" ,"Typepath","/obj/structure/closet")
+	var/target_path = input(c, "Enter typepath:" ,"Typepath","/obj/estructura/armario")
 	objholder = text2path(target_path)
 	if(!ispath(objholder))
 		objholder = pick_closest_path(target_path)
 		if(!objholder)
-			alert("No path has been selected.")
+			alert("No se ha seleccionado ninguna ruta.")
 			return
 		else if(ispath(objholder, /area))
 			objholder = null
-			alert("Area paths are not supported for this mode, use the area edit mode instead.")
+			alert("Las rutas de área no son compatibles con este modo; utilice el modo de edición de área en su lugar.")
 			return
 	deselect_region()
 

@@ -1,12 +1,12 @@
 /datum/reagent/drug
-	name = "Drug"
+	name = "Droga"
 	metabolization_rate = 0.1
-	taste_description = "bitterness"
+	taste_description = "amargura"
 	var/trippy = TRUE //Does this drug make you trip?
 
 /datum/reagent/drug/space_drugs
-	name = "Space drugs"
-	description = "An illegal chemical compound used as drug."
+	name = "Drogas espaciales"
+	description = "Un compuesto químico ilegal utilizado como droga."
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30
 
@@ -56,7 +56,7 @@
 	..()
 
 /datum/reagent/drug/nicotine
-	name = "Nicotine"
+	name = "Nicotina"
 	description = "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage."
 	reagent_state = LIQUID
 	color = "#60A584" // rgb: 96, 165, 132
@@ -89,11 +89,11 @@
 	. = 1
 
 /datum/reagent/drug/hallucinogen
-	name = "Hallucinogen"
+	name = "Alucinógeno"
 	description = "A stronghallucinogenic drug."
 	color = "#E700E7" // rgb: 231, 0, 231
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
-	taste_description = "the clouds"
+	taste_description = "las nubes"
 	overdose_threshold = 30
 	price_per_unit = 2.5
 
@@ -165,7 +165,7 @@
 		psychonaut.emote(pick("twitch","drool","moan"))
 
 /datum/reagent/drug/hallucinogen_concetrate
-	name = "Raw Hallucinogen Extract"
+	name = "Extracto de alucinógeno crudo"
 	description = "A crude concentration of psychoactive compounds. Unstable and incompletely processed."
 	color = "#b000b0"
 	metabolization_rate = 0.15 * REAGENTS_METABOLISM

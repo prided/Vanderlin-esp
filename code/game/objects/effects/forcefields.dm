@@ -40,7 +40,7 @@
 
 /// A BREAKABLE, transparent wall, not to be confused with the effect.
 /obj/structure/forcefield
-	name = "arcyne wall"
+	name = "arcyne pared"
 	desc = "A wall of pure arcyne force."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "forcefield"

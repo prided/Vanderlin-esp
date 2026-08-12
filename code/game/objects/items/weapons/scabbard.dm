@@ -19,7 +19,7 @@
 	GENERIC SCABBARDS
 */
 /obj/item/weapon/scabbard/knife
-	name = "knife sheath"
+	name = "funda de cuchillo"
 	desc = "A slingable sheath made of leather, meant to host surprises of smaller sizes."
 	icon_state = "sheath"
 	force = DAMAGE_KNIFE - 7
@@ -117,7 +117,7 @@
 	item_weight = 400 GRAMS
 
 /obj/item/weapon/scabbard/cane
-	name = "fancy cane"
+	name = "bastón elegante"
 	desc = "A polished, dark wooden cane, decorated with gold and silver. Often carried by nobility, even those without a limp, simply to flaunt their wealth to the peasantry. This one contains a concealed blade!"
 	icon_state = "canesheath"
 	force = DAMAGE_MACE - 4
@@ -132,12 +132,12 @@
 	item_weight = 500 GRAMS
 
 /obj/item/weapon/scabbard/cane/courtphysician
-	name = "fancy cane"
+	name = "bastón elegante"
 	desc = "A decorated cane bearing the visage of a vulture."
 	icon_state = "doccanesheath"
 
 /obj/item/weapon/scabbard/cane/hand
-	name = "fancy cane"
+	name = "bastón elegante"
 	desc = "A decorated silver cane bearing a rontz at the top."
 	icon_state = "staffsheath"
 
@@ -204,7 +204,7 @@
 
 
 /obj/item/weapon/scabbard/blackmeadow
-	name = "simple eastern scabbard"
+	name = "vaina oriental simple"
 	desc = "A piece of steel lined with wood. Great for batting away blows."
 	icon_state = "kazscab"
 	item_state = "kazscab"

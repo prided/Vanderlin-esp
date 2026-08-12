@@ -5,7 +5,7 @@
 |			 	 |
 \---------------*/
 /obj/item/clothing/neck/goldamulet
-	name = "gold amulet"
+	name = "amuleto de oro"
 	icon_state = "amuletg"
 	slot_flags = ITEM_SLOT_NECK
 	equip_sound = 'sound/foley/equip/cloak_equip.ogg'
@@ -15,7 +15,7 @@
 	sellprice = 60
 
 /obj/item/clothing/neck/silveramulet
-	name = "silver amulet"
+	name = "amuleto de plata"
 	icon_state = "amulets"
 	slot_flags = ITEM_SLOT_NECK | ITEM_SLOT_WRISTS // It needs this or else it is less useful than a psycross
 	equip_sound = 'sound/foley/equip/cloak_equip.ogg'
@@ -29,7 +29,7 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/clothing/neck/jadeamulet
-	name = "joapstone amulet"
+	name = "amuleto de joapstone"
 	icon_state = "amulet_jade"
 	slot_flags = ITEM_SLOT_NECK
 	equip_sound = 'sound/foley/equip/cloak_equip.ogg'
@@ -99,7 +99,7 @@
 	sellprice = 25
 
 /obj/item/clothing/neck/shellamulet
-	name = "shell amulet"
+	name = "amuleto de concha"
 	icon_state = "amulet_shell"
 	slot_flags = ITEM_SLOT_NECK
 	equip_sound = 'sound/foley/equip/cloak_equip.ogg'
@@ -325,7 +325,7 @@
 	max_integrity = INTEGRITY_STRONG
 
 /obj/item/clothing/neck/gorget/copper
-	name = "neck protector"
+	name = "protector de cuello"
 	icon_state = "copperneck"
 	desc = "An antique and simple protection for the neck, used more as an accessory by the common folk. But poor protection is still better than nothing."
 	smeltresult = /obj/item/ingot/copper
@@ -379,7 +379,7 @@
 	melting_material = /datum/material/bronze
 
 /obj/item/clothing/neck/bevor/iron
-	name = "iron bevor"
+	name = "bevor de hierro"
 	desc = "A piece of iron plate armor meant to protect the throat and neck of its wearer against decapitation, extending the protection of armor plates."
 	icon_state = "ibevor"
 	smeltresult = /obj/item/ingot/iron
@@ -422,7 +422,7 @@
 	icon_state = "kazengunneckguard"
 
 /obj/item/clothing/neck/gorget/explosive
-	name = "collar of servitude"
+	name = "collar de servidumbre"
 	examine_name = "gorget"
 	icon_state = "collar_of_servitude"
 	desc = "an ordinary gorget that has been imbued with a curse of the explosive sort by the inquisition. It is a powerfui tool designed to keep its wearer \
@@ -470,7 +470,7 @@
 		collar_unlocked = TRUE
 		to_chat(user, "The red gem inset in \the [src] dims its glow, it seems to be safe to take off now!")
 	else
-		to_chat(user, "Collar is already unlocked!")
+		to_chat(user, "¡El collar ya está desbloqueado!")
 
 	return ITEM_INTERACT_SUCCESS
 
@@ -490,7 +490,7 @@
 /obj/item/clothing/neck/gorget/explosive/proc/prepare_to_go_boom()
 	if(is_going_to_boom)
 		is_going_to_boom = FALSE
-		visible_message(span_notice("Red aura of the [src] slowly fades away."))
+		visible_message(span_notice("El aura roja del [src] se desvanece lentamente."))
 		return
 
 	playsound(src, 'sound/music/musicbox_windup.ogg', 45)
@@ -502,7 +502,7 @@
 
 /obj/item/clothing/neck/gorget/explosive/proc/go_boom()
 	if(!is_in_neck_slot || !is_going_to_boom)
-		visible_message(span_notice("The red aura emanating from [src] stops!"))
+		visible_message(span_notice("¡El aura roja que emana de [src] se detiene!"))
 		return
 
 	explosion(src, 1, 1, 2, 3) //first one to make sure wearer is damaged heavily
@@ -522,7 +522,7 @@
 	qdel(src)
 
 /obj/item/clothing/neck/gorget/gold
-	name = "golden gorget"
+	name = "gorguera dorada"
 	desc = "A series of resplendant golden plates designed to protect the neck, traditionally worn atop a jacket or cuirass. The holy sigil between its buckled halves promises to carry the flame of its wearer, no matter what strike's poised its way."
 	icon_state = "goldgorget"
 	armor_class = AC_HEAVY //Ceremonial. Heavy is the head that bares the burden.
@@ -546,7 +546,7 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/collar_detonator
-	name = "collar detonator"
+	name = "detonador de collar"
 	desc = "What seems to be an ordinary key at first is actually an enchanted contraption designed to \
 		detonate or unlock collar of servitudes used by the inquisition."
 	icon_state = "mazekey"
@@ -576,7 +576,7 @@
 
 /obj/item/clothing/neck/gorget/hoplite // Better than an iron gorget, not quite as good as a steel bevor
 	name = "bronze gorget"
-	desc = "A heavy collar of great age, meant to protect the neck."
+	desc = "Un collar pesado de gran antigüedad, destinado a proteger el cuello."
 	icon_state = "aasimarneck"
 	smeltresult = /obj/item/ingot/bronze
 	armor_type = /datum/armor/neck/maille/good
@@ -702,7 +702,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 /obj/item/clothing/neck/shalal
-	name = "desert rider medal"
+	name = "medalla del jinete del desierto"
 	desc = ""
 	icon_state = "shalal"
 	//dropshrink = 0.75
@@ -710,7 +710,7 @@
 	sellprice = 15
 
 /obj/item/clothing/neck/shalal/emir
-	name = "desert noble medal"
+	name = "medalla noble del desierto"
 
 /obj/item/clothing/neck/feld
 	name = "feldsher's collar"
@@ -727,7 +727,7 @@
 	sellprice = 15
 
 /obj/item/clothing/neck/courtphysician
-	name = "court physician's collar"
+	name = "collar del médico de la corte"
 	desc = "Fits snug."
 	icon_state = "courtcollar"
 	item_state = "courtcollar"

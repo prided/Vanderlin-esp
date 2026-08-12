@@ -39,7 +39,7 @@
 	. = ..()
 	var/mob/living/simple_animal/hostile/retaliate/blood/flesh = controller.pawn
 
-	flesh.visible_message("<span class='notice'>[flesh] calms down.</span>")
+	flesh.visible_message("<span class='notice'>[flesh] se calma.</span>")
 	flesh.remove_filter("frenzy_outline")
 
 	flesh.melee_damage_lower = initial(flesh.melee_damage_lower)

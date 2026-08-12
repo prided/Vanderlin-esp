@@ -173,7 +173,7 @@
 	if(isliving(usr))
 		var/mob/living/L = usr
 		if(L.stat != DEAD)
-			if(tgui_alert(L, "Are you done living?", "", list("Yes", "No")) == "Yes")
+			if(tgui_alert(L, "¿Has terminado de vivir?", "", list("Yes", "No")) == "Yes")
 				L.succumb(reaper = TRUE)
 
 /atom/movable/screen/fullscreen/crit/death

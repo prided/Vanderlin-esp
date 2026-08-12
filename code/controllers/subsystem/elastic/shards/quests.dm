@@ -1,5 +1,5 @@
 /datum/elastic_shard/quests
-	name = "Quests"
+	name = "Misiones"
 	upload_frequency = 5 MINUTES
 	shard_category = ELASCAT_QUESTS
 

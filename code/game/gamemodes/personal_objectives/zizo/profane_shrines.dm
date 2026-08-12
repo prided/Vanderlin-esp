@@ -33,7 +33,7 @@
 
 /datum/objective/personal/build_zizo_shrine/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have built all the required inverted crosses, completing Zizo's objective!"))
+	to_chat(owner.current, span_greentext("¡Has construido todas las cruces invertidas necesarias, completando el objetivo de Zizo!"))
 	adjust_storyteller_influence(ZIZO, 20)
 	UnregisterSignal(owner.current, COMSIG_ITEM_CRAFTED)
 

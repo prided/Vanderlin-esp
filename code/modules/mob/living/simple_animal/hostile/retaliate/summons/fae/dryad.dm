@@ -12,7 +12,7 @@
 	if(source.stat == DEAD)
 		return
 
-	target.visible_message(span_boldwarning("Vines spread out from [source]!"))
+	target.visible_message(span_boldwarning("¡Las enredaderas se extienden desde [source]!"))
 	for(var/turf/turf as anything in RANGE_TURFS(2, source.loc))
 		new /obj/structure/vine(turf)
 

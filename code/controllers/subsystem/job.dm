@@ -34,7 +34,7 @@ SUBSYSTEM_DEF(job)
 	var/list/all_jobs = sortList(subtypesof(/datum/job), GLOBAL_PROC_REF(cmp_typepaths_asc))
 	if(!length(all_jobs))
 		to_chat(world, span_boldannounce("Error setting up jobs, no job datums found."))
-		to_chat(world, span_boldannounce("You should start panicking."))
+		to_chat(world, span_boldannounce("Deberías empezar a entrar en pánico."))
 		return FALSE
 
 	for(var/job_type in all_jobs)
@@ -712,7 +712,7 @@ SUBSYSTEM_DEF(job)
 	//! TODO: Refactor this out... Look at how TG handles job greetings or implement our own method
 	if(player.mind?.assigned_role.title != title)
 		return
-	to_chat(player, span_notice("You are the <b>[get_informed_title(player)].</b>"))
+	to_chat(player, span_notice("Eres el <b>[get_informed_title(player)].</b>"))
 	if(tutorial)
 		to_chat(player, span_notice("*-----------------*"))
 		to_chat(player, span_notice(tutorial))

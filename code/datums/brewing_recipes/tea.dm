@@ -1,5 +1,5 @@
 /datum/brewing_recipe/golden_calendula_tea
-	name = "Golden Calendula Tea"
+	name = "Té de caléndula dorada"
 	reagent_to_brew = /datum/reagent/consumable/golden_calendula_tea
 	needed_reagents = list(/datum/reagent/water = 100)
 	needed_items = list(/obj/item/alch/herb/calendula = 1, /obj/item/alch/herb/mentha = 1, /obj/item/reagent_containers/food/snacks/spiderhoney = 1)

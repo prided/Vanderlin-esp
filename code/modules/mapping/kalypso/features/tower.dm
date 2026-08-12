@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/tower
-	name = "Ruined Tower"
+	name = "Torre en ruinas"
 	id = "feature_tower"
 	mappath = "_maps/kalypso/tower.dmm"
 

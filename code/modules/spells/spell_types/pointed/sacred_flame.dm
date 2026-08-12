@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/sacred_flame
-	name = "Sacred Flame"
-	desc = "Burn the target with divine light."
+	name = "Llama Sagrada"
+	desc = "Quema al objetivo con luz divina."
 	button_icon_state = "sacredflame"
 	sound = 'sound/magic/heal.ogg'
 	charge_sound = 'sound/magic/holycharging.ogg'
@@ -24,7 +24,7 @@
 	if(!ismob(cast_on))
 		if(cast_on.fire_act())
 			owner.visible_message(
-				"<font color='yellow'>[owner] points at [cast_on], igniting it with sacred flames!</font>",
+				"¡<font color='yellow'>[owner] apunta a [cast_on], encendiéndolo con llamas sagradas!</font>",
 				"<font color='yellow'>I point at [cast_on], igniting it with sacred flames!</font>",
 			)
 		else
@@ -37,7 +37,7 @@
 		return
 	var/mob/living/heretic = cast_on
 	owner.visible_message(
-		"<font color='yellow'>[owner] points at [heretic], igniting [heretic.p_them()] with sacred flames!!</font>",
+		"¡¡<font color='yellow'>[owner] apunta a [heretic], encendiendo [heretic.p_them()] con llamas sagradas!!</font>",
 		"<font color='yellow'>I point at [heretic], igniting  [heretic.p_them()] with sacred flames!!</font>",
 	)
 	playsound(heretic, 'sound/items/flint.ogg', 150, FALSE)

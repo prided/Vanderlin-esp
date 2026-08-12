@@ -127,7 +127,7 @@
 			if(M.mind)
 				if(M.mind.language_holder)
 					if(!length(M.mind.language_holder.languages))
-						to_chat(M, "<span class='warning'>I don't know any languages.</span>")
+						to_chat(M, "<span class='warning'>No sé ningún idioma.</span>")
 					else
 						for(var/X in M.mind.language_holder.languages)
 							var/datum/language/LA = GLOB.language_datum_instances[X]
@@ -138,7 +138,7 @@
 				to_chat(L, "[X] - <span class='info'>[GLOB.roguetraits[X]]</span>")
 				ht = TRUE
 		if(!ht)
-			to_chat(L, "<span class='warning'>I have no special traits.</span>")
+			to_chat(L, "<span class='warning'>No tengo rasgos especiales.</span>")
 		to_chat(L, "*----*")
 		return
 
@@ -151,7 +151,7 @@
 		H.print_skill_levels(H)
 
 /atom/movable/screen/craft
-	name = "crafting menu"
+	name = "menú de elaboración"
 	icon_state = "craft"
 	screen_loc = rogueui_craft
 	var/last_craft
@@ -190,7 +190,7 @@
 	. = ..()
 
 /atom/movable/screen/area_creator
-	name = "create new area"
+	name = "crear nueva área"
 	icon_state = "area_edit"
 	screen_loc = ui_building
 
@@ -374,7 +374,7 @@
 	L.dropItemToGround(L.get_active_held_item(), silent = FALSE)
 
 /atom/movable/screen/act_intent
-	name = "intent"
+	name = "intención"
 	icon_state = "help"
 	screen_loc = ui_acti
 
@@ -512,7 +512,7 @@
 //
 
 /atom/movable/screen/quad_intents
-	name = "mmb intents"
+	name = "intenciones mmb"
 	icon_state = "mmbintents0"
 	icon = 'icons/mob/roguehud.dmi'
 	screen_loc = rogueui_quad
@@ -573,7 +573,7 @@
 			icon_state = "take[giving]"
 
 /atom/movable/screen/def_intent
-	name = "defense intent"
+	name = "intención de defensa"
 	icon_state = "def1n"
 	icon = 'icons/mob/roguehud.dmi'
 	screen_loc = rogueui_def
@@ -876,7 +876,7 @@
 			L.lay_down()
 
 /atom/movable/screen/storage
-	name = "storage"
+	name = "almacenamiento"
 	icon_state = "block"
 	screen_loc = "7,7 to 10,8"
 	plane = HUD_PLANE
@@ -934,7 +934,7 @@
 		icon_state = "catch[throwy]"
 
 /atom/movable/screen/zone_sel
-	name = "damage zone"
+	name = "zona de daño"
 	icon_state = "m-zone_sel"
 	screen_loc = rogueui_targetdoll
 	var/overlay_icon = 'icons/mob/roguehud64.dmi'
@@ -1327,7 +1327,7 @@
 	screen_loc = ui_health
 
 /atom/movable/screen/healthdoll
-	name = "health doll"
+	name = "muñeca de salud"
 	screen_loc = rogueui_targetdoll
 
 /atom/movable/screen/healthdoll/Click(location, control, params)
@@ -1341,11 +1341,11 @@
 		if(ENCUMBRANCE_EXTREME)
 			return span_userdanger(span_big("EXTRA-HEAVY!!"))
 		if(ENCUMBRANCE_HEAVY)
-			return span_userdanger("Heavy!")
+			return span_userdanger("¡Pesado!")
 		if(ENCUMBRANCE_MEDIUM)
 			return span_boldnotice("Medium.")
 		if(ENCUMBRANCE_LIGHT)
-			return span_notice("Light.")
+			return span_notice("Luz.")
 		if(ENCUMBRANCE_NONE)
 			return span_tinynotice("None.")
 
@@ -1411,7 +1411,7 @@
 	screen_loc = null
 
 /atom/movable/screen/healths/blood
-	name = "life"
+	name = "vida"
 	icon_state = "blood100"
 	screen_loc = rogueui_blood
 	icon = 'icons/mob/rogueheat.dmi'
@@ -1429,7 +1429,7 @@
 			if(length(user_mob.mind.relations))
 				user_mob.mind.display_known_people(user_mob)
 			else
-				to_chat(user_mob, "<span class='warning'>I don't know anyone.</span>")
+				to_chat(user_mob, "<span class='warning'>No conozco a nadie.</span>")
 		if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 			if(!user_mob.mind)
 				return
@@ -1610,7 +1610,7 @@
 				to_chat(M, span_info("[vices.get_desc()]"))
 			to_chat(M, "*--------*")
 			if(!length(M.stressors))
-				to_chat(M, span_info("I'm not feeling much of anything right now."))
+				to_chat(M, span_info("No siento mucho de nada en este momento."))
 			for(var/datum/stress_event/stress_event in M.stressors)
 				if(!stress_event.can_show(M))
 					continue
@@ -1625,16 +1625,16 @@
 			to_chat(M, "*--------*")
 		if(LAZYACCESS(modifiers, RIGHT_CLICK))
 			if(M.get_triumphs() <= 0)
-				to_chat(M, "<span class='warning'>I haven't TRIUMPHED.</span>")
+				to_chat(M, "<span class='warning'>NO HE TRIUNFADO.</span>")
 				return
-			if(tgui_alert(M, "Do you want to remember a TRIUMPH?", "Remember TRIUMPH", list("Yes", "No")) == "Yes")
+			if(tgui_alert(M, "¿Quieres recordar un TRIUNFO?", "Remember TRIUMPH", list("Yes", "No")) == "Yes")
 				if(M.add_stress(/datum/stress_event/triumph))
 					M.adjust_triumphs(-1)
 					M.playsound_local(M, 'sound/misc/notice (2).ogg', 100, FALSE)
 
 
 /atom/movable/screen/rmbintent
-	name = "alt intents"
+	name = "intenciones alternativas"
 	icon = 'icons/mob/roguehud.dmi'
 	icon_state = "rmbintent"
 	var/list/shown_intents = list()
@@ -1706,7 +1706,7 @@
 	. = ..()
 
 /atom/movable/screen/rintent_selection
-	name = "rmb intent"
+	name = "intención de rmb"
 	icon = 'icons/mob/roguehud.dmi'
 	icon_state = "rmbaimed"
 	var/stored_intent
@@ -1797,7 +1797,7 @@
 		if(NIGHT)
 			name = "Noc"
 		if(DAWN)
-			name = "Astrata - Dawn"
+			name = "Astrata - Amanecer"
 	return ..()
 
 /atom/movable/screen/time/update_overlays()

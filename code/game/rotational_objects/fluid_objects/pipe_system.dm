@@ -1,5 +1,5 @@
 /obj/structure/water_pipe
-	name = "fluid pipe"
+	name = "tubo de fluido"
 	desc = ""
 	icon_state = "base"
 	icon = 'icons/roguetown/misc/pipes.dmi'

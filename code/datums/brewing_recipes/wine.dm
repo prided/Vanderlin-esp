@@ -27,7 +27,7 @@
 	)
 
 /datum/brewing_recipe/wine/tangerine_wine
-	name = "Tangerine Wine"
+	name = "Vino De Mandarina"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/tangerine
 	needed_reagents = list(/datum/reagent/water = 100)
 	needed_items = list(/obj/item/reagent_containers/food/snacks/produce/fruit/tangerine = 3, /obj/item/reagent_containers/food/snacks/sugar = 1)
@@ -37,7 +37,7 @@
 	)
 
 /datum/brewing_recipe/wine/raspberry_wine
-	name = "Raspberry Wine"
+	name = "Vino de frambuesa"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/raspberry
 	needed_reagents = list(/datum/reagent/water = 100)
 	needed_items = list(/obj/item/reagent_containers/food/snacks/produce/fruit/raspberry = 3, /obj/item/reagent_containers/food/snacks/sugar = 1)
@@ -58,7 +58,7 @@
 
 
 /datum/brewing_recipe/wine/tiefling_wine
-	name = "Tiefling Blood Wine"
+	name = "Tiefling Vino de sangre"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/tiefling
 	needed_reagents = list(/datum/reagent/water = 100, /datum/reagent/blood/tiefling = 60)
 	needed_items = list(/obj/item/reagent_containers/food/snacks/sugar = 1)

@@ -19,7 +19,7 @@
 	)
 
 /datum/job/advclass/sacrestant/psydoniantemplar // A templar, but for the Inquisition
-	title = "Psydonian Templar"
+	title = "Psydonian Templario"
 	tutorial = "You are among the strongest students of the Ordo Benetarus. Top of your classes in both physical skill and intellectual matters, you’re here to prove you’re worthy of becoming an inquisitor. One simple step, before your skill is recognized."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_PLAYER_ALL
@@ -55,13 +55,13 @@
 		"Armet" = /obj/item/clothing/head/helmet/heavy/psydonhelm,
 		"Bucket Helm" = /obj/item/clothing/head/helmet/heavy/psybucket,
 	)
-	spawned.select_equippable(player_client, helmets, message = "Choose your HELMET.", title = "TAKE UP PSYDON'S HELMS.")
+	spawned.select_equippable(player_client, helmets, message = "Elige tu CASCO.", title = "TAKE UP PSYDON'S HELMS.")
 
 	var/static/list/armors = list(
 		"Hauberk" = /obj/item/clothing/armor/chainmail/hauberk/fluted,
 		"Cuirass" = /obj/item/clothing/armor/cuirass/ornate,
 	)
-	spawned.select_equippable(player_client, armors, message = "Choose your ARMOR.", title = "TAKE UP PSYDON'S MANTLE.")
+	spawned.select_equippable(player_client, armors, message = "Elige tu ARMADURA.", title = "TAKE UP PSYDON'S MANTLE.")
 
 	var/static/list/weapons = list(
 		"Psydonic Longsword" = list(/obj/item/weapon/scabbard/sword, /obj/item/weapon/sword/long/psydon),
@@ -72,7 +72,7 @@
 		"Psydonic Spear + Handmace" = list(/obj/item/weapon/polearm/spear/psydon, /obj/item/weapon/mace/cudgel/psy),
 		"Psydonic Poleaxe + Shortsword" = list(/obj/item/weapon/greataxe/psy, /obj/item/weapon/sword/short/psy),
 	)
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose your WEAPON.", title = "TAKE UP PSYDON'S ARMS.")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu ARMA.", title = "TAKE UP PSYDON'S ARMS.")
 	switch(weapon_choice)
 		if("Psydonic Longsword")
 			spawned.clamped_adjust_skill_level(/datum/attribute/skill/combat/swords, 37, 37, TRUE)

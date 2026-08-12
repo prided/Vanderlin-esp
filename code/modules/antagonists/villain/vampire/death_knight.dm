@@ -1,8 +1,8 @@
 /datum/antagonist/skeleton/knight
 	name = "Death Knight"
 	increase_votepwr = FALSE
-	roundend_category = "Vampires"
-	antagpanel_category = "Vampire"
+	roundend_category = "Vampiros"
+	antagpanel_category = "Vampiro"
 
 /datum/antagonist/skeleton/knight/on_gain()
 	. = ..()
@@ -29,7 +29,7 @@
 			if(objective.check_completion())
 				to_chat(owner, "<B>Goal #[count]</B>: [objective.explanation_text] <span class='greentext'>TRIUMPH!</span>")
 			else
-				to_chat(owner, "<B>Goal #[count]</B>: [objective.explanation_text] <span class='redtext'>Failure.</span>")
+				to_chat(owner, "<B>Objetivo #[count]</B>: [objective.explanation_text] <span class='redtext'>Fallo.</span>")
 				traitorwin = FALSE
 			count += objective.triumph_count
 	var/special_role_text = LOWER_TEXT(name)
@@ -37,10 +37,10 @@
 		if(count)
 			if(owner)
 				owner.adjust_triumphs(count)
-		to_chat(world, span_greentext("The [special_role_text] has TRIUMPHED!"))
+		to_chat(world, span_greentext("¡El [special_role_text] ha TRIUNFADO!"))
 		if(owner?.current)
 			owner.current.playsound_local(get_turf(owner.current), 'sound/misc/triumph.ogg', 100, FALSE, pressure_affected = FALSE)
 	else
-		to_chat(world, span_redtext("The [special_role_text] has FAILED!"))
+		to_chat(world, span_redtext("¡El [special_role_text] ha FALLADO!"))
 		if(owner?.current)
 			owner.current.playsound_local(get_turf(owner.current), 'sound/misc/fail.ogg', 100, FALSE, pressure_affected = FALSE)

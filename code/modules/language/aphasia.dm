@@ -5,7 +5,7 @@
 	speech_verb = "garbles"
 	ask_verb = "mumbles"
 	whisper_verb = "mutters"
-	exclaim_verb = "screams incoherently"
+	exclaim_verb = "grita incoherentemente"
 	flags = LANGUAGE_HIDE_ICON_IF_NOT_UNDERSTOOD
 	key = "16"
 

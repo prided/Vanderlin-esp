@@ -23,7 +23,7 @@
 	cast_on.visible_message(
 		span_info("A loud crunching sound has come from [cast_on]!"),
 		span_userdanger("I feel arcyne teeth biting into my eyes!"),
-		span_hear("I hear a loud crunch"),
+		span_hear("escucho un fuerte crujido"),
 	)
 	if(iscarbon(cast_on))
 		var/mob/living/carbon/carbon = cast_on

@@ -32,7 +32,7 @@
 		return
 	var/mob/living/carbon/M = owner
 	if(!M)
-		to_chat(owner, span_warning("You have no hands to transform!"))
+		to_chat(owner, span_warning("¡No tienes manos para transformarte!"))
 		return SPELL_CANCEL_CAST
 	if(M.active_hand_index == 1)
 		item_type = /obj/item/weapon/briar_claw/left

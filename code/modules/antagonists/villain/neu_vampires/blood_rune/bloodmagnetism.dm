@@ -1,6 +1,6 @@
 
 /datum/rune_spell/bloodmagnetism
-	name = "Blood Magnetism"
+	name = "Magnetismo sanguíneo"
 	desc = "Bring forth one of your fellow believers, no matter how far they are, as long as their heart beats."
 	desc_talisman = "Use to begin the Blood Magnetism ritual where you stand."
 	invocation = "N'ath reth sh'yro eth d'rekkathnor!"
@@ -46,7 +46,7 @@
 	var/obj/effect/blood_rune/R = spell_holder
 	R.one_pulse()
 
-	rejoin = tgui_alert(activator, "Will you pull them toward you, or pull yourself toward them?", "Blood Magnetism", list("Summon Cultist", "Rejoin Cultist")) == "Rejoin Cultist"
+	rejoin = tgui_alert(activator, "Will you pull them toward you, or pull yourself toward them?", "Magnetismo sanguíneo", list("Summon Cultist", "Rejoin Cultist")) == "Rejoin Cultist"
 
 	var/list/possible_targets = list()
 	var/list/prisoners = list()
@@ -73,7 +73,7 @@
 		annotated_targets["\Roman[i]-[prisoner.real_name] (Prisoner)"] = prisoner
 		i++
 
-	var/choice = input(activator, "Choose who you wish to [rejoin ? "rejoin" : "summon"]", "Blood Magnetism") as null|anything in annotated_targets
+	var/choice = input(activator, "Choose who you wish to [rejoin ? "rejoin" : "summon"]", "Magnetismo sanguíneo") as null|anything in annotated_targets
 	if (!choice)
 		qdel(src)
 		return
@@ -165,7 +165,7 @@
 /datum/rune_spell/bloodmagnetism/proc/success()
 	if (target.occult_muted())
 		for(var/mob/living/contributor in contributors)
-			to_chat(activator, span_warning("The ritual failed, the target seems to be under a curse that prevents us from reaching them through the veil.") )
+			to_chat(activator, span_warning("El ritual falló, el objetivo parece estar bajo una maldición que nos impide alcanzarlo a través del velo.") )
 	else
 		if (rejoin)
 			var/list/valid_turfs = list()

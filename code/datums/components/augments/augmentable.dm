@@ -72,7 +72,7 @@
 		return
 	shackle.on_remove(H)
 	H.visible_message(
-		span_danger("[H]'s entire frame shudders violently before exploding into a catastrophic shower of metal and steam!"),
+		span_danger("¡Todo el marco de [H] se estremece violentamente antes de explotar en una catastrófica lluvia de metal y vapor!"),
 		span_userdanger("CRITICAL FAILURE! SHACKLE UNIT NON-RESPONSIVE!")
 	)
 	playsound(H, 'sound/vo/automaton/statuscritical.ogg', 100, TRUE)
@@ -97,7 +97,7 @@
 		return COMPONENT_AUGMENT_FAILED
 	for(var/datum/augment/IA in installed_augments)
 		if(is_type_in_list(A, IA.incompatible_installations) || is_type_in_list(IA, A.incompatible_installations))
-			to_chat(user, span_warning("This augment conflicts with \the [IA.name]."))
+			to_chat(user, span_warning("Este aumento entra en conflicto con \the [IA.name]."))
 			return COMPONENT_AUGMENT_CONFLICT
 
 	modify_max_stability(A.stability_cost)
@@ -123,7 +123,7 @@
 	A.parent = null
 	A.on_remove(H)
 
-	to_chat(user, span_notice("Removed [A.name]."))
+	to_chat(user, span_notice("Se eliminó [A.name]."))
 	return COMPONENT_AUGMENT_SUCCESS
 
 /datum/component/augmentable/proc/repair(datum/source, amount, mob/user)
@@ -137,8 +137,8 @@
 	modify_stability(amount/5, user)
 
 	H.visible_message(
-		span_notice("[user] repairs [H]'s damaged components."),
-		span_notice("[user] repairs your damaged components.")
+		span_notice("[user] repara los componentes dañados de [H]."),
+		span_notice("[user] repara sus componentes dañados.")
 	)
 
 	return COMPONENT_AUGMENT_SUCCESS

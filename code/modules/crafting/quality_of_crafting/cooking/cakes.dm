@@ -112,7 +112,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/cake_strawberry
 	category = "Cakes"
-	name = "Strawberry Cake Base"
+	name = "Base de pastel de fresa"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/produce/fruit/strawberry = 1,
@@ -129,7 +129,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/cake_tamto
 	category = "Cakes"
-	name = "Tomato Silk Cake Base"
+	name = "Base de pastel de seda de tomate"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/fruit/tamto_slice = 1,
@@ -237,7 +237,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/unbaked_tamtocake
 	category = "Cakes"
-	name = "Unbaked Tomato Silk Cake"
+	name = "Pastel de seda de tomate sin hornear"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/cheese = 1,

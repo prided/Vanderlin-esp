@@ -1,5 +1,5 @@
 /obj/abstract/visual_ui_element/console_input
-	name = "Console Input"
+	name = "Entrada de consola"
 	icon = 'icons/visual_ui/quake_console.dmi'
 	icon_state = "quake_input"
 	layer = VISUAL_UI_BUTTON

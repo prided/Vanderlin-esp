@@ -26,7 +26,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -35,7 +35,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -44,18 +44,18 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
 			"Fresh goods from distant lands!",
-			"Taste the flavors of the world!",
+			"¡Prueba los sabores del mundo!",
 			"My cargo hold is full of delicacies!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
-			"Come try exotic cuisines!",
+			"¡Ven a probar cocinas exóticas!",
 		),
 	)
 
@@ -87,7 +87,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -96,7 +96,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -105,7 +105,7 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
@@ -152,7 +152,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -161,7 +161,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -170,23 +170,23 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Treasures fit for royalty!",
+			"¡Tesoros dignos de la realeza!",
 			"Luxury beyond your wildest dreams!",
-			"Each piece tells a story of distant courts!",
+			"¡Cada pieza cuenta una historia de cortes lejanas!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
-			"Behold, wonders from afar!",
+			"¡He aquí maravillas desde lejos!",
 		),
 	)
 
 /datum/trader_data/tool_merchant
-	name = "Tool"
+	name = "Herramienta"
 	base_type = list(/datum/supply_pack/tools)
 	initial_products = list()
 	initial_wanteds = list(
@@ -213,7 +213,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -222,7 +222,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -231,15 +231,15 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Tools forged by master craftsmen!",
-			"Implements to make work easier!",
-			"Quality instruments from skilled smiths!",
+			"¡Herramientas forjadas por maestros artesanos!",
+			"¡Implementos para facilitar el trabajo!",
+			"¡Instrumentos de calidad de herreros expertos!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Equip yourself with proper tools!",
@@ -274,7 +274,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -283,7 +283,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -292,13 +292,13 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Ancient remedies and exotic compounds!",
+			"¡Remedios antiguos y compuestos exóticos!",
 			"Elixirs brewed in distant laboratories!",
 			"Potions that blur the line between medicine and magic!",
 		),
@@ -335,7 +335,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -344,7 +344,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -353,15 +353,15 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Raw materials from the far corners of the world!",
+			"¡Materias primas de los rincones más lejanos del mundo!",
 			"Building blocks for your grandest projects!",
-			"Resources gathered from untamed lands!",
+			"¡Recursos recolectados de tierras indómitas!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Stock up on quality materials!",
@@ -397,7 +397,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -406,7 +406,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -415,20 +415,20 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
 			"Blades forged in distant foundries!",
-			"Weapons that have tasted victory!",
-			"Arms to protect and conquer!",
-			"Steel tested in a hundred battles!",
+			"¡Armas que han probado la victoria!",
+			"¡Armas para proteger y conquistar!",
+			"¡Acero probado en cien batallas!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Arm yourself for whatever comes!",
-			"Quality steel for discerning warriors!",
+			"¡Acero de calidad para guerreros exigentes!",
 		),
 	)
 
@@ -461,7 +461,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -470,7 +470,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -479,20 +479,20 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Creatures from lands unknown!",
+			"¡Criaturas de tierras desconocidas!",
 			"Beasts to serve and companion you!",
 			"Animals bred by expert handlers!",
 			"Livestock to enrich your holdings!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Behold my menagerie of wonders!",
-			"Creatures great and small!",
+			"¡Criaturas grandes y pequeñas!",
 		),
 	)
 
@@ -531,7 +531,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -540,7 +540,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -549,20 +549,20 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Seeds from gardens across the world!",
-			"Plants that will transform your land!",
-			"Crops unknown to these shores!",
+			"¡Semillas de jardines de todo el mundo!",
+			"¡Plantas que transformarán tu tierra!",
+			"¡Cultivos desconocidos en estas costas!",
 			"The future of your harvest in my hands!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
-			"Sow the seeds of prosperity!",
-			"Exotic flora awaits your soil!",
+			"¡Siembra las semillas de la prosperidad!",
+			"¡La flora exótica espera tu suelo!",
 		),
 	)
 
@@ -594,7 +594,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -603,7 +603,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -612,16 +612,16 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Music from every corner of the realm!",
-			"Instruments crafted by master artisans!",
+			"¡Música de todos los rincones del reino!",
+			"¡Instrumentos elaborados por maestros artesanos!",
 			"Melodies waiting to be born!",
-			"The sound of distant cultures!",
+			"¡El sonido de culturas lejanas!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Let music fill your halls!",
@@ -630,7 +630,7 @@
 	)
 
 /datum/trader_data/book_merchant
-	name = "Scholar"
+	name = "Erudito"
 	base_type = list(/datum/supply_pack/rawmats, /datum/supply_pack/narcotics)
 	initial_products = list()
 	initial_wanteds = list(
@@ -658,7 +658,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -667,7 +667,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -676,20 +676,20 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Knowledge from forgotten libraries!",
+			"¡Conocimiento de bibliotecas olvidadas!",
 			"Wisdom of ages past and present!",
 			"Scrolls penned by learned sages!",
-			"The accumulated learning of civilizations!",
+			"¡El aprendizaje acumulado de las civilizaciones!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Enlighten yourself with ancient wisdom!",
-			"Knowledge is the greatest treasure!",
+			"¡El conocimiento es el mayor tesoro!",
 		),
 	)
 
@@ -722,7 +722,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -731,7 +731,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -740,7 +740,7 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
@@ -752,7 +752,7 @@
 			"The art of healing from many lands!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
-			"Health is the greatest wealth!",
+			"¡La salud es la mayor riqueza!",
 			"Restore what time has taken!",
 		),
 	)
@@ -785,7 +785,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -794,7 +794,7 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm currently buying nothing at the moment.",
@@ -803,7 +803,7 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",
@@ -812,10 +812,10 @@
 			"Oddities from the furthest reaches!",
 			"Curiosities that defy explanation!",
 			"Rarities collected across lifetimes!",
-			"Wonders that few eyes have seen!",
+			"¡Maravillas que pocos ojos han visto!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
-			"Marvel at the impossible!",
-			"Treasures beyond imagination!",
+			"¡Maravíllate ante lo imposible!",
+			"¡Tesoros más allá de la imaginación!",
 		),
 	)

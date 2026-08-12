@@ -1,5 +1,5 @@
 /obj/structure/curtain
-	name = "curtain"
+	name = "cortina"
 	desc = ""
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "bathroom-open"
@@ -16,7 +16,7 @@
 /obj/structure/curtain/proc/toggle(mob/user)
 	user.changeNext_move(CLICK_CD_FAST)
 	if(directional && !(get_dir(src, user) == dir))
-		to_chat(user, span_notice("I can't reach the curtains from this side."))
+		to_chat(user, span_notice("No puedo alcanzar las cortinas desde este lado."))
 		return
 	if(open)
 		set_opacity(TRUE)
@@ -36,7 +36,7 @@
 	if(anchored)
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message("<span class='warning'>[user] cuts apart [src].</span>",
+	user.visible_message("<span class='warning'>[user] corta [src].</span>",
 		"<span class='notice'>I start to cut apart [src].</span>", "<span class='hear'>I hear cutting.</span>")
 
 	if(I.use_tool(src, user, 50, volume=100) && !anchored)

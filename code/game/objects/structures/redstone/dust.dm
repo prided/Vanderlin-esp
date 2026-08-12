@@ -1,6 +1,6 @@
 /obj/structure/redstone/dust
-	name = "redstone dust"
-	desc = "Magical dust that can transmit power signals."
+	name = "polvo de piedra roja"
+	desc = "Polvo mágico que puede transmitir señales de energía."
 	icon_state = "dust"
 	redstone_role = REDSTONE_ROLE_CONDUCTOR
 

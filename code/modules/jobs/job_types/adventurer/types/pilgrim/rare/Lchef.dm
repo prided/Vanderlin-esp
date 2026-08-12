@@ -48,7 +48,7 @@
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/pilgrim/masterchef
 
 /datum/outfit/pilgrim/masterchef
-	name = "Master Chef (Pilgrim)"
+	name = "Maestro Chef (Peregrino)"
 	belt = /obj/item/storage/belt/leather
 	pants = /obj/item/clothing/pants/tights/colored/random
 	shirt = /obj/item/clothing/shirt/shortshirt/colored/random

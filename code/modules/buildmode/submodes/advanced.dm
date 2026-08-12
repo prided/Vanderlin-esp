@@ -12,12 +12,12 @@
 	to_chat(c, "<span class='notice'>Left Mouse Button on turf/obj          = Place objects</span>")
 	to_chat(c, "<span class='notice'>Right Mouse Button                     = Delete objects</span>")
 	to_chat(c, "")
-	to_chat(c, "<span class='notice'>Use the button in the upper left corner to</span>")
-	to_chat(c, "<span class='notice'>change the direction of built objects.</span>")
+	to_chat(c, "<span class='notice'>Utilice el botón en la esquina superior izquierda para</span>")
+	to_chat(c, "<span class='notice'>cambiar la dirección de los objetos construidos.</span>")
 	to_chat(c, "<span class='notice'>***********************************************************</span>")
 
 /datum/buildmode_mode/advanced/change_settings(client/c)
-	var/target_path = input(c, "Enter typepath:", "Typepath", "/obj/structure/closet")
+	var/target_path = input(c, "Enter typepath:", "Typepath", "/obj/estructura/armario")
 	objholder = text2path(target_path)
 	if(!ispath(objholder))
 		objholder = pick_closest_path(target_path)
@@ -26,7 +26,7 @@
 			return
 		else if(ispath(objholder, /area))
 			objholder = null
-			alert("That path is not allowed.")
+			alert("Ese camino no está permitido.")
 			return
 
 /datum/buildmode_mode/advanced/handle_click(client/c, list/modifiers, obj/object)
@@ -37,7 +37,7 @@
 	if(left_click && alt_click)
 		if (istype(object, /turf) || istype(object, /obj) || istype(object, /mob))
 			objholder = object.type
-			to_chat(c, "<span class='notice'>[initial(object.name)] ([object.type]) selected.</span>")
+			to_chat(c, "<span class='notice'>[initial(object.name)] ([object.type]) seleccionado.</span>")
 		else
 			to_chat(c, "<span class='notice'>[initial(object.name)] is not a turf, object, or mob! Please select again.</span>")
 	else if(left_click)

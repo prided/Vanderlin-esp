@@ -1,5 +1,5 @@
 /datum/bounty/generic/iron_ore
-	name = "Iron Shipment"
+	name = "Envío de hierro"
 	desc = "We need raw iron ore for the smiths."
 	required_path = /obj/item/ore/iron
 	required_count = 8
@@ -8,7 +8,7 @@
 	demanded_by = PEASANTS
 
 /datum/bounty/generic/coal
-	name = "Coal Shipment"
+	name = "Envío de carbón"
 	desc = "We need raw coal for the smiths."
 	required_path = /obj/item/ore/coal
 	required_count = 12
@@ -17,8 +17,8 @@
 	demanded_by = PEASANTS
 
 /datum/bounty/generic/lumber
-	name = "Lumber Delivery"
-	desc = "Construction crews are out of timber."
+	name = "Entrega de madera"
+	desc = "Los equipos de construcción se han quedado sin madera."
 	required_path = /obj/item/natural/wood/plank
 	required_count = 10
 	reward_reputation = 6

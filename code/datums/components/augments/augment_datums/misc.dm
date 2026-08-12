@@ -8,7 +8,7 @@
 	installation_time = 20 SECONDS
 
 /datum/augment/music_player
-	name = "music box"
+	name = "caja de música"
 	desc = "A stereo system integrated into the chest."
 	incompatible_installations = list(/datum/augment/music_player)
 	stability_cost = 0
@@ -52,7 +52,7 @@
 
 /datum/augment/heatvision
 	name = "heat vision"
-	desc = "Adds a thermal processor past the optical sensors."
+	desc = "Agrega un procesador térmico más allá de los sensores ópticos."
 	incompatible_installations = list(/datum/augment/heatvision)
 	stability_cost = -15
 	engineering_difficulty = SKILL_RANK_JOURNEYMAN

@@ -102,7 +102,7 @@
 			return FALSE
 		unflipped_compost += min(compost_value, MAXIMUM_TOTAL_COMPOST - get_total_compost())
 		if(!batch_process)
-			to_chat(user, span_notice("I add \the [attacking_item] to \the [src]"))
+			to_chat(user, span_notice("Agrego \the [attacking_item] a \the [src]"))
 		qdel(attacking_item)
 		update_appearance(UPDATE_OVERLAYS)
 		return TRUE

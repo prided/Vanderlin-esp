@@ -37,7 +37,7 @@
 				to_chat(rollviewer, "<span class='notice'>Lucky</span>")
 				return DICE_WIN
 			else
-				to_chat(rollviewer, "<span class='boldnotice'>Phenomenal</span>")
+				to_chat(rollviewer, "<span class='boldnotice'>Fenomenal</span>")
 				return DICE_WIN
 
 /mob/living/proc/rollfrenzy()

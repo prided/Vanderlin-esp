@@ -1,5 +1,5 @@
 /mob/living/simple_animal/hostile/retaliate/banker
-	name = "Banker"
+	name = "Banquero"
 	desc = "Come buy some!"
 	unique_name = FALSE
 	maxHealth = 200

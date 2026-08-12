@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(paintings)
-	name = "Paintings"
+	name = "Pinturas"
 	init_order = INIT_ORDER_PATH
 	flags = SS_NO_FIRE
 
@@ -54,7 +54,7 @@ SUBSYSTEM_DEF(paintings)
 							return "This author is banned from uploading!"
 						if(!(istext(painting_title) && istext(author) && istext(author_ckey)))
 							return "This painting is incorrectly formatted!"
-						var/replace = tgui_alert(client, "Someone wants to replace [painting_title] with another one by you, do you want to replace this?", "Confirm", list("Yes", "No"))
+						var/replace = tgui_alert(client, "Someone wants to replace [painting_title] with another one by you, do you want to replace this?", "Confirmar", list("Yes", "No"))
 						if(replace != "Yes")
 							canvas.reject = TRUE
 							return "there is already a painting by this title!"

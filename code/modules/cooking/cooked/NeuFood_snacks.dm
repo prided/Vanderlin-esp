@@ -31,7 +31,7 @@
 	portable = FALSE
 	biting = TRUE
 	eat_effect = null
-	tastes = list("roasted meat" = 2, "potato" = 1)
+	tastes = list("carne asada" = 2, "potato" = 1)
 	slices_num = 0
 	faretype = FARE_NEUTRAL
 	modified = TRUE
@@ -51,7 +51,7 @@
 	nutrition = COOKED_MEAT_NUTRITION + COOKED_VEGGIE_NUTRITION + 1
 	biting = TRUE
 	eat_effect = null
-	tastes = list("roasted meat" = 1, "caramelized onions" = 1)
+	tastes = list("carne asada" = 1, "cebollas caramelizadas" = 1)
 	slices_num = 0
 	modified = TRUE
 	rotprocess = SHELFLIFE_DECENT
@@ -71,25 +71,25 @@
 	short_cooktime = (50 - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/cooking)) * 8))
 
 	if(!tool.reagents?.has_reagent(/datum/reagent/consumable/blackpepper, 1))
-		to_chat(user, span_notice("There's not enough black pepper to make anything with."))
+		to_chat(user, span_notice("No hay suficiente pimienta negra para hacer nada."))
 		return ITEM_INTERACT_BLOCKING
 
-	to_chat(user, "You start rubbing the steak with black pepper.")
+	to_chat(user, "Empiezas a frotar el filete con pimienta negra.")
 	playsound(user, 'sound/foley/peppermill.ogg', 100, TRUE, -1)
 	if(do_after(user, 3 SECONDS, src))
 		if(!tool.reagents.has_reagent(/datum/reagent/consumable/blackpepper, 1))
-			to_chat(user, span_notice("There's not enough black pepper to make anything with."))
+			to_chat(user, span_notice("No hay suficiente pimienta negra para hacer nada."))
 			return ITEM_INTERACT_BLOCKING
 
 		tool.reagents.remove_reagent(/datum/reagent/consumable/blackpepper, 1)
 
 		name = "peppersteak"
-		desc = "Roasted flesh flanked with a generous coating of ground pepper for intense flavor."
+		desc = "Carne asada flanqueada con una generosa capa de pimienta molida para un sabor intenso."
 		faretype = FARE_FINE
 		portable = FALSE
 		var/mutable_appearance/spice = mutable_appearance('icons/roguetown/items/food.dmi', "frysteak_spice")
 		overlays += spice
-		tastes = list("spicy red meat" = 2)
+		tastes = list("carne roja picante" = 2)
 		meal_properties()
 		bitesize = initial(bitesize)
 		user.mind.add_sleep_experience(/datum/attribute/skill/craft/cooking/fine_cuisine, (GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)*0.5))
@@ -104,7 +104,7 @@
 	base_icon_state = "frysteak"
 	biting = TRUE
 	eat_effect = /datum/status_effect/buff/foodbuff
-	tastes = list("warm steak" = 1, "herbs" = 1)
+	tastes = list("warm steak" = 1, "hierbas" = 1)
 	slices_num = 0
 	rotprocess = SHELFLIFE_DECENT
 	faretype = FARE_NEUTRAL
@@ -125,7 +125,7 @@
 	desc = "A slab of beastflesh, fried to a perfect medium-rare. It has been seasoned with highly-spicy drowsbane."
 	icon_state = "steak_salsa"
 	eat_effect = null
-	tastes = list("warm steak" = 1, "infernal spice" = 1)
+	tastes = list("warm steak" = 1, "especia infernal" = 1)
 	slices_num = 0
 	foodtype = MEAT | VEGETABLES
 	nutrition = COOKED_MEAT_NUTRITION + COOKED_VEGGIE_NUTRITION
@@ -157,7 +157,7 @@
 
 /obj/item/reagent_containers/food/snacks/cooked/rib
 	name = "rib"
-	desc = "A single rib, the meat easily falls off the bone."
+	desc = "Una sola costilla, la carne se desprende fácilmente del hueso."
 	icon_state = "ribs_slice"
 	eat_effect = null
 	dropshrink = 0.8
@@ -179,11 +179,11 @@
 	nutrition = COOKED_MEAT_NUTRITION + HONEY_NUTRITION
 	faretype = FARE_FINE
 	foodtype = MEAT | SUGAR
-	tastes = list("supple cooked meat" = 1, "honey glaze" = 1)
+	tastes = list("supple cooked meat" = 1, "glaseado de miel" = 1)
 	item_weight = 520 GRAMS
 
 /obj/item/reagent_containers/food/snacks/cooked/rib/honey
-	name = "glazed rib"
+	name = "costilla glaseada"
 	desc = "A single glazed rib, the meat easily falls off the bone."
 	icon_state = "honey_ribs_slice"
 	tastes = list("supple cooked meat" = 1)
@@ -195,8 +195,8 @@
 
 /*	.............   Fried egg   ................ */
 /obj/item/reagent_containers/food/snacks/cooked/egg
-	tastes = list("fried egg" = 1)
-	name = "fried egg"
+	tastes = list("huevo frito" = 1)
+	name = "huevo frito"
 	desc = "A staple of Astratan midsummer festival eating."
 	icon_state = "friedegg"
 	base_icon_state = "friedegg"
@@ -206,8 +206,8 @@
 	item_weight = 50 GRAMS
 
 /obj/item/reagent_containers/food/snacks/cooked/twin_egg
-	tastes = list("fried egg" = 1)
-	name = "fried egg twins"
+	tastes = list("huevo frito" = 1)
+	name = "gemelos de huevo frito"
 	desc = "A staple of Astratan midsummer festival eating. There are two of them."
 	icon_state = "seggs"
 	base_icon_state = "seggs"
@@ -219,7 +219,7 @@
 /obj/item/reagent_containers/food/snacks/cooked/valorian_omlette
 	name = "valorian omelette"
 	desc = "Fried cackleberries on a bed of half-melted cheese, a dish from distant lands."
-	tastes = list("fried cackleberries" = 1, "cheese" = 1)
+	tastes = list("fried cackleberries" = 1, "queso" = 1)
 	icon_state = "omelette"
 	base_icon_state = "omelette"
 	faretype = FARE_FINE
@@ -234,7 +234,7 @@
 
 /*	.............   Caravaneer's Omelette   ................ */
 /obj/item/reagent_containers/food/snacks/comelette_base
-	name = "omelette base"
+	name = "base de tortilla"
 	desc = "All it needs now is some potato slices, for a perfect texture."
 	icon_state = "comelette_base"
 	foodtype = EGG | RAW
@@ -253,7 +253,7 @@
 
 /obj/item/reagent_containers/food/snacks/cooked/comelette
 	name = "caraveneer's omelette"
-	desc = "The very best breakfast for sharing amongst family and friends."
+	desc = "El mejor desayuno para compartir entre familiares y amigos."
 	tastes = list("fried cackleberries" = 1, "potato" = 1)
 	icon_state = "comelette"
 	faretype = FARE_NEUTRAL
@@ -326,7 +326,7 @@
 /obj/item/reagent_containers/food/snacks/cooked/comelette/meat
 	name = "caraveneer's omelette"
 	desc = "The very best breakfast for sharing amongst family and friends, with little bits of meat."
-	tastes = list("fried cackleberries" = 1, "potato" = 1, "succulant meat" = 1)
+	tastes = list("fried cackleberries" = 1, "potato" = 1, "carne suculenta" = 1)
 	icon_state = "meat_comelette"
 	faretype = FARE_FINE
 	slice_path = /obj/item/reagent_containers/food/snacks/comelette_slice/meat
@@ -339,7 +339,7 @@
 	dropshrink = 0.8
 	slices_num = 0
 	bitesize = 3
-	tastes = list("fried cackleberries" = 1, "potato" = 1, "succulant meat" = 1)
+	tastes = list("fried cackleberries" = 1, "potato" = 1, "carne suculenta" = 1)
 	nutrition = ((EGG_NUTRITION*2 + VEGGIE_NUTRITION + MINCE_NUTRITION)*COOK_MOD)/6
 	faretype = FARE_FINE
 	foodtype = EGG | VEGETABLES | MEAT
@@ -380,7 +380,7 @@
 	biting = TRUE
 	modified = TRUE
 	eat_effect = /datum/status_effect/buff/foodbuff
-	tastes = list("frybird" = 1, "herbs" = 1)
+	tastes = list("frybird" = 1, "hierbas" = 1)
 	nutrition = (RAWMEAT_NUTRITION + 1)*COOK_MOD + 1
 	foodtype = MEAT|VEGETABLES
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -411,11 +411,11 @@
 	item_weight = 400 GRAMS
 
 /obj/item/reagent_containers/food/snacks/cooked/royal_truffle
-	name = "royal truffles"
+	name = "trufas reales"
 	desc = "The height of decadence, a precious truffle pig, turned into an amusing meal, served on a bed of its beloved golden truffles."
 	icon_state = "royaltruffles"
 	base_icon_state = "royaltruffles"
-	tastes = list("salted ham" = 1, "divine truffles" = 1)
+	tastes = list("jamón salado" = 1, "trufas divinas" = 1)
 	biting = TRUE
 	filling_color = "#8a0000"
 	become_rot_type = /obj/item/reagent_containers/food/snacks/rotten/bacon
@@ -428,8 +428,8 @@
 
 /*	.............   Frything   ................ */
 /obj/item/reagent_containers/food/snacks/cooked/strange
-	name = "fried strange meat"
-	desc = "Whatever it was, it's roasted."
+	name = "carne extraña frita"
+	desc = "Sea lo que sea, está asado."
 	icon_state = "fried_strange"
 	base_icon_state = "fried_strange"
 	biting = TRUE
@@ -443,7 +443,7 @@
 
 /*	.............   Sausage & Wiener   ................ */
 /obj/item/reagent_containers/food/snacks/cooked/sausage
-	name = "sausage"
+	name = "embutido"
 	desc = "Delicious flesh stuffed in an intestine casing."
 	icon_state = "wiener"
 	base_icon_state = "wiener"
@@ -456,7 +456,7 @@
 
 /obj/item/reagent_containers/food/snacks/cooked/sausage_cabbage
 	name = "wiener on cabbage"
-	desc = "A rich and heavy meal, perfect ration for a soldier on the march."
+	desc = "Una comida rica y pesada, ración perfecta para un soldado en marcha."
 	icon_state = "wienercabbage"
 	base_icon_state = "wienercabbage"
 	nutrition = COOKED_SAUSAGE_NUTRITION+COOKED_VEGGIE_NUTRITION
@@ -483,7 +483,7 @@
 	item_weight = 200 GRAMS
 
 /obj/item/reagent_containers/food/snacks/cooked/sausage_cocaumole
-	name = "wiener with cocaumole"
+	name = "salchicha con cocaumole"
 	desc = "Stout and savory."
 	icon_state = "wiener_cocaumole"
 	nutrition = COOKED_SAUSAGE_NUTRITION+COOKED_VEGGIE_NUTRITION
@@ -496,12 +496,12 @@
 	item_weight = 180 GRAMS
 
 /obj/item/reagent_containers/food/snacks/cooked/sausage_onion
-	name = "wiener and onions"
+	name = "salchicha y cebolla"
 	desc = "Stout and flavourful."
 	icon_state = "wieneronion"
 	base_icon_state = "wieneronion"
 	nutrition = COOKED_SAUSAGE_NUTRITION+COOKED_VEGGIE_NUTRITION
-	tastes = list("fried onions" = 1)
+	tastes = list("cebollas fritas" = 1)
 	foodtype = VEGETABLES | MEAT
 	faretype = FARE_NEUTRAL
 	modified = TRUE
@@ -510,12 +510,12 @@
 	item_weight = 180 GRAMS
 
 /obj/item/reagent_containers/food/snacks/cooked/sausage_sticked
-	name = "sausage on a stick"
+	name = "salchicha en un palo"
 	desc = "A meaty, portable snack perfect for campfires or fairs."
 	icon_state = "wienerstick"
 	base_icon_state = "wienerstick"
 	nutrition = COOKED_SAUSAGE_NUTRITION
-	tastes = list("grilled sausage" = 2)
+	tastes = list("salchicha a la parrilla" = 2)
 	foodtype = MEAT
 	faretype = FARE_NEUTRAL
 	modified = TRUE
@@ -543,7 +543,7 @@
 
 /obj/item/reagent_containers/food/snacks/foodbase/griddledog_raw
 	name = "uncooked griddledog"
-	desc = "A sausage covered with dough, begging to be fried."
+	desc = "Una salchicha cubierta de masa que pide ser frita."
 	nutrition = RAWMEAT_NUTRITION + BUTTERDOUGHSLICE_NUTRITION
 	icon_state = "rawgriddledog"
 	tastes = list("savory sausage" = 2, "butterdough" = 1)
@@ -558,7 +558,7 @@
 	desc = "A classic piece of Grenzelhoftian street food, the fried butterdough is a Vanderlinian adulteration."
 	nutrition = COOKED_SAUSAGE_NUTRITION + BUTTERDOUGHSLICE_NUTRITION * COOK_MOD
 	icon_state = "griddledog"
-	tastes = list("savory sausage" = 2, "crispy butterdough" = 1)
+	tastes = list("savory sausage" = 2, "masa de mantequilla crujiente" = 1)
 	trash = /obj/item/grown/log/tree/stick
 	rotprocess = SHELFLIFE_EXTREME
 	faretype = FARE_FINE
@@ -603,7 +603,7 @@
 
 /*	.............   Fried onions   ................ */
 /obj/item/reagent_containers/food/snacks/onion_fried
-	name = "fried onion"
+	name = "cebolla frita"
 	desc = "Seared onions roasted to a delicious set of rings."
 	icon_state = "onion_fried"
 	base_icon_state = "onion_fried"
@@ -713,7 +713,7 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/drowsbanejam/slice
 	nutrition = COOKED_VEGGIE_NUTRITION
 	foodtype = VEGETABLES
-	tastes = list("infernal spice" = 1)
+	tastes = list("especia infernal" = 1)
 	rotprocess = SHELFLIFE_DECENT
 	faretype = FARE_NEUTRAL
 	portable = FALSE
@@ -749,7 +749,7 @@
 \-------*/
 
 /obj/item/reagent_containers/food/snacks/salad
-	name = "salad"
+	name = "ensalada"
 	desc = "Cut fresh vegetables, loved by peasants and health-conscious nobles alike."
 	icon = 'icons/roguetown/items/cooking.dmi' //This is so it can grab bowl sprites. Salad sprites are stored there also. Check bowl code in NeuFood.dm for details.
 	icon_state = ""
@@ -758,7 +758,7 @@
 	nutrition = (VEGGIE_NUTRITION) * COOK_MOD
 	foodtype = VEGETABLES
 	trash = /obj/item/reagent_containers/glass/bowl
-	tastes = list("fresh cabbage" = 1)
+	tastes = list("repollo fresco" = 1)
 	rotprocess = null
 	faretype = FARE_NEUTRAL
 	portable = FALSE
@@ -799,7 +799,7 @@
 		desc = "[desc] Fried potato wedges have been placed overtop."
 		add_overlay("potato_salad")
 	else if(istype(tool, /obj/item/reagent_containers/food/snacks/cooked/frysteak))
-		name = "[name] with meat"
+		name = "[name] con carne"
 		desc = "[desc] Perhaps counterintuitively, frysteak has been chopped overtop."
 		add_overlay("meat_salad")
 	else if(istype(tool, /obj/item/reagent_containers/food/snacks/produce/grain/sunreed)) //Of note, in cooking.dmi I have stored overlays for greyscaled fruit and dressing. I've been coding this food so long, that I can't be bothered to add them. But YOU can. Credit for 7erracotta for the sprites.
@@ -841,7 +841,7 @@
 	short_cooktime = (50 - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/cooking)) * 8))
 
 	if(!tool.reagents.has_reagent(/datum/reagent/consumable/blackpepper, 1))
-		to_chat(user, span_warning("There's not enough black pepper to make anything with."))
+		to_chat(user, span_warning("No hay suficiente pimienta negra para hacer nada."))
 		return ITEM_INTERACT_BLOCKING
 
 	to_chat(user, "You start rubbing the bird roast with black pepper.")
@@ -849,7 +849,7 @@
 	playsound(user, 'sound/foley/peppermill.ogg', 100, TRUE, -1)
 	if(do_after(user, 3 SECONDS, src))
 		if(!tool.reagents.has_reagent(/datum/reagent/consumable/blackpepper, 1))
-			to_chat(user, span_notice("There's not enough black pepper to make anything with."))
+			to_chat(user, span_notice("No hay suficiente pimienta negra para hacer nada."))
 			return ITEM_INTERACT_BLOCKING
 		tool.reagents.remove_reagent(/datum/reagent/consumable/blackpepper, 1)
 		name = "spiced [name]"
@@ -858,7 +858,7 @@
 		portable = FALSE
 		var/mutable_appearance/spice = mutable_appearance('icons/roguetown/items/food.dmi', "roast_spice")
 		overlays += spice
-		tastes = list("spicy birdmeat" = 2)
+		tastes = list("carne de ave picante" = 2)
 		modified = TRUE
 		user.mind.add_sleep_experience(/datum/attribute/skill/craft/cooking/fine_cuisine, (GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)*0.5))
 		user.nobles_seen_servant_work()

@@ -1,5 +1,5 @@
 /datum/gem_cut/vampiric
-	name = "vampiric"
+	name = "vampírico"
 
 /datum/gem_cut/vampiric/setup_cut(multiplier)
 	weapon_effect_type = /datum/rune_effect/life_steal

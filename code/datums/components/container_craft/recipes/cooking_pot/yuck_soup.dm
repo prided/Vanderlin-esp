@@ -1,5 +1,5 @@
 /datum/container_craft/cooking/yuck_soup
-	name = "Yuck Soup"
+	name = "Sopa asquerosa"
 	created_reagent = /datum/reagent/yuck/cursed_soup
 	requirements = list(/obj/item/reagent_containers/food/snacks/produce/fruit/jacksberry/poison = 1)
 	max_optionals = 0

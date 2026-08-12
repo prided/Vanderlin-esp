@@ -138,7 +138,7 @@
 
 /obj/item/clothing/gloves/plate/kote/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	detail_color = GLOB.noble_dyes[choice]

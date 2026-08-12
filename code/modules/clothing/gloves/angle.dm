@@ -20,7 +20,7 @@
 	armor_type = /datum/armor/gloves/leather/advanced
 
 /obj/item/clothing/gloves/angle/masterwork
-	name = "masterwork heavy leather gloves"
+	name = "guantes de cuero pesados de obra maestra"
 	desc = "A heavier pair of leather gloves with extra, thick padding. These look like they can take a brutal beating. Great melee protection and very reliable durability."
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
@@ -60,7 +60,7 @@
 	color = "#ffffff"
 
 /obj/item/clothing/gloves/angle/freifechter
-	name = "fencing gloves"
+	name = "guantes de esgrima"
 	desc = "A pair of hardened leather gloves used by fencers who aren't exactly convinced of losing a finger to a particularly strong feder cut. The inside is padded for extra durability."
 	icon_state = "freigloves"
 	item_state = "freigloves"

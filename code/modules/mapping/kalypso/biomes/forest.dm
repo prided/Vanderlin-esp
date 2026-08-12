@@ -1,5 +1,5 @@
 /datum/biome/forest
-	name = "Forest"
+	name = "Bosque"
 	id = BIOME_FOREST
 
 	flora_density_base = 1.2

@@ -439,7 +439,7 @@
 	if(.)
 		return
 	if(length(src_object.contents()))
-		to_chat(usr, "<span class='notice'>I start dumping out the contents...</span>")
+		to_chat(usr, "<span class='notice'>Empiezo a vaciar el contenido...</span>")
 		if(!do_after(usr, 2 SECONDS, src_object.parent))
 			return FALSE
 

@@ -1,6 +1,6 @@
 
 /obj/structure/vertical_gearbox
-	name = "vertical gearbox"
+	name = "caja de cambios vertical"
 	icon = 'icons/obj/rotation_machines.dmi'
 	icon_state = "gearbox"
 

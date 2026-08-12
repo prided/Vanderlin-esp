@@ -7,7 +7,7 @@ GLOBAL_LIST_INIT(arcane_tomes, list())
 
 ///////////////////////////////////////ARCANE TOME////////////////////////////////////////////////
 /obj/item/tome
-	name = "arcane tome"
+	name = "tomo arcano"
 	desc = "A dark, dusty tome with frayed edges and a sinister cover. Its surface is hard and cold to the touch."
 	icon = 'icons/obj/vampire.dmi'
 	icon_state = "tome"

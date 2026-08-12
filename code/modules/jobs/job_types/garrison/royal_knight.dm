@@ -105,7 +105,7 @@
 		"Sabre" = /obj/item/weapon/sword/sabre/dec,
 	)
 
-	var/choice = spawned.select_equippable(player_client, selectable, message = "Choose Your Specialisation", title = "KNIGHT")
+	var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu especialización", title = "KNIGHT")
 	if(!choice)
 		return
 
@@ -201,7 +201,7 @@
 		"Decorated Golden Helmet" = /obj/item/clothing/head/helmet/heavy/decorated/golden,
 	)
 
-	spawned.select_equippable(player_client, selectablehelmets, message = "Choose Your Helmet", title = JOB_ROYAL_KNIGHT)
+	spawned.select_equippable(player_client, selectablehelmets, message = "Elige tu casco", title = JOB_ROYAL_KNIGHT)
 
 /datum/attribute_holder/sheet/job/royalknight/steam
 	raw_attribute_list = list(
@@ -230,7 +230,7 @@
 	)
 
 /datum/job/advclass/royalknight/steam
-	title = "Steam Knight"
+	title = "Caballero de vapor"
 	tutorial = "The pinnacle of Vanderlin's steam technology. \
 	Start with a set of Steam Armor that requires steam to function. \
 	The suit is powerful when powered but will slow you down when not \
@@ -241,7 +241,7 @@
 	category_tags = list(CTAG_ROYALKNIGHT)
 
 /datum/outfit/royalknight/steam
-	name = "Steam Knight"
+	name = "Caballero de vapor"
 	armor = /obj/item/clothing/armor/steam
 	head = /obj/item/clothing/head/helmet/heavy/steam
 	gloves = /obj/item/clothing/gloves/plate/steam

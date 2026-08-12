@@ -13,7 +13,7 @@
 	var/name = "data"
 
 /datum/data/record
-	name = "record"
+	name = "registro"
 	var/list/fields = list()
 
 /datum/data/record/Destroy()

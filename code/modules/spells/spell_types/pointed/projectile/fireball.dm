@@ -31,7 +31,7 @@
 	to_fire.exp_fire *= spell_magnitude_modifier
 
 /datum/action/cooldown/spell/projectile/fireball/baali
-	name = "Infernal Fireball"
+	name = "Bola de fuego infernal"
 
 	associated_skill = /datum/attribute/skill/magic/blood
 

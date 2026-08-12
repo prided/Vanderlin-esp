@@ -15,7 +15,7 @@
 	..()
 
 	if(usr.client != src.owner || !check_rights(0))
-		message_admins("[usr.key] has attempted to override the admin panel!")
+		message_admins("¡[usr.key] ha intentado anular el panel de administración!")
 		log_admin("[key_name_admin(usr)] tried to use the admin panel without authorization.")
 		return
 
@@ -41,7 +41,7 @@
 			return
 
 		if(!SSticker.HasRoundStarted())
-			tgui_alert(usr,"The game hasn't started yet!")
+			tgui_alert(usr,"¡El juego aún no ha comenzado!")
 			return
 
 		var/target = locate(href_list["attributes"])
@@ -61,7 +61,7 @@
 			return
 		var/mob/M = locate(href_list["getplaytimewindow"]) in GLOB.mob_list
 		if(!M)
-			to_chat(usr, "<span class='danger'>ERROR: Mob not found.</span>")
+			to_chat(usr, "<span class='danger'>ERROR: Mob no encontrado.</span>")
 			return
 		cmd_show_exp_panel(M.client)
 
@@ -70,7 +70,7 @@
 			return
 		var/client/C = locate(href_list["toggleexempt"]) in GLOB.clients
 		if(!C)
-			to_chat(usr, "<span class='danger'>ERROR: Client not found.</span>")
+			to_chat(usr, "<span class='danger'>ERROR: Cliente no encontrado.</span>")
 			return
 		toggle_exempt_status(C)
 
@@ -83,7 +83,7 @@
 			var/datum/round_event/event = E.runEvent()
 			if(event.announceWhen>0)
 				event.processing = FALSE
-				var/prompt = tgui_alert(usr, "Would you like to alert the crew?", "Alert", list("Yes", "No", "Cancel"))
+				var/prompt = tgui_alert(usr, "Would you like to alert the crew?", "Alerta", list("Yes", "No", "Cancel"))
 				switch(prompt)
 					if("Yes")
 						event.announceChance = 100
@@ -93,7 +93,7 @@
 					if("No")
 						event.announceChance = 0
 				event.processing = TRUE
-			message_admins("[key_name_admin(usr)] has triggered an event. ([E.name])")
+			message_admins("[key_name_admin(usr)] ha desencadenado un evento. ([E.name])")
 			log_admin("[key_name(usr)] has triggered an event. ([E.name])")
 		return
 
@@ -152,8 +152,8 @@
 			return
 
 		message_admins("<span class='adminnotice'>[key_name_admin(usr)] is considering ending the round.</span>")
-		if(tgui_alert(usr, "This will end the round, are you SURE you want to do this?", "Confirmation", list("Yes", "No")) == "Yes")
-			if(tgui_alert(usr, "Final Confirmation: End the round NOW?", "Confirmation", list("Yes", "No")) == "Yes")
+		if(tgui_alert(usr, "This will end the round, are you SURE you want to do this?", "Confirmación", list("Yes", "No")) == "Yes")
+			if(tgui_alert(usr, "Final Confirmation: End the round NOW?", "Confirmación", list("Yes", "No")) == "Yes")
 				message_admins("<span class='adminnotice'>[key_name_admin(usr)] has ended the round.</span>")
 				SSticker.force_ending = 1 //Yeah there we go APC destroyed mission accomplished
 				return
@@ -202,10 +202,10 @@
 			if(!check_if_greater_rights_than(M.client))
 				to_chat(usr, "<span class='danger'>Error: They have more rights than you do.</span>")
 				return
-			if(tgui_alert(usr, "Kick [key_name(M)]?", "Confirm", list("Yes", "No")) != "Yes")
+			if(tgui_alert(usr, "Kick [key_name(M)]?", "Confirmar", list("Yes", "No")) != "Yes")
 				return
 			if(!M)
-				to_chat(usr, "<span class='danger'>Error: [M] no longer exists!</span>")
+				to_chat(usr, "<span class='danger'>Error: ¡[M] ya no existe!</span>")
 				return
 			if(!M.client)
 				to_chat(usr, "<span class='danger'>Error: [M] no longer has a client!</span>")
@@ -256,7 +256,7 @@
 	else if(href_list["deletemessage"])
 		if(!check_rights(R_ADMIN))
 			return
-		var/safety = tgui_alert(usr, "Delete message/note?","Confirm", list("Yes","No"));
+		var/safety = tgui_alert(usr, "¿Eliminar mensaje/nota?","Confirmar", list("Yes","No"));
 		if (safety == "Yes")
 			var/message_id = href_list["deletemessage"]
 			delete_message(message_id)
@@ -264,7 +264,7 @@
 	else if(href_list["deletemessageempty"])
 		if(!check_rights(R_ADMIN))
 			return
-		var/safety = tgui_alert(usr, "Delete message/note?", "Confirm", list("Yes","No"));
+		var/safety = tgui_alert(usr, "¿Eliminar mensaje/nota?", "Confirmar", list("Yes","No"));
 		if (safety == "Yes")
 			var/message_id = href_list["deletemessageempty"]
 			delete_message(message_id, browse = TRUE)
@@ -393,7 +393,7 @@
 		GLOB.master_mode = href_list["c_mode2"]
 		log_admin("[key_name_admin(usr)] set the mode as [GLOB.master_mode].")
 		message_admins("<span class='adminnotice'>[key_name_admin(usr)] set the mode as [GLOB.master_mode].</span>")
-		to_chat(world, "<span class='adminnotice'><b>The mode is now: [GLOB.master_mode]</b></span>")
+		to_chat(world, "<span class='adminnotice'><b>El modo ahora es: [GLOB.master_mode]</b></span>")
 		Game() // updates the main game menu
 		if(tgui_alert(usr, "Would you like to save this as the default mode for the server?", "Save mode", DEFAULT_INPUT_CHOICES) == CHOICE_YES)
 			SSticker.save_mode(GLOB.master_mode)
@@ -404,12 +404,12 @@
 			return
 
 		if(SSticker.HasRoundStarted())
-			return alert(usr, "The game has already started.")
+			return alert(usr, "El juego ya ha comenzado.")
 		if(GLOB.master_mode != "secret")
-			return alert(usr, "The game mode has to be secret!")
+			return alert(usr, "¡El modo de juego tiene que ser secreto!")
 		GLOB.secret_force_mode = href_list["f_secret2"]
 		log_admin("[key_name_admin(usr)] set the forced secret mode as [GLOB.secret_force_mode].")
-		message_admins("<span class='adminnotice'>[key_name_admin(usr)] set the forced secret mode as [GLOB.secret_force_mode].</span>")
+		message_admins("<span class='adminnotice'>[key_name_admin(usr)] establece el modo secreto forzado como [GLOB.secret_force_mode].</span>")
 		Game() // updates the main game menu
 		HandleFSecret()
 
@@ -421,13 +421,13 @@
 		if(!ismob(M))
 			to_chat(usr, "this can only be used on instances of type /mob.")
 
-		var/speech = input("What will [key_name(M)] say?", "Force speech", "")// Don't need to sanitize, since it does that in say(), we also trust our admins.
+		var/speech = input("¿Qué dirá [key_name(M)]?", "Force speech", "")// Don't need to sanitize, since it does that in say(), we also trust our admins.
 		if(!speech)
 			return
 		M.say(speech, forced = "admin speech")
 		speech = sanitize(speech) // Nah, we don't trust them
 		log_admin("[key_name_admin(usr)] forced [key_name(M)] to say: [speech]")
-		message_admins("<span class='adminnotice'>[key_name_admin(usr)] forced [key_name_admin(M)] to say: [speech]</span>")
+		message_admins("<span class='adminnotice'>[key_name_admin(usr)] obligó a [key_name_admin(M)] a decir: [speech]</span>")
 
 	else if(href_list["sendtoprison"])
 		if(!check_rights(R_ADMIN))
@@ -460,7 +460,7 @@
 			if(tgui_alert(usr, "[key_name(M)] is a LIVING MOB. Are you sure you want to send him back?", "Message", list("Yes", "No")) != "Yes")
 				return
 		if(!M.client)
-			to_chat(usr, "<span class='warning'>[M] doesn't seem to have an active client.</span>")
+			to_chat(usr, "<span class='warning'>[M] no parece tener un cliente activo.</span>")
 			return
 		log_admin("[key_name_admin(usr)] has sent [key_name(M)] back to the Lobby.")
 		message_admins("[key_name_admin(usr)] sent [key_name_admin(M)] back to the lobby")
@@ -587,7 +587,7 @@
 
 		//Job + antagonist
 		if(M.mind)
-			special_role_description = "Role: <b>[M.mind.assigned_role.title]</b>; Antagonist: <font color='red'><b>[M.mind.special_role]</b></font>"
+			special_role_description = "Rol: <b>[M.mind.assigned_role.title]</b>; Antagonista: <font color='red'><b>[M.mind.special_role]</b></font>"
 		else
 			special_role_description = "Role: <i>Mind datum missing</i> Antagonist: <i>Mind datum missing</i>"
 
@@ -604,10 +604,10 @@
 					status = "<font color='orange'><b>[HAS_TRAIT(L, TRAIT_CRITICAL_CONDITION) ? "Unconscious and Dying" : "Unconscious"]</b></font>"
 				if(DEAD)
 					status = "<font color='red'><b>Dead</b></font>"
-			health_description = "Status = [status]"
+			health_description = "Estado = [status]"
 			health_description += "<BR>Oxy: [L.getOxyLoss()] - Tox: [L.getToxLoss()] - Fire: [L.getFireLoss()] - Brute: [L.getBruteLoss()] - Clone: [L.getCloneLoss()] - Brain: [L.getOrganLoss(ORGAN_SLOT_BRAIN)]"
 		else
-			health_description = "This mob type has no health to speak of."
+			health_description = "Este tipo de mafia no tiene salud de la que hablar."
 
 		//Gender
 		switch(M.gender)
@@ -616,10 +616,10 @@
 			else
 				gender_description = "<font color='red'><b>[M.gender]</b></font>"
 
-		to_chat(src.owner, "<b>Info about [M.name]:</b> ")
+		to_chat(src.owner, "<b>Información sobre [M.name]:</b> ")
 		to_chat(src.owner, "Mob type = [M.type]; Gender = [gender_description] Damage = [health_description]")
 		to_chat(src.owner, "Name = <b>[M.name]</b>; Real_name = [M.real_name]; Mind_name = [M.mind?"[M.mind.name]":""]; Key = <b>[M.key]</b>;")
-		to_chat(src.owner, "Location = [location_description];")
+		to_chat(src.owner, "Ubicación = [location_description];")
 		to_chat(src.owner, "[special_role_description]")
 		to_chat(src.owner, ADMIN_FULLMONTY_NONAME(M))
 
@@ -634,12 +634,12 @@
 
 		var/quirk_type = text2path(href_list["quirk"])
 		if(!ispath(quirk_type, /datum/quirk))
-			to_chat(usr, "<span class='warning'>Invalid quirk type.</span>")
+			to_chat(usr, "<span class='warning'>Tipo de peculiaridad no válido.</span>")
 			return
 
 		// Check if they already have this quirk
 		if(H.has_quirk(quirk_type))
-			to_chat(usr, "<span class='warning'>[H] already has this quirk.</span>")
+			to_chat(usr, "<span class='warning'>[H] ya tiene esta peculiaridad.</span>")
 			return
 
 		// Get the quirk singleton for customization check
@@ -650,7 +650,7 @@
 		if(length(singleton.customization_options))
 			var/list/options = singleton.return_customization(H.client?.prefs)
 			if(length(options))
-				var/selected = input(usr, "Select [singleton.customization_label]:", "Quirk Customization") as null|anything in options
+				var/selected = input(usr, "Seleccione [singleton.customization_label]:", "Personalización de peculiaridades") as null|anything in options
 				if(selected)
 					custom_value = selected
 				else
@@ -683,7 +683,7 @@
 
 		var/quirk_type = text2path(href_list["quirk"])
 		if(!ispath(quirk_type, /datum/quirk))
-			to_chat(usr, "<span class='warning'>Invalid quirk type.</span>")
+			to_chat(usr, "<span class='warning'>Tipo de peculiaridad no válido.</span>")
 			return
 
 		var/datum/quirk/Q = H.get_quirk(quirk_type)
@@ -696,9 +696,9 @@
 		if(H.remove_quirk(quirk_type))
 			log_admin("[key_name_admin(usr)] removed quirk [quirk_name] from [key_name_admin(H)].")
 			message_admins("[key_name_admin(usr)] removed quirk [quirk_name] from [key_name_admin(H)].")
-			to_chat(usr, "<span class='notice'>Removed quirk [quirk_name] from [H].</span>")
+			to_chat(usr, "<span class='notice'>Se eliminó la peculiaridad [quirk_name] de [H].</span>.")
 		else
-			to_chat(usr, "<span class='warning'>Failed to remove quirk from [H].</span>")
+			to_chat(usr, "<span class='warning'>No se pudo eliminar la peculiaridad de [H].</span>")
 
 		show_player_panel_next(H, "quirks")
 
@@ -726,7 +726,7 @@
 		for(var/datum/job/job in SSjob.joinable_occupations)
 			if(job.title == Add)
 				var/new_slot_count = null
-				new_slot_count = input(usr, "How many jebs do you want?", "Add wanted posters", "[new_slot_count]") as num|null
+				new_slot_count = input(usr, "¿Cuántos jebs quieres?", "Add wanted posters", "[new_slot_count]") as num|null
 				if(!new_slot_count)
 					break
 				job.total_positions = new_slot_count
@@ -808,7 +808,7 @@
 
 		var/mob/living/carbon/human/H = locate(href_list["adminsmite"]) in GLOB.mob_list
 		if(!H || !istype(H))
-			to_chat(usr, "This can only be used on instances of type /mob/living/carbon/human")
+			to_chat(usr, "Esto solo se puede usar en instancias del tipo /mob/living/carbon/human")
 			return
 
 		usr.client.smite(H)
@@ -824,7 +824,7 @@
 		if(!check_rights(R_ADMIN))
 			return
 
-		if(tgui_alert(usr, "Confirm?", "Message", list("Yes", "No")) != "Yes")
+		if(tgui_alert(usr, "¿Confirmar?", "Message", list("Yes", "No")) != "Yes")
 			return
 		var/mob/M = locate(href_list["getmob"])
 		usr.client.Getmob(M)
@@ -864,7 +864,7 @@
 	else if(href_list["bulk_change"])
 		var/mob/living/M = locate(href_list["bulk_change"])
 		var/statkey = href_list["stat"]
-		var/change_stat = input(usr, "Increase or Decrease this stat.", "Bulk Stat Change", 1) as num
+		var/change_stat = input(usr, "Aumenta o disminuye esta estadística.", "Bulk Stat Change", 1) as num
 		if(!change_stat)
 			return
 		M.change_stat(statkey, change_stat)
@@ -921,7 +921,7 @@
 			return
 
 		if(!SSticker.HasRoundStarted())
-			alert("The game hasn't started yet!")
+			alert("¡El juego aún no ha comenzado!")
 			return
 
 		var/mob/M = locate(href_list["traitor"])
@@ -995,7 +995,7 @@
 			alert("The path list you sent is empty.")
 			return
 		if(length(paths) > 5)
-			alert("Select fewer object types, (max 5).")
+			alert("Seleccione menos tipos de objetos (máximo 5).")
 			return
 
 		var/list/offset = splittext(href_list["offset"],",")
@@ -1079,7 +1079,7 @@
 			log_admin("[key_name(usr)] created a [english_list(paths)]")
 			for(var/path in paths)
 				if(ispath(path, /mob))
-					message_admins("[key_name_admin(usr)] created a [english_list(paths)]")
+					message_admins("[key_name_admin(usr)] creó un [english_list(paths)]")
 					break
 		else
 			log_admin("[key_name(usr)] created [number]ea [english_list(paths)]")
@@ -1117,7 +1117,7 @@
 	else if(href_list["viewruntime"])
 		var/datum/error_viewer/error_viewer = locate(href_list["viewruntime"])
 		if(!istype(error_viewer))
-			to_chat(usr, "<span class='warning'>That runtime viewer no longer exists.</span>")
+			to_chat(usr, "<span class='warning'>Ese visor de tiempo de ejecución ya no existe.</span>")
 			return
 
 		if(href_list["viewruntime_backto"])
@@ -1337,7 +1337,7 @@
 		if(answer == "yes")
 			log_query_debug("[usr.key] | Reported a server hang")
 			if(tgui_alert(usr, "Had you just press any admin buttons?", "Query server hang report", list("Yes", "No")) == "Yes")
-				var/response = input(usr,"What were you just doing?","Query server hang report") as null|text
+				var/response = input(usr,"¿Qué estabas haciendo?","Query server hang report") as null|text
 				if(response)
 					log_query_debug("[usr.key] | [response]")
 		else if(answer == "no")
@@ -1346,7 +1346,7 @@
 	else if(href_list["rebootworld"])
 		if(!check_rights(R_ADMIN))
 			return
-		var/confirm = tgui_alert(usr, "Are you sure you want to reboot the server?", "Confirm Reboot", list("Yes", "No"))
+		var/confirm = tgui_alert(usr, "¿Está seguro de que desea reiniciar el servidor?", "Confirmar reinicio", list("Yes", "No"))
 		if(confirm == "No")
 			return
 		if(confirm == "Yes")
@@ -1572,9 +1572,9 @@
 		return
 
 	if(SSticker.HasRoundStarted())
-		return alert(usr, "The game has already started.")
+		return alert(usr, "El juego ya ha comenzado.")
 	if(GLOB.master_mode != "secret")
-		return alert(usr, "The game mode has to be secret!")
+		return alert(usr, "¡El modo de juego tiene que ser secreto!")
 	var/dat = {"<B>What game mode do you want to force secret to be? Use this if you want to change the game mode, but want the players to believe it's secret. This will only work if the current game mode is secret.</B><HR>"}
 	for(var/mode in config.modes)
 		dat += {"<A href='byond://?src=[REF(src)];[HrefToken()];f_secret2=[mode]'>[config.mode_names[mode]]</A><br>"}

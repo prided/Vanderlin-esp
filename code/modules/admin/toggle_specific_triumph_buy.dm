@@ -1,5 +1,5 @@
 /client/proc/toggle_specific_triumph_buy()
-	set category = "GameMaster.Triumphs"
+	set category = "GameMaster.Triunfos"
 	set name = "Toggle a Specific Triumph Buy"
 	if(!check_rights(R_ADMIN))
 		return FALSE

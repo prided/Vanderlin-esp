@@ -30,7 +30,7 @@
 	if(is_failing())
 		examine_list += span_danger("<b>[owner]</b>'s throat is visibly swollen, the skin around [owner.p_their()] neck taut and inflamed.")
 	else if(damage >= high_threshold)
-		examine_list += span_warning("<b>[owner]</b>'s neck looks slightly puffy and reddened around the throat.")
+		examine_list += span_warning("El cuello de <b>[owner]</b> se ve ligeramente hinchado y enrojecido alrededor de la garganta.")
 	else if(damage >= low_threshold)
 		examine_list += span_notice("<b>[owner]</b>'s throat looks mildly irritated.")
 
@@ -58,7 +58,7 @@
 
 /datum/action/item_action/organ_action/use/harpy_sing
 	name = "Harpy's song"
-	desc = "Project your voice through song."
+	desc = "Proyecta tu voz a través de la canción."
 	button_icon = 'icons/obj/surgery.dmi'
 	button_icon_state = "harpysong"
 

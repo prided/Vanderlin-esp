@@ -70,7 +70,7 @@
 		var/datum/quirk/vice/hunted/quirk = target.get_quirk(/datum/quirk/vice/hunted)
 		quirk.desc = "Your actions have made you a target. You will be hunted and have assassination attempts made against you without any escalation."
 		quirk.customization_value = "Responsible for the death of someone protected with a Bone Ward."
-		to_chat(target, span_warningbig("My actions did not go unnoticed, I am being hunted..."))
+		to_chat(target, span_warningbig("Mis acciones no pasaron desapercibidas, estoy siendo perseguido..."))
 
 // ##########################################################################################
 

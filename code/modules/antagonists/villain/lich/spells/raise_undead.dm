@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/raise_undead
-	name = "Raise Undead"
-	desc = "Raise a new skeleton from the fallen."
+	name = "Levantar muertos vivientes"
+	desc = "Levanta un nuevo esqueleto de los caídos."
 	button_icon_state = "raiseskele"
 	sound = 'sound/magic/magnet.ogg'
 
@@ -58,7 +58,7 @@
 
 	var/obj/item/bodypart/cast_on_head = cast_on.get_bodypart(BODY_ZONE_HEAD)
 	if(!cast_on_head)
-		to_chat(owner, span_warning("This corpse is headless."))
+		to_chat(owner, span_warning("Este cadáver no tiene cabeza."))
 		return . | SPELL_CANCEL_CAST
 
 /datum/action/cooldown/spell/raise_undead/cast(mob/living/carbon/human/cast_on)
@@ -73,7 +73,7 @@
 		if(offer == CHOICE_YES)
 			to_chat(cast_on, span_danger("You rise as a minion."))
 			cast_on.turn_to_minion(owner, cast_on.ckey)
-			cast_on.visible_message(span_warning("[cast_on.real_name]'s eyes light up with an evil glow."), runechat_message = TRUE)
+			cast_on.visible_message(span_warning("Los ojos de [cast_on.real_name] se iluminan con un brillo maligno."), runechat_message = TRUE)
 			register_minion(cast_on, owner)
 			return
 		else

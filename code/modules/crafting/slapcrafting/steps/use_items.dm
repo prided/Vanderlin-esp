@@ -3,7 +3,7 @@
 	item_types = list(/obj/item/needle)
 
 /datum/slapcraft_step/use_item/carpentry/hammer
-	desc = "Hammer the wooden joints"
+	desc = "Martillar las juntas de madera."
 	item_types = list(/obj/item/weapon/hammer)
 
 /datum/slapcraft_step/use_item/carpentry/hammer/second

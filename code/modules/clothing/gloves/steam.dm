@@ -1,5 +1,5 @@
 /obj/item/clothing/gloves/plate/steam
-	name = "steamknight gloves"
+	name = "guantes de caballero de vapor"
 	desc = "Part of the steamknight armor. Requires knowledge in engineering to operate."
 
 	icon = 'icons/roguetown/clothing/steamknight.dmi'

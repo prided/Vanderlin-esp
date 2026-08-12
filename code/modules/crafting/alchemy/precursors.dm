@@ -39,7 +39,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/fruit
-	name = "fruit"
+	name = "fruta"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/air = 2,
 		/datum/thaumaturgical_essence/water = 1,
@@ -65,7 +65,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/grain
-	name = "grain"
+	name = "grano"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/order = 2,
 		/datum/thaumaturgical_essence/earth = 1,
@@ -168,7 +168,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/stoneblock
-	name = "stone block"
+	name = "bloque de piedra"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/earth = 1,
 		/datum/thaumaturgical_essence/order = 3,
@@ -254,7 +254,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/gem_fire
-	name = "fire gem"
+	name = "gema de fuego"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/crystal = 6,
 		/datum/thaumaturgical_essence/order = 2,
@@ -265,7 +265,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/gem_water
-	name = "water gem"
+	name = "gema de agua"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/crystal = 6,
 		/datum/thaumaturgical_essence/order = 2,
@@ -322,7 +322,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/common_ore
-	name = "common ore"
+	name = "mineral común"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/earth = 3,
 		/datum/thaumaturgical_essence/order = 1
@@ -334,7 +334,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/noble_ore
-	name = "noble ore"
+	name = "mineral noble"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/order = 3,
 		/datum/thaumaturgical_essence/energia = 1,
@@ -574,7 +574,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 
 //intentionally no fibre, turn it into cloth instead
 /datum/natural_precursor/cloth_and_silk
-	name = "silk and cloth"
+	name = "seda y tela"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/air = 2,
 		/datum/thaumaturgical_essence/order = 2
@@ -585,7 +585,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/clod_and_clay
-	name = "dirt and clay"
+	name = "tierra y arcilla"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/earth = 2,
 		/datum/thaumaturgical_essence/water = 1
@@ -596,7 +596,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/glass
-	name = "glass shard"
+	name = "fragmento de vidrio"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/crystal = 3
 	)
@@ -618,7 +618,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/worms
-	name = "worms"
+	name = "gusanos"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/life = 2,
 		/datum/thaumaturgical_essence/earth = 2
@@ -749,7 +749,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/runedust
-	name = "rune dust"
+	name = "polvo de runas"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/order = 10,
 		/datum/thaumaturgical_essence/magic = 5
@@ -769,7 +769,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/waterdust
-	name = "water dust"
+	name = "polvo de agua"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/water = 20
 	)
@@ -778,7 +778,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/firedust
-	name = "fire dust"
+	name = "polvo de fuego"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/fire = 20
 	)
@@ -787,7 +787,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/airdust
-	name = "air dust"
+	name = "polvo de aire"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/air = 20
 	)
@@ -796,7 +796,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/earthdust
-	name = "earth dust"
+	name = "polvo de tierra"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/earth = 20
 	)
@@ -805,7 +805,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/seeddust
-	name = "seed dust"
+	name = "polvo de semillas"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/order = 10,
 		/datum/thaumaturgical_essence/life = 5
@@ -815,7 +815,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/coaldust
-	name = "coal dust"
+	name = "polvo de carbón"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/fire = 10,
 		/datum/thaumaturgical_essence/earth = 10
@@ -825,7 +825,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/silverdust
-	name = "silver dust"
+	name = "polvo de plata"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/order = 10,
 		/datum/thaumaturgical_essence/void = 10
@@ -835,7 +835,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/golddust
-	name = "gold dust"
+	name = "polvo de oro"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/order = 10,
 		/datum/thaumaturgical_essence/light = 10
@@ -845,7 +845,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/irondust
-	name = "iron dust"
+	name = "polvo de hierro"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/earth = 10,
 		/datum/thaumaturgical_essence/order = 5
@@ -865,7 +865,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/swampdust
-	name = "swamp dust"
+	name = "polvo de pantano"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/earth = 5,
 		/datum/thaumaturgical_essence/life = 5,
@@ -876,7 +876,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/westleach_dust
-	name = "westleach dust"
+	name = "polvo de Westleach"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/air = 5,
 		/datum/thaumaturgical_essence/life = 5,
@@ -904,7 +904,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 
 //1 standard crystal can be split into two small ones
 /datum/natural_precursor/mana_crystal_small
-	name = "small mana crystal"
+	name = "pequeño cristal de maná"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/magic = 3,
 		/datum/thaumaturgical_essence/earth = 2
@@ -953,7 +953,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 
 //infernal summons
 /datum/natural_precursor/infernalash
-	name = "infernal ash"
+	name = "ceniza infernal"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/energia = 10,
 		/datum/thaumaturgical_essence/fire = 5,
@@ -983,7 +983,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/abyssalflame
-	name = "abyssal flame"
+	name = "llama abisal"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/energia = 25,
 		/datum/thaumaturgical_essence/fire = 20,
@@ -1045,7 +1045,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/elementalshard
-	name = "elemental shard"
+	name = "fragmento elemental"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/crystal = 15,
 		/datum/thaumaturgical_essence/earth = 10,
@@ -1055,7 +1055,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/elementalfragment
-	name = "elemental fragment"
+	name = "fragmento elemental"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/crystal = 20,
 		/datum/thaumaturgical_essence/earth = 15,
@@ -1065,7 +1065,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/elementalrelic
-	name = "elemental relic"
+	name = "reliquia elemental"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/crystal = 25,
 		/datum/thaumaturgical_essence/earth = 20,
@@ -1079,7 +1079,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 */
 
 /datum/natural_precursor/rotten_food
-	name = "rotten food"
+	name = "comida podrida"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/chaos = 4,
 		/datum/thaumaturgical_essence/poison = 2,

@@ -95,7 +95,7 @@ GLOBAL_LIST_EMPTY_TYPED(all_leylines, /datum/mana_pool/leyline)
 // A leyline variable is a thing to be generated when a leyline is instantiated and affects many features of said leyline
 
 /datum/leyline_variable
-	var/name = "abstract, do not instantiate"
+	var/name = "abstracto, no instanciar"
 	var/beam_color = COLOR_WHITE
 
 

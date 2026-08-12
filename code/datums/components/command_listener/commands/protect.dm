@@ -1,5 +1,5 @@
 /datum/follower_command/protect
-	command_name = "Protect"
+	command_name = "Proteger"
 	var/target_name = ""
 	var/list/target_images = list()
 	var/datum/callback/update_timer

@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(acid)
-	name = "Acid"
+	name = "Ácido"
 	priority = FIRE_PRIORITY_ACID
 	flags = SS_NO_INIT|SS_BACKGROUND
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME

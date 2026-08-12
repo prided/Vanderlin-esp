@@ -25,7 +25,7 @@ CONFIGURATION:
 */
 
 /datum/loot_table
-	var/name = "generic table"
+	var/name = "tabla genérica"
 	///okay this is quite the different thing, essentially this works with 2 things, either a an assoc list of stat or skill
 	///to list of items with weights. Or Just raw list with weights, these then get added in with bonuses based on their skills based on a minimum
 	///you can set the minimum value in the second list or leave it default which is 0
@@ -512,7 +512,7 @@ CONFIGURATION:
 		loot_table_types += LT
 
 	if(!length(loot_table_types))
-		to_chat(user, "<span class='warning'>No configured loot tables found.</span>")
+		to_chat(user, "<span class='warning'>No se encontraron tablas de botín configuradas.</span>")
 		return
 
 	user.show_loot_table_menu(user, loot_table_types)
@@ -580,7 +580,7 @@ CONFIGURATION:
 				return
 
 			var/current_luck = user.get_stat_level(STAT_FORTUNE)
-			var/new_luck = input(user, "Enter new luck level (0-100):", "Set Luck Level", current_luck) as num|null
+			var/new_luck = input(user, "Enter new luck level (0-100):", "Establecer nivel de suerte", current_luck) as num|null
 			if(!isnull(new_luck))
 				new_luck = max(0, min(100, new_luck))
 				// Remove old debug modifier and set new one

@@ -60,7 +60,7 @@
 	if(!COOLDOWN_FINISHED(src, fire_cooldown))
 		return
 	COOLDOWN_START(src, fire_cooldown, cooldown_time)
-	firer.visible_message(span_danger("<b>[firer]</b> [ranged_message] at [target]!</span>"))
+	firer.visible_message(span_danger("<b>[firer]</b> [ranged_message] en [target]!</span>"))
 	INVOKE_ASYNC(src, PROC_REF(async_fire_ranged_attack), firer, target, modifiers)
 	if(isnull(burst_shots))
 		return

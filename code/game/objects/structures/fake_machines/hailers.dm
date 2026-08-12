@@ -36,7 +36,7 @@
 	if(!locked() && istype(H, /obj/item/paper))
 		if(!user.transferItemToLoc(H, src))
 			return
-		user.visible_message(span_notice("[user] feeds [H] to [src]."), span_notice("I feed [H] to [src]."))
+		user.visible_message(span_notice("[user] alimenta [H] a [src]."), span_notice("Le doy [H] a [src]."))
 		say_cooldown("Bbbllrrr... fffrrrtt... brrrhh...")
 		return
 	return ..()
@@ -53,7 +53,7 @@
 			dat += "<A href='byond://?src=[REF(src)];read=[REF(H)]'>[H.name]</A> [auth ? "<A href='byond://?src=[REF(src)];write=[REF(H)]'>Write</A> <A href='byond://?src=[REF(src)];remove=[REF(H)]'>Remove</A> <A href='byond://?src=[REF(src)];rename=[REF(H)]'>Rename</A>": ""]<BR>"
 		else
 			dat += "<A href='byond://?src=[REF(src)];read=[REF(H)]'>[H.name]</A> [auth ? "<A href='byond://?src=[REF(src)];remove=[REF(H)]'>Remove</A>" : ""]<BR>"
-	user << browse("<HEAD><TITLE>Notices</TITLE></HEAD>[dat]","window=HAILER")
+	user << browse("<HEAD><TITLE>Avisos</TITLE></HEAD>[dat]","window=HAILER")
 	onclose(user, "HAILER")
 
 /obj/structure/fake_machine/hailer/Topic(href, href_list)
@@ -128,7 +128,7 @@
 		if(istype(H, /obj/item/paper))
 			dat += "<A href='byond://?src=[REF(src)];read=[REF(H)]'>[H.name]</A><BR>"
 
-	user << browse("<HEAD><TITLE>Notices</TITLE></HEAD>[dat]","window=HAILER BOARD")
+	user << browse("<HEAD><TITLE>Avisos</TITLE></HEAD>[dat]","window=HAILER BOARD")
 	onclose(user, "HAILER BOARD")
 
 /obj/structure/fake_machine/hailerboard/Topic(href, href_list)

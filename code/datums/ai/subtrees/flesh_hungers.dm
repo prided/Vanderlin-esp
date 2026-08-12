@@ -67,7 +67,7 @@
 			finish_action(controller, TRUE)
 			return
 	else if(is_type_in_list(food_target, flesh.food_type))
-		flesh.visible_message("<span class='warning'>[flesh] consumes [food_target]!</span>")
+		flesh.visible_message("<span class='warning'>[flesh] consume [food_target]!</span>")
 		controller.blackboard[BB_FLESH_HUNGER] = max(0, controller.blackboard[BB_FLESH_HUNGER] - 50)
 		qdel(food_target)
 		finish_action(controller, TRUE)

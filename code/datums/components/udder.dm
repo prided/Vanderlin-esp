@@ -169,16 +169,16 @@
  */
 /obj/item/udder/proc/milk(obj/item/reagent_containers/milk_holder, mob/user)
 	if(milk_holder.reagents.total_volume >= milk_holder.volume)
-		to_chat(user, span_warning("[milk_holder] is full."))
+		to_chat(user, span_warning("[milk_holder] está lleno."))
 		return
 	var/transfered = reagents.trans_to(milk_holder, rand(5,10))
 	if(transfered)
-		user.visible_message(span_notice("[user] milks [src] using \the [milk_holder]."), span_notice("You milk [src] using \the [milk_holder]."))
+		user.visible_message(span_notice("[user] ordeña [src] usando \the [milk_holder]."), span_notice("You milk [src] using \the [milk_holder]."))
 		playsound(udder_mob, pick('sound/vo/mobs/cow/milking (1).ogg', 'sound/vo/mobs/cow/milking (2).ogg'), 33, TRUE, -1)
 		udder_mob.Immobilize(1 SECONDS)
 		if(isliving(user))
 			var/mob/living/living = user
 			living.Immobilize(0.9 SECONDS)
 	else
-		to_chat(user, span_warning("The udder is dry. Wait a bit longer..."))
+		to_chat(user, span_warning("La ubre está seca. Espera un poco más..."))
 	user.changeNext_move(1 SECONDS)

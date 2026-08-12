@@ -44,7 +44,7 @@
 
 	return ..()
 
-/obj/item/weapon/shield/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the projectile", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+/obj/item/weapon/shield/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "el proyectil", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	SEND_SIGNAL(src, COMSIG_ITEM_HIT_REACT, args)
 	if(attack_type == THROWN_PROJECTILE_ATTACK || attack_type == PROJECTILE_ATTACK)
 		if(istype(hitby, /obj/projectile))
@@ -53,11 +53,11 @@
 				owner.visible_message("<span class='danger'>The [hitby] pierces [owner]'s [src]!</span>")
 				return 0
 		if(owner.client?.chargedprog == 100 && owner.used_intent?.tranged)
-			owner.visible_message("<span class='danger'>[owner] blocks [hitby] with [src]!</span>")
+			owner.visible_message("<span class='danger'>[owner] bloquea [hitby] con [src]!</span>")
 			return 1
 		else
 			if(prob(coverage))
-				owner.visible_message("<span class='danger'>[owner] blocks [hitby] with [src]!</span>")
+				owner.visible_message("<span class='danger'>[owner] bloquea [hitby] con [src]!</span>")
 				return 1
 	return 0
 
@@ -99,7 +99,7 @@
 	hitsound = list('sound/combat/shieldbash_metal.ogg')
 
 /obj/item/weapon/shield/wood
-	name = "wooden shield"
+	name = "escudo de madera"
 	desc = "A simple, emblazoned round wooden shield with leather padding. \nCan exceptionally block attacks, but is more brittle than metal ones."
 	icon_state = "woodsh"
 	coverage = 60
@@ -170,7 +170,7 @@
 	item_weight = 4 KILOGRAMS
 
 /obj/item/weapon/shield/tower/spidershield
-	name = "spider shield"
+	name = "escudo de araña"
 	desc = "A bulky shield of spike-like lengths molten together. The motifs evoke anything but safety and protection."
 	icon = 'icons/roguetown/weapons/32/elven.dmi'
 	icon_state = "spidershield"
@@ -185,7 +185,7 @@
 				return list("shrink" = 0.6,"sx" = 1,"sy" = 4,"nx" = 1,"ny" = 2,"wx" = 3,"wy" = 3,"ex" = 0,"ey" = 2,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/weapon/shield/tower/hoplite
-	name = "ancient shield"
+	name = "escudo antiguo"
 	desc = "A gigantic, bronze reinforced shield that covers the entire body. An Aasimar relic from an era long past."
 	icon_state = "boeotian"
 	force = DAMAGE_SHIELD + 5
@@ -267,12 +267,12 @@
 #undef SHIELD_BANG_COOLDOWN
 
 /obj/item/weapon/shield/tower/metal/ancient
-	name = "ancient shield"
+	name = "escudo antiguo"
 	desc = "An ancient, knightly, kite-shaped steel shield."
 	icon_state = "ancientsh"
 
 /obj/item/weapon/shield/tower/metal/psy
-	name = "Covenant"
+	name = "Pacto"
 	desc = "The Ordo Benetarus holds a mantra: A Psydonian endures. A Psydonian preserves themselves. A Psydonian preserves His flock. Protect them."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psyshield"
@@ -287,7 +287,7 @@
 
 /obj/item/weapon/shield/tower/buckleriron
 	name = "iron buckler"
-	desc = "A small sized iron shield, popular among mercenaries due to its light weight and ease of mobility."
+	desc = "Un escudo de hierro de pequeño tamaño, popular entre los mercenarios debido a su peso ligero y facilidad de movilidad."
 	icon_state = "ironbuckler"
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_BACK
 	force = DAMAGE_SHIELD * 1.5
@@ -313,7 +313,7 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/shield/tower/buckleriron/captain
-	name = "Order"
+	name = "Orden"
 	desc = "A buckler decorated with gold made specifically for the Captain alongside their armor. To bring order to the lands with every blow deflected."
 	icon_state = "capbuckler"
 	sellprice = 60

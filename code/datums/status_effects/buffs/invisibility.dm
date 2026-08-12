@@ -20,7 +20,7 @@
 	var/viewing_message = owner.rogue_sneaking ? null : span_warning("[owner] fades into nothing!")
 	owner.visible_message( \
 		viewing_message, \
-		span_notice("My form fades away.") \
+		span_notice("Mi forma se desvanece.") \
 	)
 	animate(owner, alpha = 0, time = 1 SECONDS, easing = EASE_IN)
 
@@ -36,7 +36,7 @@
 		to_chat(owner, span_notice("I blend into the shadows as my form reveals itself. I remain hidden."))
 	else
 		owner.visible_message( \
-			span_warning("[owner] appears from nothing!"), \
+			span_warning("¡[owner] aparece de la nada!"), \
 			span_warning("I become visible again.") \
 		)
 

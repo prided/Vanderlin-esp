@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(regionthreat)
-	name = "Regional Threat"
+	name = "Amenaza regional"
 	wait = 5 MINUTES
 	flags = SS_KEEP_TIMING
 	runlevels = RUNLEVEL_GAME

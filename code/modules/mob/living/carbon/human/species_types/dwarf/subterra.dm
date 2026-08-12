@@ -2,7 +2,7 @@
 	race = /datum/species/dwarf/mountain/subterra
 
 /datum/species/dwarf/mountain/subterra
-	name = "Jarosite Dwarf"
+	name = "Enano jarosita"
 	id = SPEC_ID_DWARF_SUBTERRAN
 	id_override = SPEC_ID_DWARF
 	desc = "Dwarves lost to the darkest reaches of Subterra.\

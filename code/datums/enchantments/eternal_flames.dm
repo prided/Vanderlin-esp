@@ -1,5 +1,5 @@
 /datum/enchantment/eternal_flames
-	enchantment_name = "Eternal Flames"
+	enchantment_name = "Llamas eternas"
 	examine_text = "This item seems to be in a constant superheated state."
 
 	should_process = TRUE

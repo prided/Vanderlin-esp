@@ -29,7 +29,7 @@
 	. = TRUE // Cancel other bites
 
 	playsound(drinker, pick('sound/foley/waterwash (1).ogg', 'sound/foley/waterwash (2).ogg'), 100)
-	drinker.visible_message(span_info("[drinker] starts to drink from [fountain]."))
+	drinker.visible_message(span_info("[drinker] comienza a beber de [fountain]."))
 
 	if(!do_after(drinker, drink_time, fountain))
 		return

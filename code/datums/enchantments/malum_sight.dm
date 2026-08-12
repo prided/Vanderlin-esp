@@ -1,5 +1,5 @@
 /datum/enchantment/malum_sight
-	enchantment_name = "Malum's Eye"
+	enchantment_name = "El ojo de Malum"
 	examine_text = "Through this I can see the sparkle of gemstones and ores."
 	essence_recipe = list(
 		/datum/thaumaturgical_essence/earth = 50,
@@ -25,7 +25,7 @@
 	else
 		active_item = TRUE
 		user.set_oresight(TRUE)
-		to_chat(user, span_notice("My legs feel much stronger."))
+		to_chat(user, span_notice("Mis piernas se sienten mucho más fuertes."))
 
 /datum/enchantment/malum_sight/proc/on_drop(obj/item/i, mob/living/user)
 	if(enchanted_item.loc == user)
@@ -124,8 +124,8 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "sparks"
 	dir = NORTH
-	name = "useful ore"
-	desc = "The stone here must contain something handy."
+	name = "mineral útil"
+	desc = "La piedra aquí debe contener algo útil."
 	randomdir = FALSE
 	duration = 1 SECONDS
 	layer = 18
@@ -134,8 +134,8 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "shieldsparkles"
 	dir = NORTH
-	name = "valuable ore"
-	desc = "The stone here must contain something pricy!"
+	name = "mineral valioso"
+	desc = "¡La piedra aquí debe contener algo caro!"
 	randomdir = FALSE
 	duration = 1 SECONDS
 	layer = 18
@@ -144,8 +144,8 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "quantum_sparks"
 	dir = NORTH
-	name = "glittering ore"
-	desc = "GEMS! I'M RICH!!!"
+	name = "mineral brillante"
+	desc = "¡GEMAS! ¡¡¡SOY RICO!!!"
 	randomdir = FALSE
 	duration = 1 SECONDS
 	layer = 18
@@ -155,14 +155,14 @@
 	icon_state = "purplesparkles"
 	dir = NORTH
 	name = "bedrock"
-	desc = "The stone here's too hard to break."
+	desc = "La piedra aquí es demasiado dura para romperla."
 	randomdir = FALSE
 	duration = 1 SECONDS
 	layer = 18
 
 /obj/effect/temp_visual/magicore
-	name = "magic ore"
-	desc = "I feel some energy pulsating from that wall..."
+	name = "mineral mágico"
+	desc = "Siento algo de energía pulsando desde esa pared..."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "emppulse"
 	dir = NORTH

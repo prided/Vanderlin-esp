@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/soul_speak
-	name = "Speak with Soul"
+	name = "Habla con el alma"
 	desc = ""
 	button_icon_state = "speakwithdead"
 	sound = 'sound/magic/churn.ogg'
@@ -31,7 +31,7 @@
 			continue
 		souloptions += S
 	if(!length(souloptions))
-		to_chat(owner, span_warning("I was unable to commune with a soul."))
+		to_chat(owner, span_warning("No pude comunicarme con un alma."))
 		return . | SPELL_CANCEL_CAST
 
 	var/mob/selected
@@ -84,7 +84,7 @@
 
 /datum/action/cooldown/spell/undirected/soul_speak/proc/return_soul(mob/living/carbon/spirit/soul, list/itemstore)
 	if(!QDELETED(owner))
-		to_chat(owner, span_warning("The soul returns to the Underworld."))
+		to_chat(owner, span_warning("El alma regresa al inframundo."))
 	if(QDELETED(soul))
 		return
 	to_chat(soul, span_warning("You feel yourself being transported back to the Underworld."))

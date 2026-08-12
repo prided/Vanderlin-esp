@@ -177,7 +177,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	var/list/trainable_recipes = training_data.return_viable_recipes(customer)
 	var/mob/living/trader = parent
 	if(!length(trainable_recipes))
-		trader.say("I don't have anything to teach you at this time.")
+		trader.say("No tengo nada que enseñarte en este momento.")
 		return
 
 	var/picking = TRUE
@@ -226,7 +226,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 		trader.say("I don't see any ores to smelt? Bring me back some ores if you'd like me to smelt.")
 		return
 
-	trader.say("It will cost you [total_cost] [trader_data.currency_name] to smelt all this. Are you sure you want to?")
+	trader.say("Te costará [total_cost] [trader_data.currency_name] fundir todo esto. ¿Estás seguro de que quieres hacerlo?")
 	var/list/npc_options = list(
 		BLACKSMITH_OPTION_YES = radial_icons_cache[BLACKSMITH_RADIAL_YES],
 		BLACKSMITH_OPTION_NO = radial_icons_cache[BLACKSMITH_RADIAL_NO],
@@ -260,7 +260,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	var/obj/item/storage/inactive_item = customer.get_inactive_held_item()
 
 	if(!inactive_item?.anvilrepair)
-		trader.say("I can't repair that!")
+		trader.say("¡No puedo reparar eso!")
 		return
 	if(ispath(inactive_item.smeltresult, /obj/item/ingot))
 		var/obj/item/ingot/ingot = inactive_item.smeltresult
@@ -542,7 +542,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 		trader.say(trader_data.return_trader_phrase(TRADER_NOT_BUYING_ANYTHING))
 		return
 
-	var/list/buy_info = list(span_green("I'm willing to buy the following:"))
+	var/list/buy_info = list(span_green("Estoy dispuesto a comprar lo siguiente:"))
 
 	var/list/product_info
 	for(var/obj/item/thing as anything in wanted_items)

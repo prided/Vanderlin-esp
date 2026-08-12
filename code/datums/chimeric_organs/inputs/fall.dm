@@ -1,5 +1,5 @@
 /datum/chimeric_node/input/fall
-	name = "soft landing"
+	name = "aterrizaje suave"
 	desc = "Triggered when you fall, if not on cooldown negates the fall damage if the node is strong enough."
 
 /datum/chimeric_node/input/fall/register_triggers(mob/living/carbon/target)

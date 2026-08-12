@@ -1,5 +1,5 @@
 /datum/objective/personal/release_fish
-	name = "Release Fish"
+	name = "Liberar peces"
 	category = "Abyssor's Chosen"
 	triumph_count = 2
 	rewards = list("2 Triumphs", "Abyssor grows stronger", "Fishing knowledge")

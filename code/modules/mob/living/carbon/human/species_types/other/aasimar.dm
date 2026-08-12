@@ -36,7 +36,7 @@
 	Most Aasimar were created to serve The Ten, and few if any Psydonic Aasimar remain to this day- \
 	decrepit husks of what were once great warriors. "
 
-	skin_tone_wording = "Craft"
+	skin_tone_wording = "Artesanía"
 
 	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_NOHYGIENE)
@@ -125,7 +125,7 @@
 /datum/species/aasimar/after_creation(mob/living/carbon/C)
 	. = ..()
 	C.grant_language(/datum/language/celestial)
-	to_chat(C, "<span class='info'>I can speak Celestial with ,c before my speech.</span>")
+	to_chat(C, "<span class='info'>Puedo hablar Celestial con ,c antes de mi discurso.</span>")
 	C.add_spell(/datum/action/cooldown/spell/undirected/eternal_vigilance)
 
 /datum/species/aasimar/on_species_loss(mob/living/carbon/C)

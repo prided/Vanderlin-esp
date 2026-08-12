@@ -1,6 +1,6 @@
 
 /obj/item/clothing/cloak/martyr
-	name = "martyr cloak"
+	name = "capa de mártir"
 	desc = "An elegant cloak in the colors of Astrata. Looks like it can only fit Humen-sized people."
 	color = null
 	icon_state = "martyrcloak"
@@ -27,7 +27,7 @@
 	melt_amount = 350
 
 /obj/item/clothing/pants/platelegs/grandmaster
-	name = "holy silver chausses"
+	name = "calzas de plata sagrada"
 	desc = "Plate leggings of silver forged for the grandmaster. A sea of silver to descend upon evil."
 	icon = 'icons/roguetown/clothing/special/martyr.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/martyr.dmi'
@@ -110,7 +110,7 @@
 	sellprice = 0
 
 /obj/item/clothing/face/exoticsilkmask
-	name = "exotic silk mask"
+	name = "máscara de seda exótica"
 	icon_state = "exoticsilkmask"
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP

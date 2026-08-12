@@ -1,9 +1,9 @@
 
 /datum/reagent/buff/strength/concentrated
-	name = "Concentrated Strength"
+	name = "Fuerza concentrada"
 	color = "#c86800"
-	taste_description = "raw meat so dense it almost chokes you"
-	scent_description = "blood and hot iron"
+	taste_description = "carne cruda tan densa que casi te ahoga"
+	scent_description = "sangre y hierro caliente"
 
 /datum/reagent/buff/strength/concentrated/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.has_status_effect(/datum/status_effect/buff/alch/strengthpot/concentrated))
@@ -14,10 +14,10 @@
 	return ..()
 
 /datum/reagent/buff/perception/concentrated
-	name = "Concentrated Perception"
+	name = "Percepción concentrada"
 	color = "#c8c800"
 	taste_description = "eye-watering acuity"
-	scent_description = "ozone and pine"
+	scent_description = "ozono y pino"
 
 /datum/reagent/buff/perception/concentrated/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.has_status_effect(/datum/status_effect/buff/alch/perceptionpot/concentrated))
@@ -28,9 +28,9 @@
 	return ..()
 
 /datum/reagent/buff/intelligence/concentrated
-	name = "Concentrated Intelligence"
+	name = "Inteligencia concentrada"
 	color = "#2a5a1a"
-	taste_description = "cold water from a very deep well"
+	taste_description = "agua fría de un pozo muy profundo"
 	scent_description = "old parchment and ink"
 
 /datum/reagent/buff/intelligence/concentrated/on_mob_life(mob/living/carbon/M, efficiency)
@@ -42,10 +42,10 @@
 	return ..()
 
 /datum/reagent/buff/constitution/concentrated
-	name = "Concentrated Constitution"
+	name = "Constitución concentrada"
 	color = "#0a0302"
 	taste_description = "bile thick enough to stand a spoon in"
-	scent_description = "deep earth and old stone"
+	scent_description = "tierra profunda y piedra vieja"
 
 /datum/reagent/buff/constitution/concentrated/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.has_status_effect(/datum/status_effect/buff/alch/constitutionpot/concentrated))
@@ -59,7 +59,7 @@
 	name = "Concentrated Endurance"
 	color = "#507000"
 	taste_description = "sweat and salt and iron will"
-	scent_description = "exertion and dry heat"
+	scent_description = "esfuerzo y calor seco"
 
 /datum/reagent/buff/endurance/concentrated/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.has_status_effect(/datum/status_effect/buff/alch/endurancepot/concentrated))
@@ -70,7 +70,7 @@
 	return ..()
 
 /datum/reagent/buff/speed/concentrated
-	name = "Concentrated Speed"
+	name = "Velocidad concentrada"
 	color = "#c8c840"
 	taste_description = "pure lightning on the tongue"
 	scent_description = "electric heat"
@@ -86,7 +86,7 @@
 /datum/reagent/buff/fortune/concentrated
 	name = "Concentrated Fortune"
 	color = "#d4af37"
-	taste_description = "sweetness that defies explanation"
+	taste_description = "dulzura que desafía toda explicación"
 	scent_description = "warm coin and morning air"
 
 /datum/reagent/buff/fortune/concentrated/on_mob_life(mob/living/carbon/M, efficiency)
@@ -108,7 +108,7 @@
 	description = "A biting, iron-rich tincture said to have been drunk by duelists before contests of blades."
 	color = "#8a1a1a"
 	taste_description = "blood and cold steel"
-	scent_description = "iron and oiled leather"
+	scent_description = "hierro y cuero engrasado"
 
 /datum/reagent/skill_elixir/blade_arts/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -123,7 +123,7 @@
 	description = "A thick, gritty draught smelling of soil and animal fat. Favoured by soldiers and brawlers."
 	color = "#5a3010"
 	taste_description = "rendered marrow and grit"
-	scent_description = "sweat, earth, and old blood"
+	scent_description = "Sudor, tierra y sangre vieja."
 
 /datum/reagent/skill_elixir/heavy_arms/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -138,7 +138,7 @@
 	description = "A light, sharp-smelling oil that steadies the wrist and quickens the eye."
 	color = "#704020"
 	taste_description = "pepper and hot leather"
-	scent_description = "tanned hide and sweat"
+	scent_description = "piel bronceada y sudor"
 
 /datum/reagent/skill_elixir/whip_hand/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -152,8 +152,8 @@
 	name = "Marksman's Eye Drop"
 	description = "A sharp, resinous tonic said to steady the hand and sharpen the eye to a needle's point."
 	color = "#a0a030"
-	taste_description = "pine resin and something bright"
-	scent_description = "woodsmoke and dry air"
+	taste_description = "resina de pino y algo brillante"
+	scent_description = "humo de leña y aire seco"
 
 /datum/reagent/skill_elixir/marksmans_eye/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -168,7 +168,7 @@
 	description = "A heavy, mineral-rich drink that settles the stance and firms the grip."
 	color = "#505060"
 	taste_description = "chalk and iron filings"
-	scent_description = "stone dust and sweat"
+	scent_description = "polvo de piedra y sudor"
 
 /datum/reagent/skill_elixir/shield_bearer/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -182,7 +182,7 @@
 	name = "Craftsman's Wit"
 	description = "A sharp, acrid liquid that clears the mind for mechanical and constructive thought."
 	color = "#3a3a4a"
-	taste_description = "carbon and mineral oil"
+	taste_description = "carbón y aceite mineral"
 	scent_description = "machine grease and sawdust"
 
 /datum/reagent/skill_elixir/craftsmans_wit/on_mob_metabolize(mob/living/L)
@@ -197,7 +197,7 @@
 	name = "Smelter's Patience"
 	description = "A thick, warm draught that hardens the body against sustained heat and labour."
 	color = "#b04800"
-	taste_description = "charcoal and something sweet"
+	taste_description = "carbón y algo dulce"
 	scent_description = "hot metal and coal smoke"
 
 /datum/reagent/skill_elixir/smelters_patience/on_mob_metabolize(mob/living/L)
@@ -213,7 +213,7 @@
 	description = "A gritty, chalky drink mixed with sawdust that puts fire in the arms and steadiness in the hands."
 	color = "#8a6030"
 	taste_description = "chalk, sawdust, and something earthy"
-	scent_description = "fresh-cut wood and stone"
+	scent_description = "madera y piedra recién cortadas"
 
 /datum/reagent/skill_elixir/builders_draught/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -227,8 +227,8 @@
 	name = "Trapper's Sense"
 	description = "A bitter, woodsy tincture that sharpens awareness and steadies the hands for delicate work."
 	color = "#506030"
-	taste_description = "bark and bitter herbs"
-	scent_description = "wet leaves and earth"
+	taste_description = "corteza y hierbas amargas"
+	scent_description = "hojas mojadas y tierra"
 
 /datum/reagent/skill_elixir/trappers_sense/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -243,7 +243,7 @@
 	description = "A self-referential paradox: an elixir that sharpens the mind for making elixirs. Tastes like it knows something you don't."
 	color = "#604080"
 	taste_description = "sulfur, copper, and faint sweetness"
-	scent_description = "reagent fumes and hot glass"
+	scent_description = "Humos de reactivos y vidrio caliente."
 
 /datum/reagent/skill_elixir/alchemists_clarity/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -255,10 +255,10 @@
 
 /datum/reagent/skill_elixir/smiths_blood
 	name = "Smith's Blood"
-	description = "A dark, iron-tasting draught that puts fire in the arm and certainty in the hammer."
+	description = "Una bebida oscura con sabor a hierro que pone fuego en el brazo y certeza en el martillo."
 	color = "#5a1010"
-	taste_description = "iron, copper, and old fire"
-	scent_description = "forge smoke and blood"
+	taste_description = "hierro, cobre y fuego viejo"
+	scent_description = "forjar humo y sangre"
 
 /datum/reagent/skill_elixir/smiths_blood/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -287,8 +287,8 @@
 	name = "Locksmith's Oil"
 	description = "A shimmering, slippery liquid that steadies the hands and narrows the focus."
 	color = "#c0c0b0"
-	taste_description = "metallic and slick"
-	scent_description = "machine oil and brass"
+	taste_description = "metálico y resbaladizo"
+	scent_description = "aceite de máquina y latón"
 
 /datum/reagent/skill_elixir/locksmiths_oil/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -302,7 +302,7 @@
 	name = "Cook's Brine"
 	description = "A complex, briny tonic that sharpens the palate and quickens culinary instinct."
 	color = "#c8a060"
-	taste_description = "salt, acid, and something savory"
+	taste_description = "sal, ácido y algo salado"
 	scent_description = "a working kitchen"
 
 /datum/reagent/skill_elixir/cooks_brine/on_mob_metabolize(mob/living/L)
@@ -317,7 +317,7 @@
 	name = "Prep Hand's Tonic"
 	description = "A sharp, herbal tonic that quickens the hands at the cutting board."
 	color = "#90b060"
-	taste_description = "sharp herbs and vinegar"
+	taste_description = "hierbas picantes y vinagre"
 	scent_description = "a freshly-wiped chopping board"
 
 /datum/reagent/skill_elixir/prep_hands_tonic/on_mob_metabolize(mob/living/L)
@@ -332,7 +332,7 @@
 	name = "Brewer's Wort"
 	description = "A murky, yeasty liquid that smells of fermentation and old barrels. Fermenters swear by it."
 	color = "#906020"
-	taste_description = "yeast, barley, and something acidic"
+	taste_description = "levadura, cebada y algo ácido"
 	scent_description = "fermenting grain and oak"
 
 /datum/reagent/skill_elixir/brewers_wort/on_mob_metabolize(mob/living/L)
@@ -347,7 +347,7 @@
 	name = "Seamstress's Thimble-Drop"
 	description = "A delicate, waxy liquid that steadies the fingers for fine needlework."
 	color = "#e0c8d0"
-	taste_description = "beeswax and something faintly floral"
+	taste_description = "cera de abejas y algo ligeramente floral"
 	scent_description = "clean linen and lavender"
 
 /datum/reagent/skill_elixir/seamstress_thimble_drop/on_mob_metabolize(mob/living/L)
@@ -362,7 +362,7 @@
 	name = "Miner's Heart"
 	description = "A thick, charcoal-dark brew that bolsters the body for sustained physical labour."
 	color = "#303030"
-	taste_description = "charcoal, iron, and bitter mineral water"
+	taste_description = "carbón, hierro y agua mineral amarga"
 	scent_description = "deep stone and coal dust"
 
 /datum/reagent/skill_elixir/miners_heart/on_mob_metabolize(mob/living/L)
@@ -375,10 +375,10 @@
 
 /datum/reagent/skill_elixir/farmers_almanac
 	name = "Farmer's Almanac Tonic"
-	description = "A surprisingly complex herbal blend that sharpens practical knowledge and pattern recognition."
+	description = "Una mezcla de hierbas sorprendentemente compleja que agudiza el conocimiento práctico y el reconocimiento de patrones."
 	color = "#608040"
-	taste_description = "soil and chamomile and something almost sweet"
-	scent_description = "turned earth and dried herbs"
+	taste_description = "tierra y manzanilla y algo casi dulce"
+	scent_description = "tierra removida y hierbas secas"
 
 /datum/reagent/skill_elixir/farmers_almanac/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -393,7 +393,7 @@
 	description = "A strange, sweet-smelling tonic brewed from flowers and fish scales. Creatures seem calmer around those who drink it."
 	color = "#70a080"
 	taste_description = "river water and wildflower"
-	scent_description = "something animals find calming"
+	scent_description = "algo que los animales encuentran calmante"
 
 /datum/reagent/skill_elixir/beastwhisper/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -408,8 +408,8 @@
 	description = "Blessed water charged with divine intent. Those of faith find their connection to their patron deepened by it."
 	color = "#f0f0e0"
 	glows = TRUE
-	taste_description = "purity and something warm"
-	scent_description = "incense and clean air"
+	taste_description = "pureza y algo cálido"
+	scent_description = "incienso y aire limpio"
 
 /datum/reagent/skill_elixir/miracle_water/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -424,8 +424,8 @@
 	description = "A crimson, viscous liquid that pulses faintly. Blood sorcerers report a deepened sensitivity to the flows of vitae when they consume it."
 	color = "#800020"
 	glows = TRUE
-	taste_description = "copper and living heat"
-	scent_description = "iron and something ancient"
+	taste_description = "cobre y calor vivo"
+	scent_description = "hierro y algo antiguo"
 
 /datum/reagent/skill_elixir/vital_ichor/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -440,7 +440,7 @@
 	description = "A faintly luminous blue liquid that smells of ozone and dried herbs. Mages report that it makes the abstract feel immediately legible."
 	color = "#2030c0"
 	glows = TRUE
-	taste_description = "charged air and something metallic"
+	taste_description = "aire cargado y algo metálico"
 	scent_description = "ozone and mana-bloom"
 
 /datum/reagent/skill_elixir/arcane_solvent/on_mob_metabolize(mob/living/L)
@@ -471,8 +471,8 @@
 	name = "Athlete's Brine"
 	description = "A salty, mineral-rich drink that sustains the body through extended physical effort."
 	color = "#20a060"
-	taste_description = "salt, electrolytes, and something grassy"
-	scent_description = "sea air and effort"
+	taste_description = "Sal, electrolitos y algo herbáceo."
+	scent_description = "aire de mar y esfuerzo"
 
 /datum/reagent/skill_elixir/athletes_brine/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -486,7 +486,7 @@
 	name = "Shadow Tonic"
 	description = "A thin, colourless tonic that dulls the sound of footsteps and sharpens peripheral vision."
 	color = "#202020"
-	taste_description = "nothing, almost exactly"
+	taste_description = "nada, casi exactamente"
 	scent_description = "barely anything at all"
 
 /datum/reagent/skill_elixir/shadow_tonic/on_mob_metabolize(mob/living/L)

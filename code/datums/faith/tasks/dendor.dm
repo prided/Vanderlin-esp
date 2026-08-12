@@ -15,7 +15,7 @@
 
 /datum/devotion_task/dendor_tend
 	name = "Tend to Life"
-	desc = "Care for growing plants"
+	desc = "Cuidado de las plantas en crecimiento."
 	devotion_reward = 1
 	progression_reward = 1
 	cooldown_time = 0 SECONDS
@@ -28,7 +28,7 @@
 	return FALSE
 
 /datum/devotion_task/dendor_bless
-	name = "Provide Dendor's Blessing"
+	name = "Proporciona la bendición de Dendor"
 	desc = "Spread dendors word to plants"
 	devotion_reward = 25
 	progression_reward = 12

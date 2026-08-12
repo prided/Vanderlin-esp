@@ -12,17 +12,17 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 
 /datum/stress_event/penance_assigned
 	stress_change = 2
-	desc = span_warning("I have been assigned a penance for my transgressions.")
+	desc = span_warning("Se me ha asignado una penitencia por mis transgresiones.")
 	timer = 10 MINUTES
 
 /datum/penance
-	var/name = "Penance"
-	var/desc = "A task of atonement"
+	var/name = "Penitencia"
+	var/desc = "Una tarea de expiación"
 	var/mob/living/carbon/human/penitent
 	var/mob/living/carbon/human/priest
 	var/datum/patron/patron
 	var/completion_message = "You have been absolved of your penance."
-	var/failure_message = "You have failed your penance."
+	var/failure_message = "Has fallado en tu penitencia."
 
 	/// Signal to track for progress
 	var/signal_type
@@ -48,7 +48,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 
 	to_chat(penitent, span_danger("You have been assigned a penance by [priest]: [name]"))
 	to_chat(penitent, span_notice("[desc]"))
-	to_chat(penitent, span_notice("Progress: [current_count]/[required_count]"))
+	to_chat(penitent, span_notice("Progreso: [current_count]/[required_count]"))
 
 	add_verb(target, list(/mob/living/carbon/human/proc/check_penance_verb))
 
@@ -75,7 +75,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 
 /datum/penance/proc/progress(amount = 1)
 	current_count += amount
-	to_chat(penitent, span_notice("Penance progress: [current_count]/[required_count]"))
+	to_chat(penitent, span_notice("Progreso de la penitencia: [current_count]/[required_count]"))
 
 	// Notify priest of progress
 	if(priest && current_count % 3 == 0) // Every 3 progress
@@ -124,7 +124,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 
 /mob/living/carbon/human/proc/assign_penance_verb()
 	set name = "Assign Penance"
-	set category = "RoleUnique.Divine"
+	set category = "RolÚnico.Divino"
 
 	var/list/targets = list()
 	for(var/mob/living/carbon/human/H in view(7, src))
@@ -132,7 +132,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 			targets += H
 
 	if(!length(targets))
-		to_chat(src, span_warning("No valid penitents nearby."))
+		to_chat(src, span_warning("No hay penitentes válidos cerca."))
 		return
 
 	var/mob/living/carbon/human/target = tgui_input_list(src, "Who shall receive penance?", "Potential Penitents", targets)
@@ -146,18 +146,18 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 		"Trial by Combat" = /datum/penance/combat,
 	)
 
-	var/choice = tgui_input_list(src, "What penance shall they perform?", "Penance Type", penance_types)
+	var/choice = tgui_input_list(src, "What penance shall they perform?", "Tipo de penitencia", penance_types)
 	if(!choice)
 		return
 
 	var/penance_path = penance_types[choice]
 	if(assign_penance_to(target, penance_path, src))
 		to_chat(src, span_notice("You assign [choice] to [target]."))
-		visible_message(span_warning("[src] pronounces penance upon [target]!"))
+		visible_message(span_warning("¡[src] pronuncia penitencia sobre [target]!"))
 
 /mob/living/carbon/human/proc/absolve_penance_verb()
 	set name = "Absolve Penance"
-	set category = "RoleUnique.Divine"
+	set category = "RolÚnico.Divino"
 
 	var/list/penitents = list()
 	for(var/mob/living/carbon/human/H in view(7, src))
@@ -165,10 +165,10 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 			penitents += H
 
 	if(!length(penitents))
-		to_chat(src, span_warning("No penitents nearby."))
+		to_chat(src, span_warning("No hay penitentes cerca."))
 		return
 
-	var/mob/living/carbon/human/target = tgui_input_list(src, "Who shall be absolved?", "Penitents", penitents)
+	var/mob/living/carbon/human/target = tgui_input_list(src, "¿Quién será absuelto?", "Penitents", penitents)
 	if(!target)
 		return
 
@@ -181,19 +181,19 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 
 /mob/living/carbon/human/proc/check_penance_verb()
 	set name = "Check Penance"
-	set category = "RoleUnique.Divine"
+	set category = "RolÚnico.Divino"
 
 	var/datum/penance/P = get_penance(src)
 	if(!P)
-		to_chat(src, span_notice("You have no active penance."))
+		to_chat(src, span_notice("No tienes penitencia activa."))
 		return
 
-	to_chat(src, span_boldnotice("Current Penance: [P.name]"))
+	to_chat(src, span_boldnotice("Penitencia actual: [P.name]"))
 	to_chat(src, span_notice("[P.desc]"))
-	to_chat(src, span_notice("Progress: [P.current_count]/[P.required_count]"))
+	to_chat(src, span_notice("Progreso: [P.current_count]/[P.required_count]"))
 	if(P.time_limit)
 		var/time_remaining = (P.assigned_time + P.time_limit - world.time) / 10
-		to_chat(src, span_warning("Time remaining: [round(time_remaining / 60)] minutes"))
+		to_chat(src, span_warning("Tiempo restante: [round(time_remaining / 60)] minutos"))
 
 /// Get active penance for a mob
 /proc/get_penance(mob/living/carbon/human/target)

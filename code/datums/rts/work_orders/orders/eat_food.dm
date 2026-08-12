@@ -1,5 +1,5 @@
 /datum/work_order/eat_food
-	name = "Eating Food"
+	name = "Comer comida"
 	stamina_cost = 0
 	work_time_left = 10 SECONDS
 

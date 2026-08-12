@@ -13,7 +13,7 @@ This memorial has been designed for him and any future coders to perish.
 */
 
 /obj/structure/fluff/arc
-	name = "Tomb of the Unknown Employee"
+	name = "Tumba del empleado desconocido"
 	desc = ""
 	icon = 'icons/obj/tomb.dmi'
 	icon_state = "memorial"

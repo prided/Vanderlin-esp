@@ -23,7 +23,7 @@
 	slot_flags = ITEM_SLOT_GLOVES
 	resistance_flags = FIRE_PROOF
 
-	attack_verb = list("challenged")
+	attack_verb = list("desafiado")
 	max_integrity = INTEGRITY_WORST
 
 	strip_delay = 2 SECONDS

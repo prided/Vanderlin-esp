@@ -869,13 +869,13 @@
 	. = ..()
 	if(href_list[VV_HK_ADD_REAGENT] && check_rights(R_VAREDIT))
 		if(!reagents)
-			var/amount = input(usr, "Specify the reagent size of [src]", "Set Reagent Size", 50) as num|null
+			var/amount = input(usr, "Especifique el tamaño del reactivo de [src]", "Set Reagent Size", 50) as num|null
 			if(amount)
 				create_reagents(amount)
 
 		if(reagents)
 			var/chosen_id
-			switch(tgui_alert(usr, "Choose a method.", "Add Reagents", list("Search", "Choose from a list", "I'm feeling lucky")))
+			switch(tgui_alert(usr, "Elija un método.", "Add Reagents", list("Search", "Choose from a list", "I'm feeling lucky")))
 				if("Search")
 					var/valid_id
 					while(!valid_id)
@@ -895,7 +895,7 @@
 				if("I'm feeling lucky")
 					chosen_id = pick(subtypesof(/datum/reagent))
 			if(chosen_id)
-				var/amount = input(usr, "Choose the amount to add.", "Choose the amount.", reagents.maximum_volume) as num|null
+				var/amount = input(usr, "Choose the amount to add.", "Elige la cantidad.", reagents.maximum_volume) as num|null
 				if(amount)
 					reagents.add_reagent(chosen_id, amount)
 					log_admin("[key_name(usr)] has added [amount] units of [chosen_id] to [src]")
@@ -930,7 +930,7 @@
 	if(href_list[VV_HK_ADD_AI])
 		if(!check_rights(R_VAREDIT))
 			return
-		var/result = input(usr, "Choose the AI controller to apply to this atom WARNING: Not all AI works on all atoms.", "AI controller") as null|anything in subtypesof(/datum/ai_controller)
+		var/result = input(usr, "Choose the AI controller to apply to this atom WARNING: Not all AI works on all atoms.", "controlador de IA") as null|anything in subtypesof(/datum/ai_controller)
 		if(!result)
 			return
 		ai_controller = new result(src)
@@ -940,12 +940,12 @@
 		var/matrix/M = transform
 		switch(result)
 			if("Scale")
-				var/x = input(usr, "Choose x mod","Transform Mod") as null|num
+				var/x = input(usr, "Elige x mod","Transform Mod") as null|num
 				var/y = input(usr, "Choose y mod","Transform Mod") as null|num
 				if(!isnull(x) && !isnull(y))
 					transform = M.Scale(x,y)
 			if("Translate")
-				var/x = input(usr, "Choose x mod","Transform Mod") as null|num
+				var/x = input(usr, "Elige x mod","Transform Mod") as null|num
 				var/y = input(usr, "Choose y mod","Transform Mod") as null|num
 				if(!isnull(x) && !isnull(y))
 					transform = M.Translate(x,y)
@@ -1103,11 +1103,11 @@
 
 	var/postfix = "[sobject][saddition][hp]"
 
-	var/message = "has [what_done] [starget][postfix][typing_info]"
+	var/message = "tiene [what_done] [starget][postfix][typing_info]"
 	user.log_message(message, LOG_ATTACK, color="red")
 
 	if(user != target)
-		var/reverse_message = "has been [what_done] by [ssource][postfix][typing_info]"
+		var/reverse_message = "ha sido [what_done] por [ssource][postfix][typing_info]"
 		target.log_message(reverse_message, LOG_ATTACK, color="orange", log_globally=FALSE)
 
 /**

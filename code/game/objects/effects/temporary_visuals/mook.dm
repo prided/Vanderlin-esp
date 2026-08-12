@@ -1,6 +1,6 @@
 /obj/effect/temp_visual/mook_dust
 	name = "dust"
-	desc = "It's just a dust cloud!"
+	desc = "¡Es solo una nube de polvo!"
 	icon = 'icons/effects/mook.dmi'
 	icon_state = "mook_leap_cloud"
 	layer = BELOW_MOB_LAYER

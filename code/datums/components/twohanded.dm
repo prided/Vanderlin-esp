@@ -181,7 +181,7 @@
 			to_chat(user, span_notice("[parent] is too cumbersome to carry in one hand!"))
 			user.dropItemToGround(parent, force=TRUE)
 		else
-			to_chat(user, span_warning("I need my other hand to be empty!"))
+			to_chat(user, span_warning("¡Necesito que mi otra mano esté vacía!"))
 		return
 	if(user.usable_hands < 2)
 		if(require_twohands)
@@ -224,12 +224,12 @@
 	if(wield_block_offhand)
 		offhand_item = new(user)
 		offhand_item.name = "[parent_item.name] - offhand"
-		offhand_item.desc = "Your second grip on [parent_item]."
+		offhand_item.desc = "Su segundo agarre en [parent_item]."
 		RegisterSignal(offhand_item, COMSIG_ITEM_DROPPED, PROC_REF(on_drop))
 		RegisterSignal(offhand_item, COMSIG_QDELETING, PROC_REF(on_destroy))
 		user.put_in_inactive_hand(offhand_item)
 
-	to_chat(user, span_notice("I wield [parent] with both hands."))
+	to_chat(user, span_notice("Manejo [parent] con ambas manos."))
 
 /**
  * Unwield the two handed item

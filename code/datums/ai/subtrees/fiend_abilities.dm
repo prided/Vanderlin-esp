@@ -34,7 +34,7 @@
 		finish_action(controller, FALSE)
 		return
 
-	fiend.visible_message(span_danger("<b>[fiend]</b> throws fire at [target]!"))
+	fiend.visible_message(span_danger("¡<b>[fiend]</b> lanza fuego a [target]!"))
 	create_meteors(fiend, target)
 	controller.set_blackboard_key(BB_FIEND_FLAME_CD, world.time + 25 SECONDS)
 	finish_action(controller, TRUE)

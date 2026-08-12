@@ -84,7 +84,7 @@
 	delivery_parcel.contained_item = contained_item
 	delivery_parcel.delivery_area_type = delivery_area
 	delivery_parcel.allowed_jobs = delivery_parcel.get_area_jobs(delivery_area)
-	delivery_parcel.name = "Delivery for [initial(delivery_area.name)]"
+	delivery_parcel.name = "Entrega para [initial(delivery_area.name)]"
 	delivery_parcel.desc = "A securely wrapped parcel addressed to [initial(delivery_area.name)]. [pick("Handle with care.", "Do not bend.", "Confidential contents.", "Urgent delivery.")]"
 	delivery_parcel.icon_state = contained_item.w_class >= WEIGHT_CLASS_NORMAL ? "ration_large" : "ration_small"
 	delivery_parcel.dropshrink = 1

@@ -13,7 +13,7 @@
 	pants = /obj/item/clothing/pants/trou/leathertights
 
 /datum/trader_data/artifact_weapons
-	name = "Artifact"
+	name = "Artefacto"
 	outfit_override = list(/obj/effect/mob_spawn/corpse/human/elf/artifact)
 
 	initial_products = list()
@@ -44,14 +44,14 @@
 		),
 		ITEM_SELLING_CANCELED_PHRASE = list(
 			"Perhaps you need more time to consider such a momentous purchase.",
-			"The artifacts will wait for a worthy owner.",
+			"Los artefactos esperarán a un dueño digno.",
 		),
 		ITEM_SELLING_ACCEPTED_PHRASE = list(
 			"May this ancient weapon serve you well in battle.",
 			"You have chosen wisely. This artifact has a storied history.",
 		),
 		INTERESTED_PHRASE = list(
-			"Ah, that item catches my eye! I would pay handsomely for such a piece.",
+			"¡Ah, ese artículo me llama la atención! Pagaría generosamente por una pieza así.",
 			"Now that is something I could add to my collection.",
 		),
 		BUY_PHRASE = list(
@@ -60,7 +60,7 @@
 		),
 		NO_CASH_PHRASE = list(
 			"These are artifacts of legend, not common trinkets. Return when your purse is heavier.",
-			"Six thousand gold pieces is the price. No credit, no exceptions.",
+			"Seis mil piezas de oro es el precio. Sin crédito, sin excepciones.",
 		),
 		NO_STOCK_PHRASE = list(
 			"That particular artifact has already found a new owner.",
@@ -75,12 +75,12 @@
 			"Worthless baubles have no place in my shop.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already possess enough of these items.",
-			"My vaults are full of such things already.",
+			"Ya poseo suficientes de estos artículos.",
+			"Mis bóvedas ya están llenas de esas cosas.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Welcome, seeker of legendary weapons! Each artifact here has tasted blood in epic battles.",
-			"These weapons carry the souls of ancient warriors. Choose carefully.",
+			"¡Bienvenido, buscador de armas legendarias! Cada artefacto aquí ha probado la sangre en batallas épicas.",
+			"Estas armas llevan las almas de antiguos guerreros. Elige con cuidado.",
 			"I have traveled the world collecting these legendary arms. Each tells a story of glory and conquest.",
 			"Six thousand gold pieces may seem steep, but these are weapons of legend!",
 		),
@@ -92,7 +92,7 @@
 		),
 		TRADER_BATTLE_START_PHRASE = list(
 			"You dare steal from a dealer of legendary weapons? Face my wrath!",
-			"Fool! These artifacts will defend themselves!",
+			"¡Tonto! ¡Estos artefactos se defenderán solos!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"The artifacts... have chosen... a new master...",

@@ -63,7 +63,7 @@ Reel teleports the attached atom to the grabbed turf.
 	no_attack = TRUE
 
 /datum/intent/attach
-	name = "attach"
+	name = "adjuntar"
 	icon_state = "inattach"
 	desc = "Used to attach an entity to the hook for reeling. Must not be heavy, large, or anchored."
 	no_attack = TRUE
@@ -82,7 +82,7 @@ Reel teleports the attached atom to the grabbed turf.
 		. += span_warning("It's expended. It must be reloaded.")
 	else if(!is_loaded && grappled_turf && in_use)
 		. += span_warning("It's deployed. You can <b>ATTACH</b> a hook to an entity.")
-		. += span_info("I may activate this in my hand to reset.")
+		. += span_info("Puedo activar esto en mi mano para restablecerlo.")
 	if(attached && grappled_turf && in_use && !is_loaded)
 		. += span_warning("It's ready to use. You may <b>REEL</b> in \the [attached].")
 
@@ -105,7 +105,7 @@ Reel teleports the attached atom to the grabbed turf.
 			playsound(user, 'sound/misc/grapple_crank.ogg', 100, FALSE, 3)
 			if(do_after(user, 70 - stat, user, timed_action_flags = (IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE|IGNORE_HELD_ITEM|IGNORE_USER_DIR_CHANGE)))
 				playsound(src, 'sound/foley/trap_arm.ogg', 100, FALSE , 5)
-				to_chat(user, span_info("It's loaded!"))
+				to_chat(user, span_info("¡Está cargado!"))
 				isloading = FALSE
 				is_loaded = TRUE
 				update_appearance(UPDATE_ICON_STATE)
@@ -119,7 +119,7 @@ Reel teleports the attached atom to the grabbed turf.
 				if(do_after(user, 10))
 					reel()
 			else
-				to_chat(user, span_info("[attached] is too far!"))
+				to_chat(user, span_info("¡[attached] está demasiado lejos!"))
 	else if(!is_loaded && in_use && grappled_turf && tile_effect)	//Reset option.
 		user.visible_message("[user] unhooks from the tile.")
 		reset_tile()
@@ -247,7 +247,7 @@ Reel teleports the attached atom to the grabbed turf.
 							attached = user
 							return
 						else
-							to_chat(user, span_info("The path is blocked!"))
+							to_chat(user, span_info("¡El camino está bloqueado!"))
 							return
 					else if(get_dist(user, T) > max_range_z)
 						reason = "It's too far."
@@ -264,7 +264,7 @@ Reel teleports the attached atom to the grabbed turf.
 							attached = user
 							return
 						else
-							to_chat(user, span_info("The path is blocked!"))
+							to_chat(user, span_info("¡El camino está bloqueado!"))
 							return
 			else
 				to_chat(user, span_info("Incorrect target! It needs a clear floor tile to grapple onto."))
@@ -297,9 +297,9 @@ Reel teleports the attached atom to the grabbed turf.
 				if(do_after(user, 10))
 					reel()
 			else
-				to_chat(user, span_info("[target] is too far!"))
+				to_chat(user, span_info("¡[target] está demasiado lejos!"))
 		else
-			to_chat(user, span_info("I need to have something attached."))
+			to_chat(user, span_info("Necesito tener algo adjunto."))
 	. = ..()
 
 //Attaches a hook to an atom. Used with the "ATTACH" intent.

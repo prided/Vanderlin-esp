@@ -34,7 +34,7 @@
 	winset(src, "output_selector.legacy_output_selector", "left=output_browser")
 
 /client/verb/refresh_tgui()
-	set name = "Refresh TGUI"
+	set name = "Actualizar TGUI"
 	set category = "OOC.Fix"
 
 	for(var/window_id in tgui_windows)

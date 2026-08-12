@@ -1,6 +1,6 @@
 
 /datum/mob_affix/unstoppable
-	name = "Unstoppable"
+	name = "Imparable"
 	description = "Cannot be slowed or stunned"
 	color = "#FFD700"
 	intensity = 1.0

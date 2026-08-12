@@ -29,7 +29,7 @@
 		return dy + (0.5 * dx)
 
 /datum/rune_spell/stun
-	name = "Stun"
+	name = "Aturdir"
 	desc = "Overwhelm everyone's senses with a blast of pure chaotic energy. Cultists will recover their senses a bit faster."
 	desc_talisman = "Use to produce a smaller radius blast, or touch someone with it to focus the entire power of the spell on their person."
 	invocation = "Fuu ma'jin!"
@@ -115,7 +115,7 @@
 
 /obj/effect/blood_ritual/stun/proc/do_stun()
 	playsound(src, 'sound/effects/vampire/stun_rune.ogg', 75, 0, 0)
-	visible_message(span_warning("The rune explodes in a bright flash of chaotic energies!") )
+	visible_message(span_warning("¡La runa explota en un brillante destello de energías caóticas!") )
 
 	for(var/mob/living/L in dview(7, get_turf(src)))
 		var/duration = stun_duration

@@ -1,5 +1,5 @@
 /datum/animal_gene/ravenous
-	name = "Ravenous"
+	name = "Voraz"
 	desc = "A bottomless appetite. Burns through food reserves at an alarming rate."
 	rarity = 8
 	exclusion_group = GENE_GROUP_METABOLISM

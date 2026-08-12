@@ -82,14 +82,14 @@
 
 //................ Fur Hats ............... //
 /obj/item/clothing/head/hatfur
-	name = "fur hat"
+	name = "sombrero de piel"
 	desc = "A hat made of fur typically worn by guildsmen."
 	icon_state = "hatfur"
 	min_cold_protection_temperature = -20
 	item_weight = 155 GRAMS
 
 /obj/item/clothing/head/hatblu
-	name = "fur hat"
+	name = "sombrero de piel"
 	icon_state = "hatblu"
 	min_cold_protection_temperature = -20
 	item_weight = 155 GRAMS
@@ -107,7 +107,7 @@
 
 /obj/item/clothing/head/antlerhood
 	name = "antlerhood"
-	desc = "a hood suited for druids and shamans."
+	desc = "una capucha adecuada para druidas y chamanes."
 	color = null
 	flags_inv = HIDEEARS|HIDEHAIR
 	icon_state = "antlerhood"
@@ -152,7 +152,7 @@
 
 /obj/item/clothing/head/padded/briarthorns/pickup(mob/living/carbon/user)
 	. = ..()
-	to_chat(user, span_warning ("The thorns prick me."))
+	to_chat(user, span_warning ("Las espinas me pinchan."))
 	var/obj/item/bodypart/arm = user.get_active_hand()
 	arm?.bodypart_attacked_by(BCLASS_CUT, 7, modifiers = list(CRIT_MOD_CHANCE = CANT_CRIT))
 
@@ -247,7 +247,7 @@
 //............... Adept's Cowl ............... //
 
 /obj/item/clothing/head/adeptcowl
-	name = "adept's cowl"
+	name = "capucha de adepto"
 	desc = "A black cowl worn by the Adepts of the Inquisitorial Lodge"
 	icon_state = "adeptscowl"
 	item_state = "adeptscowl"
@@ -259,7 +259,7 @@
 \-----------*/
 
 /obj/item/clothing/head/priesthat // bishops mitre really
-	name = "priest's hat"
+	name = "sombrero de sacerdote"
 	desc = "The sacred headpiece of a priest."
 	icon_state = "priest"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
@@ -274,7 +274,7 @@
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/head/headdress // egyptian
-	name = "foreign headdress"
+	name = "tocado extranjero"
 	desc = ""
 	icon_state = "headdress"
 	item_weight = 77 GRAMS
@@ -295,7 +295,7 @@
 	color = "#cb3434"
 
 /obj/item/clothing/head/vampire
-	name = "crown of darkness"
+	name = "corona de oscuridad"
 	icon_state = "vcrown"
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD
@@ -431,11 +431,11 @@
 
 /obj/item/clothing/head/archercap
 	name = "archer's cap"
-	desc = "For the merry men."
+	desc = "Para los hombres alegres."
 	icon_state = "archercap"
 
 /obj/item/clothing/head/fedora
-	name = "archeologist's hat"
+	name = "sombrero de arqueólogo"
 	desc = "A strangely-shaped hat with dust caked onto its aged leather."
 	icon_state = "curator"
 	item_state = "curator"
@@ -449,8 +449,8 @@
 	item_state = "gravehat"
 
 /obj/item/clothing/head/explorerhat
-	name = "explorer's hat"
-	desc = "How many secrets can I uncover this week?"
+	name = "sombrero de explorador"
+	desc = "¿Cuántos secretos puedo descubrir esta semana?"
 	icon_state = "explorerhat"
 	item_state = "explorerhat"
 	sewrepair = TRUE

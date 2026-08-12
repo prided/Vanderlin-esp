@@ -1,6 +1,6 @@
 
 /datum/enchantment/life_eternal
-	enchantment_name = "Life Eternal"
+	enchantment_name = "vida eterna"
 	examine_text = "This item radiates with the pure essence of life itself."
 	enchantment_color = "#FF69B4"
 	enchantment_end_message = "The life essence fades away."

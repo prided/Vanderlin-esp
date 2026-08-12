@@ -38,4 +38,4 @@
 	speech_chance = 1
 	speak = list("moo?","moo","MOOOOOO")
 	emote_hear = list("brays.")
-	emote_see = list("shakes her head.")
+	emote_see = list("sacude la cabeza.")

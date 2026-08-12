@@ -1,6 +1,6 @@
 /obj/item/clothing/shirt/dress
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "bar dress"
+	name = "vestido de barra"
 	desc = ""
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon_state = "dress"
@@ -45,7 +45,7 @@
 /obj/item/clothing/shirt/dress/silkdress
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	name = "chemise"
-	desc = "Comfortable yet elegant, it offers both style and comfort for everyday wear"
+	desc = "Cómodo pero elegante, ofrece estilo y comodidad para el uso diario."
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon_state = "silkdress"
 	color = CLOTHING_LINEN
@@ -88,7 +88,7 @@
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	icon = 'icons/roguetown/clothing/shirts_royalty.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts_royalty.dmi'
-	name = "royal gown"
+	name = "vestido real"
 	desc = "An elaborate ball gown, a favoured fashion of queens and elevated nobility around Faience."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "royaldress"
@@ -109,7 +109,7 @@
 
 //................ Prince Shirt   ............... //
 /obj/item/clothing/shirt/dress/royal/prince
-	name = "gilded dress shirt"
+	name = "camisa de vestir dorada"
 	desc = "A gold-embroidered dress shirt specially tailored for the monarch's children."
 	icon_state = "prince"
 	detail_color = CLOTHING_ROYAL_MAJENTA
@@ -182,8 +182,8 @@
 	sleeved = null
 
 /obj/item/clothing/shirt/dress/gown
-	name = "spring gown"
-	desc = "A delicate gown that captures the essence of the season’s renewal."
+	name = "vestido de primavera"
+	desc = "Un vestido delicado que captura la esencia de la renovación de la temporada."
 	icon = 'icons/roguetown/clothing/shirts_gown.dmi'
 	icon_state = "springgown"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts_gown.dmi'
@@ -199,7 +199,7 @@
 	var/picked = FALSE
 
 /obj/item/clothing/shirt/dress/gown/summergown
-	name = "summer gown"
+	name = "vestido de verano"
 	desc = "A breezy, flowing gown fit for warm weathers."
 	icon_state = "summergown"
 	color = "#e395bb"
@@ -207,14 +207,14 @@
 	detail_tag = null
 
 /obj/item/clothing/shirt/dress/gown/wintergown
-	name = "winter gown"
+	name = "vestido de invierno"
 	desc = "A warm, elegant gown adorned with soft fur for cold."
 	icon_state = "wintergown"
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	detail_color = "#45749d"
 
 /obj/item/clothing/shirt/dress/gown/fallgown
-	name = "fall gown"
+	name = "vestido de otoño"
 	desc = "A long sleeved, solemn gown signifies the season's nearing end."
 	icon_state = "fallgown"
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR

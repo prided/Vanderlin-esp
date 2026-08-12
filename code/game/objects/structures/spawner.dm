@@ -11,7 +11,7 @@
 	var/max_mobs = 5
 	var/spawn_time = 300 //30 seconds default
 	var/mob_types = list(/mob/living/simple_animal/hostile/retaliate/bigrat)
-	var/spawn_text = "emerges from"
+	var/spawn_text = "surge de"
 	faction = list("hostile")
 	var/spawner_type = /datum/component/spawner
 	var/wait = FALSE

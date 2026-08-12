@@ -32,7 +32,7 @@
 
 /datum/tgs_chat_command/ahelp
 	name = "ahelp"
-	help_text = "<ckey|ticket #> <message|ticket <close|resolve|icissue|mentorissue|reject|reopen <ticket #>|list>>"
+	help_text = "<ckey|ticket #> <message|ticket <close|resolve|icissue|mentorissue|reject|reopen <ticket #>|lista>>"
 	admin_only = TRUE
 
 /datum/tgs_chat_command/ahelp/Run(datum/tgs_chat_user/sender, params)
@@ -54,7 +54,7 @@
 
 /datum/tgs_chat_command/namecheck
 	name = "namecheck"
-	help_text = "Returns info on the specified target"
+	help_text = "Devuelve información sobre el objetivo especificado."
 	admin_only = TRUE
 
 /datum/tgs_chat_command/namecheck/Run(datum/tgs_chat_user/sender, params)
@@ -89,7 +89,7 @@ GLOBAL_LIST(round_end_notifiees)
 
 /datum/tgs_chat_command/sdql
 	name = "sdql"
-	help_text = "Runs an SDQL query"
+	help_text = "Ejecuta una consulta SDQL"
 	admin_only = TRUE
 
 /datum/tgs_chat_command/sdql/Run(datum/tgs_chat_user/sender, params)
@@ -106,7 +106,7 @@ GLOBAL_LIST(round_end_notifiees)
 
 /datum/tgs_chat_command/reload_admins
 	name = "reload_admins"
-	help_text = "Forces the server to reload admins."
+	help_text = "Obliga al servidor a recargar administradores."
 	admin_only = TRUE
 
 /datum/tgs_chat_command/reload_admins/Run(datum/tgs_chat_user/sender, params)

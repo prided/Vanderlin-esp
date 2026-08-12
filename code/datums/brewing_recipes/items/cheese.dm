@@ -1,5 +1,5 @@
 /datum/brewing_recipe/cheese
-	name = "Cheese"
+	name = "Queso"
 	needed_reagents = list(/datum/reagent/consumable/milk/salted = 5)
 	reagent_to_brew = null
 	brewed_item = /obj/item/reagent_containers/food/snacks/cheese
@@ -29,7 +29,7 @@
 	return TRUE
 
 /datum/brewing_recipe/cheese/gote
-	name = "Gote Cheese"
+	name = "Queso Gote"
 	needed_reagents = list(/datum/reagent/consumable/milk/salted_gote = 5)
 	brewed_item = /obj/item/reagent_containers/food/snacks/cheese/gote
 	pre_reqs = /datum/reagent/consumable/milk/salted_gote

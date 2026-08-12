@@ -5,8 +5,8 @@
 #define ALCOHOL_EXPONENT 1.6 //The exponent applied to boozepwr to make higher volume alcohol at least a little bit damaging to the liver
 
 /datum/reagent/consumable/ethanol
-	name = "Ethanol"
-	description = "A well-known alcohol with a variety of applications."
+	name = "Etanol"
+	description = "Un alcohol muy conocido con una variedad de aplicaciones."
 	color = "#404030" // rgb: 64, 64, 48
 	nutriment_factor = 0
 	taste_description = "alcohol"
@@ -111,39 +111,39 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	return ..()
 
 /datum/reagent/consumable/ethanol/beer
-	name = "Beer"
+	name = "Cerveza"
 	description = ""
 	color = "#a17c10" // rgb: 102, 67, 0
 	nutriment_factor = 0.1
 	boozepwr = 25
 	taste_description = "ale"
-	glass_name = "glass of beer"
+	glass_name = "vaso de cerveza"
 	glass_desc = ""
 	price_per_unit = 0.05
 
 /datum/reagent/consumable/ethanol/rum
-	name = "Rum"
+	name = "Ron"
 	description = ""
 	color = "#5f3b23" // rgb: 102, 67, 0
 	boozepwr = 25
 	taste_description = "rum"
 
 /datum/reagent/consumable/ethanol/cider
-	name = "Apple Cider"
+	name = "sidra de manzana"
 	boozepwr = 40
-	taste_description = "cider"
-	glass_name = "glass of cider"
+	taste_description = "sidra"
+	glass_name = "vaso de sidra"
 	color = "#d8a175"
 	quality = DRINK_NICE
 
 /datum/reagent/consumable/ethanol/cider/pear
-	name = "Pear Cider"
+	name = "Sidra de pera"
 	color = "#6aa945"
 
 /datum/reagent/consumable/ethanol/cider/strawberry
 	name = "Strawberry Cider"
 	color = "#da4d4d"
-	taste_description = "strawberry cider"
+	taste_description = "sidra de fresa"
 
 /datum/reagent/consumable/ethanol/aqua_vitae
 	name = "Aqua Vitae"
@@ -153,7 +153,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	quality = DRINK_NICE
 
 /datum/reagent/consumable/ethanol/brandy
-	name = "Apple Brandy"
+	name = "brandy de manzana"
 	boozepwr = 60
 	taste_description = "brandy"
 	glass_name = "glass of brandy"
@@ -172,13 +172,13 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#bb751a"
 
 /datum/reagent/consumable/ethanol/brandy/plum
-	name = "Plum Brandy"
+	name = "Brandy de ciruela"
 	color = "#5c0449"
 
 /datum/reagent/consumable/ethanol/wine
-	name = "Wine"
+	name = "Vino"
 	boozepwr = 30
-	taste_description = "wine"
+	taste_description = "vino"
 	glass_name = "glass of wine"
 	color = "#8a0b0b"
 
@@ -189,7 +189,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	boozepwr = 65
 	taste_description = "hearty barley ale"
 	glass_icon_state = "aleglass"
-	glass_name = "glass of ale"
+	glass_name = "vaso de cerveza"
 	glass_desc = ""
 
 
@@ -239,7 +239,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 // Elf Production - LEAF-LOVERS MOTHERFUCKER
 
 /datum/reagent/consumable/ethanol/aurorian
-	name = "Aurorian"
+	name = "auroriano"
 	boozepwr = 5
 	taste_description = "subtle herbaceous undertones"
 	color = "#5D8A8A"
@@ -247,7 +247,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	price_per_unit = 0.2
 
 /datum/reagent/consumable/ethanol/fireleaf // cabbbage
-	name = "Fireleaf"
+	name = "hoja de fuego"
 	boozepwr = 2
 	taste_description = "bland liquor"
 	color = "#475e45"
@@ -259,7 +259,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/butterhairs
 	name = "Butterhairs"
 	boozepwr = 30
-	taste_description = "buttery richness"
+	taste_description = "riqueza mantecosa"
 	color = "#5D8A8A"
 	quality = DRINK_GOOD
 	price_per_unit = 0.3
@@ -292,24 +292,24 @@ All effects don't start immediately, but rather get worse over time; the rate is
 // Humen Production - Grape Based
 
 /datum/reagent/consumable/ethanol/sourwine // Peasant grade shit.
-	name = "Sour Wine"
+	name = "vino agrio"
 	boozepwr = 20
-	taste_description = "sour wine"
+	taste_description = "vino agrio"
 	color = "#552b4b"
 	price_per_unit = 0.2
 
 /datum/reagent/consumable/ethanol/whitewine
-	name = "White Wine"
+	name = "Vino blanco"
 	boozepwr = 30
-	taste_description = "sweet white wine"
+	taste_description = "vino blanco dulce"
 	color = "#F3ED91"
 	quality = DRINK_NICE
 	price_per_unit = 0.2
 
 /datum/reagent/consumable/ethanol/redwine
-	name = "Red Wine"
+	name = "Vino tinto"
 	boozepwr = 30
-	taste_description = "tannin-stricken wine"
+	taste_description = "vino afectado por taninos"
 	color = "#571111"
 	quality = DRINK_NICE
 	price_per_unit = 0.2
@@ -366,9 +366,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	age_path = null
 
 /datum/reagent/consumable/ethanol/tangerine
-	name = "Tangerine Wine"
+	name = "Vino De Mandarina"
 	boozepwr = 15
-	taste_description = "bittersweet young wine"
+	taste_description = "vino joven agridulce"
 	color = "#e7aa59"
 	quality = DRINK_NICE
 	age_path = /datum/reagent/consumable/ethanol/tangerine/aged
@@ -390,9 +390,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	age_path = null
 
 /datum/reagent/consumable/ethanol/raspberry
-	name = "Raspberry Wine"
+	name = "Vino de frambuesa"
 	boozepwr = 15
-	taste_description = "bittersweet young wine"
+	taste_description = "vino joven agridulce"
 	color = "#ee5ea6"
 	quality = DRINK_NICE
 	age_path = /datum/reagent/consumable/ethanol/raspberry/aged
@@ -438,18 +438,18 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	age_path = null
 
 /datum/reagent/consumable/ethanol/tiefling
-	name = "Tiefling Blood Wine"
+	name = "Tiefling Vino de sangre"
 	boozepwr = 15
-	taste_description = "bitter young wine"
+	taste_description = "vino joven amargo"
 	color = "#b32525"
 	quality = DRINK_NICE
 	glows = TRUE
 	age_path = /datum/reagent/consumable/ethanol/tiefling/aged
 
 /datum/reagent/consumable/ethanol/tiefling/aged
-	name = "Aged Tiefling Blood Wine"
+	name = "Vino de Sangre Envejecido Tiefling"
 	boozepwr = 30
-	taste_description = "bitter aged wine"
+	taste_description = "vino añejo amargo"
 	color = "#e21313"
 	quality = DRINK_GOOD
 	age_path = /datum/reagent/consumable/ethanol/tiefling/delectable
@@ -520,7 +520,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/avarmead
 	name = "Zögiin bal"
 	boozepwr = 30
-	taste_description = "spicy honey"
+	taste_description = "miel picante"
 	color = "#e0a400"
 	quality = DRINK_GOOD
 
@@ -548,7 +548,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/kgunsake
 	name = "Junmai-ginjo"
 	boozepwr = 50
-	taste_description = "dry sweetness"
+	taste_description = "dulzura seca"
 	color = "#ccd7e0"
 	quality = DRINK_GOOD
 
@@ -566,7 +566,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	boozepwr = 30
 	quality = DRINK_NICE
-	taste_description = "sweet, sweet alcohol"
+	taste_description = "dulce, dulce alcohol"
 	glass_icon_state = "meadglass"
 	glass_name = "Mead"
 	glass_desc = ""
@@ -615,7 +615,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	affected_mob.remove_status_effect(/datum/status_effect/buff/murkwine)
 
 /datum/reagent/consumable/ethanol/nocshine // wait, no, NOCSHINE
-	name = "Noc's Shine"
+	name = "El brillo de Noc"
 	boozepwr = 70  // YEEEEEHAAAWWWWWW
 	taste_description = "what might be my throat melting and nose hair burning"
 	color = "#d8fbfd63"
@@ -639,7 +639,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	name = "Luxintenebre" // lux left w/ sugar in a darkened place for quite some time... U could say... Light in Darkness.....
 	description = "A fermented form of vitae, highly alcoholic, and with a particularly grim taste. Often sought out by the daring, foolhardy, and heretical..."
 	boozepwr = 80 // THE END OF THE FUCKING WORLD.
-	taste_description = "a green numbness, then a burning vigor in the heart" // heartburn (healing)
+	taste_description = "un entumecimiento verde, luego un vigor ardiente en el corazón" // heartburn (healing)
 	color = "#86cca3"
 	quality = DRINK_VERYGOOD // good stuff!
 	age_path = /datum/reagent/consumable/ethanol/luxwine/aged
@@ -689,7 +689,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	..()
 
 /datum/reagent/consumable/ethanol/whipwine // dont ask
-	name = "Magickal Whip Wine"
+	name = "Vino de látigo mágico"
 	description = "A dubious recent recipe from abroad. Magickal Whip Wine is said to increase one's potence and stamina sevenfold."
 	boozepwr = 10 // it's a whip. it's an actual whip.
 	taste_description = "leather, bitter herbs, and regret" // what did you expect
@@ -699,7 +699,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	name = "Divine Snake Wine"
 	description = "The True Form of the Whipwine. The Magickal Snake Wine was an exclusively produced medicinal wine from over three centuries ago..."
 	boozepwr = 60 // ancient lichebrau...
-	taste_description = "bitterness, pain, iron, and ancient mistakes" // what did you expect [2]
+	taste_description = "Amargura, dolor, hierro y errores antiguos." // what did you expect [2]
 	color = "#553837"
 	price_per_unit = 0.45
 
@@ -713,7 +713,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/baijiu
 	name = "Baijiu"
 	boozepwr = 60
-	taste_description = "fiery and pungent alcohol with a hint of sweetness"
+	taste_description = "Alcohol ardiente y picante con un toque de dulzura."
 	color = "#f8fdfc"
 	quality = DRINK_GOOD
 	price_per_unit = 0.3
@@ -737,7 +737,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/kgunshochu
 	name = "Shochu"
 	boozepwr = 60
-	taste_description = "dry, clean finish"
+	taste_description = "acabado seco y limpio"
 	color = "#F8FDFC"
 	quality = DRINK_VERYGOOD
 	price_per_unit = 0.3

@@ -1,14 +1,14 @@
 /datum/infusion_recipe
 	abstract_type = /datum/infusion_recipe
 	var/category = "Infusions"
-	var/name = "infusion recipe"
+	var/name = "receta de infusión"
 	var/obj/item/target_type
 	var/list/required_essences = list() // essence_type = amount
 	var/infusion_time = 10 SECONDS
 	var/obj/item/result_type
 
 /datum/infusion_recipe/glass
-	name = "Glass Transmutation"
+	name = "Transmutación de vidrio"
 	target_type  = /obj/item/natural/stone
 	result_type = /obj/item/natural/glass
 	required_essences = list(/datum/thaumaturgical_essence/crystal = 5)
@@ -26,13 +26,13 @@
 	required_essences = list(/datum/thaumaturgical_essence/fire = 10)
 
 /datum/infusion_recipe/mana_crystal
-	name = "Mana Crystal"
+	name = "Cristal de maná"
 	target_type  = /obj/item/gem
 	result_type = /obj/item/mana_battery/mana_crystal/standard
 	required_essences = list(/datum/thaumaturgical_essence/magic = 10)
 
 /datum/infusion_recipe/seed_random
-	name = "Seed Transmutation"
+	name = "Transmutación de semillas"
 	target_type  = /obj/item/neuFarm/seed
 	result_type = /obj/item/neuFarm/seed/mixed_seed
 	required_essences = list(/datum/thaumaturgical_essence/life = 5)
@@ -44,7 +44,7 @@
 //earth because we are turning one metal into another, heavier metal
 //motion because QUICKsilver, get it?
 /datum/infusion_recipe/cinnabar
-	name = "Cinnabar Transmutation"
+	name = "Transmutación de cinabrio"
 	target_type  = /obj/item/alch/silverdust
 	result_type = /obj/item/ore/cinnabar
 	required_essences = list(/datum/thaumaturgical_essence/magic = 20, /datum/thaumaturgical_essence/earth = 10, /datum/thaumaturgical_essence/motion = 10)

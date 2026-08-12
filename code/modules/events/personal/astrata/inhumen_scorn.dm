@@ -1,5 +1,5 @@
 /datum/round_event_control/inhumen_scorn
-	name = "Inhumen Scorn"
+	name = "Inhumen Desprecio"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/inhumen_scorn
 	weight = 10
@@ -48,7 +48,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE ASTRATA'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE ASTRATA!"),
 		span_notice("Astrata wishes you to insult the inhumen! Spit in the face of inhumen to earn her favor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/magic/bless.ogg', 100)

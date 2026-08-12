@@ -86,7 +86,7 @@
 		crosser.adjustFireLoss(-2, updating_health = FALSE)
 
 /datum/vine_mutation/toxicity
-	name = "toxic"
+	name = "tóxico"
 	hue = "#ff00ff"
 	severity = 10
 	quality = NEGATIVE
@@ -101,7 +101,7 @@
 		eater.adjustToxLoss(5)
 
 /datum/vine_mutation/explosive  //OH SHIT IT CAN CHAINREACT RUN!!!
-	name = "explosive"
+	name = "explosivo"
 	hue = "#ff0000"
 	quality = NEGATIVE
 	severity = 2
@@ -117,7 +117,7 @@
 	explosion(holder.loc, 0, 0, severity, 0, 0)
 
 /datum/vine_mutation/fire_proof
-	name = "fire proof"
+	name = "prueba de fuego"
 	hue = "#ff8888"
 	quality = MINOR_NEGATIVE
 
@@ -141,7 +141,7 @@
 		qdel(prey)
 
 /datum/vine_mutation/aggressive_spread  //very OP, but im out of other ideas currently
-	name = "aggressive spreading"
+	name = "propagación agresiva"
 	hue = "#333333"
 	severity = 3
 	quality = NEGATIVE
@@ -153,7 +153,7 @@
 	buckled.ex_act(severity, null, src)
 
 /datum/vine_mutation/transparency
-	name = "transparent"
+	name = "transparente"
 	hue = ""
 	quality = POSITIVE
 
@@ -162,7 +162,7 @@
 	holder.alpha = 125
 
 /datum/vine_mutation/thorns
-	name = "thorny"
+	name = "espinoso"
 	hue = "#666666"
 	severity = 10
 	quality = NEGATIVE
@@ -384,7 +384,7 @@
 
 /obj/structure/vine/black_briar
 	name = "\proper black briar"
-	desc = span_briar("Some victories come at a horrible price.")
+	desc = span_briar("Algunas victorias tienen un precio horrible.")
 	icon_state = "BriarLight1"
 	base_icon_state = "Briar"
 	buckle_prevents_pull = TRUE

@@ -1,5 +1,5 @@
 /datum/material/steel
-	name = "Steel"
+	name = "Acero"
 	show_as_filling = TRUE
 	color = "#5c5454"
 	hardness = MAT_VALUE_HARD + 5

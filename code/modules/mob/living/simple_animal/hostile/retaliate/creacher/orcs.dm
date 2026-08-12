@@ -1,5 +1,5 @@
 /mob/living/simple_animal/hostile/orc
-	name = "Savage Orc"
+	name = "Orco salvaje"
 	desc = ""
 	icon = 'icons/roguetown/mob/monster/simple_orcs.dmi'
 	icon_state = "savageorc"
@@ -53,7 +53,7 @@
 			/obj/effect/decal/cleanable/blood)
 
 /mob/living/simple_animal/hostile/orc/orc_marauder
-	name = "Orc Marauder"
+	name = "Merodeador orco"
 	icon_state = "orcmarauder"
 	icon_living = "orcmarauder"
 	icon_dead = "orcmarauder"

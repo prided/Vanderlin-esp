@@ -24,7 +24,7 @@
 	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 12
 
 /datum/fish_source/ocean
-	catalog_description = "Shallow Ocean"
+	catalog_description = "Océano poco profundo"
 	background = "background_tray"
 	fish_table = list(
 		FISHING_DUD = 3,
@@ -47,7 +47,7 @@
 	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 15
 
 /datum/fish_source/ocean/deep
-	catalog_description = "Deep Ocean"
+	catalog_description = "Océano profundo"
 	fish_table = list(
 		FISHING_DUD = 3,
 		/obj/item/reagent_containers/food/snacks/fish/angler = 6,
@@ -141,7 +141,7 @@
 	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 5
 
 /datum/fish_source/river
-	catalog_description = "Flowing River"
+	catalog_description = "Río que fluye"
 	fish_table = list(
 		FISHING_DUD = 2,
 		/obj/item/reagent_containers/food/snacks/fish/carp = 6,

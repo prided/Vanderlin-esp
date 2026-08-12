@@ -1,6 +1,6 @@
 
 /obj/item/storage/fancy/ifak
-	name = "personal patch kit"
+	name = "kit de parches personales"
 	desc = "Personal treatment pouch; has all you need to stop you or someone else from meeting Necra."
 	icon = 'icons/obj/medical.dmi'
 	icon_state = "ifak"

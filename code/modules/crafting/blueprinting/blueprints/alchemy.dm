@@ -4,12 +4,12 @@
 	category = "Alchemy"
 	construct_tool = /obj/item/weapon/hammer
 	craftsound = 'sound/foley/Building-01.ogg'
-	verbage = "infuse"
-	verbage_tp = "infuses"
+	verbage = "infundir"
+	verbage_tp = "infunde"
 
 /datum/blueprint_recipe/alchemy/essence_reservoir
 	name = "Essence Reservoir"
-	desc = "A container for storing alchemical essences."
+	desc = "Un recipiente para almacenar esencias alquímicas."
 	result_type = /obj/machinery/essence/reservoir
 	required_materials = list(
 		/obj/item/ingot/thaumic = 1,
@@ -19,8 +19,8 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/alchemy/essence_combiner
-	name = "Essence Combiner"
-	desc = "A device for combining different alchemical essences."
+	name = "Combinador de esencias"
+	desc = "Un dispositivo para combinar diferentes esencias alquímicas."
 	result_type = /obj/machinery/essence/combiner
 	required_materials = list(
 		/obj/item/ingot/thaumic = 2,
@@ -30,8 +30,8 @@
 	craftdiff = 3
 
 /datum/blueprint_recipe/alchemy/research_matrix
-	name = "Research Matrix"
-	desc = "A matrix for researching new alchemical formulas."
+	name = "Matriz de investigación"
+	desc = "Una matriz para investigar nuevas fórmulas alquímicas."
 	result_type = /obj/machinery/essence/research_matrix
 	required_materials = list(
 		/obj/item/ingot/thaumic = 2,
@@ -39,8 +39,8 @@
 	)
 
 /datum/blueprint_recipe/alchemy/essence_infuser
-	name = "Essence Infuser"
-	desc = "A device for infusing items with alchemical essence."
+	name = "Infusor de esencia"
+	desc = "Un dispositivo para infundir elementos con esencia alquímica."
 	result_type = /obj/machinery/essence/infuser
 	required_materials = list(
 		/obj/item/natural/stone = 2,
@@ -50,8 +50,8 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/alchemy/essence_splitter
-	name = "Essence Splitter"
-	desc = "A device for splitting alchemical essences."
+	name = "Divisor de esencia"
+	desc = "Un dispositivo para dividir esencias alquímicas."
 	result_type = /obj/machinery/essence/splitter
 	required_materials = list(
 		/obj/item/ingot/thaumic = 2,
@@ -61,8 +61,8 @@
 	craftdiff = 3
 
 /datum/blueprint_recipe/alchemy/enchantment_altar
-	name = "Enchantment Altar"
-	desc = "An altar for enchanting items with alchemical properties."
+	name = "Altar de encantamiento"
+	desc = "Un altar para objetos encantadores con propiedades alquímicas."
 	result_type = /obj/machinery/essence/enchantment_altar
 	required_materials = list(
 		/obj/item/natural/stone = 2,
@@ -86,7 +86,7 @@
 
 /datum/blueprint_recipe/alchemy/separator
 	name = "Alembic"
-	desc = "A device for seperating liquids from eachother through distillation."
+	desc = "Dispositivo para separar líquidos entre sí mediante destilación."
 	result_type = /obj/structure/chem_separator
 	required_materials = list(
 		/obj/item/natural/wood/plank = 1,
@@ -96,7 +96,7 @@
 
 /datum/blueprint_recipe/alchemy/shisha
 	name = "Shisha Pipe"
-	desc = "A traditional water pipe for smoking herbs and other substances."
+	desc = "Una pipa de agua tradicional para fumar hierbas y otras sustancias."
 	result_type = /obj/structure/fluff/statue/shisha
 	required_materials = list(
 		/obj/item/natural/wood/plank = 2,

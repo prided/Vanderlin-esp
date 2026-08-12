@@ -74,7 +74,7 @@
 	if(!isturf(loc))
 		return FALSE
 	var/obj/structure/statue/petrified/S = new(loc, src, statue_timer)
-	S.name = "statue of [name]"
+	S.name = "estatua de [name]"
 	ADD_TRAIT(src, TRAIT_BLOODLOSS_IMMUNE, MAGIC_TRAIT)
 	S.icon_state = null
 	S.copy_overlays(src)

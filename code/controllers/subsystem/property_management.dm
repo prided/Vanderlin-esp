@@ -478,12 +478,12 @@ SUBSYSTEM_DEF(housing)
 
 	// Check if already claimed/owned
 	if(SShousing.property_owners[linked_property.property_id] || SShousing.temporary_claims[linked_property.property_id])
-		to_chat(user, span_warning("This property is already claimed!"))
+		to_chat(user, span_warning("¡Esta propiedad ya está reclamada!"))
 		return
 
 	// Check if user already owns a property with this save_id
 	if(SShousing.player_owns_save_id(user.ckey, linked_property.save_id))
-		to_chat(user, span_warning("You already have a property of this type!"))
+		to_chat(user, span_warning("¡Ya tienes una propiedad de este tipo!"))
 		return
 
 	if(check_other_players(user))
@@ -512,7 +512,7 @@ SUBSYSTEM_DEF(housing)
 
 	options["Cancel"] = null
 
-	var/choice = input(user, "Select a property design slot:", "Property Claim") as null|anything in options
+	var/choice = input(user, "Seleccione un espacio de diseño de propiedad:", "Reclamación de propiedad") as null|anything in options
 	if(!choice || options[choice] == null)
 		return
 
@@ -524,11 +524,11 @@ SUBSYSTEM_DEF(housing)
 
 	if(SShousing.claim_temporary(linked_property, user, selected_slot))
 		claimed = TRUE
-		name = "Claimed Property (Slot [selected_slot])"
-		desc = "Click to save your current design to slot [selected_slot]."
+		name = "Propiedad reclamada (ranura [selected_slot])"
+		desc = "Haga clic para guardar su diseño actual en la ranura [selected_slot]."
 		to_chat(user, span_notice("Property claimed with design slot [selected_slot]! Click again to save changes."))
 	else
-		to_chat(user, span_warning("Failed to claim property!"))
+		to_chat(user, span_warning("¡No se pudo reclamar la propiedad!"))
 
 /obj/structure/sign/property_sign/claim/proc/save_property_design(mob/user)
 	if(!linked_property || linked_property.owner_ckey != user.ckey)
@@ -536,17 +536,17 @@ SUBSYSTEM_DEF(housing)
 
 	var/slot = linked_property.owner_property_slot
 	if(!slot)
-		to_chat(user, span_warning("No slot assigned to this property!"))
+		to_chat(user, span_warning("¡No hay espacio asignado a esta propiedad!"))
 		return
 
-	var/confirm = tgui_alert(user, "Save the current state to design slot [slot]?", "Save Property", list("Yes", "No"))
+	var/confirm = tgui_alert(user, "¿Guardar el estado actual en la ranura de diseño [slot]?", "Guardar propiedad", list("Yes", "No"))
 	if(confirm != "Yes")
 		return
 
 	if(SShousing.save_property(linked_property, user.ckey, slot))
 		to_chat(user, span_notice("Property saved successfully to slot [slot]!"))
 	else
-		to_chat(user, span_warning("Failed to save property!"))
+		to_chat(user, span_warning("¡No se pudo guardar la propiedad!"))
 
 /obj/structure/sign/property_sign/for_sale
 
@@ -557,7 +557,7 @@ SUBSYSTEM_DEF(housing)
 
 	// Check if already owned
 	if(SShousing.property_owners[linked_property.property_id])
-		to_chat(user, span_warning("This property is already owned!"))
+		to_chat(user, span_warning("¡Esta propiedad ya es propiedad!"))
 		return
 
 	// Check if user already owns a property with this save_id
@@ -599,13 +599,13 @@ SUBSYSTEM_DEF(housing)
 
 	options["Cancel"] = null
 
-	var/choice = input(user, "Select a property design slot:", "Property Purchase") as null|anything in options
+	var/choice = input(user, "Seleccione un espacio de diseño de propiedad:", "Compra de propiedad") as null|anything in options
 	if(!choice || options[choice] == null)
 		return
 
 	var/selected_slot = options[choice]
 
-	var/confirm = tgui_alert(user, "Purchase this property for [linked_property.rent_cost] credits using slot [selected_slot]?\n\nRent will be deducted each round.", "Property Purchase", list("Yes", "No"))
+	var/confirm = tgui_alert(user, "Purchase this property for [linked_property.rent_cost] credits using slot [selected_slot]?\n\nRent will be deducted each round.", "Compra de propiedad", list("Yes", "No"))
 	if(confirm != "Yes")
 		return
 

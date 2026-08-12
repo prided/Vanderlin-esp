@@ -1,5 +1,5 @@
 /obj/machinery/light/fueledstreet
-	name = "street lamp"
+	name = "farola"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "slamp1"
 	var/state_suffix = "1"

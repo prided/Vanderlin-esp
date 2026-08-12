@@ -47,7 +47,7 @@
 	if(being_buckled == buckler)
 		being_buckled.visible_message(
 			span_notice("[buckler] lays down on [src]."),
-			span_notice("You lay down on [src]."),
+			span_notice("Te acuestas en [src]."),
 			// visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 		)
 	else
@@ -63,13 +63,13 @@
 
 	if(being_unbuckled == unbuckler)
 		being_unbuckled.visible_message(
-			span_notice("[unbuckler] gets up from [src]."),
-			span_notice("You get up from [src]."),
+			span_notice("[unbuckler] se levanta de [src]."),
+			span_notice("Te levantas de [src]."),
 			// visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 		)
 	else
 		being_unbuckled.visible_message(
-			span_notice("[unbuckler] pulls [being_unbuckled] up from [src]."),
+			span_notice("[unbuckler] levanta [being_unbuckled] de [src]."),
 			span_notice("[unbuckler] pulls you up from [src]."),
 			// visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 		)

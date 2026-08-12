@@ -163,13 +163,13 @@
 		return
 	for(var/obj/A in T)
 		if(istype(A, /obj/structure/chair))
-			to_chat(user, "<span class='warning'>There is already a chair here!</span>")
+			to_chat(user, "<span class='warning'>¡Ya hay una silla aquí!</span>")
 			return
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
 			to_chat(user, "<span class='warning'>There is already something here!</span>")
 			return
 
-	user.visible_message("<span class='notice'>[user] rights \the [src.name].</span>", "<span class='notice'>I right \the [name].</span>")
+	user.visible_message("<span class='notice'>[user] derechos \the [src.name].</span>", "<span class='notice'>I right \the [name].</span>")
 	var/obj/structure/chair/C = new origin_type(get_turf(loc))
 	TransferComponents(C)
 	C.setDir(user.dir)
@@ -205,12 +205,12 @@
 	origin_type = /obj/structure/chair/stool/bar
 
 /obj/item/chair/wood
-	name = "wooden chair"
+	name = "silla de madera"
 	origin_type = /obj/structure/chair/wood
 	break_chance = 50
 
 /obj/structure/chair/mime
-	name = "invisible chair"
+	name = "silla invisible"
 	desc = ""
 	anchored = FALSE
 	icon_state = null

@@ -45,7 +45,7 @@
 		return prob(30)
 
 /obj/structure/spider/stickyweb/fire_act(added, maxstacks)
-	visible_message("<span class='warning'>[src] catches fire!</span>")
+	visible_message("¡<span class='warning'>[src] se incendia!</span>")
 	var/turf/T = get_turf(src)
 	qdel(src)
 	new /obj/effect/hotspot(T)
@@ -92,7 +92,7 @@
 
 /obj/structure/spider/cocoon/Destroy()
 	var/turf/T = get_turf(src)
-	src.visible_message(span_warning("\The [src] splits open."))
+	src.visible_message(span_warning("\The [src] se abre."))
 	for(var/atom/movable/A in contents)
 		A.forceMove(T)
 	return ..()

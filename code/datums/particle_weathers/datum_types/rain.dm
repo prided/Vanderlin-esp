@@ -34,7 +34,7 @@
 			C.SoakMob(FEET, dirty_water = FALSE, rain = TRUE)
 
 /datum/particle_weather/rain/rain_gentle
-	name = "Rain"
+	name = "Lluvia"
 	desc = "Gentle Rain, la la description."
 	particleEffectType = /particles/weather/rain
 
@@ -54,7 +54,7 @@
 	temperature_modification = -1
 
 /datum/particle_weather/rain/rain_storm
-	name = "Rain"
+	name = "Lluvia"
 	desc = "Gentle Rain, la la description."
 	particleEffectType = /particles/weather/rain
 

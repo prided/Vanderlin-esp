@@ -35,7 +35,7 @@
 		new /obj/effect/temp_visual/spell_impact(get_turf(target), impact_color, spell_impact_intensity)
 
 /obj/projectile/magic/death
-	name = "bolt of death"
+	name = "rayo de la muerte"
 	icon_state = "pulse1_bl"
 
 /obj/projectile/magic/death/on_hit(target)
@@ -50,7 +50,7 @@
 				victim.grab_ghost(force = TRUE)
 				to_chat(victim, span_notice("I rise with a start, I'm undead!!!"))
 			else if(victim.stat != DEAD)
-				to_chat(victim, span_notice("I feel great!"))
+				to_chat(victim, span_notice("¡Me siento genial!"))
 			return
 		// victim.investigate_log("has been killed by a bolt of death.", INVESTIGATE_DEATHS)
 		victim.death()

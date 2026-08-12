@@ -4,7 +4,7 @@
 		particles.ModParticles(target, min, max, type = "circle", random = 1)
 
 /particles
-	var/name = "particles"
+	var/name = "partículas"
 
 /particles/Destroy(force)
 	if(force)

@@ -410,7 +410,7 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 
 				for(var/mob/living/collided in dest_turf.contents)
 					var/damage_multiplier = collided.maxHealth * 0.01
-					to_chat(collided, span_userdanger("[src] collides into you!"))
+					to_chat(collided, span_userdanger("¡[src] choca contra ti!"))
 					var/damage = 0
 					if(prob(15)) //sorry buddy, luck wasn't on your side
 						damage = 29 * collision_lethality * damage_multiplier
@@ -714,10 +714,10 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
  */
 /obj/structure/industrial_lift/proc/show_fluff_message(direction, mob/user)
 	if(direction == UP)
-		user.visible_message(span_notice("[user] moves the lift upwards."), span_notice("You move the lift upwards."))
+		user.visible_message(span_notice("[user] mueve el elevador hacia arriba."), span_notice("You move the lift upwards."))
 
 	if(direction == DOWN)
-		user.visible_message(span_notice("[user] moves the lift downwards."), span_notice("You move the lift downwards."))
+		user.visible_message(span_notice("[user] mueve el elevador hacia abajo."), span_notice("You move the lift downwards."))
 
 // A subtype intended for "public use"
 /obj/structure/industrial_lift/public
@@ -728,8 +728,8 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 	radial_travel = FALSE
 
 /obj/structure/industrial_lift/debug
-	name = "transport platform"
-	desc = "A lightweight platform. It moves in any direction, except up and down."
+	name = "plataforma de transporte"
+	desc = "Una plataforma ligera. Se mueve en cualquier dirección, excepto hacia arriba y hacia abajo."
 	color = "#5286b9ff"
 	lift_id = DEBUG_LIFT_ID
 	radial_travel = TRUE
@@ -775,7 +775,7 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 
 /obj/structure/industrial_lift/tram
 	name = "tram"
-	desc = "A tram for tramversing the station."
+	desc = "Un tranvía para recorrer la estación."
 	obj_flags = BLOCK_Z_OUT_DOWN
 	//kind of a centerpiece of the station, so pretty tough to destroy
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF

@@ -2,7 +2,7 @@
 /datum/curse
 	var/name = "Debug Curse"
 	/// Whats shown to the player upon being cursed
-	var/description = "This is a debug curse."
+	var/description = "Esta es una maldición de depuración."
 	/// Trait given by this curse
 	var/trait
 
@@ -21,7 +21,7 @@
 
 /datum/curse/proc/on_loss(mob/living/carbon/human/owner)
 	REMOVE_TRAIT(owner, trait, TRAIT_CURSE)
-	to_chat(owner, span_userdanger("Something has changed... I feel relieved."))
+	to_chat(owner, span_userdanger("Algo ha cambiado... Me siento aliviado."))
 	owner.playsound_local(get_turf(owner), 'sound/misc/curse_lifted.ogg', 80, FALSE, pressure_affected = FALSE)
 	qdel(src)
 	return
@@ -77,7 +77,7 @@
 
 /datum/curse/noc
 	name = "Noc's Curse"
-	description = "Magical knowledge is now beyond my grasp."
+	description = "El conocimiento mágico ahora está más allá de mi alcance."
 	trait = TRAIT_NOC_CURSE
 
 /datum/curse/ravox
@@ -92,7 +92,7 @@
 
 /datum/curse/xylix
 	name = "Xylix's Curse"
-	description = "Fortune is no longer on my side."
+	description = "La fortuna ya no está de mi lado."
 	trait = TRAIT_XYLIX_CURSE
 
 /datum/curse/pestra
@@ -123,7 +123,7 @@
 
 /datum/curse/schizophrenic //zizo curse but without the jumpscares and meta hallucinations
 	name = "Schizophrenic"
-	description = "I can see and hear things others cannot."
+	description = "Puedo ver y oír cosas que otros no pueden."
 	trait = TRAIT_SCHIZO_FLAW
 	var/atom/movable/screen/fullscreen/maniac/hallucinations
 

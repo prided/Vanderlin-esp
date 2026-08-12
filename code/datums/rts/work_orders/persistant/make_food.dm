@@ -10,7 +10,7 @@
 
 
 /datum/persistant_workorder/make_food/bread
-	name = "Make Bread"
+	name = "hacer pan"
 	ui_icon_state = "bread_salo"
 
 	arg_2 = /datum/food_item/bread

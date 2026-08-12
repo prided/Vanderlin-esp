@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(quest_scrolls)
 
 #define WHISPER_COOLDOWN 10 SECONDS
 /obj/item/paper/scroll/quest
-	name = "enchanted contract scroll"
+	name = "pergamino de contrato encantado"
 	desc = "A scroll oft known as a \"whispering scroll\". Enchanted with magicks to make it whisper to its bearer when opened the location of its target.\n\
 	The magical protections make it resistant to damage and tampering. It will only whisper when carried on the person of the contract bearer."
 	icon = 'icons/obj/questing.dmi'
@@ -97,7 +97,7 @@ GLOBAL_LIST_EMPTY(quest_scrolls)
 		. += span_notice("This contract hasn't been claimed yet. Open it to claim it for yourself!")
 	else if(assigned_quest.complete)
 		. += span_notice("\nThis contract is complete! Return it to the Notice Board to claim your reward.")
-		. += span_info("\nPlace it on the marked area next to the book.")
+		. += span_info("\nPlace en el área marcada al lado del libro.")
 	else
 		. += span_notice("\nThis contract is still in progress.")
 
@@ -106,14 +106,14 @@ GLOBAL_LIST_EMPTY(quest_scrolls)
 		to_chat(user, span_warning("The enchanted scroll resists your attempts to tear it."))
 		return
 	if(istype(P, /obj/item/paper)) // Prevent merging with other papers/scrolls
-		to_chat(user, span_warning("The magical energies prevent you from combining this with other scrolls."))
+		to_chat(user, span_warning("Las energías mágicas te impiden combinar esto con otros pergaminos."))
 		return
 	if(istype(P, /obj/item/natural/thorn) || istype(P, /obj/item/natural/feather))
 		if(!open)
-			to_chat(user, span_warning("You need to open the scroll first."))
+			to_chat(user, span_warning("Primero debes abrir el pergamino."))
 			return
 		if(!assigned_quest)
-			to_chat(user, span_warning("This contract scroll doesn't accept modifications."))
+			to_chat(user, span_warning("Este pergamino de contrato no acepta modificaciones."))
 			return
 	..()
 
@@ -171,7 +171,7 @@ GLOBAL_LIST_EMPTY(quest_scrolls)
 
 	var/turf/target_turf = assigned_quest.get_target_location()
 	if(!target_turf)
-		to_chat(user, span_warning("The scroll cannot sense its target."))
+		to_chat(user, span_warning("El pergamino no puede detectar su objetivo."))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	var/turf/user_turf = get_turf(user)
@@ -342,19 +342,19 @@ GLOBAL_LIST_EMPTY(quest_scrolls)
 	// Get precise direction text
 	var/direction_text = get_precise_direction_between(user_turf, compass_target)
 	if(!direction_text)
-		direction_text = "unknown direction"
+		direction_text = "dirección desconocida"
 
 	// Determine distance description
 	var/distance_text
 	switch(distance)
 		if(0 to 14)
-			distance_text = "very close"
+			distance_text = "muy cerca"
 		if(15 to 40)
 			distance_text = "close"
 		if(41 to 100)
 			distance_text = ""
 		if(101 to INFINITY)
-			distance_text = "far away"
+			distance_text = "lejos"
 
 	last_compass_direction = "[distance_text] to the [direction_text]"
 	if(!last_z_level_hint)

@@ -38,7 +38,7 @@
 			postfix = "in about [DisplayTimeText(tl)]"
 		else
 			postfix = "soon"
-		to_chat(src, "The game will start [postfix].")
+		to_chat(src, "El juego comenzará [postfix].")
 		if(client)
 			var/usedkey = get_display_ckey(ckey)
 			var/list/thinz = list("takes [client.p_their()] seat.", "settles in.", "joins the session", "joins the table.", "becomes a player.")

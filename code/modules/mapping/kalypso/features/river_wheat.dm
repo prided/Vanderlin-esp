@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/river_wheat
-	name = "River Wheat"
+	name = "trigo de río"
 	id = "feature_riverwheat"
 	mappath = "_maps/kalypso/wheatfield.dmm"
 

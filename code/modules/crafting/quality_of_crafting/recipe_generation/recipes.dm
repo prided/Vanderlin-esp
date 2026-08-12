@@ -561,10 +561,10 @@
 			sev_text = "Moderate"
 			sev_color = "goldenrod"
 		if(WOUND_SEVERITY_SEVERE)
-			sev_text = "Severe"
+			sev_text = "Severo"
 			sev_color = "sienna"
 		if(WOUND_SEVERITY_CRITICAL)
-			sev_text = "Critical"
+			sev_text = "Crítico"
 			sev_color = "firebrick"
 		if(WOUND_SEVERITY_BIOHAZARD)
 			sev_text = "BIOHAZARD"

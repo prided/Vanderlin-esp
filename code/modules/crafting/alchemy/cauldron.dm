@@ -1,6 +1,6 @@
 /obj/machinery/essence/cauldron_node
-	name = "cauldron essence node"
-	desc = "An internal essence conduit."
+	name = "nodo de esencia del caldero"
+	desc = "Un conducto interno de esencia."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "cauldron1"
 	density = FALSE
@@ -60,7 +60,7 @@
 
 /obj/machinery/light/fueled/cauldron
 	name = "cauldron"
-	desc = "Bubble, Bubble, toil and trouble. A great iron cauldron for brewing potions from alchemical essences."
+	desc = "Burbuja, Burbuja, trabajo y problemas. Un gran caldero de hierro para preparar pociones a partir de esencias alquímicas."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "cauldron1"
 	base_state = "cauldron"
@@ -104,7 +104,7 @@
 		. += span_notice("No recipe selected. Click with empty hand to select a recipe.")
 
 	if(selected_recipe)
-		. += span_notice("Required essences:")
+		. += span_notice("Esencias requeridas:")
 		for(var/essence_type in selected_recipe.required_essences)
 			var/datum/thaumaturgical_essence/essence = new essence_type
 			var/required = selected_recipe.required_essences[essence_type]
@@ -126,14 +126,14 @@
 		return
 
 	if(!selected_recipe)
-		to_chat(user, span_warning("You must select a recipe first."))
+		to_chat(user, span_warning("Primero debes seleccionar una receta."))
 		return
 
 	auto_repeat = !auto_repeat
 	if(auto_repeat)
 		to_chat(user, span_info("Auto-repeat enabled. [src] will automatically brew [initial(selected_recipe.recipe_name)] when essences are available."))
 	else
-		to_chat(user, span_info("Auto-repeat disabled."))
+		to_chat(user, span_info("Repetición automática desactivada."))
 
 /obj/machinery/light/fueled/cauldron/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(user.cmode)
@@ -148,7 +148,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(essence_contents.len >= max_essence_types)
-		to_chat(user, span_warning("The cauldron cannot hold any more essence types."))
+		to_chat(user, span_warning("El caldero no puede contener más tipos de esencia."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/essence_type = vial.contained_essence.type
@@ -170,7 +170,7 @@
 		return NONE
 
 	if(QDELETED(essence_node))
-		to_chat(user, span_warning("The cauldron has no essence conduit."))
+		to_chat(user, span_warning("El caldero no tiene conducto de esencia."))
 		return ITEM_INTERACT_BLOCKING
 
 	essence_node.show_link_menu(user)

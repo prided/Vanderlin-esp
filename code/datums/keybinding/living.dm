@@ -68,7 +68,7 @@
 	hotkey_keys = list()
 	classic_keys = list()
 	name = "activate_inhand"
-	full_name = "Activate in-hand"
+	full_name = "Activar en la mano"
 	description = "Uses whatever item you have in-hand"
 
 /datum/keybinding/living/activate_inhand/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -153,7 +153,7 @@
 
 /datum/keybinding/living/resist
 	hotkey_keys = list("X")
-	name = "cancelresist"
+	name = "cancelar resistir"
 	full_name = "Cancel/Resist"
 	description = "Stop an action such as a charged attack or spam this to resist against a grab."
 
@@ -169,7 +169,7 @@
 /datum/keybinding/living/defendtoggle
 	hotkey_keys = list("C")
 	name = "defendtoggle"
-	full_name = "Combat Mode"
+	full_name = "Modo de combate"
 	description = "Initiates combat mode. Enables certain RMB intents. Allows to dodge and parry."
 
 /datum/keybinding/living/defendtoggle/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -237,7 +237,7 @@
 	hotkey_keys = list()
 	name = "rest"
 	full_name = "Lay Down"
-	description = "Lay down on the floor."
+	description = "Acuéstate en el suelo."
 	var/lastrest = 0
 
 /datum/keybinding/living/rest/down(client/user, turf/target, mousepos_x, mousepos_y)

@@ -1,10 +1,10 @@
 /datum/reagent/consumable/milk
-	name = "Milk"
+	name = "Leche"
 	description = "An opaque white liquid produced by the mammary glands of mammals."
 	color = "#DFDFDF" // rgb: 223, 223, 223
 	taste_description = "milk"
 	glass_icon_state = "glass_white"
-	glass_name = "glass of milk"
+	glass_name = "vaso de leche"
 	glass_desc = ""
 
 /datum/reagent/consumable/milk/on_mob_life(mob/living/carbon/M, efficiency)
@@ -19,12 +19,12 @@
 
 
 /datum/reagent/consumable/coffee
-	name = "Coffee"
-	description = "Coffee is a brewed drink prepared from roasted seeds, commonly called coffee beans, of the coffee plant."
+	name = "Café"
+	description = "El café es una bebida preparada a partir de semillas tostadas, comúnmente llamadas granos de café, de la planta del café."
 	color = "#482000" // rgb: 72, 32, 0
 	nutriment_factor = 0
 	overdose_threshold = 80
-	taste_description = "bitterness"
+	taste_description = "amargura"
 	glass_icon_state = "glass_brown"
 	glass_name = "glass of coffee"
 	glass_desc = ""
@@ -42,13 +42,13 @@
 	. = 1
 
 /datum/reagent/consumable/ice
-	name = "Ice"
+	name = "Hielo"
 	description = "Frozen water, your dentist wouldn't like you chewing this."
 	reagent_state = SOLID
 	color = "#619494" // rgb: 97, 148, 148
-	taste_description = "ice"
+	taste_description = "hielo"
 	glass_icon_state = "iceglass"
-	glass_name = "glass of ice"
+	glass_name = "vaso de hielo"
 	glass_desc = ""
 
 /datum/reagent/consumable/ice/on_mob_life(mob/living/carbon/M, efficiency)
@@ -56,7 +56,7 @@
 	..()
 
 /datum/reagent/consumable/golden_calendula_tea
-	name = "Golden Calendula Tea"
+	name = "Té de caléndula dorada"
 	description = "A refreshing tea, great to soothe wounds and relieve fatigue."
 	color = "#b38e17"
 
@@ -94,8 +94,8 @@
 	..()
 
 /datum/reagent/consumable/caffeine
-	name = "Caffeine"
-	description = "Why are you seeing this?"
+	name = "Cafeína"
+	description = "¿Por qué estás viendo esto?"
 	hydration_factor = 5
 	overdose_threshold = 60
 
@@ -111,7 +111,7 @@
 		M.heart_attack()
 
 /datum/reagent/consumable/caffeine/coffee
-	name = "Coffee"
+	name = "Café"
 	description = "Coffee beans brewed into a hot drink. With a hint of bitterness. Rejuvenating."
 	reagent_state = LIQUID
 	color = "#482000"
@@ -121,7 +121,7 @@
 	quality = DRINK_GOOD
 
 /datum/reagent/consumable/caffeine/tea
-	name = "Exotic Tea"
+	name = "Té exótico"
 	description = "Tea leaves brewed into a hot drink. Slight hint of bitterness. Smooth."
 	reagent_state = LIQUID
 	color = "#508141" // Deeper green to make it look better

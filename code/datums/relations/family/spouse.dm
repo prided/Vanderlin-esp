@@ -1,5 +1,5 @@
 /datum/relation/family/spouse
-	name = "Spouse"
+	name = "Cónyuge"
 	bond_type = "spouse"
 
 /datum/relation/family/spouse/dissolve()

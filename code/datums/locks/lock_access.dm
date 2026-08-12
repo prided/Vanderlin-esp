@@ -53,18 +53,18 @@
 	user.lock_unlock_animation(src, item)
 	if(!silent && lock_sound)
 		playsound(src, lock_sound, 50)
-		user.visible_message(span_notice("[user] locks \the [src]."), span_notice("I lock \the [src]."), span_notice("I hear a click."))
+		user.visible_message(span_notice("[user] locks \the [src]."), span_notice("Bloqueo \the [src]."), span_notice("Escucho un clic."))
 		return
-	to_chat(user, span_notice("I lock \the [src]."))
+	to_chat(user, span_notice("Bloqueo \the [src]."))
 
 /// Called when unlocked
 /obj/proc/on_unlock(mob/living/user, obj/item, silent = FALSE)
 	user.lock_unlock_animation(src, item)
 	if(!silent && unlock_sound)
 		playsound(src, unlock_sound, 50)
-		user.visible_message(span_notice("[user] unlocks \the [src]."), span_notice("I unlock \the [src]."), span_notice("I hear a click."))
+		user.visible_message(span_notice("[user] desbloquea \the [src]."), span_notice("Desbloqueo \the [src]."), span_notice("Escucho un clic."))
 		return
-	to_chat(user, span_notice("I unlock \the [src]."))
+	to_chat(user, span_notice("Desbloqueo \the [src]."))
 
 /// Somethings might care when a lock is added to them
 /obj/proc/on_lock_add(mob/living/user)

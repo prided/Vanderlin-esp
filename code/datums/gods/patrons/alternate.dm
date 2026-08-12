@@ -6,15 +6,15 @@
 	name = "The Wurm"
 	desc = "A Belief of Pestra contorted. You live for the Wurm and you will die for it."
 	domain = "\"Mineralogy\", Flesh Searing, Chimeric Enhancement"
-	flaws = "Blind Faith, Self-Harm, Cruelty"
-	worshippers = "The Desperate, The Lost, Fanatics"
+	flaws = "Fe ciega, autolesiones, crueldad"
+	worshippers = "Los desesperados, los perdidos, los fanáticos"
 	sins = "Betrayal of Duty, Hesitance, Trusting Outsiders"
 	boons = "Two \"blessed\" chimeric organs"
 
 	confess_lines = list(
-		"THE CYCLE WILL GO ON!",
+		"¡EL CICLO CONTINUARÁ!",
 		"THE WURM WILL GUIDE MY PATH!",
-		"MY SCARS ARE MY PROOF!",
+		"¡MIS CICATRICES SON MI PRUEBA!",
 		"THE POOLS WILL ERODE ALL!",
 	)
 
@@ -22,7 +22,7 @@
 
 /datum/patron/alternate/great_hunt
 	name = "The Great Hunt"
-	display_name = "The Great Hunt (Unproven)"
+	display_name = "La gran caza (no probada)"
 	desc = "In the cold reaches of Ossland, they worship the four aspects of the Great Hunt: \
 	Graggar as The Hunter, revered for the relation between predator and prey; \
 	Necra as The Skull, revered for the death that awaits every living being; \
@@ -30,10 +30,10 @@
 	Abyssor as The Traveler, revered for the safe passage of travelers and the unflinching weather that scours the north."
 	boons = "None. You have not proven worthy, yet."
 	domain = "The Hunt, Travelers, Nature"
-	flaws = "Intense, Morbid"
+	flaws = "Intenso, Morboso"
 	worshippers = "Hunters, the Northmen"
 	sins = "Wasting any of your kills, Smashing skullmets, Exploiting nature"
-	prayer_fail = "I need an amulet of the hunt for my prayers to be heard..."
+	prayer_fail = "Necesito un amuleto de la caza para que mis oraciones sean escuchadas..."
 	confess_lines = list(
 		"I WILL BE REBORN!",
 		"TO HUNT IS TO TAKE YOUR PLACE IN THE CYCLE!",
@@ -63,10 +63,10 @@
 	flaws = "...really?"
 	worshippers = "The Gestalt"
 	sins = "Denying Your Beauty, Resisting the Gestalt"
-	boons = "Beauty of the Umbral Rosa"
+	boons = "Belleza de la Rosa Umbral"
 
 	confess_lines = list(
-		"WE ARE BEAUTIFUL!",
+		"¡SOMOS HERMOSOS!",
 		"LISTEN TO OUR SONG!",
 		"CUT MY FLESH SO I MAY SPROUT!",
 		"OH NOC, SWEET NOC, YOUR GAZE IS THE NECTAR IN WHICH I DRINK!",

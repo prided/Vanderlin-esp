@@ -70,13 +70,13 @@
 
 /obj/item/natural/chaff/wheat
 	icon_state = "wheatchaff"
-	name = "wheat stalks"
+	name = "tallos de trigo"
 	foodextracted = /obj/item/reagent_containers/food/snacks/produce/grain/wheat
 	dropshrink = 0.8
 	item_weight = 180 GRAMS
 
 /obj/item/natural/chaff/oat
-	name = "oat stalks"
+	name = "tallos de avena"
 	icon_state = "oatchaff"
 	foodextracted = /obj/item/reagent_containers/food/snacks/produce/grain/oat
 	item_weight = 200 GRAMS

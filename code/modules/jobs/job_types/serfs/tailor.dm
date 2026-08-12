@@ -23,7 +23,7 @@
 
 /datum/job/tailor
 	title = JOB_TAILOR
-	f_title = "Seamstress"
+	f_title = "Costurera"
 	alt_titles = list("Dressmaker", "Clothier", "Sewist", "Couturier", "Outfitter")
 	tutorial = "Cloth, linen, silk and leather. \
 	You've tirelessly studied and poured your life into \

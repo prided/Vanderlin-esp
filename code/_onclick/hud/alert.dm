@@ -86,7 +86,7 @@
 /atom/movable/screen/alert
 	icon = 'icons/mob/screen_alert.dmi'
 	icon_state = "status"
-	name = "Alert"
+	name = "Alerta"
 	desc = ""
 	mouse_opacity = MOUSE_OPACITY_ICON
 	var/timeout = 0 //If set to a number, this alert will clear itself after that many deciseconds
@@ -139,42 +139,42 @@
 
 //Gas alerts
 /atom/movable/screen/alert/not_enough_oxy
-	name = "Choking"
+	name = "asfixia"
 	desc = ""
 	icon_state = "not_enough_oxy"
 
 /atom/movable/screen/alert/too_much_oxy
-	name = "Choking (O2)"
+	name = "Asfixia (O2)"
 	desc = ""
 	icon_state = "too_much_oxy"
 
 /atom/movable/screen/alert/not_enough_nitro
-	name = "Choking (No N2)"
+	name = "Asfixia (Sin N2)"
 	desc = ""
 	icon_state = "not_enough_nitro"
 
 /atom/movable/screen/alert/too_much_nitro
-	name = "Choking (N2)"
+	name = "Asfixia (N2)"
 	desc = ""
 	icon_state = "too_much_nitro"
 
 /atom/movable/screen/alert/not_enough_co2
-	name = "Choking (No CO2)"
+	name = "Asfixia (Sin CO2)"
 	desc = ""
 	icon_state = "not_enough_co2"
 
 /atom/movable/screen/alert/too_much_co2
-	name = "Choking (CO2)"
+	name = "Asfixia (CO2)"
 	desc = ""
 	icon_state = "too_much_co2"
 
 /atom/movable/screen/alert/not_enough_tox
-	name = "Choking (No Plasma)"
+	name = "Asfixia (sin plasma)"
 	desc = ""
 	icon_state = "not_enough_tox"
 
 /atom/movable/screen/alert/too_much_tox
-	name = "Choking (Plasma)"
+	name = "Asfixia (plasma)"
 	desc = ""
 	icon_state = "too_much_tox"
 //End gas alerts
@@ -186,22 +186,22 @@
 	icon_state = "fat"
 
 /atom/movable/screen/alert/hungry
-	name = "Hungry"
+	name = "Hambriento"
 	desc = ""
 	icon_state = "hungry"
 
 /atom/movable/screen/alert/starving
-	name = "Starving"
+	name = "Hambriento"
 	desc = ""
 	icon_state = "starving"
 
 /atom/movable/screen/alert/gross
-	name = "Grossed out."
+	name = "Asqueado."
 	desc = ""
 	icon_state = "gross"
 
 /atom/movable/screen/alert/verygross
-	name = "Very grossed out."
+	name = "Muy asqueado."
 	desc = ""
 	icon_state = "gross2"
 
@@ -211,7 +211,7 @@
 	icon_state = "gross3"
 
 /atom/movable/screen/alert/status_effect/debuff/hot
-	name = "Too Hot"
+	name = "demasiado caliente"
 	desc = ""
 	icon_state = "debuff"
 
@@ -221,7 +221,7 @@
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/lowpressure
-	name = "Low Pressure"
+	name = "Baja presion"
 	desc = ""
 	icon_state = "lowpressure"
 
@@ -231,13 +231,13 @@
 	icon_state = "highpressure"
 
 /atom/movable/screen/alert/hypnosis
-	name = "Hypnosis"
+	name = "Hipnosis"
 	desc = ""
 	icon_state = "hypnosis"
 	var/phrase
 
 /atom/movable/screen/alert/mind_control
-	name = "Mind Control"
+	name = "Control mental"
 	desc = ""
 	icon_state = "mind_control"
 	var/command
@@ -253,7 +253,7 @@
 	icon_state = "drunk"
 
 /atom/movable/screen/alert/embeddedobject
-	name = "Embedded Objects"
+	name = "Objetos incrustados"
 	desc = ""
 	icon_state = "embeddedobject"
 
@@ -274,17 +274,17 @@
 	icon_state = "weightless"
 
 /atom/movable/screen/alert/highgravity
-	name = "High Gravity"
+	name = "alta gravedad"
 	desc = ""
 	icon_state = "paralysis"
 
 /atom/movable/screen/alert/veryhighgravity
-	name = "Crushing Gravity"
+	name = "Gravedad aplastante"
 	desc = ""
 	icon_state = "paralysis"
 
 /atom/movable/screen/alert/fire
-	name = "On Fire"
+	name = "En llamas"
 	desc = ""
 	icon_state = "fire"
 
@@ -320,7 +320,7 @@
 	G.reenter_corpse()
 
 /atom/movable/screen/alert/notify_action
-	name = "Body created"
+	name = "Cuerpo creado"
 	desc = ""
 	icon_state = "template"
 	timeout = 300

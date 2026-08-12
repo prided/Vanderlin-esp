@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/status/wheel
-	name = "Wheel of Fortune"
+	name = "Rueda de la fortuna"
 	desc = "Roll the dice for something nice..."
 	sound = 'sound/misc/letsgogambling.ogg'
 
@@ -42,6 +42,6 @@
 	return ..()
 
 /atom/movable/screen/alert/status_effect/buff/wheel
-	name = "The Wheel"
+	name = "La rueda"
 	desc = "Xylix has spun your fate. You feel disorientated as if you had been rotated.\n"
 	icon_state = "acid"

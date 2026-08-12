@@ -70,15 +70,15 @@
 
 	if(flier.stat || flier.body_position == LYING_DOWN || isnull(flier.client))
 		if(feedback)
-			flier.balloon_alert(flier, "can't my spread wings!")
+			flier.balloon_alert(flier, "¡No puedo extender mis alas!")
 		return FALSE
 	if(flier.encumbrance >= ENCUMBRANCE_HEAVY)
 		if(feedback)
-			flier.balloon_alert(flier, "too heavy!")
+			flier.balloon_alert(flier, "¡demasiado pesado!")
 		return FALSE
 	if(flier.incapacitated())
 		if(feedback)
-			owner.balloon_alert(owner, "incapacitated!")
+			owner.balloon_alert(owner, "incapacitado!")
 		return FALSE
 
 	return TRUE
@@ -88,7 +88,7 @@
 	if(!HAS_TRAIT_FROM(human, TRAIT_MOVE_FLOATING, SPECIES_FLIGHT_TRAIT))
 		var/attempt_takeoff = can_takeoff && try_takeoff
 		if(attempt_takeoff)
-			to_chat(human, span_info("I will try to fly upwards if possible."))
+			to_chat(human, span_info("Intentaré volar hacia arriba si es posible."))
 		if(do_after(owner, flight_startup, extra_checks = CALLBACK(src, PROC_REF(can_fly))))
 			start_flying(human, attempt_takeoff)
 	else
@@ -115,7 +115,7 @@
 	playsound(human, 'sound/mobs/wingflap.ogg', 75, FALSE)
 	to_chat(human, span_notice("I beat my wings and begin to hover..."))
 	if(flight_time)
-		to_chat(owner, span_userdanger("I can only stay airborne for [flight_time / 10] seconds!"))
+		to_chat(owner, span_userdanger("¡Solo puedo permanecer en el aire durante [flight_time / 10] segundos!"))
 		flight_timer = addtimer(CALLBACK(src, PROC_REF(stop_flying), human, TRUE), flight_time, TIMER_STOPPABLE)
 
 	fly?.build_all_button_icons(update_flags = UPDATE_BUTTON_BACKGROUND)
@@ -193,7 +193,7 @@
 	SIGNAL_HANDLER
 
 	if(!owner.adjust_stamina(FLIGHT_DRAIN_AMOUNT))
-		to_chat(owner, span_warning("You're too exhausted to keep flying!"))
+		to_chat(owner, span_warning("¡Estás demasiado agotado para seguir volando!"))
 		stop_flying(owner, TRUE)
 		return
 
@@ -233,19 +233,19 @@
 	return ZIMPACT_CANCEL_DAMAGE
 
 /obj/item/organ/wings/flight/harpy
-	name = "harpy wings"
+	name = "alas de arpía"
 	accessory_type = /datum/sprite_accessory/wings/large/harpyswept
 	flight_for_species = list(SPEC_ID_HARPY)
 
 /obj/item/organ/wings/flight/kobold
-	name = "kobold wings"
+	name = "alas de kobold"
 	accessory_type = /datum/sprite_accessory/wings/kobold
 	flight_for_species = list(SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
 	can_takeoff = FALSE
 	flight_time = 5 SECONDS
 
 /obj/effect/flyer_shadow
-	name = "humanoid shadow"
+	name = "sombra humanoide"
 	desc = "A shadow cast from something flying above."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "shadow"

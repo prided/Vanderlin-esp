@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(pollution)
-	name = "Pollution"
+	name = "Contaminación"
 	init_order = INIT_ORDER_AIR //Before atoms, because the emitters may need to know the singletons
 	flags = SS_BACKGROUND
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME

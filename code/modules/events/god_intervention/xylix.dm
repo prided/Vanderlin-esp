@@ -1,5 +1,5 @@
 /datum/round_event_control/xylix_fortune
-	name = "Xylix's Fortune"
+	name = "La fortuna de Xylix"
 	track = EVENT_TRACK_INTERVENTION
 	typepath = /datum/round_event/xylix_fortune
 	weight = 8

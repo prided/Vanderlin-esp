@@ -1,28 +1,28 @@
 /datum/mob_descriptor/voice
 	abstract_type = /datum/mob_descriptor/voice
 	slot = MOB_DESCRIPTOR_SLOT_VOICE
-	verbage = "speaks with"
+	verbage = "habla con"
 	prefix = "a"
 	suffix = "voice"
 
 /datum/mob_descriptor/voice/ordinary
-	name = "Ordinary"
+	name = "Común"
 	prefix = "an"
 
 /datum/mob_descriptor/voice/monotone
-	name = "Monotone"
+	name = "Monótono"
 
 /datum/mob_descriptor/voice/deep
-	name = "Deep"
+	name = "Profundo"
 
 /datum/mob_descriptor/voice/soft
-	name = "Soft"
+	name = "Suave"
 
 /datum/mob_descriptor/voice/shrill
 	name = "Shrill"
 
 /datum/mob_descriptor/voice/sleepy
-	name = "Sleepy"
+	name = "Somnoliento"
 
 /datum/mob_descriptor/voice/commanding
 	name = "Commanding"
@@ -41,22 +41,22 @@
 	name = "Nasal"
 
 /datum/mob_descriptor/voice/refined
-	name = "Refined"
+	name = "Refinado"
 
 /datum/mob_descriptor/voice/cheery
 	name = "Cheery"
 
 /datum/mob_descriptor/voice/dispassionate
-	name = "Dispassionate"
+	name = "Desapasionado"
 
 /datum/mob_descriptor/voice/gravelly
 	name = "Gravelly"
 
 /datum/mob_descriptor/voice/whiny
-	name = "Whiny"
+	name = "Quejoso"
 
 /datum/mob_descriptor/voice/melodic
-	name = "Melodic"
+	name = "Melódico"
 
 /datum/mob_descriptor/voice/drawling
 	name = "Drawling"
@@ -86,10 +86,10 @@
 	name = "Snide"
 
 /datum/mob_descriptor/voice/smoker
-	name = "Smoker's"
+	name = "fumador"
 
 /datum/mob_descriptor/voice/venomous
 	name = "Venomous"
 
 /datum/mob_descriptor/voice/stuttering
-	name = "Stuttering"
+	name = "Tartamudeo"

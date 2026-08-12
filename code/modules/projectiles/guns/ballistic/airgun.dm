@@ -71,11 +71,11 @@
 /obj/item/gun/ballistic/airgun/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if((istype(tool, /obj/item/ammo_box) || istype(tool, /obj/item/ammo_casing)))
 		if(!(user.is_holding(src)))
-			to_chat(user, span_warning("I need to hold \the [src] to load it!"))
+			to_chat(user, span_warning("¡Necesito mantener presionado \the [src] para cargarlo!"))
 			return ITEM_INTERACT_BLOCKING
 
 		if(!(loading_chamber))
-			to_chat(user, span_warning("The loading chamber isn't open!"))
+			to_chat(user, span_warning("¡La cámara de carga no está abierta!"))
 			return ITEM_INTERACT_BLOCKING
 
 		if(steam_lever)
@@ -86,7 +86,7 @@
 
 /obj/item/gun/ballistic/airgun/attack_self(mob/living/user, list/modifiers)
 	if(!loading_chamber)
-		to_chat(user, span_warning("The chamber isn't open to unload [src]!"))
+		to_chat(user, span_warning("¡La cámara no está abierta para descargar [src]!"))
 		return
 
 	if(steam_lever)
@@ -101,7 +101,7 @@
 		return
 
 	if(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering) <= 1)//requires average engineering
-		to_chat(user, span_warning("I can't make a sense of all these knobs and levers!"))
+		to_chat(user, span_warning("¡No puedo entender todas estas perillas y palancas!"))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	if(!user.is_holding(src))
@@ -139,13 +139,13 @@
 			if(loading_chamber)
 				to_chat(user, span_info("I begin to close the loading chamber..."))
 				if(do_after(user, use_time SECONDS, src))
-					to_chat(user, span_info("I close the loading chamber."))
+					to_chat(user, span_info("Cierro la cámara de carga."))
 					playsound(src, 'sound/foley/industrial/toggle.ogg', 100, FALSE)
 					loading_chamber = FALSE
 			else
-				to_chat(user, span_info("I begin to open the loading chamber..."))
+				to_chat(user, span_info("Empiezo a abrir la cámara de carga..."))
 				if(do_after(user, use_time SECONDS, src))
-					to_chat(user, span_info("I open the loading chamber."))
+					to_chat(user, span_info("Abro la cámara de carga."))
 					playsound(src, 'sound/foley/industrial/toggle.ogg', 100, FALSE)
 					loading_chamber = TRUE
 
@@ -165,15 +165,15 @@
 
 		if("Steam Lever")
 			if(steam_lever)
-				to_chat(user, span_info("I begin to pull the steam lever down..."))
+				to_chat(user, span_info("Empiezo a bajar la palanca de vapor..."))
 				if(do_after(user, use_time SECONDS, src))
-					to_chat(user, span_info("I pull the steam lever down, disabling the flow of steam."))
+					to_chat(user, span_info("Bajo la palanca de vapor, desactivando el flujo de vapor."))
 					playsound(src, 'sound/foley/lock.ogg', 100, FALSE)
 					steam_lever = FALSE
 			else
 				to_chat(user, span_info("I begin to pull the steam lever up..."))
 				if(do_after(user, use_time SECONDS, src))
-					to_chat(user, span_info("I pull the steam lever up, enabling the flow of steam."))
+					to_chat(user, span_info("Levanto la palanca de vapor, permitiendo el flujo de vapor."))
 					playsound(src, 'sound/foley/lock.ogg', 100, FALSE)
 					steam_lever = TRUE
 

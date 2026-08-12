@@ -69,7 +69,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 
 //This helper applies components to things on the map directly.
 /obj/effect/mapping_helpers/component_injector
-	name = "Component Injector"
+	name = "Inyector de componentes"
 	late = TRUE
 	var/target_type
 	var/target_name
@@ -120,7 +120,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 //This is our map object, which just gets placed anywhere on the map. A .dm file is linked to it to set the templates list.
 //If there's only one template in the list, it will only pick that (useful for editing parts of maps without editing the WHOLE map)
 /obj/effect/landmark/map_load_mark
-	name = "map loader landmark"
+	name = "punto de referencia del cargador de mapas"
 	var/list/templates //List of templates we're trying to pick from (must be a list, even if there's only one entry)
 
 /obj/effect/landmark/map_load_mark/Initialize()
@@ -216,7 +216,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 	payload.lock()
 
 /obj/effect/mapping_helpers/structure
-	name = "structure helper"
+	name = "ayudante de estructura"
 	layer = WALL_OBJ_LAYER
 	plane = GAME_PLANE_UPPER
 	late = TRUE

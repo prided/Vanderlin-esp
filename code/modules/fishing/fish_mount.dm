@@ -65,7 +65,7 @@
 	if(!do_after(user, 3 SECONDS, src) || mounted_fish)
 		return ..()
 	add_fish(item, catcher = user.name)
-	balloon_alert_to_viewers("fish mounted")
+	balloon_alert_to_viewers("pez montado")
 	return ..()
 
 /obj/structure/fish_mount/proc/add_fish(obj/item/reagent_containers/food/snacks/fish/fish, from_persistence = FALSE, catcher)
@@ -143,7 +143,7 @@
 		if(fish_reference.w_class >= WEIGHT_CLASS_BULKY)
 			ash_type = /obj/effect/decal/cleanable/ash/large
 		new ash_type(loc)
-		visible_message("[fish_reference] turns into dust as [fish_reference.p_theyre()] removed from [src].")
+		visible_message("[fish_reference] se convierte en polvo cuando [fish_reference.p_theyre()] se elimina de [src].")
 	else
 		user.put_in_hands(mounted_fish)
 	balloon_alert_to_viewers("fish removed")

@@ -1,5 +1,5 @@
 /obj/item/clothing/shirt/shadowshirt
-	name = "silk shirt"
+	name = "camisa de seda"
 	desc = "A sleeveless shirt woven of glossy material."
 	icon_state = "shadowshirt"
 	item_state = "shadowshirt"
@@ -11,7 +11,7 @@
 	salvage_result = /obj/item/natural/silk
 
 /obj/item/clothing/shirt/apothshirt
-	name = "apothecary shirt"
+	name = "camisa de boticario"
 	desc = "When trudging through late-autumn forests, one needs to keep warm."
 	icon_state = "apothshirt"
 	item_state = "apothshirt"
@@ -45,7 +45,7 @@
 
 /obj/item/clothing/shirt/jester
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "jester's tunick"
+	name = "túnica de bufón"
 	desc = "Just remember that the last laugh is on you."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "jestershirt"
@@ -116,7 +116,7 @@
 	"ORANGE"="#b86f0c",
 	"Royal Majenta"="#962e5c")
 	var/mob/living/carbon/human/L = loc
-	var/choice = tgui_input_list(L, "Choose a color.", "GRENZELHOFTIAN COLORPLEX", colors)
+	var/choice = tgui_input_list(L, "Elige un color.", "GRENZELHOFTIAN COLORPLEX", colors)
 	var/playerchoice = colors[choice]
 	picked = TRUE
 	detail_color = playerchoice
@@ -145,7 +145,7 @@
 
 /obj/item/clothing/shirt/ornate/dress
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "ornate dress"
+	name = "vestido adornado"
 	desc = "A red dress with gold accents, fit for nobility."
 	icon_state = "ornatedress"
 
@@ -169,7 +169,7 @@
 
 /obj/item/clothing/shirt/vampire
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "regal silks"
+	name = "sedas reales"
 	desc = ""
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	prevent_crits = list(BCLASS_BITE, BCLASS_TWIST)
@@ -180,7 +180,7 @@
 
 
 /obj/item/clothing/shirt/fancyjacket
-	name = "fancy jacket"
+	name = "chaqueta elegante"
 	desc = "My, so modern -- so elegant. Which fine hands sewed this?"
 	icon_state = "fancyjacket"
 	icon = 'icons/roguetown/clothing/shirts.dmi'
@@ -232,7 +232,7 @@
 	l_sleeve_status = SLEEVE_NOMOD
 
 /obj/item/clothing/shirt/dress/velvetdress
-	name = "velvet dress"
+	name = "vestido de terciopelo"
 	desc = "A garment made with embroidered velvet, both elegant and warm. Poetry made manifest in swaying fabric."
 	icon_state = "velvetdress"
 	item_state = "velvetdress"

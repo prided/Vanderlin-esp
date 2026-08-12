@@ -27,7 +27,7 @@
 
 // Deep water tile - slows movement and can be used by the boss to heal pretty much used in the arena.
 /obj/effect/deep_water
-	name = "deep water"
+	name = "aguas profundas"
 	desc = "Unnaturally dark water that seems to be deeper than it appears."
 	icon = 'icons/effects/water.dmi'  // Replace with appropriate icon
 	icon_state = "deep"  // Replace with appropriate icon_state
@@ -64,7 +64,7 @@
 /obj/effect/deep_water/Crossed(atom/movable/AM)
 	. = ..()
 	if(isliving(AM) && !("deepone" in AM:faction))
-		to_chat(AM, "<span class='warning'>The water is surprisingly deep and difficult to move through!</span>")
+		to_chat(AM, "<span class='warning'>¡El agua es sorprendentemente profunda y difícil de atravesar!</span>")
 
 /obj/effect/deep_water/Uncrossed(atom/movable/AM)
 	. = ..()

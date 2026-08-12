@@ -32,7 +32,7 @@
 	)
 
 /datum/job/advclass/pilgrim/rare/fishermaster
-	title = "Master Fisher"
+	title = "Maestro pescador"
 	tutorial = "Seafarers who have mastered the tides, and are able to catch any fish with ease \
 	no matter the body of water. They have learned to thrive off the gifts of Abyssor, not simply survive."
 	allowed_sexes = list(MALE, FEMALE)
@@ -40,7 +40,7 @@
 	total_positions = 1
 	roll_chance = 0
 	category_tags = list(CTAG_PILGRIM)
-	apprentice_name = "Fisher Apprentice"
+	apprentice_name = "Aprendiz de pescador"
 	cmode_music = 'sound/music/cmode/towner/CombatTowner.ogg'
 	is_recognized = TRUE
 
@@ -48,7 +48,7 @@
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/pilgrim/fishermaster/old
 
 /datum/outfit/pilgrim/fishermaster
-	name = "Master Fisher (Pilgrim)"
+	name = "Maestro Pescador (Peregrino)"
 	neck = /obj/item/storage/belt/pouch/coins/mid
 	head = /obj/item/clothing/head/fisherhat
 	backr = /obj/item/storage/backpack/satchel

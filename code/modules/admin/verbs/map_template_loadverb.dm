@@ -1,10 +1,10 @@
 /client/proc/map_template_load()
-	set category = "Debug.Mapping Custom"
-	set name = "Map template - Place"
+	set category = "Depuración.Mapeo personalizado"
+	set name = "Plantilla de mapa - Lugar"
 
 	var/datum/map_template/template
 
-	var/map = tgui_input_list(src, "Choose a Map Template to place at your CURRENT LOCATION", "Place Map Template", sortList(SSmapping.map_templates))
+	var/map = tgui_input_list(src, "Elija una plantilla de mapa para colocar en su UBICACIÓN ACTUAL", "Place Map Template", sortList(SSmapping.map_templates))
 	if(!map)
 		return
 	template = SSmapping.map_templates[map]
@@ -13,8 +13,8 @@
 	if(!T)
 		return
 
-	var/centered = alert(src, "Do you want this to be created from the center, or from the bottom left corner of your map?", "Spawn Position", "Center", "Bottom Left") == "Center" ? TRUE : FALSE
-	var/delete = alert(src, "Do you want to delete atoms in your load area?", "Atom Deletion", "Yes", "No") == "Yes" ? TRUE : FALSE
+	var/centered = alert(src, "¿Quieres que esto se cree desde el centro o desde la esquina inferior izquierda de tu mapa?", "Posición de aparición", "Centro", "Abajo a la izquierda") == "Centro" ? TRUE : FALSE
+	var/delete = alert(src, "Do you want to delete atoms in your load area?", "Eliminación de átomos", "Yes", "No") == "Yes" ? TRUE : FALSE
 
 	var/list/preview = list()
 	for(var/S in template.get_affected_turfs(T, centered))
@@ -24,23 +24,23 @@
 	images += preview
 	if(tgui_alert(src,"Confirm location.","Template Confirm", list("Yes","No")) == "Yes")
 		if(template.load(T, centered, delete))
-			message_admins("<span class='adminnotice'>[key_name_admin(src)] has placed a map template ([template.name]) at [ADMIN_COORDJMP(T)]</span>")
+			message_admins("<span class='adminnotice'>[key_name_admin(src)] ha colocado una plantilla de mapa ([template.name]) en [ADMIN_COORDJMP(T)]</span>")
 		else
-			to_chat(src, "Failed to place map")
+			to_chat(src, "No se pudo colocar el mapa")
 	images -= preview
 
 /client/proc/map_template_upload()
-	set category = "Debug.Mapping Custom"
+	set category = "Depuración.Mapeo personalizado"
 	set name = "Map Template - Upload"
 
 	var/map = input(src, "Choose a Map Template to upload to template storage","Upload Map Template") as null|file
 	if(!map)
 		return
 	if(copytext("[map]",-4) != ".dmm")
-		to_chat(src, "<span class='warning'>Filename must end in '.dmm': [map]</span>")
+		to_chat(src, "<span class='warning'>El nombre del archivo debe terminar en '.dmm': [map]</span>")
 		return
 	var/datum/map_template/M
-	switch(tgui_alert(src, "What kind of map is this?", "Map type", list("Normal", "Cancel")))
+	switch(tgui_alert(src, "¿Qué tipo de mapa es este?", "Tipo de mapa", list("Normal", "Cancel")))
 		if("Normal")
 			M = new /datum/map_template(map, "[map]", TRUE)
 		else
@@ -64,5 +64,5 @@
 			return
 
 	SSmapping.map_templates[M.name] = M
-	message_admins("<span class='adminnotice'>[key_name_admin(src)] has uploaded a map template '[map]' ([M.width]x[M.height])[report_link].</span>")
+	message_admins("<span class='adminnotice'>[key_name_admin(src)] ha subido una plantilla de mapa '[map]' ([M.width]x[M.height])[report_link].</span>")
 	to_chat(src, "<span class='notice'>Map template '[map]' ready to place ([M.width]x[M.height])</span>")

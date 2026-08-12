@@ -63,11 +63,11 @@
 
 	//Fire/water stacks
 	if(on_fire)
-		var/fire_text = "[m1] on fire!"
+		var/fire_text = "¡[m1] en llamas!"
 		if(isliving(user))
 			var/mob/living/liver = user
 			if(liver.has_quirk(/datum/quirk/vice/addiction/pyromaniac))
-				fire_text += span_boldred(" IT'S BEAUTIFUL!")
+				fire_text += span_boldred(" ¡ES HERMOSO!")
 				liver.sate_addiction(/datum/quirk/vice/addiction/pyromaniac)
 		msg += fire_text
 	if(fire_stacks + divine_fire_stacks > 0)
@@ -114,10 +114,10 @@
 	if(ccaparison)
 		. += span_notice("This animal is wearing a caparison: ([ccaparison.name]).")
 	if(bbarding)
-		. += span_notice("This animal is wearing a bard: ([bbarding.name]).")
+		. += span_notice("Este animal lleva un bardo: ([bbarding.name]).")
 
 	if(genetics && length(genetics.genes))
-		. += span_notice("Genetic traits: [english_list(genetics.get_gene_names())].")
+		. += span_notice("Rasgos genéticos: [english_list(genetics.get_gene_names())].")
 
 	. += "ᛉ ------------ ᛉ</span>"
 	SEND_SIGNAL(src, COMSIG_ATOM_EXAMINE, user, .)

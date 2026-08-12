@@ -26,7 +26,7 @@
 	required_atoms = list(/obj/item/natural/artifact = 1, /obj/item/natural/leyline = 1)
 
 /datum/runerituals/buff/lesserperception
-	name = "lesser arcane eyes"
+	name = "ojos arcanos menores"
 	buff = /datum/status_effect/buff/magicperception/lesser
 	blacklisted = FALSE
 	required_atoms = list(/obj/item/reagent_containers/food/snacks/produce/manabloom = 1, /obj/item/natural/infernalash = 2)
@@ -65,7 +65,7 @@
 	required_atoms = list(/obj/item/natural/artifact = 2, /obj/item/natural/leyline = 2)
 
 /datum/runerituals/buff/perception
-	name = "arcane eyes"
+	name = "ojos arcanos"
 	buff = /datum/status_effect/buff/magicperception
 	tier = 2
 	blacklisted = FALSE

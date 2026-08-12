@@ -1,5 +1,5 @@
 /datum/objective/personal/ravox_duel
-	name = "Honor Duels"
+	name = "Duelos de honor"
 	category = "Ravox's Chosen"
 	triumph_count = 3
 	immediate_effects = list("Gained an ability to challenge others")
@@ -87,8 +87,8 @@
 		return
 	ongoing = FALSE
 
-	to_chat(loser, span_red("You have lost the duel of honor!"))
-	to_chat(winner, span_green("You have won the duel of honor!"))
+	to_chat(loser, span_red("¡Has perdido el duelo de honor!"))
+	to_chat(winner, span_green("¡Has ganado el duelo de honor!"))
 
 	if(objective)
 		var/datum/objective/personal/ravox_duel/ravox = objective.resolve()

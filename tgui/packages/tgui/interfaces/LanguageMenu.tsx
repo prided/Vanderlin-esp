@@ -147,7 +147,7 @@ const LanguageRow = (props: LanguageProps) => {
               })
             }
           >
-            Grant
+            Conceder
           </Button>
           <Button
             disabled={!language.can_speak && !language.can_understand}
@@ -157,7 +157,7 @@ const LanguageRow = (props: LanguageProps) => {
               })
             }
           >
-            Remove
+            Eliminar
           </Button>
         </Table.Cell>
       )}
@@ -202,7 +202,7 @@ export const LanguageMenu = (props) => {
 
   return (
     <Window
-      title="Language Menu"
+      title="Menú de idioma"
       width={admin_mode ? 700 : 500}
       height={Math.min(
         shown_languages.length * 25 + (admin_mode ? 145 : 100),
@@ -212,19 +212,18 @@ export const LanguageMenu = (props) => {
       <Window.Content>
         <Section
           scrollable
-          title={admin_mode ? <i>- Admin Mode -</i> : null}
+          title={admin_mode ? <i>- Modo Administrador -</i> : null}
           buttons={admin_mode ? <OmnitongueToggle /> : null}
           fill
         >
           <Table>
             <Table.Row header>
-              <Table.Cell>Name</Table.Cell>
-              <Table.Cell>Speak</Table.Cell>
-              <Table.Cell>Understand</Table.Cell>
+              <Table.Cell>Nombre</Table.Cell>
+              <Table.Cell>Hablar</Table.Cell>
+              <Table.Cell>Entender</Table.Cell>
               <Table.Cell>
                 <Tooltip
-                  content="Use this key in your message
-                  to speak in this language."
+                  content="Utilice esta clave en su mensaje para hablar en este idioma."
                 >
                   <Box
                     inline
@@ -232,15 +231,14 @@ export const LanguageMenu = (props) => {
                       borderBottom: '2px dotted rgba(255, 255, 255, 0.8)',
                     }}
                   >
-                    Key
+                    Llave
                   </Box>
                 </Tooltip>
               </Table.Cell>
               {!!is_living && (
                 <Table.Cell>
                   <Tooltip
-                    content="Determines which language you speak
-                    naturally, without using the 'key'."
+                    content="Determina qué idioma hablas de forma natural, sin utilizar la 'tecla'."
                   >
                     <Box
                       inline
@@ -248,7 +246,7 @@ export const LanguageMenu = (props) => {
                         borderBottom: '2px dotted rgba(255, 255, 255, 0.8)',
                       }}
                     >
-                      Default
+                      Por defecto
                     </Box>
                   </Tooltip>
                 </Table.Cell>

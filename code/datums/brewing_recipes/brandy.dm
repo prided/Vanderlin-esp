@@ -1,5 +1,5 @@
 /datum/brewing_recipe/brandy
-	name = "Apple Brandy"
+	name = "brandy de manzana"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/brandy
 	needed_reagents = list(/datum/reagent/consumable/ethanol/cider = 150)
 	pre_reqs = /datum/reagent/consumable/ethanol/cider
@@ -28,7 +28,7 @@
 	reagent_to_brew = /datum/reagent/consumable/ethanol/brandy/tangerine
 
 /datum/brewing_recipe/brandy/plum
-	name = "Plum Brandy"
+	name = "Brandy de ciruela"
 	pre_reqs = /datum/reagent/consumable/ethanol/plum_wine
 	needed_reagents = list(/datum/reagent/consumable/ethanol/plum_wine = 150)
 	reagent_to_brew = /datum/reagent/consumable/ethanol/brandy/plum

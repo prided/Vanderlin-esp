@@ -213,7 +213,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/cow/cowlet
 	name = "calf"
-	desc = "So cute!"
+	desc = "¡Tan lindo!"
 	icon_state = "cowlet"
 	icon_living = "cowlet"
 	icon_dead = "cowlet_dead"

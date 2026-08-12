@@ -55,7 +55,7 @@ export const MESSAGE_TYPES: MessageType[] = [
   {
     type: MESSAGE_TYPE_SYSTEM,
     name: 'System Messages',
-    description: 'Messages from your client, always enabled',
+    description: 'Mensajes de tu cliente, siempre habilitados',
     selector: '.boldannounce',
     important: true,
   },
@@ -63,64 +63,64 @@ export const MESSAGE_TYPES: MessageType[] = [
   {
     type: MESSAGE_TYPE_LOCALCHAT,
     name: 'Local',
-    description: 'In-character local messages (say, emote, etc)',
+    description: 'Mensajes locales en personaje (hablar, realizar acciones, etc.)',
     selector: '.say, .emote',
   },
   {
     type: MESSAGE_TYPE_INFO,
     name: 'Info',
-    description: 'Non-urgent messages from the game and items',
+    description: 'Mensajes no urgentes del juego y de los objetos',
     selector:
       '.notice:not(.pm), .info, .sinister, .cult, .infoplain, .announce, .hear, .smallnotice, .boldnotice',
   },
   {
     type: MESSAGE_TYPE_WARNING,
     name: 'Warnings',
-    description: 'Urgent messages from the game and items',
+    description: 'Mensajes urgentes del juego y de los objetos',
     selector:
       '.warning:not(.pm), .critical, .warning, .italics, .alertsyndie, .warningplain',
   },
   {
     type: MESSAGE_TYPE_DEADCHAT,
     name: 'Deadchat',
-    description: 'All of deadchat',
+    description: 'Todo el chat muerto',
     selector: '.deadsay, .ghostalert',
   },
   {
     type: MESSAGE_TYPE_OOC,
     name: 'OOC',
-    description: 'The bluewall of global OOC messages',
+    description: 'El muro azul de los mensajes OOC globales',
     selector: '.ooc, .adminooc, .adminobserverooc, .oocplain, .looc',
   },
   {
     type: MESSAGE_TYPE_ADMINPM,
     name: 'Admin PMs',
-    description: 'Messages to/from admins (adminhelp)',
+    description: 'Mensajes hacia/desde administradores (adminhelp)',
     selector: '.pm, .adminhelp',
   },
   {
     type: MESSAGE_TYPE_COMBAT,
     name: 'Combat Log',
-    description: 'Urist McTraitor has stabbed you with a knife!',
+    description: '¡Urist McTraitor te ha apuñalado con un cuchillo!',
     selector: '.danger, .userdanger, .crit',
   },
   {
     type: MESSAGE_TYPE_UNKNOWN,
     name: 'Unsorted',
-    description: 'Everything we could not sort, always enabled',
+    description: 'Todo lo que no pudimos ordenar, siempre habilitado.',
   },
   // Admin stuff
   {
     type: MESSAGE_TYPE_ADMINCHAT,
     name: 'Admin Chat',
-    description: 'ASAY messages',
+    description: 'mensajes ASAY',
     selector: '.admin_channel, .adminsay',
     admin: true,
   },
   {
     type: MESSAGE_TYPE_PRAYER,
     name: 'Prayers',
-    description: 'Prayers from players',
+    description: 'Oraciones de los jugadores',
     selector: '.prayer',
     admin: true,
   },
@@ -134,13 +134,13 @@ export const MESSAGE_TYPES: MessageType[] = [
   {
     type: MESSAGE_TYPE_ATTACKLOG,
     name: 'Attack Log',
-    description: 'Urist McTraitor has shot John Doe',
+    description: 'Urist McTraitor ha disparado a John Doe',
     admin: true,
   },
   {
     type: MESSAGE_TYPE_DEBUG,
     name: 'Debug Log',
-    description: 'DEBUG: SSPlanets subsystem Recover().',
+    description: 'DEBUG: Recuperación del subsistema SSPlanets().',
     admin: true,
   },
 ];

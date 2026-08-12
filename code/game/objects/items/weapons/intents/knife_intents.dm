@@ -37,7 +37,7 @@
 /datum/intent/peculate
 	name = "peculate"
 	hitsound = null
-	desc = "Thieve the appearance of another."
+	desc = "Robar la apariencia de otro."
 	icon_state = "peculate"
 
 /datum/intent/dagger/chop

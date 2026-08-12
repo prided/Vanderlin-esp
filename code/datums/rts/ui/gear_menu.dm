@@ -147,7 +147,7 @@
 		add_overlay(MA)
 		name = "[gear_type]: [item.name]"
 	else
-		name = "[gear_type]: Empty"
+		name = "[gear_type]: Vacío"
 
 /atom/movable/screen/gear_slot/Click(location, control, params)
 	. = ..()
@@ -186,10 +186,10 @@
 
 	worker_mind.set_current_task(/datum/work_order/retrieve_gear, linked_node, stored_item, gear_type)
 
-	to_chat(user, "[worker_mind.worker_name] assigned to retrieve [stored_item.name] from [linked_node.name].")
+	to_chat(user, "[worker_mind.worker_name] asignado para recuperar [stored_item.name] de [linked_node.name].")
 
 /atom/movable/screen/gear_slot/proc/display_stored_item_stats(mob/camera/strategy_controller/user)
-	var/stats_text = "<b>[stored_item.name] (Stored)</b><br>"
+	var/stats_text = "<b>[stored_item.name] (almacenado)</b><br>"
 	stats_text += "<b>Location:</b> [linked_node.name]<br>"
 	stats_text += "<b>Storage Type:</b> [gear_type]<br><br>"
 

@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(minor_mapping)
-	name = "Minor Mapping"
+	name = "Mapeo menor"
 	init_order = INIT_ORDER_MINOR_MAPPING
 	flags = SS_NO_FIRE
 

@@ -14,7 +14,7 @@
 	triumph_buy_id = TRIUMPH_BUY_FORMIKRAG_KOBOLD
 
 /datum/triumph_buy/seasonal/subspecies/snow_elf
-	name = "Snow Elf"
+	name = "elfo de nieve"
 	desc = "Able to select a subspecies of Elf."
 	triumph_buy_id = TRIUMPH_BUY_SNOW_ELF
 	triumph_cost = 150

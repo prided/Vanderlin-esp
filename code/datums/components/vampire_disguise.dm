@@ -73,7 +73,7 @@
 		return FALSE
 
 	if(H.bloodpool < min_bloodpool)
-		to_chat(H, span_warning("I don't have enough blood to maintain a disguise."))
+		to_chat(H, span_warning("No tengo suficiente sangre para mantener un disfraz."))
 		return FALSE
 
 	disguised = TRUE
@@ -107,7 +107,7 @@
 		vclan.apply_vampire_look(H)
 
 	if(!disguise_status())
-		H.visible_message(H, span_bloody("[H]'s true nature is revealed!"), span_warning("My true nature is revealed!"), vision_distance = COMBAT_MESSAGE_RANGE)
+		H.visible_message(H, span_bloody("[H]'s true nature is revealed!"), span_warning("¡Mi verdadera naturaleza se revela!"), vision_distance = COMBAT_MESSAGE_RANGE)
 		H.vampire_detected(length(H.CheckEyewitness(H))-1) // -1 so it needs 2 people to qualify for detection
 	return TRUE
 
@@ -116,7 +116,7 @@
 		return FALSE
 
 	remove_disguise(H)
-	to_chat(H, span_danger("My disguise is forcibly broken!"))
+	to_chat(H, span_danger("¡Mi disfraz se rompe a la fuerza!"))
 	return TRUE
 
 /datum/component/vampire_disguise/proc/disguise_status()
@@ -128,8 +128,8 @@
 	if(user == vampire)
 		return
 	if(!user.affects_masquerade(FALSE))
-		LAZYADDASSOCLIST(examine_list, EXAMINE_SECT_FACE, span_warningbig("[P[THEYRE]] in [P[THEIR]] true form."))
+		LAZYADDASSOCLIST(examine_list, EXAMINE_SECT_FACE, span_warningbig("[P[THEYRE]] en forma verdadera [P[THEIR]]."))
 		return
 	user.add_stress(/datum/stress_event/vampire_seen)
-	LAZYADDASSOCLIST(examine_list, EXAMINE_SECT_FACE, span_boldannounce("MONSTER!"))
+	LAZYADDASSOCLIST(examine_list, EXAMINE_SECT_FACE, span_boldannounce("¡MONSTRUO!"))
 	vampire.vampire_detected(length(vampire.CheckEyewitness(user)))

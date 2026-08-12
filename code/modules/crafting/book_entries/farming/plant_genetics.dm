@@ -1,6 +1,6 @@
 /datum/book_entry/plant_genetics
 	name = "Plant Breeding and Genetics"
-	category = "Agriculture"
+	category = "Agricultura"
 
 /datum/book_entry/plant_genetics/inner_book_html(mob/user)
 	return {"

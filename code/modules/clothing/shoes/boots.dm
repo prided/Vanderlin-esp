@@ -13,7 +13,7 @@
 	abstract_type = /obj/item/clothing/shoes/boots
 
 /obj/item/clothing/shoes/boots/darkboots
-	name = "dark boots"
+	name = "botas oscuras"
 	//dropshrink = 0.75
 	color = "#d5c2aa"
 	desc = "Boots made out of darker materials. Offers light protection against melee attacks."
@@ -61,11 +61,11 @@
 	sellprice = 200
 
 /obj/item/clothing/shoes/boots/armor/gold/king
-	name = "royal golden greaves"
+	name = "grebas doradas reales"
 	sellprice = 300
 
 /obj/item/clothing/shoes/boots/armor/bronze
-	name = "bronze greaves"
+	name = "grebas de bronce"
 	desc = "Padded sabatons of bronze, tightly strapped together and padded with hide from a fearsome beaste. The sandals clack about, yet they do not feel obstructive; if anything, you've never felt more agile while beplated."
 	icon_state = "bronzegreaves"
 	body_parts_covered = FEET | LEGS
@@ -75,7 +75,7 @@
 	name = "light plate boots"
 	icon_state = "soldierboots"
 	item_state = "soldierboots"
-	desc = "Lightly armored boots made from iron offering protection against both melee and ranged attacks."
+	desc = "Botas ligeramente blindadas hechas de hierro que ofrecen protección contra ataques cuerpo a cuerpo y a distancia."
 	armor_type = /datum/armor/boots/brigandine
 	max_integrity = INTEGRITY_STRONG + 50
 	armor_class = AC_MEDIUM
@@ -124,7 +124,7 @@
 	sellprice = VALUE_SILVER_ITEM * 2
 
 /obj/item/clothing/shoes/boots/leather
-	name = "leather boots"
+	name = "botas de cuero"
 	//dropshrink = 0.75
 	desc = "Boots made out of sturdy leather. Providing light protection against melee attacks."
 	prevent_crits = list(BCLASS_LASHING, BCLASS_BITE, BCLASS_TWIST)
@@ -144,7 +144,7 @@
 //KEEP THIS IN MIND
 
 /obj/item/clothing/shoes/boots/hunter
-	name = "hunting boots"
+	name = "botas de caza"
 	desc = "These boots arent for those sitting on cushioned chairs, or prissy nobles. No, these are for the true explorer, the wilds tamer, the truth seeker. And like any good explorer, this pair of boots comes with a hidden suprise, for those trying to hide a small blade."
 	icon_state = "hunterboots"
 	item_state = "hunterboots"
@@ -177,7 +177,7 @@
 	filters += filter(type="drop_shadow", x=0, y=0, size=0.5, offset=1, color=rgb(218, 165, 32))
 
 /obj/item/clothing/shoes/boots/leather/advanced
-	name = "hardened leather boots"
+	name = "botas de cuero endurecido"
 	desc = "Sturdy, durable, flexible. A marvel of the dark ages that exists solely to protect your toes."
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
@@ -197,7 +197,7 @@
 	AddComponent(/datum/component/squeak, custom_sounds = list(SFX_WATCH_BOOT_STEP))
 
 /obj/item/clothing/shoes/boots/leather/masterwork
-	name = "masterwork leather boots"
+	name = "botas de cuero de obra maestra"
 	desc = "These boots are a craftsmanship marvel. Made with the finest leather. Strong, nimble, reliable."
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
@@ -270,7 +270,7 @@
 	item_weight = 125 GRAMS
 
 /obj/item/clothing/shoes/boots/armor/silver
-	name = "silver boots"
+	name = "botas plateadas"
 	desc = "Finely forged boots made out of silver."
 	icon_state = "silverboots"
 	armor_type = /datum/armor/boots/plate/silver
@@ -285,7 +285,7 @@
 //............... Evil Boots ............... //
 
 /obj/item/clothing/shoes/boots/armor/zizo
-	name = "darksteel boots"
+	name = "botas de acero oscuro"
 	desc = "Plate boots. Called forth from the edge of what should be known. In Her name."
 	icon_state = "zizoboots"
 	item_state = "zizoboots"
@@ -299,7 +299,7 @@
 	AddComponent(/datum/component/squeak, custom_sounds = list(SFX_EVIL_BOOT_STEP))
 
 /obj/item/clothing/shoes/boots/armor/matthios
-	name = "gilded boots"
+	name = "botas doradas"
 	desc = "Plate boots. A door kicked in, treasures to behold inside."
 	icon_state = "matthiosboots"
 	item_state = "matthiosboots"
@@ -314,7 +314,7 @@
 
 // variant with no armor, just drip.
 /obj/item/clothing/shoes/boots/armor/matthios/lord
-	name = "lordly boots"
+	name = "botas señoriales"
 	desc = "Boots terribly befitting of that of a tyrannical lord. Has a fake metal veneer to strike fear into the hearts of peasants."
 	armor_type = /datum/armor/none
 
@@ -356,7 +356,7 @@
 
 /obj/item/clothing/shoes/boots/leather/blackmeadow/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	detail_color = GLOB.noble_dyes[choice]

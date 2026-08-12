@@ -1,7 +1,7 @@
 GLOBAL_VAR_INIT(vamp_detection, FALSE)
 
 /datum/round_event_control/antagonist/solo/from_ghosts/daewalker
-	name = "The Daewalker"
+	name = "El Daewalker"
 	tags = list(
 		TAG_ASTRATA,
 		TAG_BLOOD,

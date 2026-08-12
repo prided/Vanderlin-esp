@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/retaliate/elemental/collossus
 	icon = 'icons/mob/summonable/64x64.dmi'
-	name = "earthen colossus"
+	name = "coloso de tierra"
 	icon_state = "collossus"
 	icon_living = "collossus"
 	icon_dead = "vvd"

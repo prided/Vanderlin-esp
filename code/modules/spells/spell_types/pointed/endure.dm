@@ -1,6 +1,6 @@
 
 /obj/effect/temp_visual/psyheal_rogue //color is white by default, set to whatever is needed
-	name = "enduring glow"
+	name = "brillo duradero"
 	icon = 'icons/effects/miracle-healing.dmi'
 	icon_state = "heal_psycross"
 	duration = 15
@@ -79,7 +79,7 @@
 		if (situational_bonus > 0)
 			conditional_buff = TRUE
 
-		target.visible_message(span_info("A strange stirring feeling pours from [target]!"), span_info("Sentimental thoughts drive away my pain..."))
+		target.visible_message(span_info("A strange stirring feeling pours from [target]!"), span_info("Los pensamientos sentimentales alejan mi dolor..."))
 		var/psyhealing = 3
 		psyhealing += psicross_bonus
 		if (conditional_buff & !zcross_trigger)
@@ -98,8 +98,8 @@
 	return FALSE
 
 /atom/movable/screen/alert/status_effect/buff/psyhealing
-	name = "Enduring"
-	desc = "I am awash with sentimentality."
+	name = "Duradero"
+	desc = "Estoy inundado de sentimentalismo."
 	icon_state = "buff"
 
 #define PSYDON_HEALING_FILTER "psydon_heal_glow"
@@ -144,7 +144,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/psyvived
 	name = "Absolved"
-	desc = "I feel a strange sense of peace."
+	desc = "Siento una extraña sensación de paz."
 	icon_state = "buff"
 
 #define PSYDON_REVIVED_FILTER "psydon_revival_glow"

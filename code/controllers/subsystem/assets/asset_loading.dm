@@ -3,7 +3,7 @@
 /// Anything inserted here will fully load if directly gotten
 /// So this just serves to remove the requirement to load assets fully during init
 SUBSYSTEM_DEF(asset_loading)
-	name = "Asset Loading"
+	name = "Carga de activos"
 	priority = FIRE_PRIORITY_ASSETS
 	flags = SS_NO_INIT
 	runlevels = RUNLEVEL_LOBBY|RUNLEVELS_DEFAULT

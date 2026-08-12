@@ -1,6 +1,6 @@
 /datum/chimeric_node/output/burn
 	name = "ignition"
-	desc = "When activated ignites you."
+	desc = "Cuando se activa te enciende."
 
 /datum/chimeric_node/output/burn/trigger_effect(multiplier)
 	. = ..()

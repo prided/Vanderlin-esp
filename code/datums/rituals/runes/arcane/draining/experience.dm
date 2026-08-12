@@ -19,7 +19,7 @@
 /datum/status_effect/mana_siphon_buff/experience/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_ARCANE_KNOWLEDGE, "[type]")
-	to_chat(owner, span_cultsmall("The frenetic energy leaves you."))
+	to_chat(owner, span_cultsmall("La energía frenética te abandona."))
 
 /atom/movable/screen/alert/status_effect/mana_siphon_buff/experience
 	name = "Arcyne Improvement"

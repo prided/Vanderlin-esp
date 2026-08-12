@@ -1,6 +1,6 @@
 /obj/item/clothing/pants/skirt
 	name = "skirt"
-	desc = "Long, flowing, and modest."
+	desc = "Largo, fluido y modesto."
 	icon_state = "skirt"
 	item_state = "skirt"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'

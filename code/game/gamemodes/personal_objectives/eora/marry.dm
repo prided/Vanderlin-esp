@@ -1,5 +1,5 @@
 /datum/objective/personal/marry
-	name = "Find Love"
+	name = "encontrar el amor"
 	category = "Eora's Lovebird"
 	triumph_count = 2
 	immediate_effects = list("You will feel stressed until you marry someone or enough time has passed (+2 Stress)", "Gained an ability to find marital status of others")
@@ -37,7 +37,7 @@
 /datum/objective/personal/marry/complete_objective(escalatation_type = ESCALATION_INTERVENTION_ONLY)
 	. = ..()
 	owner.current.remove_stress(/datum/stress_event/eora_matchmaking)
-	to_chat(owner.current, span_greentext("You have married and therefore completed Eora's wish!"))
+	to_chat(owner.current, span_greentext("¡Te has casado y por lo tanto has cumplido el deseo de Eora!"))
 	adjust_storyteller_influence(EORA, 10)
 	UnregisterSignal(SSdcs, COMSIG_GLOBAL_MARRIAGE)
 

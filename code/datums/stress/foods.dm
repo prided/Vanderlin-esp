@@ -20,7 +20,7 @@
 
 /datum/stress_event/favourite_food
 	stress_change = -1
-	desc = span_green("I ate my favourite food!")
+	desc = span_green("¡Comí mi comida favorita!")
 	timer = 5 MINUTES
 
 /datum/stress_event/favourite_food/can_apply(mob/living/user)
@@ -44,7 +44,7 @@
 
 /datum/stress_event/favourite_drink
 	stress_change = -1
-	desc = span_green("I had my favourite drink!")
+	desc = span_green("¡Tomé mi bebida favorita!")
 	timer = 5 MINUTES
 
 /datum/stress_event/favourite_drink/can_apply(mob/living/user)
@@ -68,7 +68,7 @@
 
 /datum/stress_event/hated_food
 	stress_change = 1
-	desc = span_red("I had to eat my most hated food!")
+	desc = span_red("¡Tuve que comer mi comida más odiada!")
 	timer = 10 MINUTES
 
 /datum/stress_event/hated_food/can_apply(mob/living/user)
@@ -80,7 +80,7 @@
 
 /datum/stress_event/hated_drink
 	stress_change = 1
-	desc = span_red("I had to consume my most hated drink!")
+	desc = span_red("¡Tuve que consumir mi bebida más odiada!")
 	timer = 10 MINUTES
 
 /datum/stress_event/hated_drink/can_apply(mob/living/user)

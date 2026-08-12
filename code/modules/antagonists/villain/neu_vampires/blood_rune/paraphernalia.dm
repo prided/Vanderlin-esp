@@ -1,7 +1,7 @@
 
 /datum/rune_spell/paraphernalia
 	name = "Paraphernalia"
-	desc = "Produce various apparatus such as talismans."
+	desc = "Produce varios aparatos como talismanes."
 	desc_talisman = "LIKE, HOW, NO SERIOUSLY CALL AN ADMIN."
 	invocation = "H'drak v'loso, mir'kanas verbot!"
 	word1 = /datum/rune_word/hell
@@ -39,7 +39,7 @@
 				return
 
 			var/datum/rune_spell/spell = AT.spell_type
-			var/chosen_tome = input(user, "Choose a tome where to transfer this [initial(spell.name)] talisman.", "Transfer talisman", null) as null|anything in valid_tomes
+			var/chosen_tome = input(user, "Choose a tome where to transfer this [initial(spell.name)] talisman.", "Transferir talismán", null) as null|anything in valid_tomes
 			if (!chosen_tome)
 				qdel(src)
 				return
@@ -48,7 +48,7 @@
 			tool = AT
 
 			if (target.talismans.len >= MAX_TALISMAN_PER_TOME)
-				to_chat(activator, span_warning("This tome cannot contain any more talismans.") )
+				to_chat(activator, span_warning("Este tomo no puede contener más talismanes.") )
 				abort(RITUALABORT_FULL)
 				return
 
@@ -87,7 +87,7 @@
 					spawned_object = new /obj/item/talisman(T)
 				if ("Arcane Tome")
 					spawned_object = new /obj/item/tome(T)
-			spell_holder.visible_message(span_rose("The blood drops merge into the rune, and \a [spawned_object] materializes on top.") )
+			spell_holder.visible_message(span_rose("Las gotas de sangre se fusionan en la runa y \a [spawned_object] se materializa en la parte superior.") )
 			anim(target = spawned_object, a_icon = 'icons/effects/vampire.dmi', flick_anim = "rune_imbue")
 			new /obj/effect/afterimage/black(T, spawned_object)
 			qdel(src)
@@ -171,5 +171,5 @@
 			var/mob/M = target.loc
 			M << browse(target.tome_text(), "window = arcanetome;size = 537x375")
 	else
-		to_chat(activator, span_warning("This tome cannot contain any more talismans.") )
+		to_chat(activator, span_warning("Este tomo no puede contener más talismanes.") )
 	qdel(src)

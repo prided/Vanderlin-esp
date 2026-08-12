@@ -59,7 +59,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 			return
 		var/time_taken = I.embedding.embedded_unsafe_removal_time*I.w_class
 		if(usr == src)
-			usr.visible_message(span_warning("[usr] attempts to remove [I] from [usr.p_their()] [L.name]."),span_warning("I attempt to remove [I] from my [L.name]..."))
+			usr.visible_message(span_warning("[usr] intenta eliminar [I] de [usr.p_their()] [L.name]."),span_warning("I attempt to remove [I] from my [L.name]..."))
 		else
 			usr.visible_message(span_warning("[usr] attempts to remove [I] from [src]'s [L.name]."),span_warning("I attempt to remove [I] from [src]'s [L.name]..."))
 		if(do_after(usr, time_taken, src))
@@ -73,7 +73,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 			playsound(src, 'sound/foley/flesh_rem.ogg', 100, TRUE, -2)
 			var/subject = QDELETED(I) ? "something" : I
 			if(usr == src)
-				usr.visible_message(span_notice("[usr] rips [subject] out of [usr.p_their()] [L.name]!"), span_notice("I successfully remove [subject] from my [L.name]."))
+				usr.visible_message(span_notice("¡[usr] arranca [subject] de [usr.p_their()] [L.name]!"), span_notice("I successfully remove [subject] from my [L.name]."))
 			else
 				usr.visible_message(span_notice("[usr] rips [subject] out of [src]'s [L.name]!"), span_notice("I successfully remove [subject] from [src]'s [L.name]."))
 
@@ -99,7 +99,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 	if(href_list["item"]) //canUseTopic check for this is handled by mob/Topic()
 		var/slot = text2num(href_list["item"])
 		if(slot & check_obscured_slots(TRUE))
-			to_chat(usr, span_warning("I can't reach that! Something is covering it."))
+			to_chat(usr, span_warning("¡No puedo alcanzar eso! Algo lo está cubriendo."))
 			return
 
 	if(href_list["remove_briar"])
@@ -111,7 +111,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 
 	if(href_list["undiesthing"]) //canUseTopic check for this is handled by mob/Topic()
 		if(!get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
-			to_chat(usr, span_warning("I can't reach that! Something is covering it."))
+			to_chat(usr, span_warning("¡No puedo alcanzar eso! Algo lo está cubriendo."))
 			return
 		if(underwear == "Nude")
 			return
@@ -145,7 +145,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 	var/list/message = list()
 	if(stat >= DEAD)
 		if(HAS_TRAIT(user, TRAIT_SUICIDED))
-			message += span_suicide("[p_they(TRUE)] commited suicide... Nothing can be done...")
+			message += span_suicide("[p_they(TRUE)] se suicidó... No se puede hacer nada...")
 		if(isobserver(user) || HAS_TRAIT(user, TRAIT_SOUL_EXAMINE))
 			if(!key && !get_ghost(TRUE))
 				message += span_suicide("[p_their(TRUE)] soul has departed for the Underworld.")

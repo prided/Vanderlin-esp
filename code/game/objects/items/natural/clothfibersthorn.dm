@@ -1,5 +1,5 @@
 /obj/item/natural/fibers
-	name = "fiber"
+	name = "fibra"
 	desc = "Plant fiber. The peasants make their living sewing these into fabrics and clothing."
 	icon_state = "fibers"
 	possible_item_intents = list(/datum/intent/use)
@@ -25,7 +25,7 @@
 	item_weight = 1 GRAMS
 
 /obj/item/natural/fibers/sinew
-	name = "sinew fiber"
+	name = "fibra de tendón"
 	desc = "Sinew fiber. Made from butchered animals sinew, commonly used by hunters for leatherworking and bowcrafting."
 	icon_state = "fibers"
 	possible_item_intents = list(/datum/intent/use)
@@ -42,7 +42,7 @@
 	bundletype = /obj/item/natural/bundle/fibers/sinew
 
 /obj/item/natural/silk
-	name = "silk"
+	name = "seda"
 	icon_state = "fibers"
 	possible_item_intents = list(/datum/intent/use)
 	desc = "Silken strands. Their usage in clothing is exotic in all places save the Underdark."
@@ -63,7 +63,7 @@
 
 /client/verb/bloodnda()
 	set category = "DEBUGTEST"
-	set name = "bloodnda"
+	set name = "sangre"
 	set desc = ""
 
 	var/obj/item/I
@@ -157,7 +157,7 @@
 	icon2step = 6
 
 /obj/item/natural/bundle/silk
-	name = "silken weave"
+	name = "tejido de seda"
 	icon_state = "fibersroll1"
 	possible_item_intents = list(/datum/intent/use)
 	desc = "Silk neatly woven together."
@@ -214,7 +214,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
 	stacktype = /obj/item/grown/log/tree/stick
-	stackname = "sticks"
+	stackname = "palos"
 	icon1 = "stickbundle1"
 	icon1step = 4
 	icon2 = "stickbundle2"
@@ -223,7 +223,7 @@
 
 /obj/item/natural/bowstring
 	name = "bowstring"
-	desc = "A simple cord of bowstring."
+	desc = "Una simple cuerda de arco."
 	icon_state = "fibers"
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
@@ -238,7 +238,7 @@
 	spitoutmouth = FALSE
 
 /obj/item/natural/bundle/worms
-	name = "worms"
+	name = "gusanos"
 	desc = "Multiple wriggly worms."
 	icon_state = "worm2"
 	color = "#964B00"
@@ -249,10 +249,10 @@
 	icon2step = 5
 	icon3 = "worm4"
 	stacktype = /obj/item/natural/worms
-	stackname = "worms"
+	stackname = "gusanos"
 
 /obj/item/natural/bundle/bone
-	name = "stack of bones"
+	name = "pila de huesos"
 	icon_state = "bonestack1"
 	possible_item_intents = list(/datum/intent/use)
 	desc = "Bones stacked upon one another."

@@ -490,7 +490,7 @@
 				to_chat(owner, span_warning("You cannot contribute after the round has ended!"))
 				return
 			if(tb.activated)
-				to_chat(owner, span_warning("The item is already active!"))
+				to_chat(owner, span_warning("¡El artículo ya está activo!"))
 				return
 			if(istype(tb, /datum/triumph_buy/communal/preround) && SSticker.HasRoundStarted())
 				to_chat(owner, span_warning("This can only be contributed to before the round starts!"))
@@ -574,7 +574,7 @@
 
 	var/datum/ticket/triumph/t = new
 	t.ticket_id = generate_ticket_id()
-	t.name = "[amount] Triumph Ticket"
+	t.name = "[amount] Boleto de triunfo"
 	t.description = "Redeemable for [amount] triumphs."
 	t.triumph_amount = amount
 	t.granted_by = "Triumph Shop"
@@ -606,7 +606,7 @@
 		return FALSE
 	if(!item.is_unlocked_for(owner))
 		if(item.required_award)
-			to_chat(owner.mob, span_warning("You haven't unlocked the achievement required for [item.name]."))
+			to_chat(owner.mob, span_warning("No has desbloqueado el logro requerido para [item.name]."))
 		else if(item.loadout_flags & LOADOUT_FLAG_PATREON_LOCKED)
 			to_chat(owner.mob, span_warning("[item.name] requires an active Patreon subscription."))
 		return FALSE
@@ -642,7 +642,7 @@
 	if(path_str in owner.prefs.single_round_loadout)
 		return FALSE
 	if(!item.is_unlocked_for(owner))
-		to_chat(owner.mob, span_warning("You don't meet the requirements for [item.name]."))
+		to_chat(owner.mob, span_warning("No cumples con los requisitos para [item.name]."))
 		return FALSE
 	var/used = length(owner.prefs.equipped_loadout) + length(owner.prefs.single_round_loadout)
 	if(used >= 3)
@@ -729,7 +729,7 @@
 	var/mob/living/carbon/human/preview = owner.mob
 	if(istype(preview, /mob/living/carbon/human))
 		if(!charactet_eligible_for_trait(preview, owner, trait_type))
-			to_chat(owner.mob, span_warning("Your character does not meet the requirements for that trait."))
+			to_chat(owner.mob, span_warning("Tu personaje no cumple con los requisitos para ese rasgo."))
 			return FALSE
 	//never trust client-sent cost I don't want some fuck ass -1000000 cost
 	var/total_weight = 0

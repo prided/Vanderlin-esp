@@ -127,16 +127,16 @@ const QuestDetail = (props: {
               <Button
                 icon="arrow-up"
                 color="average"
-                tooltip="Add to reward from the quest fund"
+                tooltip="Agregar a la recompensa del fondo de misiones"
                 onClick={() => onBoost(quest.ref)}
               >
-                Boost
+                Aumentar
               </Button>
             </Stack.Item>
           )}
           <Stack.Item>
             <Button icon="arrow-left" onClick={onBack}>
-              Back
+              Atrás
             </Button>
           </Stack.Item>
         </Stack>
@@ -151,38 +151,38 @@ const QuestDetail = (props: {
         </Stack.Item>
 
         <Stack.Item>
-          <Box bold>Objective</Box>
+          <Box bold>Objetivo</Box>
           <Box>{quest.objective}</Box>
         </Stack.Item>
 
         {!!quest.location && (
           <Stack.Item>
-            <Box bold>Location</Box>
+            <Box bold>Ubicación</Box>
             <Box>{quest.location}</Box>
           </Stack.Item>
         )}
 
         {quest.region !== null && quest.region !== '' && (
           <Stack.Item>
-            <Box bold>Region</Box>
+            <Box bold>Región</Box>
             <Box>{quest.region}</Box>
           </Stack.Item>
         )}
 
         {quest.giver !== null && quest.giver !== '' && (
           <Stack.Item>
-            <Box bold>Issued by</Box>
+            <Box bold>Expedido por</Box>
             <Box>{quest.giver}</Box>
           </Stack.Item>
         )}
 
         <Stack.Item>
-          <Box bold>Reward</Box>
+          <Box bold>Recompensa</Box>
           <Box color="good">
             {quest.reward} mammons
             {quest.reward_boosted > 0 && (
               <Box as="span" color="average" fontSize="0.85em" ml={1}>
-                (+{quest.reward_boosted} mammons boosted)
+                (+{quest.reward_boosted} Mammons adicionales)
               </Box>
             )}
           </Box>
@@ -195,7 +195,7 @@ const QuestDetail = (props: {
             icon="scroll"
             onClick={() => onClaim(quest.ref)}
           >
-            Accept this Quest
+            Acepta esta misión
           </Button>
         </Stack.Item>
       </Stack>
@@ -213,7 +213,7 @@ const QuestPoolTab = (props: {
   if (!quests.length) {
     return (
       <Box color="label" italic mt={1}>
-        No {difficulty} quests are posted right now. Check back later.
+        No {difficulty} Las misiones están publicadas ahora mismo. Vuelve a consultar más tarde.
       </Box>
     );
   }
@@ -263,7 +263,7 @@ const ThreatPanel = (props: { threats: ThreatRegion[] }) => {
   if (!threats.length) {
     return (
       <Box color="label" italic>
-        No threat regions are registered.
+        No se registran regiones de amenaza.
       </Box>
     );
   }
@@ -277,7 +277,7 @@ const ThreatPanel = (props: { threats: ThreatRegion[] }) => {
                 {t.name}
                 {t.fixed === 1 && (
                   <Box as="span" color="label" fontSize="0.8em" ml={1}>
-                    (fixed)
+                    (fijado)
                   </Box>
                 )}
               </Box>
@@ -290,7 +290,7 @@ const ThreatPanel = (props: { threats: ThreatRegion[] }) => {
                 </Box>
                 {t.invasion === 1 && (
                   <Box as="span" color="bad" bold ml={1}>
-                    ⚠ INVASION RISK
+                    ⚠ RIESGO DE INVASIÓN
                   </Box>
                 )}
               </Box>
@@ -300,7 +300,7 @@ const ThreatPanel = (props: { threats: ThreatRegion[] }) => {
       ))}
       <Stack.Item>
         <Box italic color="label" mt={1}>
-          Funding more quests in high-threat areas reduces danger faster.
+          Financiar más misiones en áreas de alta amenaza reduce el peligro más rápidamente.
         </Box>
       </Stack.Item>
     </Stack>
@@ -318,7 +318,7 @@ const ActiveQuestsPanel = (props: {
   if (!quests.length) {
     return (
       <Box color="label" italic>
-        No quests currently in progress.
+        No hay misiones actualmente en progreso.
       </Box>
     );
   }
@@ -345,20 +345,20 @@ const ActiveQuestsPanel = (props: {
                     <Button
                       icon="arrow-up"
                       color="average"
-                      tooltip="Add to reward from the quest fund"
+                      tooltip="Agregar a la recompensa del fondo de misiones"
                       onClick={() => onBoost(q.ref)}
                     >
-                      Boost
+                      Aumentar
                     </Button>
                   </Stack.Item>
                 <Stack.Item>
                   <Button
                     icon="undo"
                     color="bad"
-                    tooltip="Recall this scroll — quest returns to the board"
+                    tooltip="Recuerda este pergamino: la misión vuelve al tablero"
                     onClick={() => onRevoke(q.ref)}
                   >
-                    Recall
+                    Recordar
                   </Button>
                 </Stack.Item>
               </Stack>
@@ -367,38 +367,38 @@ const ActiveQuestsPanel = (props: {
             <Stack vertical>
               <Stack.Item>
                 <Box>
-                  <Box as="span" color="label">Held by: </Box>
+                  <Box as="span" color="label">En manos de: </Box>
                   {q.receiver}
                 </Box>
               </Stack.Item>
               {!!q.region && (
                 <Stack.Item>
                   <Box>
-                    <Box as="span" color="label">Region: </Box>
+                    <Box as="span" color="label">Región: </Box>
                     {q.region}
                   </Box>
                 </Stack.Item>
               )}
               <Stack.Item>
                 <Box>
-                  <Box as="span" color="label">Progress: </Box>
+                  <Box as="span" color="label">Progreso: </Box>
                   {q.progress} / {q.progress_max}
                 </Box>
               </Stack.Item>
               <Stack.Item>
                 <Box>
-                  <Box as="span" color="label">Reward: </Box>
+                  <Box as="span" color="label">Recompensa: </Box>
                   <Box as="span" color="good" bold>{q.reward} mammons</Box>
                   {q.reward_boosted > 0 && (
                     <Box as="span" color="average" fontSize="0.85em" ml={1}>
-                      (+{q.reward_boosted} mammons boosted)
+                      (+{q.reward_boosted} Mammons adicionales)
                     </Box>
                   )}
                 </Box>
               </Stack.Item>
               <Stack.Item>
                 <Box>
-                  <Box as="span" color="label">Time held: </Box>
+                  <Box as="span" color="label">Tiempo retenido: </Box>
                   {formatElapsed(q.accepted_time, worldTime)}
                 </Box>
               </Stack.Item>
@@ -418,7 +418,7 @@ const ValidatePanel = (props: {
   if (!customQuests.length) {
     return (
       <Box color="label" italic>
-        You have no active custom quests awaiting validation.
+        No tienes misiones personalizadas activas en espera de validación.
       </Box>
     );
   }
@@ -443,7 +443,7 @@ const ValidatePanel = (props: {
                 color="good"
                 onClick={() => onValidate(cq.ref)}
               >
-                Validate
+                Validar
               </Button>
             </Stack.Item>
           </Stack>
@@ -483,7 +483,7 @@ export const NoticeBoard = () => {
   };
 
   return (
-    <Window width={560} height={isQuestGiver ? 660 : 520} title="Guild Notice Board">
+    <Window width={560} height={isQuestGiver ? 660 : 520} title="Tablón de anuncios del gremio">
       <Window.Content scrollable>
 
         <Section>
@@ -493,26 +493,26 @@ export const NoticeBoard = () => {
             </Stack.Item>
             <Stack.Item grow>
               <Box fontSize="1.2em" bold>
-                Guild Notice Board
+                Tablón de anuncios del gremio
               </Box>
               <Box color="label">
-                Quest Fund:{' '}
+                Fondo de misiones:{' '}
                 <Box as="span" color="good" bold>
                   {quest_fund} mammons
                 </Box>
               </Box>
               <Box color="label">
-                Available:{' '}
+                Disponible:{' '}
                 <Box as="span" color="good">
-                  {easy_quests.length} Easy
+                  {easy_quests.length} Fácil
                 </Box>{' '}
                 /{' '}
                 <Box as="span" color="average">
-                  {medium_quests.length} Medium
+                  {medium_quests.length} Medio
                 </Box>{' '}
                 /{' '}
                 <Box as="span" color="bad">
-                  {hard_quests.length} Hard
+                  {hard_quests.length} Duro
                 </Box>
               </Box>
             </Stack.Item>
@@ -520,7 +520,7 @@ export const NoticeBoard = () => {
         </Section>
 
         <Section
-          title="Quest Board"
+          title="Tablón de misiones"
           buttons={
             <Stack>
               <Stack.Item>
@@ -529,7 +529,7 @@ export const NoticeBoard = () => {
                   color="good"
                   onClick={() => act('turnin')}
                 >
-                  Turn In
+                  Entregar
                 </Button>
               </Stack.Item>
               <Stack.Item>
@@ -538,7 +538,7 @@ export const NoticeBoard = () => {
                   color="bad"
                   onClick={() => act('abandon')}
                 >
-                  Abandon
+                  Abandonar
                 </Button>
               </Stack.Item>
             </Stack>
@@ -582,7 +582,7 @@ export const NoticeBoard = () => {
 
         {isQuestGiver && (
           <Section
-            title="Steward Options"
+            title="Opciones de mayordomo"
             buttons={
               <Stack>
                 <Stack.Item>
@@ -591,7 +591,7 @@ export const NoticeBoard = () => {
                     color="average"
                     onClick={() => act('deposit_fund')}
                   >
-                    Deposit ({steward_balance} mammons)
+                    Depósito ({steward_balance} Mammons)
                   </Button>
                 </Stack.Item>
                 <Stack.Item>
@@ -600,7 +600,7 @@ export const NoticeBoard = () => {
                     color="good"
                     onClick={() => act('issue_custom')}
                   >
-                    Issue Quest
+                    Emitir misión
                   </Button>
                 </Stack.Item>
               </Stack>
@@ -612,21 +612,21 @@ export const NoticeBoard = () => {
                 onClick={() => setStewardTab('threats')}
               >
                 <Icon name="exclamation-triangle" mr={1} />
-                Threats
+                Amenazas
               </Tabs.Tab>
               <Tabs.Tab
                 selected={stewardTab === 'active'}
                 onClick={() => setStewardTab('active')}
               >
                 <Icon name="tasks" mr={1} />
-                Active ({active_quests.length})
+                Activo ({active_quests.length})
               </Tabs.Tab>
               <Tabs.Tab
                 selected={stewardTab === 'validate'}
                 onClick={() => setStewardTab('validate')}
               >
                 <Icon name="check-circle" mr={1} />
-                Validate ({my_custom_quests.length})
+                Validar ({my_custom_quests.length})
               </Tabs.Tab>
             </Tabs>
 

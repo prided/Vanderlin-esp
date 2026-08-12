@@ -1,5 +1,5 @@
 /obj/structure/redstone/torch
-	name = "redstone torch"
+	name = "antorcha de piedra roja"
 	desc = "A torch that provides constant redstone power. Inverts when the attached block is powered."
 	icon_state = "torch"
 	redstone_role = REDSTONE_ROLE_SOURCE

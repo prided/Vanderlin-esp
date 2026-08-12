@@ -23,8 +23,8 @@
 	return P
 
 /obj/structure/mob_wrap
-	desc = "A big wrapped cocoon made of meat."
-	name = "meat cocoon"
+	desc = "Un gran capullo envuelto hecho de carne."
+	name = "capullo de carne"
 	icon = 'icons/obj/wrap.dmi'
 	icon_state = "deliverycrate5"
 	density = FALSE

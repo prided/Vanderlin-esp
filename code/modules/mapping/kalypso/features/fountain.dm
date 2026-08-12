@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/salvia
-	name = "Salvia Fountain"
+	name = "Fuente de Salvia"
 	id = "feature_salvia"
 	mappath = "_maps/kalypso/salviafountain.dmm"
 

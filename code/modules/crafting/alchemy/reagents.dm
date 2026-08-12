@@ -1,7 +1,7 @@
 //Potions
 /datum/reagent/medicine/healthpot
-	name = "Health Potion"
-	description = "Gradually regenerates all types of damage."
+	name = "Poción de salud"
+	description = "Regenera gradualmente todo tipo de daño."
 	reagent_state = LIQUID
 	color = "#ff0000"
 	taste_description = "lifeblood"
@@ -39,8 +39,8 @@
 	. = ..()
 
 /datum/reagent/medicine/stronghealth
-	name = "Strong Health Potion"
-	description = "Quickly regenerates all types of damage."
+	name = "Poción de salud fuerte"
+	description = "Regenera rápidamente todo tipo de daño."
 	color = "#820000be"
 	taste_description = "rich lifeblood"
 	scent_description = "metal"
@@ -103,11 +103,11 @@
 				M.update_damage_overlays()
 
 /datum/reagent/medicine/gender_potion
-	name = "Gender Potion"
+	name = "Poción de género"
 	description = "Change the user's gender."
 	reagent_state = LIQUID
 	color = "#FF33FF"
-	taste_description = "raw sweetness"
+	taste_description = "dulzura cruda"
 	scent_description = "flower nectar"
 	metabolization_rate = REAGENTS_METABOLISM * 5
 	alpha = 173
@@ -123,23 +123,23 @@
 	if(M.gender == MALE)
 		old_gender = MALE
 		M.gender = FEMALE
-		M.visible_message(span_boldnotice("[M] suddenly looks more feminine!"), span_boldwarning("You suddenly feel more feminine!"))
+		M.visible_message(span_boldnotice("[M] suddenly looks more feminine!"), span_boldwarning("¡De repente te sientes más femenina!"))
 	else
 		old_gender = FEMALE
 		M.gender = MALE
-		M.visible_message(span_boldnotice("[M] suddenly looks more masculine!"), span_boldwarning("You suddenly feel more masculine!"))
+		M.visible_message(span_boldnotice("¡[M] de repente parece más masculino!"), span_boldwarning("¡De repente te sientes más masculino!"))
 	M.dna?.species?.on_gender_update(M, old_gender)
 	M.regenerate_icons()
 	..()
 
 //Someone please remember to change this to actually do mana at some point?
 /datum/reagent/medicine/manapot
-	name = "Mana Potion"
-	description = "Gradually regenerates energy."
+	name = "Poción de maná"
+	description = "Regenera energía gradualmente."
 	reagent_state = LIQUID
 	color = "#000042"
-	taste_description = "sweet mana"
-	scent_description = "dry air"
+	taste_description = "dulce maná"
+	scent_description = "aire seco"
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 	price_per_unit = 0.5
@@ -157,10 +157,10 @@
 
 /datum/reagent/medicine/strongmana
 	name = "Strong Mana Potion"
-	description = "Rapidly regenerates energy."
+	description = "Regenera rápidamente la energía."
 	color = "#0000ff"
 	taste_description = "raw power"
-	scent_description = "dry air"
+	scent_description = "aire seco"
 	metabolization_rate = REAGENTS_METABOLISM * 3
 	price_per_unit = 3
 
@@ -170,11 +170,11 @@
 
 
 /datum/reagent/medicine/stampot
-	name = "Stamina Potion"
-	description = "Gradually regenerates stamina."
+	name = "Poción de resistencia"
+	description = "Regenera gradualmente la resistencia."
 	reagent_state = LIQUID
 	color = "#129c00"
-	taste_description = "sweet tea"
+	taste_description = "té dulce"
 	scent_description = "grass"
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
@@ -186,7 +186,7 @@
 	..()
 
 /datum/reagent/medicine/strongstam
-	name = "Strong Stamina Potion"
+	name = "Poción de resistencia fuerte"
 	description = "Rapidly regenerates stamina."
 	color = "#13df00"
 	taste_description = "sparkly static"
@@ -205,7 +205,7 @@
 	reagent_state = LIQUID
 	color = "#00ff00"
 	taste_description = "sickly sweet"
-	scent_description = "rotten cheese"
+	scent_description = "queso podrido"
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/antidote/on_mob_life(mob/living/carbon/M, efficiency)
@@ -215,7 +215,7 @@
 	. = 1
 
 /datum/reagent/medicine/diseasecure
-	name = "Disease Cure"
+	name = "Cura de enfermedades"
 	description = "Quickly heals damage induced by toxins and poisons."
 	reagent_state = LIQUID
 	color = "#004200"
@@ -254,7 +254,7 @@
 /datum/reagent/buff/strength
 	name = "Strength"
 	color = "#ff9000"
-	taste_description = "raw meat"
+	taste_description = "carne cruda"
 	scent_description = "sour vomit"
 
 /datum/reagent/buff/strength/on_mob_life(mob/living/carbon/M, efficiency)
@@ -268,8 +268,8 @@
 /datum/reagent/buff/perception
 	name = "Perception"
 	color = "#ffff00"
-	taste_description = "cat urine"
-	scent_description = "urine"
+	taste_description = "orina de gato"
+	scent_description = "orina"
 
 /datum/reagent/buff/perception/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.has_status_effect(/datum/status_effect/buff/alch/perceptionpot))
@@ -282,8 +282,8 @@
 /datum/reagent/buff/intelligence
 	name = "Intelligence"
 	color = "#438127"
-	taste_description = "bog water"
-	scent_description = "moss"
+	taste_description = "agua de pantano"
+	scent_description = "musgo"
 
 /datum/reagent/buff/intelligence/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.has_status_effect(/datum/status_effect/buff/alch/intelligencepot))
@@ -296,7 +296,7 @@
 /datum/reagent/buff/constitution
 	name = "Constitution"
 	color = "#130604"
-	taste_description = "acidic bile"
+	taste_description = "bilis ácida"
 	scent_description = "petrichor"
 
 /datum/reagent/buff/constitution/on_mob_life(mob/living/carbon/M, efficiency)
@@ -311,7 +311,7 @@
 	name = "Endurance"
 	color = "#ffff00"
 	taste_description = "gote urine"
-	scent_description = "urine"
+	scent_description = "orina"
 
 /datum/reagent/buff/endurance/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.has_status_effect(/datum/status_effect/buff/alch/endurancepot))
@@ -324,8 +324,8 @@
 /datum/reagent/buff/speed
 	name = "Speed"
 	color = "#ffff00"
-	taste_description = "raw egg yolk"
-	scent_description = "sweat"
+	taste_description = "yema de huevo cruda"
+	scent_description = "sudor"
 
 /datum/reagent/buff/speed/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.has_status_effect(/datum/status_effect/buff/alch/speedpot))
@@ -336,10 +336,10 @@
 	return ..()
 
 /datum/reagent/buff/fortune
-	name = "Fortune"
+	name = "Fortuna"
 	color = "#ffff00"
 	taste_description = "sweet urine"
-	scent_description = "urine"
+	scent_description = "orina"
 
 /datum/reagent/buff/fortune/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.has_status_effect(/datum/status_effect/buff/alch/fortunepot))
@@ -362,7 +362,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	reagent_state = LIQUID
 	color = "#47b2e0"
 	random_reagent_color = TRUE
-	taste_description = "bitterness"
+	taste_description = "amargura"
 	scent_description = "charcoal"
 	metabolization_rate = REAGENTS_SLOW_METABOLISM
 	var/naus = 3
@@ -381,7 +381,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 /datum/reagent/berrypoison/shroom
 	name = "Mushroom Poison"
 	color = "#5647e0"
-	taste_description = "acidity"
+	taste_description = "acidez"
 	scent_description = "acrid earthiness"
 	naus = 5
 	tox = 2.5
@@ -408,12 +408,12 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	return ..()
 
 /datum/reagent/organpoison
-	name = "Organ Poison"
+	name = "Veneno para órganos"
 	description = ""
 	reagent_state = LIQUID
 	color = "#2c1818"
 	random_reagent_color = TRUE
-	taste_description = "sour meat"
+	taste_description = "carne agria"
 	scent_description = "metal"
 	metabolization_rate = REAGENTS_SLOW_METABOLISM
 	var/list/cannibalism_pool = ALL_RACES_LIST
@@ -435,10 +435,10 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 				if(15, 30)
 					to_chat(graggar_lover, span_warning("Feel... strange..."))
 				if(45)
-					to_chat(graggar_lover, span_bloody("Flesh...bone..."))
+					to_chat(graggar_lover, span_bloody("Carne...hueso..."))
 				if(50 to 59)
 					if(prob(30))
-						to_chat(graggar_lover, span_bloody("More... More..."))
+						to_chat(graggar_lover, span_bloody("Más... Más..."))
 					var/obj/item/bodypart/bp = graggar_lover.get_bodypart()
 					bp?.add_pain(SHOCK_STAGE_1 * efficiency)
 					bp?.bodypart_attacked_by(BCLASS_BLUNT, 12 * efficiency, null, BODY_ZONE_CHEST, crit_message = FALSE, modifiers = list(CRIT_MOD_CHANCE = -10))
@@ -464,7 +464,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 					playsound(graggar_lover, pick('sound/combat/gib (1).ogg','sound/combat/gib (2).ogg'), 100, FALSE, 3)
 					graggar_lover.spawn_gibs(TRUE)
 					graggar_lover.emote("agony")
-					graggar_lover.visible_message(span_danger("[graggar_lover]'s skin bursts!"), span_userdanger("MY SKIN BURSTS!!"))
+					graggar_lover.visible_message(span_danger("¡La piel de [graggar_lover] estalla!"), span_userdanger("MY SKIN BURSTS!!"))
 					INVOKE_ASYNC(graggar_lover, TYPE_PROC_REF(/mob/living/carbon/human, graggar_baptize))
 					H.graggometer = 0
 	return ..()
@@ -475,14 +475,14 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 		return
 
 	if(answer != CHOICE_YES)
-		to_chat(src, span_bloody("You reject Graggar's offer of power. The Beast recedes, your stomach growls..."))
+		to_chat(src, span_bloody("Rechazas la oferta de poder de Graggar. La Bestia retrocede, tu estómago gruñe..."))
 		return
 
 	set_patron(/datum/patron/inhumen/graggar)
 	to_chat(src, SPAN_GOD_GRAGGAR("The Beast's teeth close around your heart! Devour! Conquer! Graggar!"))
 
 /datum/reagent/organpoison/human
-	name = "Humen Organ Poison"
+	name = "Humen Veneno para órganos"
 	cannibalism_pool = SPECIES_CANNIBAL_MEN
 
 /datum/reagent/organpoison/kobold
@@ -490,7 +490,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	cannibalism_pool = SPECIES_CANNIBALISM_KOBOLD
 
 /datum/reagent/stampoison
-	name = "Stamina Poison"
+	name = "Veneno de resistencia"
 	description = ""
 	reagent_state = LIQUID
 	color = "#083b1c"
@@ -513,8 +513,8 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	reagent_state = LIQUID
 	color = "#041d0e"
 	random_reagent_color = TRUE
-	taste_description = "frozen air"
-	scent_description = "freezing dust"
+	taste_description = "aire helado"
+	scent_description = "polvo helado"
 	metabolization_rate = REAGENTS_SLOW_METABOLISM * 9
 
 /datum/reagent/strongstampoison/on_mob_life(mob/living/carbon/M, efficiency)
@@ -531,7 +531,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 //reminder this is incredibly potent, the poison to out poison anyone, this the shit that killed Psydon
 /datum/reagent/dreaddeath
 	name = "Dread Death"
-	description = "A terribly potent poison."
+	description = "Un veneno terriblemente potente."
 	reagent_state = LIQUID
 	color = "#0e0004"
 	random_reagent_color = TRUE
@@ -560,8 +560,8 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	description = ""
 	reagent_state = LIQUID
 	color = "#c8c9e9"
-	taste_description = "cold needles"
-	scent_description = "freezing dust"
+	taste_description = "agujas frías"
+	scent_description = "polvo helado"
 	metabolization_rate = REAGENTS_SLOW_METABOLISM
 
 /datum/reagent/killersice/on_mob_life(mob/living/carbon/M, efficiency)
@@ -575,7 +575,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	reagent_state = LIQUID
 	color = "#810e0e"
 	taste_description = "each tastebud individually burning to a crisp"
-	scent_description = "brimstone"
+	scent_description = "azufre"
 	metabolization_rate = REAGENTS_SLOW_METABOLISM
 	var/tox = 1
 	var/oxy = 5
@@ -588,13 +588,13 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 			if(volume >= 25)
 				M.remove_reagent(/datum/reagent/drowsbane, 5 * efficiency) //Incase you eat like, five drowsbane clusters to get infinite healing.
 			if(prob(10))
-				to_chat(M, span_notice("Something inside me burns, it's rejuvenating!"))
+				to_chat(M, span_notice("Algo dentro de mí arde, ¡es rejuvenecedor!"))
 		if(isdarkelf(M) || ishalfdrow(M))
 			M.adjustToxLoss(tox * efficiency)
 			M.adjustOxyLoss(oxy * efficiency) //For dark elves this should be lethal if you take 5u or more. Don't eat spicy food. Relatively harmless in lower amounts because it heals itself.
 			if(prob(10))
 				M.adjust_eye_blur(4 SECONDS * efficiency)
-				to_chat(M, span_warning("My eyes water..."))
+				to_chat(M, span_warning("Mis ojos se llenan de lágrimas..."))
 				M.emote("cough")
 			if(prob(10))
 				M.emote("gasp")
@@ -606,7 +606,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 			if(volume > 5)
 				if(prob(10))
 					M.adjust_eye_blur(4 SECONDS * efficiency)
-					to_chat(M, span_warning("My eyes water..."))
+					to_chat(M, span_warning("Mis ojos se llenan de lágrimas..."))
 					M.emote("cough")
 				if(prob(10))
 					M.emote("gasp")
@@ -619,7 +619,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 |Ingredients|
 \----------*/
 /datum/reagent/undeadash
-	name = "Spectral Powder"
+	name = "Polvo espectral"
 	description = ""
 	reagent_state = SOLID
 	color = "#330066"
@@ -645,7 +645,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 // "Second wind" reagent generated when someone suffers a wound. Epinephrine, adrenaline, and stimulants are all already taken so here we are
 /datum/reagent/adrenaline
-	name = "Adrenaline"
+	name = "Adrenalina"
 	description = "Adrenaline is a hormone used as a drug to treat cardiac arrest and other cardiac dysrhythmias resulting in diminished or absent cardiac output."
 	taste_description = "rush"
 	reagent_state = LIQUID
@@ -670,7 +670,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 //Naturally synthesized painkiller, similar to epinephrine
 /datum/reagent/medicine/endorphin
-	name = "Endorphin"
+	name = "Endorfina"
 	description = "Endorphins are chemically similar to morphine, but naturally synthesized by the human body. \
 				They are typically produced as a bodily response to pain, but can also be produced under favorable circumstances. \
 				Overdosing will cause drowsyness and jitteriness."
@@ -678,7 +678,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	color = "#ff799679"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	taste_description = "euphoria"
+	taste_description = "euforia"
 
 /datum/reagent/medicine/endorphin/on_mob_metabolize(mob/living/carbon/M)
 	. = ..()

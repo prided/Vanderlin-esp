@@ -1,7 +1,7 @@
 /datum/customizer_choice
 	abstract_type = /datum/customizer_choice
 	/// User facing name of the customizer choice.
-	var/name = "Customizer"
+	var/name = "Personalizador"
 	/// Type of the entry datum which is used for save/load of information.
 	var/customizer_entry_type = /datum/customizer_entry
 	/// List of sprite accessories this choice allows. Can be null

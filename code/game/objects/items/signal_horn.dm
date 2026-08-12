@@ -16,9 +16,9 @@
 
 /obj/item/signal_horn/proc/attempt_sound_horn(mob/living/user)
 	if(!COOLDOWN_FINISHED(src, sound_horn))
-		to_chat(user, span_warning("[src] is not ready to be used yet!"))
+		to_chat(user, span_warning("¡[src] aún no está listo para usarse!"))
 		return
-	user.visible_message(span_warning("[user] is about to sound [src]!"))
+	user.visible_message(span_warning("¡[user] está a punto de sonar [src]!"))
 	if(do_after(user, 1.5 SECONDS))
 		sound_horn(user)
 		COOLDOWN_START(src, sound_horn, 1 MINUTES)
@@ -65,15 +65,15 @@
 		var/disttext
 		switch(distance)
 			if(0 to 20)
-				disttext = " very close"
+				disttext = " muy cerca"
 			if(20 to 40)
 				disttext = " close"
 			if(40 to 80)
 				disttext = ""
 			if(80 to 160)
-				disttext = " far"
+				disttext = " lejos"
 			else
-				disttext = " very far"
+				disttext = " muy lejos"
 
 		//sound played for other players, by fem_tanyl !!!1!!
 		player.playsound_local(get_turf(player), 'sound/items/signalhorn.ogg', 35, FALSE, pressure_affected = FALSE)
@@ -106,7 +106,7 @@
 	if(TR && TR.last_induced_ambush_time && (world.time < TR.last_induced_ambush_time + 5 MINUTES))
 		to_chat(user, span_warning("Foes have been cleared out here recently, perhaps you should wait a moment before sounding the horn again."))
 		return
-	user.visible_message(span_userdanger("[user] is about to sound [src]!"))
+	user.visible_message(span_userdanger("¡[user] está a punto de sonar [src]!"))
 	user.apply_status_effect(/datum/status_effect/debuff/clickcd, 5 SECONDS) // We don't want them to spam the message.
 	if(do_after(user, 30 SECONDS)) // Enough time for any antag to kick or interrupt third party, me think
 		TR.last_induced_ambush_time = world.time

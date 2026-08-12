@@ -20,13 +20,13 @@
 	required_bodypart_status = BODYPART_ORGANIC
 
 /datum/wound/bruise/small
-	name = "bruise"
+	name = "moretón"
 	whp = 15
 	woundpain = 8
 	sew_threshold = 25
 
 /datum/wound/bruise/large
-	name = "massive hematoma"
+	name = "hematoma masivo"
 	whp = 40
 	bleed_rate = 0.45
 	clotting_rate = 0.02

@@ -74,7 +74,7 @@ GLOBAL_LIST_EMPTY(armor_item_usage)
 			. = TRUE
 
 /client/proc/view_armor_compare()
-	set name = "View Armor Comparison"
+	set name = "Ver comparación de armaduras"
 	set category = "Debug"
 	set desc = "Opens a tgui panel to browse and compare every armor datum in the game"
 

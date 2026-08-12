@@ -975,7 +975,7 @@ GLOBAL_LIST_EMPTY(active_lifts_by_type)
 				var/obj/item/mob_holder/holder = listed_atom
 				for(var/obj/item/item in holder.held_mob.get_equipped_items())
 					item.forceMove(get_turf(holder))
-				to_chat(holder.held_mob, span_boldwarning("You have been sold."))
+				to_chat(holder.held_mob, span_boldwarning("Te han vendido."))
 				qdel(holder.held_mob)
 			qdel(listed_atom)
 

@@ -36,9 +36,9 @@
 	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 1,
 							/obj/item/alch/sinew = 2,
 							/obj/item/alch/bone = 1)
-	response_help_continuous = "pets"
+	response_help_continuous = "mascotas"
 	response_help_simple = "pet"
-	response_disarm_continuous = "gently pushes aside"
+	response_disarm_continuous = "empuja suavemente a un lado"
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
@@ -124,7 +124,7 @@
 							/obj/item/natural/fur/cabbit = 1)
 
 /mob/living/simple_animal/pet/cat/black
-	name = "black cat"
+	name = "gato negro"
 	desc = "Possessed of lamplike eyes and a meow that sounds like the rattle of bones. Black cats are sacred to Necra, said to bring wandering spirits to the Carriageman."
 	gender = FEMALE
 	icon = 'icons/roguetown/topadd/takyon/Cat.dmi'
@@ -146,7 +146,7 @@
 	unique_pet = TRUE
 
 /mob/living/simple_animal/pet/cat/kitten
-	name = "kitten"
+	name = "gatito"
 	desc = ""
 	density = FALSE
 	pass_flags = PASSMOB

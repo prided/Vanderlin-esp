@@ -1,5 +1,5 @@
 /datum/faith/divine_pantheon
-	name = "\improper Divine Pantheon"
+	name = "\improper Panteón Divino"
 	desc = "The most accepted religion around Faience. \
 		May Necra and her children protect us from the four!"
 	godhead = /datum/patron/divine/astrata

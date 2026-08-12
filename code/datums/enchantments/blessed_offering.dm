@@ -1,6 +1,6 @@
 //We do a bit of trolling
 /datum/enchantment/blessed_offering
-	enchantment_name = "Blessed Offering"
+	enchantment_name = "Ofrenda bendita"
 	examine_text = "This smells divine, I am tempted to eat it."
 
 	essence_recipe = list(
@@ -21,7 +21,7 @@
 /datum/enchantment/blessed_offering/proc/on_eat(obj/item/source, mob/living/eater)
 	if(!eater)
 		return
-	to_chat(eater, span_boldwarning("I feel life flowing through me."))
+	to_chat(eater, span_boldwarning("Siento que la vida fluye a través de mí."))
 	eater.reagents.add_reagent(/datum/reagent/medicine/atropine, 4)
 	eater.reagents.add_reagent(/datum/reagent/soap, 4) //tastes like soap
 	eater.reagents.add_reagent(/datum/reagent/adrenaline, 5)

@@ -183,7 +183,7 @@
 	//POV of players around the source
 	visible_message(span_notice("[user] climbs [up_down] [src]."))
 	//POV of players around the destination
-	user.balloon_alert_to_viewers("climbed [up_down]")
+	user.balloon_alert_to_viewers("subió [up_down]")
 
 /// Shows a radial menu that players can use to climb up and down a stair.
 /obj/structure/ladder/proc/show_options(mob/user, is_ghost = FALSE)
@@ -301,7 +301,7 @@
 	crafted = TRUE
 
 /obj/structure/wallladder
-	name = "wall ladder"
+	name = "escalera de pared"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "ladderwall"

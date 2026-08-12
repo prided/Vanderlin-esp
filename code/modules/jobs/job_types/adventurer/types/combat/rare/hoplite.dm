@@ -23,7 +23,7 @@
 	)
 
 /datum/job/advclass/combat/hoplite
-	title = "Immortal Bulwark"
+	title = "Baluarte inmortal"
 	tutorial = "You have marched and fought in formations since the ancient war that nearly destroyed Psydonia. There are few in the world who can match your expertise in a shield wall, but all you have ever known is battle and obedience..."
 	allowed_races = list(SPEC_ID_AASIMAR)
 	outfit = /datum/outfit/hoplite
@@ -48,7 +48,7 @@
 		spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hoplite/sword)
 
 /datum/outfit/hoplite
-	name = "Immortal Bulwark"
+	name = "Baluarte inmortal"
 	// Despite extensive combat experience, this class is exceptionally destitute. The only luxury besides combat gear that it possesses is a lantern for a source of light
 	// Beneath the arms and armor is a simple loincloth, and it doesn't start with any money. This should encourage them to find someone to serve or work alongside with very quickly
 	pants = /obj/item/clothing/pants/loincloth/colored/brown

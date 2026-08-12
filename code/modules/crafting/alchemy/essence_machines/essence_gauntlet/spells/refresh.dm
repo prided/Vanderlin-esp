@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/refresh
-	name = "Refresh"
-	desc = "Removes minor fatigue and restores a small amount of stamina."
+	name = "Refrescar"
+	desc = "Elimina la fatiga menor y restaura una pequeña cantidad de resistencia."
 	button_icon_state = "terrors"
 	//sound = 'sound/magic/staff_healing.ogg'
 	cast_range = 1

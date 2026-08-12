@@ -1,7 +1,7 @@
 /obj/item/clothing/armor/gambeson
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	name = "gambeson"
-	desc = "Thick quilted cloth in layers, good on its own or worn below metal as padding."
+	desc = "Tela gruesa acolchada en capas, buena por sí sola o usada debajo del metal como relleno."
 	icon_state = "gambeson"
 	resistance_flags = FLAMMABLE
 	blocksound = SOFTUNDERHIT
@@ -131,7 +131,7 @@
 
 //................ Padded Dress ............... //
 /obj/item/clothing/armor/gambeson/heavy/dress
-	name = "padded dress"
+	name = "vestido acolchado"
 	desc = "Favored by the female nobility, to maintain both vitality and good taste while out hunting."
 	icon_state = "armordress"
 	allowed_race = SPECIES_BASE_BODY
@@ -146,7 +146,7 @@
 
 //................ Winter Dress ............... //
 /obj/item/clothing/armor/gambeson/heavy/winterdress
-	name = "winter dress"
+	name = "vestido de invierno"
 	icon = 'icons/roguetown/clothing/shirts_royalty.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts_royalty.dmi'
 	desc = "A thick, padded, and comfortable dress to maintain both temperature and safety when leaving the keep."
@@ -187,7 +187,7 @@
 
 //................ Striped Tunic ............... // - Light gambesson type
 /obj/item/clothing/armor/gambeson/light/striped
-	name = "striped tunic"
+	name = "túnica a rayas"
 	desc = "A common tunic worn by just about anyone. Nothing special, but essential."
 	icon_state = "striped"
 	sleevetype = null

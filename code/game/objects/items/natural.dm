@@ -19,7 +19,7 @@
 			return NONE
 
 		if(item_flags & IN_STORAGE)
-			user.balloon_alert(user, "can't reach!")
+			user.balloon_alert(user, "¡No puedo alcanzar!")
 			return ITEM_INTERACT_BLOCKING
 
 		if(B.amount < B.maxamount)
@@ -39,7 +39,7 @@
 			return NONE
 
 		if(item_flags & IN_STORAGE)
-			user.balloon_alert(user, "can't reach!")
+			user.balloon_alert(user, "¡No puedo alcanzar!")
 			return ITEM_INTERACT_BLOCKING
 
 		var/obj/item/natural/bundle/N = new bundletype(loc)
@@ -58,7 +58,7 @@
 
 /obj/item/natural/bundle
 	name = "bundle"
-	desc = "You shouldn't be seeing this."
+	desc = "No deberías estar viendo esto."
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
 	throwforce = 0
@@ -127,7 +127,7 @@
 		amount = (amount + B.amount) - maxamount
 		B.amount = maxamount
 		B.update_bundle()
-		user.balloon_alert(user, "not enough space!")
+		user.balloon_alert(user, "¡No hay suficiente espacio!")
 
 		if(amount == 1)
 			var/obj/H = new stacktype(get_turf(src))
@@ -150,7 +150,7 @@
 		return NONE
 
 	if(amount >= maxamount)
-		to_chat(user, span_warning("There's not enough space in [src]."))
+		to_chat(user, span_warning("No hay suficiente espacio en [src]."))
 		return ITEM_INTERACT_BLOCKING
 
 	user.changeNext_move(CLICK_CD_FAST)
@@ -201,7 +201,7 @@
 
 	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(item_flags & IN_STORAGE)
-		user.balloon_alert(user, "can't reach!")
+		user.balloon_alert(user, "¡No puedo alcanzar!")
 		return
 
 	if(amount <= 0) //how did you manage to do this
@@ -236,7 +236,7 @@
 
 /obj/item/natural/bundle/examine(mob/user)
 	. = ..()
-	. += span_notice("There are [amount] [stackname] in this [bundle_verb].")
+	. += span_notice("Hay [amount] [stackname] en este [bundle_verb].")
 
 /obj/item/natural/bundle/proc/update_bundle()
 	if(firefuel != 0)
@@ -272,7 +272,7 @@
 
 /obj/item/natural/clod
 	name = "generic clod"
-	desc = "A handful of nothing."
+	desc = "Un puñado de nada."
 	icon_state = "clod1"
 	dropshrink = 0
 	throwforce = 0
@@ -350,7 +350,7 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/natural/infernalash//T1 mage summon loot
-	name = "infernal ash"
+	name = "ceniza infernal"
 	icon_state = "infernalash"
 	desc = "Ash burnt and burnt once again. Smells of brimstone and hellfire. Still has embers within."
 	resistance_flags = FIRE_PROOF
@@ -397,7 +397,7 @@
 	item_weight = 80 GRAMS
 
 /obj/item/natural/abyssalflame//T4 mage summon loot
-	name = "abyssal flame"
+	name = "llama abisal"
 	icon_state = "abyssalflame"
 	desc = "A flickering, black flame contained in a crystal; the heart of an archfiend. Or, at least, what passes for one. It pulses with dense thrums of magick."
 	resistance_flags = FIRE_PROOF
@@ -433,7 +433,7 @@
 	item_weight = 10 GRAMS
 
 /obj/item/natural/iridescentscale	//T2 mage summon loot
-	name = "iridescent scales"
+	name = "escamas iridiscentes"
 	icon_state = "iridescent_scale"
 	desc = "Tiny, colorful scales from a glimmerwing, they shine with inate magic"
 	resistance_flags = FIRE_PROOF
@@ -507,7 +507,7 @@
 	item_weight = 20 GRAMS
 
 /obj/item/natural/elementalshard
-	name = "elemental shard"
+	name = "fragmento elemental"
 	icon_state = "shard"
 	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
 	resistance_flags = FIRE_PROOF
@@ -525,7 +525,7 @@
 	item_weight = 30 GRAMS
 
 /obj/item/natural/elementalfragment
-	name = "elemental fragment"
+	name = "fragmento elemental"
 	icon_state = "fragment"
 	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
 	resistance_flags = FIRE_PROOF
@@ -543,7 +543,7 @@
 	item_weight = 25 GRAMS
 
 /obj/item/natural/elementalrelic
-	name = "elemental relic"
+	name = "reliquia elemental"
 	icon_state = "relic"
 	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
 	resistance_flags = FIRE_PROOF

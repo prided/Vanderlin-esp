@@ -7,7 +7,7 @@
 	noaa = TRUE
 
 /datum/intent/hand/clean
-	name = "clean"
+	name = "limpio"
 	icon_state = "inclean"
 
 /datum/intent/hand/draw

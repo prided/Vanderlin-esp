@@ -300,12 +300,12 @@ GLOBAL_LIST_EMPTY(tracker_beacons)
 
 /datum/component/team_monitor/proc/change_frequency(mob/user)
 	//Get new frequency
-	var/new_freq = input(user, "Enter a new frequency (1 - 999):", "Frequency Change", 1) as num|null
+	var/new_freq = input(user, "Ingrese una nueva frecuencia (1 - 999):", "Cambio de frecuencia", 1) as num|null
 	if(!new_freq)
 		to_chat(user, "<span class='warning'>Invalid frequency. Encrypted tracking HUD disabled.</span>")
 		return
 	if(new_freq < 1 || new_freq > 999)
-		to_chat(user, "<span class='warning'>Frequency is out of range. Must be between 1 and 999.</span>")
+		to_chat(user, "<span class='warning'>La frecuencia está fuera de rango. Debe estar entre 1 y 999.</span>")
 		return
 	set_frequency(new_freq)
 	to_chat(user, "<span class='notice'>Tracking HUD now scanning on frequency <i>[team_frequency]</i>.</span>")
@@ -594,15 +594,15 @@ GLOBAL_LIST_EMPTY(tracker_beacons)
 
 /datum/component/tracking_beacon/proc/change_frequency(mob/user)
 	//Get new frequency
-	var/new_freq = input(user, "Enter a new frequency (1 - 999):", "Frequency Change", 1) as num|null
+	var/new_freq = input(user, "Ingrese una nueva frecuencia (1 - 999):", "Cambio de frecuencia", 1) as num|null
 	if(!new_freq)
 		to_chat(user, "<span class='warning'>Invalid frequency. Encrypted tracking beacon disabled.</span>")
 		return
 	if(new_freq < 1 || new_freq > 999)
-		to_chat(user, "<span class='warning'>Frequency is out of range. Must be between 1 and 999.</span>")
+		to_chat(user, "<span class='warning'>La frecuencia está fuera de rango. Debe estar entre 1 y 999.</span>")
 		return
 	set_frequency(new_freq)
-	to_chat(user, "<span class='notice'>Tracking HUD now transmitting on frequency <i>[team_frequency]</i>.</span>")
+	to_chat(user, "<span class='notice'>El HUD de seguimiento ahora transmite en la frecuencia <i>[team_frequency]</i>.</span>")
 	//Set frequency of the linked tracker
 	if(attached_monitor)
 		attached_monitor.set_frequency(new_freq)

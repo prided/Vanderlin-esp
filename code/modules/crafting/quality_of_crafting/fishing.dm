@@ -1,6 +1,6 @@
 /datum/repeatable_crafting_recipe/fishing
 	abstract_type = /datum/repeatable_crafting_recipe/fishing
-	category = "Fishing"
+	category = "Pesca"
 	allow_inverse_start = TRUE
 
 /datum/repeatable_crafting_recipe/fishing/bait
@@ -106,7 +106,7 @@
 	attacked_atom = /obj/item/natural/fibers
 
 /datum/repeatable_crafting_recipe/fishing/hook
-	name = "wooden fishing hook"
+	name = "anzuelo de pesca de madera"
 	output = /obj/item/fishing/hook/wooden
 	starting_atom = /obj/item/grown/log/tree/stick
 	requirements = list(

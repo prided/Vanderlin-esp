@@ -34,7 +34,7 @@ LINEN BINS
 /obj/item/bedsheet/examine(mob/user)
 	. = ..()
 	if(bed_tucked)
-		. += span_info("[src] is tucked into the bed.")
+		. += span_info("[src] está metido en la cama.")
 
 /obj/item/bedsheet/interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!isliving(interacting_with))
@@ -45,7 +45,7 @@ LINEN BINS
 	if(!user.transferItemToLoc(src, get_turf(to_cover)))
 		return ITEM_INTERACT_BLOCKING
 
-	balloon_alert(user, "covered")
+	balloon_alert(user, "cubierto")
 	coverup(to_cover)
 	add_fingerprint(user)
 
@@ -67,7 +67,7 @@ LINEN BINS
 	plane = GAME_PLANE_UPPER
 	pixel_x = base_pixel_x
 	pixel_y = base_pixel_y
-	balloon_alert(sleeper, "covered")
+	balloon_alert(sleeper, "cubierto")
 	var/angle = sleeper.lying_prev
 	dir = angle2dir(angle + 180) // 180 flips it to be the same direction as the mob
 

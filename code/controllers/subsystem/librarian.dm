@@ -77,7 +77,7 @@ SUBSYSTEM_DEF(librarian)
 		_book_titles_contents += "[encoded_title]"
 		fdel("data/player_generated_books/[LIBRARY_JSON].json")
 		text2file(json_encode(_book_titles_contents), "data/player_generated_books/[LIBRARY_JSON].json")
-		message_admins("Book [book_title] has been saved to the player book database by [author_ckey]([author])")
+		message_admins("El libro [book_title] ha sido guardado en la base de datos de libros del jugador por [author_ckey]([author])")
 		return "You have a feeling the newly written book will remain in the archive for a very long time..."
 	else
 		message_admins("!!! _book_titles.json no longer exists, previous book title list has been lost. making a new one without old books... !!!")

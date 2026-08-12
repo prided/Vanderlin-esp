@@ -27,7 +27,7 @@
 //	qdel(credits_icon)
 
 /client/proc/ClearCredits()
-	set name = "Hide Credits"
+	set name = "Ocultar creditos"
 	set category = "OOC"
 	add_verb(src, /client/proc/ClearCredits)
 	QDEL_LIST(credits)

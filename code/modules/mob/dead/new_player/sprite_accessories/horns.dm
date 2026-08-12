@@ -49,7 +49,7 @@
 	relevant_layers = list(BODY_FRONT_LAYER, BODY_BEHIND_LAYER)
 
 /datum/sprite_accessory/horns/oni_large
-	name = "Oni (Large)"
+	name = "Oni (grande)"
 	icon_state = "oni_large"
 	relevant_layers = list(BODY_FRONT_LAYER, BODY_ADJ_LAYER, BODY_BEHIND_LAYER)
 
@@ -58,7 +58,7 @@
 	icon_state = "broken"
 
 /datum/sprite_accessory/horns/rbroken
-	name = "Broken (Right)"
+	name = "Roto (derecha)"
 	icon_state = "rbroken"
 
 /datum/sprite_accessory/horns/lbroken
@@ -74,7 +74,7 @@
 	icon_state = "knight"
 
 /datum/sprite_accessory/horns/dragon
-	name = "Dragon"
+	name = "Dragón"
 	icon_state = "dragon"
 
 /datum/sprite_accessory/horns/antlers
@@ -90,7 +90,7 @@
 	icon_state = "smallantlers"
 
 /datum/sprite_accessory/horns/curledramhorns
-	name = "Curled Ram Horns"
+	name = "Cuernos de carnero rizados"
 	icon_state = "ramcurled"
 
 /datum/sprite_accessory/horns/curledramhornsalt
@@ -98,19 +98,19 @@
 	icon_state = "ramcurledalt"
 
 /datum/sprite_accessory/horns/smallramhorns
-	name = "Small Ram Horns"
+	name = "Cuernos de carnero pequeños"
 	icon_state = "ramcurledsmall"
 
 /datum/sprite_accessory/horns/smallramhornsalt
-	name  = "Small Ram Horns Alt"
+	name  = "Cuernos de carnero pequeños Alt"
 	icon_state = "ramcurledsmallalt"
 
 /datum/sprite_accessory/horns/smallramhornsthree
-	name = "Small Ram Horns 3"
+	name = "Cuernos de carnero pequeños 3"
 	icon_state = "ramcurledsmall3"
 
 /datum/sprite_accessory/horns/liftedhorns
-	name = "Lifted Horns"
+	name = "Cuernos levantados"
 	icon_state = "lifted"
 
 /datum/sprite_accessory/horns/sideswept
@@ -134,11 +134,11 @@
 	icon_state = "unihorn"
 
 /datum/sprite_accessory/horns/longhorns
-	name = "Longhorns"
+	name = "cuernos largos"
 	icon_state = "longhorns"
 
 /datum/sprite_accessory/horns/outstretched
-	name = "Outstretched"
+	name = "Extendido"
 	icon_state = "outstretched"
 
 /datum/sprite_accessory/horns/halo
@@ -146,7 +146,7 @@
 	icon_state = "halo"
 
 /datum/sprite_accessory/horns/greathorns
-	name = "Great Horns"
+	name = "Grandes cuernos"
 	icon_state = "great"
 
 /datum/sprite_accessory/horns/bunhorns
@@ -154,7 +154,7 @@
 	icon_state = "bunhorns"
 
 /datum/sprite_accessory/horns/marauder
-	name = "Marauder"
+	name = "Merodeador"
 	icon_state = "marauder"
 
 /datum/sprite_accessory/horns/faceguard
@@ -162,11 +162,11 @@
 	icon_state = "faceguard"
 
 /datum/sprite_accessory/horns/sheephorns
-	name = "Sheep Horns"
+	name = "Cuernos de oveja"
 	icon_state = "sheep"
 
 /datum/sprite_accessory/horns/doublehorns
-	name = "Double Horns"
+	name = "Cuernos dobles"
 	icon_state = "doublehorns"
 
 /datum/sprite_accessory/horns/large
@@ -179,7 +179,7 @@
 	relevant_layers = list(BODY_ADJ_LAYER, BODY_BEHIND_LAYER, BODY_FRONT_LAYER)
 
 /datum/sprite_accessory/horns/halforc
-	name = "Half Orc"
+	name = "Medio orco"
 	icon = 'icons/mob/sprite_accessory/halforc.dmi'
 	icon_state = "orctusk"
 	default_colors = list("#F4F4BE")

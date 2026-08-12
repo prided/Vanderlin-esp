@@ -28,7 +28,7 @@
 
 /datum/component/butchering/proc/startNeckSlice(obj/item/source, mob/living/carbon/human/H, mob/living/user)
 	if(DOING_INTERACTION_WITH_TARGET(user, H))
-		to_chat(user, span_warning("You're already interacting with [H]!"))
+		to_chat(user, span_warning("¡Ya estás interactuando con [H]!"))
 		return
 
 	user.visible_message(span_danger("[user] is slitting [H]'s throat!"), \
@@ -41,12 +41,12 @@
 	playsound(H.loc, butcher_sound, 50, TRUE, -1)
 	if(do_after(user, clamp(50 SECONDS / source.force, 3 SECONDS, 10 SECONDS), H) && H.Adjacent(source))
 		if(H.has_status_effect(/datum/status_effect/neck_slice))
-			user.show_message(span_warning("[H]'s neck has already been already cut, you can't make the bleeding any worse!"), MSG_VISUAL, \
+			user.show_message(span_warning("El cuello de [H] ya ha sido cortado, ¡no puedes empeorar el sangrado!"), MSG_VISUAL, \
 							span_warning("Their neck has already been already cut, you can't make the bleeding any worse!"))
 			return
 
 		H.visible_message(span_danger("[user] slits [H]'s throat!"), \
-					span_userdanger("[user] slits your throat..."))
+					span_userdanger("[user] te corta la garganta..."))
 		log_combat(user, H, "wounded via throat slitting", source)
 		H.apply_damage(source.force, BRUTE, BODY_ZONE_HEAD) // easy tiger, we'll get to that in a sec
 		var/obj/item/bodypart/slit_throat = H.get_bodypart(BODY_ZONE_PRECISE_NECK)

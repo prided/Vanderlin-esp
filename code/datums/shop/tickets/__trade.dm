@@ -113,7 +113,7 @@ GLOBAL_DATUM_INIT(ticket_trade_manager, /datum/ticket_trade_manager, new)
 			to_chat(from_client, span_warning("You no longer have ticket [id]."))
 			return FALSE
 		if(id in locked_ids)
-			to_chat(from_client, span_warning("Ticket '[t.name]' is already in a pending trade."))
+			to_chat(from_client, span_warning("El ticket '[t.name]' ya está en una transacción pendiente."))
 			return FALSE
 		offered_datums += t
 
@@ -139,7 +139,7 @@ GLOBAL_DATUM_INIT(ticket_trade_manager, /datum/ticket_trade_manager, new)
 					found_name = entry["name"]
 					break
 			if(!found_name)
-				to_chat(from_client, span_warning("Could not find requested ticket [id] in [to_ckey]'s inventory."))
+				to_chat(from_client, span_warning("No se pudo encontrar el ticket solicitado [id] en el inventario de [to_ckey]."))
 				return FALSE
 			requested_names += found_name
 
@@ -177,10 +177,10 @@ GLOBAL_DATUM_INIT(ticket_trade_manager, /datum/ticket_trade_manager, new)
 
 	var/datum/ticket_trade/trade = find_trade(trade_id)
 	if(!trade)
-		to_chat(accepting_client, span_warning("That trade no longer exists."))
+		to_chat(accepting_client, span_warning("Ese comercio ya no existe."))
 		return FALSE
 	if(trade.to_ckey != accepting_client.ckey)
-		to_chat(accepting_client, span_warning("That trade is not addressed to you."))
+		to_chat(accepting_client, span_warning("Ese intercambio no está dirigido a usted."))
 		return FALSE
 	if(trade.cancel_requested_at && (world.time - trade.cancel_requested_at) < (TICKET_TRADE_CANCEL_LOCK * 10))
 		to_chat(accepting_client, span_warning("The sender is cancelling this trade, please wait a moment."))
@@ -298,7 +298,7 @@ GLOBAL_DATUM_INIT(ticket_trade_manager, /datum/ticket_trade_manager, new)
 
 	var/datum/ticket_trade/trade = find_trade(trade_id)
 	if(!trade)
-		to_chat(cancelling_client, span_warning("That trade no longer exists."))
+		to_chat(cancelling_client, span_warning("Ese comercio ya no existe."))
 		return FALSE
 	if(trade.from_ckey != cancelling_client.ckey)
 		to_chat(cancelling_client, span_warning("You can only cancel your own outgoing trades."))
@@ -318,7 +318,7 @@ GLOBAL_DATUM_INIT(ticket_trade_manager, /datum/ticket_trade_manager, new)
 		to_chat(cancelling_client, span_notice("Trade [trade.trade_id] cancelled."))
 		var/client/to_client = GLOB.directory[trade.to_ckey]
 		if(to_client)
-			to_chat(to_client, span_warning("Trade offer from [trade.from_ckey] was cancelled."))
+			to_chat(to_client, span_warning("La oferta comercial de [trade.from_ckey] fue cancelada."))
 		log_game("TICKETS: [cancelling_client.ckey] cancelled trade [trade.trade_id].")
 
 	return TRUE

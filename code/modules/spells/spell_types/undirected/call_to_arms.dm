@@ -9,7 +9,7 @@
 	associated_skill = /datum/attribute/skill/magic/holy
 	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/ravox)
 
-	invocation = "MAY THE FIGHT BE BLOODY!"
+	invocation = "¡QUE LA LUCHA SEA SANGRIENTA!"
 	invocation_type = INVOCATION_SHOUT
 
 	charge_required = FALSE

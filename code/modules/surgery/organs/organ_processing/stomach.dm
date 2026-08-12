@@ -18,7 +18,7 @@
 	//fat fuck friday
 	if(HAS_TRAIT_FROM(owner, TRAIT_FAT, OBESITY))
 		if(owner.overeatduration < 200 SECONDS)
-			to_chat(owner, span_notice("I feel fit again!"))
+			to_chat(owner, span_notice("¡Me siento en forma otra vez!"))
 			REMOVE_TRAIT(owner, TRAIT_FAT, OBESITY)
 			owner.remove_movespeed_modifier("obesity")
 	else
@@ -64,15 +64,15 @@
 		owner.metabolism_efficiency = 1
 	else if(owner.nutrition > NUTRITION_LEVEL_FED && owner.satiety > 80)
 		if(owner.metabolism_efficiency != 1.25)
-			to_chat(owner, span_notice("You feel vigorous."))
+			to_chat(owner, span_notice("Te sientes vigoroso."))
 			owner.metabolism_efficiency = 1.25
 	else if(owner.nutrition < NUTRITION_LEVEL_STARVING + 50)
 		if(owner.metabolism_efficiency != 0.8)
-			to_chat(owner, span_notice("You feel sluggish."))
+			to_chat(owner, span_notice("Te sientes lento."))
 		owner.metabolism_efficiency = 0.8
 	else
 		if(owner.metabolism_efficiency == 1.25)
-			to_chat(owner, span_notice("You no longer feel vigorous."))
+			to_chat(owner, span_notice("Ya no te sientes vigoroso."))
 		owner.metabolism_efficiency = 1
 
 	handle_nutrition_hydration_state(owner, delta_time, times_fired)

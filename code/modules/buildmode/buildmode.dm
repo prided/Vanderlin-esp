@@ -356,7 +356,7 @@ GLOBAL_LIST_EMPTY(buildmode_appearance_cache)
  */
 /proc/togglebuildmode(mob/M as mob in GLOB.player_list)
 	set name = "Toggle Build Mode"
-	set category = "Event"
+	set category = "Evento"
 
 	if(M.client)
 		if(istype(M.client.click_intercept, /datum/buildmode))
@@ -371,7 +371,7 @@ GLOBAL_LIST_EMPTY(buildmode_appearance_cache)
  * Dummy object for tracking mouse movement in pixel positioning mode
  */
 /atom/movable/buildmode_pixel_dummy
-	name = "pixel positioning tracker"
+	name = "rastreador de posicionamiento de píxeles"
 	icon = 'icons/effects/alphacolors.dmi'
 	alpha = 1
 	glide_size = 1000

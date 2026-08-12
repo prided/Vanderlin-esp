@@ -34,7 +34,7 @@
 	item_types = list(/obj/item/reagent_containers/food/snacks/produce/fruit/jacksberry)
 
 /datum/slapcraft_step/item/dirt
-	desc = "Add some dirt."
+	desc = "Agrega un poco de tierra."
 	item_types = list(/obj/item/natural/clod/dirt)
 
 /datum/slapcraft_step/item/stick
@@ -58,7 +58,7 @@
 /datum/slapcraft_step/item/stake/third
 
 /datum/slapcraft_step/item/stone
-	desc = "Add some stone."
+	desc = "Agrega un poco de piedra."
 	item_types = list(/obj/item/natural/stone)
 
 /datum/slapcraft_step/item/stone/second

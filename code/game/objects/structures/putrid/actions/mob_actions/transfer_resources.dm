@@ -1,5 +1,5 @@
 /datum/action/cooldown/meatvine/personal/transfer_resources
-	name = "Transfer Resources"
+	name = "Transferir recursos"
 	desc = "Transfer 20 personal resources to another meatvine. Must be adjacent. Cost: 20 resources."
 	button_icon_state = "transfer"
 	cooldown_time = 15 SECONDS
@@ -31,7 +31,7 @@
 	// Check if receiver can accept resources
 	var/can_receive = receiver.personal_resource_max - receiver.personal_resource_pool
 	if(can_receive < transfer_amount)
-		to_chat(giver, span_warning("[receiver] cannot accept the full transfer! They can only accept [can_receive] more resources."))
+		to_chat(giver, span_warning("¡[receiver] no puede aceptar la transferencia completa! Solo pueden aceptar [can_receive] más recursos."))
 		// Still allow partial transfer
 		transfer_amount = can_receive
 		if(transfer_amount <= 0)
@@ -39,7 +39,7 @@
 
 	// Perform the transfer
 	giver.visible_message(
-		span_notice("[giver] transfers resources to [receiver]."),
+		span_notice("[giver] transfiere recursos a [receiver]."),
 		span_boldnotice("You transfer [transfer_amount] resources to [receiver].")
 	)
 

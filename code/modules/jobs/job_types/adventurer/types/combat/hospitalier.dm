@@ -20,7 +20,7 @@
 	)
 
 /datum/job/advclass/combat/hospitalier
-	title = "Hospitalier"
+	title = "hospitalario"
 	tutorial = "Hospitaliers are selfless individuals who take it upon \
 	themselves to aid those in need.  With only your mace, shield and wits \
 	to keep you safe, you have set out on a journey to aid others."
@@ -35,7 +35,7 @@
 	)
 
 /datum/outfit/adventurer/hospitalier
-	name = "Hospitalier (Adventurer)"
+	name = "Hospitalario (Aventurero)"
 	armor = /obj/item/clothing/armor/leather
 	shirt = /obj/item/clothing/shirt/undershirt/colored/black
 	pants = /obj/item/clothing/pants/trou/leather

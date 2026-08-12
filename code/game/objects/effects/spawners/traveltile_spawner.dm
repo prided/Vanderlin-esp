@@ -124,7 +124,7 @@
 	aportalgoesto = "inhumenexit"
 
 /obj/structure/fluff/traveltile/to_inhumen_tribe
-	name = "to the Deep Bog"
+	name = "al pantano profundo"
 	aportalid = "inhumenexit"
 	aportalgoesto = "inhumenin"
 	required_trait = TRAIT_INHUMENCAMP
@@ -156,7 +156,7 @@
 	check_other_side = TRUE
 
 /obj/structure/fluff/traveltile/gallowband_bog
-	name = "To the Bog Witch"
+	name = "A la bruja del pantano"
 	aportalid = "gallow_bog"
 	aportalgoesto = "bog_gallow"
 	required_trait = TRAIT_GALLOWBAND
@@ -172,7 +172,7 @@
 	check_other_side = TRUE
 
 /obj/structure/fluff/traveltile/courtagent_sewers
-	name = "To the Sewers"
+	name = "A las alcantarillas"
 	aportalid = "agent_sewers"
 	aportalgoesto = "sewers_agent"
 	required_trait = TRAIT_COURTAGENT
@@ -181,7 +181,7 @@
 	check_other_side = TRUE
 
 /obj/structure/fluff/traveltile/sewers_courtagent
-	name = "To the Hideout"
+	name = "Al escondite"
 	aportalid = "sewers_agent"
 	aportalgoesto = "agent_sewers"
 	required_trait = TRAIT_COURTAGENT

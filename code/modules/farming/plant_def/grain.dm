@@ -20,7 +20,7 @@
 	base_genetics.water_efficiency = TRAIT_GRADE_POOR  // Loves water
 
 /datum/plant_def/wheat
-	name = "wheat stalks"
+	name = "tallos de trigo"
 	icon_state = "wheat"
 	produce_type = /obj/item/natural/chaff/wheat
 	produce_amount_min = 2
@@ -41,7 +41,7 @@
 	base_genetics.quality_trait = TRAIT_GRADE_GOOD
 
 /datum/plant_def/oat
-	name = "oat stalks"
+	name = "tallos de avena"
 	icon_state = "oat"
 	produce_type = /obj/item/natural/chaff/oat
 	produce_amount_min = 2

@@ -1,5 +1,5 @@
 /datum/surgery_operation/basic/restore_lux
-	name = "Restore Lux"
+	name = "Restaurar Lux"
 	desc = "Grant a patient a dosage of lux to restore their own."
 
 	implements = list(
@@ -34,7 +34,7 @@
 		return TRUE
 
 	if(!istype(tool, /obj/item/reagent_containers/lux_tainted))
-		to_chat(surgeon, "They can only receive tainted lux!")
+		to_chat(surgeon, "¡Solo pueden recibir lux contaminado!")
 		return FALSE
 
 	return TRUE
@@ -43,7 +43,7 @@
 	display_results(
 		surgeon,
 		patient,
-		span_notice("I begin to implant [tool] into [patient]..."),
+		span_notice("Empiezo a implantar [tool] en [patient]..."),
 		span_notice("[surgeon] begins to work [tool] into [patient]'s heart."),
 		span_notice("[surgeon] begins to work something into [patient]'s innards."),
 	)
@@ -66,9 +66,9 @@
 		display_results(
 			surgeon,
 			patient,
-			span_notice("You succeed in integrating [tool] into [patient]'s heart."),
+			span_notice("Logras integrar [tool] en el corazón de [patient]."),
 			span_notice("[surgeon] works the [tool] into [patient]'s heart."),
-			span_notice("[surgeon] works something into [patient]'s innards."),
+			span_notice("[surgeon] introduce algo en las entrañas de [patient]."),
 		)
 		if(patient.get_lux_status() == LUX_NO_LUX)
 			patient.apply_status_effect(/datum/status_effect/buff/received_lux)

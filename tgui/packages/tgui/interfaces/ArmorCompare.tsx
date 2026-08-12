@@ -191,18 +191,17 @@ export const ArmorCompare = (props) => {
     <Window width={960} height={680}>
       <Window.Content scrollable>
         <Section
-          title="Compare"
+          title="Comparar"
           buttons={
             <Box color="label" fontSize="0.9em">
-              Click an armor below to add it here. Click a filled slot to
-              remove it.
+              Haz clic en una armadura a continuación para agregarla aquí. Haz clic en un espacio lleno para eliminarlo.
             </Box>
           }
         >
           <Table>
             <Table.Row header>
-              <Table.Cell>Slot</Table.Cell>
-              <Table.Cell collapsing width="80px">Class</Table.Cell>
+              <Table.Cell>Ranura</Table.Cell>
+              <Table.Cell collapsing width="80px">Clase</Table.Cell>
               {RATINGS.map((rating) => (
                 <Table.Cell key={rating} collapsing>
                   {RATING_LABELS[rating]}
@@ -220,7 +219,7 @@ export const ArmorCompare = (props) => {
                     />
                   ) : (
                     <Box color="label" italic>
-                      Empty slot
+                      Ranura vacía
                     </Box>
                   )}
                 </Table.Cell>
@@ -250,15 +249,14 @@ export const ArmorCompare = (props) => {
             buttons={
               <Button
                 icon="times"
-                content="Close"
+                content="Cerrar"
                 onClick={() => setViewingType(null)}
               />
             }
           >
             {viewingItems.length === 0 ? (
               <Box color="label" italic>
-                No item types default to this armor directly (it may only be
-                applied dynamically, e.g. via set_armor).
+                Ningún tipo de elemento está predeterminado directamente en esta armadura (solo se puede aplicar dinámicamente, por ejemplo, a través de set_armor).
               </Box>
             ) : (
               <Box
@@ -281,7 +279,7 @@ export const ArmorCompare = (props) => {
         )}
 
         <Section
-          title="Armor Types"
+          title="Tipos de armadura"
           fill
           scrollable
           buttons={
@@ -306,9 +304,9 @@ export const ArmorCompare = (props) => {
           />
           <Table>
             <Table.Row header>
-              <Table.Cell>Type</Table.Cell>
-              <Table.Cell width="80px">Class</Table.Cell>
-              <Table.Cell collapsing>Used By</Table.Cell>
+              <Table.Cell>Tipo</Table.Cell>
+              <Table.Cell width="80px">Clase</Table.Cell>
+              <Table.Cell collapsing>Utilizado por</Table.Cell>
               {RATINGS.map((rating) => (
                 <Table.Cell
                   key={rating}

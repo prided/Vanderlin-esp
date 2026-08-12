@@ -205,7 +205,7 @@ const GASES = [
     id: 'hypernoblium',
     path: '/datum/gas/hypernoblium',
     name: 'Hyper-noblium',
-    label: 'Hyper-nob',
+    label: 'hipernob',
     color: 'teal',
   },
   {
@@ -226,7 +226,7 @@ const GASES = [
     id: 'tritium',
     path: '/datum/gas/tritium',
     name: 'Tritium',
-    label: 'Tritium',
+    label: 'tritio',
     color: 'limegreen',
   },
   {
@@ -254,7 +254,7 @@ const GASES = [
     id: 'freon',
     path: '/datum/gas/freon',
     name: 'Freon',
-    label: 'Freon',
+    label: 'freón',
     color: 'paleturquoise',
   },
   {
@@ -275,7 +275,7 @@ const GASES = [
     id: 'proto_nitrate',
     path: '/datum/gas/proto_nitrate',
     name: 'Proto Nitrate',
-    label: 'Proto-Nitrate',
+    label: 'Proto-nitrato',
     color: 'greenyellow',
   },
   {
@@ -289,7 +289,7 @@ const GASES = [
     id: 'halon',
     path: '/datum/gas/halon',
     name: 'Halon',
-    label: 'Halon',
+    label: 'halón',
     color: 'purple',
   },
   {

@@ -123,7 +123,7 @@
 		"Great axe" = /obj/item/weapon/polearm/halberd/bardiche/woodcutter,
 	)
 
-	var/weaponchoice = spawned.select_equippable(player_client, selectableweapon, message = "Choose Your Specialisation", title = "Warrior of the ten!")
+	var/weaponchoice = spawned.select_equippable(player_client, selectableweapon, message = "Elige tu especialización", title = "Warrior of the ten!")
 	if(!weaponchoice)
 		return
 
@@ -159,7 +159,7 @@
 			qdel(shield)
 
 /datum/outfit/adventurer/cleric
-	name = "Cleric (Adventurer)"
+	name = "Clérigo (Aventurero)"
 	shirt = /obj/item/clothing/armor/gambeson
 	gloves = /obj/item/clothing/gloves/leather
 	pants = /obj/item/clothing/pants/trou/leather

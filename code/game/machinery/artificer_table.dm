@@ -14,14 +14,14 @@
 /obj/machinery/artificer_table/examine(mob/user)
 	. = ..()
 	if(material)
-		. += span_warning("There's a [initial(material.name)] ready to be worked.")
+		. += span_warning("Hay un [initial(material.name)] listo para trabajar.")
 
 	var/mob/living/buckled = locate() in buckled_mobs
 	if(buckled)
 		. += span_notice("[buckled] is secured to the table.")
 		var/stability = SEND_SIGNAL(buckled, COMSIG_AUGMENT_GET_STABILITY)
 		if(stability)
-			. += span_info("Core Stability: [stability]%")
+			. += span_info("Estabilidad del núcleo: [stability]%")
 
 /obj/machinery/artificer_table/user_buckle_mob(mob/living/M, mob/user, check_loc = TRUE)
 	if(!M.CanReach(src))
@@ -43,7 +43,7 @@
 			if(SEND_SIGNAL(buckled, COMSIG_AUGMENT_GET_STABILITY))
 				var/skill = GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering)
 				var/repair_amount = 5 + (skill * 3)
-				to_chat(user, span_notice("You begin repairing [buckled]..."))
+				to_chat(user, span_notice("Comienzas a reparar [buckled]..."))
 				if(do_after(user, 5 SECONDS, target = buckled))
 					SEND_SIGNAL(buckled, COMSIG_AUGMENT_REPAIR, repair_amount, user)
 					user.mind?.add_sleep_experience(/datum/attribute/skill/craft/engineering, GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE))
@@ -70,7 +70,7 @@
 				new_atom.update_integrity(new_atom.max_integrity, update_atom = FALSE)
 				material.artrecipe.item_created(new_atom)
 			var/obj/item/created_item_instance = material.artrecipe.created_item
-			user.visible_message(span_info("[user] creates \a [created_item_instance.name]."))
+			user.visible_message(span_info("[user] crea \a [created_item_instance.name]."))
 			user.mind.add_sleep_experience(material.artrecipe.appro_skill, (GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) * (material.artrecipe.craftdiff + 1)/2) * user.get_learning_boon(material.artrecipe.appro_skill))
 			qdel(material)
 			material = null
@@ -129,7 +129,7 @@
 			appro_recipe -= R
 
 	if(appro_recipe.len)
-		var/datum/chosen_recipe = tgui_input_list(user, "Choose A Creation", "Artificer", sortNames(appro_recipe.Copy()))
+		var/datum/chosen_recipe = tgui_input_list(user, "Elige una creación", "Artificer", sortNames(appro_recipe.Copy()))
 		if(!material.artrecipe && chosen_recipe)
 			material.artrecipe = new chosen_recipe.type(material)
 			return TRUE

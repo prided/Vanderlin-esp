@@ -12,7 +12,7 @@
 	associated_skill = /datum/attribute/skill/magic/holy
 	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/dendor)
 
-	invocation = "Be still and calm, brotherbeast."
+	invocation = "Quédate quieto y tranquilo, hermano bestia."
 	invocation_type = INVOCATION_WHISPER
 
 	charge_required = FALSE
@@ -54,7 +54,7 @@
 		return
 
 	owner.visible_message(
-		span_greentext("[owner] soothes \the [cast_on] with Dendor's whisper."),
+		span_greentext("[owner] calma a \the [cast_on] con el susurro de Dendor."),
 		span_notice("I tame the beast with Dendor's whisper."),
 	)
 

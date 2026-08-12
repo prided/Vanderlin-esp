@@ -28,7 +28,7 @@
 	)
 
 /datum/job/advclass/combat/paladin
-	title = "Paladin"
+	title = "Paladín"
 	tutorial = "Paladins are former noblemen and clerics who have dedicated themselves to great combat prowess. Often, they were promised redemption for past sins if they crusaded in the name of the gods."
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	outfit = /datum/outfit/paladin
@@ -79,7 +79,7 @@
 
 	if(!spawned.has_language(/datum/language/celestial) && (spawned.patron?.type in ALL_TEMPLE_PATRONS))
 		spawned.grant_language(/datum/language/celestial)
-		to_chat(spawned, "<span class='info'>I can speak Celestial with ,c before my speech.</span>")
+		to_chat(spawned, "<span class='info'>Puedo hablar Celestial con ,c antes de mi discurso.</span>")
 
 	if(spawned.dna?.species.id == SPEC_ID_HUMEN)
 		spawned.dna.species.soundpack_m = new /datum/voicepack/male/knight()
@@ -92,7 +92,7 @@
 
 
 /datum/outfit/paladin
-	name = "Paladin"
+	name = "Paladín"
 
 	armor = /obj/item/clothing/armor/cuirass
 	shirt = /obj/item/clothing/armor/chainmail

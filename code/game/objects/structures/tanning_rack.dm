@@ -35,7 +35,7 @@
 			update_appearance(UPDATE_OVERLAYS)
 			return
 		else
-			to_chat(user, span_warning("The rack is already occupied!"))
+			to_chat(user, span_warning("¡El estante ya está ocupado!"))
 			return
 	if((user.used_intent.type == /datum/intent/dagger/cut || user.used_intent.type == /datum/intent/sword/cut || user.used_intent.type == /datum/intent/axe/cut) && stored_item)
 		if(anchored)
@@ -43,7 +43,7 @@
 			var/work_time = (12 SECONDS - (skill_level * 15))
 			var/pieces_to_spawn = rand(1, min(skill_level + 1, 6)) //Random number from 1 to skill level
 			var/sound_played = FALSE
-			to_chat(user, span_warning("I begin scraping [stored_item]..."))
+			to_chat(user, span_warning("Empiezo a raspar [stored_item]..."))
 			if(!do_after(user, work_time))
 				return
 			playsound(src,pick('sound/items/book_open.ogg','sound/items/book_page.ogg'), 100, FALSE)
@@ -53,7 +53,7 @@
 					new /obj/item/natural/cured/essence(get_turf(user))
 					if(!sound_played)
 						sound_played = TRUE
-						to_chat(user, span_warning("Dendor provides..."))
+						to_chat(user, span_warning("Dendor proporciona..."))
 						playsound(src,pick('sound/items/gem.ogg'), 100, FALSE)
 				if(istype(stored_item, /obj/item/natural/hide))
 					new /obj/item/natural/hide/cured(get_turf(user))
@@ -71,7 +71,7 @@
 			to_chat(user, span_warning("The [src] can now be moved."))
 		else
 			anchored = TRUE
-			to_chat(user, span_warning("You anchor [src]."))
+			to_chat(user, span_warning("Anclas [src]."))
 		playsound(src,pick('sound/foley/woodclimb.ogg'), 100, TRUE)
 		return
 	. = ..()

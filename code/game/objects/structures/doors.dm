@@ -1,5 +1,5 @@
 /obj/structure/door
-	name = "wooden door"
+	name = "puerta de madera"
 	desc = "A door that can open and close."
 	icon = 'icons/roguetown/misc/doors.dmi'
 	icon_state = "woodhandle"
@@ -138,7 +138,7 @@
 			force_open(user)
 			return
 		playsound(src, pick(attacked_sound), 100)
-		user.visible_message(span_warning("[user] kicks [src]!"), \
+		user.visible_message(span_warning("¡[user] patea a [src]!"), \
 			span_notice("I kick [src]!"))
 
 /obj/structure/door/attack_paw(mob/user)
@@ -165,7 +165,7 @@
 		last_bump = world.time
 		var/mob/living/L = user
 		if(L.m_intent == MOVE_INTENT_SNEAK)
-			to_chat(user, span_warning("This door is locked."))
+			to_chat(user, span_warning("Esta puerta está cerrada."))
 			return
 		if(can_knock)
 			if(user.a_intent?.name == "punch")
@@ -215,7 +215,7 @@
 		if((get_dir(src, user) == dir) || omni_bolt)
 			lock?.toggle(user)
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-		to_chat(user, span_notice("I can't reach the bolt from this side."))
+		to_chat(user, span_notice("No puedo alcanzar el cerrojo desde este lado."))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	if(has_viewport)
@@ -448,7 +448,7 @@
 	metalizer_result = null
 
 /obj/structure/door/swing
-	name = "swing door"
+	name = "puerta batiente"
 	desc = "A door that swings."
 	icon_state = "swing"
 	windowed = TRUE
@@ -485,7 +485,7 @@
 	omni_bolt = TRUE
 
 /obj/structure/door/iron
-	name = "iron door"
+	name = "puerta de hierro"
 	icon_state = "donjon"
 	armor_type = /datum/armor/door/heavy
 	max_integrity = 2000
@@ -515,11 +515,11 @@
 	unlock_sound = 'sound/foley/unlock.ogg'
 
 /obj/structure/door/iron/bars/cell
-	name = "cell door"
+	name = "puerta de la celda"
 	kickthresh = 20
 
 /obj/structure/door/stone
-	name = "stone door"
+	name = "puerta de piedra"
 	icon_state = "stone"
 	armor_type = /datum/armor/door/heavy
 	open_sound = 'sound/foley/doors/stoneopen.ogg'
@@ -538,7 +538,7 @@
 	INVOKE_ASYNC(src, PROC_REF(force_open))
 
 /obj/structure/door/abyss
-	name = "abyssal door"
+	name = "puerta abisal"
 	icon_state = "abyssdoor"
 	icon = 'icons/delver/abyss_objects.dmi'
 	armor_type = /datum/armor/door/heavy
@@ -551,7 +551,7 @@
 	metalizer_result = null
 
 /obj/structure/door/driftwood
-	name = "driftwood door"
+	name = "puerta de madera flotante"
 	icon_state = "driftwood_door"
 	icon = 'icons/delver/abyss_objects.dmi'
 	windowed = TRUE

@@ -1,5 +1,5 @@
 /datum/brewing_recipe/beer
-	name = "Wheat Beer"
+	name = "Cerveza de trigo"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/beer
 	needed_reagents = list(/datum/reagent/water = 100)
 	needed_items = list(/obj/item/reagent_containers/food/snacks/produce/grain/wheat = 4)
@@ -9,6 +9,6 @@
 	brewing_skill = /datum/attribute/skill/craft/cooking/brewing
 
 /datum/brewing_recipe/beer/oat
-	name = "Oat Ale"
+	name = "cerveza de avena"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/ale
 	needed_items = list(/obj/item/reagent_containers/food/snacks/produce/grain/oat = 4)

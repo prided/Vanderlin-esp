@@ -1,7 +1,7 @@
 /turf/open/water
 	gender = PLURAL
 	name = "water"
-	desc = "It's... well, water."
+	desc = "Es... bueno, agua."
 	icon = 'icons/turf/natural/liquids.dmi'
 	icon_state = "water"
 	baseturfs = /turf/open/water
@@ -397,19 +397,19 @@
 	if(volume_status == WATER_VOLUME_DRY)
 		return
 	if(!can_examine_depth)
-		. += span_notice("I can't see the bottom...")
+		. += span_notice("No puedo ver el fondo...")
 		return
 	var/depth_message
 	switch(water_height)
 		if(WATER_HEIGHT_ANKLE)
 			depth_message = "ankle deep."
 		if(WATER_HEIGHT_SHALLOW)
-			depth_message = "about waist high."
+			depth_message = "aproximadamente hasta la cintura."
 		if(WATER_HEIGHT_DEEP)
-			depth_message = "rather deep."
+			depth_message = "bastante profundo."
 		else
 			return
-	. += span_notice("It looks [depth_message]")
+	. += span_notice("Parece [depth_message]")
 
 /turf/open/water/process()
 	if(cached_use)
@@ -480,7 +480,7 @@
 			return
 
 	if(direction == UP && HAS_TRAIT(swimming_mob, TRAIT_SINKING))
-		to_chat(swimming_mob, span_warningbig("I'm sinking and can't swim upwards!"))
+		to_chat(swimming_mob, span_warningbig("¡Me estoy hundiendo y no puedo nadar hacia arriba!"))
 		return
 
 	if(!swimming_mob.can_z_move(direction, src, null, ZMOVE_SWIM_FLAGS|ZMOVE_FEEDBACK))
@@ -490,9 +490,9 @@
 		return
 	if(swimming_mob.zMove(direction, z_move_flags = ZMOVE_SWIM_FLAGS|ZMOVE_FEEDBACK))
 		if(direction == UP)
-			to_chat(swimming_mob, forced ? span_warningbig("A strong current pushes you upward!") : span_notice("You swim upward."))
+			to_chat(swimming_mob, forced ? span_warningbig("¡Una fuerte corriente te empuja hacia arriba!") : span_notice("Nadas hacia arriba."))
 		else
-			to_chat(swimming_mob, forced ? span_warningbig("You sink downwards!") : span_notice("You swim downward."))
+			to_chat(swimming_mob, forced ? span_warningbig("¡Te hundes hacia abajo!") : span_notice("Nadas hacia abajo."))
 
 /**
  * Prepares a moving movable to be precipitated if Move() is successful.
@@ -550,7 +550,7 @@
 			return NONE
 
 		if(tool.reagents.holder_full())
-			to_chat(user, "<span class='warning'>[tool] is full.</span>")
+			to_chat(user, "<span class='warning'>[tool] está lleno.</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		if(water_volume < MINIMUM_WATER_VOLUME || volume_status == WATER_VOLUME_DRY)
@@ -576,7 +576,7 @@
 			return NONE
 
 		if(water_volume >= water_volume_maximum)
-			to_chat(user, "<span class='warning'>\The [name] is full.</span>")
+			to_chat(user, "<span class='warning'>\The [name] está lleno.</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		if(!do_after(user, 8 DECISECONDS, src))
@@ -665,7 +665,7 @@
 	if(volume_status == WATER_VOLUME_DRY)
 		return TRUE
 	playsound(user, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 100, FALSE)
-	user.visible_message(span_info("[user] starts to drink from [src]."))
+	user.visible_message(span_info("[user] comienza a beber de [src]."))
 	if(!do_after(user, 2.5 SECONDS, src))
 		return TRUE
 	var/datum/reagents/reagents = new()
@@ -698,7 +698,7 @@
 	color = "#705a43"
 
 /turf/open/water/sewer
-	name = "sewage"
+	name = "aguas residuales"
 	desc = "This dark water smells of dead rats."
 	icon_state = MAP_SWITCH("water", "pavingW")
 	underlay_icon_state = "paving"
@@ -756,7 +756,7 @@
 
 /turf/open/water/swamp
 	name = "murk"
-	desc = "Weeds and algae cover the surface of the water."
+	desc = "Las malas hierbas y las algas cubren la superficie del agua."
 	icon = 'icons/turf/natural/liquids.dmi'
 	icon_state = MAP_SWITCH("water", "dirtW2")
 	underlay_icon_state = "dirt"
@@ -799,7 +799,7 @@
 
 /turf/open/water/swamp/deep
 	name = "murk"
-	desc = "Deep water with several weeds and algae on the surface."
+	desc = "Agua profunda con varias hierbas y algas en la superficie."
 	icon_state = MAP_SWITCH("water", "dirtW")
 	water_height = WATER_HEIGHT_DEEP
 	slowdown = 20
@@ -834,7 +834,7 @@
 
 /turf/open/water/clean
 	name = "water"
-	desc = "Crystal clear water, what a blessing!"
+	desc = "Agua cristalina, ¡qué bendición!"
 	icon_state = MAP_SWITCH("water", "rockw2")
 	underlay_icon_state = "rock"
 	water_height = WATER_HEIGHT_SHALLOW
@@ -877,7 +877,7 @@
 
 /turf/open/water/river
 	name = "water"
-	desc = "Crystal clear water! Flowing swiftly along the river."
+	desc = "¡Agua cristalina! Fluyendo rápidamente a lo largo del río."
 	icon_state = MAP_SWITCH("rivermove", "rivermove-rockc")
 	underlay_icon_state = "rock"
 	water_height = WATER_HEIGHT_DEEP
@@ -958,7 +958,7 @@
 
 /turf/open/water/river/blood
 	name = "blood"
-	desc = "This river flows a viscous red."
+	desc = "Este río fluye de un rojo viscoso."
 	icon_state = MAP_SWITCH("rivermove", "rivermove-rockb")
 	underlay_icon_state = "rock"
 	water_reagent = /datum/reagent/blood
@@ -973,7 +973,7 @@
 
 /turf/open/water/acid // holy SHIT
 	name = "acid pool"
-	desc = "Well... how did THIS get here?"
+	desc = "Bueno... ¿cómo llegó ESTO aquí?"
 	underlay_icon_state = null
 	water_reagent = /datum/reagent/rogueacid
 	cleanliness_factor = -100
@@ -985,7 +985,7 @@
 	notake = TRUE
 
 /turf/open/water/ocean
-	name = "salt water"
+	name = "agua salada"
 	desc = "The waves lap at the coast, hungry to swallow the land."
 	icon_state = MAP_SWITCH("water", "gravelW")
 	underlay_icon_state = "gravel"
@@ -996,7 +996,7 @@
 	fishing_datum = /datum/fish_source/ocean
 
 /turf/open/water/ocean/abyss
-	name = "salt water"
+	name = "agua salada"
 	desc = "Deceptively deep, be careful not to find yourself this far out."
 	icon = 'icons/turf/natural/liquids.dmi'
 	icon_state = MAP_SWITCH("water", "ashW")
@@ -1015,7 +1015,7 @@
 	force_open_above = TRUE
 
 /datum/reagent/water/salty
-	name = "Salt Water"
+	name = "agua salada"
 	taste_description = "salt"
 	color = "#3e7459"
 

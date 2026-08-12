@@ -1,5 +1,5 @@
 /datum/work_order/nappy_time
-	name = "Napping"
+	name = "siesta"
 	stamina_cost = 0
 	work_time_left = 30 SECONDS
 	var/starting_working_number = 0

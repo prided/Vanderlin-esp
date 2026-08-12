@@ -78,7 +78,7 @@
 		to_chat(steward, span_warning("Only a quest-issuing role can validate quests."))
 		return FALSE
 	if(complete)
-		to_chat(steward, span_notice("This quest is already complete."))
+		to_chat(steward, span_notice("Esta misión ya está completa."))
 		return FALSE
 	log_quest(steward.ckey, steward.mind, steward, "Validate custom quest: [title]")
 	mark_complete()
@@ -89,7 +89,7 @@
 /// Returns TRUE if the user completed both prompts.
 /datum/quest/custom/proc/fill_common_fields(mob/user)
 	var/list/diff_choices = list(QUEST_DIFFICULTY_EASY, QUEST_DIFFICULTY_MEDIUM, QUEST_DIFFICULTY_HARD)
-	var/diff = tgui_input_list(user, "Quest difficulty?", "Custom Quest Difficulty", diff_choices)
+	var/diff = tgui_input_list(user, "¿Dificultad de la misión?", "Custom Quest Difficulty", diff_choices)
 	if(!diff)
 		return FALSE
 	quest_difficulty = diff

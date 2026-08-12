@@ -36,7 +36,7 @@
 
 /atom/movable/screen/alert/status_effect/heldup
 	name = "Held Up"
-	desc = "Making any sudden moves would probably be a bad idea!"
+	desc = "¡Hacer cualquier movimiento repentino probablemente sería una mala idea!"
 	icon_state = "aimed"
 
 /datum/component/hostage
@@ -69,7 +69,7 @@
 	captor.visible_message(span_danger("[captor] takes [target] hostage with [weapon]!"), \
 		span_danger("You take [target] hostage with [weapon]."), ignored_mobs = target, \
 		vision_distance = COMBAT_MESSAGE_RANGE)
-	to_chat(target, span_userdanger("[captor] takes you hostage with [weapon]!"))
+	to_chat(target, span_userdanger("¡[captor] te toma como rehén con [weapon]!"))
 
 	captor.apply_status_effect(/datum/status_effect/holdup)
 	target.apply_status_effect(/datum/status_effect/grouped/heldup, REF(captor))
@@ -189,7 +189,7 @@
 
 	var/mob/living/captor = parent
 	captor.visible_message(span_danger("[captor] breaks [captor.p_their()] focus on [target]!"), \
-		span_userdanger("You no longer have [weapon] focused on [target]!"), ignored_mobs = target)
+		span_userdanger("¡Ya no tienes [weapon] enfocado en [target]!"), ignored_mobs = target)
 	to_chat(target, span_userdanger("[captor] breaks [captor.p_their()] focus on you!"))
 	qdel(src)
 

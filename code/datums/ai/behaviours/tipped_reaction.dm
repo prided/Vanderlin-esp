@@ -25,8 +25,8 @@
 		seen_message = "[controller.pawn] looks at [savior] [text]."
 		self_message = "You look at [savior] [text]."
 	else
-		seen_message = "[controller.pawn] seems resigned to its fate."
-		self_message = "You resign yourself to your fate."
+		seen_message = "[controller.pawn] parece resignado a su destino."
+		self_message = "Te resignas a tu destino."
 	controller.pawn.visible_message(span_notice("[seen_message]"), span_notice("[self_message]"))
 	finish_action(controller, TRUE, tipper_key, reacting_key)
 

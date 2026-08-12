@@ -78,7 +78,7 @@ export function SubsystemViews(props: Props) {
     <Section
       fill
       scrollable
-      title="Subsystem Overview"
+      title="Descripción general del subsistema"
       buttons={
         <Stack align="center">
           <Stack.Item color="label">
@@ -91,7 +91,7 @@ export function SubsystemViews(props: Props) {
               onClick={() => setBars(!bars)}
               selected={bars}
             >
-              Bars
+              Barras
             </Button>
           </Stack.Item>
         </Stack>

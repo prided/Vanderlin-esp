@@ -1,7 +1,7 @@
 GLOBAL_LIST_INIT(animal_migration_points, list())
 
 /obj/effect/landmark/events/animal_migration_point
-	name = MAP_SWITCH("", "Migration Point")
+	name = MAP_SWITCH("", "Punto de migración")
 
 /obj/effect/landmark/events/animal_migration_point/Initialize(mapload)
 	. = ..()
@@ -12,7 +12,7 @@ GLOBAL_LIST_INIT(animal_migration_points, list())
 	return ..()
 
 /datum/round_event_control/passive_animal_migration
-	name = "Passive Animal Migration"
+	name = "Migración pasiva de animales"
 	track = EVENT_TRACK_MUNDANE
 	typepath = /datum/round_event/animal_migration/passive
 	weight = 5

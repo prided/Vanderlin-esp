@@ -12,8 +12,8 @@
 
 /*	.................   Dough   ................... */
 /obj/item/reagent_containers/food/snacks/dough_base
-	name = "unfinished dough"
-	desc = "With a little more ambition, you will conquer."
+	name = "masa sin terminar"
+	desc = "Con un poco más de ambición conquistarás."
 	icon_state = "dough_base"
 	w_class = WEIGHT_CLASS_NORMAL
 
@@ -27,7 +27,7 @@
 
 /obj/item/reagent_containers/food/snacks/dough
 	name = "dough"
-	desc = "The triumph of all bakers."
+	desc = "El triunfo de todos los panaderos."
 	icon_state = "dough"
 	slices_num = 2
 	slice_batch = TRUE
@@ -46,7 +46,7 @@
 
 /*	.................   Smalldough   ................... */
 /obj/item/reagent_containers/food/snacks/dough_slice
-	name = "smalldough"
+	name = "masa pequeña"
 	icon_state = "doughslice"
 	w_class = WEIGHT_CLASS_NORMAL
 	slices_num = 0
@@ -80,7 +80,7 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/reagent_containers/food/snacks/dough_flat
-	name = "flatdough"
+	name = "masa plana"
 	icon_state = "dough_flat"
 	w_class = WEIGHT_CLASS_NORMAL
 	slices_num = 0
@@ -119,7 +119,7 @@
 /*	.................   Butterdough   ................... */
 /obj/item/reagent_containers/food/snacks/butterdough
 	name = "butterdough"
-	desc = "What is a triumph, to a legacy?"
+	desc = "¿Qué es un triunfo, para un legado?"
 	icon_state = "butterdough"
 	slices_num = 2
 	bitesize = 3
@@ -176,7 +176,7 @@
 				qdel(src)
 		else if(tool.get_sharpness())
 			playsound(user, 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
-			to_chat(user, span_notice("Cutting the dough into strips and making a prezzel..."))
+			to_chat(user, span_notice("Cortar la masa en tiras y hacer un prezzel..."))
 			if(do_after(user, short_cooktime, src))
 				if(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/cooking) >= 2 || isdwarf(user))
 					new /obj/item/reagent_containers/food/snacks/foodbase/prezzel_raw/good(loc)
@@ -223,7 +223,7 @@
 /*	.................   Piedough   ................... */
 /obj/item/reagent_containers/food/snacks/piedough
 	name = "piedough"
-	desc = "The beginning of greater things to come."
+	desc = "El comienzo de cosas más grandes por venir."
 	icon_state = "piedough"
 	dropshrink = 0.9
 	w_class = WEIGHT_CLASS_NORMAL
@@ -242,7 +242,7 @@
 
 /*	.................   Bread   ................... */
 /obj/item/reagent_containers/food/snacks/bread
-	name = "bread loaf"
+	name = "barra de pan"
 	desc = "One of the staple foods of commoners. A simple meal, yet a luxury men will die for."
 	icon_state = "loaf"
 	base_icon_state = "loaf"
@@ -344,9 +344,9 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/reagent_containers/food/snacks/breadslice/toast
-	name = "toasted bread"
+	name = "pan tostado"
 	icon_state = "toast"
-	tastes = list("crispy bread" = 1)
+	tastes = list("pan crujiente" = 1)
 
 	nutrition = BREADSLICE_NUTRITION * COOK_MOD
 	faretype = FARE_NEUTRAL
@@ -354,7 +354,7 @@
 	item_weight = 80 GRAMS
 
 /obj/item/reagent_containers/food/snacks/stale_bread
-	name = "stale bread"
+	name = "pan duro"
 	desc = "Old. Is that mold? Not fit for slicing, just eating in sullen silence."
 	icon_state = "loaf"
 	color = "#92908a"
@@ -366,12 +366,12 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_EXTREME
 	foodtype = GRAIN
-	tastes = list("stale bread" = 1)
+	tastes = list("pan duro" = 1)
 	item_weight = 500 GRAMS
 
 /obj/item/reagent_containers/food/snacks/stale_bread/raisin
 	icon_state = "raisinbread6"
-	tastes = list("stale bread" = 1, "old raisin" = 1)
+	tastes = list("pan duro" = 1, "old raisin" = 1)
 	faretype = FARE_POOR
 	foodtype = GRAIN | FRUIT
 	nutrition = BREAD_NUTRITION * 0.5 + RAISIN_NUTRITION
@@ -381,7 +381,7 @@
 
 /*	.................   Raisin bread   ................... */
 /obj/item/reagent_containers/food/snacks/raisindough
-	name = "dough of raisins"
+	name = "masa de pasas"
 	icon_state = "dough_raisin"
 	slices_num = 0
 	w_class = WEIGHT_CLASS_NORMAL
@@ -441,7 +441,7 @@
 	faretype = FARE_NEUTRAL
 	rotprocess = null
 	foodtype = GRAIN | DAIRY
-	tastes = list("chewy butterdough" = 1)
+	tastes = list("masa de mantequilla masticable" = 1)
 	item_weight = 450 GRAMS
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice
@@ -454,7 +454,7 @@
 	faretype = FARE_NEUTRAL
 	rotprocess = null
 	foodtype = GRAIN | DAIRY
-	tastes = list("chewy butterdough" = 1)
+	tastes = list("masa de mantequilla masticable" = 1)
 	item_weight = 90 GRAMS
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -493,7 +493,7 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_DECENT
 	foodtype = GRAIN | RAW | DAIRY | FRUIT
-	tastes = list("buttery dough" = 1, "dried raspberries" = 1)
+	tastes = list("buttery dough" = 1, "frambuesas secas" = 1)
 
 /obj/item/reagent_containers/food/snacks/bread/bookbread/raspberry
 	name = "raspberry bookbread"
@@ -505,7 +505,7 @@
 	nutrition = BOOKBREAD_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried raspberries" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "frambuesas secas" = 1)
 	item_weight = 380 GRAMS
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/raspberry
@@ -516,7 +516,7 @@
 	nutrition = BOOKBREADSLICE_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried raspberries")
+	tastes = list("masa de mantequilla masticable" = 1, "frambuesas secas")
 
 /*	.................   Raisin Bookbread   ................... */
 /obj/item/reagent_containers/food/snacks/jacksberrybutterdough
@@ -543,7 +543,7 @@
 	nutrition = BOOKBREAD_NUTRITION + RAISIN_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "raisins" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "raisins" = 1)
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/jacksberry
 	name = "sliced raisin bookbread"
@@ -553,7 +553,7 @@
 	nutrition = BOOKBREADSLICE_NUTRITION + RAISIN_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "raisins")
+	tastes = list("masa de mantequilla masticable" = 1, "raisins")
 
 /*	.................   Raisin Bookbread (Poison)  ................... */
 /obj/item/reagent_containers/food/snacks/jacksberrybutterdough/poison
@@ -590,7 +590,7 @@
 	nutrition = BOOKBREAD_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried blackberries" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "dried blackberries" = 1)
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/blackberry
 	name = "sliced blackberry bookbread"
@@ -600,7 +600,7 @@
 	nutrition = BOOKBREADSLICE_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried blackberries")
+	tastes = list("masa de mantequilla masticable" = 1, "dried blackberries")
 
 /*	.................   Pear Bookbread   ................... */
 /obj/item/reagent_containers/food/snacks/pearbutterdough
@@ -614,7 +614,7 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_DECENT
 	foodtype = GRAIN | RAW | DAIRY | FRUIT
-	tastes = list("buttery dough" = 1, "dried pears" = 1)
+	tastes = list("buttery dough" = 1, "peras secas" = 1)
 	item_weight = 380 GRAMS
 
 /obj/item/reagent_containers/food/snacks/bread/bookbread/pear
@@ -627,7 +627,7 @@
 	nutrition = BOOKBREAD_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried pears" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "peras secas" = 1)
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/pear
 	name = "sliced pear bookbread"
@@ -637,7 +637,7 @@
 	nutrition = BOOKBREADSLICE_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried pears")
+	tastes = list("masa de mantequilla masticable" = 1, "peras secas")
 
 /*	.................   Tangerine Bookbread   ................... */
 /obj/item/reagent_containers/food/snacks/tangerinebutterdough
@@ -664,7 +664,7 @@
 	nutrition = BOOKBREAD_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried tangerines" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "dried tangerines" = 1)
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/tangerine
 	name = "sliced tangerine bookbread"
@@ -674,7 +674,7 @@
 	nutrition = BOOKBREADSLICE_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried tangerines")
+	tastes = list("masa de mantequilla masticable" = 1, "dried tangerines")
 
 /*	.................   Plum Bookbread   ................... */
 /obj/item/reagent_containers/food/snacks/plumbutterdough
@@ -688,7 +688,7 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_DECENT
 	foodtype = GRAIN | RAW | DAIRY | FRUIT
-	tastes = list("buttery dough" = 1, "dried plums" = 1)
+	tastes = list("buttery dough" = 1, "ciruelas secas" = 1)
 	item_weight = 380 GRAMS
 
 /obj/item/reagent_containers/food/snacks/bread/bookbread/plum
@@ -701,17 +701,17 @@
 	nutrition = BOOKBREAD_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried plums" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "ciruelas secas" = 1)
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/plum
 	name = "sliced plum bookbread"
-	desc = "A subtle flavor, best for enjoying subtler books. Mysteries prefered."
+	desc = "Un sabor sutil, ideal para disfrutar de libros más sutiles. Se prefieren los misterios."
 	icon_state = "plum_bookbread_slice"
 
 	nutrition = BOOKBREADSLICE_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried plums")
+	tastes = list("masa de mantequilla masticable" = 1, "ciruelas secas")
 
 /*	.................   Lemon Bookbread   ................... */
 /obj/item/reagent_containers/food/snacks/lemonbutterdough
@@ -725,7 +725,7 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_DECENT
 	foodtype = GRAIN | RAW | DAIRY | FRUIT
-	tastes = list("buttery dough" = 1, "dried lemons" = 1)
+	tastes = list("buttery dough" = 1, "limones secos" = 1)
 	item_weight = 380 GRAMS
 
 /obj/item/reagent_containers/food/snacks/bread/bookbread/lemon
@@ -738,7 +738,7 @@
 	nutrition = BOOKBREAD_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried lemons" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "limones secos" = 1)
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/lemon
 	name = "sliced lemon bookbread"
@@ -748,7 +748,7 @@
 	nutrition = BOOKBREADSLICE_NUTRITION + DRIEDFRUIT_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT
-	tastes = list("chewy butterdough" = 1, "dried lemons")
+	tastes = list("masa de mantequilla masticable" = 1, "limones secos")
 
 /*	.................   Chocolate Bookbread   ................... */
 /obj/item/reagent_containers/food/snacks/chocolatebutterdough
@@ -797,14 +797,14 @@
 	item_weight = 40 GRAMS
 
 /obj/item/reagent_containers/food/snacks/choccy_cookie
-	name = "chocolate chip cookie"
+	name = "galleta con chispas de chocolate"
 	desc = "Salty cookie and sweet chocolate meet in this treat."
 	icon_state = "cookie"
 
 	nutrition = BUTTERDOUGHSLICE_NUTRITION + CHOCCY_NUTRITION
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | SUGAR
-	tastes = list("chewy butterdough" = 1, "rich chocolate" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "rich chocolate" = 1)
 	item_weight = 40 GRAMS
 
 /obj/item/reagent_containers/food/snacks/choco_butterdough_slice
@@ -836,14 +836,14 @@
 	item_weight = 120 GRAMS
 
 /obj/item/reagent_containers/food/snacks/choco_bun
-	name = "chocolate bun"
-	desc = "A rich chocolate bun, buttery and sweet."
+	name = "bollo de chocolate"
+	desc = "Un rico bollo de chocolate, mantecoso y dulce."
 	icon_state = "bunchoc"
 	base_icon_state = "bunchoc"
 	nutrition = BUTTERDOUGHSLICE_NUTRITION + CHOCCY_NUTRITION
 	faretype = FARE_LAVISH
 	foodtype = GRAIN | DAIRY | SUGAR
-	tastes = list("chewy butterdough" = 1, "rich chocolate" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "rich chocolate" = 1)
 	biting = TRUE
 	item_weight = 120 GRAMS
 
@@ -869,7 +869,7 @@
 	nutrition = BOOKBREAD_NUTRITION + CHOCCY_NUTRITION
 	faretype = FARE_LAVISH
 	foodtype = GRAIN | DAIRY | SUGAR
-	tastes = list("chewy butterdough" = 1, "rich chocolate" = 1)
+	tastes = list("masa de mantequilla masticable" = 1, "rich chocolate" = 1)
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/chocolate
 	name = "sliced chocolate bookbread"
@@ -879,7 +879,7 @@
 	nutrition = BOOKBREADSLICE_NUTRITION + CHOCCY_NUTRITION
 	faretype = FARE_LAVISH
 	foodtype = GRAIN | DAIRY | SUGAR
-	tastes = list("chewy butterdough" = 1, "rich chocolate")
+	tastes = list("masa de mantequilla masticable" = 1, "rich chocolate")
 
 /*-----------------\
 | Sunreed Products |
@@ -897,7 +897,7 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_LONG
 	foodtype = GRAIN | RAW
-	tastes = list("semi-sweet dough" = 1)
+	tastes = list("masa semidulce" = 1)
 	item_weight = 280 GRAMS
 
 /obj/item/reagent_containers/food/snacks/masa
@@ -916,7 +916,7 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_LONG
 	foodtype = GRAIN | RAW
-	tastes = list("semi-sweet dough" = 1)
+	tastes = list("masa semidulce" = 1)
 	item_weight = 280 GRAMS
 
 /obj/item/reagent_containers/food/snacks/masa_slice
@@ -931,7 +931,7 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_LONG
 	foodtype = GRAIN | RAW
-	tastes = list("semi-sweet dough" = 1)
+	tastes = list("masa semidulce" = 1)
 	item_weight = 140 GRAMS
 
 /obj/item/reagent_containers/food/snacks/masa_slice/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -956,7 +956,7 @@
 
 /obj/item/reagent_containers/food/snacks/masa_flat
 	name = "sunreed flat-cake"
-	desc = "Something to keep our future safe."
+	desc = "Algo para mantener nuestro futuro seguro."
 	icon_state = "masa_flat"
 	dropshrink = 0.9
 	w_class = WEIGHT_CLASS_NORMAL
@@ -966,12 +966,12 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_LONG
 	foodtype = GRAIN | RAW
-	tastes = list("semi-sweet dough" = 1)
+	tastes = list("masa semidulce" = 1)
 	item_weight = 120 GRAMS
 
 /obj/item/reagent_containers/food/snacks/masa_honey
 	name = "honeyed sunreed dough"
-	desc = "Sweet dough with sweet honey."
+	desc = "Masa dulce con miel dulce."
 	icon_state = "honey_masa"
 	bitesize = 3
 	w_class = WEIGHT_CLASS_NORMAL
@@ -981,13 +981,13 @@
 	faretype = FARE_IMPOVERISHED
 	rotprocess = SHELFLIFE_LONG
 	foodtype = GRAIN | RAW | SUGAR
-	tastes = list("semi-sweet dough" = 1, "honey" = 1)
+	tastes = list("masa semidulce" = 1, "honey" = 1)
 	item_weight = 280 GRAMS
 
 /*	.................   Sunreed Dough   ................... */
 
 /obj/item/reagent_containers/food/snacks/sunreed_bread
-	name = "sunbread"
+	name = "pan de sol"
 	desc = "Preserves very well over long travels."
 	icon_state = "maizebread"
 	dropshrink = 0.8
@@ -1002,7 +1002,7 @@
 	faretype = FARE_POOR
 	rotprocess = null
 	foodtype = GRAIN
-	tastes = list("semi-sweet bread" = 1)
+	tastes = list("pan semidulce" = 1)
 	item_weight = 450 GRAMS
 
 /obj/item/reagent_containers/food/snacks/sunreed_bread_slice
@@ -1017,7 +1017,7 @@
 	faretype = FARE_POOR
 	rotprocess = null
 	foodtype = GRAIN
-	tastes = list("semi-sweet bread" = 1)
+	tastes = list("pan semidulce" = 1)
 	item_weight = 110 GRAMS
 
 /obj/item/reagent_containers/food/snacks/sunreed_bread/honey
@@ -1030,7 +1030,7 @@
 	nutrition = BREAD_NUTRITION+HONEY_NUTRITION
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | SUGAR
-	tastes = list("semi-sweet bread" = 1, "honey" = 1)
+	tastes = list("pan semidulce" = 1, "honey" = 1)
 
 /obj/item/reagent_containers/food/snacks/sunreed_bread_slice/honey
 	name = "honeyed sunbread cube"
@@ -1042,7 +1042,7 @@
 	nutrition = (BREAD_NUTRITION+HONEY_NUTRITION)/4
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | SUGAR
-	tastes = list("semi-sweet bread" = 1, "honey" = 1)
+	tastes = list("pan semidulce" = 1, "honey" = 1)
 
 /*	.................   Estrellas   ................... */
 
@@ -1056,7 +1056,7 @@
 	faretype = FARE_POOR
 	rotprocess = SHELFLIFE_LONG
 	foodtype = GRAIN
-	tastes = list("semi-sweet bread" = 1)
+	tastes = list("pan semidulce" = 1)
 	item_weight = 50 GRAMS
 
 /obj/item/reagent_containers/food/snacks/estrella/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -1082,7 +1082,7 @@
 	faretype++
 
 	if(istype(tool, /obj/item/reagent_containers/food/snacks/sugar))
-		name = "sugar powdered [name]"
+		name = "azúcar en polvo [name]"
 		desc = "[desc] Its form holds the sugar excellently."
 		icon_state = "sugar_estrella"
 	else if(istype(tool, /obj/item/reagent_containers/food/snacks/chocolate/chunk))
@@ -1108,7 +1108,7 @@
 	item_weight = 150 GRAMS
 
 /obj/item/reagent_containers/food/snacks/foodbase/huskbunraw
-	name = "raw huskbun"
+	name = "bollo de cáscara crudo"
 	desc = "The husk helps cook it, and adds to the taste."
 	icon_state = "huskbun_raw"
 	nutrition = SMALLDOUGH_NUTRITION
@@ -1122,7 +1122,7 @@
 /obj/item/reagent_containers/food/snacks/foodbase/huskbunraw/meat
 	foodtype = GRAIN | MEAT | RAW
 	nutrition = SMALLDOUGH_NUTRITION + MINCE_NUTRITION
-	tastes = list("crumbly sunreed dough" = 1, "succulant meat" = 1)
+	tastes = list("crumbly sunreed dough" = 1, "carne suculenta" = 1)
 
 /obj/item/reagent_containers/food/snacks/foodbase/huskbunraw/potato
 	foodtype = GRAIN | VEGETABLES
@@ -1132,12 +1132,12 @@
 /obj/item/reagent_containers/food/snacks/foodbase/huskbunraw/onion
 	foodtype = GRAIN | VEGETABLES
 	nutrition = SMALLDOUGH_NUTRITION + VEGGIE_NUTRITION
-	tastes = list("crumbly sunreed dough" = 1, "caramalized onion" = 1)
+	tastes = list("crumbly sunreed dough" = 1, "cebolla caramalizada" = 1)
 
 /obj/item/reagent_containers/food/snacks/foodbase/huskbunraw/cheese
 	foodtype = GRAIN | DAIRY
 	nutrition = SMALLDOUGH_NUTRITION + CHEESE_NUTRITION
-	tastes = list("crumbly sunreed dough" = 1, "gooey cheese" = 1)
+	tastes = list("crumbly sunreed dough" = 1, "queso pegajoso" = 1)
 
 /obj/item/reagent_containers/food/snacks/huskbun
 	name = "huskbun"
@@ -1201,35 +1201,35 @@
 /obj/item/reagent_containers/food/snacks/foodbase/saigaita/meat
 	foodtype = GRAIN | MEAT
 	nutrition = SMALLDOUGH_NUTRITION + MINCE_NUTRITION
-	tastes = list("semi-sweet bread" = 1, "succulant meat" = 1)
+	tastes = list("pan semidulce" = 1, "carne suculenta" = 1)
 
 /obj/item/reagent_containers/food/snacks/foodbase/saigaita/potato
 	foodtype = GRAIN | VEGETABLES
 	nutrition = SMALLDOUGH_NUTRITION + VEGGIE_NUTRITION
-	tastes = list("semi-sweet bread" = 1, "warm potato" = 1)
+	tastes = list("pan semidulce" = 1, "warm potato" = 1)
 
 /obj/item/reagent_containers/food/snacks/foodbase/saigaita/onion
 	foodtype = GRAIN | VEGETABLES
 	nutrition = SMALLDOUGH_NUTRITION + VEGGIE_NUTRITION
-	tastes = list("semi-sweet bread" = 1, "caramalized onion" = 1)
+	tastes = list("pan semidulce" = 1, "cebolla caramalizada" = 1)
 
 /obj/item/reagent_containers/food/snacks/foodbase/saigaita/cheese
 	foodtype = GRAIN | DAIRY
 	nutrition = SMALLDOUGH_NUTRITION + CHEESE_NUTRITION
-	tastes = list("semi-sweet bread" = 1, "gooey cheese" = 1)
+	tastes = list("pan semidulce" = 1, "queso pegajoso" = 1)
 
 /obj/item/reagent_containers/food/snacks/foodbase/saigaita/egg
 	foodtype = GRAIN | EGG
 	nutrition = SMALLDOUGH_NUTRITION + EGG_NUTRITION
-	tastes = list("semi-sweet bread" = 1, "scrambled egg" = 1)
+	tastes = list("pan semidulce" = 1, "huevo revuelto" = 1)
 
 /obj/item/reagent_containers/food/snacks/saigaita_cooked
-	name = "grilled saigaita"
+	name = "saigaita a la parrilla"
 	desc = "This saigaita has been heated to perfection."
 	icon_state = "lilsaiga"
 	bitesize = 4
 	nutrition = (SMALLDOUGH_NUTRITION + MINCE_NUTRITION) * COOK_MOD
-	tastes = list("semi-sweet bread" = 1)
+	tastes = list("pan semidulce" = 1)
 	dropshrink = 0.8
 	faretype = FARE_NEUTRAL
 	item_weight = 120 GRAMS
@@ -1331,7 +1331,7 @@
 	desc = "Moulded to count out eight exactly rationed slices, because even the desperate want desert. This one has splendid little bits of lime and glaze."
 	icon_state = "lemon_eighthscake"
 	slice_path = /obj/item/reagent_containers/food/snacks/eighthscake_slice/lime
-	tastes = list("sweet sunreed dough" = 1, "lime glaze" = 1)
+	tastes = list("sweet sunreed dough" = 1, "glaseado de lima" = 1)
 	faretype = FARE_FINE
 	foodtype = GRAIN | JUNKFOOD | EGG | FRUIT
 	nutrition = (CAKEBASE_NUTRITION + FRUIT_NUTRITION) * COOK_MOD
@@ -1363,7 +1363,7 @@
 	name = "lime eighthscake slice"
 	desc = "A perfectly rationed eighth of an eighthscake. This one has splendid little bits of lime and glaze."
 	icon_state = "lemon_eighthscake_slice"
-	tastes = list("sweet sunreed dough" = 1, "lime glaze" = 1)
+	tastes = list("sweet sunreed dough" = 1, "glaseado de lima" = 1)
 	faretype = FARE_FINE
 	foodtype = GRAIN | JUNKFOOD | EGG | FRUIT
 	nutrition = ((CAKEBASE_NUTRITION + FRUIT_NUTRITION) * COOK_MOD)/8
@@ -1461,22 +1461,22 @@
 
 /obj/item/reagent_containers/food/snacks/tostada_meat/fish
 	name = "fish plato"
-	desc = "Crispy fish on an edible plate."
+	desc = "Pescado crujiente en un plato comestible."
 	icon_state = "tostada_fish"
 	nutrition = (SMALLDOUGH_NUTRITION + RAWMEAT_NUTRITION) * COOK_MOD
-	tastes = list("crunchy sunreed dough" = 1, "crispy fish" = 1)
+	tastes = list("crunchy sunreed dough" = 1, "pescado crujiente" = 1)
 
 /obj/item/reagent_containers/food/snacks/tostada_meat/egg
 	name = "egg plato"
 	desc = "Sunny-side egg on an edible plate."
 	icon_state = "tostada_egg"
 	nutrition = (SMALLDOUGH_NUTRITION + EGG_NUTRITION) * COOK_MOD
-	tastes = list("crunchy sunreed dough" = 1, "fried egg" = 1)
+	tastes = list("crunchy sunreed dough" = 1, "huevo frito" = 1)
 
 /*	.................   Sun Crackers   ................... */
 
 /obj/item/reagent_containers/food/snacks/chippile
-	name = "sun-crackers"
+	name = "galletas de sol"
 	desc = "A pile of crunchy sun-crackers."
 	icon_state = "chippile"
 	bitesize = 4
@@ -1543,13 +1543,13 @@
 	desc = "A pile of crunchy sun-crackers, smothered in spicy drowsbane."
 	icon_state = "chippile_salsa"
 	nutrition = (SMALLDOUGH_NUTRITION + COOKED_VEGGIE_NUTRITION) * COOK_MOD
-	tastes = list("crunchy sunreed dough" = 1, "infernal spice" = 1)
+	tastes = list("crunchy sunreed dough" = 1, "especia infernal" = 1)
 	faretype = FARE_NEUTRAL
 	stacktype = /obj/item/reagent_containers/food/snacks/chip_drowsbane
 	list_reagents = list(/datum/reagent/drowsbane = 10)
 
 /obj/item/reagent_containers/food/snacks/chip
-	name = "sun-crackers"
+	name = "galletas de sol"
 	desc = "A single sun-cracker. Great for dipping."
 	icon_state = "chip"
 	bitesize = 1
@@ -1576,7 +1576,7 @@
 	icon_state = "chip_salsa"
 	bitesize = 1
 	nutrition = ((SMALLDOUGH_NUTRITION + COOKED_VEGGIE_NUTRITION)* COOK_MOD)/5
-	tastes = list("crunchy sunreed dough" = 1, "infernal spice" = 1)
+	tastes = list("crunchy sunreed dough" = 1, "especia infernal" = 1)
 	dropshrink = 0.8
 	faretype = FARE_NEUTRAL
 	list_reagents = list(/datum/reagent/drowsbane = 2)
@@ -1589,7 +1589,7 @@
 /*	.................   Bread bun   ................... */
 /obj/item/reagent_containers/food/snacks/bun
 	name = "bun"
-	desc = "Portable, quaint and entirely consumable"
+	desc = "Portátil, pintoresco y totalmente consumible."
 	icon_state = "bun"
 	base_icon_state = "bun"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -1618,7 +1618,7 @@
 	item_weight = 180 GRAMS
 
 /obj/item/reagent_containers/food/snacks/grenzelbun_cocaumole
-	name = "grenzelbun with cocaumole"
+	name = "grenzelbun con cocaumole"
 	desc = "A staple of Grenzelhoft cuisine, altered by Tiefling wanderers."
 	icon_state = "grenzbun_cocaumole"
 	bitesize = 5
@@ -1633,8 +1633,8 @@
 
 /*	.................   Cheese bun   ................... */
 /obj/item/reagent_containers/food/snacks/foodbase/cheesebun_raw
-	name = "raw cheese bun"
-	desc = "Portable, quaint and entirely consumable"
+	name = "pan de queso crudo"
+	desc = "Portátil, pintoresco y totalmente consumible."
 	icon_state = "cheesebun_raw"
 	w_class = WEIGHT_CLASS_NORMAL
 
@@ -1652,7 +1652,7 @@
 	icon_state = "cheesebun"
 	base_icon_state = "cheesebun"
 	biting = TRUE
-	tastes = list("crispy bread and cream cheese" = 1)
+	tastes = list("pan crujiente y queso crema" = 1)
 	w_class = WEIGHT_CLASS_NORMAL
 
 	nutrition = (SMALLDOUGH_NUTRITION + CHEESE_NUTRITION) * COOK_MOD
@@ -1663,7 +1663,7 @@
 
 /*	.................   Xylix Bun   ................... */
 /obj/item/reagent_containers/food/snacks/foodbase/xylixbun_raw
-	name = "mysterious dough"
+	name = "masa misteriosa"
 	desc = "This dough seems entirely inconspicous, sure to bake into a regular bun."
 	icon_state = "xylixdough"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -1681,7 +1681,7 @@
 	name = "xylixbun"
 	desc = "A very smug looking bun throwing up a holy gesture. Surely nothing bad could come of eating this?"
 	icon_state = "xylixbun"
-	tastes = list("horribly spicy bread" = 1)
+	tastes = list("pan horriblemente picante" = 1)
 	w_class = WEIGHT_CLASS_NORMAL
 
 	nutrition = (SMALLDOUGH_NUTRITION + VEGGIE_NUTRITION) * COOK_MOD
@@ -1717,7 +1717,7 @@
 	base_icon_state = "pastry"
 	biting = TRUE
 
-	tastes = list("crispy butterdough" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1)
 	nutrition = BUTTERDOUGHSLICE_NUTRITION * COOK_MOD
 	rotprocess = SHELFLIFE_EXTREME
 	foodtype = GRAIN | DAIRY
@@ -1742,7 +1742,7 @@
 	icon_state = "biscuit"
 	base_icon_state = "biscuit"
 	biting = TRUE
-	tastes = list("crispy butterdough" = 1, "raisins" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "raisins" = 1)
 	faretype = FARE_POOR
 	foodtype = GRAIN | DAIRY | FRUIT
 	nutrition = (BUTTERDOUGHSLICE_NUTRITION + RAISIN_NUTRITION) * COOK_MOD * DRIED_MOD
@@ -1782,7 +1782,7 @@
 	rotprocess = SHELFLIFE_LONG
 	foodtype = GRAIN | DAIRY
 	nutrition = BUTTERDOUGH_NUTRITION * COOK_MOD
-	tastes = list("crispy butterdough" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1)
 	faretype = FARE_NEUTRAL
 	item_weight = 80 GRAMS
 
@@ -1814,7 +1814,7 @@
 	desc = "Having deep origins in the culture of Vanderlin, the humble fritter is perhaps the most patriotic pastry out there, long may it reign!"
 	icon_state = "applefritter"
 	dropshrink = 0.8
-	tastes = list("crispy butterdough" = 1, "sweet apple bits" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "sweet apple bits" = 1)
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | FRUIT | JUNKFOOD
 	nutrition = (BUTTERDOUGHSLICE_NUTRITION + FRUIT_NUTRITION) * COOK_MOD
@@ -1835,7 +1835,7 @@
 
 /*	.................   Cake   ................... */
 /obj/item/reagent_containers/food/snacks/cake
-	name = "cake base"
+	name = "base de pastel"
 	desc = "With this sweet thing, you shall make them sing. With jacksberry filling a cheesecake can be made. More exotic cakes require different fruit fillings."
 	icon_state = "cake"
 	dropshrink = 0.8
@@ -1943,13 +1943,13 @@
 
 /obj/item/reagent_containers/food/snacks/cheesecake_cooked
 	name = "cheesecake"
-	desc = "Humenity's favored creation."
+	desc = "La creación favorita de la humanidad."
 	icon_state = "cheesecake"
 	dropshrink = 0.8
 	slices_num = 6
 	slice_path = /obj/item/reagent_containers/food/snacks/cheesecake_slice
 	w_class = WEIGHT_CLASS_NORMAL
-	tastes = list("cake"=1, "jacksberry" = 1, "creamy cheese"=1)
+	tastes = list("cake"=1, "jacksberry" = 1, "queso cremoso"=1)
 	slice_batch = TRUE
 	slice_sound = TRUE
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -1970,7 +1970,7 @@
 	slices_num = 0
 	bitesize = 2
 	biting = TRUE
-	tastes = list("cake"=1, "jacksberry" = 1, "creamy cheese"=1)
+	tastes = list("cake"=1, "jacksberry" = 1, "queso cremoso"=1)
 	w_class = WEIGHT_CLASS_NORMAL
 	eat_effect = /datum/status_effect/buff/foodbuff
 	nutrition = ((CAKEBASE_NUTRITION + RAISIN_NUTRITION + CHEESE_NUTRITION) * COOK_MOD) * SLICED_MOD
@@ -1985,7 +1985,7 @@
 /*	.................   STRAWBERRY CAKE   ................... */
 
 /obj/item/reagent_containers/food/snacks/strawbycake
-	name = "strawberry cake base"
+	name = "base de pastel de fresa"
 	desc = "With this sweet thing, you shall make them sing. Lacking sugar frosting."
 	icon_state = "cake_filled"
 	dropshrink = 0.8
@@ -1998,7 +1998,7 @@
 	item_weight = 400 GRAMS
 
 /obj/item/reagent_containers/food/snacks/strawbycake_ready
-	name = "unbaked strawberry cake"
+	name = "pastel de fresa sin hornear"
 	icon_state = "strawberrycakeuncooked"
 	dropshrink = 0.8
 	slices_num = 0
@@ -2011,7 +2011,7 @@
 	item_weight = 600 GRAMS
 
 /obj/item/reagent_containers/food/snacks/strawbycake_cooked
-	name = "strawberry cake"
+	name = "pastel de fresa"
 	desc = "Traditionally made with sugarbeet frosting, an elvish treat as old as time. Commonly served at elf weddings."
 	icon_state = "strawberrycake"
 	dropshrink = 0.8
@@ -2046,7 +2046,7 @@
 /*	.................   CRIMSON PINE CAKE   ................... */
 
 /obj/item/reagent_containers/food/snacks/crimsoncake
-	name = "crimson pine cake base"
+	name = "base de pastel de pino carmesí"
 	desc = "With this sweet thing, you shall make them sing. Lacking chocolate bits."
 	icon_state = "cake_filled"
 	dropshrink = 0.8
@@ -2059,7 +2059,7 @@
 	item_weight = 400 GRAMS
 
 /obj/item/reagent_containers/food/snacks/crimsoncake_ready
-	name = "unbaked crimson pine cake"
+	name = "pastel de pino carmesí sin hornear"
 	icon_state = "crimsonpinecakeraw"
 	slices_num = 0
 	w_class = WEIGHT_CLASS_NORMAL
@@ -2071,7 +2071,7 @@
 	item_weight = 600 GRAMS
 
 /obj/item/reagent_containers/food/snacks/crimsoncake_cooked
-	name = "crimson pine cake"
+	name = "pastel de pino carmesí"
 	desc = "A fusion of Crimson Elf and Grenzelhoftian cuisines, the cake originates from the Valorian Republics. Rumor has it that one of the many casus belli in the Republics was based upon a disagreement on the cakes exact recipe."
 	icon_state = "crimsonpinecake"
 	slices_num = 6
@@ -2166,7 +2166,7 @@
 /*	.................   TAMTO SILK CAKE   ................... */
 
 /obj/item/reagent_containers/food/snacks/tamtocake
-	name = "tamto silk cake base"
+	name = "base de pastel de seda tamto"
 	desc = "With this sweet thing, you shall make them sing. Lacking fresh cheese glazing."
 	icon_state = "cake_filled"
 	dropshrink = 0.8
@@ -2179,7 +2179,7 @@
 	item_weight = 400 GRAMS
 
 /obj/item/reagent_containers/food/snacks/tamtocake_ready
-	name = "unbaked tamto silk cake"
+	name = "pastel de seda tamto sin hornear"
 	icon_state = "tomatosilk_raw"
 	dropshrink = 0.9
 	slices_num = 0
@@ -2192,14 +2192,14 @@
 	item_weight = 600 GRAMS
 
 /obj/item/reagent_containers/food/snacks/tamtocake_cooked
-	name = "tamto silk cake"
+	name = "pastel de seda tamto"
 	desc = "A silky smooth cake with delectably sweet tamto filling, originating from the bogs of Daftmarsh."
 	icon_state = "tomatosilk"
 	dropshrink = 0.9
 	slices_num = 6
 	slice_path = /obj/item/reagent_containers/food/snacks/tamtocake_slice
 	w_class = WEIGHT_CLASS_NORMAL
-	tastes = list("cake"=1, "sweet tamto" = 1, "creamy cheese"=1)
+	tastes = list("cake"=1, "dulce tamto" = 1, "queso cremoso"=1)
 	slice_batch = TRUE
 	slice_sound = TRUE
 	rotprocess = SHELFLIFE_LONG
@@ -2215,7 +2215,7 @@
 	dropshrink = 0.8
 	slices_num = 0
 	bitesize = 2
-	tastes = list("cake"=1, "sweet tamto" = 1, "creamy cheese"=1)
+	tastes = list("cake"=1, "dulce tamto" = 1, "queso cremoso"=1)
 	w_class = WEIGHT_CLASS_NORMAL
 	rotprocess = SHELFLIFE_DECENT
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -2244,7 +2244,7 @@
 	name = "plain scone"
 	desc = "A delightfully fancy treat adored by the upper echelons of Kingsfield."
 	icon_state = "cookedscone"
-	tastes = list("crumbly butterdough" = 1, "sweet" = 1)
+	tastes = list("masa de mantequilla desmenuzable" = 1, "dulce" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | SUGAR
@@ -2255,7 +2255,7 @@
 /*	.................   Tangerine Scone   ................... */
 
 /obj/item/reagent_containers/food/snacks/foodbase/scone_raw_tangerine
-	name = "unbaked tangerine scone"
+	name = "bollo de mandarina sin hornear"
 	icon_state = "uncookedtangerinescone"
 	eat_effect = /datum/status_effect/debuff/uncookedfood
 	rotprocess = SHELFLIFE_DECENT
@@ -2268,7 +2268,7 @@
 	name = "tangerine scone"
 	desc = "A delightfully fancy treat adored by the upper echelons of Kingsfield, complete with tangerine frosting."
 	icon_state = "cookedtangerinescone"
-	tastes = list("crumbly butterdough" = 1, "sweet" = 1, "tangerine" = 1)
+	tastes = list("masa de mantequilla desmenuzable" = 1, "dulce" = 1, "tangerine" = 1)
 	eat_effect = /datum/status_effect/buff/foodbuff
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | SUGAR | FRUIT
@@ -2291,7 +2291,7 @@
 	name = "plum scone"
 	desc = "A delightfully fancy treat adored by the upper echelons of Kingsfield, complete with plum filling."
 	icon_state = "cookedplumscone"
-	tastes = list("crumbly butterdough" = 1, "sweet" = 1, "plum" = 1)
+	tastes = list("masa de mantequilla desmenuzable" = 1, "dulce" = 1, "plum" = 1)
 	eat_effect = /datum/status_effect/buff/foodbuff
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | SUGAR | FRUIT
@@ -2301,7 +2301,7 @@
 /*	.................   Chocolate Scone   ................... */
 
 /obj/item/reagent_containers/food/snacks/foodbase/scone_raw_choco
-	name = "unbaked chocolate scone"
+	name = "bollo de chocolate sin hornear"
 	icon_state = "uncookedchocscone"
 	eat_effect = /datum/status_effect/debuff/uncookedfood
 	rotprocess = SHELFLIFE_DECENT
@@ -2314,7 +2314,7 @@
 	name = "chocolate scone"
 	desc = "A luxurious treat made with exotic chocolate."
 	icon_state = "cookedsconechoc"
-	tastes = list("crumbly butterdough" = 1, "sweet" = 1, "rich chocolate" = 1)
+	tastes = list("masa de mantequilla desmenuzable" = 1, "dulce" = 1, "rich chocolate" = 1)
 	eat_effect = /datum/status_effect/buff/foodbuff
 	faretype = FARE_FINE
 	foodtype = GRAIN | DAIRY | SUGAR
@@ -2342,7 +2342,7 @@
 	desc = "Enjoyed by mercenaries throughout Psydonia, though despite their prevalence no one quite knows the origin."
 	bitesize = 6
 	icon_state = "griddlecake"
-	tastes = list("fluffy butterdough" = 1)
+	tastes = list("masa de mantequilla esponjosa" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | EGG
@@ -2366,7 +2366,7 @@
 	desc = "Enjoyed by mercenaries throughout Psydonia, though despite their prevalence no one quite knows the origin."
 	bitesize = 6
 	icon_state = "griddlecakelemon"
-	tastes = list("fluffy butterdough" = 1, "sweet" = 1, "lemon" = 1)
+	tastes = list("masa de mantequilla esponjosa" = 1, "dulce" = 1, "lemon" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_FINE
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -2391,7 +2391,7 @@
 	desc = "Enjoyed by mercenaries throughout Psydonia, though despite their prevalence no one quite knows the origin."
 	bitesize = 6
 	icon_state = "griddlecakeapple"
-	tastes = list("fluffy butterdough" = 1, "sweet" = 1, "apple" = 1)
+	tastes = list("masa de mantequilla esponjosa" = 1, "dulce" = 1, "apple" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_FINE
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -2416,7 +2416,7 @@
 	desc = "Enjoyed by mercenaries throughout Psydonia, though despite their prevalence no one quite knows the origin."
 	bitesize = 6
 	icon_state = "griddlecakeberry"
-	tastes = list("fluffy butterdough" = 1, "sweet" = 1, "berry" = 1)
+	tastes = list("masa de mantequilla esponjosa" = 1, "dulce" = 1, "berry" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_FINE
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -2495,7 +2495,7 @@
 	nutrition = BUTTERDOUGHSLICE_NUTRITION + FRUIT_NUTRITION
 
 /obj/item/reagent_containers/food/snacks/foodbase/dottart_base/plum
-	name = "raw plum dot tart"
+	name = "tarta de ciruela cruda"
 	icon_state = "plum_dottart_base"
 	foodtype = GRAIN | DAIRY | RAW | FRUIT
 	nutrition = BUTTERDOUGHSLICE_NUTRITION + FRUIT_NUTRITION
@@ -2537,7 +2537,7 @@
 	desc = "A small strawberry jam-filled pastry, for when a whole pie would be inapropriate for canapes."
 	bitesize = 2
 	icon_state = "strawberry_dottart"
-	tastes = list("crispy butterdough" = 1, "strawberry jam" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "mermelada de fresa" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | FRUIT
@@ -2549,7 +2549,7 @@
 	desc = "A small tangerine jam-filled pastry, for when a whole pie would be inapropriate for canapes."
 	bitesize = 2
 	icon_state = "tangerine_dottart"
-	tastes = list("crispy butterdough" = 1, "tangerine jam" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "mermelada de mandarina" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | FRUIT
@@ -2561,7 +2561,7 @@
 	desc = "A small plum jam-filled pastry, for when a whole pie would be inapropriate for canapes."
 	bitesize = 2
 	icon_state = "plum_dottart"
-	tastes = list("crispy butterdough" = 1, "plum jam" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "mermelada de ciruela" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | FRUIT
@@ -2573,7 +2573,7 @@
 	desc = "A small blackberry jam-filled pastry, for when a whole pie would be inapropriate for canapes."
 	bitesize = 2
 	icon_state = "blackberry_dottart"
-	tastes = list("crispy butterdough" = 1, "blackberry jam" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "blackberry jam" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | FRUIT
@@ -2585,7 +2585,7 @@
 	desc = "A small raspberry jam-filled pastry, for when a whole pie would be inapropriate for canapes."
 	bitesize = 2
 	icon_state = "raspberry_dottart"
-	tastes = list("crispy butterdough" = 1, "raspberry jam" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "mermelada de frambuesa" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | FRUIT
@@ -2593,11 +2593,11 @@
 	item_weight = 60 GRAMS
 
 /obj/item/reagent_containers/food/snacks/dottart_lemon
-	name = "lemon dot tart"
+	name = "tarta de limón"
 	desc = "A small lemon jam-filled pastry, for when a whole pie would be inapropriate for canapes."
 	bitesize = 2
 	icon_state = "lemon_dottart"
-	tastes = list("crispy butterdough" = 1, "lemon jam" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "lemon jam" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | FRUIT
@@ -2609,7 +2609,7 @@
 	desc = "A small lime jam-filled pastry, for when a whole pie would be inapropriate for canapes."
 	bitesize = 2
 	icon_state = "lime_dottart"
-	tastes = list("crispy butterdough" = 1, "lime jam" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "mermelada de lima" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | FRUIT
@@ -2621,7 +2621,7 @@
 	desc = "A small pear jam-filled pastry, for when a whole pie would be inapropriate for canapes."
 	bitesize = 2
 	icon_state = "pear_dottart"
-	tastes = list("crispy butterdough" = 1, "pear jam" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "mermelada de pera" = 1)
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | DAIRY | FRUIT
@@ -2707,7 +2707,7 @@
 	slice_sound = TRUE
 	icon_state = "pizza"
 	dropshrink = 0.9
-	tastes = list("crispy dough" = 1, "warm tomato" = 1, "gooey cheese" = 1, "")
+	tastes = list("masa crujiente" = 1, "tomate caliente" = 1, "queso pegajoso" = 1, "")
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | FRUIT | DAIRY
@@ -2719,7 +2719,7 @@
 	desc = "A deliciously greasy sausage half-pie originating from the trade-capital of Vanderlin, long may it reign!"
 	slice_path = /obj/item/reagent_containers/food/snacks/tamtoplate_slice/meat
 	icon_state = "meat_pizza"
-	tastes = list("crispy dough" = 1, "warm tomato" = 1, "gooey cheese" = 1, "savory sausage")
+	tastes = list("masa crujiente" = 1, "tomate caliente" = 1, "queso pegajoso" = 1, "savory sausage")
 	faretype = FARE_FINE
 	foodtype = GRAIN | FRUIT | DAIRY | MEAT
 	nutrition = (SMALLDOUGH_NUTRITION + FRUIT_NUTRITION + CHEESE_NUTRITION + RAWMEAT_NUTRITION) * COOK_MOD
@@ -2730,7 +2730,7 @@
 	desc = "A deliciously greasy fish half-pie originating from the trade-capital of Vanderlin, long may it reign!"
 	slice_path = /obj/item/reagent_containers/food/snacks/tamtoplate_slice/fish
 	icon_state = "fish_pizza"
-	tastes = list("crispy dough" = 1, "warm tomato" = 1, "gooey cheese" = 1, "crispy fish" = 1)
+	tastes = list("masa crujiente" = 1, "tomate caliente" = 1, "queso pegajoso" = 1, "pescado crujiente" = 1)
 	faretype = FARE_FINE
 	foodtype = GRAIN | FRUIT | DAIRY | MEAT
 	nutrition = (SMALLDOUGH_NUTRITION + FRUIT_NUTRITION + CHEESE_NUTRITION + MINCE_NUTRITION) * COOK_MOD
@@ -2741,7 +2741,7 @@
 	desc = "A deliciously greasy onion half-pie originating from the trade-capital of Vanderlin, long may it reign!"
 	slice_path = /obj/item/reagent_containers/food/snacks/tamtoplate_slice/onion
 	icon_state = "onion_pizza"
-	tastes = list("crispy dough" = 1, "warm tomato" = 1, "gooey cheese" = 1, "crunchy onion" = 1)
+	tastes = list("masa crujiente" = 1, "tomate caliente" = 1, "queso pegajoso" = 1, "cebolla crujiente" = 1)
 	faretype = FARE_FINE
 	foodtype = GRAIN | FRUIT | DAIRY | VEGETABLES
 	nutrition = (SMALLDOUGH_NUTRITION + FRUIT_NUTRITION + CHEESE_NUTRITION + VEGGIE_NUTRITION) * COOK_MOD
@@ -2756,7 +2756,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "pizza_slice"
 	dropshrink = 0.8
-	tastes = list("crispy dough" = 1, "warm tomato" = 1, "gooey cheese" = 1, "")
+	tastes = list("masa crujiente" = 1, "tomate caliente" = 1, "queso pegajoso" = 1, "")
 	rotprocess = SHELFLIFE_LONG
 	faretype = FARE_NEUTRAL
 	foodtype = GRAIN | FRUIT | DAIRY
@@ -2767,7 +2767,7 @@
 	name = "sausage tamto plate slice"
 	desc = "A deliciously greasy sausage half-pie originating from the trade-capital of Vanderlin, long may it reign!"
 	icon_state = "meat_pizza_slice"
-	tastes = list("crispy dough" = 1, "warm tomato" = 1, "gooey cheese" = 1, "savory sausage")
+	tastes = list("masa crujiente" = 1, "tomate caliente" = 1, "queso pegajoso" = 1, "savory sausage")
 	faretype = FARE_FINE
 	foodtype = GRAIN | FRUIT | DAIRY | MEAT
 	nutrition = ((SMALLDOUGH_NUTRITION + FRUIT_NUTRITION + CHEESE_NUTRITION + RAWMEAT_NUTRITION) * COOK_MOD) * SLICED_MOD
@@ -2777,7 +2777,7 @@
 	name = "sausage tamto plate"
 	desc = "A deliciously greasy fish half-pie originating from the trade-capital of Vanderlin, long may it reign!"
 	icon_state = "fish_pizza_slice"
-	tastes = list("crispy dough" = 1, "warm tomato" = 1, "gooey cheese" = 1, "crispy fish" = 1)
+	tastes = list("masa crujiente" = 1, "tomate caliente" = 1, "queso pegajoso" = 1, "pescado crujiente" = 1)
 	faretype = FARE_FINE
 	foodtype = GRAIN | FRUIT | DAIRY | MEAT
 	nutrition = ((SMALLDOUGH_NUTRITION + FRUIT_NUTRITION + CHEESE_NUTRITION + MINCE_NUTRITION) * COOK_MOD) * SLICED_MOD
@@ -2787,7 +2787,7 @@
 	name = "onion tamto plate slice"
 	desc = "A deliciously greasy onion half-pie originating from the trade-capital of Vanderlin, long may it reign!"
 	icon_state = "onion_pizza_slice"
-	tastes = list("crispy dough" = 1, "warm tomato" = 1, "gooey cheese" = 1, "crunchy onion" = 1)
+	tastes = list("masa crujiente" = 1, "tomate caliente" = 1, "queso pegajoso" = 1, "cebolla crujiente" = 1)
 	faretype = FARE_FINE
 	foodtype = GRAIN | FRUIT | DAIRY | VEGETABLES
 	nutrition = ((SMALLDOUGH_NUTRITION + FRUIT_NUTRITION + CHEESE_NUTRITION + VEGGIE_NUTRITION) * COOK_MOD) * SLICED_MOD

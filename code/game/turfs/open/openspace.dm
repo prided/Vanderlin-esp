@@ -1,6 +1,6 @@
 /turf/open/openspace
-	name = "open space"
-	desc = "My eyes can see far down below."
+	name = "espacio abierto"
+	desc = "Mis ojos pueden ver muy abajo."
 	icon_state = MAP_SWITCH("openspace", "openspacemap")
 	baseturfs = /turf/open/openspace
 	intact = FALSE
@@ -140,7 +140,7 @@
 
 /turf/open/openspace/proc/start_traveling(mob/living/user, direction)
 	var/turf/target = get_step_multiz(src, direction)
-	user.visible_message(span_warning("[user] starts to climb down."), span_warning("I start to climb down."))
+	user.visible_message(span_warning("[user] starts to climb down."), span_warning("Empiezo a bajar."))
 	if(user.m_intent != MOVE_INTENT_SNEAK)
 		playsound(user, 'sound/foley/climb.ogg', 100, TRUE)
 	if(do_after(user, 3 SECONDS, src))

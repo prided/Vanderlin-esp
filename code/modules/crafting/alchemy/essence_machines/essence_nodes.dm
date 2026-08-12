@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY(essence_nodes)
 
 /obj/structure/essence_node
-	name = "essence node"
+	name = "nodo de esencia"
 	desc = "A weakened point in the environment that allows access to alchemical essence. It pulses with inner energy."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "node"
@@ -95,7 +95,7 @@ GLOBAL_LIST_EMPTY(essence_nodes)
 		var/obj/item/essence_vial/vial = I
 
 		if(!can_harvest())
-			to_chat(user, span_warning("The node has no essence to harvest."))
+			to_chat(user, span_warning("El nodo no tiene esencia para cosechar."))
 			return
 
 		if(!vial.can_hold_essence())
@@ -114,7 +114,7 @@ GLOBAL_LIST_EMPTY(essence_nodes)
 		else if(vial.contained_essence.type == essence_type.type)
 			vial.essence_amount += harvested
 		else
-			to_chat(user, span_warning("The vial contains a different type of essence."))
+			to_chat(user, span_warning("El vial contiene un tipo diferente de esencia."))
 			current_essence += harvested // Refund
 			return
 
@@ -129,11 +129,11 @@ GLOBAL_LIST_EMPTY(essence_nodes)
 		var/obj/item/essence_node_jar/jar = I
 
 		if(jar.contained_node)
-			to_chat(user, span_warning("The jar already contains a node."))
+			to_chat(user, span_warning("El frasco ya contiene un nodo."))
 			return
 
 		if(tier > jar.max_tier)
-			to_chat(user, span_warning("This jar cannot contain such a powerful node."))
+			to_chat(user, span_warning("Este frasco no puede contener un nodo tan poderoso."))
 			return
 
 		if(!can_be_extracted())
@@ -168,11 +168,11 @@ GLOBAL_LIST_EMPTY(essence_nodes)
 	. = ..()
 	var/datum/thaumaturgical_essence/temp_essence = new essence_type.type
 	if(HAS_TRAIT(user, TRAIT_LEGENDARY_ALCHEMIST))
-		. += span_notice("This node generates [temp_essence.name].")
+		. += span_notice("Este nodo genera [temp_essence.name].")
 	else
 		. += span_notice("This node generates essence smelling of [temp_essence.smells_like].")
 
-	. += span_notice("This node generates [temp_essence.name].")
+	. += span_notice("Este nodo genera [temp_essence.name].")
 	. += span_notice("Essence: [current_essence]/[max_essence] units")
 	. += span_notice("Tier: [tier] ([tier ? "Rare" : "Common"])")
 	. += span_notice("Recharge Rate: [recharge_rate] essence per minute")
@@ -201,7 +201,7 @@ GLOBAL_LIST_EMPTY(essence_nodes)
 	essence_type = /datum/thaumaturgical_essence/life
 
 /obj/item/essence_node_portable
-	name = "essence node"
+	name = "nodo de esencia"
 	desc = "A large amount of essence still wrapped within its environmental shell. It still beats with alchemical energy."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "essence"
@@ -263,7 +263,7 @@ GLOBAL_LIST_EMPTY(essence_nodes)
 		if(holder.stamina)
 			holder.stamina = max(0, holder.stamina - stamina_drain)
 			if(holder.stamina <= 20)
-				to_chat(holder, span_warning("Carrying the essence node is exhausting you!"))
+				to_chat(holder, span_warning("¡Llevar el nodo de esencia te está agotando!"))
 		last_stamina_drain = world.time
 
 /obj/item/essence_node_portable/dropped(mob/user)

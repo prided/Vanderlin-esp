@@ -63,7 +63,7 @@
 	spawned.hud_used?.initialize_bloodpool()
 	spawned.hud_used?.bloodpool.set_fill_color("#dcdddb")
 	spawned.hud_used?.bloodpool?.name = "Psydon's Grace: [spawned.bloodpool]"
-	spawned.hud_used?.bloodpool?.desc = "Devotion: [spawned.bloodpool]/[spawned.maxbloodpool]"
+	spawned.hud_used?.bloodpool?.desc = "Devoción: [spawned.bloodpool]/[spawned.maxbloodpool]"
 	spawned.maxbloodpool = 1000
 	spawned.AddComponent(/datum/component/bloodpool_regen, 0.5)
 
@@ -87,7 +87,7 @@
 
 /mob/living/carbon/human/proc/torture_victim()
 	set name = "Extract Confession"
-	set category = "RoleUnique.Inquisition"
+	set category = "RolÚnico.Inquisición"
 
 	var/obj/item/grabbing/I = get_active_held_item()
 	var/mob/living/carbon/human/H
@@ -95,7 +95,7 @@
 		return
 	H = I.grabbed
 	if(H == src)
-		to_chat(src, span_warning("I won't torture myself!"))
+		to_chat(src, span_warning("¡No me torturaré!"))
 		return
 	if(!HAS_TRAIT(H, TRAIT_RESTRAINED) && !H.buckled)
 		to_chat(src, span_warning("[H] needs to be restrained or buckled first!"))
@@ -110,7 +110,7 @@
 		return
 
 	if(H.getShockStage() < SHOCK_STAGE_4)
-		to_chat(src, span_warning("Not ready to speak yet."))
+		to_chat(src, span_warning("Aún no estoy listo para hablar."))
 		return
 	if(!do_after(src, 4 SECONDS, H))
 		return
@@ -135,13 +135,13 @@
 			"TELL ME!",
 			"THE PAIN HAS ONLY BEGUN, CONFESS!",
 		)
-		say(pick(torture_lines), spans = list("torture"))
+		say(pick(torture_lines), spans = list("tortura"))
 		H.emote("painscream")
 		H.confession_time("antag", src)
 
 /mob/living/carbon/human/proc/faith_test()
-	set name = "Test Faith"
-	set category = "RoleUnique.Inquisition"
+	set name = "Prueba de fe"
+	set category = "RolÚnico.Inquisición"
 
 	var/obj/item/grabbing/I = get_active_held_item()
 	var/mob/living/carbon/human/H
@@ -149,7 +149,7 @@
 		return
 	H = I.grabbed
 	if(H == src)
-		to_chat(src, span_warning("I won't torture myself!"))
+		to_chat(src, span_warning("¡No me torturaré!"))
 		return
 	if(!HAS_TRAIT(H, TRAIT_RESTRAINED) && !H.buckled)
 		to_chat(src, span_warning("[H] needs to be restrained or buckled first!"))
@@ -164,7 +164,7 @@
 		return
 
 	if(H.getShockStage() < SHOCK_STAGE_4)
-		to_chat(src, span_warning("Not ready to speak yet."))
+		to_chat(src, span_warning("Aún no estoy listo para hablar."))
 		return
 	if(!do_after(src, 4 SECONDS, H))
 		return
@@ -187,14 +187,14 @@
 			"ARE YOU FAITHFUL?",
 			"TO WHICH SHEPHERD DO YOU FLOCK TO?",
 		)
-		say(pick(faith_lines), spans = list("torture"))
+		say(pick(faith_lines), spans = list("tortura"))
 		H.emote("painscream")
 		H.confession_time("patron", src)
 
 /// Verb for Inquisitors to recall people with the vice `/datum/quirk/vice/suspicion`
 /mob/living/carbon/human/proc/suspect_heretics()
-	set name = "Remember Suspects"
-	set category = "RoleUnique.Inquisition"
+	set name = "Recuerde a los sospechosos"
+	set category = "RolÚnico.Inquisición"
 	if(!mind)
 		return
 	mind.recall_targets(src, type="Ordos")
@@ -204,7 +204,7 @@
 
 /mob/living/carbon/human/proc/confession_time(confession_type = "antag", mob/living/carbon/human/user)
 	var/timerid = addtimer(CALLBACK(src, PROC_REF(confess_sins), confession_type, FALSE, user), 10 SECONDS, TIMER_STOPPABLE)
-	var/responsey = tgui_input_list(src, "Resist torture?", "TEST OF PAIN", list(RESIST_TORTURE, CONFESS_SINS), RESIST_TORTURE)
+	var/responsey = tgui_input_list(src, "¿Resistir la tortura?", "PRUEBA DE DOLOR", list(RESIST_TORTURE, CONFESS_SINS), RESIST_TORTURE)
 
 	if(SStimer.timer_id_dict[timerid])
 		deltimer(timerid)
@@ -241,7 +241,7 @@
 	var/is_innocent = TRUE
 
 	if(resist)
-		to_chat(src, span_boldwarning("I attempt to resist the torture!"))
+		to_chat(src, span_boldwarning("¡Intento resistir la tortura!"))
 		resist_chance = (GET_MOB_ATTRIBUTE_VALUE(src, STAT_INTELLIGENCE) + GET_MOB_ATTRIBUTE_VALUE(src, STAT_ENDURANCE)) + 10
 		if(istype(buckled, /obj/structure/fluff/walldeco/chains))
 			resist_chance -= 15
@@ -335,7 +335,7 @@
 
 		if(length(confessions))
 			if(torture)
-				say(pick(confessions), spans = list("torture"), forced = TRUE)
+				say(pick(confessions), spans = list("tortura"), forced = TRUE)
 			else
 				say(pick(confessions), forced = TRUE)
 
@@ -442,12 +442,12 @@
 			return
 		else
 			if(torture)
-				say(pick(innocent_lines), spans = list("torture"), forced = TRUE)
+				say(pick(innocent_lines), spans = list("tortura"), forced = TRUE)
 			else
 				say(pick(innocent_lines), forced = TRUE)
 			return
-	to_chat(src, span_good("I resist the torture!"))
-	say(pick(innocent_lines), spans = list("torture"), forced = TRUE)
+	to_chat(src, span_good("¡Resisto la tortura!"))
+	say(pick(innocent_lines), spans = list("tortura"), forced = TRUE)
 	return
 
 /datum/job/advclass/puritan

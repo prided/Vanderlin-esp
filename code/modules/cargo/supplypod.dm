@@ -263,7 +263,7 @@
 
 //------------------------------------TEMPORARY_VISUAL-------------------------------------//
 /obj/effect/DPtarget //This is the object that forceMoves the supplypod to it's location
-	name = "Landing Zone Indicator"
+	name = "Indicador de zona de aterrizaje"
 	desc = ""
 	icon_state = ""
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER

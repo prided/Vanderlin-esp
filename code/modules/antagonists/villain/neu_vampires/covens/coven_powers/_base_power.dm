@@ -174,7 +174,7 @@
 	//the power is currently active
 	if (active && !multi_activate)
 		if (alert)
-			to_chat(owner, span_warning("[src] is already active!"))
+			to_chat(owner, span_warning("¡[src] ya está activo!"))
 		return FALSE
 
 	//a mutually exclusive power is already active or on cooldown
@@ -191,7 +191,7 @@
 					return TRUE
 				else
 					if (alert)
-						to_chat(owner, span_warning("You cannot have [src] and [found_power] active at the same time!"))
+						to_chat(owner, span_warning("¡No puedes tener [src] y [found_power] activos al mismo tiempo!"))
 					return FALSE
 			if (found_power.get_cooldown())
 				if (alert)
@@ -201,7 +201,7 @@
 	//the user cannot afford the power's vitae expenditure
 	if (!can_afford())
 		if (alert)
-			to_chat(owner, span_warning("You do not have enough blood to cast [src]!"))
+			to_chat(owner, span_warning("¡No tienes suficiente sangre para lanzar [src]!"))
 		return FALSE
 
 	//the power's cooldown has not elapsed
@@ -228,7 +228,7 @@
 
 	if ((check_flags & COVEN_CHECK_IMMOBILE) && HAS_TRAIT(owner, TRAIT_IMMOBILIZED))
 		if (alert)
-			to_chat(owner, span_warning("You cannot cast [src] while immobilised!"))
+			to_chat(owner, span_warning("¡No puedes lanzar [src] mientras estás inmovilizado!"))
 		return FALSE
 
 	if ((check_flags & COVEN_CHECK_LYING) && HAS_TRAIT(owner, TRAIT_FLOORED))
@@ -238,7 +238,7 @@
 
 	if ((check_flags & COVEN_CHECK_SEE) && owner.is_blind())
 		if (alert)
-			to_chat(owner, span_warning("You cannot cast [src] without your sight!"))
+			to_chat(owner, span_warning("¡No puedes lanzar [src] sin tu vista!"))
 		return FALSE
 
 	if ((check_flags & COVEN_CHECK_SPEAK) && HAS_TRAIT(owner, TRAIT_MUTE))
@@ -296,7 +296,7 @@
 	//check if distance is in range
 	if (get_dist(owner, target) > range)
 		if (alert)
-			to_chat(owner, span_warning("[target] is out of range!"))
+			to_chat(owner, span_warning("¡[target] está fuera de rango!"))
 		return FALSE
 
 	//handling for if a ranged Discipline is being used on its caster
@@ -311,7 +311,7 @@
 	//account for complete supernatural resistance
 	if (HAS_TRAIT(target, TRAIT_ANTIMAGIC))
 		if (alert)
-			to_chat(owner, span_warning("[target] resists your Disciplines!"))
+			to_chat(owner, span_warning("¡[target] resiste tus Disciplinas!"))
 		return FALSE
 
 	//check target type
@@ -321,7 +321,7 @@
 		var/mob/living/living_target = target
 		if ((target_type & TARGET_LIVING) && (living_target.stat == DEAD))
 			if (alert)
-				to_chat(owner, span_warning("You cannot cast [src] on dead things!"))
+				to_chat(owner, span_warning("¡No puedes lanzar [src] sobre cosas muertas!"))
 			return FALSE
 
 		if ((target_type & TARGET_PLAYER) && !living_target.client)
@@ -339,7 +339,7 @@
 			//todo: remove this variable and refactor it and TRAIT_ANTIMAGIC into a tiered system
 			if (HAS_TRAIT(human_target, TRAIT_COVEN_RESISTANT))
 				if (alert)
-					to_chat(owner, span_warning("[target] resists your Disciplines!"))
+					to_chat(owner, span_warning("¡[target] resiste tus Disciplinas!"))
 				return FALSE
 
 			if (target_type & TARGET_HUMAN)
@@ -817,7 +817,7 @@
 
 	if (spend_resources())
 		if((vitae_cost > 0) && (duration_length > 10 SECONDS)) // No spam please
-			to_chat(owner, span_warning("[src] consumes your blood to stay active."))
+			to_chat(owner, span_warning("[src] consume tu sangre para mantenerse activo."))
 		grant_usage_xp(target, TRUE)
 		if (!duration_override)
 			do_duration(target)

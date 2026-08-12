@@ -1,5 +1,5 @@
 /datum/gem_cut/sanctified
-	name = "sanctified"
+	name = "santificado"
 
 /datum/gem_cut/sanctified/setup_cut(multiplier)
 	weapon_effect_type = /datum/rune_effect/damage/holy

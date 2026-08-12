@@ -38,10 +38,10 @@
 		say("The dead cannot leave for [SSmapping.config.immigrant_origin], ensure they get a proper burial in [SSmapping.config.map_name].")
 		return
 	if(is_type_in_list(departing_mob.mind?.assigned_role, uncryoable))
-		var/title = departing_mob.gender == FEMALE ? "lady" : "lord"
+		var/title = departing_mob.gender == FEMALE ? "dama" : "lord"
 		say("Surely you jest, my [title], you have a kingdom to rule over!")
 		return //prevents noble roles from cryoing as per request of Aberra
-	if(tgui_alert(user, "Are you sure you want to [departing_mob == user ? "leave for [SSmapping.config.immigrant_origin] (you" : "send this person to [SSmapping.config.immigrant_origin] (they"] will be removed from the current round, the job slot freed)?", "Departing", list("Confirm", "Cancel")) != "Confirm")
+	if(tgui_alert(user, "Are you sure you want to [departing_mob == user ? "leave for [SSmapping.config.immigrant_origin] (you" : "send this person to [SSmapping.config.immigrant_origin] (they"] will be removed from the current round, the job slot freed)?", "Partiendo", list("Confirmar", "Cancel")) != "Confirmar")
 		return //doublechecks that people actually want to leave the round
 	if(user.incapacitated(IGNORE_GRAB) || QDELETED(departing_mob) || (departing_mob != user && departing_mob.client) || get_dist(src, dropping) > 2 || get_dist(src, user) > 2)
 		return //Things have changed since the alert happened.
@@ -54,7 +54,7 @@
 	//the section below handles roles and admin logging
 	var/dat = "[key_name(user)] has despawned [departing_mob == user ? "themselves" : departing_mob], job [departing_mob.job], at [AREACOORD(src)]. Contents despawned along:"
 	if(!length(departing_mob.contents))
-		dat += " none."
+		dat += " ninguno."
 	else
 		var/atom/movable/content = departing_mob.contents[1]
 		dat += " [content.name]"
@@ -101,9 +101,9 @@
 	return "[mob_name] successfully cryo'd!"
 
 /obj/structure/train/carriage //A temporary subform of the train that is just a carriage	name = "train"
-	desc = "A train carriage."
+	desc = "Un vagón de tren."
 	icon = 'icons/roguetown/items/train.dmi'
-	icon_state = "train2"
+	icon_state = "tren2"
 	layer = TABLE_LAYER
 	density = TRUE
 	anchored = TRUE

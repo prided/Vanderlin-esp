@@ -1,15 +1,15 @@
 /datum/world_trait/fertility
-	name = "Fertile Lands"
-	desc = "Crops are growing faster."
+	name = "Tierras Fértiles"
+	desc = "Los cultivos están creciendo más rápido."
 
 /datum/world_trait/fishing_increase
 	name = "Rainy Day Boon"
-	desc = "Fishes are easier to catch."
+	desc = "Los peces son más fáciles de pescar."
 
 /datum/world_trait/fishing_decrease
-	name = "River Drought"
-	desc = "Fishes are harder to catch."
+	name = "Sequía del río"
+	desc = "Los peces son más difíciles de pescar."
 
 /datum/world_trait/delver
-	name = "Delver's Restriction"
+	name = "La restricción de Delver"
 	desc = "Actions become limited in most areas."

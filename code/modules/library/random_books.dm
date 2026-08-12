@@ -99,23 +99,23 @@
 
 /obj/item/book/random_book/apocrypha
 	book_category = "Apocrypha & Grimoires"
-	name = "Book (Apocrypha & Grimoires)"
+	name = "Libro (apócrifos y grimorios)"
 
 /obj/item/book/random_book/myths
 	book_category = "Myths & Tales"
-	name = "Book (Myths & Tales)"
+	name = "Libro (Mitos y Cuentos)"
 
 /obj/item/book/random_book/legends
 	book_category = "Legends & Accounts"
-	name = "Book (Legends & Accounts)"
+	name = "Libro (leyendas y cuentas)"
 
 /obj/item/book/random_book/thesis
 	book_category = "Thesis"
-	name = "Book (Thesis)"
+	name = "Libro (Tesis)"
 
 /obj/item/book/random_book/eoratica
 	book_category = "Eoratica"
-	name = "Book (Eoratica)"
+	name = "Libro (Eoratica)"
 
 /obj/item/book/random // Deprecated subtype
 	name = "Book (improper)"

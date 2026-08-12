@@ -1,5 +1,5 @@
 /datum/mob_affix/armored
-	name = "Armored"
+	name = "Blindado"
 	description = "Thick hide reduces incoming damage"
 	color = "#888888"
 

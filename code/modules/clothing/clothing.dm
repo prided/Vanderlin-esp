@@ -144,7 +144,7 @@
 	. = ..()
 	if(torn_sleeve_number)
 		if(torn_sleeve_number == 1)
-			. += span_notice("It has one torn sleeve.")
+			. += span_notice("Tiene una manga rota.")
 		else
 			. += span_notice("Both its sleeves have been torn!")
 
@@ -316,7 +316,7 @@
 		return
 
 	user.changeNext_move(CLICK_CD_MELEE)
-	M.visible_message(span_warning("[user] pats out the flames on [M] with [src]!"))
+	M.visible_message(span_warning("¡[user] apaga las llamas en [M] con [src]!"))
 	M.adjust_divine_fire_stacks(-2)
 	if(M.fire_stacks > 0)
 		M.adjust_fire_stacks(-2)
@@ -395,7 +395,7 @@
 			armorlist[x] = 0
 	if(ismob(loc) && brokemessage)
 		var/mob/M = loc
-		to_chat(M, "ARMOR BROKEN...!")
+		to_chat(M, "¡ARMADURA ROTA...!")
 
 /obj/item/clothing/atom_fix()
 	. = ..()

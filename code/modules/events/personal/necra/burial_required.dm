@@ -1,5 +1,5 @@
 /datum/round_event_control/necra_burials
-	name = "Burial Request"
+	name = "Solicitud de entierro"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/necra_burials
 	weight = 10
@@ -49,8 +49,8 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE NECRA'S CHOSEN!"),
-		span_notice("Necra demands proper rites for the departed! Give enough corpses a proper burial to earn Necra's favor!"),
+		span_userdanger("¡ERES EL ELEGIDO DE NECRA!"),
+		span_notice("¡Necra exige ritos adecuados para los difuntos! ¡Dale un entierro adecuado a suficientes cadáveres para ganarte el favor de Necra!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/ambience/noises/genspooky (1).ogg', 100)
 

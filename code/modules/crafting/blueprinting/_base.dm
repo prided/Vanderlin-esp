@@ -13,8 +13,8 @@ GLOBAL_LIST_INIT(blueprint_recipes, init_blueprint_recipes())
 		.[initial(recipe.name)] = new recipe
 
 /datum/blueprint_recipe
-	var/name = "Unknown Structure"
-	var/desc = "A mysterious structure."
+	var/name = "Estructura desconocida"
+	var/desc = "Una estructura misteriosa."
 	var/atom/result_type = null // What gets built
 	var/list/required_materials = list() // Materials needed (path = amount)
 	var/atom/construct_tool
@@ -28,7 +28,7 @@ GLOBAL_LIST_INIT(blueprint_recipes, init_blueprint_recipes())
 	var/datum/attribute/skill/skillcraft = /datum/attribute/skill/craft/crafting // What skill this recipe requires (e.g., /datum/attribute/skill/craft/carpentry)
 	var/craftdiff = 0 // Difficulty modifier (0 = easy, higher = harder)
 	var/verbage = "construct" // What the user does (e.g., "build", "assemble")
-	var/verbage_tp = "constructs" // Third person version
+	var/verbage_tp = "construye" // Third person version
 	var/craftsound = 'sound/foley/bandage.ogg'
 	var/edge_density = TRUE
 	var/requires_learning = FALSE

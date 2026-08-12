@@ -1,5 +1,5 @@
 /datum/orderless_slapcraft
-	var/name = "Generic Recipe"
+	var/name = "Receta genérica"
 	var/category
 	abstract_type = /datum/orderless_slapcraft
 

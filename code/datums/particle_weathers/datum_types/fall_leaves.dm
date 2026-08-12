@@ -16,7 +16,7 @@
 
 
 /datum/particle_weather/fall_leaves
-	name = "Fall Leaves"
+	name = "hojas de otoño"
 	desc = "Gentle fall, la la description."
 	particleEffectType = /particles/weather/fall_leaves
 

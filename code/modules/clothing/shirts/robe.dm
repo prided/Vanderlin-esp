@@ -1,7 +1,7 @@
 /obj/item/clothing/shirt/robe
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	name = "robe"
-	desc = "A common robe, worn mostly by religious adepts."
+	desc = "Una túnica común, usada principalmente por adeptos religiosos."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "white_robe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -43,7 +43,7 @@
 //................ Temple Robes ............... //
 
 /obj/item/clothing/shirt/robe/pestra
-	name = "naga robe"
+	name = "túnica naga"
 	desc = "Green robes which cover the body in many layers, resembling the ill form of the rotten naga."
 	icon_state = "pestrarobe"
 	icon = 'icons/roguetown/clothing/patron_robes.dmi'
@@ -60,14 +60,14 @@
 
 /obj/item/clothing/shirt/robe/astrata
 	name = "sun robe"
-	desc = "The cloth of a follower of Astrata."
+	desc = "La tela de un seguidor de Astrata."
 	icon_state = "astratarobe"
 
 	sleeved = null
 
 /obj/item/clothing/shirt/robe/noc
 	name = "moon robe"
-	desc = "The cloth of a follower of Noc."
+	desc = "La tela de un seguidor de Noc."
 	icon_state = "nocrobe"
 	sleeved = null
 
@@ -106,7 +106,7 @@
 	icon_state = "malumrobe"
 
 /obj/item/clothing/shirt/robe/priest
-	name = "solar vestments"
+	name = "vestimentas solares"
 	desc = "Holy vestments sanctified by divine hands. Caution is advised if not a faithful."
 	icon_state = "priestrobe"
 	dropshrink = 0.8
@@ -149,11 +149,11 @@
 
 /obj/item/clothing/shirt/robe/merchant
 	name = "guilder jacket"
-	desc = "A fancy jacket common with members of the Mercator Guild."
+	desc = "Una chaqueta elegante común entre los miembros del Gremio Mercator."
 	icon_state = "merrobe"
 
 /obj/item/clothing/shirt/robe/nun
-	name = "nun habit"
+	name = "hábito de monja"
 	icon_state = "nun"
 	item_state = "nun"
 	allowed_race = SPECIES_BASE_BODY
@@ -161,7 +161,7 @@
 
 /obj/item/clothing/shirt/robe/feld
 	name = "feldsher's robe"
-	desc = "Red to hide the blood."
+	desc = "Rojo para ocultar la sangre."
 	icon_state = "feldrobe"
 	item_state = "feldrobe"
 
@@ -172,7 +172,7 @@
 	item_state = "surgrobe"
 
 /obj/item/clothing/shirt/robe/courtphysician
-	name = "court physician's robe"
+	name = "bata de médico de la corte"
 	desc = "The dark red helps hide blood stains, and is elegant."
 	icon_state = "courtrobe"
 	item_state = "courtrobe"
@@ -193,7 +193,7 @@
 	color = null
 
 /obj/item/clothing/shirt/robe/newmage
-	name = "mage robe"
+	name = "túnica de mago"
 	desc = "base mage robe"
 	icon_state = "adept-red"
 	icon = 'icons/roguetown/clothing/shirts.dmi'
@@ -220,11 +220,11 @@
 			var/mob/living/carbon/human/H = src.loc
 			if(slot_flags & ITEM_SLOT_ARMOR)
 				if(H.wear_armor != src)
-					to_chat(H, span_warning("I should put that on first."))
+					to_chat(H, span_warning("Debería ponerme eso primero."))
 					return
 			if(slot_flags & ITEM_SLOT_CLOAK)
 				if(H.cloak != src)
-					to_chat(H, span_warning("I should put that on first."))
+					to_chat(H, span_warning("Debería ponerme eso primero."))
 					return
 			if(H.head)
 				to_chat(H, span_warning("I'm already wearing something on my head."))
@@ -410,7 +410,7 @@
 	color = CLOTHING_WHITE
 
 /obj/item/clothing/shirt/robe/shepherdvest
-	name = "shepherd vest"
+	name = "chaleco de pastor"
 	desc = "A vest of basic cloth, it's chest bared open to expose what lay underneath."
 	icon_state = "shepherdvest"
 	item_state = "shepherdvest"

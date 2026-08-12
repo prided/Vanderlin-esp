@@ -1,5 +1,5 @@
 /datum/round_event_control/antagonist/solo/vampires
-	name = "Vampires"
+	name = "Vampiros"
 	tags = list(
 		TAG_COMBAT,
 		TAG_BLOOD,

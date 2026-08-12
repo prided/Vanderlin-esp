@@ -115,7 +115,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/thirstyt1
-	name = "Getting thirsty"
+	name = "tener sed"
 	desc = "<span class='warning'>I could use a drink.</span>\n"
 	icon_state = "thirst1"
 
@@ -140,7 +140,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/thirstyt2
-	name = "Extremly thirsty"
+	name = "Extremadamente sediento"
 	desc = "<span class='warning'>If I don't drink something soon, my mouth will be sand.</span>\n"
 	icon_state = "thirst2"
 
@@ -164,7 +164,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/thirstyt3
-	name = "Extreme Dehydration"
+	name = "Deshidratación extrema"
 	desc = "<span class='boldwarning'>I AM DYING OF THIRST!</span>\n"
 	icon_state = "thirst3"
 
@@ -187,7 +187,7 @@
 
 //Used only when starvation damage is enabled
 /atom/movable/screen/alert/status_effect/debuff/thirstyt4
-	name = "Dying of Thirst"
+	name = "Morir de sed"
 	desc = "<span class='boldwarning'>I am dying of thirst! I need to find water, quick!</span>\n"
 	icon_state = "thirst4"
 
@@ -209,7 +209,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/uncookedfood
 
 /atom/movable/screen/alert/status_effect/debuff/uncookedfood
-	name = "Raw Food!"
+	name = "¡Comida cruda!"
 	desc = "<span class='warning'>Augh! Why didn't I bring that food to fire?!</span>\n"
 	icon_state = "uncookedfood"
 
@@ -257,7 +257,7 @@
 		C.add_nausea(50)
 
 /atom/movable/screen/alert/status_effect/debuff/burntmeal
-	name = "Burnt Food!"
+	name = "¡Comida quemada!"
 	desc = "<span class='warning'>That tasted like charcoal and cinder!</span>\n"
 	icon_state = "burntmeal"
 
@@ -270,7 +270,7 @@
 	status_type = STATUS_EFFECT_UNIQUE
 
 /atom/movable/screen/alert/status_effect/debuff/rotfood
-	name = "Rotten Food!"
+	name = "¡Comida podrida!"
 	desc = "<span class='warning'>I felt a maggot wriggle as I swallowed...</span>\n"
 	icon_state = "burntmeal"
 
@@ -376,7 +376,7 @@
 
 
 /atom/movable/screen/alert/status_effect/debuff/sleepytime
-	name = "Tired"
+	name = "Cansado"
 	desc = "<span class='warning'>I am feeling tired.</span>\n"
 	icon_state = "sleepy"
 
@@ -387,7 +387,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/trainsleep
-	name = "Muscle Soreness"
+	name = "Dolor muscular"
 	desc = "<span class='warning'>Gaaaah, So sooooooore.</span>\n"
 	icon_state = "muscles"
 
@@ -399,7 +399,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/barbfalter
-	name = "Faltering"
+	name = "Vacilante"
 	desc = "<span class='warning'>I've pushed myself to my limit.</span>\n"
 	icon_state = "muscles"
 
@@ -435,8 +435,8 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/chilled
-	name = "Chilled"
-	desc = "I can barely feel my limbs!"
+	name = "Enfriado"
+	desc = "¡Apenas puedo sentir mis extremidades!"
 	icon_state = "chilled"
 
 /datum/status_effect/debuff/vamp_dreams
@@ -472,7 +472,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/drunk
-	name = "Eoran Wine"
+	name = "Eoran Vino"
 	desc = span_warning("I am intoxicated from ambrosia not meant for mortal mouths.\n")
 	icon_state = "drunk"
 
@@ -484,8 +484,8 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/mesmerised
-	name = "Mesmerised"
-	desc = span_warning("Their beauty is otherworldly...")
+	name = "hipnotizado"
+	desc = span_warning("Su belleza es de otro mundo...")
 	icon_state = "acid"
 
 
@@ -509,7 +509,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/baothadruqks
-	name = "Baothan Dust"
+	name = "Polvo de Baothan"
 	desc = span_warning("Someone blew some powders at me...\n")
 	icon_state = "drunk"
 
@@ -522,7 +522,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/lux_drained
 	name = "Lux Drained"
-	desc = span_danger("I can't feel my soul, WHY CAN'T I FEEL MY SOUL!\n")
+	desc = span_danger("No puedo sentir mi alma, ¡POR QUÉ NO PUEDO SENTIR MI ALMA!\n")
 
 //charflaw variant of lux_drained, used when the flaw is selected
 /datum/status_effect/debuff/flaw_lux_taken
@@ -586,7 +586,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/corrupted_by_tainted_lux
-	name = "Corrupted..."
+	name = "corrupto..."
 	desc = span_danger("It filled my veins with light and rot alike... I can feel it crawling under my skin, whispering that I should never have done it...")
 
 /datum/status_effect/debuff/electrified
@@ -625,13 +625,13 @@
 
 	for(var/atom/A in list(T) + T.contents)
 		if(A.flags_1 & CONDUCT_1)
-			L.visible_message(span_warning("[L] gets shocked!"), span_danger("Electricity courses through your body!"))
+			L.visible_message(span_warning("[L] gets shocked!"), span_danger("¡La electricidad recorre tu cuerpo!"))
 			L.electrocute_act(shock_strength, src)
 			return
 
 /atom/movable/screen/alert/status_effect/debuff/electrified
 	name = "Electrified"
-	desc = "Your body is charged with unstable electricity!"
+	desc = "¡Tu cuerpo está cargado de electricidad inestable!"
 	icon_state = "dazed"
 
 /datum/status_effect/debuff/cursed_t1
@@ -663,7 +663,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/curse_t1
-	name = "Necra's Gaze"
+	name = "La mirada de Necra"
 	desc = "The Undermaiden's gaze falls lightly upon me, I've displeased her."
 	icon_state = "curse_necra_1"
 
@@ -678,7 +678,7 @@
 	icon_state = "curse_necra_3"
 
 /atom/movable/screen/alert/status_effect/debuff/curse_t4
-	name = "Necra's Rage"
+	name = "La ira de Necra"
 	desc = "The Undermaiden's hateful gaze falls upon me, I've enraged her, and she will torment me till the day I enter her embrace!"
 	icon_state = "curse_necra_4"
 

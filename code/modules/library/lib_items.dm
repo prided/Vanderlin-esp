@@ -87,7 +87,7 @@
 		return
 	if(length(contents) >= 15)
 		return
-	user.visible_message("[user] starts to put [I] into [src].", "You start to put [I] into [src].")
+	user.visible_message("[user] comienza a poner [I] en [src].", "You start to put [I] into [src].")
 	if(!do_after(user, 0.75 SECONDS, src))
 		return
 	I.forceMove(src)

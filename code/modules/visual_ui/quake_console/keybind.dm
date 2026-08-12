@@ -29,7 +29,7 @@
 
 // Process input for console
 /client/verb/console_input(input_text as text)
-	set name = "Console Input"
+	set name = "Entrada de consola"
 	set hidden = 1
 
 	var/mob/M = mob

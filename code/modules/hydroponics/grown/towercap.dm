@@ -33,7 +33,7 @@
 	return FALSE
 
 /obj/structure/punji_sticks
-	name = "punji sticks"
+	name = "palos de punji"
 	desc = ""
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "punji"

@@ -12,7 +12,7 @@
 
 /obj/item/clothing/head/helmet/gallowglass
 	name = "gallowglass helmet"
-	desc = "Worn by proud fighters of remote clans."
+	desc = "Usado por orgullosos luchadores de clanes remotos."
 	icon_state = "gallowglass"
 	sellprice = VALUE_STEEL_SMALL_ITEM
 	smeltresult = /obj/item/ingot/steel_slag
@@ -55,7 +55,7 @@
 
 //............... Grenzelhoft Plume Hat ............... // - worn over a skullcap
 /obj/item/clothing/head/helmet/skullcap/grenzelhoft
-	name = "grenzelhoft plume hat"
+	name = "grenzelhoft sombrero de pluma"
 	desc = "Slaying foul creachers or fair maidens: Grenzelhoft stands. A stylish hat concealing an iron skullcap."
 	icon_state = "grenzelhat"
 	item_state = "grenzelhat"
@@ -128,7 +128,7 @@
 	worn_y_dimension = 32
 
 /obj/item/clothing/head/helmet/kettle/iron
-	name = "iron kettle helmet"
+	name = "casco de caldera de hierro"
 	desc = "A lightweight iron helmet generally worn by crossbowmen and garrison archers."
 	icon_state = "ikettle"
 	item_state = "ikettle"
@@ -497,7 +497,7 @@
 	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/head/helmet/visored/knight/iron
-	name = "iron knights helmet"
+	name = "casco de caballeros de hierro"
 	desc = "A lightweight iron armet that protects dreams of chivalrous friendship, fair maidens to rescue, and glorious deeds of combat. Its visor can be flipped over for higher visibility at the cost of eye protection."
 	icon_state = "iknight"
 
@@ -532,7 +532,7 @@
 	. = ..()
 	if(!istype(W, /obj/item/natural/feather) || detail_tag)
 		return
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	user.visible_message(span_warning("[user] adds [W] to [src]."))
@@ -591,7 +591,7 @@
 
 // It will stay here to make sure nothing breaks
 /obj/item/clothing/head/helmet/townwatch
-	name = "old watch helmet"
+	name = "casco de reloj viejo"
 	desc = "An old archaic helmet of a symbol long forgotten."
 	icon_state = "guardhelm"
 
@@ -725,7 +725,7 @@
 	abstract_type = /obj/item/clothing/head/helmet/blacksteel
 
 /obj/item/clothing/head/helmet/blacksteel/bucket
-	name = "Blacksteel Great Helm"
+	name = "Blacksteel Gran Yelmo"
 	desc = "A bucket helmet forged of durable blacksteel. None shall pass.."
 	body_parts_covered = FULL_HEAD
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
@@ -761,7 +761,7 @@
 
 /obj/item/clothing/head/helmet/blacksteel/psythorns/attack_self(mob/living/user)
 	. = ..()
-	user.visible_message(span_warning("[user] starts to reshape the [src]."))
+	user.visible_message(span_warning("[user] comienza a remodelar el [src]."))
 	if(do_after(user, 4 SECONDS))
 		var/obj/item/clothing/wrists/bracers/psythorns/P = new /obj/item/clothing/wrists/bracers/psythorns(get_turf(src.loc))
 		if(user.is_holding(src))
@@ -771,7 +771,7 @@
 		arm?.bodypart_attacked_by(BCLASS_CUT, 25, modifiers = list(CRIT_MOD_CHANCE = CANT_CRIT))
 		qdel(src)
 	else
-		user.visible_message(span_warning("[user] stops reshaping [src]."))
+		user.visible_message(span_warning("[user] deja de remodelar [src]."))
 		return
 
 /obj/item/clothing/head/helmet/bronze
@@ -794,7 +794,7 @@
 	. = ..()
 	if(!istype(W, /obj/item/natural/feather) || detail_tag)
 		return
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	user.visible_message(span_warning("[user] adds [W] to [src]."))
@@ -819,7 +819,7 @@
 	. = ..()
 	if(!istype(W, /obj/item/natural/cloth) || detail_tag)
 		return
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	user.visible_message(span_warning("[user] adds [W] to [src]."))

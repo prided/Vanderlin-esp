@@ -34,7 +34,7 @@
 	)
 
 /datum/antagonist/vampire/lord/daewalker
-	name = "The Daewalker"
+	name = "El Daewalker"
 	antag_hud_type = null
 	antag_hud_name = null
 	confess_lines = list(
@@ -131,7 +131,7 @@
 	if(blade == user)
 		return
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))
-		examine_list += span_boldred("TRAITOR! His capture has been ordered by the highest authority!")
+		examine_list += span_boldred("¡TRAIDOR! ¡Su captura ha sido ordenada por la máxima autoridad!")
 	else if(user.mind?.has_antag_datum(/datum/antagonist/werewolf))
 		examine_list += span_boldred("The bloodsucker of Astrata...")
 	else if(is_priest_job(user.mind?.assigned_role))
@@ -139,7 +139,7 @@
 	else if(istype(user.culture, /datum/culture/universal/grenzelhoft))
 		examine_list += span_boldred("The nitebeast of Grenz! He's here!")
 	else if(user.mind?.has_antag_datum(/datum/antagonist/maniac))
-		examine_list += span_green("The legally distinct vampire hunter!")
+		examine_list += span_green("¡El cazador de vampiros legalmente distinto!")
 
 
 /datum/antagonist/vampire/lord/daewalker/greet()
@@ -263,7 +263,7 @@
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/shoes/boots/leather/daewalker
-	name = "dark boots"
+	name = "botas oscuras"
 	icon_state = "psydonboots"
 	item_state = "psydonboots"
 	color = CLOTHING_ROYAL_BLACK

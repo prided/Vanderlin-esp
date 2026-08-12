@@ -1,7 +1,7 @@
 
 /obj/item/bee_treatment
 	name = "bee medication"
-	desc = "A treatment for bee diseases."
+	desc = "Un tratamiento para las enfermedades de las abejas."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "cream"
 	var/treatment_type = "general"
@@ -14,7 +14,7 @@
 	var/obj/structure/apiary/A = interacting_with
 
 	if(!A.has_disease)
-		to_chat(user, span_notice("The bees don't appear to need treatment."))
+		to_chat(user, span_notice("Las abejas no parecen necesitar tratamiento."))
 		return ITEM_INTERACT_BLOCKING
 
 	to_chat(user, span_notice("You apply [src] to [A]."))
@@ -31,7 +31,7 @@
 		A.disease = null
 		A.disease_severity = 0
 		A.treatment_progress = 0
-		to_chat(user, span_notice("The bees appear to be recovering!"))
+		to_chat(user, span_notice("¡Las abejas parecen estar recuperándose!"))
 	else
 		to_chat(user, span_notice("The treatment seems to be having some effect."))
 
@@ -43,25 +43,25 @@
 
 /obj/item/bee_treatment/antiviral
 	name = "bee antiviral"
-	desc = "A treatment for viral bee diseases like foulbrood."
+	desc = "Un tratamiento para enfermedades virales de las abejas como la loque."
 	treatment_type = "Foulbrood"
 	treatment_strength = 40
 
 /obj/item/bee_treatment/miticide
 	name = "bee miticide"
-	desc = "A treatment for varroa mites that infest bee colonies."
+	desc = "Un tratamiento para los ácaros varroa que infestan las colonias de abejas."
 	treatment_type = "Varroa Mites"
 	treatment_strength = 40
 
 /obj/item/bee_treatment/insecticide
-	name = "targeted insecticide"
-	desc = "A treatment for wax moths and other hive pests."
+	name = "insecticida dirigido"
+	desc = "Un tratamiento para las polillas de la cera y otras plagas de la colmena."
 	treatment_type = "Wax Moths"
 	treatment_strength = 40
 
 /obj/item/bee_smoker
 	name = "bee smoker"
-	desc = "A device used to calm bees with smoke."
+	desc = "Un dispositivo utilizado para calmar a las abejas con humo."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "smoker"
 	w_class = WEIGHT_CLASS_SMALL
@@ -71,7 +71,7 @@
 
 /obj/item/bee_smoker/attack_self(mob/user)
 	if(!active && fuel > 0)
-		to_chat(user, span_notice("You light [src]."))
+		to_chat(user, span_notice("Enciendes [src]."))
 		active = TRUE
 		update_appearance(UPDATE_ICON_STATE)
 		process_smoker(user)
@@ -143,15 +143,15 @@
 		to_chat(user, A.disease.get_inspection_message())
 		to_chat(user, A.disease.get_severity_description(A.disease_severity))
 	else
-		to_chat(user, span_notice("The bees appear to be healthy."))
+		to_chat(user, span_notice("Las abejas parecen estar sanas."))
 
 	if(A.bee_count + A.outside_bees == 0)
-		to_chat(user, span_warning("The hive is empty!"))
+		to_chat(user, span_warning("¡La colmena está vacía!"))
 	else if(A.bee_count + A.outside_bees < 5)
-		to_chat(user, span_warning("The colony is very small."))
+		to_chat(user, span_warning("La colonia es muy pequeña."))
 	else if(A.bee_count + A.outside_bees < 15)
-		to_chat(user, span_notice("The colony is moderate in size."))
+		to_chat(user, span_notice("La colonia es de tamaño moderado."))
 	else
-		to_chat(user, span_notice("The colony is thriving with many bees!"))
+		to_chat(user, span_notice("¡La colonia está prosperando con muchas abejas!"))
 
 	return ITEM_INTERACT_SUCCESS

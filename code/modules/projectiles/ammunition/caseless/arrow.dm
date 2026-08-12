@@ -19,14 +19,14 @@
 	AddElement(/datum/element/tipped_item, _max_reagents = 2, _dip_amount = 2, _attack_injects = FALSE)
 
 /obj/item/ammo_casing/caseless/arrow/stone
-	name = "stone arrow"
+	name = "flecha de piedra"
 	desc = "A fletched projectile with a stone tip."
 	icon_state = "stonearrow"
 	projectile_type = /obj/projectile/bullet/reusable/arrow/stone //weaker projectile
 	max_integrity = 5
 
 /obj/item/ammo_casing/caseless/arrow/poison
-	name = "poison arrow"
+	name = "flecha envenenada"
 	desc = "An arrow with its tip coated in a weak poison."
 	icon_state = "arrow_poison"
 
@@ -42,7 +42,7 @@
 	reagents.add_reagent(/datum/reagent/strongpoison, 2)
 
 /obj/projectile/bullet/reusable/arrow/spiced
-	name = "spiced arrow"
+	name = "flecha especiada"
 	desc = "A profane arrow infused with spice."
 	icon_state = "arrowspice_proj"
 
@@ -51,7 +51,7 @@
 	reagents.add_reagent(/datum/reagent/druqks, 20)
 
 /obj/item/ammo_casing/caseless/arrow/pyro
-	name = "pyroclastic arrow"
+	name = "flecha piroclástica"
 	desc = "An arrow with its tip smeared with a flammable tincture."
 	projectile_type = /obj/projectile/bullet/reusable/arrow/pyro
 	icon_state = "arrow_pyroclastic"
@@ -90,7 +90,7 @@
 	reagent = /datum/reagent/water
 
 /obj/item/ammo_casing/caseless/arrow/water
-	name = "water arrow"
+	name = "flecha de agua"
 	desc = "An arrow with its tip replaced by a water crystal, creates a splash on impact."
 	icon_state = "arrow_water"
 	projectile_type = /obj/projectile/bullet/reusable/arrow/water
@@ -102,7 +102,7 @@
 	RemoveElement(/datum/element/tipped_item)
 
 /obj/item/ammo_casing/caseless/arrow/bone
-	name = "bone arrow"
+	name = "flecha de hueso"
 	desc = "A fletched projectile with a bone tip."
 	icon_state = "bonearrow"
 	projectile_type = /obj/projectile/bullet/reusable/arrow/bone //weaker projectile

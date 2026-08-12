@@ -55,7 +55,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 					user.put_in_hands(I)
 					addl_mail = TRUE
 				else
-					say("You have additional mail available.")
+					say("Tienes correo adicional disponible.")
 					break
 	if(!ishuman(user))
 		return
@@ -82,10 +82,10 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		return
 	user.changeNext_move(6)
 	if(!coin_loaded)
-		to_chat(user, span_warning("The machine doesn't respond. It needs a coin."))
+		to_chat(user, span_warning("La máquina no responde. Necesita una moneda."))
 		return
 	if(inqcoins)
-		to_chat(user, span_warning("The machine doesn't respond."))
+		to_chat(user, span_warning("La máquina no responde."))
 		return
 	var/send2place = browser_input_text(user, "Where to? (Person or #number)")
 	if(!send2place)
@@ -117,7 +117,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 				P.mailedto = send2place
 				P.update_appearance()
 				P.forceMove(X.loc)
-				X.say("New mail!")
+				X.say("¡Nuevo correo!")
 				playsound(X, 'sound/misc/mail.ogg', 100, FALSE, -1)
 				break
 		if(found)
@@ -125,7 +125,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 				var/stripped_info = remove_color_tags(P.info)
 				GLOB.letters_sent |= stripped_info
 
-			visible_message(span_warning("[user] sends something."))
+			visible_message(span_warning("[user] envía algo."))
 			playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 			SStreasury.give_money_treasury(coin_loaded, "Mail Income")
 			coin_loaded = FALSE
@@ -156,7 +156,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		if(P.info)
 			var/stripped_info = remove_color_tags(P.info)
 			GLOB.letters_sent |= stripped_info
-		visible_message(span_warning("[user] sends something."))
+		visible_message(span_warning("[user] envía algo."))
 		playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 		SStreasury.give_money_treasury(coin_loaded, "Mail")
 		coin_loaded = FALSE
@@ -211,7 +211,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		return
 
 	if(!is_mercenary_job(H.mind.assigned_role))
-		to_chat(H, span_warning("I can't make use of this - I do not belong to the Guild."))
+		to_chat(H, span_warning("No puedo hacer uso de esto; no pertenezco al Gremio."))
 		return
 
 	if(H.tokenclaimed)
@@ -219,17 +219,17 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		return
 
 	if(!token.signee)
-		to_chat(H, span_warning("I cannot send an unsigned token."))
+		to_chat(H, span_warning("No puedo enviar un token sin firmar."))
 		return
 
 	// Process the token
 	qdel(token)
-	visible_message(span_warning("[H] sends something."))
+	visible_message(span_warning("[H] envía algo."))
 	playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 
 	sleep(2 SECONDS)
 
-	say("THANK YOU FOR YOUR SERVITUDE.")
+	say("GRACIAS POR SU SERVICIO.")
 	playsound(src, 'sound/misc/mercsuccess.ogg', 100, FALSE, -1)
 	playsound(src, 'sound/misc/hiss.ogg', 100, FALSE, -1)
 	to_chat(H, span_warning("A trinket comes tumbling down from the machine. Proof of your distinction."))
@@ -280,7 +280,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 
 /obj/structure/fake_machine/mail/proc/handle_broken_mirror(obj/item/inqarticles/bmirror/mirror, mob/user)
 	if(mirror.broken && !mirror.bloody)
-		visible_message(span_warning("[user] sends something."))
+		visible_message(span_warning("[user] envía algo."))
 		budget2change(2, user, "MARQUE")
 		qdel(mirror)
 		GLOB.vanderlin_round_stats[STATS_MARQUES_MADE] += 2
@@ -288,7 +288,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 	else
 		if(!mirror.broken)
-			to_chat(user, span_warning("It isn't broken."))
+			to_chat(user, span_warning("No está roto."))
 		else if(mirror.bloody)
 			to_chat(user, span_warning("Clean it first."))
 
@@ -342,9 +342,9 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		if(is_duplicate)
 			to_chat(user, span_notice("They've already confessed."))
 		else if(is_selfreport)
-			to_chat(user, span_notice("Why was that confession signed by an inquisition member? What?"))
+			to_chat(user, span_notice("¿Por qué esa confesión fue firmada por un miembro de la inquisición? ¿Qué?"))
 			if(is_indexed)
-				visible_message(span_warning("[user] receives something."))
+				visible_message(span_warning("[user] recibe algo."))
 				var/obj/item/inqarticles/indexer/replacement = new /obj/item/inqarticles/indexer/
 				user.put_in_hands(replacement)
 		return
@@ -384,7 +384,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	if(confession.paired)
 		qdel(confession.paired)
 	qdel(confession)
-	visible_message(span_warning("[user] sends something."))
+	visible_message(span_warning("[user] envía algo."))
 	playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 
 
@@ -402,10 +402,10 @@ GLOBAL_LIST_EMPTY(letters_sent)
 
 		if(is_duplicate)
 			qdel(indexer)
-			visible_message(span_warning("[user] sends something."))
+			visible_message(span_warning("[user] envía algo."))
 			playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
-			visible_message(span_warning("[user] receives something."))
-			to_chat(user, span_notice("We've already collected a sample of their accursed blood."))
+			visible_message(span_warning("[user] recibe algo."))
+			to_chat(user, span_notice("Ya hemos recogido una muestra de su maldita sangre."))
 			var/obj/item/inqarticles/indexer/replacement = new /obj/item/inqarticles/indexer(get_turf(user))
 			user.put_in_hands(replacement)
 		else
@@ -413,7 +413,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			budget2change(marque_value, user, "MARQUE")
 			GLOB.vanderlin_round_stats[STATS_MARQUES_MADE] += marque_value
 			qdel(indexer)
-			visible_message(span_warning("[user] sends something."))
+			visible_message(span_warning("[user] envía algo."))
 			playsound(src, 'sound/misc/otavanlament.ogg', 100, FALSE, -1)
 			playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 		return
@@ -433,9 +433,9 @@ GLOBAL_LIST_EMPTY(letters_sent)
 
 		if(is_duplicate || is_selfreport)
 			qdel(indexer)
-			visible_message(span_warning("[user] sends something."))
+			visible_message(span_warning("[user] envía algo."))
 			playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
-			visible_message(span_warning("[user] receives something."))
+			visible_message(span_warning("[user] recibe algo."))
 
 			if(is_selfreport)
 				to_chat(user, span_notice("Why did that INDEXER contain Inquisitional blood? What am I doing?"))
@@ -449,7 +449,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			GLOB.vanderlin_round_stats[STATS_MARQUES_MADE] += 2
 			user.inquisition_position.merits += 1
 			qdel(indexer)
-			visible_message(span_warning("[user] sends something."))
+			visible_message(span_warning("[user] envía algo."))
 			playsound(src, 'sound/misc/otavasent.ogg', 100, FALSE, -1)
 			playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 
@@ -464,7 +464,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	GLOB.vanderlin_round_stats[STATS_MARQUES_MADE] += slip.marquevalue
 	qdel(slip)
 
-	visible_message(span_warning("[user] sends something."))
+	visible_message(span_warning("[user] envía algo."))
 	playsound(src, 'sound/misc/otavasent.ogg', 100, FALSE, -1)
 	playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 
@@ -541,7 +541,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	if(is_duplicate || is_selfreport)
 		QDEL_NULL(accusation.paired) // do this before the paper so it isn't cleared
 		QDEL_NULL(accusation)
-		visible_message(span_warning("[user] sends something."))
+		visible_message(span_warning("[user] envía algo."))
 		playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 
 		if(is_confessed)
@@ -551,7 +551,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			var/obj/item/inqarticles/indexer/replacement = new /obj/item/inqarticles/indexer(get_turf(user))
 			user.put_in_hands(replacement)
 		else
-			to_chat(user, span_notice("They've already been accused."))
+			to_chat(user, span_notice("Ya han sido acusados."))
 		return
 
 	// Calculate marque value
@@ -568,16 +568,16 @@ GLOBAL_LIST_EMPTY(letters_sent)
 
 	qdel(accusation.paired)
 	qdel(accusation)
-	visible_message(span_warning("[user] sends something."))
+	visible_message(span_warning("[user] envía algo."))
 	playsound(src, 'sound/misc/otavanlament.ogg', 100, FALSE, -1)
 	playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 
 /obj/structure/fake_machine/mail/proc/handle_paper_mail(obj/item/paper/paper, mob/user)
 	if(inqcoins)
-		to_chat(user, span_warning("The machine doesn't respond."))
+		to_chat(user, span_warning("La máquina no responde."))
 		return
 
-	if(tgui_alert(user, "Send Mail?", "Confirm", list("YES","NO")) != "YES")
+	if(tgui_alert(user, "¿Enviar correo?", "Confirmar", list("YES","NO")) != "YES")
 		return
 
 	var/send_to = browser_input_text(user, "Where to? (Person or #number)", "Vanderlin", null)
@@ -600,14 +600,14 @@ GLOBAL_LIST_EMPTY(letters_sent)
 				paper.mailedto = send_to
 				paper.update_appearance()
 				paper.forceMove(mailbox.loc)
-				mailbox.say("New mail!")
+				mailbox.say("¡Nuevo correo!")
 				playsound(mailbox, 'sound/misc/mail.ogg', 100, FALSE, -1)
 				break
 
 		if(found)
 			if(paper.info)
 				GLOB.letters_sent |= remove_color_tags(paper.info)
-			visible_message(span_warning("[user] sends something."))
+			visible_message(span_warning("[user] envía algo."))
 			playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 		else
 			to_chat(user, span_warning("Cannot send it. Bad number?"))
@@ -633,7 +633,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	if(paper.info)
 		GLOB.letters_sent |= remove_color_tags(paper.info)
 
-	visible_message(span_warning("[user] sends something."))
+	visible_message(span_warning("[user] envía algo."))
 	playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 	send_ooc_note("New letter from <b>[sent_from].</b>", name = send_to)
 
@@ -889,7 +889,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		inqcoins -= PA.marquescost
 		if(PA.maximum)
 			decreaseremaining(PA)
-		visible_message(span_warning("[usr] sends something."))
+		visible_message(span_warning("[usr] envía algo."))
 		if(!inqcoins)
 			coin_loaded = FALSE
 			update_appearance()

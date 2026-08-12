@@ -61,11 +61,11 @@
 	else
 		. += span_warning("The bowl is empty.")
 	if(liquid_contents.total_volume > 0)
-		. += span_notice("The base contains [liquid_contents.total_volume]u of liquid.")
+		. += span_notice("La base contiene [liquid_contents.total_volume]u de líquido.")
 	else
-		. += span_warning("The base is dry.")
+		. += span_warning("La base está seca.")
 	if(current_smoker)
-		. += span_notice("[current_smoker.name] is smoking from it.")
+		. += span_notice("[current_smoker.name] está humeando.")
 	else
 		. += span_notice("Click it to smoke.")
 
@@ -76,7 +76,7 @@
 
 	if(current_smoker == user)
 		stop_smoking()
-		to_chat(user, span_notice("You pull away from the [name]."))
+		to_chat(user, span_notice("Te alejas del [name]."))
 		return
 
 	if(current_smoker)
@@ -115,7 +115,7 @@
 		if(!container.is_open_container())
 			return
 		if(liquid_contents.total_volume >= liquid_max_volume)
-			to_chat(user, span_warning("The base is already full."))
+			to_chat(user, span_warning("La base ya está llena."))
 			return
 		I.reagents.trans_to(liquid_contents, min(I.reagents.total_volume, liquid_max_volume - liquid_contents.total_volume))
 		to_chat(user, span_notice("You pour liquid into the base of the [name]."))
@@ -151,7 +151,7 @@
 
 /obj/structure/fluff/statue/shisha/proc/empty_bowl(mob/living/user)
 	if(!bowl_contents)
-		to_chat(user, span_warning("The bowl is already empty."))
+		to_chat(user, span_warning("El cuenco ya está vacío."))
 		return
 	bowl_contents.forceMove(get_turf(src))
 	bowl_contents = null
@@ -164,7 +164,7 @@
 	var/n = length(loaded_coals)
 	var/heat_desc = n >= 3 ? "fierce" : n == 2 ? "comfortable" : "gentle"
 	to_chat(user, span_notice("You settle in and take a draw from the [name]. The [heat_desc] heat of the coals warms the bowl."))
-	visible_message(span_notice("[user.name] begins smoking the [name]."))
+	visible_message(span_notice("[user.name] comienza a fumar el [name]."))
 	AddComponent(/datum/component/rope, user, \
 		icon = 'icons/effects/beam.dmi', \
 		icon_state = "shisha", \
@@ -237,10 +237,10 @@
 
 	if(n >= 3)
 		to_chat(current_smoker, span_notice("You take a deep, intense draw. Rich smoke floods your lungs."))
-		visible_message(span_notice("[current_smoker.name] exhales a thick cloud of smoke."))
+		visible_message(span_notice("[current_smoker.name] exhala una espesa nube de humo."))
 	else if(n == 2)
 		to_chat(current_smoker, span_notice("You take a smooth, full draw from the [name]. Fragrant smoke fills your lungs."))
-		visible_message(span_notice("[current_smoker.name] exhales a steady cloud of smoke."))
+		visible_message(span_notice("[current_smoker.name] exhala una nube constante de humo."))
 	else
 		to_chat(current_smoker, span_notice("You take a soft, mild draw from the [name]. A wisp of lightly scented smoke drifts through."))
 		visible_message(span_notice("[current_smoker.name] exhales a thin wisp of smoke."))

@@ -1,6 +1,6 @@
 /obj/item/fake_machine/drugtrade
 	name = "NARCOS"
-	desc = "A machine that exports drugs throughout a network of pneumatic pipes."
+	desc = "Una máquina que exporta drogas a través de una red de tuberías neumáticas."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "ballooner"
 	density = TRUE
@@ -82,7 +82,7 @@
 				if(prize >= 1)
 					play_sound=TRUE
 					budgie += prize
-					I.visible_message("<span class='warning'>[I] is sucked into the tube!</span>")
+					I.visible_message("¡<span class='warning'>[I] es succionado por el tubo!</span>")
 					qdel(I)
 			budgie = round(budgie)
 			if(budgie > 0)
@@ -99,7 +99,7 @@
 
 /obj/structure/fake_machine/drugmachine
 	name = "PURITY"
-	desc = "You want to destroy your life."
+	desc = "Quieres destruir tu vida."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "goldvendor"
 	density = TRUE
@@ -173,7 +173,7 @@
 				record_round_statistic(STATS_TAXES_EVADED, tax_amt)
 				add_abstract_elastic_data(ELASCAT_ECONOMY, ELASDATA_TAXES_EVADED, tax_amt)
 		else
-			say("Not enough!")
+			say("¡No es suficiente!")
 			return
 		var/pathi = pick(PA.contains)
 		var/obj/item/I = new pathi(get_turf(src))
@@ -196,7 +196,7 @@
 			options += "Enable Paying Taxes"
 		else
 			options += "Stop Paying Taxes"
-		var/select = input(usr, "Please select an option.", "", null) as null|anything in options
+		var/select = input(usr, "Por favor seleccione una opción.", "", null) as null|anything in options
 		if(!select)
 			return
 		if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH) || locked())

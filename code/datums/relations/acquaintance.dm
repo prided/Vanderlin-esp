@@ -1,6 +1,6 @@
 /datum/relation/acquaintance
 	name = "Acquaintance"
-	desc = "Someone you have crossed paths with."
+	desc = "Alguien con quien te has cruzado."
 	upgrades = list(/datum/relation/had_crossed, /datum/relation/was_crossed)
 
 /datum/relation/acquaintance/get_desc_string()

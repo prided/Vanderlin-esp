@@ -11,7 +11,7 @@ export const DetailSlapcraft = ({ r, lookup, pickerMap, allRecipes, essenceIndex
   const second = steps[1];
   return (
     <>
-      <SectionHead>Steps</SectionHead>
+      <SectionHead>Pasos</SectionHead>
       <Box className="RecipeBook__step-block">
         {second && (() => {
           const parts = second.desc.split(second.name);
@@ -57,7 +57,7 @@ export const DetailSlapcraft = ({ r, lookup, pickerMap, allRecipes, essenceIndex
                   <RecipeLink name={s.name} path={s._path} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
                 </>
               )}
-              {!!s.optional && <span className="RecipeBook__step-note"> (optional)</span>}
+              {!!s.optional && <span className="RecipeBook__step-note"> (opcional)</span>}
             </Box>
           );
         })}

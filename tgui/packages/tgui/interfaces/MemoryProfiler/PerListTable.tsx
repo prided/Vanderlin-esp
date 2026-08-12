@@ -137,13 +137,13 @@ export function PerListTable(props: { report: ListsReport }) {
       <Section
         fill
         scrollable
-        title="Lists"
+        title="Listas"
         buttons={
           <SearchBar
             expensive
             query={search}
             onSearch={setSearch}
-            placeholder="Filter owners, or type a site like orphan..."
+            placeholder="Filtrar propietarios o escribir un sitio como huérfano..."
             style={{ width: '24rem' }}
           />
         }
@@ -155,16 +155,16 @@ export function PerListTable(props: { report: ListsReport }) {
               desc={sort.desc}
               onClick={() => toggle('owner')}
             >
-              Owner
+              Dueño
             </SortCell>
-            <Table.Cell collapsing>Site</Table.Cell>
+            <Table.Cell collapsing>Sitio</Table.Cell>
             <SortCell
               collapsing
               active={sort.key === 'length'}
               desc={sort.desc}
               onClick={() => toggle('length')}
             >
-              Len
+              len
             </SortCell>
             <SortCell
               collapsing
@@ -188,14 +188,14 @@ export function PerListTable(props: { report: ListsReport }) {
               desc={sort.desc}
               onClick={() => toggle('assoc_nodes')}
             >
-              Assoc
+              Asociación
             </SortCell>
             <SortCell
               active={sort.key === 'bytes'}
               desc={sort.desc}
               onClick={() => toggle('bytes')}
             >
-              Bytes
+              bytes
             </SortCell>
           </Table.Row>
           {rows.map((row) => (
@@ -209,7 +209,7 @@ export function PerListTable(props: { report: ListsReport }) {
                   </Box>
                 </Tooltip>
                 {!row.capacity_sane && (
-                  <Tooltip content="Capacity failed the walk's sanity guard, so this row's allocated size is not trustworthy.">
+                  <Tooltip content="La capacidad falló al guardia de cordura de la caminata, por lo que el tamaño asignado a esta fila no es confiable.">
                     <Icon name="ruler" ml={1} color="average" />
                   </Tooltip>
                 )}

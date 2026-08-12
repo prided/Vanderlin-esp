@@ -31,8 +31,8 @@
 	color = CLOTHING_PLUM_PURPLE
 
 /obj/item/clothing/cloak/raincloak/colored/mortus
-	name = "funeral cloak"
-	desc = "You're always shrouded by death."
+	name = "manto funerario"
+	desc = "Siempre estás envuelto por la muerte."
 	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/cloak/raincloak/colored/brown
@@ -70,7 +70,7 @@
 	user.update_fov_angles()
 
 /obj/item/clothing/cloak/raincloak/furcloak
-	name = "fur cloak"
+	name = "capa de piel"
 	icon_state = "furgrey"
 	inhand_mod = FALSE
 	hoodtype = /obj/item/clothing/head/hooded/rainhood/furhood

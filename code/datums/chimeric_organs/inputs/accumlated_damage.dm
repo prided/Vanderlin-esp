@@ -1,6 +1,6 @@
 /datum/chimeric_node/input/accumlated_damage
 	name = "responsive"
-	desc = "Triggers when you have a combined amount of damage."
+	desc = "Se activa cuando tienes una cantidad combinada de daño."
 
 	weight = 2
 

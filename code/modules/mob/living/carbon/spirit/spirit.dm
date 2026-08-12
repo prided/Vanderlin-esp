@@ -106,7 +106,7 @@
 
 /mob/living/carbon/spirit/returntolobby()
 	set name = "{RETURN TO LOBBY}"
-	set category = "Preferences.Options"
+	set category = "Preferencias.Opciones"
 	set hidden = 1
 
 	if(key)
@@ -237,7 +237,7 @@
 
 	if(ghost)
 		var/user_acknowledgement = user ? user.real_name : "a mysterious force"
-		to_chat(ghost, span_rose("My soul finds peace buried in consecrated ground, thanks to [user_acknowledgement]."))
+		to_chat(ghost, span_rose("Mi alma encuentra la paz enterrada en tierra consagrada, gracias a [user_acknowledgement]."))
 
 /mob/living/carbon/spirit/show_inv(mob/user)
 	return

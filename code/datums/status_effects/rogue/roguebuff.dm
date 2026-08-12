@@ -10,7 +10,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/drunk
 	name = "Drunk"
-	desc = span_nicegreen("I feel very drunk.")
+	desc = span_nicegreen("Me siento muy borracho.")
 	icon_state = "drunk"
 
 /datum/status_effect/buff/drunk/on_apply()
@@ -33,8 +33,8 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/buff/foodbuff
-	name = "Great Meal"
-	desc = span_nicegreen("That was a good meal!")
+	name = "Gran comida"
+	desc = span_nicegreen("¡Esa fue una buena comida!")
 	icon_state = "foodbuff"
 
 /datum/status_effect/buff/foodbuff/on_apply()
@@ -58,8 +58,8 @@
 		C.add_stress(/datum/stress_event/clean_plus)
 
 /atom/movable/screen/alert/status_effect/buff/clean_plus
-	name = "Clean"
-	desc = span_nicegreen("I feel very refreshed.")
+	name = "Limpio"
+	desc = span_nicegreen("Me siento muy renovado.")
 	icon_state = "buff"	// add custom icon TO DO
 
 
@@ -92,7 +92,7 @@
 /datum/status_effect/buff/druqks/baotha/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_CRACKHEAD, TRAIT_STATUS_EFFECT(id))
-	owner.visible_message("[owner]'s eyes appear to return to normal.")
+	owner.visible_message("Los ojos de [owner] parecen volver a la normalidad.")
 
 /atom/movable/screen/alert/status_effect/buff/druqks
 	name = "High"
@@ -187,7 +187,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/featherfall
 	name = "Featherfall"
-	desc = "I am somewhat protected against falling from heights."
+	desc = "Estoy algo protegido contra caídas desde alturas."
 	icon_state = "buff"
 
 /datum/status_effect/buff/featherfall
@@ -198,12 +198,12 @@
 
 /datum/status_effect/buff/featherfall/on_apply()
 	. = ..()
-	to_chat(owner, span_warning("I feel lighter."))
+	to_chat(owner, span_warning("Me siento más ligero."))
 	ADD_TRAIT(owner, TRAIT_NOFALLDAMAGE1, TRAIT_STATUS_EFFECT(id))
 
 /datum/status_effect/buff/featherfall/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("The feeling of lightness fades."))
+	to_chat(owner, span_warning("La sensación de ligereza se desvanece."))
 	REMOVE_TRAIT(owner, TRAIT_NOFALLDAMAGE1, TRAIT_STATUS_EFFECT(id))
 
 /datum/status_effect/buff/darkvision
@@ -214,7 +214,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/darkvision
 	name = "Darkvision"
-	desc = span_nicegreen("I can see in the dark.")
+	desc = span_nicegreen("Puedo ver en la oscuridad.")
 	icon_state = "buff"
 
 /datum/status_effect/buff/darkvision/on_apply()
@@ -228,7 +228,7 @@
 
 /datum/status_effect/buff/darkvision/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("Darkness shrouds your senses once more."))
+	to_chat(owner, span_warning("La oscuridad envuelve tus sentidos una vez más."))
 	REMOVE_TRAIT(owner, TRAIT_DARKVISION, TRAIT_STATUS_EFFECT(id))
 	owner.update_sight()
 
@@ -319,8 +319,8 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/buff/nocbuff
-	name = "Divine Knowledge"
-	desc = span_nicegreen("Divine knowledge flows through me.")
+	name = "Conocimiento Divino"
+	desc = span_nicegreen("El conocimiento divino fluye a través de mí.")
 	icon_state = "intelligence"
 
 
@@ -334,8 +334,8 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/buff/ravoxbuff
-	name = "Divine Power"
-	desc = span_nicegreen("Divine power flows through me.")
+	name = "poder divino"
+	desc = span_nicegreen("El poder divino fluye a través de mí.")
 	icon_state = "ravox"
 
 
@@ -352,7 +352,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/buff/beastsense
-	name = "Bestial Senses"
+	name = "Sentidos bestiales"
 	desc = span_nicegreen("No scent too faint, no shadow too dark...")
 	icon_state = "bestialsense"
 
@@ -367,7 +367,7 @@
 
 /datum/status_effect/buff/beastsense/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("Darkness shrouds your senses once more."))
+	to_chat(owner, span_warning("La oscuridad envuelve tus sentidos una vez más."))
 	REMOVE_TRAIT(owner, TRAIT_BESTIALSENSE, REF(src))
 	owner.update_sight()
 
@@ -380,7 +380,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/buff/trollshape
-	name = "Troll Shape"
+	name = "Forma de troll"
 	desc = span_nicegreen("I AM STRONG! DENDOR'S ENEMIES WILL DIE!")
 	icon_state = "trollshape"
 /datum/status_effect/buff/trollshape/on_apply()
@@ -440,8 +440,8 @@
 		C.remove_stress(/datum/stress_event/divine_beauty)
 
 /atom/movable/screen/alert/status_effect/buff/divine_beauty
-	name = "Divine Beauty"
-	desc = span_nicegreen("Everything about myself feels beautiful!")
+	name = "Belleza divina"
+	desc = span_nicegreen("¡Todo en mí se siente hermoso!")
 	icon_state = "beauty"
 
 /*-----------------\
@@ -457,7 +457,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/call_to_arms
 	name = "Call to Arms"
-	desc = span_bloody("THE FIGHT WILL BE BLOODY!")
+	desc = span_bloody("¡LA LUCHA SERÁ SANGRIENTA!")
 	icon_state = "call_to_arms"
 
 /*-----------------\
@@ -472,8 +472,8 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/buff/craft_buff
-	name = "Exquisite Craftsmanship"
-	desc = span_notice("I am inspired to create!")
+	name = "Artesanía exquisita"
+	desc = span_notice("¡Me inspiro para crear!")
 	icon_state = "malum_buff"
 
 /datum/status_effect/buff/malum_anvil
@@ -515,7 +515,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/call_to_hunt
 	name = "Call to Hunt"
-	desc = span_bloody("FOR THE HUNT!")
+	desc = span_bloody("¡PARA LA CAZA!")
 	icon_state = "call_to_hunt"
 
 /*-----------------\
@@ -577,7 +577,7 @@
 
 #define CRANKBOX_FILTER "crankboxbuff_glow"
 /atom/movable/screen/alert/status_effect/buff/churnerprotection
-	name = "Magick Distorted"
+	name = "Magia distorsionada"
 	desc = "The wailing box is disrupting magicks around me!"
 	icon_state = "buff"
 
@@ -605,7 +605,7 @@
 #undef CRANKBOX_FILTER
 
 /atom/movable/screen/alert/status_effect/buff/churnernegative
-	name = "Magick Distorted"
+	name = "Magia distorsionada"
 	desc = "That infernal contraption is sapping my very arcyne essence!"
 	icon_state = "buff"
 
@@ -625,7 +625,7 @@
 /datum/status_effect/buff/churnernegative/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_ANTIMAGIC, TRAIT_STATUS_EFFECT(id))
-	to_chat(owner, span_warning("I feel my connection to the arcyne surround me once more."))
+	to_chat(owner, span_warning("Siento que mi conexión con el arcyne me rodea una vez más."))
 	owner.visible_message("[owner]'s arcyne aura seems to return once more.")
 
 /datum/status_effect/buff/lux_drank/baothavitae
@@ -657,7 +657,7 @@
 // SKELETON BARD BUFF ALERT
 /atom/movable/screen/alert/status_effect/bardbuff
 	name = "Musical Buff"
-	desc = "My skills are improved by music!"
+	desc = "¡Mis habilidades mejoran con la música!"
 	icon_state = "intelligence"
 	alert_group = ALERT_BUFF
 
@@ -754,7 +754,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/strength
 	name = "arcane reinforced strength"
-	desc = "I am magically strengthened."
+	desc = "Estoy mágicamente fortalecido."
 	icon_state = "buff"
 
 /datum/status_effect/buff/magicstrength/lesser
@@ -766,7 +766,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/strength/lesser
 	name = "lesser arcane strength"
-	desc = "I am magically strengthened."
+	desc = "Estoy mágicamente fortalecido."
 	icon_state = "buff"
 
 
@@ -803,7 +803,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/endurance
 	name = "arcane endurance"
-	desc = "I am magically resilient."
+	desc = "Soy mágicamente resistente."
 	icon_state = "buff"
 
 /datum/status_effect/buff/magicendurance/lesser
@@ -815,7 +815,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/endurance/lesser
 	name = "lesser arcane endurance"
-	desc = "I am magically resilient."
+	desc = "Soy mágicamente resistente."
 	icon_state = "buff"
 
 
@@ -828,7 +828,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/constitution
 	name = "arcane constitution"
-	desc = "I feel reinforced by magick."
+	desc = "Me siento reforzado por la magia."
 	icon_state = "buff"
 
 /datum/status_effect/buff/magicconstitution/lesser
@@ -840,7 +840,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/constitution/lesser
 	name = "lesser arcane constitution"
-	desc = "I feel reinforced by magick."
+	desc = "Me siento reforzado por la magia."
 	icon_state = "buff"
 
 /datum/status_effect/buff/magicperception
@@ -852,7 +852,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/perception
 	name = "arcane perception"
-	desc = "I can see everything."
+	desc = "Puedo ver todo."
 	icon_state = "buff"
 
 /datum/status_effect/buff/magicperception/lesser
@@ -896,7 +896,7 @@
 	addtimer(CALLBACK(target, TYPE_PROC_REF(/atom, remove_atom_colour), TEMPORARY_COLOUR_PRIORITY, newcolor), 12 SECONDS)
 
 /atom/movable/screen/alert/status_effect/debuff/cold
-	name = "Cold"
+	name = "Frío"
 	desc = "Something has chilled me to the bone! It's hard to move."
 
 /datum/status_effect/buff/nocblessing
@@ -907,7 +907,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/buff/nocblessing
-	name = "Noc's blessing"
+	name = "La bendición de Noc"
 	desc = "Gazing Noc helps me think."
 	icon_state = "buff"
 
@@ -919,8 +919,8 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/buff/nocblessed
-	name = "Blessed by Noc"
-	desc = "I have been blessed by Noc since I was born, with his help I can see and think better than anyone."
+	name = "Bendecido por Noc"
+	desc = "He sido bendecido por Noc desde que nací, con su ayuda puedo ver y pensar mejor que nadie."
 	icon_state = "intelligence"
 
 
@@ -996,7 +996,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/stuffed
 	name = "Stuffed"
-	desc = "A hearty meal!"
+	desc = "¡Una comida abundante!"
 
 // Buff to halflings for not wearing shoes, comes with stress events
 /datum/status_effect/buff/free_feet
@@ -1018,5 +1018,5 @@
 	owner.remove_stress(/datum/stress_event/feet_free)
 
 /atom/movable/screen/alert/status_effect/buff/free_feet
-	name = "Foot Freedom"
-	desc = "Not wearing shoes allows me to move more freely."
+	name = "Libertad de pies"
+	desc = "No usar zapatos me permite moverme más libremente."

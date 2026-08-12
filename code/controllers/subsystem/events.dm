@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(events)
-	name = "Events"
+	name = "Eventos"
 	init_order = INIT_ORDER_EVENTS
 	runlevels = RUNLEVEL_GAME
 
@@ -87,8 +87,8 @@ SUBSYSTEM_DEF(events)
 // REEEEEEEEE
 
 /client/proc/forceEvent()
-	set name = "Trigger Event"
-	set category = "GameMaster.Interactions"
+	set name = "Evento desencadenante"
+	set category = "GameMaster.Interacciones"
 	if(!holder ||!check_rights(R_FUN))
 		return
 	holder.forceEvent(usr)

@@ -130,7 +130,7 @@
 		return NONE
 
 	if(ismob(source))
-		to_chat(source, span_warning("Too far!"))
+		to_chat(source, span_warning("¡Demasiado lejos!"))
 
 	return COMPONENT_MOVABLE_BLOCK_PRE_MOVE
 

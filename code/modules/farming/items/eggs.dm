@@ -1,7 +1,7 @@
 
 /obj/item/reagent_containers/food/snacks/egg
 	name = "egg"
-	desc = "Also known as cackleberries amongst the peasants."
+	desc = "También conocido como cackleberries entre los campesinos."
 	icon_state = "egg"
 	list_reagents = list(/datum/reagent/consumable/eggyolk = 5)
 	filling_color = "#F0E68C"
@@ -28,7 +28,7 @@
 		var/obj/O = new /obj/effect/decal/cleanable/food/egg_smudge(T)
 		O.pixel_x = O.base_pixel_x + rand(-8,8)
 		O.pixel_y = O.base_pixel_y + rand(-8,8)
-		visible_message("<span class='warning'>[H] crushes [src] underfoot.</span>")
+		visible_message("<span class='warning'>[H] aplasta [src] bajo sus pies.</span>")
 		qdel(src)
 
 /obj/item/reagent_containers/food/snacks/egg/proc/hatch(mob/living/simple_animal/hostile/retaliate/chicken/parent, mob/living/simple_animal/hostile/retaliate/chicken/father)

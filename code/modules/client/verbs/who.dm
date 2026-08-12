@@ -65,7 +65,7 @@
 
 	var/codermonkey_string = generate_codemonkey_string()
 	if(!isnull(codermonkey_string))
-		lines += span_bold("Current Non-Admin Staff:")
+		lines += span_bold("Personal no administrativo actual:")
 		lines += span_boldnotice("Non-admin staff are unable to handle adminhelp tickets.")
 		lines += codermonkey_string
 

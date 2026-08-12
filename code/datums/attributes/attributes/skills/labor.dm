@@ -18,7 +18,7 @@
 	)
 
 /datum/attribute/skill/labor/farming
-	name = "Farming"
+	name = "Agricultura"
 	desc = "Represents your character's ability to farm. The higher your skill in Farming, the more you know about a seed, fertilizer, etc. by examining them."
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(
@@ -43,7 +43,7 @@
 	)
 
 /datum/attribute/skill/labor/fishing
-	name = "Fishing"
+	name = "Pesca"
 	desc = "Represents your character's ability to fish. The higher your skill in Fishing, the better the fish you can catch and the faster you can catch them."
 	governing_attribute = STAT_PERCEPTION
 	default_attributes = list(

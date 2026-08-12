@@ -33,7 +33,7 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/natural/hide/cured
-	name = "cured leather"
+	name = "cuero curado"
 	icon_state = "leather"
 	desc = "A hide piece that has been cured and may now be worked."
 	sellprice = 7
@@ -46,7 +46,7 @@
 	maxamount = 10
 	spitoutmouth = FALSE
 	stacktype = /obj/item/natural/hide/cured
-	stackname = "cured leather"
+	stackname = "cuero curado"
 	icon1 = "leatherroll1"
 	icon1step = 5
 	icon2 = "leatherroll2"
@@ -76,7 +76,7 @@
 
 /obj/item/natural/fur/gote
 	name = "gote fur"
-	desc = "Pelt from a gote."
+	desc = "Piel de gote."
 	icon_state = "pelt_gote"
 
 /obj/item/natural/fur/volf
@@ -86,7 +86,7 @@
 
 /obj/item/natural/fur/mole
 	name = "mole fur"
-	desc = "Pelt from a mole."
+	desc = "Piel de topo."
 	icon_state = "pelt_mole"
 
 /obj/item/natural/fur/rous
@@ -114,14 +114,14 @@
 
 /obj/item/natural/fur/raccoon
 	name = "raccoon fur"
-	desc = "Fur from a raccoon."
+	desc = "Piel de mapache."
 	icon_state = "pelt_raccoon"
 	color = null
 	sellprice = 12
 
 /obj/item/natural/fur/bobcat
 	name = "bobcat fur"
-	desc = "Fur from a lynx."
+	desc = "Piel de lince."
 	icon_state = "pelt_bobcat"
 	color = null
 
@@ -155,7 +155,7 @@
 		if(-1)
 			sellprice = floor(sellprice * 0.1)
 			var/initial_name = name
-			name = "rotten [initial_name]"
+			name = "podrido [initial_name]"
 			rotten = TRUE
 
 /obj/item/natural/head/MiddleClick(mob/living/user, list/modifiers)
@@ -181,8 +181,8 @@
 	..()
 
 /obj/item/natural/head/volf
-	name = "volf head"
-	desc = "The severed head of a fearsome volf."
+	name = "cabeza de lobo"
+	desc = "La cabeza cortada de un temible volf."
 	icon_state = "volfhead"
 	sellprice = 5
 	blood_value = BLOOD_VOLUME_SURVIVE
@@ -197,8 +197,8 @@
 	item_weight = 1.2 KILOGRAMS
 
 /obj/item/natural/head/troll
-	name = "troll head"
-	desc = "The severed head of a giant troll."
+	name = "cabeza de troll"
+	desc = "La cabeza cortada de un troll gigante."
 	icon_state = "trollhead"
 	grid_height = 96
 	grid_width = 96
@@ -211,7 +211,7 @@
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
 
 /obj/item/natural/head/troll/axe
-	name = "troll head"
+	name = "cabeza de troll"
 	desc = "The severed head of a once mighty warrior troll."
 	icon_state = "trollhead_axe"
 	sellprice = 30
@@ -222,8 +222,8 @@
 	sellprice = 45
 
 /obj/item/natural/head/rous
-	name = "rous head"
-	desc = "The severed head of an unusually large rat."
+	name = "cabeza de rous"
+	desc = "La cabeza cortada de una rata inusualmente grande."
 	icon_state = "roushead"
 	sellprice = 2
 	meat_to_give = /obj/item/reagent_containers/food/snacks/meat/mince/beef
@@ -240,7 +240,7 @@
 
 /obj/item/natural/head/fox
 	name = "venard head"
-	desc = "The head of a majestic venard."
+	desc = "La cabeza de un majestuoso venardo."
 	icon_state = "foxhead"
 	layer = 3.1
 	grid_height = 32
@@ -265,8 +265,8 @@
 	item_weight = 400 GRAMS
 
 /obj/item/natural/head/mole
-	name = "mole head"
-	desc = "The severed head of a lesser mole."
+	name = "cabeza de topo"
+	desc = "La cabeza cortada de un topo menor."
 	icon_state = "molehead"
 	grid_height = 96
 	grid_width = 96
@@ -340,10 +340,10 @@
 	if(stat == DEAD && ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(user.has_status_effect(/datum/status_effect/debuff/silver_bane))
-			to_chat(user, span_notice("My power is weakened, I cannot heal!"))
+			to_chat(user, span_notice("¡Mi poder está debilitado, no puedo sanar!"))
 			return TRUE
 		if(is_species(user, /datum/species/werewolf))
-			visible_message(span_danger("[user] ravenously consumes [src]!"), span_warning("I feed on succulent flesh. I feel reinvigorated."))
+			visible_message(span_danger("[user] ravenously consumes [src]!"), span_warning("Me alimento de carne suculenta. Me siento revitalizado."))
 			H.rage_datum?.update_rage(WW_RAGE_HIGH)
 			gib()
 		return TRUE
@@ -352,9 +352,9 @@
 	if(is_species(user, /datum/species/werewolf))
 		visible_message(span_danger("[user] bites into [src] and thrashes!"))
 	else
-		visible_message(span_danger("[user] bites [src]!"))
+		visible_message(span_danger("¡[user] muerde a [src]!"))
 	if(HAS_TRAIT(user, TRAIT_POISONBITE) && src.reagents)
 		var/poison = GET_MOB_ATTRIBUTE_VALUE(user, STAT_CONSTITUTION)/2
 		src.reagents.add_reagent(/datum/reagent/toxin/venom, poison/2)
 		src.reagents.add_reagent(/datum/reagent/medicine/soporpot, poison)
-		to_chat(user, span_warning("Your fangs inject venom into [src]!"))
+		to_chat(user, span_warning("¡Tus colmillos inyectan veneno en [src]!"))

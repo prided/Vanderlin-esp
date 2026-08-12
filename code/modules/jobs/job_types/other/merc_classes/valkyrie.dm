@@ -20,7 +20,7 @@
 	)
 
 /datum/job/advclass/mercenary/valkyrie
-	title = "Valkyrie"
+	title = "valquiria"
 	tutorial = "You've seen countless battles and earned your fair share of riches from them. \
 	Flying above the battlefield, you seek those who are injured and come to their aid, for a price."
 	allowed_races = list(SPEC_ID_HARPY)

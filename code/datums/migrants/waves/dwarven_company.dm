@@ -1,5 +1,5 @@
 /datum/migrant_role/dwarven_company/captain
-	name = "Dwarven Captain"
+	name = "Capitán enano"
 	greet_text = "You are the captain of a dwarven's expedition, following the tracks of Matthios's influence you shall lead your party in Malum's name."
 	migrant_job = /datum/job/migrant/dwarven_company/captain
 
@@ -34,7 +34,7 @@
 	)
 
 /datum/job/migrant/dwarven_company/captain
-	title = "Dwarven Captain"
+	title = "Capitán enano"
 	tutorial = "You are the captain of a dwarven's expedition, following the tracks of Matthios's influence you shall lead your party in Malum's name."
 	outfit = /datum/outfit/dwarven_company/captain
 	exp_types_granted  = list(EXP_TYPE_COMBAT)
@@ -63,7 +63,7 @@
 	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor)
 
 /datum/migrant_role/dwarven_company/weaponsmith
-	name = "Dwarven Weaponsmith"
+	name = "Armero enano"
 	greet_text = " You are the weaponsmith of a dwarven expedition, obey your foreman as they lead you in Malum's name into the tomb of Matthios."
 	migrant_job = /datum/job/migrant/dwarven_company/weaponsmith
 
@@ -110,7 +110,7 @@
 	)
 
 /datum/job/migrant/dwarven_company/weaponsmith
-	title = "Dwarven Weaponsmith"
+	title = "Armero enano"
 	tutorial = " You are the weaponsmith of a dwarven expedition, obey your foreman as they lead you in Malum's name into the tomb of Matthios."
 	outfit = /datum/outfit/dwarven_company/weaponsmith
 
@@ -149,7 +149,7 @@
 		backl = /obj/item/weapon/pick/paxe
 
 /datum/migrant_role/dwarven_company/armorsmith
-	name = "Dwarven Armorsmith"
+	name = "Armero enano"
 	greet_text = " You are the armorsmith of a dwarven expedition, obey your foreman as they lead you in Malum's name into the tomb of Matthios."
 	migrant_job = /datum/job/migrant/dwarven_company/armorsmith
 
@@ -196,7 +196,7 @@
 	)
 
 /datum/job/migrant/dwarven_company/armorsmith
-	title = "Dwarven Armorsmith"
+	title = "Armero enano"
 	tutorial = " You are the armorsmith of a dwarven expedition, obey your foreman as they lead you in Malum's name into the tomb of Matthios."
 	outfit = /datum/outfit/dwarven_company/armorsmith
 
@@ -209,7 +209,7 @@
 	)
 
 /datum/outfit/dwarven_company/armorsmith
-	name = "Dwarven Armorsmith"
+	name = "Armero enano"
 	ring = /obj/item/clothing/ring/silver/makers_guild
 	head = /obj/item/clothing/head/hatfur
 	pants = /obj/item/clothing/pants/trou
@@ -235,7 +235,7 @@
 		backl =	/obj/item/weapon/hammer/sledgehammer
 
 /datum/migrant_wave/dwarven_company
-	name = "Dwarven Expedition"
+	name = "Expedición enana"
 	max_spawns = 4
 	shared_wave_type = /datum/migrant_wave/dwarven_company
 	downgrade_wave = /datum/migrant_wave/dwarven_company_down
@@ -248,7 +248,7 @@
 	greet_text = "The way to Matthios's tomb is opened. Malum has called for all dwarves bold enough to go in, and we shall answer."
 
 /datum/migrant_wave/dwarven_company_down
-	name = "Dwarven Expedition"
+	name = "Expedición enana"
 	max_spawns = 4
 	shared_wave_type = /datum/migrant_wave/dwarven_company
 	downgrade_wave = /datum/migrant_wave/dwarven_company_down_one
@@ -261,7 +261,7 @@
 	greet_text = "The way to Matthios's tomb is opened. Malum has called for all dwarves bold enough to go in, and we shall answer."
 
 /datum/migrant_wave/dwarven_company_down_one
-	name = "Dwarven Expedition"
+	name = "Expedición enana"
 	max_spawns = 4
 	shared_wave_type = /datum/migrant_wave/dwarven_company
 	can_roll = FALSE

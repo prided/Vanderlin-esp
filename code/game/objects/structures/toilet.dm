@@ -25,7 +25,7 @@
 	var/obj/item/I = pick(things)
 	STR.remove_from_storage(I, get_turf(user))
 	user.put_in_hands(I)
-	to_chat(user, span_notice("I find [I] in the toilet."))
+	to_chat(user, span_notice("Encuentro [I] en el baño."))
 
 /* /obj/structure/toilet/deconstruct()
 	if(!(flags_1 & NODECONSTRUCT_1))

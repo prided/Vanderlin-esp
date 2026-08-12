@@ -374,7 +374,7 @@
 	var/overseer_bonus = get_overseer_bonus(surgeon)
 	if(overseer_bonus < 1)
 		requirement += (1 - overseer_bonus) * 4
-		to_chat(surgeon, span_notice("You feel more confident with an experienced eye watching over you."))
+		to_chat(surgeon, span_notice("Te sientes más seguro con un ojo experimentado vigilándote."))
 
 	return FLOOR(clamp(requirement, dice_num, dice_num * dice_sides), 1)
 
@@ -384,7 +384,7 @@
 		return
 
 	if(requirement != null)
-		to_chat(surgeon, span_warning("[result_label] (requirement was [requirement]/[dice_num * dice_sides])"))
+		to_chat(surgeon, span_warning("[result_label] (el requisito era [requirement]/[dice_num * dice_sides])"))
 	else
 		to_chat(surgeon, span_warning("[result_label]"))
 
@@ -538,7 +538,7 @@
 		var/failure_message = "intentional failure"
 		if(!force_fail && (GET_MOB_SKILL_VALUE(surgeon, skill_used) < skill_min))
 			force_fail = TRUE
-			failure_message = "lack of skill"
+			failure_message = "falta de habilidad"
 
 		var/roll_result = NONE
 		var/roll_requirement = 0
@@ -634,9 +634,9 @@
 
 	var/you_feel = pick("a brief pain", "your body tense up", "an unnerving sensation")
 	target.show_message(
-		msg = vague_message || detailed_message || span_notice("You feel [you_feel] as you are operated on."),
+		msg = vague_message || detailed_message || span_notice("Sientes [you_feel] mientras te operan."),
 		type = MSG_VISUAL,
-		alt_msg = span_notice("You feel [you_feel] as you are operated on."),
+		alt_msg = span_notice("Sientes [you_feel] mientras te operan."),
 	)
 
 /// Display pain message to the target based on their traits and condition
@@ -717,9 +717,9 @@
 	display_results(
 		surgeon,
 		patient,
-		span_notice("You begin to operate on [patient]..."),
-		span_notice("[surgeon] begins to operate on [patient]."),
-		span_notice("[surgeon] begins to operate on [patient]."),
+		span_notice("Comienzas a operar en [patient]..."),
+		span_notice("[surgeon] comienza a operar en [patient]."),
+		span_notice("[surgeon] comienza a operar en [patient]."),
 	)
 
 /**
@@ -755,7 +755,7 @@
 		surgeon,
 		patient,
 		span_notice("You succeed."),
-		span_notice("[surgeon] succeeds!"),
+		span_notice("¡[surgeon] tiene éxito!"),
 		span_notice("[surgeon] finishes."),
 	)
 
@@ -794,7 +794,7 @@
 
 	var/screwedmessage = ""
 	if(operation_args[OPERATION_FORCE_FAIL])
-		screwedmessage = " Intentionally."
+		screwedmessage = " Intencionalmente."
 
 	display_results(
 		surgeon,

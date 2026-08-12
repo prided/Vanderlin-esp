@@ -1,6 +1,6 @@
 /datum/chimeric_node/special/tiny
 	name = "tiny"
-	desc = "Lets you be picked up like those little freaks Kobolds."
+	desc = "Te permite ser recogido como esos pequeños monstruos Kobolds."
 	weight = 0
 
 	needs_attachment = FALSE

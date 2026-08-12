@@ -45,7 +45,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE MALUM'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE MALUM!"),
 		span_notice("Malum wants you to hone your craft! Improve your crafting skills to earn Malum's favor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/magic/dwarf_chant01.ogg', 100)

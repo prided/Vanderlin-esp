@@ -236,7 +236,7 @@
 			return
 
 	if(show_finish_text)
-		to_chat(user, span_notice("You finish \the [name]."))
+		to_chat(user, span_notice("Terminas \the [name]."))
 
 	if(user.mind && skillcraft)
 		if(isliving(user))

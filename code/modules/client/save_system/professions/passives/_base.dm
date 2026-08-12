@@ -1,6 +1,6 @@
 /datum/passive
-	var/name = "Unknown Passive"
-	var/description = "A mysterious passive effect"
+	var/name = "Pasivo desconocido"
+	var/description = "Un misterioso efecto pasivo"
 	var/icon_state = "passive_unknown"
 	var/passive_level = 1
 

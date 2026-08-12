@@ -1,6 +1,6 @@
 /datum/world_trait/skeleton_siege
 	name = "Skeleton Siege"
-	desc = "Skeletons are attacking the town."
+	desc = "Los esqueletos están atacando la ciudad."
 
 /datum/world_trait/goblin_siege
 	name = "Goblin Siege"

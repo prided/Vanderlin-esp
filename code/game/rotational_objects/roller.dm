@@ -186,7 +186,7 @@
 	animate(icon_state = "roller4", time = frame_time)
 
 /obj/structure/roller_sorter
-	name = "roller sorter"
+	name = "clasificador de rodillos"
 	desc = "A specialized roller that can sort items based on type."
 	icon = 'icons/obj/roller.dmi'
 	icon_state = "roller_sorter"
@@ -212,7 +212,7 @@
 	. = ..()
 	. += span_notice("Sorts items to the [dir2text(sort_direction)] when they match the filter.")
 	. += span_notice("Currently sorting [length(sorting_list)] item types.")
-	. += span_notice("Click with empty hand to change sort direction.")
+	. += span_notice("Haga clic con la mano vacía para cambiar la dirección de clasificación.")
 	. += span_notice("Alt-Click to clear sorting list.")
 
 /obj/structure/roller_sorter/attack_hand(mob/living/user, list/modifiers)
@@ -284,7 +284,7 @@
 
 
 /obj/item/roller_sorter_lister
-	name = "roller sorter attachment"
+	name = "accesorio clasificador de rodillos"
 	desc = "An attachment that can be placed on rollers to sort items."
 	icon = 'icons/obj/roller.dmi'
 	icon_state = "sorter_construct"
@@ -304,11 +304,11 @@
 		return NONE
 
 	if(is_type_in_list(interacting_with, current_sort))
-		to_chat(user, span_warning("[interacting_with] is already in the sorting list!"))
+		to_chat(user, span_warning("¡[interacting_with] ya está en la lista de clasificación!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(length(current_sort) >= max_items)
-		to_chat(user, span_warning("The sorting list is full!"))
+		to_chat(user, span_warning("¡La lista de clasificación está llena!"))
 		return ITEM_INTERACT_BLOCKING
 
 	current_sort += interacting_with.type

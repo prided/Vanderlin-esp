@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY(TodUpdate)
 
 SUBSYSTEM_DEF(nightshift)
-	name = "Night Shift"
+	name = "Turno de noche"
 	wait = 10 SECONDS
 	flags = SS_NO_TICK_CHECK
 	priority = 1
@@ -39,7 +39,7 @@ SUBSYSTEM_DEF(nightshift)
 	check_nightshift()
 
 /datum/controller/subsystem/nightshift/proc/announce(message)
-	priority_announce(message, sound='sound/misc/bell.ogg', sender_override="Automated Lighting System Announcement")
+	priority_announce(message, sound='sound/misc/bell.ogg', sender_override="Anuncio del sistema de iluminación automatizado")
 
 /datum/controller/subsystem/nightshift/proc/check_nightshift()
 	var/curtod = settod()

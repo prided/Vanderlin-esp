@@ -1,5 +1,5 @@
 /datum/book_entry/cavity_access
-	name = "Accessing Body Cavities"
+	name = "Acceso a las cavidades corporales"
 
 /datum/book_entry/cavity_access/inner_book_html(mob/user)
 	return {"
@@ -102,7 +102,7 @@
 		</div>
 	"}
 /datum/book_entry/pestran_chimeric
-	name = "Chimeric Organ Techniques"
+	name = "Técnicas de órganos quiméricos"
 /datum/book_entry/pestran_chimeric/inner_book_html(mob/user)
 	return {"
 		<div>

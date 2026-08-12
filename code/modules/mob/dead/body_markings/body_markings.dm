@@ -50,18 +50,18 @@
 
 /datum/body_marking/tiger
 	icon = 'icons/mob/body_markings/tiger_markings.dmi'
-	name = "Tiger"
+	name = "Tigre"
 	icon_state = "ltiger"
 	affected_bodyparts = CHEST | ARM_LEFT | ARM_RIGHT | LEG_LEFT | LEG_RIGHT
 	default_color = DEFAULT_SECONDARY
 
 /datum/body_marking/tiger/dark
-	name = "Tiger (Dark)"
+	name = "Tigre (oscuro)"
 	default_color = "444444"
 
 /datum/body_marking/sock
 	icon = 'icons/mob/body_markings/sock_markings.dmi'
-	name = "Sock"
+	name = "Calcetín"
 	icon_state = "sock"
 	affected_bodyparts = HAND_LEFT | HAND_RIGHT | LEG_LEFT | LEG_RIGHT
 	default_color = DEFAULT_SECONDARY
@@ -133,7 +133,7 @@
 
 /datum/body_marking/belly
 	icon = 'icons/mob/body_markings/chest_markings.dmi'
-	name = "Belly"
+	name = "Barriga"
 	icon_state = "belly"
 	affected_bodyparts = CHEST
 	default_color = DEFAULT_SECONDARY
@@ -209,20 +209,20 @@
 
 /datum/body_marking/small/spotted
 	icon = 'icons/mob/body_markings/small_spotted_markings.dmi'
-	name = "Spots (Volk)"
+	name = "Manchas (Volk)"
 	icon_state = "spotted"
 	affected_bodyparts = HEAD | CHEST | HAND_LEFT | HAND_RIGHT | ARM_LEFT | ARM_RIGHT | LEG_LEFT | LEG_RIGHT
 	default_color = DEFAULT_TERTIARY
 
 /datum/body_marking/small/sock
 	icon = 'icons/mob/body_markings/small_sock_markings.dmi'
-	name = "Sock (Volk)"
+	name = "Calcetín (Volk)"
 	icon_state = "sock_s"
 	affected_bodyparts = HAND_LEFT | HAND_RIGHT | LEG_LEFT | LEG_RIGHT
 	default_color = DEFAULT_SECONDARY
 
 /datum/body_marking/small/sock/tertiary
-	name = "Sock (Tertiary) (Volk)"
+	name = "Calcetín (Terciario) (Volk)"
 	default_color = DEFAULT_TERTIARY
 
 /datum/body_marking/small/socklonger
@@ -234,14 +234,14 @@
 
 /datum/body_marking/small/tips
 	icon = 'icons/mob/body_markings/small_tips_markings.dmi'
-	name = "Tips (Volk)"
+	name = "Consejos (Volk)"
 	icon_state = "tips_s"
 	affected_bodyparts = HAND_LEFT | HAND_RIGHT | LEG_LEFT | LEG_RIGHT
 	default_color = DEFAULT_SECONDARY
 
 /datum/body_marking/small/belly
 	icon = 'icons/mob/body_markings/small_chest_markings.dmi'
-	name = "Belly (Volk)"
+	name = "Vientre (Volk)"
 	icon_state = "belly_s"
 	affected_bodyparts = CHEST
 	default_color = DEFAULT_SECONDARY
@@ -249,7 +249,7 @@
 
 /datum/body_marking/small/bellyslim
 	icon = 'icons/mob/body_markings/small_chest_markings.dmi'
-	name = "Belly (Slim) (Volk)"
+	name = "Vientre (Delgado) (Volk)"
 	icon_state = "bellyslim_s"
 	affected_bodyparts = CHEST
 	default_color = DEFAULT_SECONDARY
@@ -287,7 +287,7 @@
 
 /datum/body_marking/small/front
 	icon = 'icons/mob/body_markings/small_chest_markings.dmi'
-	name = "Front (Volk)"
+	name = "Frente (Volk)"
 	icon_state = "front_s"
 	affected_bodyparts = CHEST
 	default_color = DEFAULT_SECONDARY

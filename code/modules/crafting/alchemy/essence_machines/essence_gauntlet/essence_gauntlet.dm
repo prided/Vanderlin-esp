@@ -103,11 +103,11 @@
 	var/obj/item/essence_vial/vial = I
 
 	if(!vial.contained_essence || vial.essence_amount <= 0)
-		to_chat(user, span_warning("[vial] is empty!"))
+		to_chat(user, span_warning("¡[vial] está vacío!"))
 		return
 
 	if(length(stored_vials) >= max_vials)
-		to_chat(user, span_warning("[src] is full!"))
+		to_chat(user, span_warning("¡[src] está lleno!"))
 		return
 
 	if(!user.transferItemToLoc(vial, src))
@@ -189,7 +189,7 @@
 	return TRUE
 
 /obj/item/clothing/gloves/essence_gauntlet/proc/not_enough_essence(mob/user)
-	to_chat(user, span_warning("[src] lacks sufficient essence!"))
+	to_chat(user, span_warning("¡A [src] le falta esencia suficiente!"))
 
 /obj/item/clothing/gloves/essence_gauntlet/proc/get_available_essence_types()
 	var/list/available_types = list()
@@ -210,12 +210,12 @@
 	. += span_notice("Vials: [length(stored_vials)]/[max_vials]")
 
 	if(!length(stored_vials))
-		. += span_notice("No vials inserted.")
+		. += span_notice("No se han insertado viales.")
 		return
 	for(var/obj/item/essence_vial/vial in stored_vials)
 		if(vial.contained_essence && vial.essence_amount > 0)
 			. += span_notice("- [vial.essence_amount] ligulae of [HAS_TRAIT(user, TRAIT_LEGENDARY_ALCHEMIST) ? "[vial.contained_essence.name]" : "essence smelling of [vial.contained_essence.smells_like]l"].")
 		else
-			. += span_notice("- Empty")
+			. += span_notice("- Vacío")
 
 	. += span_notice("Right-click to remove a vial.")

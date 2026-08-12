@@ -44,7 +44,7 @@
 	traits = list(TRAIT_STEELHEARTED, TRAIT_DODGEEXPERT)
 
 /datum/outfit/mercenary/goon
-	name = "Goon (Mercenary)"
+	name = "Matón (mercenario)"
 	shoes = /obj/item/clothing/shoes/nobleboot
 	belt = /obj/item/storage/belt/leather/mercenary
 	backl = /obj/item/storage/backpack/satchel
@@ -67,7 +67,7 @@
 		"Barehands" = /obj/item/clothing/gloves/bandages/pugilist
 	)
 
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose your WEAPON.", title = "FOR THE BOSS.")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu ARMA.", title = "PARA EL JEFE.")
 	switch(weapon_choice)
 		if("Barehands")
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/unarmed, 5)
@@ -80,7 +80,7 @@
 		"Speedster, Leather Coat" = /obj/item/clothing/armor/leather/jacket/leathercoat,
 	)
 
-	var/armor_choice = spawned.select_equippable(player_client, armors, message = "Choose your ARCHETYPE.", title = "FOR THE BOSS.")
+	var/armor_choice = spawned.select_equippable(player_client, armors, message = "Elige tu ARQUETIPO.", title = "PARA EL JEFE.")
 	switch(armor_choice)
 		if("Brute, Splint Armor")
 			ADD_TRAIT(spawned, TRAIT_CRITICAL_RESISTANCE, JOB_TRAIT)

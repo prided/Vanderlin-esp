@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY(cellauto_cells)
 
 SUBSYSTEM_DEF(cellauto)
-	name  = "Cellular Automata"
+	name  = "Autómatas celulares"
 	wait  = 0.05 SECONDS
 	priority = FIRE_PRIORITY_CELLULAR
 	flags = SS_NO_INIT

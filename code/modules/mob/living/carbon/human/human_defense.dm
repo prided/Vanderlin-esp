@@ -171,7 +171,7 @@
 			return 1
 	return 0
 
-/mob/living/carbon/human/proc/check_shields(atom/AM, damage, attack_text = "the attack", attack_type = MELEE_ATTACK, armor_penetration = 0)
+/mob/living/carbon/human/proc/check_shields(atom/AM, damage, attack_text = "el ataque", attack_type = MELEE_ATTACK, armor_penetration = 0)
 	var/block_chance_modifier = round(damage / -3)
 
 	for(var/obj/item/I in held_items)
@@ -479,7 +479,7 @@
 				chest_clothes.acid_act(acidpwr, acid_volume)
 				update_inv_wear_suit()
 			else
-				to_chat(src, "<span class='notice'>My [chest_clothes.name] protects my body from the acid!</span>")
+				to_chat(src, "<span class='notice'>¡Mi [chest_clothes.name] protege mi cuerpo del ácido!</span>")
 		else
 			. = get_bodypart(BODY_ZONE_CHEST)
 			if(.)
@@ -503,7 +503,7 @@
 				update_inv_gloves()
 				update_inv_wear_suit()
 			else
-				to_chat(src, "<span class='notice'>My [arm_clothes.name] protects my arms and hands from the acid!</span>")
+				to_chat(src, "<span class='notice'>¡Mi [arm_clothes.name] protege mis brazos y manos del ácido!</span>")
 		else
 			. = get_bodypart(BODY_ZONE_R_ARM)
 			if(.)
@@ -528,7 +528,7 @@
 				update_inv_shoes()
 				update_inv_wear_suit()
 			else
-				to_chat(src, "<span class='notice'>My [leg_clothes.name] protects my legs and feet from the acid!</span>")
+				to_chat(src, "<span class='notice'>¡Mi [leg_clothes.name] protege mis piernas y pies del ácido!</span>")
 		else
 			. = get_bodypart(BODY_ZONE_R_LEG)
 			if(.)
@@ -602,7 +602,7 @@
 		m1 = "[p_they(TRUE)] [p_are()]"
 		examination += "<span class='notice'>Let's see how [src] is doing.</span>"
 		if(!user.stat && !silent)
-			user.visible_message("<span class='notice'>[user] examines [src].</span>", \
+			user.visible_message("<span class='notice'>[user] examina [src].</span>", \
 				"<span class='notice'>I check [src] for injuries.</span>")
 
 	if(stat < DEAD)
@@ -678,7 +678,7 @@
 
 	if(additional)
 		examination += span_info(span_green("[getToxLoss()] TOXIN"))
-		examination += span_info(span_blue("[getOxyLoss()] OXYGEN"))
+		examination += span_info(span_blue("[getOxyLoss()] OXÍGENO"))
 	examination += "ø ------------ ø</span>"
 	if(!silent)
 		to_chat(user, examination.Join("\n"))
@@ -691,7 +691,7 @@
 	if(user == src)
 		examination += "<span class='notice'>Let's see how my [parse_zone(choice)] is doing.</span>"
 		if(!stat && !silent)
-			visible_message("<span class='notice'>[src] examines [p_their()] [parse_zone(choice)].</span>")
+			visible_message("<span class='notice'>[src] examina [p_their()] [parse_zone(choice)].</span>")
 	else if(user)
 		examination += "<span class='notice'>Let's see how [src]'s [parse_zone(choice)] is doing.</span>"
 		if(!user.stat && !silent)

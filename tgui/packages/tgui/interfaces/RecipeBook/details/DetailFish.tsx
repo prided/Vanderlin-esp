@@ -7,31 +7,31 @@ export const DetailFish = ({ r }: { r: Recipe }) => {
   return (
     <>
       {r.desc && <Box className="RecipeBook__desc" dangerouslySetInnerHTML={{ __html: r.desc }} />}
-      <SectionHead>Physical</SectionHead>
+      <SectionHead>Físico</SectionHead>
       <Box className="RecipeBook__step-block">
-        <Box className="RecipeBook__step-row">Size: {r.avg_size}cm</Box>
-        <Box className="RecipeBook__step-row">Weight: {r.avg_weight}g</Box>
+        <Box className="RecipeBook__step-row">Tamaño: {r.avg_size}cm</Box>
+        <Box className="RecipeBook__step-row">Peso: {r.avg_weight}g</Box>
       </Box>
-      <SectionHead>Environment</SectionHead>
+      <SectionHead>Entorno</SectionHead>
       <Box className="RecipeBook__step-block">
-        <Box className="RecipeBook__step-row">Fluid: {r.fluid_type}</Box>
-        <Box className="RecipeBook__step-row">Temperature: {r.temp_min}C – {r.temp_max}C</Box>
+        <Box className="RecipeBook__step-row">Líquido: {r.fluid_type}</Box>
+        <Box className="RecipeBook__step-row">Temperatura: {r.temp_min}C – {r.temp_max}C</Box>
       </Box>
-      <SectionHead>Fishing</SectionHead>
+      <SectionHead>Pesca</SectionHead>
       <Box className="RecipeBook__step-block">
-        <Box className="RecipeBook__step-row">Found: {r.spots}</Box>
+        <Box className="RecipeBook__step-row">Encontró: {r.spots}</Box>
         <Box className="RecipeBook__step-row">
-          Difficulty: <span style={{ color: diffColor }}>{r.difficulty}</span>
+          Dificultad: <span style={{ color: diffColor }}>{r.difficulty}</span>
         </Box>
-        <Box className="RecipeBook__step-row">Favourite bait: {r.fav_bait}</Box>
-        <Box className="RecipeBook__step-row">Disliked bait: {r.dislike_bait}</Box>
+        <Box className="RecipeBook__step-row">Cebo preferido: {r.fav_bait}</Box>
+        <Box className="RecipeBook__step-row">Cebo que no le gusta: {r.dislike_bait}</Box>
         {r.lures?.map((l, i) => (
           <Box key={i} className="RecipeBook__step-row">• {l}</Box>
         ))}
       </Box>
       {!!r.traits?.length && (
         <>
-          <SectionHead>Behaviour</SectionHead>
+          <SectionHead>Comportamiento</SectionHead>
           <Box className="RecipeBook__step-block">
             {r.traits!.map((t, i) => (
               <Box key={i} className="RecipeBook__step-row">• {t}</Box>

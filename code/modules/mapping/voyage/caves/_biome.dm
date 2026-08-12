@@ -1,5 +1,5 @@
 /datum/cave_biome
-	var/name = "Generic Cave"
+	var/name = "Cueva genérica"
 	var/list/terrain_weights = list()
 	var/list/terrain_weights_lower = list()
 	var/list/flora_weights = list()

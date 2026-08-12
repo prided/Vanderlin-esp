@@ -1,5 +1,5 @@
 /datum/animal_gene/barren
-	name = "Barren"
+	name = "Estéril"
 	desc = "Dulls reproductive drive, significantly extending the cooldown between breeding cycles."
 	rarity = 6
 	exclusion_group = GENE_GROUP_BREEDING

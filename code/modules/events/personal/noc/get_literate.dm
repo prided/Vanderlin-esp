@@ -42,7 +42,7 @@
 	var/datum/objective/personal/literacy/new_objective = new(owner = chosen_illiterate.mind)
 	chosen_illiterate.mind.add_personal_objective(new_objective)
 
-	to_chat(chosen_illiterate, span_userdanger("YOU ARE NOC'S CHOSEN!"))
+	to_chat(chosen_illiterate, span_userdanger("¡ERES EL ELEGIDO DE NOC!"))
 	to_chat(chosen_illiterate, span_notice("Noc demands you get literate! Learn to read to earn Noc's favor!"))
 	chosen_illiterate.playsound_local(chosen_illiterate, 'sound/ambience/noises/mystical (4).ogg', 100)
 

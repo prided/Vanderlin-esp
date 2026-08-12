@@ -14,7 +14,7 @@
 
 	if(!ishuman(owner))
 		if(feedback)
-			to_chat(owner, span_warning("The burden is too great for this body"))
+			to_chat(owner, span_warning("La carga es demasiado grande para este cuerpo."))
 		return FALSE
 
 /datum/action/cooldown/spell/transfer_pain/is_valid_target(atom/cast_on)
@@ -40,11 +40,11 @@
 
 	owner.visible_message(
 		span_notice("[owner] begins a solemn prayer to Pestra."),
-		span_notice("You begin the pain transfer ritual..."),
+		span_notice("Comienzas el ritual de transferencia del dolor..."),
 	)
 
 	if(!do_after(owner, 5 SECONDS, cast_on))
-		to_chat(owner, span_warning("The ritual was interrupted!"))
+		to_chat(owner, span_warning("¡El ritual fue interrumpido!"))
 		return
 
 	var/total_pain_to_transfer = 0
@@ -103,15 +103,15 @@
 			new_wound.passive_healing = max(1, 3 - wound_severity_mod)
 
 			if(wound_severity_mod > 2.0)
-				new_wound.name = "transferred agony"
+				new_wound.name = "agonía transferida"
 			else if(wound_severity_mod > 1.0)
 				new_wound.name = "transferred serious pain"
 			else
-				new_wound.name = "transferred pain"
+				new_wound.name = "dolor transferido"
 
 			new_wound.apply_to_bodypart(BP)
 
 	playsound(owner, 'sound/magic/heal.ogg', 50, TRUE)
 	to_chat(owner, span_notice("You take [cast_on]'s pain upon yourself!"))
-	to_chat(cast_on, span_notice("You feel [owner] take some of your pain away!"))
+	to_chat(cast_on, span_notice("¡Sientes que [owner] te quita parte del dolor!"))
 	SEND_SIGNAL(owner, COMSIG_PAIN_TRANSFERRED, pain_percentage)

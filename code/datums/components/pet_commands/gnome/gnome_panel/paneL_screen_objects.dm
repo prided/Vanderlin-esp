@@ -47,7 +47,7 @@
 	color = on ? "#55FF55" : "#AAAAAA"
 
 /atom/movable/screen/gnome_panel/alchemy
-	name = "Toggle Alchemy"
+	name = "Alternar alquimia"
 	icon_state = "alch"
 
 /atom/movable/screen/gnome_panel/alchemy/Click()
@@ -60,7 +60,7 @@
 	color = on ? "#CC55FF" : "#AAAAAA"
 
 /atom/movable/screen/gnome_panel/splitter
-	name = "Toggle Splitting"
+	name = "Alternar división"
 	icon_state = "split"
 
 /atom/movable/screen/gnome_panel/splitter/Click()
@@ -82,7 +82,7 @@
 	if(panel) panel.cmd_set_priority()
 
 /atom/movable/screen/gnome_panel/close_panel
-	name = "Close Panel"
+	name = "Cerrar panel"
 	icon_state = "close"
 	color = "#FF5555"
 
@@ -90,7 +90,7 @@
 	if(panel) panel.quit()
 
 /atom/movable/screen/gnome_panel/transport_source
-	name = "Transport Source"
+	name = "Fuente de transporte"
 	icon_state = "transport-source"
 
 /atom/movable/screen/gnome_panel/transport_source/Click()
@@ -104,12 +104,12 @@
 	. = ..()
 	var/turf/t = panel?.gnome?.ai_controller?.blackboard[BB_GNOME_TRANSPORT_SOURCE]
 	var/pending = is_pending(GNOME_WP_TRANSPORT_SOURCE)
-	name = t ? "Pickup ([t.x],[t.y])" : "Set Pickup"
+	name = t ? "Pickup ([t.x],[t.y])" : "Establecer recogida"
 	color = pending ? "#FFFF00" : (t ? "#00CCFF" : "#888888")
 	if(pending) alpha = 255
 
 /atom/movable/screen/gnome_panel/transport_dest
-	name = "Transport Destination"
+	name = "Destino de transporte"
 	icon_state = "transport-drop"
 
 /atom/movable/screen/gnome_panel/transport_dest/Click()
@@ -154,7 +154,7 @@
 	color = "#AAAAAA"
 
 /atom/movable/screen/gnome_panel/set_filter
-	name = "Set Item Filter"
+	name = "Establecer filtro de elementos"
 	icon_state = "filter"
 
 /atom/movable/screen/gnome_panel/set_filter/Click()
@@ -185,7 +185,7 @@
 	color = (panel?.gnome?.item_filters?.len) ? "#FF5555" : "#555555"
 
 /atom/movable/screen/gnome_panel/set_cauldron
-	name = "Set Cauldron"
+	name = "Establecer caldero"
 	icon_state = "cauldron"
 
 /atom/movable/screen/gnome_panel/set_cauldron/Click()
@@ -199,7 +199,7 @@
 	. = ..()
 	var/obj/c = panel?.gnome?.ai_controller?.blackboard[BB_GNOME_TARGET_CAULDRON]
 	var/pending = is_pending(GNOME_WP_CAULDRON)
-	name = c ? "Cauldron: set" : "Set Cauldron"
+	name = c ? "Cauldron: set" : "Establecer caldero"
 	color = pending ? "#FFFF00" : (c ? "#CC55FF" : "#888888")
 	if(pending) alpha = 255
 
@@ -223,7 +223,7 @@
 	if(pending) alpha = 255
 
 /atom/movable/screen/gnome_panel/set_bottle
-	name = "Set Bottle Storage"
+	name = "Establecer almacenamiento de botellas"
 	icon_state = "bottle-source"
 
 /atom/movable/screen/gnome_panel/set_bottle/Click()
@@ -237,12 +237,12 @@
 	. = ..()
 	var/turf/b = panel?.gnome?.ai_controller?.blackboard[BB_GNOME_BOTTLE_STORAGE]
 	var/pending = is_pending(GNOME_WP_BOTTLE)
-	name = b ? "Bottles ([b.x],[b.y])" : "Set Bottle Spot"
+	name = b ? "Botellas ([b.x],[b.y])" : "Set Bottle Spot"
 	color = pending ? "#FFFF00" : (b ? "#AAFFAA" : "#888888")
 	if(pending) alpha = 255
 
 /atom/movable/screen/gnome_panel/recipe
-	name = "Set Alchemy Recipe"
+	name = "Establecer receta de alquimia"
 	icon_state = "recipe"
 
 /atom/movable/screen/gnome_panel/recipe/Click()
@@ -257,7 +257,7 @@
 		qdel(tmp)
 		color = "#CC55FF"
 	else
-		name = "No Recipe"
+		name = "Sin receta"
 		color = "#888888"
 
 /atom/movable/screen/gnome_panel/set_splitter_source
@@ -275,7 +275,7 @@
 	. = ..()
 	var/turf/s = panel?.gnome?.ai_controller?.blackboard[BB_GNOME_SPLITTER_SOURCE]
 	var/pending = is_pending(GNOME_WP_SPLITTER_SOURCE)
-	name = s ? "Source ([s.x],[s.y])" : "Set Source"
+	name = s ? "Fuente ([s.x], [s.y])" : "Set Source"
 	color = pending ? "#FFFF00" : (s ? "#FF55FF" : "#888888")
 	if(pending) alpha = 255
 
@@ -295,6 +295,6 @@
 	var/datum/ai_controller/c = panel?.gnome?.ai_controller
 	var/obj/mach = c ? (c.blackboard[BB_GNOME_TARGET_SPLITTER] || c.blackboard[BB_GNOME_TARGET_EXTRACTOR]) : null
 	var/pending = is_pending(GNOME_WP_SPLITTER_MACH)
-	name = mach ? mach.name : "Set Machine"
+	name = mach ? mach.name : "Establecer máquina"
 	color = pending ? "#FFFF00" : (mach ? "#FF55FF" : "#888888")
 	if(pending) alpha = 255

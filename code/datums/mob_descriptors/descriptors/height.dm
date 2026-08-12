@@ -7,7 +7,7 @@
 	prefix = "a"
 
 /datum/mob_descriptor/height/tall
-	name = "Tall"
+	name = "Alto"
 	prefix = "a"
 
 /datum/mob_descriptor/height/short
@@ -15,7 +15,7 @@
 	prefix = "a"
 
 /datum/mob_descriptor/height/towering
-	name = "Towering"
+	name = "Imponente"
 	prefix = "a"
 
 /datum/mob_descriptor/height/tiny
@@ -23,15 +23,15 @@
 	prefix = "a"
 
 /datum/mob_descriptor/height/shortly
-	name = "Slightly shorter"
+	name = "un poco más corto"
 	prefix = "a"
 	
 /datum/mob_descriptor/height/tallish
-	name = "Somewhat taller"
+	name = "algo más alto"
 	prefix = "a"
 
 /datum/mob_descriptor/height/average	
-	name = "Average"
+	name = "Promedio"
 	prefix = "a"
 
 /datum/mob_descriptor/height/lowslung

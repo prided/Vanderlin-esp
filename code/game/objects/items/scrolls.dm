@@ -71,4 +71,4 @@
 		smoke.start()
 		uses--
 	else
-		to_chat(user, "The spell matrix was disrupted by something near the destination.")
+		to_chat(user, "La matriz del hechizo fue interrumpida por algo cerca del destino.")

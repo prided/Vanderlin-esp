@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/status/infestation
-	name = "Infestation"
+	name = "Infestación"
 	desc = "Causes a swarm of bugs to surround your target, bites them and causes sickness."
 	button_icon_state = "infestation"
 	self_cast_possible = FALSE
@@ -30,7 +30,7 @@
 /datum/status_effect/debuff/infestation/on_apply()
 	. = ..()
 	var/mob/living/target = owner
-	to_chat(owner, span_danger("I am suddenly surrounded by a cloud of bugs!"))
+	to_chat(owner, span_danger("¡De repente estoy rodeado por una nube de insectos!"))
 	target.adjust_jitter(20 SECONDS)
 	target.add_overlay(rotten)
 	RegisterSignal(owner, COMSIG_COMPONENT_CLEAN_ACT, PROC_REF(wash_off))
@@ -49,18 +49,18 @@
 		"Flies are laying eggs in my open wounds!",
 		"Something crawled in my ear!",
 		"There are too many bugs to count!",
-		"They're trying to get under my skin!",
+		"¡Están tratando de meterse bajo mi piel!",
 		"Make it stop!",
 		"Millipede legs tickle the back of my ear!",
 		"Fire ants bite at my feet!",
 		"A wasp sting right on the nose!",
 		"Cockroaches scurry across my neck!",
 		"Maggots slimily wriggle along my body!",
-		"Beetles crawl over my mouth!",
-		"Fleas bite my ankles!",
+		"¡Los escarabajos se arrastran por mi boca!",
+		"¡Las pulgas me muerden los tobillos!",
 		"Gnats buzz around my face!",
-		"Lice suck my blood!",
-		"Crickets chirp in my ears!",
+		"¡Los piojos me chupan la sangre!",
+		"¡Los grillos chirrían en mis oídos!",
 		"Earwigs crawl into my ears!",
 	)
 	var/mob/living/L = owner
@@ -75,6 +75,6 @@
 		to_chat(C, span_warning(pick(messages)))
 
 /atom/movable/screen/alert/status_effect/debuff/infestation
-	name = "Infestation"
+	name = "Infestación"
 	desc = "Pestilent vermin bite and chew at my skin."
 	icon_state = "debuff"

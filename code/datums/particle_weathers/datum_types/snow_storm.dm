@@ -15,7 +15,7 @@
 	transform 			   = null
 
 /datum/particle_weather/snow_gentle
-	name = "Gentle Snow"
+	name = "Nieve suave"
 	desc = "Gentle Snow, la la description."
 	particleEffectType = /particles/weather/snow
 
@@ -34,7 +34,7 @@
 	temperature_modification = -10
 
 /datum/particle_weather/snow_storm
-	name = "Snow Storm"
+	name = "Tormenta de nieve"
 	desc = "Snow Storm, la la description."
 	particleEffectType = /particles/weather/snow
 

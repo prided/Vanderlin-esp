@@ -19,7 +19,7 @@
 	projectile_type = /obj/projectile/magic/eora
 
 /obj/projectile/magic/eora
-	name = "wine bubble"
+	name = "burbuja de vino"
 	icon_state = "leaper"
 	range = 7
 	nondirectional_sprite = TRUE
@@ -31,7 +31,7 @@
 	if(isliving(target))
 		var/mob/living/L = target
 		L.OffBalance(50)
-		L.visible_message(span_info("A purple haze shrouds [target]!"), span_notice("I feel incredibly drunk..."))
+		L.visible_message(span_info("A purple haze shrouds [target]!"), span_notice("Me siento increíblemente borracho..."))
 		L.reagents.add_reagent(/datum/reagent/berrypoison, 1)
 		L.apply_status_effect(/datum/status_effect/debuff/eoradrunk)
 		L.set_eye_blur_if_lower(40 SECONDS)
@@ -44,14 +44,14 @@
 	new /obj/structure/wine_bubble(get_turf(src))
 
 /obj/effect/temp_visual/wine_projectile_impact
-	name = "wine bubble"
+	name = "burbuja de vino"
 	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "leaper_bubble_pop"
 	layer = ABOVE_ALL_MOB_LAYER
 	duration = 3
 
 /obj/structure/wine_bubble
-	name = "wine bubble"
+	name = "burbuja de vino"
 	desc = ""
 	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "leaper"
@@ -74,6 +74,6 @@
 		L.OffBalance(50)
 		L.reagents.add_reagent(/datum/reagent/berrypoison, 1)
 		L.apply_status_effect(/datum/status_effect/debuff/eoradrunk)
-		L.visible_message(span_info("A purple haze shrouds [L]!"), span_notice("I feel incredibly drunk..."))
+		L.visible_message(span_info("A purple haze shrouds [L]!"), span_notice("Me siento increíblemente borracho..."))
 		L.set_eye_blur_if_lower(40 SECONDS)
 	qdel(src)

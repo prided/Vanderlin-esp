@@ -91,7 +91,7 @@
 
 /obj/structure/pre_lock_interact(mob/living/user)
 	if(obj_broken)
-		to_chat(user, span_notice("[src] is broken, I cannot do this."))
+		to_chat(user, span_notice("[src] está roto, no puedo hacer esto."))
 		return FALSE
 	return ..()
 
@@ -182,7 +182,7 @@
 			if(25 to 50)
 				return "It appears heavily damaged."
 			if(1 to 25)
-				return span_warning("It's falling apart!")
+				return span_warning("¡Se está desmoronando!")
 
 /obj/structure/onZImpact(turf/impacted_turf, levels, impact_flags)
 	. = ..()
@@ -198,7 +198,7 @@
 		return
 
 	for(var/mob/living/crumpled_mob in contents)
-		visible_message(span_danger("[src] falls on [crumpled_mob.name]!"))
+		visible_message(span_danger("¡[src] cae sobre [crumpled_mob.name]!"))
 		crumpled_mob.Stun(1)
 		crumpled_mob.AdjustKnockdown(levels * 20)
 		crumpled_mob.take_overall_damage(impact_damage, damage_type = BCLASS_BLUNT)

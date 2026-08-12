@@ -24,7 +24,7 @@
 		return FALSE
 
 	preparing = TRUE
-	consumed.visible_message(span_warning("[consumed] digs into the ground and prepares to fire!"))
+	consumed.visible_message(span_warning("¡[consumed] cava en el suelo y se prepara para disparar!"))
 	consumed.anchored = TRUE
 
 	if(!consumed.client)
@@ -81,7 +81,7 @@
 
 	if(!can_bombard_target(start_turf, target_turf))
 		if(camera_mob)
-			to_chat(camera_mob, span_warning("You cannot hit that location!"))
+			to_chat(camera_mob, span_warning("¡No puedes llegar a ese lugar!"))
 		cancel_bombard()
 		return FALSE
 
@@ -152,7 +152,7 @@
 	cleanup_bombard()
 
 	if(camera_mob)
-		to_chat(camera_mob, span_warning("Bombard cancelled."))
+		to_chat(camera_mob, span_warning("Bombardeo cancelado."))
 
 /datum/action/cooldown/meatvine/personal/bombard/proc/cleanup_bombard()
 	var/mob/living/simple_animal/hostile/retaliate/meatvine/consumed = owner
@@ -272,7 +272,7 @@
 	if(origin_mob)
 		var/turf/origin_turf = get_turf(origin_mob)
 		if(get_dist(origin_turf, new_turf) > range_limit)
-			to_chat(src, span_warning("You cannot move any further from your body!"))
+			to_chat(src, span_warning("¡No puedes alejarte más de tu cuerpo!"))
 			return
 
 	forceMove(new_turf)
@@ -331,13 +331,13 @@
 	animate(src, pixel_z = 0, time = duration)
 
 /obj/effect/temp_visual/bombard_incoming/acid
-	name = "incoming acid"
+	name = "ácido entrante"
 	color = "#00ff00"
 	light_color = "#00ff00"
 	light_outer_range = 3
 
 /obj/effect/temp_visual/bombard_incoming/neurotoxin
-	name = "incoming neurotoxin"
+	name = "neurotoxina entrante"
 	color = "#9900ff"
 	light_color = "#9900ff"
 	light_outer_range = 3
@@ -351,7 +351,7 @@
 	alpha = 128
 
 /obj/effect/bombard_zone
-	name = "hazard zone"
+	name = "zona de peligro"
 	desc = "A dangerous area."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "smoke"
@@ -390,7 +390,7 @@
 
 /obj/effect/bombard_zone/acid
 	name = "acid pool"
-	desc = "A pool of highly corrosive acid."
+	desc = "Un charco de ácido altamente corrosivo."
 	icon_state = "acid_weak"
 	color = "#00ff00"
 	light_color = "#00ff00"
@@ -401,8 +401,8 @@
 	M.adjust_fire_stacks(1)
 
 /obj/effect/bombard_zone/neurotoxin
-	name = "neurotoxin cloud"
-	desc = "A cloud of deadly neurotoxin."
+	name = "nube de neurotoxina"
+	desc = "Una nube de neurotoxina mortal."
 	icon_state = "smoke"
 	color = "#9900ff"
 	light_color = "#9900ff"

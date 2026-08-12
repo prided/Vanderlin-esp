@@ -86,13 +86,13 @@
 	filters += filter(type="drop_shadow", x=0, y=0, size=0.5, offset=1, color=rgb(218, 165, 32))
 
 /obj/item/clothing/gloves/plate/beastclaws
-	name = "beast claws"
+	name = "garras de bestia"
 	desc = "A menacing pair of plated claws, a ceremonial weapon of the Osslandic hunters. The four claws symbolize the four godly aspects they revere."
 	icon_state = "atgervi_shaman_gloves"
 	item_state = "atergvi_shaman_gloves"
 
 /obj/item/clothing/head/helmet/bascinet/owl
-	name = "owl helmet"
+	name = "casco de búho"
 	desc = "A carefully forged steel helmet in the shape of an owl's face, with added chain to cover the face and neck against many blows."
 	icon_state = "atgervi_raider"
 	item_state = "atgervi_raider"
@@ -105,7 +105,7 @@
 	worn_y_dimension = 48
 
 /obj/item/clothing/head/helmet/leather/saiga/moose
-	name = "moose hood"
+	name = "capucha de alce"
 	desc = "A deceptively strong hood of hide with a pair of large heavy antlers. A suitable memorial for a worthy beast."
 	icon_state = "atgervi_shaman"
 	item_state = "atgervi_shaman"
@@ -148,7 +148,7 @@
 				return list("shrink" = 0.7,"sx" = -17,"sy" = -15,"nx" = -15,"ny" = -15,"wx" = -12,"wy" = -15,"ex" = -18,"ey" = -15,"nturn" = 0,"sturn" = 0,"wturn" = 180,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 1,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/clothing/head/helmet/leather/shaman_hood
-	name = "moose hood"
+	name = "capucha de alce"
 	desc = "A deceptively strong hood of hide with a pair of large heavy antlers. A suitable memorial for a worthy beast."
 	icon = 'icons/roguetown/clothing/special/gronn.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/gronn.dmi'
@@ -228,7 +228,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(lux_consumed)
-		to_chat(user, span_warning("It has already been infused."))
+		to_chat(user, span_warning("Ya ha sido infundido."))
 		return ITEM_INTERACT_BLOCKING
 
 	to_chat(user, span_warning("I infuse the hood with the soul energies!"))

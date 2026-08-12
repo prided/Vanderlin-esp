@@ -161,7 +161,7 @@
 
 /obj/item/candle/scandelabra
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "silver candelabra"
+	name = "candelabro de plata"
 	desc = ""
 	infinite = TRUE
 	icon_state = "scandelabra"
@@ -174,7 +174,7 @@
 
 /obj/item/candle/scandelabrasingle
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "silver candelabra"
+	name = "candelabro de plata"
 	desc = ""
 	infinite = TRUE
 	icon_state = "singlescandelabra"
@@ -187,7 +187,7 @@
 
 /obj/item/candle/gcandelabra
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "gold candelabra"
+	name = "candelabro de oro"
 	desc = ""
 	infinite = TRUE
 	icon_state = "gcandelabra"
@@ -200,7 +200,7 @@
 
 /obj/item/candle/gcandelabrasingle
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "gold candelabra"
+	name = "candelabro de oro"
 	desc = ""
 	infinite = TRUE
 	icon_state = "singlegcandelabra"
@@ -213,7 +213,7 @@
 
 /obj/item/candle/scandle
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "silver candle"
+	name = "vela de plata"
 	desc = ""
 	infinite = TRUE
 	icon_state = "scandle"
@@ -226,7 +226,7 @@
 
 /obj/item/candle/gcandle
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "gold candle"
+	name = "vela de oro"
 	desc = ""
 	infinite = TRUE
 	icon_state = "gcandle"

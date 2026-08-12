@@ -537,7 +537,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 	creator.add_faction(current.get_faction())
 
 	if(creator.mind.special_role)
-		message_admins("[ADMIN_LOOKUPFLW(current)] has been created by [ADMIN_LOOKUPFLW(creator)], an antagonist.")
+		message_admins("[ADMIN_LOOKUPFLW(current)] ha sido creado por [ADMIN_LOOKUPFLW(creator)], un antagonista.")
 		to_chat(current, span_danger("Despite my creators current allegiances, my true master remains [creator.real_name]. If their loyalties change, so do yours. This will never change unless my creator's body is destroyed."))
 
 /// Output all memories of a mind
@@ -679,7 +679,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 		usr.client.debug_variables(antag_datum_ref)
 
 	else if (href_list["memory_edit"])
-		var/new_memo = copytext(sanitize(input("Write new memory", "Memory", memory) as null|message),1,MAX_MESSAGE_LEN)
+		var/new_memo = copytext(sanitize(input("escribir nueva memoria", "Memoria", memory) as null|message),1,MAX_MESSAGE_LEN)
 		if (isnull(new_memo))
 			return
 		memory = new_memo
@@ -699,7 +699,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 					objective_pos = antag_datum_ref.objectives.Find(old_objective)
 					break
 			if(!old_objective)
-				to_chat(usr,"Invalid objective.")
+				to_chat(usr,"Objetivo no válido.")
 				return
 		else
 			if(href_list["target_antag"])
@@ -728,7 +728,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 			if(old_objective.name in GLOB.admin_objective_list)
 				def_value = old_objective.name
 
-		var/selected_type = input("Select objective type:", "Objective type", def_value) as null|anything in GLOB.admin_objective_list
+		var/selected_type = input("Select objective type:", "Tipo de objetivo", def_value) as null|anything in GLOB.admin_objective_list
 		selected_type = GLOB.admin_objective_list[selected_type]
 		if (!selected_type)
 			return
@@ -739,7 +739,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 			new_objective.owner = src
 			new_objective.admin_edit(usr)
 			target_antag.objectives += new_objective
-			message_admins("[key_name_admin(usr)] added a new objective for [current]: [new_objective.explanation_text]")
+			message_admins("[key_name_admin(usr)] agregó un nuevo objetivo para [current]: [new_objective.explanation_text]")
 			log_admin("[key_name(usr)] added a new objective for [current]: [new_objective.explanation_text]")
 		else
 			if(old_objective.type == selected_type)
@@ -753,7 +753,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 				new_objective.admin_edit(usr)
 				target_antag.objectives -= old_objective
 				target_antag.objectives.Insert(objective_pos, new_objective)
-			message_admins("[key_name_admin(usr)] edited [current]'s objective to [new_objective.explanation_text]")
+			message_admins("[key_name_admin(usr)] editó el objetivo de [current] a [new_objective.explanation_text]")
 			log_admin("[key_name(usr)] edited [current]'s objective to [new_objective.explanation_text]")
 
 	else if (href_list["obj_delete"])
@@ -764,10 +764,10 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 				antag_datum_ref.objectives -= objective
 				break
 		if(!objective)
-			to_chat(usr,"Invalid objective.")
+			to_chat(usr,"Objetivo no válido.")
 			return
 		//qdel(objective) Needs cleaning objective destroys
-		message_admins("[key_name_admin(usr)] removed an objective for [current]: [objective.explanation_text]")
+		message_admins("[key_name_admin(usr)] eliminó un objetivo para [current]: [objective.explanation_text]")
 		log_admin("[key_name(usr)] removed an objective for [current]: [objective.explanation_text]")
 
 	else if(href_list["obj_completed"])
@@ -778,7 +778,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 				objective = objective
 				break
 		if(!objective)
-			to_chat(usr,"Invalid objective.")
+			to_chat(usr,"Objetivo no válido.")
 			return
 		objective.completed = !objective.completed
 		log_admin("[key_name(usr)] toggled the win state for [current]'s objective: [objective.explanation_text]")

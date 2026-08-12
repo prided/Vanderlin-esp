@@ -3,7 +3,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective
 	var/datum/mind/owner				//The primary owner of the objective. !!SOMEWHAT DEPRECATED!! Prefer using 'team' for new code.
 	var/datum/team/team					//An alternative to 'owner': a team. Use this when writing new code.
-	var/name = "generic objective" 		//Name for admin prompts
+	var/name = "objetivo genérico" 		//Name for admin prompts
 	var/explanation_text = "Nothing"	//What that person is supposed to do.
 	var/team_explanation_text			//For when there are multiple owners.
 	var/datum/mind/target = null		//If they are focused on a particular person.
@@ -142,7 +142,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 				H.equip_in_one_of_slots(O, slots)
 
 /datum/objective/assassinate
-	name = "assasinate"
+	name = "asesinar"
 	var/target_role_type=FALSE
 	martyr_compatible = 0
 	triumph_count = 3
@@ -167,7 +167,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 		explanation_text = "Assassinate [target.name], who was obliterated"
 
 /datum/objective/mutiny
-	name = "mutiny"
+	name = "motín"
 	var/target_role_type=FALSE
 	martyr_compatible = 1
 
@@ -182,7 +182,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 	if(target && target.current)
 		explanation_text = "Assassinate or exile [target.name], the [!target_role_type ? target.assigned_role.title : target.special_role]."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Objetivo libre"
 
 /datum/objective/debrain
 	name = "debrain"
@@ -206,15 +206,15 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/debrain/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Steal the brain of [target.name], the [!target_role_type ? target.assigned_role.title : target.special_role]."
+		explanation_text = "Roba el cerebro de [target.name], el [!target_role_type ? target.assigned_role.title : target.special_role]."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Objetivo libre"
 
 /datum/objective/debrain/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
 
 /datum/objective/protect//The opposite of killing a dude.
-	name = "protect"
+	name = "proteger"
 	martyr_compatible = TRUE
 	var/target_role_type = FALSE
 	var/human_check = TRUE
@@ -225,26 +225,26 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/protect/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Protect [target.name], the [!target_role_type ? target.assigned_role.title : target.special_role]."
+		explanation_text = "Protege [target.name], el [!target_role_type ? target.assigned_role.title : target.special_role]."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Objetivo libre"
 
 /datum/objective/protect/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
 
 /datum/objective/protect/nonhuman
-	name = "protect nonhuman"
+	name = "proteger a los no humanos"
 	human_check = FALSE
 
 /datum/objective/escape/prisoner
-	name = "survive"
+	name = "sobrevivir"
 	explanation_text = "Escape the prison."
 	team_explanation_text = "Escape the prison."
 
 /datum/objective/escape
-	name = "survive"
-	explanation_text = "Survive without facing justice."
-	team_explanation_text = "Survive without facing justice."
+	name = "sobrevivir"
+	explanation_text = "Sobrevivir sin enfrentar la justicia."
+	team_explanation_text = "Sobrevivir sin enfrentar la justicia."
 
 /datum/objective/escape/check_completion()
 	// Require all owners escape safely.
@@ -255,9 +255,9 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 	return TRUE
 
 /datum/objective/dungeoneer
-	name = "protect"
-	explanation_text = "Keep the prisoner alive and in their cell."
-	team_explanation_text = "Keep the prisoner alive and in their cell."
+	name = "proteger"
+	explanation_text = "Mantenga al prisionero vivo y en su celda."
+	team_explanation_text = "Mantenga al prisionero vivo y en su celda."
 	var/mob/prisoner
 
 /datum/objective/dungeoneer/check_completion()
@@ -266,7 +266,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 		return TRUE
 
 /datum/objective/survive
-	name = "survive"
+	name = "sobrevivir"
 	explanation_text = "Stay alive until the end."
 
 /datum/objective/survive/check_completion()
@@ -288,7 +288,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/martyr
 	name = "martyr"
-	explanation_text = "Die a glorious death."
+	explanation_text = "Muere una muerte gloriosa."
 
 /datum/objective/martyr/check_completion()
 	var/list/datum/mind/owners = get_owners()
@@ -301,7 +301,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 GLOBAL_LIST_EMPTY(possible_items)
 /datum/objective/steal
-	name = "steal"
+	name = "robar"
 	var/datum/objective_item/targetinfo = null //Save the chosen item datum so we can access it later.
 	var/obj/item/steal_target = null //Needed for custom objectives (they're just items, not datums).
 	martyr_compatible = 0
@@ -334,7 +334,7 @@ GLOBAL_LIST_EMPTY(possible_items)
 	if(item)
 		targetinfo = item
 		steal_target = targetinfo.targetitem
-		explanation_text = "Steal [targetinfo.name]"
+		explanation_text = "Robar [targetinfo.name]"
 		give_special_equipment(targetinfo.special_equipment)
 		return steal_target
 	else
@@ -385,7 +385,7 @@ GLOBAL_LIST_EMPTY(possible_items)
 	return FALSE
 
 /datum/objective/capture
-	name = "capture"
+	name = "captura"
 
 /datum/objective/capture/proc/gen_amount_goal()
 	target_amount = rand(5,10)
@@ -403,9 +403,9 @@ GLOBAL_LIST_EMPTY(possible_items)
 /datum/objective/protect_object/update_explanation_text()
 	. = ..()
 	if(protect_target)
-		explanation_text = "Protect \the [protect_target] at all costs."
+		explanation_text = "Protege \the [protect_target] a toda costa."
 	else
-		explanation_text = "Free objective."
+		explanation_text = "Objetivo libre."
 
 /datum/objective/protect_object/check_completion()
 	return !QDELETED(protect_target)
@@ -415,7 +415,7 @@ GLOBAL_LIST_EMPTY(possible_items)
 	var/stolen = FALSE 		//Have we already eliminated this target?
 
 /datum/objective/steal_five_of_type
-	name = "steal five of"
+	name = "robar cinco de"
 	explanation_text = "Steal at least five items!"
 	var/list/wanted_items = list()
 

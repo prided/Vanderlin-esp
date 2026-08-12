@@ -5,7 +5,7 @@
 	construct_tool = /obj/item/weapon/hammer
 	craftsound = 'sound/foley/Building-01.ogg'
 	verbage = "assemble"
-	verbage_tp = "assembles"
+	verbage_tp = "ensambla"
 
 /datum/blueprint_recipe/engineering/artificer_table
 	name = "artificer table"
@@ -20,7 +20,7 @@
 
 /datum/blueprint_recipe/engineering/lever
 	name = "lever"
-	desc = "A mechanical lever for operating machinery."
+	desc = "Una palanca mecánica para operar maquinaria."
 	result_type = /obj/structure/lever
 	required_materials = list(
 		/obj/item/gear/metal = 1,
@@ -31,7 +31,7 @@
 
 /datum/blueprint_recipe/engineering/trapdoor
 	name = "floorhatch"
-	desc = "A mechanical trapdoor for floor access."
+	desc = "Una trampilla mecánica para el acceso al suelo."
 	result_type = /obj/structure/floordoor
 	required_materials = list(
 		/obj/item/gear/metal = 1,
@@ -41,7 +41,7 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/engineering/pressure_plate
-	name = "pressure plate"
+	name = "placa de presión"
 	desc = "A mechanical plate that activates when stepped on."
 	result_type = /obj/structure/pressure_plate
 	required_materials = list(
@@ -53,7 +53,7 @@
 
 /datum/blueprint_recipe/engineering/repeater
 	name = "repeater"
-	desc = "A device for extending mechanical signals."
+	desc = "Un dispositivo para extender señales mecánicas."
 	result_type = /obj/structure/repeater
 	required_materials = list(
 		/obj/item/gear/metal = 1,
@@ -77,7 +77,7 @@
 
 /datum/blueprint_recipe/engineering/passage
 	name = "passage"
-	desc = "A mechanical passage gate."
+	desc = "Una puerta de paso mecánica."
 	result_type = /obj/structure/bars/passage
 	required_materials = list(
 		/obj/item/gear/metal = 1,
@@ -87,8 +87,8 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/engineering/distiller
-	name = "copper distiller"
-	desc = "A copper distillation apparatus."
+	name = "destilador de cobre"
+	desc = "Un aparato de destilación de cobre."
 	result_type = /obj/structure/fermentation_keg/distiller
 	required_materials = list(
 		/obj/item/ingot/copper = 2,
@@ -98,7 +98,7 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/engineering/iron_bars
-	name = "iron bars"
+	name = "barras de hierro"
 	desc = "Strong iron bars for security."
 	result_type = /obj/structure/bars
 	required_materials = list(/obj/item/ingot/iron = 1)
@@ -106,15 +106,15 @@
 	craftdiff = 0
 
 /datum/blueprint_recipe/engineering/bent_bars
-	name = "iron bars (bent)"
-	desc = "Bent iron bars with decorative curves."
+	name = "barras de hierro (dobladas)"
+	desc = "Barras de hierro dobladas con curvas decorativas."
 	result_type = /obj/structure/bars/bent
 	required_materials = list(/obj/item/ingot/iron = 1)
 	supports_directions = TRUE
 	craftdiff = 0
 
 /datum/blueprint_recipe/engineering/auto_anvil
-	name = "Auto Anvil"
+	name = "Yunque automático"
 	desc = "An automated anvil for mass production."
 	result_type = /obj/structure/orphan_smasher
 	required_materials = list(
@@ -125,7 +125,7 @@
 	craftdiff = 3
 
 /datum/blueprint_recipe/engineering/cannon
-	name = "Cannon"
+	name = "Cañón"
 	desc = "A powerful blackpowder weapon."
 	result_type = /obj/structure/cannon
 	required_materials = list(

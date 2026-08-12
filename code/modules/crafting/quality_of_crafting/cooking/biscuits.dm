@@ -111,8 +111,8 @@
 
 
 /datum/repeatable_crafting_recipe/cooking/grenzelbun_cocaumole
-	category = "Tiefling Cuisine"
-	name = "Grenzel Bun With Cocaumole"
+	category = "Tiefling Cocina"
+	name = "Grenzel Bollo Con Cocaumole"
 	subtypes_allowed = TRUE
 
 	requirements = list(
@@ -129,7 +129,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/grenzelbun_cocaumole_alt
-	name = "Grenzel Bun With Cocaumole"
+	name = "Grenzel Bollo Con Cocaumole"
 	hides_from_books = TRUE
 	subtypes_allowed = TRUE
 

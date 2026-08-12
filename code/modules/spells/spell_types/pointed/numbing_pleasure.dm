@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/painkiller
-	name = "Numbing Pleasure"
+	name = "Placer entumecedor"
 	button_icon_state = "astrata"
 	sound = 'sound/magic/timestop.ogg'
 
@@ -7,7 +7,7 @@
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
 	associated_skill = /datum/attribute/skill/magic/holy
-	invocation = "May you find bliss through your pain."
+	invocation = "Que encuentres la felicidad a través de tu dolor."
 	invocation_type = INVOCATION_WHISPER
 
 	charge_required = FALSE

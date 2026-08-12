@@ -5,13 +5,13 @@
 	construct_tool = null
 
 /datum/blueprint_recipe/dendor/shrine
-	name = "growing shrine to Dendor (unique)"
+	name = "Santuario en crecimiento para Dendor (único)"
 	required_materials = list(/obj/item/grown/log/tree/small = 1,
 				/obj/item/natural/thorn = 3,
 				/obj/item/natural/head/gote = 1)
 	result_type = /obj/structure/fluff/psycross/crafted/shrine/dendor_gote
-	verbage = "consecrate"
-	verbage_tp = "consecrates"
+	verbage = "consagrar"
+	verbage_tp = "consagra"
 	craftsound = 'sound/foley/Building-01.ogg'
 
 /datum/blueprint_recipe/dendor/shrine/saiga

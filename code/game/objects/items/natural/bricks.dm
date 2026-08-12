@@ -1,6 +1,6 @@
 /obj/item/natural/brick
-	name = "brick"
-	desc = "A cooked red brick."
+	name = "ladrillo"
+	desc = "Un ladrillo rojo cocido."
 	icon = 'icons/roguetown/items/cooking.dmi'	//It's because these are cooked via clay. Don't ask questions.
 	icon_state = "claybrickcook"
 	gripped_intents = null
@@ -18,7 +18,7 @@
 	item_weight = 1.1 KILOGRAMS
 
 /obj/item/natural/bundle/brick
-	name = "stack of bricks"
+	name = "pila de ladrillos"
 	desc = "A stack of bricks."
 	icon_state = "brickbundle1"
 	icon = 'icons/roguetown/items/cooking.dmi'	//It's because these are cooked via clay. Don't ask questions.
@@ -33,7 +33,7 @@
 	throwforce = 0	// useless for throwing unless solo
 	throw_range = 2
 	w_class = WEIGHT_CLASS_NORMAL
-	stackname = "bricks"
+	stackname = "ladrillos"
 	stacktype = /obj/item/natural/brick
 	maxamount = 4
 	icon1 = "brickbundle2"

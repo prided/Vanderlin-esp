@@ -1,12 +1,12 @@
 /obj/effect/decal/cleanable/generic
-	name = "clutter"
+	name = "desorden"
 	desc = ""
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "shards"
 	beauty = -50
 
 /obj/effect/decal/cleanable/ash
-	name = "ashes"
+	name = "cenizas"
 	desc = ""
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "ash"
@@ -24,7 +24,7 @@
 	turf_loc_check = FALSE
 
 /obj/effect/decal/cleanable/ash/large
-	name = "large pile of ashes"
+	name = "gran montón de cenizas"
 	icon_state = "big_ash"
 	beauty = -100
 
@@ -71,7 +71,7 @@
 	return
 
 /obj/effect/decal/cleanable/dirt/cobweb
-	name = "cobweb"
+	name = "telaraña"
 	desc = ""
 	icon = 'icons/roguetown/misc/webbing.dmi'
 	icon_state = "cobweb1"
@@ -85,7 +85,7 @@
 	icon_state = "cobweb2"
 
 /obj/effect/decal/cleanable/molten_object
-	name = "gooey grey mass"
+	name = "masa gris pegajosa"
 	desc = ""
 	gender = NEUTER
 	icon = 'icons/effects/effects.dmi'
@@ -110,7 +110,7 @@
 	clean_type = CLEAN_TYPE_LIGHT_DECAL
 
 /obj/effect/decal/cleanable/vomit/old
-	name = "dried vomit"
+	name = "vómito seco"
 	desc = ""
 	clean_type = CLEAN_TYPE_HARD_DECAL
 
@@ -167,7 +167,7 @@
 	icon_state = "freon"
 
 /obj/effect/decal/cleanable/plasma
-	name = "stabilized plasma"
+	name = "plasma estabilizado"
 	desc = ""
 	icon_state = "flour"
 	icon = 'icons/effects/tomatodecal.dmi'

@@ -49,7 +49,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 			to_chat(usr, span_danger("OOC for dead mobs has been turned off."))
 			return
 		if(prefs.muted & MUTE_OOC)
-			to_chat(src, span_danger("I cannot use OOC (muted)."))
+			to_chat(src, span_danger("No puedo usar OOC (silenciado)."))
 			return
 	if(is_misc_banned(ckey, BAN_MISC_OOC))
 		to_chat(src, span_danger("I have been banned from OOC."))
@@ -102,7 +102,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 /client/proc/lobbyooc(msg as text)
 	set category = "OOC"
 	set name = "OOC"
-	set desc = "Talk with the other players."
+	set desc = "Habla con los otros jugadores."
 
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, span_danger("Speech is currently admin-disabled."))
@@ -119,7 +119,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 
 	if(!holder)
 		if(prefs.muted & MUTE_OOC)
-			to_chat(src, span_danger("I cannot use OOC (muted)."))
+			to_chat(src, span_danger("No puedo usar OOC (silenciado)."))
 			return
 	if(is_misc_banned(ckey, BAN_MISC_OOC))
 		to_chat(src, span_danger("I have been banned from OOC."))
@@ -209,7 +209,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 // OOC colors require a refactoring
 
 /client/proc/set_ooc(newColor as color)
-	set name = "Set Default OOC Color"
+	set name = "Establecer color OOC predeterminado"
 	set desc = ""
 	set category = "OOC.Admin"
 	set hidden = FALSE
@@ -243,7 +243,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	if(GLOB.admin_notice)
 		to_chat(src, "<span class='boldnotice'>Admin Notice:</span>\n \t [GLOB.admin_notice]")
 	else
-		to_chat(src, "<span class='notice'>There are no admin notices at the moment.</span>")
+		to_chat(src, "<span class='notice'>No hay avisos de administrador en este momento.</span>")
 
 #ifdef TESTSERVER
 /client/verb/smiteselfverily()
@@ -259,7 +259,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 
 /mob/dead/new_player/verb/togglobb()
 	set name = "SilenceLobbyMusic"
-	set category = "Preferences.Sound"
+	set category = "Preferencias.Sonido"
 	stop_sound_channel(CHANNEL_LOBBYMUSIC)
 
 /proc/CheckJoinDate(ckey)
@@ -323,7 +323,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 			return FALSE
 
 	if (length(pronouns) != length(unique_list(pronouns)))
-		to_chat(usr, span_warning("You cannot use the same pronoun multiple times."))
+		to_chat(usr, span_warning("No puedes usar el mismo pronombre varias veces."))
 		return FALSE
 
 	for (var/pronoun in GLOB.oocpronouns_required)
@@ -346,7 +346,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	var/old_pronouns = prefs.read_preference(/datum/preference/text/oocpronouns)
 	to_chat(src, span_notice("You can set up to [MAX_PRONOUNS] different pronouns, separated by slashes (/)."))
 	if (prefs.read_preference(/datum/preference/text/oocpronouns))
-		to_chat(src, span_notice("Your current OOC pronouns are: [prefs.read_preference(/datum/preference/text/oocpronouns)]"))
+		to_chat(src, span_notice("Tus pronombres OOC actuales son: [prefs.read_preference(/datum/preference/text/oocpronouns)]"))
 	else
 		to_chat(src, span_notice("You have not set any OOC pronouns yet."))
 
@@ -408,9 +408,9 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	prefs.save_preferences()
 
 /client/verb/select_ignore()
-	set name = "Ignore Player"
+	set name = "Ignorar jugador"
 	set category = "OOC"
-	set desc ="Ignore a player's messages on the OOC channel"
+	set desc ="Ignorar los mensajes de un jugador en el canal OOC"
 	set hidden = 1
 	if(!holder)
 		return
@@ -428,25 +428,25 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 		else
 			choices[displayed_choicename] = C
 	choices = sortList(choices)
-	var/selection = input("Please, select a player!", "Ignore", null, null) as null|anything in choices
+	var/selection = input("Please, select a player!", "Ignorar", null, null) as null|anything in choices
 	if(!selection || !(selection in choices))
 		return
 	displayed_choicename = selection // ckey string
 	selection = choices[selection] // client
 	if(selection == src)
-		to_chat(src, "You can't ignore myself.")
+		to_chat(src, "No puedes ignorarme.")
 		return
 	ignore_key(selection, displayed_choicename)
 
 /client/proc/show_previous_roundend_report()
-	set name = "Your Last Round"
+	set name = "Tu última ronda"
 	set category = "OOC"
 	set desc = ""
 
 	SSticker.show_roundend_report(src, TRUE)
 
 /client/verb/fit_viewport()
-	set name = "Fit Viewport"
+	set name = "Ajustar al área visible"
 	set category = "OOC"
 	set desc = "Fit the width of the map window to match the viewport"
 
@@ -527,9 +527,9 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	INVOKE_ASYNC(src, VERB_REF(fit_viewport))
 
 /client/verb/policy()
-	set name = "Show Policy"
+	set name = "Mostrar política"
 	set desc = ""
-	set category = "OOC.Links"
+	set category = "Enlaces OOC"
 	set hidden = 1
 	if(!holder)
 		return

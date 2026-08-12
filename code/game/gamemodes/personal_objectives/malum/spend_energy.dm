@@ -1,5 +1,5 @@
 /datum/objective/personal/energy_expenditure
-	name = "Spend Energy"
+	name = "Gastar energía"
 	category = "Malum's Chosen"
 	triumph_count = 2
 	rewards = list("2 Triumphs", "Malum grows stronger", "Malum blesses you (+1 Endurance)")
@@ -28,7 +28,7 @@
 
 /datum/objective/personal/energy_expenditure/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've spent enough energy working to satisfy Malum!"))
+	to_chat(owner.current, span_greentext("¡Has gastado suficiente energía trabajando para satisfacer Malum!"))
 	adjust_storyteller_influence(MALUM, 20)
 	UnregisterSignal(owner.current, COMSIG_MOB_ENERGY_SPENT)
 

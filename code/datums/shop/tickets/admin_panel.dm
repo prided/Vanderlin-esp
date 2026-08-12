@@ -185,7 +185,7 @@
 			"type" = t.ticket_type,
 		))
 		C.prefs.save_preferences()
-		to_chat(C, span_notice("You have received a ticket: <b>[t.name]</b>!"))
+		to_chat(C, span_notice("Has recibido un ticket: <b>[t.name]</b>!"))
 		to_chat(admin_mob, span_notice("TICKETS: Granted '[t.name]' to [target_ckey] (online)."))
 		message_admins("[key_name(admin_mob)] granted ticket '[t.name]' (triumph) to [target_ckey].")
 		log_game("TICKETS: [admin_mob.ckey] granted '[t.name]' (triumph) to [target_ckey] via UI (online).")

@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/barbrage
 	name = "Rage"
-	desc = "Enter a state of martial fervor, increasing offensive capabilities at the cost of making yourself vulnerable."
+	desc = "Entra en un estado de fervor marcial, aumentando las capacidades ofensivas a costa de hacerte vulnerable."
 	button_icon_state = "bcry"
 	sound = 'sound/magic/barbroar.ogg'
 

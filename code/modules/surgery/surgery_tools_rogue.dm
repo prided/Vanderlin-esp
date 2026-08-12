@@ -1,5 +1,5 @@
 /obj/item/weapon/surgery
-	name = "surgical tool"
+	name = "herramienta quirúrgica"
 	desc = "Something that will tear your guts apart."
 	icon = 'icons/roguetown/items/surgery.dmi'
 	item_state = "bone_dagger"
@@ -135,7 +135,7 @@
 	if(istype(interacting_with, /obj/machinery/light/fueled))
 		var/obj/machinery/light/fueled/forge = interacting_with
 		if(forge.on)
-			user.visible_message(span_info("[user] heats [src]."))
+			user.visible_message(span_info("[user] calienta [src]."))
 			fire_act(10)
 			return ITEM_INTERACT_SUCCESS
 
@@ -143,7 +143,7 @@
 		var/mob/living/carbon/C = interacting_with
 		var/obj/item/bodypart/part = C.get_bodypart(user.zone_selected)
 		if(!part || part.skeletonized)
-			balloon_alert(user, "nothing to cauterize!")
+			balloon_alert(user, "nada que cauterizar!")
 			return ITEM_INTERACT_BLOCKING
 
 		// Hate
@@ -151,7 +151,7 @@
 			for(var/obj/item/organ/artery in part.getorganslotlist(ORGAN_SLOT_ARTERY))
 				if(artery.damage)
 					break
-				balloon_alert(user, "no wounds!")
+				balloon_alert(user, "¡sin heridas!")
 				return ITEM_INTERACT_BLOCKING
 
 		var/on_who = "my"
@@ -159,7 +159,7 @@
 			on_who = "[C]'s"
 
 		user.visible_message(
-			span_danger("[user] starts to cauterize [on_who] [parse_zone(user.zone_selected)]"),
+			span_danger("[user] comienza a cauterizar [on_who] [parse_zone(user.zone_selected)]"),
 			span_userdanger("I start to cauterize [on_who] [parse_zone(user.zone_selected)]"),
 			span_userdanger("I hear flesh sizzle.")
 		)
@@ -206,7 +206,7 @@
 	update_appearance(UPDATE_ICON_STATE)
 
 /obj/item/weapon/surgery/hammer
-	name = "examination hammer"
+	name = "martillo de examen"
 	desc = "A small hammer used to check a patient's reactions and diagnose their condition."
 	icon_state = "kneehammer"
 	force = DAMAGE_CLUB - 5
@@ -238,7 +238,7 @@
 	if(interacting_with == user)
 		user.visible_message(span_info("[user] begins smacking themself with a small hammer."))
 	else
-		user.visible_message(span_info("[user] begins to smack [interacting_with] with a small hammer."))
+		user.visible_message(span_info("[user] comienza a golpear a [interacting_with] con un pequeño martillo."))
 
 	if(!do_after(user, 0.5 SECONDS, interacting_with))
 		return ITEM_INTERACT_BLOCKING
@@ -296,7 +296,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(target.reagents.holder_full())
-		to_chat(user, span_notice("[target] is full."))
+		to_chat(user, span_notice("[target] está lleno."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(isliving(target))
@@ -313,7 +313,7 @@
 			if(living_target.reagents.holder_full())
 				return ITEM_INTERACT_BLOCKING
 			living_target.visible_message(
-				span_danger("[user] injects [living_target] with the syringe!"),
+				span_danger("¡[user] inyecta [living_target] con la jeringa!"),
 				span_userdanger("[user] injects you with the syringe!"),
 			)
 
@@ -335,7 +335,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(reagents.holder_full())
-		to_chat(user, span_notice("[src] is full."))
+		to_chat(user, span_notice("[src] está lleno."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(isliving(target))
@@ -343,7 +343,7 @@
 		var/drawn_amount = reagents.maximum_volume - reagents.total_volume
 		if(target != user)
 			target.visible_message(
-				span_danger("[user] is trying to take a blood sample from [target]!"),
+				span_danger("¡[user] está intentando tomar una muestra de sangre de [target]!"),
 				span_userdanger("[user] is trying to take a blood sample from you!"),
 			)
 			if(!do_after(user, 4 SECONDS, target, extra_checks = CALLBACK(src, PROC_REF(try_syringe), living_target, user)))
@@ -351,13 +351,13 @@
 			if(reagents.holder_full())
 				return ITEM_INTERACT_BLOCKING
 		if(living_target.transfer_blood_to(src, drawn_amount))
-			user.visible_message(span_notice("[user] takes a blood sample from [living_target]."))
+			user.visible_message(span_notice("[user] toma una muestra de sangre de [living_target]."))
 		else
-			to_chat(user, span_warning("You are unable to draw any blood from [living_target]!"))
+			to_chat(user, span_warning("¡No puedes extraer sangre de [living_target]!"))
 		return ITEM_INTERACT_SUCCESS
 
 	if(!target.reagents.total_volume)
-		to_chat(user, span_warning("[target] is empty!"))
+		to_chat(user, span_warning("¡[target] está vacío!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!target.is_drawable(user))

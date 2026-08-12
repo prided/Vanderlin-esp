@@ -17,7 +17,7 @@
 
 /mob/living/carbon/human/species/human/northern/militia/after_creation()
 	..()
-	job = "Militia"
+	job = "Milicia"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_LEECHIMMUNE, INNATE_TRAIT)

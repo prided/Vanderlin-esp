@@ -25,18 +25,18 @@
 	if(istype(O, /obj/item/canvas))
 		var/obj/item/canvas/M = O
 		if(!M.author || !M.title)
-			to_chat(user, span_notice("This canvas isn't signed."))
+			to_chat(user, span_notice("Este lienzo no está firmado."))
 			return
 		// Prompt the user to upload the manuscript
-		var/choice = tgui_alert(user, "Do you want to add the painting to the archive?", "Confirm", list("Yes", "No"))
+		var/choice = tgui_alert(user, "Do you want to add the painting to the archive?", "Confirmar", list("Yes", "No"))
 		if(choice == "Yes")
 			if(is_misc_banned(user.ckey, BAN_MISC_PUBLISH))
 				to_chat(src, span_danger("I have been banned from publishing to the archive."))
 				return
 			upload_painting(user, M)
-			to_chat(user, span_notice("The painting has been uploaded."))
+			to_chat(user, span_notice("El cuadro ha sido subido."))
 		else
-			to_chat(user, span_notice("You decide not to upload the painting."))
+			to_chat(user, span_notice("Decides no subir el cuadro."))
 		return
 
 	if(istype(O, /obj/item/manuscript))
@@ -45,7 +45,7 @@
 			to_chat(user, span_notice("This manuscript has yet to be authored and titled. You'll need to do so before uploading it."))
 			return
 		// Prompt the user to upload the manuscript
-		var/choice = tgui_alert(user, "Do you want to add the manuscript to the archive?", "Confirm", list("Yes", "No"))
+		var/choice = tgui_alert(user, "¿Quieres agregar el manuscrito al archivo?", "Confirmar", list("Yes", "No"))
 		if(choice == "Yes")
 			if(is_misc_banned(user.ckey, BAN_MISC_PUBLISH))
 				to_chat(src, span_danger("I have been banned from publishing to the archive."))
@@ -53,9 +53,9 @@
 			upload_manuscript(user, M)
 			// // Optionally delete the manuscript after uploading
 			// qdel(M)
-			to_chat(user, span_notice("The manuscript has been uploaded."))
+			to_chat(user, span_notice("El manuscrito ha sido subido."))
 		else
-			to_chat(user, span_notice("You decide not to upload the manuscript."))
+			to_chat(user, span_notice("Decides no subir el manuscrito."))
 		return
 	// THIS IS FOR LOADING BLANK PAPER AS MATERIAL
 	if((O.type == /obj/item/paper) && !has_paper)
@@ -66,7 +66,7 @@
 		has_paper = TRUE
 		loaded_paper = O
 		src.icon_state = "Ppress_Prepared"
-		to_chat(user, span_warning("You insert the blank paper into [src]."))
+		to_chat(user, span_warning("Inserta el papel en blanco en [src]."))
 		qdel(O)
 	return ..()
 
@@ -79,7 +79,7 @@
 		if(!user.put_in_hands(output_item))
 			output_item.forceMove(get_turf(user))
 		else
-			to_chat(user, span_warning("You retrieve [output_item] from [src]."))
+			to_chat(user, span_warning("Recupera [output_item] de [src]."))
 		output_item = null
 		src.icon_state = "Ppress_Clean"
 		return
@@ -95,7 +95,7 @@
 		return
 	else
 		// Default interaction or message
-		to_chat(user, span_warning("[src] is empty."))
+		to_chat(user, span_warning("[src] está vacío."))
 		return
 
 /obj/machinery/printingpress/attack_hand_secondary(mob/user, list/modifiers)
@@ -107,12 +107,12 @@
 		to_chat(user, span_warning("[src] is currently printing. Please wait."))
 		return
 	if(output_item)
-		to_chat(user, span_warning("There is a finished product in [src]. Use an empty hand to retrieve it."))
+		to_chat(user, span_warning("Hay un producto terminado en [src]. Utilice una mano vacía para recuperarlo."))
 		return
 	if(!has_paper)
-		to_chat(user, span_warning("[src] requires a blank piece of paper to print."))
+		to_chat(user, span_warning("[src] requiere una hoja de papel en blanco para imprimir."))
 		return
-	var/choice = input(user, "Choose an option for \the [src]") as null|anything in list("Print The Book", "Print a Tome of Justice", "Print from the Archive", "Profession Manuel")
+	var/choice = input(user, "Elija una opción para \the [src]") as null|anything in list("Print The Book", "Print a Tome of Justice", "Print from the Archive", "Profession Manuel")
 	switch(choice)
 		if ("Print The Book")
 			start_printing(user, "bibble")
@@ -127,7 +127,7 @@
 						continue
 					manuel_name_to_path |= initial(book.name)
 					manuel_name_to_path[initial(book.name)] = book
-			choice = input(user, "Choose an option for \the [src]") as null|anything in manuel_name_to_path
+			choice = input(user, "Elija una opción para \the [src]") as null|anything in manuel_name_to_path
 			if(choice)
 				start_printing(user, manuel_name_to_path[choice])
 
@@ -137,7 +137,7 @@
 		return
 	printing = TRUE
 	src.icon_state = "Ppress_Printing"
-	to_chat(user, span_warning("[src] starts printing..."))
+	to_chat(user, span_warning("[src] comienza a imprimir..."))
 	playsound(src, 'sound/misc/ppress.ogg', 100, FALSE)
 	// Delete the blank paper as it's consumed during printing
 	if(loaded_paper)
@@ -180,15 +180,15 @@
 	// Creates a static book (Tome of Justice)
 	var/obj/item/book/law/B = new()
 	output_item = B
-	visible_message("<span class='notice'>[src] hums as it produces [B.name].</span>")
+	visible_message("<span class='notice'>[src] zumba mientras produce [B.name].</span>")
 
 /obj/machinery/printingpress/proc/print_manuscript(mob/user, id)
 	output_item = new /obj/item/book/playerbook(src, null, null, null, id)
 
 /obj/machinery/printingpress/proc/choose_search_parameters(mob/user)
-	var/search_title = input(user, "Enter the title (optional):") as text|null
-	var/search_author = input(user, "Enter the author (optional):") as text|null
-	var/search_category = input(user, "Select a category (optional):") in list("Any", "Myths & Tales", "Legends & Accounts", "Thesis", "Eoratica") // Removed "Apocrypha & Grimoires"
+	var/search_title = input(user, "Ingrese el título (opcional):") as text|null
+	var/search_author = input(user, "Ingrese el autor (opcional):") as text|null
+	var/search_category = input(user, "Seleccione una categoría (opcional):") in list("Any", "Myths & Tales", "Legends & Accounts", "Thesis", "Eoratica") // Removed "Apocrypha & Grimoires"
 	// Pass the selected parameters to search_manuscripts
 	search_manuscripts(user, search_title, search_author, search_category)
 
@@ -225,7 +225,7 @@
 		var/filename = SANITIZE_FILENAME(href_list["filename"])
 
 		if(!SSlibrarian.player_book_exists(filename))
-			to_chat(usr, span_notice("This book doesn't exist."))
+			to_chat(usr, span_notice("Este libro no existe."))
 			return
 
 		start_printing(usr, "archive", filename)

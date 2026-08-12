@@ -17,7 +17,7 @@
 	AddElement(/datum/element/tipped_item, _max_reagents = 3, _dip_amount = 3, _attack_injects = FALSE)
 
 /obj/item/ammo_casing/caseless/dart/poison
-	name = "poison dart"
+	name = "dardo venenoso"
 	desc = "A dart with its tip coated in a weak poison."
 	icon_state = "dart_poison"
 	projectile_type = /obj/projectile/bullet/reusable/dart/poison

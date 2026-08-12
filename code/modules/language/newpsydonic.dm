@@ -4,7 +4,7 @@
 	spans = list(SPAN_PSYDON)
 	desc = "The common language of Grenzelhoft, evolved from Old Psydonic over centuries."
 	speech_verb = "states"
-	ask_verb = "questions"
+	ask_verb = "preguntas"
 	exclaim_verb = "shouts"
 	key = "n"
 	space_chance = 20

@@ -5,7 +5,7 @@
 /datum/brain_trauma/mild
 
 /datum/brain_trauma/mild/stuttering
-	name = "Stuttering"
+	name = "Tartamudeo"
 	desc = ""
 	scan_desc = ""
 	gain_text = span_warning("Speaking clearly is getting harder.")
@@ -23,7 +23,7 @@
 	name = "Dumbness"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("I feel dumber.")
+	gain_text = span_warning("Me siento más tonto.")
 	lose_text = span_notice("I feel smart again.")
 
 /datum/brain_trauma/mild/dumbness/on_gain()
@@ -44,11 +44,11 @@
 	..()
 
 /datum/brain_trauma/mild/speech_impediment
-	name = "Speech Impediment"
+	name = "Impedimento del habla"
 	desc = ""
 	scan_desc = ""
 	gain_text = span_danger("I can't seem to form any coherent thoughts!")
-	lose_text = span_danger("My mind feels more clear.")
+	lose_text = span_danger("Mi mente se siente más clara.")
 
 /datum/brain_trauma/mild/speech_impediment/on_gain()
 	ADD_TRAIT(owner, TRAIT_UNINTELLIGIBLE_SPEECH, TRAUMA_TRAIT)
@@ -59,11 +59,11 @@
 	..()
 
 /datum/brain_trauma/mild/concussion
-	name = "Concussion"
+	name = "Conmoción cerebral"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("My head hurts!")
-	lose_text = span_notice("The pressure inside my head starts fading.")
+	gain_text = span_warning("¡Me duele la cabeza!")
+	lose_text = span_notice("La presión dentro de mi cabeza comienza a desvanecerse.")
 
 /datum/brain_trauma/mild/concussion/on_life()
 	if(prob(5))
@@ -78,19 +78,19 @@
 			if(6 to 9)
 				owner.slurring += 30
 			if(10)
-				to_chat(owner, span_notice("I forget for a moment what you were doing."))
+				to_chat(owner, span_notice("Me olvido por un momento de lo que estabas haciendo."))
 				owner.Stun(20)
 			if(11)
-				to_chat(owner, span_warning("I faint."))
+				to_chat(owner, span_warning("Me desmayo."))
 				owner.Unconscious(80)
 
 	..()
 
 /datum/brain_trauma/mild/muscle_weakness
-	name = "Muscle Weakness"
+	name = "Debilidad muscular"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("My muscles feel oddly faint.")
+	gain_text = span_warning("Mis músculos se sienten extrañamente débiles.")
 	lose_text = span_notice("I feel in control of my muscles again.")
 
 /datum/brain_trauma/mild/muscle_weakness/on_life()
@@ -113,10 +113,10 @@
 	..()
 
 /datum/brain_trauma/mild/muscle_spasms
-	name = "Muscle Spasms"
+	name = "Espasmos musculares"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("My muscles feel oddly faint.")
+	gain_text = span_warning("Mis músculos se sienten extrañamente débiles.")
 	lose_text = span_notice("I feel in control of my muscles again.")
 
 /datum/brain_trauma/mild/muscle_spasms/on_gain()
@@ -128,11 +128,11 @@
 	..()
 
 /datum/brain_trauma/mild/nervous_cough
-	name = "Nervous Cough"
+	name = "Tos nerviosa"
 	desc = ""
 	scan_desc = ""
 	gain_text = span_warning("My throat itches incessantly...")
-	lose_text = span_notice("My throat stops itching.")
+	lose_text = span_notice("Mi garganta deja de picar.")
 
 /datum/brain_trauma/mild/nervous_cough/on_life()
 	if(prob(6) && !HAS_TRAIT(owner, TRAIT_SOOTHED_THROAT))
@@ -146,7 +146,7 @@
 	..()
 
 /datum/brain_trauma/mild/expressive_aphasia
-	name = "Expressive Aphasia"
+	name = "Afasia expresiva"
 	desc = ""
 	scan_desc = ""
 	gain_text = span_warning("I lose my grasp on complex words.")
@@ -191,7 +191,7 @@
 	name = "Mind Echo"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("I feel a faint echo of my thoughts...")
+	gain_text = span_warning("Siento un débil eco de mis pensamientos...")
 	lose_text = span_notice("The faint echo fades away.")
 	var/list/hear_dejavu = list()
 	var/list/speak_dejavu = list()

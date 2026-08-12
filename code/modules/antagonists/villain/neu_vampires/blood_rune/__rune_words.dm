@@ -5,7 +5,7 @@ GLOBAL_LIST_INIT(rune_words_rune, list("ire", "ego", "nahlizet", "certum", "veri
 GLOBAL_LIST_INIT(rune_words_icons, list("rune-1", "rune-2", "rune-4", "rune-8", "rune-16", "rune-32", "rune-64", "rune-128", "rune-256", "rune-512"))
 
 /datum/rune_word
-	var/english		= "word"//don't change those
+	var/english		= "palabra"//don't change those
 	var/rune		= "zek'kon"
 	var/icon		= 'icons/uristrunes.dmi'
 	var/icon_state	= ""

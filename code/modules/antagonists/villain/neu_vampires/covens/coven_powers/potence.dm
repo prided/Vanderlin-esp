@@ -1,5 +1,5 @@
 /datum/coven/potence
-	name = "Potence"
+	name = "potencia"
 	desc = "Boosts melee and unarmed damage."
 	icon_state = "potence"
 	power_type = /datum/coven_power/potence
@@ -7,7 +7,7 @@
 
 /datum/coven_power/potence
 	name = "Potence power name"
-	desc = "Potence power description"
+	desc = "Descripción del poder de potencia."
 
 	check_flags = COVEN_CHECK_CAPABLE
 	toggled = TRUE
@@ -55,7 +55,7 @@
 
 //POTENCE 1
 /datum/coven_power/potence/one
-	name = "Potence 1"
+	name = "potencia 1"
 	desc = "Enhance your muscles. Never hit softly."
 	level = 1
 
@@ -68,7 +68,7 @@
 
 //POTENCE 2
 /datum/coven_power/potence/two
-	name = "Potence 2"
+	name = "potencia 2"
 	desc = "Become powerful beyond your muscles. Wreck people and things."
 	level = 2
 
@@ -80,7 +80,7 @@
 
 //POTENCE 3
 /datum/coven_power/potence/three
-	name = "Potence 3"
+	name = "potencia 3"
 	desc = "Become a force of destruction. Lift and break the unliftable and the unbreakable."
 	level = 3
 
@@ -92,8 +92,8 @@
 
 //POTENCE 4
 /datum/coven_power/potence/four
-	name = "Potence 4"
-	desc = "Become an unyielding machine for as long as your Vitae lasts."
+	name = "potencia 4"
+	desc = "Conviértete en una máquina inquebrantable mientras dure tu Vitae."
 	level = 4
 
 	vitae_cost = 75
@@ -105,8 +105,8 @@
 
 //POTENCE 5
 /datum/coven_power/potence/five
-	name = "Potence 5"
-	desc = "The people could worship you as a god if you showed them this."
+	name = "potencia 5"
+	desc = "La gente podría adorarte como a un dios si les mostraras esto."
 	level = 5
 
 	vitae_cost = 120
@@ -135,6 +135,6 @@
 	effectedstats = list(STAT_STRENGTH = 5, STAT_ENDURANCE = 5)
 
 /atom/movable/screen/alert/status_effect/buff/potence
-	name = "Potence"
+	name = "potencia"
 	desc = ""
 	icon_state = "adrrush"

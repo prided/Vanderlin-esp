@@ -52,7 +52,7 @@
 				spawned.dna.species.accent_language = spawned.dna.species.get_accent(spawned.dna.species.native_language)
 
 /datum/outfit/pilgrim/zalad
-	name = "Zaladin Emir (Pilgrim)"
+	name = "Zaladin Emir (Peregrino)"
 	shoes = /obj/item/clothing/shoes/shalal
 	gloves = /obj/item/clothing/gloves/leather
 	head = /obj/item/clothing/head/crown/circlet

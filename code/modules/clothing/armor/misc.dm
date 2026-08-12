@@ -20,7 +20,7 @@
 
 //................ Amazon chainkini ............... //
 /obj/item/clothing/armor/amazon_chainkini
-	name = "amazonian armor"
+	name = "armadura amazónica"
 	desc = "Fur skirt and maille chest holder, it doesn't cover very much."
 	icon_state = "chainkini"
 	item_state = "chainkini"
@@ -82,7 +82,7 @@
 
 /obj/item/clothing/armor/brigandine/haraate/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	detail_color = GLOB.noble_dyes[choice]
@@ -90,7 +90,7 @@
 
 //................ Abyssal Robe ............... //
 /obj/item/clothing/armor/brigandine/abyssor // This is only a brigandine subtype for balance reasons, it should be a cuirass variant.
-	name = "abyssal robe"
+	name = "túnica abisal"
 	desc = "A bronze cuirass, its surface etched with swirling wave motifs. Beneath the armor hangs a flowing robe of deep blue cloth, reminiscent of the sea's endless depths. Salt has dulled its shine, but it still carries the dignity of those who serve Abyssor."
 	icon_state = "abyssal_robe"
 	item_state = "abyssal_robe"
@@ -158,7 +158,7 @@
 	item_weight = 3.95 KILOGRAMS
 
 /obj/item/clothing/armor/plate/bronze
-	name = "bronze cuirass"
+	name = "coraza de bronce"
 	desc = "A chiseled breastplate of bronze, further padded with hide to comfort its championing bod. The plates have been carefully forged to mimic the statuesque physiques of Psydonia's ancient heroes. Wearing it bolsters you with determination."
 	body_parts_covered = CHEST | VITALS | LEGS
 	icon_state = "bronzecuirass"

@@ -128,7 +128,7 @@
 
 /datum/action/oracle_announce
 	name = "Invoke Lunar Authority"
-	desc = "Invoke your divine authority."
+	desc = "Invoca tu autoridad divina."
 	button_icon_state = "recruit_acolyte"
 	check_flags = AB_CHECK_CONSCIOUS
 
@@ -142,7 +142,7 @@
 
 /mob/living/carbon/human/proc/oracleannouncement()
 	set name = "Oracle Announcement"
-	set category = "RoleUnique.Divine"
+	set category = "RolÚnico.Divino"
 	if(stat)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/dreamcave))

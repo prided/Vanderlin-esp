@@ -47,7 +47,7 @@
 
 /atom/movable/screen/alert/status_effect/family_curse/misfortune
 	name = "Family Misfortune"
-	desc = "Your family's curse brings ill fortune to your steps."
+	desc = "La maldición de tu familia trae mala suerte a tus pasos."
 	icon_state = "debuff"
 
 	var/static/list/misfortune_tips = list(
@@ -64,8 +64,8 @@
 		desc = "[initial(desc)] [pick(misfortune_tips)]"
 
 /datum/family_curse/hunger
-	name = "Insatiable Appetite"
-	description = "This bloodline is voracious in its hunger."
+	name = "Apetito insaciable"
+	description = "Este linaje es voraz en su hambre."
 	curse_effects = list(/datum/status_effect/hunger)
 
 /datum/status_effect/hunger
@@ -80,6 +80,6 @@
 		H.dna.species.nutrition_mod += 1.1
 
 /atom/movable/screen/alert/status_effect/family_curse/hunger
-	name = "Insatiable Appetite"
-	desc = "Your family is cursed with a hunger that is rarely sated."
+	name = "Apetito insaciable"
+	desc = "Tu familia está maldecida por un hambre que rara vez se sacia."
 	icon_state = "debuff"

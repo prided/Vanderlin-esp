@@ -75,7 +75,7 @@
 		/datum/action/cooldown/spell/undirected/list_target/convert_role/church/churchling,
 		/datum/action/cooldown/spell/undirected/call_bird/priest,
 	)
-	honorary = "Vicar"
+	honorary = "Vicario"
 
 	exp_type = list(EXP_TYPE_CHURCH)
 	exp_types_granted = list(EXP_TYPE_CHURCH, EXP_TYPE_CLERIC, EXP_TYPE_LEADERSHIP)
@@ -124,7 +124,7 @@
 	l_hand = /obj/item/weapon/polearm/woodstaff/aries
 
 /datum/job/priest/demoted
-	title = "Ex-Priest"
+	title = "Ex-sacerdote"
 	f_title = "Ex-Priestess"
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_EQUIP_RANK)
 	department_flag = CHURCHMEN
@@ -134,7 +134,7 @@
 
 /datum/job/priest/vice
 	title = "Vice Priest"
-	f_title = "Vice Priestess"
+	f_title = "Vice Sacerdotisa"
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_EQUIP_RANK)
 	department_flag = CHURCHMEN
 	factions = list(FACTION_TOWN)
@@ -143,11 +143,11 @@
 
 /mob/living/carbon/human/proc/coronate_lord()
 	set name = "Coronate"
-	set category = "RoleUnique.Divine"
+	set category = "RolÚnico.Divino"
 	if(!mind)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
-		to_chat(src, span_warning("I need to do this in my Chapel."))
+		to_chat(src, span_warning("Necesito hacer esto en mi Capilla."))
 		return FALSE
 
 	var/mob/living/carbon/coronated
@@ -175,11 +175,11 @@
 			if(is_lord_job(HL.mind.assigned_role) || is_consort_job(HL.mind.assigned_role))
 				HL.mind.set_assigned_role(SSjob.GetJobType(/datum/job/villager))
 		if(HL.job == JOB_MONARCH)
-			HL.job = "Ex-Monarch"
+			HL.job = "Ex-Monarca"
 			lord_job?.remove_spells(HL)
 			HL.honorary = "Former [lord_job.honorary]"
 		if(HL.job == JOB_CONSORT)
-			HL.job = "Ex-Consort"
+			HL.job = "Ex consorte"
 			consort_job?.remove_spells(HL)
 
 	var/new_monarch_title = (coronated.gender == MALE) ? SSmapping.config.monarch_title : SSmapping.config.monarch_title_f
@@ -192,27 +192,27 @@
 	GLOB.badomens -= OMEN_NOLORD
 	say("By the authority of the Gods, I pronounce you Ruler of all [SSmapping.config.map_name]!")
 	priority_announce("[real_name] the [mind.assigned_role.get_informed_title(src)] has named [coronated.real_name] the inheritor of [SSmapping.config.map_name]!", \
-	title = "Long Live [lord_job.get_informed_title()] [coronated.real_name]!", sound = 'sound/misc/bell.ogg')
+	title = "¡Larga vida a [lord_job.get_informed_title()] [coronated.real_name]!", sound = 'sound/misc/bell.ogg')
 
 /mob/living/carbon/human/proc/churchexcommunicate()
 	set name = "Excommunicate"
-	set category = "RoleUnique.Divine"
+	set category = "RolÚnico.Divino"
 	if(stat)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
-		to_chat(src, span_warning("I need to do this from the prayer hall."))
+		to_chat(src, span_warning("Necesito hacer esto desde la sala de oración."))
 		return FALSE
 	var/inputty = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(src, "Excommunicate someone, cutting off their connection to the Ten. (excommunicate them again to remove it)", "Sinner's Name")))
 	if(inputty)
 		if(inputty in GLOB.excommunicated_players)
 			GLOB.excommunicated_players -= inputty
-			priority_announce("[real_name] has forgiven [inputty]. The Ten hear their prayers once more!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
+			priority_announce("[real_name] ha perdonado a [inputty]. ¡Los Diez escuchan sus oraciones una vez más!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
 			for(var/mob/living/carbon/human/H in GLOB.human_list)
 				if(H.real_name == inputty)
 					H.cleric?.recommunicate()
 			return
 		if(length(GLOB.tennite_schisms))
-			to_chat(src, span_warning("I cannot excommunicate anyone during the schism!"))
+			to_chat(src, span_warning("¡No puedo excomulgar a nadie durante el cisma!"))
 			return FALSE
 
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
@@ -227,11 +227,11 @@
 
 /mob/living/carbon/human/proc/churchcurse()
 	set name = "Curse"
-	set category = "RoleUnique.Divine"
+	set category = "RolÚnico.Divino"
 	if(stat)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
-		to_chat(src, "<span class='warning'>I need to do this from the prayer hall.</span>")
+		to_chat(src, "<span class='warning'>Necesito hacer esto desde la sala de oración.</span>")
 		return FALSE
 	var/inputty = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(src, "Curse someone as a heretic. (curse them again to remove it)", "Sinner's Name")))
 	if(inputty)
@@ -243,7 +243,7 @@
 					H.remove_stress(/datum/stress_event/psycurse)
 			return
 		if(length(GLOB.tennite_schisms))
-			to_chat(src, span_warning("I cannot curse anyone during the schism!"))
+			to_chat(src, span_warning("¡No puedo maldecir a nadie durante el cisma!"))
 			return FALSE
 		for(var/mob/living/carbon/human/H in GLOB.human_list)
 			if(H.real_name == inputty)
@@ -256,16 +256,16 @@
 				break
 
 /mob/living/carbon/human/proc/churchannouncement()
-	set name = "Priest Announcement"
-	set category = "RoleUnique.Divine"
+	set name = "Anuncio del sacerdote"
+	set category = "RolÚnico.Divino"
 	if(stat)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
-		to_chat(src, "<span class='warning'>I need to do this from the prayer hall.</span>")
+		to_chat(src, "<span class='warning'>Necesito hacer esto desde la sala de oración.</span>")
 		return FALSE
-	var/inputty = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(src, "Make an announcement to the faithful", "Church Announcement", multiline = TRUE)))
+	var/inputty = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(src, "Make an announcement to the faithful", "Anuncio de la Iglesia", multiline = TRUE)))
 	if(inputty)
-		priority_announce("[inputty]", title = "The [get_role_title()] Speaks", sound = 'sound/misc/bell.ogg')
+		priority_announce("[inputty]", title = "El [get_role_title()] habla", sound = 'sound/misc/bell.ogg')
 		src.log_talk("[TIMETOTEXT4LOGS] [inputty]", LOG_SAY, tag="Priest announcement")
 
 /// Helper for giving priest verbs, and whether that should include coronation or penance verbs.
@@ -286,7 +286,7 @@
 
 /datum/action/priestly_powers
 	name = "Invoke Divine Authority"
-	desc = "Invoke your divine authority."
+	desc = "Invoca tu autoridad divina."
 	button_icon_state = "recruit_acolyte"
 	check_flags = AB_CHECK_CONSCIOUS
 	var/list/authorized_powers = list(PRIEST_ANNOUNCE, PRIEST_CURSE, PRIEST_EXCOMMUNICATE)
@@ -298,7 +298,7 @@
 
 	var/mob/living/carbon/human/priest = owner
 
-	var/choice = tgui_input_list(priest, "What right do you wish to invoke?", "Choice", authorized_powers)
+	var/choice = tgui_input_list(priest, "¿Qué derecho desea invocar?", "Elección", authorized_powers)
 	if(!choice)
 		return
 

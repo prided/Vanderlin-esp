@@ -62,7 +62,7 @@
 			species.accent_language = species.get_accent(species.native_language)
 
 /datum/outfit/adventurer/qatil
-	name = "Qatil (Adventurer)"
+	name = "Qatil (Aventurero)"
 	pants = /obj/item/clothing/pants/trou/leather
 	beltr = /obj/item/weapon/knife/dagger/steel/special
 	shoes = /obj/item/clothing/shoes/shalal

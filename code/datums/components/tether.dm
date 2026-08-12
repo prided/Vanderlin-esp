@@ -18,7 +18,7 @@
 
 /datum/component/tether/proc/checkTether(mob/mover, newloc)
 	if (get_dist(mover,newloc) > max_dist)
-		to_chat(mover, "<span class='danger'>The [tether_name] runs out of slack and prevents you from moving!</span>")
+		to_chat(mover, "<span class='danger'>¡El [tether_name] se queda sin holgura y te impide moverte!</span>")
 		return COMPONENT_MOVABLE_BLOCK_PRE_MOVE
 
 	var/atom/blocker

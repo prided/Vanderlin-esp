@@ -29,9 +29,9 @@
 		if(!patient.is_location_accessible(operating_zone, IGNORED_OPERATION_CLOTHING_SLOTS))
 			patient.balloon_alert(src, "operation site is obstructed!")
 		else if(!IS_LYING_OR_CANNOT_LIE(patient))
-			patient.balloon_alert(src, "not lying down!")
+			patient.balloon_alert(src, "¡no acostado!")
 		else
-			patient.balloon_alert(src, "nothing to do with [realtool.name]!")
+			patient.balloon_alert(src, "¡nada que ver con [realtool.name]!")
 		//  ...then, block attacking. prevents the surgeon from viciously stabbing the patient on a mistake
 		return ITEM_INTERACT_BLOCKING
 

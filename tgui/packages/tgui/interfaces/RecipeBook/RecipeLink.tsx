@@ -37,7 +37,7 @@ export const RecipePicker = (props: {
 
   return (
     <span style={{ display: 'inline-block' }}>
-      <span className="RecipeBook__hyperlink" onClick={handleClick} title="Multiple recipes — click to choose">
+      <span className="RecipeBook__hyperlink" onClick={handleClick} title="Varias recetas: haz clic para elegir">
         {name} ▾
       </span>
       {open && coords && (

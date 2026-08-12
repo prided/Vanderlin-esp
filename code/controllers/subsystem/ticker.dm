@@ -303,7 +303,7 @@ SUBSYSTEM_DEF(ticker)
 						var/job_status = player.IsJobUnavailable(needed_job)
 						if(job_status != JOB_AVAILABLE)
 							to_chat(player, span_warning("You cannot be [needed_job] and thus are not considered."))
-							message_admins("JOB ERROR: [key_name(player)] is unable to be [needed_job], Error [job_status]!")
+							message_admins("ERROR DE TRABAJO: [key_name(player)] no puede ser [needed_job], ¡Error [job_status]!")
 							continue
 					readied_jobs.Add(needed_job)
 
@@ -702,7 +702,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/skip_delay = check_rights()
 	if(delay_end && !skip_delay)
-		to_chat(world, span_boldannounce("An admin has delayed the round end."))
+		to_chat(world, span_boldannounce("Un administrador ha retrasado el final de la ronda."))
 		return
 
 	to_chat(world, span_boldannounce("Rebooting World in [DisplayTimeText(delay)]. [reason]"))
@@ -724,7 +724,7 @@ SUBSYSTEM_DEF(ticker)
 
 	SStriumphs.end_triumph_saving_time()
 
-	log_game(span_boldannounce("Rebooting World. [reason]"))
+	log_game(span_boldannounce("Reiniciando el mundo. [reason]"))
 
 	world.Reboot()
 
@@ -736,9 +736,9 @@ SUBSYSTEM_DEF(ticker)
  */
 /datum/controller/subsystem/ticker/proc/cancel_reboot(mob/user)
 	if(!reboot_timer)
-		to_chat(user, span_warning("There is no pending reboot!"))
+		to_chat(user, span_warning("¡No hay ningún reinicio pendiente!"))
 		return FALSE
-	to_chat(world, span_boldannounce("An admin has delayed the round end."))
+	to_chat(world, span_boldannounce("Un administrador ha retrasado el final de la ronda."))
 	deltimer(reboot_timer)
 	reboot_timer = null
 	return TRUE

@@ -1,13 +1,13 @@
 /datum/action/cooldown/spell/aoe/on_turf/circle/flower_field
-	name = "Flower Field"
-	desc = "Summons a magical field of flowers using a single flower."
+	name = "campo de flores"
+	desc = "Invoca un campo mágico de flores usando una sola flor."
 	button_icon_state = "flower_field"
 
 	required_form = FORM_EARTH
 	required_technique = TECHNIQUE_CREATION
 	required_level = 3
 
-	invocation = "May the earth bloom!"
+	invocation = "¡Que la tierra florezca!"
 	invocation_type = INVOCATION_WHISPER
 
 	charge_time = 3 SECONDS
@@ -46,7 +46,7 @@
 			break
 
 	if(!flower_item || !flowers)
-		to_chat(owner, span_warning("I need a flower as a catalyst!"))
+		to_chat(owner, span_warning("¡Necesito una flor como catalizador!"))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
@@ -114,11 +114,11 @@
 
 // ---------------------- ROSA FIELD ----------------------------
 /obj/structure/flora/field/rosa
-	name = "rosa field"
+	name = "campo rosa"
 	icon_state = "rosa"
 
 /obj/structure/flora/field/rosa
-	name = "rosa field"
+	name = "campo rosa"
 	icon_state = "rosa"
 
 /obj/structure/flora/field/rosa/Crossed(atom/movable/AM)
@@ -129,13 +129,13 @@
 	if (HAS_TRAIT(L, TRAIT_FLOWERFIELD_IMMUNITY))
 		return
 	if (!L.buckled && prob(45))
-		L.visible_message(span_danger("The rose vines entangle [L]!"), span_userdanger("Vines entangle me!"))
+		L.visible_message(span_danger("¡Las enredaderas de rosas enredan [L]!"), span_userdanger("Vines entangle me!"))
 		buckle_mob(L, TRUE, check_loc = FALSE)
 	apply_flower_effect(L, /datum/status_effect/debuff/rosa_pacification)
 
 // ---------------------- SALVIA FIELD ----------------------------
 /obj/structure/flora/field/salvia
-	name = "salvia field"
+	name = "campo de salvia"
 	icon_state = "salvia"
 	object_slowdown = 4
 
@@ -146,7 +146,7 @@
 		if (HAS_TRAIT(L, TRAIT_FLOWERFIELD_IMMUNITY))
 			return
 		if (prob(30))
-			L.emote("spin", forced=TRUE)
+			L.emote("girar", forced=TRUE)
 			L.Stun(5)
 		apply_flower_effect(L, /datum/status_effect/debuff/salvia_madness)
 
@@ -176,7 +176,7 @@
 
 // ---------------------- CALENDULA FIELD ----------------------------
 /obj/structure/flora/field/calendula
-	name = "calendula field"
+	name = "campo de caléndula"
 	icon_state = "calendula"
 
 /obj/structure/flora/field/calendula/Crossed(atom/movable/AM)
@@ -189,7 +189,7 @@
 
 // ---------------------- MANABLOOM FIELD ----------------------------
 /obj/structure/flora/field/manabloom
-	name = "manabloom field"
+	name = "campo de manabloom"
 	icon_state = "mana"
 
 /obj/structure/flora/field/manabloom/Crossed(atom/movable/AM)
@@ -202,7 +202,7 @@
 
 // ---------------------- MATRICARIA FIELD ----------------------------
 /obj/structure/flora/field/matricaria
-	name = "matricaria field"
+	name = "campo de matricaria"
 	icon_state = "matricaria"
 	object_slowdown = 3
 
@@ -218,7 +218,7 @@
 
 // ---------------------- POPPY FIELD ----------------------------
 /obj/structure/flora/field/poppy
-	name = "poppy field"
+	name = "campo de amapola"
 	icon_state = "poppy"
 
 /obj/structure/flora/field/poppy/Crossed(atom/movable/AM)
@@ -292,7 +292,7 @@
 	. = ..()
 
 /atom/movable/screen/alert/status_effect/debuff/rosa_pacification
-	name = "Pacified"
+	name = "Pacificado"
 	desc = span_notice("You are unable to do violence.")
 	icon_state = "pacify"
 
@@ -315,14 +315,14 @@
 	tick_counter++
 	L.Stun(3)
 	L.adjust_jitter(4 SECONDS)
-	L.emote(pick("spin", "dance"), forced=TRUE)
+	L.emote(pick("girar", "dance"), forced=TRUE)
 	L.emote(pick("laugh", "giggle"), forced=TRUE)
 	if (tick_counter >= 4)
 		L.emote("faint", forced=TRUE)
 		qdel(src)
 
 /atom/movable/screen/alert/status_effect/debuff/salvia_madness
-	name = "Salvia Madness"
+	name = "Locura de Salvia"
 	desc = span_notice("You have an overwhelming urge to dance and laugh.")
 	icon_state = "salvia_mad"
 
@@ -350,7 +350,7 @@
 		L.adjustBruteLoss(5, damage_type = BCLASS_CUT)
 
 	if (locate(/obj/structure/flora/field/euphorbia) in get_turf(L))
-		to_chat(L, span_warning("The spines hurt your feet"))
+		to_chat(L, span_warning("Las espinas te lastiman los pies"))
 
 	if (prob(20) && ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -360,8 +360,8 @@
 		to_chat(H, span_danger("A thorn embeds into your [BP.name]!"))
 
 /atom/movable/screen/alert/status_effect/debuff/euphorbia_thorns
-	name = "Spiny Terrain"
-	desc = "You are stepping on spines."
+	name = "Terreno espinoso"
+	desc = "Estás pisando espinas."
 	icon_state = "entwined"
 
 // ---------------------- CALENDULA SEDATION ----------------------------
@@ -394,7 +394,7 @@
 	if (tick_counter % 15 == 5)
 		if (!HAS_TRAIT(L, TRAIT_NOSTAMINA) && prob(30))
 			L.adjust_stamina(-1, internal_regen = FALSE)
-			to_chat(L, span_notice("You feel drained..."))
+			to_chat(L, span_notice("Te sientes agotado..."))
 
 	if (tick_counter % 15 == 10 && !L.has_status_effect(/datum/status_effect/incapacitating/sleeping))
 		L.emote("yawn", forced=TRUE)
@@ -406,8 +406,8 @@
 			L.emote("snore", forced=TRUE)
 
 /atom/movable/screen/alert/status_effect/debuff/calendula_sedation
-	name = "Tranquility"
-	desc = "You feel too relaxed...."
+	name = "Tranquilidad"
+	desc = "Te sientes demasiado relajado...."
 	icon_state = "tranquil"
 
 // ---------------------- MANABLOOM SILENCE ----------------------------
@@ -437,7 +437,7 @@
 	. = ..()
 
 /atom/movable/screen/alert/status_effect/debuff/manabloom_silence
-	name = "Silenced"
+	name = "Silenciado"
 	desc = span_notice("You are blocked from the arcyne.")
 	icon_state = "spellblock"
 

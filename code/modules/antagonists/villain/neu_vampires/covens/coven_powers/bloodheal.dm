@@ -3,7 +3,7 @@
 
 /datum/coven/bloodheal
 	name = "Bloodheal"
-	desc = "Use the power of your Vitae to slowly regenerate your flesh."
+	desc = "Usa el poder de tu Vitae para regenerar lentamente tu carne."
 	icon_state = "bloodheal"
 	power_type = /datum/coven_power/bloodheal
 	max_level = 10
@@ -65,7 +65,7 @@
 		if(prob(20)) // 20% chance per pulse to show visible healing
 			owner.visible_message(
 				span_warning("[owner]'s wounds slowly knit themselves back together!"),
-				span_warning("Your flesh slowly regenerates!")
+				span_warning("¡Tu carne se regenera lentamente!")
 			)
 			owner.vampire_undisguise()
 			do_masquerade_violation(owner)
@@ -128,7 +128,7 @@
 //BLOODHEAL 5
 /datum/coven_power/bloodheal/five
 	name = "Greater Bloodheal"
-	desc = "Regenerate injuries and restore damaged organs."
+	desc = "Regenerar lesiones y restaurar órganos dañados."
 	level = 5
 	vitae_cost = 18
 	duration_length = 2 SECONDS
@@ -160,7 +160,7 @@
 //BLOODHEAL 9
 /datum/coven_power/bloodheal/nine
 	name = "Surpassing Bloodheal"
-	desc = "Restore your physical form almost instantaneously."
+	desc = "Restaura tu forma física casi instantáneamente."
 	level = 9
 	vitae_cost = 32
 	duration_length = 1 SECONDS

@@ -1,6 +1,6 @@
 /datum/chimeric_node/input/wounded
-	name = "wounded"
-	desc = "Triggered when you receive a wound."
+	name = "herido"
+	desc = "Se activa cuando recibes una herida."
 
 /datum/chimeric_node/input/wounded/register_triggers(mob/living/carbon/target)
 	if(!target)

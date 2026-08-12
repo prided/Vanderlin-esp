@@ -150,7 +150,7 @@ export const ColorPicker = ({
                   icon="times"
                   color="transparent"
                   fontSize="0.8em"
-                  tooltip="Clear color (revert to default)"
+                  tooltip="Borrar color (volver al valor predeterminado)"
                   onClick={onClear}
                 />
               </Stack.Item>
@@ -158,7 +158,7 @@ export const ColorPicker = ({
           ) : (
             <Stack.Item color="label" fontSize="0.8em">
               <Icon name="circle" mr={1} color="label" />
-              No color applied, default appearance
+              No se aplica ningún color, apariencia predeterminada
             </Stack.Item>
           )}
         </Stack>
@@ -167,7 +167,7 @@ export const ColorPicker = ({
       <Stack.Item>
         <Box color="label" fontSize="0.75em">
           <Icon name="lock" mr={1} />
-          Greyed swatches require triumph unlocks. Click to purchase.
+          Las muestras grises requieren desbloqueos de triunfo. Haz clic para comprar.
         </Box>
       </Stack.Item>
     </Stack>

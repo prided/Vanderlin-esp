@@ -4,7 +4,7 @@
 	icon_state = "halfspeak"
 	spans = list(SPAN_DWARF)
 	speech_verb = "sputters"
-	ask_verb = "propositions"
+	ask_verb = "proposiciones"
 	exclaim_verb = "exclaims"
 	key = "p"
 	space_chance = 0

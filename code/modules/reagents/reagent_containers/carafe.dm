@@ -54,7 +54,7 @@
 /* Teapots */
 
 /obj/item/reagent_containers/glass/carafe/teapot
-	name = "fancy teapot"
+	name = "tetera elegante"
 	desc = "A fancy tea pot made out of ceramic. Used to hold tea."
 	icon_state = "teapot_fancy"
 	fill_icon_thresholds = null
@@ -129,7 +129,7 @@
 	sellprice = 60
 
 /obj/item/reagent_containers/glass/carafe/teapot/shell
-	name = "shell teapot"
+	name = "tetera de concha"
 	desc = "A dainty teapot carved out of shell."
 	icon_state = "teapot_shell"
 	fill_icon_thresholds = null

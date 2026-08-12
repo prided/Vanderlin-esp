@@ -1,5 +1,5 @@
 /obj/structure/flora/shells
-	name = "shells"
+	name = "conchas"
 	desc = ""
 	icon = 'icons/delver/abyss_objects.dmi'
 	icon_state = "shell-1"
@@ -194,7 +194,7 @@
 	icon_state = "[initial(icon_state)][rand(1,3)]"
 
 /obj/structure/flora/rock/water
-	name = "boulder"
+	name = "roca"
 	icon_state = "boulder-1"
 	icon = 'icons/delver/abyss_objects.dmi'
 
@@ -235,7 +235,7 @@
 	icon_state = "[initial(icon_state)][rand(1,5)]"
 
 /obj/structure/abyss_window
-	name = "abyssal window"
+	name = "ventana abisal"
 	icon_state = "abyss_window"
 	icon = 'icons/delver/abyss_objects.dmi'
 
@@ -256,14 +256,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/abyss_window, 32)
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/boards, 32)
 
 /obj/structure/desert_window
-	name = "desert window"
+	name = "ventana del desierto"
 	icon_state = "window_brass"
 	icon = 'icons/delver/desert_objects.dmi'
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/desert_window, 32)
 
 /obj/structure/desert_window/open
-	name = "open desert window"
+	name = "ventana abierta del desierto"
 	icon_state = "window_open"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/desert_window/open, 32)

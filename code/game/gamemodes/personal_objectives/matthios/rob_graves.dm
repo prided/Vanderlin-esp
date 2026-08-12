@@ -1,6 +1,6 @@
 /datum/objective/personal/grave_robbery
 	name = "Rob Graves"
-	category = "Matthios' Chosen"
+	category = "Matthios' Elegido"
 	triumph_count = 2
 	rewards = list("2 Triumphs", "Matthios grows stronger", "Ability to rob graves without being cursed", "Matthios blesses you (+1 Endurance)")
 	var/graves_robbed = 0

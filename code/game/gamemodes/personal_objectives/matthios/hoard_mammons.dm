@@ -1,6 +1,6 @@
 /datum/objective/personal/hoard_mammons
 	name = "Hoard Mammons"
-	category = "Matthios' Chosen"
+	category = "Matthios' Elegido"
 	triumph_count = 2
 	rewards = list("2 Triumphs", "Matthios grows stronger", "Ability to see item's value on examine", "Matthios blesses you (+1 Fortune)")
 	var/target_mammons = 300

@@ -138,7 +138,7 @@ GLOBAL_LIST_INIT(island_descents, list())
 GLOBAL_LIST_INIT(island_ascents, list())
 
 /obj/structure/island_descent
-	name = "Descent into Darkness"
+	name = "Descenso a la oscuridad"
 	desc = "A passage leading deeper into the fragment. The way down is treacherous."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "shitportal"
@@ -212,7 +212,7 @@ GLOBAL_LIST_INIT(island_ascents, list())
 		return
 
 	if(!is_ghost)
-		to_chat(user, span_notice("You descend into the depths..."))
+		to_chat(user, span_notice("Desciendes a las profundidades..."))
 		playsound(src, 'sound/foley/ladder.ogg', 100, FALSE)
 		if(!do_after(user, 3 SECONDS, src))
 			return
@@ -221,7 +221,7 @@ GLOBAL_LIST_INIT(island_ascents, list())
 
 /obj/structure/island_descent/proc/attempt_descent(mob/user, is_ghost = FALSE)
 	if(!is_ghost && !can_descend)
-		to_chat(user, span_warning("The passage seems blocked."))
+		to_chat(user, span_warning("El paso parece bloqueado."))
 		return FALSE
 
 	if(descent_requirements && !is_ghost)
@@ -249,8 +249,8 @@ GLOBAL_LIST_INIT(island_ascents, list())
 	return TRUE
 
 /obj/structure/island_ascent
-	name = "Ascent to Surface"
-	desc = "A passage leading back up to the surface. Fresh air flows from above."
+	name = "Ascenso a la superficie"
+	desc = "Un pasaje que conduce de regreso a la superficie. El aire fresco fluye desde arriba."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "shitportal"
 	density = TRUE
@@ -332,7 +332,7 @@ GLOBAL_LIST_INIT(island_ascents, list())
 
 /obj/structure/island_ascent/proc/attempt_ascent(mob/user, is_ghost = FALSE)
 	if(!is_ghost && !can_ascend)
-		to_chat(user, span_warning("The passage seems blocked."))
+		to_chat(user, span_warning("El paso parece bloqueado."))
 		return FALSE
 
 	if(ascent_requirements && !is_ghost)
@@ -354,7 +354,7 @@ GLOBAL_LIST_INIT(island_ascents, list())
 		return TRUE
 
 	if(requirements_met < length(ascent_requirements))
-		to_chat(user, span_warning("You cannot ascend yet."))
+		to_chat(user, span_warning("No puedes ascender todavía."))
 		return FALSE
 
 	return TRUE

@@ -1,11 +1,11 @@
 /datum/action/cooldown/spell/undirected/list_target/convert_role/guard
-	name = "Recruit Guardsmen"
+	name = "Reclutar guardias"
 	button_icon_state = "recruit_guard"
 
 	new_role = "Garrison Recruit"
 	recruitment_faction = "Garrison"
-	recruitment_message = "Join the Garrison, %RECRUIT!"
-	accept_message = "I swear fealty to the Crown and its garrison!"
+	recruitment_message = "¡Únete a la guarnición, %RECRUIT!"
+	accept_message = "¡Juro lealtad a la Corona y su guarnición!"
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/guard/on_conversion(mob/living/cast_on)
 	. = ..()
@@ -17,4 +17,4 @@
 	new_role = "Forest Garrison Recruit"
 	recruitment_faction = "Forest Garrison"
 	recruitment_message = "Join the Forest Garrison, %RECRUIT!"
-	accept_message = "I swear to protect the forest!"
+	accept_message = "¡Juro proteger el bosque!"

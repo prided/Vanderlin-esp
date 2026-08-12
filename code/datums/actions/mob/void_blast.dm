@@ -43,7 +43,7 @@
 
 /// Create a laser in the direction we are facing
 /datum/action/cooldown/mob_cooldown/voidblast/proc/fire_laser()
-	owner.visible_message(span_danger("[src] fires a aberrant beam!"))
+	owner.visible_message(span_danger("¡[src] dispara un rayo aberrante!"))
 	playsound(owner, 'sound/magic/obeliskbeam.ogg', 150, FALSE, 0, 3)
 	var/turf/target_turf = get_ranged_target_turf(owner, owner.dir, beam_range)
 	var/turf/origin_turf = get_turf(owner)

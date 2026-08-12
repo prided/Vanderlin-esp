@@ -1,7 +1,7 @@
 
 /obj/item/clothing/pants/loincloth
 	name = "loincloth"
-	desc = "Protects your modesty, but not much else."
+	desc = "Protege tu modestia, pero no mucho más."
 	icon_state = "loincloth"
 	item_state = "loincloth"
 	r_sleeve_status = SLEEVE_NOMOD

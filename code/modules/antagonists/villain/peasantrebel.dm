@@ -3,8 +3,8 @@
 
 /datum/antagonist/prebel
 	name = "Peasant Rebel"
-	roundend_category = "Peasant Rebels"
-	antagpanel_category = "Peasant Rebellion"
+	roundend_category = "Rebeldes campesinos"
+	antagpanel_category = "Rebelión campesina"
 	job_rank = ROLE_PREBEL
 	antag_hud_type = ANTAG_HUD_REV
 	antag_hud_name = "rev"
@@ -13,7 +13,7 @@
 	confess_lines = list(
 		"VIVA!",
 		"DEATH TO THE NOBLES!",
-		"STICK IT TO THE MAN!",
+		"¡PLÁNTALE CARA AL PODER!",
 		"NO GODS, NO MASTERS!",
 	)
 	increase_votepwr = FALSE
@@ -114,7 +114,7 @@
 	return TRUE
 
 /datum/action/cooldown/spell/undirected/convert_rebel
-	name = "RECRUIT REBELS"
+	name = "RECLUTAR REBELDES"
 	desc = "!"
 
 	antimagic_flags = NONE
@@ -128,7 +128,7 @@
 		return
 	var/inputty = browser_input_text(cast_on, "Make a speech", "REVOLUTON!")
 	if(inputty)
-		owner.say(inputty, forced = "Revolution ([name])")
+		owner.say(inputty, forced = "Revolución ([name])")
 		var/datum/antagonist/prebel/PR = owner.mind.has_antag_datum(/datum/antagonist/prebel)
 		for(var/mob/living/carbon/human/rebel in get_hearers_in_view(6, owner))
 			addtimer(CALLBACK(rebel, TYPE_PROC_REF(/mob/living/carbon/human, rev_ask), owner, PR, inputty), 1)
@@ -149,7 +149,7 @@
 	var/datum/team/prebels/RT = mind_datum.rev_team
 	var/shittime = world.time
 	playsound_local(src, 'sound/misc/rebel.ogg', 100, FALSE)
-	var/garbaggio = tgui_alert(src, "[offer]","Rebellion", list("Yes", "No"))
+	var/garbaggio = tgui_alert(src, "[offer]","Rebelión", list("Yes", "No"))
 	if(world.time > shittime + 35 SECONDS)
 		to_chat(src,"<span class='danger'>Too late.</span>")
 		return
@@ -161,8 +161,8 @@
 			RT.offers2join += "<span class='info'><B>[real_name]</B> <span class='blue'>ACCEPTED</span> [guy.real_name]: \"[offer]\"</span>"
 			to_chat(guy,"<span class='blue'>[src] joins the revolution.</span>")
 	else
-		to_chat(src,"<span class='danger'>I reject the offer.</span>")
-		to_chat(guy,"<span class='danger'>[src] rejects the offer.</span>")
+		to_chat(src,"<span class='danger'>Rechazo la oferta.</span>")
+		to_chat(guy,"<span class='danger'>[src] rechaza la oferta.</span>")
 		RT.offers2join += "<span class='info'><B>[real_name]</B> <span class='red'>REJECTED</span> [guy.real_name]: \"[offer]\"</span>"
 
 /datum/antagonist/prebel/proc/add_revolutionary(datum/mind/rev_mind)
@@ -172,14 +172,14 @@
 	return TRUE
 
 /datum/team/prebels
-	name = "\improper Peasant Rebellion"
+	name = "\improper Rebelión Campesina"
 	member_name = "rebel"
 	var/list/offers2join = list()
 
 /datum/objective/prebel
-	name = "Rebellion"
-	explanation_text = "Put a rebel on the throne with the crown and make a new decree."
-	team_explanation_text = "Put a rebel on the throne with the crown and make a new decree."
+	name = "Rebelión"
+	explanation_text = "Pon a un rebelde en el trono con la corona y haz un nuevo decreto."
+	team_explanation_text = "Pon a un rebelde en el trono con la corona y haz un nuevo decreto."
 
 /datum/team/prebels/New(starting_members)
 	. = ..()

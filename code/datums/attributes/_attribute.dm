@@ -2,7 +2,7 @@
 	/// Name of the attribute
 	var/name = null
 	/// Description of the attribute
-	var/desc = "Alan, please add details."
+	var/desc = "Alan, por favor agrega detalles."
 	/// Icon
 	var/icon = 'icons/ui_icons/attributes.dmi'
 	/// Icon state

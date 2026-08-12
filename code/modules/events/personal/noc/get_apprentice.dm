@@ -1,5 +1,5 @@
 /datum/round_event_control/scholarship_request
-	name = "Scholarship Request"
+	name = "Solicitud de Beca"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/scholarship_request
 	weight = 7
@@ -65,7 +65,7 @@
 	var/datum/objective/personal/get_apprentice/new_objective = new(owner = chosen_one.mind)
 	chosen_one.mind.add_personal_objective(new_objective)
 
-	to_chat(chosen_one, span_userdanger("YOU ARE NOC'S CHOSEN!"))
+	to_chat(chosen_one, span_userdanger("¡ERES EL ELEGIDO DE NOC!"))
 	to_chat(chosen_one, span_notice("Noc wishes for you to pass your knowledge! Seek a suitable child or downtrodden and make them your new apprentice! (RMB on a target with an empty hand)"))
 	chosen_one.playsound_local(chosen_one, 'sound/ambience/noises/mystical (4).ogg', 100)
 

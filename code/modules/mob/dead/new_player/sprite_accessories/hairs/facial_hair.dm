@@ -46,7 +46,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/facial/braided
-	name = "Dignitary"
+	name = "Dignatario"
 	icon_state = "braided"
 	gender = MALE
 	specuse = list(SPEC_ID_DWARF)
@@ -70,19 +70,19 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/facial/knightly
-	name = "Knightly"
+	name = "Caballeresco"
 	icon_state = "facial_knightly"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/facial/know
-	name = "Knowledge"
+	name = "Conocimiento"
 	icon_state = "facial_wise"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/facial/fiveoclockm
-	name = "Mustache"
+	name = "Bigote"
 	icon_state = "facial_5oclockmoustache"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -94,7 +94,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/facial/pipe
-	name = "Pipesmoker"
+	name = "fumador de pipa"
 	icon_state = "facial_pipe"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -136,7 +136,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF,  SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/facial/facial_genius
-	name = "The Genius"
+	name = "El genio"
 	icon_state = "facial_genius"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF,  SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -148,19 +148,19 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF,  SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/facial/facial_general
-	name = "The General"
+	name = "el general"
 	icon_state = "facial_general"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF,  SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/facial/facial_teadrinker
-	name = "The Tea Drinker"
+	name = "El bebedor de té"
 	icon_state = "facial_teadrinker"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF,  SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/facial/facial_pacifist
-	name = "The Pacifist"
+	name = "El pacifista"
 	icon_state = "facial_pacifist"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF,  SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -178,7 +178,7 @@
 	specuse = list(SPEC_ID_DWARF)
 
 /datum/sprite_accessory/hair/facial/anniversary
-	name = "Anniversary (Feminine)"
+	name = "Aniversario (Femenino)"
 	icon_state = "facial_anniversary"
 	gender = FEMALE
 	specuse = list(SPEC_ID_DWARF)
@@ -229,7 +229,7 @@
 	specuse = list(SPEC_ID_RAKSHARI)
 
 /datum/sprite_accessory/hair/facial/triton/seaqueen
-	name = "Seaqueen"
+	name = "reina del mar"
 	icon_state = "seaqueen"
 	gender = FEMALE
 	specuse = list(SPEC_ID_TRITON)

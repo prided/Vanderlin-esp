@@ -286,7 +286,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 		work_time *= chisel.toolspeed
 
 	playsound(src, pick('sound/combat/hits/onrock/onrock (1).ogg', 'sound/combat/hits/onrock/onrock (2).ogg', 'sound/combat/hits/onrock/onrock (3).ogg', 'sound/combat/hits/onrock/onrock (4).ogg'), 100)
-	user.visible_message("<span class='info'>[user] begins chiseling [src] into blocks.</span>")
+	user.visible_message("<span class='info'>[user] comienza a cincelar [src] en bloques.</span>")
 	var/stone_amount = rand(1, max(round(skill_level)/2, 1))
 
 	if(!do_after(user, work_time))
@@ -316,7 +316,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	playsound(src, pick('sound/items/stonestone.ogg'), 100)
 
 	if(prob(10))
-		user.visible_message(span_info("[user] strikes the stones together."))
+		user.visible_message(span_info("[user] golpea las piedras entre sí."))
 		var/datum/effect_system/spark_spread/S = new()
 		var/turf/front = get_step(user, user.dir)
 		S.set_up(1, 1, front)
@@ -332,7 +332,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 		if(!sharpening.max_blade_int)
 			return NONE
 		playsound(src, pick('sound/items/sharpen_long1.ogg','sound/items/sharpen_long2.ogg'), 100)
-		user.visible_message("<span class='notice'>[user] sharpens [sharpening]!</span>")
+		user.visible_message("<span class='notice'>[user] afila [sharpening]!</span>")
 		sharpening.degrade_bintegrity(1)
 		sharpening.add_bintegrity(sharpening.max_blade_int * 0.1, user)
 		if(prob(35))
@@ -432,7 +432,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 		work_time *= chisel.toolspeed
 
 	playsound(src, pick('sound/combat/hits/onrock/onrock (1).ogg', 'sound/combat/hits/onrock/onrock (2).ogg', 'sound/combat/hits/onrock/onrock (3).ogg', 'sound/combat/hits/onrock/onrock (4).ogg'), 100)
-	user.visible_message("<span class='info'>[user] begins chiseling a part of [src] off.</span>")
+	user.visible_message("<span class='info'>[user] comienza a cincelar una parte de [src].</span>")
 
 	if(!do_after(user, work_time))
 		return ITEM_INTERACT_BLOCKING
@@ -450,7 +450,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	if(istype(tool, /obj/item/natural/stone))
 		playsound(src, 'sound/items/stonestone.ogg', 100)
 		if(prob(35))
-			user.visible_message(span_info("[user] strikes the stone against the rock.</span>"))
+			user.visible_message(span_info("[user] golpea la piedra contra la roca.</span>"))
 			var/datum/effect_system/spark_spread/S = new()
 			var/turf/front = get_step(user, user.dir)
 			S.set_up(1, 1, front)
@@ -496,8 +496,8 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	mineralType = /obj/item/gem
 
 /obj/item/natural/rock/random_ore
-	name = "rock?"
-	desc = "Wait, this shouldn't be here?"
+	name = "¿roca?"
+	desc = "Espera, ¿esto no debería estar aquí?"
 	icon_state = "stonerandom"
 
 /obj/item/natural/rock/random/Initialize()
@@ -517,8 +517,8 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 
 //................	Stone blocks	............... //
 /obj/item/natural/stoneblock
-	name = "stone block"
-	desc = "A rectangular stone block for building."
+	name = "bloque de piedra"
+	desc = "Un bloque de piedra rectangular para la construcción."
 	icon = 'icons/roguetown/items/natural.dmi'
 	icon_state = "stoneblock"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
@@ -537,8 +537,8 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 
 //................ Stone block stack	............... //
 /obj/item/natural/bundle/stoneblock
-	name = "stack of stone blocks"
-	desc = "A stack of stone blocks."
+	name = "pila de bloques de piedra"
+	desc = "Una pila de bloques de piedra."
 	icon_state = "stoneblockbundle1"
 	icon = 'icons/roguetown/items/natural.dmi'
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
@@ -556,7 +556,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	throwforce = 0	// useless for throwing unless solo
 	throw_range = 2
 	w_class = WEIGHT_CLASS_NORMAL
-	stackname = "stone blocks"
+	stackname = "bloques de piedra"
 	stacktype = /obj/item/natural/stoneblock
 	maxamount = 4
 	icon1 = "stoneblockbundle2"

@@ -483,7 +483,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/start/new_player
-	name = "New Player"
+	name = "Nuevo jugador"
 	icon_state = "x"
 
 /obj/effect/landmark/start/new_player/Initialize()
@@ -507,7 +507,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 //observer start
 /obj/effect/landmark/observer_start
-	name = "Observer-Start"
+	name = "Inicio del observador"
 	icon_state = "x"
 
 
@@ -550,7 +550,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/ruin/Initialize(mapload, my_ruin_template)
 	. = ..()
-	name = "ruin_[length(GLOB.ruin_landmarks) + 1]"
+	name = "ruina_[length(GLOB.ruin_landmarks) + 1]"
 	ruin_template = my_ruin_template
 	GLOB.ruin_landmarks |= src
 

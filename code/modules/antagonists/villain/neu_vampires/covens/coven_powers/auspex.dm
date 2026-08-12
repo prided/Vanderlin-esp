@@ -1,6 +1,6 @@
 /datum/coven/auspex
 	name = "Auspex"
-	desc = "Allows to see entities, auras and their health through walls."
+	desc = "Permite ver entidades, auras y su salud a través de las paredes."
 	icon_state = "auspex"
 	power_type = /datum/coven_power/auspex
 	max_level = 2
@@ -12,7 +12,7 @@
 //HEIGHTENED SENSES
 /datum/coven_power/auspex/heightened_senses
 	name = "Heightened Senses"
-	desc = "Enhances your senses far past human limitations."
+	desc = "Mejora tus sentidos mucho más allá de las limitaciones humanas."
 
 	level = 1
 	check_flags = COVEN_CHECK_CONSCIOUS
@@ -39,8 +39,8 @@
 
 //PSYCHIC PROJECTION
 /datum/coven_power/auspex/psychic_projection
-	name = "Psychic Projection"
-	desc = "Leave your body behind and fly across the land."
+	name = "Proyección psíquica"
+	desc = "Deja tu cuerpo atrás y vuela por la tierra."
 
 	level = 2
 	check_flags = COVEN_CHECK_CONSCIOUS
@@ -77,7 +77,7 @@ GLOBAL_LIST_INIT(astral_projections, list())
 	astral.death()//pretty straightforward isn't it?
 
 /datum/action/cooldown/spell/undirected/astral_toggle
-	name = "Toggle Tangibility"
+	name = "Alternar tangibilidad"
 	desc = "Turn into a visible copy of your body, able to speak and bump into doors. But note that the slightest source of damage will dispel your astral projection altogether."
 	button_icon_state = "astral_toggle"
 	button_icon = 'icons/mob/actions/spells/vampire.dmi'
@@ -181,7 +181,7 @@ GLOBAL_LIST_INIT(astral_projections, list())
 					if (M.client)
 						M.playsound_local(loc, get_sfx("disappear_sound"), 75, 0, -2)
 			anchor.key = key
-			to_chat(anchor, span_notice("You reconnect with your body.") )
+			to_chat(anchor, span_notice("Te reconectas con tu cuerpo.") )
 			anchor.ajourn = null
 	invisibility = 101
 	density = FALSE
@@ -208,7 +208,7 @@ GLOBAL_LIST_INIT(astral_projections, list())
 						if (M.client)
 							M.playsound_local(loc, get_sfx("disappear_sound"), 75, 0, -2)
 				anchor.key = key
-				to_chat(anchor, span_notice("You reconnect with your body.") )
+				to_chat(anchor, span_notice("Te reconectas con tu cuerpo.") )
 				anchor.ajourn = null
 		invisibility = 101
 		density = FALSE
@@ -240,13 +240,13 @@ GLOBAL_LIST_INIT(astral_projections, list())
 				. += span_notice("You check yourself to see how others would see you were you tangible:")
 				anchor.examine(user)
 			else if (user?.clan)
-				. += span_notice("It's an astral projection.")
+				. += span_notice("Es una proyección astral.")
 			else
-				. += span_cult("Wait something's not right here.")
+				. += span_cult("Espera, algo no está bien aquí.")
 		else if (anchor)
 			. += anchor.examine(user)//examining the astral projection alone won't be enough to see through it, although the user might want to make sure they cannot be identified first.
 	else
-		. +=  span_cult("Wait something's not right here.")
+		. +=  span_cult("Espera, algo no está bien aquí.")
 
 //no pulling stuff around
 /mob/living/simple_animal/hostile/retaliate/astral_projection/start_pulling(atom/movable/AM, state, force = pull_force, suppress_message = FALSE, obj/item/item_override, accurate = FALSE)

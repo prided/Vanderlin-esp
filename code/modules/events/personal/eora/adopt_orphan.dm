@@ -1,5 +1,5 @@
 /datum/round_event_control/adoption_call
-	name = "Adoption Call"
+	name = "Llamada de adopción"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/adoption_call
 	weight = 7
@@ -76,7 +76,7 @@
 	chosen_one.add_spell(/datum/action/cooldown/spell/adopt_child)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE EORA'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE EORA!"),
 		span_notice("Eora weeps for the orphaned children! Find an orphan and adopt them as your own child to earn her favor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/vo/female/gen/giggle (1).ogg', 100)

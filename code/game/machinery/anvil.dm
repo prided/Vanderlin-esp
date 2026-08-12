@@ -25,11 +25,11 @@
 		if(working_material.currecipe)
 			. += span_warning("It is currently being worked on to become \a [working_material.currecipe.name].")
 		if(HAS_TRAIT(working_material, TRAIT_NEEDS_QUENCH))
-			. += span_warning("[working_material] is too hot to touch.")
+			. += span_warning("[working_material] está demasiado caliente para tocarlo.")
 
 /obj/machinery/anvil/attack_hand(mob/living/user, list/modifiers)
 	if(smithing)
-		to_chat(user, span_warning("[src] is currently being worked on!"))
+		to_chat(user, span_warning("¡Actualmente se está trabajando en [src]!"))
 		return TRUE
 	if(working_material)
 		return working_material.attack_hand(user, modifiers)
@@ -42,7 +42,7 @@
 
 /obj/machinery/anvil/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(smithing)
-		to_chat(user, span_warning("[src] is currently being worked on!"))
+		to_chat(user, span_warning("¡Actualmente se está trabajando en [src]!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/obj/item/actual_attacking_item = tool
@@ -103,7 +103,7 @@
 
 	var/skill_value = GET_MOB_SKILL_VALUE(user, working_material.anvilrepair)
 	if(skill_value <= 0)
-		to_chat(user, span_warning("You don't know enough about this craft to restore [working_material]."))
+		to_chat(user, span_warning("No sabes lo suficiente sobre este oficio para restaurar [working_material]."))
 		return FALSE
 
 	var/expected_ingot_type
@@ -116,7 +116,7 @@
 			if(istype(expected_ingot_type, /obj/item/ingot/steel_slag))
 				expected_ingot_type = /obj/item/ingot/steel
 	if(!expected_ingot_type || !istype(item, expected_ingot_type))
-		to_chat(user, span_warning("This isn't the right material to restore [working_material]."))
+		to_chat(user, span_warning("Este no es el material adecuado para restaurar [working_material]."))
 		return FALSE
 
 	if(!HAS_TRAIT(working_material, TRAIT_NEEDS_QUENCH))
@@ -194,7 +194,7 @@
 		return
 
 	if(quality_score >= 80)
-		user.visible_message(span_greentext("[user] deftly strikes the bar!"))
+		user.visible_message(span_greentext("¡[user] golpea hábilmente la barra!"))
 	else if(quality_score >= 40)
 		user.visible_message(span_info("[user] strikes the bar!"))
 	else
@@ -222,7 +222,7 @@
 
 	recipe.handle_creation(loc, user)
 
-	user?.visible_message(span_info("[user] finishes crafting \the [initial(output_item_path.name)]!"))
+	user?.visible_message(span_info("¡[user] termina de elaborar \the [initial(output_item_path.name)]!"))
 	qdel(working_material)
 
 /obj/machinery/anvil/proc/choose_recipe(mob/living/user)

@@ -5,7 +5,7 @@
 	recruitment_faction = "Inquisition"
 	recruitment_message = "You will serve Psydon's will, %RECRUIT!"
 	accept_message = "F-fine just don't kill me!"
-	refuse_message = "I FOLLOW MY GOD INTO DEATH!!!"
+	refuse_message = "SIGO A MI DIOS HASTA LA MUERTE!!!"
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/adept/cast(mob/living/carbon/human/cast_on)
 	. = ..()
@@ -13,6 +13,6 @@
 		return
 	//Can't convert devoted faithfuls
 	if(cast_on.has_quirk(/datum/quirk/vice/addiction/godfearing))
-		cast_on.say("I FOLLOW MY GOD INTO DEATH!!!")
+		cast_on.say("SIGO A MI DIOS HASTA LA MUERTE!!!")
 		return FALSE
 	return TRUE

@@ -48,7 +48,7 @@
 	if(!can_suicide())
 		return FALSE
 
-	var/confirm = tgui_alert(src, "Are you sure you want to commit suicide?", "Confirm Suicide", list("Yes", "No"))
+	var/confirm = tgui_alert(src, "¿Estás seguro de que quieres suicidarte?", "Confirmar suicidio", list("Yes", "No"))
 
 	// ensure our situation didn't change while we were sleeping waiting for the tgui_alert.
 	if(!can_suicide() || (ckey != oldkey))
@@ -57,7 +57,7 @@
 	if(confirm == "Yes")
 		return TRUE
 
-	balloon_alert(src, "suicide attempt aborted!")
+	balloon_alert(src, "¡Intento de suicidio abortado!")
 	return FALSE
 
 /// Checks if we are in a valid state to suicide (not already suiciding, capable of actually killing ourselves, area checks, etc.) Returns TRUE if we can suicide, FALSE if we can not.
@@ -68,7 +68,7 @@
 
 	var/area/checkable = get_area(src)
 	if(checkable.area_flags & BLOCK_SUICIDE)
-		to_chat(src, span_warning("I can't commit suicide here!"))
+		to_chat(src, span_warning("¡No puedo suicidarme aquí!"))
 		return FALSE
 	switch(stat)
 		if(CONSCIOUS)
@@ -76,9 +76,9 @@
 		if(SOFT_CRIT, HARD_CRIT)
 			to_chat(src, span_warning("I can't commit suicide while in a critical condition!"))
 		if(UNCONSCIOUS)
-			to_chat(src, span_warning("I need to be conscious to commit suicide!"))
+			to_chat(src, span_warning("¡Necesito estar consciente para suicidarme!"))
 		if(DEAD)
-			to_chat(src, span_warning("I'm already dead!"))
+			to_chat(src, span_warning("¡Ya estoy muerto!"))
 	return FALSE
 
 /mob/living/carbon/can_suicide()

@@ -54,7 +54,7 @@
 /datum/hud/var/atom/movable/screen/action_bar/resistdelay/resistdelay
 
 /atom/movable/screen/action_bar/resistdelay
-	name = "resist delay"
+	name = "resistir el retraso"
 	icon = 'icons/mob/roguehud.dmi'
 	icon_state = ""
 

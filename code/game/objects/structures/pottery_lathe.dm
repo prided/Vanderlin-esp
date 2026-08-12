@@ -1,5 +1,5 @@
 /obj/item/natural/clay
-	name = "clay"
+	name = "arcilla"
 	icon_state = "stone1"
 	main_material = /datum/material/clay
 
@@ -9,7 +9,7 @@
 
 /obj/item/natural/clay/set_material_information()
 	. = ..()
-	name = "[LOWER_TEXT(initial(main_material.name))] clay lump"
+	name = "[LOWER_TEXT(initial(main_material.name))] terrón de arcilla"
 
 /obj/structure/pottery_lathe
 	name = "potter's lathe"
@@ -99,7 +99,7 @@
 				continue
 			recipes |= new recipe
 
-	var/datum/pottery_recipe/choice = input(user, "Choose a recipe to start", src) as anything in recipes
+	var/datum/pottery_recipe/choice = input(user, "Elige una receta para empezar", src) as anything in recipes
 	if(!choice)
 		return FALSE
 	in_progress = new choice.type

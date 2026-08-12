@@ -20,7 +20,7 @@
 	contains = /obj/item/storage/backpack/satchel
 
 /datum/supply_pack/storage/backpack
-	name = "Backpack"
+	name = "Mochila"
 	cost = 20
 	contains = /obj/item/storage/backpack/backpack
 
@@ -35,6 +35,6 @@
 	contains = /obj/item/weapon/scabbard/sword
 
 /datum/supply_pack/storage/tray
-	name = "Tray"
+	name = "Bandeja"
 	cost = 10
 	contains = /obj/item/tray

@@ -14,7 +14,7 @@
 
 /datum/verbs/menu/Settings/verb/setup_character()
 	set name = "Game Preferences"
-	set category = "Preferences.Options"
+	set category = "Preferencias.Opciones"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.show_choices(usr)
@@ -22,14 +22,14 @@
 
 /client/verb/setup_character()
 	set name = "Game Preferences"
-	set category = "Preferences.Options"
+	set category = "Preferencias.Opciones"
 	set desc = ""
 	if(prefs)
 		usr.client.prefs.show_choices(usr, 4)
 
 /client/verb/stop_sounds_rogue()
 	set name = "StopSounds"
-	set category = "Preferences.Sound"
+	set category = "Preferencias.Sonido"
 	set desc = ""
 	if(mob)
 		SEND_SOUND(mob, sound(null))
@@ -288,7 +288,7 @@ GLOBAL_LIST_INIT(ghost_forms, sortList(list("ghost","ghostking","ghostian2","ske
 	if(!is_content_unlocked())
 		alert("This setting is for accounts with BYOND premium only.")
 		return
-	var/new_form = input(src, "Thanks for supporting BYOND - Choose your ghostly form:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_forms
+	var/new_form = input(src, "Gracias por apoyar BYOND - Elige tu forma fantasmal:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_forms
 	if(new_form)
 		prefs.write_preference(/datum/preference/choiced/ghost_form, new_form)
 		prefs.save_preferences()
@@ -299,7 +299,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	if(!is_content_unlocked())
 		alert("This setting is for accounts with BYOND premium only.")
 		return
-	var/new_orbit = input(src, "Thanks for supporting BYOND - Choose your ghostly orbit:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_orbits
+	var/new_orbit = input(src, "Gracias por apoyar BYOND - Elige tu órbita fantasmal:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_orbits
 	if(new_orbit)
 		prefs.write_preference(/datum/preference/choiced/ghost_orbit, new_orbit)
 		prefs.save_preferences()
@@ -320,14 +320,14 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 		prefs.save_preferences()
 
 /client/verb/pick_ghost_customization()
-	set name = "Ghost Customization"
-	set category = "Preferences"
+	set name = "Personalización de fantasmas"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	if(!holder)
 		return
 	if(is_content_unlocked())
-		switch(tgui_alert(usr, "Which setting do you want to change?", "Which", list("Ghost Form","Ghost Orbit","Ghost Accessories")))
+		switch(tgui_alert(usr, "¿Qué configuración quieres cambiar?", "Which", list("Ghost Form","Ghost Orbit","Ghost Accessories")))
 			if("Ghost Form")
 				pick_form()
 			if("Ghost Orbit")
@@ -338,8 +338,8 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 		pick_ghost_accs()
 
 /client/verb/pick_ghost_others()
-	set name = "Ghosts of Others"
-	set category = "Preferences"
+	set name = "Fantasmas de otros"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	if(!holder)
@@ -360,7 +360,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 
 /client/verb/toggle_intent_style()
 	set name = "Toggle Intent Selection Style"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	if(!holder)
@@ -372,7 +372,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 
 /client/verb/toggle_ghost_hud_pref()
 	set name = "Toggle Ghost HUD"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	if(!holder)
@@ -387,7 +387,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 /client/verb/toggle_inquisition() // warning: unexpected inquisition
 	set name = "Toggle Inquisitiveness"
 	set desc = ""
-	set category = "Preferences"
+	set category = "Preferencias"
 	set hidden = 1
 	if(!holder)
 		return
@@ -402,7 +402,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 //Admin Preferences
 /client/proc/toggleadminhelpsound()
 	set name = "Hear/Silence Adminhelps"
-	set category = "Preferences.Admin"
+	set category = "Preferencias.Admin"
 	set desc = ""
 	if(!holder)
 		return
@@ -413,7 +413,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 
 /client/proc/toggleannouncelogin()
 	set name = "Do/Don't Announce Login"
-	set category = "Preferences.Admin"
+	set category = "Preferencias.Admin"
 	set desc = ""
 	if(!holder)
 		return
@@ -424,7 +424,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 
 /client/proc/toggle_hear_radio()
 	set name = "Show/Hide Radio Chatter"
-	set category = "Preferences.Admin"
+	set category = "Preferencias.Admin"
 	set desc = ""
 	if(!holder)
 		return
@@ -434,8 +434,8 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Radio Chatter", "[prefs.preference_has_flag(/datum/preference/bitwise/chat_toggles, CHAT_RADIO) ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/deadchat()
-	set name = "Show/Hide Deadchat"
-	set category = "Preferences.Admin"
+	set name = "Mostrar/Ocultar Deadchat"
+	set category = "Preferencias.Admin"
 	set desc ="Toggles seeing deadchat"
 	if(!holder)
 		return
@@ -445,8 +445,8 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Deadchat Visibility", "[prefs.preference_has_flag(/datum/preference/bitwise/chat_toggles, CHAT_DEAD) ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggleprayers()
-	set name = "Show/Hide Prayers"
-	set category = "Preferences.Admin"
+	set name = "Mostrar/Ocultar Oraciones"
+	set category = "Preferencias.Admin"
 	set desc = ""
 	if(!holder)
 		return
@@ -456,8 +456,8 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Prayer Visibility", "[prefs.preference_has_flag(/datum/preference/bitwise/chat_toggles, CHAT_PRAYER) ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_prayer_sound()
-	set name = "Hear/Silence Prayer Sounds"
-	set category = "Preferences.Admin"
+	set name = "Escuchar/Silenciar sonidos de oración"
+	set category = "Preferencias.Admin"
 	set desc = ""
 	if(!holder)
 		return
@@ -468,14 +468,14 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 
 /client/proc/colorasay()
 	set name = "Set Admin Say Color"
-	set category = "Preferences.Admin"
+	set category = "Preferencias.Admin"
 	set desc = ""
 	if(!holder)
 		return
 	if(!CONFIG_GET(flag/allow_admin_asaycolor))
 		to_chat(src, "Custom Asay color is currently disabled by the server.")
 		return
-	var/new_asaycolor = input(src, "Please select your ASAY color.", "ASAY color", prefs.read_preference(/datum/preference/color/asaycolor)) as color|null
+	var/new_asaycolor = input(src, "Seleccione su color ASAY.", "ASAY color", prefs.read_preference(/datum/preference/color/asaycolor)) as color|null
 	if(new_asaycolor)
 		prefs.write_preference(/datum/preference/color/asaycolor, new_asaycolor)
 		prefs.save_preferences()
@@ -485,7 +485,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 /client/proc/resetasaycolor()
 	set name = "Reset your Admin Say Color"
 	set desc = ""
-	set category = "Preferences.Admin"
+	set category = "Preferencias.Admin"
 	if(!holder)
 		return
 	if(!CONFIG_GET(flag/allow_admin_asaycolor))
@@ -497,7 +497,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 /client/proc/set_ghost_sprite()
 	set name = "Set Ghost Icon State"
 	set desc = "This is the ghost icon state you will use when ghosted"
-	set category = "Preferences.Admin"
+	set category = "Preferencias.Admin"
 	if(!holder)
 		return
 	var/new_icon = input(src, "Input the typepath.", "GHOST ICON", prefs.admin_ghost_icon) as text|null
@@ -514,7 +514,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 /client/proc/set_ui_theme()
 	set name = "Toggle UI theme"
 	set desc = "Toggle UI theme"
-	set category = "Preferences.Admin"
+	set category = "Preferencias.Admin"
 	if(!holder)
 		return
 
@@ -523,11 +523,11 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	else
 		prefs.write_preference(/datum/preference/choiced/ui_theme, UI_PREFERENCE_LIGHT_MODE)
 
-	to_chat(src, span_notice("UI theme switched to [prefs.read_preference(/datum/preference/choiced/ui_theme)]"))
+	to_chat(src, span_notice("El tema de la interfaz de usuario cambió a [prefs.read_preference(/datum/preference/choiced/ui_theme)]"))
 
 /client/proc/set_personal_admin_ooc_color()
-	set name = "Set Personal Admin OOC Color"
-	set category = "Preferences.Admin"
+	set name = "Establecer color OOC de administrador personal"
+	set category = "Preferencias.Admin"
 	set desc = ""
 	if(!holder)
 		return
@@ -542,7 +542,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 /client/proc/reset_personal_admin_ooc_color()
 	set name = "Reset Personal Admin OOC Color"
 	set desc = ""
-	set category = "Preferences.Admin"
+	set category = "Preferencias.Admin"
 	if(!holder)
 		return
 	prefs.write_preference(/datum/preference/color/ooccolor, null)

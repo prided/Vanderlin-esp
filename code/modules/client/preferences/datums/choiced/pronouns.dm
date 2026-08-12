@@ -20,10 +20,10 @@
 
 	if(length(allowed_pronouns) == 1)
 		prefs.write_preference(/datum/preference/choiced/pronouns, allowed_pronouns[1])
-		to_chat(user, span_warning("This species can only use [prefs.read_preference(/datum/preference/choiced/pronouns)]."))
+		to_chat(user, span_warning("Esta especie solo puede utilizar [prefs.read_preference(/datum/preference/choiced/pronouns)]."))
 		return
 
 	var/pronouns_input = browser_input_list(user, "CHOOSE HOW MORTALS REFER TO YOUR HERO", "DISOBEY SOCIAL NORMS", allowed_pronouns)
 	if(pronouns_input)
 		prefs.write_preference(/datum/preference/choiced/pronouns, pronouns_input)
-		to_chat(user, span_warning("Your character's pronouns are now [prefs.read_preference(/datum/preference/choiced/pronouns)]."))
+		to_chat(user, span_warning("Los pronombres de tu personaje ahora son [prefs.read_preference(/datum/preference/choiced/pronouns)]."))

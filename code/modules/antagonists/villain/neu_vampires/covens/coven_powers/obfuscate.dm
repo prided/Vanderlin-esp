@@ -4,7 +4,7 @@
 
 /datum/coven/obfuscate
 	name = "Obfuscate"
-	desc = "Makes you less noticeable for living and un-living beings."
+	desc = "Te hace menos visible para los seres vivos y no vivos."
 	icon_state = "obfuscate"
 	power_type = /datum/coven_power/obfuscate
 	experience_multiplier = 1.5
@@ -84,7 +84,7 @@
 
 //UNSEEN PRESENCE - Can move while stealthed, but only walking speed
 /datum/coven_power/obfuscate/unseen_presence
-	name = "Unseen Presence"
+	name = "Presencia invisible"
 	desc = "Move among the crowds without ever being noticed. Achieve invisibility while walking."
 	level = 2
 
@@ -172,7 +172,7 @@
 			potential_targets[target.real_name] = target
 
 	if(!length(potential_targets))
-		to_chat(owner, span_warning("There are no suitable targets nearby to mimic!"))
+		to_chat(owner, span_warning("¡No hay objetivos adecuados cerca para imitar!"))
 		return FALSE
 
 	var/chosen_name = input(owner, "Choose someone to mimic:", "Mask of a Thousand Faces") as null|anything in potential_targets
@@ -297,7 +297,7 @@
 		viewer.flash_fullscreen("blackflash")
 		viewer.set_eyes_closed(TRUE)
 		found_ping(viewer, owner.client, "hidden", 10 SECONDS)
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), viewer, span_hypnophrase("Wait... what was I doing?")), 3 SECONDS)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), viewer, span_hypnophrase("Espera... ¿qué estaba haciendo?")), 3 SECONDS)
 
 /datum/coven_power/obfuscate/vanish_from_the_minds_eye/deactivate()
 	. = ..()
@@ -361,7 +361,7 @@
 		target.alpha = 255
 		UnregisterSignal(target, aggressive_signals)
 		if(target != owner)
-			to_chat(target, span_warning("The supernatural veil fades away..."))
+			to_chat(target, span_warning("El velo sobrenatural se desvanece..."))
 
 	cloaked_mobs.Cut()
 
@@ -378,7 +378,7 @@
 	SIGNAL_HANDLER
 
 	var/mob/living/ally = source
-	to_chat(ally, span_danger("Your actions break the supernatural veil!"))
+	to_chat(ally, span_danger("¡Tus acciones rompen el velo sobrenatural!"))
 
 	// Remove this ally from the cloak
 	ally.alpha = 255

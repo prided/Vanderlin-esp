@@ -23,6 +23,6 @@
 	mana_overloaded = FALSE
 
 /mob/stop_mana_overload()
-	to_chat(src, span_notice("You feel your body returning to normal."))
+	to_chat(src, span_notice("Sientes que tu cuerpo vuelve a la normalidad."))
 
 	return ..()

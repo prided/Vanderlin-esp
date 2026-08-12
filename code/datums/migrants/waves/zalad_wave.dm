@@ -250,7 +250,7 @@
 			backr = /obj/item/weapon/polearm/spear/billhook
 
 /datum/migrant_role/zalad_guard
-	name = "Zalad Soldier"
+	name = "Zalad Soldado"
 	greet_text = "You are a slave soldier from Deshret, sent as an escort to the emirs on a foreign land, do not fail them."
 	migrant_job = /datum/job/migrant/zalad_migration/zalad_guard
 
@@ -277,7 +277,7 @@
 	)
 
 /datum/job/migrant/zalad_migration/zalad_guard
-	title = "Zalad Soldier"
+	title = "Zalad Soldado"
 	tutorial = "You are a slave soldier from Deshret, sent as an escort to the emirs on a foreign land, do not fail them."
 	outfit = /datum/outfit/zalad_migration/zalad_guard
 	allowed_sexes = list(MALE, FEMALE)

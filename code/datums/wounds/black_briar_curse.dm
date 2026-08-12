@@ -2,7 +2,7 @@
 /datum/wound/black_briar_curse
 	abstract_type = (/datum/wound/black_briar_curse)
 
-	category = "Disease"
+	category = "Enfermedad"
 	name = "umbrosal cordycepsis"
 	desc = "Commonly referred to as the Black Briar curse."
 	check_name = "<span class='briar'><B>BLACK BRIAR</B></span>"
@@ -277,7 +277,7 @@
 	owner.adjust_energy(max(0, (GET_MOB_ATTRIBUTE_VALUE(owner, STAT_ENDURANCE) - 20)) * (SSmobs.wait * 0.1) * infection_percent)
 	if(infection_percent >= 1)
 		if(owner.can_feel_pain())
-			to_chat(owner, span_briar("IT HURTS! IT HURTS!"))
+			to_chat(owner, span_briar("¡DUELE! ¡DUELE!"))
 			if(prob(80))
 				owner.emote(pick("agony", "painscream", "firescream", "laugh"))
 		owner.Paralyze(3 SECONDS, TRUE)

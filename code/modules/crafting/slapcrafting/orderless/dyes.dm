@@ -1,7 +1,7 @@
 /*	.................   Cheap dye crafting   ................... */
 /datum/orderless_slapcraft/cheapdye
-	name = "cheap dyes"
-	recipe_name = "Cheap dyes"
+	name = "tintes baratos"
+	recipe_name = "Tintes baratos"
 	starting_item = /obj/item/fertilizer/ash
 	related_skill = /datum/attribute/skill/misc/sewing
 	skill_xp_gained = 2

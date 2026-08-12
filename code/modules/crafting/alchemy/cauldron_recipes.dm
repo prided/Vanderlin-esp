@@ -1,6 +1,6 @@
 /datum/alch_cauldron_recipe
 	abstract_type = /datum/alch_cauldron_recipe
-	var/category = "Potions"
+	var/category = "Pociones"
 	var/recipe_name = ""
 	var/smells_like = "nothing"
 	var/list/output_reagents = list()
@@ -45,8 +45,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/stam_poison
-	recipe_name = "Stamina Poison"
-	smells_like = "kicked up dust"
+	recipe_name = "Veneno de resistencia"
+	smells_like = "levantó polvo"
 	output_reagents = list(/datum/reagent/stampoison = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/air = 9,
@@ -54,7 +54,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/health_potion
-	recipe_name = "Lifeblood Potion"
+	recipe_name = "Poción de sangre vital"
 	smells_like = "metal"
 	output_reagents = list(/datum/reagent/medicine/healthpot = 25)
 	required_essences = list(
@@ -64,7 +64,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/mana_potion
 	recipe_name = "Mana"
-	smells_like = "dry air"
+	smells_like = "aire seco"
 	output_reagents = list(/datum/reagent/medicine/manapot = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/water = 9,
@@ -72,8 +72,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/stamina_potion
-	recipe_name = "Stamina Potion"
-	smells_like = "wet grass"
+	recipe_name = "Poción de resistencia"
+	smells_like = "hierba mojada"
 	output_reagents = list(/datum/reagent/medicine/stampot = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/air = 9,
@@ -82,7 +82,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/antidote
 	recipe_name = "Antidote"
-	smells_like = "rotten cheese"
+	smells_like = "queso podrido"
 	output_reagents = list(/datum/reagent/medicine/antidote = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/earth = 5,
@@ -110,7 +110,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/disease_cure
-	recipe_name = "Disease Cure"
+	recipe_name = "Cura de enfermedades"
 	smells_like = "saiga droppings"
 	output_reagents = list(/datum/reagent/medicine/diseasecure = 25)
 	required_essences = list(
@@ -130,8 +130,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/big_health_potion
-	recipe_name = "Strong Lifeblood Potion"
-	smells_like = "rich metal"
+	recipe_name = "Poción de sangre fuerte"
+	smells_like = "metal rico"
 	output_reagents = list(/datum/reagent/medicine/stronghealth = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/life = 4,
@@ -140,8 +140,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/big_stamina_potion
-	recipe_name = "Strong Stamina Potion"
-	smells_like = "freshly cut grass"
+	recipe_name = "Poción de resistencia fuerte"
+	smells_like = "hierba recién cortada"
 	output_reagents = list(/datum/reagent/medicine/strongstam = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/air = 9,
@@ -174,8 +174,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/per_potion
-	recipe_name = "Perception of Cat Eyes"
-	smells_like = "cat urine"
+	recipe_name = "Percepción de los ojos de gato"
+	smells_like = "orina de gato"
 	output_reagents = list(/datum/reagent/buff/perception = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/fire = 18,
@@ -196,7 +196,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/con_potion
-	recipe_name = "Constitution of Stone Flesh"
+	recipe_name = "Constitución de carne de piedra"
 	smells_like = "petrichor"
 	output_reagents = list(/datum/reagent/buff/constitution = 25)
 	required_essences = list(
@@ -206,8 +206,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/int_potion
-	recipe_name = "Intelligence of Ancient Minds"
-	smells_like = "fresh moss"
+	recipe_name = "Inteligencia de mentes antiguas"
+	smells_like = "musgo fresco"
 	output_reagents = list(/datum/reagent/buff/intelligence = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/water = 18,
@@ -217,8 +217,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/spd_potion
-	recipe_name = "Speed of Fleeting Spirits"
-	smells_like = "sea salt"
+	recipe_name = "Velocidad de los espíritus fugaces"
+	smells_like = "sal marina"
 	output_reagents = list(/datum/reagent/buff/speed = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/water = 18,
@@ -240,7 +240,7 @@ Keep them reasonable to make
 //Misc
 
 /datum/alch_cauldron_recipe/gender_potion
-	recipe_name = "Gender Potion"
+	recipe_name = "Poción de género"
 	smells_like = "flowery nectars"
 	output_reagents = list(/datum/reagent/medicine/gender_potion = 25)
 	required_essences = list(
@@ -265,7 +265,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/blistergall_potion
 	recipe_name = "Blistergall"
-	smells_like = "acidic rot"
+	smells_like = "podredumbre ácida"
 	output_reagents = list(/datum/reagent/poison/blistergall = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/fire = 9,
@@ -275,7 +275,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/gloomvenom_potion
 	recipe_name = "Gloomvenom"
-	smells_like = "damp caves"
+	smells_like = "cuevas húmedas"
 	output_reagents = list(/datum/reagent/poison/gloomvenom = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/void = 12,
@@ -285,7 +285,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/hexblood_poison_potion
 	recipe_name = "Hexblood Poison"
-	smells_like = "burnt copper"
+	smells_like = "cobre quemado"
 	output_reagents = list(/datum/reagent/poison/hexblood_poison = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/death = 9,
@@ -306,7 +306,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/soulbane_ichor_potion
 	recipe_name = "Soulbane Ichor"
-	smells_like = "nothing and death"
+	smells_like = "nada y muerte"
 	output_reagents = list(/datum/reagent/poison/soulbane_ichor = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/death = 21,
@@ -327,8 +327,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/mirelung_brew_potion
-	recipe_name = "Mirelung Brew"
-	smells_like = "stagnant water"
+	recipe_name = "Cerveza Mirelung"
+	smells_like = "agua estancada"
 	output_reagents = list(/datum/reagent/poison/mirelung_brew = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/water = 12,
@@ -358,7 +358,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/vitalroot_draught_potion
 	recipe_name = "Vitalroot Draught"
-	smells_like = "deep earth and mineral water"
+	smells_like = "tierra profunda y agua mineral"
 	output_reagents = list(/datum/reagent/medicine/vitalroot_draught = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/life = 9,
@@ -379,7 +379,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/pale_serum_potion
 	recipe_name = "Pale Serum"
-	smells_like = "clean sterility"
+	smells_like = "esterilidad limpia"
 	output_reagents = list(/datum/reagent/medicine/pale_serum = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/order = 12,
@@ -388,8 +388,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/crystalline_lymph_potion
-	recipe_name = "Crystalline Lymph"
-	smells_like = "ionized air"
+	recipe_name = "Linfa cristalina"
+	smells_like = "aire ionizado"
 	output_reagents = list(/datum/reagent/medicine/crystalline_lymph = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/crystal = 9,
@@ -399,7 +399,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/bloodelder_wine_potion
 	recipe_name = "Bloodelder Wine"
-	smells_like = "fermented fruit and copper"
+	smells_like = "fruta fermentada y cobre"
 	output_reagents = list(/datum/reagent/medicine/bloodelder_wine = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/life = 12,
@@ -409,7 +409,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/nervebind_extract_potion
 	recipe_name = "Nervebind Extract"
-	smells_like = "damp fungus"
+	smells_like = "hongo húmedo"
 	output_reagents = list(/datum/reagent/medicine/nervebind_extract = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/void = 9,
@@ -418,7 +418,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/stonevein_broth_potion
-	recipe_name = "Stonevein Broth"
+	recipe_name = "Caldo de vena de piedra"
 	smells_like = "wet stone"
 	output_reagents = list(/datum/reagent/medicine/stonevein_broth = 25)
 	required_essences = list(
@@ -450,7 +450,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/marrowbrew_potion
 	recipe_name = "Marrowbrew"
-	smells_like = "bone broth"
+	smells_like = "caldo de huesos"
 	output_reagents = list(/datum/reagent/medicine/marrowbrew = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/earth = 9,
@@ -459,8 +459,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/spiritwood_elixir_potion
-	recipe_name = "Spiritwood Elixir"
-	smells_like = "ancient forest"
+	recipe_name = "Elixir de madera espiritual"
+	smells_like = "bosque antiguo"
 	output_reagents = list(/datum/reagent/medicine/spiritwood_elixir = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/life = 12,
@@ -471,7 +471,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/coldvein_compress_potion
 	recipe_name = "Coldvein Compress"
-	smells_like = "winter air"
+	smells_like = "aire de invierno"
 	output_reagents = list(/datum/reagent/medicine/coldvein_compress = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/frost = 9,
@@ -554,7 +554,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/cryzaline_suspension
-	recipe_name = "Cryzaline Suspension"
+	recipe_name = "Suspensión crizalina"
 	smells_like = "biting frost"
 	output_reagents = list(/datum/reagent/cryzaline_suspension = 25)
 	required_essences = list(

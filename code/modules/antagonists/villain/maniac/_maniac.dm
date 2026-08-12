@@ -20,16 +20,16 @@
 
 /datum/antagonist/maniac
 	name = "Maniac"
-	roundend_category = "Maniacs"
+	roundend_category = "maníacos"
 	antagpanel_category = "Maniac"
 	antag_memory = "<b>Recently I've been visited by a lot of VISIONS. They're all about another WORLD, ANOTHER life. I will do EVERYTHING to know the TRUTH, and return to the REAL world.</b>"
 	job_rank = ROLE_MANIAC
 	antag_hud_type = ANTAG_HUD_MANIAC
 	antag_hud_name = "generic_villain"
 	confess_lines = list(
-		"I gave them no time to squeal.",
+		"No les di tiempo para chillar.",
 		"I shant quit ripping them.",
-		"They deserve to be put at my blade.",
+		"Merecen ser puestos en mi espada.",
 		"Do what thou wilt shall be the whole of the law.",
 	)
 	/// Traits we apply to the owner
@@ -257,7 +257,7 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 	if(GLOB.maniac_highlander) // another Maniac has TRIUMPHED before we could
 		if(src.owner && src.owner.current)
 			var/straggler = src.owner.current
-			to_chat(straggler, SPAN_GOD_GRAGGAZO("IT'S NO USE! I CAN'T WAKE UP!"))
+			to_chat(straggler, SPAN_GOD_GRAGGAZO("¡NO SIRVE DE NADA! ¡NO PUEDO DESPERTAR!"))
 		return
 	GLOB.maniac_highlander = 1
 	STOP_PROCESSING(SSobj, src)
@@ -303,18 +303,18 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 		to_chat(trey_liam, SPAN_GOD_GRAGGAZO("<span class='reallybig'>... WHERE AM I? ...</span>"))
 		sleep(1.5 SECONDS)
 		var/static/list/slop_lore = list(
-			SPAN_GOD_GRAGGAZO("... Rockhill? Vanderlin? No ... They don't exist ..."),
-			SPAN_GOD_GRAGGAZO("... My name is Trey. Trey Liam, Scientific Overseer ..."),
+			SPAN_GOD_GRAGGAZO("...Rockhill? ¿Vanderlin? No... No existen..."),
+			SPAN_GOD_GRAGGAZO("... Mi nombre es Trey. Trey Liam, supervisor científico..."),
 			SPAN_GOD_GRAGGAZO("... I'm on the Aeon, a self sustaining ship, used to preserve what remains of humanity ..."),
-			SPAN_GOD_GRAGGAZO("... Launched into the stars, preserving their memories ... Their personalities ..."),
+			SPAN_GOD_GRAGGAZO("... Lanzados a las estrellas, preservando sus recuerdos... Sus personalidades..."),
 			SPAN_GOD_GRAGGAZO("... Keeps them alive in vessels, oblivious to the catastrophe ..."),
 			SPAN_GOD_GRAGGAZO("... There is no hope left. Only the program lets me live through the avatars ..."),
-			SPAN_GOD_GRAGGAZO("... What have I done?! ..."),
+			SPAN_GOD_GRAGGAZO("... ¡¿Qué he hecho?! ..."),
 		)
 		for(var/slop in slop_lore)
 			to_chat(trey_liam, slop)
 			sleep(3 SECONDS)
-		to_chat(trey_liam, span_big(SPAN_GOD_GRAGGAZO("I have to go back, I have to go back, I have to go back to Vanderlin.")))
+		to_chat(trey_liam, span_big(SPAN_GOD_GRAGGAZO("Tengo que volver, tengo que volver, tengo que volver a Vanderlin.")))
 	else
 		INVOKE_ASYNC(src, GLOBAL_PROC_REF(cant_wake_up), dreamer)
 		cull_competitors(dreamer)
@@ -328,7 +328,7 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 	ADD_TRAIT(target, TRAIT_SHAKY_SPEECH, TRAIT_GENERIC)
 	target.Knockdown(10 SECONDS)
 	to_chat(target, SPAN_GOD_GRAGGAZO("<span class='reallybig'>I CAN'T WAKE UP.</span>"))
-	target.say("I CAN'T WAKE UP!", spans = list("reallybig"), ignore_spam = TRUE)
+	target.say("¡NO PUEDO DESPERTAR!", spans = list("reallybig"), ignore_spam = TRUE)
 	sleep(2 SECONDS)
 	for(var/i in 1 to 10)
 		to_chat(target, SPAN_GOD_GRAGGAZO("<span class='reallybig'>ICANTWAKEUP</span>"))
@@ -361,9 +361,9 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 			REMOVE_TRAIT(C, TRAIT_SCHIZO_AMBIENCE, "/datum/antagonist/maniac")
 			C.log_message("was culled by the TRIUMPH of Maniac [key_name(victor)].", LOG_GAME)
 			sleep(1 SECONDS)
-			to_chat(C, SPAN_GOD_GRAGGAZO("What?! No, no, this can't be!"))
+			to_chat(C, SPAN_GOD_GRAGGAZO("¡¿Qué?! ¡No, no, esto no puede ser!"))
 			sleep(2 SECONDS)
-			to_chat(C, SPAN_GOD_GRAGGAZO("How can I be TOO LATE-"))
+			to_chat(C, SPAN_GOD_GRAGGAZO("¿Cómo puedo llegar DEMASIADO TARDE?"))
 			sleep(1 SECONDS)
 			INVOKE_ASYNC(src, GLOBAL_PROC_REF(cant_wake_up), C)
 			QDEL_LIST(competitor.wonders_made)
@@ -382,7 +382,7 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 			if(objective.check_completion())
 				to_chat(world, "<B>[objective.flavor] #[count]</B>: [objective.explanation_text] <span class='greentext'>TRIUMPH!</span>")
 			else
-				to_chat(world, "<B>[objective.flavor] #[count]</B>: [objective.explanation_text] <span class='redtext'>Failure.</span>")
+				to_chat(world, "<B>[objective.flavor] #[count]</B>: [objective.explanation_text] <span class='redtext'>Fallo.</span>")
 				traitorwin = FALSE
 			count += objective.triumph_count
 
@@ -394,17 +394,17 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 		// if(count)
 		// 	if(owner)
 		// 		owner.adjust_triumphs(count)
-		to_chat(world, span_greentext("The [special_role_text] has TRIUMPHED!"))
+		to_chat(world, span_greentext("¡El [special_role_text] ha TRIUNFADO!"))
 		if(owner?.current)
 			owner.current.playsound_local(get_turf(owner.current), 'sound/misc/triumph.ogg', 100, FALSE, pressure_affected = FALSE)
 	else
-		to_chat(world, span_redtext("The [special_role_text] has FAILED!"))
+		to_chat(world, span_redtext("¡El [special_role_text] ha FALLADO!"))
 		if(owner?.current)
 			owner.current.playsound_local(get_turf(owner.current), 'sound/misc/fail.ogg', 100, FALSE, pressure_affected = FALSE)
 
 /obj/structure/maniac_return_machine
 	name = "Vanderlin Program"
-	desc = "The Vanderlin Program was created by ██████████ in the year ████, allowing humans to explore hostile worlds and environments through remote-controlled bodies without danger to the user's life."
+	desc = "El Programa Vanderlin fue creado por ██████████ en el año ████, permitiendo a los humanos explorar mundos y entornos hostiles a través de cuerpos controlados remotamente sin peligro para la vida del usuario."
 	icon_state = "pylon"
 	icon = 'icons/roguetown/misc/mana_pylon.dmi'
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF

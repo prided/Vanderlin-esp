@@ -34,7 +34,7 @@
 	set_light(1, 1, 1, l_color =  "#ff0d0d")
 	SSroguemachine.cameras += src
 	number = length(SSroguemachine.cameras)
-	name = "face #[number]"
+	name = "cara #[number]"
 
 /obj/structure/fake_machine/camera/Destroy()
 	set_light(0)

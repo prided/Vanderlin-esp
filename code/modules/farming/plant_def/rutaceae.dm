@@ -1,5 +1,5 @@
 /datum/plant_def/tangerine
-	name = "tangerine tree"
+	name = "árbol de mandarina"
 	icon_state = "tangerinetree"
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/fruit/tangerine
 	uproot_loot = list(/obj/item/grown/log/tree/small)

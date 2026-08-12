@@ -76,7 +76,7 @@
 	chargetime = 1
 
 /datum/intent/shoot/puffer/arc
-	name = "arc"
+	name = "arco"
 	icon_state = "inarc"
 	charging_slowdown = 2
 	warnoffset = 20
@@ -91,7 +91,7 @@
 	chargetime = 10
 
 /datum/intent/shoot/musket/arc
-	name = "arc"
+	name = "arco"
 	icon_state = "inarc"
 	charging_slowdown = 3
 	warnoffset = 20
@@ -221,7 +221,7 @@
 	charging_slowdown = 2.5
 
 /datum/intent/arc
-	name = "arc"
+	name = "arco"
 	icon_state = "inarc"
 	tranged = 1
 	warnie = "aimwarn"

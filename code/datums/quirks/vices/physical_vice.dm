@@ -5,7 +5,7 @@
 	duration = 5 SECONDS
 
 /datum/quirk/vice/bad_sight
-	name = "Poor Vision"
+	name = "Mala visión"
 	desc = "I need spectacles to see normally from my years spent reading books."
 	point_value = 2
 
@@ -32,7 +32,7 @@
 		user.apply_status_effect(/datum/status_effect/debuff/badvision)
 
 /datum/quirk/vice/cyclops_right
-	name = "Cyclops (R)"
+	name = "Cíclope (R)"
 	desc = "I lost my right eye long ago. But it made me great at noticing things."
 	point_value = 2
 	traits_to_add = list(TRAIT_CYCLOPS_RIGHT)
@@ -46,7 +46,7 @@
 	return ..()
 
 /datum/quirk/vice/cyclops_left
-	name = "Cyclops (L)"
+	name = "Cíclope (L)"
 	desc = "I lost my left eye long ago. But it made me great at noticing things."
 	point_value = 2
 	traits_to_add = list(TRAIT_CYCLOPS_LEFT)
@@ -60,7 +60,7 @@
 	return ..()
 
 /datum/quirk/vice/tongueless
-	name = "Tongueless"
+	name = "sin lengua"
 	desc = "I said one word too many to a noble, they cut out my tongue. (Being mute is not an excuse to forego roleplay. Use of custom emotes is recommended.)"
 	point_value = 4
 
@@ -83,7 +83,7 @@
 
 /datum/quirk/vice/wooden_arm_right
 	name = "Wooden Arm (R)"
-	desc = "I lost my right arm long ago, but the wooden arm doesn't bleed as much."
+	desc = "Perdí mi brazo derecho hace mucho tiempo, pero el brazo de madera no sangra tanto."
 	point_value = 3
 
 /datum/quirk/vice/wooden_arm_right/on_spawn()
@@ -222,7 +222,7 @@
 	return "[option]"
 
 /datum/quirk/vice/tainted_soul
-	name = "Tainted Soul"
+	name = "Alma contaminada"
 	desc = "You had an unfortunate run-in with a monster. A goblin saved you, but you've never felt the same since."
 	point_value = 2
 	blocked_species = list(
@@ -240,7 +240,7 @@
 
 /datum/quirk/vice/rough_start
 	name = "Rough Start"
-	desc = "You begin your journey drunk, drugged, beaten, with broken legs, and spawn somewhere random in the forest."
+	desc = "Comienzas tu viaje borracho, drogado, golpeado, con las piernas rotas y apareces en algún lugar aleatorio del bosque."
 	point_value = 4
 	apply_order = 10000 ///this should always be first tbh
 	incompatible_quirks = list(
@@ -291,7 +291,7 @@
 	return ..()
 
 /datum/quirk/vice/lost_keys
-	name = "Lost Keys"
+	name = "llaves perdidas"
 	desc = "You've lost your keys! They're somewhere nearby, and you spawn at a vagrant location."
 	point_value = 1
 	incompatible_quirks = list(
@@ -313,7 +313,7 @@
 	if(length(vagrant_spawns))
 		H.forceMove(pick(vagrant_spawns))
 
-	to_chat(H, span_warning("Where did I leave my keys?"))
+	to_chat(H, span_warning("¿Dónde dejé mis llaves?"))
 	return ..()
 
 /datum/quirk/vice/lost_keys/after_job_spawn(datum/job/job)
@@ -382,19 +382,19 @@
 
 /datum/stress_event/darkness
 	stress_change = 2
-	desc = span_red("I can't see! The darkness is terrifying!")
+	desc = span_red("¡No puedo ver! ¡La oscuridad es aterradora!")
 	timer = 1 MINUTES
 
 /datum/quirk/vice/fear_darkness
-	name = "Fear of Darkness"
-	desc = "The dark terrifies you. Without light, you panic and lose control."
+	name = "Miedo a la oscuridad"
+	desc = "La oscuridad te aterroriza. Sin luz, entras en pánico y pierdes el control."
 	point_value = 3
 	var/in_darkness = FALSE
 	var/next_panic = 0
 
 /datum/quirk/vice/fear_darkness/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Scared of the Dark..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Miedo a la oscuridad..."))
 
 /datum/quirk/vice/fear_darkness/on_life(mob/living/user)
 	if(!owner)
@@ -415,7 +415,7 @@
 	if(dark)
 		if(!in_darkness)
 			in_darkness = TRUE
-			to_chat(owner, span_userdanger("THE DARKNESS! I CAN'T SEE!"))
+			to_chat(owner, span_userdanger("¡LA OSCURIDAD! ¡NO PUEDO VER!"))
 			owner.add_stress(/datum/stress_event/darkness)
 
 		if(world.time >= next_panic)
@@ -428,7 +428,7 @@
 	else
 		if(in_darkness)
 			in_darkness = FALSE
-			to_chat(owner, span_notice("Finally, light! I can breathe again..."))
+			to_chat(owner, span_notice("¡Por fin luz! Puedo respirar de nuevo..."))
 
 /datum/quirk/vice/missing_teeth
 	name = "Missing Teeth"
@@ -477,7 +477,7 @@
 	)
 
 /datum/quirk/vice/frail
-	name = "Frail"
+	name = "Frágil"
 	desc = "Due injury, genetics or just any other reason, you are frailer than other people. You get -1 to Constitution and -1 to Strength."
 	point_value = 1
 

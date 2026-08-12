@@ -249,7 +249,7 @@
 
 /obj/structure/quest_counter/proc/process_turnin(mob/user, obj/item/paper/scroll/quest/scroll)
 	if(!scroll.assigned_quest?.complete)
-		say("This contract isn't complete yet, [user.real_name].")
+		say("Este contrato aún no está completo, [user.real_name].")
 		return
 
 	var/datum/quest/Q = scroll.assigned_quest
@@ -280,7 +280,7 @@
 		if(CQ.pledge_ref)
 			var/obj/item/paper/scroll/quest/pledge/PL = CQ.pledge_ref.resolve()
 			var/patron = (!QDELETED(PL) && PL.pledge_title) ? PL.pledge_title : "an anonymous patron"
-			say("The commission \"[Q.title]\", pledged by [patron], has been fulfilled. " + \
+			say("Se ha cumplido la comisión \"[Q.title]\", comprometida por [patron]. " + \
 				"Your reward of [reward] mammons has been dispensed. ([tax_amt] mammons taxed.)")
 		else
 			say(reward > base_reward ? \
@@ -348,7 +348,7 @@
 			continue
 		available[label] = quest_type
 
-	var/mode_choice = tgui_input_list(user, "What kind of custom quest?", "Custom Quest", available)
+	var/mode_choice = tgui_input_list(user, "¿Qué tipo de misión personalizada?", "Misión personalizada", available)
 	if(!mode_choice)
 		return
 
@@ -360,7 +360,7 @@
 		return
 
 	if(!SSquestboard.issue_custom_quest(user, CQ))
-		say("Failed to post the custom quest. Check the fund balance.")
+		say("No se pudo publicar la misión personalizada. Verifique el saldo del fondo.")
 		qdel(CQ)
 		return
 
@@ -387,7 +387,7 @@
 			to_chat(user, span_warning("Only a guild steward can post a pledge here."))
 			return
 		if(PL.pledge_state != "sealed")
-			say("This pledge isn't sealed yet! The issuer must seal it and commit their coins first.")
+			say("¡Este compromiso aún no está sellado! El emisor debe sellarlo y comprometer sus monedas primero.")
 			return
 		var/datum/quest/custom/CQ = PL.post_to_board(user, src)
 		if(CQ)

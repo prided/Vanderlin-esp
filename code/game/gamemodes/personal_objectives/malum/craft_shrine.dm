@@ -1,5 +1,5 @@
 /datum/objective/personal/craft_shrine
-	name = "Build Shrines"
+	name = "construir santuarios"
 	category = "Malum's Chosen"
 	triumph_count = 2
 	rewards = list("2 Triumphs", "Malum grows stronger", "Crafting knowledge")

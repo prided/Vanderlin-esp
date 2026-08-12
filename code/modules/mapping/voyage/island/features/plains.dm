@@ -10,7 +10,7 @@
 	spawn_weight = 50
 
 /datum/island_feature_template/strawberry
-	name = "Strawberry Field"
+	name = "campo de fresas"
 	template_path = /datum/map_template/world_feature/strawberry
 	width = 11
 	height = 10
@@ -21,7 +21,7 @@
 	spawn_weight = 100
 
 /datum/island_feature_template/abandoned_camp
-	name = "Abandoned Camp"
+	name = "Campamento abandonado"
 	template_path = /datum/map_template/world_feature/abandoned_camp
 	width = 12
 	height = 11
@@ -43,7 +43,7 @@
 	spawn_weight = 100
 
 /datum/island_feature_template/flowerfield
-	name = "Flower Field"
+	name = "campo de flores"
 	template_path = /datum/map_template/world_feature/flowerfield
 	width = 8
 	height = 9
@@ -54,7 +54,7 @@
 	spawn_weight = 100
 
 /datum/island_feature_template/salvia
-	name = "Salvia Fountain"
+	name = "Fuente de Salvia"
 	template_path = /datum/map_template/world_feature/salvia
 	width = 11
 	height = 12

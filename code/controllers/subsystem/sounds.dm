@@ -1,7 +1,7 @@
 #define DATUMLESS "NO_DATUM"
 
 SUBSYSTEM_DEF(sounds)
-	name = "Sounds"
+	name = "sonidos"
 	flags = SS_NO_FIRE
 	init_order = INIT_ORDER_SOUNDS
 	var/static/using_channels_max = CHANNEL_HIGHEST_AVAILABLE		//BYOND max channels
@@ -41,7 +41,7 @@ SUBSYSTEM_DEF(sounds)
 	find_all_available_sounds()
 
 	if(!(RUST_G))
-		to_chat(world, span_boldnotice("Sounds subsystem: No rust_g detected."))
+		to_chat(world, span_boldnotice("Subsistema de sonidos: No se detectó Rust_g."))
 		return ..()
 
 	// Precache ambience sounds

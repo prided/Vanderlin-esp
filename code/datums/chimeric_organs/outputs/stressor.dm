@@ -1,5 +1,5 @@
 /datum/chimeric_node/output/stressor
-	name = "remembering"
+	name = "recordando"
 	desc = "When activated triggers the last stress event you've had"
 
 	var/datum/stress_event/last_event

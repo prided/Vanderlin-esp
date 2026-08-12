@@ -3,12 +3,12 @@
 	abstract_type = /datum/supply_pack/food/drinks
 
 /datum/supply_pack/food/drinks/water
-	name = "Water Bottle"
+	name = "Botella de agua"
 	cost = 5
 	contains = /obj/item/reagent_containers/glass/bottle/water
 
 /datum/supply_pack/food/drinks/beer
-	name = "Beer-In-A-Bottle"
+	name = "Cerveza en botella"
 	cost = 8
 	contains = /obj/item/reagent_containers/glass/bottle/beer
 
@@ -28,7 +28,7 @@
 	contains = /obj/item/reagent_containers/glass/bottle/beer/ratkept
 
 /datum/supply_pack/food/drinks/grenzelbeer
-	name = "Grenzelhoftian Bitter Beer"
+	name = "Grenzelhoftian Cerveza Amarga"
 	cost = 19
 	contains = /obj/item/reagent_containers/glass/bottle/beer/hagwoodbitter
 
@@ -38,12 +38,12 @@
 	contains = /obj/item/reagent_containers/glass/bottle/beer/aurorian
 
 /datum/supply_pack/food/drinks/elfcab
-	name = "Elvish Fireleaf"
+	name = "Hoja de fuego élfica"
 	cost = 35
 	contains = /obj/item/reagent_containers/glass/bottle/beer/fireleaf
 
 /datum/supply_pack/food/drinks/butterhair
-	name = "Dwarvish Butterhairs"
+	name = "Pelos de mantequilla enanos"
 	cost = 41
 	contains = /obj/item/reagent_containers/glass/bottle/beer/butterhairs
 
@@ -58,12 +58,12 @@
 	contains = /obj/item/reagent_containers/glass/bottle/beer/voddena
 
 /datum/supply_pack/food/drinks/winezaladin
-	name = "Zaladin Wine"
+	name = "Zaladin Vino"
 	cost = 20
 	contains = /obj/item/reagent_containers/glass/bottle/wine
 
 /datum/supply_pack/food/drinks/winegrenzel
-	name = "Grenzelhoftian Sour Wine"
+	name = "Grenzelhoftian Vino Agrio"
 	cost = 25
 	contains = /obj/item/reagent_containers/glass/bottle/wine/sourwine
 
@@ -78,7 +78,7 @@
 	contains = /obj/item/reagent_containers/glass/bottle/whitewine
 
 /datum/supply_pack/food/drinks/elfred
-	name = "Elvish Red Wine"
+	name = "Vino tinto élfico"
 	cost = 154
 	contains = /obj/item/reagent_containers/glass/bottle/elfred
 
@@ -128,6 +128,6 @@
 	contains = /obj/item/reagent_containers/glass/bottle/black/yaojiu
 
 /datum/supply_pack/food/drinks/tealeaves
-	name = "Ground Tea Leaves"
+	name = "Hojas de té molidas"
 	cost = 10
 	contains = /obj/item/reagent_containers/food/snacks/produce/tealeaves_ground

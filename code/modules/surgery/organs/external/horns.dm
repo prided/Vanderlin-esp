@@ -14,7 +14,7 @@
 	accessory_type = /datum/sprite_accessory/horns/tiefling
 
 /obj/item/organ/horns/triton
-	name = "triton tusks"
+	name = "colmillos de tritón"
 	accessory_type = /datum/sprite_accessory/horns/triton
 
 /obj/item/organ/horns/demihuman

@@ -1,5 +1,5 @@
 /obj/structure/redstone/comparator
-	name = "redstone comparator"
+	name = "comparador de piedra roja"
 	desc = "Compares redstone signal strengths. Can read containers and signals through walls."
 	icon_state = "comparator"
 	redstone_role = REDSTONE_ROLE_PROCESSOR
@@ -230,7 +230,7 @@
 
 /obj/structure/redstone/comparator/attack_hand(mob/user)
 	mode = (mode == "compare") ? "subtract" : "compare"
-	to_chat(user, "<span class='notice'>Mode changed to [mode].</span>")
+	to_chat(user, "<span class='notice'>Modo cambiado a [mode].</span>")
 	on_power_changed() // Recalculate
 	update_appearance(UPDATE_ICON | UPDATE_OVERLAYS)
 

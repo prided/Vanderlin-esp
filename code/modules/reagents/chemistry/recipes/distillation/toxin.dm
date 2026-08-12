@@ -19,17 +19,17 @@
 	distill_message = "The mercury burns off and the mirrorwaste concentrates into a purer form."
 
 /datum/distillation_recipe/quietdeath_concentrated
-	name = "Concentrated Quietdeath"
+	name = "Muerte silenciosa concentrada"
 	id = "quietdeath_concentrated"
 	distilled_reagent = /datum/reagent/poison/quietdeath
 	required_reagents = list(/datum/reagent/toxin/amanitin = 3)
 	consume_reagents = TRUE
 	results = list(/datum/reagent/poison/quietdeath = 2.0)
 	required_temp = T0C + 100
-	distill_message = "The water evaporates away, leaving an even more potent concentrate behind."
+	distill_message = "El agua se evapora, dejando un concentrado aún más potente."
 
 /datum/distillation_recipe/vitalroot_distilled
-	name = "Distilled Vitalroot"
+	name = "Raíz vital destilada"
 	id = "vitalroot_distilled"
 	distilled_reagent = /datum/reagent/medicine/vitalroot_draught
 	required_reagents = list(/datum/reagent/medicine/rosawater = 5)

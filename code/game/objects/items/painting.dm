@@ -22,7 +22,7 @@
 	if(!do_after(user, 3 SECONDS, interacting_with))
 		return ITEM_INTERACT_BLOCKING
 
-	to_chat(user, span_warning("I place [src] on the wall."))
+	to_chat(user, span_warning("Coloco [src] en la pared."))
 
 	var/obj/structure/S = new deployed_structure(user.loc)
 	switch(direction)

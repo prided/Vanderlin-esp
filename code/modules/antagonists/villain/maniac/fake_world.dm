@@ -51,22 +51,22 @@
 //Mostly garbage related to the ending "cutscene"
 /obj/item/clothing/head/maniac
 	name = "cyberdeck headset"
-	desc = "Sweet dreams..."
+	desc = "Dulces sueños..."
 	icon = 'icons/roguetown/maniac/clothing.dmi'
 	mob_overlay_icon = 'icons/roguetown/maniac/clothing_mob.dmi'
 	icon_state = "cyberdeck"
 	armor_type = /datum/armor/weak
 
 /obj/item/clothing/shirt/maniac
-	name = "formal shirt"
-	desc = "TNC is the fairest company I know, at least I think?."
+	name = "camisa formal"
+	desc = "TNC es la empresa más justa que conozco, ¿al menos eso creo?."
 	icon = 'icons/roguetown/maniac/clothing.dmi'
 	mob_overlay_icon = 'icons/roguetown/maniac/clothing_mob.dmi'
 	icon_state = "shirt"
 
 /obj/item/clothing/pants/tights/maniac
-	name = "formal pants"
-	desc = "TNC is the fairest company I know, at least I think?."
+	name = "pantalones formales"
+	desc = "TNC es la empresa más justa que conozco, ¿al menos eso creo?."
 	gender = PLURAL
 	icon = 'icons/roguetown/maniac/clothing.dmi'
 	mob_overlay_icon = 'icons/roguetown/maniac/clothing_mob.dmi'
@@ -82,8 +82,8 @@
 	name = "trey"
 
 /obj/item/gun/ballistic/revolver/last_resort
-	name = "\proper last resort"
-	desc = "There is always a way out."
+	name = "\proper último recurso"
+	desc = "Siempre hay una salida."
 
 /obj/item/gun/ballistic/revolver/last_resort/Initialize(mapload)
 	. = ..()

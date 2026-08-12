@@ -123,7 +123,7 @@
 
 	var/slot_flag = inv.find_space_for(target)
 	if(!slot_flag)
-		pawn.visible_message(span_notice("[pawn] looks at [target] but has no room for it."))
+		pawn.visible_message(span_notice("[pawn] mira [target] pero no tiene espacio para ello."))
 		controller.add_blackboard_key_lazylist(BB_LOOT_BLACKLIST, target)
 		// Prune it after 5 minutes so the list doesn't grow forever
 		addtimer(CALLBACK(controller, TYPE_PROC_REF(/datum/ai_controller, remove_thing_from_blackboard_key), BB_LOOT_BLACKLIST, target), 5 MINUTES)

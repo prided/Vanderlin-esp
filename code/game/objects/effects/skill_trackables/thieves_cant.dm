@@ -20,9 +20,9 @@
 /obj/effect/skill_tracker/thieves_cant/examine(mob/user)
 	. = ..()
 	if(!user.has_language(/datum/language/thievescant))
-		to_chat(user, "You can't quite understand these markings.")
+		to_chat(user, "No puedes entender bien estas marcas.")
 		return
-	to_chat(user, "The etchings say: [span_notice(thieves_message)]")
+	to_chat(user, "Los grabados dicen: [span_notice(thieves_message)]")
 
 /obj/effect/skill_tracker/thieves_cant/proc/write_message(mob/user, message)
 	if(!do_after(user, 5 SECONDS, src))
@@ -36,7 +36,7 @@
 
 
 /obj/effect/mapping_helpers/thieves_cant_helper
-	name = "Thieves Cant Generator"
+	name = "Los ladrones no pueden generar"
 
 	icon = 'icons/roguetown/misc/trackables.dmi'
 	icon_state = "thieves_cant"

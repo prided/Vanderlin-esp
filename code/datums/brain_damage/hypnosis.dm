@@ -1,5 +1,5 @@
 /datum/brain_trauma/hypnosis
-	name = "Hypnosis"
+	name = "Hipnosis"
 	desc = ""
 	scan_desc = ""
 	gain_text = ""

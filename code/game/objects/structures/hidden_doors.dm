@@ -47,7 +47,7 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 /datum/secret_door_manager/proc/on_job_spawn(source, datum/job/job, mob/living/spawned, client/player_client)
 	SIGNAL_HANDLER
 	if((job.type in vips) || (accessor_trait && (accessor_trait in job.mind_traits) || (accessor_trait in job.traits)))
-		var/msg = "The [memory_name] secret doors answer to: '[open_phrase]'"
+		var/msg = "Las puertas secretas [memory_name] responden a: '[open_phrase]'"
 		spawned.mind?.store_memory(msg)
 
 /datum/secret_door_manager/proc/add_door(obj/structure/door/secret/new_door)
@@ -206,12 +206,12 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 /obj/structure/door/secret/examine(mob/user)
 	. = ..()
 	if(isobserver(user))
-		. += span_purple("There's a hidden door here...")
+		. += span_purple("Hay una puerta oculta aquí...")
 		return
 	if(isliving(user))
 		var/mob/living/L = user
 		if(HAS_MIND_TRAIT(user, accessor_trait))
-			. += span_purple("There's a hidden door here...")
+			. += span_purple("Hay una puerta oculta aquí...")
 		else
 			var/bonuses = (HAS_TRAIT(user, TRAIT_THIEVESGUILD) || HAS_TRAIT(user, TRAIT_ASSASSIN)) ? 2 : 0
 			if(GET_MOB_ATTRIBUTE_VALUE(L, STAT_PERCEPTION) + bonuses >= hidden_dc)
@@ -293,7 +293,7 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 
 ///// MAPPERS /////
 /obj/effect/mapping_helpers/secret_door_creator
-	name = "Secret Door Creator"
+	name = "Creador de puertas secretas"
 	icon = 'icons/effects/hidden_door.dmi'
 	icon_state = "hidden_door"
 
@@ -408,7 +408,7 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 
 
 /obj/effect/mapping_helpers/secret_door_creator/thieves_guild
-	name = "Thieves' Guild Secret Door Creator"
+	name = "Creador de puertas secretas del gremio de ladrones"
 	color = "#3ed02b"
 	override_floor = FALSE
 	hidden_dc = 13
@@ -435,7 +435,7 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 
 
 /obj/effect/mapping_helpers/secret_door_creator/rous
-	name = "Rous Secret Door Creator"
+	name = "Creador de puertas secretas de Rous"
 	color = "#dcec4b"
 	override_floor = FALSE
 	hidden_dc = 16

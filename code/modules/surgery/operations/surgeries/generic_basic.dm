@@ -94,9 +94,9 @@
 	display_results(
 		surgeon,
 		patient,
-		span_notice("I begin to saw through [patient]'s bones..."),
-		span_notice("[surgeon] begins to saw through [patient]'s bones."),
-		span_notice("[surgeon] begins to saw through [patient]'s bones."),
+		span_notice("Empiezo a cortar los huesos de [patient]..."),
+		span_notice("[surgeon] comienza a cortar los huesos de [patient]."),
+		span_notice("[surgeon] comienza a cortar los huesos de [patient]."),
 	)
 	display_pain(patient, "I feel a horrid ache spread through my insides!")
 
@@ -106,9 +106,9 @@
 	display_results(
 		surgeon,
 		patient,
-		span_notice("I saw [patient] open."),
-		span_notice("[surgeon] saws [patient] open!"),
-		span_notice("[surgeon] saws [patient] open!"),
+		span_notice("Vi [patient] abierto."),
+		span_notice("¡[surgeon] sierras [patient] abiertas!"),
+		span_notice("¡[surgeon] sierras [patient] abiertas!"),
 	)
 	display_pain(patient, "It feels like something just broke!")
 

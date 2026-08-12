@@ -13,7 +13,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/song/accelakathist
 	name = "Accelerating Akathist"
-	desc = "I can feel the rhythm!"
+	desc = "¡Puedo sentir el ritmo!"
 	icon_state = "buff"
 
 #define ACCELAKATHIST_FILTER "akathist_glow"

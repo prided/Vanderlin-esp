@@ -39,7 +39,7 @@
 		patient,
 		span_danger("I start removing [patient]'s tooth."),
 		span_danger("[surgeon] start removing <b>[patient]</b>'s tooth."),
-		span_warning("[surgeon] begins performing an extraction in [patient]'s mouth."),
+		span_warning("[surgeon] comienza a realizar una extracción en la boca de [patient]."),
 	)
 
 /datum/surgery_operation/basic/extract_tooth/on_success(mob/living/patient, mob/living/surgeon, tool, list/operation_args)

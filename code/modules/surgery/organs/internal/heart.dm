@@ -6,8 +6,8 @@
 	organ_efficiency = list(ORGAN_SLOT_HEART = 100)
 	w_class = WEIGHT_CLASS_SMALL
 	low_threshold_passed = span_info("Prickles of pain appear then die out from within my chest...")
-	high_threshold_passed = span_warning("Something inside my chest hurts, and the pain isn't subsiding. I am breathing far faster than before.")
-	now_fixed = span_info("My heart begins to beat again.")
+	high_threshold_passed = span_warning("Algo dentro de mi pecho duele y el dolor no disminuye. Estoy respirando mucho más rápido que antes.")
+	now_fixed = span_info("Mi corazón comienza a latir de nuevo.")
 	high_threshold_cleared = span_info("The pain in my chest has died down, and my breathing becomes more relaxed.")
 	organ_volume = 0.5
 	max_blood_storage = 600

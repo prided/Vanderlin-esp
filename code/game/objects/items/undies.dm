@@ -33,7 +33,7 @@
 	if(H.underwear != "Nude" || H.cached_underwear == "Nude")
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message("<span class='notice'>[user] tries to put [src] on [H]...</span>")
+	user.visible_message("<span class='notice'>[user] intenta poner [src] en [H]...</span>")
 	if(do_after(user, 5 SECONDS, H))
 		return ITEM_INTERACT_BLOCKING
 

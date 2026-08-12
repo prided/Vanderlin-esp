@@ -5,7 +5,7 @@
 	abstract_type = /datum/supply_pack/food
 
 /datum/supply_pack/food/meat
-	name = "Dry Meat"
+	name = "Carne Seca"
 	cost = 10
 	contains = /obj/item/reagent_containers/food/snacks/cooked/coppiette
 
@@ -15,7 +15,7 @@
 	contains = /obj/item/reagent_containers/food/snacks/hardtack
 
 /datum/supply_pack/food/cheese
-	name = "Cheese Wheel"
+	name = "Rueda de queso"
 	cost = 25
 	contains = /obj/item/reagent_containers/food/snacks/cheddar
 
@@ -30,7 +30,7 @@
 	contains = /obj/item/reagent_containers/food/snacks/meat/salami
 
 /datum/supply_pack/food/potato
-	name = "Potato"
+	name = "Papa"
 	cost = 4
 	contains = /obj/item/reagent_containers/food/snacks/produce/vegetable/potato
 
@@ -40,7 +40,7 @@
 	contains = /obj/item/reagent_containers/food/snacks/produce/grain/wheat
 
 /datum/supply_pack/food/egg
-	name = "Egg"
+	name = "Huevo"
 	cost = 2
 	contains = /obj/item/reagent_containers/food/snacks/egg
 
@@ -60,12 +60,12 @@
 	contains = /obj/item/reagent_containers/food/snacks/spiderhoney/honey
 
 /datum/supply_pack/food/eel
-	name = "Eel"
+	name = "Anguila"
 	cost = 5
 	contains = /obj/item/reagent_containers/food/snacks/fish/eel
 
 /datum/supply_pack/food/carp
-	name = "Carp"
+	name = "Carpa"
 	cost = 10
 	contains = /obj/item/reagent_containers/food/snacks/fish/carp
 
@@ -75,7 +75,7 @@
 	contains = /obj/item/reagent_containers/food/snacks/fish/angler
 
 /datum/supply_pack/food/clownfish
-	name = "Clownfish"
+	name = "pez payaso"
 	cost = 40
 	contains = /obj/item/reagent_containers/food/snacks/fish/clownfish
 
@@ -120,7 +120,7 @@
 	contains = /obj/item/reagent_containers/food/snacks/plum_dried
 
 /datum/supply_pack/food/roastedcoffee
-	name = "Roasted Coffee"
+	name = "Café tostado"
 	cost = 12
 	contains = /obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted
 
@@ -130,16 +130,16 @@
 	contains = /obj/item/reagent_containers/food/snacks/saltseeds
 
 /datum/supply_pack/food/saltfish
-	name = "Salted Fish"
+	name = "Pescado Salado"
 	cost = 12
 	contains = /obj/item/reagent_containers/food/snacks/saltfish
 
 /datum/supply_pack/food/redtallow
-	name = "Red Tallow"
+	name = "Sebo rojo"
 	cost = 15
 	contains = /obj/item/reagent_containers/food/snacks/tallow/red
 
 /datum/supply_pack/food/tallow
-	name = "Tallow"
+	name = "Sebo"
 	cost = 10
 	contains = /obj/item/reagent_containers/food/snacks/tallow

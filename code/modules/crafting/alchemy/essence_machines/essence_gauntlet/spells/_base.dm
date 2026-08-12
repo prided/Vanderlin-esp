@@ -1,8 +1,8 @@
 // These do not all confirm to spell standards but if someone wants to go through all 60 odd of these and add proper
 // Valid target / Can cast then be my guest
 /datum/action/cooldown/spell/essence
-	name = "Utility Spell"
-	desc = "A minor utility spell."
+	name = "Hechizo de utilidad"
+	desc = "Un hechizo de utilidad menor."
 	spell_cost = 5
 	charge_drain = 0
 	charge_required = FALSE

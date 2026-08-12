@@ -1,5 +1,5 @@
 /obj/machinery/light/fueled/lanternpost
-	name = "lantern post"
+	name = "poste de linterna"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "streetlantern1"
 	base_state = "streetlantern"
@@ -88,7 +88,7 @@
 		if(torchy)
 			if(LR.on && !on)
 				if(torchy.fuel <= 0)
-					to_chat(user, "<span class='warning'>The mounted lantern is burned out.</span>")
+					to_chat(user, "<span class='warning'>La linterna montada está quemada.</span>")
 					return
 				else
 					torchy.spark_act()

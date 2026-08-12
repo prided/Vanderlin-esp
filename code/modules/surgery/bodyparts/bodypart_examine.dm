@@ -244,11 +244,11 @@
 	else
 		switch(germ_level)
 			if(INFECTION_LEVEL_ONE to INFECTION_LEVEL_ONE + ((INFECTION_LEVEL_TWO - INFECTION_LEVEL_ONE) / 3))
-				status += span_infection("Light Infection")
+				status += span_infection("Infección leve")
 			if(INFECTION_LEVEL_ONE + ((INFECTION_LEVEL_TWO - INFECTION_LEVEL_ONE) / 3) to INFECTION_LEVEL_ONE + (2 * (INFECTION_LEVEL_TWO - INFECTION_LEVEL_ONE) / 3))
-				status += span_infection("Medium Infection+")
+				status += span_infection("Infección media+")
 			if(INFECTION_LEVEL_ONE + (2 * (INFECTION_LEVEL_TWO - INFECTION_LEVEL_ONE) / 3) to INFECTION_LEVEL_TWO)
-				status += span_infection("Serious Infection")
+				status += span_infection("Infección grave")
 			if(INFECTION_LEVEL_TWO to INFECTION_LEVEL_TWO + ((INFECTION_LEVEL_THREE - INFECTION_LEVEL_THREE) / 3))
 				status += span_infection("<b>Acute Infection</b>")
 			if(INFECTION_LEVEL_TWO + ((INFECTION_LEVEL_THREE - INFECTION_LEVEL_THREE) / 3) to INFECTION_LEVEL_TWO + (2 * (INFECTION_LEVEL_THREE - INFECTION_LEVEL_TWO) / 3))
@@ -292,7 +292,7 @@
 			else if(injury.get_bleed_rate() > BLEED_RATE_NOTICABLE)
 				this_injury_desc = "<b><i>badly bleeding</i></b> [this_injury_desc]"
 			else
-				this_injury_desc = "<b>bleeding</b> [this_injury_desc]"
+				this_injury_desc = "<b>sangrado</b> [this_injury_desc]"
 		if(injury.is_clamped())
 			this_injury_desc = "<span style='color: [COLOR_SILVER]'>clamped</span> [this_injury_desc]"
 		if(injury.is_sutured())

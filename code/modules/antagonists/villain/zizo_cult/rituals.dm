@@ -30,7 +30,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	abstract_type = /datum/ritual/servantry
 
 /datum/ritual/servantry/convert
-	name = "Convert"
+	name = "Convertir"
 	center_requirement = /mob/living/carbon/human
 
 	is_cultist_ritual = TRUE
@@ -52,10 +52,10 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 		to_chat(user, span_danger("They are wearing silver, it resists the dark magick!"))
 		return
 	var/datum/antagonist/zizocultist/PR = user.mind.has_antag_datum(/datum/antagonist/zizocultist)
-	var/alert = tgui_alert(target, "YOU WILL BE SHOWN THE TRUTH. DO YOU RESIST?", "???", list("Yield", "Resist"))
+	var/alert = tgui_alert(target, "YOU WILL BE SHOWN THE TRUTH. DO YOU RESIST?", "???", list("Yield", "Resistir"))
 	target.Immobilize(3 SECONDS)
 	if(alert == "Yield")
-		to_chat(target, span_notice("I see the truth now! It all makes so much sense! They aren't HERETICS! They want the BEST FOR US!"))
+		to_chat(target, span_notice("¡Ahora veo la verdad! ¡Todo tiene mucho sentido! ¡No son HEREJES! ¡Quieren lo MEJOR PARA NOSOTROS!"))
 		PR.add_cultist(target.mind)
 		target.praise()
 	else
@@ -105,7 +105,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	if(!target)
 		return
 	if(target.mob_biotypes & MOB_UNDEAD)
-		to_chat(user, span_warning("The fruits of her work prevent me from changing my appearance..."))
+		to_chat(user, span_warning("Los frutos de su trabajo me impiden cambiar mi apariencia..."))
 		return
 	target.randomize_human_appearance(include_donator = FALSE)
 	target.regenerate_clothes()
@@ -122,7 +122,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	to_chat(user, span_notice("A corrupted heart. When used on a non-enlightened mortal their heart shall ache and they will be immobilized and too stunned to speak. Perfect for getting new soon-to-be enlightened. Now, just don't use it at the combat ready."))
 
 /obj/item/corruptedheart
-	name = "corrupted heart"
+	name = "corazón corrupto"
 	desc = "It sparkles with forbidden magic energy. It makes all the heart aches go away."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "heart-on"
@@ -134,7 +134,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 
 	if(istype(target.patron, /datum/patron/inhumen/zizo) && CAN_HAVE_BLOOD(target) && target.get_blood_volume() < BLOOD_VOLUME_NORMAL)
 		target.set_blood_volume(BLOOD_VOLUME_NORMAL)
-		to_chat(target, span_notice("My elixir of life is stagnant once again."))
+		to_chat(target, span_notice("Mi elixir de vida está estancado una vez más."))
 		qdel(src)
 		return
 
@@ -159,11 +159,11 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 /datum/ritual/servantry/darksunmark/invoke(mob/living/user, turf/center)
 	var/obj/item/paper/P = locate() in center.contents
 	if(!P)
-		to_chat(user, span_warning("The ritual requires a parchment with a name."))
+		to_chat(user, span_warning("El ritual requiere un pergamino con un nombre."))
 		return
 	var/paper_name = STRIP_HTML_FULL(P.info, MAX_NAME_LEN)
 	if(!user.mind || !user.mind.do_i_know(name = paper_name))
-		to_chat(user, span_warning("I don't know anyone by that name."))
+		to_chat(user, span_warning("No conozco a nadie con ese nombre."))
 		return
 	var/mob/living/carbon/human/target
 	var/assassin_found = FALSE
@@ -199,7 +199,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	abstract_type = /datum/ritual/transmutation
 
 /datum/ritual/transmutation/allseeingeye
-	name = "All-seeing Eye"
+	name = "Ojo que todo lo ve"
 	center_requirement = /obj/item/organ/eyes
 
 /datum/ritual/transmutation/allseeingeye/invoke(mob/living/user, turf/center)
@@ -214,7 +214,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 /datum/ritual/transmutation/cross/invoke(mob/living/user, turf/center)
 	. = ..()
 	new /obj/item/clothing/neck/psycross/zizo(center)
-	to_chat(user, span_notice("The psycross is transmuted into an amulet of Zizo."))
+	to_chat(user, span_notice("El psycross se transmuta en un amuleto de Zizo."))
 
 /datum/ritual/transmutation/criminalstool
 	name = "Criminal's Tool"
@@ -225,8 +225,8 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	to_chat(user, span_notice("The Criminal's Tool. Could be useful for hiding tracks or getting rid of sigils."))
 
 /obj/item/soap/cult
-	name = "accursed soap"
-	desc = "It is pulsating."
+	name = "jabón maldito"
+	desc = "Está pulsando."
 	clean_speed = 1
 	clean_effectiveness = 100
 	clean_strength = CLEAN_ALL
@@ -267,7 +267,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 // 	qdel(src)
 
 /datum/ritual/transmutation/invademind
-	name = "Invade Mind"
+	name = "Invadir la mente"
 	center_requirement = /obj/item/natural/feather
 
 /datum/ritual/transmutation/invademind/invoke(mob/living/user, turf/center)
@@ -389,7 +389,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	if(!target)
 		return
 	ADD_TRAIT(target, TRAIT_ZJUMP, TRAIT_GENERIC)
-	to_chat(target, span_notice("I feel like my legs have become stronger."))
+	to_chat(target, span_notice("Siento que mis piernas se han vuelto más fuertes."))
 
 
 /datum/ritual/fleshcrafting/fleshmend
@@ -427,7 +427,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 
 /atom/movable/screen/alert/status_effect/buff/fleshmend
 	name = "Fleshmend"
-	desc = "Forbidden magick restores my ailments."
+	desc = "La magia prohibida restaura mis dolencias."
 	icon_state = "bloodheal"
 
 /obj/effect/temp_visual/heal_rogue/fleshmend
@@ -450,7 +450,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	to_chat(target, span_notice("I no longer fear the dark."))
 
 /datum/ritual/fleshcrafting/undead
-	name = "Dominate Undead"
+	name = "Dominar a los no-muertos"
 	center_requirement = /mob/living/carbon/human
 
 	w_req = /obj/item/organ/brain
@@ -467,7 +467,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	target.add_spell(/datum/action/cooldown/spell/gravemark, mastery_spell = TRUE)
 	target.add_spell(/datum/action/cooldown/spell/control_undead, mastery_spell = TRUE)
 	target.add_spell(/datum/action/cooldown/spell/decompose, mastery_spell = TRUE)
-	to_chat(target, span_notice("The undead bow down to my will."))
+	to_chat(target, span_notice("Los no-muertos se inclinan ante mi voluntad."))
 
 /datum/ritual/fleshcrafting/arcane
 	name = "Siphon Arcane"
@@ -508,7 +508,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	target.change_stat(STAT_CONSTITUTION, -3)
 
 /datum/ritual/fleshcrafting/immortality
-	name = "Flawed Immortality"
+	name = "Inmortalidad defectuosa"
 	center_requirement = /mob/living/carbon/human
 
 	n_req = /mob/living/carbon/human
@@ -544,7 +544,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	target.add_spell(/datum/action/cooldown/spell/undirected/regenerate)
 
 /datum/ritual/fleshcrafting/fleshform
-	name = "Stronger Form"
+	name = "Forma más fuerte"
 	center_requirement = /mob/living/carbon/human
 
 	w_req = /obj/item/organ/guts
@@ -561,7 +561,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 		to_chat(target, span_danger("I'm not letting my strongest follower become a mindless brute."))
 		return
 	if(!target.mind)
-		to_chat(target, span_warning("A mindless beast will not serve our cause."))
+		to_chat(target, span_warning("Una bestia sin sentido no servirá a nuestra causa."))
 		return
 	to_chat(target, span_warning("SOON I WILL BECOME A HIGHER FORM!"))
 	addtimer(CALLBACK(src, PROC_REF(flesh_convert), target, center), 5 SECONDS)
@@ -601,7 +601,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 		part.drop_limb()
 
 /datum/ritual/fleshcrafting/badomen
-	name = "Bad Omen"
+	name = "Mal presagio"
 	center_requirement = /mob/living/carbon/human
 	is_cultist_ritual = TRUE
 
@@ -614,7 +614,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 		addomen(OMEN_ROUNDSTART)
 
 /datum/ritual/fleshcrafting/ascend
-	name = "ASCEND!"
+	name = "¡ASCENDER!"
 	center_requirement = /mob/living/carbon/human // cult leader
 
 	n_req = /mob/living/carbon/human // the ruler
@@ -642,7 +642,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	var/mob/living/trl = new /mob/living/simple_animal/hostile/retaliate/blood/ascended(center)
 	cultist.mind?.transfer_to(trl)
 	cultist.gib()
-	priority_announce("The sky blackens, a dark day for Psydonia.", "Ascension", 'sound/misc/gods/astrata_omen.ogg')
+	priority_announce("El cielo se oscurece, un día oscuro para Psydonia.", "Ascensión", 'sound/misc/gods/astrata_omen.ogg')
 	for(var/mob/living/carbon/human/V in GLOB.human_list)
 		if(V.mind in SSmapping.retainer.cultists)
 			V.add_stress(/datum/stress_event/lovezizo)

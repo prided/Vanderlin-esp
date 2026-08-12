@@ -1,18 +1,18 @@
 /datum/blueprint_recipe/floor
 	abstract_type = /datum/blueprint_recipe/floor
-	category = "Floors"
+	category = "Pisos"
 	pixel_offsets = FALSE
 	build_time = 3 SECONDS
 
 /datum/blueprint_recipe/floor/woodfloor
 	name = "Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -20,13 +20,13 @@
 
 /datum/blueprint_recipe/floor/woodfloor_turned
 	name = "Rotated Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/woodturned
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -40,22 +40,22 @@
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
 	craftdiff = 1
 
 /datum/blueprint_recipe/floor/woodplatform
-	name = "Wood Platform"
-	desc = "A wooden platform."
+	name = "Plataforma de madera"
+	desc = "Una plataforma de madera."
 	result_type = /turf/open/floor/ruinedwood/platform
 	required_materials = list(
 		/obj/item/natural/wood/plank = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
 	build_time = 4 SECONDS
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -63,14 +63,14 @@
 
 
 /datum/blueprint_recipe/floor/stonefloor
-	name = "Stone Floor"
+	name = "Piso de piedra"
 	desc = "A cobbled stone floor."
 	result_type = /turf/open/floor/cobblerock
 	required_materials = list(
 		/obj/item/natural/stone = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -83,13 +83,13 @@
 
 /datum/blueprint_recipe/floor/stonefloor_cobblestone
 	name = "Cobblestone Floor"
-	desc = "A cobblestone floor."
+	desc = "Un suelo de adoquines."
 	result_type = /turf/open/floor/cobble
 	required_materials = list(
 		/obj/item/natural/stone = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -110,13 +110,13 @@
 
 /datum/blueprint_recipe/floor/stonefloor_blocks
 	name = "Stone Block Floor"
-	desc = "A stone block floor."
+	desc = "Un suelo de bloques de piedra."
 	result_type = /turf/open/floor/blocks
 	required_materials = list(
 		/obj/item/natural/stoneblock = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -124,13 +124,13 @@
 
 /datum/blueprint_recipe/floor/stonefloor_newstone
 	name = "Newstone Floor"
-	desc = "A newstone floor."
+	desc = "Un suelo de piedra nueva."
 	result_type = /turf/open/floor/blocks/newstone
 	required_materials = list(
 		/obj/item/natural/stoneblock = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -138,13 +138,13 @@
 
 /datum/blueprint_recipe/floor/stonefloor_bluestone
 	name = "Bluestone Floor"
-	desc = "A bluestone floor."
+	desc = "Un suelo de piedra azul."
 	result_type = /turf/open/floor/blocks/bluestone
 	required_materials = list(
 		/obj/item/natural/stoneblock = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -158,7 +158,7 @@
 		/obj/item/natural/stoneblock = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -172,7 +172,7 @@
 		/obj/item/natural/stoneblock = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -180,15 +180,15 @@
 
 
 /datum/blueprint_recipe/floor/stoneplatform
-	name = "Stone Platform"
-	desc = "A stone platform."
+	name = "Plataforma de piedra"
+	desc = "Una plataforma de piedra."
 	result_type = /turf/open/floor/blocks/platform
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
 	build_time = 4 SECONDS
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -197,18 +197,18 @@
 
 /datum/blueprint_recipe/floor/twig
 	name = "Twig Floor"
-	desc = "A floor made of twigs."
+	desc = "Un suelo hecho de ramitas."
 	result_type = /turf/open/floor/twig
 	required_materials = list(
 		/obj/item/grown/log/tree/stick = 2
 	)
 	construct_tool = /obj/item/weapon/knife
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/twigplatform
 	name = "Twig Platform"
-	desc = "A platform made of twigs and rope."
+	desc = "Una plataforma hecha de ramitas y cuerda."
 	result_type = /turf/open/floor/twig/platform
 	required_materials = list(
 		/obj/item/grown/log/tree/stick = 3,
@@ -216,21 +216,21 @@
 	)
 	construct_tool = /obj/item/weapon/hammer
 	build_time = 4 SECONDS
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	craftdiff = 1
 
 /datum/blueprint_recipe/floor/dirtroad
-	name = "Dirt Road"
-	desc = "A dirt road."
+	name = "Camino de tierra"
+	desc = "Un camino de tierra."
 	result_type = /turf/open/floor/dirt/road
 	required_materials = list(
 		/obj/item/natural/fibers = 1,
 		/obj/item/natural/clod/dirt = 3
 	)
 	construct_tool = /obj/item/weapon/shovel
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/dirt
@@ -242,7 +242,7 @@
 		/obj/item/natural/clod/dirt = 3
 	)
 	construct_tool = /obj/item/weapon/shovel
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/tavern
@@ -254,14 +254,14 @@
 		/obj/item/natural/brick = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
 
 /datum/blueprint_recipe/floor/tile
-	name = "Tiled Floor"
+	name = "Suelo de baldosas"
 	desc = "Tiled floor of stone and clay bricks."
 	result_type = /turf/open/floor/tile
 	required_materials = list(
@@ -269,14 +269,14 @@
 		/obj/item/natural/brick = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
 
 /datum/blueprint_recipe/floor/tile_green
-	name = "Green Tiled Floor"
+	name = "Suelo de baldosas verdes"
 	desc = "Tiled floor of stone and clay bricks."
 	result_type = /turf/open/floor/tile/checker_green
 	required_materials = list(
@@ -284,7 +284,7 @@
 		/obj/item/natural/brick = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -298,7 +298,7 @@
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -309,84 +309,84 @@
 	result_type = /turf/open/floor/tile/masonic/single
 
 /datum/blueprint_recipe/floor/masonic/inverted
-	name = "Inverted Masonic Tile"
+	name = "Azulejo masónico invertido"
 	result_type = /turf/open/floor/tile/masonic/inverted
 
 /datum/blueprint_recipe/floor/masonic/spiral
-	name = "Spiral Masonic Tile"
+	name = "Azulejo masónico en espiral"
 	result_type = /turf/open/floor/tile/masonic/spiral
 	craftdiff = 3
 
 /datum/blueprint_recipe/floor/masonic/full
-	name = "Masonic White Tile"
+	name = "Azulejo blanco masónico"
 	result_type = /turf/open/floor/tile/masonic/full
 
 /datum/blueprint_recipe/floor/masonic/full/inverted
-	name = "Masonic Black Tile"
+	name = "Azulejo negro masónico"
 	result_type = /turf/open/floor/tile/masonic/full/inverted
 
 /datum/blueprint_recipe/floor/masonic/arrow
-	name = "Masonic Arrow"
+	name = "Flecha masónica"
 	result_type = /turf/open/floor/tile/masonic/arrow
 
 /datum/blueprint_recipe/floor/masonic/arrow/inverted
-	name = "Inverted Masonic Arrow"
+	name = "Flecha masónica invertida"
 	result_type = /turf/open/floor/tile/masonic/arrow/inverted
 
 /datum/blueprint_recipe/floor/brick
-	name = "Brick Tile"
+	name = "Azulejo de ladrillo"
 	desc = "Brick flooring."
 	result_type = /turf/open/floor/tile/brick
 	required_materials = list(
 		/obj/item/natural/brick = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 1
 
 /datum/blueprint_recipe/floor/brick/brown
-	name = "Brown Brick"
+	name = "Ladrillo marrón"
 	result_type = /turf/open/floor/tile/brownbrick
 
 
 /datum/blueprint_recipe/floor/diamond
-	name = "Diamond Tile"
+	name = "Azulejo de diamante"
 	desc = "Luxurious diamond-pattern flooring made of stone blocks."
 	result_type = /turf/open/floor/tile/diamond
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
 
 /datum/blueprint_recipe/floor/diamond_blue
-	name = "Blue Diamond Tile"
+	name = "Azulejo de diamante azul"
 	desc = "Elegant blue diamond-pattern flooring made of stone blocks."
 	result_type = /turf/open/floor/tile/diamond/blue
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
 
 /datum/blueprint_recipe/floor/diamond_purple
-	name = "Purple Diamond Tile"
+	name = "Azulejo de diamante morado"
 	desc = "Regal purple diamond-pattern flooring made of stone blocks."
 	result_type = /turf/open/floor/tile/diamond/purple
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
@@ -399,7 +399,7 @@
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
@@ -412,33 +412,33 @@
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
 
 /datum/blueprint_recipe/floor/bfloorz
-	name = "Blue Floor Tile"
-	desc = "Distinctive blue flooring made of stone blocks."
+	name = "Azulejo de piso azul"
+	desc = "Suelo azul distintivo hecho de bloques de piedra."
 	result_type = /turf/open/floor/tile/bfloorz
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
 
 /datum/blueprint_recipe/floor/tilerg
-	name = "Green Tile"
+	name = "Azulejo verde"
 	desc = "Decorative green tiling made of stone blocks."
 	result_type = /turf/open/floor/tile/tilerg
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
@@ -451,7 +451,7 @@
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
@@ -464,7 +464,7 @@
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
@@ -477,7 +477,7 @@
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 3
@@ -490,7 +490,7 @@
 		/obj/item/natural/brick = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 3
@@ -503,7 +503,7 @@
 		/obj/item/natural/stoneblock = 3
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 4
@@ -516,7 +516,7 @@
 		/obj/item/natural/brick = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 3
@@ -529,7 +529,7 @@
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
@@ -542,14 +542,14 @@
 		/obj/item/natural/brick = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
 
 /datum/blueprint_recipe/floor/grass
 	name = "Grass"
-	desc = "Some grass."
+	desc = "Un poco de hierba."
 	result_type = /turf/open/floor/grass
 	required_materials = list(
 		/obj/item/natural/fibers = 2,
@@ -557,12 +557,12 @@
 		/obj/item/natural/clod/dirt = 2
 	)
 	construct_tool = /obj/item/weapon/shovel
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/grassyellow
-	name = "Yellow Grass"
-	desc = "Some grass."
+	name = "Hierba amarilla"
+	desc = "Un poco de hierba."
 	result_type = /turf/open/floor/grass/yel
 	required_materials = list(
 		/obj/item/natural/fibers = 2,
@@ -570,12 +570,12 @@
 		/obj/item/natural/clod/dirt = 2
 	)
 	construct_tool = /obj/item/weapon/shovel
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/grassred
-	name = "Red Grass"
-	desc = "Some grass."
+	name = "Hierba roja"
+	desc = "Un poco de hierba."
 	result_type = /turf/open/floor/grass/red
 	required_materials = list(
 		/obj/item/natural/fibers = 2,
@@ -583,12 +583,12 @@
 		/obj/item/natural/clod/dirt = 2
 	)
 	construct_tool = /obj/item/weapon/shovel
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/grassmixyel
 	name = "Mixed Yellow Grass"
-	desc = "Some grass."
+	desc = "Un poco de hierba."
 	result_type = /turf/open/floor/grass/mixyel
 	required_materials = list(
 		/obj/item/natural/fibers = 2,
@@ -596,12 +596,12 @@
 		/obj/item/natural/clod/dirt = 2
 	)
 	construct_tool = /obj/item/weapon/shovel
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/grasscold
 	name = "Tundra Grass"
-	desc = "Some grass."
+	desc = "Un poco de hierba."
 	result_type = /turf/open/floor/grass/cold
 	required_materials = list(
 		/obj/item/natural/fibers = 2,
@@ -609,12 +609,12 @@
 		/obj/item/natural/clod/dirt = 2
 	)
 	construct_tool = /obj/item/weapon/shovel
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/grasshealthy
 	name = "Healthy Grass"
-	desc = "A bit of extra fertilizer makes the difference."
+	desc = "Un poco de fertilizante extra marca la diferencia."
 	result_type = /turf/open/floor/grass/healthy
 	required_materials = list(
 		/obj/item/natural/fibers = 3,
@@ -622,12 +622,12 @@
 		/obj/item/natural/clod/dirt = 3
 	)
 	construct_tool = /obj/item/weapon/shovel
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/hay
 	name = "Hay"
-	desc = "Some hay."
+	desc = "Un poco de heno."
 	result_type = /turf/open/floor/hay
 	required_materials = list(
 		/obj/item/natural/fibers = 3,
@@ -635,18 +635,18 @@
 		/obj/item/natural/clod/dirt = 1
 	)
 	construct_tool = /obj/item/weapon/pitchfork
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/floor/woodflooralt
 	name = "Alternative Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/alt
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -654,13 +654,13 @@
 
 /datum/blueprint_recipe/floor/woodfloortwo
 	name = "Alternative Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/two
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -668,13 +668,13 @@
 
 /datum/blueprint_recipe/floor/woodfloorturned
 	name = "Rotated Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/turned
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -682,13 +682,13 @@
 
 /datum/blueprint_recipe/floor/woodfloorturnedalt
 	name = "Alternative Rotated Ruined Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/turned/alt
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -696,13 +696,13 @@
 
 /datum/blueprint_recipe/floor/woodfloorturned
 	name = "Rotated Ruined Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/turned
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -710,13 +710,13 @@
 
 /datum/blueprint_recipe/floor/ruinedspiral
 	name = "Spiral Ruined Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/spiral
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -724,13 +724,13 @@
 
 /datum/blueprint_recipe/floor/ruinedspiralfade
 	name = "Faded Spiral Ruined Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/spiralfade
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -738,13 +738,13 @@
 
 /datum/blueprint_recipe/floor/ruinedchevron
 	name = "Chevron Ruined Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/chevron
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -752,13 +752,13 @@
 
 /datum/blueprint_recipe/floor/ruineddark
 	name = "Dark Ruined Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/darker
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -766,20 +766,20 @@
 
 /datum/blueprint_recipe/floor/ruineddarkturned
 	name = "Rotated Dark Ruined Wooden Floor"
-	desc = "A ruined wooden floor."
+	desc = "Un suelo de madera en ruinas."
 	result_type = /turf/open/floor/ruinedwood/turned/darker
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
 	craftdiff = 1
 
 /datum/blueprint_recipe/floor/roof
-	name = "Tile Roofing"
+	name = "Techos de tejas"
 	desc = "Tiled roof made of clay bricks."
 	result_type = /turf/open/floor/rooftop
 	required_materials = list(
@@ -787,7 +787,7 @@
 	)
 	supports_directions = TRUE
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -802,7 +802,7 @@
 	)
 	supports_directions = TRUE
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -810,13 +810,13 @@
 
 /datum/blueprint_recipe/floor/stonefloor_blocksred
 	name = "Red Stone Block Floor"
-	desc = "A stone block floor."
+	desc = "Un suelo de bloques de piedra."
 	result_type = /turf/open/floor/blocks/stonered
 	required_materials = list(
 		/obj/item/natural/stoneblock = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -824,13 +824,13 @@
 
 /datum/blueprint_recipe/floor/stonefloor_blocksgreen
 	name = "Green Stone Block Floor"
-	desc = "A stone block floor."
+	desc = "Un suelo de bloques de piedra."
 	result_type = /turf/open/floor/blocks/green
 	required_materials = list(
 		/obj/item/natural/stoneblock = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -838,27 +838,27 @@
 
 /datum/blueprint_recipe/floor/stonefloor_blocksredtiny
 	name = "Tiny Red Stone Block Floor"
-	desc = "A stone block floor."
+	desc = "Un suelo de bloques de piedra."
 	result_type = /turf/open/floor/blocks/stonered/tiny
 	required_materials = list(
 		/obj/item/natural/stoneblock = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 1
 
 /datum/blueprint_recipe/floor/stonefloor_newblue
-	name = "New Blue Stone Block Floor"
-	desc = "A stone block floor."
+	name = "Nuevo piso de bloques de piedra azul"
+	desc = "Un suelo de bloques de piedra."
 	result_type = /turf/open/floor/blocks/newstone/alt
 	required_materials = list(
 		/obj/item/natural/stoneblock = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -866,13 +866,13 @@
 
 /datum/blueprint_recipe/floor/paving
 	name = "Paved Stone Block Floor"
-	desc = "A stone block floor."
+	desc = "Un suelo de bloques de piedra."
 	result_type = /turf/open/floor/blocks/paving
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -880,13 +880,13 @@
 
 /datum/blueprint_recipe/floor/pavingvertical
 	name = "Vertical Paved Stone Block Floor"
-	desc = "A stone block floor."
+	desc = "Un suelo de bloques de piedra."
 	result_type = /turf/open/floor/blocks/paving/vert
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -900,14 +900,14 @@
 		/obj/item/natural/stone = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Floors"
+	category = "Pisos"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 1
 
 /datum/blueprint_recipe/floor/greenstone/runed
-	name = "Rough Runed Greenstone Floors"
+	name = "Pisos de piedra verde con runas rugosas"
 	required_materials = list(
 		/obj/item/natural/stone = 2,
 		/obj/item/gem/amethyst = 1,
@@ -943,7 +943,7 @@
 
 /datum/blueprint_recipe/floor/glass
 	name = "Wood Framed Glass Floor"
-	desc = "A glass floor."
+	desc = "Un suelo de cristal."
 	required_materials = list(
 		/obj/item/natural/wood/plank = 2,
 		/obj/item/natural/glass = 2,
@@ -954,7 +954,7 @@
 
 /datum/blueprint_recipe/floor/concrete
 	name = "Concrete Floor"
-	desc = "A slab of stone"
+	desc = "Una losa de piedra"
 	required_materials = list(
 		/obj/item/natural/stone = 2,
 	)
@@ -981,5 +981,5 @@
 	result_type = /turf/open/floor/metal/barograte
 
 /datum/blueprint_recipe/floor/metal/opengrate
-	name = "Metal Grate (Open)"
+	name = "Rejilla Metálica (Abierta)"
 	result_type = /turf/open/floor/metal/barograte/open

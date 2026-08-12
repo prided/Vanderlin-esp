@@ -1,6 +1,6 @@
 /*	..................   Gaseous Form   ................... */
 /mob/living/simple_animal/hostile/retaliate/gaseousform
-	name = "gaseous mist"
+	name = "niebla gaseosa"
 	desc = ""
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "mist"

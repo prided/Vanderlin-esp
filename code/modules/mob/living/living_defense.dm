@@ -92,11 +92,11 @@
 	var/organ_hit_text = ""
 	var/limb_hit = check_limb_hit(def_zone)//to get the correct message info.
 	if(limb_hit)
-		organ_hit_text = " in \the [parse_zone(limb_hit)]"
+		organ_hit_text = " en \the [parse_zone(limb_hit)]"
 	if(P.hitsound && !nodmg)
 		var/volume = P.vol_by_damage()
 		playsound(src, pick(P.hitsound), volume, TRUE, -1)
-	visible_message("<span class='danger'>[src] is hit by \a [P][organ_hit_text]![next_attack_msg.Join()]</span>", \
+	visible_message("<span class='danger'>[src] es golpeado por \a [P][organ_hit_text]![next_attack_msg.Join()]</span>", \
 			"<span class='danger'>I'm hit by \a [P][organ_hit_text]![next_attack_msg.Join()]</span>", null, COMBAT_MESSAGE_RANGE)
 	next_attack_msg.Cut()
 
@@ -141,7 +141,7 @@
 			var/real_damage = apply_damage(I.throwforce, damagetype, zone, armor)
 			if(!real_damage)
 				nodmg = TRUE
-				next_attack_msg += span_warning(" Armor stops the damage.")
+				next_attack_msg += span_warning(" La armadura detiene el daño.")
 			var/mob/thrown_by = I.thrownby?.resolve()
 			if(!nodmg)
 				if(iscarbon(src))
@@ -158,7 +158,7 @@
 						if(I.can_embed() && prob(I.embedding.embed_chance) && HAS_TRAIT(src, TRAIT_SIMPLE_WOUNDS) && !HAS_TRAIT(src, TRAIT_PIERCEIMMUNE))
 							simple_add_embedded_object(I, silent = FALSE, crit_message = TRUE)
 					I.do_special_attack_effect(thrown_by, null, null, src, null, thrown = TRUE)
-			visible_message("<span class='danger'>[src] is hit by [I]![next_attack_msg.Join()]</span>", \
+			visible_message("¡<span class='danger'>[src] es golpeado por [I]![next_attack_msg.Join()]</span>", \
 							"<span class='danger'>I'm hit by [I]![next_attack_msg.Join()]</span>")
 			next_attack_msg.Cut()
 			if(thrown_by)
@@ -285,7 +285,7 @@
 
 /mob/living/proc/send_grabbed_message(mob/living/carbon/user)
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
-		visible_message(span_danger("[user] firmly grips [src]!"), \
+		visible_message(span_danger("¡[user] agarra firmemente [src]!"), \
 						src != user ? span_danger("[user] firmly grips me!") : "", \
 						span_hear("I hear aggressive shuffling!"), null, user)
 		to_chat(user, span_danger("I firmly grip [src != user ? "[src]" : "myself"]!"))
@@ -305,7 +305,7 @@
 						"<span class='notice'>\The [M] [pick(M.a_intent.attack_verb)] me!</span>", null, COMBAT_MESSAGE_RANGE)
 		return FALSE
 	if(HAS_TRAIT(M, TRAIT_PACIFISM))
-		to_chat(M, "<span class='warning'>I don't want to hurt anyone!</span>")
+		to_chat(M, "<span class='warning'>¡No quiero lastimar a nadie!</span>")
 		return FALSE
 
 	M.do_attack_animation(src, visual_effect_icon = M.a_intent.animname)
@@ -346,7 +346,7 @@
 
 	if (M.used_intent.type == INTENT_HARM)
 		if(HAS_TRAIT(M, TRAIT_PACIFISM))
-			to_chat(M, "<span class='info'>I don't want to hurt anyone!</span>")
+			to_chat(M, "<span class='info'>¡No quiero lastimar a nadie!</span>")
 			return FALSE
 
 		if(M.is_muzzled() || M.is_mouth_covered(FALSE, TRUE))
@@ -356,7 +356,7 @@
 		if (prob(75))
 			log_combat(M, src, "attacked")
 			playsound(src, 'sound/blank.ogg', 50, TRUE, -1)
-			visible_message("<span class='danger'>[M.name] bites [src]!</span>", \
+			visible_message("<span class='danger'>[M.name] muerde [src]!</span>", \
 							"<span class='danger'>[M.name] bites you!</span>", "<span class='hear'>I hear a chomp!</span>", COMBAT_MESSAGE_RANGE, M)
 			to_chat(M, "<span class='danger'>I bite [src]!</span>")
 			return TRUE
@@ -431,7 +431,7 @@
 		SEND_SOUND(src, sound('sound/flash_ring.ogg',0, 1, 0, 250))
 
 	if(ears.damage >= 15 && prob(ears.damage - 5))
-		to_chat(src, span_userdanger("You can't hear anything!"))
+		to_chat(src, span_userdanger("¡No puedes oír nada!"))
 		// Makes you deaf, enough that you need a proper source of healing, it won't self heal
 		// you need earmuffs, inacusiate, or replacement
 		ears.setOrganDamage(ears.maxHealth)

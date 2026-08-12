@@ -20,7 +20,7 @@
 	)
 
 /datum/job/advclass/mercenary/desert_pirate
-	title = "Desert Rider"
+	title = "Jinete del desierto"
 	tutorial = "A pirate of rakshari origin, hailing from the west dune-sea of Zaladin. Well-trained riders and experienced archers, these nomads live the life of marauders and raiders, taking what belongs to weaker settlements and caravans."
 	allowed_races = list(SPEC_ID_RAKSHARI)
 	outfit = /datum/outfit/mercenary/desert_pirate
@@ -41,7 +41,7 @@
 	spawned.merctype = 1 //Desert Rider chain, 0 for Desert Rider Medal
 
 /datum/outfit/mercenary/desert_pirate
-	name = "Desert Rider (Mercenary)"
+	name = "Jinete del desierto (mercenario)"
 	pants = /obj/item/clothing/pants/trou/leather
 	beltr = /obj/item/weapon/sword/sabre
 	backl = /obj/item/gun/ballistic/bow/short

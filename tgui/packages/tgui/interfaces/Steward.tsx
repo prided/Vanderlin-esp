@@ -171,23 +171,23 @@ export const Steward = (props) => {
   };
 
   return (
-    <Window title="Master of Nerves" width={860} height={560}>
+    <Window title="Maestro de los nervios" width={860} height={560}>
       <Window.Content scrollable>
         <Section>
           <Table>
             <Table.Row>
               <Table.Cell bold width="120px">
-                Treasury:
+                Tesorería:
               </Table.Cell>
               <Table.Cell>{treasury}m</Table.Cell>
               <Table.Cell bold width="100px">
-                Lord's Tax:
+                Impuesto del Señor:
               </Table.Cell>
               <Table.Cell>
                 <LordTaxControl value={lordTax} />
               </Table.Cell>
               <Table.Cell bold width="110px">
-                Guild's Tax:
+                Impuesto del gremio:
               </Table.Cell>
               <Table.Cell>{queensTax}%</Table.Cell>
             </Table.Row>
@@ -196,7 +196,7 @@ export const Steward = (props) => {
 
         <Box mb={1}>
           <Input
-            placeholder="Search across all tabs..."
+            placeholder="Buscar en todas las pestañas..."
             value={searchQuery}
             onInput={handleSearchInput}
             fluid
@@ -205,28 +205,28 @@ export const Steward = (props) => {
 
         <Tabs>
           <Tabs.Tab icon="landmark" selected={tab === 'bank'} onClick={() => setTab('bank')}>
-            Bank
+            Banco
           </Tabs.Tab>
           <Tabs.Tab icon="boxes" selected={tab === 'stockpile'} onClick={() => setTab('stockpile')}>
-            Stockpile
+            Reservas
           </Tabs.Tab>
           <Tabs.Tab icon="ship" selected={tab === 'import'} onClick={() => setTab('import')}>
-            Import
+            Importar
           </Tabs.Tab>
           <Tabs.Tab icon="scroll" selected={tab === 'bounties'} onClick={() => setTab('bounties')}>
-            Bounties
+            Recompensas
           </Tabs.Tab>
           <Tabs.Tab icon="user-tie" selected={tab === 'jobs'} onClick={() => setTab('jobs')}>
-            Jobs
+            Empleos
           </Tabs.Tab>
           <Tabs.Tab icon="coins" selected={tab === 'wages'} onClick={() => setTab('wages')}>
-            Wages
+            Salarios
           </Tabs.Tab>
           <Tabs.Tab icon="wrench" selected={tab === 'custom'} onClick={() => setTab('custom')}>
-            Custom
+            Personalizados
           </Tabs.Tab>
           <Tabs.Tab icon="book" selected={tab === 'log'} onClick={() => setTab('log')}>
-            Log
+            Registro
           </Tabs.Tab>
         </Tabs>
 
@@ -234,7 +234,7 @@ export const Steward = (props) => {
 
         {tab === 'stockpile' && (
           <StockTab
-            title="Stockpile"
+            title="Reservas"
             entries={filteredStockpiles}
             compact={compact}
             onToggleCompact={() => setCompact(!compact)}
@@ -244,7 +244,7 @@ export const Steward = (props) => {
 
         {tab === 'import' && (
           <StockTab
-            title="Imports"
+            title="Importaciones"
             entries={filteredImports}
             compact={compact}
             onToggleCompact={() => setCompact(!compact)}
@@ -295,7 +295,7 @@ const LordTaxControl = ({ value }: { value: number }) => {
         />
       </Stack.Item>
       <Stack.Item>
-        <Button onClick={() => act('set_tax', { value: tax })}>Set</Button>
+        <Button onClick={() => act('set_tax', { value: tax })}>Establecer</Button>
       </Stack.Item>
     </Stack>
   );
@@ -331,17 +331,17 @@ const MoneyControl = ({
 };
 
 const BankTab = ({ accounts }: { accounts: Account[] }) => (
-  <Section title="Bank Accounts">
+  <Section title="Cuentas bancarias">
     <Table>
       <Table.Row header>
-        <Table.Cell>Name</Table.Cell>
+        <Table.Cell>Nombre</Table.Cell>
         <Table.Cell>Balance</Table.Cell>
-        <Table.Cell align="right">Give</Table.Cell>
-        <Table.Cell align="right">Fine</Table.Cell>
+        <Table.Cell align="right">Dar</Table.Cell>
+        <Table.Cell align="right">Multar</Table.Cell>
       </Table.Row>
       {accounts.length === 0 ? (
         <Table.Row>
-          <Table.Cell colSpan={4}>No accounts found.</Table.Cell>
+          <Table.Cell colSpan={4}>No se encontraron cuentas.</Table.Cell>
         </Table.Row>
       ) : (
         accounts.map((acc) => (
@@ -356,10 +356,10 @@ const BankTab = ({ accounts }: { accounts: Account[] }) => (
             </Table.Cell>
             <Table.Cell verticalAlign="middle">{acc.balance}m</Table.Cell>
             <Table.Cell verticalAlign="middle" align="right">
-              <MoneyControl action="give_money" refId={acc.ref} label="Give" color="good" />
+              <MoneyControl action="give_money" refId={acc.ref} label="Dar" color="good" />
             </Table.Cell>
             <Table.Cell verticalAlign="middle" align="right">
-              <MoneyControl action="fine_account" refId={acc.ref} label="Fine" color="bad" />
+              <MoneyControl action="fine_account" refId={acc.ref} label="Multar" color="bad" />
             </Table.Cell>
           </Table.Row>
         ))
@@ -413,14 +413,14 @@ const StockRowCompact = ({
             {(showImportExport || showImportOnly) && (
               <Stack.Item>
                 <Button compact icon="ship" onClick={() => act('import', { ref: entry.ref })}>
-                  Imp {entry.importExportAmt} ({entry.importPrice})
+                  Diablillo {entry.importExportAmt} ({entry.importPrice})
                 </Button>
               </Stack.Item>
             )}
             {showImportExport && (
               <Stack.Item>
                 <Button compact icon="truck" onClick={() => act('export', { ref: entry.ref })}>
-                  Exp {entry.importExportAmt} ({entry.exportPrice})
+                  Exp. {entry.importExportAmt} ({entry.exportPrice})
                 </Button>
               </Stack.Item>
             )}
@@ -461,11 +461,11 @@ const StockCard = ({
             {entry.desc}
           </Box>
         </Stack.Item>
-        <Stack.Item>Stockpiled Amount: {entry.held}</Stack.Item>
-        {!entry.stablePrice && <Stack.Item>Demand: {entry.demand}</Stack.Item>}
+        <Stack.Item>Cantidad almacenada: {entry.held}</Stack.Item>
+        {!entry.stablePrice && <Stack.Item>Demanda: {entry.demand}</Stack.Item>}
         <Stack.Item>
           <Stack align="center">
-            <Stack.Item width="140px">Bounty Price:</Stack.Item>
+            <Stack.Item width="140px">Precio de recompensa:</Stack.Item>
             <Stack.Item>
               <NumberInput
                 width="60px"
@@ -482,7 +482,7 @@ const StockCard = ({
           <>
             <Stack.Item>
               <Stack align="center">
-                <Stack.Item width="140px">Withdraw Price:</Stack.Item>
+                <Stack.Item width="140px">Precio de retiro:</Stack.Item>
                 <Stack.Item>
                   <NumberInput
                     width="60px"
@@ -499,7 +499,7 @@ const StockCard = ({
               <>
                 <Stack.Item>
                   <Stack align="center">
-                    <Stack.Item width="140px">Oversupply Amount:</Stack.Item>
+                    <Stack.Item width="140px">Cantidad de exceso de oferta:</Stack.Item>
                     <Stack.Item>
                       <NumberInput
                         width="60px"
@@ -514,7 +514,7 @@ const StockCard = ({
                 </Stack.Item>
                 <Stack.Item>
                   <Stack align="center">
-                    <Stack.Item width="140px">Oversupply Price:</Stack.Item>
+                    <Stack.Item width="140px">Precio de exceso de oferta:</Stack.Item>
                     <Stack.Item>
                       <NumberInput
                         width="60px"
@@ -539,7 +539,7 @@ const StockCard = ({
                   icon={entry.withdrawDisabled ? 'lock' : 'lock-open'}
                   onClick={() => act('toggle_withdraw', { ref: entry.ref })}
                 >
-                  {entry.withdrawDisabled ? 'Enable' : 'Disable'} Withdrawing
+                  {entry.withdrawDisabled ? 'Enable' : 'Disable'} retiros
                 </Button>
               </Stack.Item>
             )}
@@ -548,14 +548,14 @@ const StockCard = ({
                 {(showImportExport || showImportOnly) && (
                   <Stack.Item>
                     <Button icon="ship" onClick={() => act('import', { ref: entry.ref })}>
-                      Import {entry.importExportAmt} ({entry.importPrice})
+                      Importar {entry.importExportAmt} ({entry.importPrice})
                     </Button>
                   </Stack.Item>
                 )}
                 {showImportExport && (
                   <Stack.Item>
                     <Button icon="truck" onClick={() => act('export', { ref: entry.ref })}>
-                      Export {entry.importExportAmt} ({entry.exportPrice})
+                      Exportar {entry.importExportAmt} ({entry.exportPrice})
                     </Button>
                   </Stack.Item>
                 )}
@@ -587,20 +587,20 @@ const StockTab = ({
     title={title}
     buttons={
       <Button icon="compress" selected={compact} onClick={onToggleCompact}>
-        Compact
+        Compacto
       </Button>
     }
   >
     {entries.length === 0 ? (
-      <Box color="label">Nothing found.</Box>
+      <Box color="label">No se encontró nada.</Box>
     ) : compact ? (
       <Table>
         <Table.Row header>
-          <Table.Cell>Name</Table.Cell>
-          <Table.Cell>Amt</Table.Cell>
-          <Table.Cell>Bounty</Table.Cell>
-          {!showImportOnly && <Table.Cell>Withdraw</Table.Cell>}
-          <Table.Cell align="right">Trade</Table.Cell>
+          <Table.Cell>Nombre</Table.Cell>
+          <Table.Cell>Cantidad</Table.Cell>
+          <Table.Cell>Recompensa</Table.Cell>
+          {!showImportOnly && <Table.Cell>Retirar</Table.Cell>}
+          <Table.Cell align="right">Intercambiar</Table.Cell>
         </Table.Row>
         {entries.map((entry) => (
           <StockRowCompact
@@ -628,11 +628,11 @@ const StockTab = ({
 
 const BountyTab = ({ entries }: { entries: StockEntry[] }) => {
   return (
-    <Section title="Bounties">
+    <Section title="Recompensas">
       <Table>
         {entries.length === 0 ? (
           <Table.Row>
-            <Table.Cell>No active bounties found.</Table.Cell>
+            <Table.Cell>No se encontraron recompensas activas.</Table.Cell>
           </Table.Row>
         ) : (
           entries.map((entry) => <BountyRow key={entry.ref} entry={entry} />)
@@ -651,7 +651,7 @@ const BountyRow = ({ entry }: { entry: StockEntry }) => {
         <Box color="label" fontSize="0.9em">
           {entry.desc}
         </Box>
-        <Box fontSize="0.85em">Total Collected: {entry.held}</Box>
+        <Box fontSize="0.85em">Total recaudado: {entry.held}</Box>
       </Table.Cell>
       <Table.Cell verticalAlign="middle" align="right" width="120px">
         <NumberInput
@@ -682,7 +682,7 @@ const JobsTab = ({
 
   return (
     <>
-      <Section title="Pay by Class">
+      <Section title="Paga por clase">
         <Stack align="center">
           <Stack.Item grow>
             <Dropdown
@@ -701,20 +701,20 @@ const JobsTab = ({
               disabled={!payJob}
               onClick={() => act('payroll', { job: payJob, amount: payAmount })}
             >
-              Pay All
+              Pagar todo
             </Button>
           </Stack.Item>
         </Stack>
       </Section>
-      <Section title="Assign Jobs">
+      <Section title="Asignar trabajos">
         <Table>
           <Table.Row header>
-            <Table.Cell>Name</Table.Cell>
-            <Table.Cell align="right">Assign</Table.Cell>
+            <Table.Cell>Nombre</Table.Cell>
+            <Table.Cell align="right">Asignar</Table.Cell>
           </Table.Row>
           {jobs.length === 0 ? (
             <Table.Row>
-              <Table.Cell colSpan={2}>No residents found matching criteria.</Table.Cell>
+              <Table.Cell colSpan={2}>No se encontraron residentes que coincidan con los criterios.</Table.Cell>
             </Table.Row>
           ) : (
             jobs.map((job) => <JobRow key={job.ref} job={job} assignableJobs={assignableJobs} />)
@@ -739,7 +739,7 @@ const JobRow = ({ job, assignableJobs }: { job: JobEntry; assignableJobs: string
       <Table.Cell verticalAlign="middle" align="right">
         {job.isLord ? (
           <Box color="label" italic>
-            The Monarch cannot be reassigned.
+            El Monarca no puede ser reasignado.
           </Box>
         ) : (
           <Stack align="center" justify="flex-end">
@@ -748,7 +748,7 @@ const JobRow = ({ job, assignableJobs }: { job: JobEntry; assignableJobs: string
             </Stack.Item>
             <Stack.Item>
               <Button disabled={!selected} onClick={() => act('change_job', { ref: job.ref, job: selected })}>
-                Assign
+                Asignar
               </Button>
             </Stack.Item>
           </Stack>
@@ -775,10 +775,10 @@ const CustomTab = ({
 
   return (
     <Section
-      title="Custom Stocks"
+      title="Existencias personalizadas"
       buttons={
         <Button icon="compress" selected={compact} onClick={onToggleCompact}>
-          Compact
+          Compacto
         </Button>
       }
     >
@@ -802,26 +802,26 @@ const CustomTab = ({
               disabled={!selectedPath}
               onClick={() => act('create_custom', { path: selectedPath })}
             >
-              Create New Custom Stock
+              Crear nuevo stock personalizado
             </Button>
           </Stack.Item>
         </Stack>
         {availableItems.length === 0 && (
-          <NoticeBox mt={0.5}>Carry an item to create a custom stock for it.</NoticeBox>
+          <NoticeBox mt={0.5}>Lleva un artículo para crear un stock personalizado para él.</NoticeBox>
         )}
       </Box>
       {entries.length === 0 ? (
         <Box color="label" italic>
-          No custom stocks found.
+          No se encontraron existencias personalizadas.
         </Box>
       ) : compact ? (
         <Table>
           <Table.Row header>
-            <Table.Cell>Name</Table.Cell>
-            <Table.Cell>Amt</Table.Cell>
-            <Table.Cell>Bounty</Table.Cell>
-            <Table.Cell>Withdraw</Table.Cell>
-            <Table.Cell align="right">Actions</Table.Cell>
+            <Table.Cell>Nombre</Table.Cell>
+            <Table.Cell>Cantidad</Table.Cell>
+            <Table.Cell>Recompensa</Table.Cell>
+            <Table.Cell>Retirar</Table.Cell>
+            <Table.Cell align="right">Acciones</Table.Cell>
           </Table.Row>
           {entries.map((entry) => (
             <CustomRowCompact key={entry.ref} entry={entry} />
@@ -917,13 +917,13 @@ const CustomCard = ({ entry }: { entry: StockEntry }) => {
           <Box color="label" fontSize="0.9em">
             {entry.desc}
           </Box>
-          <Box fontSize="0.85em">Created by: {entry.createdBy}</Box>
+          <Box fontSize="0.85em">Creado por: {entry.createdBy}</Box>
         </Stack.Item>
-        <Stack.Item>Stockpiled Amount: {entry.held}</Stack.Item>
-        <Stack.Item>Demand: {entry.demand}</Stack.Item>
+        <Stack.Item>Cantidad almacenada: {entry.held}</Stack.Item>
+        <Stack.Item>Demanda: {entry.demand}</Stack.Item>
         <Stack.Item>
           <Stack align="center">
-            <Stack.Item width="140px">Bounty Price:</Stack.Item>
+            <Stack.Item width="140px">Precio de recompensa:</Stack.Item>
             <Stack.Item>
               <NumberInput
                 width="60px"
@@ -938,7 +938,7 @@ const CustomCard = ({ entry }: { entry: StockEntry }) => {
         </Stack.Item>
         <Stack.Item>
           <Stack align="center">
-            <Stack.Item width="140px">Withdraw Price:</Stack.Item>
+            <Stack.Item width="140px">Precio de retiro:</Stack.Item>
             <Stack.Item>
               <NumberInput
                 width="60px"
@@ -958,7 +958,7 @@ const CustomCard = ({ entry }: { entry: StockEntry }) => {
                 icon={entry.withdrawDisabled ? 'lock' : 'lock-open'}
                 onClick={() => act('toggle_withdraw', { ref: entry.ref })}
               >
-                {entry.withdrawDisabled ? 'Enable' : 'Disable'} Withdrawing
+                {entry.withdrawDisabled ? 'Enable' : 'Disable'} retiros
               </Button>
             </Stack.Item>
             <Stack.Item>{deleteButton}</Stack.Item>
@@ -970,9 +970,9 @@ const CustomCard = ({ entry }: { entry: StockEntry }) => {
 };
 
 const LogTab = ({ entries }: { entries: string[] }) => (
-  <Section title="Log">
+  <Section title="Registro">
     {entries.length === 0 ? (
-      <Box color="label">No log entries found.</Box>
+      <Box color="label">No se encontraron entradas de registro.</Box>
     ) : (
       <Stack vertical>
         {entries.map((line, i) => (
@@ -1010,7 +1010,7 @@ const WagesTab = ({ entries }: { entries: WageEntry[] }) => {
   });
 
   return (
-    <Section title="Daily Wages">
+    <Section title="Salario diario">
       {categories.length > 0 && (
         <Stack align="center" mb={1}>
           <Stack.Item grow style={{ overflow: 'hidden', minWidth: 0 }}>
@@ -1042,18 +1042,18 @@ const WagesTab = ({ entries }: { entries: WageEntry[] }) => {
 
       <Table>
         <Table.Row header>
-          <Table.Cell>Job</Table.Cell>
+          <Table.Cell>Trabajo</Table.Cell>
           <Table.Cell
             align="right"
             onClick={handleToggleSort}
             style={{ cursor: 'pointer', userSelect: 'none' }}
           >
-            Daily Wage {sortOrder === 'desc' ? '▼' : sortOrder === 'asc' ? '▲' : ''}
+            Salario diario {sortOrder === 'desc' ? '▼' : sortOrder === 'asc' ? '▲' : ''}
           </Table.Cell>
         </Table.Row>
         {shown.length === 0 ? (
           <Table.Row>
-            <Table.Cell colSpan={2}>No jobs found matching criteria.</Table.Cell>
+            <Table.Cell colSpan={2}>No se encontraron trabajos que coincidan con los criterios.</Table.Cell>
           </Table.Row>
         ) : (
           shown.map((entry) => <WageRow key={entry.title} entry={entry} />)

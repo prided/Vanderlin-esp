@@ -6,20 +6,20 @@
 // --------- IRON -----------
 
 /datum/anvil_recipe/valuables/gold_teeth
-	name = "Golden Teeth"
+	name = "Dientes de oro"
 	required_material = /obj/item/ingot/gold
 	created_item = /obj/item/natural/teeth/gold
 	craftdiff = 2
 	output_amount = 8
 
 /datum/anvil_recipe/valuables/gold_mask
-	name = "Golden Half Mask"
+	name = "Media máscara dorada"
 	required_material = /obj/item/ingot/gold
 	created_item = /obj/item/clothing/face/lordmask
 	craftdiff = 2
 
 /datum/anvil_recipe/valuables/gold_mask_left
-	name = "Golden Half Mask (Left)"
+	name = "Media máscara dorada (izquierda)"
 	required_material = /obj/item/ingot/gold
 	created_item = /obj/item/clothing/face/lordmask/l
 	craftdiff = 2
@@ -31,7 +31,7 @@
 ///////////////////////////////////////////////
 
 /datum/anvil_recipe/valuables/iron/statue
-	name = "Iron Statue"
+	name = "Estatua de hierro"
 	created_item = /obj/item/statue/iron
 
 // --------- STEEL -----------
@@ -50,7 +50,7 @@
 ///////////////////////////////////////////////
 
 /datum/anvil_recipe/valuables/steel/statue
-	name = "Steel Statue"
+	name = "Estatua de acero"
 	created_item = /obj/item/statue/steel
 
 // --------- SILVER -----------
@@ -62,7 +62,7 @@
 ///////////////////////////////////////////////
 
 /datum/anvil_recipe/valuables/silver/statue
-	name = "Silver Statue"
+	name = "Estatua de plata"
 	created_item = /obj/item/statue/silver
 
 /datum/anvil_recipe/valuables/silver/volf
@@ -71,7 +71,7 @@
 	created_item = /obj/item/statue/silver/volf
 
 /datum/anvil_recipe/valuables/silver/urn
-	name = "Silver Urn (+Silver Bar)"
+	name = "Urna de Plata (+Barra de Plata)"
 	additional_items = list(/obj/item/ingot/silver)
 	created_item = /obj/item/statue/silver/urn
 
@@ -86,7 +86,7 @@
 	created_item = /obj/item/statue/silver/finger
 
 /datum/anvil_recipe/valuables/silver/bust
-	name = "Silver Bust"
+	name = "Busto de Plata"
 	created_item = /obj/item/statue/silver/bust
 
 /datum/anvil_recipe/valuables/silver/vase
@@ -98,24 +98,24 @@
 	created_item = /obj/item/statue/silver/totem
 
 /datum/anvil_recipe/valuables/silver/teapot
-	name = "Silver Teapot"
+	name = "Tetera de plata"
 	created_item = /obj/item/reagent_containers/glass/carafe/teapot/silver
 
 /datum/anvil_recipe/valuables/silver/obelisk
-	name = "Silver Obelisk"
+	name = "Obelisco de Plata"
 	created_item = /obj/item/statue/silver/obelisk
 
 /datum/anvil_recipe/valuables/silver/tablet
-	name = "Silver Tablet"
+	name = "Tableta de plata"
 	created_item = /obj/item/statue/silver/tablet
 
 /datum/anvil_recipe/valuables/silver/comb
-	name = "Silver Combs"
+	name = "Peines de plata"
 	created_item = /obj/item/statue/silver/comb
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/silver/figurine
-	name = "Silver Figurines"
+	name = "Figuras de plata"
 	created_item = /obj/item/statue/silver/figurine
 	output_amount = 2
 
@@ -130,12 +130,12 @@
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/silver/rings
-	name = "Silver Rings"
+	name = "Anillos de plata"
 	created_item = /obj/item/clothing/ring/silver
 	output_amount = 3
 
 /datum/anvil_recipe/valuables/silver/diadem
-	name = "Silver Diadem"
+	name = "Diadema de Plata"
 	created_item = /obj/item/clothing/head/crown/circlet/silverdiadem
 
 /datum/anvil_recipe/valuables/silver/nosechain
@@ -156,12 +156,12 @@
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/silver/amulet
-	name = "Silver Amulets"
+	name = "Amuletos de Plata"
 	created_item = /obj/item/clothing/neck/silveramulet
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/silver/dorpels
-	name = "Silver Dorpel Ring"
+	name = "Anillo Dorpel de Plata"
 	additional_items = list(/obj/item/gem/diamond)
 	created_item = /obj/item/clothing/ring/silver/dorpel
 	craftdiff = 4
@@ -185,7 +185,7 @@
 	craftdiff = 4
 
 /datum/anvil_recipe/valuables/silver/topers
-	name = "Silver Toper Ring"
+	name = "Anillo Toper de Plata"
 	additional_items = list(/obj/item/gem/yellow)
 	created_item = /obj/item/clothing/ring/silver/toper
 	craftdiff = 4
@@ -274,7 +274,7 @@
 	created_item = /obj/item/statue/gold/volf
 
 /datum/anvil_recipe/valuables/gold/urn
-	name = "Gold Urn (+ Gold Bar)"
+	name = "Urna de Oro (+ Barra de Oro)"
 	additional_items = list(/obj/item/ingot/gold)
 	created_item = /obj/item/statue/gold/urn
 
@@ -288,7 +288,7 @@
 	created_item = /obj/item/statue/gold/vase
 
 /datum/anvil_recipe/valuables/gold/obelisk
-	name = "Gold Obelisk"
+	name = "Obelisco de oro"
 	created_item = /obj/item/statue/gold/obelisk
 
 /datum/anvil_recipe/valuables/gold/totem
@@ -309,12 +309,12 @@
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/gold/comb
-	name = "Gold Combs"
+	name = "Peines de oro"
 	created_item = /obj/item/statue/gold/comb
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/gold/figurine
-	name = "Gold Figurines"
+	name = "Figuras de oro"
 	created_item = /obj/item/statue/gold/figurine
 	output_amount = 2
 
@@ -324,7 +324,7 @@
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/gold/amulet
-	name = "Gold Amulets"
+	name = "Amuletos de oro"
 	created_item = /obj/item/clothing/neck/goldamulet
 	output_amount = 2
 
@@ -338,12 +338,12 @@
 	created_item = /obj/item/clothing/head/crown/circlet
 
 /datum/anvil_recipe/valuables/gold/rings
-	name = "Gold Rings"
+	name = "Anillos de oro"
 	created_item = /obj/item/clothing/ring/gold
 	output_amount = 3
 
 /datum/anvil_recipe/valuables/gold/diadem
-	name = "Gold Diadem"
+	name = "Diadema de oro"
 	created_item = /obj/item/clothing/head/crown/circlet/golddiadem
 
 /datum/anvil_recipe/valuables/gold/nosechain
@@ -406,7 +406,7 @@
 	craftdiff = 6
 
 /datum/anvil_recipe/valuables/signet/silver
-	name = "Silver Signet Ring"
+	name = "Anillo de sello de plata"
 	required_material = /obj/item/ingot/silver
 	craftdiff = 4
 	created_item = /obj/item/clothing/ring/signet/silver
@@ -418,7 +418,7 @@
 	created_item = /obj/item/clothing/ring/signet
 
 /datum/anvil_recipe/valuables/signet/psy/gold
-	name = "Gold Signet Ring"
+	name = "Anillo de sello de oro"
 	craftdiff = 4
 	required_material = /obj/item/ingot/gold
 	created_item = /obj/item/clothing/ring/signet/psy/g
@@ -438,11 +438,11 @@
 //////////////////////////////////////////////
 
 /datum/anvil_recipe/valuables/bronze/statue
-	name = "Bronze Statue"
+	name = "Estatua de bronce"
 	created_item = /obj/item/statue/bronze
 
 /datum/anvil_recipe/valuables/bronze/bust
-	name = "Bronze Bust"
+	name = "Busto de Bronce"
 	created_item = /obj/item/statue/bronze/bust
 
 /datum/anvil_recipe/valuables/bronze/volf
@@ -451,7 +451,7 @@
 	created_item = /obj/item/statue/bronze/volf
 
 /datum/anvil_recipe/valuables/bronze/urn
-	name = "Bronze Urn (+ Bronze Bar)"
+	name = "Urna de Bronce (+ Barra de Bronce)"
 	additional_items = list(/obj/item/ingot/bronze)
 	created_item = /obj/item/statue/bronze/urn
 
@@ -465,7 +465,7 @@
 	created_item = /obj/item/statue/bronze/vase
 
 /datum/anvil_recipe/valuables/bronze/obelisk
-	name = "Bronze Obelisk"
+	name = "Obelisco de bronce"
 	created_item = /obj/item/statue/bronze/obelisk
 
 /datum/anvil_recipe/valuables/bronze/totem
@@ -473,25 +473,25 @@
 	created_item = /obj/item/statue/bronze/totem
 
 /datum/anvil_recipe/valuables/bronze/teapot
-	name = "Bronze Teapot"
+	name = "Tetera de bronce"
 	created_item = /obj/item/reagent_containers/glass/carafe/teapot/bronze
 
 /datum/anvil_recipe/valuables/bronze/tablet
-	name = "Bronze Tablet"
+	name = "Tableta de Bronce"
 	created_item = /obj/item/statue/bronze/tablet
 
 /datum/anvil_recipe/valuables/bronze/cameo
-	name = "Bronze Cameos"
+	name = "Cameos de bronce"
 	created_item = /obj/item/statue/bronze/cameo
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/bronze/comb
-	name = "Bronze Combs"
+	name = "Peines de bronce"
 	created_item = /obj/item/statue/bronze/comb
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/bronze/figurine
-	name = "Bronze Figurines"
+	name = "Figuras de bronce"
 	created_item = /obj/item/statue/bronze/figurine
 	output_amount = 2
 
@@ -525,7 +525,7 @@
 	output_amount = 2
 
 /datum/anvil_recipe/valuables/bronze_ring
-	name = "Bronze Rings (x2)"
+	name = "Anillos de Bronce (x2)"
 	required_material = /obj/item/ingot/bronze
 	created_item = /obj/item/clothing/ring/bronze
 	output_amount = 2

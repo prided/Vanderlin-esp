@@ -54,7 +54,7 @@ export const BardSongbook = () => {
   } = data;
 
   return (
-    <Window width={400} height={620} title="Songbook">
+    <Window width={400} height={620} title="cancionero">
       <Window.Content scrollable>
         {has_bardic_training && (
           <BardBuffSection
@@ -86,7 +86,7 @@ export const BardSongbook = () => {
                     disabled={!can_unlearn}
                     onClick={() => act('unlearn_song', { type_path: song.type_path })}
                   >
-                    {song.name} (known)
+                    {song.name} (conocido)
                   </Button>
                 ) : (
                   <Button

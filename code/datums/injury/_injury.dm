@@ -9,7 +9,7 @@
 //because in it's stages list, "deep cut" = 15.
 /datum/injury
 	/// Description of the injury - default in case something borks
-	var/desc = "injury"
+	var/desc = "lesión"
 	/// Number representing the current stage
 	var/current_stage = 0
 	/// Amount of damage this injury is currently causing. Use damage_per_injury() rather than damage to determine the state of an injury.

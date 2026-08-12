@@ -4,13 +4,13 @@
 /datum/emote/living/carbon/human/cry
 	key = "cry"
 	key_third_person = "cries"
-	message = "cries."
+	message = "llora."
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = SOFT_CRIT
 
 /mob/living/carbon/human/verb/emote_cry()
-	set name = "Cry"
-	set category = "Emotes.Noises"
+	set name = "Llorar"
+	set category = "Emotes.Ruidos"
 
 	emote("cry", intentional = TRUE)
 
@@ -28,12 +28,12 @@
 
 /datum/emote/living/carbon/human/eyebrow
 	key = "eyebrow"
-	message = "raises an eyebrow."
+	message = "levanta una ceja."
 	emote_type = EMOTE_VISIBLE
 
 /mob/living/carbon/human/verb/emote_eyebrow()
 	set name = "Raise Eyebrow"
-	set category = "Emotes.Actions"
+	set category = "Emotes.Acciones"
 
 	emote("eyebrow", intentional = TRUE)
 
@@ -45,20 +45,20 @@
 
 /mob/living/carbon/human/verb/emote_psst()
 	set name = "Psst"
-	set category = "Emotes.Noises"
+	set category = "Emotes.Ruidos"
 
 	emote("psst", intentional = TRUE)
 
 /datum/emote/living/carbon/human/grumble
 	key = "grumble"
 	key_third_person = "grumbles"
-	message = "grumbles."
+	message = "se queja."
 	message_muffled = "makes a grumbling noise."
 	emote_type = EMOTE_AUDIBLE
 
 /mob/living/carbon/human/verb/emote_grumble()
 	set name = "Grumble"
-	set category = "Emotes.Noises"
+	set category = "Emotes.Ruidos"
 
 	emote("grumble", intentional = TRUE)
 
@@ -73,12 +73,12 @@
 /datum/emote/living/carbon/human/mumble
 	key = "mumble"
 	key_third_person = "mumbles"
-	message = "mumbles."
+	message = "murmura."
 	emote_type = EMOTE_AUDIBLE
 
 /mob/living/carbon/human/verb/emote_mumble()
 	set name = "Mumble"
-	set category = "Emotes.Noises"
+	set category = "Emotes.Ruidos"
 
 	emote("mumble", intentional = TRUE)
 
@@ -89,20 +89,20 @@
 /datum/emote/living/carbon/human/raise
 	key = "raise"
 	key_third_person = "raises"
-	message = "raises a hand."
+	message = "levanta una mano."
 	hands_use_check = TRUE
 
 /datum/emote/living/carbon/human/salute
 	key = "salute"
 	key_third_person = "salutes"
 	message = "salutes."
-	message_param = "salutes to %t."
+	message_param = "saludos a %t."
 	hands_use_check = TRUE
 
 /datum/emote/living/carbon/human/shrug
 	key = "shrug"
 	key_third_person = "shrugs"
-	message = "shrugs."
+	message = "se encoge de hombros."
 
 /datum/emote/living/carbon/human/wag
 	key = "wag"
@@ -149,17 +149,17 @@
 	key_third_person = "purrs"
 	vary = TRUE
 	sound = SFX_CAT_PURR
-	message = "purrs."
+	message = "ronronea."
 	emote_type = EMOTE_AUDIBLE
 
 /mob/living/carbon/human/species/rakshari/verb/emote_purr()
 	set name = "purr"
-	set category = "Emotes.Noises"
+	set category = "Emotes.Ruidos"
 	emote("purr", intentional = TRUE)
 
 /mob/living/carbon/human/species/rakshari/verb/emote_meow()
 	set name = "meow"
-	set category = "Emotes.Noises"
+	set category = "Emotes.Ruidos"
 	emote("meow", intentional = TRUE)
 
 //Ayy lmao

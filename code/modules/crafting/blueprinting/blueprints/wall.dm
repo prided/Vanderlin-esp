@@ -1,18 +1,18 @@
 /datum/blueprint_recipe/wall
 	abstract_type = /datum/blueprint_recipe/wall
-	category = "Walls"
+	category = "Paredes"
 	pixel_offsets = FALSE
 	build_time = 5 SECONDS
 
 /datum/blueprint_recipe/wall/woodwall
 	name = "Wood Wall"
-	desc = "A wooden wall."
+	desc = "Una pared de madera."
 	result_type = /turf/closed/wall/mineral/wood
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -25,21 +25,21 @@
 		/obj/item/grown/log/tree/small = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
 
 
 /datum/blueprint_recipe/wall/dwoodwall
-	name = "Dark Wood Wall"
-	desc = "A dark wooden wall."
+	name = "Pared de madera oscura"
+	desc = "Una pared de madera oscura."
 	result_type = /turf/closed/wall/mineral/wooddark
 	required_materials = list(
 		/obj/item/natural/wood/plank = 3
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -47,33 +47,33 @@
 
 /datum/blueprint_recipe/wall/dwoodwall/horizontal
 	name = "Horizontal Dark Wood Wall"
-	desc = "A dark wooden wall."
+	desc = "Una pared de madera oscura."
 	result_type = /turf/closed/wall/mineral/wooddark/horizontal
 
 /datum/blueprint_recipe/wall/dwoodwall/vertical
 	name = "Vertical Dark Wood Wall"
-	desc = "A dark wooden wall."
+	desc = "Una pared de madera oscura."
 	result_type = /turf/closed/wall/mineral/wooddark/vertical
 
 /datum/blueprint_recipe/wall/dwoodwall/end
 	name = "Dark Wood End Wall"
-	desc = "A dark wooden wall."
+	desc = "Una pared de madera oscura."
 	result_type = /turf/closed/wall/mineral/wooddark/end
 
 /datum/blueprint_recipe/wall/dwoodwall/slit
 	name = "Dark Wood Slit Wall"
-	desc = "A dark wooden wall."
+	desc = "Una pared de madera oscura."
 	result_type = /turf/closed/wall/mineral/wooddark/slitted
 
 /datum/blueprint_recipe/wall/dwoodwindow
-	name = "Dark Wood Window"
-	desc = "A dark wooden wall with a window."
+	name = "Ventana de madera oscura"
+	desc = "Una pared de madera oscura con una ventana."
 	result_type = /turf/closed/wall/mineral/wooddark/window
 	required_materials = list(
 		/obj/item/natural/wood/plank = 3
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
@@ -81,14 +81,14 @@
 
 
 /datum/blueprint_recipe/wall/stonewall
-	name = "Stone Wall"
-	desc = "A stone wall."
+	name = "Muro de piedra"
+	desc = "Un muro de piedra."
 	result_type = /turf/closed/wall/mineral/stone
 	required_materials = list(
 		/obj/item/natural/stone = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -101,34 +101,34 @@
 		/obj/item/natural/stone = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
 
 /datum/blueprint_recipe/wall/stonebrick
-	name = "Stone Brick Wall"
+	name = "Pared de ladrillos de piedra"
 	desc = "A stone brick wall."
 	result_type = /turf/closed/wall/mineral/stonebrick
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
 	craftdiff = 2
 
 /datum/blueprint_recipe/wall/fancyswall
-	name = "Decorated Stone Wall"
+	name = "Muro de piedra decorado"
 	desc = "A decorated stone wall."
 	result_type = /turf/closed/wall/mineral/decostone
 	required_materials = list(
 		/obj/item/natural/stoneblock = 3
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -142,7 +142,7 @@
 		/obj/item/natural/stoneblock = 3
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 	skillcraft = /datum/attribute/skill/craft/masonry
@@ -151,7 +151,7 @@
 
 /datum/blueprint_recipe/wall/tentwall
 	name = "Tent Wall"
-	desc = "A temporary tent wall."
+	desc = "Una pared de tienda temporal."
 	result_type = /turf/closed/wall/mineral/tent
 	required_materials = list(
 		/obj/item/grown/log/tree/stick = 1,
@@ -159,7 +159,7 @@
 	)
 	construct_tool = /obj/item/weapon/knife
 	build_time = 3 SECONDS
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/wall/daubwall
@@ -171,7 +171,7 @@
 		/obj/item/natural/clod/dirt = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/wall/daubwall/vert
@@ -183,7 +183,7 @@
 		/obj/item/natural/clod/dirt = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/wall/baddaub
@@ -195,12 +195,12 @@
 		/obj/item/natural/clod/dirt = 2
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Walls"
+	category = "Paredes"
 	floor_object = TRUE
 
 /datum/blueprint_recipe/wall/solid_window
 	name = "Solid Glass Window"
-	desc = "A solid framed window."
+	desc = "Una ventana con marco sólido."
 	required_materials = list(
 		/obj/item/natural/wood/plank = 4,
 		/obj/item/natural/glass = 2,
@@ -210,12 +210,12 @@
 	result_type = /turf/closed/wall/window
 
 /datum/blueprint_recipe/wall/solid_window/alt
-	name = "Alternative Solid Glass Window"
+	name = "Ventana de vidrio sólido alternativa"
 	result_type = /turf/closed/wall/window/openclose
 
 /datum/blueprint_recipe/wall/silver_window
 	name = "Solid Silver Stained Glass Window"
-	desc = "A solid framed window."
+	desc = "Una ventana con marco sólido."
 	required_materials = list(
 		/obj/item/ingot/silver = 2,
 		/obj/item/natural/glass = 2,
@@ -230,7 +230,7 @@
 
 /datum/blueprint_recipe/wall/red_window
 	name = "Solid Red Stained Glass Window"
-	desc = "A solid framed window."
+	desc = "Una ventana con marco sólido."
 	required_materials = list(
 		/obj/item/ingot/iron = 2,
 		/obj/item/natural/glass = 2,
@@ -241,7 +241,7 @@
 
 /datum/blueprint_recipe/wall/yellow_window
 	name = "Solid Yellow Stained Glass Window"
-	desc = "A solid framed window."
+	desc = "Una ventana con marco sólido."
 	required_materials = list(
 		/obj/item/ingot/iron = 2,
 		/obj/item/natural/glass = 2,
@@ -253,7 +253,7 @@
 
 /datum/blueprint_recipe/wall/stonewindow
 	name = "Solid Stone Window"
-	desc = "A solid framed window."
+	desc = "Una ventana con marco sólido."
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2,
 		/obj/item/natural/fibers = 2,
@@ -294,7 +294,7 @@
 	result_type = /turf/closed/wall/mineral/stone/moss/red
 
 /datum/blueprint_recipe/wall/decorstone
-	name = "Decor Stone Wall"
+	name = "decoración de la pared de piedra"
 	desc = "A wall with etched details."
 	required_materials = list(
 		/obj/item/natural/stoneblock = 4,
@@ -446,7 +446,7 @@
 
 /datum/blueprint_recipe/wall/roof
 	name = "Center Brick Roof"
-	desc = "A large brick roof."
+	desc = "Un gran techo de ladrillo."
 	required_materials = list(
 		/obj/item/natural/brick = 4,
 	)
@@ -478,8 +478,8 @@
 	result_type = /turf/closed/wall/mineral/underbrick
 
 /datum/blueprint_recipe/wall/pipe
-	name = "Pipe Wall"
-	desc = "A wall with a pipe embedded into it."
+	name = "Pared de tubería"
+	desc = "Una pared con una tubería incrustada en ella."
 	required_materials = list(
 		/obj/item/natural/brick = 2,
 		/obj/item/ingot/bronze = 1,

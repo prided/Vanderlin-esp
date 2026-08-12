@@ -5,23 +5,23 @@ import type { NavProps } from '../shared';
 
 export const DetailArtificer = ({ r, lookup, pickerMap, allRecipes, essenceIndex, nav }: NavProps) => (
   <>
-    <SectionHead>Steps</SectionHead>
+    <SectionHead>Pasos</SectionHead>
     <Box className="RecipeBook__step-block">
       <Box className="RecipeBook__step-row">
         <Sprite icon={r.base_icon} icon_state={r.base_state} />
-        Place{' '}
+        Colocar{' '}
         <RecipeLink name={r.base_name!} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
-        {' '}on artificer table
+        {' '}en la mesa del artífice
       </Box>
-      <Box className="RecipeBook__step-row RecipeBook__step-note">🔨 Hammer</Box>
+      <Box className="RecipeBook__step-row RecipeBook__step-note">🔨 Martillo</Box>
       {r.extras?.map((item, i) => (
         <Box key={i}>
           <Box className="RecipeBook__step-row">
             <Sprite icon={item.icon} icon_state={item.icon_state} />
-            Add{' '}
+            Agregar{' '}
             <RecipeLink name={item.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
-          <Box className="RecipeBook__step-row RecipeBook__step-note">🔨 Hammer</Box>
+          <Box className="RecipeBook__step-row RecipeBook__step-note">🔨 Martillo</Box>
         </Box>
       ))}
     </Box>

@@ -314,7 +314,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 /obj/item/weapon/hoe/copper
-	name = "copper hoe"
+	name = "azada de cobre"
 	desc = ""
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	icon_state = "choe"
@@ -336,8 +336,8 @@
 	misscost = 0
 
 /obj/item/weapon/hoe/stone
-	name = "stone hoe"
-	desc = "A makeshift hoe made out of stone."
+	name = "azada de piedra"
+	desc = "Una azada improvisada hecha de piedra."
 	icon_state = "stonehoe"
 	force = DAMAGE_STAFF - 7
 	force_wielded = DAMAGE_STAFF_WIELD - 10
@@ -438,7 +438,7 @@
 				return list("shrink" = 0.5,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /datum/intent/pforkdump
-	name = "scoop"
+	name = "cuchara"
 	icon_state = "inscoop"
 	chargetime = 0
 	noaa = TRUE

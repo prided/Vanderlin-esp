@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/conjure_summon/familiar
-	name = "Find Familiar"
+	name = "encontrar familiar"
 	desc = "Summons a temporary spectral wolf to aid you."
 	button_icon = 'icons/mob/actions/roguespells.dmi'
 	button_icon_state = "zad"

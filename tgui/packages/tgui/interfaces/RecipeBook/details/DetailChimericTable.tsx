@@ -20,18 +20,18 @@ const NodeList = ({ nodes, color }: { nodes?: NodeEntry[]; color: string }) => {
 
 export const DetailChimericTable = ({ r, lookup, pickerMap, allRecipes, essenceIndex, nav }: NavProps) => (
   <>
-    <SectionHead>Node Info</SectionHead>
+    <SectionHead>Información del nodo</SectionHead>
     <Box className="RecipeBook__step-block">
-      <Box className="RecipeBook__step-row">Max tier: {r.node_tier}</Box>
+      <Box className="RecipeBook__step-row">Nivel máximo: {r.node_tier}</Box>
       <Box className="RecipeBook__step-row">
-        Purity: {r.purity_min}% – {r.purity_max}% (avg {Math.round(((r.purity_min || 0) + (r.purity_max || 0)) / 2)}%)
+        Pureza: {r.purity_min}% – {r.purity_max}% (promedio {Math.round(((r.purity_min || 0) + (r.purity_max || 0)) / 2)}%)
       </Box>
     </Box>
-    <SectionHead>Blood Cost</SectionHead>
+    <SectionHead>Costo de sangre</SectionHead>
     <Box className="RecipeBook__step-block">
-      <Box className="RecipeBook__step-row">Base: {r.base_blood_cost}u/beat</Box>
+      <Box className="RecipeBook__step-row">Base: {r.base_blood_cost}u/latido</Box>
       <Box className="RecipeBook__step-row" style={{ color: 'mediumseagreen' }}>
-        Preferred: −{((r.pref_bonus || 0) * 100).toFixed(0)}%
+        Preferido: −{((r.pref_bonus || 0) * 100).toFixed(0)}%
       </Box>
       <Box className="RecipeBook__step-row" style={{ color: 'red' }}>
         Incompatible: +{((r.incompat_penalty || 0) * 100).toFixed(0)}%
@@ -39,7 +39,7 @@ export const DetailChimericTable = ({ r, lookup, pickerMap, allRecipes, essenceI
     </Box>
     {!!(r.preferred_blood?.length || r.compatible_blood?.length || r.incompatible_blood?.length) && (
       <>
-        <SectionHead>Blood Types</SectionHead>
+        <SectionHead>tipos de sangre</SectionHead>
         <Box className="RecipeBook__step-block">
           {r.preferred_blood?.map((b, i) => (
             <Box key={i} className="RecipeBook__step-row" style={{ color: 'mediumseagreen' }}>★ {b}</Box>
@@ -53,15 +53,15 @@ export const DetailChimericTable = ({ r, lookup, pickerMap, allRecipes, essenceI
         </Box>
       </>
     )}
-    <SectionHead>Input Nodes</SectionHead>
+    <SectionHead>Nodos de entrada</SectionHead>
     <NodeList nodes={r.input_nodes} color="steelblue" />
-    <SectionHead>Output Nodes</SectionHead>
+    <SectionHead>Nodos de salida</SectionHead>
     <NodeList nodes={r.output_nodes} color="sienna" />
-    <SectionHead>Special Nodes</SectionHead>
+    <SectionHead>Nodos especiales</SectionHead>
     <NodeList nodes={r.special_nodes} color="rebeccapurple"/>
     {!!r.source_mobs?.length && (
       <>
-        <SectionHead>Blood Source Mobs</SectionHead>
+        <SectionHead>Mobs fuente de sangre</SectionHead>
         <Box className="RecipeBook__step-block">
           {r.source_mobs.map((mob, i) => (
             <Box key={i} className="RecipeBook__step-row">

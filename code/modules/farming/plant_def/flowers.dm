@@ -1,5 +1,5 @@
 /datum/plant_def/sunflower
-	name = "sunflowers"
+	name = "girasoles"
 	icon_state = "sunflower"
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/sunflower
 	produce_amount_min = 2

@@ -87,7 +87,7 @@
 	broodmother.attempt_lay_egg(tier)
 
 /atom/movable/screen/broodmother/bar/tier_1_biomass_bar
-	name = "Tier 1 Biomass"
+	name = "Biomasa de nivel 1"
 	icon_state = "t1_biomass"
 	screen_loc = "WEST:-80,TOP:-4"
 	tier = 1
@@ -99,13 +99,13 @@
 	tier = 1
 
 /atom/movable/screen/broodmother/bar/tier_2_biomass_bar
-	name = "Tier 2 Biomass"
+	name = "Biomasa de nivel 2"
 	icon_state = "t2_biomass"
 	screen_loc = "WEST:-70,TOP:-4"
 	tier = 2
 
 /atom/movable/screen/broodmother/button/tier_2_biomass_lay
-	name = "Lay a tier 2 egg"
+	name = "Pon un huevo de nivel 2"
 	icon_state = "t2_lay_egg"
 	screen_loc = "WEST:-72,TOP:-134"
 	tier = 2

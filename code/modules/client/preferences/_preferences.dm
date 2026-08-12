@@ -724,7 +724,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 /datum/preferences/proc/reset_patron(mob/user, silent = FALSE)
 	write_preference(/datum/preference/choiced/patron, /datum/patron/divine/astrata)
 	if(!silent)
-		to_chat(user, "<font color='red'>Patron reset.</font>")
+		to_chat(user, "<font color='red'>Restablecimiento de patrón.</font>")
 
 /datum/preferences/proc/reset_culture(mob/user, silent = FALSE)
 	var/datum/culture/selected = GLOB.culture_singletons[read_preference(/datum/preference/choiced/culture)]
@@ -743,7 +743,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	if(user.client?.prefs)
 		if(user.client.prefs.lastclass)
 			if(user.get_triumphs() < 2)
-				to_chat(user, "<span class='warning'>I haven't TRIUMPHED enough.</span>")
+				to_chat(user, "<span class='warning'>NO HE TRIUNFADO lo suficiente.</span>")
 				return
 			user.adjust_triumphs(-2)
 			user.client.prefs.lastclass = null
@@ -857,7 +857,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			var/expires = "This is a permanent ban."
 			if(ban_details["expiration_time"])
 				expires = " The ban is for [DisplayTimeText(text2num(ban_details["duration"]) MINUTES)] and expires on [ban_details["expiration_time"]] (server time)."
-			to_chat(user, "<span class='danger'>You, or another user of this computer or connection ([ban_details["key"]]) is banned from playing [href_list["bancheck"]].<br>The ban reason is: [ban_details["reason"]]<br>This ban (BanID #[ban_details["id"]]) was applied by [ban_details["admin_key"]] on [ban_details["bantime"]] during round ID [ban_details["round_id"]].<br>[expires]</span>")
+			to_chat(user, "<span class='danger'>You, or another user of this computer or connection ([ban_details["key"]]) is banned from playing [href_list["bancheck"]].<br>The ban reason is: [ban_details["reason"]]<br>This ban (BanID #[ban_details["id"]]) fue aplicado por [ban_details["admin_key"]] on [ban_details["bantime"]] during round ID [ban_details["round_id"]].<br>[expires]</span>")
 			return
 
 	if(href_list["preference"] == "family")
@@ -992,7 +992,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 				set_keybinds(user)
 
 			if("keybindings_reset")
-				var/choice = tgui_alert(user, "Do you really want to reset your keybindings?", "Setup keybindings", DEFAULT_INPUT_CONFIRMATIONS)
+				var/choice = tgui_alert(user, "Do you really want to reset your keybindings?", "Configurar combinaciones de teclas", DEFAULT_INPUT_CONFIRMATIONS)
 				if(choice != CHOICE_CONFIRM)
 					return
 				write_preference(/datum/preference/toggle/hotkeys, TRUE)
@@ -1099,7 +1099,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			return
 
 		if("save")
-			to_chat(user, span_info("Preferences Saved."))
+			to_chat(user, span_info("Preferencias guardadas."))
 			save_preferences()
 			save_character()
 			if(isnewplayer(user))
@@ -1124,7 +1124,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 						S.cd = "/character[i]"
 						S["real_name"] >> name
 						if(!name)
-							name = "Slot[i]"
+							name = "Ranura[i]"
 						choices[name] = i
 			var/choice = browser_input_list(user, "WHO IS YOUR HERO?", "NECRA AWAITS", choices, read_preference(/datum/preference/text/real_name))
 			if(choice)
@@ -1380,7 +1380,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	// Ensure link starts with "https://"
 	if(findtext(value, "https://") != 1)
 		if(!silent)
-			to_chat(user, "<span class='warning'>Your link must be https!</span>")
+			to_chat(user, "<span class='warning'>¡Tu enlace debe ser https!</span>")
 		return FALSE
 
 	// Extract domain from the URL
@@ -1391,7 +1391,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	// Check if domain is in the allowed list
 	if(!(domain in allowed_hosts))
 		if(!silent)
-			to_chat(user, "<span class='warning'>The image must be hosted on an approved site.</span>")
+			to_chat(user, "<span class='warning'>La imagen debe estar alojada en un sitio aprobado.</span>")
 		return FALSE
 
 	// Extract the filename and extension
@@ -1407,7 +1407,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	// Validate extension
 	if(!(extension in valid_extensions))
 		if(!silent)
-			to_chat(user, "<span class='warning'>The image must be one of the following extensions: '[english_list(valid_extensions)]'</span>")
+			to_chat(user, "<span class='warning'>La imagen debe tener una de las siguientes extensiones: '[english_list(valid_extensions)]'</span>")
 		return FALSE
 
 	return TRUE

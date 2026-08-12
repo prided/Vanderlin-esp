@@ -1,5 +1,5 @@
 /datum/relation/had_crossed
-	name = "Crossed"
+	name = "Cruzado"
 	desc = "You have slighted them in the past and they likely hold a grudge."
 	symmetric = FALSE
 
@@ -7,7 +7,7 @@
 	return "Something happened between [holder?.name] and [other?.name], and [other?.name] is upset about it."
 
 /datum/relation/was_crossed
-	name = "Was Crossed"
+	name = "fue cruzado"
 	desc = "You were slighted by them in the past and you remember it."
 	symmetric = FALSE
 

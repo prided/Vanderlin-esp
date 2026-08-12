@@ -1,5 +1,5 @@
 /datum/round_event_control/malum_diligence
-	name = "Malum's Diligence"
+	name = "La diligencia de Malum"
 	track = EVENT_TRACK_INTERVENTION
 	typepath = /datum/round_event/malum_diligence
 	weight = 8

@@ -5,12 +5,12 @@
 	subtypes_allowed = TRUE
 
 /datum/repeatable_crafting_recipe/engineering/shaft
-	name = "wooden shaft"
+	name = "eje de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -25,7 +25,7 @@
 		/obj/item/ingot/bronze = 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -40,7 +40,7 @@
 		/obj/item/natural/wood/plank = 4,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -54,7 +54,7 @@
 		/obj/item/ingot/bronze = 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -69,7 +69,7 @@
 		/obj/item/natural/wood/plank = 2,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -77,13 +77,13 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/engineering/vertical_gearbox
-	name = "vertical gearbox"
+	name = "caja de cambios vertical"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 		/obj/item/natural/wood/plank = 2,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -183,7 +183,7 @@
 		/obj/item/ingot/bronze = 2,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 		/obj/item/weapon/hammer = list(span_notice("starts to hammer"), span_notice("start to hammer"), 'sound/items/bsmith2.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
@@ -248,7 +248,7 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/engineering/steam_recharger
-	name = "steam recharger"
+	name = "recargador de vapor"
 	requirements = list(
 		/obj/item/ingot/bronze = 2,
 	)

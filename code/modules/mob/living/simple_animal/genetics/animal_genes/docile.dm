@@ -1,5 +1,5 @@
 /datum/animal_gene/docile
-	name = "Docile"
+	name = "Dócil"
 	desc = "Exceptionally calm. Much easier to tame; won't flee when struck."
 	rarity = 4
 	exclusion_group = GENE_GROUP_HAPPINESS

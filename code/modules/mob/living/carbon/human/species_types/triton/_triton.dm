@@ -25,7 +25,7 @@
 	)
 
 /datum/species/triton
-	name = "Triton"
+	name = "Tritón"
 	id = SPEC_ID_TRITON
 	native_language = "Deepspeak"
 	changesource_flags = WABBAJACK
@@ -218,7 +218,7 @@
 	)
 
 /datum/action/innate/bioluminescence
-	name = "Bioluminescence"
+	name = "Bioluminiscencia"
 	desc = "Toggle a bright bioluminescent light from your body, moving with you."
 	button_icon_state = "shieldsparkles"
 

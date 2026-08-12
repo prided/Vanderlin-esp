@@ -1,6 +1,6 @@
 /datum/enchantment/on_hit/rewind
-	enchantment_name = "Temporal Rewind"
-	examine_text = "It seems both old and new at the same time."
+	enchantment_name = "Rebobinado temporal"
+	examine_text = "Parece viejo y nuevo al mismo tiempo."
 	essence_recipe = list(
 		/datum/thaumaturgical_essence/cycle = 50,
 		/datum/thaumaturgical_essence/magic = 30,
@@ -19,7 +19,7 @@
 	var/turf/target_turf = get_turf(attacker)
 	active_item = TRUE
 	sleep(5 SECONDS)
-	to_chat(attacker, span_notice("[source] rewinds you back in time!"))
+	to_chat(attacker, span_notice("¡[source] te retrocede en el tiempo!"))
 	do_teleport(attacker, target_turf, channel = TELEPORT_CHANNEL_QUANTUM)
 	active_item = FALSE
 

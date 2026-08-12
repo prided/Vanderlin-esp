@@ -1,5 +1,5 @@
 /datum/migrant_role/zizo_cultist
-	name = "Zizo's Ascendant"
+	name = "Ascendente de Zizo"
 	migrant_job = /datum/job/migrant/zizo_cultist
 
 /datum/attribute_holder/sheet/job/migrant/zizo_cultist
@@ -26,7 +26,7 @@
 	)
 
 /datum/job/migrant/zizo_cultist
-	title = "Zizo's Ascendant"
+	title = "Ascendente de Zizo"
 	outfit = /datum/outfit/zizo_cultist
 	antag_role = /datum/antagonist/zizocultist/leader
 	allowed_sexes = list(FEMALE)
@@ -41,7 +41,7 @@
 	default_patron = /datum/patron/inhumen/zizo
 
 /datum/outfit/zizo_cultist
-	name = "Zizo's Ascendant"
+	name = "Ascendente de Zizo"
 	head = /obj/item/clothing/head/helmet/skullcap/cult
 	mask = /obj/item/clothing/face/shepherd/shadowmask
 	neck = /obj/item/clothing/neck/chaincoif
@@ -60,7 +60,7 @@
 	scabbards = list(/obj/item/weapon/scabbard/knife)
 
 /datum/migrant_role/zizo_cultist_lesser
-	name = "Ascendant Follower"
+	name = "Seguidor ascendente"
 	greet_text = "You are the apostle of your madame. Should you see their ascension through, you will be rewarded in kind."
 	migrant_job = /datum/job/migrant/zizo_cultist_lesser
 
@@ -85,7 +85,7 @@
 	)
 
 /datum/job/migrant/zizo_cultist_lesser
-	title = "Ascendant Follower"
+	title = "Seguidor ascendente"
 	tutorial = "You are the apostle of your madame. Should you see their ascension through, you will be rewarded in kind."
 	outfit = /datum/outfit/zizo_cultist_lesser
 	antag_role = /datum/antagonist/zizocultist
@@ -99,7 +99,7 @@
 	default_patron = /datum/patron/inhumen/zizo
 
 /datum/outfit/zizo_cultist_lesser
-	name = "Ascendant Follower"
+	name = "Seguidor ascendente"
 	head = /obj/item/clothing/head/helmet/skullcap/cult
 	mask = /obj/item/clothing/face/shepherd/shadowmask
 	neck = /obj/item/clothing/neck/highcollier

@@ -19,7 +19,7 @@
 
 	// We only apply description changes if quality is good (2+) or really poor (rotting)
 	if(quality <= rot_threshold)  // Bad quality - close to rotting
-		food_item.name = pick("unappealing", "sloppy", "failed", "woeful", "soggy", "bland") + " [initial(food_item.name)]"
+		food_item.name = pick("poco atractivo", "sloppy", "failed", "woeful", "soggy", "bland") + " [initial(food_item.name)]"
 		food_item.desc = pick("It is made without love or care.",
 							"It barely looks like food.",
 							"It is a disgrace to cooking.",
@@ -36,14 +36,14 @@
 	// Good quality (2+)
 	if(quality >= 2 && quality < 3)
 		food_item.eat_effect = /datum/status_effect/buff/foodbuff
-		food_item.name = pick("tasty", "well-made", "appealing") + " [initial(food_item.name)]"
+		food_item.name = pick("tasty", "bien hecho", "atractivo") + " [initial(food_item.name)]"
 		food_item.desc = "[initial(food_item.desc)] It looks good."
 		return
 
 	// Great quality (3+)
 	if(quality >= 3 && quality < 4)
 		food_item.eat_effect = /datum/status_effect/buff/foodbuff
-		food_item.name = pick("fine", "tasty", "well-made", "appealing", "appetising", "savory", "flavorful") + " [initial(food_item.name)]"
+		food_item.name = pick("fine", "tasty", "bien hecho", "atractivo", "appetising", "sabroso", "sabroso") + " [initial(food_item.name)]"
 		food_item.desc = "[initial(food_item.desc)] [pick("It looks tasty.",
 													"It smells good.",
 													"This is fine cooking.",
@@ -56,7 +56,7 @@
 	// Masterful quality (4)
 	if(quality >= 4)
 		food_item.eat_effect = /datum/status_effect/buff/foodbuff
-		food_item.name = pick("masterful", "exquisite", "perfected", "gourmet", "delicious") + " [initial(food_item.name)]"
+		food_item.name = pick("maestro", "exquisito", "perfeccionado", "gourmet", "delicious") + " [initial(food_item.name)]"
 		food_item.desc = "[initial(food_item.desc)] [pick("It looks perfect.",
 													"It smells like heaven.",
 													"It is a triumph of cooking.",

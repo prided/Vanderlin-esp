@@ -135,7 +135,7 @@
 
 /obj/item/paper/update_name()
 	if(mailer)
-		name = "letter"
+		name = "carta"
 		return ..()
 	name = initial(name)
 	return ..()
@@ -161,7 +161,7 @@
 	if(ignore_distance || in_range(user, src) || isobserver(user))
 		show_paper_hud(user)
 	else
-		return span_warning("I'm too far away to read it.")
+		return span_warning("Estoy demasiado lejos para leerlo.")
 
 /obj/item/paper/proc/show_paper_hud(mob/user)
 	var/dat = {"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
@@ -199,7 +199,7 @@
 	user << browse(dat, "window=reading;size=500x400;can_close=1;can_minimize=0;can_maximize=0;can_resize=1;titlebar=1;border=0")
 
 /obj/item/paper/verb/rename()
-	set name = "Rename paper"
+	set name = "cambiar el nombre del papel"
 	set hidden = 1
 	set src in usr
 
@@ -220,7 +220,7 @@
 
 /obj/item/paper/attack_self(mob/user, list/modifiers)
 	if(mailer)
-		user.visible_message("<span class='notice'>[user] opens the letter from [mailer].</span>")
+		user.visible_message("<span class='notice'>[user] abre la carta de [mailer].</span>")
 		cached_mailer = mailer
 		cached_mailedto = mailedto
 		mailer = null
@@ -234,7 +234,7 @@
 		sleep(5)
 		victim.adjust_fire_stacks(15)
 		victim.IgniteMob()
-		victim.visible_message(span_danger("[user] bursts into flames upon reading [src]!"))
+		victim.visible_message(span_danger("¡[user] estalla en llamas al leer [src]!"))
 	read(user)
 	if(rigged && (SSevents.holidays && SSevents.holidays[APRIL_FOOLS]))
 		if(!spam_flag)
@@ -375,7 +375,7 @@
 			sleep(5)
 			victim.adjust_fire_stacks(15)
 			victim.IgniteMob()
-			victim.visible_message(span_danger("[usr] bursts into flames upon reading [src]!"))
+			victim.visible_message(span_danger("¡[usr] estalla en llamas al leer [src]!"))
 
 	if(href_list["help"])
 		openhelp(usr)
@@ -427,12 +427,12 @@
 
 		user.visible_message( \
 			span_notice("[user] begins to make a manuscript..."), \
-			span_notice("I begin to combine [src] and [combining_page] to make a manuscript..."), \
+			span_notice("Empiezo a combinar [src] y [combining_page] para hacer un manuscrito..."), \
 			span_hear("I hear pages being rattled and shuffled.") \
 		)
 		var/obj/item/manuscript/new_manuscript = new(null, list(src, combining_page))
 		if(QDELETED(new_manuscript)) //make sure it didn't hint_qdel
-			to_chat(user, span_warning("I can not make a manuscript, something is preventing me...!"))
+			to_chat(user, span_warning("¡No puedo hacer un manuscrito, algo me lo impide...!"))
 			stack_trace("tried to make a manuscript but it was qdeleted")
 			return
 
@@ -443,7 +443,7 @@
 		if(!writable)
 			return
 		if(trapped)
-			to_chat(user, span_warning("[src] is already trapped."))
+			to_chat(user, span_warning("[src] ya está atrapado."))
 		else
 			to_chat(user, span_warning("I draw infernal symbols on this [src], rigging it to explode."))
 			trapped = TRUE
@@ -452,11 +452,11 @@
 		if(!writable)
 			return
 		if(user.is_blind())
-			to_chat(user, span_warning("I want to write on [src], but I cannot."))
+			to_chat(user, span_warning("Quiero escribir en [src], pero no puedo."))
 			return
 
 		if(length(info) > maxlen)
-			to_chat(user, "<span class='warning'>[src] is full of verba.</span>")
+			to_chat(user, "<span class='warning'>[src] está lleno de verba.</span>")
 			return
 		if(user.can_read(src))
 			format_browse(info_links, user)

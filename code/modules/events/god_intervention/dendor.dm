@@ -66,7 +66,7 @@
 			root.AddComponent(/datum/component/vine_controller, event = src, potency = 0.1, muts = list(/datum/vine_mutation/light, /datum/vine_mutation/healing, /datum/vine_mutation/woodening))
 
 /datum/round_event_control/dendor_fertility
-	name = "Dendor's Blessing"
+	name = "La bendición de Dendor"
 	track = EVENT_TRACK_INTERVENTION
 	typepath = /datum/round_event/dendor_fertility
 	weight = 2
@@ -84,7 +84,7 @@
 	SSmapping.add_world_trait(/datum/world_trait/dendor_fertility, 20 MINUTES)
 
 /datum/round_event_control/dendor_ire
-	name = "Dendor's Ire"
+	name = "La ira de Dendor"
 	track = EVENT_TRACK_INTERVENTION
 	typepath = /datum/round_event/dendor_ire
 	weight = 2

@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/churn_wealthy
 	name = "Churn Wealthy"
-	desc = "Empowering the weak often involves destroying the strong."
+	desc = "Empoderar a los débiles a menudo implica destruir a los fuertes."
 	button_icon_state = "churnwealthy"
 	sound = 'sound/magic/heal.ogg'
 	charge_sound = 'sound/magic/holycharging.ogg'
@@ -36,26 +36,26 @@
 		return
 	if(totalvalue <= 30)
 		owner.say("Wealth becomes woe!")
-		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("I feel the weight of my wealth burning at my soul!"))
+		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("¡Siento el peso de mi riqueza ardiendo en mi alma!"))
 		cast_on.adjustFireLoss(30)
 		playsound(owner, 'sound/magic/churn.ogg', 100, TRUE)
 		return
 	if(totalvalue <= 60)
 		owner.say("Wealth becomes woe!")
-		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("I feel the weight of my wealth burning at my soul!"))
+		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("¡Siento el peso de mi riqueza ardiendo en mi alma!"))
 		cast_on.adjustFireLoss(60)
 		playsound(owner, 'sound/magic/churn.ogg', 100, TRUE)
 		return
 	if(totalvalue <= 100)
 		owner.say("Wealth becomes woe!")
-		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("I feel the weight of my wealth burning at my soul!"))
+		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("¡Siento el peso de mi riqueza ardiendo en mi alma!"))
 		cast_on.adjustFireLoss(80)
 		cast_on.Stun(20)
 		playsound(owner, 'sound/magic/churn.ogg', 100, TRUE)
 		return
 	if(totalvalue <= 200)
-		owner.say("The Free-God rebukes!")
-		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("I feel the weight of my wealth tearing at my soul!"))
+		owner.say("¡El Dios Libre reprende!")
+		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("¡Siento el peso de mi riqueza desgarrando mi alma!"))
 		cast_on.adjustFireLoss(100)
 		cast_on.adjust_divine_fire_stacks(7)
 		cast_on.Stun(20)
@@ -63,8 +63,8 @@
 		playsound(owner, 'sound/magic/churn.ogg', 100, TRUE)
 		return
 	if(totalvalue <= 500)
-		owner.say("The Free-God rebukes!")
-		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("I feel the weight of my wealth tearing at my soul!"))
+		owner.say("¡El Dios Libre reprende!")
+		cast_on.visible_message(span_danger("[cast_on] is burned by holy light!"), span_userdanger("¡Siento el peso de mi riqueza desgarrando mi alma!"))
 		cast_on.adjustFireLoss(120)
 		cast_on.adjust_divine_fire_stacks(9)
 		cast_on.IgniteMob()
@@ -73,7 +73,7 @@
 		return
 	if(totalvalue >= 501)
 		cast_on.visible_message(span_danger("[cast_on] is smited with holy light!"), span_userdanger("I feel the weight of my wealth rend my soul apart!"))
-		owner.say("Your final transaction! The Free-God rebukes!!")
+		owner.say("¡Tu transacción final! ¡¡El Dios-Libre reprende!!")
 		cast_on.Stun(60)
 		cast_on.adjustFireLoss(120)
 		cast_on.adjust_divine_fire_stacks(9)

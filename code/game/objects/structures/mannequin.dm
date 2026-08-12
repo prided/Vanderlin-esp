@@ -225,27 +225,27 @@
 				if(SLOT_MANNEQUIN_HEAD)
 					slot_examine = " on its head."
 				if(SLOT_MANNEQUIN_NECK)
-					slot_examine = " on its neck."
+					slot_examine = " en su cuello."
 				if(SLOT_MANNEQUIN_GLOVES)
-					slot_examine = " on its hands."
+					slot_examine = " en sus manos."
 				if(SLOT_MANNEQUIN_WRISTS)
-					slot_examine = " around its arms."
+					slot_examine = " alrededor de sus brazos."
 				if(SLOT_MANNEQUIN_BELT)
-					slot_examine = " about its waist."
+					slot_examine = " sobre su cintura."
 				if(SLOT_MANNEQUIN_SHIRT)
-					slot_examine = " close to its skin."
+					slot_examine = " cerca de su piel."
 				if(SLOT_MANNEQUIN_ARMOR)
-					slot_examine = " over its body."
+					slot_examine = " sobre su cuerpo."
 				if(SLOT_MANNEQUIN_PANTS)
-					slot_examine = " on its legs."
+					slot_examine = " en sus piernas."
 				if(SLOT_MANNEQUIN_FEET)
-					slot_examine = " on its feet."
+					slot_examine = " en sus pies."
 				if(SLOT_MANNEQUIN_MASK)
-					slot_examine = " on its face."
+					slot_examine = " en su cara."
 				if(SLOT_MANNEQUIN_CLOAK)
-					slot_examine = " over its shoulders."
+					slot_examine = " sobre sus hombros."
 				if(SLOT_MANNEQUIN_RING)
-					slot_examine = " around its finger."
+					slot_examine = " alrededor de su dedo."
 			msg += "Wearing [cloth_to_examine][slot_examine].<br>"
 	/*
 	* This is placed here due to the fact
@@ -729,7 +729,7 @@
 * or unequipped of their clothing.
 */
 /obj/structure/mannequin/male/decorative
-	name = "decorative display"
+	name = "exhibición decorativa"
 	desc = "Due to magic or fragile material the clothing on this one cannot be taken off."
 	unchangeable = TRUE
 

@@ -24,7 +24,7 @@
 
 /datum/objective/personal/literacy/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've learned to read, completing Noc's objective!"))
+	to_chat(owner.current, span_greentext("¡Has aprendido a leer, completando el objetivo de Noc!"))
 	adjust_storyteller_influence(NOC, 20)
 	UnregisterSignal(owner.current, COMSIG_SKILL_RANK_CHANGE)
 

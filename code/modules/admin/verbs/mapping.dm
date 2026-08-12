@@ -43,7 +43,7 @@ GLOBAL_LIST_INIT(admin_verbs_debug_mapping, list(
 GLOBAL_PROTECT(admin_verbs_debug_mapping)
 
 /obj/effect/debugging/mapfix_marker
-	name = "map fix marker"
+	name = "marcador de corrección de mapa"
 	icon = 'icons/mob/screen_gen.dmi'
 	icon_state = "mapfixmarker"
 	desc = ""
@@ -59,7 +59,7 @@ GLOBAL_PROTECT(admin_verbs_debug_mapping)
 GLOBAL_LIST_EMPTY(dirty_vars)
 
 /client/proc/see_dirty_varedits()
-	set category = "Debug.Mapping"
+	set category = "Depuración.Mapeo"
 	set name = "Dirty Varedits"
 
 	var/list/dat = list()
@@ -73,7 +73,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 #endif
 
 /client/proc/intercom_view()
-	set category = "Debug.Mapping"
+	set category = "Depuración.Mapeo"
 	set name = "Intercom Range Display"
 
 	var/static/intercom_range_display_status = FALSE
@@ -86,7 +86,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 
 /client/proc/enable_debug_verbs()
 	set category = "Debug.Core"
-	set name = "Debug verbs - Enable"
+	set name = "Verbos de depuración: habilitar"
 	if(!check_rights(R_DEBUG))
 		return
 
@@ -107,9 +107,9 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Disable Debug Verbs") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/count_objects_on_z_level()
-	set category = "Debug.Mapping"
+	set category = "Depuración.Mapeo"
 	set name = "Count Objects On Level"
-	var/level = input("Which z-level?","Level?") as text|null
+	var/level = input("¿Qué nivel z?","¿Nivel?") as text|null
 	if(!level)
 		return
 	var/num_level = text2num(level)
@@ -118,7 +118,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 	if(!isnum(num_level))
 		return
 
-	var/type_text = input("Which type path?","Path?") as text|null
+	var/type_text = input("¿Qué tipo de ruta?","Path?") as text|null
 	if(!type_text)
 		return
 	var/type_path = text2path(type_text)
@@ -146,10 +146,10 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Count Objects Zlevel") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/count_objects_all()
-	set category = "Debug.Mapping"
+	set category = "Depuración.Mapeo"
 	set name = "Count Objects All"
 
-	var/type_text = input("Which type path?","") as text|null
+	var/type_text = input("¿Qué tipo de ruta?","") as text|null
 	if(!type_text)
 		return
 	var/type_path = text2path(type_text)
@@ -169,19 +169,19 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 //This proc is intended to detect lag problems relating to communication procs
 GLOBAL_VAR_INIT(say_disabled, FALSE)
 /client/proc/disable_communication()
-	set category = "Debug.Mapping"
-	set name = "Disable all communication verbs"
+	set category = "Depuración.Mapeo"
+	set name = "Deshabilitar todos los verbos de comunicación."
 
 	GLOB.say_disabled = !GLOB.say_disabled
 	if(GLOB.say_disabled)
-		message_admins("[key] used 'Disable all communication verbs', killing all communication methods.")
+		message_admins("[key] usó 'Desactivar todos los verbos de comunicación', eliminando todos los métodos de comunicación.")
 	else
 		message_admins("[key] used 'Disable all communication verbs', restoring all communication methods.")
 
 //This generates the icon states for job starting location landmarks.
 /client/proc/create_mapping_job_icons()
 	set name = "Generate job landmarks icons"
-	set category = "Debug.Mapping"
+	set category = "Depuración.Mapeo"
 	var/icon/final = icon()
 	var/mob/living/carbon/human/dummy/D = new(locate(1,1,1)) //spawn on 1,1,1 so we don't have runtimes when items are deleted
 	D.setDir(SOUTH)
@@ -200,8 +200,8 @@ GLOBAL_VAR_INIT(say_disabled, FALSE)
 	fcopy(final, "icons/mob/landmarks.dmi")
 
 /client/proc/debug_z_levels()
-	set name = "Debug Z-Levels"
-	set category = "Debug.Mapping"
+	set name = "Depurar niveles Z"
+	set category = "Depuración.Mapeo"
 
 	var/list/z_list = SSmapping.z_list
 	var/list/messages = list()

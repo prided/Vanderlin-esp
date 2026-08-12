@@ -5,23 +5,23 @@ import type { NavProps } from '../shared';
 
 export const DetailAnvil = ({ r, lookup, pickerMap, allRecipes, essenceIndex, nav }: NavProps) => (
   <>
-    <SectionHead>Steps</SectionHead>
+    <SectionHead>Pasos</SectionHead>
     <Box className="RecipeBook__step-block">
       <Box className="RecipeBook__step-row">
         <Sprite icon={r.bar_icon} icon_state={r.bar_state} />
-        Place{' '}
+        Colocar{' '}
         <RecipeLink name={r.bar_name!} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
-        {' '}on anvil
+        {' '}sobre yunque
       </Box>
-      <Box className="RecipeBook__step-row RecipeBook__step-note">🔨 Hammer</Box>
+      <Box className="RecipeBook__step-row RecipeBook__step-note">🔨 Martillo</Box>
       {r.extras?.map((item, i) => (
         <Box key={i}>
           <Box className="RecipeBook__step-row">
             <Sprite icon={item.icon} icon_state={item.icon_state} />
-            Add{' '}
+            Agregar{' '}
             <RecipeLink name={item.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
-          <Box className="RecipeBook__step-row RecipeBook__step-note">🔨 Hammer</Box>
+          <Box className="RecipeBook__step-row RecipeBook__step-note">🔨 Martillo</Box>
         </Box>
       ))}
     </Box>

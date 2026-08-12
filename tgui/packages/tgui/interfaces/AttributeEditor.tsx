@@ -39,35 +39,35 @@ type AttributeEditorData = {
 
 const EDITOR_TUTORIAL_STEPS: TutorialStep[] = [
   {
-    title: 'Attribute Editor',
-    body: "This tool lets you directly edit a character's attributes and skills. Changes take effect immediately.",
+    title: 'Editor de atributos',
+    body: "Esta herramienta te permite editar directamente los atributos y habilidades de un personaje. Los cambios entran en vigor inmediatamente.",
     popupAnchor: 'center',
   },
   {
-    title: 'Global Variables',
-    body: 'The top band sets system-wide limits, the min/max range attributes and skills can reach, their fallback defaults, and the diceroll modifier.',
+    title: 'Variables globales',
+    body: 'La banda superior establece los límites de todo el sistema, el rango mínimo/máximo que pueden alcanzar los atributos y habilidades, sus valores predeterminados de respaldo y el modificador de tirada de dados.',
     highlight: { top: 4, left: 0, width: 100, height: 24 },
     popupAnchor: 'bottom',
   },
   {
-    title: 'Attributes (left) & Skills (right)',
-    body: 'The bottom half is split into two scrollable columns. Each row has a BONUS field and a RAW field. RAW is the permanent base. BONUS is added on top, effective value = RAW + BONUS.',
+    title: 'Atributos (izquierda) y habilidades (derecha)',
+    body: 'La mitad inferior se divide en dos columnas desplazables. Cada fila tiene un campo BONUS y uno RAW. RAW es la base permanente. BONUS se suma encima: valor efectivo = RAW + BONUS.',
     highlight: { top: 28, left: 0, width: 100, height: 72 },
     popupAnchor: 'center',
   },
   {
     title: 'BONUS',
-    body: 'Type a positive or negative number. It is added directly to RAW. Setting BONUS to -22 subtracts 22 from the effective value. NULL removes the bonus entirely, this is its own modifier so it will not override buffs.',
+    body: 'Escribe un número positivo o negativo. Se suma directamente a RAW. Establecer BONUS en -22 resta 22 al valor efectivo. NULL elimina por completo el bono; es un modificador independiente, por lo que no anulará otros efectos.',
     popupAnchor: 'center',
   },
   {
     title: 'RAW',
-    body: 'The permanent base value stored on the character. Edit this for lasting changes. NULL sets it to the system default.',
+    body: 'El valor base permanente almacenado en el personaje. Edítalo para aplicar cambios duraderos. NULL lo restablece al valor predeterminado del sistema.',
     popupAnchor: 'center',
   },
   {
-    title: "That's it!",
-    body: 'Changes apply immediately. No undo.',
+    title: "¡Eso es todo!",
+    body: 'Los cambios se aplican inmediatamente. Sin deshacer.',
     popupAnchor: 'center',
   },
 ];
@@ -123,7 +123,7 @@ const EntryRow = (props: {
         verticalAlign: 'bottom',
         borderBottom: '1px solid rgba(90,76,76,0.2)',
       }}>
-        <Tooltip content="Remove admin bonus, effective value will equal RAW" position="top">
+        <Tooltip content="Quitar bono administrativo; el valor efectivo será igual a RAW" position="top">
           <Button color="transparent"
             onClick={() => act('null_attribute', { attribute_type: type })}
             style={{ border: `1px solid ${PP.border}`, color: PP.textMuted,
@@ -165,7 +165,7 @@ const EntryRow = (props: {
         verticalAlign: 'bottom',
         borderBottom: '1px solid rgba(90,76,76,0.2)',
       }}>
-        <Tooltip content="Set RAW to NULL, system default applies" position="top">
+        <Tooltip content="Establecer RAW en NULL; se aplicará el valor predeterminado del sistema" position="top">
           <Button color="transparent"
             onClick={() => act('null_raw_attribute', { attribute_type: type })}
             style={{ border: `1px solid ${PP.border}`, color: PP.textMuted,
@@ -246,7 +246,7 @@ const GlobalsTable = (props: {
           </td>
           {nullable && (
             <td style={{ padding: '3px 8px 3px 4px', whiteSpace: 'nowrap', verticalAlign: 'bottom' }}>
-              <Tooltip content="Set to NULL (unset)" position="top">
+              <Tooltip content="Establecer en NULL (sin definir)" position="top">
                 <Button color="transparent"
                   onClick={() => props.act('null_var', { var_name: varName })}
                   style={{ border: `1px solid ${PP.border}`, color: PP.textMuted,
@@ -339,7 +339,7 @@ export const AttributeEditor = (props: object, context: object) => {
             <Box style={{ flexGrow: 1, fontSize: '130%', fontWeight: 'bold', color: PP.textTitle }}>
               {parent || 'Character'}
             </Box>
-            <Tooltip content="Show tutorial" position="bottom">
+            <Tooltip content="Mostrar tutorial" position="bottom">
               <Box
                 onClick={() => setShowTutorial(true)}
                 style={{
@@ -358,7 +358,7 @@ export const AttributeEditor = (props: object, context: object) => {
             borderBottom: `2px solid ${PP.border}`,
             flexShrink: 0,
           }}>
-            <SectionBar title="Global Variables" />
+            <SectionBar title="Variables globales" />
             <Box style={{ display: 'flex' }}>
               <Box style={{ width: '50%', borderRight: `1px solid ${PP.border}` }}>
                 <GlobalsTable act={act} rows={[
@@ -391,7 +391,7 @@ export const AttributeEditor = (props: object, context: object) => {
               flexDirection: 'column',
               overflow: 'hidden',
             }}>
-              <SectionBar title="Attributes" count={attributes.length} />
+              <SectionBar title="Atributos" count={attributes.length} />
               <Box style={{ overflowY: 'auto', flexGrow: 1 }}>
                 <EntryTable
                   entries={attributes}
@@ -407,11 +407,11 @@ export const AttributeEditor = (props: object, context: object) => {
               overflow: 'hidden',
             }}>
               <SectionBar
-                title="Skills"
+                title="Habilidades"
                 count={filteredSkills.length}
                 right={
                   <Input
-                    placeholder="Search..."
+                    placeholder="Buscar..."
                     value={skillSearch}
                     onInput={(e) => setSkillSearch(e.target.value)}
                     style={{ width: '120px', fontSize: '90%' }}

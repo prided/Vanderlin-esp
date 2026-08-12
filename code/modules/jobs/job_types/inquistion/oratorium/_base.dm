@@ -83,7 +83,7 @@
 	qdel(position)
 	return TRUE
 
-/datum/oratorium/proc/add_member_to_school(mob/living/carbon/human/member, school_name, starting_merits = 0, position_name = "Initiate", position_desc = "A new member")
+/datum/oratorium/proc/add_member_to_school(mob/living/carbon/human/member, school_name, starting_merits = 0, position_name = "Initiate", position_desc = "un nuevo miembro")
 	if(!member || !school_name)
 		return FALSE
 
@@ -92,7 +92,7 @@
 		return FALSE
 
 	if(member.inquisition_position)
-		to_chat(member, "<span class='warning'>You already have a position in the hierarchy.</span>")
+		to_chat(member, "<span class='warning'>Ya tienes un puesto en la jerarquía.</span>")
 		return FALSE
 
 	var/datum/inquisition_hierarchy_node/new_position = create_position(
@@ -119,7 +119,7 @@
 		return FALSE
 
 	if(position.assigned_member)
-		to_chat(member, "<span class='warning'>This position is already occupied by [position.assigned_member.real_name].</span>")
+		to_chat(member, "<span class='warning'>Esta posición ya está ocupada por [position.assigned_member.real_name].</span>")
 		return FALSE
 
 	if(member.inquisition_position)

@@ -5,7 +5,7 @@
 #define USE_RUSTG_ICONFORGE_GAGS
 
 SUBSYSTEM_DEF(greyscale)
-	name = "Greyscale"
+	name = "Escala de grises"
 	flags = SS_NO_FIRE
 	init_order = INIT_ORDER_GREYSCALE
 

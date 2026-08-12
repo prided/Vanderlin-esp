@@ -12,7 +12,7 @@
 	faction = list("saiga")
 	gender = FEMALE
 	footstep_type = FOOTSTEP_MOB_SHOE
-	emote_see = list("looks around.", "chews some leaves.")
+	emote_see = list("mira a su alrededor.", "mastica algunas hojas.")
 	move_to_delay = 8
 
 	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 1,

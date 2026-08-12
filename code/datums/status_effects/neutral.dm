@@ -24,7 +24,7 @@
 /datum/status_effect/aasimar_stasis/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, "stasis")
-	to_chat(owner, span_notice("It's time to serve once more."))
+	to_chat(owner, span_notice("Es hora de servir una vez más."))
 
 /datum/status_effect/aasimar_stasis/deep
 	id = "aasimar_stasis_deep"
@@ -33,13 +33,13 @@
 
 /datum/status_effect/aasimar_stasis/deep/on_apply()
 	. = ..()
-	to_chat(owner, span_notice("I let my 'self' sink deep."))
+	to_chat(owner, span_notice("Dejé que mi \"yo\" se hundiera profundamente."))
 	ADD_TRAIT(owner, TRAIT_DEAF, "stasis")
 	owner.apply_status_effect(/datum/status_effect/grouped/blindness)
 
 /datum/status_effect/aasimar_stasis/deep/on_remove()
 	. = ..()
-	to_chat(owner, span_notice("I return to the surface."))
+	to_chat(owner, span_notice("Vuelvo a la superficie."))
 	REMOVE_TRAIT(owner, TRAIT_DEAF, "stasis")
 	owner.remove_status_effect(/datum/status_effect/grouped/blindness)
 
@@ -70,7 +70,7 @@
 	var/total_damage = 0
 
 /atom/movable/screen/alert/status_effect/in_love
-	name = "In Love"
+	name = "Enamorado"
 	desc = ""
 	icon_state = "in_love"
 
@@ -153,7 +153,7 @@
 
 /datum/status_effect/bugged/get_examine_text(mob/user, list/P)
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))
-		var/str = span_warning("[P[THEYVE]] [device.get_examine_name()] implanted.")
+		var/str = span_warning("[P[THEYVE]] [device.get_examine_name()] implantado.")
 		return "<A href='byond://?src=[REF(owner)];item=[device]'>][str]</A>"
 
 

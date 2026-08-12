@@ -3,25 +3,25 @@
 	required_count = 1
 
 /datum/essence_combo/spell/single/air
-	name = "Air Mastery"
+	name = "Dominio del aire"
 	required_essences = list(/datum/thaumaturgical_essence/air)
 
 	granted_spells = list(/datum/action/cooldown/spell/essence/breeze, /datum/action/cooldown/spell/essence/air_walk)
 
 /datum/essence_combo/spell/single/water
-	name = "Water Mastery"
+	name = "Dominio del agua"
 	required_essences = list(/datum/thaumaturgical_essence/water)
 
 	granted_spells = list(/datum/action/cooldown/spell/essence/cleanse, /datum/action/cooldown/spell/essence/water_breathing)
 
 /datum/essence_combo/spell/single/fire
-	name = "Fire Mastery"
+	name = "Dominio del fuego"
 	required_essences = list(/datum/thaumaturgical_essence/fire)
 
 	granted_spells = list(/datum/action/cooldown/spell/essence/spark, /datum/action/cooldown/spell/essence/warmth)
 
 /datum/essence_combo/spell/single/earth
-	name = "Earth Mastery"
+	name = "Dominio de la Tierra"
 	required_essences = list(/datum/thaumaturgical_essence/earth)
 
 	granted_spells = list(/datum/action/cooldown/spell/essence/mend, /datum/action/cooldown/spell/essence/stone_shape)
@@ -39,13 +39,13 @@
 	granted_spells = list(/datum/action/cooldown/spell/essence/illuminate, /datum/action/cooldown/spell/essence/daylight)
 
 /datum/essence_combo/spell/single/motion
-	name = "Motion Mastery"
+	name = "Dominio del movimiento"
 	required_essences = list(/datum/thaumaturgical_essence/motion)
 
 	granted_spells = list(/datum/action/cooldown/spell/essence/haste, /datum/action/cooldown/spell/essence/phase_step)
 
 /datum/essence_combo/spell/single/life
-	name = "Life Mastery"
+	name = "Dominio de la vida"
 	required_essences = list(/datum/thaumaturgical_essence/life)
 
 	granted_spells = list(/datum/action/cooldown/spell/essence/refresh, /datum/action/cooldown/spell/essence/vigor)
@@ -75,12 +75,12 @@
 	granted_spells = list(/datum/action/cooldown/spell/essence/arcane_mark)
 
 /datum/essence_combo/spell/single/energia
-	name = "Energia Mastery"
+	name = "Dominio de la energía"
 	required_essences = list(/datum/thaumaturgical_essence/energia)
 	granted_spells = list(/datum/action/cooldown/spell/essence/energize)
 
 /datum/essence_combo/spell/single/cycle
-	name = "Cycle Mastery"
+	name = "Dominio del ciclo"
 	required_essences = list(/datum/thaumaturgical_essence/cycle)
 
 	granted_spells = list(/datum/action/cooldown/spell/essence/seasonal_attune)

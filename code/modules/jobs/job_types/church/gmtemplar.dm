@@ -84,14 +84,14 @@
 		"Mace" = /obj/item/weapon/mace/goden/steel/grandmaster,
 	)
 
-	spawned.select_equippable(player_client, selectableweapon, message = "Choose thy blade", title = "GRANDMASTER")
+	spawned.select_equippable(player_client, selectableweapon, message = "Elige tu espada", title = "GRANDMASTER")
 
 	var/static/list/selectablehelm = list(
 		"Armet" = /obj/item/clothing/head/helmet/visored/silver/armet,
 		"Bascinet" = /obj/item/clothing/head/helmet/visored/silver,
 	)
 
-	spawned.select_equippable(player_client, selectablehelm, message = "Choose thy helm", title = "GRANDMASTER")
+	spawned.select_equippable(player_client, selectablehelm, message = "Elige tu yelmo", title = "GRANDMASTER")
 
 	var/static/list/selectablecloak = list(
 		"Cloak" = /obj/item/clothing/cloak/pantheon,

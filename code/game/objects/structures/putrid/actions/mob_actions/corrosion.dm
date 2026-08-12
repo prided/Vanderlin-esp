@@ -1,6 +1,6 @@
 
 /datum/action/cooldown/meatvine/personal/corrosion
-	name = "Corrosive Acid"
+	name = "Ácido corrosivo"
 	desc = "Drench an object in acid, destroying it over time."
 	button_icon_state = "alien_acid"
 	personal_resource_cost = 20
@@ -38,7 +38,7 @@
 
 /datum/action/cooldown/meatvine/personal/corrosion/Activate(atom/target)
 	if(!target.acid_act(200, 1000))
-		to_chat(owner, span_noticealien("You cannot dissolve this object."))
+		to_chat(owner, span_noticealien("No puedes disolver este objeto."))
 		return FALSE
 
 	owner.visible_message(

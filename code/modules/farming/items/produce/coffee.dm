@@ -3,17 +3,17 @@
 	desc = "A small sweet, small red fruit that contains coffee bean(s) inside. Can be grounded in a millstone for coffee beans."
 	icon_state = "coffee"
 	seed = /obj/item/neuFarm/seed/coffee
-	tastes = list("hibicus sweetness" = 1)
+	tastes = list("dulzura de hibisco" = 1)
 	bitesize = 1
 	mill_result = /obj/item/reagent_containers/food/snacks/produce/coffeebeans
 	rotprocess = null
 
 /obj/item/reagent_containers/food/snacks/produce/coffeebeans
-	name = "coffee beans"
+	name = "granos de café"
 	desc = "Freshly extracted coffee beans, with a hard texture. Should be roasted first."
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "coffeebeans"
-	tastes = list("unpleasant bitterness" = 1)
+	tastes = list("amargura desagradable" = 1)
 	bitesize = 1
 	seed = /obj/item/neuFarm/seed/coffee
 	rotprocess = null

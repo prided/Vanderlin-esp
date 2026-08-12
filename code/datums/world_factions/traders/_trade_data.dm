@@ -51,7 +51,7 @@
 			"Sorry adventurer, I can't give credit! Come back when you're a little mmmmm... richer!",
 		),
 		NO_STOCK_PHRASE = list(
-			"Sorry adventurer, but that item is not in stock at the moment.",
+			"Lo siento aventurero, pero ese artículo no está en stock en este momento.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"I don't want to buy that item for the time being, check back another time.",
@@ -60,10 +60,10 @@
 			"This item seems to be worthless on a closer look, I won't buy this.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"I already bought enough of this for the time being.",
+			"Ya compré suficiente de esto por el momento.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Hello! I am the test trader.",
+			"¡Hola! Soy el comerciante de prueba.",
 			"Oooooooo~!",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
@@ -73,7 +73,7 @@
 			"I'm currently selling nothing at the moment.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"Thief!",
+			"¡Ladrón!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"That is a discount I call death.",

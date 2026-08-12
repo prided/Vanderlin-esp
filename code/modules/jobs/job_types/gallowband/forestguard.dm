@@ -67,7 +67,7 @@
 	return slots
 
 /datum/outfit/forestguard
-	name = "Forest Guard Base"
+	name = "Base de la Guardia Forestal"
 	pants = /obj/item/clothing/pants/trou/leather
 	shoes = /obj/item/clothing/shoes/boots/darkboots
 	wrists = /obj/item/clothing/wrists/bracers/leather

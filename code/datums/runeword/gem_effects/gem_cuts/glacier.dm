@@ -1,5 +1,5 @@
 /datum/gem_cut/glacier
-	name = "glacier"
+	name = "glaciar"
 
 /datum/gem_cut/glacier/setup_cut(multiplier)
 	weapon_effect_type = /datum/rune_effect/damage/cold

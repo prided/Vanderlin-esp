@@ -1,5 +1,5 @@
 /datum/language/deepspeak
-	name = "Deep Speak"
+	name = "Habla profunda"
 	desc = ""
 	icon_state = "fish"
 	spans = list(SPAN_DEEPSPEAK)

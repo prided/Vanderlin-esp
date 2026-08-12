@@ -23,7 +23,7 @@
 	)
 
 /datum/job/advclass/bandit/sellsword //Strength class, starts with axe or flails and medium armor training
-	title = "Sellsword"
+	title = "mercenario"
 	tutorial = "Perhaps a mercenary, perhaps a deserter - at one time, you killed for a master in return for gold. Now you live with no such master over your head - and take what you please."
 	allowed_sexes = list(MALE, FEMALE)
 
@@ -44,7 +44,7 @@
 		"Spear & Crossbow" = list(/obj/item/weapon/polearm/spear/billhook,  /obj/item/gun/ballistic/bow/cross),
 		"Sword & Buckler" = list(/obj/item/weapon/sword , /obj/item/weapon/shield/tower/buckleriron)
 	)
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose your weapon.", title = "TAKE UP ARMS.")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu arma.", title = "TAKE UP ARMS.")
 	switch(weapon_choice)
 		if("Spear & Crossbow")
 			spawned.equip_to_slot_or_del(new /obj/item/ammo_holder/quiver/bolts, ITEM_SLOT_BELT_R, TRUE)
@@ -54,7 +54,7 @@
 
 
 /datum/outfit/bandit/sellsword
-	name = "Sellsword (Bandit)"
+	name = "mercenario (bandido)"
 	belt = /obj/item/storage/belt/leather
 	pants = /obj/item/clothing/pants/trou/leather
 	shirt = /obj/item/clothing/armor/gambeson

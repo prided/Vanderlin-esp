@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/divine_strike
-	name = "Divine Strike"
+	name = "Golpe divino"
 	desc = ""
 	button_icon_state = "createlight"
 	sound = 'sound/magic/timestop.ogg'
@@ -54,7 +54,7 @@
 		UnregisterSignal(I, COMSIG_ITEM_AFTERATTACK)
 
 /atom/movable/screen/alert/status_effect/buff/divine_strike
-	name = "Divine Strike"
+	name = "Golpe divino"
 	desc = "Your next attack deals additional damage and slows your target."
 	icon_state = "stressvg"
 
@@ -76,7 +76,7 @@
 	if(!istype(M.used_intent, INTENT_HARM))
 		return
 	H.apply_status_effect(/datum/status_effect/debuff/ravox_burden)
-	H.visible_message(span_warning("The strike from [M]'s fist causes [H] to go stiff!"), vision_distance = COMBAT_MESSAGE_RANGE)
+	H.visible_message(span_warning("¡El golpe del puño de [M] hace que [H] se ponga rígido!"), vision_distance = COMBAT_MESSAGE_RANGE)
 	qdel(src)
 
 /datum/status_effect/debuff/ravox_burden
@@ -92,7 +92,7 @@
 		effectedstats[STAT_ENDURANCE] -= 1
 
 /atom/movable/screen/alert/status_effect/debuff/ravox_burden
-	name = "Ravox's Burden"
+	name = "La carga de Ravox"
 	desc = "My arms and legs are restrained by divine chains!"
 	icon_state = "restrained"
 

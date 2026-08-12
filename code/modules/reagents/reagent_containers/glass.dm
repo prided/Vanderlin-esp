@@ -25,7 +25,7 @@
 		return FALSE
 
 	if(liquids.fire_state) //Use an extinguisher first
-		to_chat(user, span_danger("You can't scoop up anything while it's on fire!"))
+		to_chat(user, span_danger("¡No puedes recoger nada mientras está en llamas!"))
 		return FALSE
 
 	if(liquids.liquid_group.expected_turf_height == 1)
@@ -59,7 +59,7 @@
 	misscost = 0
 
 /datum/intent/pour
-	name = "feed"
+	name = "alimentar"
 	icon_state = "infeed"
 	chargetime = 0
 	noaa = TRUE

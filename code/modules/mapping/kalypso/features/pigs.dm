@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/pigs
-	name = "Bog Pigs"
+	name = "Cerdos del pantano"
 	id = "feature_pigs"
 	mappath = "_maps/kalypso/pigs.dmm"
 

@@ -1,5 +1,5 @@
 /datum/round_event_control/create_abyssoids
-	name = "Create Abyssoids"
+	name = "Crear abisoides"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/create_abyssoids
 	weight = 7
@@ -49,7 +49,7 @@
 	chosen_one.add_spell(/datum/action/cooldown/spell/undirected/create_abyssoid)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE ABYSSOR'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE ABYSSOR!"),
 		span_blue("Abyssor wants everyone to remember him! Create an army of holy abyssoid leeches and distribute them among the ingrates!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/items/bucket_transfer (2).ogg', 100)

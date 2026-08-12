@@ -3,7 +3,7 @@
 	created_item = /obj/item/reagent_containers/glass/bowl/clay
 
 /datum/pottery_recipe/platter
-	name = "Clay Platter"
+	name = "Plato de arcilla"
 	created_item = /obj/item/plate/clay
 
 /datum/pottery_recipe/cup
@@ -11,11 +11,11 @@
 	created_item = /obj/item/reagent_containers/glass/cup/clay
 
 /datum/pottery_recipe/fancy_cup
-	name = "Fancy Clay Cup"
+	name = "Taza de arcilla elegante"
 	created_item = /obj/item/reagent_containers/glass/cup/fancy_clay
 
 /datum/pottery_recipe/mug
-	name = "Clay Mug"
+	name = "Taza de arcilla"
 	created_item = /obj/item/reagent_containers/glass/cup/clay_mug
 
 /datum/pottery_recipe/teapot

@@ -1,5 +1,5 @@
 /obj/effect/abstract/liquid_turf
-	name = "liquid"
+	name = "líquido"
 	icon = 'icons/effects/liquids.dmi'
 	icon_state = "puddle"
 	anchored = TRUE
@@ -29,7 +29,7 @@
 	var/mutable_appearance/displayed_content
 	/// State-specific message chunks for examine_turf()
 	var/static/list/liquid_state_messages = list(
-		"[LIQUID_STATE_PUDDLE]" = "a puddle of $",
+		"[LIQUID_STATE_PUDDLE]" = "un charco de $",
 		"[LIQUID_STATE_ANKLES]" = "$ going [span_warning("up to your ankles")]",
 		"[LIQUID_STATE_WAIST]" = "$ going [span_warning("up to your waist")]",
 		"[LIQUID_STATE_SHOULDERS]" = "$ going [span_warning("up to your shoulders")]",
@@ -273,7 +273,7 @@
 				liquid_group.transfer_to_atom(src, CHOKE_REAGENTS_INGEST_ON_FALL_AMOUNT, C)
 				C.adjustOxyLoss(5)
 				C.emote("cough")
-				to_chat(C, span_userdanger("You fall in and swallow some water!"))
+				to_chat(C, span_userdanger("¡Te caes y tragas un poco de agua!"))
 		else
 			to_chat(M, span_userdanger("You fall in the water!"))
 

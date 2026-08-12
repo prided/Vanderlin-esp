@@ -11,12 +11,12 @@
 	item_weight = 16 GRAMS
 
 /obj/item/alch/waterdust
-	name = "water essentia"
+	name = "esencia de agua"
 	icon_state = "water_runedust"
 	item_weight = 75 GRAMS
 
 /obj/item/alch/seeddust
-	name = "seed dust"
+	name = "polvo de semillas"
 	icon_state = "seeddust"
 	item_weight = 75 GRAMS
 
@@ -26,17 +26,17 @@
 	item_weight = 75 GRAMS
 
 /obj/item/alch/coaldust
-	name = "coal dust"
+	name = "polvo de carbón"
 	icon_state = "coaldust"
 	item_weight = 75 GRAMS
 
 /obj/item/alch/silverdust
-	name = "silver dust"
+	name = "polvo de plata"
 	icon_state = "silverdust"
 	item_weight = 75 GRAMS
 
 /obj/item/alch/magicdust
-	name = "pure essentia"
+	name = "esencia pura"
 	icon_state = "magic_runedust"
 	item_weight = 75 GRAMS
 
@@ -52,7 +52,7 @@
 	item_weight = 18 GRAMS
 
 /obj/item/alch/irondust
-	name = "iron dust"
+	name = "polvo de hierro"
 	icon_state = "irondust"
 	item_weight = 75 GRAMS
 
@@ -62,12 +62,12 @@
 	item_weight = 75 GRAMS
 
 /obj/item/alch/swampdust
-	name = "swampweed dust"
+	name = "polvo de pantano"
 	icon_state = "swampdust"
 	item_weight = 75 GRAMS
 
 /obj/item/alch/tobaccodust
-	name = "westleach dust"
+	name = "polvo de Westleach"
 	icon_state = "tobaccodust"
 	item_weight = 75 GRAMS
 
@@ -97,7 +97,7 @@
 	indexed = TRUE
 
 /obj/item/alch/horn
-	name = "troll horn"
+	name = "cuerno de troll"
 	icon_state = "horn"
 	desc = "The horn of a bog troll."
 	force = 7
@@ -109,13 +109,13 @@
 	grid_height = 64
 
 /obj/item/alch/golddust
-	name = "gold dust"
+	name = "polvo de oro"
 	icon_state = "golddust"
 	item_weight = 75 GRAMS
 
 /obj/item/alch/feaudust
 	name = "feau dust"
-	desc = "Combining gold and iron results in this powder with unique alchemical properties."
+	desc = "La combinación de oro y hierro da como resultado este polvo con propiedades alquímicas únicas."
 	icon_state = "feaudust"
 	item_weight = 75 GRAMS
 
@@ -127,7 +127,7 @@
 
 /obj/item/alch/transisdust
 	name = "transis dust"
-	desc = "A complex mix of herbs that produce a powder which can modify the body."
+	desc = "Una mezcla compleja de hierbas que producen un polvo que puede modificar el cuerpo."
 	icon_state = "transisdust"
 	item_weight = 75 GRAMS
 

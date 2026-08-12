@@ -25,7 +25,7 @@
 	icon_state = "inlight"
 
 /datum/action/cooldown/spell/undirected/touch/orison
-	name = "Orison"
+	name = "Oración"
 	desc = "The basic precept of holy magic orients around the power of prayer and soliciting a Divine Patron for a tiny sliver of Their might."
 	button_icon_state = "thaumaturgy"
 	can_cast_on_self = TRUE
@@ -63,13 +63,13 @@
 		var/mob/living/blessed_mob = victim
 		if(blessed_mob.has_status_effect(/datum/status_effect/light_buff))
 			blessed_mob.remove_status_effect(/datum/status_effect/light_buff)
-			caster.visible_message(span_notice("[caster] issues a reserved gesture towards [victim], and the holy light leaves [victim.p_them()]."),\
+			caster.visible_message(span_notice("[caster] emite un gesto reservado hacia [victim], y la luz sagrada abandona [victim.p_them()]."),\
 			span_notice("I gesture towards [victim], and [victim.p_their()] blessing of light recedes."))
 
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/melee/touch_attack/orison
-	name = "\improper lesser prayer"
+	name = "\improper oración menor"
 	desc = "The fundamental teachings of theology return to you:\n \
 		<b>Fill</b>: Beseech your Divine to create a small quantity of holy water in a container that you touch for some devotion.\n \
 		<b>Touch</b>: Direct a sliver of divine thaumaturgy into your being, causing your voice to become LOUD when you next speak. Can be used on light sources at range, and it will cause them flicker.\n \
@@ -79,7 +79,7 @@
 /datum/action/cooldown/spell/undirected/touch/orison/proc/create_water(atom/victim, mob/living/carbon/human/user)
 	if(victim.is_refillable())
 		if(victim.reagents.holder_full())
-			to_chat(user, span_warning("[victim] is full."))
+			to_chat(user, span_warning("[victim] está lleno."))
 			return FALSE
 
 		user.visible_message(
@@ -120,7 +120,7 @@
 	if(victim == user)
 		if(user.has_status_effect(/datum/status_effect/thaumaturgy))
 			user.remove_status_effect((/datum/status_effect/thaumaturgy))
-			to_chat(user, span_notice("The feeling in my throat wanes, I will speak normally."))
+			to_chat(user, span_notice("La sensación en mi garganta disminuye, hablaré normalmente."))
 			return FALSE
 		// give us a buff that makes our next spoken victim really loud and also cause any linked, un-muted scom to shriek out the phrase at a 15% chance
 		var/cast_time = 50 - (holy_skill * 5)
@@ -167,7 +167,7 @@
 
 			var/datum/status_effect/light_buff/light_buff_status = /datum/status_effect/light_buff
 			if (blessed_mob.has_status_effect(light_buff_status))
-				user.visible_message(span_notice("The holy light emanating from [blessed_mob] becomes brighter!"), span_notice("I feed further devotion into [blessed_mob]'s blessing of light."))
+				user.visible_message(span_notice("¡La luz sagrada que emana de [blessed_mob] se vuelve más brillante!"), span_notice("I feed further devotion into [blessed_mob]'s blessing of light."))
 			else
 				user.visible_message(span_notice("A gentle illumination suddenly blossoms into being around [blessed_mob]!"), span_notice("I grant [blessed_mob] a blessing of light."))
 
@@ -192,13 +192,13 @@
 	return SECONDARY_ATTACK_CALL_NORMAL
 
 /obj/item/melee/touch_attack/orison/lesser
-	name = "\improper lesser prayer"
+	name = "\improper oración menor"
 	desc = "The fundamental teachings of theology return to you:\n \
 		<b>Fill</b>: Beseech your Divine to create a small quantity of holy water in a container that you touch for some devotion."
 	possible_item_intents = list(ORISON_FILL)
 
 /datum/reagent/water/blessed
-	name = "blessed water"
+	name = "agua bendita"
 	description = "A gift of Devotion. Very slightly heals wounds."
 
 /datum/reagent/water/blessed/on_mob_life(mob/living/carbon/M, efficiency)
@@ -222,14 +222,14 @@
 	if (methods & TOUCH)
 		if (exposed_mob.mob_biotypes & MOB_UNDEAD)
 			exposed_mob.adjustFireLoss(2*reac_volume, 0)
-			exposed_mob.visible_message(span_warning("[exposed_mob] erupts into angry fizzling and hissing!"), span_warning("BLESSED WATER!!! IT BURNS!!!"))
+			exposed_mob.visible_message(span_warning("[exposed_mob] erupts into angry fizzling and hissing!"), span_warning("¡¡¡AGUA BENDITA!!! ¡¡¡ARDE!!!"))
 			exposed_mob.emote("scream")
 
 	return ..()
 
 /datum/reagent/water/cursed
-	name = "cursed water"
-	description = "A gift of Devotion. Very slightly heals wounds of the dead and the enlightened."
+	name = "agua maldita"
+	description = "Un regalo de Devoción. Cura muy ligeramente las heridas de los muertos y de los iluminados."
 
 /datum/reagent/water/cursed/on_mob_life(mob/living/carbon/M, efficiency)
 	. = ..()
@@ -254,7 +254,7 @@
 		M.adjust_stamina(0.5*REM * efficiency)
 
 /atom/movable/screen/alert/status_effect/thaumaturgy
-	name = "Thaumaturgical Voice"
+	name = "Voz taumatúrgica"
 	desc = "The power of my god will make the next thing I say much louder!"
 	icon_state = "stressvg"
 
@@ -279,8 +279,8 @@
 	playsound(owner, 'sound/magic/invoke_general.ogg', 33, TRUE)
 
 /atom/movable/screen/alert/status_effect/light_buff
-	name = "Miraculous Light"
-	desc = "A blessing of light wards off the darkness surrounding me."
+	name = "Luz milagrosa"
+	desc = "Una bendición de luz protege de la oscuridad que me rodea."
 	icon_state = "stressvg"
 
 /datum/status_effect/light_buff
@@ -298,7 +298,7 @@
 
 /datum/status_effect/light_buff/on_apply()
 	. = ..()
-	to_chat(owner, span_notice("Light blossoms into being around me!"))
+	to_chat(owner, span_notice("¡La luz florece a mi alrededor!"))
 	var/filter = owner.get_filter("blessing_of_light")
 	if (!filter)
 		owner.add_filter("blessing_of_light", 2, outline_filter(1, outline_colour))

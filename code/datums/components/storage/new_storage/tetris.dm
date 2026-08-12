@@ -261,15 +261,15 @@
 	if(LAZYLEN(can_hold))
 		if(!is_type_in_typecache(storing, can_hold))
 			if(!stop_messages)
-				to_chat(user, span_warning("[host] cannot hold [storing]!"))
+				to_chat(user, span_warning("¡[host] no puede contener [storing]!"))
 			return FALSE
 	if(is_type_in_typecache(storing, cant_hold)) //Items which this container can't hold.
 		if(!stop_messages)
-			to_chat(user, span_warning("[host] cannot hold [storing]!"))
+			to_chat(user, span_warning("¡[host] no puede contener [storing]!"))
 		return FALSE
 	if((storing.w_class > max_w_class) && !is_type_in_typecache(storing, exception_hold))
 		if(!stop_messages)
-			to_chat(user, span_warning("[storing] is too big for [host]!"))
+			to_chat(user, span_warning("¡[storing] es demasiado grande para [host]!"))
 		return FALSE
 	var/atom/recursive_loc = real_location?.loc
 	var/depth = 0
@@ -314,7 +314,7 @@
 		return FALSE
 	if(storing.anchored)
 		if(!stop_messages)
-			to_chat(user, span_warning("\The [storing] can't be moved!"))
+			to_chat(user, span_warning("¡\The [storing] no se puede mover!"))
 		return FALSE
 	var/datum/component/storage/concrete/master = master()
 	if(!istype(master))

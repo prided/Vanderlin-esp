@@ -99,7 +99,7 @@
 					onerror: function(error) {
 						statusEl.textContent = "Error loading Doom: " + error;
 						statusEl.style.color = "#f00";
-						console.error("Doom loading error:", error);
+						console.error("Error de carga de Doom:", error);
 					}
 				});
 

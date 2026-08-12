@@ -26,7 +26,7 @@
 
 	// Check if this door is already enchanted
 	if(target_door.GetComponent(/datum/component/overlord_door_enchantment))
-		to_chat(owner, span_warning("This door is already enchanted."))
+		to_chat(owner, span_warning("Esta puerta ya está encantada."))
 		return FALSE
 
 	// Add enchantment component to existing door
@@ -70,12 +70,12 @@
 		return
 
 	// Everyone gets transported to the entry structure in the lair
-	to_chat(user, span_danger("As you step through the doorway, reality shifts around you!"))
+	to_chat(user, span_danger("¡Al cruzar la puerta, la realidad cambia a tu alrededor!"))
 	user.forceMove(get_turf(GLOB.lair_portal))
 	if(user.mind == linked_overlord.owner)
 		user.visible_message(span_danger("[user] dissolves into shadow."))
 	else
-		user.visible_message(span_warning("[user] vanishes through the doorway!"))
+		user.visible_message(span_warning("¡[user] desaparece por la puerta!"))
 
 /datum/action/cooldown/spell/undirected/enter_overseer_mode
 	name = "Overseer Trance"
@@ -98,7 +98,7 @@
 		return
 
 	if(!overlord_datum.overlord_controller)
-		to_chat(cast_on, span_warning("You have not established a lair yet."))
+		to_chat(cast_on, span_warning("Aún no has establecido una guarida."))
 		return
 
 	if(overlord_datum.controlling_rts)
@@ -160,19 +160,19 @@
 		return
 
 	if(!length(overlord_datum.enchanted_doors))
-		to_chat(owner, span_warning("You don't have any enchanted doors."))
+		to_chat(owner, span_warning("No tienes puertas encantadas."))
 		return
 
 	var/datum/component/overlord_door_enchantment/enchant = target_door.GetComponent(/datum/component/overlord_door_enchantment)
 	if(!enchant || enchant.linked_overlord != overlord_datum)
-		to_chat(owner, span_warning("This door is not enchanted by you."))
+		to_chat(owner, span_warning("Esta puerta no está encantada por ti."))
 		return
 
 	overlord_datum.enchanted_doors -= target_door
 	qdel(enchant)
 
-	target_door.visible_message(span_danger("The dark energy fades from [target_door]."))
-	to_chat(owner, span_notice("You have removed the enchantment from [target_door]."))
+	target_door.visible_message(span_danger("La energía oscura se desvanece de [target_door]."))
+	to_chat(owner, span_notice("Has eliminado el encantamiento de [target_door]."))
 
 /datum/action/cooldown/spell/undirected/summon_worker
 	name = "Summon Worker"
@@ -194,7 +194,7 @@
 		return . | SPELL_CANCEL_CAST
 
 	if(!overlord_datum.overlord_controller)
-		to_chat(owner, span_warning("You have not established a lair yet."))
+		to_chat(owner, span_warning("Aún no has establecido una guarida."))
 		return . | SPELL_CANCEL_CAST
 
 	if(length(overlord_datum.overlord_controller.worker_mobs))

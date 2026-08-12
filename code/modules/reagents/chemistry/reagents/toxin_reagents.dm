@@ -5,7 +5,7 @@
 	name = "Toxin"
 	description = "A toxic chemical."
 	color = "#CF3600" // rgb: 207, 54, 0
-	taste_description = "bitterness"
+	taste_description = "amargura"
 	taste_mult = 1.2
 	harmful = TRUE
 	var/toxpwr = 1.5
@@ -17,8 +17,8 @@
 	return ..()
 
 /datum/reagent/toxin/amatoxin
-	name = "Amatoxin"
-	description = "A powerful poison derived from certain species of mushroom."
+	name = "amatoxina"
+	description = "Un poderoso veneno derivado de ciertas especies de hongos."
 	color = "#792300" // rgb: 121, 35, 0
 	toxpwr = 2.5
 	taste_description = "mushroom"
@@ -26,8 +26,8 @@
 
 /datum/reagent/toxin/plasma
 	name = "Purple Aetherium"
-	description = "A strange liquid, it seems almost... alive."
-	taste_description = "bitterness"
+	description = "Un líquido extraño, parece casi... vivo."
+	taste_description = "amargura"
 	specific_heat = SPECIFIC_HEAT_PLASMA
 	taste_mult = 1.5
 	color = "#8228A0"
@@ -47,19 +47,19 @@
 	toxpwr = 0.5
 
 /datum/reagent/toxin/teapowder
-	name = "Ground Tea Leaves"
-	description = "Finely shredded tea leaves, used for making tea."
+	name = "Hojas de té molidas"
+	description = "Hojas de té finamente trituradas, utilizadas para preparar té."
 	reagent_state = SOLID
 	color = "#7F8400" // rgb: 127, 132, 0
 	toxpwr = 0.1
-	taste_description = "green tea"
+	taste_description = "té verde"
 
 /datum/reagent/medicine/soporpot
-	name = "Soporific Poison"
+	name = "Veneno soporífero"
 	description = "Weakens those it enters."
 	reagent_state = LIQUID
 	color = "#fcefa8"
-	taste_description = "drowsyness"
+	taste_description = "somnolencia"
 	overdose_threshold = 0
 	metabolization_rate = 1 * REAGENTS_METABOLISM
 	alpha = 225
@@ -75,7 +75,7 @@
 	..()
 
 /datum/reagent/toxin/venom
-	name = "Venom"
+	name = "Veneno"
 	description = "An exotic poison extracted from highly toxic fauna. Causes scaling amounts of toxin damage and bruising depending on dosage. Often decays into Histamine."
 	reagent_state = LIQUID
 	color = "#F0FFF0"
@@ -88,7 +88,7 @@
 	..()
 
 /datum/reagent/toxin/fentanyl
-	name = "Fentanyl"
+	name = "Fentanilo"
 	description = "Fentanyl will inhibit brain function and cause toxin damage before eventually knocking out its victim."
 	reagent_state = LIQUID
 	color = "#64916E"
@@ -128,11 +128,11 @@
 	color = "#d6d6d8"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	toxpwr = 0.25
-	taste_description = "bad cooking"
+	taste_description = "mala cocina"
 
 
 /datum/reagent/toxin/amanitin
-	name = "Amanitin"
+	name = "amanitina"
 	description = "A very powerful delayed toxin. Upon full metabolization, a massive amount of toxin damage will be dealt depending on how long it has been in the victim's bloodstream."
 	silent_toxin = TRUE
 	reagent_state = LIQUID
@@ -150,8 +150,8 @@
 
 
 /datum/reagent/toxin/acid
-	name = "Sulphuric acid"
-	description = "A strong mineral acid with the molecular formula H2SO4."
+	name = "Ácido sulfúrico"
+	description = "Un ácido mineral fuerte con la fórmula molecular H2SO4."
 	color = "#00FF32"
 	toxpwr = 1
 	var/acidpwr = 10 //the amount of protection removed from the armour
@@ -191,7 +191,7 @@
 	description = "A potent mana regeneration extract, it however has the issue of stopping your body's ability to naturally disperse mana."
 	glows = TRUE
 	color = "#6eb9e4"
-	taste_description = "flowers"
+	taste_description = "flores"
 	metabolization_rate = 0.1 //this shit will kill you
 	price_per_unit = 1.1
 
@@ -264,18 +264,18 @@
 
 /obj/item/reagent_containers/spidervenom_inert
 	list_reagents = list(/datum/reagent/toxin/spidervenom_inert = 10)
-	name = "Pale spider gland"
+	name = "Glándula de araña pálida"
 	desc = "A squishy pale gland, filled to the brim with venom of the deadly Aragn spider. Feels cold to the touch."
 	icon = 'icons/obj/webbing.dmi'
 	icon_state = "gland"
 
 /datum/reagent/poison/mirelung_brew
-	name = "Mirelung Brew"
+	name = "Cerveza Mirelung"
 	description = "A vile lung-coating poison used by swamp brigands. It causes the victim to experience respiratory failure over time, as their airways flood with a thick, viscous film mimicking drowning."
 	reagent_state = LIQUID
 	color = "#3B5323"
-	taste_description = "swamp water and bile"
-	scent_description = "stagnant water"
+	taste_description = "agua de pantano y bilis"
+	scent_description = "agua estancada"
 	harmful = TRUE
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 
@@ -292,7 +292,7 @@
 	reagent_state = LIQUID
 	color = "#FF6347"
 	taste_description = "unbearable burning"
-	scent_description = "cooking flesh and pepper"
+	scent_description = "cocinar carne y pimienta"
 	harmful = TRUE
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 
@@ -309,7 +309,7 @@
 	. = ..()
 
 /datum/reagent/poison/blinding_spore
-	name = "Blinding Spore"
+	name = "Espora cegadora"
 	description = "Powder from the eyeblight mushroom. Contact with skin or mucous membranes induces temporary blindness and severe eye irritation. Not lethal, but profoundly incapacitating in a fight."
 	reagent_state = SOLID
 	color = "#F5DEB3"
@@ -338,7 +338,7 @@
 	reagent_state = LIQUID
 	color = "#0D0D0D"
 	taste_description = "oblivion"
-	scent_description = "nothing and death"
+	scent_description = "nada y muerte"
 	harmful = TRUE
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 
@@ -364,8 +364,8 @@
 	description = "A black liquid that corrodes metal and is devastating against armored targets. Against living flesh it deals modest brute damage, but against those wearing metal armor its vapors eat through joints and fastenings particularly useful against knights."
 	reagent_state = LIQUID
 	color = "#1C1C1C"
-	taste_description = "sharp metal"
-	scent_description = "acid and rust"
+	taste_description = "metal afilado"
+	scent_description = "ácido y óxido"
 	harmful = TRUE
 
 /datum/reagent/poison/ironblight/expose_mob(mob/living/exposed_mob, methods, reac_volume, show_message, touch_protection)
@@ -440,8 +440,8 @@
 	description = "Brewed from cursed blood and wychwood ash. It seeps into wounds on contact, rapidly delivering trauma as it inflames tissue and causes internal hemorrhage. Popular with assassins."
 	reagent_state = LIQUID
 	color = "#8B0000"
-	taste_description = "iron and char"
-	scent_description = "burnt copper"
+	taste_description = "hierro y carbón"
+	scent_description = "cobre quemado"
 	harmful = TRUE
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM
 
@@ -463,7 +463,7 @@
 	description = "Contaminated water drawn from a corpse-pit. Drinking it introduces rapidly multiplying bacteria into the bloodstream. It poisons slowly at first, then accelerates the infection compounds upon itself over time."
 	reagent_state = LIQUID
 	color = "#5D4037"
-	taste_description = "fetid water"
+	taste_description = "agua fétida"
 	scent_description = "rot and swamp"
 	harmful = TRUE
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -504,7 +504,7 @@
 	reagent_state = LIQUID
 	color = "#4A235A"
 	taste_description = "musty sweetness"
-	scent_description = "damp caves"
+	scent_description = "cuevas húmedas"
 	harmful = TRUE
 	metabolization_rate = 0.3 * REAGENTS_METABOLISM
 	boiling_point = T0C + 110
@@ -523,7 +523,7 @@
 	description = "Powdered remains of a creature scorched by magical fire. Suspended in air or splashed across flesh, the fine particles ignite on contact with warmth, inflicting persistent burn injury. Its touch lingers."
 	reagent_state = SOLID
 	color = "#696969"
-	taste_description = "choking ash"
+	taste_description = "ceniza asfixiante"
 	scent_description = "burning hair and char"
 	harmful = TRUE
 
@@ -542,8 +542,8 @@
 	description = "A caustic secretion harvested from acid-slugs that nest near hot springs. On contact with flesh it erupts into suppurating blisters, causing severe burn damage. Internal ingestion causes intense toxic damage."
 	reagent_state = LIQUID
 	color = "#ADFF2F"
-	taste_description = "burning acid"
-	scent_description = "acidic rot"
+	taste_description = "ácido ardiente"
+	scent_description = "podredumbre ácida"
 	harmful = TRUE
 
 /datum/reagent/poison/blistergall/expose_mob(mob/living/exposed_mob, methods, reac_volume, show_message, touch_protection)

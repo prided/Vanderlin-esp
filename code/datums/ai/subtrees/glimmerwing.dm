@@ -39,7 +39,7 @@
 
 	target.visible_message(span_boldwarning("Kneestingers pop out from the ground around [sylph]!"))
 	target.apply_status_effect(/datum/status_effect/buff/seelie_drugs)
-	target.visible_message(span_danger("[sylph] dusts [target] with some kind of powder!"))
+	target.visible_message(span_danger("¡[sylph] espolvorea [target] con algún tipo de polvo!"))
 	target.adjustToxLoss(15)
 
 	controller.set_blackboard_key(BB_DRUG_COOLDOWN, world.time + action_cooldown)

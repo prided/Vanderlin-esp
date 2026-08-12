@@ -78,7 +78,7 @@
 
 /obj/item/breach_charge/fire_act(added, maxstacks)
 	if(deployed && !ignited)
-		visible_message(span_warning("[src] ignites!"))
+		visible_message(span_warning("¡[src] se enciende!"))
 		playsound(src, 'sound/items/fuse.ogg', 100)
 		ignited = TRUE
 		icon_state = "[initial(icon_state)]_ignited"
@@ -95,12 +95,12 @@
 				defuse(user)
 				return
 		else
-			user.visible_message(span_notice("[user] begins picking up [src]..."), \
+			user.visible_message(span_notice("[user] comienza a recoger [src]..."), \
 				span_notice("I begin picking up [src]..."))
 
 		if(do_after(user, defuse_time, target = src))
-			user.visible_message(span_notice("[user] picks up [src]."), \
-				span_notice("I pick up [src]."))
+			user.visible_message(span_notice("[user] recoge [src]."), \
+				span_notice("Recojo [src]."))
 
 			deployed = FALSE
 			icon_state = initial(icon_state)
@@ -114,7 +114,7 @@
 	deltimer(fuse_timer)
 	fuse_timer = null
 	icon_state = "[initial(icon_state)]_deployed"
-	defuser.visible_message(span_notice("[defuser] defuses [src]..."), \
+	defuser.visible_message(span_notice("[defuser] desactiva [src]..."), \
 				span_notice("I successfully defuse [src]..."))
 
 /obj/item/breach_charge/proc/detonate(detonator)

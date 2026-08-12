@@ -72,7 +72,7 @@
 			L.add_stress(stress2give)
 
 /obj/structure/fake_machine/musicbox
-	name = "wax music device"
+	name = "dispositivo de música de cera"
 	desc = "A marvelous device created by Heartfelts artificers before its fall, it plays a variety of songs from across Faience, as if their performers were within the same room."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "music0"
@@ -139,25 +139,25 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 
 	if(locked())
-		to_chat(user, span_info("\The [src] is locked..."))
+		to_chat(user, span_info("\The [src] está bloqueado..."))
 		return
 
-	var/button_selection = input(user, "What button do I press?", "\The [src]") as null | anything in list("Stop/Start","Change Song","Change Volume")
+	var/button_selection = input(user, "¿Qué botón presiono?", "\The [src]") as null | anything in list("Stop/Start","Change Song","Change Volume")
 	if(!Adjacent(user))
 		return
 	if(!button_selection)
 		to_chat(user, span_info("I change my mind..."))
 		return
-	user.visible_message(span_info("[user] presses a button on \the [src]."),span_info("I press a button on \the [src]."))
+	user.visible_message(span_info("[user] presiona un botón en \the [src]."),span_info("Presiono un botón en \the [src]."))
 	playsound(src, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
 
 	if(button_selection=="Stop/Start")
 		toggle_music()
 
 	if(button_selection=="Change Song")
-		var/songlists_selection = input(user, "Which song list?", "\The [src]") as null | anything in list("CHILL"=MUSIC_TAVCAT_CHILL, "FUCK"=MUSIC_TAVCAT_FUCK, "PARTY"=MUSIC_TAVCAT_PARTY, "SCUM"=MUSIC_TAVCAT_SCUM, "DAMN"=MUSIC_TAVCAT_DAMN, "MISC"=MUSIC_TAVCAT_MISC)
+		var/songlists_selection = input(user, "¿Qué lista de canciones?", "\The [src]") as null | anything in list("CHILL"=MUSIC_TAVCAT_CHILL, "FUCK"=MUSIC_TAVCAT_FUCK, "PARTY"=MUSIC_TAVCAT_PARTY, "SCUM"=MUSIC_TAVCAT_SCUM, "DAMN"=MUSIC_TAVCAT_DAMN, "MISC"=MUSIC_TAVCAT_MISC)
 		playsound(src, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
-		user.visible_message(span_info("[user] presses a button on \the [src]."),span_info("I press a button on \the [src]."))
+		user.visible_message(span_info("[user] presiona un botón en \the [src]."),span_info("Presiono un botón en \the [src]."))
 		var/chosen_songlists_selection = null
 		if(songlists_selection=="CHILL")
 			chosen_songlists_selection = MUSIC_TAVCAT_CHILL
@@ -178,20 +178,20 @@
 			to_chat(user, span_info("I change my mind..."))
 			return
 		playsound(src, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
-		user.visible_message(span_info("[user] presses a button on \the [src]."),span_info("I press a button on \the [src]."))
+		user.visible_message(span_info("[user] presiona un botón en \the [src]."),span_info("Presiono un botón en \the [src]."))
 		curfile = chosen_songlists_selection[song_selection]
 		stop_playing()
 		start_playing()
 
 	if(button_selection=="Change Volume")
-		var/volume_selection = input(user, "How loud do you wish me to be?", "\The [src] (Volume Currently : [curvol]/[100])") as num|null
+		var/volume_selection = input(user, "How loud do you wish me to be?", "\The [src] (Volumen actual: [curvol]/[100])") as num|null
 		if(!Adjacent(user))
 			return
 		if(!volume_selection)
 			to_chat(user, span_info("I change my mind..."))
 			return
 		playsound(src, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
-		user.visible_message(span_info("[user] presses a button on \the [src]."),span_info("I press a button on \the [src]."))
+		user.visible_message(span_info("[user] presiona un botón en \the [src]."),span_info("Presiono un botón en \the [src]."))
 		volume_selection = clamp(volume_selection, 1, 100)
 		if(curvol<volume_selection)
 			to_chat(user, span_info("I make \the [src] louder."))

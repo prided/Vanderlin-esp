@@ -25,7 +25,7 @@
 /datum/status_effect/debuff/addiction/greedy
 
 /atom/movable/screen/alert/status_effect/debuff/addiction
-	name = "Addiction"
+	name = "Adicción"
 	desc = ""
 	icon_state = "debuff"
 
@@ -71,9 +71,9 @@
 		next_mammon_increase = world.time + rand(35 MINUTES, 40 MINUTES)
 		var/current_mammons = get_mammons_in_atom(H)
 		if(current_mammons >= required_mammons)
-			to_chat(H, span_blue("I'm quite happy with the amount of mammons I have..."))
+			to_chat(H, span_blue("Estoy bastante contento con la cantidad de mamones que tengo..."))
 		else
-			to_chat(H, span_boldwarning("I need more mammons, what I have is not enough..."))
+			to_chat(H, span_boldwarning("Necesito más mamones, lo que tengo no es suficiente..."))
 		last_checked_mammons = current_mammons
 
 	var/new_mammon_amount = get_mammons_in_atom(H)
@@ -143,11 +143,11 @@
 
 /datum/quirk/vice/paranoid/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Paranoid..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Paranoico..."))
 
 /datum/quirk/vice/clingy
-	name = "Clingy"
-	desc = "I like being around people, it's just so lively..."
+	name = "Pegajoso"
+	desc = "Me gusta estar rodeado de gente, es tan animado..."
 	point_value = 2
 	incompatible_quirks = list(
 		/datum/quirk/vice/isolationist
@@ -192,7 +192,7 @@
 
 /datum/quirk/vice/isolationist/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Introvert..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Introvertido..."))
 
 /datum/quirk/vice/isolationist/on_life(mob/living/user)
 	if(world.time < last_check + 10 SECONDS)
@@ -231,7 +231,7 @@
 
 /datum/quirk/vice/narcoleptic/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Sleepy..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Somnoliento..."))
 
 /datum/quirk/vice/narcoleptic/on_spawn()
 	last_unconsciousness = world.time
@@ -257,7 +257,7 @@
 			if(pain >= SHOCK_STAGE_2 && pain_pity_charges > 0)
 				pain_pity_charges--
 				concious_timer = rand(1 MINUTES, 2 MINUTES)
-				to_chat(H, span_warning("The pain keeps me awake..."))
+				to_chat(H, span_warning("El dolor me mantiene despierto..."))
 			else
 				if(prob(40) || drugged_up)
 					drugged_up = FALSE
@@ -285,7 +285,7 @@
 	narco.drugged_up = TRUE
 
 /datum/quirk/vice/masochist
-	name = "Masochist"
+	name = "Masoquista"
 	desc = "I love the feeling of pain, so much I can't get enough of it."
 	point_value = 4
 	var/next_paincrave = 0
@@ -293,7 +293,7 @@
 
 /datum/quirk/vice/masochist/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Masochist!"))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("¡Masoquista!"))
 
 /datum/quirk/vice/masochist/on_spawn()
 	next_paincrave = world.time + rand(15 MINUTES, 25 MINUTES)
@@ -326,9 +326,9 @@
 				to_chat(H, span_warning("The pain is gone..."))
 			if(MASO_THRESHOLD_TWO)
 				if(ascending)
-					to_chat(H, span_blue("Yes, more pain!"))
+					to_chat(H, span_blue("¡Sí, más dolor!"))
 				else
-					to_chat(H, span_warning("No, my pain!"))
+					to_chat(H, span_warning("¡No, mi dolor!"))
 			if(MASO_THRESHOLD_THREE)
 				to_chat(H, span_blue("More, I love it!"))
 
@@ -352,7 +352,7 @@
 
 // Chronic Pain Vices
 /datum/quirk/vice/chronic_arthritis
-	name = "Chronic Arthritis"
+	name = "Artritis crónica"
 	desc = "Your joints ache constantly, causing periodic pain flares and reduced mobility."
 	point_value = 3
 
@@ -376,7 +376,7 @@
 	return ..()
 
 /datum/quirk/vice/chronic_back_pain
-	name = "Chronic Back Pain"
+	name = "Dolor de espalda crónico"
 	desc = "Years of wear and tear have left you with persistent lower back pain that affects your mobility."
 	point_value = 3
 
@@ -391,7 +391,7 @@
 	return ..()
 
 /datum/quirk/vice/old_war_wound
-	name = "Old War Wound"
+	name = "Vieja herida de guerra"
 	desc = "An old injury from your past still haunts you, causing chronic pain and occasional flare-ups."
 	point_value = 5
 
@@ -413,6 +413,6 @@
 				wounded.limb_flags |= i
 			wounded.update_chronic()
 			var/wound_location = wounded.name
-			var/wound_desc = pick("shrapnel wound", "arrow wound", "deep scar", "poorly healed fracture")
+			var/wound_desc = pick("herida de metralla", "herida de flecha", "cicatriz profunda", "poorly healed fracture")
 			to_chat(H, span_warning("You feel the familiar ache of your old [wound_desc] in your [wound_location]."))
 	return ..()

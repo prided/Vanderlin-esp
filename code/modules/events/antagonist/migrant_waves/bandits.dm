@@ -1,5 +1,5 @@
 /datum/round_event_control/antagonist/migrant_wave/bandits
-	name = "Bandit Migration"
+	name = "Migración de bandidos"
 	wave_type = /datum/migrant_wave/bandit
 
 	weight = 8

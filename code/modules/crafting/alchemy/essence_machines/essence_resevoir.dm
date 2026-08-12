@@ -1,5 +1,5 @@
 /obj/machinery/essence/reservoir
-	name = "essence reservoir"
+	name = "depósito de esencia"
 	desc = "A large glass sphere for storing massive quantities of alchemical essences."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "essence_tank"
@@ -66,7 +66,7 @@
 /obj/machinery/essence/reservoir/examine(mob/user)
 	. = ..()
 	if(filter_mode)
-		. += span_notice("Filter Mode: ACTIVE")
+		. += span_notice("Modo de filtro: ACTIVO")
 		. += span_notice("Allowed types: [length(allowed_essence_types) ? "[allowed_essence_types.len]" : "all (empty whitelist)"]")
 	else
 		. += span_notice("Filter Mode: DISABLED")
@@ -98,7 +98,7 @@
 	var/essence_type = vial.contained_essence.type
 
 	if(filter_mode && length(allowed_essence_types) && !(essence_type in allowed_essence_types))
-		to_chat(user, span_warning("This reservoir's filter does not allow [vial.contained_essence.name]."))
+		to_chat(user, span_warning("El filtro de este depósito no permite [vial.contained_essence.name]."))
 		return
 
 	var/moved = storage.add(essence_type, vial.essence_amount)
@@ -186,7 +186,7 @@
 	options["View Current Filters"] = "view"
 	options["Cancel"] = "cancel"
 
-	var/choice = input(user, "Essence Filter Configuration", "Filter Menu") in options
+	var/choice = input(user, "Configuración del filtro de esencia", "Menú de filtro") in options
 	if(!choice || choice == "cancel" || !Adjacent(user))
 		return
 
@@ -215,9 +215,9 @@
 					candidates[e.name] = essence_type
 				qdel(e)
 			if(!length(candidates))
-				to_chat(user, span_warning("No essence types available to add."))
+				to_chat(user, span_warning("No hay tipos de esencia disponibles para agregar."))
 				return
-			var/selected = input(user, "Select essence type to add:", "Add Filter") in candidates
+			var/selected = input(user, "Seleccione el tipo de esencia para agregar:", "Add Filter") in candidates
 			if(selected && Adjacent(user))
 				add_essence_filter(candidates[selected], user)
 		if("remove")
@@ -226,7 +226,7 @@
 				var/datum/thaumaturgical_essence/e = new essence_type
 				filter_options[e.name] = essence_type
 				qdel(e)
-			var/selected = input(user, "Select essence type to remove:", "Remove Filter") in filter_options
+			var/selected = input(user, "Select essence type to remove:", "Quitar filtro") in filter_options
 			if(selected && Adjacent(user))
 				remove_essence_filter(filter_options[selected], user)
 		if("clear")
@@ -238,7 +238,7 @@
 			if(!length(allowed_essence_types))
 				to_chat(user, span_info("No filters configured — accepting all essence types."))
 			else
-				to_chat(user, span_info("Allowed essence types:"))
+				to_chat(user, span_info("Tipos de esencia permitidos:"))
 				for(var/essence_type in allowed_essence_types)
 					var/datum/thaumaturgical_essence/e = new essence_type
 					to_chat(user, span_info("  - [e.name]"))

@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/touch/non_detection
-	name = "Nondetection"
+	name = "No detección"
 	desc = "Consume a handful of ash and shroud a target that you touch from divination magic for two daes."
 	button_icon_state = "prestidigitation"
 	can_cast_on_self = TRUE
@@ -26,7 +26,7 @@
 
 /datum/action/cooldown/spell/undirected/touch/non_detection/cast_on_hand_hit(obj/item/melee/touch_attack/hand, mob/living/victim, mob/living/carbon/caster, list/modifiers)
 	if(victim.has_status_effect(/datum/status_effect/non_detection) || HAS_TRAIT(target, TRAIT_ANTISCRYING))
-		to_chat(caster, span_warning("[victim] already has protection from divination magic."))
+		to_chat(caster, span_warning("[victim] ya tiene protección contra la magia de adivinación."))
 		return FALSE
 
 	var/obj/item/sacrifice
@@ -35,7 +35,7 @@
 			sacrifice = I
 
 	if(!sacrifice)
-		to_chat(caster, span_warning("I require some ash in a free hand."))
+		to_chat(caster, span_warning("Necesito un poco de ceniza en una mano libre."))
 		return FALSE
 
 	if(!do_after(caster, 5 SECONDS, victim))
@@ -53,7 +53,7 @@
 	return TRUE
 
 /obj/item/melee/touch_attack/nondetection
-	name = "\improper arcyne focus"
+	name = "\improper arcyne enfoque"
 	desc = "Touch a creature to cover them in an anti-scrying shroud for two daes, consumes some ash as a catalyst."
 	color = "#3FBAFD"
 

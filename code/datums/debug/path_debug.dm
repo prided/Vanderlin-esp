@@ -107,7 +107,7 @@ GLOBAL_DATUM_INIT(pathfind_dude, /obj/pathfind_guy, new())
 	return arrow
 
 /datum/action/innate/path_debug/jps
-	name = "JPS Test"
+	name = "Prueba JPS"
 	button_icon = 'icons/turf/debug.dmi'
 	button_icon_state = "jps"
 
@@ -121,8 +121,8 @@ GLOBAL_DATUM_INIT(pathfind_dude, /obj/pathfind_guy, new())
 
 /datum/action/innate/path_debug/jps/Activate()
 	. = ..()
-	max_distance = input(owner, "How far should we be allowed to try and path", "Max Distance") as num
-	min_distance = input(owner, "How close should we try and get to the target before stopping", "Min Distance") as num
+	max_distance = input(owner, "How far should we be allowed to try and path", "Distancia máxima") as num
+	min_distance = input(owner, "How close should we try and get to the target before stopping", "Distancia mínima") as num
 
 /datum/action/innate/path_debug/jps/Deactivate()
 	source_turf = null

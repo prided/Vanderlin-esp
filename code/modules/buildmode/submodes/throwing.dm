@@ -21,7 +21,7 @@
 		if(isturf(object))
 			return
 		throw_atom = object
-		to_chat(c, "Selected object '[throw_atom]'")
+		to_chat(c, "Objeto seleccionado '[throw_atom]'")
 	if(right_click)
 		if(throw_atom)
 			throw_atom.throw_at(object, 10, 1, c.mob)

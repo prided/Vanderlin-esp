@@ -1,5 +1,5 @@
 /datum/triumph_buy/adoption
-	name = "Adoption Ability"
+	name = "Capacidad de adopción"
 	desc = "Gain an ability to adopt children and start your own family!"
 	triumph_buy_id = TRIUMPH_BUY_ADOPTION
 	triumph_cost = 1

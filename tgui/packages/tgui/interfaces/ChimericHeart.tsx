@@ -5,35 +5,35 @@ import { TutorialOverlay } from '../interfaces/_common/TutorialOverlay';
 
 const TUTORIAL_STEPS = [
   {
-    title: 'Chimeric Organ Interface',
-    body: 'This menu lets you inspect and rewire the humor nodes stitched into this chimeric organ. Nodes must be paired an input drives an output.',
+    title: 'Interfaz de órgano quimérico',
+    body: 'Este menú le permite inspeccionar y reconectar los nodos del humor unidos a este órgano quimérico. Los nodos deben estar emparejados y una entrada controla una salida.',
     popupAnchor: 'center',
   },
   {
-    title: 'Inputs & Outputs',
-    body: 'The left column lists input nodes and the right lists output nodes. Each shows its tier and purity. Unpaired nodes are inactive.',
+    title: 'Entradas y salidas',
+    body: 'La columna de la izquierda enumera los nodos de entrada y la derecha enumera los nodos de salida. Cada uno muestra su nivel y pureza. Los nodos no emparejados están inactivos.',
     highlight: { top: 10, left: 0, width: 35, height: 90 },
     popupAnchor: 'right',
   },
   {
-    title: 'Pairing Nodes',
-    body: 'Click an input to select it, then click a compatible output to pair them. Nodes must be within the maximum tier difference. Incompatible nodes will dim.',
+    title: 'Emparejamiento de nodos',
+    body: 'Haz clic en una entrada para seleccionarla, luego haz clic en una salida compatible para emparejarlas. Los nodos deben estar dentro de la diferencia de nivel máxima. Los nodos incompatibles se atenuarán.',
     popupAnchor: 'center',
   },
   {
-    title: 'Disconnecting',
-    body: 'Click a paired node then use the unlink button to sever the connection. Both nodes return to unpaired status.',
+    title: 'Desconectando',
+    body: 'Haz clic en un nodo emparejado y luego usa el botón de desvincular para cortar la conexión. Ambos nodos vuelven al estado no emparejado.',
     popupAnchor: 'center',
   },
   {
-    title: 'Blood Requirements',
-    body: 'The center panel shows how much stored blood each node requires. Unmet requirements will cause the organ to begin failing.',
+    title: 'Requisitos de sangre',
+    body: 'El panel central muestra cuánta sangre almacenada requiere cada nodo. Si no se cumplen los requisitos, el órgano comenzará a fallar.',
     highlight: { top: 10, left: 33, width: 34, height: 50 },
     popupAnchor: 'center',
   },
   {
-    title: 'Stability',
-    body: 'The stability bar shows organ health. At 0% the organ fails and must be repaired before it can function again.',
+    title: 'Estabilidad',
+    body: 'La barra de estabilidad muestra la salud del órgano. Al llegar a 0 %, el órgano falla y debe repararse antes de volver a funcionar.',
     highlight: { top: 0, left: 50, width: 50, height: 10 },
     popupAnchor: 'bottom',
   },
@@ -127,7 +127,7 @@ const NodeRow = (props: {
           </Stack.Item>
           {!!isPaired && (
             <Stack.Item>
-              <Tooltip content="Disconnect pairing" position="left">
+              <Tooltip content="Desconectar emparejamiento" position="left">
                 <Box
                   as="span"
                   onClick={(e) => {
@@ -147,7 +147,7 @@ const NodeRow = (props: {
             <ProgressBar
               value={node.purity / 100}
               color={purityColor(node.purity)}>
-              {node.purity}% purity
+              {node.purity}% de pureza
             </ProgressBar>
           </Stack.Item>
           <Stack.Item>
@@ -264,7 +264,7 @@ const ChimericPanel = (props: { data: ChimericHeartData; act: (action: string, p
         <Stack align="center">
           <Stack.Item grow>
             <Stack align="center">
-              <Stack.Item color="label">Stability</Stack.Item>
+              <Stack.Item color="label">Estabilidad</Stack.Item>
               <Stack.Item grow>
                 <ProgressBar
                   value={(100 - failed_percent) / 100}
@@ -282,7 +282,7 @@ const ChimericPanel = (props: { data: ChimericHeartData; act: (action: string, p
             </Stack>
           </Stack.Item>
           <Stack.Item>
-            <Tooltip content="Show tutorial" position="bottom">
+            <Tooltip content="Mostrar tutorial" position="bottom">
               <Button
                 compact
                 icon="question-circle"
@@ -310,7 +310,7 @@ const ChimericPanel = (props: { data: ChimericHeartData; act: (action: string, p
                   setSelectedInput(null);
                   setSelectedOutput(null);
                 }}>
-                Cancel
+                Cancelar
               </Button>
             </Stack.Item>
           </Stack>
@@ -320,9 +320,9 @@ const ChimericPanel = (props: { data: ChimericHeartData; act: (action: string, p
       <Stack.Item grow>
         <Stack fill>
           <Stack.Item width="33%">
-            <Section fill title="Inputs" scrollable>
+            <Section fill title="Entradas" scrollable>
               {allInputs.length === 0 && (
-                <Box color="label" italic>No input nodes.</Box>
+                <Box color="label" italic>Sin nodos de entrada.</Box>
               )}
               {allInputs.map((node) => (
                 <NodeRow
@@ -341,9 +341,9 @@ const ChimericPanel = (props: { data: ChimericHeartData; act: (action: string, p
           <Stack.Item width="34%">
             <Stack fill vertical>
               <Stack.Item>
-                <Section title="Blood Requirements">
+                <Section title="Requisitos de sangre">
                   {blood_requirements.length === 0 && (
-                    <Box color="label" italic>No blood requirements.</Box>
+                    <Box color="label" italic>Sin requisitos de sangre.</Box>
                   )}
                   {blood_requirements.map((req) => {
                     const ratio = Math.min(req.stored / req.required, 1);
@@ -369,9 +369,9 @@ const ChimericPanel = (props: { data: ChimericHeartData; act: (action: string, p
               </Stack.Item>
 
               <Stack.Item>
-                <Section title="Special Nodes">
+                <Section title="Nodos especiales">
                   {special_nodes.length === 0 && (
-                    <Box color="label" italic>No special nodes.</Box>
+                    <Box color="label" italic>Sin nodos especiales.</Box>
                   )}
                   {special_nodes.map((sp) => {
                     const attachedName = sp.attached_id
@@ -398,9 +398,9 @@ const ChimericPanel = (props: { data: ChimericHeartData; act: (action: string, p
               </Stack.Item>
 
               <Stack.Item>
-                <Section title="Pairings">
+                <Section title="Emparejamientos">
                   {inputs.length === 0 ? (
-                    <Box color="label" italic>No paired nodes.</Box>
+                    <Box color="label" italic>Sin nodos emparejados.</Box>
                   ) : (
                     inputs.map((inp) => {
                       const out = outputs.find((o) => o.id === inp.partner_id);
@@ -437,9 +437,9 @@ const ChimericPanel = (props: { data: ChimericHeartData; act: (action: string, p
           </Stack.Item>
 
           <Stack.Item width="33%">
-            <Section fill title="Outputs" scrollable>
+            <Section fill title="Salidas" scrollable>
               {allOutputs.length === 0 && (
-                <Box color="label" italic>No output nodes.</Box>
+                <Box color="label" italic>Sin nodos de salida.</Box>
               )}
               {allOutputs.map((node) => (
                 <NodeRow
@@ -464,7 +464,7 @@ export const ChimericHeart = (props, context) => {
   const { act, data } = useBackend<ChimericHeartData>();
 
   return (
-    <Window title="Chimeric Organ" width={700} height={480}>
+    <Window title="órgano quimérico" width={700} height={480}>
       <Window.Content>
         <ChimericPanel data={data} act={act} />
       </Window.Content>

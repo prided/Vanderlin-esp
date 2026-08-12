@@ -1,5 +1,5 @@
 /obj/item/customlock //custom lock unfinished
-	name = "unfinished lock"
+	name = "cerradura sin terminar"
 	desc = "A lock without its pins set. Endless possibilities..."
 	icon = 'icons/roguetown/items/keys.dmi'
 	icon_state = "lock"
@@ -11,7 +11,7 @@
 /obj/item/customlock/examine()
 	. = ..()
 	if(get_access())
-		. += span_info("It has been etched with [access2string()].")
+		. += span_info("Ha sido grabado con [access2string()].")
 		return
 	. += span_info("Its pins can be set with a hammer or copied from an existing lock or key.")
 
@@ -68,7 +68,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 	if(!copy_access(tool))
-		to_chat(user, span_warning("I cannot base the pins on [tool]!"))
+		to_chat(user, span_warning("¡No puedo basar los pines en [tool]!"))
 		return ITEM_INTERACT_BLOCKING
 
 	to_chat(user, span_notice("I set the pins based on [tool]."))

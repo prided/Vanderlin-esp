@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/projectile/blood_steal
-	name = "Blood Steal"
+	name = "robo de sangre"
 	desc = "Launch a bolt which leeches the blood of those hit."
 	button_icon_state = "bloodsteal"
 	sound = 'sound/magic/vlightning.ogg'
@@ -54,7 +54,7 @@
 
 		H.visible_message(
 			span_danger("[H] has their blood ripped from their body!"),
-			span_userdanger("Blood erupts from my body!"),
+			span_userdanger("¡La sangre brota de mi cuerpo!"),
 			span_hear("I hear a fluid spill..."),
 		)
 		new /obj/effect/decal/cleanable/blood/puddle(get_turf(H), H.get_blood_type().color)

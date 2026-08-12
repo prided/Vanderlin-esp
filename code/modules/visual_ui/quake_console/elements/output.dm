@@ -8,7 +8,7 @@
 	icon_state = null
 
 /obj/abstract/visual_ui_element/scrollable/console_output
-	name = "Console Output"
+	name = "Salida de consola"
 	icon = 'icons/visual_ui/quake_console.dmi'
 	icon_state = "quake_background"
 	mask_icon_state = "quake_scroll_mask"

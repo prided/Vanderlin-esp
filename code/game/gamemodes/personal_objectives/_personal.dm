@@ -1,5 +1,5 @@
 /datum/objective/personal
-	name = "Generic Personal Objective"
+	name = "Objetivo personal genérico"
 	var/category = "Personal"
 	var/list/immediate_effects
 	var/list/rewards

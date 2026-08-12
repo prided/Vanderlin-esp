@@ -1,6 +1,6 @@
 //the parent buff has the buff icon state, no need to apply it here aswell
 /atom/movable/screen/alert/status_effect/buff/alch
-	desc = "Power rushes through your veins."
+	desc = "El poder corre por tus venas."
 
 /datum/status_effect/buff/alch
 	duration = 10 MINUTES
@@ -82,7 +82,7 @@
 	name = "Endurance"
 
 /atom/movable/screen/alert/status_effect/buff/alch/artemisia_luck
-	name = "Artemisia Fortune"
+	name = "Artemisia fortuna"
 
 /datum/status_effect/buff/alch/artemisia_luck
 	id = "artemisia_luck"
@@ -114,5 +114,5 @@
 
 
 /atom/movable/screen/alert/status_effect/buff/alch/fortunepot
-	name = "Fortune"
+	name = "Fortuna"
 

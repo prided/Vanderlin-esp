@@ -54,7 +54,7 @@
 \-----------------*/
 
 /obj/item/weapon/sword/short
-	name = "short sword"
+	name = "espada corta"
 	desc = "A steel sword of shortened design and a reduced grip for single hand use."
 	icon_state = "swordshort"
 	force = DAMAGE_SHORTSWORD
@@ -81,7 +81,7 @@
 	item_weight = 750 GRAMS
 
 /obj/item/weapon/sword/short/bronze
-	name = "bronze short sword"
+	name = "espada corta de bronce"
 	desc = "A bronze sword of shortened design and a reduced grip for single hand use."
 	icon_state = "shortsword_bronze"
 	wdefense = GOOD_PARRY
@@ -93,8 +93,8 @@
 
 /obj/item/weapon/sword/short/silver
 
-	name = "silver short sword"
-	desc = "A short silver sword, for those who fight the creatures of the nite."
+	name = "espada corta de plata"
+	desc = "Una espada corta de plata, para aquellos que luchan contra las criaturas de la noche."
 	icon_state = "silverswordshort"
 	force = DAMAGE_SHORTSWORD + 2
 	wdefense = GOOD_PARRY
@@ -124,7 +124,7 @@
 	AddComponent(/datum/component/psyblessed, FALSE, 2, 50, 50, 1, TRUE)
 
 /obj/item/weapon/sword/short/ida //Worse thrust but more damage for cutting.
-	name = "steel ida"
+	name = "ida de acero"
 	desc = "A steel short sword with a leaf-shaped blade. Used to be a popular weapon in the east."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "ida_steel"
@@ -133,7 +133,7 @@
 	item_weight = 700 GRAMS
 
 /obj/item/weapon/sword/short/iron/ida
-	name = "iron ida"
+	name = "ida de hierro"
 	desc = "A short sword with a leaf-shaped blade. Used to be a popular weapon in the east."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "ida_iron"
@@ -169,7 +169,7 @@
 		icon_state = "decsword[rand(1,3)]"
 
 /obj/item/weapon/sword/silver
-	name = "silver sword"
+	name = "espada de plata"
 	desc = "A simple silver sword with an edge that gleams in moonlight."
 	icon_state = "silversword"
 	max_blade_int = 240
@@ -184,7 +184,7 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/sword/iron
-	desc = "A simple iron sword with a tested edge, sharp and true."
+	desc = "Una simple espada de hierro con un filo probado, afilado y verdadero."
 	icon_state = "isword"
 	wdefense = GOOD_PARRY
 	max_blade_int = 200
@@ -193,7 +193,7 @@
 	item_weight = 1.3 KILOGRAMS
 
 /obj/item/weapon/sword/bronze
-	name = "bronze sword"
+	name = "espada de bronce"
 	desc = "A simple and reliable bronze sword."
 	icon_state = "sword_bronze"
 	wdefense = GOOD_PARRY
@@ -203,7 +203,7 @@
 	item_weight = 1.2 KILOGRAMS
 
 /obj/item/weapon/sword/kaskara
-	name = "steel kaskara"
+	name = "kaskara de acero"
 	desc = "A steel sword with a small crossguard."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "kaskara_steel"
@@ -214,7 +214,7 @@
 	smeltresult = /obj/item/ingot/steel_slag
 
 /obj/item/weapon/sword/kaskara/iron
-	name = "iron kaskara"
+	name = "kaskara de hierro"
 	desc = "A sword of with a small crossguard."
 	icon_state = "kaskara_iron"
 	wdefense = GOOD_PARRY
@@ -224,8 +224,8 @@
 	item_weight = 1.3 KILOGRAMS
 
 /obj/item/weapon/sword/stone
-	name = "stone sword"
-	desc = "A crudely made sword, wielded by savages."
+	name = "espada de piedra"
+	desc = "Una espada toscamente hecha, empuñada por salvajes."
 	icon_state = "stone_sword"
 	force = DAMAGE_SWORD - 6
 	force_wielded = DAMAGE_SHORTSWORD - 1
@@ -299,7 +299,7 @@
 	item_weight = 1 KILOGRAMS
 
 /obj/item/weapon/sword/sabre/dadao
-	name = "steel dadao"
+	name = "dadao de acero"
 	icon_state = "dadao_steel"
 	desc = "Sometimes also referred to as \"Saiga Choppers\". Dadaos are heavy eastern blades infamous for their ability to slice men in half."
 	force = DAMAGE_SWORD + 1
@@ -318,7 +318,7 @@
 	item_weight = 1.3 KILOGRAMS
 
 /obj/item/weapon/sword/sabre/dadao/bronze
-	name = "bronze dadao"
+	name = "dadao de bronce"
 	icon_state = "dadao_bronze"
 	max_blade_int = 150
 	max_integrity = INTEGRITY_STANDARD
@@ -418,7 +418,7 @@
 	item_weight = 1.2 KILOGRAMS
 
 /obj/item/weapon/sword/scimitar/lakkarikhopesh
-	name = "steel khopesh"
+	name = "khopesh de acero"
 	desc = "A crescent curved sword. It's popular among traveling Noccian scholars."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "khopesh_steel"
@@ -461,7 +461,7 @@
 	item_weight = 1 KILOGRAMS
 
 /obj/item/weapon/sword/scimitar/sengese/silver
-	name = "silver sengese"
+	name = "sengese de plata"
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "sengese_silver"
 	max_blade_int = 240
@@ -475,7 +475,7 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/sword/scimitar/wodao
-	name = "steel wo dao"
+	name = "acero wo dao"
 	desc = "A slightly curved blade of eastern origin. While less durable compared to other swords, it's swift balance and unique design makes it great for unleashing precise strikes."
 	icon_state = "wodao_steel"
 	wbalance = VERY_HARD_TO_DODGE
@@ -486,7 +486,7 @@
 	item_weight = 900 GRAMS
 
 /obj/item/weapon/sword/scimitar/wodao/iron
-	name = "iron wo dao"
+	name = "hierro wo dao"
 	icon_state = "wodao_iron"
 	force = DAMAGE_SWORD - 1
 	force_wielded = DAMAGE_SWORD_WIELD -1
@@ -800,7 +800,7 @@
 				return list("shrink" = 0.6,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/sword/long/aruval
-	name = "steel aruval"
+	name = "aruval de acero"
 	icon_state = "aruval_steel"
 	desc = "A long billhook machete of Savannah Elf origin. It was originally designed to cut large branches, but has since evolved into a formidable weapon."
 	possible_item_intents = list(SWORD_CUT, SWORD_CHOP)
@@ -827,7 +827,7 @@
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/sword/long/aruval/iron //Balance-patch
-	name = "iron aruval"
+	name = "aruval de hierro"
 	icon_state = "aruval_iron"
 	max_integrity = INTEGRITY_STRONG
 	smeltresult = /obj/item/ingot/iron
@@ -1015,7 +1015,7 @@
 
 /obj/item/weapon/sword/long/ravox
 	name = "duel settler"
-	desc = "The tenets of Ravoxian duels are inscribed upon the blade of this sword."
+	desc = "Los principios de los duelos ravoxianos están inscritos en la hoja de esta espada."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "ravoxflamberge"
 	force = DAMAGE_SWORD + 2
@@ -1058,8 +1058,8 @@
 	sellprice = 160
 
 /obj/item/weapon/sword/long/silver
-	name = "silver longsword"
-	desc = "A finely crafted silver longsword"
+	name = "espada larga de plata"
+	desc = "Una espada larga de plata finamente elaborada."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "silverlongsword"
 	max_blade_int = 240
@@ -1081,7 +1081,7 @@
 
 //................ Greatsword ............... //
 /obj/item/weapon/sword/long/greatsword
-	name = "greatsword"
+	name = "gran espada"
 	desc = "An oversized hunk of metal designed for putting fear into men and killing beasts."
 	icon_state = "gsw"
 	force_wielded = DAMAGE_GREATSWORD_WIELD
@@ -1181,7 +1181,7 @@
 	AddComponent(/datum/component/psyblessed, TRUE, 5, 100, 100, 2, TRUE)
 
 /obj/item/weapon/sword/long/greatsword/psydon/unforgotten
-	name = "unforgotten blade"
+	name = "espada inolvidable"
 	desc = "High Inquisitor Archibald once recorded an expedition of seven brave order members into eastern snow-felled wastes to root out evil. Its leader, Holy Ordinator Guillemin, was said to have held on for seven daes and seven nights against darksteel-clad heretics before Psydon acknowledged his endurance. Nothing but his blade remained - his psycross wrapped around its hilt in remembrance."
 	icon_state = "forgottenblade"
 	item_weight = 2.5 KILOGRAMS
@@ -1284,8 +1284,8 @@
 //................ Claymores ............... //
 
 /obj/item/weapon/sword/long/greatsword/claymore/iron
-	name = "iron claymore"
-	desc = "A large sword originating from the north, commonly used by Ravoxians."
+	name = "Claymore de hierro"
+	desc = "Una gran espada originaria del norte, comúnmente utilizada por los ravoxianos."
 	icon_state = "ironclaymore"
 	force_wielded = DAMAGE_LONGSWORD_WIELD
 	max_blade_int = 200
@@ -1309,7 +1309,7 @@
 
 
 /obj/item/weapon/sword/long/greatsword/claymore
-	name = "steel claymore"
+	name = "Claymore de acero"
 	desc = "A steel variant of the standard claymore."
 	icon_state = "steelclaymore"
 	gripped_intents = list(SWORD_CUT, SWORD_THRUST, SWORD_STRIKE, SWDLONG_CHOP)
@@ -1354,7 +1354,7 @@
 
 /obj/item/weapon/sword/long/greatsword/claymore/gold //Uncraftable
 	name = "ravoxian claymore"
-	desc = "A huge sword constructed out of Steel and Gold, wielded by certain Templars of the Ravoxian Order."
+	desc = "Una enorme espada construida con acero y oro, empuñada por ciertos Templarios de la Orden Ravoxiana."
 	icon_state = "gsclaymore"
 	max_blade_int = INTEGRITY_STRONG + 50
 	sellprice = 200
@@ -1434,7 +1434,7 @@
 
 //................ Executioners Sword ............... //
 /obj/item/weapon/sword/long/exe
-	name = "executioner's sword"
+	name = "espada del verdugo"
 	icon_state = "exe"
 	desc = "An ancient blade of ginormous stature, with a round ended tip. The pride and joy of Vanderlin's greatest pastime, executions."
 	force_wielded = DAMAGE_GREATSWORD_WIELD + 4
@@ -1457,7 +1457,7 @@
 				return list("shrink" = 0.6,"sx" = -1,"sy" = 3,"nx" = -1,"ny" = 2,"wx" = 3,"wy" = 4,"ex" = -1,"ey" = 5,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 20,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/weapon/sword/long/exe/astrata
-	name = "solar judge"
+	name = "juez solar"
 	desc = "This wicked executioner's blade calls for order."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "astratasword"
@@ -1486,7 +1486,7 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	playsound(user, "clothwipe", 100, TRUE)
 	SEND_SIGNAL(src, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_SCRUB)
-	user.visible_message("<span class='warning'>[user] wipes [src] down with its cloth.</span>", "<span class='notice'>I wipe [src] down with its cloth.</span>")
+	user.visible_message("<span class='warning'>[user] limpia [src] con su paño.</span>", "<span class='notice'>I wipe [src] down with its cloth.</span>")
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 // Copper Messer
@@ -1534,7 +1534,7 @@
 
 /obj/item/weapon/sword/long/rider/copper
 	name = "copper falx"
-	desc = "A special 'sword' of copper, the material isn't the best but is good enough to slash and kill."
+	desc = "Una \"espada\" especial de cobre, el material no es el mejor pero es lo suficientemente bueno para cortar y matar."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "copperfalx"
 	item_state = "copperfalx"
@@ -1645,7 +1645,7 @@
 //A weapon meant to be used with two hands.
 /obj/item/weapon/sword/katana
 	name = "katana"
-	desc = "A foreign sword."
+	desc = "Una espada extranjera."
 	icon_state = "eastsword1"
 	force_wielded = DAMAGE_SWORD_WIELD + 3
 	wdefense = GOOD_PARRY
@@ -1672,13 +1672,13 @@
 
 /obj/item/weapon/sword/katana/mulyeog/rumacaptain
 	name = "samjeongdo"
-	desc = "A gold-stained with cloud patterns on the groove. One of a kind."
+	desc = "Una hoja teñida de oro, con patrones de nubes en la acanaladura. Única en su clase."
 	icon_state = "eastsword3"
 	force = DAMAGE_SWORD + 3
 	wdefense = GREAT_PARRY
 
 /obj/item/weapon/sword/sabre/hook
-	name = "hook sword"
+	name = "espada de gancho"
 	desc = "A steel sword with a hooked design at the tip of it; perfect for disarming enemies. Its back edge is sharpened and the hilt appears to have a sharpened tip."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "hook_sword"
@@ -1804,7 +1804,7 @@
 				M.dropItemToGround(I, force = FALSE, silent = FALSE)
 				user.stop_pulling()
 				user.put_in_inactive_hand(I)
-				M.visible_message(span_danger("[user] takes [I] from [M]'s hand!"), \
+				M.visible_message(span_danger("¡[user] toma [I] de la mano de [M]!"), \
 				span_userdanger("[user] takes [I] from my hand!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE)
 				user.changeNext_move(12)//avoids instantly attacking with the new weapon
 				playsound(src, 'sound/combat/weaponr1.ogg', 100, FALSE, -1) //sound queue to let them know that they got disarmed
@@ -1823,18 +1823,18 @@
 				else
 					user.Immobilize(10)
 					M.Immobilize(10)
-					M.visible_message(span_notice("[user.name] struggles to disarm [M.name]!"))
+					M.visible_message(span_notice("¡[user.name] lucha por desarmar a [M.name]!"))
 					playsound(src, 'sound/foley/struggle.ogg', 100, FALSE, -1)
 		if(!isliving(M))
-			to_chat(user, span_warning("You cannot disarm this enemy!"))
+			to_chat(user, span_warning("¡No puedes desarmar a este enemigo!"))
 			return
 		else
-			to_chat(user, span_warning("They aren't holding anything on that hand!"))
+			to_chat(user, span_warning("¡No tienen nada en esa mano!"))
 			return
 
 
 /obj/item/weapon/sword/long/martyr
-	name = "martyr sword"
+	name = "espada mártir"
 	desc = "A relic passed down through generations of worshippers. It simmers with godly energies, and will only yield to the hands of those who have taken the Oath."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "martyrsword"

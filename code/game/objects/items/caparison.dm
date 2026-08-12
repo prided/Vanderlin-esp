@@ -59,7 +59,7 @@
 		return
 
 	if(chosen_design == "Symbol")
-		var/chosen_symbol = tgui_input_list(user, "Select a symbol.", "Caparison Design", symbol_types)
+		var/chosen_symbol = tgui_input_list(user, "Seleccione un símbolo.", "Caparison Design", symbol_types)
 		if(!chosen_symbol)
 			return
 		detail_state = symbol_types[chosen_symbol]
@@ -76,14 +76,14 @@
 
 	colors_to_pick += GLOB.noble_dyes
 
-	var/primary_color = tgui_input_list(user, "Select a primary color.", "Caparison Design", colors_to_pick)
+	var/primary_color = tgui_input_list(user, "Seleccione un color primario.", "Caparison Design", colors_to_pick)
 	if(!primary_color)
 		return
 	color = colors_to_pick[primary_color]
 
 	if(chosen_design != "None")
 		if(chosen_design != "Symbol")
-			var/secondary_color = tgui_input_list(user, "Select a secondary color.", "Caparison Design", colors_to_pick)
+			var/secondary_color = tgui_input_list(user, "Seleccione un color secundario.", "Caparison Design", colors_to_pick)
 			if(!secondary_color)
 				return
 			detail_color = colors_to_pick[secondary_color]
@@ -113,7 +113,7 @@
 	female_caparison_state = "eora_caparison-f"
 
 /obj/item/caparison/azure
-	name = "azurean caparison"
+	name = "caparazón azul"
 	desc = "A decorative piece of cloth meant to be used as a saddle decoration. It's adorned with ducal colours. This one fits on a Saiga."
 	caparison_state = "azure_caparison"
 	female_caparison_state = "azure_caparison-f"

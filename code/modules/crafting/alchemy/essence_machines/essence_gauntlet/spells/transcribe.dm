@@ -15,7 +15,7 @@
 	return string
 
 /datum/action/cooldown/spell/essence/transcribe
-	name = "Orderly Transcription"
+	name = "Transcripción ordenada"
 	desc = "A magic piece of paper transcribes whats happening around."
 	button_icon_state = "transcribe"
 	cast_range = 1
@@ -27,7 +27,7 @@
 	. = ..()
 	if(owner.dropItemToGround(owner.get_active_held_item()))
 		owner.put_in_hands(make_item(), TRUE)
-		owner.visible_message(span_info("A parchment and blue magical quill appears in [owner]'s hand!"), span_info("You summon a parchment and magical quill!"))
+		owner.visible_message(span_info("¡Un pergamino y una pluma mágica azul aparecen en la mano de [owner]!"), span_info("You summon a parchment and magical quill!"))
 
 
 /datum/action/cooldown/spell/essence/transcribe/proc/make_item()
@@ -38,7 +38,7 @@
 
 
 /obj/item/paper/transcript
-	name = "Transcription"
+	name = "Transcripción"
 	desc = "A magical piece of paper that has been transcribed upon."
 
 /obj/item/paper/transcript/read(mob/user)
@@ -63,7 +63,7 @@
 		user << browse(dat, "window=reading;size=500x400;can_close=1;can_minimize=0;can_maximize=0;can_resize=1;titlebar=0;border=0")
 		onclose(user, "reading", src)
 	else
-		return span_warning("I'm too far away to read it.")
+		return span_warning("Estoy demasiado lejos para leerlo.")
 
 /obj/item/paper/magictranscription
 	name = "Magical Transcription" //this is essentially just modern TG's tape recorder clumped together with our parchment code c:
@@ -91,10 +91,10 @@
 
 /obj/item/paper/magictranscription/proc/start_recording(mob/user)
 	if(recording)
-		to_chat(user, span_warning("The parchment is already recording!"))
+		to_chat(user, span_warning("¡El pergamino ya está grabando!"))
 		return
 	if(used_capacity >= max_capacity)
-		to_chat(user, span_warning("The parchment is full of magical energy!"))
+		to_chat(user, span_warning("¡El pergamino está lleno de energía mágica!"))
 		return
 	recording = TRUE
 	become_hearing_sensitive()
@@ -107,7 +107,7 @@
 			to_chat(user, span_warning("The parchment's glow is fading... [(max_capacity - used_capacity) / 10] seconds of magic remain."))
 		sleep(10)
 	if(used_capacity >= max_capacity)
-		to_chat(user, span_warning("The parchment's magic is exhausted!"))
+		to_chat(user, span_warning("¡La magia del pergamino se ha agotado!"))
 		stop_recording(user)
 
 /obj/item/paper/magictranscription/proc/stop_recording(mob/user)
@@ -118,12 +118,12 @@
 	time_warned = FALSE
 	lose_hearing_sensitivity()
 	update_icon()
-	to_chat(user, span_notice("The parchment stops glowing."))
+	to_chat(user, span_notice("El pergamino deja de brillar."))
 	if(storedinfo.len > 0)
 		print_transcript(user)
 		qdel(src)
 	else
-		to_chat(user, span_warning("The parchment is blank - nothing was recorded."))
+		to_chat(user, span_warning("El pergamino está en blanco; no se registró nada."))
 
 /obj/item/paper/magictranscription/Hear(message, atom/movable/speaker, message_langs, raw_message, list/spans, message_mods)
 	. = ..()
@@ -151,7 +151,7 @@
 	if(!canprint)
 		to_chat(user, span_warning("The parchment needs time to replenish its magic before printing again!")) //failsafe incase it fails or something
 		return
-	var/transcribed_text = "<b>Magical Transcription:</b><br><br>"
+	var/transcribed_text = "<b>Transcripción mágica:</b><br><br>"
 	var/paper_name = "Magical Transcription"
 	var/list/pages = list()
 	for(var/excerpt in storedinfo)
@@ -169,7 +169,7 @@
 	for(var/page_text in pages)
 		var/obj/item/paper/transcript = new /obj/item/paper/transcript(get_turf(src))
 		if(pages.len > 1)
-			transcript.name = "[paper_name] - Page [page_index]/[pages.len]"
+			transcript.name = "[paper_name] - Página [page_index]/[pages.len]"
 		else
 			transcript.name = paper_name
 		transcript.info = page_text
@@ -201,7 +201,7 @@
 		var/secs = time - mins * 60
 		. += span_notice("It contains [storedinfo.len] recorded speech\s ([mins]m [secs]s of magic remaining).")
 	else
-		. += span_notice("It's blank and ready to record.")
+		. += span_notice("Está en blanco y listo para grabar.")
 
 /datum/action/cooldown/spell/essence/transcribe/spell
 	name = "Arcane Transcription"

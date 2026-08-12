@@ -61,7 +61,7 @@
 					H.add_stress(/datum/stress_event/odor)
 
 		if(prob(2))
-			H.visible_message(span_green("The [descriptor] of [scent] bombards my nostrils."))
+			H.visible_message(span_green("El [descriptor] de [scent] bombardea mis fosas nasales."))
 
 ///Smoke coming from cigarettes and fires
 /datum/pollutant/smoke //and mirrors
@@ -80,7 +80,7 @@
 	smell_intensity = 2
 	pollutant_flags = POLLUTANT_SMELL
 
-	name = "debug fragrance"
+	name = "fragancia de depuración"
 	scent = "debug scent"
 	color = "#000000"
 
@@ -92,28 +92,28 @@
 	color = "#967bb6"
 
 /datum/pollutant/fragrance/cherry
-	name = "cherry"
+	name = "cereza"
 	scent = "cherries"
 	color = "#B62625"
 
 /datum/pollutant/fragrance/rose
-	name = "rose"
-	scent = "roses"
+	name = "rosa"
+	scent = "rosas"
 	color = "#F33A6A"
 
 /datum/pollutant/fragrance/jasmine
-	name = "jasmine"
-	scent = "jasmine"
+	name = "jazmín"
+	scent = "jazmín"
 	color = "#F8DE7E"
 
 /datum/pollutant/fragrance/mint
-	name = "mint"
-	scent = "mint"
+	name = "menta"
+	scent = "menta"
 	color = "#3EB489"
 
 /datum/pollutant/fragrance/vanilla
-	name = "vanilla"
-	scent = "vanilla"
+	name = "vainilla"
+	scent = "vainilla"
 	color = "#dfd8ba"
 
 /datum/pollutant/fragrance/pear
@@ -123,7 +123,7 @@
 
 /datum/pollutant/fragrance/strawberry
 	name = "strawberry"
-	scent = "strawberries"
+	scent = "fresas"
 	color = "#fc5a8d"
 
 //Body odor
@@ -132,7 +132,7 @@
 	pollutant_flags = POLLUTANT_SMELL|POLLUTANT_BREATHE_ACT
 	smell_intensity = 1
 
-	scent = "body odor"
+	scent = "olor corporal"
 	color = "#c13636"
 	var/musk_reagent = /datum/reagent/miasmagas
 
@@ -148,11 +148,11 @@
 		victim.reagents.add_reagent(musk_reagent, 1)
 
 /datum/pollutant/fragrance/musk/brimstone
-	name = "brimstone"
-	scent = "brimstone"
+	name = "azufre"
+	scent = "azufre"
 	color = "#7b3939"
 
 /datum/pollutant/fragrance/musk/bilgewater
-	name = "bilge water"
-	scent = "rotted fish"
+	name = "agua de sentina"
+	scent = "pescado podrido"
 	color = "#40526d"

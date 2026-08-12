@@ -123,7 +123,7 @@
 /obj/structure/soil/proc/try_handle_harvest(obj/item/attacking_item, mob/user)
 	if(istype(attacking_item, /obj/item/weapon/sickle))
 		if(!plant || !produce_ready)
-			to_chat(user, span_warning("There is nothing to harvest!"))
+			to_chat(user, span_warning("¡No hay nada que cosechar!"))
 			return TRUE
 		user_harvests(user)
 		playsound(src,'sound/items/seed.ogg', 100, FALSE)
@@ -188,7 +188,7 @@
 			container.reagents.remove_reagent(/datum/reagent/water/gross, 30)
 			water_amount = 150
 		else
-			to_chat(user, span_warning("There's no water in \the [container]!"))
+			to_chat(user, span_warning("¡No hay agua en \the [container]!"))
 			return TRUE
 	if(water_amount > 0)
 		var/list/wash = list('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg')
@@ -208,13 +208,13 @@
 	else if(istype(attacking_item, /obj/item/natural/poo))
 		// Manure is balanced NPK with high nitrogen
 		if(can_accept_fertilizer())
-			to_chat(user, span_notice("I fertilize the soil with manure."))
+			to_chat(user, span_notice("Fertilizo el suelo con estiércol."))
 			adjust_nitrogen(60)
 			adjust_phosphorus(40)
 			adjust_potassium(50)
 			fertilize_success = TRUE
 		else
-			to_chat(user, span_warning("The soil is already well fertilized!"))
+			to_chat(user, span_warning("¡El suelo ya está bien fertilizado!"))
 	if(fertilize_success)
 		qdel(attacking_item)
 		return TRUE
@@ -225,10 +225,10 @@
 
 /obj/structure/soil/proc/apply_fertilizer(obj/item/fertilizer/fert, mob/user)
 	if(!can_accept_fertilizer())
-		to_chat(user, span_warning("The soil is already well fertilized!"))
+		to_chat(user, span_warning("¡El suelo ya está bien fertilizado!"))
 		return FALSE
 
-	to_chat(user, span_notice("I fertilize the soil with [fert.name]."))
+	to_chat(user, span_notice("Fertilizo el suelo con [fert.name]."))
 	adjust_nitrogen(fert.nitrogen_content)
 	adjust_phosphorus(fert.phosphorus_content)
 	adjust_potassium(fert.potassium_content)
@@ -241,7 +241,7 @@
 		to_chat(user, span_notice("I begin ripping out the weeds with my hands..."))
 		if(do_after(user, get_farming_do_time(user, 3 SECONDS), src))
 			apply_farming_fatigue(user, 20)
-			to_chat(user, span_notice("I rip out the weeds."))
+			to_chat(user, span_notice("Arranco las malas hierbas."))
 			deweed()
 			add_sleep_experience(user, /datum/attribute/skill/labor/farming, GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) * 0.2)
 			SEND_SIGNAL(user, COMSIG_PLANT_TENDED)
@@ -267,7 +267,7 @@
 				return FALSE
 			apply_farming_fatigue(user, 10)
 			playsound(src,'sound/items/dig_shovel.ogg', 100, TRUE)
-			to_chat(user, span_notice("I flatten the soil."))
+			to_chat(user, span_notice("Aplano el suelo."))
 			decay_soil()
 		return TRUE
 	return FALSE
@@ -280,12 +280,12 @@
 			user_harvests(user)
 		return
 	if(plant && plant_dead)
-		to_chat(user, span_notice("I begin to remove the dead crop..."))
+		to_chat(user, span_notice("Empiezo a quitar el cultivo muerto..."))
 		if(do_after(user, get_farming_do_time(user, 6 SECONDS), src))
 			if(!plant || !plant_dead)
 				return
 			apply_farming_fatigue(user, 10)
-			to_chat(user, span_notice("I remove the crop."))
+			to_chat(user, span_notice("Quito el cultivo."))
 			playsound(src,'sound/items/seed.ogg', 100, FALSE)
 			uproot()
 			add_sleep_experience(user, /datum/attribute/skill/labor/farming, GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) * 0.2)
@@ -510,54 +510,54 @@
 	. = ..()
 	// Plant description
 	if(plant)
-		. += span_info("\The [plant.name] is growing here...")
+		. += span_info("\The [plant.name] está creciendo aquí...")
 		// Plant health feedback
 		if(plant_dead == TRUE)
-			. += span_warning("It's dead!")
+			. += span_warning("¡Está muerto!")
 		else if(plant_health <=  MAX_PLANT_HEALTH * 0.3)
 			. += span_warning("It's dying!")
 		else if (plant_health <=  MAX_PLANT_HEALTH * 0.6)
-			. += span_warning("It's brown and unhealthy...")
+			. += span_warning("Es marrón y poco saludable...")
 		// Plant maturation and produce feedback
 		if(matured)
 			. += span_info("It's fully grown but perhaps not yet ripe.")
 		else
 			. += span_info("It's far from fully grown.")
 		if(produce_ready)
-			. += span_info("It's ready for harvest.")
+			. += span_info("Está listo para la cosecha.")
 	// Water feedback
 	if(water <= MAX_PLANT_WATER * 0.15)
 		. += span_warning("The soil is thirsty.")
 	else if (water <= MAX_PLANT_WATER * 0.5)
-		. += span_info("The soil is moist.")
+		. += span_info("El suelo está húmedo.")
 	else
 		. += span_info("The soil is wet.")
 	// Nutrition feedback
 	if(nitrogen < MAX_PLANT_NITROGEN * 0.15)
-		. += span_warning("The plant is lacking Nitrogen.")
+		. += span_warning("La planta carece de Nitrógeno.")
 	else if(nitrogen < MAX_PLANT_NITROGEN * 0.3)
-		. += span_info("The plant is running low on Nitrogen.")
+		. += span_info("La planta se está quedando sin nitrógeno.")
 	if(potassium < MAX_PLANT_POTASSIUM * 0.15)
 		. += span_warning("The plant is lacking Potassium.")
 	else if(potassium < MAX_PLANT_POTASSIUM * 0.3)
-		. += span_info("The plant is running low on Potassium.")
+		. += span_info("La planta se está quedando sin potasio.")
 	if(phosphorus < MAX_PLANT_PHOSPHORUS * 0.15)
 		. += span_warning("The plant is lacking Phosphorus.")
 	else if(phosphorus < MAX_PLANT_PHOSPHORUS * 0.3)
-		. += span_info("The plant is running low on Phosphorus.")
+		. += span_info("La planta se está quedando sin fósforo.")
 	// Weeds feedback
 	if(weeds >= MAX_PLANT_WEEDS * 0.6)
 		. += span_warning("It's overtaken by the weeds!")
 	else if (weeds >= MAX_PLANT_WEEDS * 0.3)
-		. += span_warning("Weeds are growing out...")
+		. += span_warning("Las malas hierbas están creciendo...")
 	// Tilled feedback
 	if(tilled_time > 0)
-		. += span_info("The soil is tilled.")
+		. += span_info("El suelo está labrado.")
 	// Blessed feedback
 	if(blessed_time > 0)
 		. += span_good("The soil seems blessed.")
 	if(pollination_time > 0)
-		. += span_good("The soil has been pollinated.")
+		. += span_good("El suelo ha sido polinizado.")
 
 /obj/structure/soil/proc/process_weeds(dt)
 	// Blessed soil will have the weeds die
@@ -1243,7 +1243,7 @@
 
 /*	..................   Mushroom Mound   ................... */
 /obj/structure/soil/mushmound
-	name = "mushroom mound"
+	name = "montículo de hongos"
 	desc = "A mound made of chaff and nitesoil. A suitable place to grow mushrooms and not much else."
 	icon_state = "mushmound"
 	anchored = TRUE

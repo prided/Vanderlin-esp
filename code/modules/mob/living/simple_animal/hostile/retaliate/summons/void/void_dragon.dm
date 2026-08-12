@@ -1,7 +1,7 @@
 /datum/intent/unarmed/dragonclaw
 	name = "gouge"
 	icon_state = "inchop"
-	attack_verb = list("slashes", "gouges", "eviscerates")
+	attack_verb = list("slashes", "gouges", "eviscera")
 	animname = "cut"
 	blade_class = BCLASS_CHOP
 	hitsound = "genslash"
@@ -13,7 +13,7 @@
 	miss_sound = "bluntwooshlarge"
 
 /mob/living/simple_animal/hostile/retaliate/voiddragon
-	name = "void dragon"
+	name = "dragón vacío"
 	desc = "An ancient creature from a bygone age. Now would be a good time to run."
 	icon = 'icons/mob/96x96/ratwood_dragon.dmi'
 	icon_state = "dragon"
@@ -293,7 +293,7 @@
 	var/mob/living/carbon/target = targets[1]
 	var/distance = get_dist(user.loc,target.loc)
 	if(distance>3)
-		to_chat(user, span_colossus("[target.p_theyre(TRUE)] too far away!"))
+		to_chat(user, span_colossus("¡[target.p_theyre(TRUE)] demasiado lejos!"))
 		return
 	ai_controller.PauseAi(5 SECONDS)
 	if(do_after(user, 5 SECONDS, target = src))
@@ -464,7 +464,7 @@
 /mob/living/simple_animal/hostile/retaliate/voiddragon/proc/void_explosion(atom/target)
 	var/turf/T = get_turf(target)
 
-	visible_message(span_colossus("[src] begins to form a pulsating ball of void energy!"))
+	visible_message(span_colossus("¡[src] comienza a formar una bola pulsante de energía del vacío!"))
 
 	new /obj/effect/temp_visual/dragon_explosion_target(T)
 
@@ -534,7 +534,7 @@
 	alpha = initial(alpha)
 
 	playsound(src, 'sound/magic/ethereal_exit.ogg', 100, TRUE)
-	visible_message(span_colossus("[src] phases back into reality!"))
+	visible_message(span_colossus("¡[src] vuelve a la realidad!"))
 
 	Stun(1 SECONDS)
 
@@ -608,13 +608,13 @@
 	addtimer(CALLBACK(src, PROC_REF(clone_expire)), lifetime)
 
 /mob/living/simple_animal/hostile/dragon_clone/proc/clone_expire()
-	visible_message(span_notice("[src] dissipates into shadows!"))
+	visible_message(span_notice("¡[src] se disipa en las sombras!"))
 	new /obj/effect/temp_visual/dragon_shadow(get_turf(src))
 	qdel(src)
 
 /obj/effect/temp_visual/drakewall
 	desc = "An ash drakes true flame."
-	name = "Fire Barrier"
+	name = "Barrera contra incendios"
 	icon = 'icons/effects/fire.dmi'
 	icon_state = "1"
 	anchored = TRUE
@@ -629,7 +629,7 @@
 
 /obj/effect/temp_visual/dragon_swoop
 	name = "certain death"
-	desc = "Don't just stand there, move!"
+	desc = "¡No te quedes ahí parado, muévete!"
 	icon = 'icons/effects/96x96.dmi'
 	icon_state = "void_blink_in"
 	layer = BELOW_MOB_LAYER
@@ -694,7 +694,7 @@
 	var/next_stage_time = 0
 
 /atom/movable/screen/alert/status_effect/void_corruption
-	name = "Void Corruption"
+	name = "Corrupción del vacío"
 	desc = "Void energy is eating away at your very being!"
 	icon_state = "poison" // "void_corruption"  // ICON NEEDED
 
@@ -717,7 +717,7 @@
 	if(ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		H.cut_overlay(mutable_appearance('icons/effects/effects.dmi', "void_corruption_overlay"))
-		to_chat(H, span_notice("The void corruption fades from my body."))
+		to_chat(H, span_notice("La corrupción del vacío se desvanece de mi cuerpo."))
 
 /datum/status_effect/void_corruption/tick()
 	if(world.time >= next_damage_time)
@@ -740,7 +740,7 @@
 	new /obj/effect/temp_visual/void_corruption(get_turf(owner))
 
 	if(prob(50))
-		to_chat(owner, span_warning("The void corruption burns my flesh!"))
+		to_chat(owner, span_warning("¡La corrupción del vacío quema mi carne!"))
 
 	if(corruption_stage >= 2 && prob(25))
 		owner.adjust_confusion(4 SECONDS)

@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/retaliate/minotaur
 	icon = 'icons/mob/newminotaur.dmi'
-	name = "Minotaur"
+	name = "Minotauro"
 	icon_state = "MinotaurMale"
 	icon_living = "MinotaurMale"
 	icon_dead = "MinotaurMale_dead"
@@ -90,7 +90,7 @@
 /datum/intent/simple/minotaur_unarmed
 	name = "minotaur unarmed"
 	icon_state = "instrike"
-	attack_verb = list("punches", "strikes", "kicks", "steps on", "crushes", "bites")
+	attack_verb = list("punches", "huelgas", "kicks", "steps on", "crushes", "bites")
 	animname = "blank22"
 	blade_class = BCLASS_CUT
 	hitsound = "smallslash"
@@ -102,7 +102,7 @@
 	item_damage_type = "stab"
 
 /datum/intent/simple/minotaur_axe
-	name = "minotaur axe"
+	name = "hacha de minotauro"
 	icon_state = "instrike"
 	attack_verb = list("hacks at", "slashes", "chops", "steps on", "crushes", "bites")
 	animname = "blank22"
@@ -148,7 +148,7 @@
 	layer = BELOW_MOB_LAYER
 
 /obj/effect/temp_visual/minotaur_fury_zone
-	name = "fiery zone"
+	name = "zona ardiente"
 	desc = "A patch of ground that's about to erupt in flames!"
 	icon = 'icons/effects/fire.dmi'
 	icon_state = "fire_small"
@@ -209,7 +209,7 @@
 
 /obj/effect/temp_visual/minotaur_fury_zone/strong
 	name = "raging inferno"
-	desc = "A violent eruption of magical flames!"
+	desc = "¡Una violenta erupción de llamas mágicas!"
 	icon_state = "fire"
 	light_outer_range = 3
 	light_color = "#FF3300"

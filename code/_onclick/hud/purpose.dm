@@ -4,8 +4,8 @@
 	alert_type = /atom/movable/screen/alert/status_effect/purpose
 
 /atom/movable/screen/alert/status_effect/purpose
-	name = "Tasks"
-	desc = "I have things to do."
+	name = "Tareas"
+	desc = "Tengo cosas que hacer."
 	icon_state = "purpose"
 	alert_group = ALERT_STATUS
 

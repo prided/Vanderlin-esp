@@ -10,7 +10,7 @@
 	required_chem_temp = 350 // Lower temp for gentle herbal brewing
 	pollute_amount = 200
 	wording_choice = "leaves of"
-	complete_message = "The herbal brew smells soothing!"
+	complete_message = "¡La infusión de hierbas huele relajante!"
 	used_skill = /datum/attribute/skill/craft/alchemy
 	quality_modifier = 0.8
 
@@ -25,7 +25,7 @@
 
 // Taraxacum Extract Recipe
 /datum/container_craft/cooking/herbal_tea/taraxacum_extract
-	name = "Taraxacum Extract"
+	name = "Extracto de Taraxacum"
 	created_reagent = /datum/reagent/medicine/herbal/taraxacum_extract
 	requirements = list(
 		/obj/item/alch/herb/taraxacum = 3
@@ -66,7 +66,7 @@
 	quality_modifier = 0.9
 
 /datum/container_craft/cooking/herbal_salve/calendula_salve
-	name = "Calendula Salve"
+	name = "Ungüento de caléndula"
 	created_reagent = /datum/reagent/medicine/herbal/calendula_salve
 	requirements = list(
 		/obj/item/alch/herb/calendula = 3
@@ -88,7 +88,7 @@
 
 // Mentha Tea Recipe
 /datum/container_craft/cooking/herbal_tea/mentha_tea
-	name = "Mentha Tea"
+	name = "Té de menta"
 	created_reagent = /datum/reagent/medicine/herbal/mentha_tea
 	requirements = list(
 		/obj/item/alch/herb/mentha = 2
@@ -98,7 +98,7 @@
 
 // Herbal Buff Teas
 /datum/container_craft/cooking/herbal_tea/salvia_wisdom
-	name = "Salvia Wisdom Tea"
+	name = "Té de sabiduría de salvia"
 	created_reagent = /datum/reagent/buff/herbal/salvia_wisdom
 	requirements = list(
 		/obj/item/alch/herb/salvia = 2
@@ -142,7 +142,7 @@
 	)
 	crafting_time = 5 SECONDS
 	finished_smell = /datum/pollutant/food/bitter
-	complete_message = "The extract smells dangerous..."
+	complete_message = "El extracto huele peligroso..."
 
 /datum/container_craft/cooking/herbal_tea/matricaria_irritant
 	name = "Matricaria Irritant"
@@ -223,7 +223,7 @@
 	max_optionals = 1
 	crafting_time = 20 SECONDS
 	finished_smell = /datum/pollutant/food/herb
-	complete_message = "The panacea glows with herbal potency!"
+	complete_message = "¡La panacea brilla con potencia herbal!"
 
 // Witch's Bane (anti-poison blend)
 /datum/container_craft/cooking/herbal_tea/witches_bane
@@ -255,7 +255,7 @@
 	)
 	crafting_time = 12 SECONDS
 	finished_smell = /datum/pollutant/food/mint
-	complete_message = "The tea shimmers with intellectual clarity!"
+	complete_message = "¡El té brilla con claridad intelectual!"
 
 
 // Moonwater Elixir (magical enhancement)
@@ -278,7 +278,7 @@
 
 // Battle Stim (combat enhancement)
 /datum/container_craft/cooking/herbal_tea/battle_stim
-	name = "Warrior's Battle Broth"
+	name = "Caldo de batalla del guerrero"
 	created_reagent = /datum/reagent/buff/herbal/battle_stim
 	requirements = list(
 		/obj/item/alch/herb/benedictus = 1,
@@ -296,7 +296,7 @@
 
 // Alchemist's Insight (reveals herb properties)
 /datum/container_craft/cooking/herbal_tea/alchemist_insight
-	name = "Alchemist's Insight"
+	name = "Perspicacia del alquimista"
 	created_reagent = /datum/reagent/buff/herbal/alchemist_insight
 	requirements = list(
 		/obj/item/alch/herb/salvia = 1,
@@ -343,7 +343,7 @@
 
 /datum/container_craft/cooking/perfume
 	abstract_type = /datum/container_craft/cooking/perfume
-	category = "Fragrances"
+	category = "Fragancias"
 	crafting_time = 30 SECONDS
 	water_conversion = 0.5
 	reagent_requirements = list(
@@ -372,7 +372,7 @@
 	complete_message = "A strong, fragrant scent of rosa permeates the area."
 
 /datum/container_craft/cooking/perfume/mint
-	name = "Mint Perfume"
+	name = "Perfume de menta"
 	created_reagent = /obj/item/perfume/mint
 	requirements = list(
 		/obj/item/alch/herb/mentha = 1
@@ -386,7 +386,7 @@
 	complete_message = "A strong, fragrant scent of mint permeates the area."
 
 /datum/container_craft/cooking/perfume/pear
-	name = "Pear Perfume"
+	name = "Perfume de pera"
 	created_reagent = /obj/item/perfume/pear
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/produce/fruit/pear = 1
@@ -400,7 +400,7 @@
 	wording_choice = "pieces of"
 
 /datum/container_craft/cooking/perfume/strawberry
-	name = "Strawberry Perfume"
+	name = "Perfume De Fresa"
 	created_reagent = /obj/item/perfume/strawberry
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/produce/fruit/strawberry = 1

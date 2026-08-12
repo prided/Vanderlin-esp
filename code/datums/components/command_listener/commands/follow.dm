@@ -21,7 +21,7 @@
 		FALSE)
 
 	playsound(automaton, 'sound/vo/automaton/executingorders.ogg', 70)
-	automaton.say("EXECUTING: Following [target]", forced = TRUE)
+	automaton.say("EJECUTANDO: Siguiendo [target]", forced = TRUE)
 
 /datum/follower_command/follow/terminate(mob/living/carbon/human/automaton)
 	if(bound_component)

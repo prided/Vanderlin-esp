@@ -19,7 +19,7 @@
 	hardness = 3
 
 /turf/closed/wall/mineral/stone/window
-	name = "stone murder hole"
+	name = "agujero de asesinato de piedra"
 	desc = "A wall of stone with convenient small indents on it, perfect to let loose arrows against invaders."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/stone.dmi', 'icons/turf/window.dmi')
 	icon_state = "stone"
@@ -58,7 +58,7 @@
 
 /turf/closed/wall/mineral/decorstone
 	name = "decorated stone wall"
-	desc = "The mason did an excellent job etching details into this wall."
+	desc = "El albañil hizo un excelente trabajo grabando detalles en esta pared."
 	icon = 'icons/turf/smooth/walls/stone_deco.dmi'
 	icon_state = MAP_SWITCH("stone_deco", "stone_deco-0")
 	blade_dulling = DULLING_BASH
@@ -77,7 +77,7 @@
 	hardness = 2
 
 /turf/closed/wall/mineral/decorstone/window
-	name = "stone murder hole"
+	name = "agujero de asesinato de piedra"
 	desc = "A wall of decorated stone with convenient small indents on it, perfect to let loose arrows against invaders."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/stone_deco.dmi', 'icons/turf/window.dmi')
 	icon_state = "stone_deco"
@@ -120,7 +120,7 @@
 	damage_deflection = 10
 
 /turf/closed/wall/mineral/stonebrick
-	name = "brick wall"
+	name = "pared de ladrillo"
 	desc = "Several rows of bricks form this wall."
 	icon = 'icons/turf/smooth/walls/stone_brick.dmi'
 	icon_state = MAP_SWITCH("stone_brick", "stone_brick-0")
@@ -154,7 +154,7 @@
 	color = "#ffddd7"
 
 /turf/closed/wall/mineral/wood
-	name = "wooden wall"
+	name = "pared de madera"
 	desc = "A rough-hewn wall of wood."
 	icon = 'icons/turf/smooth/walls/wood.dmi'
 	icon_state = MAP_SWITCH("wood", "wood-0")
@@ -176,7 +176,7 @@
 	spread_chance = 1.8
 
 /turf/closed/wall/mineral/wood/window
-	name = "wooden window"
+	name = "ventana de madera"
 	desc = "A window with a rough-hewn wooden frame."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/wood.dmi', 'icons/turf/window.dmi')
 	icon_state = "wood"
@@ -214,7 +214,7 @@
 	return ..()
 
 /turf/closed/wall/mineral/wooddark
-	name = "dark wood wall"
+	name = "pared de madera oscura"
 	desc = "Made from durable, somewhat darker wood."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "corner"
@@ -251,7 +251,7 @@
 	icon_state = "slittedwooddark"
 
 /turf/closed/wall/mineral/wooddark/window
-	name = "dark wood window"
+	name = "ventana de madera oscura"
 	icon_state = "subwindow"
 	opacity = FALSE
 	explosion_block = 1
@@ -324,7 +324,7 @@
 
 /turf/closed/wall/mineral/decostone
 	name = "decorated stone wall"
-	desc = "The mason did an excellent job etching details into this wall."
+	desc = "El albañil hizo un excelente trabajo grabando detalles en esta pared."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "decostone-b"
 	wallclimb = FALSE

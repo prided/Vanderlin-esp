@@ -29,7 +29,7 @@
 	node_y = 680
 
 /datum/thaumic_research_node/advanced_combiner_applications
-	name = "Essence Fusion Mastery"
+	name = "Maestría en fusión de esencias"
 	desc = "Advanced techniques for combining different magical essences into more powerful and complex compounds. The foundation for all higher-level combination work."
 	icon_state = "node"
 	required_essences = list(

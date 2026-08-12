@@ -11,7 +11,7 @@
 
 /*	..................   Onion slice   ................... */
 /obj/item/reagent_containers/food/snacks/veg/onion_sliced
-	name = "sliced onion"
+	name = "cebolla en rodajas"
 	icon_state = "onion_sliced"
 	slices_num = 0
 	slice_skill = /datum/attribute/skill/craft/cooking/preparation
@@ -19,14 +19,14 @@
 
 /*	..................   Cabbage   ................... */
 /obj/item/reagent_containers/food/snacks/veg/cabbage_sliced
-	name = "shredded cabbage"
+	name = "repollo rallado"
 	icon_state = "cabbage_sliced"
 	slice_skill = /datum/attribute/skill/craft/cooking/preparation
 	item_weight = 300 GRAMS
 
 /*	..................   Potato   ................... */
 /obj/item/reagent_containers/food/snacks/veg/potato_sliced
-	name = "potato cuts"
+	name = "cortes de papa"
 	icon_state = "potato_sliced"
 	slice_skill = /datum/attribute/skill/craft/cooking/preparation
 	item_weight = 70 GRAMS
@@ -58,7 +58,7 @@
 	nutrition =  (BERRY_NUTRITION+1) * COOK_MOD
 	tastes = list("salted roasted seeds" = 1)
 	name = "salted roasted seeds"
-	desc = "Too salty for rats, delectable for humens."
+	desc = "Demasiado salado para las ratas, delicioso para los humanos."
 	icon_state = "roastseeds"
 	dropshrink = 0.8
 	color = "#e5b175"
@@ -83,7 +83,7 @@
 
 	short_cooktime = (50 - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/cooking)) * 8))
 	playsound(user, 'sound/items/wood_sharpen.ogg', 100, TRUE, -1)
-	to_chat(user, span_notice("Scooping out the [src]..."))
+	to_chat(user, span_notice("Sacando el [src]..."))
 	if(do_after(user, short_cooktime, src))
 		new /obj/item/reagent_containers/glass/cup/cocaudo_husk(loc)
 		new /obj/item/neuFarm/seed/cocaudo(loc)

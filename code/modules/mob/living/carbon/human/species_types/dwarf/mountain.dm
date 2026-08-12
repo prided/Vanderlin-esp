@@ -26,7 +26,7 @@
 	)
 
 /datum/species/dwarf/mountain
-	name = "Dwarf"
+	name = "Enano"
 	id = SPEC_ID_DWARF
 	desc = "Shaped by Psydon and Necra, chosen by Malum.\
 	\n\n\

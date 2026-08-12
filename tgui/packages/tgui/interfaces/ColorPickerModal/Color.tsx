@@ -31,7 +31,7 @@ export const ColorPresets: React.FC<ColorPresetsProps> = React.memo(
           right="4px"
           icon="chevron-up"
         >
-          Hide
+          Ocultar
         </Button>
         <Stack justify="center">
           <Stack.Item>

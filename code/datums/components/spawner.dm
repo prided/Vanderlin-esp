@@ -4,7 +4,7 @@
 	var/list/spawned_mobs = list()
 	var/spawn_delay = 0
 	var/max_mobs = 5
-	var/spawn_text = "emerges from"
+	var/spawn_text = "surge de"
 	var/list/faction = list("mining")
 
 /datum/component/spawner/Initialize(_mob_types, _spawn_time, _faction, _spawn_text, _max_mobs)

@@ -94,7 +94,7 @@ export const RecipeBook = (props: any, context: any) => {
               />
             ) : (
               <Box style={{ margin: 'auto', color: 'var(--rb-text-muted)', fontStyle: 'italic' }}>
-                Select a recipe from the list.
+                Selecciona una receta de la lista.
               </Box>
             )}
           </Box>

@@ -1,7 +1,7 @@
 #define TRAIT_RECENTLY_STAGGERED "recently_staggered"
 
 /datum/action/cooldown/spell/aoe/repulse/howl
-	name = "Terrifying Howl"
+	name = "Aullido aterrador"
 	desc = "Let loose a howl of dread, repelling those nearby while immobilizing them."
 	button_icon_state = "howl"
 
@@ -58,7 +58,7 @@
 		if(dist_from_caster <= 1)
 			victim_living.Immobilize(maximum_immobilize)
 			victim_living.adjust_eye_blur(maximum_immobilize / 2 SECONDS)
-			to_chat(victim, span_userdanger("You're disoriented by [caster]'s roar!"))
+			to_chat(victim, span_userdanger("¡Estás desorientado por el rugido de [caster]!"))
 			if(dist_from_caster != 0) //we can't throw someone on the same turf as us
 				throw_victim(victim, caster)
 		else

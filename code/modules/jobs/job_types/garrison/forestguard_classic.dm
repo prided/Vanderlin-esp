@@ -42,7 +42,7 @@
 	)
 
 /datum/outfit/forestguard_classic
-	name = "Forest Guard Base"
+	name = "Base de la Guardia Forestal"
 	pants = /obj/item/clothing/pants/trou/leather
 	shoes = /obj/item/clothing/shoes/boots/darkboots
 	wrists = /obj/item/clothing/wrists/bracers/leather
@@ -141,7 +141,7 @@
 	)
 
 /datum/job/advclass/forestguard_classic/ranger
-	title = "Forest Ranger"
+	title = "Guardabosques"
 	tutorial = "In the Wars you were always one of the fastest, as well as one of the frailest in the platoon. Your trusty bow has served you well- of course, none you've set your sights on have found the tongue to disagree."
 	outfit = /datum/outfit/forestguard_classic/ranger
 	category_tags = list(CTAG_FORGARRISON)
@@ -157,7 +157,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard_classic/ranger
-	name = "Forest Ranger"
+	name = "Guardabosques"
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/highcollier
 	shirt = /obj/item/clothing/armor/gambeson
@@ -304,7 +304,7 @@
 	)
 
 /datum/job/advclass/forestguard_classic/rat
-	title = "Forest Rat"
+	title = "Rata del bosque"
 	tutorial = "Fed up with your antics in the city, you were rounded up by the city's Watch and put to work in the infamous forest garrison. \n\n Who knows, even despite your disadvantages, - you might just become more than a troublemaker."
 	outfit = /datum/outfit/forestguard_classic/ruffian
 	category_tags = list(CTAG_FORGARRISON)
@@ -340,5 +340,5 @@
 
 /mob/proc/haltyellorphan()
 	set name = "HALT!"
-	set category = "Emotes.Noises"
+	set category = "Emotes.Ruidos"
 	emote("haltyellorphan")

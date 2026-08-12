@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/spark
-	name = "Spark"
-	desc = "Creates a small spark that can light candles or torches."
+	name = "Chispa"
+	desc = "Crea una pequeña chispa que puede encender velas o antorchas."
 	button_icon_state = "spark"
 	sound = 'sound/magic/fireball.ogg'
 	cast_range = 1
@@ -13,7 +13,7 @@
 		return FALSE
 	target = get_turf(target)
 
-	owner.visible_message(span_notice("[owner] creates a small spark near [target]."))
+	owner.visible_message(span_notice("[owner] crea una pequeña chispa cerca de [target]."))
 	playsound(target, 'sound/magic/fireball.ogg', 30, TRUE)
 
 	for(var/obj/item/item in target.contents)

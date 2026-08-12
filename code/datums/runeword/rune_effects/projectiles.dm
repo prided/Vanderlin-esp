@@ -13,7 +13,7 @@
 /datum/rune_effect/projectile/proc/apply_projectile_effect(obj/item/firer, obj/projectile/proj, atom/target, mob/living/user)
 
 /datum/rune_effect/projectile/extra_projectiles
-	name = "Extra Projectiles"
+	name = "Proyectiles adicionales"
 
 /datum/rune_effect/projectile/extra_projectiles/get_description()
 	if(length(effect_values) >= 2)
@@ -56,7 +56,7 @@
 
 
 /datum/rune_effect/projectile/damage_modifier
-	name = "Projectile Damage"
+	name = "Daño de proyectil"
 
 /datum/rune_effect/projectile/damage_modifier/get_description()
 	if(length(effect_values) >= 1)
@@ -75,7 +75,7 @@
 		proj.damage *= effect_values[1]
 
 /datum/rune_effect/projectile/speed
-	name = "Projectile Speed"
+	name = "Velocidad del proyectil"
 
 /datum/rune_effect/projectile/speed/get_description()
 	if(length(effect_values) >= 1)
@@ -125,7 +125,7 @@
 
 
 /datum/rune_effect/projectile/bounce
-	name = "Bouncing Projectiles"
+	name = "Proyectiles que rebotan"
 
 /datum/rune_effect/projectile/bounce/get_description()
 	if(length(effect_values) >= 1)

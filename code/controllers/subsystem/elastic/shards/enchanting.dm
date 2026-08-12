@@ -1,5 +1,5 @@
 /datum/elastic_shard/enchanting
-	name = "Enchantments"
+	name = "encantamientos"
 	upload_frequency = 5 MINUTES
 	shard_category = ELASCAT_ENCHANTING
 

@@ -62,7 +62,7 @@
 		qdel(src)
 		return
 
-	user.visible_message("<span class='info'>[user] extracts the seeds.</span>")
+	user.visible_message("<span class='info'>[user] extrae las semillas.</span>")
 
 	seed.forceMove(loc)
 	if(prob(90))
@@ -82,7 +82,7 @@
 	if(prob(33))
 		if(istype(H))
 			if(eat_effect == /datum/status_effect/debuff/rotfood)
-				visible_message("<span class='warning'>[H] crushes [src] underfoot.</span>")
+				visible_message("<span class='warning'>[H] aplasta [src] bajo sus pies.</span>")
 				qdel(src)
 
 /obj/item/reagent_containers/food/snacks/grown/proc/add_juice()
@@ -105,7 +105,7 @@
 	if(trash)
 		generate_trash(T)
 
-	visible_message("<span class='warning'>[src] has been squashed.</span>","<span class='hear'>I hear a smack.</span>")
+	visible_message("<span class='warning'>[src] ha sido aplastado.</span>","<span class='hear'>I hear a smack.</span>")
 
 	reagents.reaction(T)
 	for(var/A in T)

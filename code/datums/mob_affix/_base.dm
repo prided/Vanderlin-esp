@@ -1,5 +1,5 @@
 /datum/mob_affix
-	var/name = "Unknown Affix"
+	var/name = "Afijo desconocido"
 	var/description = "A mysterious enhancement"
 	var/color = "#FFFFFF"
 	var/intensity = 1.0

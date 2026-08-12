@@ -8,7 +8,7 @@
 	generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_BACK)
 
 /datum/sprite_accessory/brand/vampire_seal
-	name = "Vampiric Seal"
+	name = "Sello vampírico"
 	icon_state = "slave_seal"
 	glows = TRUE
 	default_colors = COLOR_RED

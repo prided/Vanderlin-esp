@@ -1,5 +1,5 @@
 PROCESSING_SUBSYSTEM_DEF(enchantment)
-	name = "Enchantments"
+	name = "encantamientos"
 	priority = FIRE_PRIORITY_ENCHANTMENT
 	flags = SS_BACKGROUND
 	wait = 2 SECONDS

@@ -42,7 +42,7 @@
 
 //	........   Truffles   ................
 /obj/item/reagent_containers/food/snacks/truffles
-	name = "truffles"
+	name = "trufas"
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "mushroom1_full"
 	base_icon_state = "mushroom1_full"
@@ -62,7 +62,7 @@
 		if(poisonous)
 			. += span_warning("This truffle looks suspicious. I sense it might be poisoned.")
 		else
-			. += span_notice("This truffle looks safe to eat.")
+			. += span_notice("Esta trufa parece segura para comer.")
 
 /obj/item/reagent_containers/food/snacks/truffles/toxic
 	list_reagents = list(/datum/reagent/berrypoison/shroom = 4)
@@ -70,7 +70,7 @@
 	poisonous = TRUE
 
 /obj/item/reagent_containers/food/snacks/cooked/truffle
-	name = "cooked truffles"
+	name = "trufas cocidas"
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "mushroom1_full"
 	base_icon_state = "mushroom1_full"
@@ -103,7 +103,7 @@
 /mob/living/simple_animal/hostile/retaliate/trufflepig
 	icon = 'icons/roguetown/mob/monster/piggie.dmi'
 	name = "truffle pig"
-	desc = "A hairy pig, bred for finding truffles in the bog."
+	desc = "Un cerdo peludo, criado para encontrar trufas en el pantano."
 	icon_state = "piggie_m"
 	icon_living = "piggie_m"
 	icon_dead = "piggie_dead"
@@ -115,7 +115,7 @@
 	emote_see = list("eyes the surroundings.", "flicks its ears.")
 	deathsound = 'sound/vo/mobs/pig/hangry.ogg'
 
-	response_help_continuous = "pets"
+	response_help_continuous = "mascotas"
 	response_help_simple = "give the signal to the"
 
 	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/fatty = 3,

@@ -5,5 +5,5 @@
 	var/mob/living/living_pawn = controller.pawn
 	if(!istype(living_pawn))
 		return
-	living_pawn.say(speech, forced = "AI Controller")
+	living_pawn.say(speech, forced = "Controlador de IA")
 	finish_action(controller, TRUE)

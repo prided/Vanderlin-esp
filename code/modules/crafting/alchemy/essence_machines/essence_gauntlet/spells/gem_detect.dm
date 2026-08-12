@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/gem_detect
-	name = "Gem Detect"
+	name = "Detección de gemas"
 	desc = "Reveals the location of precious stones and crystals nearby."
 	button_icon_state = "aros"
 	button_icon = 'icons/roguetown/items/gems.dmi'

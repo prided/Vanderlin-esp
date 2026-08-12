@@ -1,6 +1,6 @@
 
 /obj/item/clothing/gloves/fingerless
-	name = "fingerless gloves"
+	name = "guantes sin dedos"
 	desc = "Gloves made out of sturdy leather with the fingers cut off for extra dexterity. They offer almost no protection whatsoever."
 	icon_state = "fingerless_gloves"
 	blocksound = SOFTHIT
@@ -13,7 +13,7 @@
 	item_weight = 50 GRAMS
 
 /obj/item/clothing/gloves/fingerless/shadowgloves
-	name = "silk gloves"
+	name = "guantes de seda"
 	desc = "Silk gloves to absorb palm sweat while leaving the fingers free for fine manipulation."
 	mob_overlay_icon = 'icons/roguetown/clothing/newclothes/onmob/onmobgloves.dmi'
 	sleeved = 'icons/roguetown/clothing/newclothes/onmob/onmobgloves.dmi'

@@ -18,11 +18,11 @@
 
 // COPPER ARMOR
 /datum/anvil_recipe/armor/copper/cuirass
-	name = "Copper heart protector"
+	name = "Protector de corazón de cobre"
 	created_item = /obj/item/clothing/armor/cuirass/copperchest
 
 /datum/anvil_recipe/armor/copper/bracers
-	name = "Copper bracers"
+	name = "Brazaletes de cobre"
 	created_item = /obj/item/clothing/wrists/bracers/copper
 
 /datum/anvil_recipe/armor/copper/mask
@@ -32,7 +32,7 @@
 
 // NECK ARMOR
 /datum/anvil_recipe/armor/copper/gorget
-	name = "Copper neck protector"
+	name = "Protector de cuello de cobre"
 	created_item = /obj/item/clothing/neck/gorget/copper
 
 // HELMETS
@@ -54,7 +54,7 @@
 	created_item = /obj/item/clothing/head/helmet/heavy/bronze
 
 /datum/anvil_recipe/armor/bronze/murmillo
-	name = "Murmillo-Style Helmet, Bronze (+1 Bronze, +1 Fur)"
+	name = "Casco estilo Murmillo, bronce (+1 bronce, +1 piel)"
 	additional_items = list(/obj/item/ingot/bronze, /obj/item/natural/fur)
 	created_item = /obj/item/clothing/head/helmet/bronzegladiator
 	craftdiff = 2
@@ -87,7 +87,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/bronze/bevor
-	name = "Bevor, Bronze (+1 Cured Leather)"
+	name = "Bevor, Bronce (+1 Cuero Curado)"
 	additional_items = list(/obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/neck/bevor/bronze
 	craftdiff = 2
@@ -99,7 +99,7 @@
 
 
 /datum/anvil_recipe/armor/bronze/mask
-	name = "Mask, Bronze (+1 Cured Leather)"
+	name = "Máscara, Bronce (+1 Cuero Curado)"
 	additional_items = list(/obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/face/facemask/bronze
 
@@ -129,7 +129,7 @@
 // BRONZE HELMET
 
 /datum/anvil_recipe/armor/bronze/helmet
-	name = "Deep Abyssor Helmet (+Bronze Bar)"
+	name = "Casco profundo Abyssor (+barra de bronce)"
 	required_material = /obj/item/ingot/bronze
 	additional_items = list(/obj/item/ingot/bronze)
 	created_item = /obj/item/clothing/head/helmet/heavy/necked/deepabyssor
@@ -163,11 +163,11 @@
 	output_amount = 2
 
 /datum/anvil_recipe/armor/iron/cuirass
-	name = "Iron Cuirass"
+	name = "Coraza de hierro"
 	created_item = /obj/item/clothing/armor/cuirass/iron
 
 /datum/anvil_recipe/armor/iron/chausses
-	name = "Iron Plate Chausses"
+	name = "Calzas de placa de hierro"
 	created_item = /obj/item/clothing/pants/platelegs/iron
 
 /datum/anvil_recipe/armor/iron/platemask
@@ -181,7 +181,7 @@
 	created_item = /obj/item/clothing/armor/chainmail/iron
 
 /datum/anvil_recipe/armor/iron/chainkini
-	name = "Iron Chainkini (+fur)"
+	name = "Chainkini de hierro (+piel)"
 	additional_items = list(/obj/item/natural/fur)
 	created_item = /obj/item/clothing/armor/amazon_chainkini
 
@@ -261,7 +261,7 @@
 	created_item = /obj/item/clothing/armor/chainmail/hauberk/iron
 
 /datum/anvil_recipe/armor/iron/cuirass
-	name = "Iron Cuirass"
+	name = "Coraza de hierro"
 	required_material = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/armor/cuirass/iron
 	craftdiff = 0
@@ -305,12 +305,12 @@
 	craftdiff = 1
 
 /datum/anvil_recipe/armor/iron/winged_helmet
-	name = "Winged Helmet"
+	name = "Casco alado"
 	created_item = /obj/item/clothing/head/helmet/winged
 	craftdiff = 1
 
 /datum/anvil_recipe/armor/iron/horned_helmet
-	name = "Horned Helmet"
+	name = "Casco con cuernos"
 	created_item = /obj/item/clothing/head/helmet/horned
 	craftdiff = 1
 
@@ -357,7 +357,7 @@
 	craftdiff = 1
 
 /datum/anvil_recipe/armor/iron/pothelmet
-	name = "Pot Helmet"
+	name = "Casco de olla"
 	created_item = /obj/item/clothing/head/helmet/ironpot
 
 /datum/anvil_recipe/armor/iron/lakkariancap
@@ -366,7 +366,7 @@
 	additional_items = list(/obj/item/ingot/gold)
 
 /datum/anvil_recipe/armor/iron/nasal_helmet
-	name = "Nasal helmet"
+	name = "casco nasal"
 	created_item = /obj/item/clothing/head/helmet/nasal
 
 /datum/anvil_recipe/armor/iron/skullcap
@@ -375,7 +375,7 @@
 	output_amount = 2
 
 /datum/anvil_recipe/armor/iron/helmetkettle
-	name = "Iron Kettle Helmet"
+	name = "Casco de caldera de hierro"
 	created_item = /obj/item/clothing/head/helmet/kettle/iron
 	output_amount = 2
 
@@ -384,7 +384,7 @@
 	created_item = /obj/item/clothing/head/helmet/kettle/slit/iron
 
 /datum/anvil_recipe/armor/iron/helmetsall
-	name = "Iron Sallet"
+	name = "Sallet de hierro"
 	created_item = /obj/item/clothing/head/helmet/sallet/iron
 
 /datum/anvil_recipe/armor/iron/helmetsallv
@@ -408,7 +408,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/iron/owlhelmet
-	name = "strigidae armet (+Bar)"
+	name = "yelmo strigidae (+barra)"
 	additional_items = list(/obj/item/ingot/iron)
 	created_item = /obj/item/clothing/head/helmet/visored/knight/owl
 	craftdiff = 2
@@ -431,12 +431,12 @@
 	created_item = /obj/item/clothing/head/helmet/heavy/ironplate
 	craftdiff = 2
 /datum/anvil_recipe/armor/iron/bevor
-	name = "Iron Bevor"
+	name = "Bevor de hierro"
 	required_material = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/neck/bevor/iron
 
 /datum/anvil_recipe/armor/iron/platebootlight
-	name = "Light Plate Boots"
+	name = "Botas de placa ligera"
 	created_item = /obj/item/clothing/shoes/boots/armor/light
 
 /datum/anvil_recipe/armor/iron/town_watch_helmet
@@ -477,7 +477,7 @@
 	output_amount = 2
 
 /datum/anvil_recipe/armor/iron/light_brigandine
-	name = "Lightweight Brigandine (+cloth)"
+	name = "Brigandina ligera (+tela)"
 	additional_items = list(/obj/item/natural/cloth)
 	created_item = /obj/item/clothing/armor/brigandine/light
 
@@ -497,7 +497,7 @@
 	output_amount = 2
 
 /datum/anvil_recipe/armor/steel/platemask
-	name = "Steel Mask"
+	name = "Máscara de acero"
 	created_item = /obj/item/clothing/face/facemask/steel
 	output_amount = 2
 
@@ -534,7 +534,7 @@
 */
 
 /datum/anvil_recipe/armor/steel/helmetbuc
-	name = "Great Helm"
+	name = "Gran yelmo"
 	required_material = /obj/item/ingot/steel
 	created_item = (/obj/item/clothing/head/helmet/heavy/bucket)
 
@@ -586,7 +586,7 @@
 	additional_items = list(/obj/item/grown/log/tree/small)
 
 /datum/anvil_recipe/armor/steel/templar/helmet_pestra
-	name = "Pestran Helmet (+Iron Bar)"
+	name = "Casco Pestran (+Barra de Hierro)"
 	created_item = /obj/item/clothing/head/helmet/heavy/necked/pestrahelm
 	additional_items = list(/obj/item/ingot/iron)
 
@@ -688,7 +688,7 @@
 
 // STEEL HELMETS
 /datum/anvil_recipe/armor/steel/nasal_helmet
-	name = "Nasal helmet"
+	name = "casco nasal"
 	created_item = /obj/item/clothing/head/helmet/nasal
 	craftdiff = 1
 	output_amount = 2
@@ -704,7 +704,7 @@
 	craftdiff = 1
 
 /datum/anvil_recipe/armor/steel/helmetbuc
-	name = "Great Helm"
+	name = "Gran yelmo"
 	created_item = (/obj/item/clothing/head/helmet/heavy/bucket)
 
 /datum/anvil_recipe/armor/steel/helmetkettle
@@ -717,7 +717,7 @@
 	created_item = /obj/item/clothing/head/helmet/kettle/slit
 
 /datum/anvil_recipe/armor/steel/froghelmet
-	name = "Frog Helmet"
+	name = "Casco de rana"
 	created_item = (/obj/item/clothing/head/helmet/heavy/frog)
 
 /datum/anvil_recipe/armor/steel/helmetsall
@@ -752,7 +752,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/steel/helmetknight
-	name = "Knight's helmet (+Bar)"
+	name = "Casco de caballero (+barra)"
 	additional_items = list(/obj/item/ingot/steel)
 	created_item = (/obj/item/clothing/head/helmet/visored/knight)
 	craftdiff = 3
@@ -825,13 +825,13 @@
 	created_item = /obj/item/clothing/head/helmet/heavy/decorated/golden
 
 /datum/anvil_recipe/armor/steel/decoratedhelmetknight
-	name = "Decorated Knight's Helmet (+Bar, +Cloth)"
+	name = "Casco de caballero decorado (+barra, +tela)"
 	additional_items = list(/obj/item/ingot/steel,/obj/item/natural/cloth)
 	created_item = /obj/item/clothing/head/helmet/heavy/decorated/knight
 	craftdiff = 4
 
 /datum/anvil_recipe/armor/steel/buckethelm
-	name = "Decorated Great Helm (+Bar, +Cloth)"
+	name = "Gran yelmo decorado (+barra, +tela)"
 	additional_items = list(/obj/item/ingot/steel, /obj/item/natural/cloth)
 	created_item = /obj/item/clothing/head/helmet/heavy/decorated/bucket
 	craftdiff = 4
@@ -843,7 +843,7 @@
 	craftdiff = 4
 
 /datum/anvil_recipe/armor/steel/halfplate_decrorated
-	name = "Decorated Half-plate (+Steel Bar x2, + Gold Bar)"
+	name = "Medio plato decorado (+Barra de acero x2, + Barra de oro)"
 	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel, /obj/item/ingot/gold)
 	created_item = /obj/item/clothing/armor/plate/decorated
 	craftdiff = 4
@@ -862,7 +862,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/steel/platefull
-	name = "Plate Armor (+Bar x3)"
+	name = "Armadura de placas (+barra x3)"
 	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel)
 	created_item = /obj/item/clothing/armor/plate/full
 	craftdiff = 4
@@ -1064,7 +1064,7 @@
 	created_item = /obj/item/clothing/head/helmet/visored/silver
 
 /datum/anvil_recipe/armor/silver/armet
-	name = "Silver Armet (+Steel Bar x2)"
+	name = "Armadura de Plata (+Barra de Acero x2)"
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
 	created_item = /obj/item/clothing/head/helmet/visored/silver/armet
 
@@ -1079,7 +1079,7 @@
 	created_item = /obj/item/clothing/pants/platelegs/silver
 
 /datum/anvil_recipe/armor/silver/platefull
-	name = "Silver Plate Armor (+Silver Bar, +Steel Bar x3)"
+	name = "Armadura de placas de plata (+Barra de plata, +Barra de acero x3)"
 	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/ingot/steel)
 	created_item = /obj/item/clothing/armor/plate/full/silver
 	craftdiff = 4
@@ -1116,7 +1116,7 @@
 
 // --------- BLACKSTEEL -----------
 /datum/anvil_recipe/armor/blacksteel/grenzel_cuirass
-	name = "Grenzelhoft Cuirass (+Steel Bar)"
+	name = "Grenzelhoft Coraza (+Barra de acero)"
 	additional_items = list(/obj/item/ingot/steel)
 	created_item = /obj/item/clothing/armor/cuirass/grenzelhoft
 
@@ -1261,7 +1261,7 @@
 	craftdiff = 4
 
 /datum/anvil_recipe/armor/grandmaster_chausses
-	name = "holy silver chausses"
+	name = "calzas de plata sagrada"
 	required_material = /obj/item/ingot/silverblessed
 	additional_items = list(/obj/item/ingot/silverblessed)
 	created_item = /obj/item/clothing/pants/platelegs/grandmaster
@@ -1351,13 +1351,13 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/beast_claws
-	name = "beast claws"
+	name = "garras de bestia"
 	required_material = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/gloves/plate/beastclaws
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/owl_helmet
-	name = "owl helmet"
+	name = "casco de búho"
 	required_material = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/head/helmet/bascinet/owl
 	craftdiff = 3
@@ -1445,11 +1445,11 @@
 	abstract_type = /datum/anvil_recipe/armor/gold
 
 /datum/anvil_recipe/armor/gold/mask
-	name = "Gold Mask"
+	name = "Máscara de oro"
 	created_item = /obj/item/clothing/face/facemask/goldmask
 
 /datum/anvil_recipe/armor/gold/armet
-	name = "Golden Knight's Armet (+1 Gold, +2 Silk)"
+	name = "Armadura de caballero dorado (+1 oro, +2 seda)"
 	additional_items = list(/obj/item/ingot/gold, /obj/item/natural/silk, /obj/item/natural/silk)
 	created_item = /obj/item/clothing/head/helmet/visored/gold/king
 

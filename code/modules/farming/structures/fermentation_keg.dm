@@ -115,12 +115,12 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 	if(!Adjacent(user))
 		return
 	if(!brewing)
-		var/response = tgui_alert(user, "What do you wish to empty?", "[src]", list("Reagents only", "Everything"))
+		var/response = tgui_alert(user, "What do you wish to empty?", "[src]", list("Reagents only", "Todo"))
 		if(!response)
 			return
 		if(!Adjacent(user))
 			return
-		user.visible_message("[user] starts emptying out [src].", "You start emptying out [src].")
+		user.visible_message("[user] comienza a vaciar [src].", "You start emptying out [src].")
 		if(!do_after(user, 5 SECONDS, src))
 			return
 		if(response == "Reagents only")
@@ -146,7 +146,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 
 	if(try_n_brew(user))
 		start_brew()
-		to_chat(user, span_info("[src] begins [selected_recipe.start_verb] [selected_recipe.name]."))
+		to_chat(user, span_info("[src] comienza [selected_recipe.start_verb] [selected_recipe.name]."))
 	..()
 
 /obj/structure/fermentation_keg/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -316,7 +316,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		//time
 		if(selected_recipe.brew_time)
 			if(brewing)
-				message += span_info("Currently [selected_recipe.start_verb].\n")
+				message += span_info("Actualmente [selected_recipe.start_verb].\n")
 			else
 				var/multiplier = 1
 				if(heated && !selected_recipe.heat_required)
@@ -343,7 +343,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		*/
 		. += message
 	else
-		. += span_blue("Right-Click on the Barrel to select a recipe.")
+		. += span_blue("Haga clic derecho en el barril para seleccionar una receta.")
 	. += span_blue("MMB-Click on [src] to dump its contents.")
 
 /obj/structure/fermentation_keg/proc/shopping_run(mob/user)
@@ -374,7 +374,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		selecting_recipe = FALSE
 		return
 
-	var/choice = input(user,"What brew do you want to make?", name) as null|anything in options
+	var/choice = input(user,"¿Qué cerveza quieres hacer?", name) as null|anything in options
 
 	selecting_recipe = FALSE
 	if(!choice)
@@ -525,7 +525,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 
 	if(brewing)
 		if(user)
-			to_chat(user, span_notice("This keg is already brewing a mix!"))
+			to_chat(user, span_notice("¡Este barril ya está preparando una mezcla!"))
 		return FALSE
 
 	var/ready = TRUE
@@ -624,7 +624,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		to_chat(user, span_info("[src] is fully emptied of [LOWER_TEXT(name_to_use)]."))
 		return
 
-	visible_message("[user] starts extracting [LOWER_TEXT(name_to_use)] into [container].", "You start extracting [LOWER_TEXT(name_to_use)] into [container].")
+	visible_message("[user] comienza a extraer [LOWER_TEXT(name_to_use)] en [container].", "Comienzas a extraer [LOWER_TEXT(name_to_use)] en [container].")
 	if(!do_after(user, 5 SECONDS, src))
 		return
 
@@ -662,7 +662,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		if(!origin_keg.reagents.get_reagent(brewed_reagent))
 			to_chat(user, span_info("[origin_keg] is fully emptied of [LOWER_TEXT(name_to_use)]."))
 			return
-		user.visible_message("[user] starts to extract [LOWER_TEXT(name_to_use)] into [src]." , "You start to extract [LOWER_TEXT(name_to_use)] in [src].")
+		user.visible_message("[user] comienza a extraer [LOWER_TEXT(name_to_use)] en [src]." , "You start to extract [LOWER_TEXT(name_to_use)] in [src].")
 		if(!do_after(user, 5 SECONDS, origin_keg))
 			return
 
@@ -681,7 +681,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		if(!origin_keg.reagents.get_reagent(brewed_reagent))
 			to_chat(user, span_info("[src] is fully emptied of [LOWER_TEXT(name_to_use)]."))
 	else
-		user.visible_message("[user] starts to pour [origin_keg] into [src]." , "You start to pour [origin_keg] in [src].")
+		user.visible_message("[user] comienza a verter [origin_keg] en [src]." , "You start to pour [origin_keg] in [src].")
 		if(!do_after(user, 5 SECONDS, origin_keg, extra_checks = CALLBACK(src, TYPE_PROC_REF(/atom/movable, Adjacent), origin_keg)))
 			return
 		origin_keg.reagents.trans_to(src, origin_keg.reagents.total_volume)
@@ -712,7 +712,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		heat = max(300, heat-5)
 
 /obj/structure/fermentation_keg/distiller
-	name = "copper distiller"
+	name = "destilador de cobre"
 
 	icon = 'icons/obj/distillery.dmi'
 	icon_state = "distillery"
@@ -743,7 +743,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 			Fluid: [input.carrying_reagent ? initial(input.carrying_reagent.name) : "Nothing"]"
 
 /obj/structure/fermentation_keg/random/water
-	name = "water barrel"
+	name = "barril de agua"
 
 /obj/structure/fermentation_keg/random/water/Initialize()
 	. = ..()
@@ -756,7 +756,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/structure/fermentation_keg/water
-	name = "water barrel"
+	name = "barril de agua"
 
 /obj/structure/fermentation_keg/water/Initialize()
 	. = ..()

@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/aoe/on_turf/meteor_storm
-	name = "Meteor Storm"
+	name = "Tormenta de meteoritos"
 	desc = "Summons forth meteors from the sky."
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC|SPELL_REQUIRES_NO_MOVE
 	button_icon_state = "fireball_greater"

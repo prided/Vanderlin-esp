@@ -64,11 +64,11 @@
 	created_item = /obj/item/weapon/pick/copper
 
 /datum/anvil_recipe/tools/copper/lamptern
-	name = "Copper Lamptern"
+	name = "Lámpara de cobre"
 	created_item = /obj/item/flashlight/flare/torch/lantern/copper
 
 /datum/anvil_recipe/tools/copper/hammer
-	name = "Copper Hammer (+Stick)"
+	name = "Martillo de cobre (+palo)"
 	additional_items = list(/obj/item/grown/log/tree/stick)
 	created_item = /obj/item/weapon/hammer/copper
 
@@ -77,7 +77,7 @@
 	created_item = /obj/item/reagent_containers/glass/bucket/pot/copper
 
 /datum/anvil_recipe/tools/copper/platter
-	name = "Platters (copper)"
+	name = "Platos (cobre)"
 	created_item = /obj/item/plate/copper
 	output_amount = 2
 
@@ -90,7 +90,7 @@
 ///////////////////////////////////////////////
 
 /datum/anvil_recipe/tools/bronze/chisel
-	name = "Bronze Chisel"
+	name = "Cincel de bronce"
 	created_item = /obj/item/weapon/chisel/bronze
 
 /datum/anvil_recipe/tools/bronze/cogbronze
@@ -109,11 +109,11 @@
 ///////////////////////////////////////////////
 
 /datum/anvil_recipe/tools/iron/syringe
-	name = "Infusion Syringe"
+	name = "Jeringa de infusión"
 	created_item = /obj/item/reagent_containers/syringe
 
 /datum/anvil_recipe/tools/iron/keyring
-	name = "Keyrings"
+	name = "Llaveros"
 	created_item = /obj/item/storage/keyring
 	output_amount = 3
 	craftdiff = 0
@@ -151,7 +151,7 @@
 	craftdiff = 0
 
 /datum/anvil_recipe/tools/iron/lamptern
-	name = "Iron Lamptern"
+	name = "Lámpara de hierro"
 	created_item = /obj/item/flashlight/flare/torch/lantern
 
 /datum/anvil_recipe/tools/iron/cogiron
@@ -192,7 +192,7 @@
 	created_item = /obj/item/weapon/pitchfork
 
 /datum/anvil_recipe/tools/iron/sewingneedle
-	name = "Sewing Needles"
+	name = "Agujas de coser"
 	created_item = /obj/item/needle
 	output_amount = 3 // They can be refilled with fiber now
 
@@ -211,7 +211,7 @@
 	created_item = /obj/item/weapon/tongs
 
 /datum/anvil_recipe/tools/iron/torch
-	name = "Iron Torches (+Coal)"
+	name = "Antorchas de hierro (+carbón)"
 	additional_items = list(/obj/item/ore/coal)
 	created_item = /obj/item/flashlight/flare/torch/metal
 	output_amount = 5
@@ -229,7 +229,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/tools/iron/chisel
-	name = "Iron Chisel"
+	name = "Cincel de hierro"
 	created_item = /obj/item/weapon/chisel/iron
 
 /datum/anvil_recipe/tools/iron/spoon
@@ -238,7 +238,7 @@
 	output_amount = 2
 
 /datum/anvil_recipe/tools/iron/fork
-	name = "Forks (iron)"
+	name = "Horquillas (hierro)"
 	created_item = /obj/item/kitchen/fork/iron
 	output_amount = 2
 
@@ -255,7 +255,7 @@
 	craftdiff = 0
 
 /datum/anvil_recipe/tools/iron/scissors
-	name = "Scissors"
+	name = "Tijeras"
 	created_item = /obj/item/weapon/knife/scissors
 
 /datum/anvil_recipe/tools/iron/frypan
@@ -293,14 +293,14 @@
 ///////////////////////////////////////////////
 
 /datum/anvil_recipe/tools/steel/cogstee
-	name = "Steel Cogs"
+	name = "Engranajes de acero"
 	appro_skill = /datum/attribute/skill/craft/engineering // To train engineering
 	created_item = /obj/item/gear/metal/steel
 	craftdiff = 1
 	output_amount = 3
 
 /datum/anvil_recipe/tools/steel/scissors
-	name = "Steel Scissors"
+	name = "Tijeras de acero"
 	created_item = /obj/item/weapon/knife/scissors/steel
 
 /datum/anvil_recipe/tools/steel/pick
@@ -315,7 +315,7 @@
 	craftdiff = 1
 
 /datum/anvil_recipe/tools/steel/chisel
-	name = "Steel Chisel"
+	name = "Cincel de acero"
 	created_item = /obj/item/weapon/chisel
 	craftdiff = 1
 
@@ -338,7 +338,7 @@
 	created_item = /obj/item/reagent_containers/glass/carafe/silver
 
 /datum/anvil_recipe/tools/silver/platter
-	name = "Platters (silver)"
+	name = "Platos (plata)"
 	created_item = /obj/item/plate/silver
 	craftdiff = 2
 
@@ -368,7 +368,7 @@
 	created_item = /obj/item/reagent_containers/glass/carafe/gold
 
 /datum/anvil_recipe/tools/gold/platter
-	name = "Platters (gold)"
+	name = "Platos (oro)"
 	created_item = /obj/item/plate/gold
 	craftdiff = 2
 
@@ -379,7 +379,7 @@
 
 // --------- CASTING TOOLS -----------
 /datum/anvil_recipe/tools/casting
-	category = "Casting"
+	category = "Fundición"
 	craftdiff = SKILL_RANK_JOURNEYMAN
 	abstract_type = /datum/anvil_recipe/tools/casting
 
@@ -389,7 +389,7 @@
 	output_item.set_material_information()
 
 /datum/anvil_recipe/tools/casting/crucible
-	name = "Crucible"
+	name = "Crisol"
 	required_material = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
 	created_item = /obj/item/storage/crucible
@@ -404,6 +404,6 @@
 	required_material = /obj/item/ingot/iron
 
 /datum/anvil_recipe/tools/casting/generic_mould
-	name = "Customizable mould"
+	name = "Molde personalizable"
 	required_material = /obj/item/ingot/steel
 	created_item = /obj/item/mould/customizable

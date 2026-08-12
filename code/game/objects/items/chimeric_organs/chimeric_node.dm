@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 
 /obj/item/chimeric_node
-	name = "humors"
+	name = "humores"
 	desc = "A preserved piece of flesh containing a humor. It pulses with unnatural life."
 	icon = 'icons/obj/chimeric_nodes.dmi'
 	icon_state = "capillary"
@@ -17,7 +17,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	if(GLOB.active_chimeric_surgeries?[src])
 		var/datum/chimeric_surgery_state/surgery = GLOB.active_chimeric_surgeries[src]
 		if(surgery.surgeon)
-			to_chat(surgery.surgeon, span_warning("The surgery was interrupted!"))
+			to_chat(surgery.surgeon, span_warning("¡La cirugía fue interrumpida!"))
 		GLOB.active_chimeric_surgeries -= src
 		qdel(surgery)
 	return ..()
@@ -28,9 +28,9 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 		if(length(stored_node.allowed_organ_slots))
 			. += span_notice("This node can only be installed in: [english_list(stored_node.allowed_organ_slots)]")
 		if(length(stored_node.forbidden_organ_slots))
-			. += span_warning("This node cannot be installed in: [english_list(stored_node.forbidden_organ_slots)]")
+			. += span_warning("Este nodo no se puede instalar en: [english_list(stored_node.forbidden_organ_slots)]")
 		if(!length(stored_node.allowed_organ_slots) && !length(stored_node.forbidden_organ_slots))
-			. += span_blue("This node is compatible with any organ.")
+			. += span_blue("Este nodo es compatible con cualquier órgano.")
 		if(length(stored_node.compatible_blood_types) || length(stored_node.preferred_blood_types))
 			. += span_notice("This node can use these blood types:")
 			for(var/datum/blood_type/blood_type as anything in stored_node.preferred_blood_types)
@@ -38,11 +38,11 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 			for(var/datum/blood_type/blood_type as anything in stored_node.compatible_blood_types)
 				if(blood_type in stored_node.preferred_blood_types)
 					continue
-				. += span_notice("   -[initial(blood_type.name)] Blood")
+				. += span_notice("   -[initial(blood_type.name)] Sangre")
 		if(length(stored_node.incompatible_blood_types))
 			. += span_warning("This node isn't able to use these blood types:")
 			for(var/datum/blood_type/blood_type as anything in stored_node.incompatible_blood_types)
-				. += span_warning("   -[initial(blood_type.name)] Blood")
+				. += span_warning("   -[initial(blood_type.name)] Sangre")
 
 /obj/item/chimeric_node/proc/setup_node(datum/chimeric_node/incoming_node, list/compatible_blood_types = list(), list/incompatible_blood_types = list(), list/preferred_blood_types = list(), base_blood_cost = 0.3, preferred_blood_bonus = 0.5, incompatible_blood_penalty = 2.0)
 	stored_node = new incoming_node
@@ -104,7 +104,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 			surgery_step_seal(user)
 		return ITEM_INTERACT_SUCCESS
 
-	to_chat(user, span_warning("That tool isn't useful at this stage of the surgery."))
+	to_chat(user, span_warning("Esa herramienta no es útil en esta etapa de la cirugía."))
 	return ITEM_INTERACT_BLOCKING
 
 /obj/item/chimeric_node/proc/start_node_surgery(mob/user)
@@ -129,7 +129,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 
 	LAZYADDASSOC(GLOB.active_chimeric_surgeries, src, surgery)
 
-	to_chat(user, span_info("Use a <b>hemostat</b> to extract the current node essence."))
+	to_chat(user, span_info("Utilice un <b>hemostat</b> para extraer la esencia del nodo actual."))
 
 /obj/item/chimeric_node/proc/surgery_step_extract(mob/user)
 	var/datum/chimeric_surgery_state/surgery = GLOB.active_chimeric_surgeries[src]
@@ -154,7 +154,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	var/datum/chimeric_table/table = new table_type()
 	var/list/available_nodes = table.input_nodes.Copy() + table.generic_inputs.Copy() + table.output_nodes.Copy() + table.generic_outputs.Copy()
 	if(!length(available_nodes))
-		to_chat(user, span_warning("No compatible nodes available!"))
+		to_chat(user, span_warning("¡No hay nodos compatibles disponibles!"))
 		return FALSE
 	var/list/node_names = list()
 	var/list/node_lookup = list()
@@ -210,7 +210,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	qdel(surgery)
 
 	user.visible_message(
-		span_notice("[user] completes the modification of \the [src]."),
+		span_notice("[user] completa la modificación de \the [src]."),
 		span_notice("You successfully transform the [old_name] into a [stored_node.name], preserving its essence!")
 	)
 

@@ -45,6 +45,6 @@
 	mob_overlay = "dis_rl"
 
 /datum/wound/dismemberment/l_leg
-	name = "left leg stump"
+	name = "muñón de la pierna izquierda"
 	check_name = "<span class='danger'><B>LEFT LEG STUMP</B></span>"
 	mob_overlay = "dis_ll"

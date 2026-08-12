@@ -113,20 +113,20 @@
 			var/datum/reagent/consumable/fav_drink = culinary_preferences[CULINARY_FAVOURITE_DRINK]
 			if(fav_food)
 				if(fav_drink)
-					. += span_tinynotice("[capitalize(P[THEIR])] favourites are [fav_food.name] and [fav_drink.name].")
+					. += span_tinynotice("Los favoritos de [capitalize(P[THEIR])] son [fav_food.name] y [fav_drink.name].")
 				else
 					. += span_tinynotice("[capitalize(P[THEIR])] favourite is [fav_food.name].")
 			else if(fav_drink)
-				. += span_tinynotice("[capitalize(P[THEIR])] favourite is [fav_drink.name].")
+				. += span_tinynotice("[capitalize(P[THEIR])] favorito es [fav_drink.name].")
 			var/obj/item/reagent_containers/food/snacks/hated_food = culinary_preferences[CULINARY_HATED_FOOD]
 			var/datum/reagent/consumable/hated_drink = culinary_preferences[CULINARY_HATED_DRINK]
 			if(hated_food)
 				if(hated_drink)
 					. += span_tinynotice("[P[THEY]] hate [hated_food.name] and [hated_drink.name].")
 				else
-					. += span_tinynotice("[P[THEY]] hate [hated_food.name].")
+					. += span_tinynotice("[P[THEY]] odio [hated_food.name].")
 			else if(hated_drink)
-				. += span_tinynotice("[P[THEY]] hate [hated_drink.name].")
+				. += span_tinynotice("[P[THEY]] odio [hated_drink.name].")
 
 	if(!HAS_TRAIT(src, TRAIT_FACELESS))
 		// Headshots ALWAYS go last.
@@ -161,7 +161,7 @@
 			continue
 
 		var/new_text = replacetext(effect_text, "SUBJECTPRONOUN", pronoun_replacement)
-		new_text = replacetext(new_text, "[pronoun_replacement] is", "[pronoun_replacement] [p_are()]") //To make sure something become "They are" or "She is", not "They are" and "She are"
+		new_text = replacetext(new_text, "[pronoun_replacement] es", "[pronoun_replacement] [p_are()]") //To make sure something become "They are" or "She is", not "They are" and "She are"
 		examine_list += new_text
 
 	if(!length(examine_list))

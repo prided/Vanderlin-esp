@@ -74,7 +74,7 @@
 
 	switch(charge_stage)
 		if(0)
-			boss.visible_message("<span class='danger'>[boss] lowers its head and prepares to charge!</span>")
+			boss.visible_message("¡<span class='danger'>[boss] baja la cabeza y se prepara para cargar!</span>")
 			playsound(boss, 'sound/misc/meteorimpact.ogg', 50, TRUE)
 			show_charge_path(boss, target)
 			charge_stage = 1
@@ -107,7 +107,7 @@
 	var/delay = 3
 
 	boss.setDir(direction)
-	boss.visible_message("<span class='danger'>[boss] charges forward!</span>")
+	boss.visible_message("<span class='danger'>[boss] ¡carga hacia adelante!</span>")
 	playsound(boss, 'sound/combat/hits/kick/stomp.ogg', 50, TRUE)
 
 	controller.PauseAi(charge_distance * delay)
@@ -231,7 +231,7 @@
 	// Get target location
 	var/turf/target_turf = get_turf(target)
 
-	boss.visible_message("<span class='danger'>[boss] slams the ground, creating a rain of fiery debris!</span>")
+	boss.visible_message("¡<span class='danger'>[boss] golpea el suelo, creando una lluvia de escombros ardientes!</span>")
 	playsound(boss, 'sound/misc/bamf.ogg', 50, TRUE)
 
 	var/current_phase = controller.blackboard[BB_MINOTAUR_PHASE]

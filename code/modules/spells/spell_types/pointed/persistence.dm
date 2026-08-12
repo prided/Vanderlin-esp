@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/persistence
-	name = "Persistence"
+	name = "Persistencia"
 	desc = ""
 	button_icon_state = "astrata"
 	sound = 'sound/magic/timestop.ogg'

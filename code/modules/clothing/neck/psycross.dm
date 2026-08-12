@@ -15,63 +15,63 @@
 	icon_state = "unfinished_wood"
 
 /obj/item/clothing/neck/psycross/divine
-	name = "wooden amulet of the ten"
+	name = "amuleto de madera de los diez"
 	desc = "The Ten eternal, strength in unity. Stalwart for centuries against the darkness."
 	icon_state = "undivided_wood"
 
 /obj/item/clothing/neck/psycross/divine/astrata
-	name = "wooden amulet of Astrata"
-	desc = "Blessed be everything the light of the sun touches, for it is protected by Her grace."
+	name = "amuleto de madera de Astrata"
+	desc = "Bendito sea todo lo que toca la luz del sol, porque está protegido por Su gracia."
 	icon_state = "astrata_wood"
 
 /obj/item/clothing/neck/psycross/divine/noc
-	name = "wooden amulet of Noc"
+	name = "amuleto de madera de Noc"
 	desc = "Diligence, study, pursuit of truth and wisdom. Let nothing deter you from it."
 	icon_state = "noc_wood"
 
 /obj/item/clothing/neck/psycross/divine/dendor
-	name = "wooden amulet of Dendor"
+	name = "amuleto de madera de Dendor"
 	desc = "Nature is a body of which we are but its entrails."
 	icon_state = "dendor_wood"
 
 /obj/item/clothing/neck/psycross/divine/abyssor
-	name = "wooden amulet of Abyssor"
+	name = "amuleto de madera de Abyssor"
 	desc = "Oceanshaper and guardian of the seas, make them remember his name."
 	icon_state = "abyssor_wood"
 
 /obj/item/clothing/neck/psycross/divine/necra
-	name = "wooden amulet of Necra"
+	name = "amuleto de madera de Necra"
 	desc = "Where, grave, thy victory? I triumph still while the Veiled Lady abides by me."
 	icon_state = "necra_wood"
 
 /obj/item/clothing/neck/psycross/divine/ravox
-	name = "wooden amulet of Ravox"
+	name = "amuleto de madera de Ravox"
 	desc = "Struggle. Challenge. And rise to struggle again. That is the sword of he who yet lives to fight again."
 	icon_state = "ravox_wood"
 
 /obj/item/clothing/neck/psycross/divine/xylix
-	name = "wooden amulet of Xylix"
+	name = "amuleto de madera de Xylix"
 	desc = "Be not fooled, and be not afraid to."
 	icon_state = "xylix_wood"
 
 /obj/item/clothing/neck/psycross/divine/eora
-	name = "wooden amulet of Eora"
-	desc = "And I love thee because thou art love."
+	name = "amuleto de madera de Eora"
+	desc = "Y te amo porque eres amor."
 	icon_state = "eora_wood"
 
 /obj/item/clothing/neck/psycross/divine/pestra
-	name = "wooden amulet of Pestra"
+	name = "amuleto de madera de Pestra"
 	desc = "When pure, alcohol is best used as a cleanser of wounds and a cleanser of the palate."
 	icon_state = "pestra_wood"
 
 /obj/item/clothing/neck/psycross/divine/malum
 	name = "wooden amulet of Malum"
-	desc = "Blessed be our works, made in His name."
+	desc = "Benditas sean nuestras obras, hechas en Su nombre."
 	icon_state = "malum_wood"
 
 // Hunt
 /obj/item/clothing/neck/psycross/great_hunt
-	name = "bone amulet"
+	name = "amuleto de hueso"
 	icon_state = "bone_amulet"
 	desc = "An amulet made of parched bones and animal sinews, a common representation of faith used in Ossland."
 	sellprice = 30
@@ -79,7 +79,7 @@
 // INHUMEN PSYCROSSES
 
 /obj/item/clothing/neck/psycross/zizo
-	name = "amulet of Zizo"
+	name = "amuleto de Zizo"
 	desc = "Through power dominate, through domination rule, through Zizo become the divinity you were always meant to be."
 	icon_state = "zcross"
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS
@@ -87,11 +87,11 @@
 	experimental_onhip = TRUE
 
 /obj/item/clothing/neck/psycross/zizo/wood
-	name = "wooden amulet of Zizo"
+	name = "amuleto de madera de Zizo"
 	icon_state = "zcross_wood"
 
 /obj/item/clothing/neck/psycross/matthios
-	name = "amulet of Matthios"
+	name = "amuleto de Matthios"
 	desc = "He was but one flame in the dark. Together, his flock shall outblaze the tyrant sun."
 	icon_state = "matthios"
 	resistance_flags = FIRE_PROOF
@@ -99,22 +99,22 @@
 	smeltresult = null
 
 /obj/item/clothing/neck/psycross/matthios/wood
-	name = "wooden amulet of Matthios"
+	name = "amuleto de madera de Matthios"
 	icon_state = "matthios_wood"
 
 /obj/item/clothing/neck/psycross/graggar
-	name = "amulet of Graggar"
+	name = "amuleto de Graggar"
 	desc = "Blood leads only to glory, and violence begets divinity. Nothing less. Conquest is simply another name for victory."
 	icon_state = "graggar"
 	resistance_flags = FIRE_PROOF
 	smeltresult = null
 
 /obj/item/clothing/neck/psycross/graggar/wood
-	name = "wooden amulet of Graggar"
+	name = "amuleto de madera de Graggar"
 	icon_state = "graggar_wood"
 
 /obj/item/clothing/neck/psycross/baotha
-	name = "amulet of Baotha"
+	name = "amuleto de Baotha"
 	desc = "A hollow promise rendered in gold. It weighs heavy with the memory of sweet wine turned to poison, and the comfort of a sorrow that refuses to fade."
 	icon_state = "baotha"
 	resistance_flags = FIRE_PROOF
@@ -122,7 +122,7 @@
 	smeltresult = null
 
 /obj/item/clothing/neck/psycross/baotha/wood
-	name = "wooden amulet of Baotha"
+	name = "amuleto de madera de Baotha"
 	desc = "A promise as hollow as the wood it was carved from. It weighs heavy with the memory of sweet wine turned to poison, and the comfort of a sorrow that refuses to fade."
 	icon_state = "baotha_wood"
 
@@ -165,7 +165,7 @@
 // SILVER PSYCROSS START
 
 /obj/item/clothing/neck/psycross/silver
-	name = "silver psycross"
+	name = "plata psycross"
 	desc = "Let His name be naught but forgot'n. Let the wicked undead burn at my touch."
 	icon_state = "psycross_silver"
 	resistance_flags = FIRE_PROOF
@@ -178,49 +178,49 @@
 
 // PANTHEON SILVER PSYCROSSES START
 /obj/item/clothing/neck/psycross/silver/divine
-	name = "amulet of the ten"
+	name = "amuleto de los diez"
 	desc = "The Ten eternal, strength in unity. Stalwart for centuries against the darkness."
 	icon_state = "undivided"
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/neck/psycross/silver/divine/astrata
-	name = "amulet of Astrata"
-	desc = "Blessed be everything the light of the sun touches, for it is protected by Her grace."
+	name = "amuleto de Astrata"
+	desc = "Bendito sea todo lo que toca la luz del sol, porque está protegido por Su gracia."
 	icon_state = "astrata"
 
 /obj/item/clothing/neck/psycross/silver/divine/noc
-	name = "amulet of Noc"
+	name = "amuleto de Noc"
 	desc = "Diligence, study, pursuit of truth and wisdom. Let nothing deter you from it."
 	icon_state = "noc"
 
 /obj/item/clothing/neck/psycross/silver/divine/dendor
-	name = "amulet of Dendor"
+	name = "amuleto de Dendor"
 	desc = "Nature is a body of which we are but its entrails."
 	icon_state = "dendor"
 
 /obj/item/clothing/neck/psycross/silver/divine/abyssor
-	name = "amulet of Abyssor"
+	name = "amuleto de Abyssor"
 	desc = "Oceanshaper and guardian of the seas, make them remember his name."
 	icon_state = "abyssor"
 
 /obj/item/clothing/neck/psycross/silver/divine/necra
-	name = "amulet of Necra"
+	name = "amuleto de Necra"
 	desc = "Where, grave, thy victory? I triumph still while the Veiled Lady abides by me."
 	icon_state = "necra"
 
 /obj/item/clothing/neck/psycross/silver/divine/ravox
-	name = "amulet of Ravox"
+	name = "amuleto de Ravox"
 	desc = "Struggle. Challenge. And rise to struggle again. That is the sword of he who yet lives to fight again."
 	icon_state = "ravox"
 
 /obj/item/clothing/neck/psycross/silver/divine/xylix
-	name = "amulet of Xylix"
+	name = "amuleto de Xylix"
 	desc = "Be not fooled, and be not afraid to."
 	icon_state = "xylix"
 
 /obj/item/clothing/neck/psycross/silver/divine/eora
 	name = "amulet of Eora"
-	desc = "And I love thee because thou art love."
+	desc = "Y te amo porque eres amor."
 	icon_state = "eora"
 
 /obj/item/clothing/neck/psycross/silver/divine/eora/potion
@@ -233,10 +233,10 @@
 		to_chat(user, span_warning("The love potion only works on living things, sicko!"))
 		return ..()
 	if(user == love_target)
-		to_chat(user, span_warning("You can't drink the love potion. What are you, a narcissist?"))
+		to_chat(user, span_warning("No puedes beber la poción de amor. ¿Qué eres, un narcisista?"))
 		return ..()
 	if(love_target.has_status_effect(/datum/status_effect/in_love))
-		to_chat(user, span_warning("[love_target] is already lovestruck!"))
+		to_chat(user, span_warning("¡[love_target] ya está enamorado!"))
 		return ..()
 
 	love_target.visible_message(span_danger("[user] starts to feed [love_target] a love potion!"),
@@ -251,25 +251,25 @@
 	qdel(src)
 
 /obj/item/clothing/neck/psycross/silver/divine/pestra
-	name = "amulet of Pestra"
+	name = "amuleto de Pestra"
 	desc = "When pure, alcohol is best used as a cleanser of wounds and a cleanser of the palate."
 	icon_state = "pestra"
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/neck/psycross/silver/divine/malum
-	name = "amulet of Malum"
-	desc = "Blessed be our works, made in His name."
+	name = "amuleto de Malum"
+	desc = "Benditas sean nuestras obras, hechas en Su nombre."
 	icon_state = "malum"
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/neck/psycross/silver/divine/malum/steel
-	name = "amulet of Malum"
+	name = "amuleto de Malum"
 	desc = "Let the tools that guide thee be thy hands."
 	icon_state = "malum_alt"
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/neck/psycross/gold
-	name = "golden psycross"
+	name = "dorado psycross"
 	desc = "Let His name be naught but forgot'n. Let devotion to Him endure, in heart and in deed, beyond the veil of sight."
 	icon_state = "psycross_gold"
 	//dropshrink = 0.75

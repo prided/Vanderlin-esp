@@ -22,7 +22,7 @@
 	blacklisted_paths = list(/obj/item/paper/inqslip)
 
 /datum/repeatable_crafting_recipe/reading/guide
-	name = "blank textbook"
+	name = "libro de texto en blanco"
 	requirements = list(
 		/obj/item/paper/scroll = 3,
 	)

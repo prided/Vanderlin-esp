@@ -1,6 +1,6 @@
 /datum/objective/personal/eat_rival_heart
 	name = "Eat Rival's Heart"
-	category = "Graggar's Contestant"
+	category = "Concursante de Graggar"
 	triumph_count = 4
 	immediate_effects = list("You will feel stressed until the culling ends (+1 Stress)", "Gained an ability to rip hearts out of corpses", "Gained an ability to locate your rival's heart")
 	rewards = list("4 Triumphs", "Graggar grows stronger", "Overwhelming Power (+3 to all stats)", "Pride of Victory (-2 Stress)")

@@ -17,7 +17,7 @@
 	name = "Chiseled"
 
 /datum/mob_descriptor/face/scarred
-	name = "Scarred"
+	name = "Cicatrizado"
 
 /datum/mob_descriptor/face/angular
 	name = "Angular"
@@ -27,13 +27,13 @@
 	name = "Gaunt"
 
 /datum/mob_descriptor/face/round
-	name = "Round"
+	name = "Redondo"
 
 /datum/mob_descriptor/face/delicate
-	name = "Delicate"
+	name = "Delicado"
 
 /datum/mob_descriptor/face/soft
-	name = "Soft"
+	name = "Suave"
 
 /datum/mob_descriptor/face/sharp
 	name = "Sharp"
@@ -42,13 +42,13 @@
 	name = "Sleek"
 
 /datum/mob_descriptor/face/broad
-	name = "Broad"
+	name = "Amplio"
 
 /datum/mob_descriptor/face/disfigured
 	name = "Disfigured"
 
 /datum/mob_descriptor/face/tall
-	name = "Tall"
+	name = "Alto"
 
 /datum/mob_descriptor/face/chubby
 	name = "Chubby"
@@ -63,7 +63,7 @@
 	name = "Cat-like"
 
 /datum/mob_descriptor/face/pig
-	name = "Piggish"
+	name = "Porcino"
 
 /datum/mob_descriptor/face/rat
 	name = "Rat-like"
@@ -72,10 +72,10 @@
 	name = "Hollow-cheeked"
 
 /datum/mob_descriptor/face/weatherbitten
-	name = "Weather-bitten"
+	name = "Mordido por el clima"
 
 /datum/mob_descriptor/face/wrinkled
-	name = "Wrinkled"
+	name = "Arrugado"
 
 /datum/mob_descriptor/face/malformed
 	name = "Malformed"
@@ -103,16 +103,16 @@
 	name = "Contemptous"
 
 /datum/mob_descriptor/face_exp/cold
-	name = "Cold"
+	name = "Frío"
 
 /datum/mob_descriptor/face_exp/dreamy
-	name = "Dreamy"
+	name = "Soñador"
 
 /datum/mob_descriptor/face_exp/disinterested
-	name = "Disinterested"
+	name = "Desinteresado"
 
 /datum/mob_descriptor/face_exp/fake
-	name = "Fake"
+	name = "Falso"
 
 /datum/mob_descriptor/face_exp/haggard
 	name = "Haggard"
@@ -125,25 +125,25 @@
 
 
 /datum/mob_descriptor/face_exp/refined
-	name = "Refined"
+	name = "Refinado"
 
 /datum/mob_descriptor/face_exp/salacious
 	name = "Salacious"
 
 /datum/mob_descriptor/face_exp/sour
-	name = "Sour"
+	name = "Agrio"
 
 /datum/mob_descriptor/face_exp/starry_eyed
-	name = "Starry-eyed"
+	name = "ojos estrellados"
 
 /datum/mob_descriptor/face_exp/spiteful
 	name = "Spiteful"
 
 /datum/mob_descriptor/face_exp/warm
-	name = "Warm"
+	name = "Cálido"
 
 /datum/mob_descriptor/face_exp/frustrated
-	name = "Frustrated"
+	name = "Frustrado"
 
 /datum/mob_descriptor/face_exp/stern
 	name = "Stern"
@@ -155,7 +155,7 @@
 	name = "Jaded"
 
 /datum/mob_descriptor/face_exp/inquisitive
-	name = "Inquisitive"
+	name = "Inquisitivo"
 
 /datum/mob_descriptor/face_exp/suspicious
 	name = "Suspicious"
@@ -176,17 +176,17 @@
 	name = "Suave"
 
 /datum/mob_descriptor/face_exp/humble
-	name = "Humble"
+	name = "Humilde"
 
 /datum/mob_descriptor/face_exp/smug
 	name = "Smug"
 
 /datum/mob_descriptor/face_exp/curious
-	name = "Curious"
+	name = "Curioso"
 
 
 /datum/mob_descriptor/face_exp/mild
-	name = "Mild"
+	name = "Leve"
 
 /datum/mob_descriptor/face_exp/glowering
 	name = "Glowering"
@@ -195,7 +195,7 @@
 	name = "Miserable"
 
 /datum/mob_descriptor/face_exp/puzzled
-	name = "Puzzled"
+	name = "Perplejo"
 
 /datum/mob_descriptor/face_exp/shy
 	name = "Shy"

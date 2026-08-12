@@ -145,7 +145,7 @@
 	return real_target
 
 /obj/effect/portal/permanent
-	name = "permanent portal"
+	name = "portal permanente"
 	desc = ""
 	var/id // var edit or set id in map editor
 	hardlinked = FALSE // dont qdel my portal nerd
@@ -177,7 +177,7 @@
 	. = ..()
 
 /obj/effect/portal/permanent/one_way // doesn't have a return portal
-	name = "one-way portal"
+	name = "portal unidireccional"
 	desc = ""
 	var/list/possible_exits = list()
 	var/keep // if this is a portal that should be kept

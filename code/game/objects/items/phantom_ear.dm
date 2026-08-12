@@ -89,11 +89,11 @@
 		return
 	if(speaker == owner)
 		if(findtext(raw_message, "deafen") && !muted)
-			to_chat(owner, span_notice("The voices in your head subside."))
+			to_chat(owner, span_notice("Las voces en tu cabeza se calman."))
 			muted = TRUE
 			return
 		else if(findtext(raw_message, "listen") && muted)
-			to_chat(owner, span_notice("You are bombarded again with the voices of the world."))
+			to_chat(owner, span_notice("Te bombardean de nuevo con las voces del mundo."))
 			muted = FALSE
 			return
 	if(speaker == src)
@@ -112,8 +112,8 @@
 	if(invisibility && !living_speaker.is_blind() && living_speaker != owner && perception > 13)
 		if(!prob(20 + ((perception - 14) * 5)))
 			return
-		to_chat(living_speaker, span_warning("We're not alone, the walls have ears..."))
-		name = "Ghostly Aura"
+		to_chat(living_speaker, span_warning("No estamos solos, las paredes tienen oídos..."))
+		name = "Aura fantasmal"
 		desc = "You feel a strange presence watching you..."
 		invisibility = NONE
 		addtimer(CALLBACK(src, PROC_REF(reset_visibility)), 5 SECONDS)

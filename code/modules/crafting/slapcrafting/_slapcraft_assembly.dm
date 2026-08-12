@@ -58,7 +58,7 @@
 		to_chat(user, span_notice("You take apart \the [src]."))
 		disassemble()
 	else
-		to_chat(user, span_warning("You can't take this apart!"))
+		to_chat(user, span_warning("¡No puedes desarmar esto!"))
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 // Something in the assembly got deleted. Perhaps burned, melted or otherwise.

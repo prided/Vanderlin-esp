@@ -58,7 +58,7 @@
 	display_results(
 		surgeon,
 		limb.owner,
-		span_notice("I make an incision in [limb.owner]'s [parse_zone(limb.body_zone)]."),
+		span_notice("Hago una incisión en el [parse_zone(limb.body_zone)] de [limb.owner]."),
 		span_notice("Blood pools around the incision in [limb.owner]'s [parse_zone(limb.body_zone)]."),
 		span_notice("Blood pools around the incision in [limb.owner]'s [parse_zone(limb.body_zone)]."),
 	)
@@ -79,7 +79,7 @@
 
 /// Pulls the skin back to access internals
 /datum/surgery_operation/limb/retract_skin
-	name = "Retract Skin"
+	name = "Retraer la piel"
 	desc = "Retract the patient's skin to access their internal organs. \
 		Causes \"skin open\" surgical state."
 

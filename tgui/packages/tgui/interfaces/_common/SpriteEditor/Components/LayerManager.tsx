@@ -42,7 +42,7 @@ export const LayerManager = (props: LayerManagerProps) => {
   ].join(' ');
   return (
     <Box {...rest}>
-      <Section fill title="Layers">
+      <Section fill title="capas">
         <Box
           width="100%"
           height="100%"
@@ -72,7 +72,7 @@ export const LayerManager = (props: LayerManagerProps) => {
           <Box style={{ gridArea: 'add' }}>
             <Button
               icon="plus"
-              tooltip="Add Layer"
+              tooltip="Agregar capa"
               onClick={() =>
                 act('spriteEditorCommand', {
                   command: 'transaction',
@@ -147,7 +147,7 @@ export const LayerManager = (props: LayerManagerProps) => {
                     <Stack.Item>
                       <Button
                         icon="arrow-up"
-                        tooltip="Move Up"
+                        tooltip="Subir"
                         disabled={i === layerCount - 1}
                         onClick={() =>
                           act('spriteEditorCommand', {
@@ -164,7 +164,7 @@ export const LayerManager = (props: LayerManagerProps) => {
                     <Stack.Item>
                       <Button
                         icon="arrow-down"
-                        tooltip="Move Down"
+                        tooltip="Mover hacia abajo"
                         disabled={i === 0}
                         onClick={() =>
                           act('spriteEditorCommand', {
@@ -181,7 +181,7 @@ export const LayerManager = (props: LayerManagerProps) => {
                     <Stack.Item>
                       <Button
                         icon="layer-group"
-                        tooltip="Flatten"
+                        tooltip="Aplanar"
                         disabled={i === 0}
                         onClick={() =>
                           act('spriteEditorCommand', {
@@ -198,7 +198,7 @@ export const LayerManager = (props: LayerManagerProps) => {
                     <Stack.Item>
                       <Button.Confirm
                         icon="xmark"
-                        tooltip="Delete"
+                        tooltip="Eliminar"
                         disabled={layerCount === 1}
                         onClick={() =>
                           act('spriteEditorCommand', {

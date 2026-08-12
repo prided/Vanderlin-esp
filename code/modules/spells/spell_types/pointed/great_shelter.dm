@@ -94,7 +94,7 @@
 	)
 
 /obj/structure/forcefield_weak/shelter_wall
-	name = "arcyne wall"
+	name = "arcyne pared"
 	desc = "A shimmering wall of arcyne force. It hums faintly."
 	max_integrity = 200
 	timeleft = 0

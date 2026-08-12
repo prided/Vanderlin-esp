@@ -93,17 +93,17 @@
 			if(sniffer.mob_biotypes & MOB_ROBOTIC)
 				smell_string = "Your sensors detect trace amounts of [dominant_pollutant.scent] in the air."
 			else
-				smell_string = "The subtle [dominant_pollutant.descriptor] of [dominant_pollutant.scent] tickles your nose..."
+				smell_string = "El sutil [dominant_pollutant.descriptor] de [dominant_pollutant.scent] te hace cosquillas en la nariz..."
 		if(POLLUTANT_SMELL_NORMAL to POLLUTANT_SMELL_STRONG)
 			if(sniffer.mob_biotypes & MOB_ROBOTIC)
-				smell_string = "Your sensors pick up the presence of [dominant_pollutant.scent] in the air."
+				smell_string = "Sus sensores detectan la presencia de [dominant_pollutant.scent] en el aire."
 			else
-				smell_string = "The [dominant_pollutant.descriptor] of [dominant_pollutant.scent] fills the air."
+				smell_string = "El [dominant_pollutant.descriptor] de [dominant_pollutant.scent] llena el aire."
 		if(POLLUTANT_SMELL_STRONG to INFINITY)
 			if(sniffer.mob_biotypes & MOB_ROBOTIC)
 				smell_string = "Your sensors pick up an intense concentration of [dominant_pollutant.scent]."
 			else
-				smell_string = "The unmistakable [dominant_pollutant.descriptor] of [dominant_pollutant.scent] bombards your nostrils."
+				smell_string = "El inconfundible [dominant_pollutant.descriptor] de [dominant_pollutant.scent] bombardea tus fosas nasales."
 
 	if(dominant_pollutant.descriptor == SCENT_DESC_ODOR)
 		to_chat(sniffer, span_warning(smell_string))

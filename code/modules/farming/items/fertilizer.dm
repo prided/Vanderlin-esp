@@ -1,6 +1,6 @@
 /obj/item/fertilizer
-	name = "generic fertilizer"
-	desc = "A basic fertilizer."
+	name = "fertilizante genérico"
+	desc = "Un fertilizante básico."
 	w_class = WEIGHT_CLASS_SMALL
 	grid_width = 32
 	grid_height = 32
@@ -21,7 +21,7 @@
 
 /obj/item/fertilizer/bone_meal
 	name = "bone meal"
-	desc = "Crushed bones, perfect for the garden."
+	desc = "Huesos triturados, perfectos para el jardín."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "bonemeal"
 	nitrogen_content = 5
@@ -30,7 +30,7 @@
 
 /obj/item/fertilizer/compost
 	name = "compost"
-	desc = "Decomposed produce ready to give life to plants."
+	desc = "Productos descompuestos listos para dar vida a las plantas."
 	icon = 'icons/roguetown/misc/composter.dmi'
 	icon_state = "compost"
 	nitrogen_content = 30
@@ -39,7 +39,7 @@
 
 /obj/item/fertilizer/ash
 	name = "ash"
-	desc = "A handful of soot."
+	desc = "Un puñado de hollín."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "ash"
 	w_class = WEIGHT_CLASS_TINY
@@ -74,7 +74,7 @@
 		if(attacking_item.reagents && glass.is_open_container())
 			. = 1 //so the containers don't splash their content on the src while scooping.
 			if(glass.reagents.total_volume >= glass.reagents.maximum_volume)
-				to_chat(user, "<span class='notice'>[glass] is full!</span>")
+				to_chat(user, "¡<span class='notice'>[glass] está lleno!</span>")
 				return
 			to_chat(user, "<span class='notice'>I scoop up [src] into [glass]!</span>")
 			reagents.trans_to(glass, reagents.total_volume, transfered_by = user)
@@ -85,7 +85,7 @@
 		return ..()
 
 /obj/item/fertilizer/ash/large
-	name = "large pile of ashes"
+	name = "gran montón de cenizas"
 	icon_state = "big_ash"
 	w_class = WEIGHT_CLASS_NORMAL
 	phosphorus_content = 40

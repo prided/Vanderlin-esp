@@ -1,5 +1,5 @@
 /obj/effect/decal
-	name = "decal"
+	name = "calcomanía"
 	plane = FLOOR_PLANE
 	anchored = TRUE
 	resistance_flags = FIRE_PROOF | UNACIDABLE | ACID_PROOF

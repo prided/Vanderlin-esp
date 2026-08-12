@@ -2,7 +2,7 @@
 	name = "Moving "
 	stamina_cost = 8
 	work_time_left = 15 SECONDS
-	visible_message = "starts to move a structure."
+	visible_message = "comienza a mover una estructura."
 	var/obj/structure/target_structure
 	var/turf/destination_turf
 	var/moving_to_structure = TRUE

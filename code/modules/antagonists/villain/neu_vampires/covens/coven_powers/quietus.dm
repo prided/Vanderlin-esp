@@ -5,12 +5,12 @@
 	power_type = /datum/coven_power/quietus
 
 /datum/coven_power/quietus
-	name = "Quietus power name"
+	name = "Nombre del poder de Quietus"
 	desc = "Quietus power description"
 
 //SILENCE OF DEATH
 /datum/coven_power/quietus/silence_of_death
-	name = "Silence of Death"
+	name = "silencio de la muerte"
 	desc = "Create an area of pure silence around you, confusing those within it, sound can still escape the zone."
 	level = 1
 	check_flags = COVEN_CHECK_CAPABLE | COVEN_CHECK_CONSCIOUS | COVEN_CHECK_IMMOBILE | COVEN_CHECK_LYING
@@ -140,7 +140,7 @@
 	return ..()
 
 /datum/coven_power/quietus/scorpions_touch
-	name = "Scorpion's Touch"
+	name = "El toque del escorpión"
 	desc = "Create a powerful venom to apply to your enemies."
 
 	level = 2
@@ -189,7 +189,7 @@
 	var/obj/item/weapon/target_weapon = target
 	if(!istype(target_weapon))
 		if(alert)
-			to_chat(owner, span_warning("[src] can only be used on weapons!"))
+			to_chat(owner, span_warning("¡[src] solo se puede usar en armas!"))
 		return FALSE
 
 	if(!target_weapon.sharpness)
@@ -204,7 +204,7 @@
 	target.AddElement(/datum/element/one_time_poison, list(/datum/reagent/strongpoison = 2))
 
 /datum/coven_power/quietus/taste_of_death
-	name = "Taste of Death"
+	name = "El sabor de la muerte"
 	desc = "Spit a glob of caustic blood at your enemies."
 
 	level = 4
@@ -231,7 +231,7 @@
 		lastattacker.adjust_stamina(-80)
 		lastattacker.adjust_fire_stacks(6)
 		lastattacker.adjustFireLoss(10)
-		to_chat(owner, "You send your curse on [lastattacker], the last creature you attacked.")
+		to_chat(owner, "Envías tu maldición sobre [lastattacker], la última criatura que atacaste.")
 	else
 		to_chat(owner, "You don't seem to have last attacked soul earlier...")
 		return

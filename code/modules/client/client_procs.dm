@@ -73,7 +73,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 				if (minute != topiclimiter[ADMINSWARNED_AT]) //only one admin message per-minute. (if they spam the admins can just boot/ban them)
 					topiclimiter[ADMINSWARNED_AT] = minute
 					msg += " Administrators have been informed."
-					message_admins("[ADMIN_LOOKUPFLW(usr)] [ADMIN_KICK(usr)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute")
+					message_admins("[ADMIN_LOOKUPFLW(usr)] [ADMIN_KICK(usr)] Ha alcanzado el límite de temas por minuto de llamadas de temas [mtl] en un minuto de juego determinado")
 				log_game("[key_name(src)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute with [hsrc ? "[hsrc] " : ""][href].")
 				to_chat(src, span_danger("[msg]"))
 				return
@@ -128,7 +128,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 		var/mob/voice = locate(href_list["voice"])
 		if(QDELETED(schizo) || !voice.client)
 			return
-		var/msg = input("Ask again:", "To the voice of a [schizo.voice_names[voice.client.ckey]]") as text|null
+		var/msg = input("Ask again:", "A la voz de un [schizo.voice_names[voice.client.ckey]]") as text|null
 		if(msg)
 			mob.schizohelp(msg, TRUE, voice, schizo)
 			schizo.asked_again = TRUE
@@ -146,7 +146,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 			if(!(schizo.voted[voice_ckey][src.ckey]))
 				schizo.voted[voice_ckey][src.ckey] = "like"
 
-				to_chat(src, span_notice("You liked the answer of a [schizo.voice_names[voice.client.ckey]]"))
+				to_chat(src, span_notice("Te gustó la respuesta de un [schizo.voice_names[voice.client.ckey]]"))
 				to_chat(voice.client, span_notice("Your answer to [schizo.rng_name] was liked."))
 				update_mentor_stat(voice.client.ckey, "likes", 1, voice)
 				var/now = world.time
@@ -164,7 +164,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 
 				update_mentor_stat(voice.client.ckey, "real_likes", 1, voice)
 			else
-				to_chat(src, span_warning("You already voted on the [schizo.voice_names[voice.client.ckey]] answer!"))
+				to_chat(src, span_warning("¡Ya votaste por la respuesta [schizo.voice_names[voice.client.ckey]]!"))
 		return
 
 	// DISLIKE SCHIZOHELP
@@ -178,11 +178,11 @@ GLOBAL_LIST_EMPTY(respawncounts)
 			// has this player already voted on THIS voice's answer?
 			if(!(schizo.voted[voice_ckey][src.ckey]))
 				schizo.voted[voice_ckey][src.ckey] = "dislike"
-				to_chat(src, span_notice("You disliked the answer of a [schizo.voice_names[voice.client.ckey]]."))
+				to_chat(src, span_notice("No te gustó la respuesta de un [schizo.voice_names[voice.client.ckey]]."))
 				to_chat(voice.client, span_notice("Your answer to [schizo.rng_name] was disliked"))
 				update_mentor_stat(voice.client.ckey, "dislikes", 1, voice)
 			else
-				to_chat(src, span_warning("You already voted on the [schizo.voice_names[voice.client.ckey]] answer!"))
+				to_chat(src, span_warning("¡Ya votaste por la respuesta [schizo.voice_names[voice.client.ckey]]!"))
 		return
 
 	if(href_list["delete_painting"])
@@ -191,7 +191,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 		var/title = href_list["id"]
 		if(!title)
 			return
-		if(tgui_alert(src, "Are you sure you want to delete the painting '[title]'?", "Confirm Deletion", list("Yes", "No")) == "Yes")
+		if(tgui_alert(src, "¿Está seguro de que desea eliminar el cuadro '[title]'?", "Confirmar eliminación", list("Yes", "No")) == "Yes")
 			if(SSpaintings.del_player_painting(title))
 				message_admins("[key_name_admin(src)] has deleted player made painting called: '[title]'")
 				SSpaintings.update_paintings()
@@ -205,7 +205,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 		if(!title)
 			return
 		var/real_title = url_decode(title)
-		if(tgui_alert(src, "Are you sure you want to delete the book '[real_title]'?", "Confirm Deletion", list("Yes", "No")) == "Yes")
+		if(tgui_alert(src, "¿Está seguro de que desea eliminar el libro '[real_title]'?", "Confirmar eliminación", list("Yes", "No")) == "Yes")
 			if(SSlibrarian.del_player_book(title, author))
 				message_admins("[key_name_admin(src)] has deleted player made book called: '[real_title]' by [author]")
 				manage_books()
@@ -521,10 +521,10 @@ GLOBAL_LIST_EMPTY(respawncounts)
 					alert_mob_dupe_login = TRUE
 				if(matches)
 					if(C)
-						message_admins("<span class='danger'><B>Notice: </B></span><span class='notice'>[key_name_admin(src)] has the same [matches] as [key_name_admin(C)].</span>")
+						message_admins("<span class='danger'><B>Aviso: </B></span><span class='notice'>[key_name_admin(src)] tiene el mismo [matches] que [key_name_admin(C)].</span>")
 						log_access("Notice: [key_name(src)] has the same [matches] as [key_name(C)].")
 					else
-						message_admins("<span class='danger'><B>Notice: </B></span><span class='notice'>[key_name_admin(src)] has the same [matches] as [key_name_admin(C)] (no longer logged in). </span>")
+						message_admins("<span class='danger'><B>Aviso: </B></span><span class='notice'>[key_name_admin(src)] tiene el mismo [matches] que [key_name_admin(C)] (ya no está conectado). </span>")
 						log_access("Notice: [key_name(src)] has the same [matches] as [key_name(C)] (no longer logged in).")
 
 	show_popup_menus = FALSE
@@ -586,10 +586,10 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	var/ceb = CONFIG_GET(number/client_error_build)
 	var/cwv = CONFIG_GET(number/client_warn_version)
 	if (byond_version < cev || byond_build < ceb)		//Out of date client.
-		to_chat(src, "<span class='danger'><b>My version of BYOND is too old:</b></span>")
+		to_chat(src, "<span class='danger'><b>Mi versión de BYOND es demasiado antigua:</b></span>")
 		to_chat(src, CONFIG_GET(string/client_error_message))
 		to_chat(src, "Your version: [byond_version].[byond_build]")
-		to_chat(src, "Required version: [cev].[ceb] or later")
+		to_chat(src, "Versión requerida: [cev].[ceb] o posterior")
 		to_chat(src, "Visit <a href=\"https://secure.byond.com/download\">BYOND's website</a> to get the latest version of BYOND.")
 		if (connecting_admin)
 			to_chat(src, "Because you are an admin, you are being allowed to walk past this limitation, But it is still STRONGLY suggested you upgrade")
@@ -608,7 +608,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 			to_chat(src, "<span class='danger'><b>My version of byond may be getting out of date:</b></span>")
 			to_chat(src, CONFIG_GET(string/client_warn_message))
 			to_chat(src, "Your version: [byond_version]")
-			to_chat(src, "Required version to remove this message: [cwv] or later")
+			to_chat(src, "Versión requerida para eliminar este mensaje: [cwv] o posterior")
 			to_chat(src, "Visit <a href=\"https://secure.byond.com/download\">BYOND's website</a> to get the latest version of BYOND.")
 
 	if(connection == "web" && !connecting_admin)
@@ -641,7 +641,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	var/nnpa = CONFIG_GET(number/notify_new_player_age)
 	if(isnum(cached_player_age) && cached_player_age == -1) //first connection
 		if(nnpa >= 0)
-			message_admins("New user: [key_name_admin(src)] [ADMIN_PP(mob)] is connecting here for the first time.")
+			message_admins("Nuevo usuario: [key_name_admin(src)] [ADMIN_PP(mob)] se conecta aquí por primera vez.")
 			if(CONFIG_GET(flag/irc_first_connection_alert))
 				send2irc_adminless_only("New-user", "[key_name(src)] is connecting for the first time!")
 	else if(isnum(cached_player_age) && cached_player_age < nnpa)
@@ -667,7 +667,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	apply_clickcatcher()
 
 	if(prefs.lastchangelog != GLOB.changelog_hash) //bolds the changelog button on the interface so we know there are updates.
-		to_chat(src, span_info("You have unread updates in the changelog."))
+		to_chat(src, span_info("Tienes actualizaciones no leídas en el registro de cambios."))
 		if(CONFIG_GET(flag/aggressive_changelog))
 			changelog()
 		else
@@ -1010,7 +1010,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 		if (oldcid != computer_id && computer_id != lastcid) //IT CHANGED!!!
 			cidcheck -= ckey //so they can try again after removing the cid randomizer.
 
-			to_chat(src, "<span class='danger'>Connection Error:</span>")
+			to_chat(src, "<span class='danger'>Error de conexión:</span>")
 			to_chat(src, "<span class='danger'>Invalid ComputerID(spoofed). Please remove the ComputerID spoofer from my byond installation and try again.</span>")
 
 			if (!cidcheck_failedckeys[ckey])
@@ -1100,7 +1100,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 		if(ip_info.ip_hosting)
 			if(string)
 				string += ", "
-			string += "Hosted IP"
+			string += "IP alojada"
 		if(ip_info.ip_mobile)
 			if(string)
 				string += ", "
@@ -1147,7 +1147,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 			if (minute != clicklimiter[ADMINSWARNED_AT]) //only one admin message per-minute. (if they spam the admins can just boot/ban them)
 				clicklimiter[ADMINSWARNED_AT] = minute
 
-				msg += " Administrators have been informed."
+				msg += " Los administradores han sido informados."
 				if (ab)
 					log_game("[key_name(src)] is using the middle click aimbot exploit")
 					message_admins("[ADMIN_LOOKUPFLW(usr)] [ADMIN_KICK(usr)] is using the middle click aimbot exploit</span>")
@@ -1179,7 +1179,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 		// If hotkey mode is enabled, then clicking the map will automatically
 		// unfocus the text bar. This removes the red color from the text bar
 		// so that the visual focus indicator matches reality.
-		winset(src, null, "command=disableInput input.background-color=[COLOR_INPUT_DISABLED] input.text-color = #ad9eb4")
+		winset(src, null, "comando=disableInput input.background-color=[COLOR_INPUT_DISABLED] input.text-color = #ad9eb4")
 
 	else
 		winset(src, null, "input.focus=true command=activeInput input.background-color=[COLOR_INPUT_ENABLED] input.text-color = #EEEEEE")
@@ -1330,7 +1330,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	char_render_holders = list()
 
 /client/proc/fullscreen()
-	winset(src, "mainwindow", "statusbar=false")
+	winset(src, "ventana principal", "statusbar=false")
 
 /client/proc/give_award(achievement_type, mob/user, amount = 1)
 	return	player_details.achievements.unlock(achievement_type, user, amount)
@@ -1382,7 +1382,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	commendation_popup(forced)
 
 /client/proc/view_stats()
-	set name = "View Chronicle"
+	set name = "Ver crónica"
 	set category = "OOC"
 
 	show_round_stats(pick_assoc(GLOB.featured_stats))
@@ -1447,7 +1447,7 @@ GLOBAL_LIST_EMPTY(respawncounts)
  */
 /client/proc/on_stat_panel_message(type, payload)
 	switch(type)
-		if("Update-Verbs")
+		if("Verbos de actualización")
 			init_verbs()
 		if("Remove-Tabs")
 			panel_tabs -= payload["tab"]
@@ -1468,8 +1468,8 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	return address in localhost_addresses
 
 /client/verb/toggle_fullscreen()
-	set name = "Toggle Fullscreen"
-	set category = "Preferences.Options"
+	set name = "Alternar pantalla completa"
+	set category = "Preferencias.Opciones"
 
 	if(prefs)
 		prefs.preference_toggle_flag(/datum/preference/bitwise/toggles, TOGGLE_FULLSCREEN)
@@ -1481,10 +1481,10 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	if(logging_in)
 		var/fullscreen = (prefs.read_preference(/datum/preference/bitwise/toggles) & TOGGLE_FULLSCREEN)
 		if(fullscreen)
-			winset(src, "mainwindow", "menu=;is-fullscreen=[fullscreen ? "true" : "false"]")
+			winset(src, "ventana principal", "menu=;is-fullscreen=[fullscreen ? "true" : "false"]")
 		return
 
-	winset(src, "mainwindow", "menu=;is-fullscreen=[new_value ? "true" : "false"]")
+	winset(src, "ventana principal", "menu=;is-fullscreen=[new_value ? "true" : "false"]")
 	attempt_auto_fit_viewport()
 
 #undef LIMITER_SIZE

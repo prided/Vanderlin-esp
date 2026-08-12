@@ -1,5 +1,5 @@
 /datum/action/cooldown/meatvine/personal/mark_target
-	name = "Mark Target"
+	name = "Marcar objetivo"
 	desc = "Mark a living target, making them visible to all putrid. Uses 15 personal resources."
 	button_icon_state = "mark_target"
 	cooldown_time = 45 SECONDS
@@ -19,16 +19,16 @@
 	var/mob/living/simple_animal/hostile/retaliate/meatvine/consumed = owner
 
 	if(!isliving(target))
-		to_chat(owner, span_warning("You can only mark living targets!"))
+		to_chat(owner, span_warning("¡Solo puedes marcar objetivos vivos!"))
 		return FALSE
 
 	var/mob/living/living_target = target
 	if(living_target.stat == DEAD)
-		to_chat(owner, span_warning("That target is already dead!"))
+		to_chat(owner, span_warning("¡Ese objetivo ya está muerto!"))
 		return FALSE
 
 	if(consumed.faction_check_atom(living_target))
-		to_chat(owner, span_warning("You cannot mark allies!"))
+		to_chat(owner, span_warning("¡No puedes marcar aliados!"))
 		return FALSE
 
 	if(consumed.master)
@@ -36,8 +36,8 @@
 
 	to_chat(owner, span_notice("You mark [living_target] for the hive!"))
 	living_target.visible_message(
-		span_danger("[consumed] marks [living_target] with a strange energy!"),
-		span_userdanger("[consumed] marks you with a strange energy!")
+		span_danger("¡[consumed] marca a [living_target] con una energía extraña!"),
+		span_userdanger("¡[consumed] te marca con una energía extraña!")
 	)
 
 	return ..()

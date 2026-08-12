@@ -24,7 +24,7 @@
 	basic_mob.face_atom()
 	if(!is_dead(target))
 		finish_action(controller, FALSE)
-	basic_mob.visible_message(span_danger("[basic_mob] starts to rip apart [target]!"))
+	basic_mob.visible_message(span_danger("¡[basic_mob] comienza a destrozar [target]!"))
 	if(do_after(basic_mob, 10 SECONDS, target, extra_checks = CALLBACK(src, PROC_REF(is_dead), target)))
 		if(!is_dead(target))
 			finish_action(controller, FALSE)

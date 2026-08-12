@@ -1,5 +1,5 @@
 /datum/round_event_control/malum_crafting
-	name = "Crafting Request"
+	name = "Solicitud de elaboración"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/malum_crafting
 	weight = 7
@@ -49,8 +49,8 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE MALUM'S CHOSEN!"),
-		span_notice("Malum demands a physical manifestation of devotion! Build 2 sacred pantheon crosses to earn Malum's favor!"),
+		span_userdanger("¡ERES EL ELEGIDO DE MALUM!"),
+		span_notice("¡Malum exige una manifestación física de devoción! ¡Construye 2 cruces sagradas del panteón para ganarte el favor de Malum!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/magic/dwarf_chant01.ogg', 100)
 

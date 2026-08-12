@@ -1,12 +1,12 @@
 /datum/coven/presence
-	name = "Presence"
-	desc = "Makes targets in radius more vulnerable to damages."
+	name = "Presencia"
+	desc = "Hace que los objetivos en el radio sean más vulnerables a los daños."
 	icon_state = "presence"
 	power_type = /datum/coven_power/presence
 
 /datum/coven_power/presence
-	name = "Presence power name"
-	desc = "Presence power description"
+	name = "Nombre del poder de presencia"
+	desc = "Descripción del poder de presencia."
 
 //AWE
 /datum/coven_power/presence/awe
@@ -27,7 +27,7 @@
 	var/mypower = GET_MOB_ATTRIBUTE_VALUE(owner, STAT_INTELLIGENCE)
 	var/theirpower = GET_MOB_ATTRIBUTE_VALUE(owner, STAT_INTELLIGENCE) - 5
 	if((theirpower >= mypower))
-		to_chat(owner, span_warning("[target]'s mind is too powerful to sway!"))
+		to_chat(owner, span_warning("¡La mente de [target] es demasiado poderosa para influir!"))
 		return FALSE
 
 	return TRUE
@@ -44,10 +44,10 @@
 
 	if(!owner.cmode)
 		to_chat(target, "<span class='userlove'><b>Follow me~</b></span>")
-		owner.say("Follow me~")
+		owner.say("Sígueme ~")
 	else
 		to_chat(target, "<span class='userlove'><b>COME HERE</b></span>")
-		owner.say("COME HERE!!")
+		owner.say("¡¡VEN AQUÍ!!")
 
 
 /datum/coven_power/presence/awe/deactivate(mob/living/carbon/human/target)
@@ -73,7 +73,7 @@
 	var/mypower = GET_MOB_ATTRIBUTE_VALUE(owner, STAT_INTELLIGENCE)
 	var/theirpower = GET_MOB_ATTRIBUTE_VALUE(owner, STAT_INTELLIGENCE) - 5
 	if((theirpower >= mypower))
-		to_chat(owner, span_warning("[target]'s mind is too powerful to sway!"))
+		to_chat(owner, span_warning("¡La mente de [target] es demasiado poderosa para influir!"))
 		return FALSE
 
 	return TRUE
@@ -106,7 +106,7 @@
 
 /datum/coven_power/presence/fall
 	name = "Kneel"
-	desc = "Make those kneel before you."
+	desc = "Haz que se arrodillen ante ti."
 
 	level = 3
 	vitae_cost = 150
@@ -123,7 +123,7 @@
 	var/mypower = GET_MOB_ATTRIBUTE_VALUE(owner, STAT_INTELLIGENCE)
 	var/theirpower = GET_MOB_ATTRIBUTE_VALUE(owner, STAT_INTELLIGENCE) - 5
 	if((theirpower >= mypower))
-		to_chat(owner, span_warning("[target]'s mind is too powerful to sway!"))
+		to_chat(owner, span_warning("¡La mente de [target] es demasiado poderosa para influir!"))
 		return FALSE
 
 	return TRUE
@@ -149,7 +149,7 @@
 
 //SUMMON
 /datum/coven_power/presence/summon
-	name = "Summon"
+	name = "Convocar"
 	desc = "Call anyone you've ever met to be by your side."
 
 	level = 4
@@ -167,7 +167,7 @@
 	var/mypower = GET_MOB_ATTRIBUTE_VALUE(owner, STAT_INTELLIGENCE)
 	var/theirpower = GET_MOB_ATTRIBUTE_VALUE(owner, STAT_INTELLIGENCE) - 5
 	if((theirpower >= mypower))
-		to_chat(owner, span_warning("[target]'s mind is too powerful to sway!"))
+		to_chat(owner, span_warning("¡La mente de [target] es demasiado poderosa para influir!"))
 		return FALSE
 
 	return TRUE
@@ -181,7 +181,7 @@
 	target.apply_overlay(MUTATIONS_LAYER)
 
 	to_chat(target, "<span class='userlove'><b>TO ME</b></span>")
-	owner.say("TO ME!!")
+	owner.say("¡¡A MÍ!!")
 	target.Immobilize(1.5 SECONDS)
 	new /obj/effect/temp_visual/vamp_summon (get_turf(target))
 	new /obj/effect/temp_visual/vamp_summon/end (get_turf(owner))
@@ -200,7 +200,7 @@
 		// Announce to nearby clan members
 		for(var/mob/living/carbon/human/observer in view(7, user))
 			if(observer.clan == user.clan && observer != user && observer != target)
-				to_chat(observer, "<span class='info'>[user.real_name] has summoned [target.real_name].</span>")
+				to_chat(observer, "<span class='info'>[user.real_name] ha convocado a [target.real_name].</span>")
 
 /datum/coven_power/presence/summon/deactivate(mob/living/carbon/human/target)
 	. = ..()
@@ -214,7 +214,7 @@
 
 //MAJESTY
 /datum/coven_power/presence/majesty
-	name = "Majesty"
+	name = "Majestad"
 	desc = "Become so grand that others find it nearly impossible to disobey or harm you."
 	level = 5
 	check_flags = COVEN_CHECK_CAPABLE|COVEN_CHECK_SPEAK
@@ -292,7 +292,7 @@
 
 	if(prob(70))
 		if(target.get_active_held_item())
-			target.visible_message("<span class='warning'>[target] seems overwhelmed by [owner]'s presence!</span>")
+			target.visible_message("¡<span class='warning'>[target] parece abrumado por la presencia de [owner]!</span>")
 			target.dropItemToGround(target.get_active_held_item())
 
 		target.stop_pulling()
@@ -393,10 +393,10 @@
 			return
 
 /atom/movable/screen/alert/status_effect/majesty_compulsion
-	name = "Overwhelming Presence"
+	name = "Presencia abrumadora"
 	desc = "You are compelled by an overwhelming presence. You find it nearly impossible to act against them."
 	icon_state = "debuff"
 
 /datum/stress_event/majesty_compelled
-	desc = "There's someone here with such an overwhelming presence that I can barely think straight around them."
+	desc = "Hay alguien aquí con una presencia tan abrumadora que apenas puedo pensar con claridad a su alrededor."
 	stress_change = -3

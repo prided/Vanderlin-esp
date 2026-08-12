@@ -1,6 +1,6 @@
 /obj/item/paint_brush
-	name = "paint brush"
-	desc = "A tool used for painting"
+	name = "pincel"
+	desc = "Una herramienta utilizada para pintar."
 	icon = 'icons/paint_supplies/paint_items.dmi'
 	icon_state = "paintbrush"
 
@@ -40,7 +40,7 @@
 	if(!interacting_with.reagents.has_reagent(/datum/reagent/water))
 		return NONE
 
-	to_chat(user, span_notice("I start to wash [src] in [interacting_with]..."))
+	to_chat(user, span_notice("Empiezo a lavar [src] en [interacting_with]..."))
 	if(!do_after(user, 1 SECONDS, interacting_with))
 		return
 

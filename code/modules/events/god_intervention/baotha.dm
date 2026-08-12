@@ -1,5 +1,5 @@
 /datum/round_event_control/baotha_revelry
-	name = "Baotha's Revelry"
+	name = "La juerga de Baotha"
 	track = EVENT_TRACK_INTERVENTION
 	typepath = /datum/round_event/baotha_revelry
 	weight = 8

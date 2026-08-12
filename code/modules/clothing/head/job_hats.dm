@@ -1,5 +1,5 @@
 /obj/item/clothing/head/fisherhat
-	name = "straw hat"
+	name = "sombrero de paja"
 	desc = "Wenches shall lust for thee. Fishe will fear thee. \
 			Humen will cast their gaze aside. As thou walk, \
 			no creecher shall dare make a sound on thy presence. \
@@ -9,7 +9,7 @@
 	item_weight = 100 GRAMS
 
 /obj/item/clothing/head/stewardtophat
-	name = "top hat"
+	name = "sombrero de copa"
 	icon_state = "stewardtophat"
 	icon = 'icons/roguetown/clothing/special/steward.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
@@ -20,7 +20,7 @@
 	item_weight = 100 GRAMS
 
 /obj/item/clothing/head/strawhat
-	name = "crude straw hat"
+	name = "sombrero de paja crudo"
 	desc = "Welcome to the grain fields, thou plowerer of the fertile."
 	icon_state = "strawhat"
 	salvage_result = /obj/item/natural/fibers
@@ -45,19 +45,19 @@
 
 /obj/item/clothing/head/nun
 	name = "nun's habit"
-	desc = "Habits worn by nuns of the pantheon's faith."
+	desc = "Hábitos usados por las monjas de la fe del panteón."
 	icon_state = "nun"
 	allowed_race = RACES_PLAYER_ALL
 	item_weight = 100 GRAMS
 
 /obj/item/clothing/head/fancyhat
-	name = "fancy hat"
+	name = "sombrero elegante"
 	icon_state = "fancyhat"
 	sellprice = VALUE_FINE_CLOTHING
 	item_weight = 100 GRAMS
 
 /obj/item/clothing/head/courtierhat
-	name = "fancy hat"
+	name = "sombrero elegante"
 	icon_state = "courtier"
 	flags_inv = HIDEEARS
 	sellprice = VALUE_FINE_CLOTHING
@@ -71,7 +71,7 @@
 	item_weight = 100 GRAMS
 
 /obj/item/clothing/head/jester
-	name = "jester's hat"
+	name = "sombrero de bufón"
 	desc = "Just remember that the last laugh is on you."
 	icon_state = "jester"
 	item_weight = 155 GRAMS
@@ -90,7 +90,7 @@
 	item_weight = 100 GRAMS
 
 /obj/item/clothing/head/wizhat
-	name = "wizard hat"
+	name = "sombrero de mago"
 	desc = "Used to distinguish dangerous wizards from senile old men."
 	icon_state = "wizardhat"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
@@ -117,7 +117,7 @@
 	icon_state = pick("wizardhat", "wizardhatred", "wizardhatgreen", "wizardhatblack", "wizardhatyellow")
 
 /obj/item/clothing/head/wizhat/witch
-	name = "witch hat"
+	name = "sombrero de bruja"
 	desc = "While officially, Witches heretical to Astrata and risk harassment by the faithkeepers, quite a few mages and Pestrans wear such hats anyways as a fashion statement."
 	icon_state = "witchhat"
 	detail_tag = "_detail"
@@ -139,8 +139,8 @@
 	abstract_type = /obj/item/clothing/head/leather
 
 /obj/item/clothing/head/leather/inqhat
-	name = "inquisitorial hat"
-	desc = "A wide-brimmed leather hat, adorned with a crimson-dyed feather. Death has come to your little town."
+	name = "sombrero inquisitorial"
+	desc = "Un sombrero de cuero de ala ancha, adornado con una pluma teñida de carmesí. La muerte ha llegado a tu pequeño pueblo."
 	icon_state = "inqhat"
 	item_state = "inqhat"
 	sewrepair = /datum/attribute/skill/craft/tanning/patching
@@ -148,7 +148,7 @@
 	dyeable = TRUE
 
 /obj/item/clothing/head/leather/inqhat/vigilante
-	name = "fancy hat"
+	name = "sombrero elegante"
 
 /obj/item/clothing/head/physhat
 	name = "court physician's hat"
@@ -159,7 +159,7 @@
 	item_weight = 112 GRAMS
 
 /obj/item/clothing/head/courtphysician
-	name = "court physician's beret"
+	name = "boina del médico de la corte"
 	desc = "A head covering for elegance, and to hide the bald spot."
 	icon_state = "courthat"
 	item_state = "courthat"
@@ -168,8 +168,8 @@
 	item_weight = 112 GRAMS
 
 /obj/item/clothing/head/courtphysician/male
-	name = "sanguine hat"
-	desc = "A hat for keeping the splattered blood out of your face, for when your trade is required."
+	name = "sombrero sanguíneo"
+	desc = "Un sombrero para mantener la sangre salpicada fuera de tu cara, para cuando tu oficio sea necesario."
 	icon_state = "dochat1"
 	item_state = "dochat1"
 	detail_tag = "_detail"
@@ -177,7 +177,7 @@
 	uses_lord_coloring = LORD_PRIMARY
 
 /obj/item/clothing/head/courtphysician/female
-	name = "sanguine cap"
+	name = "gorro sanguíneo"
 	desc = "A cap for keeping the splattered blood out of your hair, for when your trade is required."
 	icon_state = "dochat2"
 	item_state = "dochat2"
@@ -206,8 +206,8 @@
 	)
 
 /obj/item/clothing/head/gnomecap
-	name = "dwarven tallhat"
-	desc = "A warm, tall hat, made for colder climates."
+	name = "sombrero alto enano"
+	desc = "Un sombrero alto y cálido, hecho para climas más fríos."
 	icon_state = "gnomecap"
 	item_state = "gnomecap"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/head.dmi'

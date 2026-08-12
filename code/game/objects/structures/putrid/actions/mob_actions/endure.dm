@@ -10,7 +10,7 @@
 /datum/action/cooldown/meatvine/personal/literally_too_angry_to_die/Activate(atom/target)
 	. = ..()
 	if(endure_active)
-		owner.balloon_alert(owner, "already enduring")
+		owner.balloon_alert(owner, "ya soportando")
 		return FALSE
 	owner.balloon_alert(owner, "endure began")
 	playsound(owner, 'sound/alien/alien_roar1.ogg', 100, TRUE, 8, 0.9)

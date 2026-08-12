@@ -1,7 +1,7 @@
 /obj/machinery/light/fueled/smelter
 	icon = 'icons/roguetown/misc/forge.dmi'
-	name = "stone furnace"
-	desc = "A stone furnace, weathered by time and heat."
+	name = "horno de piedra"
+	desc = "Un horno de piedra, desgastado por el tiempo y el calor."
 	icon_state = "cavesmelter0"
 	base_state = "cavesmelter"
 	anchored = TRUE
@@ -43,7 +43,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 	if(tool.firefuel)
-		if(tgui_alert(user, "Fuel \the [name] with [tool]?", "VANDERLIN", list("Fuel", "Smelt")) == "Fuel")
+		if(tgui_alert(user, "Fuel \the [name] with [tool]?", "VANDERLIN", list("Combustible", "Smelt")) == "Combustible")
 			return NONE
 
 	if(try_add_item(tool, user))
@@ -54,7 +54,7 @@
 	var/obj/item/retrieved_item
 	if(!. && tongs_used && !tongs_used.held_item)
 		for(var/obj/item/storage/crucible/crucible in contents)
-			user.visible_message("[user] starts removing a crucible from [src].", "You start removing a crucible from [src].")
+			user.visible_message("[user] comienza a retirar un crisol de [src].", "You start removing a crucible from [src].")
 			if(!do_after(user, 1.5 SECONDS, src))
 				return
 			tongs_used.set_held_item(crucible)
@@ -74,7 +74,7 @@
 				to_chat(user, span_warning("It's too hot to retrieve items with your hands."))
 				return
 			user.put_in_hands(retrieved_item)
-		user.visible_message(span_info("[user] retrieves [retrieved_item] from [src]."))
+		user.visible_message(span_info("[user] recupera [retrieved_item] de [src]."))
 		contained_items -= retrieved_item
 		. = TRUE
 
@@ -98,22 +98,22 @@
 		for(var/obj/item/storage/crucible/crucible in contents)
 			crucible_count++
 		if(crucible_count >= max_crucible_amount)
-			to_chat(user, span_warning("[src] cannot hold any more crucibles!"))
+			to_chat(user, span_warning("¡[src] no puede contener más crisoles!"))
 			return FALSE
 		if(smelting_item.loc == user)
 			user.transferItemToLoc(smelting_item, src)
 		else
 			smelting_item.forceMove(src)
-		user.visible_message("[user] loads [smelting_item] into [src].", "You load [smelting_item] into [src].")
+		user.visible_message("[user] carga [smelting_item] en [src].", "You load [smelting_item] into [src].")
 		return TRUE
 
 	if(!tongs_used && !user.is_holding(smelting_item)) // necessary due to menu popup in attackby()
 		return FALSE
 	if(!smelting_item.smeltresult)
-		to_chat(user, span_warning("[smelting_item] cannot be smelted directly."))
+		to_chat(user, span_warning("[smelting_item] no se puede fundir directamente."))
 		return FALSE
 	if(length(contained_items) >= max_contained_items)
-		to_chat(user, span_warning("[src] is full!"))
+		to_chat(user, span_warning("¡[src] está lleno!"))
 		return FALSE
 
 	smelting_item.forceMove(src)
@@ -139,7 +139,7 @@
 		5 = GREAT
 		6 = EXCELLENT
 	*/
-	user.visible_message(span_warning("[user] puts something in \the [src]."))
+	user.visible_message(span_warning("[user] pone algo en \the [src]."))
 	smelting_progress = 0
 	return TRUE
 
@@ -172,7 +172,7 @@
 		if(is_type_in_typecache(smelted, valid_xp_smelts))
 			ADD_TRAIT(smelted, TRAIT_NEWLY_SMELTED, TRAIT_GENERIC)
 	playsound(src,'sound/misc/smelter_fin.ogg', 100, FALSE)
-	visible_message(span_notice("[src] finishes smelting."))
+	visible_message(span_notice("[src] termina de fundir."))
 	smelting_progress = smelting_threshold + 1
 
 /obj/machinery/light/fueled/smelter/burn_out()
@@ -181,7 +181,7 @@
 
 /obj/machinery/light/fueled/smelter/great
 	icon = 'icons/roguetown/misc/forge.dmi'
-	name = "great furnace"
+	name = "gran horno"
 	desc = "The pinnacle of dwarven engineering and the miracle of Malum's blessed fire crystal, allowing for greater alloys to be made."
 	icon_state = "smelter0"
 	base_state = "smelter"

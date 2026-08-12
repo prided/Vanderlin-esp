@@ -268,7 +268,7 @@
 			thrown_speed = thrown_thing.throw_speed
 		if(!thrown_range)
 			thrown_range = thrown_thing.throw_range
-		visible_message("<span class='danger'>[src] throws [thrown_thing].</span>", \
+		visible_message("<span class='danger'>[src] lanza [thrown_thing].</span>", \
 						"<span class='danger'>I toss [thrown_thing].</span>")
 		log_message("has thrown [thrown_thing]", LOG_ATTACK)
 		thrown_thing.safe_throw_at(end_T, thrown_range, thrown_speed, src, null, null, null, move_force)
@@ -354,7 +354,7 @@
 			buckled.user_unbuckle_mob(src,src)
 		else
 			if(src && buckled)
-				to_chat(src, "<span class='warning'>I fail to struggle free!</span>")
+				to_chat(src, "<span class='warning'> ¡No logro liberarme! </span>")
 	else
 		buckled.user_unbuckle_mob(src,src)
 
@@ -409,18 +409,18 @@
 		cuff_break = INSTANT_CUFFBREAK
 
 	if(!cuff_break)
-		to_chat(src, span_notice("I try to get out of \the [I]\s..."))
+		to_chat(src, span_notice("Intento salir de \the [I]\s..."))
 		if(do_after(src, breakouttime, timed_action_flags = (IGNORE_HELD_ITEM)))
 			clear_cuffs(I, cuff_break)
 		else
-			to_chat(src, span_danger("I fail to get out of \the [I]\s!"))
+			to_chat(src, span_danger("¡No logro salir de \the [I]\s!"))
 
 	else if(cuff_break == FAST_CUFFBREAK)
-		to_chat(src, span_notice("I attempt to break \the [I]\s..."))
+		to_chat(src, span_notice("Intento romper \the [I]\s..."))
 		if(do_after(src, breakouttime, timed_action_flags = (IGNORE_HELD_ITEM)))
 			clear_cuffs(I, cuff_break)
 		else
-			to_chat(src, span_danger("I fail to break \the [I]\s!"))
+			to_chat(src, span_danger("¡No logro romper \the [I]\s!"))
 
 	else if(cuff_break == INSTANT_CUFFBREAK)
 		clear_cuffs(I, cuff_break)
@@ -563,7 +563,7 @@
 		if(MOBTIMER_FINISHED(src, MT_PUKE, 16 SECONDS))
 			if(getorgan(/obj/item/organ/stomach))
 				MOBTIMER_SET(src, MT_PUKE)
-				to_chat(src, span_warning("I'm going to puke..."))
+				to_chat(src, span_warning("voy a vomitar..."))
 				addtimer(CALLBACK(src, PROC_REF(vomit), 50), rand(8 SECONDS, 15 SECONDS))
 		else
 			if(prob(3))
@@ -600,7 +600,7 @@
 			distance = 0
 		else
 			if(message)
-				visible_message("<span class='danger'>[src] pukes!</span>", "<span class='danger'>I puke!</span>")
+				visible_message("<span class='danger'>[src] ¡vomita!</span>", "<span class='danger'>I puke!</span>")
 				add_stress(/datum/stress_event/vomit)
 				if(iscarbon(src))
 					var/mob/living/carbon/C = src
@@ -609,7 +609,7 @@
 		if(!CAN_HAVE_BLOOD(src))
 			return TRUE
 		if(message)
-			visible_message("<span class='danger'>[src] coughs up blood!</span>", "<span class='danger'>I cough up blood!</span>")
+			visible_message("¡<span class='danger'>[src] tose sangre!</span>", "<span class='danger'>I cough up blood!</span>")
 
 	if(stun)
 		Immobilize(59)
@@ -1288,7 +1288,7 @@
 	if(href_list[VV_HK_MODIFY_BODYPART])
 		if(!check_rights(R_SPAWN))
 			return
-		var/edit_action = input(usr, "What would you like to do?","Modify Body Part") as null|anything in list("add","remove", "augment")
+		var/edit_action = input(usr, "What would you like to do?","Modificar parte del cuerpo") as null|anything in list("add","remove", "augment")
 		if(!edit_action)
 			return
 		var/list/limb_list = list()
@@ -1323,7 +1323,7 @@
 						else
 							to_chat(usr, "<span class='boldwarning'>[src] doesn't have such bodypart.</span>")
 					else
-						to_chat(usr, "<span class='boldwarning'>Only humans can be augmented.</span>")
+						to_chat(usr, "<span class='boldwarning'>Solo los humanos pueden ser aumentados.</span>")
 		admin_ticket_log("[key_name_admin(usr)] has modified the bodyparts of [src]")
 	if(href_list[VV_HK_MODIFY_ORGANS])
 		if(!check_rights(NONE))
@@ -1336,7 +1336,7 @@
 		var/list/artnames = list()
 		for(var/datum/martial_art/M as anything in artpaths)
 			artnames[initial(M.name)] = M
-		var/result = input(usr, "Choose the martial art to teach","JUDO CHOP") as null|anything in sortNames(artnames)
+		var/result = input(usr, "Elige el arte marcial para enseñar","JUDO CHOP") as null|anything in sortNames(artnames)
 		if(!usr)
 			return
 		if(QDELETED(src))
@@ -1347,12 +1347,12 @@
 			var/datum/martial_art/MA = new chosenart
 			MA.teach(src)
 			log_admin("[key_name(usr)] has taught [MA] to [key_name(src)].")
-			message_admins("<span class='notice'>[key_name_admin(usr)] has taught [MA] to [key_name_admin(src)].</span>")
+			message_admins("<span class='notice'>[key_name_admin(usr)] ha enseñado [MA] a [key_name_admin(src)].</span>")
 	if(href_list[VV_HK_GIVE_TRAUMA])
 		if(!check_rights(NONE))
 			return
 		var/list/traumas = subtypesof(/datum/brain_trauma)
-		var/result = input(usr, "Choose the brain trauma to apply","Traumatize") as null|anything in sortList(traumas, GLOBAL_PROC_REF(cmp_typepaths_asc))
+		var/result = input(usr, "Choose the brain trauma to apply","Traumatizar") as null|anything in sortList(traumas, GLOBAL_PROC_REF(cmp_typepaths_asc))
 		if(!usr)
 			return
 		if(QDELETED(src))
@@ -1369,7 +1369,7 @@
 			return
 		cure_all_traumas(TRAUMA_RESILIENCE_ABSOLUTE)
 		log_admin("[key_name(usr)] has cured all traumas from [key_name(src)].")
-		message_admins("<span class='notice'>[key_name_admin(usr)] has cured all traumas from [key_name_admin(src)].</span>")
+		message_admins("<span class='notice'>[key_name_admin(usr)] ha curado todos los traumas de [key_name_admin(src)].</span>")
 	if(href_list[VV_HK_SHOW_RELATIONS])
 		if(!check_rights(NONE))
 			return

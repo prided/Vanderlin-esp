@@ -16,7 +16,7 @@
 /obj/item/spell_focus/examine(mob/user)
 	. = ..()
 	if(stored_spell_type)
-		. += span_notice("It pulses with stored memory, [stored_spell_name], tier [spell_tier].")
+		. += span_notice("Pulsa con memoria almacenada, [stored_spell_name], nivel [spell_tier].")
 		. += span_notice("It will grant [grant_charges] charge\s when imbued.")
 	else
 		. += span_warning("It is blank, waiting to be etched.")

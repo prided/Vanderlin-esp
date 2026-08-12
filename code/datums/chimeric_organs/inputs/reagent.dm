@@ -1,7 +1,7 @@
 /datum/chimeric_node/input/reagent
 	abstract_type = /datum/chimeric_node/input/reagent
 	name = "drowning"
-	desc = "Triggered when you consume a specific brew."
+	desc = "Se activa cuando consumes una bebida específica."
 
 	var/list/trigger_reagents = list(/datum/reagent/water)
 	var/minimum_amount = 1

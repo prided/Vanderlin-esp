@@ -1,8 +1,8 @@
 GLOBAL_LIST_INIT(bloodcult_exitportals, list())
 
 /datum/rune_spell/portalexit
-	name = "Path Exit"
-	desc = "We hope you enjoyed your flight with Air Nar-Sie."//might change it later or not.
+	name = "Salida del camino"
+	desc = "Esperamos que haya disfrutado de su vuelo con Air Nar-Sie."//might change it later or not.
 	desc_talisman = "Use to immediately jaunt through the Path."
 	invocation = "Sas'so c'arta forbici!"
 	word1 = /datum/rune_word/travel
@@ -41,7 +41,7 @@ GLOBAL_LIST_INIT(bloodcult_exitportals, list())
 		qdel(src)
 		return
 
-	network = input(activator, "Choose an available Path, you may free the path later by erasing the rune.", "Path Exit") as null|anything in available_networks
+	network = input(activator, "Choose an available Path, you may free the path later by erasing the rune.", "Salida del camino") as null|anything in available_networks
 	if (!network)
 		qdel(src)
 		return
@@ -98,7 +98,7 @@ GLOBAL_LIST_INIT(bloodcult_exitportals, list())
 		to_chat(activator, span_warning("There are currently no Paths through the veil.") )
 		qdel(src)
 		return
-	var/network = input(activator, "Choose an available Path.", "Path Talisman") as null|anything in valid_choices
+	var/network = input(activator, "Choose an available Path.", "Talismán de camino") as null|anything in valid_choices
 	if (!network)
 		qdel(src)
 		return

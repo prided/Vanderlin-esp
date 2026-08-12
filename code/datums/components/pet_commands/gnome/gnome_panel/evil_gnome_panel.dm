@@ -108,7 +108,7 @@
 	if(waypoint_pending == GNOME_WP_NONE)
 		return FALSE
 	if(LAZYACCESS(modifiers, RIGHT_CLICK))
-		to_chat(commander(), span_notice("Cancelled."))
+		to_chat(commander(), span_notice("Cancelado."))
 		cancel_placement_pending()
 		return TRUE
 
@@ -132,21 +132,21 @@
 				to_chat(commander(), span_warning("That's not an item!"))
 				return TRUE
 			gnome.item_filters += object.type
-			gnome.visible_message(span_notice("[gnome] will now prioritize [object.name] items."))
+			gnome.visible_message(span_notice("[gnome] ahora priorizará los elementos [object.name]."))
 
 		if(GNOME_WP_CAULDRON)
 			if(!istype(object, /obj/machinery/light/fueled/cauldron))
-				to_chat(commander(), span_warning("That's not a cauldron!"))
+				to_chat(commander(), span_warning("¡Eso no es un caldero!"))
 				return TRUE
 			c.set_blackboard_key(BB_GNOME_TARGET_CAULDRON, object)
-			gnome.visible_message(span_notice("[gnome] marks the cauldron."))
+			gnome.visible_message(span_notice("[gnome] marca el caldero."))
 
 		if(GNOME_WP_WELL)
 			if(!istype(object, /obj/structure/well))
-				to_chat(commander(), span_warning("That's not a well!"))
+				to_chat(commander(), span_warning("¡Eso no es un pozo!"))
 				return TRUE
 			c.set_blackboard_key(BB_GNOME_TARGET_WELL, object)
-			gnome.visible_message(span_notice("[gnome] marks the well."))
+			gnome.visible_message(span_notice("[gnome] marca el pozo."))
 
 		if(GNOME_WP_BOTTLE)
 			c.set_blackboard_key(BB_GNOME_BOTTLE_STORAGE, target_turf)
@@ -162,15 +162,15 @@
 				c.set_blackboard_key(BB_GNOME_EXTRACTOR_MODE, FALSE)
 				c.set_blackboard_key(BB_GNOME_TARGET_SPLITTER, object)
 				c.clear_blackboard_key(BB_GNOME_TARGET_EXTRACTOR)
-				gnome.visible_message(span_notice("[gnome] marks the splitter."))
+				gnome.visible_message(span_notice("[gnome] marca el divisor."))
 			else if(istype(object, /obj/machinery/essence/extractor))
 				c.set_blackboard_key(BB_GNOME_EXTRACTOR_MODE, TRUE)
 				c.set_blackboard_key(BB_GNOME_SPLITTER_MODE, FALSE)
 				c.set_blackboard_key(BB_GNOME_TARGET_EXTRACTOR, object)
 				c.clear_blackboard_key(BB_GNOME_TARGET_SPLITTER)
-				gnome.visible_message(span_notice("[gnome] marks the extractor."))
+				gnome.visible_message(span_notice("[gnome] marca el extractor."))
 			else
-				to_chat(commander(), span_warning("That's not a splitter or extractor!"))
+				to_chat(commander(), span_warning("¡Eso no es un divisor ni un extractor!"))
 				return TRUE
 
 	cancel_placement_pending()
@@ -187,7 +187,7 @@
 			to_chat(commander(), span_warning("Set a pickup location first!"))
 			return
 		if(!c.blackboard[BB_GNOME_TRANSPORT_DEST])
-			to_chat(commander(), span_warning("Set a drop-off location first!"))
+			to_chat(commander(), span_warning("¡Establezca primero un lugar de entrega!"))
 			return
 		c.set_blackboard_key(BB_GNOME_TRANSPORT_MODE, TRUE)
 		gnome.visible_message(span_notice("[gnome] begins transporting items."))
@@ -198,12 +198,12 @@
 	if(!c) return
 	var/cur = c.blackboard[BB_GNOME_SEARCH_RANGE] || 1
 	c.set_blackboard_key(BB_GNOME_SEARCH_RANGE, clamp(cur + delta, 1, 10))
-	gnome.visible_message(span_notice("[gnome] nods."))
+	gnome.visible_message(span_notice("[gnome] asiente."))
 	refresh()
 
 /datum/gnome_command_panel/proc/cmd_clear_filter()
 	gnome.item_filters = list()
-	gnome.visible_message(span_notice("[gnome] will now move any item."))
+	gnome.visible_message(span_notice("[gnome] ahora moverá cualquier elemento."))
 	refresh()
 
 /datum/gnome_command_panel/proc/cmd_toggle_farming()
@@ -211,7 +211,7 @@
 	if(!c) return
 	var/now = !c.blackboard[BB_GNOME_CROP_MODE]
 	c.set_blackboard_key(BB_GNOME_CROP_MODE, now)
-	gnome.visible_message(now ? span_notice("[gnome] begins tending crops!") : span_notice("[gnome] stops tending crops."))
+	gnome.visible_message(now ? span_notice("¡[gnome] comienza a cuidar los cultivos!") : span_notice("[gnome] stops tending crops."))
 	refresh()
 
 /datum/gnome_command_panel/proc/cmd_choose_recipe()
@@ -224,7 +224,7 @@
 		recipe_names += r.recipe_name
 		recipe_paths[r.recipe_name] = rpath
 		qdel(r)
-	var/chosen = input(commander(), "Select a recipe:", "Alchemy Recipe") as null|anything in recipe_names
+	var/chosen = input(commander(), "Select a recipe:", "Receta de alquimia") as null|anything in recipe_names
 	if(chosen)
 		c.set_blackboard_key(BB_GNOME_CURRENT_RECIPE, recipe_paths[chosen])
 		gnome.visible_message(span_notice("[gnome] commits the [chosen] recipe to memory."))
@@ -247,7 +247,7 @@
 			to_chat(commander(), span_warning("Set a well first!"))
 			return
 		c.set_blackboard_key(BB_GNOME_ALCHEMY_MODE, TRUE)
-		gnome.visible_message(span_notice("[gnome] begins the alchemy process!"))
+		gnome.visible_message(span_notice("¡[gnome] comienza el proceso de alquimia!"))
 	refresh()
 
 /datum/gnome_command_panel/proc/cmd_toggle_splitter()
@@ -265,9 +265,9 @@
 			to_chat(commander(), span_warning("Set a source location first!"))
 			return
 		if(!c.blackboard[BB_GNOME_TARGET_SPLITTER] && !c.blackboard[BB_GNOME_TARGET_EXTRACTOR])
-			to_chat(commander(), span_warning("Set a machine first!"))
+			to_chat(commander(), span_warning("¡Configure una máquina primero!"))
 			return
-		gnome.visible_message(span_notice("[gnome] begins feeding the machine."))
+		gnome.visible_message(span_notice("[gnome] comienza a alimentar la máquina."))
 	refresh()
 
 /datum/gnome_command_panel/proc/cmd_set_priority()

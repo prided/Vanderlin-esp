@@ -16,9 +16,9 @@
 	to_chat(user, span_notice("Add a link from a suitable host (catbox, etc) to an mp3, mp4, or jpg / png file to have it embed at the bottom of your OOC notes."))
 	to_chat(user, span_notice("If the link doesn't show up properly in-game, ensure that it's a direct link that opens properly in a browser."))
 	to_chat(user, span_notice("Videos will be shrunk to a ~300x300 square. Keep this in mind."))
-	to_chat(user, "<font color = '#d6d6d6'>Leave a single space to delete it from your OOC notes.</font>")
+	to_chat(user, "<font color = '#d6d6d6'>Deja un solo espacio para eliminarlo de tus notas OOC.</font>")
 	to_chat(user, "<font color ='red'>Abuse of this will get you banned.</font>")
-	var/new_extra_link = input(user, "Input the accessory link (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "OOC Extra", prefs.read_preference(/datum/preference/text/ooc_extra_link)) as text|null
+	var/new_extra_link = input(user, "Ingrese el enlace del accesorio (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "OOC Extra", prefs.read_preference(/datum/preference/text/ooc_extra_link)) as text|null
 	if(new_extra_link == null)
 		return
 	if(new_extra_link == "")

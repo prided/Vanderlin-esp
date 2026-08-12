@@ -18,7 +18,7 @@
 
 /datum/augment/stats/get_examine_info()
 	var/list/info = list()
-	info += span_info("Stat changes:")
+	info += span_info("Cambios de estadísticas:")
 	for(var/stat in stat_changes)
 		var/change = stat_changes[stat]
 		info += span_info("  [stat]: [change > 0 ? "+" : ""][change]")
@@ -33,8 +33,8 @@
 	installation_time = 15 SECONDS
 
 /datum/augment/stats/perception_lens
-	name = "enhanced optical array"
-	desc = "Improves visual acuity and target acquisition."
+	name = "matriz óptica mejorada"
+	desc = "Mejora la agudeza visual y la adquisición de objetivos."
 	stability_cost = -10
 	stat_changes = list(STAT_PERCEPTION = 2)
 	engineering_difficulty = SKILL_RANK_APPRENTICE
@@ -42,7 +42,7 @@
 
 /datum/augment/stats/processing_core
 	name = "overclocked logic engine"
-	desc = "Increases processing speed and analytical capability, straining the core matrix."
+	desc = "Aumenta la velocidad de procesamiento y la capacidad analítica, forzando la matriz central."
 	stability_cost = -12
 	stat_changes = list(STAT_INTELLIGENCE = 3)
 	engineering_difficulty = SKILL_RANK_EXPERT
@@ -57,7 +57,7 @@
 	installation_time = 15 SECONDS
 
 /datum/augment/stats/pressure_tank
-	name = "extended capacity pressure tank"
+	name = "tanque de presión de capacidad extendida"
 	desc = "Allows for longer operational periods without rest."
 	stability_cost = -10
 	stat_changes = list(STAT_ENDURANCE = 2)
@@ -79,7 +79,7 @@
 	sl?.max_steam_charge -= 50
 
 /datum/augment/stats/mobility_actuator
-	name = "high-efficiency actuators"
+	name = "actuadores de alta eficiencia"
 	desc = "Improves movement speed through advanced mechanical joints."
 	stability_cost = -12
 	stat_changes = list(STAT_SPEED = 2)
@@ -96,30 +96,30 @@
 
 /datum/augment/stats/sensor_dampener
 	name = "sensor dampening module"
-	desc = "Reduces sensor sensitivity to decrease processing load."
+	desc = "Reduce la sensibilidad del sensor para disminuir la carga de procesamiento."
 	stability_cost = 8
 	stat_changes = list(STAT_PERCEPTION = -1)
 	engineering_difficulty = SKILL_RANK_NOVICE
 	installation_time = 8 SECONDS
 
 /datum/augment/stats/lightweight_frame
-	name = "lightweight chassis"
-	desc = "Reduces structural integrity for better energy efficiency."
+	name = "chasis ligero"
+	desc = "Reduce la integridad estructural para una mejor eficiencia energética."
 	stability_cost = 10
 	stat_changes = list(STAT_CONSTITUTION = -1)
 	engineering_difficulty = SKILL_RANK_NOVICE
 	installation_time = 8 SECONDS
 
 /datum/augment/stats/efficiency_mode
-	name = "power conservation mode"
-	desc = "Reduces operational capacity to improve stability."
+	name = "modo de conservación de energía"
+	desc = "Reduce la capacidad operativa para mejorar la estabilidad."
 	stability_cost = 8
 	stat_changes = list(STAT_ENDURANCE = -1)
 	engineering_difficulty = SKILL_RANK_NOVICE
 	installation_time = 8 SECONDS
 
 /datum/augment/stats/servo_governor
-	name = "movement limiter"
+	name = "limitador de movimiento"
 	desc = "Restricts movement speed to reduce mechanical stress."
 	stability_cost = 10
 	stat_changes = list(STAT_SPEED = -1)
@@ -127,16 +127,16 @@
 	installation_time = 8 SECONDS
 
 /datum/augment/stats/balanced_matrix
-	name = "stabilizing matrix"
-	desc = "A carefully balanced augmentation that improves multiple attributes."
+	name = "matriz estabilizadora"
+	desc = "Un aumento cuidadosamente equilibrado que mejora múltiples atributos."
 	stability_cost = -5
 	stat_changes = list(STAT_STRENGTH = 1, STAT_CONSTITUTION = 1)
 	engineering_difficulty = SKILL_RANK_EXPERT
 	installation_time = 20 SECONDS
 
 /datum/augment/stats/core_stabilizer
-	name = "core stabilization array"
-	desc = "Dramatically improves core stability without affecting performance."
+	name = "matriz de estabilización central"
+	desc = "Mejora drásticamente la estabilidad del núcleo sin afectar el rendimiento."
 	stability_cost = 25
 	stat_changes = list()
 	engineering_difficulty = SKILL_RANK_MASTER

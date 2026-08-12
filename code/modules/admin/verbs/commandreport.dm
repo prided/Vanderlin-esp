@@ -3,7 +3,7 @@
 
 /// Verb to open the create command report window and send command reports.
 /client/proc/cmd_admin_create_announcement()
-	set category = "GameMaster.Gods"
+	set category = "GameMaster.Dioses"
 	set name = "Announcement"
 
 	if(!check_rights(R_ADMIN))
@@ -80,7 +80,7 @@
 
 		<div>
 			<h2>Announcement Sound</h2>
-			<select name="sound">
+			<select name="sonido">
 				<option value="['sound/misc/alert.ogg']">Decree</option>
 				<option value="['sound/misc/bell.ogg']">Bell</option>
 				<option value="['sound/misc/lawdeclaration.ogg']">Law Declaration</option>
@@ -97,7 +97,7 @@
 		<br>
 
 		<div>
-			<input type="checkbox" name="encode" value=[TRUE] [NULLABLE(encode_report) && "checked"]/>
+			<input type="checkbox" name="codificar" value=[TRUE] [NULLABLE(encode_report) && "checked"]/>
 			<label>Encode body</label>
 		</div>
 
@@ -148,12 +148,12 @@
 	priority_announce(command_report_content, command_name, played_sound, encode_title = encode_report, encode_text = encode_report)
 
 	log_admin("[key_name(ui_user)] has created a command report: \"[command_report_content]\", sent from \"[command_name]\" with the sound \"[played_sound]\".")
-	message_admins("[key_name_admin(ui_user)] has created a command report, sent from \"[command_name]\" with the sound \"[played_sound]\"")
+	message_admins("[key_name_admin(ui_user)] ha creado un informe de comando, enviado desde \"[command_name]\" con el sonido \"[played_sound]\"")
 
 	command_report_content = initial(command_report_content)
 
 /datum/command_report_menu/proc/test_announcement()
-	var/send_message = "[command_report_content]\n\n\nSound Used: [played_sound]"
-	priority_announce(send_message, "TEST: [command_name]", played_sound, players = list(ui_user), encode_title = encode_report, encode_text = encode_report)
+	var/send_message = "[command_report_content]\n\n\nSound Usado: [played_sound]"
+	priority_announce(send_message, "PRUEBA: [command_name]", played_sound, players = list(ui_user), encode_title = encode_report, encode_text = encode_report)
 
 #undef DEFAULT_ANNOUNCEMENT_SOUND

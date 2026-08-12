@@ -7,7 +7,7 @@
 
 /// Baseline for grave outfits, should not be used by itself.
 /datum/outfit/grave
-	name = "Naked (grave)"
+	name = "Desnudo (tumba)"
 	mouth = /obj/item/coin/copper
 
 	/// Chance for this outfit to be selected, higher = more likely.
@@ -15,7 +15,7 @@
 
 /// Dead Beggar
 /datum/outfit/grave/t1/vagrant
-	name = "Vagrant (grave)"
+	name = "Vagabundo (tumba)"
 
 	weight = 3
 
@@ -38,14 +38,14 @@
 
 /// Dead Prisoner
 /datum/outfit/grave/t1/prisoner
-	name = "Prisoner (grave)"
+	name = "Prisionero (tumba)"
 	pants = /obj/item/clothing/pants/loincloth/colored/brown
 
 	weight = 1
 
 /// Dead Soldier
 /datum/outfit/grave/t2/soldier
-	name = "Soldier (grave)"
+	name = "Soldado (tumba)"
 	shirt = /obj/item/clothing/armor/gambeson
 	pants = /obj/item/clothing/pants/trou/leather
 	cloak = /obj/item/clothing/cloak/stabard
@@ -93,7 +93,7 @@
 
 //// Dead Noble
 /datum/outfit/grave/t3/noble
-	name = "Noble (grave)"
+	name = "Noble (tumba)"
 	shoes = /obj/item/clothing/shoes/boots/darkboots
 	shirt = /obj/item/clothing/shirt/dress/silkdress/colored/random
 	backl = /obj/item/storage/backpack/satchel
@@ -125,7 +125,7 @@
 	var/list/final_words
 
 /datum/outfit/grave/unique/ravox_saint
-	name = "Ravox Saint (Deceased)"
+	name = "Ravox Santo (Fallecido)"
 	head = /obj/item/clothing/head/flowercrown/salvia
 	neck = /obj/item/clothing/neck/chaincoif
 	armor = /obj/item/clothing/armor/plate/full/silver
@@ -143,5 +143,5 @@
 
 	mob_names = list("Saint Placida", "Saint Alexia", "Saint Paisley", "Saint Remington")
 	mob_to_spawn = /mob/living/carbon/human/species/human/northern
-	grave_messages = list("Served with distinction, died with honor.", "May their life be an example to all.", "Pledged to devote their life to justice, and kept it.", "Hero of the Goblin Wars, gave their life in service to these lands.")
-	final_words = list(SPAN_GOD_RAVOX("May I serve justice in the lives to come..."), SPAN_GOD_RAVOX("I hope only that the virtues of Ravox live strong in the hearts of those who come after..."), SPAN_GOD_RAVOX("To those who gaze upon me now, know this; Justice shall always prevail in the end!"))
+	grave_messages = list("Sirvió con distinción, murió con honor.", "Que su vida sea un ejemplo para todos.", "Se comprometió a dedicar su vida a la justicia y la cumplió.", "Hero of the Goblin Wars, gave their life in service to these lands.")
+	final_words = list(SPAN_GOD_RAVOX("Que pueda servir a la justicia en las vidas venideras..."), SPAN_GOD_RAVOX("I hope only that the virtues of Ravox live strong in the hearts of those who come after..."), SPAN_GOD_RAVOX("To those who gaze upon me now, know this; Justice shall always prevail in the end!"))

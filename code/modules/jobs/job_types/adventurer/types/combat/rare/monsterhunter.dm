@@ -20,7 +20,7 @@
 	)
 
 /datum/job/advclass/combat/monster_hunter
-	title = "Monster Hunter"
+	title = "cazador de monstruos"
 	tutorial = "Monster Hunters dedicate their lives to the eradication of the varied evils infesting Psydonia. They know the vile sorcery of the necromancer, the insidious nature of the cultist and monstrousness of vampires and werevolfs. They also know how best to end them."
 	allowed_races = RACES_PLAYER_NONEXOTIC
 	outfit = /datum/outfit/monster_hunter
@@ -41,7 +41,7 @@
 	)
 
 /datum/outfit/monster_hunter
-	name = "Monster Hunter"
+	name = "cazador de monstruos"
 	shirt = /obj/item/clothing/shirt/undershirt/puritan
 	belt = /obj/item/storage/belt/leather
 	shoes = /obj/item/clothing/shoes/boots/darkboots

@@ -1,7 +1,7 @@
 
 /datum/antagonist/bandit
 	name = ROLE_BANDIT
-	roundend_category = "Bandits"
+	roundend_category = "bandidos"
 	antagpanel_category = ROLE_BANDIT
 	job_rank = ROLE_BANDIT
 	antag_hud_type = ANTAG_HUD_BANDIT
@@ -10,9 +10,9 @@
 	var/contrib
 	antag_flags = FLAG_ANTAG_CAP_IGNORE
 	confess_lines = list(
-		"FREEDOM!!!",
-		"I WILL NOT LIVE IN YOUR WALLS!",
-		"I WILL NOT FOLLOW YOUR RULES!",
+		"¡¡¡LIBERTAD!!!",
+		"¡NO VIVIRÉ EN TUS MUROS!",
+		"¡NO SEGUIRÉ TUS REGLAS!",
 	)
 
 	innate_traits = list(
@@ -26,7 +26,7 @@
 	if(istype(examined_datum, /datum/antagonist/bandit))
 		if(examiner.real_name in GLOB.outlawed_players)
 			if(examined.real_name in GLOB.outlawed_players)
-				return span_boldnotice("Another free man. My ally.")
+				return span_boldnotice("Otro hombre libre. Mi aliado.")
 			else
 				return span_boldnotice("Pardoned free man?! Can I still trust [examined.p_them()]?!")
 		else if(examined.real_name in GLOB.outlawed_players)
@@ -51,7 +51,7 @@
 	H.set_patron(/datum/patron/inhumen/matthios)
 
 /datum/antagonist/bandit/greet()
-	to_chat(owner.current, span_alert("I am a BANDIT!"))
+	to_chat(owner.current, span_alert("¡Soy un BANDIDO!"))
 	to_chat(owner.current, span_info("Long ago I did a crime worthy of my bounty being hung on the wall outside of the local inn."))
 	owner.announce_objectives()
 	..()
@@ -82,7 +82,7 @@
 			var/mob/living/carbon/human/H = owner.current
 			the_name = H.real_name
 		if(!amt)
-			to_chat(world, "[the_name] was a bandit.")
+			to_chat(world, "[the_name] era un bandido.")
 		else
 			to_chat(world, "[the_name] was a bandit. He stole [amt] triumphs worth of loot.")
 	return

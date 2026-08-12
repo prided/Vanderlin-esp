@@ -7,13 +7,13 @@
 
 /datum/action/cooldown/spell/essence/elven_grace/cast(atom/cast_on)
 	. = ..()
-	owner.visible_message(span_notice("[owner] moves with the grace of the ancient elves."))
+	owner.visible_message(span_notice("[owner] se mueve con la gracia de los antiguos elfos."))
 	var/mob/living/L = owner
 	L.apply_status_effect(/datum/status_effect/buff/elven_grace, 300 SECONDS)
 
 /atom/movable/screen/alert/status_effect/elven_grace
 	name = "Elven Grace"
-	desc = "You move with ethereal grace and agility."
+	desc = "Te mueves con gracia y agilidad etéreas."
 	icon_state = "buff"
 
 /datum/status_effect/buff/elven_grace/on_apply()

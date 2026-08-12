@@ -1,5 +1,5 @@
 /datum/rune_effect/melee_orbital
-	name = "Orbital Conversion"
+	name = "Conversión orbital"
 	var/list/effect_values = list()
 
 /datum/rune_effect/melee_orbital/apply_effects_from_list(list/effects)
@@ -62,7 +62,7 @@
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 
 /obj/projectile/orbital
-	name = "orbital projectile"
+	name = "proyectil orbital"
 	damage_type = BRUTE
 	speed = 0.2
 	var/obj/item/base_item

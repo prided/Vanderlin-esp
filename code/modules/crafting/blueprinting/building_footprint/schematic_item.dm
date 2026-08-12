@@ -58,7 +58,7 @@
 	. = ..()
 	var/datum/building_preview/preview = get_or_build_preview()
 	if(!preview || !length(preview.blueprint_slots))
-		. += span_warning("The schematic appears to be blank or unreadable.")
+		. += span_warning("El esquema parece estar en blanco o ilegible.")
 		return
 	. += span_notice("This schematic marks [length(preview.blueprint_slots)] construction point[length(preview.blueprint_slots) != 1 ? "s" : ""]:")
 	for(var/datum/blueprint_slot/slot in preview.blueprint_slots)
@@ -157,7 +157,7 @@
 		owner.balloon_alert(owner, "invalid placement!")
 		return FALSE
 	if(!schematic?.building_template)
-		owner.balloon_alert(owner, "schematic is blank!")
+		owner.balloon_alert(owner, "¡El esquema está en blanco!")
 		return FALSE
 	return TRUE
 

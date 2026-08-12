@@ -31,7 +31,7 @@
 		icon_state = empty_icon_state
 
 /obj/structure/lootable_structure/fish_barrel
-	name = "fish barrel"
+	name = "barril de pescado"
 
 	icon_state = "fish_barrel_full"
 	empty_icon_state = "fish_barrel_empty"
@@ -41,7 +41,7 @@
 	spawns_per_person = 1
 
 /obj/structure/lootable_structure/grain_barrel
-	name = "grain barrel"
+	name = "barril de grano"
 
 	icon_state = "grain_barrel_full"
 	empty_icon_state = "grain_barrel_empty"

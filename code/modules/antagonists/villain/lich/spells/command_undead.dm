@@ -17,7 +17,7 @@
 	. = ..()
 	if(. & SPELL_CANCEL_CAST)
 		return
-	message = browser_input_text(owner, "Speak to your minions!", "LICH", multiline = TRUE)
+	message = browser_input_text(owner, "¡Habla con tus secuaces!", "LICH", multiline = TRUE)
 	if(QDELETED(src) || QDELETED(cast_on) || !can_cast_spell())
 		return . | SPELL_CANCEL_CAST
 	if(!message)

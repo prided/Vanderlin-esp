@@ -41,8 +41,8 @@
 	projectile_damage_multiplier = 1.2
 
 /obj/item/gun/ballistic/bow/short
-	name = "short bow"
-	desc = "As the eagle was killed by the arrow winged with his own feather, so the hand of the world is wounded by its own skill."
+	name = "arco corto"
+	desc = "Como el águila fue asesinada por la flecha alada con su propia pluma, así la mano del mundo es herida por su propia habilidad."
 	icon_state = "recurve"
 	base_icon_state = "recurve"
 	possible_item_intents = list(/datum/intent/shoot/bow/short, /datum/intent/arc/bow/short, INTENT_GENERIC)

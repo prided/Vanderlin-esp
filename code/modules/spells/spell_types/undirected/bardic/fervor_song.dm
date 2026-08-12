@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/song/fervor_song
-	name = "Fervorous Fantasia"
+	name = "Fantasía fervorosa"
 	desc = "Inspire the rhythm of battle, granting your allies guidance in combat!"
 	button_icon_state = "bardsong_t2_base"
 	invocation = "plays a bombastic, rhythmic march! The world feels grounded!"
@@ -14,8 +14,8 @@
 #define FERVOR_FILTER "fervor_glow"
 
 /atom/movable/screen/alert/status_effect/buff/song/fervor
-	name = "Musical Fervor"
-	desc = "Musical assistance guides my hands."
+	name = "Fervor musical"
+	desc = "La asistencia musical guía mis manos."
 	icon_state = "buff"
 
 /datum/status_effect/buff/song/fervor
@@ -33,12 +33,12 @@
 	var/filter = owner.get_filter(FERVOR_FILTER)
 	if (!filter)
 		owner.add_filter(FERVOR_FILTER, 2, list("type" = "outline", "color" = outline_colour, "alpha" = 50, "size" = 1))
-	to_chat(owner, span_warning("I feel as if I truly understand combat! This is a tune worth fighting for!"))
+	to_chat(owner, span_warning("¡Siento que realmente entiendo el combate! ¡Esta es una melodía por la que vale la pena luchar!"))
 	owner.attributes?.add_diceroll_modifier(modifier)
 
 /datum/status_effect/buff/song/fervor/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("The buzzing in my head softens, as does my adrenaline."))
+	to_chat(owner, span_warning("El zumbido en mi cabeza se suaviza, al igual que mi adrenalina."))
 	owner.remove_filter(FERVOR_FILTER)
 	owner.attributes?.remove_diceroll_modifier(modifier)
 

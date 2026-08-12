@@ -177,7 +177,7 @@
 				record_round_statistic(STATS_TAXES_EVADED, taxes)
 				add_abstract_elastic_data(ELASCAT_ECONOMY, ELASDATA_TAXES_EVADED, taxes)
 		else
-			say("Not enough!")
+			say("¡No es suficiente!")
 			return
 		if(ispath(picked_pack.contains))
 			var/obj/item/packitem = picked_pack.contains
@@ -203,7 +203,7 @@
 			options += "Enable Paying Taxes"
 		else
 			options += "Stop Paying Taxes"
-		var/select = input(usr, "Please select an option.", "", null) as null|anything in options
+		var/select = input(usr, "Por favor seleccione una opción.", "", null) as null|anything in options
 		if(!select)
 			return
 		if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH) || locked())

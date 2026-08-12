@@ -6,8 +6,8 @@ GLOBAL_DATUM_INIT(inquisition, /datum/oratorium, new)
 	var/datum/inquisition_hierarchy_interface/hierarchy_interface
 
 /mob/living/carbon/human/proc/view_inquisition()
-	set name = "View Inquisition"
-	set category = "RoleUnique.Inquisition"
+	set name = "Ver Inquisición"
+	set category = "RolÚnico.Inquisición"
 
 	if(!hierarchy_interface)
 		hierarchy_interface = new /datum/inquisition_hierarchy_interface(src)

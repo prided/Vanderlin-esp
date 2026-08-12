@@ -26,9 +26,9 @@
 		if(held_item.get_sharpness() && held_item.wlength == WLENGTH_SHORT)
 			playsound(src, 'sound/foley/shaving.ogg', 100, TRUE, -1)
 			if(user == src)
-				user.visible_message(span_danger("[user] starts to shave [user.p_their()] hair with [held_item].</span>"))
+				user.visible_message(span_danger("[user] comienza a afeitar el cabello [user.p_their()] con [held_item].</span>"))
 			else
-				user.visible_message(span_danger("[user] starts to shave [src]'s hair with [held_item].</span>"))
+				user.visible_message(span_danger("[user] comienza a afeitar el cabello de [src] con [held_item].</span>"))
 			if(do_after(user, 10 SECONDS, src))
 				set_hair_style(/datum/sprite_accessory/hair/head/bald)
 				update_body()
@@ -81,8 +81,8 @@
 					if(DirtyWater)
 						to_chat(user, span_warning("[cloth_check] water is too dirty to polish anything with it!"))
 						return
-					to_chat(user, ("You start polishing the [shoes_check] with the [cloth_check]"))
-					user.visible_message(span_notice("[user] starts to polish the [shoes_check] of [src]."))
+					to_chat(user, ("Empiezas a pulir el [shoes_check] con el [cloth_check]"))
+					user.visible_message(span_notice("[user] comienza a pulir el [shoes_check] de [src]."))
 					if(do_after(user, 2 SECONDS, src))
 						cloth_check.reagents.remove_all(1)
 						shoes_check.polished = 1
@@ -94,11 +94,11 @@
 						to_chat(user, ("You polished the [shoes_check]."))
 					return
 				else if(istype(held_item, /obj/item/natural/cloth) && user?.used_intent?.type == INTENT_USE && shoes_check.polished == 1)
-					to_chat(user, span_notice("The [shoes_check] are already polished."))
+					to_chat(user, span_notice("Los [shoes_check] ya están pulidos."))
 					return
 				if(istype(held_item, /obj/item/reagent_containers/food/snacks/fat) && user?.used_intent?.type == INTENT_USE && shoes_check.polished == 1)
 					to_chat(user, ("You start polishing the [shoes_check] with the animal"))
-					user.visible_message(span_notice("[user] starts to polish the [shoes_check] of [src]."))
+					user.visible_message(span_notice("[user] comienza a pulir el [shoes_check] de [src]."))
 					if(do_after(user, 2 SECONDS, src))
 						shoes_check.polished = 2
 						if(HAS_TRAIT(user, TRAIT_NOBLE_BLOOD))
@@ -347,16 +347,16 @@
 					to_chat(src, span_warning("I need to uncover [p_their()] mouth first!"))
 					return FALSE
 				if(!get_bodypart(BODY_ZONE_PRECISE_MOUTH))
-					to_chat(src, span_warning("I have no mouth!"))
+					to_chat(src, span_warning("¡No tengo boca!"))
 					return FALSE
 				if(!target.get_bodypart(BODY_ZONE_PRECISE_MOUTH))
 					to_chat(src, span_warning("[target] have no mouth!"))
 					return FALSE
 				if(HAS_TRAIT(src, TRAIT_NOBREATH))
-					to_chat(src, span_warning("I can't breathe!"))
+					to_chat(src, span_warning("¡No puedo respirar!"))
 					return FALSE
 				if(!getorganslot(ORGAN_SLOT_LUNGS))
-					to_chat(src, span_warning("I have no lungs!"))
+					to_chat(src, span_warning("¡No tengo pulmones!"))
 					return FALSE
 
 				if(!looping)
@@ -402,7 +402,7 @@
 						return FALSE
 
 				if(!looping)
-					visible_message(span_notice("[src] is trying to perform chest compressions on [target.name]!"), \
+					visible_message(span_notice("¡[src] está intentando realizar compresiones torácicas en [target.name]!"), \
 					span_notice("I try to perform chest compressions on [target.name]... Hold still!"), \
 					vision_distance = COMBAT_MESSAGE_RANGE)
 
@@ -415,7 +415,7 @@
 				if (HAS_TRAIT(target, TRAIT_STABLEHEART))
 					to_chat(target, span_unconscious("I feel my heart being pumped..."))
 				else if(!target.getorganslot(ORGAN_SLOT_HEART))
-					to_chat(target, span_unconscious("I feel my chest being pumped... But I don't feel any better..."))
+					to_chat(target, span_unconscious("Siento que me bombean el pecho... Pero no me siento mejor..."))
 					to_chat(src, span_warning("[target] isn't responding to my resuscitation..."))
 					return FALSE
 				else
@@ -443,8 +443,8 @@
 						 */
 						they_heart.applyOrganDamage(15 * (NUM_E ** (-0.022 * medical_skill)), they_heart.high_threshold)
 				else
-					visible_message(span_notice("<b>[src]</b> performs chest compressions on <b>[target]</b>!"), \
-								span_notice("I perform chest compressions on <b>[target]</b>."), \
+					visible_message(span_notice("¡<b>[src]</b> realiza compresiones torácicas en <b>[target]</b>!"), \
+								span_notice("Realizo compresiones torácicas en <b>[target]</b>."), \
 								span_hear("I hear pushing."),
 								vision_distance = COMBAT_MESSAGE_RANGE, \
 								ignored_mobs = target)
@@ -678,8 +678,8 @@
 /mob/living/carbon/human/vomit(lost_nutrition = 10, blood = 0, stun = 1, distance = 0, message = 1, toxic = 0)
 	if(blood && !CAN_HAVE_BLOOD(src) && !HAS_TRAIT(src, TRAIT_TOXINLOVER))
 		if(message)
-			visible_message("<span class='warning'>[src] dry heaves!</span>", \
-							span_danger("I try to throw up, but there's nothing in your stomach!"))
+			visible_message("<span class='warning'>[src] arcadas secas!</span>", \
+							span_danger("¡Intento vomitar, pero no hay nada en tu estómago!"))
 		if(stun)
 			Immobilize(200)
 		return 1
@@ -702,7 +702,7 @@
 	if(href_list[VV_HK_SET_SPECIES])
 		if(!check_rights(R_SPAWN))
 			return
-		var/result = input(usr, "Please choose a new species","Species") as null|anything in GLOB.species_list
+		var/result = input(usr, "Por favor elige una nueva especie","Especies") as null|anything in GLOB.species_list
 		if(result)
 			var/newtype = GLOB.species_list[result]
 			admin_ticket_log("[key_name_admin(usr)] has modified the bodyparts of [src] to [result]")
@@ -713,7 +713,7 @@
 		if(is_lord_job(mind.assigned_role))
 			return
 
-		var/appointment_type = tgui_alert(usr, "Are you sure you want to coronate [src.real_name] as the new Monarch?", "Confirmation", DEFAULT_INPUT_CHOICES)
+		var/appointment_type = tgui_alert(usr, "¿Estás seguro de que quieres coronar a [src.real_name] como el nuevo Monarca?", "Confirmación", DEFAULT_INPUT_CHOICES)
 		if(appointment_type == CHOICE_NO)
 			return
 
@@ -729,11 +729,11 @@
 					HL.mind.set_assigned_role(SSjob.GetJobType(/datum/job/villager))
 			//would be better to change their title directly, but that's not possible since the title comes from the job datum
 			if(HL.job == JOB_MONARCH)
-				HL.job = "Ex-Monarch"
+				HL.job = "Ex-Monarca"
 				HL.honorary = null
 				lord_job?.remove_spells(HL)
 			if(HL.job == JOB_CONSORT)
-				HL.job = "Ex-Consort"
+				HL.job = "Ex consorte"
 				HL.honorary = null
 				consort_job?.remove_spells(HL)
 
@@ -746,7 +746,7 @@
 		SSticker.rulermob = coronated
 		GLOB.badomens -= OMEN_NOLORD
 		priority_announce("The Ten have named [coronated.real_name] the inheritor of [SSmapping.config.map_name]!", \
-		title = "Long Live [lord_job.get_informed_title()] [coronated.real_name]!", sound = 'sound/misc/bell.ogg')
+		title = "¡Larga vida a [lord_job.get_informed_title()] [coronated.real_name]!", sound = 'sound/misc/bell.ogg')
 	if(href_list[VV_HK_CHANGE_TITLE])
 		if(!mind?.assigned_role)
 			return

@@ -1,258 +1,258 @@
 /datum/loadout_item/collar
 	name = "Collar"
 	item_path = /obj/item/clothing/neck/leathercollar
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 25
 
 /datum/loadout_item/woolencollar
 	name = "Woolen Collar"
 	item_path = /obj/item/clothing/neck/woolen
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 25
 
 /datum/loadout_item/bell_collar
 	name = "Bell Collar"
 	item_path = /obj/item/clothing/neck/bellcollar
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/pearlcross
 	name = "Pearl Cross"
 	item_path = /obj/item/clothing/neck/psycross/pearl
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/bpearl
 	name = "Blue Pearl Cross"
 	item_path = /obj/item/clothing/neck/psycross/bpearl
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/elf_ear_necklace
-	name = "Elf Ear Necklace"
+	name = "Collar de oreja de elfo"
 	item_path = /obj/item/clothing/neck/elfears
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/men_ear_necklace
 	name = "Men Ear Necklace"
 	item_path = /obj/item/clothing/neck/menears
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/matthios_cross
-	name = "Amulet of Matthios"
+	name = "Amuleto de Matthios"
 	item_path = /obj/item/clothing/neck/psycross/matthios
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/matthios_cross_wood
-	name = "Wooden Amulet of Matthios"
+	name = "Amuleto de madera de Matthios"
 	item_path = /obj/item/clothing/neck/psycross/matthios/wood
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/graggar_cross
-	name = "Amulet of Graggar"
+	name = "Amuleto de Graggar"
 	item_path = /obj/item/clothing/neck/psycross/graggar
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/graggar_cross_wood
-	name = "Wooden Amulet of Graggar"
+	name = "Amuleto de madera de Graggar"
 	item_path = /obj/item/clothing/neck/psycross/graggar/wood
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/baotha_cross
-	name = "Amulet of Baotha"
+	name = "Amuleto de Baotha"
 	item_path = /obj/item/clothing/neck/psycross/baotha
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/baotha_cross_wood
-	name = "Wooden Amulet of Baotha"
+	name = "Amuleto de madera de Baotha"
 	item_path = /obj/item/clothing/neck/psycross/baotha/wood
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/zizo_cross
 	name = "Amulet of Zizo"
 	item_path = /obj/item/clothing/neck/psycross/zizo
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/zizo_cross_wood
-	name = "Wooden Amulet of Zizo"
+	name = "Amuleto de madera de Zizo"
 	item_path = /obj/item/clothing/neck/psycross/zizo/wood
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/psydon_cross
-	name = "Silver Psycross"
+	name = "Plata Psycross"
 	item_path = /obj/item/clothing/neck/psycross/silver
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/psydon_cross_wood
 	name = "Wooden Psycross"
 	item_path = /obj/item/clothing/neck/psycross
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/necra_cross
-	name = "Amulet of Necra"
+	name = "Amuleto de Necra"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/necra
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/necra_cross_wood
-	name = "Wooden Amulet of Necra"
+	name = "Amuleto de madera de Necra"
 	item_path = /obj/item/clothing/neck/psycross/divine/necra
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/abyssor_cross
-	name = "Amulet of Abyssor"
+	name = "Amuleto de Abyssor"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/abyssor
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/abyssor_cross_wood
-	name = "Wooden Amulet of Abyssor"
+	name = "Amuleto de madera de Abyssor"
 	item_path = /obj/item/clothing/neck/psycross/divine/abyssor
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/dendor_cross
-	name = "Amulet of Dendor"
+	name = "Amuleto de Dendor"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/dendor
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/dendor_cross_wood
-	name = "Wooden Amulet of Dendor"
+	name = "Amuleto de madera de Dendor"
 	item_path = /obj/item/clothing/neck/psycross/divine/dendor
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/ravox_cross
-	name = "Amulet of Ravox"
+	name = "Amuleto de Ravox"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/ravox
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/ravox_cross_wood
-	name = "Wooden Amulet of Ravox"
+	name = "Amuleto de madera de Ravox"
 	item_path = /obj/item/clothing/neck/psycross/divine/ravox
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/eora_cross
-	name = "Amulet of Eora"
+	name = "Amuleto de Eora"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/eora
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/eora_cross_wood
-	name = "Wooden Amulet of Eora"
+	name = "Amuleto de madera de Eora"
 	item_path = /obj/item/clothing/neck/psycross/divine/eora
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/xylix_cross
-	name = "Amulet of Xylix"
+	name = "Amuleto de Xylix"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/xylix
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/xylix_cross_wood
-	name = "Golden Amulet of Xylix" //Pranked! it is wood
+	name = "Amuleto Dorado de Xylix" //Pranked! it is wood
 	item_path = /obj/item/clothing/neck/psycross/divine/xylix
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/noc_cross
-	name = "Amulet of Noc"
+	name = "Amuleto de Noc"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/noc
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/noc_cross_wood
-	name = "Wooden Amulet of Noc"
+	name = "Amuleto de madera de Noc"
 	item_path = /obj/item/clothing/neck/psycross/divine/noc
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/astrata_cross
-	name = "Amulet of Astrata"
+	name = "Amuleto de Astrata"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/astrata
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/astrata_cross_wood
-	name = "Wooden Amulet of Astrata"
+	name = "Amuleto de madera de Astrata"
 	item_path = /obj/item/clothing/neck/psycross/divine/astrata
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/pestra_cross
-	name = "Amulet of Pestra"
+	name = "Amuleto de Pestra"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/pestra
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/pestra_cross_wood
-	name = "Wooden Amulet of Pestra"
+	name = "Amuleto de madera de Pestra"
 	item_path = /obj/item/clothing/neck/psycross/divine/pestra
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5
 
 /datum/loadout_item/malum_cross
-	name = "Amulet of Malum"
+	name = "Amuleto de Malum"
 	item_path = /obj/item/clothing/neck/psycross/silver/divine/malum
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 100
 
 /datum/loadout_item/malum_cross_wood
-	name = "Wooden Amulet of Malum"
+	name = "Amuleto de madera de Malum"
 	item_path = /obj/item/clothing/neck/psycross/divine/malum
-	ui_category = "Neck"
+	ui_category = "Cuello"
 
 	triumph_cost_permanent = 5

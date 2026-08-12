@@ -1,6 +1,6 @@
 /datum/reagent/medicine
 	name = "Medicine"
-	taste_description = "bitterness"
+	taste_description = "amargura"
 	random_reagent_color = TRUE
 	overdose_threshold = 0
 
@@ -9,7 +9,7 @@
 	. = ..()
 
 /datum/reagent/medicine/atropine
-	name = "Atropine"
+	name = "Atropina"
 	description = "If a patient is in critical condition, rapidly heals all damage types as well as regulating oxygen in the body. Excellent for stabilizing wounded patients, and said to neutralize blood-activated internal explosives found amongst clandestine black op agents."
 	reagent_state = LIQUID
 	color = "#1D3535" //slightly more blue, like epinephrine
@@ -64,7 +64,7 @@
 	description = "A foul-smelling dark brew used by those who venture near volcanic vents. It coats the lungs and airways in a protective lattice, specifically reversing fire and chemical burn damage."
 	reagent_state = LIQUID
 	color = "#3D1C02"
-	taste_description = "volcanic sulfur and char"
+	taste_description = "azufre volcánico y carbón"
 	scent_description = "sulphurous fumes"
 	metabolization_rate = REAGENTS_METABOLISM
 
@@ -82,7 +82,7 @@
 	description = "Extracted from thornmorrow briar, a plant that repairs itself. Extremely slow to act, but uniquely persistent it remains in the bloodstream long after most medicines have faded, offering gradual healing over a prolonged period."
 	reagent_state = LIQUID
 	color = "#228B22"
-	taste_description = "thorny bitterness"
+	taste_description = "amargura espinosa"
 	scent_description = "briars and undergrowth"
 	metabolization_rate = REAGENTS_METABOLISM * 0.2  // Very slow metabolization
 
@@ -129,7 +129,7 @@
 	reagent_state = LIQUID
 	color = "#ADD8E6"
 	taste_description = "biting cold and numbness"
-	scent_description = "winter air"
+	scent_description = "aire de invierno"
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/coldvein_compress/on_mob_metabolize(mob/living/L)
@@ -155,7 +155,7 @@
 	description = "A viscous golden fluid drawn from the rendered fat of blessed beasts. It seals wounds from the inside, knitting torn flesh together at an unnatural pace but offers nothing against fire or disease."
 	reagent_state = LIQUID
 	color = "#D4AF37"
-	taste_description = "animal fat and sweetness"
+	taste_description = "grasa animal y dulzura"
 	scent_description = "rendered tallow"
 	metabolization_rate = REAGENTS_METABOLISM * 0.75
 
@@ -175,7 +175,7 @@
 	description = "A charcoal-grey paste made from rendered ash and cooled flame extracts. Specializes in treating burns with remarkable efficacy, though it does nothing for blunt wounds or bleeding."
 	reagent_state = LIQUID
 	color = "#555555"
-	taste_description = "ash and oil"
+	taste_description = "ceniza y aceite"
 	scent_description = "cooling embers"
 	metabolization_rate = REAGENTS_METABOLISM
 
@@ -202,8 +202,8 @@
 	description = "Brewed from roots that grow only near ley-line confluences. It floods the blood with restorative energy, rapidly closing oxygen deprivation and restoring breath to the suffocating it cannot address wounds or toxins."
 	reagent_state = LIQUID
 	color = "#4CAF50"
-	taste_description = "bitter roots"
-	scent_description = "deep earth and mineral water"
+	taste_description = "raíces amargas"
+	scent_description = "tierra profunda y agua mineral"
 	metabolization_rate = REAGENTS_METABOLISM
 	boiling_point = T0C + 130
 
@@ -272,8 +272,8 @@
 	description = "An oily amber extract from the woundwrack tree's bark. Applied to open wounds, it dramatically accelerates natural clotting and closes lacerations, but does nothing when absorbed internally."
 	reagent_state = LIQUID
 	color = "#C8860A"
-	taste_description = "tree bark and pine"
-	scent_description = "resinous amber"
+	taste_description = "corteza de árbol y pino"
+	scent_description = "ámbar resinoso"
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/woundwrack_oil/on_bodypart_absorb(mob/living/carbon/affected_mob, obj/item/bodypart/affected_bodypart, amount_to_transfer)
@@ -298,7 +298,7 @@
 	reagent_state = LIQUID
 	color = "#F5F5F0"
 	taste_description = "mineral and chalk"
-	scent_description = "clean sterility"
+	scent_description = "esterilidad limpia"
 	metabolization_rate = REAGENTS_METABOLISM * 0.75
 	boiling_point = T0C + 150
 
@@ -320,12 +320,12 @@
 	. = ..()
 
 /datum/reagent/medicine/spiritwood_elixir
-	name = "Spiritwood Elixir"
+	name = "Elixir de madera espiritual"
 	description = "Brewed from the heartwood of a spiritwood tree, fallen naturally. The elixir shares a brief connection with the life-force of the tree, dramatically accelerating wound closure while the link holds."
 	reagent_state = LIQUID
 	color = "#8FBC8F"
-	taste_description = "bark and sap"
-	scent_description = "ancient forest"
+	taste_description = "corteza y savia"
+	scent_description = "bosque antiguo"
 	metabolization_rate = REAGENTS_METABOLISM * 2
 
 /datum/reagent/medicine/spiritwood_elixir/on_mob_metabolize(mob/living/L)
@@ -355,7 +355,7 @@
 	reagent_state = LIQUID
 	color = "#FFFACD"
 	taste_description = "rich fat and meat"
-	scent_description = "bone broth"
+	scent_description = "caldo de huesos"
 	metabolization_rate = REAGENTS_METABOLISM * 0.5
 
 /datum/reagent/medicine/marrowbrew/on_mob_metabolize(mob/living/L)
@@ -381,7 +381,7 @@
 	description = "A sharp-smelling blue tonic derived from aquifer mosses and dissolved crystal powder. It rapidly reverses brain damage and clears narcotic haze, but does nothing for the body."
 	reagent_state = LIQUID
 	color = "#00CED1"
-	taste_description = "cold mint and ozone"
+	taste_description = "menta fría y ozono"
 	scent_description = "crisp water and crystal"
 	metabolization_rate = REAGENTS_METABOLISM * 1.5
 
@@ -406,7 +406,7 @@
 	reagent_state = LIQUID
 	color = "#C0C0C0"
 	taste_description = "bitter chalk and herbs"
-	scent_description = "dust and old herbs"
+	scent_description = "polvo y hierbas viejas"
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/witchknit_paste/on_bodypart_absorb(mob/living/carbon/affected_mob, obj/item/bodypart/affected_bodypart, amount_to_transfer)
@@ -451,11 +451,11 @@
 	. = ..()
 
 /datum/reagent/medicine/stonevein_broth
-	name = "Stonevein Broth"
+	name = "Caldo de vena de piedra"
 	description = "A dense mineral broth reduced from ore-laced spring water. Strengthens the body's resistance to physical trauma by thickening the skin and dense-packing superficial tissue."
 	reagent_state = LIQUID
 	color = "#A0A0A0"
-	taste_description = "mineral brine"
+	taste_description = "salmuera mineral"
 	scent_description = "wet stone"
 	metabolization_rate = REAGENTS_METABOLISM * 0.75
 
@@ -471,8 +471,8 @@
 	description = "A warm golden brew from sun-dried petals of the highbloom flower. It soothes toxins and infections with gentle persistence, useful for recovery, poor for emergencies."
 	reagent_state = LIQUID
 	color = "#FFD700"
-	taste_description = "floral sweetness"
-	scent_description = "dried summer flowers"
+	taste_description = "dulzura floral"
+	scent_description = "flores secas de verano"
 	metabolization_rate = REAGENTS_METABOLISM * 0.5
 
 /datum/reagent/medicine/sunpetal_decoction/on_mob_metabolize(mob/living/L)
@@ -494,8 +494,8 @@
 	description = "Derived from a rare deep-root fungus that colonizes nervous tissue. Potently numbs pain and prevents trauma shock, at the cost of making the imbiber slightly sluggish."
 	reagent_state = LIQUID
 	color = "#9370DB"
-	taste_description = "numbing bitterness"
-	scent_description = "damp fungus"
+	taste_description = "amargura entumecedora"
+	scent_description = "hongo húmedo"
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/nervebind_extract/on_mob_metabolize(mob/living/L)
@@ -518,8 +518,8 @@
 	description = "A deep crimson wine fermented from bloodelder berries over many months. Steadily restores blood volume at an exceptional rate, but has a mildly intoxicating effect that clouds perception."
 	reagent_state = LIQUID
 	color = "#8B0000"
-	taste_description = "dark berries and iron"
-	scent_description = "fermented fruit and copper"
+	taste_description = "bayas oscuras y hierro"
+	scent_description = "fruta fermentada y cobre"
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/bloodelder_wine/on_mob_metabolize(mob/living/L)
@@ -539,12 +539,12 @@
 	. = ..()
 
 /datum/reagent/medicine/crystalline_lymph
-	name = "Crystalline Lymph"
+	name = "Linfa cristalina"
 	description = "A shimmering fluid distilled from the crystallized runoff of magical formations. It stabilizes the critically wounded, preventing death from progressing while the body catches up a stopgap, not a cure."
 	reagent_state = LIQUID
 	color = "#B0E0E6"
 	taste_description = "still water and static"
-	scent_description = "ionized air"
+	scent_description = "aire ionizado"
 	metabolization_rate = REAGENTS_METABOLISM * 2
 
 /datum/reagent/medicine/crystalline_lymph/on_mob_metabolize(mob/living/L)

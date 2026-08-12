@@ -1,7 +1,7 @@
 /datum/stress_event/vice
 	timer = 5 MINUTES
 	stress_change = 3
-	desc = list(span_boldred("I don't indulge my vice."),span_boldred("I need to sate my vice."))
+	desc = list(span_boldred("I don't indulge my vice."),span_boldred("Necesito saciar mi vicio."))
 
 /datum/stress_event/vice1
 	timer = 5 MINUTES
@@ -16,7 +16,7 @@
 /datum/stress_event/vice3
 	timer = 5 MINUTES
 	stress_change = 6
-	desc = list("<span class='red'>If I don't sate my desire soon, I am going to kill myself..</span>","<span class='red'>I need it. I need it. I need it.</span>")
+	desc = list("<span class='red'>Si no sacio pronto mi deseo, voy a suicidarme...</span>","<span class='red'>I need it. I need it. I need it.</span>")
 
 /datum/stress_event/miasmagas
 	timer = 10 SECONDS
@@ -25,7 +25,7 @@
 
 /datum/stress_event/peckish
 	stress_change = 1
-	desc = "<span class='red'>I'm peckish.</span>"
+	desc = "<span class='red'>Tengo hambre.</span>"
 
 /datum/stress_event/hungry
 	stress_change = 2
@@ -41,7 +41,7 @@
 
 /datum/stress_event/thirst
 	stress_change = 2
-	desc = "<span class='red'>I'm thirsty.</span>"
+	desc = "<span class='red'>Tengo sed.</span>"
 
 /datum/stress_event/parched
 	stress_change = 3
@@ -60,7 +60,7 @@
 /datum/stress_event/viewdeath
 	timer = 1 MINUTES
 	stress_change = 1
-	desc = "<span class='red'>Death...</span>"
+	desc = "<span class='red'>Muerte...</span>"
 
 /datum/stress_event/viewdeath/get_desc(mob/living/user)
 	if(ishuman(user))
@@ -77,7 +77,7 @@
 /datum/stress_event/fviewdismember
 	timer = 1 MINUTES
 	stress_change = 1
-	desc = "<span class='red'>This land is brutal.</span>"
+	desc = "<span class='red'>Esta tierra es brutal.</span>"
 
 /datum/stress_event/viewgib
 	timer = 5 MINUTES
@@ -97,7 +97,7 @@
 /datum/stress_event/painmax
 	timer = 1 MINUTES
 	stress_change = 2
-	desc = "<span class='red'>THE PAIN!</span>"
+	desc = "<span class='red'>EL DOLOR!</span>"
 
 /datum/stress_event/painmax/can_apply(mob/living/user)
 	if(user.has_quirk(/datum/quirk/vice/masochist))
@@ -116,7 +116,7 @@
 
 /datum/stress_event/fullshoe
 	stress_change = 1
-	desc = span_red("There is something in my shoe.")
+	desc = span_red("Hay algo en mi zapato.")
 
 /datum/stress_event/uncookedfood
 	timer = 2 MINUTES
@@ -177,7 +177,7 @@
 /datum/stress_event/leechcult
 	timer = 1 MINUTES
 	stress_change = 3
-	desc = list("<span class='red'>There's a little goblin in my head telling me to do things and I don't like it!</span>","<span class='red'>\"Kill your friends.\"</span>","<span class='red'>\"Make them bleed.\"</span>","<span class='red'>\"Give them no time to squeal.\"</span>","<span class='red'>\"Praise Zizo.\"</span>","<span class='red'>\"Death to the Ten.\"</span>","<span class='red'>\"We will recycle them.\"</span>")
+	desc = list("<span class='red'>There's a little goblin in my head telling me to do things and I don't like it!</span>","<span class='red'>\"Mata a tus amigos.\"</span>","<span class='red'>\"Make them bleed.\"</span>","<span class='red'>\"No les des tiempo para chillar.\"</span>","<span class='red'>\"Praise Zizo.\"</span>","<span class='red'>\"Death to the Ten.\"</span>","<span class='red'>\"We will recycle them.\"</span>")
 
 /datum/stress_event/ugly
 	timer = 30 SECONDS
@@ -187,12 +187,12 @@
 /datum/stress_event/ugly_self
 	timer = 30 SECONDS
 	stress_change = 1
-	desc = span_red("Same old ugly mug...")
+	desc = span_red("La misma vieja y fea taza...")
 
 /datum/stress_event/vampire_seen
 	timer = 2 MINUTES
 	stress_change = 2
-	desc = span_boldred("A VAMPIRE!!")
+	desc = span_boldred("¡¡UN VAMPIRO!!")
 
 /datum/stress_event/vampire_seen/can_apply(mob/living/user)
 	return user.affects_masquerade(FALSE)
@@ -224,7 +224,7 @@
 /datum/stress_event/fishface
 	timer = 1 MINUTES
 	stress_change = 1
-	desc = span_red("That thing is hideous!")
+	desc = span_red("¡Esa cosa es horrible!")
 	var/is_helpless_child = FALSE
 	/// prevents the jumpscare from triggering from repeated examines
 	var/is_refresh = FALSE
@@ -259,7 +259,7 @@
 	if(HAS_TRAIT(src, TRAIT_TOLERANT))
 		return "Poor thing. It's how they look I guess."
 	if(is_helpless_child)
-		return span_phobia("I SAW A MONSTER!")
+		return span_phobia("¡VI UN MONSTRUO!")
 	return ..()
 
 /datum/stress_event/delf
@@ -293,12 +293,12 @@
 /datum/stress_event/para/blood
 	timer = 15 SECONDS
 	stress_change = 3
-	desc = span_red("There is so much blood here... it's like a battlefield!")
+	desc = span_red("Hay tanta sangre aquí... ¡es como un campo de batalla!")
 
 /datum/stress_event/para/str
 	timer = 2 MINUTES
 	stress_change = 2
-	desc = span_red("That beast is stronger... and might easily kill me!")
+	desc = span_red("Esa bestia es más fuerte... ¡y podría matarme fácilmente!")
 
 /datum/stress_event/para/talk
 	timer = 2 MINUTES
@@ -348,33 +348,33 @@
 /datum/stress_event/trainsleep
 	timer = 0
 	stress_change = 1
-	desc = "<span class='red'>My muscles ache.</span>"
+	desc = "<span class='red'>Me duelen los músculos.</span>"
 
 /datum/stress_event/tortured
 	stress_change = 3
 	max_stacks = 5
 	stress_change_per_extra_stack = 1
-	desc = span_red("I'm broken.")
+	desc = span_red("Estoy roto.")
 	timer = 5 MINUTES
 
 /datum/stress_event/torture_small_penalty
 	stress_change = 1
 	max_stacks = 3
 	stress_change_per_extra_stack = 1
-	desc = span_red("I tortured an innocent...")
+	desc = span_red("Torturé a un inocente...")
 	timer = 5 MINUTES
 
 /datum/stress_event/torture_large_penalty
 	stress_change = 3
 	max_stacks = 3
 	stress_change_per_extra_stack = 3
-	desc = span_red("I tortured a fellow believer!")
+	desc = span_red("¡Torturé a un compañero creyente!")
 	timer = 15 MINUTES
 
 /datum/stress_event/painful_reminder
 	stress_change = 4
 	max_stacks = 1
-	desc = span_dead("Melancholy fills my heart.")
+	desc = span_dead("La melancolía llena mi corazón.")
 	timer = 1 MINUTES
 
 /datum/stress_event/maniac
@@ -384,7 +384,7 @@
 
 /datum/stress_event/drankrat
 	stress_change = 1
-	desc = "<span class='red'>I drank from a lesser creature.</span>"
+	desc = "<span class='red'>Bebí de una criatura menor.</span>"
 	timer = 1 MINUTES
 
 /datum/stress_event/oziumoff
@@ -405,7 +405,7 @@
 /datum/stress_event/sadfate
 	timer = 60 MINUTES
 	stress_change = 1
-	desc = "<span class='red'>I feel useless...</span>"
+	desc = "<span class='red'>Me siento inútil...</span>"
 
 /datum/stress_event/saw_wonder
 	stress_change = 4
@@ -426,7 +426,7 @@
 
 /datum/stress_event/confessed
 	stress_change = 3
-	desc = span_red("I've confessed to sin.")
+	desc = span_red("He confesado mi pecado.")
 	timer = 15 MINUTES
 
 /datum/stress_event/confessedgood
@@ -436,13 +436,13 @@
 
 /datum/stress_event/maniac_woke_up
 	stress_change = 10
-	desc = span_boldred("No... I want to go back...")
+	desc = span_boldred("No... quiero volver...")
 	timer = 999 MINUTES
 
 /datum/stress_event/guillotinefail
 	timer = 5 MINUTES
 	stress_change = 3
-	desc = span_red("This execution is horrifying!")
+	desc = span_red("¡Esta ejecución es horrible!")
 
 /datum/stress_event/guillotineexecutorfail
 	timer = 15 MINUTES
@@ -457,7 +457,7 @@
 
 /datum/stress_event/maiddress/noble
 	stress_change = 6
-	desc = span_red("Wearing this is beneath me! I will not tolerate this another second!")
+	desc = span_red("¡Usar esto está por debajo de mí! ¡No toleraré esto ni un segundo más!")
 
 /datum/stress_event/maidband
 	timer = 999 MINUTES
@@ -466,7 +466,7 @@
 
 /datum/stress_event/maidband/noble
 	stress_change = 4
-	desc = span_red("Wearing this is beneath me! I will not tolerate this another second!")
+	desc = span_red("¡Usar esto está por debajo de mí! ¡No toleraré esto ni un segundo más!")
 
 /datum/stress_event/maidapron
 	timer = 999 MINUTES
@@ -475,18 +475,18 @@
 
 /datum/stress_event/maidapron/noble
 	stress_change = 5
-	desc = span_red("Wearing this is beneath me! I will not tolerate this another second!")
+	desc = span_red("¡Usar esto está por debajo de mí! ¡No toleraré esto ni un segundo más!")
 
 /// End Maid stress
 
 /datum/stress_event/noble_impoverished_food
 	stress_change = 3
-	desc = span_boldred("This is disgusting. How can anyone eat this?")
+	desc = span_boldred("Esto es repugnante. ¿Cómo puede alguien comer esto?")
 	timer = 10 MINUTES
 
 /datum/stress_event/noble_desperate
 	stress_change = 6
-	desc = span_boldred("What level of desperation have I fallen to?")
+	desc = span_boldred("¿A qué nivel de desesperación he caído?")
 	timer = 60 MINUTES
 
 /datum/stress_event/noble_bland_food
@@ -501,7 +501,7 @@
 
 /datum/stress_event/noble_bad_manners
 	stress_change = 1
-	desc = span_red("I should've used a spoon...")
+	desc = span_red("Debería haber usado una cuchara...")
 	timer = 5 MINUTES
 
 /datum/stress_event/noble_ate_without_table
@@ -542,7 +542,7 @@
 /datum/stress_event/mother_calling
 	timer = 1 MINUTES
 	stress_change = 2
-	desc = span_red("The Matron is calling for me by my full name..")
+	desc = span_red("La matrona me llama por mi nombre completo.")
 
 /datum/stress_event/friend_calling
 	timer = 30 SECONDS
@@ -560,14 +560,14 @@
 	desc = span_red("One of my brats are calling for help! Another mess I have to clean up no doubt...")
 
 /datum/stress_event/night_owl_dawn
-	desc = span_warning("I don't like the dae..")
+	desc = span_warning("no me gusta el dae..")
 	stress_change = 1
 	timer = 10 MINUTES
 
 /datum/stress_event/hithead
 	timer = 2 MINUTES
 	stress_change = 2
-	desc = span_red("Oww, my head...")
+	desc = span_red("Ay, mi cabeza...")
 
 /datum/stress_event/divine_punishment
 	timer = 5 MINUTES
@@ -577,11 +577,11 @@
 /datum/stress_event/taken_hostage
 	timer = INFINITY
 	stress_change = 3
-	desc = span_red("I've been taken hostage!")
+	desc = span_red("¡Me han tomado como rehén!")
 
 /datum/stress_event/perfume_hater
 	stress_change = 1
-	desc = span_red("The scent of flowers makes me nauseous!")
+	desc = span_red("¡El olor de las flores me da náuseas!")
 	timer = 10 MINUTES
 
 /datum/stress_event/odor
@@ -593,7 +593,7 @@
 
 /datum/stress_event/dirty
 	timer = INFINITY
-	desc = span_red("I smell horrid.")
+	desc = span_red("Huelo horrible.")
 	stress_change = 1
 
 /datum/stress_event/disgusting
@@ -606,14 +606,14 @@
 	desc = span_red("My wonderful musk has been washed away...")
 	stress_change = 1
 /datum/stress_event/startled
-	desc = span_warning("Hearing that word made me think about something scary.")
+	desc = span_warning("Escuchar esa palabra me hizo pensar en algo aterrador.")
 	stress_change = 1
 	max_stacks = 2
 	stress_change_per_extra_stack = 1
 	timer = 1 MINUTES
 
 /datum/stress_event/phobia
-	desc = span_red("I saw something very frightening.")
+	desc = span_red("Vi algo muy aterrador.")
 	stress_change = 4
 	max_stacks = 2
 	stress_change_per_extra_stack = 2
@@ -769,7 +769,7 @@
 	timer = 3 MINUTES
 
 /datum/stress_event/ear_crushed
-	desc = span_red("My phantom ear was destroyed!")
+	desc = span_red("¡Mi oído fantasma fue destruido!")
 	stress_change = 1
 	timer = 2 MINUTES
 
@@ -779,7 +779,7 @@
 	timer = 1000 MINUTES
 
 /datum/stress_event/consumed_tainted_lux
-	desc = span_warning("Why did I drink that?")
+	desc = span_warning("¿Por qué bebí eso?")
 	stress_change = 15
 	timer = 10 MINUTES
 
@@ -825,7 +825,7 @@
 
 /datum/stress_event/bad_grave
 	stress_change = 1
-	desc = span_red("Can the dead find true rest within such a poorly made grave..?")
+	desc = span_red("¿Pueden los muertos encontrar verdadero descanso dentro de una tumba tan mal hecha...?")
 	timer = 5 MINUTES
 
 /datum/stress_event/malaguero
@@ -834,7 +834,7 @@
 	max_stacks = 3
 	stress_change_per_extra_stack = 1
 	quality_modifier = -2
-	desc = span_red("The Hellspawn is making things worse...")
+	desc = span_red("El Hellspawn está empeorando las cosas...")
 	hidden = TRUE // until 2nd stack
 
 /datum/stress_event/malaguero/on_apply(mob/living/user)

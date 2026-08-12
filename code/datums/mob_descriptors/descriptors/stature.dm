@@ -3,7 +3,7 @@
 	slot = MOB_DESCRIPTOR_SLOT_STATURE
 
 /datum/mob_descriptor/stature/man
-	name = "Man/Woman"
+	name = "Hombre/Mujer"
 
 /datum/mob_descriptor/stature/man/get_description(mob/living/described)
 	if(described.gender == MALE)
@@ -12,7 +12,7 @@
 		return "woman"
 
 /datum/mob_descriptor/stature/gentleman
-	name = "Gentleman/Gentlewoman"
+	name = "Caballero/Caballera"
 
 /datum/mob_descriptor/stature/gentleman/get_description(mob/living/described)
 	if(described.gender == MALE)
@@ -21,7 +21,7 @@
 		return "gentlewoman"
 
 /datum/mob_descriptor/stature/thug
-	name = "Thug"
+	name = "Matón"
 
 /datum/mob_descriptor/stature/snob
 	name = "Snob"
@@ -30,7 +30,7 @@
 	name = "Slob"
 
 /datum/mob_descriptor/stature/brute
-	name = "Brute"
+	name = "Bruto"
 
 /datum/mob_descriptor/stature/highbrow
 	name = "Highbrow"
@@ -48,7 +48,7 @@
 	name = "Lowlife"
 
 /datum/mob_descriptor/stature/dignitary
-	name = "Dignitary"
+	name = "Dignatario"
 
 /datum/mob_descriptor/stature/trickster
 	name = "Trickster"
@@ -75,7 +75,7 @@
 	name = "Simpleton"
 
 /datum/mob_descriptor/stature/cavalier
-	name = "Cavalier"
+	name = "Caballero"
 
 /datum/mob_descriptor/stature/swashbuckler
 	name = "Swashbuckler"

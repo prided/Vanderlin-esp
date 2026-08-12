@@ -1,5 +1,5 @@
 /obj/structure/beehive/wild
-	name = "wild beehive"
+	name = "colmena salvaje"
 	desc = "A natural bee colony formed in the wild."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "wild_hive"
@@ -54,7 +54,7 @@
 	addtimer(CALLBACK(src, PROC_REF(send_out_bees)), rand(100, 300))
 
 /obj/structure/beehive/wild/attack_hand(mob/user)
-	user.visible_message(span_warning("[user] disturbs [src]!"), span_warning("You disturb the wild beehive!"))
+	user.visible_message(span_warning("¡[user] molesta a [src]!"), span_warning("You disturb the wild beehive!"))
 
 	var/protected = is_wearing_bee_protection(user)
 

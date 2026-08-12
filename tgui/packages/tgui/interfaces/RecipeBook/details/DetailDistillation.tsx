@@ -8,10 +8,10 @@ export const DetailDistillation = ({
 }: NavProps) => (
   <>
     <WarnFlag color="#e57c34">
-      Requires alembic temperature ≥ {r.required_temp ? r.required_temp - 273.15 : '?'}C
+      Requiere temperatura de alambique ≥ {r.required_temp ? r.required_temp - 273.15 : '?'}C
     </WarnFlag>
 
-    <SectionHead>Primary Input (vaporized)</SectionHead>
+    <SectionHead>Entrada primaria (vaporizada)</SectionHead>
     <Box className="RecipeBook__item-row">
       <RecipeLink
         name={r.distilled_reagent_name}
@@ -26,11 +26,11 @@ export const DetailDistillation = ({
     {!!r.required_reagents?.length && (
       <>
         <SectionHead>
-          Also requires{r.consume_reagents ? ' (consumed)' : ' (not consumed)'}
+          También requiere{r.consume_reagents ? ' (consumed)' : ' (not consumed)'}
         </SectionHead>
         {r.required_reagents.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} ligulae of{' '}
+            {rg.amount} lígulas de{' '}
             <RecipeLink
               name={rg.name}
               allRecipes={allRecipes}
@@ -46,10 +46,10 @@ export const DetailDistillation = ({
 
     {!!r.results?.length && (
       <>
-        <SectionHead>Output (per unit distilled)</SectionHead>
+        <SectionHead>Producción (por unidad destilada)</SectionHead>
         {r.results.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} ligulae of{' '}
+            {rg.amount} lígulas de{' '}
             <RecipeLink
               name={rg.name}
               allRecipes={allRecipes}

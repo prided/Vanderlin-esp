@@ -66,7 +66,7 @@ const CommunalContributor = ({
         <Stack align="center" mb={0.25}>
           <Stack.Item grow>
             <Box fontSize="0.8em" color="label">
-              Community pool: {entry.communal_current.toLocaleString()}
+              Fondo comunitario: {entry.communal_current.toLocaleString()}
               {entry.communal_max > 0 &&
                 ` / ${entry.communal_max.toLocaleString()}`}
             </Box>
@@ -100,17 +100,17 @@ const CommunalContributor = ({
       {entry.communal_activated ? (
         <Box color="good" fontSize="0.85em">
           <Icon name="check-circle" mr={1} />
-          This communal goal is already active!
+          ¡Esta meta comunitaria ya está activa!
         </Box>
       ) : remaining === 0 && entry.communal_max > 0 ? (
         <Box color="average" fontSize="0.85em">
-          Pool is full.
+          El fondo está completo.
         </Box>
       ) : (
         <Stack align="center">
           <Stack.Item>
             <Box fontSize="0.8em" color="label" mb={0.25}>
-              Contribute triumphs:
+              Aporta triunfos:
             </Box>
             <NumberInput
               value={amount}
@@ -134,7 +134,7 @@ const CommunalContributor = ({
               }
               onClick={() => onContribute(entry.ref, amount)}
             >
-              Contribute ({amount})
+              Contribuir ({amount})
             </Button>
           </Stack.Item>
           {maxPossible > 0 && (
@@ -145,7 +145,7 @@ const CommunalContributor = ({
                 tooltip={`Contribute all you can (${maxPossible})`}
                 onClick={() => setAmount(maxPossible)}
               >
-                Max
+                máx.
               </Button>
             </Stack.Item>
           )}
@@ -220,7 +220,7 @@ const TriumphBuyRow = ({
           {isCommunal && (
             <Box fontSize="0.75em" color="teal" mt={0.25}>
               <Icon name="users" mr={0.5} />
-              Community goal
+              objetivo comunitario
               {entry.communal_max > 0 &&
                 `  ${entry.communal_current.toLocaleString()} / ${entry.communal_max.toLocaleString()}`}
             </Box>
@@ -228,7 +228,7 @@ const TriumphBuyRow = ({
           {isSeasonal && (
             <Box fontSize="0.75em" color="blue" mt={0.25}>
               <Icon name="snowflake" mr={0.5} />
-              Seasonal: persists across rounds
+              Estacional: persiste a lo largo de las rondas.
             </Box>
           )}
         </Stack.Item>
@@ -341,7 +341,7 @@ export const TriumphBuyCategoryView = ({
   if (!filtered.length) {
     return (
       <NoticeBox>
-        No items found{search ? ` for "${search}"` : ''}.
+        No se encontraron objetos{search ? ` for "${search}"` : ''}.
       </NoticeBox>
     );
   }
@@ -371,8 +371,7 @@ export const ActiveTriumphBuysView = ({
   if (!items.length) {
     return (
       <NoticeBox>
-        You have no active triumph purchases this round. Browse the shop tabs to
-        spend triumphs!
+        No tienes compras de triunfo activas en esta ronda. ¡Explora las pestañas de la tienda para gastar triunfos!
       </NoticeBox>
     );
   }
@@ -401,12 +400,12 @@ export const ActiveTriumphBuysView = ({
               {isSeasonal && (
                 <Box fontSize="0.75em" color="blue" mt={0.25}>
                   <Icon name="snowflake" mr={0.5} />
-                  Seasonal: no refund available
+                  Estacional: no hay reembolso disponible
                 </Box>
               )}
               {entry.activated && !isSeasonal && (
                 <Box fontSize="0.75em" color="average" mt={0.25}>
-                  Already activated, cannot refund
+                  Ya activado, no se puede reembolsar
                 </Box>
               )}
             </Stack.Item>
@@ -422,7 +421,7 @@ export const ActiveTriumphBuysView = ({
                   }
                   onClick={() => onRefund(entry.ref)}
                 >
-                  Refund
+                  Reembolso
                 </Button>
               ) : (
                 <Box color="label" fontSize="0.8em">

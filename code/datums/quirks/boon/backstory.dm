@@ -113,7 +113,7 @@
 	/// The name of the backstory shown to players
 	var/name = "Backstory"
 	/// Description of the backstory
-	var/desc = "A background."
+	var/desc = "Un trasfondo."
 	/// The skill this backstory grants
 	var/datum/attribute/skill/granted_skill
 	/// The stat this backstory penalizes
@@ -157,13 +157,13 @@
 
 /datum/backstory/combat
 	abstract_type = /datum/backstory/combat
-	desc = "A combat-focused background."
+	desc = "Un trasfondo centrado en el combate."
 	amount = 20
 	clamp = 20
 	xp_multiplier = 0.1
 
 /datum/backstory/combat/soldier
-	name = "Former Soldier"
+	name = "ex soldado"
 	desc = "You served in the military, learning discipline and swordsmanship."
 	granted_skill = /datum/attribute/skill/combat/swords
 	stat_penalty = STAT_INTELLIGENCE
@@ -175,7 +175,7 @@
 	stat_penalty = STAT_SPEED
 
 /datum/backstory/combat/mercenary
-	name = "Ex-Mercenary"
+	name = "Ex-mercenario"
 	desc = "You fought for coin, wielding axe and mace with brutal efficiency."
 	granted_skill = /datum/attribute/skill/combat/axesmaces
 	stat_penalty = STAT_PERCEPTION
@@ -193,8 +193,8 @@
 	stat_penalty = STAT_STRENGTH
 
 /datum/backstory/combat/assassin
-	name = "Reformed Assassin"
-	desc = "You killed for hire, a blade in the dark."
+	name = "Asesino reformado"
+	desc = "Mataste a sueldo, una espada en la oscuridad."
 	granted_skill = /datum/attribute/skill/combat/knives
 	stat_penalty = STAT_ENDURANCE
 
@@ -211,26 +211,26 @@
 	stat_penalty = STAT_INTELLIGENCE
 
 /datum/backstory/combat/whipmaster
-	name = "Former Slaver"
+	name = "Antiguo esclavista"
 	desc = "You wielded whip and flail in a dark past you've left behind."
 	granted_skill = /datum/attribute/skill/combat/whipsflails
 	stat_penalty = STAT_CONSTITUTION
 
 /datum/backstory/combat/shieldbearer
 	name = "Shield Bearer"
-	desc = "You defended others with shield and determination."
+	desc = "Defendiste a los demás con escudo y determinación."
 	granted_skill = /datum/attribute/skill/combat/shields
 	stat_penalty = STAT_SPEED
 
 /datum/backstory/combat/gunner
 	name = "Former Gunner"
-	desc = "You served with firearms, a dangerous and loud profession."
+	desc = "Serviste con armas de fuego, una profesión peligrosa y ruidosa."
 	granted_skill = /datum/attribute/skill/combat/firearms
 	stat_penalty = STAT_PERCEPTION
 
 /datum/backstory/combat/athlete // under "combat" so they get clamped as well
-	name = "Former Athlete"
-	desc = "You competed in games, testing strength and endurance."
+	name = "Ex atleta"
+	desc = "Competiste en juegos, probando fuerza y resistencia."
 	granted_skill = /datum/attribute/skill/misc/athletics
 	stat_penalty = STAT_INTELLIGENCE
 
@@ -245,7 +245,7 @@
 	desc = "A crafting-focused background."
 
 /datum/backstory/craft/blacksmith
-	name = "Apprentice Blacksmith"
+	name = "Aprendiz de herrero"
 	desc = "You worked the forge, shaping metal with hammer and anvil."
 	granted_skill = /datum/attribute/skill/craft/blacksmithing
 	stat_penalty = STAT_INTELLIGENCE
@@ -257,14 +257,14 @@
 	stat_penalty = STAT_SPEED
 
 /datum/backstory/craft/armorer
-	name = "Former Armorer"
+	name = "Antiguo armero"
 	desc = "You made armor, protecting warriors with your craft."
 	granted_skill = /datum/attribute/skill/craft/armorsmithing
 	stat_penalty = STAT_PERCEPTION
 
 /datum/backstory/craft/carpenter
 	name = "Retired Carpenter"
-	desc = "You worked with wood, building homes and furniture."
+	desc = "Trabajaste con madera, construyendo casas y muebles."
 	granted_skill = /datum/attribute/skill/craft/carpentry
 	stat_penalty = STAT_INTELLIGENCE
 
@@ -282,25 +282,25 @@
 
 /datum/backstory/craft/alchemist
 	name = "Apprentice Alchemist"
-	desc = "You mixed potions and studied strange reagents."
+	desc = "Mezclaste pociones y estudiaste reactivos extraños."
 	granted_skill = /datum/attribute/skill/craft/alchemy
 	stat_penalty = STAT_ENDURANCE
 
 /datum/backstory/craft/engineer
-	name = "Failed Engineer"
+	name = "Ingeniero fallido"
 	desc = "You built machines and contraptions, though not all worked."
 	granted_skill = /datum/attribute/skill/craft/engineering
 	stat_penalty = STAT_CONSTITUTION
 
 /datum/backstory/craft/tailor
-	name = "Former Tailor"
+	name = "Ex sastre"
 	desc = "You sewed garments for nobles and commoners alike."
 	granted_skill = /datum/attribute/skill/misc/sewing
 	stat_penalty = STAT_STRENGTH
 
 /datum/backstory/craft/tanner
 	name = "Ex-Tanner"
-	desc = "You worked with leather, turning hides into useful goods."
+	desc = "Trabajaste con cuero, convirtiendo las pieles en bienes útiles."
 	granted_skill = /datum/attribute/skill/craft/tanning
 	stat_penalty = STAT_INTELLIGENCE
 
@@ -333,7 +333,7 @@
 	desc = "A labor-focused background."
 
 /datum/backstory/labor/miner
-	name = "Ex-Miner"
+	name = "Ex minero"
 	desc = "You worked in the mines, digging for ore and gems."
 	granted_skill = /datum/attribute/skill/labor/mining
 	stat_penalty = STAT_PERCEPTION
@@ -351,20 +351,20 @@
 	stat_penalty = STAT_STRENGTH
 
 /datum/backstory/labor/butcher
-	name = "Former Butcher"
+	name = "ex carnicero"
 	desc = "You prepared meat, skilled with knife and cleaver."
 	granted_skill = /datum/attribute/skill/labor/butchering
 	stat_penalty = STAT_INTELLIGENCE
 
 /datum/backstory/labor/lumberjack
-	name = "Ex-Lumberjack"
+	name = "Ex-leñador"
 	desc = "You felled trees and split logs with ease."
 	granted_skill = /datum/attribute/skill/labor/lumberjacking
 	stat_penalty = STAT_PERCEPTION
 
 /datum/backstory/labor/tamer
-	name = "Beast Tamer"
-	desc = "You trained animals, from horses to more exotic beasts."
+	name = "Domador de bestias"
+	desc = "Entrenaste animales, desde caballos hasta bestias más exóticas."
 	granted_skill = /datum/attribute/skill/labor/taming
 	stat_penalty = STAT_STRENGTH
 
@@ -373,13 +373,13 @@
 	desc = "A miscellaneous background."
 
 /datum/backstory/misc/thief
-	name = "Former Thief"
+	name = "Ex ladrón"
 	desc = "You picked pockets and stole to survive."
 	granted_skill = /datum/attribute/skill/misc/stealing
 	stat_penalty = STAT_STRENGTH
 
 /datum/backstory/misc/spy
-	name = "Ex-Spy"
+	name = "Ex-espía"
 	desc = "You moved in shadows, gathering secrets."
 	granted_skill = /datum/attribute/skill/misc/sneaking
 	stat_penalty = STAT_ENDURANCE
@@ -391,48 +391,48 @@
 	stat_penalty = STAT_CONSTITUTION
 
 /datum/backstory/misc/bard
-	name = "Tavern Bard"
+	name = "Bardo de taberna"
 	desc = "You played for crowds, earning coin and applause."
 	granted_skill = /datum/attribute/skill/misc/music
 	stat_penalty = STAT_STRENGTH
 
 /datum/backstory/misc/medic
-	name = "Field Medic"
+	name = "Médico de campo"
 	desc = "You treated the wounded on battlefields and in clinics."
 	granted_skill = /datum/attribute/skill/misc/medicine
 	stat_penalty = STAT_SPEED
 
 /datum/backstory/misc/rider
-	name = "Horse Trainer"
-	desc = "You rode and trained mounts for nobles and soldiers."
+	name = "Entrenador de caballos"
+	desc = "Montaste y entrenaste monturas para nobles y soldados."
 	granted_skill = /datum/attribute/skill/misc/riding
 	stat_penalty = STAT_INTELLIGENCE
 
 /datum/backstory/misc/scribe
 	name = "Scribe's Apprentice"
-	desc = "You studied letters and copied manuscripts."
+	desc = "Estudiaste cartas y copiaste manuscritos."
 	granted_skill = /datum/attribute/skill/misc/reading
 	stat_penalty = STAT_ENDURANCE
 
 /datum/backstory/misc/swimmer
-	name = "Former Swimmer"
+	name = "Ex nadador"
 	desc = "You swam the rivers and knew the waters well."
 	granted_skill = /datum/attribute/skill/misc/swimming
 	stat_penalty = STAT_STRENGTH
 
 /datum/backstory/misc/merchant
 	name = "Merchant's Assistant"
-	desc = "You counted coin and learned the art of numbers."
+	desc = "Contaste monedas y aprendiste el arte de los números."
 	granted_skill = /datum/attribute/skill/labor/mathematics
 	stat_penalty = STAT_CONSTITUTION
 
 /datum/backstory/magic
 	abstract_type = /datum/backstory/magic
-	desc = "A magical background."
+	desc = "Un fondo mágico."
 	stat_reduction = 0
 	clamp = 20
 
 /datum/backstory/magic/acolyte
 	name = "Former Acolyte"
-	desc = "You studied in a temple, learning divine miracles."
+	desc = "Estudiaste en un templo, aprendiendo milagros divinos."
 	granted_skill = /datum/attribute/skill/magic/holy

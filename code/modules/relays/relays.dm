@@ -23,7 +23,7 @@ GLOBAL_VAR(relay_config)
 
 	var/choice = browser_input_list(src, "Which relay do you wish to use? Relays can help improve ping for some users.", "Relay Select", names)
 	if(!choice)
-		to_chat(src, span_notice("You didn't select a relay."))
+		to_chat(src, span_notice("No seleccionaste un relevo."))
 		return
 
 	var/list/relay = name_to_relay[choice]

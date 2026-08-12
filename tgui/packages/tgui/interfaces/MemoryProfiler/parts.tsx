@@ -123,8 +123,7 @@ export function TruncatedNotice(props: TruncatedProps) {
 
   return (
     <NoticeBox color="yellow">
-      Showing {count(shown)} of {count(total)} {noun}. Dump to a file from the
-      Overview tab to see the rest.
+      Mostrando {count(shown)} of {count(total)} {noun}. Vuelque a un archivo desde la pestaña Descripción general para ver el resto.
     </NoticeBox>
   );
 }
@@ -150,9 +149,8 @@ export function SkipBreakdown(props: { skipped: SkipCounts }) {
 
   return (
     <>
-      <LabeledList.Item label="Empty">
-        {count(skipped.empty)} lists hold nothing. Normal - they are counted,
-        they just have no contents to attribute.
+      <LabeledList.Item label="Vacío">
+        {count(skipped.empty)} las listas no contienen nada. Normal: se cuentan, pero no tienen contenido que atribuir.
       </LabeledList.Item>
       {LIST_FAILURES.filter((status) => exact(skipped[status]) > 0).map(
         (status) => (
@@ -204,7 +202,7 @@ export function UnattributedList(props: { unattributed: Unattributed }) {
         </LabeledList.Item>
       ))}
       <LabeledList.Item label="Total">
-        {bytes(unattributed.unattributed_bytes)} not on any row above
+        {bytes(unattributed.unattributed_bytes)} no en ninguna fila de arriba
       </LabeledList.Item>
     </LabeledList>
   );

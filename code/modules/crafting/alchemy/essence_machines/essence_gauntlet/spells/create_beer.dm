@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/create_beer
-	name = "Create Beer"
+	name = "crear cerveza"
 	desc = "A dwarven secret - transforms water and grain into fine ale."
 	button_icon_state = "bread"
 	cast_range = 1

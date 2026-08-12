@@ -1,5 +1,5 @@
 /datum/animal_gene/fecundity
-	name = "Fecundity"
+	name = "Fecundidad"
 	desc = "Affects reproductive drive, altering the cooldown between breeding cycles."
 	rarity = 6
 	exclusion_group = GENE_GROUP_BREEDING

@@ -124,11 +124,11 @@
 	old_plane = null
 
 /datum/particle_weather/fog/swamp
-	name = "Swamp Fog"
+	name = "Niebla del pantano"
 	particleEffectType = /particles/weather/fog/swamp
 
 /datum/particle_weather/fog/darkness
-	name = "Omen of Darkness Fog"
+	name = "Presagio de niebla oscura"
 	particleEffectType = /particles/weather/dark
 
 

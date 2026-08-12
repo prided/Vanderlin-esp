@@ -20,7 +20,7 @@
 	)
 
 /datum/job/persistence/miner
-	title = "Mineworker"
+	title = "Minero"
 	tutorial = "You're a mineworker, ensure the settlement has stone and ores."
 	department_flag = SERFS
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
@@ -38,7 +38,7 @@
 
 
 /datum/outfit/miner_p
-	name = "Mineworker"
+	name = "Minero"
 	head = /obj/item/clothing/head/helmet/leather/minershelm
 	shirt = /obj/item/clothing/shirt/undershirt/colored/random
 	shoes = /obj/item/clothing/shoes/boots/leather

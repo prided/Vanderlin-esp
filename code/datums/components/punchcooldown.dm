@@ -18,7 +18,7 @@
 	if(M.used_intent.type == INTENT_HARM && isliving(target))
 		M.changeNext_move(CLICK_CD_RAPID)
 		if(warcry)
-			M.say(warcry, ignore_spam = TRUE, forced = "north star warcry")
+			M.say(warcry, ignore_spam = TRUE, forced = "grito de guerra de la estrella del norte")
 
 ///Called on COMSIG_ITEM_ATTACK_SELF. Allows you to change the warcry.
 /datum/component/wearertargeting/punchcooldown/proc/changewarcry(datum/source, mob/user)

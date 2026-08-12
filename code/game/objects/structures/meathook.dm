@@ -59,7 +59,7 @@
 
 	var/mob/living/L = user.pulling
 	playsound(src, 'sound/foley/butcher.ogg', 25, TRUE)
-	L.visible_message(span_danger("[user] starts hanging [L] on [src]!"), span_danger("[user] starts hanging you on [src]]!"), span_hear("I hear the sound of clanging chains..."))
+	L.visible_message(span_danger("¡[user] comienza a colgar [L] en [src]!"), span_danger("[user] starts hanging you on [src]]!"), span_hear("I hear the sound of clanging chains..."))
 	if(!do_after(user, 12 SECONDS, src))
 		return FALSE
 
@@ -70,7 +70,7 @@
 	if(user.pulling != L)
 		return FALSE
 
-	L.visible_message(span_danger("[user] hangs [L] on [src]!"), span_danger("[user] hangs you on [src]]!"))
+	L.visible_message(span_danger("¡[user] cuelga [L] en [src]!"), span_danger("[user] hangs you on [src]]!"))
 	L.forceMove(drop_location())
 	L.emote("scream")
 	L.add_splatter_floor()
@@ -87,22 +87,22 @@
 	if(buckled_mob)
 		var/mob/living/M = buckled_mob
 		if (M != user)
-			M.visible_message(span_notice("[user] is trying to pull [M] free of [src]!"),\
+			M.visible_message(span_notice("¡[user] está intentando liberar a [M] de [src]!"),\
 				span_notice("[user] is trying to pull me off [src]! It hurts!"),\
 				span_hear("I hear the sound of torn flesh and whimpering..."))
 			if(!do_after(user, 12 SECONDS, src))
 				if(M && M.buckled)
 					M.visible_message(span_notice("[user] fails to free [M]!"),\
-					span_notice("[user] fails to pull me off of [src]!"))
+					span_notice("¡[user] no logra sacarme de [src]!"))
 				return
 		else
-			M.visible_message(span_warning("[M] struggles to break free from [src]!"),\
+			M.visible_message(span_warning("¡[M] lucha por liberarse de [src]!"),\
 				span_notice("I struggle to break free from [src], tearing my legs! (Stay still for two minutes.)"),\
 				span_hear("I hear the sound of torn flesh and whimpering..."))
 			M.adjustBruteLoss(30, damage_type = BCLASS_PIERCE)
 			if(!do_after(M, 30 SECONDS, src))
 				if(M && M.buckled)
-					to_chat(M, span_warning("I fail to free myself!"))
+					to_chat(M, span_warning("¡No logro liberarme!"))
 				return
 			if(!M.buckled)
 				return
@@ -178,7 +178,7 @@
 		if(!(user.used_intent.type == /datum/intent/dagger/cut || user.used_intent.type == /datum/intent/dagger/chop/cleaver || user.used_intent.type == /datum/intent/sword/cut || user.used_intent.type == /datum/intent/axe/cut))
 			return
 		var/cut_time = 4 SECONDS - (0.5 SECONDS * GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/labor/butchering))
-		to_chat(user, span_notice("I prepare to drain [butchery_target]'s blood by cutting the skin..."))
+		to_chat(user, span_notice("Me preparo para drenar la sangre de [butchery_target] cortando la piel..."))
 		if(do_after(user, cut_time, src, (IGNORE_HELD_ITEM)))
 			butchery_target.blood_drained++
 			draining_blood = TRUE
@@ -332,7 +332,7 @@
 			if(total_bonus_items > 0)
 				var/happiness_message = butchery_target.get_happiness_butcher_message(happiness_bonus)
 				if(happiness_message)
-					to_chat(user, span_notice("[happiness_message] (+[total_bonus_items] bonus items)"))
+					to_chat(user, span_notice("[happiness_message] (+[total_bonus_items] artículos de bonificación)"))
 
 			butchery_target.gib()
 			var/boon = user.get_learning_boon(/datum/attribute/skill/labor/butchering)

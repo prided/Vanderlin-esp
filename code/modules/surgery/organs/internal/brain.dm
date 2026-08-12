@@ -195,7 +195,7 @@
 	if(!damage && !length(traumas))
 		to_chat(user, span_notice("\The [src] is in pristine quality already."))
 		return
-	user.visible_message(span_notice("<b>[user]</b> starts healing \the [src]..."), \
+	user.visible_message(span_notice("<b>[user]</b> comienza a sanar \the [src]..."), \
 					span_notice("I start healing \the [src]..."), \
 					vision_distance = COMBAT_MESSAGE_RANGE)
 
@@ -222,7 +222,7 @@
 
 
 /obj/item/organ/brain/proc/handle_lobotomy(obj/item/tool, mob/living/user, params)
-	user.visible_message(span_notice("<b>[user]</b> starts lobotomizing \the [src]..."), \
+	user.visible_message(span_notice("<b>[user]</b> comienza a lobotomizar \the [src]..."), \
 					span_notice("I start lobotomizing \the [src]..."), \
 					vision_distance = COMBAT_MESSAGE_RANGE)
 	owner.custom_pain("OH GOD! My [src] is being SLASHED IN TWAIN!", 30, FALSE, owner.get_bodypart(current_zone))
@@ -233,7 +233,7 @@
 	if(!do_after(user, time, owner))
 		to_chat(user, span_warning("I must stand still!"))
 		return TRUE
-	user.visible_message(span_notice("<b>[user]</b> lobotomizes \the [src]."), \
+	user.visible_message(span_notice("<b>[user]</b> lobotomiza \the [src]."), \
 					span_notice("I lobotomize \the [src]."), \
 					vision_distance = COMBAT_MESSAGE_RANGE)
 	switch(owner.diceroll(GET_MOB_ATTRIBUTE_VALUE(owner, STAT_ENDURANCE), context = DICE_CONTEXT_MENTAL))
@@ -338,7 +338,7 @@
 	)
 
 	if(C != user)
-		to_chat(C, "<span class='notice'>[user] inserts [src] into your head.</span>")
+		to_chat(C, "<span class='notice'>[user] inserta [src] en tu cabeza.</span>")
 		to_chat(user, "<span class='notice'>I insert [src] into [C]'s head.</span>")
 	else
 		to_chat(user, "<span class='notice'>I insert [src] into your head.</span>"	)
@@ -447,7 +447,7 @@
 	// Conscious or soft-crit
 	var/brain_message
 	if(prev_damage < BRAIN_DAMAGE_MILD && damage >= BRAIN_DAMAGE_MILD)
-		brain_message = span_warning("I feel lightheaded.")
+		brain_message = span_warning("Me siento mareado.")
 	else if(prev_damage < BRAIN_DAMAGE_SEVERE && damage >= BRAIN_DAMAGE_SEVERE)
 		brain_message = span_warning("I feel less in control of my thoughts.")
 	else if(prev_damage < (BRAIN_DAMAGE_DEATH - 20) && damage >= (BRAIN_DAMAGE_DEATH - 20) && damage < BRAIN_DAMAGE_DEATH)
@@ -584,7 +584,7 @@
 		qdel(X)
 
 /obj/item/organ/brain/alien
-	name = "alien brain"
+	name = "cerebro alienígena"
 	desc = ""
 	icon_state = "brain-x"
 

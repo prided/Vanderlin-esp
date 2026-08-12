@@ -3,7 +3,7 @@
 	REMOVE_TRAIT(src, TRAIT_ANTIMAGIC, TRAIT_GENERIC)
 
 /mob/living/simple_animal/hostile/retaliate/voiddragon/red	//subtype for dragon-kobold event, requested by Mario
-	name = "red dragon"
+	name = "dragón rojo"
 	desc = "An ancient creature from a bygone age. Now would be a good time to run."
 	health = 2500
 	maxHealth = 2500

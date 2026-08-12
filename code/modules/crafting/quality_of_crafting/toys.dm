@@ -8,7 +8,7 @@
 		/obj/item/grown/log/tree/small= 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/weapon/knife
@@ -17,11 +17,11 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/dragon
-	name = "Wooden Dragon Toy"
+	name = "Juguete de dragón de madera"
 	output = /obj/item/orphan_toy/dragon
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/knight
-	name = "Wooden Knight Toy"
+	name = "Juguete de caballero de madera"
 	output = /obj/item/orphan_toy/knight
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/wizard
@@ -29,7 +29,7 @@
 	output = /obj/item/orphan_toy/wizard
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/bard
-	name = "Wooden Bard Toy"
+	name = "Juguete de bardo de madera"
 	output = /obj/item/orphan_toy/bard
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/goblin
@@ -45,14 +45,14 @@
 	output = /obj/item/orphan_toy/wolf
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/saiga
-	name = "Wooden Saiga Toy"
+	name = "Juguete de madera Saiga"
 	output = /obj/item/orphan_toy/saiga
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/coins
-	name = "Wooden Coins"
+	name = "Monedas de madera"
 	output = /obj/item/coin/wood/pile
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/crown
-	name = "Wooden Crown"
+	name = "Corona de madera"
 	output = /obj/item/clothing/head/crown/wooden
 	craftdiff = 3

@@ -13,7 +13,7 @@
 	triumph_cost_permanent = 25
 
 /datum/loadout_item/skirt
-	name = "Skirt"
+	name = "Falda"
 	item_path = /obj/item/clothing/pants/skirt
 	ui_category = "Pants"
 
@@ -41,7 +41,7 @@
 	triumph_cost_permanent = 75
 
 /datum/loadout_item/blackmeadowpants
-	name = "Gamebson Trousers"
+	name = "Pantalones Gamebson"
 	item_path = /obj/item/clothing/pants/trou/leather/blackmeadow
 	ui_category = "Pants"
 

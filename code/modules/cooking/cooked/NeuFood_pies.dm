@@ -9,7 +9,7 @@
 
 /*	........   Pie making   ................ */
 /obj/item/reagent_containers/food/snacks/foodbase/piebottom
-	name = "pie bottom"
+	name = "fondo de pastel"
 	desc = "The foundation of the fantastical."
 	icon_state = "piebottom"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -94,7 +94,7 @@
 	nutrition = FRUITPIE_NUTRITION
 
 /obj/item/reagent_containers/food/snacks/raw_pie/meat
-	name = "uncooked meat pie"
+	name = "pastel de carne cruda"
 	icon_state = "meatpie_raw"
 	filling_color = "#b44f44"
 	overlay_state = "fill_meat"
@@ -149,7 +149,7 @@
 		if(stunning)
 			L.Paralyze(20) //splat!
 		L.adjust_eye_blur(2 SECONDS)
-		L.visible_message("<span class='warning'>[L] is hit by [src]!</span>", "<span class='danger'>I'm hit by [src]!</span>")
+		L.visible_message("¡<span class='warning'>[L] es golpeado por [src]!</span>", "<span class='danger'>I'm hit by [src]!</span>")
 	qdel(src)
 
 /obj/item/reagent_containers/food/snacks/pie/CheckParts(list/parts_list)
@@ -238,14 +238,14 @@
 
 // -------------- MEAT PIE -----------------
 /obj/item/reagent_containers/food/snacks/pie/cooked/meat // bae item
-	name = "meat pie"
+	name = "pastel de carne"
 	desc = "A pie that is fit for meat lovers. It contains meat, meat, and nothing but meat."
 	foodtype = GRAIN | DAIRY | MEAT
 	nutrition = MEATPIE_NUTRITION * COOK_MOD
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/meat/meat
 	icon_state = "meatpie"
-	tastes = list("meat and butterdough" = 1)
+	tastes = list("carne y masa de mantequilla" = 1)
 	filling_color = "#b44f44"
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/meat/meat/good
@@ -259,15 +259,15 @@
 
 // -------------- FISH PIE -----------------
 /obj/item/reagent_containers/food/snacks/pie/cooked/meat/fish
-	name = "fish pie"
+	name = "pastel de pescado"
 	icon_state = "fishpie"
-	tastes = list("baked fish and butterdough" = 1)
+	tastes = list("pescado al horno y masa de mantequilla" = 1)
 	filling_color = "#bb5a93"
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/meat/fish/good
 	eat_effect = /datum/status_effect/buff/foodbuff
 	slice_path = /obj/item/reagent_containers/food/snacks/pieslice/good/fish
-	tastes = list("baked fish and crispy butterdough" = 1)
+	tastes = list("pescado al horno y masa de mantequilla crujiente" = 1)
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/meat/fish/good/Initialize(mapload)
 	. = ..()
@@ -279,7 +279,7 @@
 	desc = "A pie made with a host of different ingredients. May or may not contain meat."
 	slices_num = 6
 	nutrition = POTPIE_NUTRITION * COOK_MOD
-	tastes = list("mysterious filling and butterdough" = 1)
+	tastes = list("relleno misterioso y masa de mantequilla" = 1)
 	filling_color = "#9d8c3b"
 	foodtype = GRAIN | DAIRY | MEAT
 
@@ -294,7 +294,7 @@
 
 // -------------- BERRY PIE -----------------
 /obj/item/reagent_containers/food/snacks/pie/cooked/berry
-	name = "berry pie"
+	name = "pastel de bayas"
 	desc = "A sweet pie made from jacksberries. A popular choice for banquets among peasants, and enjoyed by all."
 	slices_num = 6
 	tastes = list("butterdough" = 1, "berries" = 1)
@@ -307,7 +307,7 @@
 /obj/item/reagent_containers/food/snacks/pie/cooked/berry/good
 	eat_effect = /datum/status_effect/buff/foodbuff
 	slice_path = /obj/item/reagent_containers/food/snacks/pieslice/good/berry
-	tastes = list("crispy butterdough" = 1, "sweet berries" = 1)
+	tastes = list("masa de mantequilla crujiente" = 1, "sweet berries" = 1)
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/berry/good/Initialize(mapload)
 	. = ..()
@@ -333,12 +333,12 @@
 
 // -------------- RASPBERRY PIE -----------------
 /obj/item/reagent_containers/food/snacks/pie/cooked/raspberry
-	name = "raspberry pie"
+	name = "pastel de frambuesa"
 	icon_state = "pompkaunpie"
 	desc = "A sweet pie made from raspberries. A classic Vanderlinian treat, nearly lost to time."
 	nutrition = FRUITPIE_NUTRITION * COOK_MOD
 	slice_path = /obj/item/reagent_containers/food/snacks/pieslice/raspberry
-	tastes = list("raspberry and butterdough" = 1)
+	tastes = list("frambuesa y masa de mantequilla" = 1)
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/raspberry/good
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -351,12 +351,12 @@
 
 // -------------- POMPKAUN PIE -----------------
 /obj/item/reagent_containers/food/snacks/pie/cooked/pompkaun
-	name = "pompkaun pie"
+	name = "pastel de pompkaun"
 	icon_state = "pompkaunpie"
 	desc = "Usually eaten in the second to last month of fall, when the pompkauns have been carved for Dendor but have not yet rotted."
 	nutrition = FRUITPIE_NUTRITION * COOK_MOD
 	slice_path = /obj/item/reagent_containers/food/snacks/pieslice/pompkaun
-	tastes = list("pompkaun and butterdough" = 1)
+	tastes = list("pompkaun y masa de mantequilla" = 1)
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/pompkaun/good
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -372,7 +372,7 @@
 	name = "apple pie"
 	desc = "A sweet pie made from apples. Some claim it to taste even better with cheese."
 	nutrition = FRUITPIE_NUTRITION * COOK_MOD
-	tastes = list("apples and butterdough" = 1)
+	tastes = list("manzanas y masa de mantequilla" = 1)
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/apple/good
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -385,10 +385,10 @@
 
 // -------------- PEAR PIE -----------------
 /obj/item/reagent_containers/food/snacks/pie/cooked/pear
-	name = "pear pie"
+	name = "pastel de pera"
 	desc = "A sweet pie made from pears. Not as famous as it's other fruit cousins."
 	nutrition = FRUITPIE_NUTRITION * COOK_MOD
-	tastes = list("pears and butterdough" = 1)
+	tastes = list("peras y masa de mantequilla" = 1)
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/pear/good
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -401,10 +401,10 @@
 
 // -------------- BOROWIKI PIE -----------------
 /obj/item/reagent_containers/food/snacks/pie/cooked/borowiki
-	name = "borowiki pie"
+	name = "pastel de borowiki"
 	desc = "A savory pie filled with hearty borowiki mushrooms."
 	nutrition = VEGGIEPIE_NUTRITION * COOK_MOD
-	tastes = list("borowiki and butterdough" = 1)
+	tastes = list("borowiki y masa de mantequilla" = 1)
 
 /obj/item/reagent_containers/food/snacks/pie/cooked/borowiki/good
 	eat_effect = /datum/status_effect/buff/foodbuff
@@ -446,19 +446,19 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	foodtype = GRAIN | DAIRY
 	nutrition = BUTTERDOUGHSLICE_NUTRITION + CHEESE_NUTRITION
-	tastes = list("hot cheese" = 1)
+	tastes = list("queso caliente" = 1)
 
 /obj/item/reagent_containers/food/snacks/foodbase/handpieraw/apple
 	w_class = WEIGHT_CLASS_NORMAL
 	foodtype = GRAIN | FRUIT
 	nutrition = BUTTERDOUGHSLICE_NUTRITION + FRUIT_NUTRITION
-	tastes = list("sweet apple" = 1)
+	tastes = list("manzana dulce" = 1)
 
 /obj/item/reagent_containers/food/snacks/foodbase/handpieraw/berry
 	w_class = WEIGHT_CLASS_NORMAL
 	foodtype = GRAIN | FRUIT
 	nutrition = BUTTERDOUGHSLICE_NUTRITION + BERRY_NUTRITION
-	tastes = list("sweet berry" = 1)
+	tastes = list("baya dulce" = 1)
 
 /obj/item/reagent_containers/food/snacks/handpie
 	name = "handpie"
@@ -466,7 +466,7 @@
 	icon_state = "handpie"
 	bitesize = 4
 	nutrition = (BUTTERDOUGHSLICE_NUTRITION + MINCE_NUTRITION) * COOK_MOD
-	tastes = list("dry dough" = 1)
+	tastes = list("masa seca" = 1)
 	dropshrink = 0.8
 	faretype = FARE_FINE
 	item_weight = 150 GRAMS
@@ -475,7 +475,7 @@
 	desc = "The dwarven take on pies, called pierogi in their dialect. A fistful of food to stand the test of time."
 	eat_effect = /datum/status_effect/buff/foodbuff
 	bitesize = 4
-	tastes = list("crispy dough" = 1)
+	tastes = list("masa crujiente" = 1)
 
 /obj/item/reagent_containers/food/snacks/handpie/good/Initialize(mapload)
 	. = ..()
@@ -507,7 +507,7 @@
 
 /obj/item/reagent_containers/food/snacks/raw_tart
 	name = "uncooked tart"
-	desc = "A tart ready for the oven."
+	desc = "Una tarta lista para el horno."
 	icon_state = "tartuncooked"
 	var/overlay_state = ""
 	var/glaze_state = "tartuncooked_glaze"
@@ -557,13 +557,13 @@
 	glaze_color = "#f0a1c2"
 
 /obj/item/reagent_containers/food/snacks/raw_tart/chocolate
-	name = "uncooked chocolate tart"
+	name = "tarta de chocolate cruda"
 	overlay_state = "fill_tart"
 	glaze_color = "#612D08"
 
 /*	........   Tart Cooked   ................ */
 /obj/item/reagent_containers/food/snacks/tart
-	name = "tart"
+	name = "tarta"
 	desc = "A sweet and delicate pastry."
 
 /obj/item/reagent_containers/food/snacks/tart/cooked
@@ -581,23 +581,23 @@
 
 /obj/item/reagent_containers/food/snacks/tart/cooked/avocado
 	name = "avocado tart"
-	desc = "A smooth and creamy tart filled with mashed avocado."
+	desc = "Una tarta suave y cremosa rellena de puré de aguacate."
 	icon_state = "avocadotart"
-	tastes = list("avocado and butterdough" = 1)
+	tastes = list("aguacate y masa de mantequilla" = 1)
 	slice_path = /obj/item/reagent_containers/food/snacks/tartslice/avocado
 
 /obj/item/reagent_containers/food/snacks/tart/cooked/mango
 	name = "mangga tart"
 	desc = "A tart filled with the tropical mangga flesh."
 	icon_state = "mangotart"
-	tastes = list("mango and butterdough" = 1)
+	tastes = list("mango y masa de mantequilla" = 1)
 	slice_path = /obj/item/reagent_containers/food/snacks/tartslice/mango
 
 /obj/item/reagent_containers/food/snacks/tart/cooked/mangosteen
-	name = "mangosteen tart"
+	name = "tarta de mangostán"
 	desc = "A tart with the sweet tang of mangosteen."
 	icon_state = "mangosteentart"
-	tastes = list("mangosteen and butterdough" = 1)
+	tastes = list("mangostán y masa de mantequilla" = 1)
 	slice_path = /obj/item/reagent_containers/food/snacks/tartslice/mangosteen
 
 /obj/item/reagent_containers/food/snacks/tart/cooked/pineapple
@@ -616,7 +616,7 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/tartslice/dragonfruit
 
 /obj/item/reagent_containers/food/snacks/tart/cooked/chocolate
-	name = "chocolate tart"
+	name = "tarta de chocolate"
 	desc = "A tart filled with rich, sweet chocolate."
 	icon_state = "choctart"
 	tastes = list("chocolate and butterdough" = 1)
@@ -624,7 +624,7 @@
 
 /obj/item/reagent_containers/food/snacks/tartslice
 	name = "tart slice"
-	desc = "A small slice of tart."
+	desc = "Un pequeño trozo de tarta."
 	icon_state = ""
 	dropshrink = 0.9
 	foodtype = GRAIN | DAIRY | FRUIT
@@ -638,17 +638,17 @@
 /obj/item/reagent_containers/food/snacks/tartslice/avocado
 	name = "avocado tart slice"
 	icon_state = "avocadotart_slice"
-	tastes = list("avocado and butterdough" = 1)
+	tastes = list("aguacate y masa de mantequilla" = 1)
 
 /obj/item/reagent_containers/food/snacks/tartslice/mango
 	name = "mangga tart slice"
 	icon_state = "mangotart_slice"
-	tastes = list("mango and butterdough" = 1)
+	tastes = list("mango y masa de mantequilla" = 1)
 
 /obj/item/reagent_containers/food/snacks/tartslice/mangosteen
 	name = "mangosteen tart slice"
 	icon_state = "mangosteentart_slice"
-	tastes = list("mangosteen and butterdough" = 1)
+	tastes = list("mangostán y masa de mantequilla" = 1)
 
 /obj/item/reagent_containers/food/snacks/tartslice/pineapple
 	name = "ananas tart slice"

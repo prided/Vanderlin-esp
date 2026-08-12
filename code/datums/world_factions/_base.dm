@@ -1,6 +1,6 @@
 /datum/world_faction
-	var/name = "World"
-	var/desc = "The entirety of the world"
+	var/name = "Mundo"
+	var/desc = "La totalidad del mundo"
 	var/faction_name
 	var/list/sell_value_modifiers = list()
 	var/list/last_sell_modification = list()
@@ -923,7 +923,7 @@
 
 	var/mob/living/simple_animal/hostile/retaliate/trader/faction_trader/old_trader = current_trader_ref?.resolve()
 	if(old_trader)
-		to_chat(spawner, "<span class='notice'>Removing existing trader...</span>")
+		to_chat(spawner, "<span class='notice'>Eliminando comerciante existente...</span>")
 		qdel(old_trader)
 		current_trader_ref = null
 

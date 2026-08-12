@@ -1,5 +1,5 @@
 /datum/rmb_intent
-	var/name = "intent"
+	var/name = "intención"
 	var/desc = ""
 	var/icon_state = ""
 	/// Bonus/Malus to parry and dodge
@@ -82,7 +82,7 @@
 		return TRUE
 
 	user.visible_message(
-		span_danger("[user] baits an attack from [defender]."),
+		span_danger("[user] provoca un ataque de [defender]."),
 		span_notice("I bait an attack from [defender].")
 	)
 	user.apply_status_effect(/datum/status_effect/debuff/baitcd, BAIT_COOLDOWN_TIME)
@@ -127,7 +127,7 @@
 	return TRUE
 
 /datum/rmb_intent/strong
-	name = "strong"
+	name = "fuerte"
 	desc = "Your attacks have increased strength and have increased force but use more stamina. Higher chance for certain critical hits. Intentionally fails surgery steps. Reduced dodge bonus."
 	icon_state = "rmbstrong"
 	def_bonus = -10
@@ -166,7 +166,7 @@
 	return TRUE
 
 /datum/rmb_intent/swift
-	name = "swift"
+	name = "rápido"
 	desc = "Your attacks have less recovery time but are less accurate and have reduced strength."
 	icon_state = "rmbswift"
 
@@ -272,7 +272,7 @@
 	return TRUE
 
 /datum/rmb_intent/riposte
-	name = "defend"
+	name = "defender"
 	desc = "No delay between dodge and parry rolls."
 	icon_state = "rmbdef"
 	def_bonus = 10
@@ -298,7 +298,7 @@
 		return FALSE
 
 	if(user.m_intent == MOVE_INTENT_RUN)
-		to_chat(user, span_warning("I can't focus on this while running."))
+		to_chat(user, span_warning("No puedo concentrarme en esto mientras corro."))
 		return FALSE
 
 	user.apply_status_effect(/datum/status_effect/buff/clash)
@@ -306,11 +306,11 @@
 	return TRUE
 
 /datum/rmb_intent/guard
-	name = "guarde"
+	name = "guardia"
 	desc = "(RMB WHILE DEFENSE IS ACTIVE) Raise your weapon, ready to attack any creature who moves onto the space you are guarding."
 	icon_state = "rmbguard"
 
 /datum/rmb_intent/weak
-	name = "weak"
+	name = "débil"
 	desc = "Your attacks have halved strength and will never critically-hit. Surgery steps can only be done with this intent. Useful for longer punishments, play-fighting, and bloodletting."
 	icon_state = "rmbweak"

@@ -38,7 +38,7 @@
 	)
 
 /datum/outfit/combat/alchemist
-	name = "Alchemist (Adventurer)"
+	name = "Alquimista (aventurero)"
 	armor = /obj/item/clothing/armor/gambeson/apothecary
 	shoes = /obj/item/clothing/shoes/apothboots
 	shirt = /obj/item/clothing/shirt/apothshirt

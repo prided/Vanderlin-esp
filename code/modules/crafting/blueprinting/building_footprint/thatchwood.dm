@@ -1,5 +1,5 @@
 /obj/item/building_schematic/thatchwood_hall
-	name = "town hall schematic"
+	name = "esquema del ayuntamiento"
 	desc = "A rolled construction schematic for Thatchwood's new town hall."
 	skill = /datum/action/cooldown/spell/place_blueprint/thatchwood_hall
 	/// Weakref to the driver so placement can report back

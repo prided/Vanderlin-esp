@@ -208,7 +208,7 @@
 				return
 			apply_ban(user)
 		if("reset")
-			var/alert = tgui_alert(user, "Reset the panel and clear all of the values?", "Reset", list("Yes", "No"))
+			var/alert = tgui_alert(user, "Reset the panel and clear all of the values?", "Reiniciar", list("Yes", "No"))
 			if(alert != "Yes")
 				return
 			reset_panel(user)
@@ -257,7 +257,7 @@
 			selected_roles -= to_remove
 
 		if("add_migrant")
-			var/selected_migrant = input(user, "Choose Migrant", "Migrant", null) as null|anything in get_all_migrant_role_names()
+			var/selected_migrant = input(user, "Elija migrante", "Migrant", null) as null|anything in get_all_migrant_role_names()
 			if(!selected_migrant)
 				return
 			selected_migrants |= selected_migrant
@@ -284,12 +284,12 @@
 			selected_antags -= to_remove
 
 		if("add_trait")
-			var/selected_trait = input(user, "Choose trait", "Traits", null) as null|anything in ALL_PRESET_TRAIT_BANS
+			var/selected_trait = input(user, "Elige rasgo", "Rasgos", null) as null|anything in ALL_PRESET_TRAIT_BANS
 			if(!selected_trait)
 				return
 			selected_traits |= selected_trait
 		if("add_trait_any")
-			var/input_trait = input(user, "Input custom trait \nMake sure it matches its name precisely!", "Traits", "") as text|null
+			var/input_trait = input(user, "Input custom trait \nMake sure it matches its name precisely!", "Rasgos", "") as text|null
 			if(!input_trait)
 				return
 			selected_traits |= input_trait
@@ -298,7 +298,7 @@
 			selected_traits -= to_remove
 
 		if("add_misc")
-			var/selected_misc_thing = input(user, "Choose a Misc Ban", "Misc Bans", null) as null|anything in ALL_MISC_BANS
+			var/selected_misc_thing = input(user, "Choose a Misc Ban", "Prohibiciones varias", null) as null|anything in ALL_MISC_BANS
 			if(!selected_misc_thing)
 				return
 			selected_misc |= selected_misc_thing
@@ -307,7 +307,7 @@
 			selected_misc -= to_remove
 
 		if("add_curse")
-			var/selected_curse_thing = input(user, "Choose a Curse", "Curses", null) as null|anything in GLOB.curse_names
+			var/selected_curse_thing = input(user, "Elige una maldición", "Maldiciones", null) as null|anything in GLOB.curse_names
 			if(!selected_curse_thing)
 				return
 			selected_curses |= selected_curse_thing
@@ -326,7 +326,7 @@
 		if("remove_ckey_role_ban")
 			var/ckey = href_list["ckey"]
 			var/ban_index = text2num(href_list["ban_index"])
-			var/alert = tgui_alert(user, "You sure you want to remove the ban?", "Remove Role Ban", list("Yes", "No"))
+			var/alert = tgui_alert(user, "¿Estás seguro de que quieres eliminar la prohibición?", "Remove Role Ban", list("Yes", "No"))
 			if(alert != "Yes")
 				return
 			var/datum/role_bans/bans = get_role_bans_for_ckey(ckey)
@@ -377,13 +377,13 @@
 		to_chat(user, span_boldwarning("No +BAN permission"))
 		return
 	if(!selected_ckey)
-		to_chat(user, span_boldwarning("Missing CKEY"))
+		to_chat(user, span_boldwarning("Falta CKEY"))
 		return
 	if(!selected_reason)
 		to_chat(user, span_boldwarning("Missing reason"))
 		return
 	if(!selected_is_permanent && selected_duration == 0)
-		to_chat(user, span_boldwarning("Missing duration"))
+		to_chat(user, span_boldwarning("Duración faltante"))
 		return
 	var/datum/role_ban_instance/instance = new /datum/role_ban_instance()
 	instance.applied_by = ckey(user.ckey)

@@ -33,7 +33,7 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 	)
 
 	// Show invitation popup to invitee
-	var/response = tgui_alert(invitee, "[inviter.real_name] has invited you to join the party '[party.party_name]'. Do you accept?", "Accept", list("Party Invitation", "Accept", "Decline"))
+	var/response = tgui_alert(invitee, "[inviter.real_name] has invited you to join the party '[party.party_name]'. Do you accept?", "Accept", list("Party Invitation", "Accept", "Rechazar"))
 
 	// Clean up the pending invite
 	GLOB.pending_party_invites -= invitee_ckey
@@ -42,15 +42,15 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 		// Double-check everything is still valid
 		if(!invitee.current_party && party && (inviter.ckey in party.members) && party.is_leader(inviter.ckey))
 			if(join_party(invitee, party))
-				to_chat(inviter, "<span class='notice'>[invitee.real_name] has joined your party!</span>")
-				to_chat(invitee, "<span class='notice'>You have joined '[party.party_name]'!</span>")
+				to_chat(inviter, "¡<span class='notice'>[invitee.real_name] se ha unido a tu grupo!</span>")
+				to_chat(invitee, "<span class='notice'>¡Te has unido a '[party.party_name]'!</span>")
 				return TRUE
 			else
-				to_chat(invitee, "<span class='warning'>Failed to join the party!</span>")
-				to_chat(inviter, "<span class='warning'>Failed to add [invitee.real_name] to the party!</span>")
+				to_chat(invitee, "<span class='warning'>¡No se pudo unir al grupo!</span>")
+				to_chat(inviter, "<span class='warning'>¡No se pudo agregar [invitee.real_name] al grupo!</span>")
 		else
 			to_chat(invitee, "<span class='warning'>The party invitation is no longer valid!</span>")
-			to_chat(inviter, "<span class='warning'>Unable to add [invitee.real_name] - invitation expired or party changed!</span>")
+			to_chat(inviter, "<span class='warning'>No se puede agregar [invitee.real_name]: ¡la invitación expiró o el grupo cambió!</span>")
 	else
 		to_chat(inviter, "<span class='notice'>[invitee.real_name] declined your party invitation.</span>")
 		to_chat(invitee, "<span class='notice'>You declined the party invitation from [inviter.real_name].</span>")
@@ -62,7 +62,7 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 		return null
 
 	if(leader.current_party)
-		to_chat(leader, "<span class='warning'>You are already in a party!</span>")
+		to_chat(leader, "<span class='warning'>¡Ya estás en un grupo!</span>")
 		return null
 
 	var/datum/party/new_party = new /datum/party(leader.ckey, party_name)
@@ -77,7 +77,7 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 		return FALSE
 
 	if(joiner.current_party)
-		to_chat(joiner, "<span class='warning'>You are already in a party!</span>")
+		to_chat(joiner, "<span class='warning'>¡Ya estás en un grupo!</span>")
 		return FALSE
 
 	return target_party.add_member(joiner)
@@ -92,14 +92,14 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 
 /mob/living/carbon/verb/create_party_verb()
 	set name = "Create Party"
-	set category = "IC.Party"
-	set desc = "Create a new party"
+	set category = "IC.Partido"
+	set desc = "Crear una nueva fiesta"
 
 	if(!src.ckey)
 		return
 
 	if(src.current_party)
-		to_chat(src, "<span class='warning'>You are already in a party!</span>")
+		to_chat(src, "<span class='warning'>¡Ya estás en un grupo!</span>")
 		return
 
 	var/party_name = browser_input_text(src, "Enter party name", "Create Party", max_length = MAX_CHARTER_LEN)
@@ -112,8 +112,8 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 
 /mob/living/carbon/verb/leave_party_verb()
 	set name = "Leave Party"
-	set category = "IC.Party"
-	set desc = "Leave your current party"
+	set category = "IC.Partido"
+	set desc = "Deja tu grupo actual"
 
 	if(!current_party)
 		to_chat(src, "<span class='warning'>You are not in a party!</span>")
@@ -124,8 +124,8 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 
 /mob/living/carbon/verb/invite_to_party()
 	set name = "Invite to Party"
-	set category = "IC.Party"
-	set desc = "Invite someone to your party"
+	set category = "IC.Partido"
+	set desc = "Invita a alguien a tu fiesta"
 
 	var/mob/living/carbon/inviter = usr
 	var/list/mobs = view(7, inviter)
@@ -141,7 +141,7 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 		return
 
 	if(!invitee.ckey)
-		to_chat(inviter, "<span class='warning'>This person cannot join parties!</span>")
+		to_chat(inviter, "<span class='warning'>¡Esta persona no puede unirse a grupos!</span>")
 		return
 
 	if(invitee.current_party)
@@ -332,7 +332,7 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 		return FALSE
 
 	if(cmode)
-		to_chat(inviter, "<span class='warning'>You cannot do this during combat!</span>")
+		to_chat(inviter, "<span class='warning'>¡No puedes hacer esto durante el combate!</span>")
 		return FALSE
 	if(invitee.cmode)
 		to_chat(inviter, "<span class='warning'>This person is too busy at this time. Try again later.</span>")

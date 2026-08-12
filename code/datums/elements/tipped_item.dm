@@ -54,7 +54,7 @@
 		return
 
 	attacked_container.reagents.trans_to(dipper, dip_amount, transfered_by = attacker)
-	attacker.visible_message(span_danger("[attacker] dips [dipper] in [attacked_container]!"), "You dip [dipper] in [attacked_container]!", vision_distance = 2)
+	attacker.visible_message(span_danger("¡[attacker] sumerge [dipper] en [attacked_container]!"), "You dip [dipper] in [attacked_container]!", vision_distance = 2)
 
 /datum/element/tipped_item/proc/try_inject(obj/item/source, atom/target, mob/user, obj/item/bodypart/affecting, actual_damage)
 	if(!affecting)
@@ -69,4 +69,4 @@
 		return
 	if(source.reagents.total_volume)
 		var/reagent_color = mix_color_from_reagents(source.reagents.reagent_list)
-		examine_list += span_info("[source] has been dipped in <font color=[reagent_color]>something</font>!")
+		examine_list += span_info("¡[source] ha sido sumergido en <font color=[reagent_color]>algo</font>!")

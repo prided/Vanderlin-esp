@@ -27,7 +27,7 @@
 	)
 
 /datum/species/elf/zizo
-	name = "Snow Elf"
+	name = "elfo de nieve"
 	id = SPEC_ID_SNOW_ELF
 	id_override = SPEC_ID_DROW
 	desc = "Zizo's progeny. \

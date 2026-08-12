@@ -1,10 +1,10 @@
 /atom/movable/screen/alert/status_effect/buff/healing
 	name = "Healing Miracle"
-	desc = "Divine intervention relieves me of my ailments."
+	desc = "La intervención divina me alivia de mis dolencias."
 	icon_state = "buff"
 
 /obj/effect/temp_visual/heal_rogue //color is white by default, set to whatever is needed
-	name = "enduring glow"
+	name = "brillo duradero"
 	icon = 'icons/effects/miracle-healing.dmi'
 	icon_state = "heal_pantheon"
 	duration = 15

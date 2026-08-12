@@ -9,7 +9,7 @@
 
 /atom/movable/screen/alert/status_effect/stress/stressinsane
 	name = "Insane"
-	desc = "I need relief. I need relief. I need relief.\n"
+	desc = "Necesito alivio. Necesito alivio. Necesito alivio.\n"
 	icon_state = "stressinsane"
 
 /datum/status_effect/stress/stressvbad
@@ -30,7 +30,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/stress/stressbad
-	name = "Stressed"
+	name = "Estresado"
 	desc = "I'm getting fed up.\n"
 	icon_state = "stressbad"
 
@@ -42,5 +42,5 @@
 
 /atom/movable/screen/alert/status_effect/stress/good/stressvgood
 	name = "Nirvana"
-	desc = "My body is a temple, and my mind a garden.\n"
+	desc = "Mi cuerpo es un templo y mi mente un jardín.\n"
 	icon_state = "stressvgood"

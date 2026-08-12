@@ -8,7 +8,7 @@
 	brewing_skill = /datum/attribute/skill/craft/cooking/confectionery
 
 /datum/brewing_recipe/rum
-	name = "Rum"
+	name = "Ron"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/rum
 	needed_reagents = list(/datum/reagent/consumable/sugar/molasses = 150)
 	pre_reqs = /datum/reagent/consumable/sugar/molasses

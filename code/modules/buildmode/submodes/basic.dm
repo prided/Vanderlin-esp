@@ -8,8 +8,8 @@
 	to_chat(c, "<span class='notice'>Left Mouse Button + ctrl = R-Window</span>")
 	to_chat(c, "<span class='notice'>Left Mouse Button + alt  = Airlock</span>")
 	to_chat(c, "")
-	to_chat(c, "<span class='notice'>Use the button in the upper left corner to</span>")
-	to_chat(c, "<span class='notice'>change the direction of built objects.</span>")
+	to_chat(c, "<span class='notice'>Utilice el botón en la esquina superior izquierda para</span>")
+	to_chat(c, "<span class='notice'>cambiar la dirección de los objetos construidos.</span>")
 	to_chat(c, "<span class='notice'>***********************************************************</span>")
 
 /datum/buildmode_mode/basic/handle_click(client/c, list/modifiers, obj/object)

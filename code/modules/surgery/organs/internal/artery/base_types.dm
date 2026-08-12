@@ -1,41 +1,41 @@
 /obj/item/organ/artery/r_arm
-	name = "right brachial arteries"
+	name = "arterias braquiales derechas"
 	zone = BODY_ZONE_R_ARM
 	blood_flow = ARTERIAL_BLOOD_FLOW * 0.75
 
 /obj/item/organ/artery/r_leg
-	name = "right femoral arteries"
+	name = "arterias femorales derechas"
 	zone = BODY_ZONE_R_LEG
 	blood_flow = ARTERIAL_BLOOD_FLOW * 0.75
 
 /obj/item/organ/artery/mouth
-	name = "facial arteries"
+	name = "arterias faciales"
 	zone = BODY_ZONE_PRECISE_MOUTH
 
 /obj/item/organ/artery/l_leg
-	name = "left femoral arteries"
+	name = "arterias femorales izquierdas"
 	zone = BODY_ZONE_L_LEG
 	blood_flow = ARTERIAL_BLOOD_FLOW * 0.75
 
 /obj/item/organ/artery/l_arm
-	name = "left brachial arteries"
+	name = "arterias braquiales izquierdas"
 	zone = BODY_ZONE_L_ARM
 	blood_flow = ARTERIAL_BLOOD_FLOW * 0.75
 
 /obj/item/organ/artery/head
-	name = "temporal arteries"
+	name = "arterias temporales"
 	desc = "Well, this one was certainly temporal."
 	zone = BODY_ZONE_HEAD
 
 /obj/item/organ/artery/chest
-	name = "torso arteries"
+	name = "arterias del torso"
 	desc = "These run throughout the torso, supplying organs and flesh with blood."
 	tear_damage_multiplier = 0.25 // it is deadly, but one hit won't not kill you on spot
 	blood_flow = ARTERIAL_BLOOD_FLOW * 2
 	zone = BODY_ZONE_CHEST
 
 /obj/item/organ/artery/heart
-	name = "thoracic aorta"
+	name = "aorta torácica"
 	desc = "Shot through the heart, and you're to blame - Darlin', you give love a bad name."
 	zone = BODY_ZONE_CHEST
 	blood_flow = ARTERIAL_BLOOD_FLOW * 2.5
@@ -66,7 +66,7 @@
 	to_chat(owner, span_userdanger("[pick(heartaches)]"))
 
 /obj/item/organ/artery/neck
-	name = "carotid artery"
+	name = "arteria carótida"
 	zone = BODY_ZONE_PRECISE_NECK
 	blood_flow = ARTERIAL_BLOOD_FLOW * 2
 	crit_weakness_lethal = TRUE

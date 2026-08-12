@@ -1,6 +1,6 @@
 
 /datum/rune_spell/astraljourney
-	name = "Astral Journey"
+	name = "Viaje Astral"
 	desc = "Channel a fragment of your soul into an astral projection so you can spy on the crew and communicate your findings with the rest of the cult."
 	desc_talisman = "Leave your body so you can go spy on your enemies."
 	invocation = "Fwe'sh mah erl nyag r'ya!"
@@ -25,7 +25,7 @@
 
 	cultist_key = activator.key
 
-	to_chat(activator, span_notice("As you recite the invocation, you feel your consciousness rise up in the air above your body.") )
+	to_chat(activator, span_notice("Mientras recitas la invocación, sientes que tu conciencia se eleva en el aire sobre tu cuerpo.") )
 	//astral = activator.ghostize(1, 1)
 	astral = new(activator.loc)
 	astral.ascend(activator)

@@ -56,7 +56,7 @@
 	damage_type = COLD_DAMAGE
 
 /datum/rune_effect/damage/lightning
-	name = "lightning damage"
+	name = "daño por rayo"
 	damage_type = LIGHTNING_DAMAGE
 
 /datum/rune_effect/damage/holy
@@ -72,7 +72,7 @@
 		to_chat(user, "<span class='notice'>[user.get_active_held_item()] deals [damage] additional holy damage!</span>")
 
 /datum/rune_effect/damage/necrotic
-	name = "necrotic damage"
+	name = "daño necrótico"
 
 /datum/rune_effect/damage/necrotic/apply_combat_effect(mob/living/target, mob/living/user, damage_dealt)
 	var/damage = get_bonus_damage(target, user)

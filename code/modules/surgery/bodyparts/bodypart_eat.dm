@@ -7,11 +7,11 @@
 		return TRUE
 	if(IS_DEADITE(user) || is_species(/datum/species/werewolf))
 		if(user.has_status_effect(/datum/status_effect/debuff/silver_bane))
-			to_chat(user, span_notice("My power is weakened, I cannot heal!"))
+			to_chat(user, span_notice("¡Mi poder está debilitado, no puedo sanar!"))
 			return TRUE
 		if(!do_after(user, 5 SECONDS, src))
 			return TRUE
-		user.visible_message(span_warning("[user] consumes [src]!"),\
+		user.visible_message(span_warning("¡[user] consume [src]!"),\
 						span_notice("I consume [src]!"))
 		playsound(user, pick(dismemsound), 100, FALSE, -1)
 		new /obj/effect/gibspawner/generic(get_turf(src), user)
@@ -22,7 +22,7 @@
 	if(status != BODYPART_ORGANIC)
 		return ..()
 	if(skeletonized || !length(food_type))
-		to_chat(user, span_warning("[src] has no meat to eat."))
+		to_chat(user, span_warning("[src] no tiene carne para comer."))
 		return
 	var/bloodcolor = COLOR_BLOOD
 	if(owner)
@@ -31,7 +31,7 @@
 		bloodcolor = original_owner.get_blood_type().color
 	var/obj/item/held_item = user.get_active_held_item()
 	if(isanimal(user))
-		visible_message("[user] begins to eat \the [src].")
+		visible_message("[user] comienza a comer \the [src].")
 		playsound(src, 'sound/foley/gross.ogg', 100, FALSE)
 		if(!do_after(user, 5 SECONDS, src))
 			return

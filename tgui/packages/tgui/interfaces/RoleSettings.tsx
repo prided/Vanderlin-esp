@@ -51,7 +51,7 @@ export const RoleSettings = () => {
   const visible = settings.filter((s) => s.category === tab);
 
   return (
-    <Window width={450} height={600} title="Role Settings">
+    <Window width={450} height={600} title="Configuración de roles">
       <Window.Content scrollable>
         <Tabs>
           {categories.map((cat) => (
@@ -102,7 +102,7 @@ const FreeTextSection = ({ setting, editing, setEditing, act }) => {
         {lines.length === 0 && (
           <Stack.Item>
             <Box color="gray" italic>
-              No lines set.
+              No hay líneas establecidas.
               {example_text && ` Example: ${example_text.split('\n')[0]}`}
             </Box>
           </Stack.Item>
@@ -162,7 +162,7 @@ const FreeTextSection = ({ setting, editing, setEditing, act }) => {
                   <Stack.Item>
                     <Button
                       icon="pencil"
-                      tooltip="Edit"
+                      tooltip="Editar"
                       onClick={() =>
                         setEditing({ savefile_key, index, value: line })
                       }
@@ -172,7 +172,7 @@ const FreeTextSection = ({ setting, editing, setEditing, act }) => {
                     <Button
                       icon="trash"
                       color="red"
-                      tooltip="Remove"
+                      tooltip="Eliminar"
                       onClick={() =>
                         act('remove_line', { savefile_key, index })
                       }
@@ -237,7 +237,7 @@ const FreeTextSection = ({ setting, editing, setEditing, act }) => {
                 setEditing({ savefile_key, index: -1, value: '' })
               }
             >
-              Add line
+              Agregar línea
             </Button>
           </Stack.Item>
         )}
@@ -258,7 +258,7 @@ const PickerSection = ({ setting, act }) => {
         {selected.length === 0 && (
           <Stack.Item>
             <Box color="gray" italic>
-              Nothing selected.
+              Nada seleccionado.
             </Box>
           </Stack.Item>
         )}
@@ -283,7 +283,7 @@ const PickerSection = ({ setting, act }) => {
                 <Button
                   icon="trash"
                   color="red"
-                  tooltip="Remove"
+                  tooltip="Eliminar"
                   onClick={() =>
                     act('remove_line', {
                       savefile_key,
@@ -297,7 +297,7 @@ const PickerSection = ({ setting, act }) => {
         ))}
         {available.length > 0 && lines.length < max_lines && (
           <Stack.Item>
-            <Section title="Available" level={2}>
+            <Section title="Disponible" level={2}>
               <Stack vertical>
                 {available.map((option) => (
                   <Stack.Item key={option.value}>

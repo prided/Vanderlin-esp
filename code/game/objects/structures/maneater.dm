@@ -114,9 +114,9 @@
 		playsound(M, 'sound/combat/grabbreak.ogg', 100)
 		return ..()
 	if(user != M)
-		user.visible_message(span_danger("[user] tries to pull [M] free of [src]!"), span_danger("I try to pull [M] free of [src]!"))
+		user.visible_message(span_danger("¡[user] intenta liberar a [M] de [src]!"), span_danger("I try to pull [M] free of [src]!"))
 	else
-		user.visible_message(span_danger("[user] tries to break free of [src]!"), span_danger("I try to break free of [src]!"))
+		user.visible_message(span_danger("¡[user] intenta liberarse de [src]!"), span_danger("¡Intento liberarme de [src]!"))
 	if(prob(10))
 		playsound(M, 'sound/combat/grabstruggle.ogg', 75)
 

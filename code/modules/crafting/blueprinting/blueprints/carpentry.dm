@@ -2,7 +2,7 @@
 /datum/blueprint_recipe/carpentry
 	abstract_type = /datum/blueprint_recipe/carpentry
 	skillcraft = /datum/attribute/skill/craft/carpentry
-	category = "Carpentry"
+	category = "Carpintería"
 	construct_tool = /obj/item/weapon/hammer
 	craftsound = 'sound/foley/Building-01.ogg'
 	verbage = "build"
@@ -10,15 +10,15 @@
 	edge_density = FALSE
 
 /datum/blueprint_recipe/carpentry/barrel
-	name = "wooden barrel"
+	name = "barril de madera"
 	desc = "A sturdy wooden barrel for fermentation."
 	result_type = /obj/structure/fermentation_keg
 	required_materials = list(/obj/item/grown/log/tree/small = 1)
 	craftdiff = 0
 
 /datum/blueprint_recipe/carpentry/door
-	name = "wooden door"
-	desc = "A basic wooden door."
+	name = "puerta de madera"
+	desc = "Una puerta de madera básica."
 	result_type = /obj/structure/door
 	required_materials = list(/obj/item/grown/log/tree/small = 2)
 	supports_directions = TRUE
@@ -26,8 +26,8 @@
 	build_time = 4 SECONDS
 
 /datum/blueprint_recipe/carpentry/swing_door
-	name = "swing door"
-	desc = "A door that swings both ways."
+	name = "puerta batiente"
+	desc = "Una puerta que se abre en ambos sentidos."
 	result_type = /obj/structure/door/swing
 	required_materials = list(/obj/item/grown/log/tree/small = 2)
 	supports_directions = TRUE
@@ -59,7 +59,7 @@
 
 /datum/blueprint_recipe/carpentry/viewport_door
 	name = "wooden door (viewport)"
-	desc = "A wooden door with an iron viewport."
+	desc = "Una puerta de madera con una ventana de hierro."
 	result_type = /obj/structure/door/viewport
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
@@ -70,7 +70,7 @@
 	build_time = 4 SECONDS
 
 /datum/blueprint_recipe/carpentry/fancy_door
-	name = "fancy wooden door"
+	name = "puerta de madera elegante"
 	desc = "An ornately crafted wooden door."
 	result_type = /obj/structure/door/fancy
 	required_materials = list(/obj/item/grown/log/tree/small = 2)
@@ -79,15 +79,15 @@
 	build_time = 4 SECONDS
 
 /datum/blueprint_recipe/carpentry/bin
-	name = "wooden bin"
+	name = "contenedor de madera"
 	desc = "A simple wooden storage bin."
 	result_type = /obj/item/bin
 	required_materials = list(/obj/item/grown/log/tree/small = 2)
 	craftdiff = 0
 
 /datum/blueprint_recipe/carpentry/chair
-	name = "wooden chair"
-	desc = "A basic wooden chair."
+	name = "silla de madera"
+	desc = "Una silla de madera básica."
 	result_type = /obj/structure/chair/wood/alt/chair3/crafted
 	required_materials = list(/obj/item/grown/log/tree/small = 1)
 	supports_directions = TRUE
@@ -105,7 +105,7 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/carpentry/stool
-	name = "wooden stool"
+	name = "taburete de madera"
 	desc = "A simple wooden stool."
 	result_type = /obj/structure/chair/stool/crafted
 	required_materials = list(/obj/item/grown/log/tree/small = 1)
@@ -114,7 +114,7 @@
 
 /datum/blueprint_recipe/carpentry/stool/bar
 	name = "barstool"
-	desc = "Stool with a cloth cushion."
+	desc = "Taburete con cojín de tela."
 	result_type = /obj/structure/chair/stool/bar
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1,
@@ -125,7 +125,7 @@
 
 /datum/blueprint_recipe/carpentry/loom
 	name = "loom"
-	desc = "A weaving loom for creating textiles."
+	desc = "Un telar para crear textiles."
 	result_type = /obj/machinery/loom
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
@@ -136,7 +136,7 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/carpentry/lantern_post
-	name = "lantern post"
+	name = "poste de linterna"
 	desc = "A tall wooden post for mounting lanterns."
 	result_type = /obj/machinery/light/fueled/lanternpost/unfixed
 	required_materials = list(
@@ -146,7 +146,7 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/carpentry/wooden_cross
-	name = "wooden cross"
+	name = "cruz de madera"
 	desc = "A religious wooden cross."
 	result_type = /obj/structure/fluff/psycross/crafted
 	required_materials = list(
@@ -166,7 +166,7 @@
 
 /datum/blueprint_recipe/carpentry/pyre
 	name = "wooden pyre"
-	desc = "A wooden funeral pyre."
+	desc = "Una pira funeraria de madera."
 	result_type = /obj/machinery/light/fueled/campfire/pyre
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
@@ -176,7 +176,7 @@
 
 /datum/blueprint_recipe/carpentry/psydon_wooden_cross
 	name = "wooden psycross"
-	desc = "A wooden psycross dedicated to Psydon."
+	desc = "Un psycross de madera dedicado a Psydon."
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1,
 		/obj/item/grown/log/tree/stake = 3
@@ -185,8 +185,8 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/carpentry/wooden_stairs_down
-	name = "wooden stairs (down)"
-	desc = "Wooden stairs leading downward."
+	name = "escaleras de madera (abajo)"
+	desc = "Escaleras de madera que conducen hacia abajo."
 	result_type = /obj/structure/stairs/d
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1,
@@ -212,7 +212,7 @@
 
 /datum/blueprint_recipe/carpentry/palisade
 	name = "palisade"
-	desc = "A wooden defensive palisade."
+	desc = "Una empalizada defensiva de madera."
 	result_type = /obj/structure/fluff/railing/tall/palisade
 	required_materials = list(/obj/item/grown/log/tree/stake = 2)
 	supports_directions = TRUE
@@ -220,7 +220,7 @@
 
 /datum/blueprint_recipe/carpentry/fence
 	name = "fence"
-	desc = "A tall wooden fence."
+	desc = "Una valla de madera alta."
 	result_type = /obj/structure/fluff/railing/tall
 	required_materials = list(/obj/item/grown/log/tree/small = 1, /obj/item/natural/wood/plank = 2)
 	supports_directions = TRUE
@@ -239,7 +239,7 @@
 
 /datum/blueprint_recipe/carpentry/closet
 	name = "closet"
-	desc = "A wooden storage closet."
+	desc = "Un armario de almacenamiento de madera."
 	result_type = /obj/structure/closet/crate/crafted_closet/crafted
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
@@ -249,14 +249,14 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/carpentry/coffin
-	name = "wooden coffin"
+	name = "ataúd de madera"
 	desc = "A wooden burial coffin."
 	result_type = /obj/structure/closet/crate/coffin
 	required_materials = list(/obj/item/natural/wood/plank = 3)
 	craftdiff = 1
 
 /datum/blueprint_recipe/carpentry/hay_bed
-	name = "hay bed"
+	name = "cama de heno"
 	desc = "A simple bed stuffed with hay."
 	result_type = /obj/structure/bed/hay
 	required_materials = list(
@@ -268,7 +268,7 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/carpentry/wool_bed
-	name = "wool bed"
+	name = "cama de lana"
 	desc = "A comfortable bed with wool stuffing."
 	result_type = /obj/structure/bed/wool
 	required_materials = list(
@@ -281,7 +281,7 @@
 
 /datum/blueprint_recipe/carpentry/double_wool_bed
 	name = "double wool bed"
-	desc = "A large double bed with wool stuffing."
+	desc = "Una cama doble grande con relleno de lana."
 	result_type = /obj/structure/bed/wool/double
 	required_materials = list(
 		/obj/item/natural/wood/plank = 3,
@@ -331,7 +331,7 @@
 	craftdiff = 5
 
 /datum/blueprint_recipe/carpentry/custom_sign
-	name = "custom sign"
+	name = "signo personalizado"
 	desc = "A wooden sign for custom messages."
 	result_type = /obj/structure/fluff/customsign
 	required_materials = list(
@@ -365,7 +365,7 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/carpentry/female_mannequin
-	name = "female mannequin"
+	name = "maniquí femenino"
 	desc = "A female display mannequin."
 	result_type = /obj/structure/mannequin/male/female
 	required_materials = list(
@@ -378,8 +378,8 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/carpentry/male_mannequin
-	name = "male mannequin"
-	desc = "A male display mannequin."
+	name = "maniquí masculino"
+	desc = "Un maniquí masculino."
 	result_type = /obj/structure/mannequin/male
 	required_materials = list(
 		/obj/item/natural/wood/plank = 1,
@@ -391,7 +391,7 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/carpentry/wall_ladder
-	name = "wall ladder"
+	name = "escalera de pared"
 	desc = "A ladder that mounts to walls."
 	result_type = /obj/structure/wallladder
 	required_materials = list(
@@ -403,8 +403,8 @@
 	check_adjacent_wall = TRUE
 
 /datum/blueprint_recipe/carpentry/wooden_table
-	name = "wooden table"
-	desc = "A sturdy wooden table."
+	name = "mesa de madera"
+	desc = "Una mesa de madera resistente."
 	result_type = /obj/structure/table/wood/crafted
 	required_materials = list(
 		/obj/item/grown/log/tree/stick = 2,
@@ -415,7 +415,7 @@
 
 /datum/blueprint_recipe/carpentry/pillory
 	name = "pillory"
-	desc = "A restraining device for punishment."
+	desc = "Un dispositivo de restricción para el castigo."
 	result_type = /obj/structure/pillory
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
@@ -436,8 +436,8 @@
 	craftdiff = 0
 
 /datum/blueprint_recipe/carpentry/operating_table
-	name = "operating table"
-	desc = "A table designed for medical procedures."
+	name = "mesa de operaciones"
+	desc = "Una mesa diseñada para procedimientos médicos."
 	result_type = /obj/structure/table/optable
 	required_materials = list(/obj/item/natural/wood/plank = 2)
 	supports_directions = TRUE
@@ -445,7 +445,7 @@
 
 /datum/blueprint_recipe/carpentry/meathook
 	name = "meathook"
-	desc = "A hook for hanging and processing meat."
+	desc = "Un gancho para colgar y procesar carne."
 	result_type = /obj/structure/meathook
 	required_materials = list(
 		/obj/item/natural/wood/plank = 1,
@@ -456,21 +456,21 @@
 
 /datum/blueprint_recipe/carpentry/spider_nest
 	name = "spider nesting house"
-	desc = "A constructed nest for spiders."
+	desc = "Un nido construido para arañas."
 	result_type = /obj/structure/spider/nest/constructed
 	required_materials = list(/obj/item/natural/wood/plank = 3)
 	craftdiff = 1
 
 /datum/blueprint_recipe/carpentry/composter
 	name = "composter"
-	desc = "A constructed composter."
+	desc = "Un compostador construido."
 	result_type = /obj/structure/composter
 	required_materials = list(/obj/item/grown/log/tree/small = 1)
 	craftdiff = 0
 
 /datum/blueprint_recipe/carpentry/plough
 	name = "plough"
-	desc = "A plough."
+	desc = "Un arado."
 	result_type = /obj/structure/plough
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
@@ -479,8 +479,8 @@
 	build_time = 4 SECONDS
 
 /datum/blueprint_recipe/carpentry/handcart
-	name = "wooden handcart"
-	desc = "A wooden handcart."
+	name = "carro de mano de madera"
+	desc = "Un carro de mano de madera."
 	result_type = /obj/structure/handcart
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 3,
@@ -490,7 +490,7 @@
 
 /datum/blueprint_recipe/carpentry/apiary
 	name = "Apiary"
-	desc = "A home for bees."
+	desc = "Un hogar para las abejas."
 	result_type = /obj/structure/apiary
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
@@ -501,7 +501,7 @@
 
 /datum/blueprint_recipe/carpentry/dryclothes
 	name = "Clothline"
-	desc = "It can dry clothes well."
+	desc = "Puede secar bien la ropa."
 	result_type = /obj/structure/dryclothes
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
@@ -511,7 +511,7 @@
 
 /datum/blueprint_recipe/carpentry/keyrack
 	name = "key rack"
-	desc = "A cupboard for securing keys."
+	desc = "Un armario para guardar las llaves."
 	result_type = /obj/structure/closet/keyrack
 	required_materials = list(
 		/obj/item/natural/wood/plank = 2,

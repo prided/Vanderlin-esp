@@ -118,7 +118,7 @@ export const NtosWindow = (props) => {
               <Button
                 color="transparent"
                 icon="window-minimize-o"
-                tooltip="Minimize"
+                tooltip="Minimizar"
                 tooltipPosition="bottom"
                 onClick={() => act('PC_minimize')}
               />
@@ -127,7 +127,7 @@ export const NtosWindow = (props) => {
               <Button
                 color="transparent"
                 icon="window-close-o"
-                tooltip="Close"
+                tooltip="Cerrar"
                 tooltipPosition="bottom-start"
                 onClick={() => act('PC_exit')}
               />
@@ -137,7 +137,7 @@ export const NtosWindow = (props) => {
                 textAlign="center"
                 color="transparent"
                 icon="power-off"
-                tooltip="Power off"
+                tooltip="Apagar"
                 tooltipPosition="bottom-start"
                 onClick={() => act('PC_shutdown')}
               />

@@ -8,7 +8,7 @@ GLOBAL_LIST_INIT(biome_registry, list(
 	return GLOB.biome_registry[biome_id]
 
 /datum/biome
-	var/name = "Unknown Biome"
+	var/name = "Bioma desconocido"
 	var/id = "unknown"
 
 	// Terrain generation properties

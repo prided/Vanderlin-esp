@@ -1,5 +1,5 @@
 /datum/chimeric_node/output/rewinding
-	name = "rewinding"
+	name = "rebobinado"
 	desc = "When activated teleports you back to the last place you were hit."
 
 	var/turf/last_hit_turf

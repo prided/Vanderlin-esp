@@ -25,7 +25,7 @@
 		return
 	if(can_buckle && has_buckled_mobs())
 		if(length(buckled_mobs) > 1)
-			var/mob/living/unbuckled = tgui_input_list(user, "Who do you wish to unbuckle?", "Unbuckle", sortNames(buckled_mobs))
+			var/mob/living/unbuckled = tgui_input_list(user, "¿A quién deseas desabrochar?", "desabrochar", sortNames(buckled_mobs))
 			if(isnull(unbuckled))
 				return
 			if(user_unbuckle_mob(unbuckled,user))
@@ -334,7 +334,7 @@
 		)
 	else
 		being_buckled.visible_message(
-			span_warning("[buckler] [buckleverb]s [being_buckled] to [src]!"),
+			span_warning("[buckler] [buckleverb]s [being_buckled] a [src]!"),
 			span_warning("[buckler] [buckleverb]s me to [src]!")
 		)
 

@@ -167,7 +167,7 @@
 			var/turf/turf = get_turf(user)
 			target = GET_TURF_ABOVE(turf)
 		if(target.zPassOut(DOWN) || target.is_blocked_turf(exclude_mobs = TRUE, ignore_atoms = list(/obj/structure/fluff/railing), type_list = TRUE))
-			to_chat(user, span_warning("I can't climb here."))
+			to_chat(user, span_warning("No puedo subir aquí."))
 			return
 
 		// if(!target || !istype(target, /turf/open))
@@ -195,7 +195,7 @@
 			climbsound = 'sound/foley/ladder.ogg'
 
 	if(myskill < climbdiff)
-		to_chat(user, span_warning("I'm not capable of climbing this."))
+		to_chat(user, span_warning("No soy capaz de escalar esto."))
 		return
 	var/used_time = max(70 - (myskill * 10) - (GET_MOB_ATTRIBUTE_VALUE(user, STAT_SPEED) * 3), 30)
 	if(user.m_intent != MOVE_INTENT_SNEAK)

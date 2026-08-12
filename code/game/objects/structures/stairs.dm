@@ -210,18 +210,18 @@
 	return TRUE
 
 /obj/structure/stairs/abyss
-	name = "abyss stairs"
+	name = "escaleras del abismo"
 	icon = 'icons/delver/abyss_objects.dmi'
 	icon_state = "abyss_stairs"
 
 /obj/structure/stairs/stone
-	name = "stone stairs"
+	name = "escaleras de piedra"
 	icon = 'icons/obj/stairs.dmi'
 	icon_state = "stonestairs"
 
 // original icon = 'icons/roguetown/topadd/cre/enigma_misc1.dmi'
 /obj/structure/stairs/stone/church
-	name = "stone stairs"
+	name = "escaleras de piedra"
 	icon = 'icons/obj/stairs.dmi'
 	icon_state = "churchstairs"
 

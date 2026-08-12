@@ -24,7 +24,7 @@
 
 /datum/objective/personal/get_apprentice/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've obtained a new apprentice, completing Noc's objective!"))
+	to_chat(owner.current, span_greentext("¡Has obtenido un nuevo aprendiz, completando el objetivo de Noc!"))
 	adjust_storyteller_influence(NOC, 20)
 	UnregisterSignal(owner.current, COMSIG_APPRENTICE_MADE)
 

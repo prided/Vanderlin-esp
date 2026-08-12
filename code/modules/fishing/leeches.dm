@@ -78,7 +78,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(!get_location_accessible(H, check_zone(user.zone_selected)))
-		to_chat(user, "<span class='warning'>Something in the way.</span>") //ooooooooooooooo
+		to_chat(user, "<span class='warning'>Algo en el camino.</span>") //ooooooooooooooo
 		return ITEM_INTERACT_BLOCKING
 
 	var/used_time
@@ -98,7 +98,7 @@
 
 	if(!completely_silent)
 		if(H == user)
-			user.visible_message("<span class='notice'>[user] places [src] on [user.p_their()] [affecting].</span>", "<span class='notice'>I place a leech on my [affecting].</span>")
+			user.visible_message("<span class='notice'>[user] coloca [src] en [user.p_their()] [affecting].</span>", "<span class='notice'>I place a leech on my [affecting].</span>")
 		else
 			user.visible_message("<span class='notice'>[user] places [src] on [H]'s [affecting].</span>", "<span class='notice'>I place a leech on [H]'s [affecting].</span>")
 
@@ -169,11 +169,11 @@
 	var/static/list/all_descs = list(
 		"What a disgusting creature." = 10,
 		"Fucking gross." = 5,
-		"Slippery..." = 3,
-		"So yummy and full of blood." = 3,
-		"I love this leech!" = 2,
-		"It is so beautiful." = 2,
-		"I wish I was a leech." = 1,
+		"Resbaladizo..." = 3,
+		"Tan delicioso y lleno de sangre." = 3,
+		"¡Me encanta esta sanguijuela!" = 2,
+		"Es tan hermoso." = 2,
+		"Ojalá fuera una sanguijuela." = 1,
 	)
 	var/list/possible_adjectives = all_adjectives.Copy()
 	var/list/possible_descs = all_descs.Copy()
@@ -216,7 +216,7 @@
 	return TRUE
 
 /obj/item/natural/worms/leech/parasite
-	name = "the parasite"
+	name = "el parásito"
 	desc = "A foul, wriggling creecher. Known to suck whole villages of their blood, these rare freeks have been domesticated for medical purposes."
 	icon_state = "parasite"
 	dropshrink = 0.9
@@ -234,15 +234,15 @@
 	. = ..()
 	giving = !giving
 	if(giving)
-		user.visible_message("<span class='notice'>[user] squeezes [src].</span>",\
+		user.visible_message("<span class='notice'>[user] aprieta [src].</span>",\
 							"<span class='notice'>I squeeze [src]. It will now infuse blood.</span>")
 	else
-		user.visible_message("<span class='notice'>[user] squeezes [src].</span>",\
+		user.visible_message("<span class='notice'>[user] aprieta [src].</span>",\
 							"<span class='notice'>I squeeze [src]. It will now extract blood.</span>")
 
 /obj/item/natural/worms/leech/propaganda
 	name = "accursed leech"
-	desc = "A leech like none other."
+	desc = "Una sanguijuela como ninguna otra."
 	icon_state = "leech"
 	drainage = 0
 	blood_sucking = 0
@@ -267,15 +267,15 @@
 				"PRAISE ZIZO!", \
 				"DEATH TO THE TEN...", \
 				"Astrata will fail!", \
-				"The Ten cannot stop me!", \
-				"Zizo shows the way!", \
-				"The Dark Lady has shown me the truth!", \
-				"My life for Zizo...", \
+				"¡Los Diez no pueden detenerme!", \
+				"¡Zizo muestra el camino!", \
+				"¡La Dama Oscura me ha mostrado la verdad!", \
+				"Mi vida por Zizo...", \
 				"Curse your Beast God!", \
-				"Noc's magick is nothing to Zizo!", \
+				"¡La magia de Noc no es nada comparada con la de Zizo!", \
 				"Abyssor is but a grain of salt!", \
 				"Pestra is the most foul of goddesses!", \
-				"Ravox's justice is flawed and dull!", \
+				"¡La justicia de Ravox es defectuosa y aburrida!", \
 				"Rip the Sun Tyrant from the sky!", \
 				"Xylix is the tongue that must be severed off!", \
 				"Cast Malum into the fires of hell!", \
@@ -307,6 +307,6 @@
 	if(iscarbon(user))
 		var/mob/living/carbon/V = user
 		if(prob(3))
-			V.say(pick("PRAISE ABYSSOR!", "REMEMBER ABYSSOR!", "ABYSSOR LIVES!", "GLORY TO ABYSSOR!", "ABYSSOR IS COMING!"))
+			V.say(pick("PRAISE ABYSSOR!", "¡RECUERDA ABYSSOR!", "ABYSSOR LIVES!", "¡GLORIA A ABYSSOR!", "ABYSSOR IS COMING!"))
 
 #undef MAX_LEECH_EVILNESS

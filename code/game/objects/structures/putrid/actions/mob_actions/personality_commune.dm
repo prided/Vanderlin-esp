@@ -1,14 +1,14 @@
 // This can probably be changed to use mind linker at some point
 /datum/action/personality_commune
 	name = "Personality Commune"
-	desc = "Sends thoughts to your alternate consciousness."
+	desc = "Envía pensamientos a tu conciencia alternativa."
 	background_icon_state = "bg_spell"
 	button_icon = 'icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "telepathy"
 	overlay_icon_state = "bg_spell_border"
 
 	/// Fluff text shown when a message is sent to the pair
-	var/fluff_text = span_boldnotice("You hear an echoing voice in the back of your head...")
+	var/fluff_text = span_boldnotice("Escuchas una voz que hace eco en la parte posterior de tu cabeza...")
 
 /datum/action/personality_commune/New(Target)
 	. = ..()
@@ -39,12 +39,12 @@
 	if(personality_body.client == non_controller_client) // We took control
 		return FALSE
 
-	var/user_message = span_boldnotice("You concentrate and send thoughts to your other self:")
+	var/user_message = span_boldnotice("Te concentras y envías pensamientos a tu otro yo:")
 	var/user_message_body = span_notice("[to_send]")
 
 	to_chat(non_controller, "[user_message] [user_message_body]")
 
-	personality_body.balloon_alert(personality_body, "you hear a voice")
+	personality_body.balloon_alert(personality_body, "escuchas una voz")
 	to_chat(personality_body, "[fluff_text] [user_message_body]")
 
 	log_directed_talk(non_controller, personality_body, to_send, LOG_SAY, "[name]")

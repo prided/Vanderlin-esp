@@ -71,7 +71,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 	if(QDELETED(src))
 		return
 	qdel(reagents)
-	name = "dry [initial(name)]"
+	name = "seco [initial(name)]"
 	color = color_matrix2color_hex(color_matrix_multiply(color_hex2color_matrix(color), GLOB.dryblood_colormatrix))
 	bloodiness = 0
 
@@ -106,7 +106,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 	return ..()
 
 /obj/effect/decal/cleanable/blood/old
-	name = "dried blood"
+	name = "sangre seca"
 	desc = ""
 	bloodiness = 0
 	icon_state = "floor1-old"
@@ -166,7 +166,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 /obj/effect/decal/cleanable/trail_holder/proc/become_dry()
 	if(QDELETED(src))
 		return
-	name = "dry [initial(name)]"
+	name = "seco [initial(name)]"
 	color = color_matrix2color_hex(color_matrix_multiply(color_hex2color_matrix(color), GLOB.dryblood_colormatrix))
 	alpha = 100
 	bloodiness = 0
@@ -234,7 +234,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 	add_blood_DNA(list("Non-human DNA" = random_human_blood_type()))
 
 /obj/effect/decal/cleanable/blood/drip
-	name = "drips of blood"
+	name = "gotas de sangre"
 	desc = ""
 	icon_state = "drip1"
 	bloodiness = 0
@@ -278,7 +278,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 		return TRUE
 
 /obj/effect/decal/cleanable/blood/puddle
-	name = "puddle of blood"
+	name = "charco de sangre"
 	desc = ""
 	icon_state = "pool1"
 	bloodiness = 0
@@ -311,7 +311,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 
 //BLOODY FOOTPRINTS
 /obj/effect/decal/cleanable/blood/footprints
-	name = "footprints"
+	name = "huellas"
 	desc = ""
 	icon = 'icons/effects/footprints.dmi'
 	// No icon on compile because appearance is made by overlays

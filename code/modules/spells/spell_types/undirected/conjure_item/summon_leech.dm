@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/conjure_item/summon_leech
-	name = "Summon Leech"
-	desc = "Summon a leech from Abyssor's domain."
+	name = "Invocar sanguijuela"
+	desc = "Invoca una sanguijuela del dominio de Abyssor."
 	button_icon_state = "curse2"
 	sound = 'sound/foley/jumpland/waterland.ogg'
 

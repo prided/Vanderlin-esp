@@ -32,7 +32,7 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/pick/copper
-	name = "copper pick"
+	name = "pico de cobre"
 	desc = ""
 	icon_state = "cpick"
 	icon = 'icons/roguetown/weapons/tools.dmi'
@@ -46,7 +46,7 @@
 	item_weight = 1.35 KILOGRAMS
 
 /obj/item/weapon/pick/steel
-	name = "steel pick"
+	name = "pico de acero"
 	desc = "With a reinforced handle and sturdy shaft, this is a superior tool for delving in the darkness."
 	icon_state = "steelpick"
 	force = DAMAGE_PICK + 3
@@ -57,7 +57,7 @@
 	pickmult = 1.2
 
 /obj/item/weapon/pick/stone
-	name = "stone pick"
+	name = "pico de piedra"
 	desc = "Stone versus sharp stone, who wins?"
 	icon_state = "stonepick"
 	force = DAMAGE_PICK - 6
@@ -70,7 +70,7 @@
 	item_weight = 1.2 KILOGRAMS
 
 /obj/item/weapon/pick/drill
-	name = "clockwork drill"
+	name = "taladro de relojería"
 	desc = "A wonderfully complex work of engineering capable of shredding walls in seconds as opposed to hours."
 	force_wielded = DAMAGE_HEAVYCLUB_WIELD
 	icon_state = "drill"

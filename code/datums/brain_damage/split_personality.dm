@@ -3,9 +3,9 @@
 
 /datum/brain_trauma/severe/split_personality
 	name = "Split Personality"
-	desc = "Patient's brain is split into two personalities, which randomly switch control of the body."
+	desc = "El cerebro del paciente se divide en dos personalidades, que cambian aleatoriamente el control del cuerpo."
 	scan_desc = ""
-	gain_text = span_warning("I feel like my mind was split in two.")
+	gain_text = span_warning("Siento como si mi mente estuviera dividida en dos.")
 	lose_text = span_notice("I feel alone again.")
 	var/current_controller = OWNER
 	var/initialized = FALSE //to prevent personalities deleting themselves while we wait for ghosts
@@ -84,7 +84,7 @@
 		return
 
 	current_backseat.log_message("assumed control of [key_name(owner)] due to [src]. (Original owner: [current_controller == OWNER ? owner.key : current_backseat.key])", LOG_GAME)
-	to_chat(owner, span_userdanger("I feel my control being taken away... my other personality is in charge now!"))
+	to_chat(owner, span_userdanger("Siento que me están quitando el control... ¡mi otra personalidad está a cargo ahora!"))
 	to_chat(current_backseat, span_userdanger("I manage to take control of my body!"))
 
 	//Body to backseat

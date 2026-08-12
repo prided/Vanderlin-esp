@@ -369,7 +369,7 @@
 	)
 
 /datum/job/advclass/orphanadv/wward
-	title= "Weird Ward"
+	title= "Barrio extraño"
 	tutorial = "While the other children busy themselves with silly activities \
 	like baking bread or throwing rocks into the river, you have your sights set \
 	much higher.  You have seen what goes on in the clinic.  You know that you can \

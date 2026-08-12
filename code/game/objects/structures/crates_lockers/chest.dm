@@ -65,13 +65,13 @@
 
 // When players exit the round via boat, their items get transported here
 /obj/structure/closet/crate/chest/lostandfound
-	desc = "An incredibly sturdy chest; the Guild can afford the best materials after all."
+	desc = "Un cofre increíblemente resistente; Después de todo, el Gremio puede permitirse los mejores materiales."
 	anchored = 1
 	max_integrity = 2000
 
 /obj/structure/closet/crate/chest/wicker
 	name = "wicker basket"
-	desc = "Fibers interwoven to make a cheap storage bin."
+	desc = "Fibras entrelazadas para hacer un contenedor de almacenamiento barato."
 	base_icon_state = "wicker"
 	icon_state = "wicker"
 	open_sound = 'sound/items/book_open.ogg'

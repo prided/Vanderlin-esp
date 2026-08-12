@@ -73,18 +73,18 @@
 	backpack_contents = list(/obj/item/weapon/knife/hunting = 1, /obj/item/tent_kit = 1, /obj/item/clothing/face/facemask/steel/steppe = 1, /obj/item/reagent_containers/glass/bottle/avarmead = 1)
 
 /datum/migrant_role/nomadrider
-	name = "Nomad Rider"
+	name = "Jinete nómada"
 	greet_text = "The khan rides at the head of a small horde of nomads, crossing into unfamiliar land in search of pasture and a place to set up tents"
 	migrant_job = /datum/job/advclass/pilgrim/nomad
 
 /datum/job/migrant/nomadrider
-	title = "Nomad Rider"
+	title = "Jinete nómada"
 	tutorial = "You are a nomad riding behind the khan, their voice a compass, their will the unyielding law that guides your path to these unknown lands. Find rest and a better living here."
 	outfit = /datum/outfit/pilgrim/nomad
 	allowed_races = RACES_PLAYER_ALL
 
 /datum/migrant_wave/nomad_migration
-	name = "The Khan's Migration"
+	name = "La migración del Khan"
 	max_spawns = 2
 	shared_wave_type = /datum/migrant_wave/nomad_migration
 	downgrade_wave = /datum/migrant_wave/nomad_migration_down
@@ -96,7 +96,7 @@
 	greet_text = "The khan rides at the head of a small horde of nomads, crossing into unfamiliar land in search of pasture and a place to set up your tents, finding solace from the frequent travel and danger of the steppes."
 
 /datum/migrant_wave/nomad_migration_down
-	name = "The Khan's Migration"
+	name = "La migración del Khan"
 	shared_wave_type = /datum/migrant_wave/nomad_migration
 	downgrade_wave = /datum/migrant_wave/nomad_migration_down_one
 	can_roll = FALSE
@@ -107,7 +107,7 @@
 	greet_text = "The khan rides at the head of a small horde of nomads, crossing into unfamiliar land in search of pasture and a place to set up tents, finding solace from the frequent travel and danger of the steppes."
 
 /datum/migrant_wave/nomad_migration_down_one
-	name = "The Khan's Migration"
+	name = "La migración del Khan"
 	shared_wave_type = /datum/migrant_wave/nomad_migration
 	downgrade_wave = /datum/migrant_wave/nomad_migration_down_two
 	can_roll = FALSE
@@ -118,7 +118,7 @@
 	greet_text = "The khan rides at the head of a small horde of nomads, crossing into unfamiliar land in search of pasture and a place to set up tents, finding solace from the frequent travel and danger of the steppes."
 
 /datum/migrant_wave/nomad_migration_down_two
-	name = "The Khan's Migration"
+	name = "La migración del Khan"
 	shared_wave_type = /datum/migrant_wave/nomad_migration
 	downgrade_wave = /datum/migrant_wave/nomad_migration_down_three
 	can_roll = FALSE
@@ -129,7 +129,7 @@
 	greet_text = "The khan rides at the head of a small horde of nomads, crossing into unfamiliar land in search of pasture and a place to set up tents, finding solace from the frequent travel and danger of the steppes."
 
 /datum/migrant_wave/nomad_migration_down_three
-	name = "The Khan's Migration"
+	name = "La migración del Khan"
 	shared_wave_type = /datum/migrant_wave/nomad_migration
 	downgrade_wave = /datum/migrant_wave/nomad_migration_down_four
 	can_roll = FALSE
@@ -140,7 +140,7 @@
 	greet_text = "The khan rides with his most trusted warrior, crossing into unfamiliar land in search of pasture and a place to set up tents, finding solace from the frequent travel and danger of the steppes."
 
 /datum/migrant_wave/nomad_migration_down_four
-	name = "The Khan's Migration"
+	name = "La migración del Khan"
 	shared_wave_type = /datum/migrant_wave/nomad_migration
 	can_roll = FALSE
 	roles = list(

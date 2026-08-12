@@ -57,7 +57,7 @@
 
 /datum/objective/personal/listen_whispers/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have listened to the whispers of the dead long enough to satisfy Necra!"))
+	to_chat(owner.current, span_greentext("¡Has escuchado los susurros de los muertos el tiempo suficiente para satisfacer a Necra!"))
 	adjust_storyteller_influence(NECRA, 20)
 	STOP_PROCESSING(SSprocessing, src)
 

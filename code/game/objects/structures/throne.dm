@@ -26,13 +26,13 @@
 	icon = 'icons/roguetown/misc/throne_alt.dmi'
 
 /obj/structure/throne/vthrone
-	name = "The Blood Throne"
+	name = "El trono de sangre"
 	desc = "A big ominous throne."
 	icon = 'icons/roguetown/misc/vthrone.dmi'
 
 /obj/structure/throne/examine(mob/user)
 	. = ..()
-	. += span_notice("The current mode is [throat_mode].")
+	. += span_notice("El modo actual es [throat_mode].")
 
 /obj/structure/throne/proc/do_filters_glow()
 	filters = filter(type = "rays", size = 80, color = "#a38c2e")

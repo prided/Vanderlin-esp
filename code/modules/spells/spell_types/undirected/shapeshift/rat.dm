@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/shapeshift/rat
-	name = "Rat Form"
+	name = "Forma de rata"
 	desc = "Transform into a big rat. Damage is not inherited between forms."
 
 	charge_required = FALSE

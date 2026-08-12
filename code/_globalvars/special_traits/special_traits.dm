@@ -26,7 +26,7 @@ GLOBAL_LIST_INIT(special_traits, build_special_traits())
 	to_chat(user, span_notice("<b>[special.name]</b>"))
 	to_chat(user, special.greet_text)
 	if(special.req_text)
-		to_chat(user, span_boldwarning("Requirements: [special.req_text]"))
+		to_chat(user, span_boldwarning("Requisitos: [special.req_text]"))
 
 /proc/try_apply_character_post_equipment(mob/living/carbon/human/character, client/player)
 	var/datum/job/job

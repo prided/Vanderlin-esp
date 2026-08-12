@@ -21,7 +21,7 @@
 
 ///Whisper verb
 /mob/verb/whisper_verb(message as text)
-	set name = "Whisper"
+	set name = "Susurro"
 	set category = "IC.Speech"
 	set hidden = 1
 
@@ -61,7 +61,7 @@
 
 ///The big me emote verb
 /mob/verb/me_big_verb()
-	set name = "Me(Big)"
+	set name = "Yo (grande)"
 	set category = "IC.Speech"
 	set hidden = TRUE
 
@@ -102,7 +102,7 @@
 
 	if(client)
 		if(client.prefs.muted & MUTE_DEADCHAT)
-			to_chat(src, "<span class='danger'>I cannot talk in deadchat (muted).</span>")
+			to_chat(src, "<span class='danger'>No puedo hablar en deadchat (silenciado).</span>")
 			return
 
 		if(client.handle_spam_prevention(message,MUTE_DEADCHAT))

@@ -20,7 +20,7 @@
 
 
 /datum/rune_effect/status_resistance/bleed
-	name = "bleed"
+	name = "sangrar"
 
 /datum/rune_effect/status_resistance/ignite
 	name = "ignite"

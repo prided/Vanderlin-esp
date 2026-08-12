@@ -45,10 +45,10 @@ type JobPrefsData = {
 };
 
 const PREF_LEVELS = [
-  { value: 3, label: 'High' },
-  { value: 2, label: 'Medium' },
-  { value: 1, label: 'Low' },
-  { value: null, label: 'Never' },
+  { value: 3, label: 'Alto' },
+  { value: 2, label: 'Medio' },
+  { value: 1, label: 'Bajo' },
+  { value: null, label: 'Nunca' },
 ] as const;
 
 export const JobPreferences = (props) => {
@@ -108,11 +108,11 @@ export const JobPreferences = (props) => {
 
   if (race_banned) {
     return (
-      <Window width={500} height={200} title="Class Selection">
+      <Window width={500} height={200} title="Selección de clase">
         <Window.Content>
           <Section>
             <Box color="bad" bold>
-              You are banned from playing the species: {race_banned_name}
+              Tienes prohibido jugar las especies: {race_banned_name}
             </Box>
           </Section>
         </Window.Content>
@@ -121,12 +121,12 @@ export const JobPreferences = (props) => {
   }
 
   return (
-    <Window width={950} height={700} title="Class Selection">
+    <Window width={950} height={700} title="Selección de clase">
       <Window.Content scrollable>
         <Section>
           <Button content={`If Role Unavailable: ${jobless_role}`} onClick={() => act('toggle_jobless')} />
-          <Button content="Reset" onClick={() => act('reset')} ml={1} />
-          <Button content="Open Role Settings" onClick={() => act('open_role_settings')} ml={1} />
+          <Button content="Reiniciar" onClick={() => act('reset')} ml={1} />
+          <Button content="Abrir configuración de roles" onClick={() => act('open_role_settings')} ml={1} />
           {last_class && (
             <Button content={`Play as ${last_class} again`} onClick={() => act('play_last_class')} ml={1} />
           )}
@@ -135,7 +135,7 @@ export const JobPreferences = (props) => {
         <Section>
           <Input
             fluid
-            placeholder="Search jobs..."
+            placeholder="Buscar empleo..."
             value={searchText}
             onChange={(value) => setSearchText(typeof value === 'string' ? value : '')}
           />
@@ -176,16 +176,16 @@ export const JobPreferences = (props) => {
           >
             <Table>
               <Table.Row header>
-                <Table.Cell width="45%">Job</Table.Cell>
-                <Table.Cell width="30%">Info</Table.Cell>
-                <Table.Cell width="25%">Priority</Table.Cell>
+                <Table.Cell width="45%">Trabajo</Table.Cell>
+                <Table.Cell width="30%">Información</Table.Cell>
+                <Table.Cell width="25%">Prioridad</Table.Cell>
               </Table.Row>
 
               {visibleJobs.length === 0 && isSearching && (
                 <Table.Row>
                   <Table.Cell colSpan={3}>
                     <Box color="label" italic>
-                      No jobs match "{searchText}"
+                      Ningún trabajo coincide \"{searchText}"
                     </Box>
                   </Table.Cell>
                 </Table.Row>
@@ -277,7 +277,7 @@ export const JobPreferences = (props) => {
                               <Button
                                 compact
                                 selected={activeExtraTab === 'titles'}
-                                content="Alternate Titles"
+                                content="Títulos alternativos"
                                 onClick={() => setActiveExtraTab('titles')}
                               />
                             )}
@@ -285,7 +285,7 @@ export const JobPreferences = (props) => {
                               <Button
                                 compact
                                 selected={activeExtraTab === 'honorary'}
-                                content="Honorary Prefix"
+                                content="Prefijo honorario"
                                 onClick={() => setActiveExtraTab('honorary')}
                               />
                             )}

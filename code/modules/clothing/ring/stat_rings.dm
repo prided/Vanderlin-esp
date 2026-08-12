@@ -11,7 +11,7 @@
 	)
 
 /obj/item/clothing/ring/statgemerald
-	name = "ring of swiftness"
+	name = "anillo de rapidez"
 	desc = "A gemerald ring, glimmering with verdant brilliance. The closer your hand drifts to it, the stronger that the wind howls."
 	icon_state = "g_newring_emerald"
 	sellprice = 222
@@ -23,7 +23,7 @@
 		return
 	else if(slot == ITEM_SLOT_RING)
 		active_item = TRUE
-		to_chat(user, span_green("'..the way of lyfe, bountiful but fleeting..'"))
+		to_chat(user, span_green("'...el camino de la vida, abundante pero fugaz..'"))
 		user.attributes?.add_attribute_modifier(/datum/attribute_modifier/statgemerald)
 	return
 
@@ -43,7 +43,7 @@
 	)
 
 /obj/item/clothing/ring/statonyx
-	name = "ring of vitality"
+	name = "anillo de vitalidad"
 	desc = "An onyx ring, shining with violet determination. The closer your hand drifts to it, the faster your heart pounds."
 	icon_state = "g_newring_quartz"
 	sellprice = 222
@@ -75,7 +75,7 @@
 	)
 
 /obj/item/clothing/ring/statamythortz
-	name = "ring of wisdom"
+	name = "anillo de sabiduría"
 	desc = "A saffira ring, crackling with azuric fascination. The closer your hand drifts to it, the clearer your mind becomes."
 	icon_state = "g_newring_sapphire"
 	sellprice = 222
@@ -106,7 +106,7 @@
 	)
 
 /obj/item/clothing/ring/statrontz
-	name = "ring of courage"
+	name = "anillo de coraje"
 	desc = "A rontz ring, radiating with crimson authority. The closer your hand drifts to it, the tighter your knuckles curl."
 	icon_state = "g_newring_ruby"
 	sellprice = 222
@@ -143,7 +143,7 @@
 	)
 
 /obj/item/clothing/ring/statdorpel
-	name = "ring of omnipotence"
+	name = "anillo de omnipotencia"
 	desc = "A dorpel ring, glowing with resplendent beauty. The closer your hand drifts to it, the more that your fears melt away."
 	icon_state = "newmulticolor"
 	smeltresult = /obj/item/riddleofsteel
@@ -160,7 +160,7 @@
 		return
 	else if(slot == ITEM_SLOT_RING)
 		active_item = TRUE
-		to_chat(user, span_blue("'..the way of hope, unbreakable and unifying..'"))
+		to_chat(user, span_blue("'...el camino de la esperanza, inquebrantable y unificador..'"))
 		user.attributes?.add_attribute_modifier(/datum/attribute_modifier/statdorpel)
 		user.add_chem_effect(CE_ENERGETIC, 5, "[type]")
 	return
@@ -183,7 +183,7 @@
 	)
 
 /obj/item/clothing/ring/dragon_ring
-	name = "dragonstone ring"
+	name = "anillo de piedra de dragón"
 	icon_state = "dragonring" //Should be safe for vampyres to wear, as the ring itself isn't made of silver. If they've suffered enough to make this ring, they should be able to wear it.
 	desc = "A gilded blacksteel ring with a drake's head, sculpted from silver. Perched within its sockets is a blortz and saffira - each, crackling with the reflection of a raging fire."
 	melting_material = /datum/material/draconic

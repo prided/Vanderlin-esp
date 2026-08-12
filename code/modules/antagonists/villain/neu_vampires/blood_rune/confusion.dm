@@ -1,7 +1,7 @@
 GLOBAL_LIST_INIT(confusion_victims, list())
 
 /datum/rune_spell/confusion
-	name = "Confusion"
+	name = "Confusión"
 	desc = "Sow panic in the mind of your enemies, and obscure cameras."
 	desc_talisman = "Sow panic in the mind of your enemies, and obscure cameras. The effect is shorter than when used from a rune."
 	invocation = "Sti' kaliesin!"

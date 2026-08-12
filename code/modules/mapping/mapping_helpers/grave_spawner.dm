@@ -241,13 +241,13 @@
 // If we want specific dieties, make new helpers!
 
 /obj/effect/mapping_helpers/structure/grave_spawner/t2
-	name = "grave spawner (T2)"
+	name = "generador de tumbas (T2)"
 	icon_state = "grave_spawner_t2"
 	decor_quality = 2
 	spawn_headstone = TRUE
 
 /obj/effect/mapping_helpers/structure/grave_spawner/t3
-	name = "grave spawner (T3)"
+	name = "generador de tumbas (T3)"
 	icon_state = "grave_spawner_t3"
 	decor_quality = 3
 	spawn_headstone = TRUE

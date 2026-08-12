@@ -46,7 +46,7 @@
 	recruitment_faction = "Retainers"
 	recruitment_message = "Join my service as a retainer, %RECRUIT!"
 	accept_message = "I pledge my service to you!"
-	refuse_message = "I must decline your offer."
+	refuse_message = "Debo rechazar tu oferta."
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/retainer/cast(mob/living/carbon/human/cast_on)
 	new_role = "Retainer of [owner.real_name]"

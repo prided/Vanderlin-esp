@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/warmth
-	name = "Warmth"
-	desc = "Provides resistance to cold and warms the body."
+	name = "Calor"
+	desc = "Proporciona resistencia al frío y calienta el cuerpo."
 	button_icon_state = "warmth"
 	cast_range = 1
 	essences = list(/datum/thaumaturgical_essence/fire)
@@ -14,8 +14,8 @@
 	target.apply_status_effect(/datum/status_effect/buff/warmth, 120 SECONDS)
 
 /atom/movable/screen/alert/status_effect/warmth
-	name = "Warmth"
-	desc = "Magical warmth protects you from cold."
+	name = "Calor"
+	desc = "El calor mágico te protege del frío."
 	icon_state = "buff"
 
 /datum/status_effect/buff/warmth
@@ -32,7 +32,7 @@
 /datum/status_effect/buff/warmth/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_RESISTCOLD, TRAIT_STATUS_EFFECT(id))
-	to_chat(owner, span_notice("The magical warmth fades away."))
+	to_chat(owner, span_notice("El calor mágico se desvanece."))
 
 /datum/action/cooldown/spell/essence/warmth/spell
 	name = "Lesser Warmth"

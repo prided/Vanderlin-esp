@@ -5,7 +5,7 @@
 	job_rank = ROLE_HARLEQUINN
 	antag_hud_name = "harlequinn"
 	confess_lines = list(
-		"I was just fulfilling contracts!",
+		"¡Solo estaba cumpliendo contratos!",
 		"The bounties called to me!",
 		"I only take what jobs pay well!",
 	)
@@ -110,7 +110,7 @@
 
 /obj/structure/buried_cache
 	name = "buried cache"
-	desc = "Something has been buried here."
+	desc = "Algo ha sido enterrado aquí."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "dirt_cache"
 	anchored = TRUE

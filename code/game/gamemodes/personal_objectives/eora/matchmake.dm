@@ -1,5 +1,5 @@
 /datum/objective/personal/marriage_broker
-	name = "Arrange Marriage"
+	name = "arreglar el matrimonio"
 	category = "Eora's Chosen"
 	triumph_count = 3
 	immediate_effects = list("Gained an ability to conduct secret marriage ceremonies", "Gained an ability to find marital status of others")

@@ -111,7 +111,7 @@
 	return TRUE
 
 /obj/item/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
-	to_chat(user, "<span class='danger'>*click*</span>")
+	to_chat(user, "<span class='danger'>*clic*</span>")
 	playsound(src, dry_fire_sound, 30, TRUE)
 
 /obj/item/gun/proc/muzzle_flash_on()
@@ -138,23 +138,23 @@
 			user.visible_message(
 				span_danger("[user] fires [src] point blank at [user.p_them()]self!"),
 				span_userdanger("I fire [src] point blank at myself!"),
-				span_hear("I hear a gunshot!"),
+				span_hear("¡Escucho un disparo!"),
 				vision_distance = COMBAT_MESSAGE_RANGE,
 			)
 		else
 			user.visible_message(
 				span_danger("[user] fires [src] point blank at [pbtarget]!"),
 				span_danger("I fire [src] point blank at [pbtarget]!"),
-				span_hear("I hear a gunshot!"),
+				span_hear("¡Escucho un disparo!"),
 				vision_distance = COMBAT_MESSAGE_RANGE,
 				ignored_mobs = pbtarget,
 			)
 			to_chat(pbtarget, span_userdanger("[user] fires [src] point blank at you!"))
 	else
 		user.visible_message(
-			span_danger("[user] fires [src]!"),
-			span_danger("I fire [src]!"),
-			span_hear("I hear a gunshot!"),
+			span_danger("¡[user] dispara [src]!"),
+			span_danger("¡Disparo [src]!"),
+			span_hear("¡Escucho un disparo!"),
 			vision_distance = COMBAT_MESSAGE_RANGE,
 		)
 
@@ -191,7 +191,7 @@
 	// This is essentially a workaround for no wielding, thank you TG
 	var/obj/item/bodypart/other_hand = user.has_hand_for_held_index(user.get_inactive_hand_index()) //returns non-disabled inactive hands
 	if(weapon_weight == WEAPON_HEAVY && !HAS_TRAIT(src, TRAIT_WIELDED) && (user.get_inactive_held_item() || !other_hand))
-		balloon_alert(user, "use both hands!")
+		balloon_alert(user, "¡Usa ambas manos!")
 		return
 
 	if(istype(user))//Check if the user can use the gun, if the user isn't alive(turrets) assume it can.

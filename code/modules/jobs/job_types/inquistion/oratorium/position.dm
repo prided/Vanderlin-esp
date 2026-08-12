@@ -1,6 +1,6 @@
 /datum/inquisition_hierarchy_node
-	var/name = "Position"
-	var/desc = "A position within the inquisition hierarchy"
+	var/name = "Posición"
+	var/desc = "Un puesto dentro de la jerarquía de la Inquisición"
 	var/school = "Order of the Venatari"
 	var/mob/living/carbon/human/assigned_member
 	var/datum/inquisition_hierarchy_node/superior

@@ -1,6 +1,6 @@
 /datum/objective/personal/embrace_death
 	name = "Embrace Death"
-	category = "Marked by Necra"
+	category = "Marcado por Necra"
 	triumph_count = 3
 	immediate_effects = list("Gained an ability to pass on peacefully")
 	rewards = list("3 Triumphs", "Necra grows stronger", "Eternal Rest")

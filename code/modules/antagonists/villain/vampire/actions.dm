@@ -1,6 +1,6 @@
 /mob/living/carbon/human/proc/sire_spawn()
 	set name = "Sire Mortal"
-	set category = "RoleUnique.Vampire"
+	set category = "RolÚnico.Vampiro"
 
 	if(!mind)
 		return
@@ -8,16 +8,16 @@
 	if(!clan)
 		return
 	if(!clan_position?.can_assign_positions)
-		to_chat(src, span_warning("I cannot sire..."))
+		to_chat(src, span_warning("No puedo engendrar..."))
 		return
 
 	var/obj/item/grabbing/bite/bite = get_item_by_slot(ITEM_SLOT_MOUTH)
 	if(!ishuman(bite?.grabbed) || bite.sublimb_grabbed != BODY_ZONE_PRECISE_NECK)
-		to_chat(src, span_warning("I must have someone's neck within my jaws."))
+		to_chat(src, span_warning("Debo tener el cuello de alguien entre mis mandíbulas."))
 		return
 	var/mob/living/carbon/human/victim = bite.grabbed
 	if(!(victim.ckey || ckey(victim.last_mind?.key)))
-		to_chat(src, span_warning("[victim.p_theyre(TRUE)] too simple to be sired."))
+		to_chat(src, span_warning("[victim.p_theyre(TRUE)] demasiado simple para ser engendrado."))
 		return
 	if(HAS_TRAIT(victim, "offered_vampirism"))
 		to_chat(src, span_warning("[victim.p_theyve(TRUE)] already been offered a blessing."))
@@ -30,7 +30,7 @@
 		to_chat(src, span_warning("[victim.p_their(TRUE)] brain is too damaged."))
 		return
 	if(!CAN_HAVE_BLOOD(victim))
-		to_chat(src, span_warning("[victim.p_their(TRUE)] does not have blood."))
+		to_chat(src, span_warning("[victim.p_their(TRUE)] no tiene sangre."))
 		return
 	if(victim.get_blood_volume() > BLOOD_VOLUME_BAD)
 		to_chat(src, span_warning("[victim.p_their(TRUE)] blood is not thin enough to be sired."))
@@ -38,7 +38,7 @@
 	if(IS_DEADITE(victim))
 		to_chat(src, span_warning("The dead already walk. This one is the Dark Lady's servant."))
 	if(victim.clan || victim.mind.has_antag_datum(/datum/antagonist/vampire))
-		to_chat(src, span_warning("[victim] has already been sired."))
+		to_chat(src, span_warning("[victim] ya ha sido engendrado."))
 		return
 	if(victim.mind.has_antag_datum(/datum/antagonist/werewolf))
 		to_chat(src, span_warning("[victim] tastes of beast. [victim.p_they()] will not sire."))
@@ -46,16 +46,16 @@
 	if(stat == DEAD && (world.time - victim.timeofdeath) > 4 MINUTES)
 		to_chat(src, span_warning("[victim.p_their(TRUE)] body has gone stiff. Too far gone to sire."))
 		return
-	if(tgui_alert(src, "Would you like to sire a new spawn?", "THE CURSE OF KAIN", list("MAKE IT SO", "I RESCIND")) != "MAKE IT SO")
-		to_chat(src, span_warning("I decide [victim] is unworthy."))
+	if(tgui_alert(src, "Would you like to sire a new spawn?", "LA MALDICIÓN DE KAIN", list("MAKE IT SO", "I RESCIND")) != "MAKE IT SO")
+		to_chat(src, span_warning("Decido que [victim] no es digno."))
 		return
 	INVOKE_ASYNC(victim, TYPE_PROC_REF(/mob/living/carbon/human, vampire_conversion_prompt), src)
 
 /mob/living/carbon/human/proc/vampire_telepathy()
 	var/TELEPATHY_COOLDOWN = 30 SECONDS
 
-	set name = "Telepathy"
-	set category = "RoleUnique.Vampire"
+	set name = "Telepatía"
+	set category = "RolÚnico.Vampiro"
 
 	if(!mind)
 		return
@@ -68,14 +68,14 @@
 		to_chat(src, span_warning("You must wait [remaining] seconds before using Telepathy again!"))
 		return
 
-	var/msg = browser_input_text(src, "Send a message", "COMMAND", max_length = MAX_MESSAGE_LEN, multiline = TRUE)
+	var/msg = browser_input_text(src, "enviar un mensaje", "COMMAND", max_length = MAX_MESSAGE_LEN, multiline = TRUE)
 	if(!msg)
 		return
 
 	if(src.bloodpool > 25)
 		src.adjust_bloodpool(-25)
 	else
-		to_chat(src, span_danger("I don't have enough blood to send a telepathy message!"))
+		to_chat(src, span_danger("¡No tengo suficiente sangre para enviar un mensaje de telepatía!"))
 		return
 
 	// set cooldown
@@ -87,11 +87,11 @@
 
 /mob/living/carbon/human/proc/disguise_button()
 	set name = "Disguise"
-	set category = "RoleUnique.Vampire"
+	set category = "RolÚnico.Vampiro"
 
 	var/datum/component/vampire_disguise/disguise_comp = GetComponent(/datum/component/vampire_disguise)
 	if(!disguise_comp)
-		to_chat(src, span_warning("I cannot disguise myself."))
+		to_chat(src, span_warning("No puedo disfrazarme."))
 		return
 
 	if(disguise_comp.disguised)
@@ -113,16 +113,16 @@
 
 
 /mob/living/carbon/human/proc/blood_strength()
-	set name = "Night Muscles"
-	set category = "RoleUnique.Vampire"
+	set name = "Músculos nocturnos"
+	set category = "RolÚnico.Vampiro"
 
 	if(!clan)
 		return
 	if(SEND_SIGNAL(src, COMSIG_DISGUISE_STATUS))
-		to_chat(src, span_warning("My curse is hidden."))
+		to_chat(src, span_warning("Mi maldición está oculta."))
 		return
 	if(bloodpool < 500)
-		to_chat(src, span_warning("Not enough vitae."))
+		to_chat(src, span_warning("No hay suficiente vitae."))
 		return
 
 
@@ -143,18 +143,18 @@
 	duration = 1 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/bloodstrength
-	name = "Night Muscles"
+	name = "Músculos nocturnos"
 	desc = ""
 	icon_state = "bleed1"
 
 /mob/living/carbon/human/proc/blood_celerity()
 	set name = "Quickening"
-	set category = "RoleUnique.Vampire"
+	set category = "RolÚnico.Vampiro"
 
 	if(!clan)
 		return
 	if(SEND_SIGNAL(src, COMSIG_DISGUISE_STATUS))
-		to_chat(src, "<span class='warning'>My curse is hidden.</span>")
+		to_chat(src, "<span class='warning'>Mi maldición está oculta.</span>")
 		return
 	if(bloodpool < 500)
 		to_chat(src, "<span class='warning'>Not enough vitae.</span>")
@@ -172,13 +172,13 @@
 
 
 /mob/living/carbon/human/proc/blood_fortitude()
-	set name = "Armor of Darkness"
-	set category = "RoleUnique.Vampire"
+	set name = "Armadura de la oscuridad"
+	set category = "RolÚnico.Vampiro"
 
 	if(clan)
 		return
 	if(SEND_SIGNAL(src, COMSIG_DISGUISE_STATUS))
-		to_chat(src, "<span class='warning'>My curse is hidden.</span>")
+		to_chat(src, "<span class='warning'>Mi maldición está oculta.</span>")
 		return
 	if(bloodpool < 500)
 		to_chat(src, "<span class='warning'>Not enough vitae.</span>")
@@ -202,7 +202,7 @@
 	duration = 30 SECONDS
 
 /atom/movable/screen/alert/status_effect/buff/fortitude
-	name = "Armor of Darkness"
+	name = "Armadura de la oscuridad"
 	desc = ""
 	icon_state = "bleed1"
 
@@ -223,7 +223,7 @@
 
 /obj/item/clothing/armor/skin_armor/vampire_fortitude
 	slot_flags = null
-	name = "vampire's skin"
+	name = "piel de vampiro"
 	desc = ""
 	icon_state = null
 	body_parts_covered = FULL_BODY

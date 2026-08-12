@@ -53,9 +53,9 @@
 
 	var/desc = span_info("Stamina.")
 	if(total_stamina > base_max_stamina)
-		desc = span_green("High stamina.")
+		desc = span_green("Alta resistencia.")
 	else if(total_stamina < base_max_stamina)
-		desc = span_alert("Low stamina.")
+		desc = span_alert("Baja resistencia.")
 
 	add_or_update_variable_stamina_modifier(
 		/datum/stamina_modifier/endurance,
@@ -103,11 +103,11 @@
 	var/base = endurance * 100
 	var/total_energy = max(base + athletics_bonus, 100)
 	var/fatigue_modification = total_energy - base_max_energy
-	var/desc = span_info("Endurance.")
+	var/desc = span_info("Resistencia.")
 	if(total_energy > base_max_energy)
-		desc = span_green("High endurance.")
+		desc = span_green("Alta resistencia.")
 	else if(total_energy < base_max_energy)
-		desc = span_alert("Low endurance.")
+		desc = span_alert("Baja resistencia.")
 	add_or_update_variable_fatigue_modifier(
 		/datum/fatigue_modifier/endurance,
 		TRUE,

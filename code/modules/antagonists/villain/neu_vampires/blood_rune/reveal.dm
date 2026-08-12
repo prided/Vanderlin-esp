@@ -28,7 +28,7 @@
 			pixel_x += 32
 
 /datum/rune_spell/reveal
-	name = "Reveal"
+	name = "Revelar"
 	desc = "Reveal what you have previously hidden, terrifying enemies in the process."
 	desc_talisman = "Reveal what you have previously hidden, terrifying enemies in the process. The effect is shorter than when used from a rune."
 	invocation = "Nikt'o barada kla'atu!"

@@ -31,7 +31,7 @@
 /datum/intent/chisel
 	name = "chisel"
 	icon_state = "inchisel"
-	attack_verb = list("chisels")
+	attack_verb = list("cinceles")
 	hitsound = list('sound/combat/hits/pick/genpick (1).ogg', 'sound/combat/hits/pick/genpick (2).ogg')
 	blade_class = null
 	no_attack = TRUE
@@ -40,20 +40,20 @@
 	releasedrain = 0
 
 /obj/item/weapon/chisel/iron
-	name = "iron chisel"
+	name = "cincel de hierro"
 	smeltresult = /obj/item/ingot/iron
 	melting_material = /datum/material/iron
 	toolspeed = 1.1
 
 /obj/item/weapon/chisel/stone
-	name = "flint chisel"
+	name = "cincel de pedernal"
 	icon_state = "stonechisel"
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	smeltresult = /obj/item/natural/stone
 	toolspeed = 1
 
 /obj/item/weapon/chisel/bronze
-	name = "bronze chisel"
+	name = "cincel de bronce"
 	icon_state = "bchisel"
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	smeltresult = /obj/item/ingot/bronze

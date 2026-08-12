@@ -1,6 +1,6 @@
 /obj/item/storage/belt/leather
 	name = "belt"
-	desc = "A leather belt."
+	desc = "Un cinturón de cuero."
 	icon_state = "leather"
 	item_state = "leather"
 	equip_sound = 'sound/blank.ogg'
@@ -79,11 +79,11 @@
 	)
 
 /obj/item/storage/belt/leather/mercenary/shalal
-	name = "shalal belt"
+	name = "cinturón shalal"
 	icon_state = "shalal"
 
 /obj/item/storage/belt/leather/mercenary/black
-	name = "black belt"
+	name = "cinturón negro"
 	icon_state = "blackbelt"
 
 /obj/item/storage/belt/leather/plaquegold
@@ -93,12 +93,12 @@
 	sellprice = 50
 
 /obj/item/storage/belt/leather/shalal
-	name = "shalal belt"
+	name = "cinturón shalal"
 	icon_state = "shalal"
 	sellprice = 5
 
 /obj/item/storage/belt/leather/black
-	name = "black belt"
+	name = "cinturón negro"
 	icon_state = "blackbelt"
 	sellprice = 10
 
@@ -120,13 +120,13 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/storage/belt/leather/steel
-	name = "steel belt"
-	desc = "A belt with a steel plate on its front."
+	name = "cinturón de acero"
+	desc = "Un cinturón con una placa de acero en su frente."
 	icon_state = "steelplaque"
 	sellprice = 30
 
 /obj/item/storage/belt/leather/rope
-	name = "rope belt"
+	name = "cinturón de cuerda"
 	desc = "A simple belt made of rope."
 	icon_state = "rope"
 	item_state = "rope"
@@ -136,7 +136,7 @@
 
 /obj/item/storage/belt/leather/rope/attack_self(mob/user, list/modifiers)
 	. = ..()
-	to_chat(user, span_notice("You begin untying [src]."))
+	to_chat(user, span_notice("Comienzas a desatar [src]."))
 	if(do_after(user, 1.5 SECONDS, src))
 		qdel(src)
 		user.put_in_active_hand(new salvage_result(get_turf(user)))
@@ -165,7 +165,7 @@
 
 /obj/item/storage/belt/leather/cloth/attack_self(mob/user, list/modifiers)
 	. = ..()
-	to_chat(user, span_notice("You begin untying [src]."))
+	to_chat(user, span_notice("Comienzas a desatar [src]."))
 	if(do_after(user, 1.5 SECONDS, src))
 		qdel(src)
 		user.put_in_active_hand(new salvage_result(get_turf(user)))
@@ -324,7 +324,7 @@
 	)
 
 /obj/item/storage/belt/pouch/cloth
-	name = "cloth pouch"
+	name = "bolsa de tela"
 	desc = "Usually used for holding small amount of coins."
 	icon_state = "clothpouch"
 	salvage_result = /obj/item/natural/cloth
@@ -363,7 +363,7 @@
 	component_type = /datum/component/storage/concrete/grid/satchel/cloth
 
 /obj/item/storage/backpack/satchel/cloth/big
-	name = "cloth rucksack"
+	name = "mochila de tela"
 	desc = "A large but rudimentary cloth sack strapped to the back for storing a medium number of items."
 	icon_state = "rucksack"
 	item_state = "rucksack"
@@ -411,7 +411,7 @@
 	ADD_TRAIT(src, TRAIT_HARD_TO_STEAL, TRAIT_GENERIC)
 
 /obj/item/storage/backpack/backpack/artibackpack
-	name = "cooling backpack"
+	name = "mochila de enfriamiento"
 	desc = "A leather backpack with complex bronze pipework coursing through it. It hums and vibrates constantly."
 	icon_state = "artibackpack"
 	item_state = "artibackpack"
@@ -420,7 +420,7 @@
 	//for those curious, yes the artibackpack preserves organs and food. Check _organ.dm and snacks.dm
 
 /obj/item/storage/backpack/backpack/artibackpack/porter
-	name = "humdrum"
+	name = "monótono"
 	desc = "A absurdly oversized backpack with complex bronze pipework coursing through it. It hums and vibrates constantly."
 	sewrepair = /datum/attribute/skill/craft/tanning/patching
 	salvage_result = /obj/item/natural/hide/cured
@@ -429,7 +429,7 @@
 	component_type = /datum/component/storage/concrete/grid/porter
 
 /obj/item/storage/backpack/satchel/surgbag
-	name = "surgery bag"
+	name = "bolsa de cirugía"
 	desc = "Contains all the phreakish devices one needs to cut a person up."
 	item_state = "doctorbag"
 	icon_state = "doctorbag"
@@ -506,7 +506,7 @@
 		if(SEND_SIGNAL(src, COMSIG_TRY_STORAGE_INSERT, A, user, TRUE))
 			to_chat(usr, span_notice("I discreetly slip [A] into [src]."))
 		else
-			to_chat(loc, span_warning("Full!"))
+			to_chat(loc, span_warning("¡Lleno!"))
 		return TRUE
 	. = ..()
 
@@ -523,7 +523,7 @@
 /obj/item/storage/belt/leather/knifebelt/examine(mob/user)
 	. = ..()
 	if(length(contents))
-		. += span_notice("[length(contents)] inside.")
+		. += span_notice("[length(contents)] en el interior.")
 
 /obj/item/storage/belt/leather/knifebelt/iron/Initialize()
 	. = ..()
@@ -597,7 +597,7 @@
 	component_type = /datum/component/storage/concrete/grid/headhook
 
 /obj/item/storage/hip/headhook/bronze
-	name = "bronze head hook"
+	name = "gancho de cabeza de bronce"
 	desc = "a bronze hook for storing 12 heads"
 	icon = 'icons/roguetown/clothing/belts.dmi'
 	//mob_overlay_icon = 'icons/roguetown/clothing/onmob/belts.dmi' // TODO
@@ -615,7 +615,7 @@
 
 /obj/item/storage/hip/headhook/attackby(obj/item/H, mob/user, list/modifiers)
 	. = ..()
-	user.visible_message("[user] tries to put [H] into [src].", "You try to put [H] into [src].")
+	user.visible_message("[user] intenta poner [H] en [src].", "Intenta poner [H] en [src].")
 
 /obj/item/storage/hip/headhook/examine(mob/user)
 	. = ..()
@@ -623,7 +623,7 @@
 		. += span_notice("[length(contents)] thing[length(contents) > 1 ? "s" : ""] in [src].")
 
 /obj/item/storage/hip/headhook/royal
-	name = "royal head hook"
+	name = "gancho de cabeza real"
 	desc = "a golden hook for storing 16 heads, befitting of any king's hunt"
 	icon = 'icons/roguetown/clothing/belts.dmi'
 	//mob_overlay_icon = 'icons/roguetown/clothing/onmob/belts.dmi' // TODO
@@ -699,7 +699,7 @@
 	if(auto_pickup)
 		. += span_notice("You are ready to collect ores.")
 	else
-		. += span_notice("You are not ready to collect ores.")
+		. += span_notice("No estás listo para recolectar minerales.")
 
 /obj/item/storage/hip/orebag/get_mechanics_examine(mob/user)
 	. = ..()

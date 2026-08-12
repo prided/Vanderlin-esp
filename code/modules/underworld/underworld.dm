@@ -2,7 +2,7 @@
 
 /mob/proc/returntolobby()
 	set name = "{RETURN TO LOBBY}"
-	set category = "Preferences.Options"
+	set category = "Preferencias.Opciones"
 	set hidden = 1
 
 	GLOB.actors_list -= mobid // admin removed - get him outta here.
@@ -37,7 +37,7 @@
 
 // shit that eventually will need moved elsewhere
 /obj/item/flashlight/flare/torch/lantern/shrunken
-	name = "shrunken lamp"
+	name = "lámpara encogida"
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "shrunkenlamp"
 	item_state = "shrunkenlamp"
@@ -90,7 +90,7 @@
 		user << sound(pick('sound/misc/carriage1.ogg', 'sound/misc/carriage2.ogg', 'sound/misc/carriage3.ogg', 'sound/misc/carriage4.ogg'), 0, 0 ,0, 50)
 
 /obj/structure/underworld/barrier //Blocks sprite locations
-	name = "DONT STAND HERE"
+	name = "NO TE QUEDES AQUÍ"
 	desc = "The Undermaiden awaits."
 	icon = 'icons/roguetown/underworld/underworld.dmi'
 	icon_state = "spiritpart"
@@ -116,7 +116,7 @@
 
 /obj/structure/underworld/carriage/attack_hand(mob/living/carbon/spirit/user)
 	if(user.paid)
-		switch(tgui_alert(user, "Are you ready to be judged?","Ready", list("Yes","No")))
+		switch(tgui_alert(user, "¿Estás listo para ser juzgado?","Listo", list("Yes","No")))
 			if("Yes")
 				playsound(user, 'sound/misc/deadbell.ogg', 50, TRUE, -2, ignore_walls = TRUE)
 				add_abstract_elastic_data(ELASCAT_MEDICAL, ELASDATA_COIN_REVIVES, 1)
@@ -129,8 +129,8 @@
 
 
 /obj/structure/underworld/coinspawner
-	name = "The Hand"
-	desc = "A coin?"
+	name = "la mano"
+	desc = "¿Una moneda?"
 	icon = 'icons/roguetown/underworld/enigma_husks.dmi'
 	icon_state = "the_hand_c"
 	anchored = TRUE
@@ -156,7 +156,7 @@
 	var/obj/item/underworld/coin/toll = new(get_turf(src))
 	if(!GLOB.underworld_coinpull_locs.len)
 		if(fool.put_in_hands(toll))
-			to_chat(fool,span_notice("\The [src] puts \the [toll] in your hand..."))
+			to_chat(fool,span_notice("\The [src] pone \the [toll] en tu mano..."))
 		else
 			to_chat(fool,span_notice("\The [src] drops \the [toll]..."))
 			toll.forceMove(get_turf(fool))
@@ -173,15 +173,15 @@
 /obj/structure/underworld/coinspawner/proc/set_coin_taken()
 	has_coin = FALSE
 	icon_state = "the_hand"
-	desc = "A hand?"
+	desc = "¿Una mano?"
 
 /obj/structure/underworld/coinspawner/proc/regenerate_coin()
 	has_coin = TRUE
 	icon_state = "the_hand_c"
-	desc = "A coin?"
+	desc = "¿Una moneda?"
 
 /obj/item/underworld/coin
-	name = "The Toll"
+	name = "El peaje"
 	desc = "This is more than just a coin."
 	icon = 'icons/roguetown/underworld/enigma_husks.dmi'
 	icon_state = "soultoken_floor"
@@ -197,5 +197,5 @@
 /obj/effect/landmark/underworldsafe/Crossed(atom/movable/AM, oldloc)
 	if(istype(AM, /mob/living/simple_animal/hostile/dragger))
 		for(var/mob/living/carbon/human/A in view(4))
-			to_chat(A, "The monster's form dematerializes as it nears the Carriage.")
+			to_chat(A, "La forma del monstruo se desmaterializa a medida que se acerca al Carro.")
 		qdel(AM)

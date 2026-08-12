@@ -58,12 +58,12 @@
 
 	if(arms_needed && !equip_buckle_inhands(potential_rider, arms_needed, target_movable)) // can be either 1 (cyborg riding) or 2 (human piggybacking) hands
 		potential_rider.visible_message(span_warning("[potential_rider] can't get a grip on [target_movable] because [potential_rider.p_their()] hands are full!"),
-			span_warning("I can't get a grip on [target_movable] because my hands are full!"))
+			span_warning("¡No puedo agarrar [target_movable] porque tengo las manos ocupadas!"))
 		return COMPONENT_BLOCK_BUCKLE
 
 	if((ride_check_flags & RIDER_NEEDS_LEGS) && HAS_TRAIT(potential_rider, TRAIT_FLOORED))
 		potential_rider.visible_message(span_warning("[potential_rider] can't get [potential_rider.p_their()] footing on [target_movable]!"),
-			span_warning("I can't get my footing on [target_movable]!"))
+			span_warning("¡No puedo ponerme de pie en [target_movable]!"))
 		return COMPONENT_BLOCK_BUCKLE
 
 	var/mob/living/target_living = target_movable
@@ -73,7 +73,7 @@
 	var/carrier_arms_needed = 0 // VANDERLIN CHANGE
 	if((ride_check_flags & CARRIER_NEEDS_ARM) && !equip_buckle_inhands(target_living, carrier_arms_needed, target_living, potential_rider))
 		target_living.visible_message(span_warning("[target_living] can't get a grip on [potential_rider] because [target_living.p_their()] hands are full!"),
-			span_warning("I can't get a grip on [potential_rider] because my hands are full!"))
+			span_warning("¡No puedo agarrar [potential_rider] porque tengo las manos ocupadas!"))
 		return COMPONENT_BLOCK_BUCKLE
 
 	target_living.AddComponent(riding_component_type, potential_rider, force, ride_check_flags)

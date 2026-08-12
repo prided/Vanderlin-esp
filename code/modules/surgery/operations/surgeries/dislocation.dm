@@ -1,6 +1,6 @@
 /datum/surgery_operation/limb/relocation
-	name = "Bone Relocation"
-	desc = "Relocate a patient's bones."
+	name = "Reubicación ósea"
+	desc = "Reubicar los huesos de un paciente."
 
 	operation_flags = OPERATION_STANDING_ALLOWED
 

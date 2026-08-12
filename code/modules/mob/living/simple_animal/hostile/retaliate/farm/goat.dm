@@ -11,7 +11,7 @@
 	faction = list("goats")
 	gender = FEMALE
 	footstep_type = FOOTSTEP_MOB_SHOE
-	emote_see = list("shakes her head.", "chews her cud.")
+	emote_see = list("sacude la cabeza.", "chews her cud.")
 
 	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 2,
 						/obj/item/natural/hide = 1,

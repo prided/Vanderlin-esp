@@ -30,7 +30,7 @@
 	category_tags = list(CTAG_PILGRIM)
 	total_positions = 1
 	roll_chance = 0
-	apprentice_name = "Carpenter Apprentice"
+	apprentice_name = "Aprendiz de carpintero"
 	cmode_music = 'sound/music/cmode/towner/CombatTowner2.ogg'
 	is_recognized = TRUE
 

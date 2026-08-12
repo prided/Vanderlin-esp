@@ -199,7 +199,7 @@
 
 /obj/item/book/secret/ledger/proc/create_order_scroll(mob/current_reader)
 	if(!length(cart))
-		to_chat(usr, "<span class='warning'>Your cart is empty!</span>")
+		to_chat(usr, "<span class='warning'>¡Tu carrito está vacío!</span>")
 		return
 
 	var/datum/world_faction/faction = SSmerchant.active_faction

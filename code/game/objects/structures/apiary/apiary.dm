@@ -21,7 +21,7 @@
 
 /obj/structure/apiary
 	name = "apiary"
-	desc = "A structure housing bees that produce honey and pollinate plants."
+	desc = "Una estructura que alberga abejas que producen miel y polinizan plantas."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "beebox-empty"
 
@@ -171,7 +171,7 @@
 		agitate_bees(80, user)
 		return
 
-	user.visible_message("[user] starts to collect combs from [src].", "You start to collect combs from [src]")
+	user.visible_message("[user] comienza a recolectar panales de [src].", "You start to collect combs from [src]")
 
 	if(!do_after(user, 2.5 SECONDS, src))
 		return
@@ -278,7 +278,7 @@
 		disease = GLOB.bee_diseases[disease_type]
 		has_disease = TRUE
 		disease_severity = 10
-		visible_message(span_warning("The bees in [src] seem agitated."))
+		visible_message(span_warning("Las abejas en [src] parecen agitadas."))
 
 /obj/structure/apiary/proc/agitate_bees(chance, mob/user)
 	if(prob(chance) && bee_count > 0)
@@ -397,7 +397,7 @@
 	var/swarm_size = rand(SWARM_MIN_SIZE, SWARM_MAX_SIZE)
 	bee_count -= swarm_size
 
-	visible_message(span_warning("A swarm of bees emerges from [src]!"))
+	visible_message(span_warning("¡Un enjambre de abejas emerge de [src]!"))
 
 	var/obj/effect/bee_swarm/swarm = new(get_turf(src))
 	swarm.bee_count = swarm_size
@@ -453,7 +453,7 @@
 	new_queen.genetics.color = pick("#FFD700", "#FFA500", "#FFFF00", "#DAA520")
 	new_queen.genetics.disease_resistance = rand(80, 120)/100
 
-	visible_message(span_notice("A new queen bee emerges from [src]!"))
+	visible_message(span_notice("¡Una nueva abeja reina emerge de [src]!"))
 
 	insert_queen(new_queen)
 

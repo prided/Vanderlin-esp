@@ -1,6 +1,6 @@
 /obj/machinery/essence/infuser
-	name = "essence infuser"
-	desc = "Saturates a placed item with alchemical essences to transform it."
+	name = "infusor de esencia"
+	desc = "Satura un objeto colocado con esencias alquímicas para transformarlo."
 	icon = 'icons/roguetown/misc/splitter.dmi'
 	icon_state = "splitter"
 	network_priority = 4
@@ -68,7 +68,7 @@
 	var/speed = GLOB.thaumic_research.get_research_bonus(/datum/thaumic_research_node/transmutation)
 	var/adjusted_time = completion_time / speed
 
-	user.visible_message(span_info("[user] begins the infusion on [infusion_target]."))
+	user.visible_message(span_info("[user] comienza la infusión en [infusion_target]."))
 	update_appearance(UPDATE_OVERLAYS)
 
 	// Spark effect timer loop
@@ -133,7 +133,7 @@
 		opts[r.name] = rpath
 		mapping[rpath] = r
 	if(!opts.len)
-		to_chat(user, span_warning("No infusion recipes available."))
+		to_chat(user, span_warning("No hay recetas de infusión disponibles."))
 		for(var/rpath in mapping)
 			qdel(mapping[rpath])
 		return
@@ -154,7 +154,7 @@
 	// Start polling for essences if we don't already have them
 	if(!recipe_ready())
 		START_PROCESSING(SSobj, src)
-	to_chat(user, span_info("Recipe selected: [current_recipe.name]"))
+	to_chat(user, span_info("Receta seleccionada: [current_recipe.name]"))
 
 /obj/machinery/essence/infuser/proc/clear_recipe(mob/user)
 	if(!current_recipe)
@@ -192,11 +192,11 @@
 				break
 			qdel(r)
 		if(!valid)
-			to_chat(user, span_warning("[I] cannot be infused."))
+			to_chat(user, span_warning("[I] no se puede infundir."))
 			return
 		if(user.transferItemToLoc(I, src))
 			infusion_target = I
-			to_chat(user, span_info("You place [I] on [src]."))
+			to_chat(user, span_info("Colocas [I] en [src]."))
 			if(current_recipe && !recipe_ready())
 				START_PROCESSING(SSobj, src)
 			update_appearance(UPDATE_OVERLAYS)
@@ -208,7 +208,7 @@
 	if(infusion_target)
 		. += span_notice("Item: [infusion_target]")
 	if(current_recipe)
-		. += span_notice("Recipe: [current_recipe.name]")
+		. += span_notice("Receta: [current_recipe.name]")
 		for(var/etype in current_recipe.required_essences)
 			var/needed = current_recipe.required_essences[etype]
 			var/have = storage.get(etype)
@@ -216,4 +216,4 @@
 			. += span_notice("  [e.name]: [have]/[needed]")
 			qdel(e)
 	if(infusing)
-		. += span_notice("Infusing...")
+		. += span_notice("Infundiendo...")

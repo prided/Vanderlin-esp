@@ -212,9 +212,9 @@
 	if(flashwindow)
 		window_flash(M.client)
 	var/options = ignore_category ? list(CHOICE_YES, CHOICE_NO, CHOICE_NEVER) : DEFAULT_INPUT_CHOICES
-	switch(tgui_alert(M, Question, "Please answer in [DisplayTimeText(poll_time)]!", options, timeout = poll_time))
+	switch(tgui_alert(M, Question, "¡Por favor responda en [DisplayTimeText(poll_time)]!", options, timeout = poll_time))
 		if(CHOICE_YES)
-			to_chat(M, "<span class='notice'>Choice registered: Yes.</span>")
+			to_chat(M, "<span class='notice'>Eleccion registrada: Si.</span>")
 			if(time_passed + poll_time <= world.time)
 				to_chat(M, "<span class='danger'>Sorry, you answered too late to be considered!</span>")
 				SEND_SOUND(M, 'sound/blank.ogg')

@@ -1,6 +1,6 @@
 /datum/book_entry/farming_basics
 	name = "Farming Fundamentals"
-	category = "Agriculture"
+	category = "Agricultura"
 
 /datum/book_entry/farming_basics/inner_book_html(mob/user)
 	return {"

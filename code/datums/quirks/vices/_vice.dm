@@ -9,7 +9,7 @@
 	var/time = 5 MINUTES
 	var/debuff = /datum/status_effect/debuff/addiction
 	var/needsate_text
-	var/sated_text = "That's much better..."
+	var/sated_text = "Eso es mucho mejor..."
 	var/unsate_time
 
 /datum/quirk/vice/addiction/on_spawn()
@@ -70,7 +70,7 @@
 
 /datum/quirk/vice/addiction/alcoholic
 	name = "Drunkard"
-	desc = "Drinking alcohol is my favorite thing."
+	desc = "Beber alcohol es lo que más me gusta."
 	point_value = 2
 	time = 30 MINUTES
 	debuff = /datum/status_effect/debuff/addiction/alcoholic
@@ -78,10 +78,10 @@
 
 /datum/quirk/vice/addiction/alcoholic/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Drinker..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Bebedor..."))
 
 /datum/quirk/vice/addiction/smoker
-	name = "Smoker"
+	name = "Fumador"
 	desc = "I need to smoke something to take the edge off."
 	point_value = 3
 	time = 30 MINUTES
@@ -90,7 +90,7 @@
 
 /datum/quirk/vice/addiction/smoker/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Smoker..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Fumador..."))
 
 /datum/quirk/vice/addiction/junkie
 	name = "Junkie"
@@ -98,7 +98,7 @@
 	point_value = 3
 	time = 50 MINUTES
 	debuff = /datum/status_effect/debuff/addiction/junkie
-	needsate_text = "Time to reach a new high."
+	needsate_text = "Es hora de alcanzar un nuevo máximo."
 
 /datum/quirk/vice/addiction/junkie/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
@@ -122,19 +122,19 @@
 	point_value = 4
 	time = 30 MINUTES
 	debuff = /datum/status_effect/debuff/addiction/kleptomaniac
-	needsate_text = "I need to STEAL something! I'll die if I don't!"
+	needsate_text = "¡Necesito ROBAR algo! ¡Moriré si no lo hago!"
 
 /datum/quirk/vice/addiction/kleptomaniac/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
 		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Klepto..."))
 
 /datum/quirk/vice/addiction/godfearing
-	name = "Devout Follower"
+	name = "Seguidor devoto"
 	desc = "I need to pray to my Patron regularly, and I'm sure my prayers stand out to the gods more!"
 	point_value = 1
 	time = 40 MINUTES
 	debuff = /datum/status_effect/debuff/addiction/godfearing
-	needsate_text = "Time to pray."
+	needsate_text = "Es hora de orar."
 
 /datum/quirk/vice/addiction/godfearing/on_spawn()
 	. = ..()
@@ -152,14 +152,14 @@
 		owner.sate_addiction(src.type)
 
 /datum/quirk/vice/addiction/sadist
-	name = "Sadist"
+	name = "Sádico"
 	desc = "Those worms call me a monster... I just like seeing limbs fly and blood drip. Is there something so BAD about that?"
 	random_exempt = TRUE
 	time = 40 MINUTES
 	point_value = 2
 	debuff = /datum/status_effect/debuff/addiction/sadist
-	needsate_text = "Where's all the blood?"
+	needsate_text = "¿Dónde está toda la sangre?"
 
 /datum/quirk/vice/addiction/sadist/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Sadist..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Sádico..."))

@@ -204,7 +204,7 @@ All foods are distributed among various categories. Use common sense.
 	return data
 
 /datum/intent/food
-	name = "feed"
+	name = "alimentar"
 	noaa = TRUE
 	icon_state = "infeed"
 	rmb_ranged = TRUE
@@ -220,7 +220,7 @@ All foods are distributed among various categories. Use common sense.
 		user.visible_message(span_green("[user] beckons [M] with [master]."), span_green("I beckon [M] with [master]."), ignored_mobs = targetl)
 		if(M.client)
 			if(M.can_see_cone(user))
-				to_chat(M, span_green("[user] beckons me with [master]."))
+				to_chat(M, span_green("[user] me llama con [master]."))
 		M.food_tempted(master, user)
 
 /obj/item/reagent_containers/food/snacks/fire_act(added, maxstacks)
@@ -276,7 +276,7 @@ All foods are distributed among various categories. Use common sense.
 		color = "#6c6897"
 		var/mutable_appearance/rotflies = mutable_appearance('icons/roguetown/mob/rotten.dmi', "rotten")
 		add_overlay(rotflies)
-		name = "rotten [initial(name)]"
+		name = "podrido [initial(name)]"
 		eat_effect = /datum/status_effect/debuff/rotfood
 		reagents.add_reagent(/datum/reagent/yuck, 5)
 		slices_num = 0
@@ -326,7 +326,7 @@ All foods are distributed among various categories. Use common sense.
 		if(eat_effect != /datum/status_effect/debuff/burnedfood)
 			if(burning >= burntime)
 				color = burned_color
-				name = "burned [name]"
+				name = "quemado [name]"
 				slice_path = null
 				eat_effect = /datum/status_effect/debuff/burnedfood
 		if(burning > (burntime * 2))
@@ -354,19 +354,19 @@ All foods are distributed among various categories. Use common sense.
 			var/favorite_food_type = human_eater.culinary_preferences[CULINARY_FAVOURITE_FOOD]
 			if(favorite_food_type == type)
 				if(human_eater.add_stress(/datum/stress_event/favourite_food))
-					to_chat(human_eater, span_green("Yum! My favorite food!"))
+					to_chat(human_eater, span_green("¡Mmm! ¡Mi comida favorita!"))
 			else if(ispath(type, favorite_food_type))
 				var/obj/item/reagent_containers/food/snacks/favorite_food_instance = favorite_food_type
 				var/favorite_food_name = initial(favorite_food_instance.name)
 				if(favorite_food_name == name)
 					if(human_eater.add_stress(/datum/stress_event/favourite_food))
-						to_chat(human_eater, span_green("Yum! My favorite food!"))
+						to_chat(human_eater, span_green("¡Mmm! ¡Mi comida favorita!"))
 			else
 				var/obj/item/reagent_containers/food/snacks/favorite_food_instance = favorite_food_type
 				var/slice_path = initial(favorite_food_instance.slice_path)
 				if(slice_path && type == slice_path)
 					if(human_eater.add_stress(/datum/stress_event/favourite_food))
-						to_chat(human_eater, span_green("Yum! My favorite food!"))
+						to_chat(human_eater, span_green("¡Mmm! ¡Mi comida favorita!"))
 
 			var/hated_food_type = human_eater.culinary_preferences[CULINARY_HATED_FOOD]
 			if(hated_food_type == type)
@@ -397,7 +397,7 @@ All foods are distributed among various categories. Use common sense.
 				switch (faretype)
 					if (FARE_IMPOVERISHED)
 						eater.add_stress(/datum/stress_event/noble_impoverished_food)
-						to_chat(eater, span_red("This is disgusting... how can anyone eat this?"))
+						to_chat(eater, span_red("Esto es asqueroso... ¿cómo puede alguien comer esto?"))
 						if (eater.nutrition >= NUTRITION_LEVEL_STARVING)
 							eater.taste(reagents)
 							return
@@ -416,7 +416,7 @@ All foods are distributed among various categories. Use common sense.
 						eater.remove_stress(/datum/stress_event/noble_bland_food)
 						eater.add_stress(/datum/stress_event/noble_lavish_food)
 						if (prob(25))
-							to_chat(eater, span_green("Ah, food fit for my title."))
+							to_chat(eater, span_green("Ah, comida digna de mi título."))
 
 			// yeomen and courtiers are also used to a better quality of life but are way less picky
 			if (human_eater.is_yeoman() || human_eater.is_courtier())
@@ -509,7 +509,7 @@ All foods are distributed among various categories. Use common sense.
 				eater.changeNext_move(CLICK_CD_MELEE * 0.5)
 	else
 		if(isbrain(eater))
-			to_chat(user, "<span class='warning'>[eater] doesn't seem to have a mouth!</span>")
+			to_chat(user, "¡<span class='warning'>[eater] no parece tener boca!</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		if(eater.nutrition in NUTRITION_LEVEL_FAT to INFINITY)

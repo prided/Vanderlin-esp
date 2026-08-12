@@ -15,7 +15,7 @@
 	)
 
 /datum/species/human/halfdrow
-	name = "Half-Drow"
+	name = "Medio-Drow"
 	id = SPEC_ID_HALF_DROW
 	multiple_accents = list(
 		"Humen Accent" = "Imperial",

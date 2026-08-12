@@ -159,7 +159,7 @@
 
 /obj/item/clothing/wrists/bracers/psythorns/attack_self(mob/living/user)
 	. = ..()
-	user.visible_message(span_warning("[user] starts to reshape the [src]."))
+	user.visible_message(span_warning("[user] comienza a remodelar el [src]."))
 	if(do_after(user, 4 SECONDS))
 		var/obj/item/clothing/head/helmet/blacksteel/psythorns/P = new /obj/item/clothing/head/helmet/blacksteel/psythorns(get_turf(src.loc))
 		if(user.is_holding(src))
@@ -169,5 +169,5 @@
 		arm?.bodypart_attacked_by(BCLASS_CUT, 25)
 		qdel(src)
 	else
-		user.visible_message(span_warning("[user] stops reshaping [src]."))
+		user.visible_message(span_warning("[user] deja de remodelar [src]."))
 		return

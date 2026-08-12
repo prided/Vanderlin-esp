@@ -18,12 +18,12 @@
 /datum/action/cooldown/spell/find_flaw/cast(mob/living/carbon/human/cast_on)
 	. = ..()
 	if(cast_on.stat == DEAD)
-		to_chat(owner, span_warning("This one's biggest flaw is being dead."))
+		to_chat(owner, span_warning("El mayor defecto de este es estar muerto."))
 		return FALSE
 
 	if(length(cast_on.quirks))
 
-		to_chat(owner, span_green("You discover [cast_on]'s flaws:"))
+		to_chat(owner, span_green("Descubres los defectos de [cast_on]:"))
 		for(var/datum/quirk/vice/vice in cast_on.quirks)
 			to_chat(owner, span_green("<b>[vice.name]</b>"))
 			SEND_SIGNAL(owner, COMSIG_FLAW_FOUND, vice, cast_on)

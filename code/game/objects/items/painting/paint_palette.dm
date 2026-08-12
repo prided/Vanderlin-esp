@@ -8,8 +8,8 @@
 	)
 
 /obj/item/paint_palette
-	name = "paint palette"
-	desc = "A tool used for painting"
+	name = "paleta de pintura"
+	desc = "Una herramienta utilizada para pintar."
 	icon = 'icons/paint_supplies/paint_items.dmi'
 	icon_state = "palette"
 
@@ -26,10 +26,10 @@
 /obj/item/paint_palette/proc/add_color(mob/user)
 	if(length(colors) >= 5)
 		return
-	var/add_color = input(user, "Choose a color to add") as color|null
+	var/add_color = input(user, "Elige un color para agregar") as color|null
 	if(!add_color)
 		return
-	var/color_name = input(user, "Choose a name for this color")
+	var/color_name = input(user, "Elige un nombre para este color")
 	if(!color_name)
 		return
 	if(length(colors) >= 5)
@@ -39,7 +39,7 @@
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/paint_palette/proc/remove_color(mob/user)
-	var/remove_color = tgui_input_list(user, "Choose a color to remove", colors)
+	var/remove_color = tgui_input_list(user, "Elige un color para eliminar", colors)
 	if(!remove_color)
 		return
 	colors -= remove_color

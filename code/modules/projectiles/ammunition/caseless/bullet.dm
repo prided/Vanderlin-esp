@@ -1,5 +1,5 @@
 /obj/item/ammo_casing/caseless/bullet
-	name = "lead ball"
+	name = "bola de plomo"
 	desc = "A round lead shot, simple and spherical."
 	projectile_type = /obj/projectile/bullet/reusable/bullet
 	caliber = "musketball"

@@ -43,6 +43,6 @@
 	target.cut_overlay(guided)
 
 /atom/movable/screen/alert/status_effect/buff/guidance
-	name = "Guidance"
+	name = "Guía"
 	desc = span_nicegreen("Arcyne assistance guides my senses in combat.")
 	icon_state = "buff"

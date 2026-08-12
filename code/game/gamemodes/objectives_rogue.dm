@@ -1,5 +1,5 @@
 /datum/objective/bandit
-	name = "bandit"
+	name = "bandido"
 	explanation_text = "Feed valuables to the idol."
 
 /datum/objective/bandit/check_completion()
@@ -13,7 +13,7 @@
 
 /datum/objective/delf
 	name = "delf"
-	explanation_text = "Feed Ears to the mother."
+	explanation_text = "Dale orejas a la madre."
 
 /datum/objective/delf/check_completion()
 	if(SSmapping.retainer.delf_ears >= SSmapping.retainer.delf_goal)
@@ -37,7 +37,7 @@
 
 /// Vamp VS. Wolves, be the last faction standing
 /datum/objective/dominate
-	name = "dominate"
+	name = "dominar"
 	triumph_count = 5
 	var/faction_ident
 
@@ -62,7 +62,7 @@
 		return TRUE
 
 /datum/objective/werewolf/infiltrate/one
-	name = "infiltrate1"
+	name = "infiltrarse1"
 	explanation_text = "Infect a member of the Church as my spawn."
 	triumph_count = 5
 
@@ -73,8 +73,8 @@
 			return TRUE
 
 /datum/objective/werewolf/infiltrate/two
-	name = "infiltrate2"
-	explanation_text = "Infect a member of the Nobility."
+	name = "infiltrarse2"
+	explanation_text = "Infectar a un miembro de la Nobleza."
 	triumph_count = 5
 
 /datum/objective/werewolf/infiltrate/two/check_completion()
@@ -84,8 +84,8 @@
 			return TRUE
 
 /datum/objective/werewolf/survive
-	name = "survive"
-	explanation_text = "My lycanthropia won't allow me to die, I mustn't die."
+	name = "sobrevivir"
+	explanation_text = "Mi licantropía no me permite morir, no debo morir."
 	triumph_count = 3
 
 /datum/objective/werewolf/survive/check_completion()

@@ -108,7 +108,7 @@
 		return
 	var/turf/Turf = get_turf(user)
 	if(locate(/obj/effect/decal/cleanable/ritual_rune) in Turf)
-		to_chat(user, span_cult("There is already a rune here."))
+		to_chat(user, span_cult("Ya hay una runa aquí."))
 		return
 	var/structures_in_way = check_for_structures_and_closed_turfs(loc, pickrune)
 	if(structures_in_way == TRUE)
@@ -122,7 +122,7 @@
 	if(do_after(user, crafttime, target = src))
 		if(QDELETED(src) || !pickrune)
 			return
-		user.visible_message(span_warning("[user] scribes an arcyne rune with [user.p_their()] [src]!"), \
+		user.visible_message(span_warning("¡[user] escribe una runa arcyne con [user.p_their()] [src]!"), \
 		span_notice("I finish dragging the [src] in symbols and circles, leaving behind a [pickrune.name]."))
 		src.amount--
 		new pickrune(Turf)
@@ -180,7 +180,7 @@
 		return
 	var/turf/Turf = get_turf(user)
 	if(locate(/obj/effect/decal/cleanable/ritual_rune) in Turf)
-		to_chat(user, span_cult("There is already a rune here."))
+		to_chat(user, span_cult("Ya hay una runa aquí."))
 		return
 	var/structures_in_way = check_for_structures_and_closed_turfs(loc, pickrune)
 	if(structures_in_way == TRUE)
@@ -193,7 +193,7 @@
 			return FALSE
 	if(!is_bled)
 		playsound(src, get_sfx("genslash"), 100, TRUE)
-		user.visible_message(span_warning("[user] cuts open [user.p_their()] palm!"), \
+		user.visible_message(span_warning("¡[user] corta la palma de [user.p_their()]!"), \
 			span_cult("I slice open my palm!"))
 		if(user.get_blood_volume())
 			user.apply_damage(pickrune.scribe_damage, BRUTE, pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM), damage_type = BCLASS_CUT, can_crit = FALSE)
@@ -271,7 +271,7 @@
 
 	var/obj/target = interacting_with
 
-	to_chat(user, span_notice("[src] takes the form of [target]!"))
+	to_chat(user, span_notice("¡[src] toma la forma de [target]!"))
 	oldicon = icon
 	oldicon_state = icon_state
 	olddesc = desc
@@ -286,7 +286,7 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/hourglass/temporal
-	name = "temporal hourglass"
+	name = "reloj de arena temporal"
 	desc = "An arcyne infused hourglass that glows with magick."
 	icon = 'icons/obj/hourglass.dmi'
 	icon_state = "hourglass_idle"
@@ -310,7 +310,7 @@
 	do_teleport(victim, target, channel = TELEPORT_CHANNEL_QUANTUM)
 
 /obj/item/natural/feather/infernal
-	name = "infernal feather"
+	name = "pluma infernal"
 	icon_state = "hellfeather"
 	possible_item_intents = list(/datum/intent/use)
 	desc = "A fluffy feather."
@@ -349,7 +349,7 @@
 	ready = TRUE
 
 /obj/item/clothing/ring/shimmeringlens
-	name = "shimmering lens"
+	name = "lente brillante"
 	desc = "A radiantly shimmering glass of lens that shimmers with magick. Looking through it gives you a bit of a headache."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "lens"
@@ -598,7 +598,7 @@
 
 //mapfetchable items
 /obj/item/natural/obsidian
-	name = "obsidian fragment"
+	name = "fragmento de obsidiana"
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "obsidian"
 	desc = "Volcanic glass cooled from molten lava rapidly."
@@ -651,7 +651,7 @@
 /obj/item/natural/melded
 	name = "arcyne meld"
 	icon_state = "wessence"
-	desc = "You should not be seeing this"
+	desc = "No deberías estar viendo esto"
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -679,7 +679,7 @@
 	amplifier = 1.25
 
 /obj/item/natural/melded/t3
-	name = "sorcerous weave"
+	name = "tejido hechicero"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "wessence"
 	desc = "A melding of molten core, heartwood core and elemental fragment."
@@ -689,7 +689,7 @@
 	amplifier = 1.5
 
 /obj/item/natural/melded/t4
-	name = "magical confluence"
+	name = "confluencia mágica"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "wessence"
 	desc = "A melding of abyssal flame, sylvan essence and elemental relic."
@@ -709,7 +709,7 @@
 
 /obj/structure/soul
 	name = "soul"
-	desc = "The soul of the dead"
+	desc = "El alma de los muertos"
 	icon = 'icons/roguetown/misc/mana.dmi'
 	icon_state = "soul"
 	plane = LEYLINE_PLANE
@@ -775,7 +775,7 @@
 			user.mana_pool.adjust_mana(transfer_amount)
 
 /obj/item/pylon_linker
-	name = "ley linker"
+	name = "enlazador de ley"
 	desc = "A mystical tool used to bind mana pylons together, allowing mana to flow between them."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "dbrush"

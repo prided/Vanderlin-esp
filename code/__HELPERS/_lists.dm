@@ -186,7 +186,7 @@ if (length(L) < I) { \
 	} while(FALSE)
 
 //Returns a list in plain english as a string
-/proc/english_list(list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "" )
+/proc/english_list(list/input, nothing_text = "nothing", and_text = " y ", comma_text = ", ", final_comma_text = "" )
 	var/total = length(input)
 	switch(total)
 		if (0)

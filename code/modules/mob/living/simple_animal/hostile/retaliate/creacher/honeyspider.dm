@@ -204,7 +204,7 @@
 	icon_state = "constructed_nest"
 
 /obj/structure/spider/nest
-	name = "spider nest"
+	name = "nido de araña"
 	desc = "A woven nest for spiders to live in."
 
 	icon = 'icons/obj/structures/spiders/nest.dmi'
@@ -223,7 +223,7 @@
 	var/honey = FLOOR(total_processed * 0.01, 1)
 	if(!honey)
 		return
-	user.visible_message(span_warning("[user] starts to collect the honey from [src]!"), span_warning("You start to collect the honey from [src]!"))
+	user.visible_message(span_warning("¡[user] comienza a recolectar la miel de [src]!"), span_warning("You start to collect the honey from [src]!"))
 	if(!do_after(user, 5 SECONDS * honey, src))
 		return
 	for(var/i = 1 to honey)

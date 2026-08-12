@@ -5,7 +5,7 @@
 /datum/repeatable_crafting_recipe
 	abstract_type = /datum/repeatable_crafting_recipe
 
-	var/name = "Generic Recipe"
+	var/name = "Receta genérica"
 	var/category
 	var/atom/output
 	var/output_amount = 1
@@ -441,7 +441,7 @@
 			if(!reagent_value)
 				continue
 
-			user.visible_message(span_info("[user] starts to incorporate some liquid into \the [name]."),
+			user.visible_message(span_info("[user] comienza a incorporar algo de líquido en \the [name]."),
 								span_info("You start to pour some liquid into \the [name]."))
 
 			if(put_items_in_hand)
@@ -616,7 +616,7 @@
 	var/successful_crafts = 0
 
 	if(max_crafts > 1)
-		requested_crafts = input(user, "How many [name] do you want to craft?", "Repeat Option", max_crafts) as null|num
+		requested_crafts = input(user, "How many [name] do you want to craft?", "Opción de repetición", max_crafts) as null|num
 
 	if(!requested_crafts)
 		return
@@ -662,7 +662,7 @@
 					process_bundle(item, user, copied_requirements, to_delete, blacklisted_paths)
 					continue
 
-				user.visible_message(span_info("[user] starts picking up [item]."), span_info("I start picking up [item]."))
+				user.visible_message(span_info("[user] starts picking up [item]."), span_info("Empiezo a recoger [item]."))
 
 				if(do_after(user, ground_use_time, item, extra_checks = CALLBACK(user, TYPE_PROC_REF(/atom/movable, CanReach), item)))
 					if(put_items_in_hand)

@@ -17,5 +17,5 @@
 		return
 	attacker.adjust_fire_stacks(5)
 	attacker.IgniteMob()
-	attacker.visible_message(span_danger("[I] sets [attacker] on fire!"))
+	attacker.visible_message(span_danger("¡[I] prende fuego a [attacker]!"))
 	src.last_used = world.time

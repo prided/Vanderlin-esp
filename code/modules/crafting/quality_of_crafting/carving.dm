@@ -33,7 +33,7 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/jade/cameo
-	name = "joapstone cameo"
+	name = "cameo de joapstone"
 	output = /obj/item/carvedgem/jade/cameo
 	craftdiff = 1
 
@@ -53,12 +53,12 @@
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/crafting/jade/ring
-	name = "joapstone ring"
+	name = "anillo de joapstone"
 	output = /obj/item/clothing/ring/jade
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/crafting/jade/amulet
-	name = "joapstone amulet"
+	name = "amuleto de joapstone"
 	output = /obj/item/clothing/neck/jadeamulet
 	craftdiff = 2
 
@@ -123,7 +123,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/jade/mask
-	name = "joapstone mask"
+	name = "máscara de joapstone"
 	output = /obj/item/clothing/face/jademask
 	craftdiff = 4
 
@@ -169,7 +169,7 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/shell/openclam
-	name = "opened clam"
+	name = "almeja abierta"
 	output = list (
 		/obj/item/carvedgem/shell/openoyster,
 		/obj/item/carvedgem/rose/rawrose
@@ -188,7 +188,7 @@
 
 /datum/repeatable_crafting_recipe/crafting/shell/rawshell
 
-	name = "2x clam shells "
+	name = "2x conchas de almeja "
 	output = /obj/item/carvedgem/shell/rawshell
 	requirements = list(
 		/obj/item/carvedgem/shell/openoyster = 1
@@ -202,7 +202,7 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/crafting/shell/cutgem
-	name = "polished clam shell"
+	name = "concha de almeja pulida"
 	output = /obj/item/carvedgem/shell/cutgem
 	craftdiff = 0
 
@@ -212,7 +212,7 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/shell/spoon
-	name = "shell spoon"
+	name = "cuchara de concha"
 	output = /obj/item/carvedgem/shell/spoon
 	craftdiff = 1
 
@@ -222,12 +222,12 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/shell/bowl
-	name = "shell bowl"
+	name = "cuenco de concha"
 	output = /obj/item/reagent_containers/glass/bowl/shell
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/shell/cup
-	name = "shell cup"
+	name = "taza de concha"
 	output = /obj/item/reagent_containers/glass/cup/shell
 	craftdiff = 1
 
@@ -237,17 +237,17 @@
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/crafting/shell/ring
-	name = "shell ring"
+	name = "anillo de concha"
 	output = /obj/item/clothing/ring/shell
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/crafting/shell/teapot
-	name = "shell teapot"
+	name = "tetera de concha"
 	output = /obj/item/reagent_containers/glass/carafe/teapot/shell
 	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/crafting/shell/amulet
-	name = "shell amulet"
+	name = "amuleto de concha"
 	output = /obj/item/clothing/neck/shellamulet
 	craftdiff = 2
 
@@ -287,7 +287,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/shell/fancycup
-	name = "fancy shell cup"
+	name = "taza de concha elegante"
 	output = /obj/item/reagent_containers/glass/cup/shellfancy
 	craftdiff = 3
 
@@ -297,32 +297,32 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/shell/comb
-	name = "shell comb"
+	name = "peine de concha"
 	output = /obj/item/carvedgem/shell/comb
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/shell/duck
-	name = "shell duck"
+	name = "pato de concha"
 	output = /obj/item/carvedgem/shell/duck
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/shell/mask
-	name = "shell mask"
+	name = "máscara de concha"
 	output = /obj/item/clothing/face/shellmask
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/crafting/shell/urn
-	name = "shell urn"
+	name = "urna de concha"
 	output = /obj/item/carvedgem/shell/urn
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/crafting/shell/statue
-	name = "shell statue"
+	name = "estatua de concha"
 	output = /obj/item/carvedgem/shell/statue
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/crafting/shell/obelisk
-	name = "shell obelisk"
+	name = "obelisco de concha"
 	output = /obj/item/carvedgem/shell/obelisk
 	craftdiff = 4
 
@@ -641,7 +641,7 @@
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/crafting/onyxa/spider
-	name = "onyxa spider statue"
+	name = "estatua de araña onyxa"
 	output = /obj/item/carvedgem/onyxa/spider
 	craftdiff = 5
 
@@ -936,7 +936,7 @@
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/crafting/coral/jaw
-	name = "shark jaw statue"
+	name = "estatua de mandíbula de tiburón"
 	output = /obj/item/carvedgem/coral/jaw
 	craftdiff = 5
 

@@ -69,7 +69,7 @@
 			if(found_item.forceMove(pawn))
 				controller.set_blackboard_key(BB_SIMPLE_CARRY_ITEM, found_item)
 				controller.clear_blackboard_key(BB_GNOME_FOUND_ITEM)
-				pawn.visible_message(span_notice("[pawn] picks up [found_item]."))
+				pawn.visible_message(span_notice("[pawn] recoge [found_item]."))
 				current_task = "delivering"
 				moving_to_target = FALSE
 				var/turf/dest = controller.blackboard[BB_GNOME_TRANSPORT_DEST]

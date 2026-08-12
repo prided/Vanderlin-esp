@@ -16,7 +16,7 @@
 	)
 
 /datum/round_event_control/antagonist/migrant_wave/vampire
-	name = "Exiled Vampire"
+	name = "Vampiro exiliado"
 	wave_type = /datum/migrant_wave/vampire
 
 	weight = 4

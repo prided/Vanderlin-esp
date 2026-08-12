@@ -1,6 +1,6 @@
 /obj/structure/flora/grass/tangler
-	name = "twisting shrub"
-	desc = "Green, spiky and... I think I saw it move!"
+	name = "arbusto retorcido"
+	desc = "Verde, puntiagudo y... ¡Creo que lo vi moverse!"
 	icon = 'icons/roguetown/mob/monster/tangler.dmi'
 	icon_state = "tangler_hidden"
 	num_random_icons = 0
@@ -78,7 +78,7 @@
 	else if(aggroed)
 		name = "twisting vine"
 	else
-		name = "twisting shrub"
+		name = "arbusto retorcido"
 
 /obj/structure/flora/grass/tangler/real/update_desc()
 	. = ..()
@@ -97,12 +97,12 @@
 			if(prob(time2mount))
 				..()
 			else
-				user.visible_message("<span class='warning'>[user] tries to pull [M] free of [src]!</span>")
+				user.visible_message("¡<span class='warning'>[user] intenta liberar a [M] de [src]!</span>")
 			return
 		if(prob(time2mount))
 			..()
 		else
-			user.visible_message("<span class='warning'>[user] tries to break free of [src]!</span>")
+			user.visible_message("<span class='warning'>[user] intenta liberarse de [src]!</span>")
 
 /obj/structure/flora/grass/tangler/real/user_buckle_mob(mob/living/M, mob/living/user, check_loc)
 	return

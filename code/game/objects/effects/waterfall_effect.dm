@@ -1,5 +1,5 @@
 /obj/effect/waterfall
-	name = "waterfall"
+	name = "cascada"
 	icon = 'icons/effects/waterfall.dmi'
 	icon_state = "waterfall_temp"
 	plane = GAME_PLANE_UPPER

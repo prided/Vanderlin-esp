@@ -1,6 +1,6 @@
 
 /datum/round_event_control/dendor_trees
-	name = "Wise Trees Propagation"
+	name = "Propagación de árboles sabios"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/dendor_trees
 	weight = 7
@@ -52,7 +52,7 @@
 	chosen_one.add_spell(/datum/action/cooldown/spell/transfrom_tree)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE DENDOR'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE DENDOR!"),
 		span_biginfo("Dendor wants you to choose suitable trees, which are to become guardians of the forest! [new_objective.explanation_text]"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/ambience/noises/genspooky (1).ogg', 100)

@@ -10,7 +10,7 @@
 
 
 /datum/persistant_workorder/make_drink/beer
-	name = "Brew Beer"
+	name = "elaborar cerveza"
 	ui_icon_state = "bread_salo"
 
 	arg_2 = /datum/bar_item/beer

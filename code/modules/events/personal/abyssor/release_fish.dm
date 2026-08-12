@@ -1,5 +1,5 @@
 /datum/round_event_control/fish_release
-	name = "Release Fish"
+	name = "Liberar peces"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/fish_release
 	weight = 10
@@ -50,7 +50,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE ABYSSOR'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE ABYSSOR!"),
 		span_notice("Abyssor demands a small respite for the creatures of the deep! Release a demanded fish back to the water to please Abyssor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/items/bucket_transfer (2).ogg', 100)

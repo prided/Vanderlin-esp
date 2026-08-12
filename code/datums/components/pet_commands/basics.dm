@@ -9,7 +9,7 @@
 	command_desc = "Command your pet to stay idle in this location."
 	radial_icon_state = "halt"
 	speech_commands = list("sit", "stay", "stop")
-	command_feedback = "sits"
+	command_feedback = "se sienta"
 
 /datum/pet_command/idle/execute_action(datum/ai_controller/controller)
 	return SUBTREE_RETURN_FINISH_PLANNING // This cancels further AI planning
@@ -25,7 +25,7 @@
  * Tells a pet to exit command mode and resume its normal behaviour, which includes regular target-seeking and what have you
  */
 /datum/pet_command/free
-	command_name = "Loose"
+	command_name = "Suelta"
 	command_desc = "Allow your pet to resume its natural behaviours."
 	radial_icon_state = "free"
 	speech_commands = list("free", "loose")
@@ -46,7 +46,7 @@
  */
 /datum/pet_command/follow
 	command_name = "Follow"
-	command_desc = "Command your pet to accompany you."
+	command_desc = "Ordena a tu mascota que te acompañe."
 	radial_icon_state = "follow"
 	speech_commands = list("heel", "follow")
 	callout_type = /datum/callout_option/move
@@ -73,7 +73,7 @@
  */
 /datum/pet_command/play_dead
 	command_name = "Play Dead"
-	command_desc = "Play a macabre trick."
+	command_desc = "Juega un truco macabro."
 	radial_icon_state = "play_dead"
 	speech_commands = list("play dead") // Don't get too creative here, people talk about dying pretty often
 
@@ -89,7 +89,7 @@
  * React if complimented
  */
 /datum/pet_command/good_boy
-	command_name = "Good Boy"
+	command_name = "Buen chico"
 	command_desc = "Give your pet a compliment."
 	hidden = TRUE
 
@@ -112,7 +112,7 @@
 		return SUBTREE_RETURN_FINISH_PLANNING
 
 	new /obj/effect/temp_visual/heart(parent.loc)
-	parent.emote("spin")
+	parent.emote("girar")
 	return SUBTREE_RETURN_FINISH_PLANNING
 
 /*
@@ -176,7 +176,7 @@
 /datum/pet_command/attack/proc/refuse_target(mob/living/parent, atom/target)
 	var/mob/living/living_parent = parent
 	living_parent.say("[refuse_reaction]")
-	living_parent.visible_message(span_notice("[living_parent] refuses to attack [target]."))
+	living_parent.visible_message(span_notice("[living_parent] se niega a atacar a [target]."))
 
 /datum/pet_command/attack/execute_action(datum/ai_controller/controller)
 	controller.queue_behavior(attack_behaviour, BB_CURRENT_PET_TARGET, targeting_strategy_key)
@@ -186,8 +186,8 @@
  * # Breed command. breed with a partner!
  */
 /datum/pet_command/breed
-	command_name = "Breed"
-	command_desc = "Command your pet to attempt to breed with a partner."
+	command_name = "Criar"
+	command_desc = "Ordena a tu mascota que intente reproducirse con una pareja."
 	requires_pointing = TRUE
 	radial_icon_state = "breed"
 	speech_commands = list("breed", "consummate")
@@ -250,7 +250,7 @@
 	return isnull(target) ? null : "signals [living_pet] to use an ability on [target]!"
 
 /datum/pet_command/protect_owner
-	command_name = "Protect owner"
+	command_name = "Proteger al propietario"
 	command_desc = "Your pet will run to your aid."
 	hidden = TRUE
 	callout_type = /datum/callout_option/guard
@@ -309,7 +309,7 @@
  */
 /datum/pet_command/fish
 	command_name = "Fish"
-	command_desc = "Command your pet to try fishing at a nearby fishing spot."
+	command_desc = "Ordene a su mascota que intente pescar en un lugar de pesca cercano."
 	requires_pointing = TRUE
 	radial_icon_state = "fish"
 	speech_commands = list("fish")
@@ -346,7 +346,7 @@
 
 /datum/pet_command/go_home
 	command_name = "Go Home"
-	command_desc = "Sends your pet home."
+	command_desc = "Envía a tu mascota a casa."
 	radial_icon = 'icons/roguetown/mob/cabbit.dmi'
 	radial_icon_state = "cabbit_dead"
 	speech_commands = list("go home") // Don't get too creative here, people talk about dying pretty often
@@ -380,8 +380,8 @@
 	return SUBTREE_RETURN_FINISH_PLANNING
 
 /datum/pet_command/aggressive
-	command_name = "Aggressive"
-	command_desc = "Makes the pet aggressive"
+	command_name = "Agresivo"
+	command_desc = "Hace que la mascota sea agresiva"
 	radial_icon_state = "aggro"
 	speech_commands = list("aggressive")
 
@@ -395,7 +395,7 @@
 
 /datum/pet_command/calm
 	command_name = "Calm"
-	command_desc = "Makes the pet calm"
+	command_desc = "Hace que la mascota se calme"
 	radial_icon_state = "calm"
 	speech_commands = list("calm")
 

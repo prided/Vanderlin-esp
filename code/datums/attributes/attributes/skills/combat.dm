@@ -3,7 +3,7 @@
 
 /datum/attribute/skill/combat/knives
 	name = "Knife-fighting"
-	desc = "Represents your character's ability to fight with knives and short blades. The higher your skill in Knife-fighting, the more accurate you'll be with knives and the better you'll be at parrying with them."
+	desc = "Representa la habilidad de tu personaje para luchar con cuchillos y hojas cortas. Cuanto mayor sea tu habilidad con cuchillos, más preciso serás y mejor podrás parar ataques con ellos."
 	governing_attribute = STAT_SPEED
 	default_attributes = list(
 		STAT_SPEED = -5,
@@ -28,7 +28,7 @@
 	)
 
 /datum/attribute/skill/combat/polearms
-	name = "Polearms"
+	name = "Armas de asta"
 	desc = "Represents your character's ability to fight with polearms and spears. The higher your skill in Polearms, the more accurate you'll be with polearms and the better you'll be at parrying with them."
 	governing_attribute = STAT_STRENGTH
 	default_attributes = list(
@@ -81,7 +81,7 @@
 	)
 
 /datum/attribute/skill/combat/crossbows
-	name = "Crossbows"
+	name = "ballestas"
 	desc = "Represents your character's ability to fight with crossbows. The higher your skill in Crossbows, the more accurate you'll be with crossbows."
 	category = SKILL_CATEGORY_RANGED
 	governing_attribute = STAT_PERCEPTION
@@ -95,7 +95,7 @@
 	)
 
 /datum/attribute/skill/combat/firearms
-	name = "Firearms"
+	name = "Armas de fuego"
 	desc = "Represents your character's ability to fight with firearms. The higher your skill in Firearms, the more accurate you'll be with firearms."
 	category = SKILL_CATEGORY_RANGED
 	governing_attribute = STAT_PERCEPTION

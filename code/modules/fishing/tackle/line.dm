@@ -23,7 +23,7 @@
 	line_color = "#696969"
 
 /obj/item/fishing/line/cloaked
-	name = "spider silk line"
+	name = "línea de seda de araña"
 	desc = "Even harder to notice than the common variety."
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "reel_white"
@@ -32,7 +32,7 @@
 
 /obj/item/fishing/line/bouncy
 	name = "flexible fishing line reel"
-	desc = "This specialized line is much harder to snap."
+	desc = "Esta línea especializada es mucho más difícil de romper."
 	icon = 'icons/obj/fishing.dmi'
 	icon_state = "reel_red"
 	fishing_line_traits = FISHING_LINE_BOUNCY
@@ -44,7 +44,7 @@
  * It may also work on mobs if the right hook is attached.
  */
 /obj/item/fishing/line/auto_reel
-	name = "fishing line auto-reel"
+	name = "carrete automático de línea de pesca"
 	icon = 'icons/obj/fishing.dmi'
 	desc = "A fishing line that automatically spins lures and begins reeling in fish the moment it bites."
 	icon_state = "reel_auto"

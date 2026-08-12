@@ -1,7 +1,7 @@
 /datum/preference/choiced/undershirt
 	savefile_key = "undershirt"
 	savefile_identifier = PREF_CHARACTER
-	category = "appearance"
+	category = "apariencia"
 	can_randomize = TRUE
 
 /datum/preference/choiced/undershirt/init_possible_values(datum/preferences/prefs)

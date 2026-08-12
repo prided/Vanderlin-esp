@@ -70,11 +70,11 @@
 			return NONE
 	else if(user in takers)
 		if(takers[user] >= spawns_per_person)
-			to_chat(user, span_warning("You've already taken your share from [parent]."))
+			to_chat(user, span_warning("Ya has tomado tu parte de [parent]."))
 			return NONE
 
 	if(length(takers) >= max_spawns)
-		to_chat(user, span_warning("[parent] has been completely emptied."))
+		to_chat(user, span_warning("[parent] se ha vaciado por completo."))
 		SEND_SIGNAL(parent, COMSIG_LOOT_SPAWNER_EMPTY)
 		return NONE
 
@@ -92,11 +92,11 @@
 
 	if(require_exact_resources)
 		if(!stockpile_ref.has_resources(resource_costs))
-			to_chat(user, span_warning("This has been pillaged for now!"))
+			to_chat(user, span_warning("¡Esto ha sido saqueado por ahora!"))
 			return FALSE
 	else
 		if(!stockpile_ref.has_any_resources(resource_costs))
-			to_chat(user, span_warning("The stockpile is completely empty of useful resources."))
+			to_chat(user, span_warning("La reserva está completamente vacía de recursos útiles."))
 			return FALSE
 
 	return TRUE

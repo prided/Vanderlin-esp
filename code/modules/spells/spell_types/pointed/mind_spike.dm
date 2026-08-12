@@ -6,7 +6,7 @@
 
 	required_form = FORM_DEATH
 
-	invocation = "Suffer."
+	invocation = "Sufrir."
 	invocation_type = INVOCATION_SHOUT
 
 	spell_flags = SPELL_RITUOS

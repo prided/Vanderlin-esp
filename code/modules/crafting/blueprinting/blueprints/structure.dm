@@ -1,18 +1,18 @@
 /datum/blueprint_recipe/structure
 	abstract_type = /datum/blueprint_recipe/structure
-	category = "Structures"
+	category = "Estructuras"
 	build_time = 4 SECONDS
 
 /datum/blueprint_recipe/structure/tentdoor
 	name = "Tent Door"
-	desc = "A tent door structure."
+	desc = "Una estructura de puerta de tienda."
 	result_type = /obj/structure/roguetent
 	required_materials = list(
 		/obj/item/grown/log/tree/stick = 1,
 		/obj/item/natural/cloth = 1
 	)
 	construct_tool = /obj/item/weapon/knife
-	category = "Structures"
+	category = "Estructuras"
 	build_time = 3 SECONDS
 
 /datum/blueprint_recipe/structure/anvil
@@ -24,34 +24,34 @@
 	)
 	construct_tool = /obj/item/weapon/hammer
 	build_time = 5 SECONDS
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/campfire
-	name = "Campfire"
+	name = "Hoguera"
 	desc = "A simple campfire for light and warmth."
 	result_type = /obj/machinery/light/fueled/campfire
 	required_materials = list(
 		/obj/item/grown/log/tree/stick = 2
 	)
 	construct_tool = /obj/item/grown/log/tree/stick
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/densefire
 	name = "Greater Campfire"
-	desc = "A larger, more efficient campfire."
+	desc = "Una fogata más grande y más eficiente."
 	result_type = /obj/machinery/light/fueled/campfire/densefire
 	required_materials = list(
 		/obj/item/grown/log/tree/stick = 2,
 		/obj/item/natural/stone = 2
 	)
 	construct_tool = /obj/item/grown/log/tree/stick
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/cookpit
-	name = "Hearth"
+	name = "Hogar"
 	desc = "A stone hearth for cooking and warmth."
 	result_type = /obj/machinery/light/fueled/hearth
 	required_materials = list(
@@ -59,19 +59,19 @@
 		/obj/item/natural/stone = 3
 	)
 	construct_tool = /obj/item/grown/log/tree/stick
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/brazier
-	name = "Brazier"
-	desc = "A wooden brazier with coal for heating."
+	name = "Brasero"
+	desc = "Un brasero de madera con carbón para calentar."
 	result_type = /obj/machinery/light/fueled/firebowl/stump
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1,
 		/obj/item/ore/coal = 1
 	)
 	construct_tool = /obj/item/grown/log/tree/small
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/standing
@@ -83,7 +83,7 @@
 		/obj/item/ore/coal = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/standingblue
@@ -96,7 +96,7 @@
 		/obj/item/fertilizer/ash = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/rack
@@ -107,7 +107,7 @@
 		/obj/item/grown/log/tree/stick = 3
 	)
 	construct_tool = /obj/item/weapon/knife
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/dryingrack
@@ -118,11 +118,11 @@
 		/obj/item/grown/log/tree/stick = 3
 	)
 	construct_tool = null
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/curtain
-	name = "Curtain"
+	name = "Cortina"
 	desc = "A long-draped curtain."
 	result_type = /obj/structure/curtain/bounty
 	required_materials = list(
@@ -130,12 +130,12 @@
 		/obj/item/natural/cloth = 2
 	)
 	construct_tool = /obj/item/needle
-	category = "Structures"
+	category = "Estructuras"
 	skillcraft = /datum/attribute/skill/misc/sewing
 
 
 /datum/blueprint_recipe/structure/bed
-	name = "Bed"
+	name = "Cama"
 	desc = "A simple wooden bed with fiber bedding."
 	result_type = /obj/structure/bed/shit
 	required_materials = list(
@@ -143,25 +143,25 @@
 		/obj/item/natural/fibers = 1
 	)
 	construct_tool = /obj/item/weapon/knife
-	category = "Structures"
+	category = "Estructuras"
 
 
 /datum/blueprint_recipe/structure/millstone
-	name = "Millstone"
-	desc = "A stone millstone for grinding grain."
+	name = "Piedra de molino"
+	desc = "Una piedra de molino para moler grano."
 	result_type = /obj/structure/fluff/millstone
 	required_materials = list(
 		/obj/item/natural/stone = 3
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Structures"
+	category = "Estructuras"
 
 	skillcraft = /datum/attribute/skill/craft/masonry
 
 
 /datum/blueprint_recipe/structure/noose
 	name = "Noose"
-	desc = "Hangs from the ceiling."
+	desc = "Cuelga del techo."
 	result_type = /obj/structure/noose
 	required_materials = list(
 		/obj/item/rope = 1
@@ -169,20 +169,20 @@
 	construct_tool = /obj/item/rope
 	verbage = "tie"
 	verbage_tp = "ties"
-	category = "Structures"
+	category = "Estructuras"
 	requires_ceiling = TRUE
 
 
 /datum/blueprint_recipe/structure/pottery_lathe
 	name = "Potter Lathe"
-	desc = "A lathe for creating pottery."
+	desc = "Un torno para crear cerámica."
 	result_type = /obj/structure/pottery_lathe
 	required_materials = list(
 		/obj/item/natural/stone = 2,
 		/obj/item/grown/log/tree/small = 1
 	)
 	construct_tool = /obj/item/weapon/hammer
-	category = "Structures"
+	category = "Estructuras"
 
 	skillcraft = /datum/attribute/skill/craft/carpentry
 
@@ -202,7 +202,7 @@
 	inverse_check = TRUE
 
 /datum/blueprint_recipe/structure/wallcandle
-	name = "Wall Candles"
+	name = "Velas de pared"
 	desc = "Stone wall-mounted candleholders."
 	result_type = /obj/machinery/light/fueled/wallfire/candle
 	required_materials = list(
@@ -218,7 +218,7 @@
 	place_on_wall = TRUE
 
 /datum/blueprint_recipe/structure/wallcandleblue
-	name = "Wall Candles (Blue)"
+	name = "Velas de pared (azul)"
 	desc = "Stone wall-mounted candleholders with blue flames."
 	result_type = /obj/machinery/light/fueled/wallfire/candle/blue
 	required_materials = list(
@@ -257,8 +257,8 @@
 	craftdiff = 3
 
 /datum/blueprint_recipe/structure/astrata_cross_gold
-	name = "golden astrata cross"
-	desc = "A golden psycross dedicated to Astrata."
+	name = "cruz dorada astrata"
+	desc = "Un psycross dorado dedicado a Astrata."
 	required_materials = list(
 		/obj/item/ingot/gold = 3,
 	)

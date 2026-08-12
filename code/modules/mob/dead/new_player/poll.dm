@@ -224,7 +224,7 @@
 		return
 	if(IsAdminAdvancedProcCall())
 		log_game("[key_name(usr)] attempted to rig the vote by voting as [key]")
-		message_admins("[key_name_admin(usr)] attempted to rig the vote by voting as [key]")
+		message_admins("[key_name_admin(usr)] intentó manipular la votación votando como [key]")
 		to_chat(usr, "<span class='danger'>You don't seem to be [key].</span>")
 		to_chat(src, "<span class='danger'>Something went horribly wrong processing your vote. Please contact an administrator, they should have gotten a message about this</span>")
 		return
@@ -321,7 +321,7 @@
 		return
 	if(IsAdminAdvancedProcCall())
 		return
-	var/reply_text = href_list["replytext"]
+	var/reply_text = href_list["texto de respuesta"]
 	if(!reply_text || (length(reply_text) > 2048))
 		to_chat(src, "<span class='danger'>The text you entered was blank or too long. Please correct the text and submit again.</span>")
 		return
@@ -399,7 +399,7 @@
 	if(length(href_list) > 2)
 		href_list.Cut(1,3) //first two values aren't options
 	else
-		to_chat(src, "<span class='danger'>No options were selected.</span>")
+		to_chat(src, "<span class='danger'>No se seleccionaron opciones.</span>")
 
 	var/special_columns = list(
 		"datetime" = "NOW()",

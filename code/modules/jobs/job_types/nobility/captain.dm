@@ -105,7 +105,7 @@
 		"Deliverer of Justice" = /obj/item/weapon/polearm/halberd/bardiche/captain,
 	)
 
-	var/choice = spawned.select_equippable(player_client, selectableweapon, message = "Choose thy blade", title = JOB_GUARD_CAPTAIN)
+	var/choice = spawned.select_equippable(player_client, selectableweapon, message = "Elige tu espada", title = JOB_GUARD_CAPTAIN)
 	if(!choice)
 		return
 	switch(choice)

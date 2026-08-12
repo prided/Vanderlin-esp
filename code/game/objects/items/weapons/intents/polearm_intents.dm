@@ -23,7 +23,7 @@
 	name = "bash"
 	blade_class = BCLASS_BLUNT
 	icon_state = "inbash"
-	attack_verb = list("bashes", "strikes")
+	attack_verb = list("bashes", "huelgas")
 	hitsound = list('sound/combat/hits/blunt/woodblunt (1).ogg', 'sound/combat/hits/blunt/woodblunt (2).ogg')
 	penfactor = AP_POLEARM_BASH
 	damfactor = 0.9
@@ -70,7 +70,7 @@
 /datum/intent/rend
 	name = "rend"
 	icon_state = "inrend"
-	attack_verb = list("rends")
+	attack_verb = list("desgarra")
 	animname = "cut"
 	blade_class = BCLASS_CHOP
 	damfactor = 1.2

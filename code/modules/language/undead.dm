@@ -3,8 +3,8 @@
 	desc = ""
 	icon_state = "zizo"
 	spans = list(SPAN_UNDEAD)
-	speech_verb = "chants"
-	ask_verb = "questions"
+	speech_verb = "cantos"
+	ask_verb = "preguntas"
 	exclaim_verb = "wails"
 	key = "w"
 	space_chance = 75 //very high due to the potential length of each syllable

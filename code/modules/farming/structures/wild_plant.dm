@@ -1,5 +1,5 @@
 /obj/structure/wild_plant
-	name = "wild "
+	name = "salvaje "
 	desc = "A wild "
 	icon_state = "tea2"
 	icon = 'icons/roguetown/misc/crops.dmi'

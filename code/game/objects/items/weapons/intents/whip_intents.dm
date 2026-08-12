@@ -49,7 +49,7 @@
 /datum/intent/whip/crack
 	name = "crack"
 	blade_class = BCLASS_BLUNT
-	attack_verb = list("cracks", "strikes") //something something dwarf fotresss
+	attack_verb = list("cracks", "huelgas") //something something dwarf fotresss
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	penfactor = 10
 	icon_state = "incrack"

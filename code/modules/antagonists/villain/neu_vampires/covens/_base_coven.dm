@@ -287,7 +287,7 @@
 			// Powers learned through research might have reduced costs
 			new_power.vitae_cost = max(1, round(new_power.vitae_cost * 0.9))
 			if(!silent && owner)
-				to_chat(owner, "<span class='boldnotice'>Through careful study, you have mastered [new_power.name]!</span>")
+				to_chat(owner, "<span class='boldnotice'>¡A través de un estudio cuidadoso, has dominado [new_power.name]!</span>")
 
 		if("discovery")
 			// Powers discovered through experimentation might have unique properties
@@ -308,7 +308,7 @@
 
 		else // level_unlock or unknown
 			if(!silent && owner)
-				to_chat(owner, "<span class='boldnotice'>You have learned [new_power.name]!</span>")
+				to_chat(owner, "<span class='boldnotice'>¡Has aprendido [new_power.name]!</span>")
 
 	// Apply post-gain effects
 	new_power.post_gain()
@@ -489,7 +489,7 @@
 	gain_experience_from_source(node.research_cost, "discovery")
 
 	if(owner)
-		to_chat(owner, "<span class='boldnotice'>You have researched [node.name]!</span>")
+		to_chat(owner, "<span class='boldnotice'>¡Has investigado [node.name]!</span>")
 
 	return TRUE
 

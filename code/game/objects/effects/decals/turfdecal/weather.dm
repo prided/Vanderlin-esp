@@ -1,5 +1,5 @@
 /obj/effect/turf_decal/weather
-	name = "sandy floor"
+	name = "suelo arenoso"
 	icon_state = "sandyfloor"
 
 /obj/effect/turf_decal/weather/snow
@@ -7,12 +7,12 @@
 	icon_state = "snowyfloor"
 
 /obj/effect/turf_decal/weather/snow/corner
-	name = "snow corner piece"
+	name = "pieza de esquina de nieve"
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "snow_corner"
 
 /obj/effect/turf_decal/weather/dirt
-	name = "dirt siding"
+	name = "revestimiento de tierra"
 	icon = 'icons/turf/decals.dmi'
 	icon_state = "dirt_side"
 

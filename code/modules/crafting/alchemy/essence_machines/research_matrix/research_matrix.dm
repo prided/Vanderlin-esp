@@ -1,6 +1,6 @@
 
 /obj/machinery/essence/research_matrix
-	name = "Alchemical Engine"
+	name = "Motor alquímico"
 	desc = "A black iconosphere radiating alchemic heat. It hums expectantly."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "placeholder"
@@ -47,7 +47,7 @@
 			return
 		var/etype = vial.contained_essence.type
 		if(!accepts_essence(etype))
-			to_chat(user, span_warning("This essence is not needed for the current research."))
+			to_chat(user, span_warning("Esta esencia no es necesaria para la investigación actual."))
 			return
 		var/deficit = selected_research.required_essences[etype] - storage.get(etype)
 		var/poured = storage.add(etype, min(vial.essence_amount, deficit))
@@ -99,7 +99,7 @@
 	if(!node_type) return
 	var/datum/thaumic_research_node/node = new node_type
 	if(GLOB.thaumic_research.has_research(node_type))
-		to_chat(usr, span_warning("Already researched."))
+		to_chat(usr, span_warning("Ya investigado."))
 		qdel(node)
 		return
 	if(!GLOB.thaumic_research.can_research(node_type))
@@ -112,14 +112,14 @@
 	// No network to invalidate since accepts_input = FALSE,
 	// but push out anything the old research needed that the new one doesn't
 	push_surplus_to_linked(storage)
-	to_chat(usr, span_info("Selected: [node.name]"))
+	to_chat(usr, span_info("Seleccionado: [node.name]"))
 	addtimer(CALLBACK(src, PROC_REF(open_research_interface), usr), 0.1)
 
 /obj/machinery/essence/research_matrix/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_notice("Unlocked research nodes: [GLOB.thaumic_research.unlocked_research.len]")
+	. += span_notice("Nodos de investigación desbloqueados: [GLOB.thaumic_research.unlocked_research.len]")
 	if(selected_research)
-		. += span_notice("Selected: [selected_research.name]")
+		. += span_notice("Seleccionado: [selected_research.name]")
 		for(var/etype in selected_research.required_essences)
 			var/needed = selected_research.required_essences[etype]
 			var/have = storage.get(etype)

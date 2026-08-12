@@ -27,11 +27,11 @@
 	)
 
 /datum/customizer/organ/snout/beak/thin
-	name = "Thin Beak"
+	name = "Pico delgado"
 	customizer_choices = list(/datum/customizer_choice/organ/snout/beak/thin)
 
 /datum/customizer_choice/organ/snout/beak/thin
-	name = "Thin Beak"
+	name = "Pico delgado"
 	organ_type = /obj/item/organ/snout/beak
 	allows_accessory_color_customization = FALSE
 	default_accessory = /datum/sprite_accessory/snout/thin_beak/slimbeak

@@ -27,7 +27,7 @@
 	allowed_race = RACES_PLAYER_ALL
 
 /obj/item/clothing/cloak/psyaltrist
-	name = "psyalter's stole"
+	name = "estola de psyalter"
 	desc = "A silk stole embroidered with silver filigree and with concealed pockets in its back worn over a hymnal-scroll. It is worn as the traditional garb of a graduate of the choir leaders of the cathedrals of Grenzelhoft, and is a symbol of their station."
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
 	icon_state = "psyaltertabard"
@@ -116,7 +116,7 @@
 
 
 /obj/item/clothing/armor/basiceast/captainrobe
-	name = "foreign robes"
+	name = "túnicas extranjeras"
 	desc = "Flower-styled robes."
 	icon_state = "eastsuit4"
 	item_state = "eastsuit4"
@@ -155,7 +155,7 @@
 	armor_type = /datum/armor/boots/ruma
 
 /obj/item/clothing/gloves/eastgloves1
-	name = "black gloves"
+	name = "guantes negros"
 	desc = "Sleek gloves typically used by swordsmen."
 	icon_state = "eastgloves1"
 	item_state = "eastgloves1"
@@ -171,7 +171,7 @@
 	dyeable = TRUE
 
 /obj/item/clothing/gloves/eastgloves2
-	name = "stylish gloves"
+	name = "guantes elegantes"
 	desc = "Unusual gloves worn by foreign gangs."
 	icon_state = "eastgloves2"
 	item_state = "eastgloves2"
@@ -188,7 +188,7 @@
 
 /obj/item/clothing/head/mentorhat
 	name = "worn bamboo hat"
-	desc = "A reinforced bamboo hat."
+	desc = "Un sombrero de bambú reforzado."
 	icon_state = "easthat"
 	item_state = "easthat"
 	armor_type = /datum/armor/head/padded/good
@@ -201,7 +201,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/face/facemask/yoruku_oni
-	name = "oni mask"
+	name = "máscara de oni"
 	desc = "A wood mask carved in the visage of demons said to stalk distant mountains."
 	icon_state = "oni"
 
@@ -218,13 +218,13 @@
 	sellprice = 80
 
 /obj/item/clothing/neck/psycross/bpearl
-	name = "blue pearl amulet"
+	name = "amuleto de perla azul"
 	icon_state = "bpearlcross"
 	desc = "An amulet made of rare blue pearls, usually worn by priests and worshippers of Abyssor, or as lucky charms for captains of ships."
 	sellprice = 220
 
 /obj/item/clothing/neck/psycross/shell
-	name = "oyster shell necklace"
+	name = "collar de concha de ostra"
 	icon_state = "oyster_necklace"
 	desc = "A necklace of strung-up seashells, the calming noise they make when they clack together is reminiscent of a shellfish's claws. They remind you that while men no longer live in water, Abyssor will always remember our origins."
 	sellprice = 25
@@ -278,7 +278,7 @@
 //kazengite content
 /obj/item/clothing/shirt/undershirt/eastshirt1
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "black foreign shirt"
+	name = "camisa extranjera negra"
 	desc = "A shirt typically used by thugs."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "eastshirt1"
@@ -293,7 +293,7 @@
 
 /obj/item/clothing/shirt/undershirt/eastshirt2
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "white foreign shirt"
+	name = "camisa extranjera blanca"
 	desc = "A shirt typically used by foreign gangs."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "eastshirt2"

@@ -39,7 +39,7 @@
 				H.adjust_disgust(25 + 30 * fraction)
 				H.add_stress(/datum/stress_event/disgusting_food)
 			else if(foodtype & H.dna.species.disliked_food)
-				to_chat(H,"<span class='notice'>That didn't taste very good...</span>")
+				to_chat(H,"<span class='notice'>Eso no sabía muy bien...</span>")
 				H.adjust_disgust(11 + 15 * fraction)
 				H.add_stress(/datum/stress_event/gross_food)
 			else if(foodtype & H.dna.species.liked_food)

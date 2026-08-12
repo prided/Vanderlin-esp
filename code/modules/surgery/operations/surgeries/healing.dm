@@ -263,7 +263,7 @@
 		patient,
 		span_warning("You screwed up!"),
 		span_warning("[surgeon] screws up!"),
-		span_notice("[surgeon] fixes some of [patient]'s wounds."),
+		span_notice("[surgeon] repara algunas de las heridas de [patient]."),
 		target_detailed = TRUE,
 	)
 

@@ -27,7 +27,7 @@
 	AddComponent(/datum/component/storage/concrete/grid/cup)
 
 /obj/item/reagent_containers/glass/cup/wooden
-	name = "wooden cup"
+	name = "taza de madera"
 	desc = "A wooden cup that has seen its fair share of use and barfights."
 	icon_state = "cup_wooden"
 	resistance_flags = FLAMMABLE
@@ -44,7 +44,7 @@
 	item_weight = 180 GRAMS
 
 /obj/item/reagent_containers/glass/cup/silver
-	name = "silver goblet"
+	name = "copa de plata"
 	desc = "A silver goblet, its surface adorned with intricate carvings and runes."
 	icon_state = "cup_silver"
 	dropshrink = 0.65
@@ -82,7 +82,7 @@
 	item_weight = 100 GRAMS
 
 /obj/item/reagent_containers/glass/cup/teacup/fancy
-	name = "fancy teacup"
+	name = "taza de té elegante"
 	desc = "A fancy tea cup made out of ceramic, decorated with an ornate glaze. Used to serve tea."
 	icon_state = "teacup_fancy"
 	sellprice = 20
@@ -133,7 +133,7 @@
 	item_weight = 150 GRAMS
 
 /obj/item/reagent_containers/glass/cup/shell
-	name = "shell cup"
+	name = "taza de concha"
 	desc = "A simple cup carved out of shell."
 	dropshrink = null
 	icon_state = "cup_shell"
@@ -205,7 +205,7 @@
 	item_weight = 80 GRAMS
 
 /obj/item/reagent_containers/glass/cup/shellfancy
-	name = "fancy shell cup"
+	name = "taza de concha elegante"
 	desc = "A fancy cup carved out of shell."
 	dropshrink = null
 	icon_state = "fancycup_shell"
@@ -232,7 +232,7 @@
 	item_weight = 150 GRAMS
 
 /obj/item/reagent_containers/glass/cup/cocaudo_husk
-	name = "cocaudo husk"
+	name = "cáscara de cocaudo"
 	desc = "A hollowed out half of a cocaudo. It holds liquid."
 	icon_state = "cocaudo_empty"
 	dropshrink = 1
@@ -255,7 +255,7 @@
 	name = "[LOWER_TEXT(initial(main_material.name))] clay cup"
 
 /obj/item/reagent_containers/glass/cup/fancy_clay
-	name = "fancy clay cup"
+	name = "taza de arcilla elegante"
 	desc = "A cup made from fired clay."
 	icon = 'icons/obj/handmade/cup_fancy.dmi'
 	icon_state = "world"

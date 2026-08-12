@@ -22,7 +22,7 @@
 	. = ..()
 	var/obj/item/held_item = owner.get_active_held_item()
 	if(!held_item)
-		to_chat(owner, span_info("I need something of value to make a transaction..."))
+		to_chat(owner, span_info("Necesito algo de valor para hacer una transacción..."))
 		return
 	var/helditemvalue = held_item.get_real_price()
 	if(!helditemvalue)
@@ -33,7 +33,7 @@
 		return
 	if(istype(cast_on.patron, /datum/patron/psydon))
 		owner.playsound_local(owner, 'sound/magic/PSY.ogg', 100, FALSE, -1)
-		cast_on.visible_message(span_info("[cast_on] stirs for a moment, the miracle dissipates."), span_notice("A dull warmth swells in your heart, only to fade as quickly as it arrived."))
+		cast_on.visible_message(span_info("[cast_on] se agita por un momento, el milagro se disipa."), span_notice("A dull warmth swells in your heart, only to fade as quickly as it arrived."))
 		playsound(cast_on, 'sound/magic/PSY.ogg', 100, FALSE, -1)
 		return
 	if(ismobholder(held_item))
@@ -48,7 +48,7 @@
 		held_mob.forceMove(T)
 		held_mob.emote("scream", forced = TRUE)
 	owner.visible_message(span_notice("The transaction is made, [cast_on] is bathed in empowerment!"))
-	to_chat(owner, "<font color='yellow'>[held_item] burns into the air suddenly, my Transaction is accepted.</font>")
+	to_chat(owner, "<font color='yellow'>[held_item] se quema en el aire de repente, mi transacción es aceptada.</font>")
 	if(iscarbon(cast_on))
 		var/mob/living/carbon/C = cast_on
 		var/datum/status_effect/buff/healing/matthioshealing/heal_effect = C.apply_status_effect(/datum/status_effect/buff/healing/matthioshealing)

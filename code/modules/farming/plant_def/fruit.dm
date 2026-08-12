@@ -23,7 +23,7 @@
 	base_genetics.cold_resistance = TRAIT_GRADE_POOR
 
 /datum/plant_def/mangosteen
-	name = "mangosteen tree"
+	name = "árbol de mangostán"
 	icon_state = "mangosteentree"
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/fruit/mangosteen
 	uproot_loot = list(/obj/item/grown/log/tree/small)

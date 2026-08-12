@@ -3,7 +3,7 @@
 #define LIST_CALLS_HELP list ("Help", "I need help", "Aaah, help me", "Matron save me", "They are going to get me", "I am just an orphan, please")
 
 /datum/action/cooldown/spell/undirected/call_for_hag
-	name = "Call for That Hag"
+	name = "Llama a esa bruja"
 	desc = "Callout to the Matron. If you are fighting, you can call out for help..."
 	button_icon_state = "message"
 
@@ -25,7 +25,7 @@
 	var/mob/living/carbon/caster = owner // need to be carbon for these checks
 
 	if(!caster.can_speak_vocal() || caster.mouth?.muteinmouth || HAS_TRAIT(caster, TRAIT_BAGGED))
-		to_chat(owner, span_red("I am unable to yell out to her!"))
+		to_chat(owner, span_red("¡No puedo gritarle!"))
 		return . | SPELL_CANCEL_CAST
 
 	matrons = list() //reset list
@@ -51,7 +51,7 @@
 		to_chat(matron, span_reallybig("[what_to_yell]!!"))
 		if(owner.cmode) // The Orphans need me!
 			matron.add_stress(/datum/stress_event/orphan_calling_help)
-			to_chat(matron, span_warning("That was [owner.real_name]'s voice!"))
+			to_chat(matron, span_warning("¡Esa era la voz de [owner.real_name]!"))
 		else
 			matron.add_stress(/datum/stress_event/orphan_calling)
 			to_chat(matron, span_notice("That sounded like it came from [owner.real_name]..."))

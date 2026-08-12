@@ -1,7 +1,7 @@
 //Legcuffs
 
 /obj/item/restraints/legcuffs
-	name = "leg cuffs"
+	name = "esposas para las piernas"
 	desc = ""
 	gender = PLURAL
 	icon = 'icons/obj/items_and_weapons.dmi'
@@ -44,7 +44,7 @@
 			if(!BP.is_object_embedded(src))
 				BP.add_embedded_object(src)
 			close_trap(user)
-			C.visible_message("<span class='boldwarning'>[C] triggers \the [src].</span>", \
+			C.visible_message("<span class='boldwarning'>[C] activa \the [src].</span>", \
 					"<span class='userdanger'>I trigger \the [src]!</span>")
 			C.emote("agony")
 			C.Stun(80)
@@ -72,7 +72,7 @@
 				if(!BP.is_object_embedded(src))
 					BP.add_embedded_object(src)
 				close_trap(user)
-				C.visible_message("<span class='boldwarning'>[C] triggers \the [src].</span>", \
+				C.visible_message("<span class='boldwarning'>[C] activa \the [src].</span>", \
 						"<span class='userdanger'>I trigger \the [src]!</span>")
 				C.emote("agony")
 				BP.add_wound(/datum/wound/fracture)
@@ -87,7 +87,7 @@
 /obj/item/restraints/legcuffs/beartrap/attackby(obj/item/W, mob/user, list/modifiers)
 	if(!armed || !W.force)
 		return ..()
-	user.visible_message("<span class='warning'>[user] triggers \the [src] with [W].</span>", \
+	user.visible_message("<span class='warning'>[user] activa \the [src] con [W].</span>", \
 			"<span class='danger'>I trigger \the [src] with [W]!</span>")
 	W.take_damage(20)
 	close_trap(user, W)
@@ -136,7 +136,7 @@
 				to_chat(user, span_notice("I arm \the [src]."))
 			else
 				if(old)
-					user.visible_message(span_warning("The old [src.name] breaks under stress!"))
+					user.visible_message(span_warning("¡El viejo [src.name] se rompe bajo tensión!"))
 					playsound(src, 'sound/foley/breaksound.ogg', 100, TRUE, -1)
 					qdel(src)
 				else
@@ -184,8 +184,8 @@
 					snap = FALSE
 			if(snap)
 				close_trap(cross_mob)
-				cross_mob.visible_message(span_danger("[cross_mob] triggers \the [src]."), \
-						span_danger("I trigger \the [src]!"))
+				cross_mob.visible_message(span_danger("[cross_mob] activa \the [src]."), \
+						span_danger("¡Activo \the [src]!"))
 				if(cross_mob.apply_damage(trap_damage, BRUTE, def_zone, cross_mob.run_armor_check(def_zone, "stab", damage = trap_damage), damage_type = BCLASS_BITE))
 					cross_mob.Stun(80)
 				cross_mob.consider_ambush()
@@ -206,7 +206,7 @@
 	item_weight = 1.5 KILOGRAMS
 
 /obj/item/restraints/legcuffs/beartrap/hunting_snare
-	name = "hunting snare"
+	name = "trampa de caza"
 	trap_damage = 0
 	armed = TRUE
 	anchored = TRUE

@@ -1,5 +1,5 @@
 /obj/machinery/essence/divider
-	name = "essence divider"
+	name = "divisor de esencia"
 	desc = "Splits incoming essence evenly across all connected outputs, skipping any that are full."
 	icon = 'icons/roguetown/misc/splitter.dmi'
 	icon_state = "divider"

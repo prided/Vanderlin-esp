@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/mend
-	name = "Minor Mend"
-	desc = "Repairs minor damage to simple objects."
+	name = "Reparación menor"
+	desc = "Repara daños menores en objetos simples."
 	button_icon_state = "mending"
 	cast_range = 1
 	essences = list(/datum/thaumaturgical_essence/earth)
@@ -22,7 +22,7 @@
 		return FALSE
 	if(I.get_integrity() >= I.max_integrity * 0.8)
 		if(owner)
-			to_chat(owner, span_info("[I] appears to be in perfect condition."))
+			to_chat(owner, span_info("[I] parece estar en perfectas condiciones."))
 		return FALSE
 	return TRUE
 
@@ -35,14 +35,14 @@
 	var/obj/item/I = cast_on
 
 	user.visible_message(
-		span_warning("[user] begins to concentrate on [I]!"),
+		span_warning("¡[user] comienza a concentrarse en [I]!"),
 		span_notice("I begin to concentrate on [I]..")
 	)
 	if(do_after(user, 2 SECONDS, I))
 		var/initial_damage = user.getBruteLoss() + user.getFireLoss()
 		for(var/i = 1, i <= 20, i++)
 			if(user.getBruteLoss() + user.getFireLoss() > initial_damage + 10)
-				to_chat(user, span_warning("I can't concentrate like this!"))
+				to_chat(user, span_warning("¡No puedo concentrarme así!"))
 				return
 			if(do_after(user, 1.6 SECONDS, I))
 				repair_percent = initial(repair_percent)
@@ -60,7 +60,7 @@
 				break
 		return TRUE
 	else
-		to_chat(user, span_warning("My concentration breaks! I could not repair [I]."))
+		to_chat(user, span_warning("¡Mi concentración se rompe! No pude reparar [I]."))
 	return FALSE
 
 /datum/action/cooldown/spell/essence/mend/spell

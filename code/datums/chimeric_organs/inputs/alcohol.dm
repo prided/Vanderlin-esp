@@ -1,5 +1,5 @@
 /datum/chimeric_node/input/reagent/alcohol
-	name = "dwarven"
+	name = "enano"
 	desc = "Will trigger from any drank reagent but remove non-alcoholic drinks"
 	is_special = TRUE
 	node_purity = 100 // No delay

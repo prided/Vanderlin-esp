@@ -1,5 +1,5 @@
 /datum/language/thievescant
-	name = "Thieves' Cant"
+	name = "Jerga de ladrones"
 	desc = ""
 	icon_state = "thief"
 	speech_verb = "says"

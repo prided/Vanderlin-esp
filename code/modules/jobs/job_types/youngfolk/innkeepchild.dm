@@ -15,7 +15,7 @@
 
 /datum/job/innkeep_son
 	title = JOB_INNKEEP_SON
-	f_title = "Innkeepers Daughter"
+	f_title = "Hija del posadero"
 	tutorial = "One nite the Innkeeper took you in during a harsh winter, \
 	you've been thankful ever since."
 	department_flag = YOUNGFOLK

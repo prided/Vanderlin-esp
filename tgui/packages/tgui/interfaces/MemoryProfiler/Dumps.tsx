@@ -18,14 +18,11 @@ export function Dumps() {
   const knownLists = lists_report?.lists_total ?? census?.lists_total;
 
   return (
-    <Section title="File dumps">
+    <Section title="Volcados de archivos">
       <Stack vertical>
         <Stack.Item>
           <NoticeBox info>
-            A returned report is capped at the top 40 rows per section, so a
-            file is the only way to see everything. The server stays frozen for
-            the whole walk and the whole write, and a full census on a live
-            world runs to hundreds of megabytes.
+            Un informe devuelto tiene un límite de 40 filas superiores por sección, por lo que un archivo es la única forma de verlo todo. El servidor permanece congelado durante todo el recorrido y toda la escritura, y un censo completo en un mundo vivo alcanza cientos de megabytes.
           </NoticeBox>
         </Stack.Item>
         <Stack.Item>
@@ -36,10 +33,10 @@ export function Dumps() {
                 disabled={!!busy}
                 onClick={() => act('dump', { kind: 'census' })}
               >
-                Dump full census
+                Volcar censo completo
               </Button.Confirm>
             </Stack.Item>
-            <Stack.Item color="label">Dump lists:</Stack.Item>
+            <Stack.Item color="label">Listas de volcado:</Stack.Item>
             {dump_row_options.map((option) =>
               option === 'all' ? (
                 <Stack.Item key={option}>
@@ -72,14 +69,14 @@ export function Dumps() {
         </Stack.Item>
         <Stack.Item>
           {dumps.length === 0 ? (
-            <Box color="label">Nothing dumped this round.</Box>
+            <Box color="label">No se generaron volcados esta ronda.</Box>
           ) : (
             <Table>
               <Table.Row header>
-                <Table.Cell collapsing>When</Table.Cell>
-                <Table.Cell>File</Table.Cell>
-                <Table.Cell collapsing>Rows</Table.Cell>
-                <Table.Cell collapsing>Size</Table.Cell>
+                <Table.Cell collapsing>Cuando</Table.Cell>
+                <Table.Cell>Archivo</Table.Cell>
+                <Table.Cell collapsing>Filas</Table.Cell>
+                <Table.Cell collapsing>Tamaño</Table.Cell>
                 <Table.Cell collapsing />
               </Table.Row>
               {dumps.map((entry, index) => (
@@ -110,7 +107,7 @@ export function Dumps() {
                       icon="download"
                       onClick={() => act('download', { index: index + 1 })}
                     >
-                      Download
+                      Descargar
                     </Button>
                   </Table.Cell>
                 </Table.Row>

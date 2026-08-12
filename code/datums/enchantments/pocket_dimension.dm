@@ -26,8 +26,8 @@ GLOBAL_VAR_INIT(pocket_portal, null)
 	user.forceMove(get_turf(output))
 
 /datum/enchantment/pocket_dimension
-	enchantment_name = "Pocket Dimension"
-	examine_text = "An alternative space exists in here."
+	enchantment_name = "Dimensión de bolsillo"
+	examine_text = "Aquí existe un espacio alternativo."
 
 	should_process = TRUE
 	essence_recipe = list(

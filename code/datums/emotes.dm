@@ -268,12 +268,12 @@
 		if(hands_use_check && HAS_TRAIT(user, TRAIT_HANDS_BLOCKED))
 			if(!intentional)
 				return FALSE
-			to_chat(user, span_warning("I cannot use my hands to [key] right now!"))
+			to_chat(user, span_warning("¡No puedo usar mis manos para [key] ahora mismo!"))
 			return FALSE
 		if(incapacitated_check && HAS_TRAIT(user, TRAIT_INCAPACITATED))
 			if(!intentional)
 				return FALSE
-			to_chat(user, span_warning("I cannot use your hands to [key] right now!"))
+			to_chat(user, span_warning("¡No puedo usar tus manos para [key] ahora mismo!"))
 			return FALSE
 
 	if(HAS_TRAIT(user, TRAIT_EMOTEMUTE))

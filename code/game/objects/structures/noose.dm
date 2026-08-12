@@ -36,7 +36,7 @@
 
 	if(do_after(user, 1 SECONDS, src))
 		playsound(src, 'sound/foley/dropsound/cloth_drop.ogg', 50, TRUE)
-		user.visible_message(span_notice("[user] cuts down the noose."), span_notice("I cut down the noose."), span_hear("I hear something snap."))
+		user.visible_message(span_notice("[user] corta la soga."), span_notice("I cut down the noose."), span_hear("I hear something snap."))
 		deconstruct(TRUE)
 		return TRUE
 
@@ -108,8 +108,8 @@
 	. = ..()
 	if(!force)
 		return
-	buckled_mob.visible_message(span_danger("[buckled_mob] falls over and hits the ground!"), \
-								span_userdanger("You fall over and hit the ground!"))
+	buckled_mob.visible_message(span_danger("¡[buckled_mob] se cae y golpea el suelo!"), \
+								span_userdanger("¡Te caes y golpeas el suelo!"))
 	buckled_mob.adjustBruteLoss(10, damage_type = BCLASS_BLUNT)
 	buckled_mob.Knockdown(6 SECONDS)
 

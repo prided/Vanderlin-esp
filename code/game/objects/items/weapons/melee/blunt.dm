@@ -2,7 +2,7 @@
 ==========================================================*/
 //................ Mace ............... //
 /obj/item/weapon/mace
-	name = "iron mace"
+	name = "maza de hierro"
 	desc = "A heavy iron mace, preferred by those with a grudge against knightly whoresons."
 	icon_state = "mace"
 	icon = 'icons/roguetown/weapons/32/clubs.dmi'
@@ -44,7 +44,7 @@
 	return ..()
 
 /obj/item/weapon/mace/rungu
-	name = "iron rungu"
+	name = "rungu de hierro"
 	desc = "An iron from the fallen east. Possesses a smoothed out head."
 	icon_state = "rungu_iron"
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
@@ -62,7 +62,7 @@
 	return ..()
 
 /obj/item/weapon/mace/shishpar
-	name = "iron shishpar"
+	name = "shishpar de hierro"
 	desc = "A heavy foreign mace with a sword-like handle. Its weight makes it a little hard to wield, but its capable of delivering devastating blows."
 	icon_state = "shishpar_iron"
 	force = DAMAGE_MACE + 1
@@ -75,7 +75,7 @@
 //................  Canes, my beloved. ............... //
 
 /obj/item/weapon/mace/cane
-	name = "wooden cane"
+	name = "bastón de madera"
 	desc = "A simple wooden cane, whittled from wood. Good for supporting your weight."
 	icon = 'icons/roguetown/weapons/32/canes.dmi'
 	icon_state = "simple_cane"
@@ -89,7 +89,7 @@
 	melt_amount = 0
 
 /obj/item/weapon/mace/cane/noble
-	name = "fancy cane"
+	name = "bastón elegante"
 	desc = "A polished, dark wooden cane, decorated with gold and silver. Often carried by nobility, even those without a limp, simply to flaunt their wealth to the peasantry."
 	icon_state = "noble_cane"
 	force = DAMAGE_MACE - 3
@@ -115,7 +115,7 @@
 	item_weight = 500 GRAMS
 
 /obj/item/weapon/mace/cane/natural
-	name = "natural wooden cane"
+	name = "bastón de madera natural"
 	desc = "A primitive cane, crudely carved from a thick tree branch. It still has a leaf on it."
 	icon_state = "natural_cane"
 	force = DAMAGE_MACE - 5
@@ -124,7 +124,7 @@
 	item_weight = 350 GRAMS
 
 /obj/item/weapon/mace/cane/bronze
-	name = "bronze cane"
+	name = "bastón de bronce"
 	desc = "A walking stick made from bronze and copper. The light on the top is entirely contained within, serving no functional purpose."
 	icon_state = "artificer_cane"
 	force = DAMAGE_MACE - 3
@@ -204,7 +204,7 @@
 
 //................ Bell ringer ............... //
 /obj/item/weapon/mace/church
-	name = "bell ringer"
+	name = "campanero"
 	desc = "Faith is sometimes best administered with steel and blood."
 	icon_state = "churchmace"
 	force = DAMAGE_MACE + 3
@@ -242,7 +242,7 @@
 	item_weight = 1.4 KILOGRAMS
 
 /obj/item/weapon/mace/steel/shishpar //More damage, but less versatile with bonuses
-	name = "steel shishpar"
+	name = "shishpar de acero"
 	desc = "A heavy foreign mace with a sword-like handle. Its weight makes it a little hard to wield, but it's capable of delivering devastating blows."
 	icon_state = "shishpar_steel"
 	force_wielded = DAMAGE_MACE_WIELD + 3
@@ -253,7 +253,7 @@
 
 //................ Spiked club ............... //
 /obj/item/weapon/mace/spiked
-	name = "spiked mace"
+	name = "maza con púas"
 	icon_state = "spikedmace"
 	force = DAMAGE_MACE + 1
 	force_wielded = DAMAGE_MACE_WIELD + 1
@@ -263,7 +263,7 @@
 
 //................ Morningstar ............... //
 /obj/item/weapon/mace/steel/morningstar
-	name = "morningstar"
+	name = "estrella de la mañana"
 	icon_state = "spiked_club_old"
 	force = DAMAGE_MACE + 2
 	force_wielded = DAMAGE_MACE_WIELD + 3
@@ -273,7 +273,7 @@
 
 //................ Iron Bludgeon ............... // Less damage, more accurate, similar to a cudgel
 /obj/item/weapon/mace/bludgeon
-	name = "iron bludgeon"
+	name = "garrote de hierro"
 	desc = "An iron headed club, useful for beating the dregs back into their gutters."
 	icon_state = "ibludgeon"
 	force = DAMAGE_CLUB + 3
@@ -296,7 +296,7 @@
 
 //................ Copper bludgeon ............... //
 /obj/item/weapon/mace/bludgeon/copper
-	name = "copper bludgeon"
+	name = "garrote de cobre"
 	desc = "An extremely crude weapon for cruder bastards."
 	icon_state = "cbludgeon"
 	force = DAMAGE_CLUB + 1
@@ -311,7 +311,7 @@
 //................ Club ............... //
 /obj/item/weapon/mace/woodclub
 	name = "club"
-	desc = "A weapon older than recorded time itself."
+	desc = "Un arma más antigua que el tiempo registrado."
 	icon_state = "club1"
 	force = DAMAGE_CLUB
 	force_wielded = DAMAGE_CLUB_WIELD
@@ -402,7 +402,7 @@
 
 //................ Wooden sword ............... //
 /obj/item/weapon/mace/woodclub/train_sword
-	name = "wooden sword"
+	name = "espada de madera"
 	desc = "Crude wood assembled into the shape of a sword, a terrible weapon to be on the receiving end of during a training spat."
 	icon = 'icons/roguetown/weapons/32/swords.dmi'
 	icon_state = "wsword"
@@ -432,7 +432,7 @@
 
 //................ Goedendag ............... //
 /obj/item/weapon/mace/goden
-	name = "warclub"
+	name = "club de guerra"
 	desc = "A two-handed club, decorated with a spiked cap crown. A perfect way to say Good Morning to any would be noble-knight."
 	icon = 'icons/roguetown/weapons/64/maces.dmi'
 	icon_state = "goedendag"
@@ -473,7 +473,7 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/mace/goden/deepduke //Boss loot
-	name = "deep duke's staff"
+	name = "bastón del duque profundo"
 	desc = "A staff made of seaglass and sturdy but unusual metal, holding no power after its misled owner's death. More useful as a bashing tool than a magic focus."
 	icon = 'icons/roguetown/mob/monster/pufferboss.dmi'
 	icon_state = "pufferprod"
@@ -575,7 +575,7 @@
 
 //................ Dwarf Warhammer ............... // - Unique Langobardo weapon
 /obj/item/weapon/mace/goden/steel/warhammer
-	name = "dwarven warhammer"
+	name = "martillo de guerra enano"
 	desc = "A great dwarven warhammer made of stern steel, engraved with oaths of battle and time."
 	icon_state = "warhammer"
 	wlength = WLENGTH_GREAT
@@ -612,7 +612,7 @@
 
 //................ Warhammers ............... //
 /obj/item/weapon/mace/warhammer
-	name = "iron warhammer"
+	name = "martillo de guerra de hierro"
 	desc = "Made to punch through armor and skull alike."
 	icon_state = "iwarhammer"
 	possible_item_intents = list(MACE_STRIKE, MACE_SMASH, WARHM_IMPALE)
@@ -632,7 +632,7 @@
 	return ..()
 
 /obj/item/weapon/mace/warhammer/steel
-	name = "steel warhammer"
+	name = "martillo de guerra de acero"
 	desc = "A fine steel warhammer, makes a satisfying sound when paired with a knight's helm."
 	icon_state = "swarhammer"
 	force = DAMAGE_MACE_WIELD
@@ -644,7 +644,7 @@
 	item_weight = 2.2 KILOGRAMS
 
 /obj/item/weapon/mace/warhammer/silver
-	name = "silver warhammer"
+	name = "martillo de guerra de plata"
 	desc = "A silver warhammer, made to fight nite-creachers. It makes a satisfying sound when paired with a skeleton's skull."
 	icon_state = "silverhammer"
 	force = DAMAGE_MACE_WIELD
@@ -723,7 +723,7 @@
 
 //................ Silver ............... //
 /obj/item/weapon/mace/silver
-	name = "silver mace"
+	name = "maza de plata"
 	desc = "A fanged silver mace, used to ward away creatures of the nite."
 	icon_state = "silvermace"
 	force = DAMAGE_MACE + 1
@@ -760,7 +760,7 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/mace/gada
-	name = "regal gada"
+	name = "gada real"
 	icon_state = "gada"
 	desc = "A luxurious silver mace that's been reinforced and embellished with gold. It's considerably heavier compared to other maces."
 	force = DAMAGE_MACE + 2
@@ -777,7 +777,7 @@
 //................ BRONZE ............... //
 
 /obj/item/weapon/mace/bronze
-	name = "bronze mace"
+	name = "maza de bronce"
 	icon_state = "mace_bronze"
 	desc = "A spiked bronze mace. A weapon thats seen a revival in use amidst the cataclysm in Heartfelt."
 	force = DAMAGE_MACE + 1
@@ -788,7 +788,7 @@
 	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/weapon/mace/bronze/shishpar
-	name = "bronze shishpar"
+	name = "shishpar de bronce"
 	desc = "A heavy foreign mace with a sword-like handle. It's weight makes it a little hard to wield, but its capable of delivering devastating blows."
 	icon_state = "shishpar_bronze"
 	force = DAMAGE_MACE_WIELD + 2

@@ -29,7 +29,7 @@
 	cmode_music = 'sound/music/cmode/combat_grenzelhoft.ogg'
 
 /datum/outfit/mercenary/grenzelhofthalb
-	name = "Grenzelhoft Hellebardiere (Mercenary)"
+	name = "Grenzelhoft Hellebardiere (Mercenario)"
 	neck = /obj/item/clothing/neck/chaincoif
 	pants = /obj/item/clothing/pants/grenzelpants
 	shoes = /obj/item/clothing/shoes/rare/grenzelhoft

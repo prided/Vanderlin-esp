@@ -122,7 +122,7 @@
 		apply_generic_weapon_damage(user, parent, victim, damage, STAB, BODY_ZONE_CHEST, BCLASS_STAB)
 
 /datum/special_intent/ground_smash
-	name = "Ground Smash"
+	name = "Golpe de tierra"
 	desc = "Swings downward, leaving a traveling quake for a few tiles. \
 		Anyone struck by it will be slowed and offbalanced, or knocked down if they're already off-balanced."
 

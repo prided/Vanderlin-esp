@@ -51,7 +51,7 @@
 		toggle_state = "[heldclod ? "[heldclod.clod_type]" : ""][initial(icon_state)]"
 
 /datum/intent/shovelscoop
-	name = "scoop"
+	name = "cuchara"
 	icon_state = "inscoop"
 	chargetime = 0
 	noaa = TRUE
@@ -244,7 +244,7 @@
 // --------- BATTLESHOVEL -----------
 
 /obj/item/weapon/shovel/necran
-	name = "necran battle shovel"
+	name = "pala de batalla necran"
 	desc = "This polearm esque great-shovel is granted for the completion of a gravetenders final initiation rites, for the wielder of this shovel shall rise no more, and with it in hand, neither shall their quarry."
 	icon = 'icons/roguetown/weapons/64/polearms.dmi'
 	icon_state = "battleshovel"
@@ -358,7 +358,7 @@
 		if(contents.len)
 			to_chat(usr, "<span class='warning'>There are too many things inside of [src] to fold it up!</span>")
 			return
-		visible_message("<span class='notice'>[usr] folds up [src].</span>")
+		visible_message("<span class='notice'>[usr] se pliega [src].</span>")
 		var/obj/item/burial_shroud/B = foldedbag_instance || new foldedbag_path
 		usr.put_in_hands(B)
 		qdel(src)

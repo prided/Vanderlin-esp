@@ -1,6 +1,6 @@
 /datum/language/rousman
 	name = "Rousman"
-	desc = "The tongue of the rousmen, child sized rat savages."
+	desc = "La lengua de los rousmen, ratas salvajes del tamaño de un niño."
 	icon_state = "rous"
 	spans = list(SPAN_DWARF)
 	speech_verb = "squeaks"

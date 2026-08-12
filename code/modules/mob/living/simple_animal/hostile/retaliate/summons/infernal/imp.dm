@@ -49,7 +49,7 @@
 	del_on_death = TRUE
 
 /obj/projectile/magic/firebolt
-	name = "ball of fire"
+	name = "bola de fuego"
 	icon_state = "fireball"
 	damage = 20
 	damage_type = BURN

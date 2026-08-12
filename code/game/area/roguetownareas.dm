@@ -3,7 +3,7 @@
 	icon_state = "rogue"
 
 /area/oob
-	name = "Out-Of-Bounds"
+	name = "Fuera de límites"
 
 /area/indoors
 	name = "indoors rt"
@@ -28,7 +28,7 @@
 ///// OUTDOORS AREAS //////
 
 /area/outdoors
-	name = "outdoors roguetown"
+	name = "al aire libre roguetown"
 	icon_state = "outdoors"
 	outdoors = TRUE
 	droning_index = DRONING_TOWN_DAY
@@ -329,14 +329,14 @@
 	background_track_night = null
 
 /area/under/lake
-	name = "underground lake"
+	name = "lago subterráneo"
 	icon_state = "lake"
 	droning_index = DRONING_LAKE
 	ambient_index = AMBIENCE_CAVE
 	ambient_index_night = AMBIENCE_GENERIC
 
 /area/indoors/ship
-	name = "the ship"
+	name = "el barco"
 	droning_index = DRONING_LAKE
 	droning_index_night = DRONING_LAKE
 	background_track = 'sound/music/area/townstreets.ogg'
@@ -344,7 +344,7 @@
 	background_track_night = 'sound/music/area/night.ogg'
 
 /area/outdoors/coast
-	name = "the coast"
+	name = "la costa"
 	droning_index = DRONING_LAKE
 	droning_index_night = DRONING_LAKE
 	background_track = 'sound/music/area/sargoth.ogg'
@@ -360,7 +360,7 @@
 	background_track = 'sound/music/area/underworlddrone.ogg'
 	background_track_dusk = null
 	background_track_night = null
-	first_time_text = "The Forest of Repentence"
+	first_time_text = "El bosque del arrepentimiento"
 
 /area/underworld/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
@@ -410,7 +410,7 @@
 			return
 
 	if(length(prayer) <= 15)
-		to_chat(damned, span_danger("My prayer was kinda short..."))
+		to_chat(damned, span_danger("Mi oración fue un poco corta..."))
 		return
 
 	if(findtext(prayer, damned.patron.name))
@@ -432,7 +432,7 @@
 ///// ANTAGONIST AREAS //////  - used on centcom so you can teleport there easily. Each antag area just gets one unique type, if its outdoor use generic indoors, vice versa, to avoid clutter in area list
 
 /area/indoors/bandit_lair
-	name = "lair (Bandits)"
+	name = "guarida (bandidos)"
 
 /area/indoors/vampire_manor
 	name = "lair (Vampire Lord)"
@@ -465,7 +465,7 @@
 	outdoors = TRUE
 
 /area/ship/middeck
-	name = "middeck"
+	name = "cubierta media"
 	icon_state = "indoors"
 	droning_index = DRONING_BOAT
 	background_track = 'sound/music/area/topdeckdrone.ogg'

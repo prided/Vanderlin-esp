@@ -2,7 +2,7 @@
 	abstract_type = /datum/container_craft/oven
 	required_container = /obj/machinery/light/fueled/oven
 	crafting_time = 25 SECONDS
-	category = "Oven"
+	category = "Horno"
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 	var/datum/pollutant/cooked_smell
@@ -39,7 +39,7 @@
 	return FALSE
 
 /datum/container_craft/oven/apple_fritter
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 	name = "Apple Fritter"
 	requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/fritter_raw = 1)
 	output = /obj/item/reagent_containers/food/snacks/fritter
@@ -73,7 +73,7 @@
 		SEND_SIGNAL(crafter, COMSIG_CONTAINER_CRAFT_COMPLETE, created_output)
 
 /datum/container_craft/oven/huskbun
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Baked Huskbun"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/huskbunraw = 1)
 	output = /obj/item/reagent_containers/food/snacks/huskbun
@@ -125,14 +125,14 @@
 		SEND_SIGNAL(crafter, COMSIG_CONTAINER_CRAFT_COMPLETE, created_output)
 
 /datum/container_craft/oven/pie/fish
-	name = "Fish Pie"
+	name = "pastel de pescado"
 	requirements = list(/obj/item/reagent_containers/food/snacks/raw_pie/fish = 1)
 	output = /obj/item/reagent_containers/food/snacks/pie/cooked/meat/fish
 	good_path = /obj/item/reagent_containers/food/snacks/pie/cooked/meat/fish/good
 	cooked_smell = /datum/pollutant/food/fish_pie
 
 /datum/container_craft/oven/pie/meat
-	name = "Meat Pie"
+	name = "Pastel de carne"
 	requirements = list(/obj/item/reagent_containers/food/snacks/raw_pie/meat = 1)
 	output = /obj/item/reagent_containers/food/snacks/pie/cooked/meat/meat
 	good_path = /obj/item/reagent_containers/food/snacks/pie/cooked/meat/meat/good
@@ -174,14 +174,14 @@
 	cooked_smell = /datum/pollutant/food/apple_pie
 
 /datum/container_craft/oven/pie/pear
-	name = "Pear Pie"
+	name = "Pastel de pera"
 	requirements = list(/obj/item/reagent_containers/food/snacks/raw_pie/pear = 1)
 	output = /obj/item/reagent_containers/food/snacks/pie/cooked/pear
 	good_path = /obj/item/reagent_containers/food/snacks/pie/cooked/pear/good
 	cooked_smell = /datum/pollutant/food/pear_pie
 
 /datum/container_craft/oven/pie/berry
-	name = "Berry Pie"
+	name = "pastel de bayas"
 	requirements = list(/obj/item/reagent_containers/food/snacks/raw_pie/berry = 1)
 	output = /obj/item/reagent_containers/food/snacks/pie/cooked/berry
 	good_path = /obj/item/reagent_containers/food/snacks/pie/cooked/berry/good
@@ -195,35 +195,35 @@
 	cooked_smell = /datum/pollutant/food/borowiki_pie
 
 /datum/container_craft/oven/bread
-	name = "Bread"
+	name = "Pan"
 	requirements = list(/obj/item/reagent_containers/food/snacks/dough = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread
 	cooked_smell = /datum/pollutant/food/bread
 
 /datum/container_craft/oven/bookbread
 	category = "Holiday Food"
-	name = "Bookbread"
+	name = "pan de libro"
 	requirements = list(/obj/item/reagent_containers/food/snacks/butterdough = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/bookbread
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/raspberrybookbread
 	category = "Holiday Food"
-	name = "Raspberry Bookbread"
+	name = "Pan de libro de frambuesa"
 	requirements = list(/obj/item/reagent_containers/food/snacks/raspberrybutterdough = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/bookbread/raspberry
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/jacksberrybookbread
 	category = "Holiday Food"
-	name = "Raisin Bookbread"
+	name = "Pan de libro con pasas"
 	requirements = list(/obj/item/reagent_containers/food/snacks/jacksberrybutterdough = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/bookbread/jacksberry
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/poisonjacksberrybookbread
 	hides_from_books = TRUE
-	name = "Raisin Bookbread (Poison)"
+	name = "Pan de libro con pasas (veneno)"
 	requirements = list(/obj/item/reagent_containers/food/snacks/jacksberrybutterdough/poison = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/bookbread/jacksberry/poison
 	cooked_smell = /datum/pollutant/food/pastry
@@ -237,14 +237,14 @@
 
 /datum/container_craft/oven/pearbookbread
 	category = "Holiday Food"
-	name = "Pear Bookbread"
+	name = "Pan de libro de pera"
 	requirements = list(/obj/item/reagent_containers/food/snacks/pearbutterdough = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/bookbread/pear
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/tangerinebookbread
 	category = "Holiday Food"
-	name = "Tangerine Bookbread"
+	name = "Pan de libro de mandarina"
 	requirements = list(/obj/item/reagent_containers/food/snacks/tangerinebutterdough = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/bookbread/tangerine
 	cooked_smell = /datum/pollutant/food/pastry
@@ -258,20 +258,20 @@
 
 /datum/container_craft/oven/lemonbookbread
 	category = "Holiday Food"
-	name = "Lemon Bookbread"
+	name = "Pan de libro de limón"
 	requirements = list(/obj/item/reagent_containers/food/snacks/lemonbutterdough = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/bookbread/lemon
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/chocolatebookbread
 	category = "Holiday Food"
-	name = "Chocolate Bookbread"
+	name = "Pan de libro de chocolate"
 	requirements = list(/obj/item/reagent_containers/food/snacks/chocolatebutterdough = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/bookbread/chocolate
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/bun
-	name = "Bun"
+	name = "Bollo"
 	requirements = list(/obj/item/reagent_containers/food/snacks/dough_slice = 1)
 	output = /obj/item/reagent_containers/food/snacks/bun
 	cooked_smell = /datum/pollutant/food/bun
@@ -284,7 +284,7 @@
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/choco_bun
-	name = "Chocolate Bun"
+	name = "Bollo de chocolate"
 	requirements = list(/obj/item/reagent_containers/food/snacks/choco_bun_raw = 1)
 	output = /obj/item/reagent_containers/food/snacks/choco_bun
 	cooked_smell = /datum/pollutant/food/bun
@@ -296,7 +296,7 @@
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/xylixbun
-	name = "Xylix Bun"
+	name = "Xylix Bollo"
 	hides_from_books = TRUE //Secret bun ooooooo
 	requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/xylixbun_raw = 1)
 	output = /obj/item/reagent_containers/food/snacks/xylixbun
@@ -402,21 +402,21 @@
 	cooked_smell = /datum/pollutant/food/tamto_cake
 
 /datum/container_craft/oven/eighthscake
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Baked Eighthscake"
 	requirements = list(/obj/item/reagent_containers/food/snacks/eighthscake_unbaked = 1)
 	output = /obj/item/reagent_containers/food/snacks/eighthscake
 	cooked_smell = /datum/pollutant/food/sunreed_dough
 
 /datum/container_craft/oven/eighthscake_lemon
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Baked Lemon Eighthscake"
 	requirements = list(/obj/item/reagent_containers/food/snacks/eighthscake_unbaked/lemon = 1)
 	output = /obj/item/reagent_containers/food/snacks/eighthscake/lemon
 	cooked_smell = /datum/pollutant/food/sunreed_dough
 
 /datum/container_craft/oven/eighthscake_lime
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Baked Lime Eighthscake"
 	requirements = list(/obj/item/reagent_containers/food/snacks/eighthscake_unbaked/lime = 1)
 	output = /obj/item/reagent_containers/food/snacks/eighthscake/lime
@@ -460,7 +460,7 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/raisin_bread
-	name = "Raisin Bread"
+	name = "Pan De Pasas"
 	requirements = list(/obj/item/reagent_containers/food/snacks/raisindough= 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/raisin
 	cooked_smell = /datum/pollutant/food/raisin_bread
@@ -474,7 +474,7 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/clay_brick
-	name = "Brick"
+	name = "Ladrillo"
 	requirements = list(/obj/item/natural/raw_brick= 1)
 	output = /obj/item/natural/brick
 	cooked_smell = null
@@ -508,7 +508,7 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/pie/mangosteen
-	name = "Mangosteen Tart"
+	name = "Tarta De Mangostán"
 	requirements = list(/obj/item/reagent_containers/food/snacks/raw_tart/mangosteen = 1)
 	output = /obj/item/reagent_containers/food/snacks/tart/cooked/mangosteen
 	cooked_smell = /datum/pollutant/food/pastry
@@ -529,21 +529,21 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/pie/chocolate
-	name = "Chocolate Tart"
+	name = "Tarta De Chocolate"
 	requirements = list(/obj/item/reagent_containers/food/snacks/raw_tart/chocolate = 1)
 	output = /obj/item/reagent_containers/food/snacks/tart/cooked/chocolate
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/sunreed_bread
-	category = "Tiefling Cuisine"
-	name = "Sunbread"
+	category = "Tiefling Cocina"
+	name = "pan de sol"
 	requirements = list(/obj/item/reagent_containers/food/snacks/masa = 1)
 	output = /obj/item/reagent_containers/food/snacks/sunreed_bread
 	cooked_smell = /datum/pollutant/food/sunreed_dough
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/honey_sunreed_bread
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Honeyed Sunbread"
 	requirements = list(/obj/item/reagent_containers/food/snacks/masa_honey = 1)
 	output = /obj/item/reagent_containers/food/snacks/sunreed_bread/honey
@@ -551,7 +551,7 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/estrella
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Estrella"
 	requirements = list(/obj/item/reagent_containers/food/snacks/masa_slice = 1)
 	output = /obj/item/reagent_containers/food/snacks/estrella
@@ -559,21 +559,21 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/comelette
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Caravaneer's Omelette"
 	requirements = list(/obj/item/reagent_containers/food/snacks/comelette_uncooked = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/comelette
 	cooked_smell = /datum/pollutant/food/fried_eggs
 
 /datum/container_craft/oven/comelette_veggie
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Veggie Caravaneer's Omelette"
 	requirements = list(/obj/item/reagent_containers/food/snacks/comelette_uncooked/veggie = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/comelette/veggie
 	cooked_smell = /datum/pollutant/food/fried_eggs
 
 /datum/container_craft/oven/comelette_meat
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Meat Caravaneer's Omelette"
 	requirements = list(/obj/item/reagent_containers/food/snacks/comelette_uncooked/meat = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/comelette/meat
@@ -636,28 +636,28 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/tamtoplate_cheese
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 	name = "Cheese Tamtoplate"
 	requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/tamtoplate_unfinished = 1)
 	output = /obj/item/reagent_containers/food/snacks/tamtoplate
 	cooked_smell = /datum/pollutant/food/tamtoplate
 
 /datum/container_craft/oven/tamtoplate_meat
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 	name = "Sausage Tamtoplate"
 	requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/tamtoplate_unfinished_meat = 1)
 	output = /obj/item/reagent_containers/food/snacks/tamtoplate/meat
 	cooked_smell = /datum/pollutant/food/tamtoplate
 
 /datum/container_craft/oven/tamtoplate_fish
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 	name = "Fish Tamtoplate"
 	requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/tamtoplate_unfinished_fish = 1)
 	output = /obj/item/reagent_containers/food/snacks/tamtoplate/fish
 	cooked_smell = /datum/pollutant/food/tamtoplate
 
 /datum/container_craft/oven/tamtoplate_onion
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 	name = "Onion Tamtoplate"
 	requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/tamtoplate_unfinished_onion = 1)
 	output = /obj/item/reagent_containers/food/snacks/tamtoplate/onion

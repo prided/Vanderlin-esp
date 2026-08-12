@@ -227,7 +227,7 @@
 		if (should_self_destruct)  // check if self-destruct
 			times_used += 1
 			if (times_used >= max_uses) //amount used before burning out
-				user.visible_message("<span class='warning'>[src] has burnt out and falls apart!</span>")
+				user.visible_message("¡<span class='warning'>[src] se ha quemado y se desmorona!</span>")
 				qdel(src)
 
 /obj/item/flashlight/flare/torch/spark_act()
@@ -261,7 +261,7 @@
 /obj/item/flashlight/flare/torch/lantern
 	name = "iron lamptern"
 	icon_state = "lamp"
-	desc = "A light to guide the way."
+	desc = "Una luz para guiar el camino."
 	light_outer_range = 7
 	on = FALSE
 	flags_1 = CONDUCT_1
@@ -306,7 +306,7 @@
 	name = "bronze lamptern"
 	icon_state = "bronzelamp"
 	item_state = "bronzelamp"
-	desc = "A marvel of engineering that emits a strange green glow."
+	desc = "Una maravilla de la ingeniería que emite un extraño brillo verde."
 	light_outer_range = 9
 	light_power = 2
 	light_color ="#3fff8f"

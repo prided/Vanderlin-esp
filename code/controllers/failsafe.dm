@@ -118,5 +118,5 @@ GLOBAL_REAL(Failsafe, /datum/controller/failsafe)
 	return defcon
 
 /datum/controller/failsafe/stat_entry(msg)
-	msg = "Defcon: [defcon_pretty()] (Interval: [Failsafe.processing_interval] | Iteration: [Failsafe.master_iteration])"
+	msg = "Defcon: [defcon_pretty()] (Intervalo: [Failsafe.processing_interval] | Iteración: [Failsafe.master_iteration])"
 	return msg

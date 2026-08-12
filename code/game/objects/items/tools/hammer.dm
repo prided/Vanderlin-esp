@@ -103,12 +103,12 @@
 		if(skill_value <= 0)
 			if(prob(30))
 				repair_percent = 0.01
-				to_chat(user, span_warning("You are just barely able to repair this..."))
+				to_chat(user, span_warning("Apenas puedes reparar esto..."))
 			else
 				repair_percent = 0
 				if(!was_broken)
 					attacked_item.take_damage(attacked_item.max_integrity * 0.1, BRUTE, "blunt")
-					user.visible_message(span_warning("[user] damages [attacked_item] further!"))
+					user.visible_message(span_warning("¡[user] daña aún más a [attacked_item]!"))
 		else
 			repair_percent *= GET_MOB_SKILL_VALUE_OLD(user, attacked_item.anvilrepair)
 
@@ -183,7 +183,7 @@
 		return TRUE
 
 	var/heal_value = force * max(1, (0.5 * GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering)))
-	if(!attacked_carbon.item_heal(user, brute_heal = heal_value, burn_heal = heal_value, heal_message_brute = "dents", heal_message_burn = "burnt metal", required_bodytype = BODYPART_ROBOTIC, item_source = src))
+	if(!attacked_carbon.item_heal(user, brute_heal = heal_value, burn_heal = heal_value, heal_message_brute = "dents", heal_message_burn = "metal quemado", required_bodytype = BODYPART_ROBOTIC, item_source = src))
 		return TRUE
 
 	user.adjust_experience(/datum/attribute/skill/craft/engineering, 1)
@@ -207,7 +207,7 @@
 
 // --------- STEEL HAMMER -----------
 /obj/item/weapon/hammer/steel
-	name = "claw hammer"
+	name = "martillo de uña"
 	icon_state = "hammer_s"
 	experimental_onhip = FALSE
 	experimental_onback = FALSE
@@ -240,8 +240,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/hammer/copper
-	name = "copper hammer"
-	desc = "A simple and rough copper hammer."
+	name = "martillo de cobre"
+	desc = "Un martillo de cobre simple y tosco."
 	icon_state = "chammer"
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	force = DAMAGE_HAMMER - 2
@@ -252,8 +252,8 @@
 	item_weight = 1.12 KILOGRAMS
 
 /obj/item/weapon/hammer/stone
-	name = "stone hammer"
-	desc = "A simple, if crude and primitive hammer."
+	name = "martillo de piedra"
+	desc = "Un martillo simple, aunque tosco y primitivo."
 	icon_state = "stonehammer"
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	force = DAMAGE_HAMMER - 4

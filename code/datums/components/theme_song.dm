@@ -35,7 +35,7 @@
 	music_enabled = !music_enabled
 	if(music_enabled)
 		combat_music_loop.start()
-		to_chat(parent, span_notice("Theme Active"))
+		to_chat(parent, span_notice("Tema activo"))
 	else
 		combat_music_loop.stop()
 		to_chat(parent, span_notice("Theme disabled."))
@@ -65,7 +65,7 @@
 	var/file_size = length(infile)
 
 	if(file_ext != ".ogg")
-		to_chat(parent, span_warning("The file must be an OGG."))
+		to_chat(parent, span_warning("El archivo debe ser un OGG."))
 		return
 	if(file_size > 6485760) // 6MB limit
 		to_chat(parent, span_warning("The file is too large. Maximum size is 6 MB."))
@@ -95,7 +95,7 @@
 
 /mob/proc/toggle_custom_music()
 	set name = "Toggle Theme Music"
-	set category = "IC.Music"
+	set category = "IC.Música"
 
 	var/datum/component/theme_music/theme = src.GetComponent(/datum/component/theme_music)
 	if(theme)
@@ -105,8 +105,8 @@
 		to_chat(src, span_notice("You are not supposed to have this, Report the bug."))
 
 /mob/proc/set_custom_music()
-	set name = "Set Custom Music"
-	set category = "IC.Music"
+	set name = "Establecer música personalizada"
+	set category = "IC.Música"
 
 	var/datum/component/theme_music/theme = src.GetComponent(/datum/component/theme_music)
 	if(theme)

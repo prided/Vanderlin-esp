@@ -3,7 +3,7 @@
 #define STEP_BUTTON "push a button"
 
 /obj/structure/orphan_smasher
-	name = "auto anvil"
+	name = "yunque automático"
 	desc = "A holy amalgamation of buttons and levers built purposely to fulfill Malum's will."
 
 	icon = 'icons/obj/autosmithy.dmi'
@@ -63,10 +63,10 @@
 	var/next_step
 	if(!working)
 		next_step = pre_start_list[length(step_list) + 1]
-		. += span_notice("[src] is currently OFF.")
+		. += span_notice("[src] está actualmente APAGADO.")
 	else
 		next_step = post_start_list[length(step_list) + 1]
-		. += span_notice("[src] is currently ON.")
+		. += span_notice("[src] está actualmente ENCENDIDO.")
 	switch(next_step)
 		if(STEP_FIDDLE)
 			. += span_notice("To toggle the machine, use RMB.")
@@ -153,7 +153,7 @@
 		if(!length(options))
 			return
 
-		var/datum/anvil_recipe/choice = input(user, "Choose a recipe to add to the queue", src) as null|anything in options
+		var/datum/anvil_recipe/choice = input(user, "Elige una receta para agregar a la cola", src) as null|anything in options
 		if(!choice)
 			return
 		anvil_recipes_to_craft |= choice
@@ -287,7 +287,7 @@
 		next_step = post_start_list[length(step_list) + 1]
 
 	if(next_step != step_type)
-		user.visible_message(span_danger("[user] messes with [src]!"), span_danger("You mess with [src]!"))
+		user.visible_message(span_danger("¡[user] se mete con [src]!"), span_danger("¡Te metes con [src]!"))
 		step_list = list()
 
 		var/body_zone = BODY_ZONE_R_ARM
@@ -300,7 +300,7 @@
 	if(!do_after(user, 1.2 SECONDS, src))
 		return
 
-	to_chat(user, span_notice("You [step_type]."))
+	to_chat(user, span_notice("Usted [step_type]."))
 	step_list |= step_type
 
 	if(working)

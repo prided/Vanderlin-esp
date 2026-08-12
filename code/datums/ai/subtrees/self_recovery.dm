@@ -25,4 +25,4 @@
 	heal_message = " licks their wounds."
 
 /datum/ai_planning_subtree/simple_self_recovery/humanoid
-	heal_message = " tends to their wounds."
+	heal_message = " atiende sus heridas."

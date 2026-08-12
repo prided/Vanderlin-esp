@@ -21,7 +21,7 @@
 	message_admins("[ADMIN_LOOKUPFLW(user)] has sacrificed [key_name_admin(L)] on the sacrificial altar at [AREACOORD(src)].")
 
 /obj/structure/healingfountain
-	name = "healing fountain"
+	name = "fuente curativa"
 	desc = ""
 	icon = 'icons/obj/hand_of_god_structures.dmi'
 	icon_state = "fountain"
@@ -35,10 +35,10 @@
 	if(.)
 		return
 	if(last_process + time_between_uses > world.time)
-		to_chat(user, "<span class='notice'>The fountain appears to be empty.</span>")
+		to_chat(user, "<span class='notice'>La fuente parece estar vacía.</span>")
 		return
 	last_process = world.time
-	to_chat(user, "<span class='notice'>The blood feels warm as you touch it. The fountain immediately dries up shortly after.</span>")
+	to_chat(user, "<span class='notice'>La sangre se siente caliente al tocarla. La fuente se seca inmediatamente poco después.</span>")
 	user.reagents.add_reagent(/datum/reagent/medicine/healthpot,40)
 	update_appearance(UPDATE_ICON_STATE)
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_appearance), UPDATE_ICON_STATE), time_between_uses)

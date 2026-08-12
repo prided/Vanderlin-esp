@@ -3,8 +3,8 @@
  */
 /datum/special_intent
 	abstract_type = /datum/special_intent
-	var/name = "special intent"
-	var/desc = "bad coders"
+	var/name = "intención especial"
+	var/desc = "malos codificadores"
 	var/icon = 'icons/effects/effects.dmi'
 
 	/// The main place where we can draw out the pattern. Every tile entry is a list with two numbers.
@@ -221,7 +221,7 @@
 		return
 
 	if(parent.loc != user)
-		user.balloon_alert(user, "dropped weapon!")
+		user.balloon_alert(user, "¡arma caída!")
 		return
 
 	if(starting_loc)
@@ -231,7 +231,7 @@
 			return
 		else if(!user.TurfAdjacent(starting_loc))
 			starting_loc = null
-			user.balloon_alert(user, "too far!")
+			user.balloon_alert(user, "¡demasiado lejos!")
 			return
 
 	for(var/turf/affected as anything in turfs)

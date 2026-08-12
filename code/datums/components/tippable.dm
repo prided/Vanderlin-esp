@@ -162,7 +162,7 @@
 	if(untip_time > 0)
 		to_chat(untipper, span_notice("You begin righting [tipped_mob]..."))
 		tipped_mob.visible_message(
-			span_notice("[untipper] begins righting [tipped_mob]."),
+			span_notice("[untipper] comienza a enderezar [tipped_mob]."),
 			span_notice("[untipper] begins righting you."),
 			ignored_mobs = untipper
 		)
@@ -184,7 +184,7 @@
 	if(QDELETED(tipped_mob))
 		return
 
-	to_chat(untipper, span_notice("You right [tipped_mob]."))
+	to_chat(untipper, span_notice("Tienes razón [tipped_mob]."))
 	tipped_mob.visible_message(
 		span_notice("[untipper] rights [tipped_mob]."),
 		span_notice("You are righted by [untipper]!"),

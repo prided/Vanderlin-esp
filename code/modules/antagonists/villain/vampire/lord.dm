@@ -19,8 +19,8 @@
 	antag_hud_type = ANTAG_HUD_VAMPIRE
 	antag_hud_name = "vamplord"
 	confess_lines = list(
-		"I AM ANCIENT!",
-		"I AM THE LAND!",
+		"¡SOY ANTIGUO!",
+		"¡YO SOY LA TIERRA!",
 		"FIRSTBORNE CHILD OF KAIN!",
 	)
 	allow_preference_switching = TRUE
@@ -101,7 +101,7 @@
 // NEW VERBS
 /mob/living/carbon/human/proc/demand_submission()
 	set name = "Demand Submission"
-	set category = "RoleUnique.Vampire"
+	set category = "RolÚnico.Vampiro"
 	if(SSmapping.retainer.king_submitted)
 		to_chat(src, span_warning("I am already the Master of [SSmapping.config.map_name]."))
 		return
@@ -109,23 +109,23 @@
 	var/mob/living/carbon/ruler = SSticker.rulermob
 
 	if(!ruler || (get_dist(src, ruler) > 1))
-		to_chat(src, span_warning("The Master of [SSmapping.config.map_name] is not beside me."))
+		to_chat(src, span_warning("El Maestro de [SSmapping.config.map_name] no está a mi lado."))
 		return
 
 	if(ruler.stat <= CONSCIOUS)
-		to_chat(src, span_warning("[ruler] is still conscious."))
+		to_chat(src, span_warning("[ruler] todavía está consciente."))
 		return
 
 	switch(tgui_alert(ruler, "Submit and Pledge Allegiance to [name]?", "SUBMISSION", list("Yes", "No")))
 		if("Yes")
 			SSmapping.retainer.king_submitted = TRUE
 		if("No")
-			to_chat(ruler, span_boldnotice("I refuse!"))
+			to_chat(ruler, span_boldnotice("¡Me niego!"))
 			to_chat(src, span_boldnotice("[p_they(TRUE)] refuse[ruler.p_s()]!"))
 
 /mob/living/carbon/human/proc/punish_spawn()
 	set name = "Punish Minion"
-	set category = "RoleUnique.Vampire"
+	set category = "RolÚnico.Vampiro"
 
 	var/list/possible = list()
 	for(var/mob/living/carbon/human/member in clan?.clan_members)

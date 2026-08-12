@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/water_breathing
-	name = "Water Breathing"
-	desc = "Allows breathing underwater for a short duration."
+	name = "Respiración de agua"
+	desc = "Permite respirar bajo el agua por un corto período de tiempo."
 	button_icon_state = "water_breathing"
 	cast_range = 1
 	essences = list(/datum/thaumaturgical_essence/water)
@@ -15,8 +15,8 @@
 	target.apply_status_effect(/datum/status_effect/buff/water_breathing, duration)
 
 /atom/movable/screen/alert/status_effect/water_breathing
-	name = "Water Breathing"
-	desc = "You can breathe underwater."
+	name = "Respiración de agua"
+	desc = "Puedes respirar bajo el agua."
 	icon_state = "buff"
 
 /datum/status_effect/buff/water_breathing
@@ -27,12 +27,12 @@
 /datum/status_effect/buff/water_breathing/on_apply()
 	. = ..()
 	ADD_TRAIT(owner, TRAIT_NODROWN, TRAIT_STATUS_EFFECT(id))
-	to_chat(owner, span_notice("You can now breathe underwater."))
+	to_chat(owner, span_notice("Ahora puedes respirar bajo el agua."))
 
 /datum/status_effect/buff/water_breathing/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_NODROWN, TRAIT_STATUS_EFFECT(id))
-	to_chat(owner, span_notice("Your ability to breathe underwater fades."))
+	to_chat(owner, span_notice("Tu capacidad para respirar bajo el agua se desvanece."))
 
 /datum/action/cooldown/spell/essence/water_breathing/spell
 	name = "Transmogrify: Gills"

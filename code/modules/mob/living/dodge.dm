@@ -161,7 +161,7 @@
 		to_chat(src, span_info("[text]"))
 
 	if(user.client?.prefs.read_preference(/datum/preference/toggle/showrolls) && attacker_dualwielding)
-		var/attacker_feedback = "Attacking with advantage."
+		var/attacker_feedback = "Atacar con ventaja."
 		if(defender_dualwielding)
 			attacker_feedback += " Cancelled out!"
 		to_chat(user, span_info("[attacker_feedback]"))
@@ -273,9 +273,9 @@
 
 	var/drained = GET_MOB_ATTRIBUTE_VALUE(src, STAT_SPEED) > 15 ? 0 : 5  // Just a proxy to determine if it was an "easy" dodge
 	if(drained > 0)
-		src.visible_message("<span class='warning'><b>[src]</b> dodges [user]'s attack!</span>")
+		src.visible_message("¡<span class='warning'><b>[src]</b> esquiva el ataque de [user]!</span>")
 	else
-		src.visible_message("<span class='warning'><b>[src]</b> easily dodges [user]'s attack!</span>")
+		src.visible_message("¡<span class='warning'><b>[src]</b> esquiva fácilmente el ataque de [user]!</span>")
 
 	dodgecd = FALSE
 

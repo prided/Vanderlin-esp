@@ -4,7 +4,7 @@
 #define GRAVE_DEVOTION_GLOBAL_MAX 0.5
 
 /obj/structure/closet/dirthole
-	name = "hole"
+	name = "agujero"
 	icon_state = "hole1"
 	icon = 'icons/turf/constructed/grave.dmi'
 	mob_storage_capacity = 3
@@ -73,7 +73,7 @@
 /obj/structure/closet/dirthole/examine(mob/user)
 	. = ..()
 	if(headstone?.inscription)
-		. += span_info("\A [headstone] is ontop and reads the following...")
+		. += span_info("\A [headstone] está arriba y lee lo siguiente...")
 		. += headstone.inscription
 	if(is_consecrated)
 		switch(gravequality)
@@ -128,7 +128,7 @@
 	if(!grave_decorations)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	else if(length(grave_decorations) != 1)
-		item_to_remove = tgui_input_list(user, "Which decoration do you want to remove?", "Grave Decor Removal", grave_decorations)
+		item_to_remove = tgui_input_list(user, "¿Qué decoración quieres quitar?", "Grave Decor Removal", grave_decorations)
 	else
 		item_to_remove = grave_decorations[1] // only one item
 
@@ -182,7 +182,7 @@
 	//In the future, an associated list can be made between any non-gravedecor items, and their associated decoration. We only have one such case, so that isnt necessary.
 	if(istype(tool, /obj/item/grown/log/tree/stick))
 		if(headstone)
-			to_chat(user, "<span class='warning'>This grave already has a headstone.</span>")
+			to_chat(user, "<span class='warning'>Esta tumba ya tiene una lápida.</span>")
 			return ITEM_INTERACT_BLOCKING
 		if(stage != DIRTHOLE_GRAVE)
 			to_chat(user, "<span class='warning'>I can't tie a grave marker on an open grave.</span>")
@@ -197,7 +197,7 @@
 			headstone = new /obj/item/gravedecor/headstone/crude(null, tool.type)
 
 		if(pacify_coffin(src, user))
-			user.visible_message(span_rose("[user] consecrates [src]."), span_rose("I consecrate [src]."))
+			user.visible_message(span_rose("[user] consagra [src]."), span_rose("I consecrate [src]."))
 			if(!is_consecrated)
 				SEND_SIGNAL(user, COMSIG_GRAVE_CONSECRATED, src)
 				record_round_statistic(STATS_GRAVES_CONSECRATED)
@@ -247,16 +247,16 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/structure/closet/dirthole/proc/inscribe(obj/item/sharp, mob/user)
-	var/new_message = tgui_input_text(user, "What would you like to be inscribed on \the [headstone]?", "Custom Inscription", headstone.custom_message, 150, TRUE)
+	var/new_message = tgui_input_text(user, "¿Qué te gustaría que estuviera inscrito en \the [headstone]?", "Inscripción personalizada", headstone.custom_message, 150, TRUE)
 	if(!new_message || new_message == headstone.custom_message)
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_info("[user] begins to engrave a message into \the [headstone] with \a [sharp]."), span_info("You begin to engrave a message into \the [headstone]."), span_info("You hear someone cutting into stone."))
+	user.visible_message(span_info("[user] comienza a grabar un mensaje en \the [headstone] con \a [sharp]."), span_info("You begin to engrave a message into \the [headstone]."), span_info("You hear someone cutting into stone."))
 	playsound(src, pick('sound/combat/hits/onrock/onrock (1).ogg', 'sound/combat/hits/onrock/onrock (2).ogg', 'sound/combat/hits/onrock/onrock (3).ogg', 'sound/combat/hits/onrock/onrock (4).ogg'), 100)
 	if(!do_after(user, 5 SECONDS, src, progress=TRUE, display_over_user=TRUE))
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_info("[user] finishes working on \the [headstone]."), span_info("You finish engraving \the [headstone] with your message."))
+	user.visible_message(span_info("[user] finishes working on \the [headstone]."), span_info("Terminas de grabar \the [headstone] con tu mensaje."))
 	headstone.custom_message = new_message
 	return ITEM_INTERACT_SUCCESS
 
@@ -264,7 +264,7 @@
 /obj/structure/closet/dirthole/proc/interaction_decor(obj/item/gravedecor/tool, mob/user)
 	if(istype(tool, /obj/item/gravedecor/headstone))
 		if(headstone)
-			to_chat(user, "<span class='warning'>This grave already has a headstone.</span>")
+			to_chat(user, "<span class='warning'>Esta tumba ya tiene una lápida.</span>")
 			return ITEM_INTERACT_BLOCKING
 		if(stage != DIRTHOLE_GRAVE)
 			to_chat(user, "<span class='warning'>I can't put a headstone on an open grave.</span>")
@@ -276,7 +276,7 @@
 
 		headstone = tool
 		if(pacify_coffin(src, user))
-			user.visible_message(span_rose("[user] consecrates [src]."), span_rose("I consecrate [src]."))
+			user.visible_message(span_rose("[user] consagra [src]."), span_rose("I consecrate [src]."))
 			if(!is_consecrated)
 				SEND_SIGNAL(user, COMSIG_GRAVE_CONSECRATED, src)
 				record_round_statistic(STATS_GRAVES_CONSECRATED)
@@ -288,7 +288,7 @@
 
 	if(istype(tool, /obj/item/gravedecor/gravefence))
 		if(gravefence)
-			to_chat(user, "<span class='warning'>This grave already has a fence.</span>")
+			to_chat(user, "<span class='warning'>Esta tumba ya tiene una valla.</span>")
 			return ITEM_INTERACT_BLOCKING
 		if(stage != DIRTHOLE_GRAVE)
 			to_chat(user, "<span class='warning'>I can't put a gravefence on an open grave.</span>")
@@ -342,7 +342,7 @@
 		var/turf/under_turf = GET_TURF_BELOW(our_turf)
 		if(under_turf && our_turf && isopenturf(under_turf))
 			playsound(src,'sound/items/dig_shovel.ogg', 100, TRUE)
-			user.visible_message("[user] starts digging out the bottom of [src]", "I start digging out the bottom of [src].")
+			user.visible_message("[user] comienza a excavar la parte inferior de [src]", "I start digging out the bottom of [src].")
 			if(!do_after(user, 10 SECONDS * attacking_shovel.toolspeed, src))
 				return ITEM_INTERACT_BLOCKING
 			attacking_shovel.heldclod = new(attacking_shovel)
@@ -682,7 +682,7 @@
 	. = ..()
 	switch(stage)
 		if(DIRTHOLE_SHALLOW, DIRTHOLE_DEEP)
-			name = "hole"
+			name = "agujero"
 		if(DIRTHOLE_PIT)
 			name = "pit"
 		if(DIRTHOLE_GRAVE)

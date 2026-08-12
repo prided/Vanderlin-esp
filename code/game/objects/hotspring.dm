@@ -73,7 +73,7 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	playsound(user, 'sound/foley/drawwater.ogg', 100, FALSE)
 	tool.reagents.add_reagent(/datum/reagent/water, 100)
-	balloon_alert(user, "[name] filled!")
+	balloon_alert(user, "[name] lleno!")
 
 	return ITEM_INTERACT_SUCCESS
 
@@ -123,18 +123,18 @@
 	object_slowdown = 0
 
 /obj/structure/flora/hotspring_rocks
-	name = "large rock"
+	name = "roca grande"
 	icon = 'icons/obj/structures/hotspring.dmi'
 	icon_state = "bigrock"
 	obj_flags = CAN_BE_HIT | IGNORE_SINK
 	density = TRUE
 
 /obj/structure/flora/hotspring_rocks/grassy
-	name = "grassy large rock"
+	name = "roca grande cubierta de hierba"
 	icon_state = "bigrock_grass"
 
 /obj/structure/flora/hotspring_rocks/small
-	name = "small rock"
+	name = "pequeña roca"
 	icon_state = "stones_1"
 	density = FALSE
 
@@ -163,7 +163,7 @@
 	base_state = "stonelantern_standing"
 
 /obj/effect/lily_petal
-	name = "lily petals"
+	name = "pétalos de lirio"
 	icon = 'icons/obj/structures/hotspring.dmi'
 	icon_state = "lilypetals1"
 

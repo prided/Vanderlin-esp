@@ -41,7 +41,7 @@ export const OutputBanner = (props: {
   const { icon, icon_state, name, count, lookup, pickerMap, allRecipes, essenceIndex, onNavigate } = props;
   return (
     <Box className="RecipeBook__output-banner">
-      <span className="RecipeBook__output-label">Creates</span>
+      <span className="RecipeBook__output-label">Crea</span>
       <Box className="RecipeBook__output-body">
         <Sprite icon={icon} icon_state={icon_state} size={2} />
         {count !== undefined && count > 1 ? `${count}× ` : ''}

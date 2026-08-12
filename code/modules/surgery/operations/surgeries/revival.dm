@@ -30,7 +30,7 @@
 		return TRUE
 
 	if(!istype(tool, /obj/item/reagent_containers/lux_tainted))
-		to_chat(surgeon, "They can only receive tainted lux!")
+		to_chat(surgeon, "¡Solo pueden recibir lux contaminado!")
 		return FALSE
 
 	return TRUE
@@ -64,7 +64,7 @@
 	display_results(
 		surgeon,
 		patient,
-		span_notice("I begin to infuse [patient]'s heart with [tool]."),
+		span_notice("Empiezo a infundir el corazón de [patient] con [tool]."),
 		span_notice("[surgeon] begins to work [tool] into [patient]'s heart."),
 		span_notice("[surgeon] begins to something into [patient]'s innards..."),
 	)
@@ -91,7 +91,7 @@
 			patient,
 			span_notice("I succeed in restarting [patient]'s heart with the infusion of [tool]."),
 			span_notice("[surgeon] works [tool] into [patient]'s heart."),
-			span_notice("[surgeon] works something into [patient]'s innards."),
+			span_notice("[surgeon] introduce algo en las entrañas de [patient]."),
 		)
 
 	qdel(tool)
@@ -111,7 +111,7 @@
 				organs.applyOrganDamage(-organs.medium_threshold)
 
 	patient.grab_ghost(force = TRUE, grab_spirit = TRUE) // even suicides
-	patient.visible_message(span_notice("[patient] is dragged back from Necra's hold!"), span_green("I awake from the void."))
+	patient.visible_message(span_notice("[patient] is dragged back from Necra's hold!"), span_green("Me despierto del vacío."))
 
 	patient.remove_status_effect(/datum/status_effect/debuff/lux_drained)
 	patient.remove_status_effect(/datum/status_effect/debuff/flaw_lux_taken)

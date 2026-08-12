@@ -1,8 +1,8 @@
 /////////////////// KEYRING ////////////////////
 
 /obj/item/storage/keyring
-	name = "keyring"
-	desc = "A circular ring of metal for hooking additional rings."
+	name = "llavero"
+	desc = "Un anillo circular de metal para enganchar anillos adicionales."
 	icon_state = "keyring0"
 	icon = 'icons/roguetown/items/keys.dmi'
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'

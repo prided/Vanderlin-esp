@@ -46,7 +46,7 @@ GLOBAL_PROTECT(href_token)
 		QDEL_IN(src, 0)
 		CRASH("Admin datum created without a rank")
 	target = ckey
-	name = "[ckey]'s admin datum ([R])"
+	name = "Datos de administrador de [ckey] ([R])"
 	rank = R
 	admin_signature = "Nanotrasen Officer #[rand(0,9)][rand(0,9)][rand(0,9)]"
 	href_token = GenerateToken()

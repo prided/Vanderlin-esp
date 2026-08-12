@@ -115,6 +115,6 @@
 	rider.Paralyze(1 SECONDS)
 	rider.Knockdown(4 SECONDS)
 	rider.visible_message(
-		span_warning("[seat] pushes [rider] off of [seat.p_them()]!"),
+		span_warning("¡[seat] empuja a [rider] fuera de [seat.p_them()]!"),
 		span_warning("[seat] pushes you off of [seat.p_them()]!"),
 	)

@@ -1,5 +1,5 @@
 /datum/round_event_control/matthios_theft
-	name = "Thieving Task"
+	name = "Tarea de robo"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/matthios_theft
 	weight = 10

@@ -7,7 +7,7 @@
 	category = "Boiling"
 
 /datum/container_craft/cooking/sugar
-	name = "Sugar"
+	name = "Azúcar"
 	category = "Boiling"
 	created_reagent = /datum/reagent/consumable/sugar
 	requirements = list(/obj/item/reagent_containers/food/snacks/sugar = 1)
@@ -77,7 +77,7 @@
 	crafter.reagents.add_reagent(/datum/reagent/water/spicy, remaining_water)
 
 /datum/container_craft/cooking/arcyne/weak_manapot
-	name = "Weak Liquid Mana"
+	name = "Maná líquido débil"
 	created_reagent = /datum/reagent/medicine/manapot/weak
 	requirements = list(
 		/obj/item/reagent_containers/powder/manabloom = 2,

@@ -45,10 +45,10 @@
 			name_to_path[aname] = animal_type
 
 	if(!length(name_to_path))
-		to_chat(user, span_warning("No tameable animals found."))
+		to_chat(user, span_warning("No se encontraron animales domesticables."))
 		return FALSE
 
-	var/chosen_name = tgui_input_list(user, "Which animal should be tamed?", "Animal Type", name_to_path)
+	var/chosen_name = tgui_input_list(user, "Which animal should be tamed?", "Tipo de animal", name_to_path)
 	if(!chosen_name)
 		return FALSE
 
@@ -56,7 +56,7 @@
 	target_animal_name = chosen_name
 
 	var/auto_title = get_title()
-	var/custom_title = tgui_input_text(user, "Give this quest a title (blank = auto):", "Quest Title", "", 80)
+	var/custom_title = tgui_input_text(user, "Dale un título a esta misión (en blanco = automático):", "Título de la misión", "", 80)
 	title = custom_title ? custom_title : auto_title
 
 	if(!fill_common_fields(user))

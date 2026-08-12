@@ -18,23 +18,23 @@
 	icon_state = "fadedown"
 
 /datum/hair_gradient/vertical_split
-	name = "Vertical Split"
+	name = "División vertical"
 	icon_state = "vsplit"
 
 /datum/hair_gradient/_split
-	name = "Horizontal Split"
+	name = "División horizontal"
 	icon_state = "bottomflat"
 
 /datum/hair_gradient/reflected
-	name = "Reflected"
+	name = "reflejado"
 	icon_state = "reflected_high"
 
 /datum/hair_gradient/reflected_inverse
-	name = "Reflected Inverse"
+	name = "Inverso reflejado"
 	icon_state = "reflected_inverse_high"
 
 /datum/hair_gradient/wavy
-	name = "Wavy"
+	name = "Ondulado"
 	icon_state = "wavy"
 
 /datum/hair_gradient/long_fade_up
@@ -50,7 +50,7 @@
 	icon_state = "short_fade_up"
 
 /datum/hair_gradient/short_fade_down
-	name = "Short Fade Down"
+	name = "Desvanecimiento corto"
 	icon_state = "short_fade_down"
 
 /datum/hair_gradient/wavy_spike

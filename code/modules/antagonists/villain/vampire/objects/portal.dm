@@ -23,7 +23,7 @@
 			var/atom/choice = browser_input_list(user, "Choose an area to open the portal", "Choices", possibleportals)
 			if(!choice)
 				return
-			user.visible_message("[user] begins to summon a portal.", "I begin to summon a portal.")
+			user.visible_message("[user] comienza a convocar un portal.", "I begin to summon a portal.")
 			if(!do_after(user, 3 SECONDS, src))
 				return
 
@@ -47,7 +47,7 @@
 			var/atom/choice = browser_input_list(user, "Choose an area to open the portal to", "Choices", possibleportals)
 			if(!choice)
 				return
-			user.visible_message("[user] begins to summon a portal.", "I begin to summon a portal.")
+			user.visible_message("[user] comienza a convocar un portal.", "I begin to summon a portal.")
 			if(do_after(user, 3 SECONDS, src))
 				user.has_bloodpool_cost(-1000)
 				if(istype(choice, /obj/item/clothing/neck/portalamulet))
@@ -140,7 +140,7 @@
 	. = ..()
 	if(!can_local_portal)
 		return
-	if(tgui_alert(user, "Create a portal?", "PORTAL GEM", list("Yes", "No")) == "Yes")
+	if(tgui_alert(user, "¿Crear un portal?", "PORTAL GEM", list("Yes", "No")) == "Yes")
 		uses -= 1
 		var/obj/effect/landmark/vteleportdestination/Vamp = new(loc)
 		Vamp.amuletname = name

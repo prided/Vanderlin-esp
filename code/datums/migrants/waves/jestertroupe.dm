@@ -1,5 +1,5 @@
 /datum/migrant_role/jestertroupe
-	name = "Buffoon"
+	name = "Bufón"
 	greet_text = "You were once part of a glorious circus from Heartfelt. Long gone are the days of mirth. The tent having been set ablaze so many years ago, you and your lot have been wandering. Here is the perfect town to start the next act. The circus is in town!"
 	migrant_job = /datum/job/migrant/jestertroupe
 
@@ -24,7 +24,7 @@
 	)
 
 /datum/job/migrant/jestertroupe
-	title = "Buffoon"
+	title = "Bufón"
 	tutorial =  "You were once part of a glorious circus from Heartfelt. Long gone are the days of mirth. The tent having been set ablaze so many years ago, you and your lot have been wandering. Here is the perfect town to start the next act. The circus is in town!"
 	outfit = /datum/outfit/jestertroupe
 	allowed_races = RACES_PLAYER_ALL
@@ -58,7 +58,7 @@
 	mask = /obj/item/clothing/face/lordmask
 
 /datum/migrant_wave/jestertroupe
-	name = "The Circus"
+	name = "el circo"
 	max_spawns = 1
 	shared_wave_type = /datum/migrant_wave/jestertroupe
 	downgrade_wave = /datum/migrant_wave/jestertroupe_down
@@ -69,7 +69,7 @@
 	greet_text = "Bread and Circuses. That's how little it takes to entertain the peasantry. You aren't funny for money, you're funny by nature."
 
 /datum/migrant_wave/jestertroupe_down
-	name = "The Comedian"
+	name = "el comediante"
 	shared_wave_type = /datum/migrant_wave/jestertroupe
 	can_roll = FALSE
 	weight = 35

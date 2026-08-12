@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(economy)
-	name = "Economy"
+	name = "Economía"
 	wait = 5 MINUTES
 	init_order = INIT_ORDER_ECONOMY
 	runlevels = RUNLEVEL_GAME

@@ -61,7 +61,7 @@
 	SET_BASE_PIXEL(0, 32)
 
 /obj/structure/fireaxecabinet/verb/toggle_open()
-	set name = "Open/Close"
+	set name = "Abrir/Cerrar"
 	set hidden = 1
 	set src in oview(1)
 

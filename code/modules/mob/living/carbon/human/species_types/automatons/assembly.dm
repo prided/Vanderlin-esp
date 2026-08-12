@@ -7,14 +7,14 @@
 
 /datum/repeatable_crafting_recipe/engineering/automaton_frame
 	name = "automaton frame"
-	category = "Automatons"
+	category = "autómatas"
 	requirements = list(
 		/obj/item/ingot/bronze = 8,
 		/obj/item/ingot/iron   = 4,
 	)
 	tool_usage = list(
 		/obj/item/weapon/hammer = list(
-			span_notice("starts hammering a brass frame together"),
+			span_notice("comienza a martillar un marco de latón"),
 			span_notice("start hammering a brass frame together"),
 			'sound/items/bsmith2.ogg'
 		),
@@ -26,7 +26,7 @@
 
 /datum/repeatable_crafting_recipe/engineering/automaton_heart
 	name = "automaton steam engine"
-	category = "Automatons"
+	category = "autómatas"
 	requirements = list(
 		/obj/item/ingot/copper = 3,
 		/obj/item/ingot/iron   = 1,
@@ -46,7 +46,7 @@
 
 /datum/repeatable_crafting_recipe/engineering/automaton_eyes
 	name = "automaton optical sensors"
-	category = "Automatons"
+	category = "autómatas"
 	requirements = list(
 		/obj/item/ingot/bronze = 1,
 		/obj/item/ingot/copper = 1,
@@ -65,7 +65,7 @@
 
 /datum/orderless_slapcraft/automaton
 	name = "Automaton Assembly"
-	category = "Automatons"
+	category = "autómatas"
 	related_skill = /datum/attribute/skill/craft/engineering
 	skill_xp_gained = 50
 	action_time = 2 SECONDS
@@ -101,7 +101,7 @@
 	else if(istype(attacking_item, /obj/item/organ/heart/automaton))
 		user.visible_message(span_notice("[user] carefully seats the steam engine into the frame's chest."), span_notice("You lower the steam engine into the chest cavity. It fits with a heavy clunk."))
 	else if(istype(attacking_item, /obj/item/organ/eyes/automaton))
-		user.visible_message(span_notice("[user] screws the optical sensors into the frame's skull."), span_notice("You screw the optical sensors into place. The lenses catch the light."))
+		user.visible_message(span_notice("[user] atornilla los sensores ópticos en el cráneo del marco."), span_notice("You screw the optical sensors into place. The lenses catch the light."))
 	else if(istype(attacking_item, /obj/item/gear/metal/bronze))
 		user.visible_message(span_notice("[user] clicks cogwheels into the frame's joints."), span_notice("You slot the cogwheels into the joint assemblies."))
 	update_frame_overlays()
@@ -139,7 +139,7 @@
 	qdel(hosted_source)
 	new /mob/living/carbon/human/species/automaton/vessel(T)
 	user.adjust_experience(related_skill, skill_xp_gained)
-	to_chat(user, span_notice("The automaton stands complete. It awaits a soul."))
+	to_chat(user, span_notice("El autómata está completo. Espera un alma."))
 
 /datum/orderless_slapcraft/automaton/handle_output_item(mob/user, obj/item/new_item)
 	return

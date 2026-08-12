@@ -145,7 +145,7 @@
 
 /datum/species/tieberian/after_creation(mob/living/carbon/C)
 	. = ..()
-	to_chat(C, "<span class='info'>I can speak Infernal with ,h before my speech.</span>")
+	to_chat(C, "<span class='info'>Puedo hablar Infernal con ,h antes de mi discurso.</span>")
 
 /datum/species/tieberian/on_species_loss(mob/living/carbon/C)
 	. = ..()

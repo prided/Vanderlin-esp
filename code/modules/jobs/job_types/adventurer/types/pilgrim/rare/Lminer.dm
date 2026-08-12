@@ -46,7 +46,7 @@
 	)
 
 /datum/job/advclass/pilgrim/rare/minermaster
-	title = "Master Miner"
+	title = "Maestro minero"
 	tutorial = "Hardy dwarves who dedicated their entire life to a singular purpose: \
 	the acquisition of ore, precious stones, and anything deep below the mines."
 	allowed_races = list(SPEC_ID_DWARF)

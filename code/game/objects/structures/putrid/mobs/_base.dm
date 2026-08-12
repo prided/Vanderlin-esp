@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/retaliate/meatvine
-	name = "Horrible creature"
+	name = "criatura horrible"
 	abstract_type = /mob/living/simple_animal/hostile/retaliate/meatvine
-	desc = "What is that?!"
+	desc = "¡¿Qué es eso?!"
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "bloodling_stage_1"
 	icon_living = "bloodling_stage_1"
@@ -158,13 +158,13 @@
 
 /mob/living/simple_animal/hostile/retaliate/meatvine/proc/try_feed_to_papameat(atom/movable/food, obj/structure/meatvine/papameat/nearest_papa, mob/user)
 	if(!nearest_papa)
-		to_chat(user, span_warning("No papa meat nearby to feed!"))
+		to_chat(user, span_warning("¡No hay carne de papá cerca para alimentar!"))
 		return FALSE
 
 	var/organic_value = calculate_organic_value(food)
 
 	if(organic_value <= 0)
-		to_chat(user, span_warning("[food] is not suitable food!"))
+		to_chat(user, span_warning("¡[food] no es un alimento adecuado!"))
 		return FALSE
 
 	unbuckle_mob(food, TRUE)
@@ -175,7 +175,7 @@
 		to_chat(user, span_warning("You stop feeding [food]."))
 		return FALSE
 
-	visible_message(span_danger("[src] feeds [food] to [nearest_papa]!"))
+	visible_message(span_danger("¡[src] alimenta [food] a [nearest_papa]!"))
 
 	if(nearest_papa.master)
 		nearest_papa.master.feed_organic_matter(organic_value)
@@ -246,7 +246,7 @@
 		to_chat(src, span_warning("This well is already being drained!"))
 		return FALSE
 	if(get_dist(src, well) > 1)
-		to_chat(src, span_warning("Must be adjacent to the healing well!"))
+		to_chat(src, span_warning("¡Debe estar adyacente al pozo de curación!"))
 		return FALSE
 	is_draining_well = TRUE
 	draining_target = well
@@ -265,7 +265,7 @@
 	last_drain_time = world.time
 	well.finish_drain()
 	to_chat(src, span_boldnotice("Drained [HEALING_WELL_DRAIN_AMOUNT] personal resources from the healing well!"))
-	to_chat(src, span_info("Personal resources: [personal_resource_pool]/[personal_resource_max]"))
+	to_chat(src, span_info("Recursos personales: [personal_resource_pool]/[personal_resource_max]"))
 
 /mob/living/simple_animal/hostile/retaliate/meatvine/proc/cancel_well_drain()
 	if(!is_draining_well)

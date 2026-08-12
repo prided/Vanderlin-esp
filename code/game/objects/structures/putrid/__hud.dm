@@ -47,8 +47,8 @@
 /atom/movable/screen/putrid/bar/info_blurb(mob/living/simple_animal/hostile/retaliate/meatvine/consumed)
 	if(!consumed.master)
 		return
-	to_chat(consumed, span_info("Current resources - [consumed.master.consumed_resource_pool]"))
-	to_chat(consumed, span_info("Maximum resources - [consumed.master.consumed_resource_max]"))
+	to_chat(consumed, span_info("Recursos actuales - [consumed.master.consumed_resource_pool]"))
+	to_chat(consumed, span_info("Recursos máximos - [consumed.master.consumed_resource_max]"))
 
 /atom/movable/screen/putrid/bar/Initialize(mapload, datum/hud/hud_owner)
 	. = ..()
@@ -116,8 +116,8 @@
 	var/mask_state = "mask"
 
 /atom/movable/screen/putrid/personal/bar/info_blurb(mob/living/simple_animal/hostile/retaliate/meatvine/consumed)
-	to_chat(consumed, span_info("Personal resources - [consumed.personal_resource_pool]"))
-	to_chat(consumed, span_info("Maximum personal resources - [consumed.personal_resource_max]"))
+	to_chat(consumed, span_info("Recursos personales - [consumed.personal_resource_pool]"))
+	to_chat(consumed, span_info("Recursos personales máximos - [consumed.personal_resource_max]"))
 
 /atom/movable/screen/putrid/personal/bar/Initialize(mapload, datum/hud/hud_owner)
 	. = ..()
@@ -154,7 +154,7 @@
 		UnregisterSignal(hud.mymob, signal)
 
 /atom/movable/screen/putrid/personal/bar/personal_resource_bar
-	name = "Personal Resources"
+	name = "Recursos personales"
 	icon_state = "points"
 	color = "#33ff66"
 	screen_loc = "EAST:+16,CENTER-2:+22"

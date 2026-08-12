@@ -5,7 +5,7 @@
 	outfit = /datum/outfit/tailor
 
 /mob/living/simple_animal/hostile/retaliate/trader
-	name = "Trader"
+	name = "Comerciante"
 	desc = "Come buy some!"
 	unique_name = FALSE
 	maxHealth = 200
@@ -53,8 +53,8 @@
 	var/datum/world_faction/faction = _faction_ref?.resolve()
 	faction_ref = _faction_ref
 	if(faction)
-		name = "[faction.faction_name] Trader"
-		desc = "A trader from the [faction.faction_name]."
+		name = "[faction.faction_name] Comerciante"
+		desc = "Un comerciante del [faction.faction_name]."
 
 	apply_dynamic_human_appearance(src, mob_spawn_path = spawner_path, r_hand = held_weapon_visual)
 
@@ -76,12 +76,12 @@
 
 	var/datum/world_faction/faction = faction_ref?.resolve()
 	if(faction)
-		name = "[faction.faction_name] [trader_data.name] Trader"
+		name = "[faction.faction_name] [trader_data.name] Comerciante"
 		desc = "A [LOWER_TEXT(trader_data.name)] trader from the [faction.faction_name]."
 
 /mob/living/simple_animal/hostile/retaliate/trader/proc/return_to_boat()
 	returning_to_boat = TRUE
-	say(pick(list("Time to head back to the ship!", "The captain calls!", "My voyage here is complete.")))
+	say(pick(list("Time to head back to the ship!", "¡El capitán llama!", "My voyage here is complete.")))
 	var/obj/effect/landmark/stall/stall = ai_controller.blackboard[BB_SHOP_SPOT]
 	if(istype(stall))
 		stall.claimed_by_trader = FALSE

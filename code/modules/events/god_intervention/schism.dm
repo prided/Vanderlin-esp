@@ -24,7 +24,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 	if(!challenger)
 		return
 
-	priority_announce("[challenger.name] challenges Astrata's leadership! The outcome of this conflict will be decided in less than 2 daes by a sheer number of their alive supporters. [challenger.name] promises great rewards to the faithful if victorious, while Astrata swears revenge to any who dare to defy her. Choose your side, or stand aside...", "Schism within the Ten", 'sound/magic/marked.ogg')
+	priority_announce("[challenger.name] challenges Astrata's leadership! The outcome of this conflict will be decided in less than 2 daes by a sheer number of their alive supporters. [challenger.name] promises great rewards to the faithful if victorious, while Astrata swears revenge to any who dare to defy her. Choose your side, or stand aside...", "Cisma dentro de los Diez", 'sound/magic/marked.ogg')
 	for(var/mob/living/carbon/human/H in GLOB.human_list)
 		setup_mob(H)
 
@@ -41,7 +41,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 		return
 
 	bordered_message(H, list(
-		span_notice("There is an active schism within the Ten! [challenger.name] has challenged Astrata's leadership!")
+		span_notice("¡Hay un cisma activo dentro de los Diez! ¡[challenger.name] ha desafiado el liderazgo de Astrata!")
 	))
 	setup_mob(H)
 
@@ -115,7 +115,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 			if(supporter && supporter.patron == challenger)
 				for(var/datum/action/innate/choose_schism_side/choose in supporter.actions)
 					if(choose.chose_early)
-						to_chat(supporter, span_notice("[challenger.name]'s challenge succeeds! Your persistent faith is rewarded with triumphs."))
+						to_chat(supporter, span_notice("¡El desafío de [challenger.name] tiene éxito! Tu fe persistente es recompensada con triunfos."))
 						supporter.adjust_triumphs(2)
 					else
 						to_chat(supporter, span_notice("[challenger.name] succeeds, but your late support goes unrewarded."))
@@ -131,7 +131,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 		for(var/datum/weakref/supporter_ref in supporters_astrata)
 			var/mob/living/carbon/human/supporter = supporter_ref.resolve()
 			if(supporter)
-				to_chat(supporter, span_userdanger("INCOMPETENT IMBECILES!"))
+				to_chat(supporter, span_userdanger("¡IMBECILES INCOMPETENTES!"))
 				supporter.electrocute_act(5, astrata)
 
 		if(GLOB.todoverride == null)
@@ -140,7 +140,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 		addtimer(CALLBACK(src, PROC_REF(select_and_announce_vice_priest), challenger), 30 SECONDS)
 
 /datum/tennite_schism/proc/astrata_scorn()
-		priority_announce("You don't deserve my holy light, you ungrateful swines!", "Astrata's Scorn", 'sound/magic/fireball.ogg')
+		priority_announce("You don't deserve my holy light, you ungrateful swines!", "El desprecio de Astrata", 'sound/magic/fireball.ogg')
 		GLOB.todoverride = NIGHT
 		settod()
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(reset_tod_override)), 20 MINUTES)
@@ -168,7 +168,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 	if(selected_priest)
 		var/male
 		if(selected_priest.gender == FEMALE)
-			selected_priest.job = "Vice Priestess"
+			selected_priest.job = "Vice Sacerdotisa"
 			male = FALSE
 		else
 			selected_priest.job = "Vice Priest"
@@ -234,18 +234,18 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 	switch(new_side)
 		if("astrata")
 			supporters_astrata += WEAKREF(user)
-			to_chat(user, span_notice("You have declared your allegiance to Astrata!"))
+			to_chat(user, span_notice("¡Has declarado tu lealtad a Astrata!"))
 		if("challenger")
 			supporters_challenger += WEAKREF(user)
 			var/datum/patron/challenger = challenger_god.resolve()
 			if(challenger)
-				to_chat(user, span_notice("You have declared your allegiance to [challenger.name]!"))
+				to_chat(user, span_notice("¡Has declarado tu lealtad a [challenger.name]!"))
 		if("neutral")
 			neutrals += WEAKREF(user)
 			to_chat(user, span_notice("You have declared neutrality in the schism."))
 
 /datum/action/innate/choose_schism_side
-	name = "Choose your side"
+	name = "Elige tu lado"
 	button_icon_state = "limb_attach"
 
 	var/chose_early = FALSE
@@ -270,7 +270,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 	if(challenger)
 		options["[challenger.name]"] = "challenger"
 
-	var/choice = input(owner, "Choose your allegiance in the schism, you can change your side [uses_remaining] more time\s", "Choose your side") as null|anything in options
+	var/choice = input(owner, "Choose your allegiance in the schism, you can change your side [uses_remaining] more time\s", "Elige tu lado") as null|anything in options
 	if(!choice || !current_schism)
 		return
 
@@ -284,7 +284,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 		current_side = "neutral"
 
 	if(options[choice] == current_side)
-		to_chat(owner, span_notice("You're already supporting this side!"))
+		to_chat(owner, span_notice("¡Ya estás apoyando a este lado!"))
 		return
 
 	uses_remaining--
@@ -297,7 +297,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 		to_chat(owner, span_boldnotice("Your allegiance in the schism is now final."))
 
 /datum/round_event_control/schism_within_ten
-	name = "Schism within the Ten"
+	name = "Cisma dentro de los Diez"
 	track = EVENT_TRACK_INTERVENTION
 	typepath = /datum/round_event/schism_within_ten
 	weight = 2

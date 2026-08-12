@@ -1,6 +1,6 @@
 /datum/container_craft/cooking
 	abstract_type = /datum/container_craft/cooking
-	category = "Soups"
+	category = "sopas"
 	crafting_time = 5 SECONDS
 	reagent_requirements = list(
 		/datum/reagent/water = 25
@@ -131,7 +131,7 @@
 	// Update reagent name with optional ingredients
 	if(length(found_optional_wildcards))
 		var/extra_string = " with [wording_choice] "
-		var/extra_taste = "with hints of "
+		var/extra_taste = "con toques de "
 		var/first_ingredient = TRUE
 		var/list/all_used_ingredients = list()
 		for(var/wildcard_type in found_optional_wildcards)

@@ -1,5 +1,5 @@
 /obj/item/clothing/armor/rare
-	name = "rare armor template"
+	name = "plantilla de armadura rara"
 	icon = 'icons/roguetown/clothing/Racial_Armour.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/onmob_racial.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/onmob_racial.dmi'

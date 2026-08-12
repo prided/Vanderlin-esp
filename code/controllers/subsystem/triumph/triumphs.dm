@@ -167,19 +167,19 @@ SUBSYSTEM_DEF(triumphs)
 /// This occurs when you try to buy a triumph condition and sets it up
 /datum/controller/subsystem/triumphs/proc/attempt_to_buy_triumph_condition(client/C, datum/triumph_buy/ref_datum)
 	if(ref_datum.disabled)
-		to_chat(C, span_warning("This Triumph Buy has been disabled by administrators!"))
+		to_chat(C, span_warning("¡Esta compra de Triumph ha sido desactivada por los administradores!"))
 		return FALSE
 
 	if(ref_datum.limited && triumph_buy_stocks[ref_datum.type] <= 0)
-		to_chat(C, span_warning("The item is out of stock!"))
+		to_chat(C, span_warning("¡El artículo está agotado!"))
 		return FALSE
 
 	if(get_triumphs(C.ckey) < ref_datum.triumph_cost)
-		to_chat(C, span_warning("You don't have enough triumphs to buy this item!"))
+		to_chat(C, span_warning("¡No tienes suficientes triunfos para comprar este artículo!"))
 		return FALSE
 
 	if(!ref_datum.allow_multiple_buys && C.has_triumph_buy(ref_datum.triumph_buy_id))
-		to_chat(C, span_warning("You already have this item!"))
+		to_chat(C, span_warning("¡Ya tienes este artículo!"))
 		return FALSE
 
 	if(C.has_triumph_buy(ref_datum.triumph_buy_id, TRUE))
@@ -219,7 +219,7 @@ SUBSYSTEM_DEF(triumphs)
 	var/previous_owner_ckey = triumph_buy.ckey_of_buyer
 	if(previous_owner_ckey != C?.ckey)
 		if(C)
-			to_chat(C, span_warning("You can't refund someone else's triumph buy!"))
+			to_chat(C, span_warning("¡No puedes reembolsar la compra de triunfo de otra persona!"))
 		return FALSE
 
 	if(!force && !triumph_buy.can_be_refunded)

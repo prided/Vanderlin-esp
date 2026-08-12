@@ -17,7 +17,7 @@
 
 	if(!ishuman(owner))
 		if(feedback)
-			to_chat(owner, span_warning("Only vampires can enslave mortals."))
+			to_chat(owner, span_warning("Solo los vampiros pueden esclavizar a los mortales."))
 		return FALSE
 
 	var/mob/living/carbon/human/vampire = owner
@@ -30,7 +30,7 @@
 
 	if(!vampire.clan)
 		if(feedback)
-			to_chat(owner, span_warning("You must belong to a clan to enslave others."))
+			to_chat(owner, span_warning("Debes pertenecer a un clan para esclavizar a otros."))
 		return FALSE
 
 /datum/action/cooldown/spell/enslave_mortal/is_valid_target(atom/cast_on)
@@ -61,12 +61,12 @@
 		return
 
 	if(cast_on.stat == DEAD)
-		to_chat(owner, span_warning("[cast_on] is dead and cannot be enslaved."))
+		to_chat(owner, span_warning("[cast_on] está muerto y no puede ser esclavizado."))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
 	if(cast_on.clan)
-		to_chat(owner, span_warning("[cast_on] already belongs to another."))
+		to_chat(owner, span_warning("[cast_on] ya pertenece a otro."))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
@@ -75,7 +75,7 @@
 	var/mob/living/carbon/human/vampire = owner
 
 	to_chat(vampire, span_warning("You begin weaving dark magic around [cast_on.name]'s mind..."))
-	to_chat(cast_on, span_userdanger("You feel an overwhelming vampiric presence invading your thoughts!"))
+	to_chat(cast_on, span_userdanger("¡Sientes una abrumadora presencia vampírica invadiendo tus pensamientos!"))
 
 	vampire.visible_message(
 		span_warning("[vampire] extends their hand toward [cast_on], dark energy swirling around them both."),
@@ -87,7 +87,7 @@
 
 	if(!do_after(vampire, enslavement_time, cast_on, IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE))
 		to_chat(vampire, span_warning("The enslavement ritual was interrupted!"))
-		to_chat(cast_on, span_notice("The oppressive mental presence suddenly fades."))
+		to_chat(cast_on, span_notice("La opresiva presencia mental se desvanece de repente."))
 		reset_spell_cooldown()
 		return
 
@@ -96,25 +96,25 @@
 		return
 
 	use_available_blood(owner, blood_cost)
-	to_chat(vampire, span_warning("You feel significantly weakened as your blood fuels the dark ritual."))
+	to_chat(vampire, span_warning("Te sientes significativamente debilitado mientras tu sangre alimenta el ritual oscuro."))
 
 	complete_enslavement_ritual(vampire, cast_on)
 
 /datum/action/cooldown/spell/enslave_mortal/proc/validate_enslavement_target(mob/living/carbon/human/target)
 	if(!target)
-		to_chat(owner, span_warning("Your target has vanished!"))
+		to_chat(owner, span_warning("¡Tu objetivo ha desaparecido!"))
 		return FALSE
 
 	if(target.stat == DEAD)
-		to_chat(owner, span_warning("Your target has died during the ritual!"))
+		to_chat(owner, span_warning("¡Tu objetivo ha muerto durante el ritual!"))
 		return FALSE
 
 	if(get_dist(owner, target) > cast_range)
-		to_chat(owner, span_warning("Your target moved too far away during the ritual!"))
+		to_chat(owner, span_warning("¡Tu objetivo se alejó demasiado durante el ritual!"))
 		return FALSE
 
 	if(target.clan)
-		to_chat(owner, span_warning("Your target joined a clan during the ritual!"))
+		to_chat(owner, span_warning("¡Tu objetivo se unió a un clan durante el ritual!"))
 		return FALSE
 
 	return TRUE

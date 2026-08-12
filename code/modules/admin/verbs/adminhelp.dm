@@ -68,10 +68,10 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	switch(state)
 		if(AHELP_ACTIVE)
 			l2b = active_tickets
-			title = "Active Tickets"
+			title = "Entradas activas"
 		if(AHELP_CLOSED)
 			l2b = closed_tickets
-			title = "Closed Tickets"
+			title = "Entradas cerradas"
 		if(AHELP_RESOLVED)
 			l2b = resolved_tickets
 			title = "Resolved Tickets"
@@ -305,7 +305,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 //Reopen a closed ticket
 /datum/admin_help/proc/Reopen()
 	if(state == AHELP_ACTIVE)
-		to_chat(usr, "<span class='warning'>This ticket is already open.</span>")
+		to_chat(usr, "<span class='warning'>Este ticket ya está abierto.</span>")
 		return
 
 	if(GLOB.ahelp_tickets.CKey2ActiveTicket(initiator_ckey))
@@ -382,7 +382,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		claim_ticket()
 		return TRUE
 	if(ticket_claimant_ckey != usr.client.ckey)
-		if(tgui_alert(usr, "Already claimed by[ticket_claimant_ckey]! do it anyways?", "Confirm", list("Yes","No")) == "No")
+		if(tgui_alert(usr, "¡Ya reclamado por [ticket_claimant_ckey]! ¿lo haces de todos modos?", "Confirmar", list("Yes","No")) == "No")
 			return FALSE
 	return TRUE
 
@@ -456,7 +456,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	msg = "[TicketHref("Ticket #[id]")] marked as IC by [key_name]"
 	message_admins(msg)
 	log_admin_private(msg)
-	AddInteraction("Marked as IC issue by [key_name]", player_message = "Marked as IC issue!")
+	AddInteraction("Marked as IC issue by [key_name]", player_message = "¡Marcado como problema de IC!")
 	Resolve(silent = TRUE)
 
 //Show the ticket panel
@@ -633,7 +633,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Adminhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_ticket)
-		if(tgui_alert(usr, "You already have a ticket open. Is this for the same issue?", "Confirm", list("Yes","No")) != "No")
+		if(tgui_alert(usr, "You already have a ticket open. Is this for the same issue?", "Confirmar", list("Yes","No")) != "No")
 			if(current_ticket)
 				current_ticket.MessageNoRecipient(msg)
 				current_ticket.TimeoutVerb()
@@ -650,7 +650,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 /client/proc/self_notes()
 	set name = "View Admin Remarks"
 	set category = "Admin"
-	set desc = "View the notes that admins have written about you"
+	set desc = "Ver las notas que los administradores han escrito sobre usted"
 
 	browse_messages(null, usr.ckey, null, TRUE)
 
@@ -770,7 +770,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 
 /proc/ircadminwho()
-	var/list/message = list("Admins: ")
+	var/list/message = list("Administradores: ")
 	var/list/admin_keys = list()
 	for(var/adm in GLOB.admins)
 		var/client/C = adm

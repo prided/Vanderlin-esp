@@ -1,6 +1,6 @@
 /datum/fatigue_modifier
 	/// Text to show to the player on examining fatigue button
-	var/desc = span_danger("Something is fucked.")
+	var/desc = span_danger("Algo está jodido.")
 
 	/// Whether or not this is a variable modifier. Variable modifiers can NOT be ever auto-cached. ONLY CHECKED VIA INITIAL(), EFFECTIVELY READ ONLY (and for very good reason)
 	var/variable = FALSE

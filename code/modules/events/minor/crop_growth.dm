@@ -1,5 +1,5 @@
 /datum/round_event_control/crop_growth
-	name = "Crop Growth"
+	name = "Crecimiento de cultivos"
 	track = EVENT_TRACK_MUNDANE
 	typepath = /datum/round_event/crop_growth
 	weight = 5

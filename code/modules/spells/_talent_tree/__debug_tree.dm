@@ -4,20 +4,20 @@
 
 // Tier 1 - Starting nodes (no prerequisites)
 /datum/talent_node/debug/basic_power
-	name = "Basic Power"
-	desc = "Increases your basic power by 10%"
+	name = "Poder Básico"
+	desc = "Aumenta tu poder básico en un 10%."
 	icon_state = "spell_fireball"
 	talent_cost = 1
 
 /datum/talent_node/debug/quick_reflexes
-	name = "Quick Reflexes"
-	desc = "Increases your reaction time"
+	name = "Reflejos rápidos"
+	desc = "Aumenta tu tiempo de reacción."
 	icon_state = "spell_haste"
 	talent_cost = 1
 
 /datum/talent_node/debug/sturdy_build
 	name = "Sturdy Build"
-	desc = "Increases your durability"
+	desc = "Aumenta su durabilidad"
 	icon_state = "spell_armor"
 	talent_cost = 1
 
@@ -30,21 +30,21 @@
 	prerequisites = list(/datum/talent_node/debug/basic_power)
 
 /datum/talent_node/debug/combat_training
-	name = "Combat Training"
+	name = "Entrenamiento de combate"
 	desc = "Improves combat effectiveness"
 	icon_state = "spell_summon"
 	talent_cost = 2
 	prerequisites = list(/datum/talent_node/debug/quick_reflexes)
 
 /datum/talent_node/debug/defensive_stance
-	name = "Defensive Stance"
-	desc = "Reduces incoming damage"
+	name = "Postura defensiva"
+	desc = "Reduce el daño recibido"
 	icon_state = "spell_shield"
 	talent_cost = 2
 	prerequisites = list(/datum/talent_node/debug/sturdy_build)
 
 /datum/talent_node/debug/agility_boost
-	name = "Agility Boost"
+	name = "Aumento de agilidad"
 	desc = "Increases movement and dodge"
 	icon_state = "spell_teleport"
 	talent_cost = 2
@@ -59,36 +59,36 @@
 	prerequisites = list(/datum/talent_node/debug/enhanced_power, /datum/talent_node/debug/combat_training)
 
 /datum/talent_node/debug/tactical_mind
-	name = "Tactical Mind"
+	name = "Mente táctica"
 	desc = "Improves strategic thinking and planning"
 	icon_state = "spell_mindswap"
 	talent_cost = 2
 	prerequisites = list(/datum/talent_node/debug/combat_training)
 
 /datum/talent_node/debug/fortified_defense
-	name = "Fortified Defense"
-	desc = "Greatly increases defensive capabilities"
+	name = "Defensa fortificada"
+	desc = "Aumenta enormemente las capacidades defensivas."
 	icon_state = "spell_forcewall"
 	talent_cost = 3
 	prerequisites = list(/datum/talent_node/debug/defensive_stance, /datum/talent_node/debug/sturdy_build)
 
 /datum/talent_node/debug/evasive_maneuvers
-	name = "Evasive Maneuvers"
-	desc = "Master of evasion and mobility"
+	name = "Maniobras evasivas"
+	desc = "Maestro de la evasión y la movilidad."
 	icon_state = "spell_smoke"
 	talent_cost = 2
 	prerequisites = list(/datum/talent_node/debug/agility_boost)
 
 // Tier 4 - Advanced combinations
 /datum/talent_node/debug/unstoppable_force
-	name = "Unstoppable Force"
+	name = "Fuerza imparable"
 	desc = "Cannot be stopped when charging"
 	icon_state = "spell_summon"
 	talent_cost = 4
 	prerequisites = list(/datum/talent_node/debug/berserker_rage, /datum/talent_node/debug/enhanced_power)
 
 /datum/talent_node/debug/master_strategist
-	name = "Master Strategist"
+	name = "Maestro estratega"
 	desc = "Ultimate tactical awareness"
 	icon_state = "spell_mindswap"
 	talent_cost = 3
@@ -103,14 +103,14 @@
 
 // Tier 5 - Ultimate abilities
 /datum/talent_node/debug/perfect_balance
-	name = "Perfect Balance"
+	name = "Equilibrio perfecto"
 	desc = "Master of both offense and defense"
 	icon_state = "spell_teleport"
 	talent_cost = 5
 	prerequisites = list(/datum/talent_node/debug/unstoppable_force, /datum/talent_node/debug/immovable_object)
 
 /datum/talent_node/debug/omniscient_warrior
-	name = "Omniscient Warrior"
+	name = "Guerrero omnisciente"
 	desc = "Knows all, sees all, defeats all"
 	icon_state = "spell_blind"
 	talent_cost = 5
@@ -118,15 +118,15 @@
 
 // Side branches - Utility skills
 /datum/talent_node/debug/resource_management
-	name = "Resource Management"
-	desc = "Better use of consumables and energy"
+	name = "Gestión de recursos"
+	desc = "Mejor uso de consumibles y energía"
 	icon_state = "spell_heal"
 	talent_cost = 2
 	prerequisites = list(/datum/talent_node/debug/tactical_mind)
 
 /datum/talent_node/debug/efficiency_expert
-	name = "Efficiency Expert"
-	desc = "All actions cost less energy"
+	name = "Experto en eficiencia"
+	desc = "Todas las acciones cuestan menos energía"
 	icon_state = "spell_haste"
 	talent_cost = 3
 	prerequisites = list(/datum/talent_node/debug/resource_management, /datum/talent_node/debug/evasive_maneuvers)
@@ -134,13 +134,13 @@
 // Special nodes with alternative prerequisites
 /datum/talent_node/debug/adaptive_fighter
 	name = "Adaptive Fighter"
-	desc = "Adapts fighting style to opponents"
+	desc = "Adapta el estilo de lucha a los oponentes."
 	icon_state = "spell_summon"
 	talent_cost = 3
 	prerequisites = list(/datum/talent_node/debug/combat_training)
 
 /datum/talent_node/debug/survival_instinct
-	name = "Survival Instinct"
+	name = "Instinto de supervivencia"
 	desc = "Enhanced survival capabilities"
 	icon_state = "spell_heal"
 	talent_cost = 2
@@ -148,7 +148,7 @@
 	singular_requirement = TRUE // Can be unlocked if any defensive node is learned
 
 /datum/talent_tree/debug
-	name = "Debug Talent Tree"
+	name = "Árbol de talentos de depuración"
 	desc = "A comprehensive debug tree for testing talent systems"
 	tree_identifier = "debug"
 	max_talent_points = 75

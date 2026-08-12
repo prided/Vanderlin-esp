@@ -1,6 +1,6 @@
 /datum/customizer_choice/organ
 	abstract_type = /datum/customizer_choice/organ
-	name = "Organ"
+	name = "Órgano"
 	/// Typepath of the organ this choice yields.
 	var/organ_type
 	/// Slot of the organ.

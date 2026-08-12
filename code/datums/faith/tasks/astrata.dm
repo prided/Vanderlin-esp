@@ -1,6 +1,6 @@
 /datum/devotion_task/astrata_purge
 	name = "Purge Undead"
-	desc = "Purge the undead"
+	desc = "Purgar a los no-muertos"
 	devotion_reward = 60
 	progression_reward = 4
 	cooldown_time = 0 SECONDS

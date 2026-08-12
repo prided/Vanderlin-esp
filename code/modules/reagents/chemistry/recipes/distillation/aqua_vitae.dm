@@ -1,5 +1,5 @@
 /datum/distillation_recipe/aqua_vitae
-	name = "Aqua Vitae - Apple"
+	name = "Aqua Vitae - Manzana"
 	id = "aqua_vitae_apple"
 	distilled_reagent = /datum/reagent/consumable/ethanol/brandy
 	required_temp = T0C + 78
@@ -14,7 +14,7 @@
 	distilled_reagent = /datum/reagent/consumable/ethanol/brandy/pear
 
 /datum/distillation_recipe/aqua_vitae/strawberry
-	name = "Aqua Vitae - Strawberry"
+	name = "Aqua Vitae - Fresa"
 	distilled_reagent = /datum/reagent/consumable/ethanol/brandy/strawberry
 
 /datum/distillation_recipe/aqua_vitae/tangerine
@@ -22,5 +22,5 @@
 	distilled_reagent = /datum/reagent/consumable/ethanol/brandy/tangerine
 
 /datum/distillation_recipe/aqua_vitae/plum
-	name = "Aqua Vitae - Plum"
+	name = "Aqua Vitae - Ciruela"
 	distilled_reagent = /datum/reagent/consumable/ethanol/plum_wine

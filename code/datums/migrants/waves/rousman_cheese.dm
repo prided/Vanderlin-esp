@@ -153,7 +153,7 @@
 // The wave
 
 /datum/migrant_wave/rousman_cheese
-	name = "Rousman Cheese Convoy"
+	name = "Rousman Convoy de queso"
 	max_spawns = 4
 	shared_wave_type = /datum/migrant_wave/rousman_cheese
 	downgrade_wave = /datum/migrant_wave/rousman_cheese_down

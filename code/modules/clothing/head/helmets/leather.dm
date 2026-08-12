@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet/leather
-	name = "leather helmet"
+	name = "casco de cuero"
 	desc = "A conical leather helmet. It's comfortable and won't protect much, but it's better than nothing."
 	icon_state = "leatherhelm"
 	equip_sound = 'sound/foley/equip/cloak_equip.ogg'
@@ -28,7 +28,7 @@
 //KEEP THIS IN MIND
 
 /obj/item/clothing/head/helmet/leather/advanced
-	name = "hardened leather helmet"
+	name = "casco de cuero endurecido"
 	desc = "Sturdy, durable, flexible. A comfortable and reliable hood made of hardened leather."
 	max_integrity = INTEGRITY_STRONG
 	body_parts_covered = HEAD|EARS|HAIR|NOSE|EYES|MOUTH
@@ -92,7 +92,7 @@
 
 //............... Hardened Helmet ............... //
 /obj/item/clothing/head/helmet/leather/conical // old helmet sprite
-	name = "hardened helmet"
+	name = "casco endurecido"
 	desc = "A conical helmet made from boiled leather and metal fittings."
 	icon_state = "leatherhelm_old"
 
@@ -106,7 +106,7 @@
 
 //............... Miners Helmet ............... //
 /obj/item/clothing/head/helmet/leather/minershelm
-	name = "miners helmet"
+	name = "casco de minero"
 	desc = "Boiled leather kettle-like helmet with a headlamp, fueled by magiks."
 	icon_state = "minerslamp"
 	item_state = "minerslamp"

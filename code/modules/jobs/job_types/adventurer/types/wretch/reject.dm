@@ -27,7 +27,7 @@
 	)
 
 /datum/job/advclass/wretch/reject
-	title = "Rejected Royal"
+	title = "Rechazado real"
 	tutorial = "You were once a member of the royal family, but due to your actions, or the circumstances of your birth, you have been cast out to roam the wilds. \
 	Now, you return, seeking redemption or perhaps... revenge."
 	allowed_races = list(\
@@ -69,9 +69,9 @@
 /datum/job/advclass/wretch/reject/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 
-	if(tgui_alert(usr, "Do you wish to be recognized as a non-foreigner?", "Foreigner", list("Yes", "No")) == "Yes")
+	if(tgui_alert(usr, "¿Desea ser reconocido como no extranjero?", "Foreigner", list("Yes", "No")) == "Yes")
 		REMOVE_TRAIT(spawned, TRAIT_FOREIGNER, TRAIT_GENERIC)
-		spawned.honorary = spawned.pronouns == SHE_HER ? "Rejected Princess" : "Rejected Prince"
+		spawned.honorary = spawned.pronouns == SHE_HER ? "Princesa rechazada" : "Príncipe rechazado"
 
 /datum/outfit/wretch/reject
 	name = "Rejected Royal (Wretch)"

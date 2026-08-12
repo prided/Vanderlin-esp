@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/seek_rival
 	name = "Seek Rival's Heart"
-	desc = "Find the distance between you and your rival's heart."
+	desc = "Encuentra la distancia entre tú y el corazón de tu rival."
 	sound = null
 
 	spell_type = NONE
@@ -34,10 +34,10 @@
 		rival_heart = current_duel.challenger_heart?.resolve()
 
 	if(QDELETED(rival_heart))
-		to_chat(owner, span_red("Your rival's heart has been destroyed..."))
+		to_chat(owner, span_red("El corazón de tu rival ha sido destruido..."))
 		return
 
-	to_chat(owner, span_notice("Your rival's heart is [where_heart(rival_heart)]"))
+	to_chat(owner, span_notice("El corazón de tu rival es [where_heart(rival_heart)]"))
 
 /datum/action/cooldown/spell/undirected/seek_rival/proc/where_heart(obj/item/organ/heart/tracked_heart)
 	if(!owner || !tracked_heart)
@@ -53,7 +53,7 @@
 
 	switch(dist)
 		if(0 to 7)
-			distance_text = "very close"
+			distance_text = "muy cerca"
 		if(8 to 15)
 			distance_text = "close"
 		if(16 to 35)
@@ -65,9 +65,9 @@
 		if(71 to 98)
 			distance_text = "somewhat far"
 		if(99 to 127)
-			distance_text = "far"
+			distance_text = "lejos"
 		else
-			distance_text = "very far"
+			distance_text = "muy lejos"
 
 	var/z_text = ""
 	if(our_z != their_z)

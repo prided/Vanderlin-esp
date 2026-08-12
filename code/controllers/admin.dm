@@ -1,6 +1,6 @@
 // Clickable stat() button.
 /obj/effect/statclick
-	name = "Initializing..."
+	name = "Inicializando..."
 	var/target
 
 INITIALIZE_IMMEDIATE(/obj/effect/statclick)
@@ -60,4 +60,4 @@ INITIALIZE_IMMEDIATE(/obj/effect/statclick)
 			new /datum/controller/failsafe()
 			SSblackbox.record_feedback("tally", "admin_verb", 1, "Restart Failsafe Controller")
 
-	message_admins("Admin [key_name_admin(usr)] has restarted the [controller] controller.")
+	message_admins("El administrador [key_name_admin(usr)] ha reiniciado el controlador [controller].")

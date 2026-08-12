@@ -2,7 +2,7 @@
 
 // Turn this into a continuous spell type?
 /datum/action/cooldown/spell/avert
-	name = "Borrowed Time"
+	name = "Tiempo prestado"
 	desc = "Shield someone from the Undermaiden's gaze, preventing them from slipping into death for as long as your faith and fatigue may muster."
 	button_icon_state = "borrowtime"
 	sound = 'sound/magic/churn.ogg'
@@ -30,7 +30,7 @@
 	)
 
 /datum/action/cooldown/spell/avert/templar
-	name = "Divine Grace"
+	name = "Gracia Divina"
 	invocation = "May The Ten grace you with time!"
 	required_items = list(/obj/item/clothing/neck/psycross/silver/divine)
 
@@ -58,8 +58,8 @@
 		span_notice("I stand beside [cast_on] and utter the hallowed words of Aeon's Intercession, staying Her grasp for just a little while longer..."),
 	)
 
-	to_chat(owner, span_small("I must remain still and at [cast_on]'s side..."))
-	to_chat(cast_on, span_warning("An odd sensation blossoms in my chest, cold and unknown..."))
+	to_chat(owner, span_small("Debo permanecer quieto y al lado de [cast_on]..."))
+	to_chat(cast_on, span_warning("Una extraña sensación florece en mi pecho, fría y desconocida..."))
 
 	ADD_TRAIT(cast_on, TRAIT_NODEATH, "avert_spell")
 
@@ -74,7 +74,7 @@
 			to_chat(cast_on, span_small(pick(near_death_lines)))
 
 		if(!check_cost(10, feedback = FALSE))
-			to_chat(owner, span_warning("My devotion runs dry, the intercession fades from my lips!"))
+			to_chat(owner, span_warning("¡Mi devoción se seca, la intercesión se desvanece de mis labios!"))
 			break
 
 		invoke_cost(10, re_run = TRUE)

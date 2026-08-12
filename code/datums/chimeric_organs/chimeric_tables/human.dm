@@ -70,7 +70,7 @@
 	node_purity_max = 45
 
 /datum/chimeric_table/demihuman
-	name = "Demihuman"
+	name = "Demihumano"
 	compatible_blood_types = list(
 		/datum/blood_type/human/demihuman,
 	)
@@ -105,7 +105,7 @@
 	node_purity_max = 45
 
 /datum/chimeric_table/triton
-	name = "Triton"
+	name = "Tritón"
 	compatible_blood_types = list(
 		/datum/blood_type/human/triton,
 	)
@@ -125,7 +125,7 @@
 	node_purity_max = 45
 
 /datum/chimeric_table/medicator
-	name = "Medicator"
+	name = "medicador"
 	compatible_blood_types = list(
 		/datum/blood_type/human/medicator,
 	)
@@ -161,7 +161,7 @@
 	node_purity_max = 45
 
 /datum/chimeric_table/cursed_elf
-	name = "Cursed Elf"
+	name = "Elfo maldito"
 	compatible_blood_types = list(
 		/datum/blood_type/human/cursed_elf,
 	)
@@ -199,7 +199,7 @@
 	node_purity_max = 45
 
 /datum/chimeric_table/dwarf
-	name = "Dwarf"
+	name = "Enano"
 	compatible_blood_types = list(
 		/datum/blood_type/human/dwarf,
 	)
@@ -258,7 +258,7 @@
 	node_purity_max = 45
 
 /datum/chimeric_table/orc
-	name = "Orc"
+	name = "orco"
 	compatible_blood_types = list(
 		/datum/blood_type/human/corrupted/orc,
 	)
@@ -310,7 +310,7 @@
 		output_nodes[output] = rand(1, 20)
 
 /datum/chimeric_table/random/subterran_dwarf
-	name = "Jarosite Dwarf"
+	name = "Enano jarosita"
 
 	compatible_blood_types = list(
 		/datum/blood_type/human/dwarf/subterra,

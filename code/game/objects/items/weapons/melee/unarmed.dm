@@ -1,5 +1,5 @@
 /obj/item/weapon/clenched_fist
-	name = "clenched fist"
+	name = "puño cerrado"
 	desc = "The fist was humenity's first weapon, and still sees much use."
 	icon = 'icons/roguetown/weapons/32/fists_claws.dmi'
 	icon_state = "clenchedfist"

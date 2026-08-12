@@ -1,6 +1,6 @@
 /datum/building_datum/bar
 	name = "Bar"
-	desc = "This is where people get drunk."
+	desc = "Aquí es donde la gente se emborracha."
 
 	building_template = "bar"
 

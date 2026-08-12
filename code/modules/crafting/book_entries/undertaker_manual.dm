@@ -1,5 +1,5 @@
 /datum/book_entry/undertaker_manual
-	name = "Undertaker's Manual"
+	name = "manual del enterrador"
 
 /datum/book_entry/undertaker_manual/inner_book_html(mob/user)
 	return {"

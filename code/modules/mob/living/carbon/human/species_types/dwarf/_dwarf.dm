@@ -2,7 +2,7 @@
 	race = /datum/species/dwarf
 
 /datum/species/dwarf
-	name = "Dwarfb"
+	name = "enano"
 	id = SPEC_ID_DWARF
 	multiple_accents = list(
 		"Dwarf Accent" = ACCENT_DWARF,
@@ -31,7 +31,7 @@
 /datum/species/dwarf/after_creation(mob/living/carbon/C)
 	..()
 	C.grant_language(/datum/language/dwarvish)
-	to_chat(C, "<span class='info'>I can speak Dwarfish with ,d before my speech.</span>")
+	to_chat(C, "<span class='info'>Puedo hablar enano con d antes de mi discurso.</span>")
 
 /datum/species/dwarf/on_species_loss(mob/living/carbon/C)
 	. = ..()

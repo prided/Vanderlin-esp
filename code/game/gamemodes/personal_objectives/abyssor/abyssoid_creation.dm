@@ -1,5 +1,5 @@
 /datum/objective/personal/create_abyssoids
-	name = "Create Abyssoids"
+	name = "Crear abisoides"
 	category = "Abyssor's Chosen"
 	triumph_count = 2
 	immediate_effects = list("Gained an ability to create abyssoid leeches")

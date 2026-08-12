@@ -2,7 +2,7 @@
 	template_path = /datum/map_template/house_1
 
 /datum/map_template/house_1
-	name = "House 1"
+	name = "Casa 1"
 	id = "house_1"
 	mappath = "_maps/templates/settlement_pieces/house_1.dmm"
 
@@ -17,7 +17,7 @@
 	z_offset = -1
 
 /datum/map_template/house_2
-	name = "House 2"
+	name = "Casa 2"
 	id = "house_2"
 	mappath = "_maps/templates/settlement_pieces/house_2.dmm"
 
@@ -30,7 +30,7 @@
 	height = 5
 
 /datum/map_template/house_3
-	name = "House 3"
+	name = "Casa 3"
 	id = "house_3"
 	mappath = "_maps/templates/settlement_pieces/house_3.dmm"
 
@@ -44,7 +44,7 @@
 	z_offset = -2
 
 /datum/map_template/house_4
-	name = "House 4"
+	name = "Casa 4"
 	id = "house_4"
 	mappath = "_maps/templates/settlement_pieces/house_4.dmm"
 

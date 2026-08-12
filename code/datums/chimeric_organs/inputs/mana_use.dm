@@ -1,6 +1,6 @@
 /datum/chimeric_node/input/mana_spent
 	name = "fey tuned"
-	desc = "Triggered when you spend a certain amount of mana."
+	desc = "Se activa cuando gastas una cierta cantidad de maná."
 
 	var/mana_required = 100
 	var/current_mana = 0

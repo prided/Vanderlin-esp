@@ -59,7 +59,7 @@
 			for(var/mob/living/carbon/human/astrater as anything in GLOB.human_list)
 				if(!istype(astrater.patron, /datum/patron/divine/astrata))
 					continue
-				to_chat(astrater, span_userdanger("You feel the pain of [astrater.patron]!"))
+				to_chat(astrater, span_userdanger("¡Sientes el dolor de [astrater.patron]!"))
 				astrater.emote("painscream", intentional = FALSE)
 
 /obj/structure/vampire/necromanticbook/proc/can_steal_sun(mob/living/carbon/human/user)

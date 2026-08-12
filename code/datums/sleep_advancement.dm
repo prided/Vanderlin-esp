@@ -81,8 +81,8 @@
 
 	if(dreamwatcher)
 		to_chat(mind.current, span_notice(pick(
-			"You feel the gaze of Noc before all else..",
-			"A silver thread weaves through your thoughts..",
+			"Sientes la mirada de Noc antes que nada..",
+			"Un hilo de plata se teje a través de tus pensamientos.",
 			"You step into a dream that feels... familiar.",
 			"Noc whispers, not in words, but in meaning.",
 		)))
@@ -99,7 +99,7 @@
 	dream_dust += intel * DREAM_DUST_PER_INT
 
 	if(dreamwatcher)
-		to_chat(mind.current, span_notice("I can feel Noc's presence... symbols shift, forgotten places stir, and ancient beings whisper through the veil."))
+		to_chat(mind.current, span_notice("Puedo sentir la presencia de Noc... los símbolos cambian, los lugares olvidados se agitan y los seres antiguos susurran a través del velo."))
 	else if(intel < 10)
 		to_chat(mind.current, span_boldwarning("My shallow imagination makes them dull..."))
 	else if(intel > 10)
@@ -360,7 +360,7 @@
 		mind.has_studied = FALSE
 		to_chat(mind.current, span_smallnotice("I feel like I can study my tome again..."))
 	SEND_SIGNAL(mind.current, COMSIG_LIVING_DREAM_END)
-	to_chat(mind.current, span_notice("...and that's all I dreamt of."))
+	to_chat(mind.current, span_notice("...y eso es todo lo que soñé."))
 	close_ui()
 
 /datum/sleep_adv/Topic(href, list/href_list)

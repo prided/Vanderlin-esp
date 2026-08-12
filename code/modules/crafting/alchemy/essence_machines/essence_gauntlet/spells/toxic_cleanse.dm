@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/toxic_cleanse
-	name = "Toxic Cleanse"
+	name = "Limpieza tóxica"
 	desc = "Completely purges an area of all toxic substances and poisons."
 	button_icon_state = "detect_poison"
 	cast_range = 3
@@ -20,7 +20,7 @@
 
 /atom/movable/screen/alert/status_effect/toxin_immunity
 	name = "Toxin Immunity"
-	desc = "You are protected from all toxins and poisons."
+	desc = "Estás protegido de todas las toxinas y venenos."
 	icon_state = "buff"
 
 /datum/status_effect/buff/toxin_immunity
@@ -31,7 +31,7 @@
 /datum/status_effect/buff/toxin_immunity/on_apply()
 	. = ..()
 	ADD_TRAIT(owner, TRAIT_TOXINLOVER, TRAIT_STATUS_EFFECT(id))
-	to_chat(owner, span_notice("Toxins cannot harm you!"))
+	to_chat(owner, span_notice("¡Las toxinas no pueden hacerte daño!"))
 
 /datum/status_effect/buff/toxin_immunity/on_remove()
 	. = ..()

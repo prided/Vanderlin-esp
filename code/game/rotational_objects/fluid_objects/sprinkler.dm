@@ -135,7 +135,7 @@
 /obj/structure/sprinkler/examine(mob/user)
 	. = ..()
 	if(connected_pipe)
-		. += span_info("Connected to a water pipe.")
+		. += span_info("Conectado a una tubería de agua.")
 	else
 		. += span_warning("Not connected to any water pipe!")
 

@@ -12,7 +12,7 @@
 	generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_FACE)
 
 /datum/sprite_accessory/snout/cat
-	name = "Cat"
+	name = "Gato"
 	icon_state = "cat"
 
 /datum/sprite_accessory/snout/sharp
@@ -20,7 +20,7 @@
 	icon_state = "sharp"
 
 /datum/sprite_accessory/snout/round
-	name = "Round"
+	name = "Redondo"
 	icon_state = "round"
 
 /datum/sprite_accessory/snout/sharplight
@@ -28,7 +28,7 @@
 	icon_state = "sharplight"
 
 /datum/sprite_accessory/snout/roundlight
-	name = "Round + Light"
+	name = "Redondo + Luz"
 	icon_state = "roundlight"
 
 /datum/sprite_accessory/snout/vulp
@@ -38,19 +38,19 @@
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/shark
-	name = "Shark"
+	name = "Tiburón"
 	icon_state = "shark"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/bug
-	name = "Bug"
+	name = "Bicho"
 	icon_state = "bug"
 	color_keys = 2
 	color_key_names = list("Snout", "Eyes")
 
 /datum/sprite_accessory/snout/elephant
-	name = "Elephant"
+	name = "Elefante"
 	icon_state = "elephant"
 	color_keys = 2
 	color_key_names = list("Snout", "Horns")
@@ -68,17 +68,17 @@
 	color_key_names = list("Snout", "Details", "Details")
 
 /datum/sprite_accessory/snout/bovine
-	name = "Bovine"
+	name = "Bovino"
 	icon_state = "bovine"
 	color_keys = 3
 	color_key_names = list("Snout", "Details", "Details")
 
 /datum/sprite_accessory/snout/rodent
-	name = "Rodent"
+	name = "Roedor"
 	icon_state = "rodent"
 
 /datum/sprite_accessory/snout/lcanid
-	name = "Mammal, Long"
+	name = "Mamífero, largo"
 	icon_state = "lcanid"
 
 /datum/sprite_accessory/snout/lcanidalt
@@ -86,19 +86,19 @@
 	icon_state = "lcanidalt"
 
 /datum/sprite_accessory/snout/lcanidstriped
-	name = "Mammal, Long, Striped"
+	name = "Mamífero, Largo, Rayado"
 	icon_state = "lcanidstripe"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/lcanidstripedalt
-	name = "Mammal, Long, Striped ALT"
+	name = "Mamífero, largo, rayado ALT"
 	icon_state = "lcanidstripealt"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/scanid
-	name = "Mammal, Short"
+	name = "Mamífero, corto"
 	icon_state = "scanid"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
@@ -110,11 +110,11 @@
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/scanidalt2
-	name = "Mammal, Short ALT 2"
+	name = "Mamífero, corto ALT 2"
 	icon_state = "scanidalt2"
 
 /datum/sprite_accessory/snout/scanidalt3
-	name = "Mammal, Short ALT 3"
+	name = "Mamífero, corto ALT 3"
 	icon_state = "scanidalt3"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
@@ -124,13 +124,13 @@
 	icon_state = "ntajaran"
 
 /datum/sprite_accessory/snout/wolf
-	name = "Mammal, Thick"
+	name = "Mamífero, Grueso"
 	icon_state = "wolf"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/wolfalt
-	name = "Mammal, Thick ALT"
+	name = "Mamífero, grueso ALT"
 	icon_state = "wolfalt"
 
 /datum/sprite_accessory/snout/otie
@@ -201,7 +201,7 @@
 	extra_state = TRUE
 
 /datum/sprite_accessory/snout/skulldog
-	name = "Skulldog"
+	name = "perro calavera"
 	icon_state = "skulldog"
 	extra_state = TRUE
 	color_keys = 2
@@ -226,13 +226,13 @@
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/hspots
-	name = "Hyena"
+	name = "Hiena"
 	icon_state = "hspots"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/hhorse
-	name = "Horse"
+	name = "Caballo"
 	icon_state = "hhorse"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
@@ -264,7 +264,7 @@
 	icon_state = "fsharplight"
 
 /datum/sprite_accessory/snout/front/roundlight
-	name = "Round + Light (Top)"
+	name = "Redondo + Luz (Superior)"
 	icon_state = "froundlight"
 
 /datum/sprite_accessory/snout/front/bird
@@ -413,7 +413,7 @@
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/shortnosed
-	name = "Short Nosed"
+	name = "nariz corta"
 	icon_state = "shortnosed"
 	color_keys = 2
 	color_key_names = list("Snout", "Nose")
@@ -441,7 +441,7 @@
 	icon_state = "bigbeak"
 
 /datum/sprite_accessory/snout/bigbeakshort
-	name = "Big Beak Short"
+	name = "Pico Grande Corto"
 	icon_state = "bigbeakshort"
 
 /datum/sprite_accessory/snout/slimbeak
@@ -457,7 +457,7 @@
 	icon_state = "slimbeakalt"
 
 /datum/sprite_accessory/snout/hookbeak
-	name = "Hook Beak"
+	name = "Pico de gancho"
 	icon_state = "hookbeak"
 
 /datum/sprite_accessory/snout/hookbeakbig
@@ -475,7 +475,7 @@
 	icon_state = "bigbeak"
 
 /datum/sprite_accessory/snout/thin_beak/bigbeakshort
-	name = "Big Beak Short"
+	name = "Pico Grande Corto"
 	icon_state = "bigbeakshort"
 
 /datum/sprite_accessory/snout/thin_beak/slimbeak
@@ -491,7 +491,7 @@
 	icon_state = "slimbeakalt"
 
 /datum/sprite_accessory/snout/thin_beak/hookbeak
-	name = "Hook Beak"
+	name = "Pico de gancho"
 	icon_state = "hookbeak"
 
 /datum/sprite_accessory/snout/thin_beak/hookbeakbig

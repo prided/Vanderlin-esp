@@ -105,7 +105,7 @@
 
 	orbiter.abstract_move(get_turf(parent))
 	if(!istype(orbiter, /mob/dead/observer/screye))
-		to_chat(orbiter, span_notice("Now orbiting [parent]."))
+		to_chat(orbiter, span_notice("Ahora orbitando [parent]."))
 
 /datum/component/orbiter/proc/end_orbit(atom/movable/orbiter, refreshing=FALSE)
 	if(!orbiter_list[orbiter])

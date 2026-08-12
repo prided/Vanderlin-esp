@@ -337,7 +337,7 @@
 	SHOULD_CALL_PARENT(TRUE)
 	if(!(impact_flags & ZIMPACT_NO_MESSAGE))
 		visible_message(
-			span_danger("[src] crashes into [impacted_turf]!"),
+			span_danger("¡[src] choca contra [impacted_turf]!"),
 			span_userdanger("You crash into [impacted_turf]!"),
 		)
 	if(!(impact_flags & ZIMPACT_NO_SPIN))
@@ -457,7 +457,7 @@
 		return FALSE
 	if((!(z_move_flags & ZMOVE_IGNORE_OBSTACLES) && !(start.zPassOut(direction) && destination.zPassIn(direction))) || (!(z_move_flags & ZMOVE_ALLOW_ANCHORED) && anchored))
 		if(z_move_flags & ZMOVE_FEEDBACK)
-			to_chat(rider || src, span_warning("I can't move there!"))
+			to_chat(rider || src, span_warning("¡No puedo moverme allí!"))
 		return FALSE
 	return destination //used by some child types checks and zMove()
 
@@ -534,7 +534,7 @@
 		log_combat(src, M, "grabbed", addition="passive grab")
 		M.stop_all_doing()
 		if(!suppress_message)
-			M.visible_message("<span class='warning'>[src] grabs [M].</span>", \
+			M.visible_message("<span class='warning'>[src] agarra [M].</span>", \
 				"<span class='danger'>[src] grabs you.</span>")
 	return TRUE
 
@@ -1208,12 +1208,12 @@
 /atom/movable/proc/force_push(atom/movable/AM, force = move_force, direction, silent = FALSE)
 	. = AM.force_pushed(src, force, direction)
 	if(!silent && .)
-		visible_message("<span class='warning'>[src] forcefully pushes against [AM]!</span>", "<span class='warning'>I forcefully push against [AM]!</span>")
+		visible_message("<span class='warning'>[src] empuja con fuerza contra [AM]!</span>", "<span class='warning'>I forcefully push against [AM]!</span>")
 
 /atom/movable/proc/move_crush(atom/movable/AM, force = move_force, direction, silent = FALSE)
 	. = AM.move_crushed(src, force, direction)
 	if(!silent && .)
-		visible_message("<span class='danger'>[src] crushes past [AM]!</span>", "<span class='danger'>I crush [AM]!</span>")
+		visible_message("¡<span class='danger'>[src] aplasta a [AM]!</span>", "<span class='danger'>I crush [AM]!</span>")
 
 /atom/movable/proc/move_crushed(atom/movable/pusher, force = MOVE_FORCE_DEFAULT, direction)
 	return FALSE

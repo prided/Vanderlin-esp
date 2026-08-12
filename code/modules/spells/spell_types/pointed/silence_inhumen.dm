@@ -1,11 +1,11 @@
 /datum/action/cooldown/spell/silence_inhumen
-	name = "Silence Inhumen"
+	name = "Silencio Inhumen"
 	button_icon_state = "bcry"
 	sound = null
 	self_cast_possible = FALSE
 	has_visual_effects = FALSE
 
-	invocation = "SILENCE, INHUMEN!"
+	invocation = "¡SILENCIO, INHUMEN!"
 	invocation_type = INVOCATION_SHOUT
 
 	antimagic_flags = NONE
@@ -24,7 +24,7 @@
 		return
 
 	if(cast_on.dna?.species.id in RACES_PLAYER_NONHERETICAL)
-		to_chat(owner, span_warning("[cast_on] is not a profane inhumen!"))
+		to_chat(owner, span_warning("¡[cast_on] no es un inhumen profano!"))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 

@@ -1,5 +1,5 @@
 /datum/repeatable_crafting_recipe/cooking/dough
-	name = "Dough"
+	name = "Masa"
 	requirements = list(
 		/obj/item/reagent_containers/powder/flour = 1,
 		/obj/item/reagent_containers/food/snacks/dough_base = 1,
@@ -16,7 +16,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/dough_alt
 	hides_from_books = TRUE
-	name = "Dough"
+	name = "Masa"
 	requirements = list(
 		/obj/item/reagent_containers/powder/flour = 1,
 		/obj/item/reagent_containers/food/snacks/dough_base = 1,
@@ -32,7 +32,7 @@
 	skillcraft = /datum/attribute/skill/craft/cooking/baking
 
 /datum/repeatable_crafting_recipe/cooking/butter_dough
-	name = "Butter Dough"
+	name = "masa de mantequilla"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/dough = 1,
 		/obj/item/reagent_containers/food/snacks/butterslice = 1,
@@ -43,12 +43,12 @@
 	required_table = TRUE
 	craft_time = 5 SECONDS
 	crafting_sound = 'sound/foley/kneading_alt.ogg'
-	crafting_message = "knead butter into the dough"
+	crafting_message = "amasar la mantequilla en la masa"
 	extra_chance = 100
 	skillcraft = /datum/attribute/skill/craft/cooking/baking
 
 /datum/repeatable_crafting_recipe/cooking/masa
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Sunreed Dough"
 	requirements = list(
 		/obj/item/reagent_containers/powder/sunreed_flour = 1,
@@ -81,7 +81,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/raspberry_butter_dough
 	category = "Holiday Food"
-	name = "Raspberry Butterdough"
+	name = "Masa de mantequilla de frambuesa"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/butterdough = 1,
 		/obj/item/reagent_containers/food/snacks/produce/fruit/raspberry = 1,
@@ -98,7 +98,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/raisin_butter_dough
 	category = "Holiday Food"
-	name = "Raisin Butterdough"
+	name = "Masa de mantequilla con pasas"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/butterdough = 1,
 		/obj/item/reagent_containers/food/snacks/raisins = 1,
@@ -115,7 +115,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/raisin_butter_dough_poison
 	hides_from_books = TRUE
-	name = "Raisin Butterdough"
+	name = "Masa de mantequilla con pasas"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/butterdough = 1,
 		/obj/item/reagent_containers/food/snacks/raisins/poison = 1,
@@ -149,7 +149,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/pear_butter_dough
 	category = "Holiday Food"
-	name = "Pear Butterdough"
+	name = "Masa de mantequilla de pera"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/butterdough = 1,
 		/obj/item/reagent_containers/food/snacks/pear_dried = 1,
@@ -166,7 +166,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/pear_butter_dough
 	category = "Holiday Food"
-	name = "Pear Butterdough"
+	name = "Masa de mantequilla de pera"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/butterdough = 1,
 		/obj/item/reagent_containers/food/snacks/pear_dried = 1,
@@ -200,7 +200,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/plum_butter_dough
 	category = "Holiday Food"
-	name = "Plum Butterdough"
+	name = "Masa de mantequilla de ciruela"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/butterdough = 1,
 		/obj/item/reagent_containers/food/snacks/plum_dried = 1,
@@ -212,7 +212,7 @@
 	required_table = TRUE
 	craft_time = 5 SECONDS
 	crafting_sound = 'sound/foley/kneading.ogg'
-	crafting_message = "knead the dough and adding dried plums"
+	crafting_message = "Amasar la masa y agregar ciruelas secas."
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/lemon_butter_dough
@@ -229,7 +229,7 @@
 	required_table = TRUE
 	craft_time = 5 SECONDS
 	crafting_sound = 'sound/foley/kneading.ogg'
-	crafting_message = "knead the dough and adding lemons"
+	crafting_message = "Amasar la masa y agregar limones."
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/chocolate_butter_dough
@@ -265,7 +265,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/chocolate_bun
-	name = "Unbaked Chocolate Bun"
+	name = "Bollo de chocolate sin hornear"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/dough_slice = 1,
 		/obj/item/reagent_containers/food/snacks/chocolate/chunk = 1,
@@ -297,7 +297,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/raisin_dough
-	name = "Raisin Dough"
+	name = "masa de pasas"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/dough = 1,
 		/obj/item/reagent_containers/food/snacks/raisins = 1,
@@ -325,7 +325,7 @@
 	craftdiff = 0
 	craft_time = 5 SECONDS
 	crafting_sound = 'sound/foley/kneading.ogg'
-	crafting_message = "combine dough slices"
+	crafting_message = "combinar rebanadas de masa"
 	extra_chance = 100
 	skillcraft = /datum/attribute/skill/craft/cooking/baking
 
@@ -342,6 +342,6 @@
 	craftdiff = 0
 	craft_time = 5 SECONDS
 	crafting_sound = 'sound/foley/kneading.ogg'
-	crafting_message = "combine dough slices"
+	crafting_message = "combinar rebanadas de masa"
 	extra_chance = 100
 	skillcraft = /datum/attribute/skill/craft/cooking/baking

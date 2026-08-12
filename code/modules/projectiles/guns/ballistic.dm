@@ -260,7 +260,7 @@
 ///Handles all the logic needed for magazine insertion
 /obj/item/gun/ballistic/proc/insert_magazine(mob/user, obj/item/ammo_box/magazine/AM, display_message = TRUE)
 	if(!istype(AM, accepted_magazine_type))
-		balloon_alert(user, "[AM.name] doesn't fit!")
+		balloon_alert(user, "¡[AM.name] no encaja!")
 		return FALSE
 
 	if(!user.transferItemToLoc(AM, src))
@@ -269,7 +269,7 @@
 
 	magazine = AM
 	if(display_message)
-		balloon_alert(user, "[magazine_wording] loaded")
+		balloon_alert(user, "[magazine_wording] cargado")
 
 	if(magazine.ammo_count())
 		playsound(src, load_sound, load_sound_volume, load_sound_vary)
@@ -295,7 +295,7 @@
 	var/obj/item/ammo_box/magazine/old_mag = magazine
 	if (tac_load)
 		if (insert_magazine(user, tac_load, FALSE))
-			balloon_alert(user, "[magazine_wording] swapped")
+			balloon_alert(user, "[magazine_wording] intercambiado")
 		else
 			to_chat(user, "<span class='warning'>I dropped the old [magazine_wording], but the new one doesn't fit. How embarrassing.</span>")
 			magazine = null
@@ -304,7 +304,7 @@
 	user.put_in_hands(old_mag)
 	old_mag.update_appearance()
 	if (display_message)
-		balloon_alert(user, "[magazine_wording] unloaded")
+		balloon_alert(user, "[magazine_wording] descargado")
 	update_appearance()
 
 /obj/item/gun/ballistic/can_shoot(mob/living/user)
@@ -332,7 +332,7 @@
 				chambered = null
 			var/num_loaded = magazine.try_load(user, tool, silent = TRUE)
 			if(num_loaded)
-				balloon_alert(user, "[num_loaded] [cartridge_wording]\s loaded")
+				balloon_alert(user, "[num_loaded] [cartridge_wording]\s cargado")
 				playsound(src, load_sound, load_sound_volume, load_sound_vary)
 				if (chambered == null && bolt_type == BOLT_TYPE_NO_BOLT)
 					chamber_round()
@@ -403,7 +403,7 @@
 
 	if(!num_unloaded)
 		if(!forced)
-			balloon_alert(user, "it's empty!")
+			balloon_alert(user, "¡está vacío!")
 		return
 
 	if(!forced)

@@ -50,9 +50,7 @@ function StatusBanner() {
       {!!last_error && <NoticeBox danger>{last_error}</NoticeBox>}
       {!!coverage && !coverage.complete && (
         <NoticeBox danger>
-          Partial table coverage: {coverage.unavailable.join(', ')} could not be
-          reached on this build, so every total in every report is short by
-          whatever lives in them. See the Compat tab.
+          Cobertura parcial de tablas: {coverage.unavailable.join(', ')} no se pudo alcanzar en esta construcción, por lo que cada total en cada informe está corto por lo que vive en ellos. Consulte la pestaña Compatibilidad.
         </NoticeBox>
       )}
     </>
@@ -65,11 +63,11 @@ export function MemoryProfiler() {
   const [tab, setTab] = useState(TAB.Overview);
 
   return (
-    <Window title="Memory Profiler" width={1100} height={760}>
+    <Window title="Perfilador de memoria" width={1100} height={760}>
       <Window.Content>
         {!enabled ? (
           <NoticeBox danger>
-            byond_memprofile is unavailable: {error || 'unknown reason'}
+            byond_memprofile no está disponible: {error || 'unknown reason'}
           </NoticeBox>
         ) : (
           <Stack fill vertical>
@@ -83,21 +81,21 @@ export function MemoryProfiler() {
                   selected={tab === TAB.Overview}
                   onClick={() => setTab(TAB.Overview)}
                 >
-                  Overview
+                  Descripción general
                 </Tabs.Tab>
                 <Tabs.Tab
                   icon="sitemap"
                   selected={tab === TAB.Types}
                   onClick={() => setTab(TAB.Types)}
                 >
-                  Types
+                  Tipos
                 </Tabs.Tab>
                 <Tabs.Tab
                   icon="list"
                   selected={tab === TAB.Lists}
                   onClick={() => setTab(TAB.Lists)}
                 >
-                  Lists
+                  Listas
                 </Tabs.Tab>
                 <Tabs.Tab
                   icon="tag"
@@ -111,14 +109,14 @@ export function MemoryProfiler() {
                   selected={tab === TAB.Diff}
                   onClick={() => setTab(TAB.Diff)}
                 >
-                  Diff
+                  diferencia
                 </Tabs.Tab>
                 <Tabs.Tab
                   icon="microscope"
                   selected={tab === TAB.Compat}
                   onClick={() => setTab(TAB.Compat)}
                 >
-                  Compat
+                  compatible
                 </Tabs.Tab>
               </Tabs>
             </Stack.Item>

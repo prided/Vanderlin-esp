@@ -59,7 +59,7 @@ export function VarsTab() {
       <Stack.Item>
         <Section>
           <ReportHeader
-            label="Capture var histogram"
+            label="Capturar histograma var"
             busy={busy}
             onCapture={() => act('capture_vars')}
             meta={metaFor(report_meta, 'vars')}
@@ -69,9 +69,7 @@ export function VarsTab() {
       {!vars_report ? (
         <Stack.Item>
           <EmptyState>
-            A var row exists only where a var is set away from its type default,
-            at 16 bytes each. A var on /atom set on every atom is a concrete
-            thing to go delete, and this is how you find it.
+            Una fila var existe solo cuando una var está alejada de su tipo predeterminado, en 16 bytes cada una. Una var en /atom configurada en cada átomo es algo concreto que se debe eliminar, y así es como se encuentra.
           </EmptyState>
         </Stack.Item>
       ) : (
@@ -79,11 +77,11 @@ export function VarsTab() {
           <Stack.Item>
             <Section>
               <LabeledList>
-                <LabeledList.Item label="Var rows">
-                  {count(vars_report.var_rows_total)} rows across{' '}
-                  {count(vars_report.vars_total)} distinct names
+                <LabeledList.Item label="Filas var">
+                  {count(vars_report.var_rows_total)} filas a lo largo{' '}
+                  {count(vars_report.vars_total)} nombres distintos
                 </LabeledList.Item>
-                <LabeledList.Item label="Total cost">
+                <LabeledList.Item label="Costo total">
                   {bytes(vars_report.var_bytes)}
                 </LabeledList.Item>
               </LabeledList>
@@ -101,13 +99,13 @@ export function VarsTab() {
             <Section
               fill
               scrollable
-              title="Var names"
+              title="nombres de var"
               buttons={
                 <SearchBar
                   expensive
                   query={search}
                   onSearch={setSearch}
-                  placeholder="Filter var names..."
+                  placeholder="Filtrar nombres de variables..."
                   style={{ width: '20rem' }}
                 />
               }
@@ -119,7 +117,7 @@ export function VarsTab() {
                     desc={sort.desc}
                     onClick={() => toggle('name')}
                   >
-                    Var name
+                    Nombre de la variable
                   </SortCell>
                   <SortCell
                     collapsing
@@ -127,14 +125,14 @@ export function VarsTab() {
                     desc={sort.desc}
                     onClick={() => toggle('count')}
                   >
-                    Rows
+                    Filas
                   </SortCell>
                   <SortCell
                     active={sort.key === 'bytes'}
                     desc={sort.desc}
                     onClick={() => toggle('bytes')}
                   >
-                    Bytes
+                    bytes
                   </SortCell>
                 </Table.Row>
                 {rows.map((row) => (

@@ -1,7 +1,7 @@
 #define OPERATION_NEW_NAME "chosen_name"
 
 /datum/surgery_operation/limb/plastic_surgery
-	name = "Facial Reconstruction"
+	name = "Reconstrucción Facial"
 	desc = "Reshape a patient's face to fix disfigurement or make them a new person."
 
 	implements = list(
@@ -49,10 +49,10 @@
 	for(var/i in 1 to 10)
 		names += species.random_name(patient.gender, TRUE)
 
-	var/choice = tgui_input_list(surgeon, "New name to assign", "Facial Reconstruction", names)
+	var/choice = tgui_input_list(surgeon, "Nuevo nombre para asignar", "Reconstrucción Facial", names)
 
 	if(choice == "Custom")
-		choice = tgui_input_text(surgeon, "New name to assign", "Facial Reconstruction", patient.name, max_length = MAX_NAME_LEN)
+		choice = tgui_input_text(surgeon, "Nuevo nombre para asignar", "Reconstrucción Facial", patient.name, max_length = MAX_NAME_LEN)
 
 	if(!choice)
 		return FALSE
@@ -65,8 +65,8 @@
 		surgeon,
 		limb.owner,
 		span_notice("I begin to alter [limb.owner]'s appearance..."),
-		span_notice("[surgeon] begins to alter [limb.owner]'s appearance."),
-		span_notice("[surgeon] begins to make an incision in [limb.owner]'s face."),
+		span_notice("[surgeon] comienza a alterar la apariencia de [limb.owner]."),
+		span_notice("[surgeon] comienza a hacer una incisión en la cara de [limb.owner]."),
 	)
 	display_pain(limb.owner, "I feel a slicing pain across your face!")
 
@@ -80,7 +80,7 @@
 			surgeon,
 			limb.owner,
 			span_notice("I successfully restore [limb.owner]'s appearance."),
-			span_notice("[surgeon] successfully restores [limb.owner]'s appearance!"),
+			span_notice("¡[surgeon] restaura con éxito la apariencia de [limb.owner]!"),
 			span_notice("[surgeon] finishes the operation on [limb.owner]'s face."),
 		)
 		display_pain(limb.owner, "The pain fades, my face feels normal again!")

@@ -38,7 +38,7 @@
 		return
 
 	if(stress_event && punishment >= PUNISHMENT_STRESS)
-		to_chat(mob, span_warning("I feel the eyes of [patron.name] upon me..."))
+		to_chat(mob, span_warning("Siento los ojos de [patron.name] sobre mí..."))
 		mob.add_stress(/datum/stress_event/divine_punishment)
 
 	if(sets_alight && punishment >= PUNISHMENT_BURN)
@@ -50,7 +50,7 @@
 		return
 	if(holy.loc != cooked)
 		return
-	to_chat(cooked, span_warning("[patron.name] spurns me for holding their sacred item, \the [holy]!"))
+	to_chat(cooked, span_warning("¡[patron.name] me desprecia por tener su objeto sagrado, \the [holy]!"))
 	cooked.adjust_divine_fire_stacks(5)
 	cooked.IgniteMob()
 	cooked.drop_all_held_items()

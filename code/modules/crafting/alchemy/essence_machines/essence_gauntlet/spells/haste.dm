@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/haste
 	name = "Swift Step"
-	desc = "Briefly increases movement speed."
+	desc = "Aumenta brevemente la velocidad de movimiento."
 	button_icon_state = "haste"
 	//sound = 'sound/magic/whiff.ogg'
 	cast_range = 0
@@ -9,7 +9,7 @@
 
 /datum/action/cooldown/spell/essence/haste/cast(atom/cast_on)
 	. = ..()
-	owner.visible_message(span_notice("[owner] moves with enhanced speed."))
+	owner.visible_message(span_notice("[owner] se mueve con velocidad mejorada."))
 	//playsound(owner, 'sound/magic/whiff.ogg', 50, TRUE)
 
 	var/mob/living/L = owner

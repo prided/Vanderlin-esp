@@ -24,7 +24,7 @@
 
 /datum/admins/proc/check_teams()
 	if(!SSticker.HasRoundStarted())
-		alert("The game hasn't started yet!")
+		alert("¡El juego aún no ha comenzado!")
 		return
 
 	var/datum/browser/popup = new(usr, "teams", "Team Listing", 500, 500)
@@ -38,7 +38,7 @@
 	var/datum/team/custom/T = new()
 	T.name = team_name
 
-	message_admins("[key_name_admin(usr)] created new [name] antagonist team.")
+	message_admins("[key_name_admin(usr)] creó un nuevo equipo antagonista [name].")
 	log_admin("[key_name(usr)] created new [name] antagonist team.")
 
 /datum/team/proc/admin_rename(mob/user)
@@ -51,7 +51,7 @@
 	log_admin("[key_name(usr)] renamed [old_name] team to [name]")
 
 /datum/team/proc/admin_communicate(mob/user)
-	var/message = input(user,"Message for the team ?","Team Message") as text|null
+	var/message = input(user,"¿Mensaje para el equipo?","Mensaje del equipo") as text|null
 	if(!message)
 		return
 	for(var/datum/mind/M in members)
@@ -66,7 +66,7 @@
 	if(!GLOB.admin_objective_list)
 		generate_admin_objective_list()
 
-	var/selected_type = input("Select objective type:", "Objective type") as null|anything in GLOB.admin_objective_list
+	var/selected_type = input("Select objective type:", "Tipo de objetivo") as null|anything in GLOB.admin_objective_list
 	selected_type = GLOB.admin_objective_list[selected_type]
 	if (!selected_type)
 		return
@@ -111,7 +111,7 @@
 	for(var/mob/M in GLOB.mob_list)
 		if(M.mind)
 			minds |= M.mind
-	var/datum/mind/value = input("Select new member:", "New team member", null) as null|anything in sortNames(minds)
+	var/datum/mind/value = input("Select new member:", "Nuevo miembro del equipo", null) as null|anything in sortNames(minds)
 	if (!value)
 		return
 
@@ -169,7 +169,7 @@
 //This is here if you want admin created teams to tell each other apart easily.
 /datum/team/custom/proc/admin_force_hud(mob/user)
 	var/list/possible_icons = icon_states('icons/mob/hud.dmi')
-	var/new_hud_state = input(user,"Choose hud icon state","Custom HUD","traitor") as null|anything in sortList(possible_icons)
+	var/new_hud_state = input(user,"Choose hud icon state","HUD personalizado","traitor") as null|anything in sortList(possible_icons)
 	if(!new_hud_state)
 		return
 	//suppose could ask for color too

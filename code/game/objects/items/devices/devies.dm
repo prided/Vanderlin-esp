@@ -13,13 +13,13 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/gem_device/attack_self(mob/living/user, list/modifiers)
-	var/alert = tgui_alert(user, "Do I want to use this? \n[usage_prompt]", "Enchanted Gem", list("Yes", "No"))
+	var/alert = tgui_alert(user, "¿Quiero usar esto? \n[usage_prompt]", "Enchanted Gem", list("Yes", "No"))
 	if(alert != "Yes")
 		return
 	if(!on_use(user))
 		to_chat(user, span_warning("\The [src] glows, then fizzles out!"))
 		return
-	to_chat(user, span_warning("With a bright spark \the [src] disappears!"))
+	to_chat(user, span_warning("¡Con una chispa brillante \the [src] desaparece!"))
 	qdel(src)
 
 /obj/item/gem_device/proc/on_use(mob/living/user)

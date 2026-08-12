@@ -1,5 +1,5 @@
 /datum/objective/personal/wise_trees
-	name = "Create Wise Trees"
+	name = "Crear árboles sabios"
 	category = "Dendor's Chosen"
 	triumph_count = 2
 	immediate_effects = list("Gained an ability to make wise trees")

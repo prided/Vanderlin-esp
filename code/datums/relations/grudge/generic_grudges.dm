@@ -1,5 +1,5 @@
 /datum/grudge_type/old_debt
-	grudge_name = "Old Debt"
+	grudge_name = "Deuda antigua"
 	aggressor_text = "You owe them something and have been avoiding making it right."
 	victim_text = "They owe you something and have made no effort to settle it."
 
@@ -9,11 +9,11 @@
 	victim_text = "They mocked you in front of others and the moment has not left you."
 
 /datum/grudge_type/broken_promise
-	grudge_name = "Broken Promise"
+	grudge_name = "Promesa rota"
 	aggressor_text = "You made a commitment to them that you did not keep."
-	victim_text = "They made you a promise and never followed through."
+	victim_text = "Te hicieron una promesa y nunca la cumplieron."
 
 /datum/grudge_type/reputation_damage
-	grudge_name = "Reputation Damage"
+	grudge_name = "Daño a la reputación"
 	aggressor_text = "Rumours you may have spread came back to colour how others see them."
 	victim_text = "Rumours traced back to them have made your reputation worse than you deserve."

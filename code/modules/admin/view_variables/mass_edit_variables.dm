@@ -56,11 +56,11 @@
 	default = vv_get_class(variable, var_value)
 
 	if(isnull(default))
-		to_chat(src, "Unable to determine variable type.")
+		to_chat(src, "No se puede determinar el tipo de variable.")
 	else
-		to_chat(src, "Variable appears to be <b>[uppertext(default)]</b>.")
+		to_chat(src, "La variable parece ser <b>[uppertext(default)]</b>.")
 
-	to_chat(src, "Variable contains: [var_value]")
+	to_chat(src, "La variable contiene: [var_value]")
 
 	if(default == VV_NUM)
 		var/dir_text = ""
@@ -115,7 +115,7 @@
 			var/pre_processing = new_value
 			var/unique
 			if (varsvars?.len)
-				unique = tgui_alert(src, "Process vars unique to each instance, or same for all?", "Variable Association", list("Unique", "Same"))
+				unique = tgui_alert(src, "Process vars unique to each instance, or same for all?", "Asociación de variables", list("Unique", "Same"))
 				if(unique == "Unique")
 					unique = TRUE
 				else
@@ -142,7 +142,7 @@
 				CHECK_TICK
 
 		if (VV_NEW_TYPE)
-			var/many = tgui_alert(src, "Create only one [value["type"]] and assign each or a new one for each thing", "How Many", list("One", "Many", "Cancel"))
+			var/many = tgui_alert(src, "Create only one [value["type"]] and assign each or a new one for each thing", "Cuántos", list("Uno", "Many", "Cancel"))
 			if (many == "Cancel")
 				return
 			if (many == "Many")
@@ -185,13 +185,13 @@
 
 	var/count = rejected+accepted
 	if (!count)
-		to_chat(src, "No objects found")
+		to_chat(src, "No se encontraron objetos")
 		return
 	if (!accepted)
-		to_chat(src, "Every object rejected your edit")
+		to_chat(src, "Cada objeto rechazó tu edición.")
 		return
 	if (rejected)
-		to_chat(src, "[rejected] out of [count] objects rejected your edit")
+		to_chat(src, "[rejected] de los objetos [count] rechazó su edición")
 
 	log_world("### MassVarEdit by [src]: [target.type] (A/R [accepted]/[rejected]) [variable]=[html_encode("[target.vars[variable]]")]([list2params(value)])")
 	log_admin("[key_name(src)] mass modified [original_name]'s [variable] to [target.vars[variable]] ([accepted] objects modified)")

@@ -134,7 +134,7 @@
 				owner.status_flags |= BLEEDOUT
 				to_chat(owner, span_userdanger("My organs feel outrageously heavy!"))
 			else if(DT_PROB(2.5, delta_time))
-				to_chat(owner, span_userdanger("Not... Enough... Blood..."))
+				to_chat(owner, span_userdanger("No... Suficiente... Sangre..."))
 		else
 			owner.status_flags &= ~BLEEDOUT
 
@@ -199,7 +199,7 @@
 		if(owner.heartbeat_sound != BEAT_SLOW)
 			owner.heartbeat_sound = BEAT_SLOW
 			SEND_SOUND(owner, slowbeat)
-			to_chat(owner, span_notice("I feel my heart slow down..."))
+			to_chat(owner, span_notice("Siento que mi corazón se ralentiza..."))
 
 	else if(owner.health <= owner.hardcrit_threshold) // owner.stat == HARD_CRIT
 		if(owner.heartbeat_sound != BEAT_FAST && owner.has_status_effect(/datum/status_effect/jitter))

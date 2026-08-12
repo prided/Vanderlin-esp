@@ -30,7 +30,7 @@
 	log_admin("[key_name(usr)] checked the individual player panel for [key_name(M)][isobserver(usr)?"":" while in game"].")
 
 	if(!M)
-		to_chat(usr, "<span class='warning'>I seem to be selecting a mob that doesn't exist anymore.</span>")
+		to_chat(usr, "<span class='warning'>Parece que estoy seleccionando un mob que ya no existe.</span>")
 		return
 
 	var/ui_theme = usr.client.prefs.read_preference(/datum/preference/choiced/ui_theme)
@@ -311,7 +311,7 @@
 
 	if(!check_rights())
 		return
-	if(tgui_alert(usr, "This will trigger a no adv class restriction triumph if the player has bought it.", "Confirm", list("Proceed", "Cancel")) != "Proceed")
+	if(tgui_alert(usr, "This will trigger a no adv class restriction triumph if the player has bought it.", "Confirmar", list("Proceed", "Cancel")) != "Proceed")
 		return FALSE
 
 	SSrole_class_handler.setup_class_handler(mob)
@@ -321,11 +321,11 @@
 /datum/admins/proc/admin_curse(mob/living/carbon/human/M in GLOB.mob_list)
 	set name = "Curse"
 	set desc = "Curse or lift a curse from a character"
-	set category = "GameMaster.Gods"
+	set category = "GameMaster.Dioses"
 	if(!check_rights())
 		return FALSE
 
-	var/category = input("Category") as null|anything in list("Ten", "Inhuman", "Special")
+	var/category = input("Categoría") as null|anything in list("Ten", "Inhuman", "Special")
 	if(!category)
 		return FALSE
 
@@ -381,7 +381,7 @@
 	check_triumphs_menu(M.ckey)
 
 /datum/admins/proc/admin_sleep(mob/living/M in GLOB.mob_list)
-	set name = "Toggle Sleeping"
+	set name = "Alternar dormir"
 	set desc = "Toggle a mob's sleeping state"
 	set category = "Admin.Admin"
 
@@ -446,7 +446,7 @@
 
 /datum/admins/proc/adjustpq(mob/living/M in GLOB.mob_list)
 	set name = "Adjust PQ"
-	set desc = "Adjust a player's PQ"
+	set desc = "Ajustar el PQ de un jugador"
 	set category = null
 
 	if(!check_rights())
@@ -510,19 +510,19 @@
 /datum/admins/proc/restart()
 	set category = "Server.Round Control"
 	set name = "Reboot World"
-	set desc = "Restarts the world immediately"
+	set desc = "Reinicia el mundo inmediatamente."
 	if(!check_rights(R_SERVER))
 		return
 
 	if(SSticker.admin_delay_notice)
-		if(tgui_alert(usr, "Are you sure? An admin has already delayed the round end for the following reason: [SSticker.admin_delay_notice]", "Confirmation", list("Yes", "No")) != "Yes")
+		if(tgui_alert(usr, "Are you sure? An admin has already delayed the round end for the following reason: [SSticker.admin_delay_notice]", "Confirmación", list("Yes", "No")) != "Yes")
 			return FALSE
 
 	var/list/options = list(REGULAR_RESTART, REGULAR_RESTART_DELAYED, HARD_RESTART, HARDEST_RESTART)
 	if(world.TgsAvailable())
 		options += TGS_RESTART
 
-	var/result = input(usr, "Select reboot method", "World Reboot", options[1]) as null|anything in options
+	var/result = input(usr, "Seleccione el método de reinicio", "World Reboot", options[1]) as null|anything in options
 	if(!result)
 		return
 
@@ -532,7 +532,7 @@
 		if(REGULAR_RESTART, REGULAR_RESTART_DELAYED)
 			var/delay = 1
 			if(result == REGULAR_RESTART_DELAYED)
-				delay = input("What delay should the restart have (in seconds)?", "Restart Delay", 5) as num|null
+				delay = input("¿Qué retraso debe tener el reinicio (en segundos)?", "Restart Delay", 5) as num|null
 				if(!delay)
 					return FALSE
 			SSplexora.restart_type = PLEXORA_SHUTDOWN_NORMAL
@@ -546,12 +546,12 @@
 		if(HARDEST_RESTART)
 			SSplexora.restart_type = PLEXORA_SHUTDOWN_HARDEST
 			SSplexora.restart_requester = usr
-			to_chat(world, "Hard world reboot - [init_by]")
+			to_chat(world, "Reinicio del mundo difícil - [init_by]")
 			world.Reboot(fast_track = TRUE)
 		if(TGS_RESTART)
 			SSplexora.restart_type = PLEXORA_SHUTDOWN_KILLDD
 			SSplexora.restart_requester = usr
-			to_chat(world, "Server restart - [init_by]")
+			to_chat(world, "Reinicio del servidor - [init_by]")
 			world.TgsEndProcess()
 
 #undef REGULAR_RESTART
@@ -578,11 +578,11 @@
 /datum/admins/proc/announce()
 	set category = "GameMaster"
 	set name = "OOC Announcement"
-	set desc="Announce your desires to the world"
+	set desc="Anuncia tus deseos al mundo"
 	if(!check_rights(0))
 		return
 
-	var/message = browser_input_text(usr, "Global message to send:", "Admin Announce")
+	var/message = browser_input_text(usr, "Mensaje global para enviar:", "Anuncio del administrador")
 	if(message)
 		if(!check_rights(R_SERVER,0))
 			message = adminscrub(message, 500)
@@ -600,7 +600,7 @@
 	if(!check_rights(0))
 		return
 
-	var/new_admin_notice = input(src,"Set a public notice for this round. Everyone who joins the server will see it.\n(Leaving it blank will delete the current notice):","Set Notice",GLOB.admin_notice) as message|null
+	var/new_admin_notice = input(src,"Set a public notice for this round. Everyone who joins the server will see it.\n(Leaving it blank will delete the current notice):","Establecer aviso",GLOB.admin_notice) as message|null
 	if(new_admin_notice == null)
 		return
 	if(new_admin_notice == GLOB.admin_notice)
@@ -632,7 +632,7 @@
 	set name="Toggle LOOC"
 	toggle_looc()
 	log_admin("[key_name(usr)] toggled LOOC.")
-	message_admins("[key_name_admin(usr)] toggled LOOC.")
+	message_admins("[key_name_admin(usr)] activó LOOC.")
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle LOOC", "[GLOB.ooc_allowed ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleoocdead()
@@ -647,7 +647,7 @@
 
 /datum/admins/proc/startnow()
 	set category = "Server.Round Control"
-	set desc="Start the round RIGHT NOW"
+	set desc="Comienza la ronda AHORA MISMO"
 	set name="Start Now"
 	if(SSticker.current_state == GAME_STATE_PREGAME || SSticker.current_state == GAME_STATE_STARTUP)
 		SSticker.start_immediately = TRUE
@@ -667,7 +667,7 @@
 
 /datum/admins/proc/toggleenter()
 	set category = "Server.Round Control"
-	set desc="People can't enter"
+	set desc="la gente no puede entrar"
 	set name="Toggle Entering"
 	GLOB.enter_allowed = !( GLOB.enter_allowed )
 	if (!( GLOB.enter_allowed ))
@@ -681,7 +681,7 @@
 
 /datum/admins/proc/toggleAI()
 	set category = "Server"
-	set desc="People can't be AI"
+	set desc="La gente no puede ser IA"
 	set name="Toggle AI"
 	var/alai = CONFIG_GET(flag/allow_ai)
 	CONFIG_SET(flag/allow_ai, !alai)
@@ -713,9 +713,9 @@
 	set desc="Delay the game start"
 	set name="Delay pre-game"
 
-	var/newtime = input("Set a new time in seconds. Set -1 for indefinite delay.","Set Delay",round(SSticker.GetTimeLeft()/10)) as num|null
+	var/newtime = input("Set a new time in seconds. Set -1 for indefinite delay.","Establecer retraso",round(SSticker.GetTimeLeft()/10)) as num|null
 	if(SSticker.current_state > GAME_STATE_PREGAME)
-		return alert("Too late... The game has already started!")
+		return alert("Demasiado tarde... ¡El juego ya ha comenzado!")
 	if(newtime)
 		newtime = newtime*10
 		SSticker.SetTimeLeft(newtime)
@@ -723,19 +723,19 @@
 			to_chat(world, "<b>The game start has been delayed.</b>")
 			log_admin("[key_name(usr)] delayed the round start.")
 		else
-			to_chat(world, "<b>The game will start in [DisplayTimeText(newtime)].</b>")
+			to_chat(world, "<b>El juego comenzará en [DisplayTimeText(newtime)].</b>")
 			SEND_SOUND(world, sound('sound/blank.ogg'))
 			log_admin("[key_name(usr)] set the pre-game delay to [DisplayTimeText(newtime)].")
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Delay Game Start") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/accelerate_or_delay_round_end()
 	set category = "Server.Round Control"
-	set desc="Delay / Accelerate the round ending or vote time"
-	set name="Delay / Accelerate the round ending or vote time"
+	set desc="Retrasar / Acelerar el final de la ronda o el tiempo de votación"
+	set name="Retrasar / Acelerar el final de la ronda o el tiempo de votación"
 
 
 	if(SSticker.current_state != GAME_STATE_PLAYING)
-		return alert("This is only available while the game is in progress.")
+		return alert("Esto solo está disponible mientras el juego está en progreso.")
 	var/list/choices = list("Time before the round end vote.", "Time until the game ends.")
 	var/choice = browser_input_list(src, "Choose what you want to adjust.", "Delay Tools", choices)
 	var/number
@@ -755,14 +755,14 @@
 				GLOB.round_timer += number
 				SSblackbox.record_feedback("tally", "admin_verb", 1, "Time before the round end vote triggered.")
 		if("Time until the game ends.")
-			number = input(usr, "By how many minutes do you want to delay or accelerate it? (positive numbers delay, negative numbers accelerate)", "Time until the round ends.") as num
+			number = input(usr, "By how many minutes do you want to delay or accelerate it? (positive numbers delay, negative numbers accelerate)", "Tiempo hasta que termine la ronda.") as num
 			if(number)
 				if(number > 0)
 					to_chat(world, "<b>The round ending will now occur after an additional [number] minutes.</b>")
 					log_admin("[key_name(usr)] delayed the round ending by [number] minutes.")
 					message_admins("[key_name(usr)] delayed the round ending by [number] minutes.")
 				else
-					to_chat(world, "<b>The round ending has been accelerated by [-number] minutes.</b>")
+					to_chat(world, "<b>El final de la ronda se ha acelerado en [-number] minutos.</b>")
 					log_admin("[key_name(usr)] accelerated the round ending by [-number] minutes.")
 					message_admins("[key_name(usr)] accelerated the round ending by [-number] minutes.")
 				number *= 1 MINUTES
@@ -828,7 +828,7 @@
 /datum/admins/proc/show_traitor_panel(mob/M in GLOB.mob_list)
 	set category = "GameMaster.Antags"
 	set desc = ""
-	set name = "Show Traitor Panel"
+	set name = "Mostrar panel de traidores"
 
 	if(!istype(M))
 		to_chat(usr, "This can only be used on instances of type /mob")
@@ -842,8 +842,8 @@
 
 /datum/admins/proc/toggleguests()
 	set category = "Server"
-	set desc="Guests can't enter"
-	set name="Toggle guests"
+	set desc="Los invitados no pueden entrar."
+	set name="Alternar invitados"
 	var/new_guest_ban = !CONFIG_GET(flag/guest_ban)
 	CONFIG_SET(flag/guest_ban, new_guest_ban)
 	if (new_guest_ban)
@@ -997,11 +997,11 @@
 		else
 			valid_id = TRUE
 		if(!valid_id)
-			to_chat(usr, span_warning("A reagent with that ID doesn't exist!"))
+			to_chat(usr, span_warning("¡Un reactivo con ese ID no existe!"))
 			return
 	if(!choice)
 		return
-	var/volume = input(usr, "Volume:", "Choose volume") as num
+	var/volume = input(usr, "Volumen:", "Elige el volumen") as num
 	if(!volume)
 		return
 	if(volume >= 100000)
@@ -1009,16 +1009,16 @@
 		return
 	var/turf/epicenter = get_turf(mob)
 	epicenter.add_liquid(choice, volume, FALSE, 300)
-	message_admins("[ADMIN_LOOKUPFLW(usr)] spawned liquid at [epicenter.loc] ([choice] - [volume]).")
+	message_admins("[ADMIN_LOOKUPFLW(usr)] generó líquido en [epicenter.loc] ([choice] - [volume]).")
 	log_admin("[key_name(usr)] spawned liquid at [epicenter.loc] ([choice] - [volume]).")
 
 /client/proc/remove_liquid()
 	set name = "Remove Liquids"
 	set category = "GameMaster.Fun"
-	set desc = "Fixes air in specified radius."
+	set desc = "Fija el aire en un radio especificado."
 	var/turf/epicenter = get_turf(mob)
 
-	var/range = input(usr, "Enter range:", "Range selection", 2) as num
+	var/range = input(usr, "Enter range:", "Selección de rango", 2) as num
 
 	for(var/obj/effect/abstract/liquid_turf/liquid in range(range, epicenter))
 		liquid.liquid_group.remove_any(liquid, liquid.liquid_group.reagents_per_turf)
@@ -1044,16 +1044,16 @@
 	var/choice = input(usr, "What type of pollutant would you like to spawn?", "Spawn Pollution") as null|anything in singleton_list
 	if(!choice)
 		return
-	var/amount_choice = input(usr, "Amount of pollution", "Spawn Pollution") as num|null
+	var/amount_choice = input(usr, "Cantidad de contaminación", "Spawn Pollution") as num|null
 	if(!amount_choice)
 		return
 	var/turf/epicenter = get_turf(mob)
 	epicenter.pollute_turf(choice, amount_choice)
-	message_admins("[ADMIN_LOOKUPFLW(usr)] spawned pollution at [epicenter.loc] ([choice] - [amount_choice]).")
+	message_admins("[ADMIN_LOOKUPFLW(usr)] generó contaminación en [epicenter.loc] ([choice] - [amount_choice]).")
 	log_admin("[key_name(usr)] spawned pollution at [epicenter.loc] ([choice] - [amount_choice]).")
 
 /datum/admins/proc/anoint_priest(mob/living/carbon/human/M in GLOB.human_list)
-	set category = "GameMaster.Interactions"
+	set category = "GameMaster.Interacciones"
 	set name = "Anoint New Priest"
 	set desc = "Choose a new priest. The previous one will be excommunicated."
 
@@ -1065,7 +1065,7 @@
 		return
 	if(is_priest_job(M.mind.assigned_role))
 		return
-	var/appointment_type = tgui_alert(usr, "Are you sure you want to anoint [M.real_name] as the new Priest?", "Confirmation", DEFAULT_INPUT_CHOICES)
+	var/appointment_type = tgui_alert(usr, "Are you sure you want to anoint [M.real_name] as the new Priest?", "Confirmación", DEFAULT_INPUT_CHOICES)
 	if(appointment_type == CHOICE_NO)
 		return
 
@@ -1078,7 +1078,7 @@
 
 		if(is_priest_job(HL.mind.assigned_role))
 			HL.mind.set_assigned_role(/datum/job/villager)
-			HL.job = "Ex-Priest"
+			HL.job = "Ex-sacerdote"
 
 			HL.remove_priest_verbs()
 			priest_job?.remove_spells(HL)
@@ -1121,7 +1121,7 @@
 		QDEL_NULL(user.client.holder.path_debug)
 
 /datum/admins/proc/give_all_triumphs()
-	set category = "GameMaster.Triumphs"
+	set category = "GameMaster.Triunfos"
 	set desc = "Triumph Giver"
 	set name = "Give All Triumphs"
 
@@ -1137,7 +1137,7 @@
 	if(amount < 0)
 		return
 
-	var/reason = tgui_input_text(user, "Choose a reason", "Triumph Giver")
+	var/reason = tgui_input_text(user, "Elige una razón", "Triumph Giver")
 
 	for(var/client/client as anything in GLOB.clients)
 		client.mob.adjust_triumphs(amount, reason = reason, override_bonus = TRUE)

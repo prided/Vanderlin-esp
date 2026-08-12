@@ -17,19 +17,19 @@
 	traits_to_add = list(TRAIT_LIGHT_STEP)
 
 /datum/quirk/boon/quick_learner
-	name = "Quick Learner"
+	name = "Aprendizaje rápido"
 	desc = "You pick up new skills faster than most. Your mind is sharp and eager to learn."
 	point_value = -5
 
 /datum/quirk/boon/iron_will
-	name = "Iron Will"
+	name = "Voluntad de hierro"
 	desc = "Your resolve is unshakeable. You handle the horrors of war better then most."
 	point_value = -4
 	traits_to_add = list(TRAIT_STEELHEARTED)
 
 /datum/quirk/boon/composed
-	name = "Composed"
-	desc = "You handle stress better than most. Pressure doesn't get to you as easily."
+	name = "Compuesto"
+	desc = "Manejas el estrés mejor que la mayoría. La presión no te afecta tan fácilmente."
 	point_value = -3
 
 /datum/quirk/boon/composed/on_life(mob/living/user)
@@ -53,11 +53,11 @@
 */
 
 /datum/quirk/boon/second_language
-	name = "Second Language"
+	name = "Segundo idioma"
 	desc = "You know an additional language."
 	quirk_category = QUIRK_BOON
 	point_value = -1
-	customization_label = "Choose Language"
+	customization_label = "Elija idioma"
 	customization_options = list(
 		/datum/language/elvish,
 		/datum/language/dwarvish,
@@ -81,7 +81,7 @@
 	return ..()
 
 /datum/quirk/boon/pet
-	name = "Loyal Companion"
+	name = "Compañero leal"
 	desc = "You have a loyal animal companion that will follow and protect you."
 	point_value = -3
 	customization_label = "Choose Pet Type"
@@ -144,8 +144,8 @@
 	return ..()
 
 /datum/quirk/boon/folk_hero
-	name = "Folk Hero"
-	desc = "You're a local legend who saved your community from great danger. People recognize you, even as a foreigner."
+	name = "Héroe popular"
+	desc = "Eres una leyenda local que salvó a tu comunidad de un gran peligro. La gente te reconoce, incluso como extranjero."
 	point_value = -10
 	blocked_ages = list(
 		AGE_CHILD,
@@ -171,26 +171,26 @@
 		examiner.mind.learn_target_identity(source_mob.mind, source_mob.real_name)
 
 /datum/quirk/boon/quick_hands
-	name = "Quick Hands"
+	name = "Manos rápidas"
 	desc = "You have great hand-eye coordination and know how to move your fingers fast. All crafts are 10% faster."
 	point_value = -4
 	traits_to_add = list(TRAIT_QUICK_HANDS)
 
 /datum/quirk/boon/naturalist
-	name = "Naturalist"
+	name = "Naturalista"
 	desc = "Your body is attuned to the natural world. You extract more nourishment from unprocessed, natural foods - fruits, vegetables, and simple preparations sustain you better than they do others."
 	point_value = -8
 	traits_to_add = list(TRAIT_FORAGER)
 
 /datum/quirk/boon/always_prepared
-	name = "Always Prepared"
+	name = "Siempre preparado"
 	desc = "You start with a cart, lantern, and tent. You're ready for anything."
 	point_value = -6
 	preview_render = FALSE
 	incompatible_quirks = list(
 		/datum/quirk/vice/rough_start,
 	)
-	customization_label = "With or Without Cart"
+	customization_label = "Con o sin carrito"
 	customization_options = list(
 		"With Cart",
 		"Without Cart"
@@ -248,7 +248,7 @@
 		owner.put_in_hands(pack)
 
 /datum/quirk/boon/rider
-	name = "Experienced Rider"
+	name = "Jinete experimentado"
 	desc = "You begin with expert riding skills and your own mount."
 	point_value = -6
 	preview_render = FALSE
@@ -265,7 +265,7 @@
 	var/mob/living/simple_animal/hostile/retaliate/saiga/S = new(T)
 	S.tamed(H)
 
-	to_chat(owner, span_notice("Your trusted mount awaits you."))
+	to_chat(owner, span_notice("Tu montura de confianza te espera."))
 	return ..()
 
 /datum/quirk/boon/rider/after_job_spawn(datum/job/job)
@@ -278,7 +278,7 @@
 
 /datum/quirk/boon/beautiful
 	name = "Strikingly Beautiful"
-	desc = "You are remarkably attractive, improving social interactions."
+	desc = "Eres notablemente atractivo, mejorando las interacciones sociales."
 	point_value = -4
 	traits_to_add = list(TRAIT_BEAUTIFUL)
 

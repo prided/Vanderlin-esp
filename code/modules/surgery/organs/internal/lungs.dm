@@ -37,7 +37,7 @@
 		return
 
 	if(is_failing() && owner?.stat == CONSCIOUS)
-		owner.visible_message(span_danger("[owner] grabs [owner.p_their()] throat, struggling for breath!"), span_userdanger("You suddenly feel like you can't breathe!"))
+		owner.visible_message(span_danger("[owner] grabs [owner.p_their()] throat, struggling for breath!"), span_userdanger("¡De repente sientes que no puedes respirar!"))
 		failed = TRUE
 
 /obj/item/organ/lungs/proc/cough_blood(delta_time)
@@ -52,7 +52,7 @@
 		return
 
 	if((damage >= medium_threshold) && prob(33))
-		owner.visible_message(span_danger("[owner] coughs up blood!"), span_userdanger("You cough up blood!"))
+		owner.visible_message(span_danger("¡[owner] tose sangre!"), span_userdanger("You cough up blood!"))
 		var/obj/item/covering = owner.is_mouth_covered()
 		if(covering)
 			covering.add_mob_blood(owner)

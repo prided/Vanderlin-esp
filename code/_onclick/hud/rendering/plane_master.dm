@@ -47,7 +47,7 @@
 	render_relay_plane = RENDER_PLANE_GAME
 
 /atom/movable/screen/plane_master/seethrough
-	name = "Seethrough"
+	name = "transparente"
 	plane = SEETHROUGH_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	render_relay_plane = RENDER_PLANE_GAME
@@ -307,7 +307,7 @@
 	render_relay_plane = null
 
 /atom/movable/screen/plane_master/area
-	name = "area plane"
+	name = "plano de area"
 	plane = AREA_PLANE
 	render_relay_plane = RENDER_PLANE_GAME
 

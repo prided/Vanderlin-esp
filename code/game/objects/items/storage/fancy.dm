@@ -66,7 +66,7 @@
  */
 
 /obj/item/storage/fancy/egg_box
-	name = "egg box"
+	name = "caja de huevos"
 	desc = "A carton for holding eggs."
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "eggbox"
@@ -86,7 +86,7 @@
  */
 
 /obj/item/storage/fancy/candle_box
-	name = "candle pack"
+	name = "paquete de velas"
 	desc = ""
 	icon = 'icons/obj/candle.dmi'
 	icon_state = "candlebox5"
@@ -137,7 +137,7 @@
 		return
 	var/obj/item/clothing/face/cigarette/cig = locate() in contents
 	if(!cig)
-		to_chat(user, "<span class='notice'>There are no [contents_tag]s left in the pack.</span>")
+		to_chat(user, "<span class='notice'>No quedan [contents_tag] en el paquete.</span>")
 		return
 	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_TAKE, cig, user)
 	user.put_in_hands(cig)
@@ -178,7 +178,7 @@
 
 	var/obj/item/clothing/face/cigarette/cig = locate() in contents
 	if(!cig)
-		to_chat(user, "<span class='notice'>There are no [contents_tag]s left in the pack.</span>")
+		to_chat(user, "<span class='notice'>No quedan [contents_tag] en el paquete.</span>")
 		return ITEM_INTERACT_BLOCKING
 
 	if(target != user || !length(contents) || target.mouth)

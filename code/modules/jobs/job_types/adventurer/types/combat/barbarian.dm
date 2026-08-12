@@ -20,7 +20,7 @@
 	)
 
 /datum/job/advclass/combat/barbarian
-	title = "Barbarian"
+	title = "Bárbaro"
 	tutorial = "Wildmen and warriors all, Barbarians forego the intricacies of modern warfare in favour of raw strength and brutal cunning. Few of them can truly adjust to the civilized, docile lands of lords and ladies."
 	allowed_races = list(\
 		SPEC_ID_HUMEN,\
@@ -59,7 +59,7 @@
 		"Dual Axes" = list(/obj/item/weapon/axe/iron, /obj/item/weapon/axe/iron), \
 		"WHO NEEDS A WEAPON?" = /obj/item/clothing/gloves/bandages/pugilist, \
 	)
-	var/choice = spawned.select_equippable(player_client, selectable, message = "CHOOSE YOUR WEAPON", title = "SPILL SOME BLOOD!")
+	var/choice = spawned.select_equippable(player_client, selectable, message = "ELIGE TU ARMA", title = "SPILL SOME BLOOD!")
 	switch(choice)
 		if("Claymore")
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/swords, 20)

@@ -87,16 +87,16 @@
 			var/obj/item/bodypart/parent = get_bodypart(organ.current_zone)
 			if(parent)
 				var/pain = 10
-				var/message = "I feel a dull pain in my [parent.name]."
+				var/message = "Siento un dolor sordo en mi [parent.name]."
 				if(organ.is_failing())
 					pain = 40
-					message = "I feel a sharp pain in my [parent.name]!"
+					message = "¡Siento un dolor agudo en mi [parent.name]!"
 				else if(organ.damage >= organ.low_threshold)
 					pain = 25
 					message = "I feel a pain in my [parent.name]."
 				else
 					pain = 10
-					message = "I feel a dull pain in my [parent.name]."
+					message = "Siento un dolor sordo en mi [parent.name]."
 				custom_pain(message, pain, FALSE, parent, pain_emote = FALSE)
 
 	if(traumatic_shock >= PAIN_SHOCK_PENALTY)

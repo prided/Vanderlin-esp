@@ -29,7 +29,7 @@
 	icon_state = "atlas"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/reddish
-	name = "Reddish"
+	name = "Rojizo"
 	icon_state = "redish"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/royal
@@ -37,11 +37,11 @@
 	icon_state = "royal"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/gothic
-	name = "Gothic"
+	name = "gótico"
 	icon_state = "gothic"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/lovers
-	name = "Lovers"
+	name = "amantes"
 	icon_state = "lovers"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/whitefly
@@ -49,7 +49,7 @@
 	icon_state = "whitefly"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/punished
-	name = "Burnt Off"
+	name = "quemado"
 	icon_state = "burnt_off"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/firewatch
@@ -73,11 +73,11 @@
 	icon_state = "moonfly"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/snow
-	name = "Snow"
+	name = "Nieve"
 	icon_state = "snow"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/oakworm
-	name = "Oak Worm"
+	name = "gusano de roble"
 	icon_state = "oakworm"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/jungle
@@ -85,7 +85,7 @@
 	icon_state = "jungle"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/witchwing
-	name = "Witch Wing"
+	name = "Ala de bruja"
 	icon_state = "witchwing"
 
 /datum/sprite_accessory/neck_feature/mammal_fluff
@@ -116,11 +116,11 @@
 	color_key_names = list("Fluff", "Front")
 
 /datum/sprite_accessory/neck_feature/mammal_fluff/insect_m
-	name = "Insect (Male)"
+	name = "Insecto (macho)"
 	icon_state = "insectm"
 
 /datum/sprite_accessory/neck_feature/mammal_fluff/insect_f
-	name = "Insect (Female)"
+	name = "Insecto (hembra)"
 	icon_state = "insectf"
 
 /datum/sprite_accessory/neck_feature/fluff/medicator

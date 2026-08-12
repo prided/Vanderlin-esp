@@ -16,7 +16,7 @@
 	)
 
 /datum/job/advclass/combat/chirurgeon
-	title = "Chirurgeon"
+	title = "Cirujano"
 	tutorial = "You've no acclaim to the tenures you say you have, and the history you recount is shoddy at best, and false at \
 	worst. In a trade that is rife with charlatans, you are arguably a hand-picked example amongst them; but amongst the lies \
 	there is one truth - your hands are indeed as steady as you claim them to be. Ensure you find an employer that won't stab \

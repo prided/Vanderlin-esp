@@ -1,11 +1,11 @@
 /datum/action/cooldown/spell/status/primal_savagery
 	name = "Primal Savagery"
-	desc = "The target's teeth will secrete poison."
+	desc = "Los dientes del objetivo secretarán veneno."
 	button_icon_state = "wolf_head"
 	sound = 'sound/magic/whiteflame.ogg'
 
 	associated_skill = /datum/attribute/skill/magic/druidic
-	invocation = "Teeth of a serpent."
+	invocation = "Dientes de una serpiente."
 	invocation_type = INVOCATION_WHISPER
 
 	required_form = FORM_LIFE
@@ -21,7 +21,7 @@
 
 /datum/action/cooldown/spell/status/primal_savagery/cast(mob/living/cast_on)
 	. = ..()
-	cast_on.visible_message(span_warning("[cast_on] looks more primal!"), span_info("You feel more primal."))
+	cast_on.visible_message(span_warning("[cast_on] looks more primal!"), span_info("Te sientes más primitivo."))
 
 /datum/status_effect/buff/primal_savagery
 	id = "primal savagery"

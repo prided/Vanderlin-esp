@@ -1,5 +1,5 @@
 /datum/material/bronze
-	name = "Bronze"
+	name = "Bronce"
 	show_as_filling = TRUE
 	color = "#ccbc63"
 	hardness = MAT_VALUE_RIGID + 10

@@ -70,7 +70,7 @@
 			if((is_admin || isobserver(AM)) && language_datum)
 				language_holder.grant_language(language_datum)
 				if(is_admin)
-					message_admins("[key_name_admin(user)] granted the [language_name] language to [key_name_admin(AM)].")
+					message_admins("[key_name_admin(user)] otorgó el lenguaje [language_name] a [key_name_admin(AM)].")
 					log_admin("[key_name(user)] granted the language [language_name] to [key_name(AM)].")
 				. = TRUE
 
@@ -78,7 +78,7 @@
 			if((is_admin || isobserver(AM)) && language_datum)
 				language_holder.remove_language(language_datum)
 				if(is_admin)
-					message_admins("[key_name_admin(user)] removed the [language_name] language from [key_name_admin(AM)].")
+					message_admins("[key_name_admin(user)] eliminó el lenguaje [language_name] de [key_name_admin(AM)].")
 					log_admin("[key_name(user)] removed the language [language_name] from [key_name(AM)].")
 				. = TRUE
 

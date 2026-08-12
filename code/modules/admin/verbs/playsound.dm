@@ -1,5 +1,5 @@
 /client/proc/play_sound(S as sound)
-	set category = "GameMaster.Sound"
+	set category = "GameMaster.Sonido"
 	set name = "Play Global Sound"
 	if(!check_rights(R_SOUND))
 		return
@@ -20,7 +20,7 @@
 	admin_sound.status = SOUND_STREAM
 	admin_sound.volume = vol
 
-	var/res = tgui_alert(usr, "Show the title of this song to the players?","Show Name", list("Yes","No", "Cancel"))
+	var/res = tgui_alert(usr, "¿Mostrar el título de esta canción a los jugadores?","Mostrar nombre", list("Yes","No", "Cancel"))
 	switch(res)
 		if("Yes")
 			to_chat(world, "<span class='boldannounce'>An admin played: [S]</span>")
@@ -40,7 +40,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Play Global Sound") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/change_music_vol()
-	set category = "Preferences.Sound"
+	set category = "Preferencias.Sonido"
 	set name = "ChangeMusicPower"
 
 	if(prefs)
@@ -69,7 +69,7 @@
 
 
 /client/verb/show_rolls()
-	set category = "Preferences.Options"
+	set category = "Preferencias.Opciones"
 	set name = "ShowRolls"
 
 	if(prefs)
@@ -81,7 +81,7 @@
 			to_chat(src, "ShowRolls Disabled")
 
 /client/verb/change_master_vol()
-	set category = "Preferences.Sound"
+	set category = "Preferencias.Sonido"
 	set name = "ChangeVolPower"
 
 	if(prefs)
@@ -96,18 +96,18 @@
 		mob.update_channel_volume(CHANNEL_AMBIENCE, prefs.read_preference(/datum/preference/numeric/mastervol))
 
 /client/proc/play_local_sound(S as sound)
-	set category = "GameMaster.Sound"
+	set category = "GameMaster.Sonido"
 	set name = "Play Local Sound"
 	if(!check_rights(R_SOUND))
 		return
 
 	log_admin("[key_name(src)] played a local sound [S]")
-	message_admins("[key_name_admin(src)] played a local sound [S]")
+	message_admins("[key_name_admin(src)] reprodujo un sonido local [S]")
 	playsound(src.mob, S, 50, FALSE, FALSE)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Play Local Sound") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/play_web_sound()
-	set category = "GameMaster.Sound"
+	set category = "GameMaster.Sonido"
 	set name = "Play Internet Sound"
 	if(!check_rights(R_SOUND))
 		return
@@ -152,7 +152,7 @@
 					music_extra_data["start"] = data["start_time"]
 					music_extra_data["end"] = data["end_time"]
 
-					var/res = tgui_alert(usr, "Show the title of and link to this song to the players?\n[title]", "Show title", list("No", "Yes", "Cancel"))
+					var/res = tgui_alert(usr, "Show the title of and link to this song to the players?\n[title]", "Mostrar título", list("No", "Yes", "Cancel"))
 					switch(res)
 						if("Yes")
 							to_chat(world, "<span class='boldannounce'>An admin played: [webpage_url]</span>")
@@ -174,7 +174,7 @@
 
 		if(web_sound_url && !findtext(web_sound_url, GLOB.is_http_protocol))
 			to_chat(src, "<span class='boldwarning'>BLOCKED: Content URL not using http(s) protocol</span>")
-			to_chat(src, "<span class='warning'>The media provider returned a content URL that isn't using the HTTP or HTTPS protocol</span>")
+			to_chat(src, "<span class='warning'>El proveedor de medios devolvió una URL de contenido que no utiliza el protocolo HTTP o HTTPS</span>")
 			return
 		if(web_sound_url || stop_web_sounds)
 			for(var/mob/M as anything in GLOB.player_list)
@@ -190,7 +190,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Play Internet Sound")
 
 /client/proc/set_round_end_sound(S as sound)
-	set category = "GameMaster.Sound"
+	set category = "GameMaster.Sonido"
 	set name = "Set Round End Sound"
 	if(!check_rights(R_SOUND))
 		return
@@ -202,7 +202,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Set Round End Sound") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/stop_sounds()
-	set category = "GameMaster.Sound"
+	set category = "GameMaster.Sonido"
 	set name = "Stop All Playing Sounds"
 	if(!src.holder)
 		return

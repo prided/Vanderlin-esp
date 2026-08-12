@@ -21,10 +21,10 @@
 		orphans += H
 
 	if(!length(orphans))
-		to_chat(owner, span_red("There aren't any orphans."))
+		to_chat(owner, span_red("No hay huérfanos."))
 		return
 
-	var/mob/orphan = tgui_input_list(owner, "Which One?", "Seek Orphan", orphans)
+	var/mob/orphan = tgui_input_list(owner, "¿Cuál?", "buscar huérfano", orphans)
 	if(QDELETED(src) || QDELETED(cast_on) || QDELETED(orphan) || !can_cast_spell())
 		return
 
@@ -43,7 +43,7 @@
 
 	switch(dist)
 		if(0 to 7)
-			distance_text = "very close"
+			distance_text = "muy cerca"
 		if(8 to 15)
 			distance_text = "close"
 		if(16 to 35)
@@ -55,9 +55,9 @@
 		if(71 to 98)
 			distance_text = "somewhat far"
 		if(99 to 127)
-			distance_text = "far"
+			distance_text = "lejos"
 		else
-			distance_text = "very far"
+			distance_text = "muy lejos"
 
 	var/z_text = null
 	if(our_z != their_z)

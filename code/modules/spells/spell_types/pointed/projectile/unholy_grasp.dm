@@ -10,7 +10,7 @@
 	associated_skill = /datum/attribute/skill/magic/holy
 
 	invocation_type = INVOCATION_EMOTE
-	invocation = span_userdanger("<b>%CASTER</b> casts %PRONOUN_their hands outward!")
+	invocation = span_userdanger("¡<b>%CASTER</b> lanza %PRONOUN_sus manos hacia afuera!")
 	invocation_self_message = span_danger("I throw out an unholy snare!")
 
 	charge_time = 2 SECONDS
@@ -43,7 +43,7 @@
 //------------------------
 
 /obj/projectile/magic/unholy_grasp
-	name = "visceral lasso"
+	name = "lazo visceral"
 	icon_state = "tentacle_end"
 	nodamage = TRUE
 	range = 3 //Net, So Low range.
@@ -59,13 +59,13 @@
 
 /obj/projectile/magic/unholy_grasp/proc/ensnare(mob/living/carbon/C)		//Same code as net but with le flavor.
 	if(!C.legcuffed && C.num_legs >= 2)
-		visible_message(span_danger("[src] ensnares [C] using some guts!"))
+		visible_message(span_danger("¡[src] atrapa a [C] usando unas tripas!"))
 		//This now ONLY gives the debuff, the unholy grasp leg cuff was bugged and couldn't be taken off
 
 		//C.legcuffed = src
 		//forceMove(C)
 		//C.update_inv_legcuffed()
-		to_chat(C, span_danger("The [src] ensnares you!"))
+		to_chat(C, span_danger("¡El [src] te atrapa!"))
 		C.apply_status_effect(/datum/status_effect/debuff/netted, 20 SECONDS)
 		playsound(src, 'sound/combat/caught.ogg', 50, TRUE)
 
@@ -96,7 +96,7 @@
 //------------------------
 
 /obj/projectile/magic/cannibalistic_vomit
-	name = "cannibalistic vomit"
+	name = "vómito caníbal"
 	icon_state = "tentacle_end"
 	nodamage = TRUE
 	range = 4 //medium range
@@ -108,7 +108,7 @@
 	if(!isliving(hit_atom))	//if it gets caught or the target can't be cuffed.
 		return
 	var/mob/living/target = hit_atom
-	to_chat(target, span_danger("My stomach hurts a lot!"))
+	to_chat(target, span_danger("¡Me duele mucho el estómago!"))
 	target.emote("gag")
 	target.reagents?.add_reagent(/datum/reagent/organpoison, 2)
 	playsound(target, 'sound/magic/marked.ogg', 50, TRUE)

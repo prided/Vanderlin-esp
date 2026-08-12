@@ -1,5 +1,5 @@
 /datum/distillation_recipe/sea_salt
-	name = "Sea Salt"
+	name = "Sal marina"
 	id = "sea_salt"
 	distilled_reagent = /datum/reagent/water/salty
 	consume_reagents = TRUE
@@ -11,7 +11,7 @@
 	distill_message = "The water boils away leaving salt."
 
 /datum/distillation_recipe/mushroom_toxin
-	name = "Amanitin"
+	name = "amanitina"
 	id = "mush_tox"
 	distilled_reagent = /datum/reagent/caveweep
 	consume_reagents = TRUE
@@ -22,7 +22,7 @@
 	distill_message = "The tears turn a pure white and release a foul stench."
 
 /datum/distillation_recipe/concentrated_mush_toxin
-	name = "Amatoxin"
+	name = "amatoxina"
 	id = "mush_tox_conc"
 	distilled_reagent = /datum/reagent/toxin/amanitin
 	consume_reagents = TRUE

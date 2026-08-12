@@ -4,7 +4,7 @@
 	icon_state = "psydon"
 	spans = list(SPAN_PSYDON_OLD)
 	speech_verb = "states"
-	ask_verb = "questions"
+	ask_verb = "preguntas"
 	exclaim_verb = "shouts"
 	key = "m"
 	space_chance = 20

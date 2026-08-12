@@ -1,7 +1,7 @@
 /datum/preference/color/voice_color
 	savefile_key = "voice_color"
 	savefile_identifier = PREF_CHARACTER
-	category = "appearance"
+	category = "apariencia"
 
 /datum/preference/color/voice_color/create_default_value(datum/preferences/prefs)
 	return "a0a0a0"
@@ -13,9 +13,9 @@
 	H.voice_color = value
 
 /datum/preference/color/voice_color/handle_link(datum/preferences/prefs, mob/user)
-	var/new_voice = input(user, "SELECT YOUR HERO'S VOICE COLOR", "THE THROAT","#"+prefs.read_preference(/datum/preference/color/voice_color)) as color|null
+	var/new_voice = input(user, "SELECT YOUR HERO'S VOICE COLOR", "LA GARGANTA","#"+prefs.read_preference(/datum/preference/color/voice_color)) as color|null
 	if(new_voice)
 		if(color_hex2num(new_voice) < 230)
-			to_chat(user, "<font color='red'>This voice color is too dark for mortals.</font>")
+			to_chat(user, "<font color='red'>Este color de voz es demasiado oscuro para los mortales.</font>")
 			return
 		prefs.write_preference(/datum/preference/color/voice_color, sanitize_hexcolor(new_voice, include_crunch = FALSE))

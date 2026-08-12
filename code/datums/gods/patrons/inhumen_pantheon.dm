@@ -30,7 +30,7 @@
 	devotion_holder = /datum/devotion/inhumen/zizo
 	prayer_fail = "I need to wear her symbol, be at an Inverted Psycross, or a statue in Her image if I wish for Her knowledge!"
 	confess_lines = list(
-		"I FOLLOW THE PATH OF ZIZO!",
+		"¡SIGO EL CAMINO DE ZIZO!",
 		"LONG LIVE QUEEN ZIZO!",
 		"ZIZO SHOWED ME THE WAY!",
 	)
@@ -85,7 +85,7 @@
 	desc = "Legendary humen bandit whose name was attributed to countless great thefts. It is because of his legacy that nobles clutch their coin purses to their chests in town."
 	flaws = "Pride, Greed, Orneriness"
 	worshippers = "Outlaws, Noble-Haters, Downtrodden Peasantry"
-	sins = "Clumsiness, Stupidity, Humility"
+	sins = "Torpeza, Estupidez, Humildad"
 	boons = "You can see the most expensive item someone is carrying."
 	added_traits = list(TRAIT_MATTHIOS_EYES)
 	devotion_holder = /datum/devotion/inhumen/matthios
@@ -111,8 +111,8 @@
 	name = BAOTHA
 	domain = "Goddess of Drugs, Self-Preservation, and Remorseless Joy"	//Bright-dyed hair falls within 'remorseless joy.' Joy for one's self at expense of the setting. Same for her music taste.
 	desc = "Ascended, formerly disgraced tiefling queen, notorious for having a mind elsewhere. Drove her kingdom into the ground through her demands and addictions. The first tiefling noble, last tiefling noble, and sole reason there are no more tiefling nobles. As she preaches to her followers, 'Joy at all costs!'"
-	flaws = "Manipulation, Self-Destruction, Willingness to Sacrifice Others"
-	worshippers = "Addicts, Hedonists, Pink-Haired Harlots"
+	flaws = "Manipulación, autodestrucción, disposición a sacrificar a otros"
+	worshippers = "Adictos, hedonistas, rameras de pelo rosa"
 	sins = "Sobriety, Self-Sacrifice, Faltering Willpower"
 	boons = "You will never overdose on drugs."
 	added_traits = list(TRAIT_CRACKHEAD)
@@ -139,15 +139,15 @@
 	name = "Graggazo"
 	domain = "Ascended God who slaughtered her kind in ascension, the Dark Sini-Star of Unnatural Beasts, Forbidden Magic, and Unbridled Hatred."
 	desc = "Became the first snow orc upon ascension through his habit of consuming the bodies of those he conquered. His forces continue to ravage the lands in her name. He proves that any with will can achieve divinity... though at a cost. MAKE THIS MAKE SENSE. MY MIND! MY MIND!!"
-	flaws = "Nothing, Everything, Nothing"
+	flaws = "Nada, todo, nada"
 	worshippers = "Broken Minds, Overshared Secrets, Space-Faring Species Like You, Misanthropes"
 	sins = "The Unseen, Secrets, Worthless Pigs"
 	boons = "You are drawn to the flavour of other followers of Zizo, and may see them when you consume without worry."
 	added_traits = list(TRAIT_ORGAN_EATER, TRAIT_BLOODDRINKER, TRAIT_CABAL)
 	confess_lines = list(
-		"WHERE AM I!",
+		"¡DÓNDE ESTOY!",
 		"NONE OF THIS IS REAL!",
-		"WHO AM I WORSHIPPING?!"
+		"¡¿A QUIÉN ESTOY ADORANDO?!"
 	)
 
 /datum/patron/inhumen/graggar_zizo/preference_accessible(datum/preferences/prefs)

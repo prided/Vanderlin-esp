@@ -30,9 +30,9 @@
 	antag_hud_type = ANTAG_HUD_NECROMANCY
 	antag_hud_name = "necromancer"
 	confess_lines = list(
-		"I WILL LIVE ETERNAL!",
-		"I AM BEHIND SEVEN PHYLACTERIES!",
-		"YOU CANNOT KILL ME!",
+		"¡VIVIRÉ ETERNO!",
+		"¡ESTOY DETRÁS DE SIETE FILACTERIAS!",
+		"¡NO PUEDES MATARME!",
 	)
 	var/list/phylacteries = list()
 	/// weak reference to the body so we can revive even if decapitated
@@ -189,13 +189,13 @@
 	INVOKE_ASYNC(src, PROC_REF(attempt_resurrection)) // this proc sleeps
 
 /datum/antagonist/lich/proc/on_fail()
-	to_chat(owner, span_userdanger("No, NO! This cannot be!"))
+	to_chat(owner, span_userdanger("¡No, no! ¡Esto no puede ser!"))
 	owner.current.gib()
 
 /// Checks if the lich has a phylactery to resurrect to and returns TRUE if successfully resurrected, else returns FALSE.
 /datum/antagonist/lich/proc/attempt_resurrection(timer = 10 SECONDS)
 	var/mob/lich_mob = lich_body_ref.resolve()
-	lich_mob?.visible_message(span_warning("[lich_mob]'s body begins to shake violently!"))
+	lich_mob?.visible_message(span_warning("¡El cuerpo de [lich_mob] comienza a temblar violentamente!"))
 
 	if(!length(phylacteries)) // it's over.
 		on_fail()
@@ -253,7 +253,7 @@
 
 /obj/item/phylactery
 	name = "phylactery"
-	desc = "Looks like it is filled with some intense power."
+	desc = "Parece que está lleno de un poder intenso."
 	icon = 'icons/roguetown/items/gems.dmi'
 	icon_state = "necro_crystal"
 	item_state = "electronic"

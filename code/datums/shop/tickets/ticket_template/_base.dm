@@ -1,6 +1,6 @@
 /datum/ticket_template
 	abstract_type = /datum/ticket_template
-	var/name = "Unnamed Template" // shown on the button
+	var/name = "Plantilla sin nombre" // shown on the button
 	var/fa_icon = "file-alt"
 	var/color = "#607d8b"
 	var/ticket_type // TICKET_TYPE_* - which tab this template belongs under

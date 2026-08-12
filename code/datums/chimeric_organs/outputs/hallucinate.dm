@@ -1,5 +1,5 @@
 /datum/chimeric_node/output/hallucinate
-	name = "hallucinating"
+	name = "alucinando"
 	desc = "Makes everyone around the user hallucinate temporarily."
 
 	var/range = 5

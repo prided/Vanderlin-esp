@@ -57,7 +57,7 @@
 			blood = new()
 			blood.color = B.color
 			if (feedback && !tribute && previous_result != BLOODCOST_TARGET_SPLATTER)
-				user.visible_message(span_warning("The blood on the floor below \the [user] starts moving!") ,
+				user.visible_message(span_warning("¡La sangre en el suelo debajo de \the [user] comienza a moverse!") ,
 									span_rose("You redirect the flow of blood inside the splatters on the floor toward the pool of your summoning.") ,
 									span_warning("You hear a liquid flowing.") )
 		if (BLOODCOST_TARGET_GRAB)
@@ -130,7 +130,7 @@
 				else if (data[BLOODCOST_LID_CONTAINER])
 					to_chat(user, span_danger("Remove \the [data[BLOODCOST_TARGET_HELD]]'s lid first!") )
 				else
-					to_chat(user, span_danger("There is no blood available. Not even in your own body!") )
+					to_chat(user, span_danger("No hay sangre disponible. ¡Ni siquiera en tu propio cuerpo!") )
 
 	//Blood is only consumed if there is enough of it
 	if (!data[BLOODCOST_FAILURE])
@@ -171,7 +171,7 @@
 					if (blood_before > BLOOD_VOLUME_SAFE && blood_after < BLOOD_VOLUME_SAFE)
 						to_chat(user, span_cult("You start looking pale.") )
 					else if (blood_before > BLOOD_VOLUME_OKAY && blood_after < BLOOD_VOLUME_OKAY)
-						to_chat(user, span_cult("You are about to pass out from the lack of blood.") )
+						to_chat(user, span_cult("Estás a punto de desmayarte por la falta de sangre.") )
 					else if (blood_before > BLOOD_VOLUME_BAD && blood_after < BLOOD_VOLUME_BAD)
 						to_chat(user, span_cult("You have trouble focusing, things will go bad if you keep using your blood.") )
 					else if (blood_before > BLOOD_VOLUME_SURVIVE && blood_after < BLOOD_VOLUME_SURVIVE)

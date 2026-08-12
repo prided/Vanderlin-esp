@@ -46,7 +46,7 @@
 	if(victim.can_block_magic(antimagic_flags))
 		victim.visible_message(
 			span_warning("The ray fizzles on contact with [victim]!"),
-			span_warning("The ray fizzles on contact with me!"),
+			span_warning("¡El rayo se desvanece al contacto conmigo!"),
 		)
 		playsound(victim, 'sound/magic/magic_nulled.ogg', 100)
 		qdel(active)
@@ -62,7 +62,7 @@
 	totalstatchange -= 3 // We need At least a 4 point disadvantage before we start siphoning
 	totalstatshift = CLAMP((totalstatchange), 0, 2) // We DO NOT WANT Matthian Clerics stealing 30 stats from Ascendants, Cap the statshift by 2
 	if(totalstatshift <1)
-		to_chat(owner, "<font color='yellow'>[victim] fire burns dimly, there is nothing worth equalizing.</font>")
+		to_chat(owner, "<font color='yellow'>[victim] el fuego arde débilmente, no hay nada que valga la pena igualar.</font>")
 		return
 	else
 		// there is SURELY a better way to do this

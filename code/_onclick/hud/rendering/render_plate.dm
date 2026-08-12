@@ -24,7 +24,7 @@
  * remember that once planes are unified on a render plate you cant change the layering of them!
  */
 /atom/movable/screen/plane_master/rendering_plate
-	name = "default rendering plate"
+	name = "placa de renderizado predeterminada"
 
 
 ///this plate renders the final screen to show to the player
@@ -36,7 +36,7 @@
 
 ///renders general in charachter game objects
 /atom/movable/screen/plane_master/rendering_plate/game_world
-	name = "game rendering plate"
+	name = "placa de renderizado del juego"
 	plane = RENDER_PLANE_GAME
 	render_target = RENDER_PLANE_GAME_RENDER_TARGET
 	render_relay_plane = RENDER_PLANE_GAME_PROCESSING

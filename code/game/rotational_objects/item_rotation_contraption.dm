@@ -77,7 +77,7 @@
 			return
 
 		in_stack += rotator.in_stack
-		balloon_alert(user, "stacked!")
+		balloon_alert(user, "apilados!")
 		update_appearance(UPDATE_NAME)
 		qdel(rotator)
 
@@ -102,7 +102,7 @@
 		if(!(locate(/obj/structure/water_pipe) in T))
 			return ITEM_INTERACT_BLOCKING
 
-	visible_message("[user] starts placing down [src].", "You start to place [src].")
+	visible_message("[user] comienza a colocar [src].", "Comienzas a colocar [src].")
 	if(!do_after(user, 1.2 SECONDS - GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering), T))
 		return ITEM_INTERACT_BLOCKING
 

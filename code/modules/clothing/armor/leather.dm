@@ -1,6 +1,6 @@
 /obj/item/clothing/armor/leather
-	name = "leather armor"
-	desc = "A light armor typically made out of boiled leather. Offers slight protection from most weapons."
+	name = "armadura de cuero"
+	desc = "Una armadura ligera típicamente hecha de cuero hervido. Ofrece una ligera protección contra la mayoría de las armas."
 	icon_state = "leather"
 	resistance_flags = FLAMMABLE
 	blade_dulling = DULLING_BASHCHOP
@@ -28,7 +28,7 @@
 //KEEP THIS IN MIND
 
 /obj/item/clothing/armor/leather/advanced
-	name = "hardened leather armor"
+	name = "armadura de cuero endurecido"
 	desc = "Sturdy, durable, flexible. Will keep you alive."
 	max_integrity = INTEGRITY_STRONG
 	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS
@@ -58,14 +58,14 @@
 	salvage_result = /obj/item/natural/hide/cured
 
 /obj/item/clothing/armor/leather/hide/advanced
-	name = "hardened hide armor"
+	name = "armadura de piel endurecida"
 	desc = "A leather armor with additional thick internal padding of creacher fur. Offers higher integrity and comfort."
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
 	armor_type = /datum/armor/leather/advanced
 
 /obj/item/clothing/armor/leather/hide/masterwork
-	name = "masterwork hide armor"
+	name = "armadura de piel de obra maestra"
 	desc = "A leather armor with a large amount of thick internal padding of the best creacher fur. Offers much higher integrity and comfort."
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
@@ -76,7 +76,7 @@
 	filters += filter(type="drop_shadow", x=0, y=0, size=0.5, offset=1, color=rgb(218, 165, 32))
 
 /obj/item/clothing/armor/leather/hide/steppe
-	name = "steppe hide armor"
+	name = "armadura de piel de estepa"
 	desc = "Worn by riders of the steppe, this leather armor is padded with beast fur for warmth and comfort"
 	icon_state = "hatangafur"
 	sellprice = VALUE_LEATHER_ARMOR_FUR
@@ -87,14 +87,14 @@
 	item_weight = 2 KILOGRAMS
 
 /obj/item/clothing/armor/leather/hide/steppe/advanced
-	name = "hardened steppe hide armor"
+	name = "armadura de piel de estepa endurecida"
 	desc = "Worn by riders of the steppe, this stiffened leather armor is padded with thick beast fur for warmth and comfort."
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
 	armor_type = /datum/armor/leather/advanced
 
 /obj/item/clothing/armor/leather/hide/steppe/masterwork
-	name = "masterwork steppe hide armor"
+	name = "armadura de piel de estepa obra maestra"
 	desc = "Worn by veteran riders of the steppe, this stiffened leather armor is padded with the best, and most dangerous, thick beast fur for warmth and comfort."
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
@@ -159,13 +159,13 @@
 	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/armor/leather/vest/colored/innkeep // repath to correct padded vest some day
-	name = "padded vest"
+	name = "chaleco acolchado"
 	desc = "Dyed green, belongs to the owner of the Drunken Saiga inn."
 	icon_state = "striped"
 	color = "#638b45"
 
 /obj/item/clothing/armor/leather/vest/winterjacket
-	name = "winter jacket"
+	name = "chaqueta de invierno"
 	desc = "The most elegant of furs and vivid of royal dyes combined together into a most classy jacket."
 	icon_state = "winterjacket"
 	detail_tag = "_detail"
@@ -192,12 +192,12 @@
 			STR.remove_from_storage(I, get_turf(src))
 
 /obj/item/clothing/armor/leather/jacket/artijacket
-	name = "artificer jacket"
+	name = "chaqueta de artífice"
 	icon_state = "artijacket"
 	desc = "A thick leather jacket adorned with fur and cog decals. The height of Heartfelt fashion."
 
 /obj/item/clothing/armor/leather/jacket/artijacket/porter
-	name = "leather jacket"
+	name = "chaqueta de cuero"
 	desc = "A thick leather jacket adorned with fur."
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
@@ -223,7 +223,7 @@
 //................ Sea Jacket ............... //
 /obj/item/clothing/armor/leather/jacket/sea
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "sea jacket"
+	name = "chaqueta de mar"
 	desc = "A sturdy jacket worn by daring seafarers. The leather it's made from has been tanned by the salt of Abyssor's seas."
 	icon_state = "sailorvest"
 	sleevetype = "shirt"
@@ -248,7 +248,7 @@
 
 //................ Silk Jacket ............... //
 /obj/item/clothing/armor/leather/jacket/apothecary
-	name = "silk jacket"
+	name = "chaqueta de seda"
 	icon_state = "nightman"
 	desc = "Displaying wealth while keeping your guts safe from blades with thick leather pads underneath."
 	sellprice = VALUE_LEATHER_ARMOR_LORD
@@ -275,7 +275,7 @@
 
 //................ Hand´s Coat ............... //
 /obj/item/clothing/armor/leather/jacket/hand
-	name = "noble coat"
+	name = "abrigo noble"
 	icon_state = "handcoat"
 	desc = "A quality silken coat, discretely lined with a thin metal plate on the inside to protect its affluent wearer."
 	sellprice = VALUE_LEATHER_ARMOR_LORD
@@ -283,7 +283,7 @@
 	body_parts_covered = COVERAGE_ALL_BUT_ARMS
 
 /obj/item/clothing/armor/leather/jacket/handjacket
-	name = "noble jacket"
+	name = "chaqueta noble"
 	icon_state = "handcoat"
 	icon = 'icons/roguetown/clothing/special/hand.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/hand.dmi'
@@ -295,7 +295,7 @@
 
 /obj/item/clothing/armor/leather/jacket/courtphysician
 	name = "sanguine coat"
-	desc = "A padded coat made of a leather, perhaps this may keep the bloodstains away."
+	desc = "Un abrigo acolchado hecho de cuero, tal vez esto pueda mantener alejadas las manchas de sangre."
 	icon_state = "doccoat"
 	item_state = "doccoat"
 	icon = 'icons/roguetown/clothing/courtphys.dmi'
@@ -344,7 +344,7 @@
 
 /obj/item/clothing/armor/leather/jacket/leathercoat/black
 	name = "black leather coat"
-	desc = "A black and purple leather coat."
+	desc = "Un abrigo de cuero negro y morado."
 	icon_state = "bleathercoat"
 	icon = 'icons/roguetown/clothing/leathercoat.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/leathercoat.dmi'
@@ -422,7 +422,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/grid/cloak
 
 /obj/item/clothing/armor/leather/fencer
-	name = "fencer's jacket"
+	name = "chaqueta de esgrimista"
 	desc = "A lightweight leather jacket made from hardened leather, designed to comfortably protect vital areas."
 	icon_state = "freijacket"
 	detail_tag = "_detail"

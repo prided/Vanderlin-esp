@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/enchantment/green_flame
-	name = "Green-Flame Blade"
+	name = "Hoja de llama verde"
 	desc = "Enchant a weapon with searing flames."
 	button_icon_state = "enchant_weapon"
 

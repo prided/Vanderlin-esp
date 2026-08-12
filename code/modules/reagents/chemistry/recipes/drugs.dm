@@ -1,5 +1,5 @@
 /datum/chemical_reaction/meth_precursor
-	name = "Methamphetamine Precursor"
+	name = "Precursor de metanfetamina"
 	id = "meth_precursor"
 	required_reagents = list(
 		/datum/reagent/mercury = 5,

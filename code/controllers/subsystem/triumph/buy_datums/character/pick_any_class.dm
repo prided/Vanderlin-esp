@@ -9,7 +9,7 @@
 	allow_multiple_buys = FALSE
 
 /datum/job/advclass/pick_everything
-	title = "Triumph Classes"
+	title = "Clases de triunfo"
 	tutorial = "This will open up another menu when you spawn allowing you to pick from any class as long as it's not disabled."
 	allowed_races = ALL_RACES_LIST
 	total_positions = -1
@@ -49,7 +49,7 @@
 	for(var/datum/job/advclass/C in possible_classes)
 		class_titles[C.title] = C
 
-	var/chosen_title = tgui_input_list(spawned, "What is my class?", "Adventure", class_titles)
+	var/chosen_title = tgui_input_list(spawned, "¿Cuál es mi clase?", "Aventura", class_titles)
 	if(!chosen_title)
 		chosen_title = pick(class_titles)
 	var/datum/job/advclass/class = class_titles[chosen_title]

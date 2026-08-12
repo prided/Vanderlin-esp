@@ -48,7 +48,7 @@
 	item_weight = 800 GRAMS
 
 /obj/item/weapon/handclaw/steel
-	name = "steel mantis claws"
+	name = "garras de mantis de acero"
 	desc = "A pair of steel claws, an uncommon sight in Ossland as they do not forge their own steel, \
 			Their longer blades offer a superior defence option but their added weight slows them down."
 	icon_state = "steelclaws"
@@ -117,7 +117,7 @@
 /datum/intent/claw/rend
 	name = "rend"
 	icon_state = "inrend"
-	attack_verb = list("rends")
+	attack_verb = list("desgarra")
 	animname = "cut"
 	blade_class = BCLASS_CHOP
 	reach = 1
@@ -155,7 +155,7 @@
 //Intents for the mauls.
 /datum/intent/effect/hobble
 	name = "hobbling strike"
-	desc = "A heavy strike aimed at the legs to cripple movement."
+	desc = "Un fuerte golpe dirigido a las piernas para paralizar el movimiento."
 	icon_state = "incrack"//Temp. Just so it's easy to differentiate.
 	attack_verb = list("hobbles")
 	animname = "strike"

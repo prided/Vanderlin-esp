@@ -1,5 +1,5 @@
 /obj/structure/trap
-	name = "IT'S A TRAP"
+	name = "ES UNA TRAMPA"
 	desc = ""
 	icon = 'icons/roguetown/misc/traps.dmi'
 	icon_state = "trap_plate"
@@ -32,7 +32,7 @@
 	if(isnull(flare_message))
 		flare_message = span_warning("\The [src] fizzles!")
 	if(isnull(found_message))
-		found_message = span_warning("\The [src] is revealed!")
+		found_message = span_warning("¡\The [src] se revela!")
 	spark_system = new
 	spark_system.set_up(4,1,src)
 	spark_system.attach(src)
@@ -143,7 +143,7 @@
 
 ///Called when someone steps ON and we're ready, make sure to call post_triggered()
 /obj/structure/trap/proc/trigger_step_on(mob/living/victim)
-	to_chat(victim, span_info("I feel a 'click' beneath me..."))
+	to_chat(victim, span_info("Siento un 'clic' debajo de mí..."))
 	playsound(src, 'sound/misc/pressurepad_down.ogg', 65, extrarange = 2)
 	return
 
@@ -199,7 +199,7 @@
 	post_triggered()
 
 /obj/structure/trap/bomb
-	name = "bomb plate trap"
+	name = "trampa de placa de bomba"
 	icon_state = "bomb_trap_plate"
 	charges = 1
 
@@ -209,7 +209,7 @@
 	post_triggered()
 
 /obj/structure/trap/mine
-	name = "mine plate trap"
+	name = "trampa de placa de mina"
 	icon_state = "bomb_trap_plate"
 	charges = 1
 
@@ -231,8 +231,8 @@
 	post_triggered()
 
 /obj/structure/sawblade_trap
-	name = "saw blade"
-	desc = "A fast spinning saw blade, propelled by some unknown mechanism"
+	name = "hoja de sierra"
+	desc = "Una hoja de sierra que gira rápidamente, impulsada por algún mecanismo desconocido."
 	icon = 'icons/roguetown/misc/traps.dmi'
 	icon_state = "trap_saw"
 	density = FALSE
@@ -250,7 +250,7 @@
 		victim.emote("scream")
 
 /obj/structure/trap/wall_projectile
-	name = "arrow plate trap"
+	name = "trampa de placa de flecha"
 	icon_state = "arrow_trap_plate"
 	var/turf/closed/home_wall
 	///How far we look for a 'home' wall
@@ -259,7 +259,7 @@
 	var/fired = /obj/projectile/bullet/reusable/arrow/stone
 
 /obj/structure/trap/wall_projectile/fireball
-	name = "fireball plate trap"
+	name = "trampa de placa de bola de fuego"
 	icon_state = "fireball_trap_plate"
 	fired = /obj/projectile/magic/aoe/fireball/rogue
 

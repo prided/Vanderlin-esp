@@ -7,7 +7,7 @@
 // HEAD
 
 /datum/supply_pack/apparel/hood
-	name = "Shoulder Hood"
+	name = "Capucha de hombro"
 	cost = 10
 	contains = /obj/item/clothing/head/roguehood/colored/random
 
@@ -17,27 +17,27 @@
 	contains = /obj/item/clothing/head/menacing
 
 /datum/supply_pack/apparel/strawhat
-	name = "Straw Hat"
+	name = "Sombrero de paja"
 	cost = 5
 	contains = /obj/item/clothing/head/strawhat
 
 /datum/supply_pack/apparel/fancyhat
-	name = "Starfish Hat"
+	name = "Sombrero de estrella de mar"
 	cost = 25
 	contains = /obj/item/clothing/head/fancyhat
 
 /datum/supply_pack/apparel/bardhat
-	name = "Feathered Hat"
+	name = "Sombrero emplumado"
 	cost = 25
 	contains = /obj/item/clothing/head/bardhat
 
 /datum/supply_pack/apparel/hatfur
-	name = "Fur Hat"
+	name = "Sombrero de piel"
 	cost = 15
 	contains = /obj/item/clothing/head/hatfur
 
 /datum/supply_pack/apparel/hatblu
-	name = "Blue Fur Hat"
+	name = "Sombrero de piel azul"
 	cost = 15
 	contains = /obj/item/clothing/head/hatblu
 
@@ -67,12 +67,12 @@
 	contains = /obj/item/clothing/head/courtierhat
 
 /datum/supply_pack/apparel/tricorn
-	name = "Tricorn"
+	name = "tricornio"
 	cost = 15
 	contains = /obj/item/clothing/head/helmet/leather/tricorn
 
 /datum/supply_pack/apparel/easternhat
-	name = "Eastern Hat"
+	name = "Sombrero oriental"
 	cost = 60
 	contains = /obj/item/clothing/head/mentorhat
 
@@ -82,12 +82,12 @@
 	contains = /obj/item/clothing/head/helmet/skullcap/grenzelhoft
 
 /datum/supply_pack/apparel/duelhat
-	name = "Duel Hat"
+	name = "Sombrero de duelo"
 	cost = 50
 	contains = /obj/item/clothing/head/leather/duelhat
 
 /datum/supply_pack/apparel/veil
-	name = "Veil"
+	name = "Velo"
 	cost = 20
 	contains = /obj/item/clothing/head/veiled
 
@@ -104,12 +104,12 @@
 	contains = /obj/item/clothing/face/spectacles
 
 /datum/supply_pack/apparel/engineering_goggles
-	name = "Engineering goggles"
+	name = "gafas de ingeniería"
 	cost = 30
 	contains = /obj/item/clothing/face/goggles
 
 /datum/supply_pack/apparel/shepherd
-	name = "Black Halfmask"
+	name = "Media máscara negra"
 	cost = 10
 	contains = /obj/item/clothing/face/shepherd
 
@@ -124,7 +124,7 @@
 	contains = /obj/item/clothing/face/facemask/yoruku_kitsune
 
 /datum/supply_pack/apparel/exoticsilkmask
-	name = "Exotic Silk Mask"
+	name = "Máscara de seda exótica"
 	cost = 50
 	contains = /obj/item/clothing/face/exoticsilkmask
 
@@ -163,17 +163,17 @@
 	contains = /obj/item/clothing/cloak/tabard
 
 /datum/supply_pack/apparel/tabardP
-	name = "Pegasus Tabard"
+	name = "Tabardo de Pegaso"
 	cost = 45
 	contains = /obj/item/clothing/cloak/pegasusknight
 
 /datum/supply_pack/apparel/apron_brown
-	name = "Brown Apron"
+	name = "Delantal marrón"
 	cost = 10
 	contains = /obj/item/clothing/cloak/apron/brown
 
 /datum/supply_pack/apparel/raincloak_random
-	name = "Raincloak"
+	name = "capa de lluvia"
 	cost = 15
 	contains = /obj/item/clothing/cloak/raincloak/colored/random
 
@@ -183,7 +183,7 @@
 	contains = /obj/item/clothing/cloak/raincloak/furcloak/colored/brown
 
 /datum/supply_pack/apparel/halfcloak_random
-	name = "Halfcloak"
+	name = "media capa"
 	cost = 30
 	contains = /obj/item/clothing/cloak/half/colored/random
 
@@ -193,27 +193,27 @@
 	contains = /obj/item/clothing/cloak/eastcloak1
 
 /datum/supply_pack/apparel/easternjacket
-	name = "Eastern Jacket"
+	name = "Chaqueta oriental"
 	cost = 60
 	contains = /obj/item/clothing/cloak/eastcloak2
 
 /datum/supply_pack/apparel/boiler
-	name = "Boiler"
+	name = "Caldera"
 	cost = 100
 	contains = /obj/item/clothing/cloak/boiler
 
 /datum/supply_pack/apparel/desertcloak
-	name = "Desert cloak"
+	name = "manto del desierto"
 	cost = 30
 	contains = /obj/item/clothing/cloak/cape/crusader
 
 /datum/supply_pack/apparel/duelcape
-	name = "Dueling Cape"
+	name = "Capa de duelo"
 	cost = 50
 	contains = /obj/item/clothing/cloak/half/duelcape
 
 /datum/supply_pack/apparel/furcoat
-	name = "Fur Coat"
+	name = "abrigo de piel"
 	cost = 45
 	contains = /obj/item/clothing/cloak/black_cloak
 
@@ -235,7 +235,7 @@
 	contains = /obj/item/clothing/armor/gambeson/heavy/dress
 
 /datum/supply_pack/apparel/leather_vest_random
-	name = "Leather Vest"
+	name = "Chaleco de cuero"
 	cost = 10
 	contains = /obj/item/clothing/armor/leather/vest/colored/random
 
@@ -280,7 +280,7 @@
 	contains = /obj/item/clothing/armor/leather/jacket/leathercoat/renegade
 
 /datum/supply_pack/apparel/leathercoat
-	name = "Leather Coat"
+	name = "abrigo de cuero"
 	cost = 30
 	contains = /obj/item/clothing/armor/leather/jacket/leathercoat
 
@@ -290,7 +290,7 @@
 	contains = /obj/item/clothing/armor/leather/jacket/leathercoat/duelcoat
 
 /datum/supply_pack/apparel/leatherjacket
-	name = "Leather Jacket"
+	name = "Chaqueta de cuero"
 	cost = 20
 	contains = /obj/item/clothing/armor/leather/jacket
 
@@ -302,17 +302,17 @@
 // SHIRT
 
 /datum/supply_pack/apparel/dress_gen_random
-	name = "Cloth Dress"
+	name = "vestido de tela"
 	cost = 20
 	contains = /obj/item/clothing/shirt/dress/gen/colored/random
 
 /datum/supply_pack/apparel/silkdress_random
-	name = "Silk Dress"
+	name = "Vestido de seda"
 	cost = 25
 	contains = /obj/item/clothing/shirt/dress/silkdress
 
 /datum/supply_pack/apparel/robe
-	name = "Robe"
+	name = "Túnica"
 	cost = 15
 	contains = /obj/item/clothing/shirt/robe/colored/mage
 
@@ -327,7 +327,7 @@
 	contains = /obj/item/clothing/shirt/undershirt/colored/random
 
 /datum/supply_pack/apparel/undershirt_sailor
-	name = "Sailor Undershirt"
+	name = "Camiseta Marinera"
 	cost = 10
 	contains = /obj/item/clothing/shirt/undershirt/sailor
 
@@ -337,7 +337,7 @@
 	contains = /obj/item/clothing/shirt/undershirt/sailor/red
 
 /datum/supply_pack/apparel/dress_pretty
-	name = "Barmaid Dress"
+	name = "Vestido de camarera"
 	cost = 15
 	contains = /obj/item/clothing/shirt/dress
 
@@ -347,7 +347,7 @@
 	contains = /obj/item/clothing/shirt/exoticsilkbra
 
 /datum/supply_pack/apparel/shortshirt_random
-	name = "Shortshirt"
+	name = "Camiseta corta"
 	cost = 10
 	contains = /obj/item/clothing/shirt/shortshirt/colored/random
 
@@ -362,12 +362,12 @@
 	contains = /obj/item/clothing/shirt/undershirt/eastshirt1
 
 /datum/supply_pack/apparel/east2_shirt
-	name = "Eastern Shirt"
+	name = "Camisa oriental"
 	cost = 35
 	contains = /obj/item/clothing/shirt/undershirt/eastshirt2
 
 /datum/supply_pack/apparel/Puritan_shirt
-	name = "Puritan Shirt"
+	name = "Camisa puritana"
 	cost = 25
 	contains = /obj/item/clothing/shirt/undershirt/puritan
 // PANTS
@@ -383,17 +383,17 @@
 	contains = /obj/item/clothing/pants/tights/sailor
 
 /datum/supply_pack/apparel/trousers
-	name = "Cloth Trousers"
+	name = "Pantalones de tela"
 	cost = 15
 	contains = /obj/item/clothing/pants/trou
 
 /datum/supply_pack/apparel/leather_trousers
-	name = "Leather Trousers"
+	name = "Pantalones de cuero"
 	cost = 20
 	contains = /obj/item/clothing/pants/trou/leather
 
 /datum/supply_pack/apparel/skirt
-	name = "Skirt"
+	name = "Falda"
 	cost = 5
 	contains = /obj/item/clothing/pants/skirt/colored/random
 
@@ -408,17 +408,17 @@
 	contains = /obj/item/clothing/pants/trou/leather/eastpants1
 
 /datum/supply_pack/apparel/east2_trousers
-	name = "Eastern Trousers"
+	name = "Pantalones orientales"
 	cost = 35
 	contains = /obj/item/clothing/pants/trou/leather/eastpants2
 
 /datum/supply_pack/apparel/belt_trousers
-	name = "Belt Trousers"
+	name = "Pantalones con cinturón"
 	cost = 25
 	contains = /obj/item/clothing/pants/trou/beltpants
 
 /datum/supply_pack/apparel/furlined_trousers
-	name = "Fur Pants"
+	name = "Pantalones de piel"
 	cost = 35
 	contains = /obj/item/clothing/pants/trou/leather/furpants
 
@@ -430,47 +430,47 @@
 	contains = /obj/item/clothing/shoes/simpleshoes
 
 /datum/supply_pack/apparel/sandals
-	name = "Sandals"
+	name = "Sandalias"
 	cost = 5
 	contains = /obj/item/clothing/shoes/sandals
 
 /datum/supply_pack/apparel/gladiator_sandals
-	name = "Gladiator Sandals"
+	name = "Sandalias de gladiador"
 	cost = 10
 	contains = /obj/item/clothing/shoes/gladiator
 
 /datum/supply_pack/apparel/boots
-	name = "Dark Boots"
+	name = "Botas oscuras"
 	cost = 20
 	contains = /obj/item/clothing/shoes/boots/darkboots
 
 /datum/supply_pack/apparel/shortboots
-	name = "Short Boots"
+	name = "Botas cortas"
 	cost = 15
 	contains = /obj/item/clothing/shoes/shortboots
 
 /datum/supply_pack/apparel/ridingboots
-	name = "Riding Boots"
+	name = "Botas de montar"
 	cost = 20
 	contains = /obj/item/clothing/shoes/ridingboots
 
 /datum/supply_pack/apparel/leather_boots
-	name = "Leather Boots"
+	name = "Botas de cuero"
 	cost = 15
 	contains = /obj/item/clothing/shoes/boots/leather
 
 /datum/supply_pack/apparel/anklets
-	name = "Anklets"
+	name = "Tobilleras"
 	cost = 50
 	contains = /obj/item/clothing/shoes/anklets
 
 /datum/supply_pack/apparel/grenzel_boots
-	name = "Grenzelhoftian Leather Boots"
+	name = "Grenzelhoftian Botas de cuero"
 	cost = 30
 	contains = /obj/item/clothing/shoes/grenzel
 
 /datum/supply_pack/apparel/buckle_boots
-	name = "Buckled Boots"
+	name = "Botas con hebillas"
 	cost = 15
 	contains = /obj/item/clothing/shoes/simpleshoes/buckle
 
@@ -485,29 +485,29 @@
 	contains = /obj/item/clothing/shoes/boots/clothlinedanklets
 
 /datum/supply_pack/apparel/furlined_boots
-	name = "Fur-Lined Boots"
+	name = "Botas forradas de piel"
 	cost = 30
 	contains = /obj/item/clothing/shoes/boots/leather/furlined
 
 /datum/supply_pack/apparel/watch_boots
-	name = "Watch Boots"
+	name = "Botas de reloj"
 	cost = 15
 	contains = /obj/item/clothing/shoes/boots/leather/advanced/watch
 
 /datum/supply_pack/apparel/fur_boots
-	name = "Fur Boots"
+	name = "Botas de piel"
 	cost = 15
 	contains = /obj/item/clothing/shoes/boots/furlinedanklets
 
 // GLOVES
 
 /datum/supply_pack/apparel/leather_gloves
-	name = "Leather Gloves"
+	name = "Guantes de cuero"
 	cost = 15
 	contains = /obj/item/clothing/gloves/leather
 
 /datum/supply_pack/apparel/fingerless_gloves
-	name = "Fingerless Gloves"
+	name = "Guantes sin dedos"
 	cost = 10
 	contains = /obj/item/clothing/gloves/fingerless
 
@@ -517,27 +517,27 @@
 	contains = /obj/item/clothing/gloves/angle/grenzel
 
 /datum/supply_pack/apparel/fur_gloves
-	name = "Fur Gloves"
+	name = "Guantes de piel"
 	cost = 15
 	contains = /obj/item/clothing/gloves/angle/furlined
 
 /datum/supply_pack/apparel/grenzel_gloves
-	name = "Grenzelhoftian Leather Gloves"
+	name = "Grenzelhoftian Guantes de cuero"
 	cost = 25
 	contains = /obj/item/clothing/gloves/leather/grenzel
 
 /datum/supply_pack/apparel/black_gloves
-	name = "Black Gloves"
+	name = "Guantes negros"
 	cost = 15
 	contains = /obj/item/clothing/gloves/leather/black
 
 /datum/supply_pack/apparel/eastern1_gloves
-	name = "Eastern Gloves"
+	name = "Guantes orientales"
 	cost = 25
 	contains = /obj/item/clothing/gloves/eastgloves1
 
 /datum/supply_pack/apparel/fingerless_gloves
-	name = "Eastern Wraps"
+	name = "Envolturas orientales"
 	cost = 25
 	contains = /obj/item/clothing/gloves/eastgloves2
 
@@ -549,7 +549,7 @@
 	contains = /obj/item/storage/belt/leather
 
 /datum/supply_pack/apparel/black_leather_belt
-	name = "Black Leather Belt"
+	name = "Cinturón de cuero negro"
 	cost = 15
 	contains = /obj/item/storage/belt/leather/black
 
@@ -576,21 +576,21 @@
 // DYES
 
 /datum/supply_pack/apparel/luxurydyes
-	name = "Luxury Dyes"
+	name = "Tintes de lujo"
 	cost = 45
 	contains = /obj/item/dye_pack/luxury
 
 /datum/supply_pack/apparel/royaldyes
-	name = "Royal Dyes"
+	name = "Tintes reales"
 	cost = 85
 	contains = /obj/item/dye_pack/royal
 
 /datum/supply_pack/apparel/magedyes
-	name = "Magician's Dyes"
+	name = "Tintes de mago"
 	cost = 45
 	contains = /obj/item/dye_pack/mage
 
 /datum/supply_pack/apparel/cheapdyes
-	name = "Cheap Dyes"
+	name = "Tintes baratos"
 	cost = 10
 	contains = /obj/item/dye_pack/cheap

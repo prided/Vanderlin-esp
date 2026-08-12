@@ -20,11 +20,11 @@
 /datum/emote/living/carbon/blink
 	key = "blink"
 	key_third_person = "blinks"
-	message = "blinks."
+	message = "parpadea."
 
 /datum/emote/living/carbon/blink_r
 	key = "blink_r"
-	message = "blinks rapidly."
+	message = "parpadea rápidamente."
 
 /datum/emote/living/carbon/clap
 	key = "clap"
@@ -38,7 +38,7 @@
 /datum/emote/living/carbon/clap/once
 	key = "claponce"
 	key_third_person = "clapsonce"
-	message = "claps once..."
+	message = "aplaude una vez..."
 	vary = FALSE
 
 /datum/emote/living/carbon/clap/get_sound(mob/living/user)

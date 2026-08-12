@@ -28,7 +28,7 @@
 	/// Ref to the hand we currently have deployed.
 	var/obj/item/melee/touch_attack/attached_hand
 	/// The message displayed to the person upon creating the touch hand
-	var/draw_message = span_notice("You channel the power of the spell to your hand.")
+	var/draw_message = span_notice("Canalizas el poder del hechizo hacia tu mano.")
 	/// The message displayed upon willingly dropping / deleting / cancelling the touch hand before using it
 	var/drop_message = span_notice("You draw the power out of your hand.")
 	/// If TRUE, the caster can willingly hit themselves with the hand
@@ -289,7 +289,7 @@
  * These should generally just be dummy objects - holds name and icon stuff.
  */
 /obj/item/melee/touch_attack
-	name = "\improper outstretched hand"
+	name = "\improper mano extendida"
 	desc = "High Five?"
 	icon = 'icons/mob/roguehudgrabs.dmi'
 	icon_state = "grabbing_greyscale"

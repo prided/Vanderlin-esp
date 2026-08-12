@@ -30,7 +30,7 @@
 	quest_giver_name = user.real_name
 
 	var/auto_title = get_title()
-	var/custom_title = tgui_input_text(user, "Give this quest a title (blank = auto):", "Quest Title", "", 80)
+	var/custom_title = tgui_input_text(user, "Dale un título a esta misión (en blanco = automático):", "Título de la misión", "", 80)
 	title = custom_title ? custom_title : auto_title
 	return TRUE
 
@@ -77,7 +77,7 @@
 	. = ..()
 	var/spawn_turf = get_turf(quest_scroll) || get_turf(user)
 	var/obj/item/quest_package/parcel = new(spawn_turf)
-	parcel.name = "delivery parcel ([delivery_target_name])"
+	parcel.name = "paquete de entrega ([delivery_target_name])"
 	parcel.quest_title = title
 	parcel.pledge_ref = pledge_ref
 	parcel.delivery_target_name = delivery_target_name
@@ -118,7 +118,7 @@
 		return
 	if(!recipient || recipient.real_name != delivery_target_name)
 		if(deliverer)
-			to_chat(deliverer, span_warning("That's not the right recipient for this parcel."))
+			to_chat(deliverer, span_warning("Ese no es el destinatario correcto para este paquete."))
 		return
 	UnregisterSignal(parcel, list(COMSIG_OBJ_HANDED_OVER, COMSIG_MOVABLE_MOVED))
 	progress_current = progress_required

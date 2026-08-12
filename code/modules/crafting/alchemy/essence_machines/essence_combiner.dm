@@ -3,7 +3,7 @@
 #define COMBINER_MODE_AUTO    3
 
 /obj/machinery/essence/combiner
-	name = "essence combiner"
+	name = "combinador de esencias"
 	desc = "Fuses multiple alchemical essences into a unified compound."
 	icon = 'icons/roguetown/misc/splitter.dmi'
 	icon_state = "splitter"
@@ -158,7 +158,7 @@
 		"Manual (locked recipe)"   = COMBINER_MODE_MANUAL,
 		"Automatic (network demand)" = COMBINER_MODE_AUTO
 	)
-	var/choice = input(user, "Select combiner mode", "Combiner Mode") as null|anything in choices
+	var/choice = input(user, "Seleccione el modo combinador", "Modo combinador") as null|anything in choices
 	if(!choice || !Adjacent(user))
 		return
 
@@ -169,12 +169,12 @@
 			var/datum/essence_combination/recipe = new rpath
 			recipe_options[initial(recipe.name)] = rpath
 			qdel(recipe)
-		var/recipe_choice = input(user, "Select a recipe to lock to", "Manual Recipe") as null|anything in recipe_options
+		var/recipe_choice = input(user, "Select a recipe to lock to", "receta manual") as null|anything in recipe_options
 		if(!recipe_choice || !Adjacent(user))
 			return
 		manual_recipe_path = recipe_options[recipe_choice]
 		mode = COMBINER_MODE_MANUAL
-		to_chat(user, span_info("Combiner locked to: [recipe_choice]"))
+		to_chat(user, span_info("Combinador bloqueado en: [recipe_choice]"))
 	else
 		manual_recipe_path = null
 		mode = new_mode
@@ -195,7 +195,7 @@
 		if(COMBINER_MODE_MANUAL)
 			if(manual_recipe_path)
 				var/datum/essence_combination/recipe = new manual_recipe_path
-				. += span_notice("Mode: Manual: locked to [initial(recipe.name)].")
+				. += span_notice("Modo: Manual: bloqueado en [initial(recipe.name)].")
 				qdel(recipe)
 			else
 				. += span_warning("Mode: Manual: no recipe selected.")
@@ -355,7 +355,7 @@
 
 /obj/machinery/essence/combiner/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_notice("=== Output ===")
+	. += span_notice("=== Salida ===")
 	if(output_storage.contents.len)
 		for(var/etype in output_storage.contents)
 			var/datum/thaumaturgical_essence/e = new etype
@@ -366,7 +366,7 @@
 	else
 		. += span_notice("  (empty)")
 	if(combining)
-		. += span_warning("Combination in progress…")
+		. += span_warning("Combinación en progreso...")
 
 #undef COMBINER_MODE_GENERIC
 #undef COMBINER_MODE_MANUAL

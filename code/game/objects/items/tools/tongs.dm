@@ -24,7 +24,7 @@
 	if(held_item)
 		. += span_info("[src] is holding \a [held_item.name].")
 		if(HAS_TRAIT(held_item, TRAIT_NEEDS_QUENCH))
-			. += span_warning("The tip is hot to the touch.")
+			. += span_warning("La punta está caliente al tacto.")
 
 /obj/item/weapon/tongs/Destroy()
 	place_item_to_atom(drop_location())
@@ -99,7 +99,7 @@
 		return FALSE
 
 	if(!isturf(A) && !istype(A, /obj/structure/table))
-		to_chat(user, "<span class='warning'>Cannot place [held_item] here!</span>")
+		to_chat(user, "<span class='warning'>¡No se puede colocar [held_item] aquí!</span>")
 		return FALSE
 
 	held_item.forceMove(get_turf(A))
@@ -135,7 +135,7 @@
 		|| HAS_TRAIT(item, TRAIT_NEEDS_QUENCH) \
 		|| item.melting_material || item.anvilrepair || item.smeltresult \
 	)
-		user.visible_message(span_info("[user] picks up [interacting_with] with [src]."))
+		user.visible_message(span_info("[user] recoge [interacting_with] con [src]."))
 		set_held_item(interacting_with)
 		return ITEM_INTERACT_SUCCESS
 
@@ -156,7 +156,7 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/tongs/stone
-	name = "stone tongs"
+	name = "pinzas de piedra"
 	icon_state = "stonetongs"
 	force = 3
 	smeltresult = null

@@ -13,7 +13,7 @@ export const DetailRepeatable = ({ r, lookup, pickerMap, allRecipes, essenceInde
     )}
     {!!r.requirements?.length && (
       <>
-        <SectionHead>Materials</SectionHead>
+        <SectionHead>Materiales</SectionHead>
         {r.requirements.map((item, i) => (
           <ItemRow key={i} item={item} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
         ))}
@@ -21,7 +21,7 @@ export const DetailRepeatable = ({ r, lookup, pickerMap, allRecipes, essenceInde
     )}
     {!!r.tools?.length && (
       <>
-        <SectionHead>Tools</SectionHead>
+        <SectionHead>Herramientas</SectionHead>
         {r.tools.map((item, i) => (
           <ItemRow key={i} item={item} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
         ))}
@@ -29,27 +29,27 @@ export const DetailRepeatable = ({ r, lookup, pickerMap, allRecipes, essenceInde
     )}
     {!!r.reagents?.length && (
       <>
-        <SectionHead>Liquids</SectionHead>
+        <SectionHead>Líquidos</SectionHead>
         {r.reagents.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} ligulae of{' '}
+            {rg.amount} lígulas de{' '}
             <RecipeLink name={rg.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
         ))}
       </>
     )}
-    <SectionHead>Steps</SectionHead>
+    <SectionHead>Pasos</SectionHead>
     <Box className="RecipeBook__step-block">
       <Box className="RecipeBook__step-row">
         <Sprite icon={r.starting_icon} icon_state={r.starting_state} />
-        Use <strong>{r.starting_name}</strong>
+        Usar <strong>{r.starting_name}</strong>
       </Box>
       <Box className="RecipeBook__step-row">
         <Sprite icon={r.attacked_icon} icon_state={r.attacked_state} />
         on <strong>{r.attacked_name}</strong>
       </Box>
       {!!r.allow_inverse && (
-        <Box className="RecipeBook__step-row RecipeBook__step-note">or vice versa</Box>
+        <Box className="RecipeBook__step-row RecipeBook__step-note">o viceversa</Box>
       )}
     </Box>
     {r.output_name && (

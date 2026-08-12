@@ -1,5 +1,5 @@
 /datum/gem_cut/toxic
-	name = "toxic"
+	name = "tóxico"
 
 /datum/gem_cut/toxic/setup_cut(multiplier)
 	weapon_effect_type = /datum/rune_effect/status/poison

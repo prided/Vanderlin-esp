@@ -1,5 +1,5 @@
 /datum/round_event_control/baotha_sniffing
-	name = "Drug Desire"
+	name = "Deseo de drogas"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/baotha_sniffing
 	weight = 10
@@ -46,7 +46,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE BAOTHA'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE BAOTHA!"),
 		span_notice("Baotha demands chemical ecstasy! Sniff drugs to earn Baotha's favor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/misc/gods/baotha_omen.ogg', 100)

@@ -530,17 +530,17 @@
 
 /obj/item/organ/examine(mob/user)
 	. = ..()
-	. += span_notice("It should be inserted in the [parse_zone(zone)].")
+	. += span_notice("Debe insertarse en el [parse_zone(zone)].")
 
 	if(organ_flags & ORGAN_FAILING)
 		if(IS_ROBOTIC_ORGAN(src))
-			. += span_warning("[src] seems to be broken.")
+			. += span_warning("[src] parece estar roto.")
 			return
 		. += span_warning("[src] has decayed for too long, and has turned a sickly color. Only a skilled physican could restore this.")
 		return
 
 	if(damage >= high_threshold)
-		. += span_danger("[src] is severely damaged, discolored and visibly struggling.")
+		. += span_danger("[src] está gravemente dañado, descolorido y visiblemente luchando.")
 	else if(damage >= medium_threshold)
 		. += span_warning("[src] shows significant trauma, deep bruising and structural damage are visible.")
 	else if(damage >= low_threshold)
@@ -556,7 +556,7 @@
 		if(germ_level >= INFECTION_LEVEL_THREE)
 			. += span_danger("[src] is visibly festering, blackened patches and foul discharge mark it as severely infected.")
 		else if(germ_level >= INFECTION_LEVEL_TWO)
-			. += span_warning("[src] looks inflamed and angry, with an unhealthy sheen across its surface.")
+			. += span_warning("[src] parece inflamado y enojado, con un brillo poco saludable en su superficie.")
 		else if(germ_level >= INFECTION_LEVEL_ONE)
 			. += span_warning("[src] has a slight discoloration and feels unusually warm to the touch.")
 		else

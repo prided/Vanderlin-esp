@@ -86,13 +86,13 @@ export function ByVarTable(props: { report: ListsReport }) {
         <Section
           fill
           scrollable
-          title="Lists by type var"
+          title="Listas por tipo var"
           buttons={
             <SearchBar
               expensive
               query={search}
               onSearch={setSearch}
-              placeholder="Filter by typepath or var name..."
+              placeholder="Filtrar por ruta de tipo o nombre de var..."
               style={{ width: '24rem' }}
             />
           }
@@ -104,7 +104,7 @@ export function ByVarTable(props: { report: ListsReport }) {
                 desc={sort.desc}
                 onClick={() => toggle('owner')}
               >
-                Type var
+                tipo var
               </SortCell>
               <SortCell
                 collapsing
@@ -112,7 +112,7 @@ export function ByVarTable(props: { report: ListsReport }) {
                 desc={sort.desc}
                 onClick={() => toggle('lists')}
               >
-                Lists
+                Listas
               </SortCell>
               <SortCell
                 collapsing
@@ -120,7 +120,7 @@ export function ByVarTable(props: { report: ListsReport }) {
                 desc={sort.desc}
                 onClick={() => toggle('direct_lists')}
               >
-                Instances
+                Instancias
               </SortCell>
               <SortCell
                 collapsing
@@ -128,7 +128,7 @@ export function ByVarTable(props: { report: ListsReport }) {
                 desc={sort.desc}
                 onClick={() => toggle('elements')}
               >
-                Elems
+                elementos
               </SortCell>
               <SortCell
                 collapsing
@@ -136,14 +136,14 @@ export function ByVarTable(props: { report: ListsReport }) {
                 desc={sort.desc}
                 onClick={() => toggle('assoc_nodes')}
               >
-                Assoc
+                Asociación
               </SortCell>
               <SortCell
                 active={sort.key === 'bytes'}
                 desc={sort.desc}
                 onClick={() => toggle('bytes')}
               >
-                Bytes
+                bytes
               </SortCell>
             </Table.Row>
             {rows.map((row) => (
@@ -186,7 +186,7 @@ export function ByVarTable(props: { report: ListsReport }) {
       <Stack.Item>
         {/* Rows that sum to less than the total, with nothing saying where the
             rest went, read as a complete accounting when they are not. */}
-        <Section title="Not charged to any row above">
+        <Section title="No se carga a ninguna fila anterior">
           <UnattributedList unattributed={report.unattributed} />
         </Section>
       </Stack.Item>

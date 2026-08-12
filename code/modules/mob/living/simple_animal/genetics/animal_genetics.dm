@@ -263,7 +263,7 @@ GLOBAL_LIST_INIT(all_animal_genes_weighted, generate_animaL_genes())
 		if(baby.genetics.should_express(G))
 			expressed += G.name
 	if(length(expressed))
-		baby.visible_message(span_notice("[baby] is born showing distinct traits: [english_list(expressed)]."))
+		baby.visible_message(span_notice("[baby] nace mostrando rasgos distintos: [english_list(expressed)]."))
 
 /datum/animal_genetics/proc/copy_to(mob/living/simple_animal/target)
 	if(!target.genetics)
@@ -389,7 +389,7 @@ GLOBAL_LIST_INIT(all_animal_genes_weighted, generate_animaL_genes())
 
 /mob/living/simple_animal/proc/debug_breed_with(mob/living/simple_animal/father)
 	var/mob/living/simple_animal/baby = new type(loc)
-	baby.name = "Debug [name]"
+	baby.name = "Depurar [name]"
 	if(genetics)
 		genetics.inherit_to(baby, father)
 	return baby

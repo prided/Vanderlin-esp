@@ -1,6 +1,6 @@
 /datum/animal_gene/hardy
 	name = "Hardy"
-	desc = "Robust constitution. Significantly higher max health."
+	desc = "Constitución robusta. Salud máxima significativamente mayor."
 	rarity = 6
 
 	exclusion_group = GENE_GROUP_CONSTITUTION

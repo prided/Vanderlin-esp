@@ -1,6 +1,6 @@
 
 /obj/item/bodypart
-	name = "limb"
+	name = "miembro"
 	desc = ""
 	icon = 'icons/mob/human_parts.dmi'
 	icon_state = ""
@@ -334,7 +334,7 @@
 	if(prob(1))
 		if(pain_dam < SHOCK_STAGE_2 && owner.loc?.luminosity > 2)
 			add_pain(rand(SHOCK_STAGE_1 * 0.3, SHOCK_STAGE_1 * 0.5))
-			to_chat(owner, span_warning("The flickering flames make your migraine worse!"))
+			to_chat(owner, span_warning("¡Las llamas parpadeantes empeoran tu migraña!"))
 
 /obj/item/bodypart/proc/update_pain_coeff()
 	var/pain_power = initial(pain_damage_coeff)
@@ -430,7 +430,7 @@
 	if(germ_level >= INFECTION_LEVEL_THREE && !CHECK_BITFIELD(limb_flags, BODYPART_DEAD))
 		kill_limb()
 		if(owner && owner.stat < DEAD)
-			to_chat(owner, span_userdanger("I can't feel my [name] anymore..."))
+			to_chat(owner, span_userdanger("Ya no puedo sentir mi [name]..."))
 	consider_processing()
 
 ///Called when TRAIT_ROTTEN is added to the limb.

@@ -38,7 +38,7 @@
 	if(connected_pipe)
 		START_PROCESSING(SSobj, src)
 		active = TRUE
-		visible_message(span_notice("[src] connects to the pipe system and begins operation."))
+		visible_message(span_notice("[src] se conecta al sistema de tuberías y comienza a funcionar."))
 	else
 		visible_message(span_warning("[src] needs to be placed on or near a water pipe!"))
 
@@ -79,7 +79,7 @@
 		if(current_providing_reagent)
 			connected_pipe.remove_provider(current_providing_reagent, 0)
 			current_providing_reagent = null
-			visible_message(span_notice("[src] runs out of fluid to provide."))
+			visible_message(span_notice("[src] se queda sin líquido para suministrar."))
 
 /obj/structure/fluid_drain/proc/drain_nearby_liquids()
 	if(processes < processes_required)
@@ -145,7 +145,7 @@
 		if(current_providing_reagent)
 			connected_pipe.remove_provider(current_providing_reagent, 0)
 		current_providing_reagent = highest_reagent.type
-		visible_message(span_notice("[src] begins providing [initial(highest_reagent.name)] to the pipe system."))
+		visible_message(span_notice("[src] comienza a proporcionar [initial(highest_reagent.name)] al sistema de tuberías."))
 
 	var/volume_factor = min(highest_volume / 100, 2)
 	providing_pressure = base_pressure * volume_factor
@@ -193,14 +193,14 @@
 	. = ..()
 
 	if(connected_pipe)
-		. += span_info("Connected to a water pipe system.")
+		. += span_info("Conectado a un sistema de tuberías de agua.")
 		if(active && providing_pressure > 0)
 			. += span_notice("Currently providing [providing_pressure] pressure to the pipe system.")
 	else
 		. += span_warning("Not connected to any water pipe!")
 
 	if(active)
-		. += span_notice("The drain is actively collecting liquids from the ground.")
+		. += span_notice("El desagüe recoge activamente líquidos del suelo.")
 	else
 		. += span_warning("The drain is inactive - it needs a pipe connection to operate.")
 

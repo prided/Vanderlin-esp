@@ -21,8 +21,8 @@
 	. = ..()
 	passtable_off(owner, "[type]")
 	REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, "[type]")
-	to_chat(owner, span_cultsmall("The frenetic energy leaves you."))
+	to_chat(owner, span_cultsmall("La energía frenética te abandona."))
 
 /atom/movable/screen/alert/status_effect/mana_siphon_buff/flight
-	name = "Arcyne Flight"
+	name = "Arcyne Vuelo"
 	desc = "You are bound to a flight sigil. While near it, arcane energy allows free movement upwards."

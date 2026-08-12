@@ -32,7 +32,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		return ..(M, user)
 
 /obj/item/throwing_star
-	name = "throwing star"
+	name = "estrella arrojadiza"
 	desc = ""
 	icon_state = "throwingstar"
 	item_state = "eshield0"
@@ -65,7 +65,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
 	armor_penetration = 100
-	attack_verb = list("bludgeoned", "whacked", "disciplined")
+	attack_verb = list("bludgeoned", "whacked", "disciplinado")
 	resistance_flags = FLAMMABLE
 
 /obj/item/staff/stick

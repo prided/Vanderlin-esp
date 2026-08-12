@@ -253,7 +253,7 @@
 				target = hit_part.owner
 		var/limb_hit_text = ""
 		if(hit_part)
-			limb_hit_text = " in the [hit_part.name]"
+			limb_hit_text = " en el [hit_part.name]"
 
 		if(num_hits > 1)
 			target.visible_message(span_danger("[target] is hit by [num_hits] [proj_name][plural_s(proj_name)][limb_hit_text][damage ? "" : ", without leaving a mark"]!"), null, null, COMBAT_MESSAGE_RANGE, target)

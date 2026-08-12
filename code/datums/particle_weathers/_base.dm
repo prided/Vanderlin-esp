@@ -62,7 +62,7 @@
 	// ==== Modify these ====
 
 	/// name of weather
-	var/name = "space wind"
+	var/name = "viento espacial"
 	/// description of weather
 	var/desc = "Heavy gusts of wind blanket the area, periodically knocking down anyone caught in the open."
 

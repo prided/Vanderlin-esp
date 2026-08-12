@@ -42,7 +42,7 @@
 /datum/component/art/rev
 
 /datum/component/art/rev/apply_moodlet(mob/M, impress)
-	M.visible_message("<span class='notice'>[M] stops to inspect [parent].</span>", \
+	M.visible_message("<span class='notice'>[M] se detiene para inspeccionar [parent].</span>", \
 						"<span class='notice'>I take in [parent], inspecting the fine craftsmanship of the proletariat.</span>")
 
 	M.add_stress(/datum/stress_event/artbad)

@@ -100,7 +100,7 @@
 	if(isreagentcontainer(tool))
 		if(do_after(user, 1 SECONDS, src))
 			if(tool.reagents.trans_to(reagents, 10, transfered_by = user))
-				user.visible_message(span_notice("[user] fills \the [name] with \the [tool.name]"), span_notice("I fill \the [name] with \the [tool.name]"))
+				user.visible_message(span_notice("[user] llena \the [name] con \the [tool.name]"), span_notice("I fill \the [name] with \the [tool.name]"))
 				playsound(src, 'sound/foley/gunpowder_fill.ogg', 100, FALSE)
 				balloon_alert(user, "added!")
 			else
@@ -110,7 +110,7 @@
 	if(isfuse(tool))
 		var/obj/item/fuse/fuse = tool
 		if(fuse.add_to_cannon(src, user))
-			user.visible_message(span_notice("[user] adds \the [fuse] to \the [src]"), span_notice("I add \the [fuse] to \the [src]"))
+			user.visible_message(span_notice("[user] agrega \the [fuse] a \the [src]"), span_notice("Agrego \the [fuse] a \the [src]"))
 			balloon_alert_to_viewers("Attached!")
 		return ITEM_INTERACT_SUCCESS
 
@@ -204,7 +204,7 @@
 
 
 /obj/item/fuse
-	name = "fuse"
+	name = "fusible"
 	abstract_type = /obj/item/fuse
 	icon = 'icons/roguetown/misc/cannon_fuse.dmi'
 	mouse_opacity = MOUSE_OPACITY_ICON
@@ -270,16 +270,16 @@
 	qdel(src)
 
 /obj/item/fuse/fiber
-	name = "fiber fuse"
+	name = "fusible de fibra"
 	icon_state = "fiber_fuse"
 
 /obj/item/fuse/parchment
-	name = "parchment fuse"
+	name = "fusible de pergamino"
 	icon_state = "parchment_fuse"
 	failure_chance = 10
 
 /atom/proc/debug_turn()
-	var/enter = input(usr, "How much", "Meow", 180)
+	var/enter = input(usr, "Cuánto", "Meow", 180)
 	transform = transform.Turn(enter)
 
 #undef SOUND_EXTRA_RANGE_CANNON

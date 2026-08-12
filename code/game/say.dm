@@ -276,9 +276,9 @@ INITIALIZE_IMMEDIATE(/atom/movable/virtualspeaker)
 		else
 			job = "Unknown"
 	else if(iscarbon(M))  // Carbon nonhuman
-		job = "No ID"
+		job = "Sin identificación"
 	else if(isobj(M))  // Cold, emotionless machines
-		job = "Machine"
+		job = "Máquina"
 	else  // Unidentifiable mob
 		job = "Unknown"
 

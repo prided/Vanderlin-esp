@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/shapeshift/mist
 	name = "Mist Form"
-	desc = "Transform into a cloud of mist."
+	desc = "Transfórmate en una nube de niebla."
 
 	charge_required = FALSE
 	cooldown_time = 50 SECONDS

@@ -1,6 +1,6 @@
 /obj/item/gem
 	name = "random gem"
-	desc = "If you find this, yell at coderbus"
+	desc = "Si encuentras esto, grita a Coderbus."
 	icon_state = "aros"
 	icon = 'icons/roguetown/items/gems.dmi'
 	w_class = WEIGHT_CLASS_TINY
@@ -46,7 +46,7 @@
 	. = ..()
 	. += get_socketing_description()
 	if(is_cut)
-		. += span_notice("This gem has been professionally cut.")
+		. += span_notice("Esta joya ha sido cortada profesionalmente.")
 
 /obj/item/gem/on_consume(mob/living/eater)
 	. = ..()
@@ -111,7 +111,7 @@
 
 /obj/item/gem/proc/apply_cut(datum/gem_cut/cut, mob/user)
 	if(is_cut)
-		to_chat(user, "[src] has already been cut!")
+		to_chat(user, "¡[src] ya ha sido cortado!")
 		return FALSE
 	var/gemcutter_level = get_profession_level(user.ckey, /datum/profession/gemcutter)
 	var/downgrade_chance = initial(cut.downgrade_chance) + (100 - gemcutter_level)
@@ -133,7 +133,7 @@
 
 	to_chat(user, "You cut [src] with a [cut_name] pattern!")
 	if(failed)
-		to_chat(user, "You messed up cutting [src] and it dropped from [GLOB.gem_quality_names[original_quality]] to [GLOB.gem_quality_names[quality]]!")
+		to_chat(user, "¡Te equivocaste al cortar [src] y cayó de [GLOB.gem_quality_names[original_quality]] a [GLOB.gem_quality_names[quality]]!")
 	return TRUE
 
 /obj/item/gem/proc/create_gem_effect_with_cut(cut_type)
@@ -196,7 +196,7 @@
 
 /obj/item/gem/blue
 	name = "blortz"
-	desc = "Pale blue, like a frozen tear."
+	desc = "Azul pálido, como una lágrima congelada."
 	//color = "#1ca5aa8c"
 	icon_state = "quartz_cut"
 	sellprice = 88
@@ -220,7 +220,7 @@
 
 /obj/item/gem/violet
 	name = "saffira"
-	desc = "This gem is admired by many wizards."
+	desc = "Esta joya es admirada por muchos magos."
 	//color = "#1733b38c"
 	icon_state = "sapphire_cut"
 	sellprice = 56
@@ -269,7 +269,7 @@
 	item_weight = 60 GRAMS
 
 /obj/item/gem/oyster
-	name = "fossilized clam"
+	name = "almeja fosilizada"
 	desc = "A fossilized clamshell. It would be a good idea to pry it open with a knife."
 	icon = 'icons/roguetown/gems/gem_shell.dmi'
 	icon_state = "oyster_closed"
@@ -315,7 +315,7 @@
 	name = "riddle of steel"
 	icon_state = "ros"
 	icon = 'icons/roguetown/items/gems.dmi'
-	desc = "Flesh, mind."
+	desc = "Carne, mente."
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
 	w_class = WEIGHT_CLASS_TINY

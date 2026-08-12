@@ -82,13 +82,13 @@
 		fuel_amount = 30
 		user.visible_message(
 			span_notice("[user] feeds the coal into their furnace with a hiss of steam."),
-			span_notice("I consume the coal for fuel. Power: [steam_charge]/[max_steam_charge]")
+			span_notice("Consumo el carbón como combustible. Potencia: [steam_charge]/[max_steam_charge]")
 		)
 	else if(istype(source, /obj/item/grown/log/tree))
 		fuel_amount = 15
 		user.visible_message(
 			span_notice("[user] stuffs the wood into their furnace, flames licking at the bark."),
-			span_notice("I consume the wood for fuel. Power: [steam_charge]/[max_steam_charge]")
+			span_notice("Consumo la madera como combustible. Potencia: [steam_charge]/[max_steam_charge]")
 		)
 
 	steam_charge = min(max_steam_charge, steam_charge + fuel_amount)

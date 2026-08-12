@@ -1,6 +1,6 @@
 /datum/enchantment/on_hit/void_touched
 	enchantment_name = "Void Touched"
-	examine_text = "This item seems to absorb light around it, existing partially outside reality."
+	examine_text = "Este objeto parece absorber la luz a su alrededor, existiendo parcialmente fuera de la realidad."
 	enchantment_color = "#2F2F2F"
 	enchantment_end_message = "The item returns to normal reality."
 	essence_recipe = list(

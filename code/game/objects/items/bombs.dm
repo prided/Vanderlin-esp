@@ -1,5 +1,5 @@
 /obj/item/smokebomb
-	name = "smoke bomb"
+	name = "bomba de humo"
 	desc = "A soft sphere with an alchemical mixture and a dispersion mechanism hidden inside. Will shatter on impact."
 	icon = 'icons/obj/bombs.dmi'
 	icon_state = "smokebomb"
@@ -41,12 +41,12 @@
 	qdel(src)
 
 /obj/item/smokebomb/poison_bomb
-	name = "poison bomb"
+	name = "bomba venenosa"
 	datum_to_spread = /datum/effect_system/smoke_spread/poison
 
 /obj/item/holy_grenade
 	name = "\improper The Holy Hand Grenade of Antioch"
-	desc = "A sacred relic carried by Brother Maynard."
+	desc = "Una reliquia sagrada llevada por el hermano Maynard."
 	icon = 'icons/obj/holy_grenade.dmi'
 	icon_state = "holy_grenade"
 	var/fuze = 25

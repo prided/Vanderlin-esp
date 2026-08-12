@@ -35,7 +35,7 @@
 		return . | SPELL_CANCEL_CAST
 
 	if(length(message) < 10)
-		to_chat(owner, span_userdanger("This not enough to ensnare their mind!"))
+		to_chat(owner, span_userdanger("¡Esto no es suficiente para atrapar su mente!"))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
@@ -54,7 +54,7 @@
 	. = ..()
 	var/list/targets = get_targets()
 	if(!length(targets))
-		to_chat(owner, span_warning("There are no mortals nearby..."))
+		to_chat(owner, span_warning("No hay mortales cerca..."))
 		return
 	if(!powerful)
 		var/mob/selected = browser_input_list(owner, "Ensnare the mind of which mortal?", "Transfix", targets)
@@ -86,7 +86,7 @@
 				var/extra = "!"
 				if(knowledgable)
 					extra = ", I sense the caster was [owner]!"
-				to_chat(target, "<font color='white'>The silver psycross shines and protect me from unholy magic[extra]</font>")
+				to_chat(target, "<font color='white'>La plata psycross brilla y me protege de la magia impía[extra]</font>")
 				to_chat(owner, span_userdanger("[target] has my BANE! It causes me to fail to ensnare their mind!"))
 				return
 
@@ -101,7 +101,7 @@
 					log_combat(owner, target, "weakly transfixed")
 				if(101 SECONDS to 180 SECONDS)
 					to_chat(target, "Your eyelids force themselves shut as you feel intense lethargy.")
-					to_chat(owner, "[target] will not be able to resist much more.")
+					to_chat(owner, "[target] no podrá resistir mucho más.")
 					target.set_eyes_closed(TRUE)
 					target.Slowdown(50)
 					log_combat(owner, target, "transfixed")
@@ -122,7 +122,7 @@
 				to_chat(target, "I feel like the unholy magic came from [owner]. I should use my magic or miracles on them.")
 
 		to_chat(owner, span_userdanger("I fail to ensnare the mind of [target]!"))
-		to_chat(target, span_userdanger("Something is wrong in this place."))
+		to_chat(target, span_userdanger("Algo anda mal en este lugar."))
 
 /datum/action/cooldown/spell/undirected/transfix/master
 	name = "Subjugate"

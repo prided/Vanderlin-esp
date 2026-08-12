@@ -35,7 +35,7 @@
 	subtypes_allowed = TRUE // so you can use any subtype of knife
 
 /datum/repeatable_crafting_recipe/alchemy/essence_gauntlet
-	name = "Essence Gauntlet"
+	name = "Guantelete de esencia"
 	output = /obj/item/clothing/gloves/essence_gauntlet
 	requirements = list(
 		/obj/item/ingot/thaumic = 3,
@@ -124,7 +124,7 @@
 //but you need to "sacrifice" water, air, fire and earth dusts, which each give 20 of their respective essence
 //is it worth it? Well that's for the alchemist to determine what they need more of
 /datum/repeatable_crafting_recipe/alchemy/magic_dust
-	name = "Pure Essentia"
+	name = "Esencia pura"
 	output = /obj/item/alch/magicdust
 	requirements = list(
 		/obj/item/alch/waterdust = 1,
@@ -147,7 +147,7 @@
 //magic and order because that's what the dust gives when split
 //cycle because cycle is the essence of change, which is what the transis dust does
 /datum/repeatable_crafting_recipe/alchemy/transis_dust
-	name = "Transis Dust"
+	name = "Polvo de Transis"
 	output = /obj/item/alch/transisdust
 	requirements = list(
 		/obj/item/alch/herb/matricaria = 1,

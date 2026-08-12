@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/turnip
-	name = "Turnip Field"
+	name = "Campo de nabos"
 	id = "feature_turnip"
 	mappath = "_maps/kalypso/turnip.dmm"
 

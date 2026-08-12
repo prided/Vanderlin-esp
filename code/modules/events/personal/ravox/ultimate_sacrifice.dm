@@ -1,5 +1,5 @@
 /datum/round_event_control/ultimate_sacrifice
-	name = "Ultimate Sacrifice"
+	name = "Sacrificio definitivo"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/ultimate_sacrifice
 	weight = 5
@@ -49,7 +49,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE RAVOX'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE RAVOX!"),
 		span_notice("There is an honor in sacrifice. You have been granted a power by Ravox to sacrifice your own life to revive another. Beware, as you won't be able to be revived ever again. Use it only as a last resort to see a truly heinous injustice undone."),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/vo/male/knight/rage (6).ogg', 70)

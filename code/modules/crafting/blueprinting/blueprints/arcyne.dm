@@ -1,10 +1,10 @@
 /datum/blueprint_recipe/arcyne
 	abstract_type = /datum/blueprint_recipe/arcyne
 	skillcraft = /datum/attribute/skill/magic/arcane
-	category = "Arcane"
+	category = "Arcano"
 	construct_tool = /obj/item/weapon/hammer
 	craftsound = 'sound/foley/Building-01.ogg'
-	verbage = "weave"
+	verbage = "tejer"
 	verbage_tp = "weaves"
 
 /datum/blueprint_recipe/arcyne/mana_pylon

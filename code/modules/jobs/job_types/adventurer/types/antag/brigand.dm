@@ -44,7 +44,7 @@
 		"Flail & Shield" = list(/obj/item/weapon/shield/wood, /obj/item/weapon/flail),
 	)
 
-	spawned.select_equippable(player_client, weapons, message = "Choose your weapon.", title = "TAKE UP ARMS.")
+	spawned.select_equippable(player_client, weapons, message = "Elige tu arma.", title = "TAKE UP ARMS.")
 
 /datum/outfit/bandit/brigand
 	name = "Brigand (Bandit)"

@@ -53,7 +53,7 @@
 		spawned.dna.species.accent_language = spawned.dna.species.get_accent(spawned.dna.species.native_language)
 
 /datum/outfit/pilgrim/grenzelhoft
-	name = "Grenzelhoft Count (Pilgrim)"
+	name = "Grenzelhoft Conde (Peregrino)"
 	shoes = /obj/item/clothing/shoes/rare/grenzelhoft
 	gloves = /obj/item/clothing/gloves/angle/grenzel
 	wrists = /obj/item/clothing/neck/psycross/gold

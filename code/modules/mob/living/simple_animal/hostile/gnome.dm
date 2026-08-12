@@ -20,9 +20,9 @@
 	attack_verb_simple = "punch"
 	density = FALSE
 
-	response_help_continuous = "pets"
+	response_help_continuous = "mascotas"
 	response_help_simple = "pet"
-	response_disarm_continuous = "gently pushes aside"
+	response_disarm_continuous = "empuja suavemente a un lado"
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
@@ -99,7 +99,7 @@
 /mob/living/simple_animal/hostile/gnome_homunculus/proc/on_befriended(datum/source, mob/living/new_friend)
 	SEND_SIGNAL(src, COMSIG_EMOTION_STORE, new_friend, EMOTION_HAPPY, "is new friend", 5)
 	// Gnomes get excited when they make friends
-	say(pick("*chirps happily*", "*does a little dance*", "Friend! Friend!"))
+	say(pick("*chirps happily*", "*does a little dance*", "¡Amigo! ¡Amigo!"))
 
 /mob/living/simple_animal/hostile/gnome_homunculus/proc/on_unfriended(datum/source, mob/living/former_friend)
 	SEND_SIGNAL(src, COMSIG_EMOTION_STORE, former_friend, EMOTION_SAD, "is no longer friend...", -5)
@@ -113,7 +113,7 @@
 	var/friendship_check = SEND_SIGNAL(src, COMSIG_FRIENDSHIP_CHECK_LEVEL, attacker, "friend")
 	if(friendship_check)
 		SEND_SIGNAL(src, COMSIG_EMOTION_STORE, attacker, EMOTION_SAD, "hurt me!", -10)
-		say(pick("Why hurt friend?!", "*cries*", "Friend... why?"))
+		say(pick("Why hurt friend?!", "*llora*", "Amigo... ¿por qué?"))
 	else
 		SEND_SIGNAL(src, COMSIG_EMOTION_STORE, attacker, EMOTION_ANGER, "attacked me with [weapon]!", -3)
 		say(pick("*growls angrily*", "Ow! Mean!", "*hisses*"))
@@ -151,7 +151,7 @@
 
 		// The witnessing gnome becomes sad
 		SEND_SIGNAL(nearby_gnome, COMSIG_EMOTION_STORE, src, EMOTION_SAD, "saw friend [name] die...", -3)
-		nearby_gnome.say(pick("*cries for [name]*", "[name] no!", "*whimpers sadly*"))
+		nearby_gnome.say(pick("*llora por [name]*", "[name] no!", "*whimpers sadly*"))
 
 	say(pick("*death rattle*", "Tell friends... gnome loved...", "*wheezes*", "Friends... remember gnome..."))
 
@@ -187,5 +187,5 @@
 	SEND_SIGNAL(src, COMSIG_FRIENDSHIP_CHANGE, player, 2)
 	SEND_SIGNAL(src, COMSIG_EMOTION_STORE, player, EMOTION_FUNNY, "played with me using [toy_item]!", 2)
 
-	say(pick("*giggle*", "Fun!", "*bounce*", "Play!"))
+	say(pick("*giggle*", "Fun!", "*rebotar*", "Play!"))
 

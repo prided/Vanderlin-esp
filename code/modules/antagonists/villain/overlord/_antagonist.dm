@@ -6,9 +6,9 @@
 	antag_hud_type = ANTAG_HUD_NECROMANCY
 	antag_hud_name = "overlord"
 	confess_lines = list(
-		"MY DOMAIN SHALL EXPAND!",
+		"¡MI DOMINIO SE EXPANDIRÁ!",
 		"THE PHYLACTERIES SUSTAIN ME!",
-		"YOU CANNOT STOP MY EMPIRE!",
+		"¡NO PUEDES DETENER MI IMPERIO!",
 	)
 
 	var/mob/camera/strategy_controller/overlord_controller/overlord_controller
@@ -130,12 +130,12 @@
 	INVOKE_ASYNC(src, PROC_REF(attempt_resurrection)) // this proc sleeps
 
 /datum/antagonist/overlord/proc/on_fail()
-	to_chat(owner, span_userdanger("No, NO! My empire crumbles!"))
+	to_chat(owner, span_userdanger("¡No, no! ¡Mi imperio se desmorona!"))
 	owner.current.gib()
 
 /datum/antagonist/overlord/proc/attempt_resurrection(timer = 10 SECONDS)
 	var/mob/overlord_mob = overlord_body_ref.resolve()
-	overlord_mob?.visible_message(span_warning("[overlord_mob]'s body begins to shake violently!"))
+	overlord_mob?.visible_message(span_warning("¡El cuerpo de [overlord_mob] comienza a temblar violentamente!"))
 
 	if(!length(built_phylacteries))
 		on_fail()

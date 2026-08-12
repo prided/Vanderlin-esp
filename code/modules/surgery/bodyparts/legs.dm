@@ -64,7 +64,7 @@
 		if(bodypart_disabled)
 			owner.set_usable_legs(owner.usable_legs - 1)
 			if(owner.stat < UNCONSCIOUS)
-				to_chat(owner, "<span class='userdanger'>You lose control of your [name]!</span>")
+				to_chat(owner, "<span class='userdanger'>¡Pierdes el control de tu [name]!</span>")
 	else if(!bodypart_disabled)
 		owner.set_usable_legs(owner.usable_legs + 1)
 
@@ -145,7 +145,7 @@
 		if(bodypart_disabled)
 			owner.set_usable_legs(owner.usable_legs - 1)
 			if(owner.stat < UNCONSCIOUS)
-				to_chat(owner, "<span class='userdanger'>You lose control of your [name]!</span>")
+				to_chat(owner, "<span class='userdanger'>¡Pierdes el control de tu [name]!</span>")
 	else if(!bodypart_disabled)
 		owner.set_usable_legs(owner.usable_legs + 1)
 

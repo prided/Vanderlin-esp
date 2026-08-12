@@ -1,6 +1,6 @@
 /obj/item/clothing/shoes
 	name = "shoes"
-	desc = "Typical shoes worn by almost anyone."
+	desc = "Zapatos típicos que usa casi cualquier persona."
 	gender = PLURAL //Carn: for grammarically correct text-parsing
 
 	icon = 'icons/roguetown/clothing/feet.dmi'
@@ -113,20 +113,20 @@
 
 	if(istype(tool, /obj/item/natural/cloth))
 		if(polished)
-			to_chat(user, span_notice("\The [name] are already polished."))
+			to_chat(user, span_notice("\The [name] ya están pulidos."))
 			return ITEM_INTERACT_BLOCKING
 
 		var/obj/item/natural/cloth/rag = tool
 		if(rag.reagents.total_volume < 0.1)
-			to_chat(user, span_warning("[rag] is too dry to polish with!"))
+			to_chat(user, span_warning("¡[rag] está demasiado seco para pulir!"))
 			return ITEM_INTERACT_BLOCKING
 
 		var/dirty_water = rag.reagents?.get_reagent_amount(/datum/reagent/water/gross)
 		if(dirty_water)
-			to_chat(user, span_warning("[rag] is too dirty to polish anything with it!"))
+			to_chat(user, span_warning("¡[rag] está demasiado sucio para pulir algo con él!"))
 			return ITEM_INTERACT_BLOCKING
 
-		to_chat(user, ("I start polishing \the [name] with \the [rag.name]"))
+		to_chat(user, ("Empiezo a pulir \the [name] con \the [rag.name]"))
 
 		if(do_after(user, 2 SECONDS, src))
 			rag.reagents.remove_all(1)

@@ -1,6 +1,6 @@
 
 /datum/action/cooldown/spell/essence/breeze
-	name = "Gentle Breeze"
+	name = "Brisa suave"
 	desc = "Creates a small breeze that can blow out candles or scatter light objects."
 	button_icon_state = "breeze"
 	//sound = 'sound/magic/whiff.ogg'

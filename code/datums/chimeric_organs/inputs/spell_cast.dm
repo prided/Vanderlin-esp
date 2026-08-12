@@ -1,6 +1,6 @@
 /datum/chimeric_node/input/spell_cast
 	name = "mage tuned"
-	desc = "Triggers when you cast a spell."
+	desc = "Se activa cuando lanzas un hechizo."
 
 /datum/chimeric_node/input/spell_cast/register_triggers(mob/living/carbon/target)
 	if(!target)

@@ -60,7 +60,7 @@
 		if(!HAS_MIND_TRAIT(user, TRAIT_KNOWBANDITS))
 			ADD_TRAIT(user.mind, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
 			user.playsound_local(user, 'sound/misc/notice (2).ogg', 100, FALSE)
-			to_chat(user, span_notice("I can recognize these fine people anywhere now."))
+			to_chat(user, span_notice("Puedo reconocer a estas buenas personas en cualquier lugar ahora."))
 	else if(!HAS_MIND_TRAIT(user, TRAIT_KNOWBANDITS))
 		ADD_TRAIT(user.mind, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
 		user.playsound_local(user, 'sound/misc/notice (2).ogg', 100, FALSE)
@@ -208,7 +208,7 @@
 	icon_state = "xavo"
 
 /obj/structure/fluff/walldeco/serpflag
-	name = "serpent flag"
+	name = "bandera de serpiente"
 	desc = ""
 	icon_state = "serpent"
 
@@ -219,7 +219,7 @@
 
 /obj/structure/fluff/walldeco/maidendrape
 	name = "black drape"
-	desc = "A drape of fabric."
+	desc = "Una cortina de tela."
 	icon_state = "black_drape"
 	dir = SOUTH
 	SET_BASE_PIXEL(0, 32)
@@ -281,7 +281,7 @@
 	SET_BASE_PIXEL(0, 32)
 
 /obj/structure/fluff/walldeco/chains
-	name = "hanging chains"
+	name = "cadenas colgantes"
 	alpha = 180
 	layer = 4.26
 	icon_state = "chains1"
@@ -306,28 +306,28 @@
 	icon_state = "moon"
 
 /obj/structure/fluff/walldeco/med
-	name = "diagram"
+	name = "diagrama"
 	icon_state = "medposter"
 
 /obj/structure/fluff/walldeco/med2
-	name = "diagram"
+	name = "diagrama"
 	icon_state = "medposter2"
 
 /obj/structure/fluff/walldeco/med3
-	name = "diagram"
+	name = "diagrama"
 	icon_state = "medposter3"
 
 /obj/structure/fluff/walldeco/med4
-	name = "diagram"
+	name = "diagrama"
 	icon_state = "medposter4"
 
 
 /obj/structure/fluff/walldeco/med5
-	name = "diagram"
+	name = "diagrama"
 	icon_state = "medposter5"
 
 /obj/structure/fluff/walldeco/med6
-	name = "diagram"
+	name = "diagrama"
 	icon_state = "medposter6"
 
 /obj/structure/fluff/walldeco/skullspike // for ground really
@@ -337,7 +337,7 @@
 
 /*	..................   The Drunken Saiga   ................... */
 /obj/structure/fluff/walldeco/sign/saiga
-	name = "The Drunken Saiga"
+	name = "El Borracho Saiga"
 	icon_state = "shopsign_inn_saiga_right"
 	SET_BASE_PIXEL(3, 16)
 
@@ -351,7 +351,7 @@
 
 /*	..................   Feldsher Sign   ................... */
 /obj/structure/fluff/walldeco/feldshersign
-	name = "feldsher sign"
+	name = "signo de feldsher"
 	icon_state = "feldsher"
 	SET_BASE_PIXEL(0, 32)
 

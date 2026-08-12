@@ -21,7 +21,7 @@
 		return
 
 	if(damage_blocked)
-		to_chat(owner.current, span_notice("The kick must inflict actual PAIN to please Zizo!"))
+		to_chat(owner.current, span_notice("¡La patada debe infligir DOLOR real para complacer a Zizo!"))
 	else
 		complete_objective()
 

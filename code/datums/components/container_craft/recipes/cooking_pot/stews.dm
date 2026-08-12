@@ -43,7 +43,7 @@
 	crafting_time = 35 SECONDS
 
 /datum/container_craft/cooking/fish_stew
-	name = "Fish Stew"
+	name = "Guiso De Pescado"
 	created_reagent = /datum/reagent/consumable/soup/stew/fish
 	requirements = list(/obj/item/reagent_containers/food/snacks/meat/mince/fish = 1)
 	max_optionals = 3
@@ -68,7 +68,7 @@
 	requirements = list(/obj/item/reagent_containers/food/snacks/meat/poultry/cutlet = 1)
 
 /datum/container_craft/cooking/solyanka
-	name = "Solyanka"
+	name = "Solianka"
 	created_reagent = /datum/reagent/consumable/soup/stew/solyanka
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/cooked/coppiette = 1,
@@ -117,7 +117,7 @@
 	crafting_time = 40 SECONDS
 
 /datum/container_craft/cooking/borowiki_stew
-	name = "Borowiki Stew"
+	name = "Estofado de borowiki"
 	created_reagent = /datum/reagent/consumable/soup/stew/borowiki
 	requirements = list(/obj/item/reagent_containers/food/snacks/produce/mushroom/borowiki = 1)
 	max_optionals = 3

@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/ice_bridge
-	name = "Ice Bridge"
+	name = "Puente de hielo"
 	desc = "Creates a temporary bridge of solid ice from the cast location to you."
 	button_icon_state = "ice_bridge"
 	cast_range = 3
@@ -11,7 +11,7 @@
 	var/turf/caster_turf = get_turf(owner)
 	if(!target_turf)
 		return FALSE
-	owner.visible_message(span_notice("[owner] creates a bridge of solid ice."))
+	owner.visible_message(span_notice("[owner] crea un puente de hielo sólido."))
 
 	var/steps = 0
 	var/broken = FALSE
@@ -25,8 +25,8 @@
 		target_turf = get_step_towards(target_turf, caster_turf)
 
 /obj/structure/ice_bridge
-	name = "ice bridge"
-	desc = "A solid bridge made of magical ice."
+	name = "puente de hielo"
+	desc = "Un puente sólido hecho de hielo mágico."
 	icon = 'icons/effects/freeze.dmi'
 	icon_state = "ice_bridge"
 	alpha = 255

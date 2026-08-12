@@ -4,7 +4,7 @@
 	button_icon_state = "bush_jaunt"
 	jaunt_type = /obj/effect/dummy/bush_disguise
 	sound = 'sound/magic/fleshtostone.ogg'
-	invocation = "Treefather, conceal my form."
+	invocation = "Padre Árbol, oculta mi forma."
 	invocation_type = INVOCATION_WHISPER
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
@@ -76,7 +76,7 @@
 	holder.activate(cast_on, temp.appearance, src, temp.name)
 	cast_on.forceMove(holder)
 	cast_on.cancel_camera()
-	to_chat(cast_on, span_notice("You blend into your surroundings..."))
+	to_chat(cast_on, span_notice("Te mezclas con tu entorno..."))
 	active_dummy = holder
 
 /datum/action/cooldown/spell/undirected/jaunt/bush_jaunt/proc/end_jaunt(mob/living/cast_on)
@@ -96,7 +96,7 @@
 		qdel(active_dummy)
 		active_dummy = null
 
-		to_chat(cast_on, span_notice("Your disguise fades away."))
+		to_chat(cast_on, span_notice("Tu disfraz se desvanece."))
 		new /obj/effect/temp_visual/emp/bush(get_turf(cast_on))
 		playsound(cast_on, 'sound/misc/woodhit.ogg', 80, TRUE)
 

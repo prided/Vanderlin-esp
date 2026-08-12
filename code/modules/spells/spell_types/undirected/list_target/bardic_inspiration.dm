@@ -1,13 +1,13 @@
 /datum/action/cooldown/spell/bardic_inspiration
 	name = "Bardic Inspiration"
-	desc = "Inspire a target with stirring words."
+	desc = "Inspira a un objetivo con palabras conmovedoras."
 	button_icon_state = "comedy"
 	sound = 'sound/magic/ahh2.ogg'
 
 	associated_skill = /datum/attribute/skill/misc/music
 
 	invocation_type = INVOCATION_SHOUT
-	invocation = "Let fortune favour the bold!"
+	invocation = "¡Que la fortuna favorezca a los audaces!"
 
 	spell_type = NONE
 	associated_skill = /datum/attribute/skill/misc/music
@@ -32,7 +32,7 @@
 	var/message = initial(invocation)
 
 	if(!owner.cmode && ishuman(owner))
-		message = browser_input_text(owner, "How will I inspire this fellow?", "XYLIX")
+		message = browser_input_text(owner, "¿Cómo inspiraré a este tipo?", "XYLIX")
 		if(QDELETED(src) || QDELETED(owner) || QDELETED(cast_on) || !can_cast_spell())
 			return . | SPELL_CANCEL_CAST
 

@@ -1,5 +1,5 @@
 /datum/chimeric_node/output/reagent
-	name = "creator"
+	name = "creador"
 	desc = "Generates chemicals when triggered"
 
 	var/possible_reagents = list(

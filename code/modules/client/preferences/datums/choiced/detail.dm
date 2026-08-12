@@ -1,7 +1,7 @@
 /datum/preference/choiced/detail
 	savefile_key = "detail"
 	savefile_identifier = PREF_CHARACTER
-	category = "appearance"
+	category = "apariencia"
 	can_randomize = TRUE
 
 /datum/preference/choiced/detail/init_possible_values(datum/preferences/prefs)

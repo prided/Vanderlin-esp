@@ -228,7 +228,7 @@
 	if(!check_node_compatibility(injected_node))
 		trigger_failure(injected_node, FALSE, "incompatible organ slot")
 		if(organ_owner)
-			to_chat(organ_owner, span_warning("The node rejects the [parent] - it's incompatible with this organ type!"))
+			to_chat(organ_owner, span_warning("El nodo rechaza el [parent]: ¡es incompatible con este tipo de órgano!"))
 		return
 
 	var/mutable_appearance/node_overlay = mutable_appearance('icons/obj/chimeric_nodes.dmi', overlay_state)
@@ -481,7 +481,7 @@
 	pair_input_output(inp, out)
 
 	if(organ_owner)
-		to_chat(organ_owner, span_notice("You feel the humors in your [parent] align with a wet click."))
+		to_chat(organ_owner, span_notice("Sientes que los humores en tu [parent] se alinean con un clic húmedo."))
 	return TRUE
 
 /datum/chimeric_node/input/proc/to_tgui()

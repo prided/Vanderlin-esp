@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal
-	name = "Personal Ability"
-	desc = "Uses personal resources"
+	name = "Habilidad personal"
+	desc = "Utiliza recursos personales."
 	button_icon = 'icons/obj/cellular/putrid_abilities.dmi'
 	background_icon = 'icons/obj/cellular/putrid_abilities.dmi'
 	base_background_icon_state = "button_bg"

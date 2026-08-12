@@ -2,7 +2,7 @@
 	category = SKILL_CATEGORY_GENERAL
 
 /datum/attribute/skill/misc/athletics
-	name = "Athletics"
+	name = "Atletismo"
 	desc = "A general skill that represents your character's physical fitness. The higher your skill in Athletics, the higher your stamina and energy."
 	governing_attribute = STAT_ENDURANCE
 	default_attributes = list(
@@ -14,7 +14,7 @@
 	)
 
 /datum/attribute/skill/misc/climbing
-	name = "Climbing"
+	name = "Escalada"
 	desc = "Represents your character's ability to scale walls and trees. The higher your skill in Climbing, the faster you can climb and the less damage you'll take while falling."
 	governing_attribute = STAT_STRENGTH
 	default_attributes = list(
@@ -28,7 +28,7 @@
 
 /datum/attribute/skill/misc/reading
 	name = "Reading"
-	desc = "Represents your character's ability to read and write. Without at least some skill in Reading, you'll be totally unable to read or write."
+	desc = "Representa la capacidad de tu personaje para leer y escribir. Sin al menos alguna habilidad en lectura, serás totalmente incapaz de leer o escribir."
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(
 		STAT_INTELLIGENCE = -8,
@@ -78,7 +78,7 @@
 	)
 
 /datum/attribute/skill/misc/lockpicking
-	name = "Lockpicking"
+	name = "abrir cerraduras"
 	desc = "Represents your character's ability to pick locks. The higher your skill in Lockpicking, the more easily you can pick locks, and the less likely you are to break your tools."
 	category = SKILL_CATEGORY_SKULDUGGERY
 	governing_attribute = STAT_PERCEPTION
@@ -104,7 +104,7 @@
 	)
 
 /datum/attribute/skill/misc/music
-	name = "Music"
+	name = "Música"
 	desc = "Represents your character's ability to play musical instruments. The higher your skill in Music, the better you can play. Bards can use higher skills for better effects!"
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(

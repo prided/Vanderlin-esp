@@ -30,7 +30,7 @@
 				return BULLET_ACT_HIT
 			else
 				blocked = 100
-				target.visible_message(	span_danger("\The [src] was deflected!"), span_danger("My armor protected me against \the [src]!"))
+				target.visible_message(	span_danger("¡\The [src] fue desviado!"), span_danger("¡Mi armadura me protegió contra \the [src]!"))
 
 	..(target, blocked)
 	DISABLE_BITFIELD(reagents.flags, NO_REACT)
@@ -38,7 +38,7 @@
 	return BULLET_ACT_HIT
 
 /obj/projectile/bullet/reusable/dart/poison
-	name = "poison dart"
+	name = "dardo venenoso"
 	desc = "A dart with its tip coated in a weak poison."
 	icon_state = "dartpoison_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/dart/poison

@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet/heavy/steam
-	name = "steamknight helmet"
+	name = "casco de caballero de vapor"
 	desc = "Part of the steamknight armor. Requires knowledge in engineering to operate."
 	icon_state = "steamknight_helm"
 	icon = 'icons/roguetown/clothing/steamknight.dmi'

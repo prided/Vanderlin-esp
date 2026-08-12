@@ -3,11 +3,11 @@
 
 	quality_descriptors = alist(
 		-1 = list(
-			"brew_prefix" = list("spoiled", "rancid", "failed", "putrid", "foul"),
+			"brew_prefix" = list("spoiled", "rancio", "failed", "putrid", "foul"),
 			"description" = list(
 				"This brew has gone terribly wrong.",
 				"The smell alone is enough to make you gag.",
-				"This is barely recognizable as alcohol.",
+				"Esto es apenas reconocible como alcohol.",
 				"Something went horribly wrong in the brewing process.",
 				"This might actually be poisonous."
 			),
@@ -19,33 +19,33 @@
 			"price_modifier" = 0.8
 		),
 		1 = list(
-			"brew_prefix" = list("weak", "watery", "poor", "substandard"),
+			"brew_prefix" = list("débil", "acuoso", "poor", "substandard"),
 			"description" = list(
 				"This brew appears poorly made with an unpleasant aroma.",
-				"The color is off and it smells strange.",
+				"El color está apagado y huele extraño.",
 				"This tastes like it was made by someone who doesn't know what they're doing."
 			),
 			"price_modifier" = 0.6
 		),
 		2 = list(
 			"brew_prefix" = "",
-			"description" = "This appears to be a standard quality brew.",
+			"description" = "Parece ser una cerveza de calidad estándar.",
 			"price_modifier" = 1.0
 		),
 		3 = list(
-			"brew_prefix" = list("fine", "quality", "well-crafted", "premium"),
+			"brew_prefix" = list("fine", "quality", "bien elaborado", "premium"),
 			"description" = list(
 				"This brew has an excellent aroma and rich color.",
-				"The craftsmanship is evident in every sip.",
-				"This shows the skill of an experienced brewer."
+				"La artesanía es evidente en cada sorbo.",
+				"Esto demuestra la habilidad de un cervecero experimentado."
 			),
 			"price_modifier" = 1.4
 		),
 		4 = list(
-			"brew_prefix" = list("masterful", "exquisite", "artisan", "legendary", "perfect"),
+			"brew_prefix" = list("maestro", "exquisito", "artesano", "legendary", "perfecto"),
 			"description" = list(
 				"This is a masterfully crafted brew with perfect clarity and an intoxicating bouquet.",
-				"This represents the pinnacle of brewing artistry.",
+				"Esto representa el pináculo del arte cervecero.",
 				"This brew is so perfect it belongs in a museum.",
 				"The gods themselves would be jealous of this brew."
 			),
@@ -99,7 +99,7 @@
 		// Insert the prefix before "bottle of"
 		var/bottle_pos = findtext(bottle.name, " bottle of ")
 		if(bottle_pos)
-			bottle.name = copytext(bottle.name, 1, bottle_pos) + " [brew_prefix] bottle of " + copytext(bottle.name, bottle_pos + 11)
+			bottle.name = copytext(bottle.name, 1, bottle_pos) + " [brew_prefix] botella de " + copytext(bottle.name, bottle_pos + 11)
 		else
 			bottle.name = "[brew_prefix] [bottle.name]"
 

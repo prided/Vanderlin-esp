@@ -1,7 +1,7 @@
 
 /datum/relation/served_together
-	name = "Served Together"
-	desc = "You crossed paths during active military service."
+	name = "Servidos juntos"
+	desc = "Se cruzaron durante el servicio militar activo."
 	upgrades = list(/datum/relation/acquaintance)
 
 /datum/relation/served_together/get_desc_string()

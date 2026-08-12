@@ -5,5 +5,5 @@
 	new_role = JOB_SERVANT
 	recruitment_faction = "Servants"
 	recruitment_message = "Join the keep's servants, %RECRUIT!"
-	accept_message = "I serve the Crown!"
+	accept_message = "¡Sirvo a la Corona!"
 	refuse_message = "I refuse."

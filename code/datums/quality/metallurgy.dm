@@ -4,7 +4,7 @@
 
 	quality_descriptors = alist(
 		SMELTERY_QUALITY_SPOIL = list(
-			"name_prefix" = "awful",
+			"name_prefix" = "horrible",
 			"description" = "",
 		),
 		SMELTERY_QUALITY_POOR = list(
@@ -16,23 +16,23 @@
 			"description" = "",
 		),
 		SMELTERY_QUALITY_GOOD = list(
-			"name_prefix" = list("refined", "processed"),
+			"name_prefix" = list("refinado", "procesado"),
 			"description" = "It shows signs of careful refinement.",
 		),
 		SMELTERY_QUALITY_GREAT = list(
 			"name_prefix" = list("high-grade", "superior"),
 			"description" = list(
-				"It gleams with exceptional purity.",
-				"The metal structure appears flawless.",
+				"Brilla con una pureza excepcional.",
+				"La estructura metálica parece impecable.",
 				"It radiates quality craftsmanship."
 			),
 		),
 		SMELTERY_QUALITY_EXCELLENT = list(
 			"name_prefix" = list("pristine", "legendary"),
 			"description" = list(
-				"It represents the pinnacle of metallurgical perfection.",
+				"Representa el pináculo de la perfección metalúrgica.",
 				"The metal seems to shine with inner light.",
-				"This is a masterwork of refinement."
+				"Esta es una obra maestra de refinamiento."
 			),
 		)
 	)

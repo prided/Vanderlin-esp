@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/projectile/bullet // admin only spell
-	name = "Arcane Bullet"
+	name = "Bala arcana"
 	desc = "Shoot out rapid bolts of arcyne power."
 	button_icon_state =  "arcane_bolt"
 	sound = 'sound/combat/Ranged/muskshoot.ogg'

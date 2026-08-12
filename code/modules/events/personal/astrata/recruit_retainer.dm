@@ -59,7 +59,7 @@
 	var/datum/objective/personal/retainer/new_objective = new(owner = noble.mind)
 	noble.mind.add_personal_objective(new_objective)
 
-	to_chat(noble, span_userdanger("YOU ARE ASTRATA'S CHOSEN!"))
+	to_chat(noble, span_userdanger("¡ERES EL ELEGIDO DE ASTRATA!"))
 	to_chat(noble, span_notice("Astrata wants you to demonstrate your ability to lead as a proper noble! Recruit at least one retainer to serve you!"))
 	noble.playsound_local(noble, 'sound/magic/bless.ogg', 100)
 

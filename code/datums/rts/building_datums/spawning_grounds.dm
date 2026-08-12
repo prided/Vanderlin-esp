@@ -1,5 +1,5 @@
 /datum/building_datum/spawning_grounds
-	name = "Spawning Ground"
+	name = "Zona de desove"
 	desc = "This is where workers come from."
 
 	building_template = "spawning_grounds"

@@ -22,7 +22,7 @@
 	)
 
 /datum/job/advclass/mercenary/exiled
-	title = "Exiled Warrior"
+	title = "Guerrero exiliado"
 	tutorial = "A barbarian - you're a brute, and you're a long way from home. You took more of a liking to the blade than your elders wanted - in truth, they did not have to even deliberate to banish you. You will drown in ale, and your enemies in blood."
 	allowed_races = list(SPEC_ID_HALF_ORC)
 	outfit = /datum/outfit/mercenary/exiled
@@ -55,7 +55,7 @@
 		"Sword & Cudgel" = list(/obj/item/weapon/sword/arming, /obj/item/weapon/mace/cudgel), \
 		"Dual Axes" = list(/obj/item/weapon/axe/iron, /obj/item/weapon/axe/iron), \
 	)
-	var/choice = spawned.select_equippable(player_client, selectable, message = "CHOOSE YOUR WEAPONS", title = "SPILL SOME BLOOD!")
+	var/choice = spawned.select_equippable(player_client, selectable, message = "ELIGE TUS ARMAS", title = "SPILL SOME BLOOD!")
 	switch(choice)
 		if("Sword & Cudgel")
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/swords, 40)
@@ -63,7 +63,7 @@
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/axesmaces, 20)
 
 /datum/outfit/mercenary/exiled
-	name = "Exiled Warrior (Mercenary)"
+	name = "Guerrero exiliado (mercenario)"
 	neck = /obj/item/clothing/neck/coif
 	pants = /obj/item/clothing/pants/trou/leather/advanced
 	gloves = /obj/item/clothing/gloves/leather

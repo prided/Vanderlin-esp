@@ -14,12 +14,12 @@
 	item_weight = 600 GRAMS
 
 /obj/item/clothing/head/crown/circlet/golddiadem
-	name = "gold diadem"
+	name = "diadema de oro"
 	desc = "A luxurious diadem forged out of gold. Often associated with the nobility of the early Grenzelhoftian Empire."
 	icon_state = "diadem_g"
 
 /obj/item/clothing/head/crown/circlet/silverdiadem
-	name = "silver diadem"
+	name = "diadema de plata"
 	desc = "A luxurious diadem forged out of silver. Often associated with the nobility of the early Grenzelhoftian Empire "
 	icon_state = "diadem_s"
 	sellprice = VALUE_SILVER_ITEM
@@ -94,17 +94,17 @@
 	sellprice = 95
 
 /obj/item/clothing/head/crown/nyle
-	name = "jewel of nyle"
+	name = "joya de nyle"
 	icon_state = "nile"
 	sellprice = VALUE_GOLD_ITEM
 
 /obj/item/clothing/head/crown/nyle/consortcrown
-	name = "jewel of nyle"
+	name = "joya de nyle"
 	icon_state = "consortcrown"
 	sellprice = VALUE_GOLD_ITEM
 
 /obj/item/clothing/head/crown/serpcrown
-	name = "crown of Vanderlin"
+	name = "corona de Vanderlin"
 	desc = "Heavy is the weight of the crown, and even heavier the responsibility it infers to its wearer."
 	icon_state = "serpcrown"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
@@ -114,7 +114,7 @@
 
 /obj/item/clothing/head/crown/serpcrown/Initialize()
 	. = ..()
-	name = "crown of [SSmapping.config.map_name]"
+	name = "corona de [SSmapping.config.map_name]"
 	if(type == /obj/item/clothing/head/crown/serpcrown && !istype(loc, /mob/living/carbon/human/dummy)) //dummies spawn this in character setup
 		SSroguemachine.crown = src
 

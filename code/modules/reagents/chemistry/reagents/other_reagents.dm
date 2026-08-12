@@ -7,7 +7,7 @@
 	taste_description = "iron"
 	taste_mult = 1.3
 	glass_icon_state = "glass_red"
-	glass_name = "glass of tomato juice"
+	glass_name = "vaso de jugo de tomate"
 	glass_desc = ""
 	shot_glass_icon_state = "shotglassred"
 	penetrates_skin = NONE
@@ -15,7 +15,7 @@
 	var/toxicity = 0.7 // how toxic will this be to digest to people who cannot drink it
 
 /datum/reagent/blood/tiefling
-	name = "Tiefling Blood"
+	name = "Tiefling Sangre"
 	glows = TRUE
 	toxicity = 0 // yum
 	price_per_unit = 0.5
@@ -129,7 +129,7 @@
 	taste_description = "water"
 	var/cooling_temperature = 2
 	glass_icon_state = "glass_clear"
-	glass_name = "glass of water"
+	glass_name = "vaso de agua"
 	glass_desc = ""
 	shot_glass_icon_state = "shotglassclear"
 	var/hydration = 12
@@ -273,8 +273,8 @@
 
 
 /datum/reagent/mercury
-	name = "Mercury"
-	description = "A curious metal that's a liquid at room temperature. Neurodegenerative and very bad for the mind."
+	name = "Mercurio"
+	description = "Un metal curioso que es líquido a temperatura ambiente. Neurodegenerativo y muy malo para la mente."
 	color = "#484848" // rgb: 72, 72, 72A
 	taste_mult = 0 // apparently tasteless.
 
@@ -315,7 +315,7 @@
 	description = "A thick substance left behind by dendor's blessed creations."
 	reagent_state = LIQUID
 	color = "#b85900"
-	taste_description = "sap"
+	taste_description = "savia"
 
 /datum/reagent/thorn_essence
 	name = "Thorn Essence"
@@ -324,18 +324,18 @@
 	taste_description = "the bog"
 
 /datum/reagent/caveweep
-	name = "Psydonian Tears"
+	name = "Psydonian Lágrimas"
 	description = "Tears from a caveweep. It has its uses in modern alchemy."
 	taste_description = "everything"
 	color = "#334274"
 	boiling_point = T0C + 150
 
 /datum/reagent/soap
-	name = "Soap"
+	name = "Jabón"
 	description = "A combination of ash and animal fats used for cleaning."
 	color = "#cbb165"
 	alpha = 180
-	taste_description = "soapy grease"
+	taste_description = "grasa jabonosa"
 	metabolization_rate = 0.5
 	glass_icon_state = "glass_clear"
 	glass_name = "glass"

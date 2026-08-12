@@ -42,7 +42,7 @@
 				return
 			log_admin("Build Mode: [key_name(c)] modified [object.name]'s [varholder] to [valueholder]")
 		else
-			to_chat(c, "<span class='warning'>[initial(object.name)] does not have a var called '[varholder]'</span>")
+			to_chat(c, "<span class='warning'>[initial(object.name)] no tiene una var llamada '[varholder]'</span>")
 	if(right_click)
 		if(object.vars.Find(varholder))
 			var/reset_value = initial(object.vars[varholder])
@@ -51,5 +51,5 @@
 				return
 			log_admin("Build Mode: [key_name(c)] modified [object.name]'s [varholder] to [reset_value]")
 		else
-			to_chat(c, "<span class='warning'>[initial(object.name)] does not have a var called '[varholder]'</span>")
+			to_chat(c, "<span class='warning'>[initial(object.name)] no tiene una var llamada '[varholder]'</span>")
 

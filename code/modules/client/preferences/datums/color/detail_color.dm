@@ -1,7 +1,7 @@
 /datum/preference/color/detail_color
 	savefile_key = "detail_color"
 	savefile_identifier = PREF_CHARACTER
-	category = "appearance"
+	category = "apariencia"
 	can_randomize = TRUE
 
 /datum/preference/color/detail_color/create_default_value(datum/preferences/prefs)

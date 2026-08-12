@@ -163,7 +163,7 @@
 	return multiplier
 
 /obj/item/fishing/lure/artificial_fly
-	name = "\improper Silkbuzz artificial fly"
+	name = "\improper Mosca artificial Silkbuzz"
 	desc = "A fishing lure resembling a large wooly fly. Unlike most other lures, it's fancy enough to catch the interest of picky fish, but only those."
 	icon_state = "artificial_fly"
 	spin_frequency = list(1.1 SECONDS, 2 SECONDS)

@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/oatfield
-	name = "Oatfield"
+	name = "campo de avena"
 	id = "feature_oatfield"
 	mappath = "_maps/kalypso/oatfield.dmm"
 

@@ -24,7 +24,7 @@
 	)
 
 /datum/job/advclass/mercenary/verderer
-	title = "Hollow Verderer"
+	title = "Verderer hueco"
 	tutorial = "A halberd expert that has for one reason or another, forsaken Amber Hollow in favor of pursuing coin and glory in wider parts of Psydonia."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(\

@@ -1,6 +1,6 @@
 
 /obj/structure/redstone/observer
-	name = "redstone observer"
+	name = "observador de piedra roja"
 	desc = "Detects changes in the block it's observing and emits a redstone pulse."
 	icon_state = "comparator"
 	redstone_role = REDSTONE_ROLE_SOURCE

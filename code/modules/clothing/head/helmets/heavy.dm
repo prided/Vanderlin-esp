@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet/heavy
-	name = "helmet template"
+	name = "plantilla de casco"
 	icon_state = "barbute"
 	flags_inv = HIDEEARS|HIDEFACE
 	equip_sound = 'sound/foley/equip/equip_armor_plate.ogg'
@@ -40,7 +40,7 @@
 	. = ..()
 	if(!istype(W, /obj/item/natural/cloth) || detail_tag)
 		return
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	user.visible_message(span_warning("[user] adds [W] to [src]."))
@@ -66,7 +66,7 @@
 	. = ..()
 	if(!istype(W, /obj/item/natural/feather) || detail_tag)
 		return
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	user.visible_message(span_warning("[user] adds [W] to [src]."))
@@ -93,7 +93,7 @@
 
 //................ Iron Plate Helmet ............... //
 /obj/item/clothing/head/helmet/heavy/ironplate
-	name = "iron plate helmet"
+	name = "casco de placa de hierro"
 	desc = "An iron masked helmet usually worn by armed men, it is a solid design yet antiquated and cheap."
 	icon_state = "ironplate"
 	flags_inv = HIDEEARS
@@ -147,7 +147,7 @@
 	if(!istype(W, /obj/item/natural/feather) || detail_tag)
 		return
 
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	user.visible_message(span_warning("[user] adds [W] to [src]."))
@@ -168,7 +168,7 @@
 	item_weight = 4 KILOGRAMS
 
 /obj/item/clothing/head/helmet/heavy/bucket/keeper
-	name = "keeper's stone mask"
+	name = "máscara de piedra del guardián"
 	desc = "A hooded stone mask worn by Pestran keepers. Their face, oft marred by disease doth not hold value, for it is the pursuit of knowledge of the heartbeast that is the true cause."
 	icon_state = "keeperhelm"
 	item_state = "keeperhelm"
@@ -183,7 +183,7 @@
 
 //............... Frog Helmet ............... //
 /obj/item/clothing/head/helmet/heavy/frog
-	name = "frog helmet"
+	name = "casco de rana"
 	desc = "A thick, heavy helmet that severely obscures the wearer's vision. Still rather protective."
 	icon_state = "froghelm"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
@@ -198,7 +198,7 @@
 //............... Zizo Frog Helmet ............... //
 
 /obj/item/clothing/head/helmet/heavy/zizo
-	name = "darksteel frog helmet"
+	name = "casco de rana de acero oscuro"
 	desc = "A darksteel frog helmet. This one has an adjustable visor. Called forth from the edge of what should be known. In Her name."
 	adjustable = CAN_CADJUST
 	icon_state = "zizofrogmouth"
@@ -379,7 +379,7 @@
 	item_weight = 4.5 KILOGRAMS
 
 /obj/item/clothing/head/helmet/heavy/necked/ravox
-	name = "ravoxian helmet"
+	name = "casco ravoxiano"
 	desc = "Headwear commonly worn by Templars in service to Ravox. It resembles a heavily-adorned visored sallet."
 	icon_state = "ravoxhelm"
 	item_state = "ravoxhelm"
@@ -416,7 +416,7 @@
 
 //............... Ravox helmet ......................//
 /obj/item/clothing/head/helmet/heavy/necked/cadwyn/ravox
-	name = "cadwyn ox-helm"
+	name = "cadwyn yelmo de buey"
 	desc = "A blindfolded helmet, horned like the ox. The Cadwyn Order does not need to see to trust in its purpose."
 	icon_state = "cadwynhelmet_ravox"
 	item_state = "cadwynhelmet_ravox"
@@ -433,7 +433,7 @@
 //............... Other heavy helmets ......................//
 //................ Deep Abyssor Helmet ............. //
 /obj/item/clothing/head/helmet/heavy/necked/deepabyssor
-	name = "deep abyssor helmet"
+	name = "casco profundo abyssor"
 	desc = "A great helmet crafted from bronze. The visor is slitted and ridged, evoking the gills of a great sea-beast. may his name be remembered..."
 	icon_state = "deepabyssorhelm"
 	item_state = "deepabyssorhelm"
@@ -442,7 +442,7 @@
 
 //............... Sinistar (Graggar) Helmet ............... //
 /obj/item/clothing/head/helmet/heavy/sinistar
-	name = "sinistar helmet"
+	name = "casco sinistar"
 	desc = "Glorious star, smeared in guts and greeted with a chorus of howls."
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64x64.dmi'
@@ -458,7 +458,7 @@
 
 /obj/item/clothing/head/helmet/heavy/decorated	// template
 	abstract_type = /obj/item/clothing/head/helmet/heavy/decorated
-	name = "a template"
+	name = "una plantilla"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
@@ -482,7 +482,7 @@
 		return
 	if(!picked)
 		var/list/icons = HELMET_KNIGHT_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = tgui_input_list(user, "Elige una cresta.", "Knightly crests", icons)
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -510,7 +510,7 @@
 		return
 	if(!picked)
 		var/list/icons = HELMET_HOUNSKULL_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = tgui_input_list(user, "Elige una cresta.", "Knightly crests", icons)
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -535,7 +535,7 @@
 		return
 	if(!picked)
 		var/list/icons = HELMET_BUCKET_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = tgui_input_list(user, "Elige una cresta.", "Knightly crests", icons)
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -560,7 +560,7 @@
 		return
 	if(!picked)
 		var/list/icons = HELMET_GOLD_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = tgui_input_list(user, "Elige una cresta.", "Knightly crests", icons)
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -590,7 +590,7 @@
 		return
 	if(!picked)
 		var/list/icons = BASCINET_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = tgui_input_list(user, "Elige una cresta.", "Knightly crests", icons)
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -696,7 +696,7 @@
 //............... Legacy Totod Order Helmets ...............//
 /obj/item/clothing/head/helmet/heavy/crusader
 	name = "winged crusader helm"
-	desc = "Proud knights of the Psydonic order displays their faith and their allegiance openly."
+	desc = "Los orgullosos caballeros de la orden Psydonic muestran abiertamente su fe y su lealtad."
 	icon_state = "totodhelm"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64x64.dmi'

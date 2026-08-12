@@ -1,5 +1,5 @@
 /datum/relation/enemy
-	name = "Enemy"
+	name = "Enemigo"
 	desc = "You have known them for a while and really cannot stand each other."
 	incompatible = list(/datum/relation/friend)
 	upgrades = list(/datum/relation/acquaintance, /datum/relation/rival)

@@ -30,7 +30,7 @@
 	color_hex = "#7a7a7a"
 
 /datum/loadout_item/dye_color/peasant/woad_blue
-	name = "Woad Blue"
+	name = "Azul de glasto"
 	color_hex = "#4a6fa5"
 
 /datum/loadout_item/dye_color/peasant/madder_red
@@ -38,7 +38,7 @@
 	color_hex = "#8b2020"
 
 /datum/loadout_item/dye_color/peasant/weld_yellow
-	name = "Weld Yellow"
+	name = "Amarillo de soldadura"
 	color_hex = "#c8a415"
 
 /datum/loadout_item/dye_color/peasant/forest_green
@@ -50,7 +50,7 @@
 	color_hex = "#1a1a1a"
 
 /datum/loadout_item/dye_color/peasant/bone_white
-	name = "Bone White"
+	name = "Blanco Hueso"
 	color_hex = "#f0ead6"
 
 /datum/loadout_item/dye_color/noble
@@ -59,7 +59,7 @@
 	palette = "noble"
 
 /datum/loadout_item/dye_color/noble/royal_blue
-	name = "Royal Blue"
+	name = "azul real"
 	color_hex = "#1a3a6b"
 
 /datum/loadout_item/dye_color/noble/deep_crimson
@@ -71,7 +71,7 @@
 	color_hex = "#1a6b3a"
 
 /datum/loadout_item/dye_color/noble/midnight_purple
-	name = "Midnight Purple"
+	name = "Púrpura medianoche"
 	color_hex = "#3a1a6b"
 
 /datum/loadout_item/dye_color/noble/burnt_sienna
@@ -96,19 +96,19 @@
 	palette = "royal"
 
 /datum/loadout_item/dye_color/royal/tyrian_purple
-	name = "Tyrian Purple"
+	name = "Púrpura de Tiro"
 	color_hex = "#66023c"
 
 /datum/loadout_item/dye_color/royal/imperial_gold
-	name = "Imperial Gold"
+	name = "Oro imperial"
 	color_hex = "#d4af37"
 
 /datum/loadout_item/dye_color/royal/kings_scarlet
-	name = "King's Scarlet"
+	name = "Escarlata del rey"
 	color_hex = "#cc2200"
 
 /datum/loadout_item/dye_color/royal/azure_cerulean
-	name = "Azure Cerulean"
+	name = "Azul cerúleo"
 	color_hex = "#007fff"
 
 /datum/loadout_item/dye_color/royal/ivory_silk

@@ -4,10 +4,10 @@
 /datum/brain_trauma/special
 
 /datum/brain_trauma/special/tenacity
-	name = "Tenacity"
+	name = "Tenacidad"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("I suddenly stop feeling pain.")
+	gain_text = span_warning("De repente dejo de sentir dolor.")
 	lose_text = span_warning("I realize you can feel pain again.")
 
 /datum/brain_trauma/special/tenacity/on_gain()
@@ -21,11 +21,11 @@
 	..()
 
 /datum/brain_trauma/special/death_whispers
-	name = "Functional Cerebral Necrosis"
+	name = "Necrosis cerebral funcional"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("I feel dead inside.")
-	lose_text = span_notice("I feel alive again.")
+	gain_text = span_warning("Me siento muerto por dentro.")
+	lose_text = span_notice("Me siento vivo de nuevo.")
 	var/active = FALSE
 
 /datum/brain_trauma/special/death_whispers/on_life()
@@ -48,9 +48,9 @@
 	active = FALSE
 
 /datum/brain_trauma/special/existential_crisis
-	name = "Existential Crisis"
+	name = "Crisis existencial"
 	desc = "Patient's hold on reality becomes faint, causing occasional bouts of non-existence."
-	gain_text = span_warning("You feel less real.")
+	gain_text = span_warning("Te sientes menos real.")
 	lose_text = span_notice("You feel more substantial again.")
 	var/obj/effect/abstract/sync_holder/veil/veil
 	/// A cooldown to prevent constantly erratic dolphining through the fabric of reality
@@ -95,7 +95,7 @@
 
 
 /obj/effect/abstract/sync_holder
-	name = "desyncronized pocket"
+	name = "bolsillo desincronizado"
 	desc = "A pocket in spacetime, keeping the user a fraction of a second in the future."
 	icon = null
 	icon_state = null
@@ -122,5 +122,5 @@
 	return TRUE //no dropping spaghetti out of your spacetime pocket
 
 /obj/effect/abstract/sync_holder/veil
-	name = "non-existence"
+	name = "no existencia"
 	desc = "Existence is just a state of mind."

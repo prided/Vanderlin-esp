@@ -1,6 +1,6 @@
 /datum/talent_node
-	var/name = "Talent"
-	var/desc = "A talent"
+	var/name = "Talento"
+	var/desc = "un talento"
 	var/icon = 'icons/mob/actions/actions_spells.dmi'
 	var/icon_state = "spell_default"
 	var/talent_cost = 1

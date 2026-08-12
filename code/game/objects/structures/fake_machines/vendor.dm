@@ -112,13 +112,13 @@
 	if(QDELETED(I) || !isitem(I))
 		return
 	if(locked())
-		to_chat(user, span_info("I cannot put [I] in \the [src] while it's locked."))
+		to_chat(user, span_info("No puedo poner [I] en \the [src] mientras está bloqueado."))
 		return
 	if(I.w_class > WEIGHT_CLASS_BULKY)
-		to_chat(user, span_info("[I] is too big for \the [src]!"))
+		to_chat(user, span_info("¡[I] es demasiado grande para \the [src]!"))
 		return
 	if(length(held_items) > max_merchandise)
-		to_chat(user, span_info("\The [src] is full!"))
+		to_chat(user, span_info("\The [src] está lleno!"))
 		return
 	held_items[I] = list()
 	held_items[I]["NAME"] = I.name

@@ -9,7 +9,7 @@
 			if(user_loc.can_see_sky())
 				if(!transformed)
 					if(COOLDOWN_FINISHED(src, message_cooldown))
-						to_chat(human_user, span_userdanger("The moonlight scorns me, inflaming my rage!"))
+						to_chat(human_user, span_userdanger("¡La luz de la luna me desprecia, inflamando mi ira!"))
 						COOLDOWN_START(src, message_cooldown, 5 SECONDS)
 				human_user.rage_datum.update_rage(10)
 
@@ -44,7 +44,7 @@
 		ADD_TRAIT(human_user, TRAIT_NO_TRANSFORM, REF(src))
 		human_user.flash_fullscreen("redflash3")
 		human_user.emote("agony", forced = TRUE)
-		to_chat(human_user, span_userdanger("UNIMAGINABLE PAIN!"))
+		to_chat(human_user, span_userdanger("¡DOLOR INIMAGINABLE!"))
 		human_user.Stun(5.1 SECONDS, ignore_canstun = TRUE)
 		human_user.Knockdown(5.1 SECONDS, ignore_canstun = TRUE)
 		addtimer(CALLBACK(src, PROC_REF(begin_transform), null, 2), 2.5 SECONDS, TIMER_DELETE_ME)
@@ -88,7 +88,7 @@
 
 	playsound(new_werewolf, pick('sound/combat/gib (1).ogg','sound/combat/gib (2).ogg'), 200, FALSE, 3)
 	new_werewolf.playsound_local(get_turf(new_werewolf), 'sound/music/wolfintro.ogg', 80, FALSE, pressure_affected = FALSE)
-	to_chat(new_werewolf, span_userdanger("I transform into a horrible beast!"))
+	to_chat(new_werewolf, span_userdanger("¡Me transformo en una bestia horrible!"))
 	new_werewolf.emote("rage")
 	new_werewolf.spawn_gibs(FALSE)
 

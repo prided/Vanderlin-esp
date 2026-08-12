@@ -74,7 +74,7 @@
 
 //CONFLAGRATION
 /datum/coven_power/demonic/conflagration
-	name = "Conflagration"
+	name = "Conflagración"
 	desc = "Turn your hands into deadly claws."
 
 	level = 3
@@ -125,7 +125,7 @@
 
 //CONDEMNTATION
 /datum/coven_power/demonic/condemnation
-	name = "Condemnation"
+	name = "Condenación"
 	desc = "Condemn a soul and their bloodline to suffering."
 	level = 5
 	check_flags = COVEN_CHECK_CONSCIOUS | COVEN_CHECK_CAPABLE | COVEN_CHECK_IMMOBILE
@@ -157,7 +157,7 @@
 			// Get or create heritage for the target
 			var/datum/heritage/target_heritage = get_or_create_heritage(target)
 			if(!target_heritage)
-				to_chat(owner, span_warning("Something prevents you from cursing their bloodline!"))
+				to_chat(owner, span_warning("¡Algo te impide maldecir su linaje!"))
 				return
 
 			// Apply the family curse

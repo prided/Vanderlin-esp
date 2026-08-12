@@ -40,7 +40,7 @@
 				to_check += wall
 
 	if(!length(connected_walls))
-		to_chat(owner, span_warning("There are no damaged walls nearby to repair!"))
+		to_chat(owner, span_warning("¡No hay paredes dañadas cerca para reparar!"))
 		return FALSE
 
 	for(var/obj/structure/meatvine/heavy/wall in connected_walls)
@@ -49,7 +49,7 @@
 
 	mob.visible_message(
 		span_danger("[mob] pulses with energy, repairing nearby meatvine walls!"),
-		span_alertalien("You channel energy to repair all connected walls.")
+		span_alertalien("Canalizas energía para reparar todas las paredes conectadas.")
 	)
 
 	StartCooldown()

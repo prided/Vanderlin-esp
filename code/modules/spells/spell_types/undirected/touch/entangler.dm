@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/touch/entangler
-	name = "Hand of Dendor"
+	name = "Mano de Dendor"
 	desc = "Invoke a hand which will create living vines and grant protection."
 	button_icon_state = "entangle"
 	sound = 'sound/items/dig_shovel.ogg'
@@ -40,13 +40,13 @@
 /datum/action/cooldown/spell/undirected/touch/entangler/proc/try_mark(mob/living/victim)
 	var/has_trait = HAS_TRAIT_FROM(victim, TRAIT_ENTANGLER_IMMUNITY, MAGIC_TRAIT)
 	var/action = has_trait ? "removing" : "adding"
-	owner.visible_message("[owner] presses their thumb on [victim]'s forehead and begins [action] Dendor's mark.")
+	owner.visible_message("[owner] presiona su pulgar en la frente de [victim] y comienza la marca de [action] Dendor.")
 	if(!do_after(owner, 5 SECONDS, victim))
 		return
 	if(has_trait)
 		playsound(owner, 'sound/magic/swap.ogg', 55, TRUE)
 		owner.visible_message(
-			span_warning("[owner] removes the mark from [victim]'s forehead."),
+			span_warning("[owner] elimina la marca de la frente de [victim]."),
 			span_warning("I remove the mark from [victim]'s forehead."),
 		)
 		to_chat(victim, span_userdanger("The vines have forsaken you."))
@@ -54,8 +54,8 @@
 		return
 	playsound(owner, 'sound/magic/ahh2.ogg', 55, TRUE)
 	owner.visible_message(
-		span_nicegreen("[owner] marks [victim]'s forehead."),
-		span_nicegreen("I mark [victim]'s forehead."),
+		span_nicegreen("[owner] marca la frente de [victim]."),
+		span_nicegreen("Marco la frente de [victim]."),
 	)
 	to_chat(victim, span_nicegreen("You are a child of the vines."))
 	ADD_TRAIT(victim, TRAIT_ENTANGLER_IMMUNITY, MAGIC_TRAIT)

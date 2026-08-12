@@ -1,5 +1,5 @@
 /datum/gem_cut/winter
-	name = "winter"
+	name = "invierno"
 
 /datum/gem_cut/winter/setup_cut(multiplier)
 	weapon_effect_type = /datum/rune_effect/damage/cold

@@ -99,7 +99,7 @@
 		var/obj/item/clothing/accessory/A = I
 		if(attached_accessory)
 			if(user)
-				to_chat(user, "<span class='warning'>[src] already has an accessory.</span>")
+				to_chat(user, "<span class='warning'>[src] ya tiene un accesorio.</span>")
 			return
 		else
 
@@ -157,7 +157,7 @@
 		to_chat(usr, "<span class='warning'>I cannot wear this suit any differently!</span>")
 		return
 	if(toggle_jumpsuit_adjust())
-		to_chat(usr, "<span class='notice'>I adjust the suit to wear it more casually.</span>")
+		to_chat(usr, "<span class='notice'>Ajusto el traje para usarlo de manera más casual.</span>")
 	else
 		to_chat(usr, "<span class='notice'>I adjust the suit back to normal.</span>")
 	if(ishuman(usr))

@@ -60,7 +60,7 @@
 		break
 
 	if(!target_cross)
-		to_chat(owner, span_warning("I need a holy cross."))
+		to_chat(owner, span_warning("Necesito una santa cruz."))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
@@ -84,7 +84,7 @@
 		cast_on.visible_message(span_warning("Holy light engulfs [cast_on], but they remain limp..."))
 		return
 	if(!cast_on.revive())
-		to_chat(owner, span_warning("Astrata's light fails to revive [cast_on]!"))
+		to_chat(owner, span_warning("¡La luz de Astrata no logra revivir a [cast_on]!"))
 		return
 	if(cast_on.health > HALFWAYCRITDEATH)
 		cast_on.adjustOxyLoss(cast_on.health - HALFWAYCRITDEATH)
@@ -96,7 +96,7 @@
 	cast_on.emote("breathgasp")
 	cast_on.adjust_jitter(100 SECONDS)
 	cast_on.adjust_blood_volume(BLOOD_VOLUME_OKAY, maximum = BLOOD_VOLUME_OKAY)
-	cast_on.visible_message(span_notice("[cast_on] is revived by holy light!"), span_green("I awake from the void."))
+	cast_on.visible_message(span_notice("[cast_on] is revived by holy light!"), span_green("Me despierto del vacío."))
 	cast_on.apply_status_effect(/datum/status_effect/debuff/revive)
 
 
@@ -177,7 +177,7 @@
 		break
 
 	if(!target_cross)
-		to_chat(owner, span_warning("I need a holy cross."))
+		to_chat(owner, span_warning("Necesito una santa cruz."))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
@@ -213,5 +213,5 @@
 	cast_on.emote("breathgasp")
 	cast_on.adjust_jitter(100 SECONDS)
 	cast_on.adjust_blood_volume(BLOOD_VOLUME_OKAY, maximum = BLOOD_VOLUME_OKAY)
-	cast_on.visible_message(span_notice("[cast_on] is revived by moonlight!"), span_green("I awake from the void."))
+	cast_on.visible_message(span_notice("[cast_on] is revived by moonlight!"), span_green("Me despierto del vacío."))
 	cast_on.apply_status_effect(/datum/status_effect/debuff/revive_noc)

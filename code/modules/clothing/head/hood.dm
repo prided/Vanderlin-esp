@@ -172,7 +172,7 @@
 	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/head/roguehood/leather
-	name = "leather hood"
+	name = "capucha de cuero"
 	desc = "A simple if foreboding hood made out of leather. Worn by street thug and honest yeoman both. \
 	Protects from the eventual stabbing, but not much more."
 	icon_state = "leatherhood"
@@ -203,7 +203,7 @@
 	filters += filter(type="drop_shadow", x=0, y=0, size=0.5, offset=1, color=rgb(218, 165, 32))
 
 /obj/item/clothing/head/roguehood/studded
-	name = "studded hood"
+	name = "capucha con tachuelas"
 	desc = "A padded hood splinted across creating a cocoon for whoever wears it - won't protect your face however."
 	icon_state = "studhood"
 	item_state = "studhood"

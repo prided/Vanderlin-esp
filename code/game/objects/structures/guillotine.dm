@@ -15,7 +15,7 @@
 
 /obj/structure/guillotine
 	name = "guillotine"
-	desc = "This is the end."
+	desc = "Este es el final."
 	icon = 'icons/obj/guillotine.dmi'
 	icon_state = "guillotine_raised"
 	can_buckle = TRUE
@@ -93,7 +93,7 @@
 			return
 		if (GUILLOTINE_BLADE_RAISED)
 			if (LAZYLEN(buckled_mobs))
-				user.visible_message("<span class='warning'>[user] begins to pull the lever!</span>",
+				user.visible_message("¡<span class='warning'>[user] comienza a tirar de la palanca!</span>",
 									"<span class='warning'>I begin to pull the lever!</span>")
 				current_action = GUILLOTINE_ACTION_INUSE
 
@@ -192,7 +192,7 @@
 				to_chat(user, span_warning("The blade is sharp enough!"))
 				return
 		else
-			to_chat(user, span_warning("I need to raise the blade in order to sharpen it!"))
+			to_chat(user, span_warning("¡Necesito levantar la hoja para afilarla!"))
 			return
 	else
 		return ..()

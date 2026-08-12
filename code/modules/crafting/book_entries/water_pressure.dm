@@ -1,5 +1,5 @@
 /datum/book_entry/water_pressure
-	name = "Fluid Dynamics"
+	name = "Dinámica de fluidos"
 
 
 /datum/book_entry/water_pressure/inner_book_html(mob/user)

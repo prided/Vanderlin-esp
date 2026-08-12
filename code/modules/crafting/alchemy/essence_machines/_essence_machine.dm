@@ -216,9 +216,9 @@
 	if(inbound)  opts["View inbound links ([inbound])"] = "in"
 	if(links.len) opts["Remove all links"]          = "clear"
 	if(!opts.len)
-		to_chat(user, span_info("[src] has no ethereal links."))
+		to_chat(user, span_info("[src] no tiene enlaces etéreos."))
 		return
-	var/choice = input(user, "Link management", "Essence Links") as null|anything in opts
+	var/choice = input(user, "Gestión de enlaces", "Enlaces de esencia") as null|anything in opts
 	if(!choice || (!Adjacent(user) && !istype(src, /obj/machinery/essence/cauldron_node)))
 		return
 	switch(opts[choice])
@@ -247,7 +247,7 @@
 	if(!choice || !Adjacent(user))
 		return
 	essence_remove_link(display[choice])
-	to_chat(user, span_info("Link removed."))
+	to_chat(user, span_info("Enlace eliminado."))
 
 /obj/machinery/essence/attackby(obj/item/I, mob/user, list/modifiers)
 	if(istype(I, /obj/item/essence_connector))
@@ -275,7 +275,7 @@
 
 /obj/machinery/essence/proc/extract_to_vial(obj/item/essence_vial/vial, mob/user)
 	if(!storage.contents.len)
-		to_chat(user, span_warning("[src] is empty."))
+		to_chat(user, span_warning("[src] está vacío."))
 		return
 	var/list/radial = list()
 	var/list/emap = list()
@@ -300,7 +300,7 @@
 	var/chosen = emap[choice]
 	var/to_take = min(storage.get(chosen), vial.max_essence, vial.extract_amount)
 	if(to_take <= 0)
-		to_chat(user, span_warning("Cannot extract with current vial settings."))
+		to_chat(user, span_warning("No se puede extraer con la configuración actual del vial."))
 		return
 	var/extracted = storage.remove(chosen, to_take)
 	if(extracted > 0)

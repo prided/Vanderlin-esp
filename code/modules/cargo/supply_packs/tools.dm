@@ -10,7 +10,7 @@
 	contains = /obj/item/rope
 
 /datum/supply_pack/tools/chain
-	name = "Chain"
+	name = "Cadena"
 	cost = 25
 	contains = /obj/item/rope/chain
 
@@ -20,27 +20,27 @@
 	contains = /obj/item/lockpickring/mundane
 
 /datum/supply_pack/tools/keyrings
-	name = "Keyring"
+	name = "Llavero"
 	cost = 5
 	contains = /obj/item/storage/keyring
 
 /datum/supply_pack/tools/needle
-	name = "Sewing Needle"
+	name = "Aguja De Coser"
 	cost = 10
 	contains = /obj/item/needle
 
 /datum/supply_pack/tools/sleepingbag
-	name = "Sleeping Bag"
+	name = "Saco de dormir"
 	cost = 12
 	contains = /obj/item/sleepingbag
 
 /datum/supply_pack/tools/scroll
-	name = "Parchment Scroll x5"
+	name = "Pergamino x5"
 	cost = 10
 	contains = list(/obj/item/paper/scroll,/obj/item/paper/scroll,/obj/item/paper/scroll,/obj/item/paper/scroll,/obj/item/paper/scroll)
 
 /datum/supply_pack/tools/parchment
-	name = "Parchment x5"
+	name = "Pergamino x5"
 	cost = 8
 	contains = list(/obj/item/paper,/obj/item/paper,/obj/item/paper,/obj/item/paper,/obj/item/paper)
 
@@ -55,24 +55,24 @@
 	contains = /obj/structure/dye_bin
 
 /datum/supply_pack/tools/plough
-	name = "Plough"
+	name = "Arado"
 	cost = 45
 	contains = /obj/structure/plough
 
 /datum/supply_pack/tools/candles
-	name = "Candles (3)"
+	name = "Velas (3)"
 	cost = 5
 	contains = list(/obj/item/candle/yellow,
 	/obj/item/candle/yellow,
 	/obj/item/candle/yellow)
 
 /datum/supply_pack/tools/lamptern
-	name = "Iron Lamptern"
+	name = "Lámpara de hierro"
 	cost = 20
 	contains = /obj/item/flashlight/flare/torch/lantern
 
 /datum/supply_pack/tools/pick
-	name = "Iron Pickaxe"
+	name = "Pico de hierro"
 	cost = 25
 	contains = /obj/item/weapon/pick
 
@@ -87,7 +87,7 @@
 	contains = /obj/item/weapon/tongs
 
 /datum/supply_pack/tools/hammer
-	name = "Hammer"
+	name = "Martillo"
 	cost = 25
 	contains = /obj/item/weapon/hammer/iron
 
@@ -97,7 +97,7 @@
 	contains = /obj/item/weapon/shovel
 
 /datum/supply_pack/tools/Sickle
-	name = "Sickle"
+	name = "Hoz"
 	cost = 25
 	contains = /obj/item/weapon/sickle
 
@@ -107,7 +107,7 @@
 	contains = /obj/item/weapon/pitchfork
 
 /datum/supply_pack/tools/hoe
-	name = "Hoe"
+	name = "Azada"
 	cost = 25
 	contains = /obj/item/weapon/hoe
 
@@ -122,12 +122,12 @@
 	contains = /obj/item/reagent_containers/glass/bucket/wooden
 
 /datum/supply_pack/tools/fryingpan
-	name = "Frying Pan"
+	name = "Sartén"
 	cost = 15
 	contains = /obj/item/cooking/pan
 
 /datum/supply_pack/tools/pot
-	name = "Cooking Pot"
+	name = "Olla de cocina"
 	cost = 10
 	contains = /obj/item/reagent_containers/glass/bucket/pot
 
@@ -152,12 +152,12 @@
 	contains = /obj/item/fishing/reel/deluxe
 
 /datum/supply_pack/tools/fishinghook
-	name = "Premium Fishing Hook"
+	name = "Anzuelo de pesca premium"
 	cost = 25
 	contains = /obj/item/fishing/hook/deluxe
 
 /datum/supply_pack/tools/bottle
-	name = "Glass Bottle x3"
+	name = "Botella de vidrio x3"
 	cost = 10
 	contains = list(/obj/item/reagent_containers/glass/bottle,/obj/item/reagent_containers/glass/bottle,/obj/item/reagent_containers/glass/bottle)
 
@@ -168,7 +168,7 @@
 	/obj/item/reagent_containers/glass/alchemical,/obj/item/reagent_containers/glass/alchemical,/obj/item/reagent_containers/glass/alchemical)
 
 /datum/supply_pack/tools/bottle_kit
-	name = "Bottling Kit"
+	name = "Kit de embotellado"
 	cost = 30
 	contains = list(/obj/item/bottle_kit)
 
@@ -177,27 +177,27 @@
 	abstract_type = /datum/supply_pack/tools/medical
 
 /datum/supply_pack/tools/medical/health
-	name = "Healing Potion"
+	name = "Poción curativa"
 	cost = 75
 	contains = /obj/item/reagent_containers/glass/bottle/healthpot
 
 /datum/supply_pack/tools/medical/mana
-	name = "Mana Potion"
+	name = "Poción de maná"
 	cost = 75
 	contains = /obj/item/reagent_containers/glass/bottle/manapot
 
 /datum/supply_pack/tools/medical/surgerybag
-	name = "Set of Surgical Tools"
+	name = "Conjunto de herramientas quirúrgicas"
 	cost = 60
 	contains = /obj/item/storage/backpack/satchel/surgbag
 
 /datum/supply_pack/tools/medical/prarml
-	name = "Left Wooden Arm"
+	name = "Brazo de madera izquierdo"
 	cost = 20
 	contains = /obj/item/bodypart/l_arm/prosthetic/wood
 
 /datum/supply_pack/tools/medical/prarmr
-	name = "Right Wooden Arm"
+	name = "Brazo de madera derecho"
 	cost = 20
 	contains = /obj/item/bodypart/r_arm/prosthetic/wood
 

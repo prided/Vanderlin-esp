@@ -1,10 +1,10 @@
 /datum/customizer/organ/neck_feature
 	abstract_type = /datum/customizer/organ/neck_feature
-	name = "Neck Feature"
+	name = "Característica del cuello"
 
 /datum/customizer_choice/organ/neck_feature
 	abstract_type = /datum/customizer_choice/organ/neck_feature
-	name = "Neck Feature"
+	name = "Característica del cuello"
 	organ_type = /obj/item/organ/neck_feature
 	organ_slot = ORGAN_SLOT_NECK_FEATURE
 

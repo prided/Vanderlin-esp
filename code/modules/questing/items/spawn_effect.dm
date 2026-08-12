@@ -1,5 +1,5 @@
 /obj/effect/quest_spawn
-	name = "quest spawner"
+	name = "generador de misiones"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "rift"
 	anchored = TRUE

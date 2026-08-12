@@ -144,7 +144,7 @@
 	return null
 
 /datum/intent/simple/claw/skeleton_unarmed
-	attack_verb = list("claws", "strikes", "punches")
+	attack_verb = list("claws", "huelgas", "punches")
 	blade_class = BCLASS_CHOP
 	animname = "cut"
 	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')

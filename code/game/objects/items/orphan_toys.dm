@@ -15,11 +15,11 @@
 	icon_state = "toy_knight"
 
 /obj/item/orphan_toy/wizard
-	name = "toy wizard"
+	name = "mago del juguete"
 	icon_state = "toy_wizard"
 
 /obj/item/orphan_toy/bard
-	name = "toy bard"
+	name = "bardo de juguete"
 	icon_state = "toy_bard"
 
 /obj/item/orphan_toy/wolf
@@ -27,7 +27,7 @@
 	icon_state = "toy_wolf"
 
 /obj/item/orphan_toy/saiga
-	name = "toy saiga"
+	name = "juguete saiga"
 	icon_state = "toy_saiga"
 
 /obj/item/orphan_toy/goblin
@@ -35,15 +35,15 @@
 	icon_state = "toy_goblin"
 
 /obj/item/orphan_toy/dragon
-	name = "toy dragon"
+	name = "dragón de juguete"
 	icon_state = "toy_dragon"
 
 /obj/item/orphan_toy/skeleton
-	name = "toy skeleton"
+	name = "esqueleto de juguete"
 	icon_state = "toy_skeleton"
 
 /obj/item/clothing/head/crown/wooden
-	name = "wooden crown"
+	name = "corona de madera"
 	desc = "Truly you are the master of all."
 	icon = 'icons/obj/orphanage.dmi'
 	icon_state = "wooden_crown"

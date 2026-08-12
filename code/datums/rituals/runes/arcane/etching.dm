@@ -22,7 +22,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/focus_etch/attack_hand(mob/living/user)
 	if(animating)
-		to_chat(user, span_notice("The seal is already working..."))
+		to_chat(user, span_notice("El sello ya está funcionando..."))
 		return
 	if(!user.get_active_held_item())
 		if(staged_focus)
@@ -36,12 +36,12 @@
 		return NONE
 
 	if(animating)
-		to_chat(user, span_notice("The seal is already working..."))
+		to_chat(user, span_notice("El sello ya está funcionando..."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/obj/item/spell_focus/focus = tool
 	if(focus.stored_spell_type)
-		to_chat(user, span_warning("That focus is already etched with [focus.stored_spell_name]."))
+		to_chat(user, span_warning("Ese enfoque ya está grabado con [focus.stored_spell_name]."))
 		return ITEM_INTERACT_BLOCKING
 	if(staged_focus)
 		to_chat(user, span_notice("A focus is already placed here."))
@@ -58,10 +58,10 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/focus_etch/proc/try_invoke(mob/living/user)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("You aren't able to invoke these symbols."))
+		to_chat(user, span_warning("No puedes invocar estos símbolos."))
 		return
 	if(rune_in_use)
-		to_chat(user, span_notice("The seal is already active."))
+		to_chat(user, span_notice("El sello ya está activo."))
 		return
 
 	// Build eligible spell list, exclude essence and already-temporary spells
@@ -76,10 +76,10 @@
 		eligible[S.name] = S
 
 	if(!eligible.len)
-		to_chat(user, span_warning("You have no storable spells."))
+		to_chat(user, span_warning("No tienes hechizos almacenables."))
 		return
 
-	var/chosen_name = tgui_input_list(user, "Choose a spell to etch:", "Etch Focus", eligible)
+	var/chosen_name = tgui_input_list(user, "Elige un hechizo para grabar:", "Etch Focus", eligible)
 	if(!chosen_name || !eligible[chosen_name])
 		return
 	if(!staged_focus || QDELETED(staged_focus)) // race guard
@@ -90,7 +90,7 @@
 	// Ask how many charges (1-3, capped by mana availability)
 	var/max_possible_charges = min(3, floor(user.mana_pool.amount / max(1, chosen.spell_cost * 2)))
 	if(max_possible_charges < 1)
-		to_chat(user, span_hierophant_warning("You don't have enough mana to etch even one charge of [chosen.name]."))
+		to_chat(user, span_hierophant_warning("No tienes suficiente maná para grabar ni siquiera una carga de [chosen.name]."))
 		return
 
 	var/charge_options = list()
@@ -163,7 +163,7 @@
 			live = S
 			break
 	if(!live)
-		to_chat(user, span_warning("You no longer know that spell."))
+		to_chat(user, span_warning("Ya no conoces ese hechizo."))
 		return FALSE
 
 	var/total_mana = live.spell_cost * 2 * chosen_charges
@@ -183,7 +183,7 @@
 	staged_focus.update_appearance(UPDATE_OVERLAYS | UPDATE_NAME | UPDATE_DESC)
 
 	user.visible_message(
-		span_notice("[user] traces the seal, the focus blazes with [live.name]!"),
+		span_notice("¡[user] traza el sello, el foco arde con [live.name]!"),
 		span_notice("You etch [chosen_charges] charge\s of [live.name] into the focus.")
 	)
 	return TRUE

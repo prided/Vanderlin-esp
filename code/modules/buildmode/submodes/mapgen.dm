@@ -15,7 +15,7 @@
 	var/list/options = list()
 	for(var/datum/mapGenerator/MP as anything in gen_paths)
 		options[initial(MP.buildmode_name)] = MP
-	var/type = input(c,"Select Generator Type","Type") as null|anything in options
+	var/type = input(c,"Seleccione el tipo de generador","Type") as null|anything in options
 	if(!type)
 		return
 
@@ -36,7 +36,7 @@
 		var/datum/mapGenerator/G = new generator_path
 		G.defineRegion(cornerA, cornerB, 1)
 		highlight_region(G.map)
-		var/confirm = tgui_alert(user_client, "Are you sure you want to run the map generator?", "Run generator", list("Yes", "No"))
+		var/confirm = tgui_alert(user_client, "Are you sure you want to run the map generator?", "Ejecutar generador", list("Yes", "No"))
 		if(confirm == "Yes")
 			G.generate()
 		log_admin("Build Mode: [key_name(user_client)] ran the map generator '[G.buildmode_name]' in the region from [AREACOORD(cornerA)] to [AREACOORD(cornerB)]")

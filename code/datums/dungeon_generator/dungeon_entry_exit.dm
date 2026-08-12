@@ -8,7 +8,7 @@ GLOBAL_LIST_INIT(dungeon_exits, list())
 /obj/structure/dungeon_entry/center/vanderlin
 
 /obj/structure/dungeon_entry
-	name = "The Tomb of Matthios"
+	name = "La Tumba de Matthios"
 	desc = ""
 
 	icon = 'icons/roguetown/misc/portal.dmi'
@@ -109,7 +109,7 @@ GLOBAL_LIST_INIT(dungeon_exits, list())
 	user.zMove(target = get_turf(exit), z_move_flags = ZMOVE_LADDER_FLAGS)
 
 /obj/structure/dungeon_exit
-	name = "dungeon exit"
+	name = "salida de la mazmorra"
 	desc = ""
 
 	obj_flags = INDESTRUCTIBLE

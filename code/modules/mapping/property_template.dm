@@ -1,65 +1,65 @@
 /datum/map_template/basic_nine
-	name = "Basic 9x9 House"
+	name = "Casa Básica 9x9"
 	mappath = "_maps/templates/delver/9x9.dmm"
 	width = 9
 	height = 9
 
 /datum/map_template/vanderlin_apartment
-	name = "Vanderlin Basic Apartment"
+	name = "Vanderlin Apartamento Básico"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment1.dmm"
 	width = 7
 	height = 7
 
 /datum/map_template/vanderlin_apartment_two
-	name = "Vanderlin Basic Apartment Two"
+	name = "Vanderlin Apartamento Básico Dos"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment2.dmm"
 	width = 6
 	height = 10
 
 /datum/map_template/vanderlin_apartment_three
-	name = "Vanderlin Basic Apartment Three"
+	name = "Vanderlin Apartamento Básico Tres"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment3.dmm"
 	width = 10
 	height = 5
 
 /datum/map_template/vanderlin_apartment_four
-	name = "Vanderlin Basic Apartment Four"
+	name = "Vanderlin Apartamento Básico Cuatro"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment4.dmm"
 	width = 9
 	height = 12
 
 /datum/map_template/vanderlin_apartment_five
-	name = "Vanderlin Basic Apartment Five"
+	name = "Vanderlin Apartamento Básico Cinco"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment5.dmm"
 	width = 9
 	height = 6
 
 /datum/map_template/vanderlin_apartment_six
-	name = "Vanderlin Basic Apartment Six"
+	name = "Vanderlin Apartamento Básico Seis"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment6.dmm"
 	width = 9
 	height = 9
 
 /datum/map_template/vanderlin_apartment_seven
-	name = "Vanderlin Basic Apartment Seven"
+	name = "Vanderlin Apartamento Básico Siete"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment7.dmm"
 	width = 6
 	height = 12
 
 /datum/map_template/vanderlin_apartment_eight
-	name = "Vanderlin Basic Apartment Eight"
+	name = "Vanderlin Apartamento Básico Ocho"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment8.dmm"
 	width = 6
 	height = 12
 
 /datum/map_template/vanderlin_house
-	name = "Vanderlin House 1"
+	name = "Vanderlin Casa 1"
 	mappath = "_maps/map_files/vanderlin/house_templates/house1.dmm"
 	width = 7
 	height = 6
 
 /datum/map_template/vanderlin_house_two
-	name = "Vanderlin House 2"
+	name = "Vanderlin Casa 2"
 	mappath = "_maps/map_files/vanderlin/house_templates/house2.dmm"
 	width = 7
 	height = 15

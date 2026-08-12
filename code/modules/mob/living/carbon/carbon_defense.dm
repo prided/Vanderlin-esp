@@ -98,14 +98,14 @@
 		if(istype(AM, /obj/item/rope/net))
 			var/obj/item/rope/net/N = AM
 			visible_message(span_warning("[src] tries to catch [N] but gets snared by it!"), \
-							span_danger("Why did I try to catch it??")) // Hahaha dumbass!!!
+							span_danger("¿Por qué intenté atraparlo?")) // Hahaha dumbass!!!
 			throw_mode_off()
 			N.ensnare(src)
 			return
 		var/obj/item/I = AM
 		I.attack_hand(src)
 		if(get_active_held_item() == I) //if our attack_hand() picks up the item...
-			visible_message(span_warning("[src] catches [I]!"), \
+			visible_message(span_warning("¡[src] atrapa a [I]!"), \
 							span_danger("I catch [I] in mid-air!"))
 			throw_mode_off()
 			return 1
@@ -146,7 +146,7 @@
 			if(used_limb == parse_zone(BODY_ZONE_PRECISE_R_HAND) || used_limb == parse_zone(BODY_ZONE_PRECISE_L_HAND))
 				record_round_statistic(STATS_HANDS_HELD)
 		target.visible_message(span_warning("[src] grabs [target]'s [used_limb]."), \
-						src != target ? span_warning("[src] grabs my [used_limb].") : "", \
+						src != target ? span_warning("[src] agarra mi [used_limb].") : "", \
 						span_hear("I hear shuffling."), null, list(src))
 		to_chat(src, span_info("I grab [src != target ? "[target]'s" : "my"] [used_limb]."))
 	else
@@ -262,7 +262,7 @@
 
 	var/obj/item/bodypart/affecting = get_bodypart(check_zone(useder)) //precise attacks, on yourself or someone you are grabbing
 	if(!affecting) //missing limb
-		to_chat(user, span_warning("Unfortunately, there's nothing there."))
+		to_chat(user, span_warning("Desafortunadamente, no hay nada allí."))
 		return FALSE
 
 	SEND_SIGNAL(I, COMSIG_ITEM_ATTACK_ZONE, src, user, affecting)
@@ -396,13 +396,13 @@
 	if(on_fire)
 		if(M.gloves)
 			M.changeNext_move(CLICK_CD_MELEE)
-			M.visible_message(span_warning("[M] pats out the flames on [src]!"))
+			M.visible_message(span_warning("¡[M] apaga las llamas en [src]!"))
 			adjust_divine_fire_stacks(-2)
 			if(fire_stacks > 0)
 				adjust_fire_stacks(-2)
 			M.gloves.take_damage(10, BURN, "fire")
 		else
-			to_chat(M, span_warning("I can't put [p_them()] out with just my bare hands!"))
+			to_chat(M, span_warning("¡No puedo apagar [p_them()] solo con mis manos!"))
 		return
 
 //	if(!(mobility_flags & MOBILITY_STAND))
@@ -445,7 +445,7 @@
 			return
 
 		if (damage == 1)
-			to_chat(src, "<span class='warning'>My eyes sting a little.</span>")
+			to_chat(src, "<span class='warning'>Me pican un poco los ojos.</span>")
 			if(prob(40))
 				eyes.applyOrganDamage(1)
 
@@ -454,7 +454,7 @@
 			eyes.applyOrganDamage(rand(2, 4))
 
 		else if( damage >= 3)
-			to_chat(src, "<span class='warning'>My eyes itch and burn severely!</span>")
+			to_chat(src, "<span class='warning'>¡Me pican y arden mucho los ojos!</span>")
 			eyes.applyOrganDamage(rand(12, 16))
 
 		if(eyes.damage > 10)

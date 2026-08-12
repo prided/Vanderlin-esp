@@ -19,7 +19,7 @@ And it also helps for the character set panel
 */
 /datum/clan
 	var/name = "Base Clan"
-	var/desc = "The clanless. The rabble. Of no importance."
+	var/desc = "Los sin clan. La chusma. Sin importancia."
 
 	var/list/clan_covens = list() //coven datums
 	var/list/restricted_covens = list()
@@ -351,7 +351,7 @@ And it also helps for the character set panel
 		if(!silent_join)
 			for(var/mob/living/carbon/human/member in clan_members)
 				if(member != new_leader)
-					to_chat(member, "<span class='notice'>[new_leader.real_name] has become the new [leader_title] of [name].</span>")
+					to_chat(member, "<span class='notice'>[new_leader.real_name] se ha convertido en el nuevo [leader_title] de [name].</span>")
 
 
 /datum/clan/proc/frenzy_message(mob/living/message)
@@ -500,8 +500,8 @@ And it also helps for the character set panel
 	user.open_clan_menu()
 
 /datum/action/clan_menu
-	name = "Clan Menu"
-	desc = "Open your clan's power management interface"
+	name = "Menú del clan"
+	desc = "Abre la interfaz de administración de energía de tu clan."
 	background_icon_state = "spell"
 	button_icon_state = "coven"
 
@@ -524,7 +524,7 @@ And it also helps for the character set panel
 	status_type = STATUS_EFFECT_REFRESH
 
 /atom/movable/screen/alert/status_effect/debuff/blood_disgust
-	name = "Sanguine Curse"
+	name = "Maldición sanguínea"
 	desc = span_warning("This type of blood does not go down well.")
 	icon_state = "hunger2"
 
@@ -540,7 +540,7 @@ And it also helps for the character set panel
 	owner.remove_stress(/datum/stress_event/bad_blood)
 
 /datum/stress_event/bad_blood
-	desc = span_warning("That blood was revolting!")
+	desc = span_warning("¡Esa sangre era repugnante!")
 	stress_change = 3
 	max_stacks = 10
 	stress_change_per_extra_stack = 3
@@ -554,7 +554,7 @@ And it also helps for the character set panel
 	status_type = STATUS_EFFECT_REFRESH
 
 /atom/movable/screen/alert/status_effect/buff/blood_preference
-	name = "Sanguine Euphoria"
+	name = "Euforia sanguínea"
 	desc = span_good("This type of blood goes down incredibly well.")
 	icon_state = "hunger2"
 
@@ -573,7 +573,7 @@ And it also helps for the character set panel
 	owner.remove_stress(/datum/stress_event/good_blood)
 
 /datum/stress_event/good_blood
-	desc = span_good("That blood was euphoric!")
+	desc = span_good("¡Esa sangre estaba eufórica!")
 	stress_change = 3
 	max_stacks = 10
 	stress_change_per_extra_stack = 3

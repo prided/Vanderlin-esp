@@ -22,7 +22,7 @@
 	)
 
 /datum/job/advclass/mercenary/zalad
-	title = "Red Sands"
+	title = "Arenas Rojas"
 	tutorial = "A cutthroat from Zalad lands, you've headed into foreign lands to make even greater coin than you had prior."
 	allowed_races = list(\
 		SPEC_ID_HUMEN,\
@@ -69,7 +69,7 @@
 				species.accent_language = species.get_accent(species.native_language)
 
 /datum/outfit/mercenary/zalad
-	name = "Red Sands (Mercenary)"
+	name = "Arenas Rojas (Mercenario)"
 	shoes = /obj/item/clothing/shoes/shalal
 	head = /obj/item/clothing/head/helmet/sallet/zalad
 	gloves = /obj/item/clothing/gloves/angle

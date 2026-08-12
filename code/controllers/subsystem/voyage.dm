@@ -76,7 +76,7 @@
 	top_right = locate(bl.x + size - 1, bl.y + size - 1, z_level)
 
 SUBSYSTEM_DEF(terrain_generation)
-	name = "Terrain Generation"
+	name = "Generación de terreno"
 	init_order = INIT_ORDER_TERRAIN
 	flags = SS_NO_FIRE
 
@@ -691,14 +691,14 @@ SUBSYSTEM_DEF(terrain_generation)
 	return null
 
 /client/proc/list_all_ships_and_islands()
-	set name = "List Ships and Islands"
+	set name = "Lista de barcos e islas"
 	set category = "Debug"
 
-	to_chat(src, "<b>==== SHIPS ====</b>")
+	to_chat(src, "<b>==== BARCOS ====</b>")
 	for(var/datum/ship_data/ship in SSterrain_generation.ship_registry)
 		var/docked = ship.docked_island ? "DOCKED to [ship.docked_island.island_name]" : "NOT DOCKED"
 		to_chat(src, "Ship at z=[ship.z_level] ([ship.bottom_left.x],[ship.bottom_left.y]) - [docked]")
 
-	to_chat(src, "<b>==== ISLANDS ====</b>")
+	to_chat(src, "<b>==== ISLAS ====</b>")
 	for(var/datum/island_data/island in SSterrain_generation.island_registry)
 		to_chat(src, "[island.island_name] at z=[island.z_level] ([island.bottom_left.x],[island.bottom_left.y]) ID: [island.island_id]")

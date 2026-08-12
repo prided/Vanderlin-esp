@@ -54,13 +54,13 @@
 			var/burn_progress = food_data["progress"]
 
 			if(burn_progress < 0.3)
-				examine_text += span_notice("[food] looks fine for now.")
+				examine_text += span_notice("[food] se ve bien por ahora.")
 			else if(burn_progress < 0.5)
-				examine_text += span_notice("[food] is starting to warm up.")
+				examine_text += span_notice("[food] está empezando a calentarse.")
 			else if(burn_progress < 0.75)
 				examine_text += span_warning("[food] is getting very hot!")
 			else if(burn_progress < 0.9)
-				examine_text += span_danger("[food] is smoking and about to burn!")
+				examine_text += span_danger("¡[food] está humeando y a punto de arder!")
 			else
 				examine_text += span_danger("[food] is burning!")
 

@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/eternal_vigilance
-	name = "Eternal Vigilance"
-	desc = "Enter a dreamless stasis. Close your eyes for a deeper trance."
+	name = "Vigilancia eterna"
+	desc = "Entra en una estasis sin sueños. Cierra los ojos para un trance más profundo."
 	has_visual_effects = FALSE
 
 	//so we don't accidentally give them arcane exp...
@@ -30,7 +30,7 @@
 		for(var/obj/item/clothing/thing in equipped_items)
 			if(thing.clothing_flags & CANT_SLEEP_IN)
 				//we're too uncomfortable for deep stasis
-				to_chat(cast_on, span_boldwarning("I can't enter stasis...[thing] bothers me..."))
+				to_chat(cast_on, span_boldwarning("No puedo entrar en estasis...[thing] me molesta..."))
 				can_sleep = FALSE
 				break
 		//we made it through the items check, go into deep stasis for a set duration.

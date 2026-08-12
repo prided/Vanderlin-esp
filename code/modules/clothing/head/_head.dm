@@ -1,5 +1,5 @@
 /obj/item/clothing/head
-	name = "hat"
+	name = "sombrero"
 	desc = ""
 
 	icon = 'icons/roguetown/clothing/head.dmi'

@@ -83,8 +83,8 @@
 	var/datum/augment/augment
 
 /datum/action/augment/sandevistan
-	name = "Chronos"
-	desc = "Activate Chronos to slow time around you."
+	name = "Cronos"
+	desc = "Activa Chronos para ralentizar el tiempo a tu alrededor."
 	button_icon_state = "time_slow"
 
 /datum/action/augment/sandevistan/Trigger(trigger_flags)
@@ -119,11 +119,11 @@
 		return
 
 	if(active)
-		to_chat(H, span_warning("The CHRONOS unit is already active!"))
+		to_chat(H, span_warning("¡La unidad CHRONOS ya está activa!"))
 		return
 
 	if(!COOLDOWN_FINISHED(src, in_the_zone))
-		to_chat(H, span_warning("The augment is recharging... ([DisplayTimeText(COOLDOWN_TIMELEFT(src, in_the_zone))] remaining)"))
+		to_chat(H, span_warning("El aumento se está recargando... ([DisplayTimeText(COOLDOWN_TIMELEFT(src, in_the_zone))] restante)"))
 		return
 
 	COOLDOWN_START(src, in_the_zone, cooldown_time)
@@ -133,7 +133,7 @@
 	H.AddComponent(/datum/component/after_image, 16, 0.5, TRUE)
 	H.AddComponent(/datum/component/slowing_field, 0.1, 5, 3)
 
-	to_chat(H, span_notice("Time seems to slow around you..."))
+	to_chat(H, span_notice("El tiempo parece ralentizarse a tu alrededor..."))
 
 	addtimer(CALLBACK(src, PROC_REF(deactivate)), active_time)
 
@@ -152,10 +152,10 @@
 	if(SF)
 		qdel(SF)
 
-	to_chat(H, span_notice("Time returns to normal."))
+	to_chat(H, span_notice("El tiempo vuelve a la normalidad."))
 
 /datum/augment/special/sandevistan/get_examine_info()
 	var/list/info = ..()
 	info += span_info("Cooldown: [DisplayTimeText(cooldown_time)]")
-	info += span_info("Duration: [DisplayTimeText(active_time)]")
+	info += span_info("Duración: [DisplayTimeText(active_time)]")
 	return info

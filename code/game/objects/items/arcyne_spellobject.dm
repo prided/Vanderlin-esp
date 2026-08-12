@@ -50,7 +50,7 @@
 	if(spellobject_flags & SPELLOBJECT_HIJACK_CLICK)
 		. += span_notice("It crackles faintly, point and click to unleash its magic.")
 	if(spellobject_flags & SPELLOBJECT_CHAOTIC)
-		. += span_warning("The magic within feels wild and unpredictable.")
+		. += span_warning("La magia interior se siente salvaje e impredecible.")
 
 /obj/item/arcyne_spellobject/update_overlays()
 	. = ..()
@@ -126,7 +126,7 @@
 				actual_target = intended_target
 				user.visible_message(
 					span_notice("[user] levels [src] and a burst of energy lances toward [intended_target]!"),
-					span_notice("The spell fires toward [intended_target].")
+					span_notice("El hechizo se dispara hacia [intended_target].")
 				)
 			if(DICE_FAILURE)
 				if(spellobject_flags & SPELLOBJECT_CHAOTIC)
@@ -187,7 +187,7 @@
 				active = FALSE
 			user.visible_message(
 				span_warning("[user]'s [name] dims — all spells exhausted."),
-				span_warning("The [name] is now empty.")
+				span_warning("El [name] ahora está vacío.")
 			)
 			if(spellobject_flags & SPELLOBJECT_CONSUMABLE)
 				qdel(src)
@@ -251,10 +251,10 @@
 
 /obj/item/arcyne_spellobject/proc/imbue_spell(mob/caster, datum/action/cooldown/spell/spell_type_path, spell_tier, charges = 1)
 	if(length(stored_spells) >= max_spells)
-		to_chat(caster, span_hierophant_warning("The [name] is already full ([max_spells] spells)."))
+		to_chat(caster, span_hierophant_warning("El [name] ya está lleno ([max_spells] hechizos)."))
 		return FALSE
 	if(spell_tier < min_spell_tier || spell_tier > max_spell_tier)
-		to_chat(caster, span_hierophant_warning("This object cannot hold a spell of that tier."))
+		to_chat(caster, span_hierophant_warning("Este objeto no puede contener un hechizo de ese nivel."))
 		return FALSE
 
 	var/datum/action/cooldown/spell/live = null

@@ -130,14 +130,14 @@
 		examine_list += span_notice("It has [length(gnome.waypoints)] waypoint[length(gnome.waypoints) > 1 ? "s" : ""] set.")
 
 	if(state_manager)
-		examine_list += span_notice("Current task: [state_manager.get_state_name()]")
+		examine_list += span_notice("Tarea actual: [state_manager.get_state_name()]")
 
 		// Show each state and its cached priority so players can debug.
 		for(var/state_name in state_manager.available_states)
 			var/datum/action_state/state = state_manager.available_states[state_name]
 			var/priority = state.cached_priority
 			if(priority > GNOME_PRIORITY_NONE)
-				examine_list += span_notice(" - [state_name]: priority [priority]")
+				examine_list += span_notice(" - [state_name]: prioridad [priority]")
 
 /datum/ai_planning_subtree/priority_action_state_manager/SelectBehaviors(datum/ai_controller/controller, delta_time)
 	var/datum/action_state_manager/manager = controller.blackboard[BB_ACTION_STATE_MANAGER]

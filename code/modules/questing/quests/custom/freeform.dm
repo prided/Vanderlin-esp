@@ -19,7 +19,7 @@
 	if(!fill_common_fields(user))
 		return FALSE
 
-	var/obj_text = tgui_input_text(user, "Describe what the adventurer must do:", "Quest Objective", "", 200)
+	var/obj_text = tgui_input_text(user, "Describe what the adventurer must do:", "Objetivo de la misión", "", 200)
 	if(!obj_text)
 		return FALSE
 
@@ -28,7 +28,7 @@
 	quest_giver_name = user.real_name
 
 	var/auto_title = get_title()
-	var/custom_title = tgui_input_text(user, "Give this quest a title:", "Quest Title", "", 80)
+	var/custom_title = tgui_input_text(user, "Dale un título a esta misión:", "Título de la misión", "", 80)
 	title = custom_title ? custom_title : auto_title
 	return TRUE
 

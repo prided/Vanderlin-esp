@@ -1,6 +1,6 @@
 /obj/structure/channel_connector/heater
-	name = "channel heater"
-	desc = "A furnace-like device that connects to metal channels to reheat molten metal as it flows through."
+	name = "calentador de canal"
+	desc = "Un dispositivo similar a un horno que se conecta a canales metálicos para recalentar el metal fundido a medida que fluye."
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
 	icon_state = "heater"
@@ -78,7 +78,7 @@
 			return
 
 		on = TRUE
-		user.visible_message("[user] lights [src].", "You light [src].")
+		user.visible_message("[user] lights [src].", "Enciendes [src].")
 		update_appearance(UPDATE_OVERLAYS)
 		return
 

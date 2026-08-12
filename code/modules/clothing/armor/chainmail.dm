@@ -21,7 +21,7 @@
 	material_category = ARMOR_MAT_CHAINMAIL
 
 /obj/item/clothing/armor/chainmail/iron
-	name = "iron haubergeon"
+	name = "haubergeon de hierro"
 	desc = "Made out of interlocked iron rings. Offers good resistance against arrows, stabs and cuts. \nUsually worn as padding for proper armor."
 	icon_state = "ihaubergeon"
 	item_state = "ihaubergeon"

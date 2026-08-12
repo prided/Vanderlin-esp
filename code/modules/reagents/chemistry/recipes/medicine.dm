@@ -77,7 +77,7 @@
 	mix_message = "The mercury disperses into the solution, leaving a chalky white fluid."
 
 /datum/chemical_reaction/crystalline_lymph
-	name = "Crystalline Lymph"
+	name = "Linfa cristalina"
 	id = "crystalline_lymph"
 	required_reagents = list(
 		/datum/reagent/water = 5,
@@ -121,7 +121,7 @@
 	mix_message = "The mix brightens to a warm golden yellow with a sweet floral scent."
 
 /datum/chemical_reaction/stonevein_broth
-	name = "Stonevein Broth"
+	name = "Caldo de vena de piedra"
 	id = "stonevein_broth"
 	required_reagents = list(
 		/datum/reagent/medicine/healthpot = 5,
@@ -140,7 +140,7 @@
 		/datum/reagent/water = 5
 	)
 	results = list(/datum/reagent/medicine/fever_oil = 12)
-	mix_message = "The mix heats rapidly, releasing a spicy burning aroma."
+	mix_message = "La mezcla se calienta rápidamente, liberando un aroma picante y ardiente."
 
 /datum/chemical_reaction/witchknit_paste
 	name = "Witchknit Paste"
@@ -176,7 +176,7 @@
 	mix_message = "The reagents emulsify into a rich, cream-coloured broth."
 
 /datum/chemical_reaction/spiritwood_elixir
-	name = "Spiritwood Elixir"
+	name = "Elixir de madera espiritual"
 	id = "spiritwood_elixir"
 	required_reagents = list(
 		/datum/reagent/medicine/healthpot = 5,
@@ -295,7 +295,7 @@
 	mix_message = "The reagents combine into a pitch-black fluid that immediately starts corroding the container slightly."
 
 /datum/chemical_reaction/blinding_spore
-	name = "Blinding Spore"
+	name = "Espora cegadora"
 	id = "blinding_spore"
 	required_reagents = list(
 		/datum/reagent/toxin/amatoxin = 5,
@@ -316,7 +316,7 @@
 	mix_message = "The mixture grows scalding hot, releasing a sharp peppery aroma."
 
 /datum/chemical_reaction/mirelung_brew
-	name = "Mirelung Brew"
+	name = "Cerveza Mirelung"
 	id = "mirelung_brew"
 	required_reagents = list(
 		/datum/reagent/water/gross = 5,

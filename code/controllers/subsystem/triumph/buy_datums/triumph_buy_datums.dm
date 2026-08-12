@@ -7,7 +7,7 @@
 	/// Display name shown as a title above the description
 	var/name = "UNNAMED TRIUMPH BUY"
 	/// Desc shown for it on the menu
-	var/desc = "NO DESCRIPTION"
+	var/desc = "SIN DESCRIPCIÓN"
 	/// Unique ID of the triumph buy
 	var/triumph_buy_id
 	/// Ckey of the person who bought it

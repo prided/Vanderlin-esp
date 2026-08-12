@@ -202,7 +202,7 @@
 	duration = 5
 
 /obj/effect/temp_visual/telekinesis
-	name = "telekinetic force"
+	name = "fuerza telequinética"
 	icon_state = "empdisable"
 	duration = 5
 
@@ -258,7 +258,7 @@
 	pixel_y = base_pixel_y + rand(-9, 0)
 
 /obj/effect/temp_visual/kinetic_blast
-	name = "kinetic explosion"
+	name = "explosión cinética"
 	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "kinetic_blast"
 	layer = ABOVE_ALL_MOB_LAYER
@@ -283,7 +283,7 @@
 	duration = 6
 
 /obj/effect/temp_visual/desynchronizer
-	name = "desynchronizer field"
+	name = "campo desincronizador"
 	icon_state = "chronofield"
 	duration = 3
 

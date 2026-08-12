@@ -20,12 +20,12 @@
 	icon_state = "gryphon"
 
 /obj/item/clothing/neck/mercmedal/underdweller
-	name = "underdweller compass"
+	name = "brújula del subhabitante"
 	desc = "A non-functional compass carried by seasoned miners as keepsake. Greed will light the way."
 	icon_state = "compass"
 
 /obj/item/clothing/neck/mercmedal/blackoak
-	name = "black oak seedpouch"
+	name = "bolsa de semillas de roble negro"
 	desc = "A dark acorn resting in a canvas pouch. May your final resting place be the one life you give back to this world."
 	icon_state = "seedpouch"
 
@@ -40,7 +40,7 @@
 	icon_state = "dogmedal"
 
 /obj/item/clothing/neck/mercmedal/anthrax
-	name = "petrified larvae charm"
+	name = "amuleto de larvas petrificadas"
 	desc = "The husk of a desiccated beespider larva, passed down within the ranks of those whose names have been struck from dark elven history. The old tyranny's uprooting would be their last act of true valor."
 	icon_state = "spider"
 

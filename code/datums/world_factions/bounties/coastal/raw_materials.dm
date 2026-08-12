@@ -1,5 +1,5 @@
 /datum/bounty/coastal/silk_trade
-	name = "Silk Trade Order"
+	name = "Orden de comercio de seda"
 	desc = "Silk fetches a fortune in the eastern markets."
 	required_path = /obj/item/natural/silk
 	required_count = 5

@@ -1,16 +1,16 @@
 // Assassin, cultist of graggar. Normally found as a drifter.
 /datum/antagonist/assassin
-	name = "Assassin"
-	roundend_category = "Assassins"
-	antagpanel_category = "Assassin"
+	name = "Asesino"
+	roundend_category = "Asesinos"
+	antagpanel_category = "Asesino"
 	antag_hud_type = ANTAG_HUD_ASSASSIN
 	antag_hud_name = "assassin"
 	show_name_in_check_antagonists = TRUE
 	confess_lines = list(
 		"MY CREED IS BLOOD!",
 		"THE DAGGER TOLD ME WHO TO CUT!",
-		"DEATH IS MY DEVOTION!",
-		"THE DARK SUN GUIDES MY HAND!",
+		"¡LA MUERTE ES MI DEVOCIÓN!",
+		"¡EL SOL OSCURO GUÍA MI MANO!",
 	)
 	antag_flags = FLAG_FAKE_ANTAG
 
@@ -41,7 +41,7 @@
 
 /mob/living/carbon/human/proc/who_targets() // Verb for the assassin to remember their targets.
 	set name = "Remember Targets"
-	set category = "RoleUnique"
+	set category = "RolÚnico"
 	if(!mind)
 		return
 	mind.recall_targets(src)
@@ -65,11 +65,11 @@
 		traitorwin = FALSE
 
 	if(traitorwin)
-		to_chat(world, "<span class='greentext'>The [name] [owner.name] has TRIUMPHED!</span>")
+		to_chat(world, "<span class='greentext'>¡El [name] [owner.name] ha TRIUNFADO!</span>")
 		if(owner?.current)
 			owner.current.playsound_local(get_turf(owner.current), 'sound/misc/triumph.ogg', 100, FALSE, pressure_affected = FALSE)
 	else
-		to_chat(world, "<span class='redtext'>The [name] [owner.name] has FAILED!</span>")
+		to_chat(world, "<span class='redtext'>¡El [name] [owner.name] ha FALLADO!</span>")
 		if(owner?.current)
 			owner.current.playsound_local(get_turf(owner.current), 'sound/misc/fail.ogg', 100, FALSE, pressure_affected = FALSE)
 

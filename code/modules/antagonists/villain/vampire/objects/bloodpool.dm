@@ -28,7 +28,7 @@
 
 	// Show active projects
 	if(active_projects.len)
-		to_chat(user, span_notice("Active Projects:"))
+		to_chat(user, span_notice("Proyectos Activos:"))
 		for(var/project_key in active_projects)
 			var/datum/vampire_project/project = active_projects[project_key]
 			var/progress_percent = round((project.paid_amount / project.total_cost) * 100, 1)
@@ -182,22 +182,22 @@
 		return TRUE
 
 /datum/vampire_project
-	var/display_name = "Unknown Project"
-	var/description = "A mysterious undertaking."
+	var/display_name = "Proyecto desconocido"
+	var/description = "Una empresa misteriosa."
 	var/total_cost = 1000
 	var/paid_amount = 0
 	var/list/contributors = list()
 	var/obj/structure/vampire/bloodpool/bloodpool
 	//body of the person who started it
 	var/datum/weakref/initiator
-	var/start_failure_message = "This project cannot be started."
+	var/start_failure_message = "Este proyecto no se puede iniciar."
 	var/completion_sound = 'sound/misc/batsound.ogg'
 
 /datum/vampire_project/proc/can_start(mob/living/user, obj/structure/vampire/bloodpool/pool)
 	return TRUE
 
 /datum/vampire_project/proc/confirm_start(mob/living/user)
-	return tgui_alert(user, "Begin [display_name]?\n[description]\nTotal Cost: [total_cost]\nYou can contribute vitae over time.", "PROJECT START", list("Yes", "No")) == "Yes"
+	return tgui_alert(user, "Begin [display_name]?\n[description]\nTotal Cost: [total_cost]\nYou can contribute vitae over time.", "INICIO DEL PROYECTO", list("Yes", "No")) == "Yes"
 
 /datum/vampire_project/proc/on_start(mob/living/user)
 	return
@@ -217,7 +217,7 @@
 	contribution = clamp(contribution, 1, max_contribution)
 
 	if(user.bloodpool < contribution)
-		to_chat(user, span_warning("I do not have enough vitae."))
+		to_chat(user, span_warning("No tengo suficiente vitae."))
 		return
 
 	user.adjust_bloodpool(-contribution)
@@ -233,9 +233,9 @@
 		bloodpool.complete_project(type)
 
 /datum/vampire_project/proc/show_details(mob/living/user)
-	to_chat(user, span_notice("Project: [display_name]"))
-	to_chat(user, span_notice("Description: [description]"))
-	to_chat(user, span_notice("Progress: [paid_amount]/[total_cost]"))
+	to_chat(user, span_notice("Proyecto: [display_name]"))
+	to_chat(user, span_notice("Descripción: [description]"))
+	to_chat(user, span_notice("Progreso: [paid_amount]/[total_cost]"))
 	to_chat(user, span_notice("Contributors: [english_list(contributors)]"))
 
 /datum/vampire_project/proc/on_complete()
@@ -270,7 +270,7 @@
 	var/datum/antagonist/vampire/lord/lord = target?.mind?.has_antag_datum(/datum/antagonist/vampire/lord)
 	if(!lord || lord.ascension_level != ascension_requirement)
 		return
-	to_chat(target, span_greentext("My power grows through collective sacrifice."))
+	to_chat(target, span_greentext("Mi poder crece a través del sacrificio colectivo."))
 	var/mob/living/carbon/human/lord_body = target
 	lord_body.set_stat_modifier("[type]", list(
 		STAT_CONSTITUTION = 2,
@@ -302,7 +302,7 @@
 	next_phase = /datum/vampire_project/power_growth/fourth
 
 /datum/vampire_project/power_growth/fourth
-	display_name = "Rite of Sovereignty"
+	display_name = "Rito de soberanía"
 	description = "The Lord is whole. Ancient power saturates every stone and vein, for the Land and its master are one."
 	total_cost = VAMPCOST_FOUR
 	ascension_requirement = 3
@@ -349,7 +349,7 @@
 	var/obj/item/clothing/neck/portalamulet/P = new(bloodpool.loc)
 	if(amulet_name)
 		P.name = amulet_name
-	creation_point.visible_message(span_notice("An amulet materializes from the crimson crucible."))
+	creation_point.visible_message(span_notice("Un amuleto se materializa del crisol carmesí."))
 
 /datum/vampire_project/maille_crafting
 	display_name = "Ancient Maille"
@@ -370,7 +370,7 @@
 
 /datum/vampire_project/armor_crafting
 	display_name = "Ancient Plate"
-	description = "Craft a complete set of vampiric armor from crystallized blood."
+	description = "Crea un conjunto completo de armadura vampírica a partir de sangre cristalizada."
 	total_cost = VAMPCOST_ONE
 	completion_sound = 'sound/misc/vcraft.ogg'
 

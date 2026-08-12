@@ -42,7 +42,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/crafting/attack_hand(mob/living/user)
 	if(animating)
-		to_chat(user, span_notice("The rune is already working..."))
+		to_chat(user, span_notice("La runa ya está funcionando..."))
 		return
 
 	//try to invoke if a recipe is matched, or eject if staged.
@@ -57,7 +57,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/crafting/attack_hand_secondary(mob/living/user, list/modifiers)
 	if(animating)
-		to_chat(user, span_notice("The rune is already working..."))
+		to_chat(user, span_notice("La runa ya está funcionando..."))
 		return
 	if(!length(slots))
 		return ..()
@@ -73,7 +73,7 @@
 		return NONE
 
 	if(animating)
-		to_chat(user, span_notice("The rune is already working..."))
+		to_chat(user, span_notice("La runa ya está funcionando..."))
 		return ITEM_INTERACT_BLOCKING
 
 	try_place_item(user, tool)
@@ -84,7 +84,7 @@
 	// Check if the item is already staged on this rune.
 	for(var/datum/crafting_slot/S in slots)
 		if(S.item == item)
-			to_chat(user, span_notice("That's already placed on the rune."))
+			to_chat(user, span_notice("Eso ya está colocado en la runa."))
 			return
 
 	// Find the maximum ingredient count across all recipes to cap slot count.
@@ -96,7 +96,7 @@
 			qdel(R)
 
 	if(length(slots) >= max_slots)
-		to_chat(user, span_hierophant_warning("The rune can't hold any more ingredients."))
+		to_chat(user, span_hierophant_warning("La runa no puede contener más ingredientes."))
 		return
 
 	// Drop the item from the user's hand onto the rune's turf, then stage it.
@@ -168,10 +168,10 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/crafting/proc/try_invoke(mob/living/user)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("You aren't able to invoke these symbols."))
+		to_chat(user, span_warning("No puedes invocar estos símbolos."))
 		return
 	if(rune_in_use)
-		to_chat(user, span_notice("The rune is already active."))
+		to_chat(user, span_notice("La runa ya está activa."))
 		return
 	rune_in_use = TRUE
 	animating = TRUE
@@ -179,7 +179,7 @@
 	// Check skill gate.
 	var/skill_level = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane)
 	if(skill_level < matched_recipe.required_skill)
-		to_chat(user, span_hierophant_warning("My arcyne is not refined enough to complete this working..."))
+		to_chat(user, span_hierophant_warning("Mi arcyne no está lo suficientemente refinado para completar este trabajo..."))
 		abort_ritual()
 		return
 	if(user.mana_pool.amount < matched_recipe.mana_cost)

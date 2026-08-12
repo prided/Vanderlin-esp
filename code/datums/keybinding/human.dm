@@ -20,7 +20,7 @@
 /datum/keybinding/human/quick_equipbelt
 	hotkey_keys = list("ShiftB")
 	name = "quick_equipbelt"
-	full_name = "Quick equip belt"
+	full_name = "Cinturón de equipamiento rápido"
 	description = "Put held thing in belt or take out most recent thing from belt"
 
 /datum/keybinding/human/quick_equipbelt/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -59,7 +59,7 @@
 /datum/keybinding/human/fixeye
 	hotkey_keys = list("F")
 	name = "fix_eye"
-	full_name = "Fixed Eye"
+	full_name = "Ojo fijo"
 	description = "Focus in a direction."
 
 /datum/keybinding/human/fixeye/down(client/user, turf/target, mousepos_x, mousepos_y)

@@ -43,7 +43,7 @@
 	confess_lines = list(
 		"DEATH TO THE TEN!",
 		"PRAISE ZIZO!",
-		"I AM THE FUTURE!",
+		"¡YO SOY EL FUTURO!",
 		"NO GODS! ONLY MASTERS!",
 	)
 	var/islesser = TRUE
@@ -77,9 +77,9 @@
 
 /datum/antagonist/zizocultist/examine_friendorfoe(datum/antagonist/examined_datum, mob/examiner, mob/examined)
 	if(istype(examined_datum, /datum/antagonist/zizocultist/leader))
-		return span_boldnotice("OUR LEADER!")
+		return span_boldnotice("¡NUESTRO LÍDER!")
 	if(istype(examined_datum, /datum/antagonist/zizocultist))
-		return span_boldnotice("A lackey for the future.")
+		return span_boldnotice("Un lacayo para el futuro.")
 	if(istype(examined_datum, /datum/antagonist/assassin))
 		return span_boldnotice("A GRAGGAROID! A CULTIST OF GRAGGAR!")
 
@@ -149,9 +149,9 @@
 		return TRUE
 
 /datum/objective/zizoserve
-	name = "Serve your Leader"
-	explanation_text = "Serve your leader and ensure that they ascend."
-	team_explanation_text = "Serve your leader and ensure that they ascend."
+	name = "Sirve a tu líder"
+	explanation_text = "Sirve a tu líder y asegúrate de que ascienda."
+	team_explanation_text = "Sirve a tu líder y asegúrate de que ascienda."
 	triumph_count = 3
 
 /datum/objective/zizoserve/check_completion()
@@ -178,7 +178,7 @@
 				if(objective.check_completion())
 					to_chat(owner, "<B>Goal #[count]</B>: [objective.explanation_text] <span class='greentext'>TRIUMPH!</span>")
 				else
-					to_chat(owner, "<B>Goal #[count]</B>: [objective.explanation_text] <span class='redtext'>Failure.</span>")
+					to_chat(owner, "<B>Objetivo #[count]</B>: [objective.explanation_text] <span class='redtext'>Fallo.</span>")
 					traitorwin = FALSE
 				count += objective.triumph_count
 	else
@@ -188,7 +188,7 @@
 				if(objective.check_completion())
 					to_chat(world, "<B>Goal #[count]</B>: [objective.explanation_text] <span class='greentext'>TRIUMPH!</span>")
 				else
-					to_chat(world, "<B>Goal #[count]</B>: [objective.explanation_text] <span class='redtext'>Failure.</span>")
+					to_chat(world, "<B>Objetivo #[count]</B>: [objective.explanation_text] <span class='redtext'>Fallo.</span>")
 					traitorwin = FALSE
 				count += objective.triumph_count
 
@@ -197,11 +197,11 @@
 		if(count)
 			if(owner)
 				owner.adjust_triumphs(count)
-		to_chat(world, span_greentext(">The [special_role_text] has TRIUMPHED!"))
+		to_chat(world, span_greentext(">¡El [special_role_text] ha TRIUNFADO!"))
 		if(owner?.current)
 			owner.current.playsound_local(get_turf(owner.current), 'sound/misc/triumph.ogg', 100, FALSE, pressure_affected = FALSE)
 	else
-		to_chat(world, span_redtext("The [special_role_text] has FAILED!"))
+		to_chat(world, span_redtext("¡El [special_role_text] ha FALLADO!"))
 		if(owner?.current)
 			owner.current.playsound_local(get_turf(owner.current), 'sound/misc/fail.ogg', 100, FALSE, pressure_affected = FALSE)
 
@@ -209,7 +209,7 @@
 
 /mob/living/carbon/human/proc/praise()
 	set name = "Praise the Dark Lady!"
-	set category = "RoleUnique.Zizo"
+	set category = "RolÚnico.Zizo"
 
 	if(stat >= UNCONSCIOUS || !can_speak_vocal())
 		return
@@ -219,14 +219,14 @@
 	log_say("[src] has praised zizo! (zizo cultist verb)")
 
 /mob/living/carbon/human/proc/communicate()
-	set name = "Communicate with Cult"
-	set category = "RoleUnique.Zizo"
+	set name = "Comunicarse con el culto"
+	set category = "RolÚnico.Zizo"
 
 	if(stat >= UNCONSCIOUS || !can_speak_vocal())
 		return
 
 	var/mob/living/carbon/human/H = src
-	var/speak = input("What do you speak of?", "ZIZO") as text|null
+	var/speak = input("¿De qué hablas?", "ZIZO") as text|null
 	if(!speak)
 		return
 	whisper("O schlet'a ty'schkotot ty'skvoro...")
@@ -242,8 +242,8 @@
 	log_telepathy("[key_name(src)] used cultist telepathy to say: [speak]")
 
 /obj/effect/decal/cleanable/sigil
-	name = "sigils"
-	desc = "Strange runics. They hurt your eyes."
+	name = "sigilos"
+	desc = "Runas extrañas. Te lastiman los ojos."
 	icon_state = "center"
 	icon = 'icons/obj/sigils.dmi'
 	clean_type = CLEAN_TYPE_LIGHT_DECAL //the sigils are made out of blood, they should be cleanable with a rag, they are also very easily spammed
@@ -257,7 +257,7 @@
 	if(isliving(user))
 		var/mob/living/living_user = user
 		if(istype(living_user, /datum/patron/inhumen/zizo))
-			to_chat(user, "It is of the [sigil_type] circle.")
+			to_chat(user, "Es del círculo [sigil_type].")
 
 /obj/effect/decal/cleanable/sigil/proc/consume_ingredients(datum/ritual/R)
 
@@ -423,7 +423,7 @@
 			to_chat(M, span_warning("There is already a sigil here."))
 			return
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
-			to_chat(M, span_warning("There is already something here."))
+			to_chat(M, span_warning("Ya hay algo aquí."))
 			return
 	if(do_after(M, 5 SECONDS))
 		M.bloody_hands--
@@ -450,14 +450,14 @@
 
 /mob/living/carbon/human/proc/draw_sigil()
 	set name = "Draw Sigil"
-	set category = "RoleUnique.Zizo"
+	set category = "RolÚnico.Zizo"
 	if(incapacitated(IGNORE_GRAB) || stat >= UNCONSCIOUS)
 		return
 
 	var/list/runes = list("Servantry", "Transmutation", "Fleshcrafting")
 
 	if(!bloody_hands && !get_bleed_rate())
-		to_chat(src, span_danger("My hands aren't bloody enough."))
+		to_chat(src, span_danger("Mis manos no están lo suficientemente sangrientas."))
 		return
 
 	var/input = input("Sigil Type", "ZIZO") as null|anything in runes
@@ -470,7 +470,7 @@
 
 /mob/living/carbon/human/proc/release_minion()
 	set name = "Release Lackey"
-	set category = "RoleUnique.Zizo"
+	set category = "RolÚnico.Zizo"
 
 	if(!istype(src) || stat == DEAD)
 		return

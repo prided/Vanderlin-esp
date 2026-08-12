@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/status/invisibility
-	name = "Invisibility"
+	name = "Invisibilidad"
 	desc = "Hide the target from eyes, for a time."
 	button_icon_state = "invisibility"
 	sound = 'sound/misc/stings/generic.ogg'

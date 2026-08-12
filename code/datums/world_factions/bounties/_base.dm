@@ -1,7 +1,7 @@
 /datum/bounty
 	abstract_type = /datum/bounty
-	var/name = "Generic Bounty"
-	var/desc = "A request for specific goods or assets."
+	var/name = "Recompensa genérica"
+	var/desc = "Una solicitud de bienes o activos específicos."
 
 	// The type of item or path needed to fulfill thebounty
 	var/required_path
@@ -115,7 +115,7 @@
 		apply_market_discounts(faction)
 
 	// Trigger UI notifications or feedback
-	to_chat(usr, "<span class='boldnotice'>Bounty Fulfled: [name]! (+[reward_reputation] Rep, +[final_currency] Cr)</span>")
+	to_chat(usr, "<span class='boldnotice'>Recompensa cumplida: [name]! (+[reward_reputation] Rep, +[final_currency] Cr)</span>")
 
 /datum/bounty/proc/process_department_cut(department_tag, cut_percentage)
 	// Currently does nothing, since no guilds yet

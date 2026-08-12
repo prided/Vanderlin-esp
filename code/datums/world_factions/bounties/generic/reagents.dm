@@ -1,5 +1,5 @@
 /datum/bounty/generic/healing_supplies
-	name = "Medical Resupply"
+	name = "Reabastecimiento médico"
 	desc = "The healers' hall is short on remedies."
 	required_reagent_amount = 75
 	required_reagent_type = /datum/reagent/medicine/healthpot

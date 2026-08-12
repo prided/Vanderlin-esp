@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/list_target/convert_role/brotherhood
-	name = "Recruit Brotherhood"
+	name = "Reclutar Hermandad"
 	button_icon_state = "recruit_servant" //N/A change this to the correct sprite when its made
 
 	new_role = "Brother"

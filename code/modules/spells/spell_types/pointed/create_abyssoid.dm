@@ -18,7 +18,7 @@
 	var/mob/living/follower = owner
 	if(follower.get_blood_volume() < BLOOD_VOLUME_BAD)
 		if(feedback)
-			to_chat(follower, span_warning("You don't have enough blood to sacrifice!"))
+			to_chat(follower, span_warning("¡No tienes suficiente sangre para sacrificar!"))
 		return FALSE
 
 /datum/action/cooldown/spell/undirected/create_abyssoid/cast(atom/cast_on)
@@ -41,7 +41,7 @@
 	)
 
 	if(!do_after(follower, 10 SECONDS, target))
-		to_chat(follower, span_warning("The ritual was interrupted!"))
+		to_chat(follower, span_warning("¡El ritual fue interrumpido!"))
 		return FALSE
 
 
@@ -50,7 +50,7 @@
 		return FALSE
 
 	if(follower.get_blood_volume() < BLOOD_VOLUME_BAD)
-		to_chat(follower, span_warning("You don't have enough blood to complete the ritual!"))
+		to_chat(follower, span_warning("¡No tienes suficiente sangre para completar el ritual!"))
 		return FALSE
 
 	follower.adjust_blood_volume(-70)

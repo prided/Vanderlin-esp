@@ -8,7 +8,7 @@
 	antag_hud_type = ANTAG_HUD_WEREWOLF
 	antag_hud_name = "werewolf"
 	confess_lines = list(
-		"THE BEAST INSIDE ME!",
+		"¡LA BESTIA DENTRO DE MÍ!",
 		"BEWARE THE BEAST!",
 		"MY LUPINE MARK!",
 	)
@@ -53,10 +53,10 @@
 	if(examiner.Adjacent(examined))
 		if(istype(examined_datum, /datum/antagonist/vampire/lord))
 			if(transformed)
-				return span_boldwarning("An Ancient Vampire. I must be careful!")
+				return span_boldwarning("Un vampiro antiguo. ¡Debo tener cuidado!")
 		if(istype(examined_datum, /datum/antagonist/vampire))
 			if(transformed)
-				return span_boldwarning("A vampire.")
+				return span_boldwarning("Un vampiro.")
 
 /datum/antagonist/werewolf/on_gain()
 	SSmapping.retainer.werewolves |= owner
@@ -78,7 +78,7 @@
 	remove_werewolf(forced = TRUE)
 	// owner.current should now be the original human mob, if not something is terribly wrong
 	if(!silent && owner.current)
-		to_chat(owner.current,span_danger("I am no longer a [special_role]!"))
+		to_chat(owner.current,span_danger("¡Ya no soy un [special_role]!"))
 	REMOVE_TRAIT(owner, TRAIT_NO_TRANSFORM, REF(src))
 	owner.special_role = null
 	owner.current.remove_spell(/datum/action/cooldown/spell/undirected/werewolf_form)
@@ -159,7 +159,7 @@
 		return
 	if(stat >= DEAD) //do shit the natural way i guess
 		return
-	to_chat(src, span_danger("I feel horrible... REALLY horrible..."))
+	to_chat(src, span_danger("Me siento horrible... REALMENTE horrible..."))
 	MOBTIMER_SET(src, MT_PUKE)
 	vomit(1, blood = TRUE, stun = FALSE)
 	return wolfy
@@ -168,25 +168,25 @@
 	if(!istype(target))
 		return
 	if(src.has_status_effect(/datum/status_effect/debuff/silver_bane))
-		to_chat(src, span_notice("My power is weakened, I cannot heal!"))
+		to_chat(src, span_notice("¡Mi poder está debilitado, no puedo sanar!"))
 		return
 	if(target.mind)
 		if(IS_DEADITE(target))
-			to_chat(src, span_warning("I should not feed on rotten flesh."))
+			to_chat(src, span_warning("No debería alimentarme de carne podrida."))
 			return
 		if(target.mind.has_antag_datum(/datum/antagonist/vampire))
-			to_chat(src, span_warning("I should not feed on corrupted flesh."))
+			to_chat(src, span_warning("No debería alimentarme de carne corrupta."))
 			return
 		if(target.mind.has_antag_datum(/datum/antagonist/werewolf))
 			to_chat(src, span_warning("I should not feed on my kin's flesh."))
 			return
 
-	to_chat(src, span_warning("I feed on succulent flesh. I feel reinvigorated."))
+	to_chat(src, span_warning("Me alimento de carne suculenta. Me siento revitalizado."))
 	return src.reagents.add_reagent(/datum/reagent/medicine/healthpot, healing_amount)
 
 /obj/item/clothing/armor/regenerating/skin/werewolf_skin
 	slot_flags = null
-	name = "werevolf's skin"
+	name = "piel de hombre lobo"
 	desc = ""
 	icon_state = null
 	body_parts_covered = FULL_BODY
@@ -204,7 +204,7 @@
 	name = "claw"
 	icon_state = "inclaw"
 	blade_class = BCLASS_CHOP
-	attack_verb = list("claws", "mauls", "eviscerates")
+	attack_verb = list("claws", "mauls", "eviscera")
 	animname = "claw"
 	hitsound = "genslash"
 	penfactor = 45

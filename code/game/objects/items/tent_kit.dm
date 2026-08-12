@@ -278,8 +278,8 @@
 			if(wall_index <= length(tent_walls))
 				var/obj/structure/tent_wall/wall = tent_walls[wall_index]
 				wall.forceMove(upper_wall_turf)
-				wall.name = "tent roof wall"
-				wall.desc = "The sloped roof section of the tent, providing overhead protection."
+				wall.name = "pared del techo de la tienda"
+				wall.desc = "La sección del techo inclinado de la tienda, que proporciona protección superior."
 				RegisterSignal(wall, COMSIG_QDELETING, PROC_REF(part_destroyed))
 				RegisterSignal(wall, COMSIG_MOVABLE_MOVED, PROC_REF(part_moved))
 				wall_index++

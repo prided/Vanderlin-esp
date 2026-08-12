@@ -212,7 +212,7 @@ export const TutorialOverlay = (props: TutorialOverlayProps) => {
                   ? <Button onClick={() => setStep(s - 1)} style={{
                     background: 'transparent', border: `1px solid ${PP.border}`,
                     color: PP.text, padding: '2px 10px', fontSize: '105%' }}>
-                    ← Back
+                    ← Volver
                   </Button>
                   : <Box style={{ width: '60px' }} />}
               </Stack.Item>

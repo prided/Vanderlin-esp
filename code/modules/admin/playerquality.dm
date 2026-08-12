@@ -82,8 +82,8 @@
 			msg += " - RSN: [reason]"
 
 /client/proc/check_pq()
-	set category = "GameMaster.Triumphs"
-	set name = "CheckPQ"
+	set category = "GameMaster.Triunfos"
+	set name = "VerificarPQ"
 	if(!holder)
 		return
 	var/selection = tgui_alert(src, "Check VIA...", "Check PQ", list("Character List", "Player List", "Player Name"))
@@ -97,7 +97,7 @@
 		if(!selections.len)
 			to_chat(src, "<span class='boldwarning'>No characters found.</span>")
 			return
-		selection = input("Which Character?") as null|anything in sortList(selections)
+		selection = input("¿Qué personaje?") as null|anything in sortList(selections)
 		if(!selection)
 			return
 		theykey = selections[selection]
@@ -108,12 +108,12 @@
 //				if(C.ckey in GLOB.anonymize)
 //					usedkey = get_fake_key(C.ckey)
 			selections[usedkey] = C.ckey
-		selection = input("Which Player?") as null|anything in sortList(selections)
+		selection = input("¿Qué jugador?") as null|anything in sortList(selections)
 		if(!selection)
 			return
 		theykey = selections[selection]
 	if(selection == "Player Name")
-		selection = input("Which Player?", "CKEY", "") as text|null
+		selection = input("¿Qué jugador?", "CKEY", "") as text|null
 		if(!selection)
 			return
 		theykey = selection
@@ -145,18 +145,18 @@
 
 /client/proc/stop_restart()
 	set category = "Server.Round Control"
-	set name = "Stop Restart"
+	set name = "Detener Reiniciar"
 	if(!holder)
 		return
 	SSticker.reboot_anyway = null
-	message_admins("[usr] stopped the 15 minute reboot after a successful vote.")
+	message_admins("[usr] detuvo el reinicio de 15 minutos después de una votación exitosa.")
 
 /client/proc/adjust_pq()
-	set category = "GameMaster.Triumphs"
-	set name = "AdjustPQ"
+	set category = "GameMaster.Triunfos"
+	set name = "AjustarPQ"
 	if(!holder)
 		return
-	var/selection = tgui_alert(src, "Adjust VIA...", "MODIFY PQ", list("Character List", "Player List", "Player Name"))
+	var/selection = tgui_alert(src, "Adjust VIA...", "MODIFICAR PQ", list("Character List", "Player List", "Player Name"))
 	var/list/selections = list()
 	var/theykey
 	if(selection == "Character List")
@@ -165,7 +165,7 @@
 		if(!selections.len)
 			to_chat(src, "<span class='boldwarning'>No characters found.</span>")
 			return
-		selection = input("Which Character?") as null|anything in sortList(selections)
+		selection = input("¿Qué personaje?") as null|anything in sortList(selections)
 		if(!selection)
 			return
 		theykey = selections[selection]
@@ -176,12 +176,12 @@
 //				if(C.ckey in GLOB.anonymize)
 //					usedkey = get_fake_key(C.ckey)
 			selections[usedkey] = C.ckey
-		selection = input("Which Player?") as null|anything in sortList(selections)
+		selection = input("¿Qué jugador?") as null|anything in sortList(selections)
 		if(!selection)
 			return
 		theykey = selections[selection]
 	if(selection == "Player Name")
-		selection = input("Which Player?", "CKEY", "") as text|null
+		selection = input("¿Qué jugador?", "CKEY", "") as text|null
 		if(!selection)
 			return
 		theykey = selection

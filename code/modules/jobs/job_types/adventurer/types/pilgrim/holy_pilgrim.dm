@@ -72,7 +72,7 @@
 	)
 
 /datum/job/advclass/pilgrim/holy_pilgrim
-	title = "Holy Pilgrim"
+	title = "Santo Peregrino"
 	tutorial = "You are a wandering pilgrim of the holy orders of the ten, you have been blessed with some miracles of your god and given divine purpose in the lands you travel to. You do not walk alone."
 	category_tags = list(CTAG_PILGRIM)
 	allowed_patrons = ALL_TEMPLE_PATRONS
@@ -108,7 +108,7 @@
 					to_chat(spawned,span_info("I learned the tongue of the mountain dwellers."))
 				if("Elvish")
 					spawned.grant_language(/datum/language/elvish)
-					to_chat(spawned,span_info("I learned the tongue of the primordial species."))
+					to_chat(spawned,span_info("Aprendí la lengua de las especies primordiales."))
 				if("Hellspeak")
 					spawned.grant_language(/datum/language/hellspeak)
 					to_chat(spawned,span_info("I learned the tongue of the hellspawn."))
@@ -147,7 +147,7 @@
 		devotion.grant_to(spawned)
 
 /datum/outfit/pilgrim/holy_pilgrim
-	name = "Holy Pilgrim (Pilgrim)"
+	name = "Santo Peregrino (Peregrino)"
 	shirt = /obj/item/clothing/shirt/undershirt/priest
 	pants = /obj/item/clothing/pants/tights/colored/black
 	shoes = /obj/item/clothing/shoes/sandals

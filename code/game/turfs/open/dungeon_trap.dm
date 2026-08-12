@@ -1,6 +1,6 @@
 /turf/open/dungeon_trap
-	name = "dark chasm"
-	desc = "It's a long way down..."
+	name = "abismo oscuro"
+	desc = "Es un largo camino hacia abajo..."
 	baseturfs = /turf/open/dungeon_trap
 	icon = 'icons/turf/floors/chasms.dmi'
 	icon_state = "chasms-255"
@@ -70,7 +70,7 @@
 /// tiles that zip you to the top z level of vanderlin
 /turf/open/dungeon_trap/australia
 	name = "deep abyss"
-	desc = "It's a long way up..."
+	desc = "Es un largo camino hacia arriba..."
 	icon_state = "undervoid2"
 	color = null
 	smoothing_flags = NONE

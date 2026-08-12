@@ -23,7 +23,7 @@
 		return
 	usr.forceMove(T)
 	log_admin("[key_name(usr)] jumped to [AREACOORD(T)]")
-	message_admins("[key_name_admin(usr)] jumped to [AREACOORD(T)]")
+	message_admins("[key_name_admin(usr)] saltó a [AREACOORD(T)]")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Jump To Area") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/jumptoturf(turf/T in world)
@@ -34,7 +34,7 @@
 		return
 
 	log_admin("[key_name(usr)] jumped to [AREACOORD(T)]")
-	message_admins("[key_name_admin(usr)] jumped to [AREACOORD(T)]")
+	message_admins("[key_name_admin(usr)] saltó a [AREACOORD(T)]")
 	usr.forceMove(T)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Jump To Turf") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
@@ -62,14 +62,14 @@
 	if(T && isturf(T))
 		A.forceMove(T)
 		log_admin("[key_name(usr)] jumped to [key_name(M)]")
-		message_admins("[key_name_admin(usr)] jumped to [ADMIN_LOOKUPFLW(M)] at [AREACOORD(M)]")
+		message_admins("[key_name_admin(usr)] saltó a [ADMIN_LOOKUPFLW(M)] en [AREACOORD(M)]")
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Jump To Mob") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	else
-		to_chat(A, span_warning("This mob is not located in the game world."))
+		to_chat(A, span_warning("Esta mafia no se encuentra en el mundo del juego."))
 
 /client/proc/jumptocoord(tx as num, ty as num, tz as num)
 	set category = "Admin.Jump"
-	set name = "Jump to Coordinate"
+	set name = "Saltar a coordinar"
 
 	if(!holder)
 		return
@@ -79,7 +79,7 @@
 		var/turf/T = locate(tx,ty,tz)
 		A.forceMove(T)
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Jump To Coordiate") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	message_admins("[key_name_admin(usr)] jumped to coordinates [tx], [ty], [tz]")
+	message_admins("[key_name_admin(usr)] saltó a las coordenadas [tx], [ty], [tz]")
 
 /client/proc/jumptokey()
 	set category = "Admin.Jump"
@@ -100,7 +100,7 @@
 		return
 	var/mob/M = selection.mob
 	log_admin("[key_name(usr)] jumped to [key_name(M)]")
-	message_admins("[key_name_admin(usr)] jumped to [ADMIN_LOOKUPFLW(M)]")
+	message_admins("[key_name_admin(usr)] saltó a [ADMIN_LOOKUPFLW(M)]")
 
 	usr.forceMove(M.loc)
 
@@ -152,7 +152,7 @@
 		return
 
 	var/mob/chosen_mob
-	chosen_mob = tgui_input_list(usr, "Which mob are you looking for?", "Search Directory", GLOB.mob_directory)
+	chosen_mob = tgui_input_list(usr, "Which mob are you looking for?", "Directorio de búsqueda", GLOB.mob_directory)
 	if(!chosen_mob)
 		return
 	debug_variables(locate(chosen_mob))
@@ -207,7 +207,7 @@
 
 	var/list/sorted_areas = get_sorted_areas()
 	if(!length(sorted_areas))
-		to_chat(src, "No areas found.")
+		to_chat(src, "No se encontraron áreas.")
 		return
 
 	var/area/A = browser_input_list(usr, "Pick an area", "Area pick", sorted_areas)

@@ -58,7 +58,7 @@
 	never granting the fortune of true relaxation."
 
 /datum/culture/universal/ambiguous
-	name = "Ambiguous"
+	name = "Ambiguo"
 	description = " Either you have no distinct dialect, or society is simply ignorant to your origin. \
 	You will not be recognized."
 

@@ -1,5 +1,5 @@
 /datum/award/achievement/progress
-	desc = "Keep at it!"
+	desc = "¡Sigue así!"
 	/// How much progress is needed to unlock this achievement.
 	var/required_progress = 10
 	/// Whether to send incremental progress messages to the player.
@@ -17,7 +17,7 @@
 	return isnum(raw_value) ? clamp(raw_value, 0, required_progress) : 0
 
 /datum/award/achievement/progress/rat_genocide
-	name = "Rous Genocide"
+	name = "Genocidio de Rous"
 	desc = "What the fuck man."
 	icon = "rat_killer"
 	category = "Combat"

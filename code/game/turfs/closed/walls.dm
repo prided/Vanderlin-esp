@@ -99,7 +99,7 @@
 /turf/closed/wall/attackby(obj/item/W, mob/user, list/modifiers)
 	user.changeNext_move(CLICK_CD_MELEE)
 	if (!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>I don't have the dexterity to do this!</span>")
+		to_chat(user, "<span class='warning'>¡No tengo la destreza para hacer esto!</span>")
 		return
 
 	//get the user's location
@@ -117,7 +117,7 @@
 	// Are you trying to break your instrument? Go ahead!
 	if(istype(W, /obj/item/instrument))
 		user.do_attack_animation(src, used_item = W, item_animation_override = ATTACK_ANIMATION_BONK)
-		visible_message("<span class='warning'>[user] slams \the [W] against \the [src]!</span>",
+		visible_message("<span class='warning'>[user] golpea a \the [W] contra \the [src]!</span>",
 						"<span class='warning'>I slam \the [W] against \the [src]!</span>",null ,COMBAT_MESSAGE_RANGE)
 		W.take_damage(10, BRUTE, "blunt")
 		return

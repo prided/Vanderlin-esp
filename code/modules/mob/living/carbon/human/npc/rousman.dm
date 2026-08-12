@@ -55,7 +55,7 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 /mob/living/carbon/human/species/rousman/ambush/after_creation()
 	. = ..()
 	AddComponent(/datum/component/ai_aggro_system)
-	job = "Ambusher Rousman"
+	job = "Emboscador Rousman"
 	equipOutfit(new /datum/outfit/npc/rousman/ambush)
 	dodgetime = 13
 	flee_in_pain = TRUE
@@ -441,7 +441,7 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 ////////////////////////////
 
 /obj/structure/rousman_hole
-	name = "narrow hole"
+	name = "agujero estrecho"
 	desc = "Is that infernal squeaking coming from this?"
 	icon = 'icons/roguetown/topadd/rousman/structures.dmi'
 	icon_state = "rousman_hole_inactive"
@@ -543,7 +543,7 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 /mob/living/carbon/human/species/rousman/assassin/after_creation()
 	. = ..()
 	AddComponent(/datum/component/ai_aggro_system)
-	job = "Assassin Rousman"
+	job = "Asesino Rousman"
 	equipOutfit(new /datum/outfit/npc/rousman/assassin)
 	dodgetime = 13
 	REMOVE_TRAIT(src, TRAIT_UNPARRYING, INNATE_TRAIT)
@@ -585,7 +585,7 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 /mob/living/carbon/human/species/rousman/seer/after_creation()
 	. = ..()
 	AddComponent(/datum/component/ai_aggro_system)
-	job = "Seer Rousman"
+	job = "Vidente Rousman"
 	equipOutfit(new /datum/outfit/npc/rousman/seer)
 	dodgetime = 13
 	REMOVE_TRAIT(src, TRAIT_UNPARRYING, INNATE_TRAIT)
@@ -598,7 +598,7 @@ GLOBAL_LIST_EMPTY(rousman_ambush_objects)
 /mob/living/carbon/human/species/rousman/seer_stronger/after_creation()
 	. = ..()
 	AddComponent(/datum/component/ai_aggro_system)
-	job = "Seer Rousman"
+	job = "Vidente Rousman"
 	equipOutfit(new /datum/outfit/npc/rousman/seer_stronger)
 	dodgetime = 13
 	REMOVE_TRAIT(src, TRAIT_UNPARRYING, INNATE_TRAIT)

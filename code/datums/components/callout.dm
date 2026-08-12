@@ -141,12 +141,12 @@
 	var/voiceline = "Something has gone wrong!"
 
 /datum/callout_option/point
-	name = "Point"
+	name = "Punto"
 	icon_state = "point"
 	voiceline = "Here!"
 
 /datum/callout_option/danger
-	name = "Danger"
+	name = "Peligro"
 	icon_state = "danger"
 	voiceline = "Danger there!"
 

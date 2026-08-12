@@ -1,6 +1,6 @@
 
 /datum/reagent/meth_precursor
-	name = "Methamphetamine Precursor"
+	name = "Precursor de metanfetamina"
 	description = "A volatile chemical intermediate. Smells awful. Probably shouldn't drink it."
 	reagent_state = LIQUID
 	color = "#C8E8FA"
@@ -10,7 +10,7 @@
 	price_per_unit = 4
 
 /datum/reagent/drug/methamphetamine
-	name = "Methamphetamine"
+	name = "metanfetamina"
 	description = "Reduces stun times by about 300%, speeds the user up, and allows the user to quickly recover stamina while dealing a small amount of Brain damage. If overdosed the subject will move randomly, laugh randomly, drop items and suffer from Toxin and Brain damage. If addicted the subject will constantly jitter and drool, before becoming dizzy and losing motor control and eventually suffer heavy toxin damage."
 	reagent_state = LIQUID
 	color = "#78C8FA" //best case scenario is the "default", gets muddled depending on purity
@@ -30,7 +30,7 @@
 
 /datum/reagent/drug/methamphetamine/on_mob_life(mob/living/carbon/affected_mob, efficiency)
 	. = ..()
-	var/high_message = pick("You feel hyper.", "You feel like you need to go faster.", "You feel like you can run the world.")
+	var/high_message = pick("You feel hyper.", "Sientes que necesitas ir más rápido.", "Sientes que puedes gobernar el mundo.")
 	if(prob(2.5))
 		to_chat(affected_mob, span_notice("[high_message]"))
 	affected_mob.AdjustStun(-40 * REM * efficiency)
@@ -134,7 +134,7 @@
 	exposed_mob.petrify(reac_volume * reagent_to_time_conversion)
 
 /datum/reagent/cryzaline_suspension
-	name = "Crysaline Suspension"
+	name = "Suspensión cristalina"
 	description = "A supercooled alchemical suspension that rapidly crystallizes moisture on contact. Each exposure deepens the frost, layering rime upon the body until it violently ruptures."
 	reagent_state = LIQUID
 	color = "#88BFFF"

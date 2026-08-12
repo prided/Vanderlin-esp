@@ -9,7 +9,7 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/clothing/ring/silver/makers_guild
-	name = "makers' ring"
+	name = "anillo de los fabricantes"
 	desc = "The wearer is a proud member of the Makers' guild."
 	icon_state = "guild_mason"
 	sellprice = 0
@@ -25,7 +25,7 @@
 	sellprice = 110
 
 /obj/item/clothing/ring/silver/saffira
-	name = "saffira ring"
+	name = "anillo de saffira"
 	icon_state = "s_ring_sapphire"
 	sellprice = 95
 
@@ -35,17 +35,17 @@
 	sellprice = 80
 
 /obj/item/clothing/ring/silver/toper
-	name = "toper ring"
+	name = "anillo superior"
 	icon_state = "s_ring_topaz"
 	sellprice = 65
 
 /obj/item/clothing/ring/silver/rontz
-	name = "rontz ring"
+	name = "anillo rontz"
 	icon_state = "s_ring_ruby"
 	sellprice = 130
 
 /obj/item/clothing/ring/gold
-	name = "gold ring"
+	name = "anillo de oro"
 	icon_state = "ring_g"
 	sellprice = 70
 
@@ -66,7 +66,7 @@
 	sellprice = 245
 
 /obj/item/clothing/ring/gold/saffira
-	name = "saffira ring"
+	name = "anillo de saffira"
 	icon_state = "g_ring_sapphire"
 	sellprice = 200
 
@@ -76,17 +76,17 @@
 	sellprice = 195
 
 /obj/item/clothing/ring/gold/toper
-	name = "toper ring"
+	name = "anillo superior"
 	icon_state = "g_ring_topaz"
 	sellprice = 180
 
 /obj/item/clothing/ring/gold/rontz
-	name = "rontz ring"
+	name = "anillo rontz"
 	icon_state = "g_ring_ruby"
 	sellprice = 255
 
 /obj/item/clothing/ring/jade
-	name = "joapstone ring"
+	name = "anillo de joapstone"
 	icon_state = "ring_jade"
 	sellprice = 60
 
@@ -101,7 +101,7 @@
 	sellprice = 40
 
 /obj/item/clothing/ring/shell
-	name = "shell ring"
+	name = "anillo de concha"
 	icon_state = "ring_shell"
 	sellprice = 20
 
@@ -127,7 +127,7 @@
 
 /obj/item/clothing/ring/active
 	var/active = FALSE
-	desc = "Unfortunately, like most magic rings, it must be used sparingly. (Right-click me to activate)"
+	desc = "Desafortunadamente, como la mayoría de los anillos mágicos, debe usarse con moderación. (Haz clic derecho en mí para activar)"
 	var/cooldowny
 	var/cdtime
 	var/activetime
@@ -142,7 +142,7 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(cooldowny)
 		if(world.time < cooldowny + cdtime)
-			to_chat(user, "<span class='warning'>Nothing happens.</span>")
+			to_chat(user, "<span class='warning'>No pasa nada.</span>")
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	user.visible_message("<span class='warning'>[user] twists the [src]!</span>")
 	if(activate_sound)
@@ -167,7 +167,7 @@
 
 
 /obj/item/clothing/ring/active/nomag
-	name = "ring of null magic"
+	name = "anillo de magia nula"
 	icon_state = "ruby"
 	activate_sound = 'sound/magic/antimagic.ogg'
 	cdtime = 10 MINUTES
@@ -191,13 +191,13 @@
 
 /obj/item/clothing/ring/active/nomag/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Right click to activate the ring's ward, which provides temporary invulnerability against all direct magical attacks for thirty seconds.")
+	. += span_info("Haz clic derecho para activar la protección del anillo, que proporciona invulnerabilidad temporal contra todos los ataques mágicos directos durante treinta segundos.")
 	. += span_info("Wearers with unholy ailments are also rendered invulnerable to being sundered by silver weaponry, for the ward's duration.")
 	. += span_info("Once the ring's ward is exhausted, it'll require ten minutes to recharge enough power for another activation.")
 
 // ................... Ring of Protection ....................... (rare treasure, not for purchase)
 /obj/item/clothing/ring/gold/protection
-	name = "ring of protection"
+	name = "anillo de protección"
 	desc = "Old ring, inscribed with arcyne words. Once held magical powers, perhaps it does still?"
 	icon_state = "ring_protection"
 	var/antileechy
@@ -241,7 +241,7 @@
 	REMOVE_TRAIT(wearer, TRAIT_SHOCKIMMUNE,"[REF(src)]")
 
 /obj/item/clothing/ring/gold/ravox
-	name = "ring of ravox"
+	name = "anillo de ravox"
 	desc = "Old ring, inscribed with arcyne words. Just being near it imbues you with otherworldly strength."
 	icon_state = "ring_ravox"
 
@@ -260,7 +260,7 @@
 	wearer.remove_status_effect(/datum/status_effect/buff/ravox)
 
 /obj/item/clothing/ring/silver/calm
-	name = "soothing ring"
+	name = "anillo calmante"
 	desc = "A lightweight ring that feels entirely weightless, and easing to your mind as you place it upon a finger."
 	icon_state = "s_newring_quartz"
 
@@ -279,7 +279,7 @@
 	wearer.remove_status_effect(/datum/status_effect/buff/calm)
 
 /obj/item/clothing/ring/silver/noc
-	name = "ring of noc"
+	name = "anillo de noc"
 	desc = "Old ring, inscribed with arcyne words. Just being near it imbues you with otherworldly knowledge."
 	icon_state = "ring_sapphire"
 
@@ -299,11 +299,11 @@
 
 /obj/item/clothing/ring/signet
 	name = "Signet Ring"
-	name = "signet ring"
+	name = "anillo de sello"
 	icon_state = "signet"
 	icon_state = "signet"
-	desc = "A large golden ring engraved with the Symbol of Psydon."
-	desc = "A large golden signet ring engraved with the Symbol of Psydon."
+	desc = "Un gran anillo dorado grabado con el símbolo de Psydon."
+	desc = "Un gran anillo de sello dorado grabado con el símbolo de Psydon."
 	sellprice = 135
 	sellprice = 135
 	var/tallowed = FALSE

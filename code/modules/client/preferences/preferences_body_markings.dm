@@ -13,7 +13,7 @@
 				var/list/candidates = marking_sets_for_species(pref_species)
 				if(length(candidates) == 0)
 					return
-				var/desired_set = input(user, "Choose your new body markings:", "Character Preference") as null|anything in candidates
+				var/desired_set = input(user, "Elige tus nuevas marcas corporales:", "Character Preference") as null|anything in candidates
 				if(desired_set)
 					var/datum/body_marking_set/BMS = GLOB.body_marking_sets[desired_set]
 					body_markings = assemble_body_markings_from_set(BMS, features, pref_species)
@@ -71,7 +71,7 @@
 					possible_candidates -= keyed_name
 			if(possible_candidates.len == 0)
 				return
-			var/desired_marking = input(user, "Choose your new marking to add:", "Character Preference") as null|anything in possible_candidates
+			var/desired_marking = input(user, "Elija su nueva marca para agregar:", "Character Preference") as null|anything in possible_candidates
 			if(desired_marking)
 				var/datum/body_marking/BD = GLOB.body_markings[desired_marking]
 				if(!body_markings[zone])
@@ -95,7 +95,7 @@
 					possible_candidates -= keyed_name
 			if(possible_candidates.len == 0)
 				return
-			var/desired_marking = input(user, "Choose a marking to change the current one to:", "Character Preference") as null|anything in possible_candidates
+			var/desired_marking = input(user, "Elija una marca para cambiar la actual a:", "Character Preference") as null|anything in possible_candidates
 			if(desired_marking)
 				if(!body_markings[zone] || !body_markings[zone][changing_name])
 					return

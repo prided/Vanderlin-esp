@@ -30,7 +30,7 @@ export const ChemSeparator = (props) => {
         <Section fill>
           <LabeledList>
             <LabeledList.Item
-              label="Separator"
+              label="Separador"
               buttons={
                 <Box my={1}>
                   <Button
@@ -38,7 +38,7 @@ export const ChemSeparator = (props) => {
                     width={6}
                     lineHeight={2}
                     align="center"
-                    content="Drain"
+                    content="Drenar"
                     icon="arrow-down"
                     disabled={
                       data.is_burning ||
@@ -53,7 +53,7 @@ export const ChemSeparator = (props) => {
                       width={6}
                       lineHeight={2}
                       align="center"
-                      content="Start"
+                      content="Comenzar"
                       icon="filter"
                       color="good"
                       disabled={
@@ -68,7 +68,7 @@ export const ChemSeparator = (props) => {
                       width={6}
                       lineHeight={2}
                       align="center"
-                      content="Stop"
+                      content="Detener"
                       icon="ban"
                       color="bad"
                       onClick={() => act('stop')}
@@ -98,7 +98,7 @@ export const ChemSeparator = (props) => {
             </LabeledList.Item>
             {data.beaker ? (
               <LabeledList.Item
-                label="Container"
+                label="Recipiente"
                 buttons={
                   <Box my={1}>
                     <Button
@@ -106,7 +106,7 @@ export const ChemSeparator = (props) => {
                       width={6}
                       lineHeight={2}
                       align="center"
-                      content="Fill"
+                      content="Llenar"
                       icon="arrow-up"
                       disabled={
                         data.is_burning ||
@@ -120,7 +120,7 @@ export const ChemSeparator = (props) => {
                       lineHeight={2}
                       align="center"
                       icon="eject"
-                      content="Eject"
+                      content="Expulsar"
                       disabled={data.is_burning}
                       onClick={() => act('eject')}
                     />
@@ -147,8 +147,8 @@ export const ChemSeparator = (props) => {
                 </ProgressBar>
               </LabeledList.Item>
             ) : (
-              <LabeledList.Item label="Container">
-                <NoticeBox my={0.7}>No container inserted.</NoticeBox>
+              <LabeledList.Item label="Recipiente">
+                <NoticeBox my={0.7}>No se ha insertado ningún contenedor.</NoticeBox>
               </LabeledList.Item>
             )}
           </LabeledList>

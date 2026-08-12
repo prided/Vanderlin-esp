@@ -1,5 +1,5 @@
 /datum/brewing_recipe/cabbage
-	name = "Fireleaf"
+	name = "hoja de fuego"
 	reagent_to_brew = /datum/reagent/consumable/ethanol/fireleaf
 	needed_reagents = list(/datum/reagent/water = 100)
 	needed_crops = list(/obj/item/reagent_containers/food/snacks/produce/vegetable/cabbage = 6)

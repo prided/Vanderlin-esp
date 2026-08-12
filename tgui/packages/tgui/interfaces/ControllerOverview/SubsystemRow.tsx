@@ -95,7 +95,7 @@ export function SubsystemRow(props: Props) {
       <Table.Cell collapsing verticalAlign="top">
         <Button
           icon="wrench"
-          tooltip="View Variables"
+          tooltip="Ver variables"
           onClick={() => {
             act('view_variables', { ref: ref });
           }}

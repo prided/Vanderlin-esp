@@ -45,10 +45,10 @@
 /datum/job/consort/New()
 	. = ..()
 	if(SSmapping.config?.monarch_title)
-		honorary = "[SSmapping.config.monarch_title] Consort"
-		honorary_f = "[SSmapping.config.monarch_title] Consort" //in case we dont have a female title and they share
+		honorary = "[SSmapping.config.monarch_title] Consorte"
+		honorary_f = "[SSmapping.config.monarch_title] Consorte" //in case we dont have a female title and they share
 	if(SSmapping.config?.monarch_title_f)
-		honorary_f = "[SSmapping.config.monarch_title_f] Consort"
+		honorary_f = "[SSmapping.config.monarch_title_f] Consorte"
 
 /datum/job/consort/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
@@ -190,7 +190,7 @@
 	)
 
 /datum/job/advclass/consort/courtesan
-	title = "Courtesan Consort"
+	title = "Consorte cortesana"
 	tutorial = "Though initially none envied your lot in life, it's certain that your midnight talents haven't gone to waste. Your honeyed words and charm have brought you right to being a ruler's beloved consort."
 	outfit = /datum/outfit/consort/courtesan
 	category_tags = list(CTAG_CONSORT)
@@ -200,7 +200,7 @@
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/courtesan/old
 
 /datum/outfit/consort/courtesan
-	name = "Courtesan Consort"
+	name = "Consorte cortesana"
 	pants = /obj/item/clothing/pants/tights/colored/random
 	shirt = /obj/item/clothing/armor/gambeson/heavy/winterdress
 	armor = /obj/item/clothing/armor/leather/vest/winterjacket
@@ -257,7 +257,7 @@
 	)
 
 /datum/job/advclass/consort/lowborn
-	title = "Lowborn Consort"
+	title = "Consorte de baja cuna"
 	tutorial = "You never could have dreamed your life would be like this. Though your origins are humble, something special about you - whether it was your good looks, your kind heart, or your bravery - has brought you into Vanderlin Keep."
 	outfit = /datum/outfit/consort/lowborn
 	category_tags = list(CTAG_CONSORT)
@@ -272,7 +272,7 @@
 
 
 /datum/outfit/consort/lowborn
-	name = "Lowborn Consort"
+	name = "Consorte de baja cuna"
 	shirt = /obj/item/clothing/shirt/dress/silkdress/colored/princess
 	armor = /obj/item/clothing/armor/leather/jacket/silk_coat
 
@@ -356,7 +356,7 @@
 		cloak = null
 
 /datum/job/exlady //just used to change the consort title
-	title = "Ex-Consort"
+	title = "Ex consorte"
 	department_flag = NOBLEMEN
 	factions = list(FACTION_TOWN)
 	total_positions = 0

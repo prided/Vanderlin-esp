@@ -1,5 +1,5 @@
 /datum/round_event_control/herb_wither
-	name = "Herb Wither"
+	name = "Hierba marchita"
 	track = EVENT_TRACK_MODERATE
 	typepath = /datum/round_event/herb_wither
 	weight = 5

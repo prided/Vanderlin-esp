@@ -79,7 +79,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if((H.real_name in bound_servants) && H.name == H.real_name)
-		to_chat(user, span_warning("[src] is already bound to this bell."))
+		to_chat(user, span_warning("[src] ya está vinculado a esta campana."))
 	else if(H.is_dead())
 		to_chat(user, span_warning("What good is a dead servant?"))
 	else if(IS_DEADITE(H))
@@ -117,10 +117,10 @@
 				return
 			for(var/s_name in servants)
 				remove_servant(servant = s_name)
-			to_chat(user, span_smallnotice("All servants have been relinquished."))
+			to_chat(user, span_smallnotice("Todos los sirvientes han sido abandonados."))
 		else
 			remove_servant(servant = remove)
-			to_chat(user, span_smallnotice("[remove] has been relinquished."))
+			to_chat(user, span_smallnotice("[remove] ha sido abandonado."))
 
 /obj/item/servant_bell/attack_self(mob/living/user, list/modifiers)
 	. = ..()
@@ -240,6 +240,6 @@
 	alert_type = /atom/movable/screen/alert/status_effect/servant_bell
 
 /atom/movable/screen/alert/status_effect/servant_bell
-	name = "Servant Bell"
+	name = "Campana de sirviente"
 	desc = "I've been summoned by the bell."
 	icon_state = "servant_bell"

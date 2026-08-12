@@ -96,7 +96,7 @@
 		return FALSE
 
 	if(!can_repair)
-		to_chat(user, span_warning("[src] cannot be used to repair [I]!"))
+		to_chat(user, span_warning("¡[src] no se puede utilizar para reparar [I]!"))
 		return FALSE
 
 	var/list/armorlist = I.get_armor().get_rating_list()
@@ -116,11 +116,11 @@
 
 		var/obj/item/patch = locate(I.salvage_result) in range(1, I.loc)
 		if(!patch)
-			to_chat(user, span_warning("You need [initial(I.salvage_result:name)] nearby to meld [I]."))
+			to_chat(user, span_warning("Necesitas [initial(I.salvage_result:name)] cerca para fusionar [I]."))
 			return FALSE
 
 		if(skill_level <= 0)
-			to_chat(user, span_warning("You don't know enough to meld [I]."))
+			to_chat(user, span_warning("No sabes lo suficiente como para fusionar [I]."))
 			return FALSE
 
 		playsound(src, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
@@ -157,14 +157,14 @@
 	if(skill_level <= 0)
 		if(prob(30))
 			repair_percent = 0.01
-			to_chat(user, span_warning("You are just barely able to repair this..."))
+			to_chat(user, span_warning("Apenas puedes reparar esto..."))
 		else
 			repair_percent = 0
 	else
 		repair_percent *= skill_level
 
 	if((armor_value == 0 && skill_level < 10) || (armor_value > 0 && skill_level < 20))
-		to_chat(user, span_warning("I should probably not be doing this..."))
+		to_chat(user, span_warning("Probablemente no debería estar haciendo esto..."))
 
 	playsound(src, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
 	var/sewtime = (6 SECONDS - skill_level)
@@ -280,7 +280,7 @@
 		/// We don't abs() injury_heal because we don't want to heal injuries below autoheal_cutoff
 		injury.heal_damage(injury_heal, TRUE)
 		if(injury.damage_per_injury() > injury.autoheal_cutoff)
-			user.visible_message(span_green("<b>[user]</b> partially stitches \a [injury.get_desc(FALSE)] on <b>[target]</b>'s [affecting.name] with \the [src]."), \
+			user.visible_message(span_green("<b>[user]</b> cose parcialmente \a [injury.get_desc(FALSE)] en <b>[target]</b> [affecting.name] con \the [src]."), \
 								span_green("I partially stitch \a [injury.get_desc(FALSE)] on \the [affecting.name] with \the [src]."))
 		else
 			user.visible_message(span_green("<b>[user]</b> stitches \a [injury.get_desc(FALSE)] shut on <b>[target]</b>'s [affecting.name] with \the [src]."), \

@@ -9,7 +9,7 @@
 	start = 8 HOURS //8:00:00 AM
 
 /datum/time_of_day/sunrise
-	name = "Sunrise"
+	name = "Amanecer"
 	color = "#F598AB"
 	start = 9.5 HOURS  //9:30:00 AM
 
@@ -29,7 +29,7 @@
 	start = 15.5 HOURS //3:30:00 PM
 
 /datum/time_of_day/midnight
-	name = "Midnight"
+	name = "Medianoche"
 	color = list("#100a18", "#0c0412", "#0f0012")
 	start = 16 HOURS //4:00:00 PM
 

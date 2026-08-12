@@ -39,7 +39,7 @@
 	..()
 
 /obj/item/reagent_containers/lux/pragmas
-	name = "luxus pragmas"
+	name = "pragmas de lujo"
 	desc = "The Divine Essence that Eora gifted to Graggar and told him to make a female companion with.\
 			He was supposed to make a beautiful and courageous wife from it, is what Eora had hoped he would do.\
 			Instead, Graggar created the Broodmother who would in turn spawn his armies. Eora was heartbroken and furious.\
@@ -114,7 +114,7 @@
 		return
 
 	if(cast_on.is_dead())
-		to_chat(owner, span_danger("it's dead!"))
+		to_chat(owner, span_danger("¡está muerto!"))
 		return
 
 	charmed_mobs += WEAKREF(cast_on)
@@ -130,7 +130,7 @@
 /// Tainted Lux from goblins, rous and others.
 
 /obj/item/reagent_containers/lux_tainted
-	name = "tainted lux"
+	name = "contaminado lux"
 	desc = "A warped remnant of soulstuff, twisted by the touch of darker powers. It quivers with a sickly pulse, its surface slick like spoiled yolk."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "tainted_lux"

@@ -106,7 +106,7 @@
 		if(impact_flags & ZIMPACT_CANCEL_DAMAGE)
 			new /obj/effect/temp_visual/mook_dust/small(impacted_turf)
 			if(m_intent != MOVE_INTENT_SNEAK) // If we're sneaking, don't show a message to anybody, shhh!
-				visible_message(span_danger("[src] gracefully lands on [impacted_turf]!"))
+				visible_message(span_danger("¡[src] aterriza con gracia en [impacted_turf]!"))
 		else
 			var/points = "!"
 			for(var/i in 1 to (levels / 2))
@@ -121,7 +121,7 @@
 	for(var/mob/living/crumpled_mob in impacted_turf)
 		if(crumpled_mob == src)
 			continue
-		visible_message("[src] falls on top of [crumpled_mob]!")
+		visible_message("¡[src] cae encima de [crumpled_mob]!")
 		crumpled_mob.Stun(1)
 		crumpled_mob.AdjustKnockdown(levels * 20)
 		crumpled_mob.take_overall_damage(impact_damage, damage_type = BCLASS_BLUNT)
@@ -212,7 +212,7 @@
 			if(ismob(L.pulling) && L.pulling != L)
 				var/mob/P = L.pulling
 				if(!(world.time % 5))
-					to_chat(src, "<span class='warning'>[L] is grabbing [P], you cannot push past.</span>")
+					to_chat(src, "<span class='warning'>[L] está agarrando a [P], no puedes pasar.</span>")
 				return TRUE
 
 	if(moving_diagonally)//no mob swap during diagonal moves.
@@ -341,9 +341,9 @@
 			if(statchance < 10)
 				statchance = 10
 			if(prob(statchance))
-				visible_message("<span class='info'>[src] pushes [M].</span>")
+				visible_message("<span class='info'>[src] empuja [M].</span>")
 			else
-				visible_message("<span class='warning'>[src] pushes [M].</span>")
+				visible_message("<span class='warning'>[src] empuja [M].</span>")
 				return TRUE
 
 	//anti-riot equipment is also anti-push
@@ -354,7 +354,7 @@
 //Called when we bump onto an obj
 /mob/living/proc/ObjBump(obj/O)
 	if(get_chem_effect(CE_BOUNCY))
-		visible_message("<span class='warning'>[src] bounces off [O]!</span>")
+		visible_message("<span class='warning'>[src] rebota en [O]!</span>")
 		var/atom/throw_target = get_edge_target_turf(src, get_dir(O, src))
 
 		src.throw_at(throw_target, get_chem_effect(CE_BOUNCY) * 5, 3, force = 0)
@@ -362,7 +362,7 @@
 
 /mob/living/proc/TurfBump(turf/T)
 	if(get_chem_effect(CE_BOUNCY))
-		visible_message("<span class='warning'>[src] bounces off [T]!</span>")
+		visible_message("<span class='warning'>[src] rebota en [T]!</span>")
 		var/atom/throw_target = get_edge_target_turf(src, get_dir(T, src))
 
 		src.throw_at(throw_target, get_chem_effect(CE_BOUNCY) * 5, 3, force = 0)
@@ -476,7 +476,7 @@
 		var/positioning_mod = get_positioning_modifier(target)
 		if(positioning_mod < 0.8) // Significant positioning disadvantage
 			if(prob(20)) // Chance to avoid grab due to bad position
-				visible_message(span_warning("[src] fails to get a good grip on [target]!"))
+				visible_message(span_warning("¡[src] no logra agarrar bien a [target]!"))
 				log_combat(src, target, "failed to grab due to positioning", addition="bad position")
 				return FALSE
 
@@ -535,7 +535,7 @@
 			M.LAssailant = usr
 		// Makes it so people who recently broke out of grabs cannot be grabbed again
 		if(TIMER_COOLDOWN_RUNNING(M, "broke_free") && !HAS_TRAIT(M, TRAIT_INCAPACITATED))
-			M.visible_message(span_warning("[M] slips from [src]'s grip."), \
+			M.visible_message(span_warning("[M] se escapa del agarre de [src]."), \
 					span_warning("I slip from [src]'s grab."))
 			log_combat(src, M, "tried grabbing", addition="passive grab")
 			stop_pulling()
@@ -616,8 +616,8 @@
 	return FALSE
 
 /mob/living/proc/send_pull_message(mob/living/target)
-	target.visible_message(span_warning("[src] grabs [target]."), \
-					src != target ? span_warning("[src] grabs me.") : "",
+	target.visible_message(span_warning("[src] agarra [target]."), \
+					src != target ? span_warning("[src] me agarra.") : "",
 					span_hear("I hear shuffling."), null, src)
 	to_chat(src, span_info("I grab [src != target ? "[target]" : "myself"]."))
 
@@ -669,7 +669,7 @@
 //mob verbs are a lot faster than object verbs
 //for more info on why this is not atom/pull, see examinate() in mob.dm
 /mob/living/verb/pulled(atom/movable/AM as mob|obj in oview(1))
-	set name = "Pull"
+	set name = "Jalar"
 	set hidden = 1
 
 	if(istype(AM) && Adjacent(AM))
@@ -691,8 +691,8 @@
 	update_pull_hud_icon()
 
 /mob/living/verb/stop_pulling1()
-	set name = "Stop Pulling"
-	set category = "IC.Interaction"
+	set name = "Deja de tirar"
+	set category = "IC.Interacción"
 	set hidden = 1
 	stop_pulling()
 
@@ -711,7 +711,7 @@
 		return
 
 	if (!CAN_SUCCUMB(src))
-		to_chat(src, span_warning("You are unable to succumb to death! This life continues."), type=MESSAGE_TYPE_INFO)
+		to_chat(src, span_warning("¡No puedes sucumbir a la muerte! Esta vida continúa."), type=MESSAGE_TYPE_INFO)
 		return
 
 	log_message("Has [whispered ? "whispered his final words" : "succumbed to death"] while in [InFullCritical() ? "hard":"soft"] critical with [round(health, 0.1)] points of health!", LOG_ATTACK)
@@ -767,14 +767,14 @@
 // MOB PROCS //END
 
 /mob/living/proc/mob_sleep()
-	set name = "Sleep"
-	set category = "IC.Interaction"
+	set name = "Dormir"
+	set category = "IC.Interacción"
 	set hidden = 1
 	if(IsSleeping())
 		to_chat(src, "<span class='warning'>I am already sleeping!</span>")
 		return
 	else
-		if(tgui_alert(src, "You sure you want to sleep for a while?", "Sleep", list("Yes", "No")) == "Yes")
+		if(tgui_alert(src, "¿Seguro que quieres dormir un rato?", "Dormir", list("Yes", "No")) == "Yes")
 			SetSleeping(400) //Short nap
 
 /mob/proc/get_contents()
@@ -782,7 +782,7 @@
 
 /mob/living/proc/lay_down()
 	set name = "Lay down"
-	set category = "IC.Interaction"
+	set category = "IC.Interacción"
 	set hidden = 1
 	if(stat)
 		return
@@ -794,7 +794,7 @@
 
 /mob/living/proc/stand_up()
 	set name = "Stand up"
-	set category = "IC.Interaction"
+	set category = "IC.Interacción"
 	set hidden = 1
 	if(stat)
 		return
@@ -807,7 +807,7 @@
 			to_chat(src, span_notice("I resisted their grab!"))
 	if(resting)
 		if(!HAS_TRAIT(src, TRAIT_FLOORED))
-			visible_message(span_notice("[src] begins standing up."), span_notice("I begin to stand up."))
+			visible_message(span_notice("[src] comienza a ponerse de pie."), span_notice("I begin to stand up."))
 			set_resting(FALSE, FALSE)
 			return TRUE
 		else
@@ -816,7 +816,7 @@
 
 /mob/living/verb/toggle_rest_verb()
 	set name = "Rest"
-	set category = "IC.Interaction"
+	set category = "IC.Interacción"
 
 	toggle_rest()
 
@@ -856,7 +856,7 @@
 				to_chat(src, span_notice("You will now try to remain standing up."))
 		else if(HAS_TRAIT(src, TRAIT_FLOORED) || (buckled && buckled.buckle_lying != NO_BUCKLE_LYING))
 			if(!silent)
-				to_chat(src, span_notice("You will now stand up as soon as you are able to."))
+				to_chat(src, span_notice("Ahora te levantarás tan pronto como puedas."))
 		else
 			get_up(instant)
 
@@ -1046,7 +1046,7 @@
 	if(isliving(AM))
 		var/mob/living/L = AM
 		if((L.m_intent == MOVE_INTENT_RUN || HAS_TRAIT(L, TRAIT_STUMBLE)) && body_position == LYING_DOWN && !buckle_lying)
-			L.visible_message("<span class='warning'>[L] trips over [src]!</span>","<span class='warning'>I trip over [src]!</span>")
+			L.visible_message("<span class='warning'>[L] tropieza con [src]!</span>","<span class='warning'>I trip over [src]!</span>")
 			L.Knockdown(10)
 			L.Immobilize(20)
 
@@ -1293,8 +1293,8 @@
 	return TRUE
 
 /mob/living/verb/resist()
-	set name = "Resist"
-	set category = "IC.Interaction"
+	set name = "Resistir"
+	set category = "IC.Interacción"
 	set hidden = 1
 	DEFAULT_QUEUE_OR_CALL_VERB(VERB_CALLBACK(src, PROC_REF(execute_resist)))
 
@@ -1332,14 +1332,14 @@
 			resist_restraints() //trying to remove cuffs.
 
 /mob/living/carbon/human/verb/ic_pray()
-	set name = "Prayer"
-	set category = "IC.Interaction"
+	set name = "Oración"
+	set category = "IC.Interacción"
 
 	emote("pray", intentional = TRUE)
 
 /mob/living/verb/submit()
 	set name = "Yield"
-	set category = "IC.Interaction"
+	set category = "IC.Interacción"
 
 	if(surrendering)
 		return
@@ -1362,7 +1362,7 @@
 	flick_overlay_view(flaggy, 15 SECONDS)
 	drop_all_held_items()
 	Stun(15 SECONDS)
-	visible_message(span_bignotice("<span class='bold'>[src]</span> yields!"), span_boldwarning("I yield!"))
+	visible_message(span_bignotice("<span class='bold'>[src]</span> yields!"), span_boldwarning("¡Me rindo!"))
 	playsound(src, 'sound/misc/surrender.ogg', 100, FALSE, -1)
 	toggle_cmode()
 	addtimer(VARSET_CALLBACK(src, surrendering, FALSE), 15 SECONDS)
@@ -1613,7 +1613,7 @@
 		return FALSE
 
 	if(HAS_TRAIT(src, TRAIT_RESTRAINED))
-		to_chat(src, span_warning("I'm restrained!"))
+		to_chat(src, span_warning("¡Estoy restringido!"))
 		return
 
 	// Passive grabs without cmode can be instantly broken and do not block movement
@@ -1700,9 +1700,9 @@
 	if(client?.prefs.read_preference(/datum/preference/toggle/showrolls))
 		shitte = " ([resist_chance]%)"
 	if(prob(resist_chance))
-		visible_message("<span class='warning'>[src] breaks free of [pulledby]'s grip!</span>", \
+		visible_message("¡<span class='warning'>[src] se libera del agarre de [pulledby]!</span>", \
 						"<span class='notice'>I break free of [pulledby]'s grip![shitte]</span>", null, null, pulledby)
-		to_chat(pulledby, "<span class='danger'>[src] breaks free of my grip!</span>")
+		to_chat(pulledby, "¡<span class='danger'>[src] se libera de mi agarre!</span>")
 		log_combat(pulledby, src, "broke grab")
 		pulledby.stop_pulling(pulling_broke_free = TRUE)
 		playsound(src.loc, 'sound/combat/grabbreak.ogg', 50, TRUE, -1)
@@ -1726,16 +1726,16 @@
 				if(G.limb_grabbed == head)
 					if(G.grabbee == pulledby)
 						if(HAS_TRAIT(H, TRAIT_NOSEGRAB) && G.sublimb_grabbed == BODY_ZONE_PRECISE_NOSE)
-							visible_message("<span class='warning'>[src] struggles to break free from [pulledby]'s grip!</span>", \
+							visible_message("¡<span class='warning'>[src] lucha por liberarse del agarre de [pulledby]!</span>", \
 											"<span class='warning'>I struggle against [pulledby]'s grip!</span>", null, null, pulledby)
-							to_chat(pulledby, "<span class='warning'>[src] struggles against my grip!</span>")
+							to_chat(pulledby, "¡<span class='warning'>[src] lucha contra mi agarre!</span>")
 							playsound(src, 'sound/combat/grabstruggle.ogg', 50, TRUE, -1)
 							client?.move_delay = world.time + 20
 							return TRUE
 						if(HAS_TRAIT(H, TRAIT_EARGRAB) && G.sublimb_grabbed == BODY_ZONE_PRECISE_EARS)
-							visible_message("<span class='warning'>[src] struggles to break free from [pulledby]'s grip!</span>", \
+							visible_message("¡<span class='warning'>[src] lucha por liberarse del agarre de [pulledby]!</span>", \
 												"<span class='warning'>I struggle against [pulledby]'s grip!</span>", null, null, pulledby)
-							to_chat(pulledby, "<span class='warning'>[src] struggles against my grip!</span>")
+							to_chat(pulledby, "¡<span class='warning'>[src] lucha contra mi agarre!</span>")
 							playsound(src, 'sound/combat/grabstruggle.ogg', 50, TRUE, -1)
 							client?.move_delay = world.time + 20
 							return TRUE
@@ -1826,10 +1826,10 @@
 			final_where = where
 
 		if(!what.mob_can_equip(who, src, final_where, TRUE, TRUE))
-			to_chat(src, "<span class='warning'>\The [what.name] doesn't fit in that place!</span>")
+			to_chat(src, "<span class='warning'>\The [what.name] ¡no cabe en ese lugar!</span>")
 			return
 
-		who.visible_message("<span class='notice'>[src] tries to put [what] on [who].</span>", \
+		who.visible_message("<span class='notice'>[src] intenta poner [what] en [who].</span>", \
 						"<span class='notice'>[src] tries to put [what] on you.</span>", null, null, src)
 		to_chat(src, "<span class='notice'>I try to put [what] on [who]...</span>")
 		if(do_after(src, what.equip_delay_other, who))
@@ -1883,7 +1883,7 @@
 	// Also if it is not set, the mob could be incapcitated, knocked out, unconscious, asleep, EMP'd, etc.
 	// Honestly this should be a body_position check but that can be done later
 	if(!(mobility_flags & MOBILITY_UI) && !(action_bitflags & ALLOW_RESTING))
-		to_chat(src, span_warning("You can't do that right now!"))
+		to_chat(src, span_warning("¡No puedes hacer eso ahora mismo!"))
 		return FALSE
 
 	// // NEED_HANDS is already checked by MOBILITY_UI for humans so this is for silicons
@@ -1894,26 +1894,26 @@
 
 	if(!Adjacent(target) && (target.loc != src))
 		if((action_bitflags & FORBID_TELEKINESIS_REACH))
-			to_chat(src, span_warning("You are too far away!"))
+			to_chat(src, span_warning("¡Estás demasiado lejos!"))
 			return FALSE
 
 	if((action_bitflags & NEED_DEXTERITY) && !IsAdvancedToolUser()) // !ISADVANCEDTOOLUSER(src)
-		to_chat(src, span_warning("You don't have the dexterity to do this!"))
+		to_chat(src, span_warning("¡No tienes la destreza para hacer esto!"))
 		return FALSE
 
 	if((action_bitflags & NEED_LITERACY) && !is_literate())
-		to_chat(src, span_warning("You can't comprehend any of this!"))
+		to_chat(src, span_warning("¡No puedes comprender nada de esto!"))
 		return FALSE
 
 	if((action_bitflags & NEED_LIGHT) && !has_light_nearby() && !has_nightvision())
-		to_chat(src, span_warning("You need more light to do this!"))
+		to_chat(src, span_warning("¡Necesitas más luz para hacer esto!"))
 		return FALSE
 
 	return TRUE
 
 /mob/living/proc/can_use_guns(obj/item/G)//actually used for more than guns!
 	if(G.trigger_guard == TRIGGER_GUARD_NONE)
-		to_chat(src, "<span class='warning'>I am unable to fire this!</span>")
+		to_chat(src, "<span class='warning'> ¡No puedo disparar esto! </span>")
 		return FALSE
 	if(G.trigger_guard != TRIGGER_GUARD_ALLOW_ALL && !IsAdvancedToolUser())
 		to_chat(src, "<span class='warning'>I try to fire [G], but can't use the trigger!</span>")
@@ -2016,7 +2016,7 @@
 	if(!new_mob)
 		return
 
-	to_chat(src, span_hypnophrase(span_big("Your form morphs into that of a [what_to_randomize]!")))
+	to_chat(src, span_hypnophrase(span_big("¡Tu forma se transforma en la de un [what_to_randomize]!")))
 
 	// And of course, make sure they get policy for being transformed
 	var/poly_msg = get_policy(POLICY_POLYMORPH)
@@ -2065,7 +2065,7 @@
 		return
 	if((fire_stacks > 0 || divine_fire_stacks > 0) && !on_fire)
 		on_fire = TRUE
-		src.visible_message("<span class='warning'>[src] catches fire!</span>", \
+		src.visible_message("¡<span class='warning'>[src] se incendia!</span>", \
 						"<span class='danger'>I'm set on fire!</span>")
 		new/obj/effect/dummy/lighting_obj/moblight/fire(src)
 		throw_alert("fire", /atom/movable/screen/alert/fire)
@@ -2249,7 +2249,7 @@
 		if(!picked)
 			return
 		var/obj/item/mob_holder/holder = new(get_turf(src), src)
-		visible_message(span_warning("[src] starts to climb into [picked] on [over]."), span_warning("You start to climb into [picked] on [over]."))
+		visible_message(span_warning("[src] comienza a subir a [picked] en [over]."), span_warning("You start to climb into [picked] on [over]."))
 		if(do_after(src, 3 SECONDS, over))
 			if(picked.loc == src)
 				return
@@ -2287,8 +2287,8 @@
 	if(buckled)
 		to_chat(user, "<span class='warning'>[src] is buckled to something!</span>")
 		return FALSE
-	user.visible_message("<span class='warning'>[user] starts trying to scoop up [src]!</span>", \
-					"<span class='danger'>I start trying to scoop up [src]...</span>", null, null, src)
+	user.visible_message("¡<span class='warning'>[user] comienza a intentar recoger [src]!</span>", \
+					"<span class='danger'>Empiezo a intentar recoger [src]...</span>", null, null, src)
 	to_chat(src, "<span class='danger'>[user] starts trying to scoop you up!</span>")
 	if(!do_after(user, 2 SECONDS, src))
 		return FALSE
@@ -2348,7 +2348,7 @@
 	. = ..()
 	var/refid = REF(src)
 	. += {"
-		<br><font size='1'>[VV_HREF_TARGETREF_1V(refid, VV_HK_BASIC_EDIT, "[ckey || "no ckey"]", NAMEOF(src, ckey))] / [VV_HREF_TARGETREF_1V(refid, VV_HK_BASIC_EDIT, "[real_name || "no real name"]", NAMEOF(src, real_name))]</font>
+		<br><font size='1'>[VV_HREF_TARGETREF_1V(refid, VV_HK_BASIC_EDIT, "[ckey || "no ckey"]", NAMEOF(src, ckey))] / [VV_HREF_TARGETREF_1V(refid, VV_HK_BASIC_EDIT, "[real_name || "sin nombre real"]", NAMEOF(src, real_name))]</font>
 		<br><font size='1'>
 			BRUTE:<font size='1'><a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=brute' id='brute'>[getBruteLoss()]</a>
 			FIRE:<font size='1'><a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=fire' id='fire'>[getFireLoss()]</a>
@@ -2588,7 +2588,7 @@
 		return
 	changeNext_move(CLICK_CD_EXHAUSTED)
 	if(m_intent != MOVE_INTENT_SNEAK)
-		visible_message(span_info("[src] looks around."), span_info("I look around."))
+		visible_message(span_info("[src] mira a su alrededor."), span_info("Miro a mi alrededor."))
 	var/looktime = 5 SECONDS - (GET_MOB_ATTRIBUTE_VALUE(src, STAT_PERCEPTION) * 2)
 	if(has_quirk(/datum/quirk/boon/keen_eye))
 		looktime *= 0.25
@@ -2615,9 +2615,9 @@
 			else
 				if(M.m_intent == MOVE_INTENT_SNEAK)
 					if(M.client?.prefs.read_preference(/datum/preference/toggle/showrolls))
-						to_chat(M, "<span class='warning'>[src] didn't find me... [probby]%</span>")
+						to_chat(M, "<span class='warning'>[src] no me encontró... [probby]%</span>")
 					else
-						to_chat(M, "<span class='warning'>[src] didn't find me.</span>")
+						to_chat(M, "<span class='warning'>[src] no me encontró.</span>")
 				else
 					found_ping(get_turf(M), client, "hidden")
 
@@ -2667,7 +2667,7 @@
 	if(!get_step_multiz(center, direction)) //We are at the edge z-level.
 		var/turf/current = get_turf(src)
 		if(direction == DOWN || !current.can_see_sky())
-			to_chat(src, span_warning("There's nothing interesting there."))
+			to_chat(src, span_warning("No hay nada interesante ahí."))
 			return
 
 		switch(GLOB.forecast)
@@ -2676,11 +2676,11 @@
 			if("rain")
 				to_chat(src, span_info("The wet wind is blowing."))
 			if("rainbow")
-				to_chat(src, span_smallnotice("A beautiful rainbow!"))
+				to_chat(src, span_smallnotice("¡Un hermoso arcoiris!"))
 			if("fog")
 				to_chat(src, span_warning("I can't see anything, the fog has set in."))
 			else
-				to_chat(src, span_info("There is nothing special to say about this weather."))
+				to_chat(src, span_info("No hay nada especial que decir sobre este clima."))
 
 		if(GLOB.tod == NIGHT)
 			var/briar_notice = FALSE
@@ -2767,7 +2767,7 @@
 	looking_holder = new(above_turf, src, UP)
 
 	if(m_intent != MOVE_INTENT_SNEAK)
-		visible_message(span_info("[src] looks up."))
+		visible_message(span_info("[src] mira hacia arriba."))
 
 	reset_perspective(looking_holder)
 	update_cone_show()
@@ -2810,7 +2810,7 @@
 	looking_holder = new(get_looking_turf(DOWN), src, DOWN)
 
 	if(m_intent != MOVE_INTENT_SNEAK)
-		visible_message(span_info("[src] looks down."))
+		visible_message(span_info("[src] mira hacia abajo."))
 
 	reset_perspective(looking_holder)
 	update_cone_show()
@@ -2888,7 +2888,7 @@
 			if(. >= UNCONSCIOUS)
 				REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_KNOCKEDOUT)
 			remove_traits(list(TRAIT_HANDS_BLOCKED, TRAIT_INCAPACITATED, TRAIT_FLOORED, TRAIT_CRITICAL_CONDITION), STAT_TRAIT)
-			log_combat(src, src, "regained consciousness")
+			log_combat(src, src, "recuperó la conciencia")
 		if(SOFT_CRIT)
 			if(pulledby)
 				ADD_TRAIT(src, TRAIT_IMMOBILIZED, PULLED_WHILE_SOFTCRIT_TRAIT) //adding trait sources should come before removing to avoid unnecessary updates
@@ -2903,7 +2903,7 @@
 				ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
 			else
 				REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
-			log_combat(src, src, "lost consciousness")
+			log_combat(src, src, "perdió el conocimiento")
 		if(HARD_CRIT)
 			if(. != UNCONSCIOUS)
 				become_blind(UNCONSCIOUS_TRAIT)
@@ -3028,7 +3028,7 @@
 		spell = new spell_type(source)
 
 	if(!silent)
-		to_chat(src, span_nicegreen("I learnt [spell.name]!"))
+		to_chat(src, span_nicegreen("¡Aprendí [spell.name]!"))
 
 	spell.Grant(src)
 	if(mastery_spell && spell.required_form)
@@ -3044,7 +3044,7 @@
 		return
 
 	if(!silent)
-		to_chat(src, span_boldwarning("I forgot [real_spell.name]!"))
+		to_chat(src, span_boldwarning("¡Olvidé [real_spell.name]!"))
 
 	var/datum/spell_mastery/mastery = mana_pool?.get_mastery()
 	if(mastery && (real_spell in mastery.granted_actions))
@@ -3074,7 +3074,7 @@
 		remove_spell(spell, return_skill_points, silent_individual)
 
 	if(!silent && !silent_individual)
-		to_chat(src, span_boldwarning("I forgot all my spells!"))
+		to_chat(src, span_boldwarning("¡Olvidé todos mis hechizos!"))
 
 /mob/living/adjust_form_mastery_points(points, used_points = FALSE, specific_form = null)
 	if(QDELETED(src))
@@ -3130,7 +3130,7 @@
 	var/time_left = COOLDOWN_TIMELEFT(src, offer_cooldown)
 
 	if(time_left)
-		to_chat(src, span_danger("I must wait [time_left / 10] seconds before offering again."))
+		to_chat(src, span_danger("Debo esperar [time_left / 10] segundos antes de volver a ofrecer."))
 		return FALSE
 
 	offered_item_ref = WEAKREF(offered_item)
@@ -3142,12 +3142,12 @@
 		to_chat(offered_to, span_notice("[offered_to] secretly offers [offered_item] to me..."))
 	else
 		visible_message(
-			span_notice("[src] offers [offered_item] to [offered_to] with an outstretched hand."), \
-			span_notice("I offer [offered_item] to [offered_to] with an outstretched hand."), \
+			span_notice("[src] ofrece [offered_item] a [offered_to] con la mano extendida."), \
+			span_notice("Ofrezco [offered_item] a [offered_to] con la mano extendida."), \
 			vision_distance = COMBAT_MESSAGE_RANGE, \
 			ignored_mobs = list(offered_to)
 		)
-		to_chat(offered_to, span_notice("[src] offers [offered_item] to me..."))
+		to_chat(offered_to, span_notice("[src] me ofrece [offered_item]..."))
 
 	new /obj/effect/temp_visual/offered_item_effect(get_turf(src), offered_item, src, offered_to, stealthy)
 
@@ -3177,7 +3177,7 @@
 
 /mob/living/proc/try_accept_offered_item(mob/living/offerer, obj/offered_item, stealthy)
 	if(get_active_held_item())
-		to_chat(src, span_warning("I need a free hand to take it!"))
+		to_chat(src, span_warning("¡Necesito una mano libre para tomarlo!"))
 		return FALSE
 
 	accept_offered_item(offerer, offered_item, stealthy)
@@ -3190,10 +3190,10 @@
 		to_chat(offerer, span_notice("[src] takes the secretly offered [offered_item]."))
 		to_chat(src, span_notice("I take the secretly offered [offered_item] from [offerer]."))
 	else
-		to_chat(offerer, span_notice("[src] takes [offered_item] from my outstretched hand."))
+		to_chat(offerer, span_notice("[src] toma [offered_item] de mi mano extendida."))
 		visible_message(
-			span_warning("[src] takes [offered_item] from [offerer]'s outstretched hand!"), \
-			span_notice("I take [offered_item] from [offerer]'s outstretched hand."), \
+			span_warning("¡[src] toma [offered_item] de la mano extendida de [offerer]!"), \
+			span_notice("Tomo [offered_item] de la mano extendida de [offerer]."), \
 			vision_distance = COMBAT_MESSAGE_RANGE, \
 			ignored_mobs = list(offerer)
 		)
@@ -3211,9 +3211,9 @@
 	eyesclosed = closed
 
 	if(eyesclosed)
-		become_blind("eyelids")
+		become_blind("párpados")
 	else
-		cure_blind("eyelids")
+		cure_blind("párpados")
 
 	if(hud_used)
 		var/atom/movable/screen/eye_intent/eyet = locate() in hud_used.static_inventory

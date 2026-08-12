@@ -149,7 +149,7 @@
 	if(length(dropped_items))
 		for(var/atom/movable/thing as anything in dropped_items)
 			thing.add_mob_blood(chest_owner)
-		chest_owner.visible_message("<span class='danger'><B>[chest_owner] spills [chest_owner.p_their()] guts!</B></span>")
+		chest_owner.visible_message("<span class='danger'><B>[chest_owner] derrama [chest_owner.p_their()] ¡tripas!</B></span>")
 
 	return TRUE
 
@@ -344,7 +344,7 @@
 		for(var/obj/item/worn_item in worn_items)
 			owner.dropItemToGround(worn_item, force = TRUE)
 
-	name = "[owner.real_name]'s head"
+	name = "La cabeza de [owner.real_name]"
 	. = ..()
 
 //Attach a limb to a human and drop any existing limb of that type.
@@ -452,5 +452,5 @@
 	if(limb)
 		limb.attach_limb(src, TRUE)
 		if(!silent)
-			visible_message(span_green("[src]'s [limb] regenerates!"), span_green("My [limb] regenerates!"), vision_distance = COMBAT_MESSAGE_RANGE)
+			visible_message(span_green("¡El [limb] de [src] se regenera!"), span_green("¡Mi [limb] se regenera!"), vision_distance = COMBAT_MESSAGE_RANGE)
 		return limb

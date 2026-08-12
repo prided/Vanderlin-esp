@@ -144,7 +144,7 @@
 /obj/item/spellbook/attack_hand_secondary(mob/user, list/modifiers)
 	if(!picked)
 		var/the_time = world.time
-		var/design = tgui_input_list(user, "Select a design.", "Spellbook Design", designlist)
+		var/design = tgui_input_list(user, "Select a design.", "Diseño de libro de hechizos", designlist)
 		if(!design || world.time > (the_time + 30 SECONDS))
 			return
 		base_icon_state = "spellbook[design]"
@@ -207,7 +207,7 @@
 
 	var/mob/living/target = interacting_with
 	if(target.stat == DEAD)
-		target.visible_message(span_danger("[user] smacks [target]'s lifeless corpse with [src]."))
+		target.visible_message(span_danger("[user] golpea el cadáver sin vida de [target] con [src]."))
 		playsound(src, "punch", 25, TRUE, -1)
 		return
 
@@ -221,7 +221,7 @@
 	)
 
 	if(length(allowed_readers) > 2 || (target in allowed_readers))
-		to_chat(user, span_smallnotice("I can't chain [target.p_them()] to my tome..."))
+		to_chat(user, span_smallnotice("No puedo encadenar [target.p_them()] a mi tomo..."))
 		return
 
 	allowed_readers += target

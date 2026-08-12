@@ -68,10 +68,10 @@
 		"Viola" = /obj/item/instrument/viola
 	)
 
-	spawned.select_equippable(player_client, instruments, message = "Choose your instrument.", title = "XYLIX")
+	spawned.select_equippable(player_client, instruments, message = "Elige tu instrumento.", title = "XYLIX")
 
 /datum/outfit/adventurer/bard
-	name = "Bard (Adventurer)"
+	name = "Bardo (aventurero)"
 	head = /obj/item/clothing/head/bardhat
 	shoes = /obj/item/clothing/shoes/boots/darkboots
 	pants = /obj/item/clothing/pants/tights/colored/random

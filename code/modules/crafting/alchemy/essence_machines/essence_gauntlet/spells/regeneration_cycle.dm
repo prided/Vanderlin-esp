@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/regeneration_cycle
-	name = "Regeneration Cycle"
+	name = "Ciclo de regeneración"
 	desc = "Establishes a cycle of continuous healing over time."
 	button_icon_state = "regeneratelimb"
 	cast_range = 1
@@ -15,8 +15,8 @@
 	new /obj/effect/temp_visual/snake/twin_up(null, target)
 
 /atom/movable/screen/alert/status_effect/regeneration_cycle
-	name = "Regeneration Cycle"
-	desc = "Your body heals itself continuously."
+	name = "Ciclo de regeneración"
+	desc = "Tu cuerpo se cura a sí mismo continuamente."
 	icon_state = "buff"
 
 /datum/status_effect/buff/regeneration_cycle

@@ -22,7 +22,7 @@
 	attach_clothing_traits(TRAIT_NEARSIGHTED_CORRECTED)
 
 /obj/item/clothing/face/spectacles/golden
-	name = "golden spectacles"
+	name = "gafas doradas"
 	desc = "A pair of shaped lenses, worn with a bridge over the nose. The frame of this one is golden."
 	icon_state = "goggles"
 	break_sound = "glassbreak"
@@ -51,7 +51,7 @@
 	var/total_sellprice = 0
 
 	if(isturf(interacting_with))
-		visible_message("[user] evaluates the items on the [interacting_with] with their monocle.")
+		visible_message("[user] evalúa los elementos del [interacting_with] con su monóculo.")
 
 		for(var/obj/item/assessed_item in interacting_with)
 			total_sellprice += assessed_item.sellprice
@@ -63,7 +63,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 	else if(istype(interacting_with, /obj/item))
-		visible_message("[user] evaluates the [interacting_with] with their monocle.")
+		visible_message("[user] evalúa el [interacting_with] con su monóculo.")
 
 		var/obj/item/assessed_item = interacting_with
 		total_sellprice += assessed_item.sellprice
@@ -172,7 +172,7 @@
 	icon_state = "surgsackmask"
 
 /obj/item/clothing/face/sack/psy
-	name = "psydonian sack mask"
+	name = "psydonian máscara de saco"
 	desc = "An ordinary brown sack. This one has eyeholes cut into it, bearing a crude chalk drawing of Psydon's cross upon its visage. Unsettling for most."
 	icon_state = "sackmask_psy"
 
@@ -195,7 +195,7 @@
 	dyeable = TRUE
 
 /obj/item/clothing/face/facemask/steel/confessor
-	name = "strange mask"
+	name = "máscara extraña"
 	desc = "It is said that the original version of this mask was used for obscure rituals in Grenzelhoft, and now it has been repurposed as a veil for the cunning hand of the Ordo Venatari. Others say it is a piece of heresy, a necessary evil, capable of keeping its user safe from vile magicks. You can taste copper whenever you draw breath."
 	icon_state = "confessormask"
 	max_integrity = 200
@@ -225,7 +225,7 @@
 /obj/item/clothing/face/facemask/steel/confessor/attackby(obj/item/I, mob/user, list/modifiers)
 	. = ..()
 	if(istype(I, /obj/item/clothing/face/spectacles/inq))
-		user.visible_message(span_warning("[user] starts to insert [I]'s lenses into [src]."))
+		user.visible_message(span_warning("[user] comienza a insertar las lentes de [I] en [src]."))
 		if(do_after(user, 4 SECONDS))
 			var/obj/item/clothing/face/facemask/steel/confessor/lensed/P = new /obj/item/clothing/face/facemask/steel/confessor/lensed(get_turf(src.loc))
 			if(user.is_holding(src))
@@ -235,7 +235,7 @@
 			qdel(src)
 			qdel(I)
 		else
-			user.visible_message(span_warning("[user] stops inserting the lenses into [src]."))
+			user.visible_message(span_warning("[user] deja de insertar las lentes en [src]."))
 		return
 
 /obj/item/clothing/face/facemask/steel/confessor/lensed

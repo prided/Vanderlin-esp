@@ -16,7 +16,7 @@
 
 /mob/living/carbon/human/species/human/northern/thief/after_creation()
 	..()
-	job = "Thief"
+	job = "Ladrón"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_LIGHT_STEP, TRAIT_GENERIC)

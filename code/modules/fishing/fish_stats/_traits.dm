@@ -22,7 +22,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 	return list
 
 /datum/fish_trait
-	var/name = "Unnamed Trait"
+	var/name = "Rasgo sin nombre"
 	/// Description of the trait in the fishing catalog and scanner
 	var/catalog_description = "Uh uh, someone has forgotten to set description to this trait. Yikes!"
 	///A list of traits fish cannot have in conjunction with this trait.
@@ -84,7 +84,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		reagents[reagent] += reagents_to_add[reagent]
 
 /datum/fish_trait/wary
-	name = "Wary"
+	name = "Cauteloso"
 	catalog_description = "This fish will avoid visible fish lines, cloaked line recommended."
 
 /datum/fish_trait/wary/difficulty_mod(obj/item/fishingrod/rod, mob/fisherman)
@@ -94,7 +94,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		.[ADDITIVE_FISHING_MOD] += FISH_TRAIT_MINOR_DIFFICULTY_BOOST
 
 /datum/fish_trait/shiny_lover
-	name = "Shiny Lover"
+	name = "Amante brillante"
 	catalog_description = "This fish loves shiny things and money, shiny lure recommended."
 
 /datum/fish_trait/shiny_lover/difficulty_mod(obj/item/fishingrod/rod, mob/fisherman)
@@ -141,8 +141,8 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		.[MULTIPLICATIVE_FISHING_MOD] = 0
 
 /datum/fish_trait/nocturnal
-	name = "Nocturnal"
-	catalog_description = "This fish avoids bright lights, fishing and storing in darkness recommended."
+	name = "Nocturno"
+	catalog_description = "Este pez evita las luces brillantes, se recomienda pescar y almacenar en la oscuridad."
 
 /datum/fish_trait/nocturnal/catch_weight_mod(obj/item/fishingrod/rod, mob/fisherman, atom/location, obj/item/reagent_containers/food/snacks/fish/fish_type)
 	. = ..()
@@ -193,7 +193,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		.[MULTIPLICATIVE_FISHING_MOD] = 0
 
 /datum/fish_trait/vegan
-	name = "Herbivore"
+	name = "herbívoro"
 	catalog_description = "This fish can only be baited with fresh produce."
 	incompatible_traits = list(/datum/fish_trait/carnivore, /datum/fish_trait/predator)
 
@@ -218,7 +218,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		.[MULTIPLICATIVE_FISHING_MOD] = 0
 
 /datum/fish_trait/predator
-	name = "Predator"
+	name = "Depredador"
 	catalog_description = "It's a predatory fish. It'll hunt down and eat live fishes of smaller size when hungry."
 	incompatible_traits = list(/datum/fish_trait/vegan)
 
@@ -244,7 +244,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		return
 
 /datum/fish_trait/yucky
-	name = "Yucky"
+	name = "Asqueroso"
 	catalog_description = "This fish tastes so repulsive, other fishes won't try to eat it."
 	reagents_to_add = list(/datum/reagent/yuck = 1.2)
 
@@ -253,7 +253,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 	ADD_TRAIT(fish, TRAIT_YUCKY_FISH, FISH_TRAIT_DATUM)
 
 /datum/fish_trait/lubed
-	name = "Slippery"
+	name = "Resbaladizo"
 	catalog_description = "This fish exudes a viscous, slippery lubrificant. It's recommended not to step on it."
 	added_difficulty = 5
 
@@ -266,7 +266,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 	minigame.gravity_velocity *= 1.4
 
 /datum/fish_trait/antigrav
-	name = "Anti-Gravity"
+	name = "Antigravedad"
 	catalog_description = "This fish will invert the gravity of the bait at random. May fall upward outside after being caught."
 	added_difficulty = 20
 
@@ -275,8 +275,8 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 
 
 /datum/fish_trait/camouflage
-	name = "Camouflage"
-	catalog_description = "This fish possess the ability to blend with its surroundings."
+	name = "Camuflaje"
+	catalog_description = "Este pez posee la capacidad de mezclarse con su entorno."
 	added_difficulty = 5
 	spontaneous_manifest_types = list(
 		/obj/item/reagent_containers/food/snacks/fish/clownfish = 15,
@@ -306,7 +306,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		animate(source, alpha = init_alpha, time = 1.2 SECONDS, easing = CIRCULAR_EASING|EASE_OUT)
 
 /datum/fish_trait/prehistoric
-	name = "Living Fossil"
+	name = "Fósil viviente"
 	catalog_description = "An ancient species thought extinct. Extremely rare and valuable."
 	inheritability = 60
 	added_difficulty = 25
@@ -348,7 +348,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 	added_difficulty = 10
 
 /datum/fish_trait/treasure_hunter
-	name = "Treasure Hunter"
+	name = "Cazador de tesoros"
 	catalog_description = "This fish collects shiny objects. May have valuables in its stomach when caught."
 	incompatible_traits = list(/datum/fish_trait/vegan)
 
@@ -366,7 +366,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 	source.visible_message(span_notice("Something shiny falls out of [source]!"))
 
 /datum/fish_trait/bioluminescent
-	name = "Bioluminescent"
+	name = "Bioluminiscente"
 	catalog_description = "This fish emits a natural glow in dark waters. Easier to spot at night."
 	incompatible_traits = list(/datum/fish_trait/nocturnal, /datum/fish_trait/camouflage)
 	added_difficulty = -3

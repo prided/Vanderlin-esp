@@ -14,8 +14,8 @@
 
 //newtree
 /obj/structure/flora/tree
-	name = "old tree"
-	desc = "An old, wicked tree that not even elves could love."
+	name = "árbol viejo"
+	desc = "Un árbol viejo y malvado que ni siquiera los elfos podrían amar."
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "t1"
 	base_icon_state = "t"
@@ -82,7 +82,7 @@
 	return ..()
 
 /obj/structure/flora/tree/wise
-	name = "wise tree"
+	name = "árbol sabio"
 	desc = "Dendor's favored. It seems to watch you with ancient awareness."
 	icon_state = "mystical"
 	var/activated = FALSE
@@ -94,7 +94,7 @@
 		"BEGONE, INTERLOPER!",
 		"BEGONE, DESTROYER!",
 		"NATURE SHALL PREVAIL!",
-		"NATURE SHALL RECLAIM THE LAND!",
+		"¡LA NATURALEZA RECLAMARÁ LA TIERRA!",
 		"LEAVE US BE!",
 		"YOU HAVE DESTROYED ENOUGH!",
 		"DENDOR SMITES THE INTERLOPERS!",
@@ -157,8 +157,8 @@
 		retaliate(user)
 
 /obj/structure/flora/tree/burnt
-	name = "burnt tree"
-	desc = "A scorched pillar of a once living tree."
+	name = "árbol quemado"
+	desc = "Un pilar chamuscado de un árbol que alguna vez estuvo vivo."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "t1"
 	num_random_icons = 4
@@ -176,7 +176,7 @@
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/structure/flora/tree/stump/pine
-	name = "pine stump"
+	name = "tocón de pino"
 	icon_state = "dead4"
 	icon = 'icons/obj/flora/pines.dmi'
 	static_debris = list(/obj/item/ore/coal/charcoal = 1)
@@ -188,7 +188,7 @@
 	icon_state = "dead[rand(4,5)]"
 
 /obj/structure/flora/tree/pine
-	name = "pine tree"
+	name = "pino"
 	desc = ""
 	icon = 'icons/obj/flora/pines.dmi'
 	icon_state = "pine1"
@@ -274,7 +274,7 @@
 
 /*	.............   Ancient log   ................ */	// Functionally a sofa, slightly better than sleeping on the ground
 /obj/structure/chair/bench/ancientlog
-	name = "ancient log"
+	name = "tronco antiguo"
 	desc = "A felled piece of tree long forgotten, the poorman's sofa."
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "log1"
@@ -379,7 +379,7 @@
 			return
 
 		if(!prob(50))
-			user.visible_message(span_warning("[user] rummages through [src]..."))
+			user.visible_message(span_warning("[user] hurga en [src]..."))
 			continue
 
 		var/obj/item/item_path = pick_n_take(looty)
@@ -388,14 +388,14 @@
 
 		var/obj/item/found_item = new item_path(user.loc)
 		user.put_in_hands(found_item)
-		user.visible_message(span_notice("[user] finds [found_item] in [src]."))
+		user.visible_message(span_notice("[user] encuentra [found_item] en [src]."))
 
 		if(!length(looty))
 			res_replenish = world.time + 8 MINUTES
 		return
 
 /obj/structure/flora/grass/tundra
-	name = "tundra grass"
+	name = "hierba de tundra"
 	icon_state = "tundragrass1"
 	base_icon_state = "tundragrass"
 
@@ -482,10 +482,10 @@
 	L.Immobilize(1 SECONDS)
 
 	if(L.m_intent == MOVE_INTENT_RUN)
-		L.visible_message(span_warning("[L] crashes into \a [src]!"), span_danger("I run into \a [src]."))
+		L.visible_message(span_warning("¡[L] choca contra \a [src]!"), span_danger("Me encuentro con \a [src]."))
 		log_combat(L, src, "ran into")
 	else if(L.currently_z_moving)
-		L.visible_message(span_warning("[L] falls onto \a [src]!"), span_danger("I fall onto \a [src]."))
+		L.visible_message(span_warning("[L] falls onto \a [src]!"), span_danger("Caigo sobre \a [src]."))
 		log_combat(L, src, "ran into")
 	else
 		to_chat(L, span_warning("I get stuck in \a [src]."))
@@ -510,8 +510,8 @@
 		L.Stun(3 SECONDS) //that fucking hurt
 
 /obj/structure/flora/grass/bush/wall
-	name = "great bush"
-	desc = "A bush, this one's roots are too thick and block the way."
+	name = "gran arbusto"
+	desc = "Un arbusto, las raíces de este son demasiado gruesas y bloquean el camino."
 	icon_state = "bushwall1"
 	base_icon_state = "bushwall"
 	num_random_icons = 2
@@ -522,7 +522,7 @@
 	attacked_sound = 'sound/misc/woodhit.ogg'
 
 /obj/structure/flora/grass/bush/wall/tundra
-	name = "tundra great bush"
+	name = "tundra gran arbusto"
 	icon_state = "bushwall_tundra1"
 	base_icon_state = "bushwall_tundra"
 
@@ -542,7 +542,7 @@
 	debris = null
 
 /obj/structure/flora/grass/bush/wall/tall/tundra
-	name = "tundra great bush"
+	name = "tundra gran arbusto"
 	icon_state = "tallbush_tundra1"
 	base_icon_state = "tallbush_tundra"
 
@@ -572,7 +572,7 @@
 // swarmpweed bush
 /obj/structure/flora/grass/swampweed
 	name = "bunch of swampweed"
-	desc = "A green root, good for smoking."
+	desc = "Una raíz verde, buena para fumar."
 	icon_state = "swampweed1"
 	base_icon_state = "swampweed"
 	num_random_icons = 3
@@ -586,7 +586,7 @@
 	pixel_x += rand(-3,3)
 
 /obj/structure/flora/shroom_tree
-	name = "shroom"
+	name = "hongo"
 	desc = "A ginormous mushroom, prized by dwarves for their shroomwood."
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "mush1"
@@ -658,7 +658,7 @@
 
 /obj/structure/roguerock
 	name = "rock"
-	desc = "Stone, faithful tool, weapon and companion."
+	desc = "Piedra, fiel herramienta, arma y compañera."
 	icon = 'icons/roguetown/misc/foliage.dmi'
 	icon_state = "rock1"
 	max_integrity = 50
@@ -696,7 +696,7 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	playsound(src, "plantcross", 80, FALSE, -1)
 	prob2findstuff = prob2findstuff + ( GET_MOB_ATTRIBUTE_VALUE(user, STAT_PERCEPTION) * 4 )
-	user.visible_message(span_smallnotice("[user] searches through [src]."))
+	user.visible_message(span_smallnotice("[user] busca en [src]."))
 
 	if(do_after(L, rand(5 DECISECONDS, 2 SECONDS), src))
 
@@ -707,7 +707,7 @@
 		if(prob(prob2findstuff))
 			var/obj/item/natural/thorn/B = new
 			user.put_in_hands(B)
-			user.visible_message(span_notice("[user] finds [B] in [src]."))
+			user.visible_message(span_notice("[user] encuentra [B] en [src]."))
 			if(prob(20))
 				islooted = TRUE
 
@@ -761,7 +761,7 @@
 /*	..................   Meagre Bush   ................... */	// This works on the characters stats and doesnt have a preset vendor content. Hardmode compared to the OG one.
 /obj/structure/flora/grass/bush_meagre
 	name = "bush"
-	desc = "Home to thorns, spiders, and maybe some berries."
+	desc = "Hogar de espinas, arañas y tal vez algunas bayas."
 	icon_state = "bush1"
 	base_icon_state = "bush"
 	num_random_icons = 3
@@ -841,7 +841,7 @@
 	prob2findstuff = prob2findstuff + ( GET_MOB_ATTRIBUTE_VALUE(user, STAT_PERCEPTION) * 4 )
 	prob2findgoodie = prob2findgoodie + ( GET_MOB_ATTRIBUTE_VALUE(user, STAT_FORTUNE) * 2 ) + ( GET_MOB_ATTRIBUTE_VALUE(user, STAT_PERCEPTION) * 2 )
 	luckydouble = ( GET_MOB_ATTRIBUTE_VALUE(user, STAT_FORTUNE) * 2 )
-	user.visible_message(span_smallnotice("[user] searches through [src]."))
+	user.visible_message(span_smallnotice("[user] busca en [src]."))
 
 	if(do_after(L, rand(5 DECISECONDS, 2 SECONDS), src))
 
@@ -856,7 +856,7 @@
 				if(B)
 					B = new B(user.loc)
 					user.put_in_hands(B)
-					user.visible_message(span_notice("[user] finds [B] in [src]."))
+					user.visible_message(span_notice("[user] encuentra [B] en [src]."))
 					if(HAS_TRAIT(user, TRAIT_MIRACULOUS_FORAGING))
 						if(prob(35))
 							return
@@ -870,7 +870,7 @@
 				if(B)
 					B = new B(user.loc)
 					user.put_in_hands(B)
-					user.visible_message(span_notice("[user] finds [B] in [src]."))
+					user.visible_message(span_notice("[user] encuentra [B] en [src]."))
 					if(HAS_TRAIT(user, TRAIT_MIRACULOUS_FORAGING))
 						if(prob(35))
 							return
@@ -881,7 +881,7 @@
 					return
 
 		else
-			to_chat(user, span_smallnotice("Didn't find anything."))
+			to_chat(user, span_smallnotice("No encontré nada."))
 	prob2findstuff = 18
 	prob2findgoodie = 15
 	luckydouble	= 3

@@ -13,7 +13,7 @@
 	shared_xp_percent = 0.2
 
 /datum/attribute/skill/craft/cooking/preparation
-	name = "Preparation"
+	name = "Preparación"
 	desc = "Represents your character's ability to prepare raw ingredients for cooking, trimming, peeling, chopping, portioning, and readying components so that the actual craft of cooking can begin. A skilled preparer works quickly and wastes little, and their knife never slips."
 	governing_attribute = STAT_SPEED
 	default_attributes = list(
@@ -38,7 +38,7 @@
 	shared_xp_percent = 0.2
 
 /datum/attribute/skill/craft/cooking/confectionery
-	name = "Confectionery"
+	name = "Confitería"
 	desc = "Represents your character's ability to work with sugar, chocolate, and other sweet ingredients. A skilled confectioner can produce candies, toffees, and elaborate sugar-work that borders on artistry."
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(
@@ -77,7 +77,7 @@
 	shared_xp_percent = 0.2
 
 /datum/attribute/skill/craft/cooking/preservation
-	name = "Preservation"
+	name = "Preservación"
 	desc = "Represents your character's knowledge of curing, salting, smoking, and pickling. A capable preserver can stretch a season's harvest through the harshest winter."
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(
@@ -103,7 +103,7 @@
 	shared_xp_percent = 0.2
 
 /datum/attribute/skill/craft/cooking/winemaking
-	name = "Winemaking"
+	name = "Elaboración de vino"
 	desc = "Represents your character's ability to produce wine from fruit and grape. More sensitive than brewing and less forgiving of error, a true vintner can read a harvest and know already what it will become."
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(
@@ -129,7 +129,7 @@
 	shared_xp_percent = 0.4
 
 /datum/attribute/skill/craft/cooking/cheesemaking
-	name = "Cheesemaking"
+	name = "elaboración de queso"
 	desc = "Represents your character's ability to produce cheese from milk and curds. A skilled cheesemaker knows the character of their cultures, the right pressure for the press, and how long to leave a wheel to age in the dark. Good cheese takes time. The best takes years."
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(

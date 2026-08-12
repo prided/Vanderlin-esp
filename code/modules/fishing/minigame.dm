@@ -247,7 +247,7 @@ GLOBAL_LIST_EMPTY(fishing_challenges_by_user)
 	RegisterSignal(used_rod, COMSIG_ITEM_ATTACK_SELF, PROC_REF(on_attack_self))
 	RegisterSignal(user, COMSIG_MOB_CLICKON, PROC_REF(handle_click))
 	start_baiting_phase()
-	to_chat(user, span_notice("You start fishing..."))
+	to_chat(user, span_notice("Empiezas a pescar..."))
 	playsound(location, 'sound/effects/splash.ogg', 100)
 
 ///Set the timers for lure that need to be spun at intervals.
@@ -290,14 +290,14 @@ GLOBAL_LIST_EMPTY(fishing_challenges_by_user)
 	SIGNAL_HANDLER
 
 	if(!user.CanReach(location))
-		user.balloon_alert(user, "too far!")
+		user.balloon_alert(user, "¡demasiado lejos!")
 		interrupt()
 
 /datum/fishing_challenge/proc/on_hands_blocked(datum/source)
 	SIGNAL_HANDLER
 	if(completed) //the rod was dropped and therefore challenge already completed.
 		return
-	user.balloon_alert(user, "hands blocked!")
+	user.balloon_alert(user, "manos bloqueadas!")
 	interrupt()
 
 /datum/fishing_challenge/proc/handle_click(mob/source, atom/target, params)
@@ -783,7 +783,7 @@ GLOBAL_LIST_EMPTY(fishing_challenges_by_user)
 	else
 		completion -= completion_loss * seconds_per_tick
 		if(completion <= 0 && !(special_effects & FISHING_MINIGAME_RULE_NO_ESCAPE))
-			user.balloon_alert(user, "it got away!")
+			user.balloon_alert(user, "¡se escapó!")
 			complete(FALSE)
 
 	completion = clamp(completion, 0, 100)
@@ -802,7 +802,7 @@ GLOBAL_LIST_EMPTY(fishing_challenges_by_user)
 /atom/movable/screen/fishing_hud
 	icon = 'icons/hud/fishing_hud.dmi'
 	screen_loc = "CENTER+1:8,CENTER:2"
-	name = "fishing minigame"
+	name = "minijuego de pesca"
 	appearance_flags = APPEARANCE_UI|KEEP_TOGETHER
 	///The fish as shown in the minigame
 	var/atom/movable/screen/hud_fish/hud_fish

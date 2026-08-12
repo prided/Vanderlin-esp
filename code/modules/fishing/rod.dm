@@ -27,7 +27,7 @@
 	/// Fishing minigame difficulty modifier (additive)
 	var/difficulty_modifier = 0
 	/// Explaination of rod functionality shown in the ui and the autowiki
-	var/ui_description = "A classic fishing rod, with no special qualities."
+	var/ui_description = "Una caña de pescar clásica, sin cualidades especiales."
 	/// More explaination shown in the wiki after ui_description
 	var/wiki_description = ""
 	/// Is this fishing rod shown in the wiki
@@ -117,7 +117,7 @@
 			if(!baited)
 				tool.forceMove(src)
 				baited = tool
-				user.visible_message("<span class='notice'>[user] hooks something to [src].</span>", "<span class='notice'>I hook [tool] to [src].</span>")
+				user.visible_message("<span class='notice'>[user] engancha algo a [src].</span>", "<span class='notice'>I hook [tool] to [src].</span>")
 				playsound(src, 'sound/foley/pierce.ogg', 50, FALSE)
 			return ITEM_INTERACT_SUCCESS
 		else if(istype(tool, /obj/item/natural/bundle/worms))
@@ -128,13 +128,13 @@
 				if(W.amount == 1)
 					new W.stacktype(get_turf(user))
 					qdel(W)
-				user.visible_message("<span class='notice'>[user] hooks something to [src].</span>", "<span class='notice'>I hook [W.stacktype] to [src].</span>")
+				user.visible_message("<span class='notice'>[user] engancha algo a [src].</span>", "<span class='notice'>I hook [W.stacktype] to [src].</span>")
 				playsound(src, 'sound/foley/pierce.ogg', 50, FALSE)
 			return ITEM_INTERACT_SUCCESS
 		else if(!baited)
 			tool.forceMove(src)
 			baited = tool
-			user.visible_message("<span class='notice'>[user] hooks something to the line.</span>", "<span class='notice'>I hook [tool] to my line.</span>")
+			user.visible_message("<span class='notice'>[user] engancha algo a la línea.</span>", "<span class='notice'>I hook [tool] to my line.</span>")
 			playsound(src, 'sound/foley/pierce.ogg', 50, FALSE)
 			return ITEM_INTERACT_SUCCESS
 

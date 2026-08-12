@@ -10,7 +10,7 @@
 //.....................Shell......................//
 
 /obj/item/carvedgem/shell
-	name = "shell base"
+	name = "base de concha"
 	desc = "if you encountered this, it's a bug!"
 	icon = 'icons/roguetown/gems/gem_shell.dmi'
 	icon_state = "raw_shell"
@@ -19,7 +19,7 @@
 	item_weight = 65 GRAMS
 
 /obj/item/carvedgem/shell/openoyster
-	name = "open fossilized clam"
+	name = "almeja fosilizada abierta"
 	desc = "A clamshell that has recently been opened. You could split the shell in two with a knife."
 	icon_state = "oyster_open"
 	grid_height = 96
@@ -52,7 +52,7 @@
 	tool_behaviour = TOOL_FORK
 
 /obj/item/carvedgem/shell/spoon
-	name = "shell spoon"
+	name = "cuchara de concha"
 	desc = "A spoon carved out of shell, far too delicate to eat with."
 	icon_state = "spoon_shell"
 	grid_height = 32
@@ -78,7 +78,7 @@
 
 /obj/item/carvedgem/shell/fish
 	name = "shell fish figurine"
-	desc = "A small fish figurine carved out of shell."
+	desc = "Una pequeña figura de pez tallada en concha."
 	icon_state = "fish_shell"
 	grid_height = 32
 	grid_width = 32
@@ -102,7 +102,7 @@
 
 /obj/item/carvedgem/shell/bust
 	name = "shell bust"
-	desc = "A bust carved out of shell."
+	desc = "Un busto tallado en concha."
 	icon_state = "bust_shell"
 	grid_height = 64
 	grid_width = 64
@@ -117,7 +117,7 @@
 	sellprice = 25
 
 /obj/item/carvedgem/shell/comb
-	name = "shell comb"
+	name = "peine de concha"
 	desc = "A luxurious comb carved out of shell."
 	icon_state = "comb_shell"
 	grid_height = 32
@@ -125,7 +125,7 @@
 	sellprice = 25
 
 /obj/item/carvedgem/shell/duck
-	name = "shell duck"
+	name = "pato de concha"
 	desc = "An adorable little duck carved out of shell."
 	icon_state = "duck_shell"
 	grid_height = 32
@@ -133,16 +133,16 @@
 	sellprice = 25
 
 /obj/item/carvedgem/shell/urn
-	name = "shell urn"
-	desc = "A large decorative urn carved out of shell."
+	name = "urna de concha"
+	desc = "Una gran urna decorativa tallada en concha."
 	icon_state = "urn_shell"
 	grid_height = 64
 	grid_width = 64
 	sellprice = 30
 
 /obj/item/carvedgem/shell/statue
-	name = "shell statue"
-	desc = "A statue carved out of shell."
+	name = "estatua de concha"
+	desc = "Una estatua tallada en concha."
 	icon_state = "statue_shell"
 	grid_height = 64
 	grid_width = 32
@@ -150,8 +150,8 @@
 
 
 /obj/item/carvedgem/shell/obelisk
-	name = "shell statue"
-	desc = "An obelisk carved out of shell."
+	name = "estatua de concha"
+	desc = "Un obelisco tallado en concha."
 	icon_state = "obelisk_shell"
 	grid_height = 64
 	grid_width = 32
@@ -166,7 +166,7 @@
 	sellprice = 35
 //.....................Rose......................//
 /obj/item/carvedgem/rose
-	name = "rose base"
+	name = "base de rosa"
 	desc = "if you are seeing this, it's a bug, report it to coders"
 	icon = 'icons/roguetown/gems/gem_rose.dmi'
 	icon_state = "raw_rose"
@@ -343,7 +343,7 @@
 
 /obj/item/carvedgem/jade/fork
 	name = "joapstone fork"
-	desc = "A fork carved out of joapstone, far too delicate to eat with."
+	desc = "Un tenedor tallado en piedra de joap, demasiado delicado para comer con él."
 	icon_state = "fork_jade"
 	grid_height = 64
 	grid_width = 32
@@ -360,7 +360,7 @@
 	tool_behaviour = TOOL_SPOON
 
 /obj/item/carvedgem/jade/cameo
-	name = "joapstone cameo"
+	name = "cameo de joapstone"
 	desc = "A cameo carved out of joapstone depicting...someone? Use your imagination on who it could be."
 	icon_state = "cameo_jade"
 	grid_height = 32
@@ -393,7 +393,7 @@
 
 /obj/item/carvedgem/jade/vase
 	name = "joapstone vase"
-	desc = "A vase carved out of joapstone."
+	desc = "Un jarrón tallado en joapstone."
 	icon_state = "vase_jade"
 	grid_height = 64
 	grid_width = 32
@@ -401,7 +401,7 @@
 
 /obj/item/carvedgem/jade/bust
 	name = "joapstone bust"
-	desc = "A bust carved out of joapstone."
+	desc = "Un busto tallado en joapstone."
 	icon_state = "bust_jade"
 	grid_height = 64
 	grid_width = 64
@@ -441,7 +441,7 @@
 
 /obj/item/carvedgem/jade/statue
 	name = "joapstone statue"
-	desc = "A statue carved out of joapstone."
+	desc = "Una estatua tallada en joapstone."
 	icon_state = "statue_jade"
 	grid_height = 64
 	grid_width = 32
@@ -449,7 +449,7 @@
 
 /obj/item/carvedgem/jade/obelisk
 	name = "joapstone obelisk"
-	desc = "An obelisk carved out of joapstone."
+	desc = "Un obelisco tallado en joapstone."
 	icon_state = "obelisk_jade"
 	grid_height = 64
 	grid_width = 32
@@ -605,7 +605,7 @@
 	sellprice = 55
 
 /obj/item/carvedgem/onyxa/spider
-	name = "onyxa spider statue"
+	name = "estatua de araña onyxa"
 	desc = " A spider carved out of onyxa. Their webs once inspired the patterns the Drow had painted on themselves long ago."
 	icon_state = "spider_onyxa"
 	grid_height = 64
@@ -747,7 +747,7 @@
 
 /obj/item/carvedgem/turq/ka
 	name = "ceruleabaster bird statue"
-	desc = "A large carving of a bird."
+	desc = "Una gran talla de un pájaro."
 	icon_state = "ka_turq"
 	grid_height = 64
 	grid_width = 32
@@ -817,7 +817,7 @@
 
 /obj/item/carvedgem/coral/fish
 	name = "aoetal fish figurine"
-	desc = "A small fish figurine carved out of aoetal."
+	desc = "Una pequeña figura de pez tallada en aoetal."
 	icon_state = "fish_coral"
 	grid_height = 32
 	grid_width = 32
@@ -825,7 +825,7 @@
 
 /obj/item/carvedgem/coral/vase
 	name = "aoetal vase"
-	desc = "A vase carved out of aoetal."
+	desc = "Un jarrón tallado en aoetal."
 	icon_state = "vase_coral"
 	grid_height = 64
 	grid_width = 32
@@ -841,7 +841,7 @@
 
 /obj/item/carvedgem/coral/bust
 	name = "aoetal bust"
-	desc = "A bust carved out of aoetal."
+	desc = "Un busto tallado en aoetal."
 	icon_state = "bust_coral"
 	grid_height = 64
 	grid_width = 64
@@ -849,7 +849,7 @@
 
 /obj/item/carvedgem/coral/fancyvase
 	name = "fancy aoetal vase"
-	desc = "A fancy vase carved out of aoetal."
+	desc = "Un elegante jarrón tallado en aoetal."
 	icon_state = "fancyvase_coral"
 	grid_height = 64
 	grid_width = 32
@@ -881,7 +881,7 @@
 
 /obj/item/carvedgem/coral/statue
 	name = "aoetal statue"
-	desc = "A statue carved out of aoetal."
+	desc = "Una estatua tallada en aoetal."
 	icon_state = "statue_coral"
 	grid_height = 64
 	grid_width = 32
@@ -889,14 +889,14 @@
 
 /obj/item/carvedgem/coral/obelisk
 	name = "aoetal obelisk"
-	desc = "An obelisk carved out of aoetal."
+	desc = "Un obelisco tallado en aoetal."
 	icon_state = "obelisk_coral"
 	grid_height = 64
 	grid_width = 32
 	sellprice = 80
 
 /obj/item/carvedgem/coral/jaw
-	name = "shark jaw statue"
+	name = "estatua de mandíbula de tiburón"
 	desc = "A statue of a shark's jaw carved out of aoetal. Its probably best if you don't touch the teeth."
 	icon_state = "jaw_coral"
 	grid_height = 64
@@ -905,7 +905,7 @@
 
 /obj/item/carvedgem/coral/shark
 	name = "aoetal shark statue"
-	desc = "A statue of a shark carved out of aoetal. Some sailors believe them to be agents of Abyssor."
+	desc = "Una estatua de un tiburón tallada en aoetal. Algunos marineros creen que son agentes de Abyssor."
 	icon_state = "shark_coral"
 	grid_height = 64
 	grid_width = 64
@@ -941,7 +941,7 @@
 
 /obj/item/carvedgem/amber/spoon
 	name = "petriamber spoon"
-	desc = "A spoon carved out of petriamber, far too delicate to eat with."
+	desc = "Una cuchara tallada en petriamber, demasiado delicada para comer con ella."
 	icon_state= "spoon_amber"
 	grid_height = 32
 	grid_width = 32
@@ -990,7 +990,7 @@
 
 /obj/item/carvedgem/amber/bust
 	name = "petriamber bust"
-	desc = "A bust carved out of petriamber."
+	desc = "Un busto tallado en petriamber."
 	icon_state = "bust_amber"
 	grid_height = 64
 	grid_width = 64
@@ -1147,7 +1147,7 @@
 
 /obj/item/carvedgem/opal/bust
 	name = "opaloise bust"
-	desc = "A bust carved out of opaloise."
+	desc = "Un busto tallado en opaloise."
 	icon_state = "bust_opal"
 	grid_height = 64
 	grid_width = 64

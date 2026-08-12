@@ -4,7 +4,7 @@
 /obj/item/clothing/head/helmet/heavy/ancient
 	misc_flags = CRAFTING_TEST_EXCLUDE
 	name = "ancient barbute"
-	desc = "A very old barbute."
+	desc = "Una barbuta muy antigua."
 	icon_state = "ancientbarbute"
 	item_state = "ancientbarbute"
 
@@ -39,7 +39,7 @@
 //................ Face ............... //
 
 /obj/item/clothing/face/facemask/steel/ancient
-	name = "ancient mask"
+	name = "máscara antigua"
 	icon_state = "ancientmask"
 	desc = "An ancient mask that hides an ancient evil."
 	misc_flags = CRAFTING_TEST_EXCLUDE
@@ -165,7 +165,7 @@
 //................ Shoes ............... //
 
 /obj/item/clothing/shoes/boots/armor/ironmaille/ancient
-	name = "ancient sandals"
+	name = "sandalias antiguas"
 	desc = "An uncomfortable looking pair of old metal sandals. Surprisingly protective."
 	icon_state = "ancientsandals"
 	item_state = "ancientsandals"
@@ -176,7 +176,7 @@
 	item_weight = 1.2 KILOGRAMS
 
 /obj/item/clothing/shoes/boots/armor/ancient
-	name = "ancient boots"
+	name = "botas antiguas"
 	desc = "Ancient boots with ceremonial ornaments from ages past."
 	icon_state = "ancientboots"
 	item_state = "ancientboots"

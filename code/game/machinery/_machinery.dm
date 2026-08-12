@@ -1,5 +1,5 @@
 /obj/machinery
-	name = "machinery"
+	name = "maquinaria"
 	icon = 'icons/obj/stationobjs.dmi'
 	desc = ""
 	verb_say = "beeps"

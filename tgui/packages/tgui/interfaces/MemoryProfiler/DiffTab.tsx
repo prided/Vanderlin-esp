@@ -65,7 +65,7 @@ export function DiffTab() {
   return (
     <Stack fill vertical>
       <Stack.Item>
-        <Section title="Baseline">
+        <Section title="Línea base">
           <Stack vertical>
             <Stack.Item>
               <Stack align="center">
@@ -75,7 +75,7 @@ export function DiffTab() {
                     disabled={!!busy}
                     onClick={() => act('set_baseline')}
                   >
-                    Set baseline
+                    Establecer línea de base
                   </Button>
                 </Stack.Item>
                 <Stack.Item>
@@ -84,7 +84,7 @@ export function DiffTab() {
                     disabled={!!busy || !baseline_at}
                     onClick={() => act('capture_diff')}
                   >
-                    Diff against baseline
+                    Diferencia con respecto a la línea de base
                   </Button>
                 </Stack.Item>
                 <Stack.Item>
@@ -94,7 +94,7 @@ export function DiffTab() {
                     disabled={!!busy}
                     onClick={() => act('clear')}
                   >
-                    Clear
+                    Limpiar
                   </Button.Confirm>
                 </Stack.Item>
                 <Stack.Item grow>
@@ -111,11 +111,7 @@ export function DiffTab() {
             </Stack.Item>
             <Stack.Item>
               <NoticeBox info>
-                Round start against round end is what actually finds a leak;
-                absolute numbers rarely are. The extension keeps exactly one
-                baseline and every diff installs a fresh one, so consecutive
-                diffs each measure from the previous. The Memory Census (Text)
-                verb shares that baseline with this panel.
+                El comienzo de la ronda contra el final de la ronda es lo que realmente encuentra una fuga; los números absolutos rara vez lo son. La extensión mantiene exactamente una línea de base y cada diferencia instala una nueva, por lo que cada medida es consecutiva a partir de la anterior. El verbo Censo de Memoria (Texto) comparte esa línea de base con este panel.
               </NoticeBox>
             </Stack.Item>
           </Stack>
@@ -124,15 +120,13 @@ export function DiffTab() {
       {!diff_report ? (
         <Stack.Item>
           <EmptyState>
-            Set a baseline, let the round run, then diff. Types that did not
-            move are dropped, and what is left is sorted by growth.
+            Establezca una línea de base, deje que la ronda se ejecute y luego diferencie. Los tipos que no se movieron se descartan y lo que queda se clasifica por crecimiento.
           </EmptyState>
         </Stack.Item>
       ) : diff_report.no_baseline ? (
         <Stack.Item>
           <NoticeBox color="yellow">
-            That call only recorded a baseline, so there was nothing to compare
-            against. Diff again to see what moved since.
+            Esa llamada solo registró una línea de base, por lo que no había nada con qué comparar. Vuelve a comparar para ver qué se ha movido desde entonces.
           </NoticeBox>
         </Stack.Item>
       ) : (
@@ -141,13 +135,13 @@ export function DiffTab() {
             <Section>
               <LabeledList>
                 <LabeledList.Item
-                  label="Lists"
+                  label="Listas"
                   color={deltaColor(diff_report.list_count_change)}
                 >
-                  {signedCount(diff_report.list_count_change)} lists,{' '}
+                  {signedCount(diff_report.list_count_change)} listas,{' '}
                   {signedBytes(diff_report.list_bytes_change)}
                 </LabeledList.Item>
-                <LabeledList.Item label="Types moved">
+                <LabeledList.Item label="Tipos movidos">
                   {count(diff_report.types_total)}
                 </LabeledList.Item>
               </LabeledList>
@@ -165,13 +159,13 @@ export function DiffTab() {
             <Section
               fill
               scrollable
-              title="Changed typepaths"
+              title="Rutas de tipo modificadas"
               buttons={
                 <SearchBar
                   expensive
                   query={search}
                   onSearch={setSearch}
-                  placeholder="Filter typepaths..."
+                  placeholder="Filtrar rutas de tipo..."
                   style={{ width: '20rem' }}
                 />
               }
@@ -183,7 +177,7 @@ export function DiffTab() {
                     desc={sort.desc}
                     onClick={() => toggle('typepath')}
                   >
-                    Typepath
+                    Ruta de tipo
                   </SortCell>
                   <SortCell
                     collapsing
@@ -191,7 +185,7 @@ export function DiffTab() {
                     desc={sort.desc}
                     onClick={() => toggle('count_after')}
                   >
-                    Instances
+                    Instancias
                   </SortCell>
                   <SortCell
                     collapsing
@@ -199,16 +193,16 @@ export function DiffTab() {
                     desc={sort.desc}
                     onClick={() => toggle('count_change')}
                   >
-                    Change
+                    Cambiar
                   </SortCell>
-                  <Table.Cell collapsing>Bytes</Table.Cell>
+                  <Table.Cell collapsing>bytes</Table.Cell>
                   <SortCell
                     collapsing
                     active={sort.key === 'bytes_change'}
                     desc={sort.desc}
                     onClick={() => toggle('bytes_change')}
                   >
-                    Change
+                    Cambiar
                   </SortCell>
                 </Table.Row>
                 {rows.map((row) => (

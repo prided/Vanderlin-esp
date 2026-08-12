@@ -19,7 +19,7 @@
 	)
 
 /datum/job/advclass/mercenary/hollowdragoon
-	title = "Hollow Dragoon"
+	title = "Dragón hueco"
 	tutorial = "You rode out from Amber Hollow on your loyal steed, seeking coin from the wider reaches of Psydonia. \
 	With armour salvaged from fallen knights and a spear in hand, you will fight for anyone, for a price."
 	allowed_races = list(\
@@ -46,7 +46,7 @@
 	new /mob/living/simple_animal/hostile/retaliate/saiga/tame/saddled(get_turf(spawned))
 
 /datum/outfit/mercenary/dragoon
-	name = "Hollow Dragoon (Mercenary)"
+	name = "Dragón Hueco (Mercenario)"
 	head = /obj/item/clothing/head/helmet/heavy/rust
 	armor = /obj/item/clothing/armor/plate/rust
 	neck = /obj/item/clothing/neck/gorget

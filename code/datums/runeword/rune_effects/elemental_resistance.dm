@@ -31,7 +31,7 @@
 			source.max_lightning_res += max_resistance_bonus
 
 /datum/rune_effect/resistance/fire
-	name = "fire resistance"
+	name = "resistencia al fuego"
 	resistance_type = FIRE_DAMAGE
 
 /datum/rune_effect/resistance/cold
@@ -39,7 +39,7 @@
 	resistance_type = COLD_DAMAGE
 
 /datum/rune_effect/resistance/lightning
-	name = "lightning resistance"
+	name = "resistencia al rayo"
 	resistance_type = LIGHTNING_DAMAGE
 
 

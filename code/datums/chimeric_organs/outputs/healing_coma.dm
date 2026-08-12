@@ -1,6 +1,6 @@
 /datum/chimeric_node/output/healing_coma
 	name = "comatose"
-	desc = "When activated puts you into a sleep to heal"
+	desc = "Cuando se activa, te pone a dormir para sanar."
 	weight = 2
 
 	var/amount_healed = 5

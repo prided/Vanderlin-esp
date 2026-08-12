@@ -124,7 +124,7 @@
 		else
 			user.add_stress(/datum/stress_event/fishface)
 			if(H?.age == AGE_CHILD && !HAS_ANY_OF_TRAITS(user, list(TRAIT_FEARLESS, TRAIT_STEELHEARTED, TRAIT_NOMOOD))) // destroy the child
-				. += span_phobia("A MONSTER!!!")
+				. += span_phobia("¡¡¡UN MONSTRUO!!!")
 			else // normal
 				. += span_necrosis("A hideous Triton.")
 	// Beauty/Ugly
@@ -159,26 +159,26 @@
 
 		// Excommunications
 		if(real_name in GLOB.excommunicated_players)
-			. += span_redtextbig("EXCOMMUNICATED!")
+			. += span_redtextbig("¡EXCOMULGADO!")
 		if(real_name in GLOB.heretical_players)
 			. += span_redtextbig("HERETIC! SHAME!")
 
 		// Outlaws
 		if(HAS_MIND_TRAIT(user, TRAIT_KNOWBANDITS) && (real_name in GLOB.outlawed_players))
-			. += span_boldred(mind?.special_role == ROLE_BANDIT ? "BANDIT!" : "OUTLAW!")
+			. += span_boldred(mind?.special_role == ROLE_BANDIT ? "¡BANDIDO!" : "OUTLAW!")
 
 		// Court Agents
 		if(HAS_MIND_TRAIT(user, TRAIT_KNOWCOURTAGENTS) && (real_name in GLOB.court_agents))
 			. += span_smallgreen ("An Agent of the Court.")
 		else if(HAS_MIND_TRAIT(user, TRAIT_KNOWCOURTAGENTS) && (real_name in GLOB.ex_court_agents))
-			. += span_redtextsmall ("An Ex-Agent of the Court.")
+			. += span_redtextsmall ("Un ex agente de la corte.")
 
 		// Faceless
 		if(HAS_TRAIT(src, TRAIT_FACELESS))
 			. += span_userdanger("NO FACE!!")
 		// Foreigner
 		if(HAS_TRAIT(src, TRAIT_FOREIGNER) && !HAS_TRAIT(user, TRAIT_FOREIGNER))
-			. += span_tinywarning("A foreigner.")
+			. += span_tinywarning("Un extranjero.")
 			if(user.has_quirk(/datum/quirk/vice/paranoid))
 				user.add_stress(/datum/stress_event/para/foreigner)
 			else
@@ -188,14 +188,14 @@
 			. += span_smallgreen("A member of the Thieves' Guild.")
 		// Cabal
 		if(HAS_TRAIT(user, TRAIT_CABAL) && (istype(patron, /datum/patron/inhumen/zizo) || HAS_TRAIT(src, TRAIT_CABAL)))
-			. += span_purple("A fellow seeker of Her ascension.")
+			. += span_purple("Un compañero buscador de Su ascensión.")
 		// Centrist
 		if(HAS_TRAIT(user, TRAIT_DIVINE_SERVANT) && (HAS_TRAIT(src, TRAIT_DIVINE_CENTRIST) && !HAS_TRAIT(src, TRAIT_DIVINE_SERVANT)))
 			. += SPAN_GOD_ASTRATA("An 'Enlightened Centrist'. Shame!")
 
 		// The disgusing inquistion section
 		if(HAS_MIND_TRAIT(user, TRAIT_INQUISITION) && (real_name in GLOB.inquis_suspect_players))
-			. += span_userdanger("SUSPECTED OF HERESY...")
+			. += span_userdanger("SOSPECHOSO DE HEREJÍA...")
 
 		var/they_pur = HAS_TRAIT(user, TRAIT_PURITAN)
 		var/they_inquis = HAS_TRAIT(user, TRAIT_INQUISITION)
@@ -232,7 +232,7 @@
 		var/stress_msg
 		switch(stress)
 			if(15 to INFINITY)
-				stress_msg = span_boldred("[P[THEYRE]] having a panic attack.")
+				stress_msg = span_boldred("[P[THEYRE]] teniendo un ataque de pánico.")
 			if(STRESS_INSANE to 15)
 				stress_msg = span_red("[P[THEYRE]] twitching at the eyes.")
 			if(STRESS_VBAD to STRESS_INSANE)
@@ -292,7 +292,7 @@
 			if(ITEM_SLOT_BACK_L)
 				slot_title = " on [P[THEIR]] left shoulder"
 			if(ITEM_SLOT_BACK_R)
-				slot_title = " on [P[THEIR]] right shoulder"
+				slot_title = " en [P[THEIR]] hombro derecho"
 			if(ITEM_SLOT_WRISTS)
 				slot_title = " on [P[THEIR]] wrist[I.gender == PLURAL ? "s" : ""]"
 			if(ITEM_SLOT_GLOVES)
@@ -330,13 +330,13 @@
 		LAZYADDASSOCLIST(examine_list, EXAMINE_SECT_FACE, span_big(span_phobia("THE WORLD TWISTS! MANIAC!")))
 	// Leper
 	if(HAS_TRAIT(src, TRAIT_LEPROSY))
-		. += span_necrosis("A LEPER...")
+		. += span_necrosis("UN LEPROSO...")
 	// Fat
 	if(HAS_TRAIT(src, TRAIT_FAT))
-		. += span_boldnotice("[P[THEYRE]] obese!")
+		. += span_boldnotice("[P[THEYRE]] obeso!")
 	// Pricing
 	if(HAS_TRAIT(user, TRAIT_SEEPRICES) && sellprice)
-		. += span_tinynoticeital("[P[THEYRE]] worth around [sellprice] mammon\s.")
+		. += span_tinynoticeital("[P[THEYRE]] vale alrededor de [sellprice] mammon\s.")
 	if(HAS_TRAIT(user, TRAIT_MATTHIOS_EYES))
 		var/atom/item = get_most_expensive()
 		if(item)
@@ -345,9 +345,9 @@
 
 	if(isautomaton(user))
 		if(HAS_TRAIT(src, TRAIT_NOBLE_BLOOD))
-			. += span_blue("[P[THEYRE]] a Blue-blooded Noble.")
+			. += span_blue("[P[THEYRE]] un noble de sangre azul.")
 		else if(HAS_TRAIT(src, TRAIT_NOBLE_POWER))
-			. += span_blue("[P[THEYRE]] a crown-recognised Noble.")
+			. += span_blue("[P[THEYRE]] un Noble reconocido por la corona.")
 		if(job in GLOB.automaton_order_jobs)
 			. += span_blue("[P[THEYRE]] an authenticated Artificer.")
 
@@ -441,9 +441,9 @@
 	// Fire
 	var/fire_str
 	if(on_fire)
-		fire_str = span_boldwarning("on fire!")
+		fire_str = span_boldwarning("¡en llamas!")
 		if(L?.has_quirk(/datum/quirk/vice/addiction/pyromaniac)) // living only
-			fire_str += span_boldred(" IT'S BEAUTIFUL!")
+			fire_str += span_boldred(" ¡ES HERMOSO!")
 			L.sate_addiction(/datum/quirk/vice/addiction/pyromaniac)
 	else if(fire_stacks + divine_fire_stacks > 0)
 		fire_str += "covered in something flammable."
@@ -491,11 +491,11 @@
 			if(0.0625 to 0.125)
 				damage_msg = "[P[THEYRE]] a little wounded."
 			if(0.125 to 0.25)
-				damage_msg = span_warning("[P[THEYRE]] wounded.")
+				damage_msg = span_warning("[P[THEYRE]] herido.")
 			if(0.25 to 0.5)
-				damage_msg = span_boldwarning("[P[THEYRE]] severely wounded.")
+				damage_msg = span_boldwarning("[P[THEYRE]] gravemente herido.")
 			if(0.5 to INFINITY)
-				damage_msg = span_boldred("[P[THEYRE]] gravely wounded.")
+				damage_msg = span_boldred("[P[THEYRE]] gravemente herido.")
 		if(damage_msg)
 			. += damage_msg
 
@@ -518,15 +518,15 @@
 			. += span_red("[P[THEIR]] soul seems to have been ripped out of [P[THEIR]] body. Revival is impossible.")
 
 	if(!getorganslot(ORGAN_SLOT_BRAIN) || (stat == DEAD && (IsAdminGhost(user) || self_inspect)))
-		. += span_boldred("[P[THEYRE]] dead.")
+		. += span_boldred("[P[THEYRE]] muerto.")
 	else if(appears_dead || HAS_TRAIT(src, TRAIT_CRITICAL_CONDITION))
-		. += span_boldwarning("[P[THEYRE]] unconscious.")
+		. += span_boldwarning("[P[THEYRE]] inconsciente.")
 	else
 		switch(stat)
 			if(UNCONSCIOUS)
-				. += span_boldwarning("[P[THEYRE]] unconscious.")
+				. += span_boldwarning("[P[THEYRE]] inconsciente.")
 			if(SOFT_CRIT)
-				. += span_notice("[P[THEYRE]] barely conscious.")
+				. += span_notice("[P[THEYRE]] apenas consciente.")
 
 	// Blood volume
 	if(!SEND_SIGNAL(src, COMSIG_DISGUISE_STATUS) && CAN_HAVE_BLOOD(src))

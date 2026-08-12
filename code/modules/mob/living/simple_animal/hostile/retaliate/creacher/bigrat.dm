@@ -9,7 +9,7 @@
 
 	faction = list(FACTION_RATS)
 	emote_hear = list("squeaks.")
-	emote_see = list("cleans its nose.")
+	emote_see = list("se limpia la nariz.")
 	move_to_delay = 5
 	vision_range = 2
 	aggro_vision_range = 2

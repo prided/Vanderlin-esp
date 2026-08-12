@@ -1,6 +1,6 @@
 /obj/item/natural/glass
 	name = "glass"
-	desc = "A glass pane for constructing windows."
+	desc = "Un panel de vidrio para construir ventanas."
 	icon_state = "glasspane"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
@@ -14,7 +14,7 @@
 	item_weight = 450 GRAMS
 
 /obj/item/natural/bundle/glass
-	name = "stack of glass"
+	name = "pila de vidrio"
 	desc = "A stack of fragile glass panes."
 	icon_state = "glasspane1"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'

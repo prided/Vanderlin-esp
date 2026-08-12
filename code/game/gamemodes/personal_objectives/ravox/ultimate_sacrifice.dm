@@ -1,5 +1,5 @@
 /datum/objective/personal/ultimate_sacrifice
-	name = "Ultimate Sacrifice"
+	name = "Sacrificio definitivo"
 	category = "Ravox's Chosen"
 	triumph_count = 3
 	immediate_effects = list("Gained an ability to give up your life to save another")

@@ -6,7 +6,7 @@
 	set category = null
 	set name = "Admin PM Mob"
 	if(!holder)
-		to_chat(src, "<span class='danger'>Error: Admin-PM-Context: Only administrators may use this command.</span>")
+		to_chat(src, "<span class='danger'>Error: Admin-PM-Context: solo los administradores pueden usar este comando.</span>")
 		return
 	if( !ismob(M) || !M.client )
 		return
@@ -18,7 +18,7 @@
 	set category = "Admin.Admin"
 	set name = "Admin PM"
 	if(!holder)
-		to_chat(src, "<span class='danger'>Error: Admin-PM-Panel: Only administrators may use this command.</span>")
+		to_chat(src, "<span class='danger'>Error: Admin-PM-Panel: solo los administradores pueden usar este comando.</span>")
 		return
 	var/list/client/targets[0]
 	for(var/client/T)
@@ -31,7 +31,7 @@
 				targets["[T.mob.real_name](as [T.mob.name]) - [T]"] = T
 		else
 			targets["(No Mob) - [T]"] = T
-	var/target = input(src,"To whom shall we send a message?","Admin PM",null) as null|anything in sortList(targets)
+	var/target = input(src,"¿A quién le enviaremos un mensaje?","Admin PM",null) as null|anything in sortList(targets)
 	cmd_admin_pm(targets[target],null)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Admin PM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -48,7 +48,7 @@
 		C = whom
 	if(!C)
 		if(holder)
-			to_chat(src, "<span class='danger'>Error: Admin-PM: Client not found.</span>")
+			to_chat(src, "<span class='danger'>Error: Admin-PM: Cliente no encontrado.</span>")
 		return
 
 	var/datum/admin_help/AH = C.current_ticket
@@ -75,7 +75,7 @@
 
 	if(!holder && !current_ticket)	//no ticket? https://www.youtube.com/watch?v=iHSPf6x1Fdo
 		to_chat(src, "<span class='danger'>I can no longer reply to this ticket, please open another one by using the Adminhelp verb if need be.</span>")
-		to_chat(src, "<span class='notice'>Message: [msg]</span>")
+		to_chat(src, "<span class='notice'>Mensaje: [msg]</span>")
 		return
 
 	var/client/recipient
@@ -95,7 +95,7 @@
 		if(!ircreplyamount)	//to prevent people from spamming irc
 			return
 		if(!msg)
-			msg = input(src,"Message:", "Private message to Administrator") as message|null
+			msg = input(src,"Message:", "Mensaje privado al administrador") as message|null
 
 		if(!msg)
 			return
@@ -107,7 +107,7 @@
 	else
 		if(!recipient)
 			if(holder)
-				to_chat(src, "<span class='danger'>Error: Admin-PM: Client not found.</span>")
+				to_chat(src, "<span class='danger'>Error: Admin-PM: Cliente no encontrado.</span>")
 				if(msg)
 					to_chat(src, msg)
 				return
@@ -129,7 +129,7 @@
 
 			if(!recipient)
 				if(holder)
-					to_chat(src, "<span class='danger'>Error: Admin-PM: Client not found.</span>")
+					to_chat(src, "<span class='danger'>Error: Admin-PM: Cliente no encontrado.</span>")
 				else
 					SSplexora.aticket_pm(current_ticket, msg)
 					current_ticket.MessageNoRecipient(msg)
@@ -189,8 +189,8 @@
 
 				to_chat(recipient, "<font color='red' size='4'><b>-- Administrator private message --</b></font>")
 				to_chat(recipient, "<span class='adminsay'>[holder.get_message_prefix()] PM from-<b>[key_name(src, recipient, 0)]</b>: <span class='linkify'>[msg]</span></span>")
-				to_chat(recipient, "<span class='adminsay'><i>Click on the administrator's name to reply.</i></span>")
-				to_chat(src, "<span class='notice'>[holder.get_message_prefix()] PM to-<b>[key_name(recipient, src, 1)]</b>: <span class='linkify'>[msg]</span></span>")
+				to_chat(recipient, "<span class='adminsay'><i>Haga clic en el nombre del administrador para responder.</i></span>")
+				to_chat(src, "<span class='notice'>[holder.get_message_prefix()] PM a-<b>[key_name(recipient, src, 1)]</b>: <span class='linkify'>[msg]</span></span>")
 
 				admin_ticket_log(recipient, "<font color='purple'>PM From [key_name_admin(src)]: [keywordparsedmsg]</font>", "<font color='purple'>PM From [key_name_admin(src)]: [keywordparsedmsg]</font>")
 				SSplexora.aticket_pm(recipient.current_ticket, msg, src)
@@ -304,13 +304,13 @@
 	if(!msg)
 		return "Error: No message"
 
-	message_admins("IRC message from [sender] to [key_name_admin(C)] : [msg]")
+	message_admins("Mensaje IRC de [sender] a [key_name_admin(C)]: [msg]")
 	log_admin_private("IRC PM: [sender] -> [key_name(C)] : [msg]")
 	msg = emoji_parse(msg)
 
 	to_chat(C, "<font color='red' size='4'><b>-- Administrator private message --</b></font>")
 	to_chat(C, "<span class='adminsay'>Admin PM from-<b><a href='byond://?priv_msg=[stealthkey]'>[adminname]</A></b>: [msg]</span>")
-	to_chat(C, "<span class='adminsay'><i>Click on the administrator's name to reply.</i></span>")
+	to_chat(C, "<span class='adminsay'><i>Haga clic en el nombre del administrador para responder.</i></span>")
 
 	admin_ticket_log(C, "<font color='purple'>PM From [irc_tagged]: [msg]</font>", "<font color='purple'>PM From [irc_tagged]: [msg]</font>")
 

@@ -1,5 +1,5 @@
 /obj/item/weapon/surgery/saw/improv
-	name = "improvised saw"
+	name = "sierra improvisada"
 	desc = "A tool used to carve through bone crudely, but better than nothing."
 	icon_state = "bonesaw_wood"
 	throwforce = DAMAGE_KNIFE - 4
@@ -17,7 +17,7 @@
 	melting_material = null
 
 /obj/item/weapon/surgery/retractor/improv
-	name = "improvised retractor"
+	name = "retractor improvisado"
 	desc = "A tool used to spread tissue open for surgical access in a tentative manner."
 	icon_state = "speculum_wood"
 	tool_behaviour = TOOL_IMPROVISED_RETRACTOR

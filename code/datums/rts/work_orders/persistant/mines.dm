@@ -1,5 +1,5 @@
 /datum/persistant_workorder/mine
-	name = "Farm"
+	name = "Granja"
 	ui_icon = 'icons/roguetown/items/ore.dmi'
 	work_type = /datum/work_order/mine
 
@@ -17,7 +17,7 @@
 	arg_4 = 30 SECONDS
 
 /datum/persistant_workorder/mine/stones
-	name = "Mine Stone"
+	name = "Piedra de mina"
 	ui_icon = 'icons/roguetown/items/natural.dmi'
 	ui_icon_state = "stone1"
 
@@ -33,7 +33,7 @@
 
 
 /datum/persistant_workorder/mine/gem
-	name = "Mine Stone"
+	name = "Piedra de mina"
 	ui_icon = 'icons/roguetown/items/natural.dmi'
 	ui_icon_state = "iridescent_scale"
 

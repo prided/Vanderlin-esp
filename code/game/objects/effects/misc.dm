@@ -13,7 +13,7 @@
 	pass_flags = PASSTABLE
 
 /obj/effect/list_container
-	name = "list container"
+	name = "contenedor de lista"
 
 /obj/effect/list_container/mobl
 	name = "mobl"
@@ -22,7 +22,7 @@
 	var/list/container = list(  )
 
 /obj/effect/overlay/thermite
-	name = "thermite"
+	name = "termita"
 	desc = ""
 	icon = 'icons/effects/fire.dmi'
 	icon_state = "2" //what?
@@ -43,7 +43,7 @@
 	blend_mode = BLEND_ADD
 
 /obj/effect/abstract/marker
-	name = "marker"
+	name = "marcador"
 	icon = 'icons/effects/effects.dmi'
 	anchored = TRUE
 	icon_state = "wave3"
@@ -58,7 +58,7 @@
 	. = ..()
 
 /obj/effect/abstract/marker/at
-	name = "active turf marker"
+	name = "marcador de césped activo"
 
 
 /obj/effect/dummy/lighting_obj

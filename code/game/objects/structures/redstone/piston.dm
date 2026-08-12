@@ -122,12 +122,12 @@
 	to_chat(user, "<span class='notice'>You rotate the [name].</span>")
 
 /obj/structure/redstone/piston/sticky
-	name = "sticky redstone piston"
+	name = "pistón de piedra roja pegajoso"
 	icon_state = "sticky_piston"
 	can_pull = TRUE
 
 /obj/structure/piston_head
-	name = "piston head"
+	name = "cabeza de pistón"
 	icon = 'icons/obj/redstone.dmi'
 	icon_state = "piston_head"
 	density = TRUE

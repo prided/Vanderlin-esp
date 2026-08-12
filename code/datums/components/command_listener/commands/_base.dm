@@ -1,5 +1,5 @@
 /datum/follower_command
-	var/command_name = "Unknown Command"
+	var/command_name = "Comando desconocido"
 	var/issuer_name = "Unknown"
 	var/issuer_job = null
 	var/datum/component/command_follower/component

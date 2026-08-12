@@ -14,7 +14,7 @@
 	REMOVE_TRAIT(target, TRAIT_ANIMAL_NATURAL_ARMOR, GENETICS_TRAIT)
 
 /datum/animal_gene/hide/thick_hide
-	name = "Thick Hide"
+	name = "Piel gruesa"
 	desc = "Dense skin. Absorbs melee and slashing damage."
 	rarity = 4
 	intensity_min = 50

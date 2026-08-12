@@ -401,7 +401,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 		trader.say(trader_data.return_trader_phrase(TRADER_NOT_BUYING_ANYTHING))
 		return
 
-	var/list/buy_info = list(span_green("I'm willing to buy the following:"))
+	var/list/buy_info = list(span_green("Estoy dispuesto a comprar lo siguiente:"))
 
 	var/list/product_info
 	for(var/obj/item/thing as anything in wanted_items)

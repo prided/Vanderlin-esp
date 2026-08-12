@@ -80,7 +80,7 @@ export const BugReport = () => {
 
   return (
     <Window
-      title="Bug Report"
+      title="Informe de error"
       width={820}
       height={400}
     >
@@ -89,7 +89,7 @@ export const BugReport = () => {
           <Stack.Item height={'85%'}>
             <Stack fill>
               <Stack.Item width={'25%'}>
-                <Section fill title="Extra info">
+                <Section fill title="Información adicional">
                   <Stack vertical>
                     <Stack.Item>
                       Ckey: {ckey}
@@ -98,23 +98,23 @@ export const BugReport = () => {
                       Byond: {byond}
                     </Stack.Item>
                     <Stack.Item>
-                      Round ID: {round_id ? round_id : "Unknown"}
+                      ID de ronda: {round_id ? round_id : "Unknown"}
                     </Stack.Item>
                     <Stack.Item>
-                      Map: {map}
+                      Mapa: {map}
                     </Stack.Item>
                   </Stack>
                 </Section>
               </Stack.Item>
               <Stack.Item grow>
-                <Section fill title="Content">
+                <Section fill title="Contenido">
                   <Input
                     autoFocus
                     autoSelect
                     fluid
                     mb={1}
                     onChange={onTypeTitle}
-                    placeholder="Your title..."
+                    placeholder="Tu título..."
                     value={title}
                   />
                   <TextArea
@@ -122,7 +122,7 @@ export const BugReport = () => {
                     height={'90%'}
                     maxLength={1024}
                     onChange={onTypeInput}
-                    placeholder="Type your report..."
+                    placeholder="Escribe tu informe..."
                     value={input}
                   />
                 </Section>
@@ -130,7 +130,7 @@ export const BugReport = () => {
               <Stack.Item width={'25%'}>
                 <Stack fill vertical>
                   <Stack.Item height={'70%'}>
-                    <Section fill title="Labels">
+                    <Section fill title="Etiquetas">
                       {LABELS.map((value, i) => (
                         <Button
                           key={i}
@@ -143,7 +143,7 @@ export const BugReport = () => {
                     </Section>
                   </Stack.Item>
                   <Stack.Item height={'30%'}>
-                    <Section fill title="Severity">
+                    <Section fill title="Gravedad">
                       <Dropdown
                         options={SEVERITIES}
                         selected={severity}
@@ -170,7 +170,7 @@ export const BugReport = () => {
                 })}
                 px={4}
               >
-                Submit
+                Entregar
               </Button>
             </Section>
           </Stack.Item>

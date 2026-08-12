@@ -72,7 +72,7 @@
 		"Rapier",
 		"Cane Blade",
 	)
-	var/choice = tgui_input_list(spawned, "CHOOSE YOUR WEAPON", "STEWARD", options, "Dagger")
+	var/choice = tgui_input_list(spawned, "ELIGE TU ARMA", "STEWARD", options, "Dagger")
 
 	if(!choice)
 		choice = "Dagger"

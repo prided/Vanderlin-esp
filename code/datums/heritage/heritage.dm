@@ -111,8 +111,8 @@
 	_stamp_inlaw_relations(mind1, mind2)
 	_stamp_inlaw_relations(mind2, mind1)
 
-	to_chat(person1.person, span_love("You are now married to [person2.person?.real_name]!"))
-	to_chat(person2.person, span_love("You are now married to [person1.person?.real_name]!"))
+	to_chat(person1.person, span_love("¡Ahora estás casado con [person2.person?.real_name]!"))
+	to_chat(person2.person, span_love("¡Ahora estás casado con [person1.person?.real_name]!"))
 	return TRUE
 
 // For every blood/adopted relation that `their_side` has, give `my_side` an in-law link to them.
@@ -212,7 +212,7 @@
 		return null
 
 	var/p_He = lookee.p_they(TRUE)
-	var/rel_text = "[p_He] is my [relationship]"
+	var/rel_text = "[p_He] es mi [relationship]"
 	if(lookee_member.adoption_status && (relationship in list("son", "daughter", FAMILY_MEMBER_CHILD)))
 		rel_text += " (adopted)"
 

@@ -40,14 +40,14 @@
 	allowed_sexes = list(MALE, FEMALE)
 	outfit = /datum/outfit/pilgrim/fisher
 	category_tags = list(CTAG_PILGRIM)
-	apprentice_name = "Fisher Apprentice"
+	apprentice_name = "Aprendiz de pescador"
 	cmode_music = 'sound/music/cmode/towner/CombatBeggar.ogg'
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/pilgrim/fisher
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/pilgrim/fisher/old
 
 /datum/outfit/pilgrim/fisher
-	name = "Fisher (Pilgrim)"
+	name = "Pescador (peregrino)"
 	neck = /obj/item/storage/belt/pouch/coins/poor
 	head = /obj/item/clothing/head/fisherhat
 	armor = /obj/item/clothing/armor/gambeson/light/striped

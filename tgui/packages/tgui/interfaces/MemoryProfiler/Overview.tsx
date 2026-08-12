@@ -26,7 +26,7 @@ export function Overview() {
       <Stack.Item>
         <Section>
           <ReportHeader
-            label="Capture census"
+            label="Capturar censo"
             busy={busy}
             onCapture={() => act('capture_census')}
             meta={metaFor(report_meta, 'census')}
@@ -39,76 +39,69 @@ export function Overview() {
             {!census ? (
               <Stack.Item>
                 <EmptyState>
-                  Nothing captured yet. A census walks the entire heap, which
-                  takes seconds and freezes the server for all of them. It is a
-                  diagnostic you run deliberately, not something to leave on a
-                  timer.
+                  Nada capturado todavía. Un censo recorre todo el montón, lo que lleva unos segundos y congela el servidor para todos ellos. Es un diagnóstico que se ejecuta deliberadamente, no algo que se debe dejar en un cronómetro.
                 </EmptyState>
               </Stack.Item>
             ) : (
               <>
                 <Stack.Item>
-                  <Section title="Totals">
+                  <Section title="Totales">
                     <LabeledList>
-                      <LabeledList.Item label="Instances">
+                      <LabeledList.Item label="Instancias">
                         {count(census.total_instances)} across{' '}
-                        {count(census.types_total)} typepaths, holding{' '}
+                        {count(census.types_total)} rutas de tipo, sosteniendo{' '}
                         {bytes(census.total_self_bytes)}
                       </LabeledList.Item>
-                      <LabeledList.Item label="Lists">
+                      <LabeledList.Item label="Listas">
                         {count(census.lists_total)} holding{' '}
                         {bytes(census.list_bytes)}
                       </LabeledList.Item>
                       <LabeledList.Item
-                        label="Orphans"
+                        label="Huérfanos"
                         color={
                           exact(census.orphan_lists) > 0 ? 'average' : undefined
                         }
                       >
-                        {count(census.orphan_lists)} lists no named root reaches
+                        {count(census.orphan_lists)} no enumera ningún alcance raíz con nombre
                       </LabeledList.Item>
                       <SkipBreakdown skipped={census.skipped} />
-                      <LabeledList.Item label="Var rows">
-                        {count(census.var_rows_total)} rows across{' '}
-                        {count(census.vars_total)} names, costing{' '}
+                      <LabeledList.Item label="Filas var">
+                        {count(census.var_rows_total)} filas a lo largo{' '}
+                        {count(census.vars_total)} nombres, costos{' '}
                         {bytes(census.var_bytes)}
                       </LabeledList.Item>
-                      <LabeledList.Item label="Build">
+                      <LabeledList.Item label="Construir">
                         {census.build}
                       </LabeledList.Item>
                     </LabeledList>
                   </Section>
                 </Stack.Item>
                 <Stack.Item>
-                  <Section title="Retained list bytes, attributed">
+                  <Section title="Bytes de lista retenidos, atribuidos">
                     <LabeledList>
-                      <LabeledList.Item label="Shared">
-                        {bytes(census.retained.shared_bytes)} held more than
-                        once, so ownership is genuinely ambiguous
+                      <LabeledList.Item label="Compartido">
+                        {bytes(census.retained.shared_bytes)} se mantiene más de una vez, por lo que la propiedad es genuinamente ambigua
                       </LabeledList.Item>
-                      <LabeledList.Item label="Globals">
+                      <LabeledList.Item label="Globales">
                         {bytes(census.retained.global_bytes)}
                       </LabeledList.Item>
                       <LabeledList.Item label="Alists">
                         {bytes(census.retained.alist_bytes)}
                       </LabeledList.Item>
-                      <LabeledList.Item label="Orphans">
+                      <LabeledList.Item label="Huérfanos">
                         {bytes(census.retained.orphan_bytes)}
                       </LabeledList.Item>
-                      <LabeledList.Item label="Too deep">
-                        {bytes(census.retained.deep_bytes)} on chains that ran
-                        past the hop cap
+                      <LabeledList.Item label="demasiado profundo">
+                        {bytes(census.retained.deep_bytes)} en cadenas que superaron el límite de saltos
                       </LabeledList.Item>
-                      <LabeledList.Item label="Unattributed">
-                        {bytes(census.retained.unattributed_bytes)}, the five
-                        above summed. This is what the refcount approximation
-                        gives up on; it is not a dominator tree.
+                      <LabeledList.Item label="Sin atribuir">
+                        {bytes(census.retained.unattributed_bytes)}, resumieron los cinco anteriores. Esto es a lo que renuncia la aproximación del refcount; no es un árbol dominador.
                       </LabeledList.Item>
                     </LabeledList>
                     <Table mt={1}>
                       <Table.Row header>
-                        <Table.Cell>Attributed to typepath</Table.Cell>
-                        <Table.Cell>Bytes</Table.Cell>
+                        <Table.Cell>Atribuido a la ruta de tipo</Table.Cell>
+                        <Table.Cell>bytes</Table.Cell>
                       </Table.Row>
                       {census.retained.by_type.map((row) => (
                         <Table.Row key={row.typepath} className="candystripe">
@@ -134,12 +127,9 @@ export function Overview() {
               <Dumps />
             </Stack.Item>
             <Stack.Item>
-              <Section title="What a row costs">
+              <Section title="Cuánto cuesta una fila">
                 <Box color="label" mb={1}>
-                  Base sizes, each traced to an allocation site in byondcore. An
-                  instance is charged this plus its var block, and a list this
-                  plus its assoc tree, so these are the floor of a row rather
-                  than the whole of it.
+                  Tamaños base, cada uno rastreado hasta un punto de asignación en byondcore. A cada instancia se le suma esto y su bloque var; a cada lista, esto y su árbol asociativo. Por tanto, representan el mínimo de una fila, no su totalidad.
                 </Box>
                 <LabeledList>
                   {base_sizes.map((entry) => (

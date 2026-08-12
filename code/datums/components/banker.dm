@@ -155,7 +155,7 @@
 
 	var/coins_in_hand = get_mammons_in_atom(customer)
 	if(coins_in_hand <= 0)
-		banker.say("You don't have any coins to deposit.")
+		banker.say("No tienes monedas para depositar.")
 		return
 
 	banker.say("You have [coins_in_hand] mammons in your possession. How much would you like to deposit to your persistent vault?")
@@ -165,7 +165,7 @@
 		return
 
 	if(deposit_amount > coins_in_hand)
-		banker.say("You don't have that many coins!")
+		banker.say("¡No tienes tantas monedas!")
 		return
 
 	// Remove coins from customer
@@ -188,15 +188,15 @@
 	var/persistent_balance = get_persistent_balance(customer)
 
 	if(persistent_balance <= 0)
-		banker.say("You don't have any funds stored in your persistent vault.")
+		banker.say("No tienes fondos almacenados en tu bóveda persistente.")
 		return
 
-	var/withdraw_amount = input(customer, "Enter amount to withdraw (1-[persistent_balance]):", "Withdrawal Amount") as num|null
+	var/withdraw_amount = input(customer, "Ingrese el monto a retirar (1-[persistent_balance]):", "Withdrawal Amount") as num|null
 	if(!withdraw_amount || withdraw_amount <= 0 || !can_bank(customer))
 		return
 
 	if(withdraw_amount > persistent_balance)
-		banker.say("You don't have that much in your persistent vault!")
+		banker.say("¡No tienes tanto en tu bóveda persistente!")
 		return
 
 	withdraw_from_persistent_vault(customer, withdraw_amount)
@@ -236,7 +236,7 @@
 
 	// Create new storage container
 	var/obj/item/storage/backpack/banking_storage/new_storage = new()
-	new_storage.name = "[customer.real_name]'s Banking Storage"
+	new_storage.name = "Almacenamiento bancario de [customer.real_name]"
 	new_storage.desc = "A secure storage container managed by the bank for [customer.real_name]. Only accessible this round."
 
 	// Set up the storage component
@@ -259,14 +259,14 @@
 	var/loan_info = get_loan_info(customer)
 
 	var/list/balance_info = list(
-		span_green("=== ACCOUNT SUMMARY ==="),
+		span_green("=== RESUMEN DE CUENTA ==="),
 		span_notice("Persistent Vault: [persistent_balance] mammons"),
 		span_notice("Round Storage: Available via Storage option")
 	)
 
 	if(loan_info["has_loan"])
 		balance_info += span_warning("Outstanding Loan: [loan_info["amount"]] mammons")
-		balance_info += span_notice("Interest Rate: [loan_interest_rate]%")
+		balance_info += span_notice("Tasa de interés: [loan_interest_rate]%")
 
 	to_chat(customer, balance_info.Join("\n"))
 
@@ -372,7 +372,7 @@
 /datum/component/banker/proc/handle_loan_request(mob/customer)
 	var/mob/living/banker = parent
 
-	var/loan_amount = input(customer, "Enter loan amount (1-[max_loan_amount]):", "Loan Request") as num|null
+	var/loan_amount = input(customer, "Ingrese el monto del préstamo (1-[max_loan_amount]):", "Solicitud de préstamo") as num|null
 	if(!loan_amount || loan_amount <= 0 || !can_bank(customer))
 		return
 
@@ -400,7 +400,7 @@
 	var/loan_info = get_loan_info(customer)
 
 	if(!loan_info["has_loan"])
-		banker.say("You don't have any outstanding loans.")
+		banker.say("No tienes ningún préstamo pendiente.")
 		return
 
 	var/coins_available = get_mammons_in_atom(customer)
@@ -530,17 +530,17 @@
 /datum/component/banker/proc/can_bank(mob/customer)
 	var/mob/living/banker = parent
 	if(banker.cmode)
-		to_chat(customer, "[banker] is in combat!")
+		to_chat(customer, "¡[banker] está en combate!")
 		return FALSE
 	if(IS_DEAD_OR_INCAP(banker))
-		to_chat(customer, "[banker] is indisposed!")
+		to_chat(customer, "¡[banker] está indispuesto!")
 		return FALSE
 	return TRUE
 
 // Storage item and component definitions
 /obj/item/storage/backpack/banking_storage
-	name = "banking storage"
-	desc = "A secure storage container managed by the bank."
+	name = "almacenamiento bancario"
+	desc = "Un contenedor de almacenamiento seguro gestionado por el banco."
 	w_class = WEIGHT_CLASS_BULKY
 	component_type = /datum/component/storage/concrete/grid/banking
 
@@ -559,10 +559,10 @@
 // Banker data datum (updated phrases)
 /datum/banker_data
 	var/list/say_phrases = list(
-		"Welcome to our banking services!",
+		"¡Bienvenido a nuestros servicios bancarios!",
 		"Your coins are safe in our persistent vault.",
 		"Need a loan? We offer competitive rates!",
-		"Consider our character upgrade services.",
+		"Considere nuestros servicios de mejora de personajes.",
 		"Don't forget about your personal storage locker!",
 		"Banking hours are always open for you."
 	)

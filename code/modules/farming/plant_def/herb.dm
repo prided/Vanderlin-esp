@@ -20,7 +20,7 @@
 	base_genetics.disease_resistance = TRAIT_GRADE_GOOD
 
 /datum/plant_def/westleach
-	name = "westleach leaf"
+	name = "hoja de westleach"
 	icon_state = "westleach"
 	produce_type = /obj/item/reagent_containers/food/snacks/produce/westleach
 	produce_amount_min = 2

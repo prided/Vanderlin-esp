@@ -73,7 +73,7 @@
 
 /obj/item/parcel/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/parcel) || I.w_class > WEIGHT_CLASS_BULKY || contained_item)
-		to_chat(user, span_warning("You can't wrap this in [src]."))
+		to_chat(user, span_warning("No puedes envolver esto en [src]."))
 		return
 
 	if(do_after(user, 2 SECONDS, target = src))
@@ -114,7 +114,7 @@
 	if(!ispath(delivery_area, /area))
 		return
 
-	. += span_info("This parcel is addressed to [initial(delivery_area.name)].")
+	. += span_info("Este paquete está dirigido a [initial(delivery_area.name)].")
 	. += (user.job_type in allowed_jobs) ? \
 		span_notice("As [user.job], you're authorized to open this.") : \
 		span_warning("It's sealed with an official guild mark - only authorized personnel should open this!")

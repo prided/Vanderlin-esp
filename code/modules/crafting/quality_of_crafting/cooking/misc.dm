@@ -19,7 +19,7 @@
 	craft_time = 6 SECONDS
 
 /datum/repeatable_crafting_recipe/cooking/soap/bath
-	name = "herbal soap "
+	name = "jabón de hierbas "
 	tool_usage = list(
 		/obj/item/pestle = list("starts to grind materials in the mortar", "start to grind materials in the mortar", 'sound/foley/mortarpestle.ogg'),
 	)
@@ -92,8 +92,8 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/salsa
-	category = "Tiefling Cuisine"
-	name = "Drowsbane Jam"
+	category = "Tiefling Cocina"
+	name = "Mermelada de Drowsbane"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/fruit/tamto_slice = 1,
@@ -124,7 +124,7 @@
 	output = /obj/item/reagent_containers/food/snacks/meat/sausage/wiener
 	craft_time = 9 SECONDS
 	crafting_sound = 'sound/foley/dropsound/food_drop.ogg'
-	crafting_message = "stuff a wiener"
+	crafting_message = "rellenar una salchicha"
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/raw_sausage_alt
@@ -140,7 +140,7 @@
 	output = /obj/item/reagent_containers/food/snacks/meat/sausage
 	craft_time = 9 SECONDS
 	crafting_sound = 'sound/foley/dropsound/food_drop.ogg'
-	crafting_message = "stuff a wiener"
+	crafting_message = "rellenar una salchicha"
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/pestranstick
@@ -156,11 +156,11 @@
 	output = /obj/item/reagent_containers/food/snacks/pestranstick
 	craft_time = 5 SECONDS
 	crafting_sound = 'sound/foley/dropsound/food_drop.ogg'
-	crafting_message = "skewer the butter"
+	crafting_message = "pinchar la mantequilla"
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/twoegg
-	name = "Twin Eggs"
+	name = "huevos gemelos"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/cooked/egg = 2,
@@ -190,7 +190,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/comelette_base
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Caravaneer's Omelette Base"
 
 	requirements = list(
@@ -205,7 +205,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/comelette
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Uncooked Caravaneer's Omelette"
 
 	requirements = list(
@@ -222,7 +222,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/comelette_veggie
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Uncooked Veggie Caravaneer's Omelette"
 
 	requirements = list(
@@ -239,7 +239,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/comelette_meat
-	category = "Tiefling Cuisine"
+	category = "Tiefling Cocina"
 	name = "Uncooked Meat Caravaneer's Omelette"
 
 	requirements = list(
@@ -272,7 +272,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/herbs
-	name = "herbs and spices"
+	name = "hierbas y especias"
 	tool_usage = list(
 		/obj/item/pestle = list("starts to grind and mix herbs in the mortar", "start to grind and mix herbs in the mortar", 'sound/foley/mortarpestle.ogg'),
 	)
@@ -299,7 +299,7 @@
 	output_amount = 3
 	craft_time = 8 SECONDS
 	crafting_sound = 'sound/foley/dropsound/food_drop.ogg'
-	crafting_message = "mix the salt and seeds"
+	crafting_message = "mezclar la sal y las semillas"
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/ribrack_honey
@@ -320,7 +320,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/cured_ollie
-	name = "Cured Ollie"
+	name = "Ollie curado"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/produce/fruit/ollie = 3,
@@ -338,7 +338,7 @@
 
 // Redtallow can be crafted using visceras (rendered from animal sinew)
 /datum/repeatable_crafting_recipe/tallow/red
-	name = "red tallow"
+	name = "sebo rojo"
 
 	requirements = list(
 		/obj/item/alch/viscera = 1,

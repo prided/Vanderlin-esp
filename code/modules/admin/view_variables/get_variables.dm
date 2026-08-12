@@ -95,7 +95,7 @@
 		if(extra_classes)
 			classes += extra_classes
 
-		.["class"] = input(src, "What kind of data?", "Variable Type", default_class) as null|anything in classes
+		.["class"] = input(src, "¿Qué tipo de datos?", "Tipo de variable", default_class) as null|anything in classes
 		if(holder && holder.marked_datum && .["class"] == markstring)
 			.["class"] = VV_MARKED_DATUM
 
@@ -113,7 +113,7 @@
 
 
 		if(VV_NUM)
-			.["value"] = input("Enter new number:", "Num", current_value) as null|num
+			.["value"] = input("Ingrese un nuevo número:", "Num", current_value) as null|num
 			if(.["value"] == null)
 				.["class"] = null
 				return
@@ -158,7 +158,7 @@
 				.["class"] = null
 				return
 			var/list/things = vv_reference_list(type, subtypes)
-			var/value = input("Select reference:", "Reference", current_value) as null|anything in things
+			var/value = input("Select reference:", "Referencia", current_value) as null|anything in things
 			if(!value)
 				.["class"] = null
 				return
@@ -171,7 +171,7 @@
 				.["class"] = null
 				return
 			var/list/things = vv_reference_list(type, subtypes)
-			var/value = input("Select reference:", "Reference", current_value) as null|anything in things
+			var/value = input("Select reference:", "Referencia", current_value) as null|anything in things
 			if(!value)
 				.["class"] = null
 				return
@@ -184,7 +184,7 @@
 				.["class"] = null
 				return
 			var/list/things = vv_reference_list(type, subtypes)
-			var/value = input("Select reference:", "Reference", current_value) as null|anything in things
+			var/value = input("Select reference:", "Referencia", current_value) as null|anything in things
 			if(!value)
 				.["class"] = null
 				return
@@ -197,20 +197,20 @@
 				.["class"] = null
 				return
 			var/list/things = vv_reference_list(type, subtypes)
-			var/value = input("Select reference:", "Reference", current_value) as null|anything in things
+			var/value = input("Select reference:", "Referencia", current_value) as null|anything in things
 			if(!value)
 				.["class"] = null
 				return
 			.["value"] = WEAKREF(things[value])
 
 		if(VV_CLIENT)
-			.["value"] = input("Select reference:", "Reference", current_value) as null|anything in GLOB.clients
+			.["value"] = input("Select reference:", "Referencia", current_value) as null|anything in GLOB.clients
 			if(.["value"] == null)
 				.["class"] = null
 				return
 
 		if(VV_FILE)
-			.["value"] = input("Pick file:", "File") as null|file
+			.["value"] = input("Seleccionar archivo:", "File") as null|file
 			if(.["value"] == null)
 				.["class"] = null
 				return
@@ -296,7 +296,7 @@
 		if(VV_TEXT_LOCATE)
 			var/datum/D
 			do
-				var/ref = input("Enter reference:", "Reference") as null|text
+				var/ref = input("Introduzca la referencia:", "Referencia") as null|text
 				if(!ref)
 					break
 				D = locate(ref)
@@ -304,7 +304,7 @@
 					tgui_alert(usr,"Invalid ref!")
 					continue
 				if(!D.can_vv_mark())
-					tgui_alert(usr,"Datum can not be marked!")
+					tgui_alert(usr,"¡El dato no se puede marcar!")
 					continue
 			while(!D)
 			.["type"] = D.type

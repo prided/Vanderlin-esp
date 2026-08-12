@@ -9,7 +9,7 @@ GLOBAL_LIST_INIT(valid_honse_colors, list("White" = COLOR_WHITE, "Gray" = COLOR_
 	icon_dead = "fogbeast_dead"
 	icon_gib = "saiga_gib"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	emote_see = list("looks around.", "chews some leaves.", "neighs")
+	emote_see = list("mira a su alrededor.", "mastica algunas hojas.", "relincha")
 	speak_chance = 1
 	see_in_dark = 6
 	move_to_delay = 8
@@ -208,7 +208,7 @@ GLOBAL_LIST_INIT(valid_honse_colors, list("White" = COLOR_WHITE, "Gray" = COLOR_
 	icon_dead = "foggie_dead"
 	icon_gib = "foggie_dead"
 	animal_species = null
-	emote_see = list("looks around.", "chews some leaves.", "neighs", "hops about playfully")
+	emote_see = list("mira a su alrededor.", "mastica algunas hojas.", "relincha", "hops about playfully")
 	animal_species = null
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 1, /obj/item/alch/bone = 3)
 	health = 20

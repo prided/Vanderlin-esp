@@ -20,8 +20,8 @@
 	hydration_req = 0.15
 
 	low_threshold_passed = span_info("My ears begin to resonate with an internal ring sometimes.")
-	now_failing = span_warning("I am unable to hear at all!")
-	now_fixed = span_info("Noise slowly begins filling my ears once more.")
+	now_failing = span_warning("¡No puedo oír nada!")
+	now_fixed = span_info("El ruido lentamente comienza a llenar mis oídos una vez más.")
 	low_threshold_cleared = span_info("The ringing in my ears has died down.")
 
 	/// temporary deafness, measured in seconds. While > 0, the person is unable to hear anything.
@@ -121,13 +121,13 @@
 	damage_multiplier = 0
 
 /obj/item/organ/ears/cat
-	name = "cat ears"
+	name = "orejas de gato"
 	icon = 'icons/obj/clothing/hats.dmi'
 	icon_state = "kitty"
 	damage_multiplier = 2
 
 /obj/item/organ/ears/elf
-	name = "elf ears"
+	name = "orejas de elfo"
 	icon_state = "ear_pointed"
 	use_mob_sprite_as_obj_sprite = FALSE
 	accessory_type = /datum/sprite_accessory/ears/elf
@@ -154,7 +154,7 @@
 	name = "wild-kin ears"
 
 /obj/item/organ/ears/rakshari
-	name = "rakshari ears"
+	name = "orejas rakshari"
 
 /obj/item/organ/ears/rakshari/on_mob_insert(mob/living/carbon/organ_owner, special, movement_flags)
 	. = ..()

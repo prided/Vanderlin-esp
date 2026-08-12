@@ -205,7 +205,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 
 ///Shown when the game has started
 /atom/movable/screen/lobby/button/join
-	name = "Join Game"
+	name = "Unirse al juego"
 	screen_loc = "WEST:20,TOP:-68"
 	icon = 'icons/hud/lobby/join_game.dmi'
 	icon_state = "" //Default to not visible
@@ -230,7 +230,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 		return
 
 	if(!SSticker?.IsRoundInProgress())
-		to_chat(hud.mymob, span_boldwarning("The round is either not ready, or has already finished..."))
+		to_chat(hud.mymob, span_boldwarning("La ronda o no esta lista o ya ha terminado..."))
 		return
 
 	//Determines Relevent Population Cap
@@ -283,7 +283,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 	prefs?.lore_popup(hud.mymob)
 
 /atom/movable/screen/lobby/button/migration
-	name = "Migration"
+	name = "Migracion"
 	screen_loc = "WEST:20,TOP:-134"
 	icon = 'icons/hud/lobby/migration.dmi'
 	icon_state = "migration"
@@ -299,7 +299,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 	migrant.show_ui()
 
 /atom/movable/screen/lobby/button/actors
-	name = "Actors"
+	name = "actores"
 	screen_loc = "WEST:20,TOP:-167"
 	icon = 'icons/hud/lobby/actors.dmi'
 	icon_state = "actors"
@@ -313,7 +313,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 	hud.mymob.client?.view_actors_manifest()
 
 /atom/movable/screen/lobby/button/collapse
-	name = "Collapse Lobby Menu"
+	name = "Contraer menu del lobby"
 	icon = 'icons/hud/lobby/collapse_expand.dmi'
 	icon_state = "collapse"
 	base_icon_state = "collapse"

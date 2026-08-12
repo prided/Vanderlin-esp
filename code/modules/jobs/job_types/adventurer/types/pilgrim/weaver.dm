@@ -15,16 +15,16 @@
 	)
 
 /datum/job/advclass/pilgrim/weaver
-	title = "Weaver"
+	title = "Tejedor"
 	allowed_sexes = list(MALE, FEMALE)
 	outfit = /datum/outfit/pilgrim/seamstress
-	apprentice_name = "Weaver"
+	apprentice_name = "Tejedor"
 	cmode_music = 'sound/music/cmode/towner/CombatTowner.ogg'
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/pilgrim/weaver
 
 /datum/outfit/pilgrim/seamstress
-	name = "Weaver (Pilgrim)"
+	name = "Tejedor (peregrino)"
 	belt = /obj/item/storage/belt/leather/cloth/lady
 	pants = /obj/item/clothing/pants/tights/colored/random
 	shoes = /obj/item/clothing/shoes/shortboots

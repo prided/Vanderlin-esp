@@ -1,8 +1,8 @@
 // Verb to link discord accounts to BYOND accounts
 /client/verb/linkdiscord()
-	set category = "OOC.Links"
+	set category = "Enlaces OOC"
 	set name = "Verify Discord Account"
-	set desc = "Verify your discord account with your BYOND account"
+	set desc = "Verifica tu cuenta de Discord con tu cuenta BYOND"
 
 	// Safety checks
 	if(!CONFIG_GET(flag/sql_enabled))

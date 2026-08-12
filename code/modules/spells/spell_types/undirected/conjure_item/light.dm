@@ -8,7 +8,7 @@
 	cooldown_time = 30 SECONDS
 	spell_cost = 50
 
-	invocation = "Let there be light."
+	invocation = "Que haya luz."
 	invocation_type = INVOCATION_WHISPER
 	spell_flags = SPELL_RITUOS
 	delete_old = TRUE
@@ -23,8 +23,8 @@
 	return item
 
 /obj/item/flashlight/flare/light
-	name = "condensed light"
-	desc = "An orb of condensed light."
+	name = "luz condensada"
+	desc = "Un orbe de luz condensada."
 	w_class = WEIGHT_CLASS_NORMAL
 	light_outer_range = 10
 	light_color = LIGHT_COLOR_WHITE

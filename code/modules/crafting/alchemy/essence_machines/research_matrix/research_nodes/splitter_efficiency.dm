@@ -1,5 +1,5 @@
 /datum/thaumic_research_node/splitter_efficiency
-	name = "Essence Division"
+	name = "División de esencia"
 	desc = "Learn to safely and more precisely divide and separate thaumic materials into their essence parts. This will increase the splitter's efficiency."
 	prerequisites = list(/datum/thaumic_research_node/basic_understanding)
 	required_essences = list(
@@ -18,7 +18,7 @@
 	bonus_value = 0.2
 
 /datum/thaumic_research_node/splitter_efficiency/two
-	name = "Refined Separation"
+	name = "Separación refinada"
 	desc = "Advanced techniques for essence splitting that achieve cleaner divisions, increasing the yield of the splitter."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/splitter_efficiency)
@@ -75,8 +75,8 @@
 	bonus_value = 1
 
 /datum/thaumic_research_node/splitter_efficiency/five
-	name = "Multiplied Division"
-	desc = "Advanced splitting techniques that result in significant reduction of waste."
+	name = "División multiplicada"
+	desc = "Técnicas avanzadas de división que resultan en una reducción significativa de residuos."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/splitter_efficiency/four)
 	required_essences = list(
@@ -95,7 +95,7 @@
 	bonus_value = 1.5
 
 /datum/thaumic_research_node/splitter_efficiency/six
-	name = "Infinite Fragmentation"
+	name = "Fragmentación infinita"
 	desc = "The ultimate splitting technique, these result in additional essence yield beyond what was deemed possible."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/splitter_efficiency/five)

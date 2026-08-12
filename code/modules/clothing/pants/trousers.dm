@@ -1,6 +1,6 @@
 
 /obj/item/clothing/pants/trou
-	name = "work trousers"
+	name = "pantalones de trabajo"
 	desc = "Padded pants for hardy workers."
 	gender = PLURAL
 	icon_state = "trou"
@@ -19,8 +19,8 @@
 	item_weight = 350 GRAMS
 
 /obj/item/clothing/pants/trou/leather
-	name = "leather trousers"
-	desc = "Standard leather pants for hardy workers."
+	name = "pantalones de cuero"
+	desc = "Pantalones de cuero estándar para trabajadores resistentes."
 	icon_state = "leathertrou"
 	armor_type = /datum/armor/pants/leather
 	max_integrity = INTEGRITY_POOR
@@ -89,13 +89,13 @@
 	filters += filter(type="drop_shadow", x=0, y=0, size=0.5, offset=1, color=rgb(218, 165, 32))
 
 /obj/item/clothing/pants/trou/leather/mourning
-	name = "mourning trousers"
+	name = "pantalones de luto"
 	desc = "Dark trousers worn by morticians while performing burial rites."
 	icon_state = "leathertrou"
 	color = "#151615"
 
 /obj/item/clothing/pants/trou/shadowpants
-	name = "silk tights"
+	name = "medias de seda"
 	desc = "Form-fitting legwear. Almost too form-fitting."
 	mob_overlay_icon = 'icons/roguetown/clothing/newclothes/onmob/onmobsilkpants.dmi'
 	sleeved = 'icons/roguetown/clothing/newclothes/onmob/sleeves_pants.dmi'
@@ -112,20 +112,20 @@
 	item_state = "apothpants"
 
 /obj/item/clothing/pants/trou/artipants
-	name = "artificer trousers"
+	name = "pantalones de artífice"
 	desc = "Thick leather trousers to protect from sparks or stray gear projectiles. Judging by the wear, it's had plenty of use."
 	icon_state = "artipants"
 	item_state = "artipants"
 
 /obj/item/clothing/pants/trou/leathertights
-	name = "leather tights"
+	name = "medias de cuero"
 	desc = "Classy leather tights, form-fitting but tasteful."
 	icon_state = "leathertights"
 	item_state = "leathertights"
 
 /obj/item/clothing/pants/trou/beltpants
 	name = "belt-buckled trousers"
-	desc = "Dark leather trousers adorned with far too many buckles to be pragmatic."
+	desc = "Pantalones de cuero oscuro adornados con demasiadas hebillas para ser pragmáticos."
 	icon_state = "beltpants"
 	item_state = "beltpants"
 
@@ -138,8 +138,8 @@
 	max_integrity = INTEGRITY_STANDARD
 
 /obj/item/clothing/pants/trou/formal
-	name = "formal trousers"
-	desc = "A formal pair of formal trousers."
+	name = "pantalones formales"
+	desc = "Un par de pantalones formales."
 	icon_state = "butlerpants"
 	item_state = "butlerpants"
 	detail_tag = "_detail"
@@ -148,7 +148,7 @@
 	detail_color = CLOTHING_DARK_INK
 
 /obj/item/clothing/pants/trou/formal/shorts
-	name = "trouser shorts"
+	name = "pantalones cortos"
 	desc = "A pair of formal trouser shorts, fit for any strapping young lad."
 	icon_state = "butlershorts"
 	item_state = "butlershorts"
@@ -185,7 +185,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/gronn.dmi'
 
 /obj/item/clothing/pants/trou/leather/shepherd
-	name = "shepherd's pants"
+	name = "pantalones de pastor"
 	desc = "A pair of white pants decorated with red stripes and traditional patterning."
 	icon_state = "shepherdpants"
 

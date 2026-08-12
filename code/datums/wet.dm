@@ -16,7 +16,7 @@
 /datum/wet/proc/get_examine_text()
 	if(water_stacks < 0)
 		var/list/msg = list()
-		msg += span_warning("It's wet.")
+		msg += span_warning("Está mojado.")
 		if(dirty_water)
 			msg += span_warning("\n And smells very bad...")
 		return msg

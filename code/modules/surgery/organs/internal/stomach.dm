@@ -5,7 +5,7 @@
 	zone = BODY_ZONE_PRECISE_STOMACH
 	slot = ORGAN_SLOT_STOMACH
 	organ_efficiency = list(ORGAN_SLOT_STOMACH = 100)
-	attack_verb = list("gored", "squished", "slapped", "digested")
+	attack_verb = list("gored", "aplastado", "slapped", "digested")
 	desc = ""
 
 	organ_volume = 1
@@ -45,12 +45,12 @@
 	organ_owner.remove_stress(/datum/stress_event/disgust)
 
 /obj/item/organ/stomach/fly
-	name = "insectoid stomach"
+	name = "estómago insectoide"
 	icon_state = "stomach-x" //xenomorph liver? It's just a black liver so it fits.
 	desc = ""
 
 /obj/item/organ/stomach/plasmaman
-	name = "digestive crystal"
+	name = "cristal digestivo"
 	icon_state = "stomach-p"
 	desc = ""
 
@@ -84,7 +84,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	zone = BODY_ZONE_PRECISE_STOMACH
 	slot = ORGAN_SLOT_GUTS
-	attack_verb = list("gored", "squished", "slapped", "digested")
+	attack_verb = list("gored", "aplastado", "slapped", "digested")
 	desc = ""
 	organ_efficiency = list(ORGAN_SLOT_GUTS = 100)
 	low_threshold_passed = "<span class='info'>My guts flashes with pain before subsiding.</span>"
@@ -100,4 +100,4 @@
 	else if(damage >= high_threshold)
 		examine_list += span_warning("<b>[owner]</b>'s midsection looks somewhat tense and swollen.")
 	else if(damage >= low_threshold)
-		examine_list += span_notice("<b>[owner]</b>'s abdomen looks mildly bloated.")
+		examine_list += span_notice("El abdomen de <b>[owner]</b> parece ligeramente hinchado.")

@@ -86,13 +86,13 @@
 	return
 
 /obj/structure/stone_tile/block
-	name = "stone block"
+	name = "bloque de piedra"
 	icon_state = "pristine_block1"
 	tile_key = "pristine_block"
 	tile_random_sprite_max = 4
 
 /obj/structure/stone_tile/slab
-	name = "stone slab"
+	name = "losa de piedra"
 	icon_state = "pristine_slab1"
 	tile_key = "pristine_slab"
 	tile_random_sprite_max = 4
@@ -127,7 +127,7 @@
 	tile_key = "cracked_block"
 
 /obj/structure/stone_tile/slab/cracked
-	name = "cracked stone slab"
+	name = "losa de piedra agrietada"
 	icon_state = "cracked_slab1"
 	tile_key = "cracked_slab"
 	tile_random_sprite_max = 1
@@ -155,12 +155,12 @@
 	tile_key = "burnt_tile"
 
 /obj/structure/stone_tile/block/burnt
-	name = "burnt stone block"
+	name = "bloque de piedra quemada"
 	icon_state = "burnt_block1"
 	tile_key = "burnt_block"
 
 /obj/structure/stone_tile/slab/burnt
-	name = "burnt stone slab"
+	name = "losa de piedra quemada"
 	icon_state = "burnt_slab1"
 	tile_key = "burnt_slab"
 

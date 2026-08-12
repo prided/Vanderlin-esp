@@ -125,7 +125,7 @@
 	advclass_cat_rolls = list(CTAG_MERCENARY = 20)
 
 /datum/migrant_wave/merc
-	name = "Band of Mercenaries"
+	name = "Banda de mercenarios"
 	downgrade_wave = /datum/migrant_wave/merc_down_one
 	weight = 8
 	roles = list(
@@ -133,7 +133,7 @@
 	)
 
 /datum/migrant_wave/merc_down_one
-	name = "Band of Mercenaries"
+	name = "Banda de mercenarios"
 	downgrade_wave = /datum/migrant_wave/merc_down_two
 	can_roll = FALSE
 	roles = list(
@@ -141,7 +141,7 @@
 	)
 
 /datum/migrant_wave/merc_down_two
-	name = "Band of Mercenaries"
+	name = "Banda de mercenarios"
 	downgrade_wave = /datum/migrant_wave/merc_down_three
 	can_roll = FALSE
 	roles = list(
@@ -149,7 +149,7 @@
 	)
 
 /datum/migrant_wave/merc_down_three
-	name = "Band of Mercenaries"
+	name = "Banda de mercenarios"
 	can_roll = FALSE
 	roles = list(
 		/datum/migrant_role/advclass/mercenary = 1,

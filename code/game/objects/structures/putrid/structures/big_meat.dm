@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY(putrid_evolutions)
 
 /obj/structure/meatvine/papameat
-	name = "papa meat"
+	name = "carne de papa"
 	desc = "You feel a combination of fear and disgust, just by looking at that thing."
 	icon = 'icons/obj/cellular/papameat.dmi'
 	icon_state = "papameat"
@@ -31,7 +31,7 @@ GLOBAL_LIST_EMPTY(putrid_evolutions)
 	to_chat(evolving_mob, span_boldnotice("You begin burrowing into the papa meat..."))
 
 	if(!do_after(evolving_mob, 5 SECONDS, src))
-		to_chat(evolving_mob, span_warning("The evolution process was interrupted!"))
+		to_chat(evolving_mob, span_warning("¡El proceso de evolución fue interrumpido!"))
 		return FALSE
 
 	// Show evolution selection screen
@@ -127,7 +127,7 @@ GLOBAL_LIST_EMPTY(putrid_evolutions)
 /obj/structure/meatvine/papameat/proc/consume_mob(mob/living/sacrifice)
 	if(!istype(sacrifice) || sacrifice.stat != DEAD)
 		return FALSE
-	visible_message(span_danger("[src] absorbs [sacrifice]!"))
+	visible_message(span_danger("¡[src] absorbe [sacrifice]!"))
 	var/heal_amount = 100
 	if(ismob(sacrifice))
 		var/mob/living/L = sacrifice

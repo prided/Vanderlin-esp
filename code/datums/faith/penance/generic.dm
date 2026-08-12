@@ -1,7 +1,7 @@
 
 /datum/penance/prayer
 	name = "Prayers of Atonement"
-	desc = "You must pray extensively to show your devotion."
+	desc = "Debes orar extensamente para mostrar tu devoción."
 	signal_type = COMSIG_PRAYER_COMPLETED
 	required_count = 10
 	devotion_reward = 30
@@ -9,7 +9,7 @@
 
 /datum/penance/donation
 	name = "Charitable Donation"
-	desc = "You must donate coin to the church."
+	desc = "Debes donar monedas a la iglesia."
 	signal_type = COMSIG_DONATION_MADE
 	required_count = 5 // 5 separate donations
 	devotion_reward = 40
@@ -17,7 +17,7 @@
 
 /datum/penance/healing
 	name = "Healing the Sick"
-	desc = "You must heal those who suffer."
+	desc = "Debes sanar a los que sufren."
 	signal_type = COMSIG_LIVING_HEALED_OTHER
 	required_count = 10
 	devotion_reward = 55
@@ -25,7 +25,7 @@
 
 /datum/penance/combat
 	name = "Trial by Combat"
-	desc = "You must prove your worth in battle."
+	desc = "Debes demostrar tu valía en la batalla."
 	signal_type = COMSIG_LIVING_COMBAT_KILL
 	required_count = 3
 	time_limit = 20 MINUTES

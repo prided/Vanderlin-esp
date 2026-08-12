@@ -1,5 +1,5 @@
 /obj/structure/warningbell
-	name = "Warning Bell"
+	name = "Campana de advertencia"
 	desc = "A large bell used to warn everyone in the vicinity of impending danger."
 	icon = 'icons/roguetown/misc/96x96.dmi'  // Ensure you have an appropriate icon for the bell
 	icon_state = "churchbell"
@@ -32,7 +32,7 @@
 
 
 /obj/structure/warningbell/townhall
-	name = "Town Hall Bell"
+	name = "Campana del Ayuntamiento"
 	desc = "A large bell used to summon townsfolk for gathering."
 	icon = 'icons/roguetown/misc/96x96.dmi'  // Ensure you have an appropriate icon for the bell
 

@@ -1,6 +1,6 @@
 /datum/mob_affix/regenerative
 	name = "Regenerative"
-	description = "Rapidly heals wounds"
+	description = "Cura rápidamente las heridas"
 	color = "#00FF44"
 	var/regen_timer
 

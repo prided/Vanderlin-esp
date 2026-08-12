@@ -101,7 +101,7 @@
 		if("night_shift_set")
 			if(!check_rights(R_ADMIN))
 				return
-			var/val = tgui_alert(usr, "What do you want to set night shift to? This will override the automatic system until set to automatic again.", "Night Shift", list("On", "Off", "Automatic"))
+			var/val = tgui_alert(usr, "What do you want to set night shift to? This will override the automatic system until set to automatic again.", "Turno de noche", list("On", "Off", "Automatic"))
 			switch(val)
 				if("Automatic")
 					if(CONFIG_GET(flag/enable_night_shifts))
@@ -143,9 +143,9 @@
 			if(!check_rights(R_ADMIN))
 				return
 			if(!SSticker.HasRoundStarted())
-				alert("The game hasn't started yet!")
+				alert("¡El juego aún no ha comenzado!")
 			else
-				alert("The game mode is Storytellers")
+				alert("El modo de juego es Narradores.")
 		if("manifest")
 			if(!check_rights(R_ADMIN))
 				return
@@ -179,11 +179,11 @@
 		if("allspecies")
 			if(!check_rights(R_FUN))
 				return
-			var/result = input(usr, "Please choose a new species","Species") as null|anything in GLOB.species_list
+			var/result = input(usr, "Por favor elige una nueva especie","Especies") as null|anything in GLOB.species_list
 			if(result)
 				SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Mass Species Change", "[result]"))
 				log_admin("[key_name(usr)] turned all humans into [result]", 1)
-				message_admins("\blue [key_name_admin(usr)] turned all humans into [result]")
+				message_admins("\blue [key_name_admin(usr)] convirtió a todos los humanos en [result]")
 				var/newtype = GLOB.species_list[result]
 				for(var/mob/living/carbon/human/H as anything in GLOB.human_list)
 					H.set_species(newtype)
@@ -192,7 +192,7 @@
 				return
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Bomb Cap"))
 
-			var/newBombCap = input(usr,"What would you like the new bomb cap to be. (entered as the light damage range (the 3rd number in common (1,2,3) notation)) Must be above 4)", "New Bomb Cap", GLOB.MAX_EX_LIGHT_RANGE) as num|null
+			var/newBombCap = input(usr,"What would you like the new bomb cap to be. (entered as the light damage range (the 3rd number in common (1,2,3) notation)) Must be above 4)", "Nuevo límite de explosión", GLOB.MAX_EX_LIGHT_RANGE) as num|null
 			if (!CONFIG_SET(number/bombcap, newBombCap))
 				return
 
@@ -203,7 +203,7 @@
 			if(!check_rights(R_FUN))
 				return
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Break All Lights"))
-			message_admins("[key_name_admin(usr)] broke all lights")
+			message_admins("[key_name_admin(usr)] rompió todas las luces")
 			for(var/obj/machinery/light/L as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/light))
 				L.break_light_tube()
 				CHECK_TICK
@@ -212,7 +212,7 @@
 			if(!check_rights(R_FUN))
 				return
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Pawsitively Purrfect"))
-			message_admins("[key_name_admin(usr)] made everyone purrfect.")
+			message_admins("[key_name_admin(usr)] hizo que todos fueran perfectos.")
 			for(var/mob/living/carbon/human/H as anything in GLOB.human_list)
 				SEND_SOUND(H, sound('sound/blank.ogg'))
 
@@ -228,13 +228,13 @@
 					var/newname = "[forename]-[pick(honorifics["[H.gender]"])]"
 					H.fully_replace_character_name(H.real_name,newname)
 				else
-					to_chat(H, "<span class='warning'>You're not purrfect enough for this!</span>")
+					to_chat(H, "<span class='warning'>¡No eres lo suficientemente perfecto para esto!</span>")
 
 		if("whiteout")
 			if(!check_rights(R_FUN))
 				return
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Fix All Lights"))
-			message_admins("[key_name_admin(usr)] fixed all lights")
+			message_admins("[key_name_admin(usr)] arregló todas las luces.")
 			for(var/obj/machinery/light/L as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/light))
 				L.fix()
 				CHECK_TICK
@@ -253,7 +253,7 @@
 				return
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Anarcho-capitalist Station"))
 			SSeconomy.full_ancap = !SSeconomy.full_ancap
-			message_admins("[key_name_admin(usr)] toggled Anarcho-capitalist mode")
+			message_admins("[key_name_admin(usr)] cambió el modo anarcocapitalista")
 			if(SSeconomy.full_ancap)
 				priority_announce("The NAP is now in full effect.", null, 'sound/blank.ogg')
 			else
@@ -262,7 +262,7 @@
 	if(E)
 		E.processing = FALSE
 		if(E.announceWhen>0)
-			switch(tgui_alert(usr, "Would you like to alert the crew?", "Alert", list("Yes", "No", "Cancel")))
+			switch(tgui_alert(usr, "Would you like to alert the crew?", "Alerta", list("Yes", "No", "Cancel")))
 				if("Yes")
 					E.announceChance = 100
 				if("Cancel")

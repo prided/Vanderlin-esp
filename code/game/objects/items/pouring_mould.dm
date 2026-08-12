@@ -1,6 +1,6 @@
 /obj/item/mould
 	name = "mould"
-	desc = "You shouldn't be seeing this one."
+	desc = "No deberías estar viendo este."
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
 	item_weight = 500 GRAMS
@@ -161,7 +161,7 @@
 	. += MA
 
 /obj/item/mould/proc/start_cooling()
-	visible_message(span_info("[src] begins to cool."), vision_distance = COMBAT_MESSAGE_RANGE)
+	visible_message(span_info("[src] comienza a enfriarse."), vision_distance = COMBAT_MESSAGE_RANGE)
 	cooling = TRUE
 	START_PROCESSING(SSobj, src)
 
@@ -193,7 +193,7 @@
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/mould/ingot
-	name = "ingot mould"
+	name = "molde de lingote"
 	desc = "A clay mould for making metal ingots."
 
 	icon_state = "ingot_mould"

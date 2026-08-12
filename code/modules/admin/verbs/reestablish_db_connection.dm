@@ -2,15 +2,15 @@
 	set category = "Server"
 	set name = "Reestablish DB Connection"
 	if (!CONFIG_GET(flag/sql_enabled))
-		to_chat(usr, "<span class='adminnotice'>The Database is not enabled!</span>")
+		to_chat(usr, "<span class='adminnotice'>¡La base de datos no está habilitada!</span>")
 		return
 
 	if (SSdbcore.IsConnected())
 		if (!check_rights(R_DEBUG,0))
-			alert("The database is already connected! (Only those with +debug can force a reconnection)", "The database is already connected!")
+			alert("¡La base de datos ya está conectada! (Solo aquellos con +debug pueden forzar una reconexión)", "¡La base de datos ya está conectada!")
 			return
 
-		var/reconnect = tgui_alert(usr, "The database is already connected! If you *KNOW* that this is incorrect, you can force a reconnection", "The database is already connected!", list("Force Reconnect", "Cancel"))
+		var/reconnect = tgui_alert(usr, "¡La base de datos ya está conectada! Si *SABES* que esto es incorrecto, puedes forzar una reconexión", "¡La base de datos ya está conectada!", list("Force Reconnect", "Cancel"))
 		if (reconnect != "Force Reconnect")
 			return
 
@@ -21,10 +21,10 @@
 
 	if (SSdbcore.IsConnectedCross())
 		if (!check_rights(R_DEBUG,0))
-			alert("The database is already connected! (Only those with +debug can force a reconnection)", "The database is already connected!")
+			alert("¡La base de datos ya está conectada! (Solo aquellos con +debug pueden forzar una reconexión)", "¡La base de datos ya está conectada!")
 			return
 
-		var/reconnect = tgui_alert(usr, "The database is already connected! If you *KNOW* that this is incorrect, you can force a reconnection", "The database is already connected!", list("Force Reconnect", "Cancel"))
+		var/reconnect = tgui_alert(usr, "¡La base de datos ya está conectada! Si *SABES* que esto es incorrecto, puedes forzar una reconexión", "¡La base de datos ya está conectada!", list("Force Reconnect", "Cancel"))
 		if (reconnect != "Force Reconnect")
 			return
 
@@ -39,11 +39,11 @@
 
 	SSdbcore.failed_connections = 0
 	if(!SSdbcore.Connect())
-		message_admins("Database connection failed: " + SSdbcore.ErrorMsg())
+		message_admins("La conexión a la base de datos falló: " + SSdbcore.ErrorMsg())
 	else
 		message_admins("Database connection re-established")
 
 	if(!SSdbcore.Connect_Cross())
-		message_admins("Database connection failed: " + SSdbcore.ErrorMsg())
+		message_admins("La conexión a la base de datos falló: " + SSdbcore.ErrorMsg())
 	else
 		message_admins("Database connection re-established")

@@ -1,7 +1,7 @@
 
 /datum/action/cooldown/spell/aoe/knock
 	name = "Knock"
-	desc = "This spell opens nearby doors and closets."
+	desc = "Este hechizo abre puertas y armarios cercanos."
 	button_icon_state = "knock"
 	click_to_activate = FALSE
 

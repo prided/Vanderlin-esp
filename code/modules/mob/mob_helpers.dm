@@ -359,9 +359,9 @@
 
 ///Convert a message to derpy speak
 /proc/derpspeech(message, stuttering)
-	message = replacetext(message, " am ", " ")
+	message = replacetext(message, " soy ", " ")
 	message = replacetext(message, " is ", " ")
-	message = replacetext(message, " are ", " ")
+	message = replacetext(message, " son ", " ")
 	message = replacetext(message, "you", "u")
 	message = replacetext(message, "help", "halp")
 	message = replacetext(message, "grief", "grife")
@@ -431,7 +431,7 @@
  * Input the intent as a string such as "help" or use "right"/"left
  */
 /mob/verb/a_intent_change(input as text)
-	set name = "a-intent"
+	set name = "una intención"
 	set hidden = 1
 
 	if(!possible_a_intents || !possible_a_intents.len)
@@ -482,7 +482,7 @@
 		to_chat(src, "[result.Join()]")
 
 /mob/verb/rog_intent_change(numb as num,offhand as num)
-	set name = "intent-change"
+	set name = "cambio de intención"
 	set hidden = 1
 	if(atkswinging)
 		stop_attack()
@@ -889,28 +889,28 @@
 	to_chat(M, "Control of your mob has been offered to dead players.")
 	if(usr)
 		log_admin("[key_name(usr)] has offered control of ([key_name(M)]) to ghosts.")
-		message_admins("[key_name_admin(usr)] has offered control of ([ADMIN_LOOKUPFLW(M)]) to ghosts")
-	var/poll_message = "Do you want to play as [M.real_name]?"
+		message_admins("[key_name_admin(usr)] ha ofrecido el control de ([ADMIN_LOOKUPFLW(M)]) a los fantasmas")
+	var/poll_message = "¿Quieres jugar como [M.real_name]?"
 	if(M.mind?.assigned_role)
 		poll_message = "[poll_message] Job:[M.mind.assigned_role.title]."
 	if(M.mind?.special_role)
-		poll_message = "[poll_message] Status:[M.mind.special_role]."
+		poll_message = "[poll_message] Estado:[M.mind.special_role]."
 	else if(M.mind)
 		var/datum/antagonist/A = M.mind.has_antag_datum(/datum/antagonist/)
 		if(A)
-			poll_message = "[poll_message] Status:[A.name]."
+			poll_message = "[poll_message] Estado:[A.name]."
 	var/list/mob/dead/observer/candidates = pollCandidatesForMob(poll_message, ROLE_ASPIRANT, null, FALSE, 100, M)
 
 	if(LAZYLEN(candidates))
 		var/mob/dead/observer/C = pick(candidates)
 		to_chat(M, "Your mob has been taken over by a ghost!")
-		message_admins("[key_name_admin(C)] has taken control of ([ADMIN_LOOKUPFLW(M)])")
+		message_admins("[key_name_admin(C)] ha tomado el control de ([ADMIN_LOOKUPFLW(M)])")
 		M.ghostize(0,drawskip=TRUE)
 		M.key = C.key
 		return TRUE
 	else
-		to_chat(M, "There were no ghosts willing to take control.")
-		message_admins("No ghosts were willing to take control of [ADMIN_LOOKUPFLW(M)])")
+		to_chat(M, "No había fantasmas dispuestos a tomar el control.")
+		message_admins("Ningún fantasma estaba dispuesto a tomar el control de [ADMIN_LOOKUPFLW(M)])")
 		return FALSE
 
 ///Clicks a random nearby mob with the source from this mob

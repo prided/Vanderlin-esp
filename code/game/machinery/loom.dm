@@ -1,7 +1,7 @@
 /obj/machinery/loom
 	icon = 'icons/roguetown/misc/structure.dmi'
 	name = "loom"
-	desc = "A wooden frame with taut threads ready to weave fabric."
+	desc = "Un marco de madera con hilos tensos listo para tejer tela."
 	icon_state = "loom"
 	max_integrity = 200
 	density = TRUE
@@ -33,7 +33,7 @@
 			to_chat(user, "You string a fiber onto [src].")
 			qdel(W)
 		else
-			to_chat(user, "You can't add any more fiber.")
+			to_chat(user, "No puedes agregar más fibra.")
 
 		return ITEM_INTERACT_SUCCESS
 
@@ -60,7 +60,7 @@
 	var/skill = GET_MOB_SKILL_VALUE_OLD(weaver, /datum/attribute/skill/misc/sewing)
 	if(isliving(user) && weaver.stat == CONSCIOUS)
 		if(storedfiber < 2)
-			to_chat(user, "You don't have enough fiber to do this.")
+			to_chat(user, "No tienes suficiente fibra para hacer esto.")
 		else
 			to_chat(user, "You start weaving some cloth...")
 			while(storedfiber > 1)

@@ -1,6 +1,6 @@
 // TODO make this a projectile jesus
 /datum/action/cooldown/spell/chill_touch
-	name = "Chill Touch"
+	name = "Toque frío"
 	desc = "A skeletal hand grips your target, the targeted zone changes the effect."
 	sound = 'sound/magic/whiteflame.ogg'
 	self_cast_possible = FALSE
@@ -31,11 +31,11 @@
 	hand.attach_target(cast_on, bodypart)
 	cast_on.visible_message(
 		span_warning("A skeletal hand grips [cast_on]'s [bodypart]!"),
-		span_danger("A skeletal hand grips my [bodypart]!"),
+		span_danger("¡Una mano esquelética agarra mi [bodypart]!"),
 	)
 
 /obj/item/chilltouch
-	name = "Skeletal Hand"
+	name = "Mano esquelética"
 	desc = "A ghostly, skeletal hand which moves of its own accord."
 	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "bounty"
@@ -102,7 +102,7 @@
 				target.emote("choke")
 				target.adjustOxyLoss(oxy_drain*mult*2)
 			if(BODY_ZONE_CHEST)
-				to_chat(target, "<span class='danger'>[target] is pummeled by a skeletal hand!</span>")
+				to_chat(target, "¡<span class='danger'>[target] es golpeado por una mano esquelética!</span>")
 				playsound(target, pick('sound/combat/hits/punch/punch_hard (1).ogg','sound/combat/hits/punch/punch_hard (2).ogg','sound/combat/hits/punch/punch_hard (3).ogg'), 100, FALSE, -1)
 				var/obj/item/bodypart/chest = target.get_bodypart(BODY_ZONE_CHEST)
 				chest.bodypart_attacked_by(BCLASS_BLUNT, oxy_drain*mult*3)

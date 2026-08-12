@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/shapeshift/rat_vampire
-	name = "Vampiric Rat Form"
+	name = "Forma de rata vampírica"
 	desc = "Transform into a small rat. Damage is not inherited between forms."
 
 	charge_required = FALSE

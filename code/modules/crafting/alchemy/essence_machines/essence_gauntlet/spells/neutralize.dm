@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/neutralize
-	name = "Neutralize"
-	desc = "Removes harmful toxins and poisons from objects or creatures."
+	name = "Neutralizar"
+	desc = "Elimina toxinas y venenos dañinos de objetos o criaturas."
 	button_icon_state = "borrowtime"
 	cast_range = 1
 	essences = list(/datum/thaumaturgical_essence/poison)
@@ -10,7 +10,7 @@
 	var/atom/target = cast_on
 	if(!target)
 		return FALSE
-	owner.visible_message(span_notice("[owner] neutralizes toxins in [target]."))
+	owner.visible_message(span_notice("[owner] neutraliza las toxinas en [target]."))
 
 	if(istype(target, /mob/living))
 		var/mob/living/L = target

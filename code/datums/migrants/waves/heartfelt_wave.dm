@@ -34,8 +34,8 @@
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	blacklisted_species = list(SPEC_ID_HALFLING)
 	is_recognized = TRUE
-	honorary = "Baron"
-	honorary_f = "Baroness"
+	honorary = "Barón"
+	honorary_f = "Baronesa"
 
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/heartfelt_lord
@@ -68,7 +68,7 @@
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/waterskin/purifier)
 
 /datum/migrant_role/heartfelt_lady
-	name = "Lady of Heartfelt"
+	name = "Señora del corazón"
 	greet_text = "You are the Lady of Heartfelt, once a respected noblewoman now struggling to survive in a desolate landscape. With your home in ruins, you look to Vanderlin, hoping to find new purpose or refuge amidst the chaos."
 	migrant_job = /datum/job/migrant/heartfelt_lady
 
@@ -93,15 +93,15 @@
 	)
 
 /datum/job/migrant/heartfelt_lady
-	title = "Lady of Heartfelt"
+	title = "Señora del corazón"
 	tutorial = "You are the Lady of Heartfelt, once a respected noblewoman now struggling to survive in a desolate landscape. With your home in ruins, you look to Vanderlin, hoping to find new purpose or refuge amidst the chaos."
 	outfit = /datum/outfit/heartfelt_lady
 	allowed_sexes = list(FEMALE)
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	blacklisted_species = list(SPEC_ID_HALFLING)
 	is_recognized = TRUE
-	honorary = "Baron"
-	honorary_f = "Baroness"
+	honorary = "Barón"
+	honorary_f = "Baronesa"
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/heartfelt_lady
 
@@ -262,7 +262,7 @@
 			index = copytext(spawned.real_name, 1,index)
 		if(!index)
 			index = spawned.real_name
-		S.name = "knight tabard ([index])"
+		S.name = "tabardo de caballero ([index])"
 
 	var/obj/item/clothing/cloak/boiler/boiler = locate() in spawned.get_all_gear()
 	if(boiler)

@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/call_bird
 	name = "Call Messenger Bird"
-	desc = "Calls for your messenger bird."
+	desc = "Llama a tu pájaro mensajero."
 	button_icon_state = "zad"
 	sound = null
 
@@ -27,7 +27,7 @@
 	)
 
 /datum/action/cooldown/spell/undirected/call_bird/priest
-	name = "Call Holy Messenger"
+	name = "Llama al Santo Mensajero"
 	destinations = list(
 		"The Archbishop" = "the Archbishop",
 		"Cancel" = "cancel",
@@ -82,7 +82,7 @@
 	owned_bird = null
 
 /obj/item/reagent_containers/food/snacks/messenger_bird
-	name = "messenger bird"
+	name = "pájaro mensajero"
 	desc = "A small bird, used by nobles to send messages beyond the borders of this city. It has a small pouch on its leg for carrying notes."
 	icon_state = "messenger"
 	icon = 'icons/roguetown/mob/monster/messenger.dmi'
@@ -103,13 +103,13 @@
 	new /obj/item/natural/feather(drop_location())
 
 /obj/item/reagent_containers/food/snacks/friedmessenger
-	name = "fried messenger"
+	name = "mensajero frito"
 	desc = "A fried messenger bird. Poor thing."
 	icon_state = "fcrow"
 	bitesize = 2
 	nutrition = MINCE_NUTRITION * COOK_MOD
 	w_class = WEIGHT_CLASS_TINY
-	tastes = list("burnt flesh" = 1)
+	tastes = list("carne quemada" = 1)
 	eat_effect = null
 	rotprocess = SHELFLIFE_SHORT
 	sellprice = 0
@@ -173,24 +173,24 @@
 
 	var/datum/action/cooldown/spell/undirected/call_bird/spell = source_spell.resolve()
 	if(spell.owner != user && !prob(GET_MOB_ATTRIBUTE_VALUE(user, STAT_SPEED) * 2))
-		to_chat(user, "<span class='warning'>[src] gets away!</span>")
+		to_chat(user, "<span class='warning'>[src] se escapa!</span>")
 		fly_away()
 		return NONE
 
 	if(istype(tool, /obj/item/paper) && spell.owner == user)
 		var/obj/item/paper/P = tool
 		if(!length(P.info))
-			to_chat(user, span_warning("The note is blank!"))
+			to_chat(user, span_warning("¡La nota está en blanco!"))
 			return ITEM_INTERACT_BLOCKING
 		to_chat(user, span_notice("You attach your note to the messenger bird."))
 		var/noble_info = "[user.key]/([user.real_name]) ([user.job])"
-		var/dest = tgui_input_list(user, "Where would you like the bird to go?", "Destination", spell.destinations)
+		var/dest = tgui_input_list(user, "Where would you like the bird to go?", "Destino", spell.destinations)
 
 		if(dest == "Cancel")
 			to_chat(user, span_notice("You decide not to send the bird anywhere."))
 			return
 
-		to_chat(user, span_notice("You tell the bird to go to [spell.destinations[dest]]"))
+		to_chat(user, span_notice("Le dices al pájaro que vaya a [spell.destinations[dest]]"))
 		var/strip_info = STRIP_HTML_FULL(replacetext(P.info, "<br>", "\n"), MAX_MESSAGE_LEN)
 		log_game("LETTER SENT: from [key_name(user)] to [spell.destinations[dest]]:\n[strip_info]", LOG_GAME)
 		strip_info = replacetext(strip_info, "\n", "<br>")

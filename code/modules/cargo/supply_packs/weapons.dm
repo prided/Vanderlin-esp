@@ -17,7 +17,7 @@
 	group = "Shields"
 
 /datum/supply_pack/weapons/shield/wood
-	name = "Wooden Shield"
+	name = "Escudo de madera"
 	cost = 20
 	contains = /obj/item/weapon/shield/wood
 
@@ -27,12 +27,12 @@
 	contains = /obj/item/weapon/shield/tower
 
 /datum/supply_pack/weapons/shield/dwarvenshield
-	name = "Dwarven Kite Shield"
+	name = "Escudo de cometa enano"
 	cost = 30
 	contains = /obj/item/weapon/shield/dwarvenkite
 
 /datum/supply_pack/weapons/shield/iron
-	name = "Iron Buckler"
+	name = "Escudo de hierro"
 	cost = 25
 	contains = /obj/item/weapon/shield/tower/buckleriron
 
@@ -62,22 +62,22 @@
 	contains = /obj/item/weapon/sword/sabre/dadao/iron
 
 /datum/supply_pack/weapons/iron/ikhopesh
-	name = "Iron Khopesh"
+	name = "Khopesh de hierro"
 	cost = 25
 	contains = /obj/item/weapon/sword/scimitar/lakkarikhopesh/iron
 
 /datum/supply_pack/weapons/iron/ikaskara
-	name = "Iron Kaskara"
+	name = "Kaskara de hierro"
 	cost = 25
 	contains = /obj/item/weapon/sword/kaskara/iron
 
 /datum/supply_pack/weapons/iron/iida
-	name = "Iron Ida"
+	name = "Ida de hierro"
 	cost = 25
 	contains = /obj/item/weapon/sword/short/iron/ida
 
 /datum/supply_pack/weapons/iron/iaruval
-	name = "Iron Aruval"
+	name = "Aruval de hierro"
 	cost = 70
 	contains = /obj/item/weapon/sword/long/aruval/iron
 
@@ -87,12 +87,12 @@
 	contains = /obj/item/weapon/knife/dagger/njora
 
 /datum/supply_pack/weapons/iron/irungu
-	name = "Iron Rungu"
+	name = "rungu de hierro"
 	cost = 25
 	contains = /obj/item/weapon/mace/rungu
 
 /datum/supply_pack/weapons/iron/insapo
-	name = "Iron Kasuyu"
+	name = "Kasuyu de hierro"
 	cost = 25
 	contains = /obj/item/weapon/axe/iron/nsapo
 
@@ -102,12 +102,12 @@
 	contains = /obj/item/weapon/knife/dagger/jile
 
 /datum/supply_pack/weapons/iron/ikukri
-	name = "Iron Kukri"
+	name = "Kukri de hierro"
 	cost = 15
 	contains = /obj/item/weapon/knife/hunting/kukri/iron
 
 /datum/supply_pack/weapons/iron/ishishpar
-	name = "Iron Shishpar"
+	name = "Shishpar de hierro"
 	cost = 45
 	contains = /obj/item/weapon/mace/shishpar
 
@@ -117,7 +117,7 @@
 	contains = /obj/item/weapon/polearm/spear/assegai
 
 /datum/supply_pack/weapons/iron/iwaraxe
-	name = "Iron War Axe"
+	name = "Hacha de guerra de hierro"
 	cost = 50
 	contains = /obj/item/weapon/polearm/halberd/bardiche/warcutter
 
@@ -127,7 +127,7 @@
 	contains = /obj/item/weapon/knife/dagger/navaja
 
 /datum/supply_pack/weapons/iron/bayonet
-	name = "Musket Bayonet"
+	name = "Bayoneta de mosquete"
 	cost = 23
 	contains = /obj/item/weapon/knife/dagger/bayonet
 
@@ -152,7 +152,7 @@
 	contains = /obj/item/weapon/sword/scimitar/sengese
 
 /datum/supply_pack/weapons/steel/irumi
-	name = "Steel Irumi"
+	name = "Irumi de acero"
 	cost = 60
 	contains = /obj/item/weapon/whip/urumi
 
@@ -162,22 +162,22 @@
 	contains = /obj/item/weapon/sword/sabre/dadao
 
 /datum/supply_pack/weapons/steel/khopesh
-	name = "Steel Khopesh"
+	name = "Khopesh de acero"
 	cost = 50
 	contains = /obj/item/weapon/sword/scimitar/lakkarikhopesh
 
 /datum/supply_pack/weapons/steel/kaskara
-	name = "Steel Kaskara"
+	name = "Kaskara de acero"
 	cost = 50
 	contains = /obj/item/weapon/sword/kaskara
 
 /datum/supply_pack/weapons/steel/ida
-	name = "Steel Ida"
+	name = "Ida de acero"
 	cost = 50
 	contains = /obj/item/weapon/sword/short/ida
 
 /datum/supply_pack/weapons/steel/aruval
-	name = "Steel Aruval"
+	name = "Aruval de acero"
 	cost = 125
 	contains = /obj/item/weapon/sword/long/aruval
 
@@ -187,27 +187,27 @@
 	contains = /obj/item/weapon/knife/dagger/steel/njora
 
 /datum/supply_pack/weapons/steel/rungu
-	name = "Steel Rungu"
+	name = "Rungu de acero"
 	cost = 50
 	contains = /obj/item/weapon/mace/steel/rungu
 
 /datum/supply_pack/weapons/steel/jile
-	name = "Steel Jile"
+	name = "Jile de acero"
 	cost = 25
 	contains = /obj/item/weapon/knife/dagger/steel/jile
 
 /datum/supply_pack/weapons/steel/kukri
-	name = "Steel Kukri"
+	name = "Kukri de acero"
 	cost = 45
 	contains = /obj/item/weapon/knife/hunting/kukri
 
 /datum/supply_pack/weapons/steel/shishpar
-	name = "Steel Shishpar"
+	name = "Shishpar de acero"
 	cost = 90
 	contains = /obj/item/weapon/mace/steel/shishpar
 
 /datum/supply_pack/weapons/steel/assegai
-	name = "Steel Assegai"
+	name = "Azagaya de acero"
 	cost = 60
 	contains = /obj/item/weapon/polearm/spear/assegai/steel
 
@@ -222,7 +222,7 @@
 	contains = /obj/item/weapon/pick/paxe
 
 /datum/supply_pack/weapons/steel/sbattleaxe
-	name = "Steel Battle Axe"
+	name = "Hacha de batalla de acero"
 	cost = 60
 	contains = /obj/item/weapon/axe/battle
 
@@ -295,7 +295,7 @@
 	contains = /obj/item/gun/ballistic/powder/musket
 
 /datum/supply_pack/weapons/ranged/cannon
-	name = "Cannon"
+	name = "Cañón"
 	cost = 800
 	contains = /obj/structure/cannon
 
@@ -310,7 +310,7 @@
 	contains = /obj/item/gun/ballistic/bow/cross/slur
 
 /datum/supply_pack/weapons/ranged/bow
-	name = "Hunting Bow"
+	name = "Arco de caza"
 	cost = 20
 	contains = /obj/item/gun/ballistic/bow
 
@@ -320,7 +320,7 @@
 	contains = /obj/item/gun/ballistic/bow/long
 
 /datum/supply_pack/weapons/ranged/shortbow
-	name = "Imported Short Bow"
+	name = "Arco corto importado"
 	cost = 40
 	contains = /obj/item/gun/ballistic/bow/short
 
@@ -350,7 +350,7 @@
 	contains = /obj/item/weapon/whip
 
 /datum/supply_pack/weapons/ranged/bomb
-	name = "Bottle Bomb"
+	name = "bomba de botella"
 	cost = 35
 	contains = /obj/item/explosive/bottle/homemade
 
@@ -385,12 +385,12 @@
 	contains = /obj/item/ammo_holder/quiver/bolts
 
 /datum/supply_pack/weapons/ammo/bullets
-	name = "Pouch of Lead Bullets"
+	name = "Bolsa de balas de plomo"
 	cost = 100
 	contains = /obj/item/storage/belt/pouch/bullets
 
 /datum/supply_pack/weapons/ammo/aflask
-	name = "Gunpowder Flask"
+	name = "Frasco de pólvora"
 	cost = 150
 	contains = /obj/item/reagent_containers/glass/bottle/aflask
 
@@ -410,7 +410,7 @@
 	contains = /obj/item/reagent_containers/powder/blastpowder
 
 /datum/supply_pack/weapons/ammo/arrows
-	name = "Arrow x10"
+	name = "Flecha x10"
 	cost = 30
 	contains = list(/obj/item/ammo_casing/caseless/arrow, /obj/item/ammo_casing/caseless/arrow,
 					/obj/item/ammo_casing/caseless/arrow, /obj/item/ammo_casing/caseless/arrow,

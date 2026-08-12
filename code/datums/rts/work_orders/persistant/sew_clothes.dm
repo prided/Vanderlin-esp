@@ -1,5 +1,5 @@
 /datum/persistant_workorder/sew_clothes
-	name = "Sew Clothes"
+	name = "coser ropa"
 	ui_icon = 'icons/roguetown/items/natural.dmi'
 	ui_icon_state = "cloth"
 	work_type = /datum/work_order/sew_clothes

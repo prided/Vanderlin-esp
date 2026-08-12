@@ -168,7 +168,7 @@
 
 			stuck_ticks = 0
 			soil.weeds = max(0, soil.weeds - 25)
-			pawn.visible_message(span_notice("[pawn] carefully removes weeds from [soil]."))
+			pawn.visible_message(span_notice("[pawn] elimina cuidadosamente las malas hierbas de [soil]."))
 			playsound(soil, pick('sound/foley/touch1.ogg','sound/foley/touch2.ogg','sound/foley/touch3.ogg'), 100, TRUE)
 			current_task = "scanning"
 			return ACTION_STATE_CONTINUE
@@ -239,7 +239,7 @@
 
 			stuck_ticks = 0
 			carried.reagents?.add_reagent(/datum/reagent/water, 150)
-			pawn.visible_message(span_notice("[pawn] fills [carried] with water from [well]."))
+			pawn.visible_message(span_notice("[pawn] llena [carried] con agua de [well]."))
 			controller.clear_blackboard_key(BB_FARMING_TARGET_WELL)
 			// Return to scanning, it will immediately find the carried water and water a plant
 			current_task = "scanning"
@@ -297,7 +297,7 @@
 				SEND_SIGNAL(seed_source, COMSIG_TRY_STORAGE_TAKE, found_seed, get_turf(pawn), TRUE)
 				if(found_seed.forceMove(pawn))
 					controller.set_blackboard_key(BB_SIMPLE_CARRY_ITEM, found_seed)
-					pawn.visible_message(span_notice("[pawn] takes [found_seed] for planting."))
+					pawn.visible_message(span_notice("[pawn] toma [found_seed] para plantar."))
 
 			current_task = "scanning"
 			return ACTION_STATE_CONTINUE

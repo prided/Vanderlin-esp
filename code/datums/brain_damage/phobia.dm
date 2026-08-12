@@ -1,9 +1,9 @@
 /datum/brain_trauma/mild/phobia
-	name = "Phobia"
+	name = "Fobia"
 	desc = ""
 	scan_desc = ""
 	gain_text = span_warning("I start finding default values very unnerving...")
-	lose_text = span_notice("I no longer feel afraid of default values.")
+	lose_text = span_notice("Ya no tengo miedo de los valores predeterminados.")
 	var/phobia_type
 	/// Cooldown for proximity checks so we don't spam a range 7 view every two seconds.
 	COOLDOWN_DECLARE(check_cooldown)
@@ -27,7 +27,7 @@
 		phobia_type = pick(GLOB.phobia_types)
 
 	gain_text = span_warning("I start finding [phobia_type] very unnerving...")
-	lose_text = span_notice("I no longer feel afraid of [phobia_type].")
+	lose_text = span_notice("Ya no tengo miedo de [phobia_type].")
 
 	trigger_regex = GLOB.phobia_regexes[phobia_type]
 	trigger_mobs = GLOB.phobia_mobs[phobia_type]
@@ -128,7 +128,7 @@
 	if(trigger_word)
 		if (owner.has_status_effect(/datum/status_effect/minor_phobia_reaction))
 			return
-		to_chat(owner, span_userdanger("Hearing [span_phobia(trigger_word)] [message]!"))
+		to_chat(owner, span_userdanger("Escuchando [span_phobia(trigger_word)] [message]!"))
 		owner.apply_status_effect(/datum/status_effect/minor_phobia_reaction)
 		return
 
@@ -139,7 +139,7 @@
 	if(reason)
 		to_chat(owner, span_userdanger("Seeing [span_phobia(reason.name)] [message]!"))
 	else
-		to_chat(owner, span_userdanger("Something [message]!"))
+		to_chat(owner, span_userdanger("¡Algo [message]!"))
 
 	if(reason)
 		owner.face_atom(reason)

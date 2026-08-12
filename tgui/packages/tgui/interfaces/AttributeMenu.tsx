@@ -51,54 +51,54 @@ interface TutorialStep {
 
 const TUTORIAL_STEPS: TutorialStep[] = [
   {
-    title: 'Welcome to the Character Ledger',
-    body: "This ledger lays out your character's seals and skill register. Let me walk you through what each page holds.",
+    title: 'Bienvenido al libro de atributos',
+    body: "Este libro de contabilidad establece los sellos y el registro de habilidades de tu personaje. Déjame explicarte lo que contiene cada página.",
     popupAnchor: 'center',
   },
   {
-    title: 'Character Seals',
-    body: 'The left page bears the Core Attribute seals arranged around your portrait: Strength, Speed, Endurance, Intelligence, Perception, Constitution, and Fortune. These foundations govern almost everything you do.',
+    title: 'Sellos de personajes',
+    body: 'La página de la izquierda muestra los sellos de los atributos principales dispuestos alrededor de su retrato: Fuerza, Velocidad, Resistencia, Inteligencia, Percepción, Constitución y Fortuna. Estos fundamentos gobiernan casi todo lo que haces.',
     target: '.AttributeMenu__panel--seals',
     popupAnchor: 'right',
   },
   {
-    title: 'Reading a seal',
-    body: 'Each seal shows its current value. Green means a blessing has lifted it, red means a curse has lowered it, and pale ink means it is unmodified.',
+    title: 'Leyendo un sello',
+    body: 'Cada sello muestra su valor actual. El verde significa que una bendición lo ha elevado, el rojo significa que una maldición lo ha reducido y la tinta pálida significa que no está modificado.',
     target: '.AttributeMenu__sealNodeValue',
     popupAnchor: 'right',
   },
   {
-    title: 'Skill Register',
-    body: 'The middle page is the Skills Book — your skills, grouped by category. Each entry shows its current value, colored the same way as the seals.',
+    title: 'Registro de habilidades',
+    body: 'La página del medio es el Libro de habilidades: tus habilidades, agrupadas por categoría. Cada entrada muestra su valor actual, coloreado de la misma manera que los sellos.',
     target: '.AttributeMenu__panel--register',
     popupAnchor: 'left',
   },
   {
-    title: 'All Skills toggle',
-    body: 'By default only trained skills are shown. Tick All Skills to also reveal untrained ones, so you can see what is left to learn.',
+    title: 'Selector de todas las habilidades',
+    body: 'De forma predeterminada, solo se muestran las habilidades entrenadas. Marque Todas las habilidades para revelar también las que no están entrenadas, para que pueda ver lo que queda por aprender.',
     target: '.AttributeMenu__toggle',
     popupAnchor: 'bottom',
   },
   {
-    title: 'Search the Register',
-    body: 'Type a skill name here to filter the register in real time. Searching automatically reveals untrained skills so nothing stays hidden.',
+    title: 'Buscar en el Registro',
+    body: 'Escriba aquí el nombre de una habilidad para filtrar el registro en tiempo real. La búsqueda revela automáticamente habilidades no entrenadas para que nada quede oculto.',
     target: '.AttributeMenu__search',
     popupAnchor: 'bottom',
   },
   {
-    title: 'Marginal Notes',
-    body: 'Click any seal or skill entry and the scribe will note the details here: description, difficulty, governing attribute, defaults, and any active blessings or curses. Press the x to close the note.',
+    title: 'Notas marginales',
+    body: 'Haz clic en cualquier sello o habilidad y el escriba anotará aquí los detalles: descripción, dificultad, atributo rector, valores predeterminados y bendiciones o maldiciones activas. Presiona la x para cerrar la nota.',
     target: '.AttributeMenu__panel--notes',
     popupAnchor: 'left',
   },
   {
-    title: 'Skill Tiers',
-    body: 'Numbers replace the old tier names: Novice was 10–19, Apprentice 20–29, Journeyman 30–39, Expert 40–49, Master 50–59, Legendary 60 and above.',
+    title: 'Niveles de habilidad',
+    body: 'Los números reemplazan los nombres de niveles antiguos: Novato tenía 10-19, Aprendiz 20-29, Oficial 30-39, Experto 40-49, Maestro 50-59, Legendario 60 y superior.',
     popupAnchor: 'center',
   },
   {
-    title: 'That is the ledger.',
-    body: 'Open the seals to inspect your stats, browse the register for your skills, and read the marginal notes whenever you want details. Press the ? at any time to revisit this walkthrough.',
+    title: 'Eso es todo sobre el libro.',
+    body: 'Abre los sellos para inspeccionar sus estadísticas, explore el registro en busca de sus habilidades y lea las notas marginales cuando desee detalles. presiona el ? en cualquier momento para volver a visitar este tutorial.',
     popupAnchor: 'center',
   },
 ];
@@ -232,7 +232,7 @@ const AttributeTutorial = (props: {
         )}
         <Box className="AttributeMenu__tutorialHeader">
           <Box className="AttributeMenu__tutorialEyebrow">
-            Step {safe + 1} of {TUTORIAL_STEPS.length}
+            Paso {safe + 1} of {TUTORIAL_STEPS.length}
           </Box>
           <Box className="AttributeMenu__tutorialTitle">{current.title}</Box>
           <Button
@@ -263,7 +263,7 @@ const AttributeTutorial = (props: {
               className="AttributeMenu__tutorialNav"
               onClick={() => setStep(safe - 1)}
             >
-              ← Back
+              ← Volver
             </Button>
           )}
           <Button
@@ -529,8 +529,8 @@ const CoreAttributes = memo((props: {
       className="AttributeMenu__panel AttributeMenu__panel--seals"
       title={
         <>
-          <Box as="span" className="AttributeMenu__eyebrow">Character Seals</Box>
-          <Box as="span" className="AttributeMenu__title">Core Attributes</Box>
+          <Box as="span" className="AttributeMenu__eyebrow">Sellos de personajes</Box>
+          <Box as="span" className="AttributeMenu__title">Atributos principales</Box>
         </>
       }
       buttons={
@@ -538,7 +538,7 @@ const CoreAttributes = memo((props: {
           color="transparent"
           className="AttributeMenu__helpButton"
           onClick={onHelpClick}
-          tooltip="How to read this ledger"
+          tooltip="Cómo leer este libro mayor"
         >
           ?
         </Button>
@@ -547,7 +547,7 @@ const CoreAttributes = memo((props: {
       <Box className="AttributeMenu__divider" />
       <Box className="AttributeMenu__constellation">
         {!stats.length && (
-          <Box className="AttributeMenu__empty">No attributes recorded.</Box>
+          <Box className="AttributeMenu__empty">No se registraron atributos.</Box>
         )}
         {!!stats.length && (
           <Box className="AttributeMenu__ringStage">
@@ -697,8 +697,8 @@ const SkillRegister = memo((props: {
       className="AttributeMenu__panel AttributeMenu__panel--register"
       title={
         <>
-          <Box as="span" className="AttributeMenu__eyebrow">Skill Register</Box>
-          <Box as="span" className="AttributeMenu__title">Skills Book</Box>
+          <Box as="span" className="AttributeMenu__eyebrow">Registro de habilidades</Box>
+          <Box as="span" className="AttributeMenu__title">Libro de habilidades</Box>
         </>
       }
       buttons={
@@ -707,14 +707,14 @@ const SkillRegister = memo((props: {
           onClick={toggleAllSkills}
           className="AttributeMenu__toggle"
         >
-          All Skills
+          Todas las habilidades
         </Button.Checkbox>
       }
     >
       <Box className="AttributeMenu__search">
         <Input
           fluid
-          placeholder="Search the register..."
+          placeholder="Busca en el registro..."
           value={search}
           onChange={(value: string) => handleSearch(value)}
         />
@@ -724,7 +724,7 @@ const SkillRegister = memo((props: {
 
       <Box className="AttributeMenu__scroll AttributeMenu__skillList">
         {!visibleCategories.length && (
-          <Box className="AttributeMenu__empty">No matching entries.</Box>
+          <Box className="AttributeMenu__empty">No hay entradas coincidentes.</Box>
         )}
         {visibleCategories.map((category) => (
           <section className="AttributeMenu__category" key={category.name}>
@@ -767,16 +767,16 @@ const InspectionPanel = memo((props: {
         className="AttributeMenu__panel AttributeMenu__panel--notes"
         title={
           <>
-            <Box as="span" className="AttributeMenu__eyebrow">Marginal Notes</Box>
-            <Box as="span" className="AttributeMenu__title">Inspection</Box>
+            <Box as="span" className="AttributeMenu__eyebrow">Notas marginales</Box>
+            <Box as="span" className="AttributeMenu__title">Inspección</Box>
           </>
         }
       >
         <Box className="AttributeMenu__divider" />
         <Box className="AttributeMenu__placeholder">
-          <Box className="AttributeMenu__placeholderMark">Uninspected</Box>
-          <p>Select a seal or skill entry to read the scribe's notes.</p>
-          <p>Values, defaults, modifiers, and governing attributes will appear here.</p>
+          <Box className="AttributeMenu__placeholderMark">no inspeccionado</Box>
+          <p>Selecciona un sello o una habilidad para leer las notas del escriba.</p>
+          <p>Aquí aparecerán los valores, valores predeterminados, modificadores y atributos rectores.</p>
         </Box>
       </Section>
     );
@@ -788,7 +788,7 @@ const InspectionPanel = memo((props: {
       className="AttributeMenu__panel AttributeMenu__panel--notes"
       title={
         <>
-          <Box as="span" className="AttributeMenu__eyebrow">Marginal Notes</Box>
+          <Box as="span" className="AttributeMenu__eyebrow">Notas marginales</Box>
           <Box as="span" className="AttributeMenu__title">
             {attribute.name}
             {attribute.shorthand && (
@@ -828,19 +828,19 @@ const InspectionPanel = memo((props: {
           </Stack.Item>
         </Stack>
          <Box className="AttributeMenu__valueCard">
-          <Box as="span">Total Value</Box>
+          <Box as="span">Valor Total</Box>
           <strong className={valueTone(attribute.net_modifier)}>
             {displayValue(total)}
           </strong>
         </Box>
 
         <Box className="AttributeMenu__detailGrid">
-          <DetailLine label="Governing" value={attribute.governing_attribute || 'NA'} />
+          <DetailLine label="Gobernante" value={attribute.governing_attribute || 'NA'} />
         </Box>
 
         {!!attribute.defaults?.length && (
           <section className="AttributeMenu__noteBlock">
-            <h3>Defaults To (highest applies, not combined)</h3>
+            <h3>Valor predeterminado (se aplica el más alto, no combinado)</h3>
             {attribute.defaults.map((def, index) => {
               const mod = def.default_value ?? 0;
               const tone = mod >= 0 ? 'is-buffed' : 'is-debuffed';
@@ -848,7 +848,7 @@ const InspectionPanel = memo((props: {
               return (
                 <>
                   {index > 0 && (
-                    <Box as="span" className="AttributeMenu__defaultOr">or</Box>
+                    <Box as="span" className="AttributeMenu__defaultOr">o</Box>
                   )}
                   <Tooltip
                     key={def.name}
@@ -872,7 +872,7 @@ const InspectionPanel = memo((props: {
         )}
 
         <Box className="AttributeMenu__valueCard">
-          <Box as="span">Base Value</Box>
+          <Box as="span">Valor base</Box>
           <strong>
             {displayValue(attribute.base)}
           </strong>
@@ -880,7 +880,7 @@ const InspectionPanel = memo((props: {
 
         {!!attribute.modifiers?.length && (
           <section className="AttributeMenu__noteBlock">
-            <h3>Blessings And Curses</h3>
+            <h3>Bendiciones y maldiciones</h3>
             {attribute.modifiers.map((mod) => (
               <Box className="AttributeMenu__modifierRow" key={mod.id}>
                 <Box as="span">{mod.id || 'Unnamed modifier'}</Box>
@@ -982,19 +982,19 @@ export const AttributeMenu = () => {
         icon="compress"
         selected={sizeMode === 'small'}
         onClick={() => selectSizeMode('small')}
-        tooltip="Compact window"
+        tooltip="ventana compacta"
       />
       <Button
         icon="table-columns"
         selected={sizeMode === 'half'}
         onClick={() => selectSizeMode('half')}
-        tooltip="Left half of the screen"
+        tooltip="Mitad izquierda de la pantalla"
       />
       <Button
         icon="expand"
         selected={sizeMode === 'full'}
         onClick={() => selectSizeMode('full')}
-        tooltip="Fullscreen"
+        tooltip="Pantalla completa"
       />
     </>
   );

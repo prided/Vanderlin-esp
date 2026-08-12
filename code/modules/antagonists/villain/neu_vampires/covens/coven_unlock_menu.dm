@@ -1,6 +1,6 @@
 /datum/coven_research_node
-	var/name = "Research Node"
-	var/desc = "A research node description"
+	var/name = "Nodo de investigación"
+	var/desc = "Una descripción del nodo de investigación."
 	var/list/prerequisites = list()
 	var/research_cost = 10
 	var/required_level = 1
@@ -245,7 +245,7 @@
 		var/info_text = ""
 
 		if(node_id in parent_coven.unlocked_research)
-			info_text = "<span class='boldnotice'>[node.name] is already unlocked!</span>"
+			info_text = "¡<span class='boldnotice'>[node.name] ya está desbloqueado!</span>"
 		else if(parent_coven.level >= node.required_level)
 			// Check prerequisites
 			var/prereqs_met = TRUE
@@ -260,7 +260,7 @@
 			if(prereqs_met)
 				// Auto-unlock if available
 				if(parent_coven.unlock_power_from_tree(node_id))
-					info_text = "<span class='boldnotice'>[node.name] has been unlocked!</span>"
+					info_text = "¡<span class='boldnotice'>[node.name] ha sido desbloqueado!</span>"
 				else
 					info_text = "<span class='warning'>Unable to unlock [node.name].</span>"
 			else

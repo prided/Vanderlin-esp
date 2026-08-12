@@ -1,6 +1,6 @@
 /datum/mob_affix/poisonous
 	name = "Poisonous"
-	description = "Attacks inject deadly toxins"
+	description = "Los ataques inyectan toxinas mortales"
 	color = "#44FF44"
 
 /datum/mob_affix/poisonous/apply_affix(mob/living/simple_animal/hostile/retaliate/target)

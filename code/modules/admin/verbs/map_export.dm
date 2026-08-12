@@ -1,17 +1,17 @@
 /client/proc/map_export()
-	set category = "Debug.Mapping Custom"
+	set category = "Depuración.Mapeo personalizado"
 	set name = "Map Export"
 	set desc = "Select a part of the map by coordinates and download it."
 
 	var/start_z = input(usr, "Start Z?", "Map Exporter") as null|num
 	start_z = clamp(start_z, 1, world.maxz)
-	var/end_z = input(usr, "End Z?", "Map Exporter") as null|num
+	var/end_z = input(usr, "¿Fin Z?", "Map Exporter") as null|num
 	end_z = clamp(end_z, 1, world.maxz)
 	var/start_x = input(usr, "Start X?", "Map Exporter") as null|num
 	start_x = clamp(start_x, 1, world.maxx)
 	var/start_y = input(usr, "Start Y?", "Map Exporter") as null|num
 	start_y = clamp(start_y, 1, world.maxy)
-	var/end_x = input(usr, "End X?", "Map Exporter") as null|num
+	var/end_x = input(usr, "¿Fin X?", "Map Exporter") as null|num
 	end_x = clamp(end_x, 1, world.maxx)
 	var/end_y = input(usr, "End Y?", "Map Exporter") as null|num
 	end_y = clamp(end_y, 1, world.maxy)

@@ -246,7 +246,7 @@
 	///list of job packs we select from during job setup
 	var/list/job_packs
 	var/pack_title = "JOB PACKS"
-	var/pack_message = "Choose a job pack"
+	var/pack_message = "Elija un paquete de trabajo"
 
 	var/attribute_sheet
 	var/attribute_sheet_old

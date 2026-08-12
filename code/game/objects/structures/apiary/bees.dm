@@ -1,6 +1,6 @@
 /obj/item/queen_bee
-	name = "queen bee"
-	desc = "The heart of a bee colony."
+	name = "abeja reina"
+	desc = "El corazón de una colonia de abejas."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "queen_bee"
 
@@ -26,11 +26,11 @@
 		queen_health -= 0.05
 
 	if(queen_health <= 0)
-		visible_message(span_warning("[src] dies of old age!"))
+		visible_message(span_warning("¡[src] muere de viejo!"))
 		qdel(src)
 
 /obj/effect/bee_swarm
-	name = "bee swarm"
+	name = "enjambre de abejas"
 	desc = "A buzzing swarm of bees looking for a place to build a new hive."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "bee"
@@ -86,12 +86,12 @@
 	A.insert_queen(queen_bee)
 	queen_bee = null
 	established = TRUE
-	visible_message(span_notice("The swarm has established a new hive!"))
+	visible_message(span_notice("¡El enjambre ha establecido una nueva colmena!"))
 	qdel(src)
 
 /obj/effect/bee_swarm/proc/swarm_timeout()
 	if(!established)
-		visible_message(span_notice("The bee swarm disperses without finding a suitable home."))
+		visible_message(span_notice("El enjambre de abejas se dispersa sin encontrar un hogar adecuado."))
 		qdel(src)
 
 /obj/effect/bee_swarm/update_overlays()
@@ -108,7 +108,7 @@
 		. += bee
 
 /obj/effect/bees
-	name = "bees"
+	name = "abejas"
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "bee"
 	pass_flags = PASSTABLE | PASSMOB

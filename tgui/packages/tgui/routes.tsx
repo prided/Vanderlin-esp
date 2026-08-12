@@ -29,15 +29,15 @@ function RoutingErrorWindow(props: RoutingErrorProps) {
       <Window.Content scrollable>
         {type === 'notFound' && (
           <div>
-            Interface <b>{name}</b> was not found.
+            Interfaz <b>{name}</b> no fue encontrado.
           </div>
         )}
         {type === 'missingExport' && (
           <div>
-            Interface <b>{name}</b> is missing an export.
+            Interfaz <b>{name}</b> le falta una exportación.
           </div>
         )}
-        {type === 'unknown' && <div>An unknown error has occurred.</div>}
+        {type === 'unknown' && <div>Se ha producido un error desconocido.</div>}
       </Window.Content>
     </Window>
   );
@@ -55,7 +55,7 @@ function SuspendedWindow() {
 // Displays a loading screen with a spinning icon
 function RefreshingWindow() {
   return (
-    <Window title="Loading">
+    <Window title="Cargando">
       <Window.Content>
         <LoadingScreen />
       </Window.Content>

@@ -65,7 +65,7 @@
 		"Longbow" = list(/obj/item/gun/ballistic/bow/long, /obj/item/ammo_holder/quiver/arrows, /obj/item/clothing/shirt/undershirt), \
 		"Crossbow" = list(/obj/item/gun/ballistic/bow/cross, /obj/item/clothing/head/helmet/kettle/slit/iron, /obj/item/ammo_holder/quiver/bolts, /obj/item/weapon/sword/short/iron, /obj/item/clothing/shirt/undershirt), \
 	)
-	var/choice = spawned.select_equippable(player_client, selectable, message = "Choose your weapon", title = "May your aim be true.")
+	var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu arma", title = "May your aim be true.")
 	switch(choice)
 		if("Bow")
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/bows, 20)

@@ -462,7 +462,7 @@
 		if(ispath(thing, STAT))
 			var/datum/attribute/attribute = GLOB.all_stats[thing]
 			stats += attribute
-	output += span_notice("<EM>Stats</EM>")
+	output += span_notice("<EM>Estadísticas</EM>")
 	for(var/datum/attribute/stat/stat as anything in stats)
 		var/raw_attribute = nulltozero(raw_attribute_list[stat.type])
 		var/total_attribute = nulltozero(attribute_list[stat.type])
@@ -569,7 +569,7 @@
 	else
 		var/display_level = return_raw_effective_skill(skill_type)
 		var/tier_name = display_level > 0 ? skill.description_from_level(display_level) : "nothing"
-		to_chat(parent, span_warning("My [skill_name] has weakened to [tier_name]!"))
+		to_chat(parent, span_warning("¡Mi [skill_name] se ha debilitado a [tier_name]!"))
 
 /// Breaks a skill's final value into base + named contributions
 /datum/attribute_holder/proc/get_skill_value_breakdown(skill_type)

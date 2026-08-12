@@ -63,7 +63,7 @@
 	if(!istype(tool, /obj/item/weapon/knife/dagger/bayonet))
 		return ..()
 
-	balloon_alert(user, "attached!")
+	balloon_alert(user, "¡adjunto!")
 	user.transferItemToLoc(tool, src)
 	bayonet = tool
 	possible_item_intents = list(/datum/intent/shoot/musket, /datum/intent/shoot/musket/arc, SPEAR_THRUST)
@@ -172,7 +172,7 @@
 				)
 
 /obj/item/weapon/knife/dagger/bayonet
-	name = "bayonet"
+	name = "bayoneta"
 	force = DAMAGE_KNIFE+2
 	wdefense = GOOD_PARRY
 	wlength = WLENGTH_LONG

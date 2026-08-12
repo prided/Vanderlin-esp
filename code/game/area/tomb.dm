@@ -3,7 +3,7 @@
 // The only real difference is audio
 
 /area/under/tomb
-	name = "Tomb of Matthios"
+	name = "Tumba de Matthios"
 	icon_state = "basement"
 	first_time_text = "THE TOMB OF MATTHIOS"
 	custom_area_sound = 'sound/misc/stings/TombSting.ogg'

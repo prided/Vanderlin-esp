@@ -1,5 +1,5 @@
 /datum/migrant_role/bodyguard
-	name = "Bodyguard"
+	name = "Guardaespaldas"
 	greet_text = "Many adventurers decide to strike it rich by raiding tombs, others band together to form mercenary companies. \
 	You, however, have had the misfortune of slipping through many cracks. Instead of tainting your eternal soul by means of \
 	murder, you've elected to taint it in self-defense. Find an employer, and make a use for yourself. Cut the middleman, \
@@ -23,7 +23,7 @@
 
 
 /datum/job/migrant/bodyguard
-	title = "Bodyguard"
+	title = "Guardaespaldas"
 	tutorial = "Many adventurers decide to strike it rich by raiding tombs, others band together to form mercenary companies. \
 	You, however, have had the misfortune of slipping through many cracks. Instead of tainting your eternal soul by means of \
 	murder, you've elected to taint it in self-defense. Find an employer, and make a use for yourself. Cut the middleman, \
@@ -55,7 +55,7 @@
 	head = /obj/item/clothing/neck/keffiyeh/colored/black
 
 /datum/migrant_wave/bodyguard
-	name = "Bodyguard"
+	name = "Guardaespaldas"
 	max_spawns = 2
 	shared_wave_type = /datum/migrant_wave/bodyguard
 	weight = 10

@@ -23,11 +23,11 @@ const ContributionTable = ({
   <table className="RecipeBook__table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px' }}>
     <thead>
       <tr>
-        <th style={{ textAlign: 'left', padding: '4px 6px' }}>Name</th>
-        <th style={{ textAlign: 'right', padding: '4px 6px' }}>Points</th>
-        <th style={{ textAlign: 'right', padding: '4px 6px' }}>Cost</th>
-        <th style={{ textAlign: 'right', padding: '4px 6px' }}>Cast Speed</th>
-        <th style={{ textAlign: 'right', padding: '4px 6px' }}>Magnitude</th>
+        <th style={{ textAlign: 'left', padding: '4px 6px' }}>Nombre</th>
+        <th style={{ textAlign: 'right', padding: '4px 6px' }}>Puntos</th>
+        <th style={{ textAlign: 'right', padding: '4px 6px' }}>Costo</th>
+        <th style={{ textAlign: 'right', padding: '4px 6px' }}>Velocidad de lanzamiento</th>
+        <th style={{ textAlign: 'right', padding: '4px 6px' }}>Magnitud</th>
       </tr>
     </thead>
     <tbody>
@@ -44,7 +44,7 @@ const ContributionTable = ({
             />
             {c.holder && (
               <span style={{ display: 'block', fontSize: '10px', fontWeight: 'normal', fontStyle: 'italic', opacity: 0.7 }}>
-                Item Stats
+                Estadísticas del objeto
               </span>
             )}
           </td>
@@ -62,7 +62,7 @@ export const DetailSpellcraft = ({ r, lookup, pickerMap, allRecipes, essenceInde
   <>
     {!!r.forms?.length && (
       <>
-        <SectionHead>Forms</SectionHead>
+        <SectionHead>Formularios</SectionHead>
         <ContributionTable
           rows={r.forms!}
           r={r}
@@ -77,7 +77,7 @@ export const DetailSpellcraft = ({ r, lookup, pickerMap, allRecipes, essenceInde
 
     {!!r.techniques?.length && (
       <>
-        <SectionHead>Techniques</SectionHead>
+        <SectionHead>Técnicas</SectionHead>
         <ContributionTable
           rows={r.techniques!}
           r={r}
@@ -91,7 +91,7 @@ export const DetailSpellcraft = ({ r, lookup, pickerMap, allRecipes, essenceInde
     )}
 
     {!r.forms?.length && !r.techniques?.length && (
-      <Box className="RecipeBook__desc">No spellcraft contributions.</Box>
+      <Box className="RecipeBook__desc">Sin contribuciones de hechizos.</Box>
     )}
   </>
 );

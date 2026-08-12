@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/burial_rites
-	name = "Burial Rites"
+	name = "Ritos de entierro"
 	desc = ""
 	button_icon_state = "consecrateburial"
 	sound = 'sound/magic/churn.ogg'
@@ -66,10 +66,10 @@
 				record_round_statistic(STATS_GRAVES_CONSECRATED)
 				grave.update_appearance(UPDATE_ICON)
 				if(grave.gravequality >= 0 && grave.gravequality <= 3)
-					owner.visible_message(span_rose("[owner] consecrates [cast_on]."), span_warning("My funeral rites have been performed on [cast_on], though they don't seem to be particularly effective..."))
+					owner.visible_message(span_rose("[owner] consagra [cast_on]."), span_warning("Mis ritos funerarios se han realizado en [cast_on], aunque no parecen ser particularmente efectivos..."))
 					owner.add_stress(/datum/stress_event/bad_grave) //Terrible grave.
 				if(grave.gravequality >= 4 && grave.gravequality <= 6)
-					owner.visible_message(span_rose("[owner] consecrates [cast_on]."), span_rose("My funeral rites have been performed on [cast_on]."))
+					owner.visible_message(span_rose("[owner] consagra [cast_on]."), span_rose("Mis ritos funerarios se han realizado en [cast_on]."))
 					grave.grow_lily()
 				if(grave.gravequality >= 7 && grave.gravequality <= 9)
 					owner.visible_message(span_rose("The air gets colder as [owner] consecrates [cast_on], woe betide any graverobber."), span_rose("Necra's gaze turns over to [cast_on] as I consecrate it. Any who would rob this grave will pay a dire toll."))
@@ -80,7 +80,7 @@
 			grave.adjust_grave_necra_devotion()
 			grave.stasis()
 			return
-		to_chat(owner, span_warning("I failed to perform the rites."))
+		to_chat(owner, span_warning("No pude realizar los ritos."))
 
 /// Proc that generates what we are going to set `inscription` in the `headstone` of the `grave` with.
 /datum/action/cooldown/spell/burial_rites/proc/generate_inscription(obj/structure/closet/dirthole/grave, obj/item/gravedecor/headstone/headstone)
@@ -119,7 +119,7 @@
 			if(corpse.last_mind?.current_ghost)
 				var/mob/ghost = corpse.last_mind.current_ghost
 				to_chat(owner, span_warning("Energy flows into \the [grave] from my hands, I must stand by \the [grave] or risk failing the rites..."))
-				my_final_words = tgui_input_text(ghost, "You feel your body being put to rest, any final words? Leave blank for a random one. (DO NOT USE THIS TO STATE WHO ATTACKED YOU)", "(OPTIONAL) Final Words", pick(premade_final_words), 50, timeout = 20 SECONDS)
+				my_final_words = tgui_input_text(ghost, "You feel your body being put to rest, any final words? Leave blank for a random one. (DO NOT USE THIS TO STATE WHO ATTACKED YOU)", "(OPCIONAL) Palabras finales", pick(premade_final_words), 50, timeout = 20 SECONDS)
 				if(my_final_words)
 					log_say("[ghost] put [my_final_words] for their final words.")
 					corpse.final_words = my_final_words // They won't be prompted again

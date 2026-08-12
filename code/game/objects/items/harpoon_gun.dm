@@ -131,7 +131,7 @@
 	if(href_list["pull_harpoon"])
 		if(leash_target != usr)
 			return
-		leash_target.visible_message(span_danger("[leash_target] starts to remove the harpoon embedded in them!"), span_danger("You start to remove the harpoon embedded in you!"))
+		leash_target.visible_message(span_danger("¡[leash_target] comienza a quitar el arpón incrustado en ellos!"), span_danger("You start to remove the harpoon embedded in you!"))
 		if(!do_after(leash_target, 5 SECONDS, src))
 			return
 		QDEL_NULL(leash)
@@ -179,7 +179,7 @@
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
 	if(leashed)
-		user.visible_message(span_danger("[user] starts to retract [src]."), span_danger("You start to retract [src]."))
+		user.visible_message(span_danger("[user] comienza a retraerse [src]."), span_danger("You start to retract [src]."))
 		if(!do_after(user, 2.5 SECONDS, src))
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 		QDEL_NULL(leash)

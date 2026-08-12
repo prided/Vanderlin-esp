@@ -3,7 +3,7 @@ GLOBAL_LIST_EMPTY(tram_signs)
 GLOBAL_LIST_EMPTY(tram_doors)
 
 /obj/machinery/tram_controls
-	name = "tram controls"
+	name = "controles de tranvía"
 	desc = "An interface for the tram that lets you tell the tram where to go and hopefully it makes it there. I'm here to describe the controls to you, not to inspire confidence."
 	icon_state = "tram_controls"
 	layer = SIGN_LAYER

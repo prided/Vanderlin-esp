@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/projectile/sickness
-	name = "Ray of Sickness"
-	desc = "Fire a toxic projectile at the living."
+	name = "Rayo de enfermedad"
+	desc = "Dispara un proyectil tóxico a los vivos."
 	button_icon_state = "raiseskele"
 	sound = 'sound/misc/portal_enter.ogg'
 
@@ -15,7 +15,7 @@
 	projectile_type = /obj/projectile/magic/sickness
 
 /obj/projectile/magic/sickness
-	name = "Bolt of Sickness"
+	name = "Rayo de enfermedad"
 	icon_state = "xray"
 	damage = 15
 	damage_type = TOX

@@ -63,7 +63,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		force = initial(force)
 		icon_state = "match_burnt"
 		item_state = "cigoff"
-		name = "burnt [initial(name)]"
+		name = "quemado [initial(name)]"
 		desc = ""
 		attack_verb = list("flicked")
 		STOP_PROCESSING(SSobj, src)
@@ -96,11 +96,11 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return ..()
 
 	if(cig.lit)
-		to_chat(user, span_warning("[cig] is already lit!"))
+		to_chat(user, span_warning("¡[cig] ya está encendido!"))
 	if(M == user)
 		cig.attackby(src, user)
 	else
-		cig.light(span_notice("[user] holds [src] out for [M], and lights [cig]."))
+		cig.light(span_notice("[user] sostiene [src] para [M] y enciende [cig]."))
 
 /obj/item/proc/help_light_cig(mob/living/M)
 	var/mask_item = M.get_item_by_slot(ITEM_SLOT_MOUTH)
@@ -311,11 +311,11 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	if(cig.lit)
-		to_chat(user, span_warning("[cig] is already lit!"))
+		to_chat(user, span_warning("¡[cig] ya está encendido!"))
 	if(M == user)
 		cig.attackby(src, user)
 	else
-		cig.light(span_notice("[user] holds [src] out for [M], and lights [cig]."))
+		cig.light(span_notice("[user] sostiene [src] para [M] y enciende [cig]."))
 
 /obj/item/clothing/face/cigarette/fire_act(added, maxstacks)
 	light()
@@ -449,7 +449,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		if(!lighting_text)
 			return ..()
 		if(!packeditem || smoketime < 0)
-			to_chat(user, span_warning("There is nothing to smoke!"))
+			to_chat(user, span_warning("¡No hay nada que fumar!"))
 		else
 			light(lighting_text)
 		return
@@ -490,7 +490,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/face/cigarette/pipe/attack_self(mob/user, list/modifiers)
 	if(lit)
-		user.visible_message(span_notice("[user] puts out [src]."), span_notice("I put out [src]."))
+		user.visible_message(span_notice("[user] apaga [src]."), span_notice("I put out [src]."))
 		extinguish()
 	else if (packeditem)
 		to_chat(user, span_notice("I empty [src] onto the floor."))
@@ -592,7 +592,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 					prot = TRUE
 
 				if(prot || prob(75))
-					user.visible_message(span_notice("After a few attempts, [user] manages to light [src]."), span_notice("After a few attempts, you manage to light [src]."))
+					user.visible_message(span_notice("Después de algunos intentos, [user] logra encender [src]."), span_notice("Después de algunos intentos, logras encender [src]."))
 				else
 					var/hitzone = user.held_index_to_dir(user.active_hand_index) == "r" ? BODY_ZONE_PRECISE_R_HAND : BODY_ZONE_PRECISE_L_HAND
 					user.apply_damage(5, BURN, hitzone)
@@ -621,7 +621,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return ..()
 
 	if(cig.lit)
-		to_chat(user, span_warning("[cig] is already lit!"))
+		to_chat(user, span_warning("¡[cig] ya está encendido!"))
 	if(M == user)
 		cig.attackby(src, user)
 	else if(fancy)
@@ -637,7 +637,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 
 /obj/item/lighter/greyscale
-	name = "cheap lighter"
+	name = "encendedor barato"
 	desc = ""
 	icon_state = "lighter"
 	fancy = FALSE

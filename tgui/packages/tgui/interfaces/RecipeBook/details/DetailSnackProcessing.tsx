@@ -7,9 +7,9 @@ export const DetailSnackProcessing = ({ r, lookup, pickerMap, allRecipes, essenc
   <>
     {r.mill_name && (
       <>
-        <SectionHead>Milling</SectionHead>
+        <SectionHead>Molienda</SectionHead>
         <Box className="RecipeBook__output-banner">
-          <span className="RecipeBook__output-label">Mills into</span>
+          <span className="RecipeBook__output-label">Se muele en</span>
           <Box className="RecipeBook__output-body">
             <Sprite icon={r.mill_icon} icon_state={r.mill_state} />
             <RecipeLink name={r.mill_name} path={r.mill_path} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
@@ -19,7 +19,7 @@ export const DetailSnackProcessing = ({ r, lookup, pickerMap, allRecipes, essenc
     )}
     {!!r.milled_from?.length && (
       <>
-        <SectionHead>Milled From</SectionHead>
+        <SectionHead>molido de</SectionHead>
         {r.milled_from!.map((item, i) => (
           <ItemRow key={i} item={item} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
         ))}
@@ -27,7 +27,7 @@ export const DetailSnackProcessing = ({ r, lookup, pickerMap, allRecipes, essenc
     )}
     {!!r.sliced_from?.length && (
       <>
-        <SectionHead>Sliced From</SectionHead>
+        <SectionHead>Se obtiene al cortar</SectionHead>
         {r.sliced_from!.map((item, i) => (
           <ItemRow key={i} item={item} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
         ))}
@@ -35,7 +35,7 @@ export const DetailSnackProcessing = ({ r, lookup, pickerMap, allRecipes, essenc
     )}
     {!!r.sources?.length && (
       <>
-        <SectionHead>Obtained From</SectionHead>
+        <SectionHead>Obtenido de</SectionHead>
         <Box className="RecipeBook__step-block">
           {r.sources!.map((s, i) => (
             <Box key={i} className="RecipeBook__step-row">
@@ -49,10 +49,10 @@ export const DetailSnackProcessing = ({ r, lookup, pickerMap, allRecipes, essenc
     )}
     {!!r.grind_results?.length && (
       <>
-        <SectionHead>Grinding</SectionHead>
+        <SectionHead>Molienda</SectionHead>
         {r.grind_results!.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} ligulae of{' '}
+            {rg.amount} lígulas de{' '}
             <RecipeLink name={rg.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
         ))}
@@ -60,10 +60,10 @@ export const DetailSnackProcessing = ({ r, lookup, pickerMap, allRecipes, essenc
     )}
     {!!r.juice_results?.length && (
       <>
-        <SectionHead>Juicing</SectionHead>
+        <SectionHead>Extracción de jugo</SectionHead>
         {r.juice_results!.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} ligulae of{' '}
+            {rg.amount} lígulas de{' '}
             <RecipeLink name={rg.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
         ))}
@@ -71,14 +71,14 @@ export const DetailSnackProcessing = ({ r, lookup, pickerMap, allRecipes, essenc
     )}
     {r.slice_name && (
       <>
-        <SectionHead>Slicing</SectionHead>
+        <SectionHead>Corte</SectionHead>
         <Box className="RecipeBook__output-banner">
-          <span className="RecipeBook__output-label">Slices into</span>
+          <span className="RecipeBook__output-label">Se corta en</span>
           <Box className="RecipeBook__output-body">
             <Sprite icon={r.slice_icon} icon_state={r.slice_state} />
             {r.slice_num !== undefined && r.slice_num > 1 ? `${r.slice_num}× ` : ''}
             <RecipeLink name={r.slice_name} path={r.slice_path} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
-            {r.slice_skill && <span className="RecipeBook__step-note"> — requires {r.slice_skill}</span>}
+            {r.slice_skill && <span className="RecipeBook__step-note"> - requiere {r.slice_skill}</span>}
           </Box>
         </Box>
       </>

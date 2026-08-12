@@ -83,7 +83,7 @@
 	icon_state = "sharp"
 
 /datum/sprite_accessory/snouts/round
-	name = "Round"
+	name = "Redondo"
 	icon_state = "round"
 
 /datum/sprite_accessory/snouts/sharplight
@@ -91,7 +91,7 @@
 	icon_state = "sharplight"
 
 /datum/sprite_accessory/snouts/roundlight
-	name = "Round + Light"
+	name = "Redondo + Luz"
 	icon_state = "roundlight"
 
 /datum/sprite_accessory/frills
@@ -110,7 +110,7 @@
 	icon_state = "short"
 
 /datum/sprite_accessory/frills/aquatic
-	name = "Aquatic"
+	name = "Acuático"
 	icon_state = "aqua"
 
 /datum/sprite_accessory/spines
@@ -136,11 +136,11 @@
 	icon_state = "short"
 
 /datum/sprite_accessory/spines/shortmeme
-	name = "Short + Membrane"
+	name = "Corto + Membrana"
 	icon_state = "shortmeme"
 
 /datum/sprite_accessory/spines_animated/shortmeme
-	name = "Short + Membrane"
+	name = "Corto + Membrana"
 	icon_state = "shortmeme"
 
 /datum/sprite_accessory/spines/long
@@ -152,19 +152,19 @@
 	icon_state = "long"
 
 /datum/sprite_accessory/spines/longmeme
-	name = "Long + Membrane"
+	name = "Largo + Membrana"
 	icon_state = "longmeme"
 
 /datum/sprite_accessory/spines_animated/longmeme
-	name = "Long + Membrane"
+	name = "Largo + Membrana"
 	icon_state = "longmeme"
 
 /datum/sprite_accessory/spines/aqautic
-	name = "Aquatic"
+	name = "Acuático"
 	icon_state = "aqua"
 
 /datum/sprite_accessory/spines_animated/aqautic
-	name = "Aquatic"
+	name = "Acuático"
 	icon_state = "aqua"
 
 
@@ -172,12 +172,12 @@
 	icon = null					//These datums exist for selecting legs on preference, and little else
 
 /datum/sprite_accessory/legs/none
-	name = "Normal Legs"
+	name = "Piernas normales"
 
 /datum/sprite_accessory/caps
 	icon = 'icons/mob/mutant_bodyparts.dmi'
 	color_key_defaults = list(KEY_HAIR_COLOR)
 
 /datum/sprite_accessory/caps/round
-	name = "Round"
+	name = "Redondo"
 	icon_state = "round"

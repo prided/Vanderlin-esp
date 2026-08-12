@@ -52,11 +52,11 @@
 	chosen_one.add_spell(/datum/action/cooldown/spell/extract_heart)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE GRAGGAR'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE GRAGGAR!"),
 		span_biginfo("Graggar hungers! [new_objective.explanation_text]"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/misc/gods/graggar_omen.ogg', 100)
 
-	to_chat(chosen_one, span_notice("Graggar grants you a power to extract hearts from the dead!"))
+	to_chat(chosen_one, span_notice("¡Graggar te otorga el poder de extraer corazones de los muertos!"))
 
 	chosen_one.mind.announce_personal_objectives()

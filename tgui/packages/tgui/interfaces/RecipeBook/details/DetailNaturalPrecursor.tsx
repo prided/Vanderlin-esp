@@ -7,7 +7,7 @@ export const DetailNaturalPrecursor = ({ r, lookup, pickerMap, allRecipes, essen
   <>
     {!!r.yields?.length && (
       <>
-        <SectionHead>Essence Yields</SectionHead>
+        <SectionHead>Rendimientos de esencia</SectionHead>
         {r.yields!.map((y, i) => (
           <Box key={i} className="RecipeBook__item-row">
             {y.amount}{' '}
@@ -18,7 +18,7 @@ export const DetailNaturalPrecursor = ({ r, lookup, pickerMap, allRecipes, essen
     )}
     {!!r.splits_from?.length && (
       <>
-        <SectionHead>Splits From</SectionHead>
+        <SectionHead>Se divide desde</SectionHead>
         {r.splits_from!.map((s, i) => (
           <Box key={i} className="RecipeBook__item-row">
             <RecipeLink

@@ -21,7 +21,7 @@
 				else
 					job_to_toggle.enabled = FALSE
 					job_to_toggle.total_positions = 0
-			message_admins("[key_name_admin(usr)] disabled all jobs and enabled all persistent jobs.")
+			message_admins("[key_name_admin(usr)] deshabilitó todos los trabajos y habilitó todos los trabajos persistentes.")
 		if("ENABLE ALL JOBS, DISABLE PERSISTENT JOBS")
 			for(var/datum/job/job_to_toggle in SSjob.joinable_occupations)
 				if(istype(job_to_toggle, /datum/job/persistence))

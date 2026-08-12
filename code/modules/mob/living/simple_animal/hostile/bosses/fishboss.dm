@@ -215,8 +215,8 @@
 	alert_type = /atom/movable/screen/alert/status_effect/abyssal_chill
 
 /atom/movable/screen/alert/status_effect/abyssal_chill
-	name = "Abyssal Chill"
-	desc = "The cold of the deep slows your movements."
+	name = "Frío abisal"
+	desc = "El frío de las profundidades ralentiza tus movimientos."
 	icon = 'icons/mob/screen_alert.dmi'
 	icon_state = "frozen"
 
@@ -240,11 +240,11 @@
 
 /obj/effect/temp_visual/cult/sparks
 	randomdir = TRUE
-	name = "blood sparks"
+	name = "chispas de sangre"
 	icon_state = "bloodsparkles"
 
 /obj/item/deepone_artifact
-	name = "abyssal artifact"
+	name = "artefacto abisal"
 	desc = "A strange relic from the deep ocean. It pulses with eldritch energy."
 	icon = 'icons/effects/effects.dmi'  // Replace with appropriate icon
 	icon_state = "horn"  // Replace with appropriate icon_state
@@ -255,19 +255,19 @@
 	var/chosen_type = pick(possible_types)
 	switch(chosen_type)
 		if("crown")
-			name = "coral crown"
+			name = "corona de coral"
 			desc = "A crown made of living coral that seems to pulse with the rhythm of distant tides."
 			icon_state = "crown"
 		if("chalice")
-			name = "abyssal chalice"
+			name = "cáliz abisal"
 			desc = "A chalice crafted from unknown deep-sea materials. Water placed within never spills."
 			icon_state = "chalice"
 		if("idol")
-			name = "deep one idol"
+			name = "un ídolo profundo"
 			desc = "A small statue depicting an ancient being. It feels uncomfortably damp no matter how much you dry it."
 			icon_state = "idol"
 		if("scale")
-			name = "scale of the Duke"
+			name = "escala del duque"
 			desc = "An enormous fish scale that shimmers with an otherworldly light."
 			icon_state = "scale"
 

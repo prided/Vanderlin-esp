@@ -1,7 +1,7 @@
 /datum/preference/choiced/skin_tone
 	savefile_key = "skin_tone"
 	savefile_identifier = PREF_CHARACTER
-	category = "appearance"
+	category = "apariencia"
 	can_randomize = TRUE
 
 /datum/preference/choiced/skin_tone/init_possible_values(datum/preferences/prefs)

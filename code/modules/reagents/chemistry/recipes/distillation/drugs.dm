@@ -8,7 +8,7 @@
 	distill_sound = "bubbles"
 
 /datum/distillation_recipe/methamphetamine
-	name = "Methamphetamine"
+	name = "metanfetamina"
 	id = "methamphetamine"
 	distilled_reagent = /datum/reagent/meth_precursor
 	consume_reagents = TRUE

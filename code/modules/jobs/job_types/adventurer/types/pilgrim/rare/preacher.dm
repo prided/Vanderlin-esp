@@ -7,7 +7,7 @@
 	)
 
 /datum/job/advclass/pilgrim/rare/preacher
-	title = "Preacher"
+	title = "Predicador"
 	tutorial = "A devout follower of Psydon, you came to this land with nothing more than \
 	the clothes on your back and the faith in your heart. \n\
 	Sway these nonbelievers to the right path!"
@@ -33,7 +33,7 @@
 		spawned.dna.species.accent_language = spawned.dna.species.get_accent(spawned.dna.species.native_language)
 
 /datum/outfit/pilgrim/preacher
-	name = "Preacher (Pilgrim)"
+	name = "Predicador (Peregrino)"
 	shoes = /obj/item/clothing/shoes/shortboots
 	belt = /obj/item/storage/belt/leather/rope
 	beltr = /obj/item/flashlight/flare/torch/lantern

@@ -1,5 +1,5 @@
 /obj/effect/building_node/farm
-	name = "Farm"
+	name = "Granja"
 	work_template = "farm"
 
 	icon = 'icons/roguetown/items/produce.dmi'

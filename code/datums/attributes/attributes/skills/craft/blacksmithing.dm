@@ -38,7 +38,7 @@
 	shared_xp_percent = 0.5
 
 /datum/attribute/skill/craft/smelting
-	name = "Smelting"
+	name = "Fundición"
 	desc = "Represents your character's ability to smelt metal into ingots. The higher your skill in Smelting, the better the ingots you create, which affect the quality of the resulting item."
 	governing_attribute = STAT_ENDURANCE
 	default_attributes = list(
@@ -55,7 +55,7 @@
 	shared_xp_percent = 0.5
 
 /datum/attribute/skill/craft/weapon_repair
-	name = "Weapon Repair"
+	name = "Reparación de armas"
 	desc = "Represents your character's ability to maintain and restore damaged weapons. A skilled weapon repairman can re-edge a dulled blade, re-set a loose haft, and pull a weapon back from the brink of uselessness though restoring a truly ruined weapon to its former glory demands more than repair alone."
 	governing_attribute = STAT_STRENGTH
 	default_attributes = list(

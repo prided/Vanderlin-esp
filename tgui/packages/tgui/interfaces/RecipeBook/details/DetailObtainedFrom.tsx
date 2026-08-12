@@ -7,7 +7,7 @@ export const DetailObtainedFrom = ({ r, lookup, pickerMap, allRecipes, essenceIn
   <>
     {!!r.sources?.length && (
       <>
-        <SectionHead>Obtained From</SectionHead>
+        <SectionHead>Obtenido de</SectionHead>
         <Box className="RecipeBook__step-block">
           {r.sources!.map((s, i) => (
             <Box key={i} className="RecipeBook__step-row">

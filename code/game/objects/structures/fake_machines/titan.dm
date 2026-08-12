@@ -78,7 +78,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 	say("The crown is summoned!")
 	playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 	playsound(src, 'sound/misc/hiss.ogg', 100, FALSE, -1)
-	src.visible_message(span_warning("Ashes circle around the THROAT and the crown rematerialises!"))
+	src.visible_message(span_warning("¡Las cenizas circulan alrededor de la GARGANTA y la corona se rematerializa!"))
 	return new /obj/item/clothing/head/crown/serpcrown(src.loc)
 
 /// Destroys the current master key with a cool message and returns a new key.
@@ -90,7 +90,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 	say("The key is summoned!")
 	playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 	playsound(src, 'sound/misc/hiss.ogg', 100, FALSE, -1)
-	src.visible_message(span_warning("The key flies around the THROAT and gently falls down!"))
+	src.visible_message(span_warning("¡La llave vuela alrededor de la GARGANTA y cae suavemente!"))
 
 	return new /obj/item/key/lord
 
@@ -108,7 +108,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 /// Checks if the mob sitting on the throne is worthy, has to be monarch or regent
 /obj/structure/fake_machine/titan/proc/is_worthy(mob/living/carbon/human/checked_mob)
 	if(!(SSticker.rulermob == checked_mob || SSticker.regent_mob == checked_mob))
-		say("You are not worthy!")
+		say("¡No eres digno!")
 		playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		return FALSE
 	return TRUE
@@ -116,7 +116,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 /// Check if the mob has the crown
 /obj/structure/fake_machine/titan/proc/has_crown(mob/living/carbon/human/checked_mob)
 	if(!(checked_mob.head == SSroguemachine.crown) && !(checked_mob.wear_mask == SSroguemachine.crown))
-		say("You need the crown!")
+		say("¡Necesitas la corona!")
 		playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		return FALSE
 	return TRUE
@@ -162,17 +162,17 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 /obj/structure/fake_machine/titan/proc/recognize_command(mob/living/carbon/human/user, message)
 	// message is already sanitized
 	if(findtext(message, "make announcement") && perform_check(user, FALSE))
-		say("All will hear your word.")
+		say("Todos escucharán tu palabra.")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_MAKE_ANNOUNCEMENT)
 		return
 	if(findtext(message, "make decree") && perform_check(user))
-		say("Speak and they will obey.")
+		say("Habla y obedecerán.")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_MAKE_DECREE)
 		return
 	if(findtext(message, "make law") && perform_check(user))
-		say("Speak and they will obey.")
+		say("Habla y obedecerán.")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_MAKE_LAW)
 		return
@@ -222,7 +222,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 /// States all commands
 /obj/structure/fake_machine/titan/proc/help()
 	var/commands = get_commands()
-	say("My commands are: [commands]")
+	say("Mis comandos son: [commands]")
 	playsound(src, 'sound/misc/machinelong.ogg', 100, FALSE, -1)
 
 /// Tries summoning the crown to the user's hand
@@ -242,7 +242,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 				playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 				return
 			if((crown_holder.head == crown) || (crown_holder.wear_mask == crown))
-				say("[crown_holder.real_name] wears the crown!")
+				say("¡[crown_holder.real_name] lleva la corona!")
 				playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 				return
 		else
@@ -287,7 +287,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 	var/datum/antagonist/prebel/rebel_datum = user.mind?.has_antag_datum(/datum/antagonist/prebel)
 	if(rebel_datum)
 		if(rebel_datum.rev_team?.members.len < 3)
-			to_chat(user, "<span class='warning'>I need more folk on my side to declare victory.</span>")
+			to_chat(user, "<span class='warning'>Necesito más gente de mi lado para declarar la victoria.</span>")
 		else
 			for(var/datum/objective/prebel/obj in user.mind.get_all_objectives())
 				obj.completed = TRUE
@@ -304,10 +304,10 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 	var/clean_message = replacetext(message, "remove decree", "")
 	var/decree_index = text2num(clean_message) || 0
 	if(!decree_index || !GLOB.lord_decrees[decree_index])
-		say("That decree doesn't exist!")
+		say("¡Ese decreto no existe!")
 		reset_mode()
 		return FALSE
-	say("That decree shall be gone!")
+	say("¡Ese decreto desaparecerá!")
 	playsound(src, 'sound/misc/machineyes.ogg', 100, FALSE, -1)
 	var/decree_text = GLOB.lord_decrees[decree_index]
 	GLOB.lord_decrees -= decree_text
@@ -320,7 +320,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 		return
 	GLOB.laws_of_the_land += message
 	record_round_statistic(STATS_LAWS_AND_DECREES_MADE)
-	priority_announce("[length(GLOB.laws_of_the_land)]. [message]", "A LAW IS DECLARED", 'sound/misc/lawdeclaration.ogg', "Captain")
+	priority_announce("[length(GLOB.laws_of_the_land)]. [message]", "SE DECLARA UNA LEY", 'sound/misc/lawdeclaration.ogg', "Captain")
 	reset_mode()
 
 /// Removes a law
@@ -328,10 +328,10 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 	var/clean_message = replacetext(message, "remove law", "")
 	var/law_index = text2num(clean_message) || 0
 	if(!law_index || !GLOB.laws_of_the_land[law_index])
-		say("That law doesn't exist!")
+		say("¡Esa ley no existe!")
 		reset_mode()
 		return FALSE
-	say("That law shall be gone!")
+	say("¡Esa ley desaparecerá!")
 	playsound(src, 'sound/misc/machineyes.ogg', 100, FALSE, -1)
 	var/law_text = GLOB.laws_of_the_land[law_index]
 	GLOB.laws_of_the_land -= law_text
@@ -341,10 +341,10 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 
 /// Removes all laws
 /obj/structure/fake_machine/titan/proc/purge_laws()
-	say("All laws shall be purged!")
+	say("¡Todas las leyes serán purgadas!")
 	playsound(src, 'sound/misc/machineyes.ogg', 100, FALSE, -1)
 	GLOB.laws_of_the_land = list()
-	priority_announce("All laws of the land have been purged!", "LAWS PURGED", 'sound/misc/lawspurged.ogg', "Captain")
+	priority_announce("¡Todas las leyes del país han sido purgadas!", "LAWS PURGED", 'sound/misc/lawspurged.ogg', "Captain")
 
 /// Declares someone an outlaw
 /obj/structure/fake_machine/titan/proc/declare_outlaw(mob/living/carbon/human/user, message)
@@ -365,7 +365,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 			reset_mode()
 			return FALSE
 	if(!found)
-		say("That person doesn't exist!")
+		say("¡Esa persona no existe!")
 		playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		reset_mode()
 		return FALSE
@@ -384,7 +384,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 		reset_mode()
 		return TRUE
 	else
-		say("That person is not an outlaw!")
+		say("¡Esa persona no es un forajido!")
 		playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		reset_mode()
 		return FALSE
@@ -394,7 +394,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 	if(!Adjacent(user))
 		reset_mode()
 		return
-	var/newtax = input(user, "Set a new tax percentage (1-99)", src, SStreasury.tax_value*100) as null|num
+	var/newtax = input(user, "Establecer un nuevo porcentaje de impuestos (1-99)", src, SStreasury.tax_value*100) as null|num
 	if(newtax)
 		if(!Adjacent(user))
 			reset_mode()
@@ -435,7 +435,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 	if(get_turf(src) != get_turf(user))
 		return
 
-	say("Select their new position.")
+	say("Seleccione su nueva posición.")
 	playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 	var/list/unfiltered_positions = list()
 	unfiltered_positions += GLOB.noble_positions
@@ -455,7 +455,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 		var/datum/job/pos = SSjob.GetJob(j_title)
 		if(pos.total_positions != 0 && pos.spawn_positions != 0)
 			possible_positions += j_title
-	var/new_pos = tgui_input_list(user, "Select their new position", src, possible_positions)
+	var/new_pos = tgui_input_list(user, "Seleccione su nueva posición", src, possible_positions)
 	if(!new_pos)
 		return
 	if(QDELETED(victim) || QDELETED(user) || QDELETED(src))
@@ -492,7 +492,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 		return FALSE
 	if(SSticker.regent_mob)
 		var/mob/living/carbon/human/regent = SSticker.regent_mob
-		priority_announce("[regent.real_name] is no longer regent.", "[user.real_name], The [user.get_role_title()] Decrees", 'sound/misc/alert.ogg', "Captain")
+		priority_announce("[regent.real_name] ya no es regente.", "[user.real_name], The [user.get_role_title()] Decrees", 'sound/misc/alert.ogg', "Captain")
 		SSticker.regent_mob = null
 		return TRUE
 	var/list/mob/living/carbon/possible_mobs = orange(2, src)
@@ -500,10 +500,10 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 		playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		say("No one around!")
 		return
-	var/mob/living/carbon/new_regent = input(user, "Who will rule when you sleep?", src, null) as null|mob in possible_mobs - user
+	var/mob/living/carbon/new_regent = input(user, "¿Quién gobernará cuando duermas?", src, null) as null|mob in possible_mobs - user
 	if(isnull(new_regent) || !Adjacent(user))
 		return
-	priority_announce("[new_regent.real_name] has been appointed regent.", "[user.real_name], The [user.get_role_title()] Decrees", 'sound/misc/alert.ogg', "Captain")
+	priority_announce("[new_regent.real_name] ha sido nombrado regente.", "[user.real_name], The [user.get_role_title()] Decrees", 'sound/misc/alert.ogg', "Captain")
 	SSticker.regent_mob = new_regent
 
 /obj/structure/fake_machine/titan/proc/silence_plebs(mob/living/carbon/human/user)

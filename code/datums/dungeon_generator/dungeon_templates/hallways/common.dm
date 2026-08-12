@@ -1,5 +1,5 @@
 /datum/map_template/dungeon/hallway
-	name = "Hall Tile"
+	name = "Azulejo de pasillo"
 	abstract_type = /datum/map_template/dungeon/hallway
 	type_weight = 5
 

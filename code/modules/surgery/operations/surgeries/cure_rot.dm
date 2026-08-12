@@ -57,17 +57,17 @@
 		surgeon,
 		patient,
 		span_notice("I begin to burn the rot within [patient]..."),
-		span_notice("[surgeon] begins to burn the rot from [patient]."),
-		span_notice("[surgeon] begins to burn the flesh of [patient]."),
+		span_notice("[surgeon] comienza a quemar la podredumbre de [patient]."),
+		span_notice("[surgeon] comienza a quemar la carne de [patient]."),
 	)
 
 /datum/surgery_operation/basic/cure_rot/on_success(mob/living/carbon/patient, mob/living/surgeon, tool, list/operation_args)
 	display_results(
 		surgeon,
 		patient,
-		span_notice("I burn away the rot from [patient]."),
-		span_notice("[surgeon] burns the rot from [patient]."),
-		span_notice("[surgeon] burns the flesh of [patient]."),
+		span_notice("Quemo la podredumbre de [patient]."),
+		span_notice("[surgeon] quema la podredumbre de [patient]."),
+		span_notice("[surgeon] quema la carne de [patient]."),
 	)
 
 	// I would rather not have this but afaik this is the only way to reduce this outside of the cure rot miracle

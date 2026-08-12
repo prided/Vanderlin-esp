@@ -53,7 +53,7 @@
 	starting_atom = /obj/item/needle
 	attacked_atom = /obj/item/paper
 	craft_time = 3 SECONDS
-	crafting_message = "starts weaving a canvas"
+	crafting_message = "comienza a tejer un lienzo"
 	craftdiff = 0
 	subtypes_allowed = TRUE
 
@@ -61,7 +61,7 @@
 	blacklisted_paths = subtypesof(/obj/item/paper)
 
 /datum/repeatable_crafting_recipe/paintbrush
-	name = "paint brush"
+	name = "pincel"
 	output = /obj/item/paint_brush
 	starting_atom = /obj/item/natural/feather
 	requirements = list(
@@ -72,12 +72,12 @@
 	allow_inverse_start = TRUE
 
 	craft_time = 3 SECONDS
-	crafting_message = "starts tying a paint brush"
+	crafting_message = "comienza a atar un pincel"
 	craftdiff = 0
 	subtypes_allowed = TRUE
 
 /datum/repeatable_crafting_recipe/paint_palette
-	name = "paint palette"
+	name = "paleta de pintura"
 	output = /obj/item/paint_palette
 	starting_atom = /obj/item/grown/log/tree/stick
 	requirements = list(
@@ -89,7 +89,7 @@
 	allow_inverse_start = TRUE
 
 	craft_time = 3 SECONDS
-	crafting_message = "starts constructing a paint palette"
+	crafting_message = "comienza a construir una paleta de pintura"
 	craftdiff = 0
 	subtypes_allowed = TRUE
 
@@ -112,7 +112,7 @@
 	)
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/alch/herb/mentha
-	category = "Bees"
+	category = "abejas"
 
 /datum/repeatable_crafting_recipe/bee_treatment/antiviral
 	name = "antiviral bee treatment"
@@ -151,7 +151,7 @@
 		/obj/item/grown/log/tree/stick = 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/grown/log/tree/stick
 	starting_atom = /obj/item/weapon/knife
@@ -166,7 +166,7 @@
 		/obj/item/alch/bone = 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/alch/bone
 	starting_atom = /obj/item/weapon/knife
@@ -181,7 +181,7 @@
 		/obj/item/reagent_containers/glass/cup/wooden = 1,
 	)
 	tool_usage = list(
-		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("start to whittle"), 'sound/items/wood_sharpen.ogg'),
+		/obj/item/weapon/knife = list(span_notice("starts to whittle"), span_notice("empezar a tallar"), 'sound/items/wood_sharpen.ogg'),
 	)
 	attacked_atom = /obj/item/reagent_containers/glass/cup/wooden
 	starting_atom = /obj/item/weapon/knife

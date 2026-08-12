@@ -19,7 +19,7 @@
 /obj/item/augment_kit/examine(mob/user)
 	. = ..()
 	if(contained_augment)
-		. += span_info("This kit contains: [contained_augment.name]")
+		. += span_info("Este kit contiene: [contained_augment.name]")
 		. += span_info("Installation requires Engineering skill level [contained_augment.engineering_difficulty]")
 		. += contained_augment.get_examine_info()
 	else
@@ -29,7 +29,7 @@
 	if(contained_augment)
 		color = contained_augment.color
 		name = "[contained_augment.name] kit"
-		desc = "[contained_augment.desc]\n\nStability Cost: [contained_augment.stability_cost]\nRequired Skill: Engineering [contained_augment.engineering_difficulty]"
+		desc = "[contained_augment.desc]\n\nStability Costo: [contained_augment.stability_cost]\nRequired Habilidad: Ingeniería [contained_augment.engineering_difficulty]"
 	else
 		color = initial(color)
 		name = initial(name)
@@ -41,7 +41,7 @@
 		return NONE
 
 	if(!contained_augment)
-		to_chat(user, span_warning("[src] is empty!"))
+		to_chat(user, span_warning("¡[src] está vacío!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/mob/living/augmented = interacting_with
@@ -59,7 +59,7 @@
 		to_chat(user, span_warning("You lack the engineering skill to install this augment!"))
 		return ITEM_INTERACT_BLOCKING
 
-	to_chat(user, span_notice("You begin installing [contained_augment.name]..."))
+	to_chat(user, span_notice("Comienzas a instalar [contained_augment.name]..."))
 
 	if(!do_after(user, contained_augment.installation_time, target = augmented))
 		return
@@ -107,10 +107,10 @@
 
 	var/skill = GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering)
 	if(skill < to_remove.engineering_difficulty)
-		to_chat(user, span_warning("You lack the engineering skill to uninstall this augment!"))
+		to_chat(user, span_warning("¡Te falta la habilidad de ingeniería para desinstalar este aumento!"))
 		return ITEM_INTERACT_BLOCKING
 
-	to_chat(user, span_notice("You begin uninstalling the [to_remove.name]..."))
+	to_chat(user, span_notice("Comienzas a desinstalar el [to_remove.name]..."))
 	if(!do_after(user, to_remove.installation_time, target = augmented))
 		return ITEM_INTERACT_BLOCKING
 

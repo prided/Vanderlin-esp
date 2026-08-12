@@ -12,7 +12,7 @@
 	/// Name of our storyteller.
 	var/name = "Badly coded storyteller"
 	/// Description of our storyteller.
-	var/desc = "Report this to the coders."
+	var/desc = "Informe esto a los codificadores."
 	/// Text that the players will be greeted with when this storyteller is chosen.
 	var/welcome_text = "Lift your Eyes to the Horizon." //changing this quote to match the one from the original eris PR.
 	/// This is the multiplier for repetition penalty in event weight. The lower the harsher it is
@@ -165,17 +165,17 @@
 			var/players_amt = get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)
 			if(forced && SSticker.HasRoundStarted())
 				if(QDELETED(event))
-					message_admins("[event.name] was deleted!")
+					message_admins("¡[event.name] fue eliminado!")
 					continue
 				valid_events[event] = round(event.calculated_weight * 10)
 			else if(event.canSpawnEvent(players_amt))
 				if(QDELETED(event))
-					message_admins("[event.name] was deleted!")
+					message_admins("¡[event.name] fue eliminado!")
 					continue
 				valid_events[event] = round(event.calculated_weight * 10) //multiply weight by 10 to get first decimal value
 		///If we didn't get any events, remove the points inform admins and dont do anything
 		if(!length(valid_events))
-			message_admins("Storyteller [mode.current_storyteller.name] failed to pick an event for track of [track].")
+			message_admins("El Narrador [mode.current_storyteller.name] no pudo elegir un evento para el seguimiento de [track].")
 			mode.event_track_points[track] *= TRACK_FAIL_POINT_PENALTY_MULTIPLIER
 			return
 		picked_event = pickweight(valid_events)
@@ -221,7 +221,7 @@
 	if(!bought_event.roundstart)
 		total_cost *= (1 + (rand(-cost_variance, cost_variance)/100)) //Apply cost variance if not roundstart event
 	mode.event_track_points[track] = max(mode.event_track_points[track] - total_cost, 0)
-	message_admins("Storyteller [mode.current_storyteller.name] purchased and triggered [bought_event] event, on [track] track, for [total_cost] cost.")
+	message_admins("El Narrador [mode.current_storyteller.name] compró y activó el evento [bought_event], en la pista [track], por el costo [total_cost].")
 	if(bought_event.roundstart)
 		SSgamemode.ran_roundstart = TRUE
 		SSgamemode.current_roundstart_event = bought_event

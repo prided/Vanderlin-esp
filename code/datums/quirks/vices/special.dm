@@ -19,7 +19,7 @@
 
 /datum/quirk/vice/hunted/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Graggar's Prey..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("La presa de Graggar..."))
 
 /datum/quirk/vice/hunted/on_life(mob/living/user)
 	if(!ishuman(user))
@@ -58,8 +58,8 @@
 	return ..()
 
 /datum/quirk/vice/pacifist
-	name = "Pacifist"
-	desc = "I don't want to harm other living beings!"
+	name = "Pacifista"
+	desc = "¡No quiero dañar a otros seres vivos!"
 	point_value = 8
 	traits_to_add = list(TRAIT_PACIFISM)
 
@@ -76,10 +76,10 @@
 
 /datum/quirk/vice/pacifist/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Pacifist..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Pacifista..."))
 
 /datum/quirk/vice/chronic_migraine
-	name = "Chronic Migraines"
+	name = "Migrañas crónicas"
 	desc = "You suffer from frequent, debilitating headaches that can strike without warning."
 	point_value = 3
 
@@ -107,7 +107,7 @@
 	return ..()
 
 /datum/quirk/vice/skill_issue
-	name = "Skill Issue"
+	name = "Problema de habilidad"
 	desc = "You were never the best at anything, and it shows. Lose 1 point to all starting skills."
 	point_value = 5
 
@@ -136,7 +136,7 @@
 	traits_to_add = list(TRAIT_PARTIAL_DEAF)
 
 /datum/quirk/vice/traumatized
-	name = "Traumatized"
+	name = "Traumatizado"
 	desc = "You were an adventurer once, till you took something to the knee. Choose something to be afraid of."
 	point_value = 3
 	customization_label = "Choose Fear"
@@ -164,7 +164,7 @@
 
 /datum/quirk/vice/traumatized/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Traumatized..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Traumatizado..."))
 
 /datum/quirk/vice/traumatized/on_spawn()
 	if(!ishuman(owner))
@@ -221,14 +221,14 @@
 	timer = 5 MINUTES
 
 /datum/quirk/vice/tortured
-	name = "Tortured"
+	name = "torturado"
 	desc = "You were once tortured by bandits, Drow raiders, or your own kingdom. You fear it happening again and always answer truthfully when tortured."
 	point_value = 2
 	traits_to_add = list(TRAIT_TORTURED)
 
 /datum/quirk/vice/tortured/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Tortured..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Torturado..."))
 
 /datum/stress_event/tortured
 	desc = "<span class='danger'>The pain... it brings back memories.</span>\n"
@@ -247,7 +247,7 @@
 		return
 	RegisterSignal(owner, COMSIG_LIVING_DEATH, PROC_REF(on_death))
 	RegisterSignal(owner, COMSIG_LIVING_TRY_ENTER_AFTERLIFE, PROC_REF(on_death))
-	to_chat(owner, span_boldwarning("You have chosen HARDCORE mode. If you die, you will become a rat. There are no second chances."))
+	to_chat(owner, span_boldwarning("Has elegido el modo HARDCORE. Si mueres, te convertirás en una rata. No hay segundas oportunidades."))
 	return ..()
 
 /datum/quirk/vice/hardcore/on_remove()
@@ -298,7 +298,7 @@
 	ADD_TRAIT(new_rat, TRAIT_NOFIRE, QUIRK_TRAIT)
 
 /datum/quirk/vice/weak_heart
-	name = "Weak Heart"
+	name = "corazón débil"
 	desc = "You were born with a weak heart. You can't handle stressful situations for fear of your heart giving out (Half threshold for heart attacks and heart attack from being overly stressed)."
 	point_value = 6
 	incompatible_quirks = list(
@@ -308,10 +308,10 @@
 
 /datum/quirk/vice/weak_heart/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Weak-Hearted..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("De corazón débil..."))
 
 /datum/quirk/vice/tremors
-	name = "Tremors"
+	name = "Temblores"
 	desc = "Your body tremors periodically, causing you to drop what's in your hands and lose your grip for a short time. High stress makes the tremors worse."
 	point_value = 4
 	var/next_tremor_time = 0
@@ -355,7 +355,7 @@
 	var/mob/living/carbon/human/H = owner
 
 	// Visual and audio feedback
-	to_chat(H, span_warning("Your hands begin to shake uncontrollably!"))
+	to_chat(H, span_warning("¡Tus manos comienzan a temblar incontrolablemente!"))
 	H.visible_message(span_warning("[H]'s hands begin trembling!"))
 
 	// Drop everything in hands
@@ -398,17 +398,17 @@
 /datum/status_effect/tremor_grip_loss/on_remove()
 	. = ..()
 	var/mob/living/carbon/human/H = owner
-	to_chat(H, span_notice("Your hands steady themselves."))
+	to_chat(H, span_notice("Tus manos se estabilizan."))
 
 /datum/status_effect/tremor_grip_loss/proc/shake_hands()
 	if(!owner)
 		return
 	var/mob/living/carbon/human/H = owner
-	H.visible_message(span_warning("[H]'s hands continue to tremble."), \
+	H.visible_message(span_warning("Las manos de [H] siguen temblando."), \
 					  span_warning("Your hands continue to shake..."))
 
 /atom/movable/screen/alert/status_effect/tremor_grip_loss
-	name = "Trembling Hands"
+	name = "Manos temblorosas"
 	desc = "My hands are shaking uncontrollably! I can't grip anything!"
 
 /datum/quirk/vice/heretic_outlaw
@@ -416,7 +416,7 @@
 	desc = "You begin your journey marked as either a heretic or an outlaw, despised by society."
 	point_value = 2
 	customization_type = QUIRK_SELECT
-	customization_label = "Choose your mark"
+	customization_label = "Elige tu marca"
 	customization_options = list("Heretic", "Outlaw", "Both!")
 	preview_render = FALSE
 
@@ -431,7 +431,7 @@
 
 	if((customization_value == "Heretic") || (customization_value == "Both!"))
 		GLOB.excommunicated_players += H.real_name
-		to_chat(H, span_boldwarning("I've been denounced by the church for either reasons legitimate or not!"))
+		to_chat(H, span_boldwarning("¡He sido denunciado por la iglesia por razones legítimas o no!"))
 	if((customization_value == "Outlaw") || (customization_value == "Both!"))
 		GLOB.outlawed_players |= H.real_name
 		to_chat(H, span_boldwarning("Whether for crimes I did or was accused of, I have been declared an outlaw!"))
@@ -442,7 +442,7 @@
 	desc = "The inquisition suspects me of heresy, whether truthfully or not... Expect a harder experience, as some only require a suspicion to administer Psydon's Justice."
 	point_value = 1
 	customization_type = QUIRK_TEXT
-	customization_label = "Why do they suspect me?"
+	customization_label = "¿Por qué sospechan de mí?"
 	customization_placeholder = "Spotted eating organs."
 
 /datum/quirk/vice/suspicion/get_desc(datum/preferences/prefs)
@@ -460,5 +460,5 @@
 	var/mob/living/carbon/human/H = owner
 
 	GLOB.inquis_suspect_players += H.real_name
-	to_chat(H, span_boldwarning("For reasons legitimate or not, I am hunted by the inquisition in this land..."))
+	to_chat(H, span_boldwarning("Por razones legítimas o no, soy perseguido por la inquisición en esta tierra..."))
 	return ..()

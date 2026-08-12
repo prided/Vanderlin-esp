@@ -1,5 +1,5 @@
 /datum/persistant_workorder/farm
-	name = "Farm"
+	name = "Granja"
 	ui_icon = 'icons/roguetown/items/produce.dmi'
 	work_type = /datum/work_order/farm_food
 
@@ -10,7 +10,7 @@
 	. = ..()
 
 /datum/persistant_workorder/farm/grain
-	name = "Farm Grains"
+	name = "Granos de granja"
 	ui_icon_state = "oatchaff"
 
 	arg_2 = "Grain"

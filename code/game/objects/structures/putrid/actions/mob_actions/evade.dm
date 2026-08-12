@@ -15,7 +15,7 @@
 		owner.balloon_alert(owner, "already evading")
 		return FALSE
 
-	owner.balloon_alert(owner, "evasive movements began")
+	owner.balloon_alert(owner, "comenzaron los movimientos evasivos")
 	addtimer(CALLBACK(src, PROC_REF(evasion_deactivate)), evasion_duration)
 	evade_active = TRUE
 	RegisterSignal(owner, COMSIG_PROJECTILE_ON_HIT, PROC_REF(on_projectile_hit))
@@ -25,7 +25,7 @@
 /// Handles deactivation of the xeno evasion ability, mainly unregistering the signal and giving a balloon alert
 /datum/action/cooldown/meatvine/personal/evade/proc/evasion_deactivate()
 	evade_active = FALSE
-	owner.balloon_alert(owner, "evasion ended")
+	owner.balloon_alert(owner, "la evasión terminó")
 	UnregisterSignal(owner, COMSIG_PROJECTILE_ON_HIT)
 	REMOVE_TRAIT(owner, TRAIT_EVASIVE, INNATE_TRAIT)
 

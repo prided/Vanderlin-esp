@@ -137,7 +137,7 @@ GLOBAL_LIST_EMPTY(graggar_cullings)
 	if(loser)
 		loser.remove_stress(/datum/stress_event/graggar_culling_unfinished)
 		loser.remove_spell(/datum/action/cooldown/spell/undirected/seek_rival)
-		to_chat(loser, span_boldred("You have FAILED Graggar for the LAST TIME!"))
+		to_chat(loser, span_boldred("¡Has FALLADO Graggar por ÚLTIMA VEZ!"))
 		loser.gib()
 
 	qdel(src)

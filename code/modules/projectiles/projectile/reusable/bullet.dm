@@ -2,7 +2,7 @@
 #define BULLET_PENETRATION 100
 
 /obj/projectile/bullet/reusable/bullet
-	name = "lead ball"
+	name = "bola de plomo"
 	desc = "A round lead shot, simple and spherical."
 	damage = BULLET_DAMAGE
 	damage_type = BRUTE
@@ -52,7 +52,7 @@
 		bodypart.add_wound(fracture_type)
 
 /obj/projectile/bullet/fragment
-	name = "smaller lead ball"
+	name = "bola de plomo más pequeña"
 	desc = "Haha. You're not able to see this!"
 	damage = 25
 	damage_type = BRUTE

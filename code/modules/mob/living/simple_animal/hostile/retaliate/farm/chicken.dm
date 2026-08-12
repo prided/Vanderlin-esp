@@ -1,6 +1,6 @@
 
 /mob/living/simple_animal/hostile/retaliate/chicken
-	name = "\improper chicken"
+	name = "\improper pollo"
 	desc = "A fat and mostly flightless bird. They produce eggs, or 'cackleberries'."
 	icon = 'icons/roguetown/mob/monster/chicken.dmi'
 	icon_state = "chicken_brown"
@@ -34,9 +34,9 @@
 	health = CHICKEN_HEALTH
 	maxHealth = CHICKEN_HEALTH
 
-	response_help_continuous = "pets"
+	response_help_continuous = "mascotas"
 	response_help_simple = "pet"
-	response_disarm_continuous = "gently pushes aside"
+	response_disarm_continuous = "empuja suavemente a un lado"
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
@@ -157,7 +157,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/chicken/chick
 	name = "chick"
-	desc = "So cute!"
+	desc = "¡Tan lindo!"
 	icon_state = "chick"
 	icon_living = "chick"
 	icon_dead = "chick_dead"
@@ -178,9 +178,9 @@
 	health = CHICKEN_HEALTH / 2
 	maxHealth = CHICKEN_HEALTH / 2
 
-	response_help_continuous = "pets"
+	response_help_continuous = "mascotas"
 	response_help_simple = "pet"
-	response_disarm_continuous = "gently pushes aside"
+	response_disarm_continuous = "empuja suavemente a un lado"
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
@@ -197,7 +197,7 @@
 
 /obj/structure/fluff/nest
 	name = "nest"
-	desc = "A chicken's nest."
+	desc = "Un nido de gallina."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "nest"
 	density = FALSE

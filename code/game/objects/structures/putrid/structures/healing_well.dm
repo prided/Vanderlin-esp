@@ -2,7 +2,7 @@
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "heal_pool"
 	name = "healing well"
-	desc = "A pulsating mass of flesh that emanates a regenerative aura."
+	desc = "Una masa pulsante de carne que emana un aura regenerativa."
 	density = FALSE
 	opacity = FALSE
 	pass_flags = LETPASSTHROW

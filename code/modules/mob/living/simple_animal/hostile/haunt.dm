@@ -225,5 +225,5 @@
 		var/mob/living/carbon/C = target
 		C.Immobilize(2 SECONDS)
 		C.visible_message("<span class='danger'>\The [src] paralyzes \the [C] in fear!</span>", \
-				"<span class='danger'>\The [src] paralyzes me!</span>")
+				"<span class='danger'>\The [src] me paraliza!</span>")
 		emote("laugh")

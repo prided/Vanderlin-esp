@@ -1,7 +1,7 @@
 /datum/customizer
 	abstract_type = /datum/customizer
 	/// User facing name of the customizer.
-	var/name = "Customizer"
+	var/name = "Personalizador"
 	/// List of all /datum/customizer_choice's that this customizer can pick from.
 	var/list/customizer_choices
 	/// The default choice from among `customizer_choices`.
@@ -50,7 +50,7 @@
 
 /datum/customizer/organ
 	abstract_type = /datum/customizer/organ
-	name = "Organ"
+	name = "Órgano"
 
 /datum/customizer/bodypart_feature
 	abstract_type = /datum/customizer/bodypart_feature

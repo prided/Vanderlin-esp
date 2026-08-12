@@ -16,7 +16,7 @@
 	)
 
 /datum/job/advclass/mercenary/corsair
-	title = "Corsair"
+	title = "Corsario"
 	tutorial = "Driven away from a typical life, you once found kin with privateers, working adjacent to a royal navy. After the Red Flag battered itself in the wind one last time, your purse was still not satisfied... And yet he complained that his belly was not full."
 	allowed_races = RACES_PLAYER_ALL
 	outfit = /datum/outfit/adventurer/corsair
@@ -31,7 +31,7 @@
 	)
 
 /datum/outfit/adventurer/corsair
-	name = "Corsair (Mercenary)"
+	name = "Corsario (mercenario)"
 	head = /obj/item/clothing/head/helmet/leather/headscarf
 	pants = /obj/item/clothing/pants/tights/sailor
 	belt = /obj/item/storage/belt/leather/mercenary

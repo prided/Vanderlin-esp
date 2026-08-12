@@ -31,11 +31,11 @@
 
 	// Check if target is a wall
 	if(!target_turf.is_blocked_turf())
-		owner.balloon_alert(owner, "must target a wall")
+		owner.balloon_alert(owner, "debe apuntar a una pared")
 		return FALSE
 
 	if(get_dist(owner, target_turf) > 4)
-		owner.balloon_alert(owner, "too far from wall")
+		owner.balloon_alert(owner, "demasiado lejos de la pared")
 		return FALSE
 
 	var/mob/living/simple_animal/hostile/retaliate/meatvine/consumed = owner
@@ -71,7 +71,7 @@
 	is_burrowing = TRUE
 	var/turf/start_turf = get_turf(owner)
 
-	owner.visible_message(span_danger("[owner] begins burrowing into the ground!"))
+	owner.visible_message(span_danger("¡[owner] comienza a excavar en el suelo!"))
 	//playsound(owner, 'sound/effects/break_stone.ogg', 75, TRUE)
 
 	animate(owner, alpha = 150, time = burrow_time)

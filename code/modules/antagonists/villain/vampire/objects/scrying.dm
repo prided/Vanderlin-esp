@@ -1,5 +1,5 @@
 /obj/structure/vampire/scryingorb // Method of spying on the town
-	name = "Eye of Night"
+	name = "Ojo de la noche"
 	icon_state = "scrying"
 
 /obj/structure/vampire/scryingorb/attack_hand(mob/living/carbon/human/user)
@@ -8,10 +8,10 @@
 		if(do_after(user, 6 SECONDS, src))
 			user.scry(can_reenter_corpse = 1, force_respawn = FALSE)
 	else
-		to_chat(user, span_warning("I don't have the power to use this!"))
+		to_chat(user, span_warning("¡No tengo el poder para usar esto!"))
 
 /mob/dead/observer/rogue/arcaneeye
-	name = "Arcane Eye"
+	name = "Ojo Arcano"
 	icon_state = "arcaneeye"
 	sight = 0
 	see_in_dark = 2
@@ -64,35 +64,35 @@
 		vampirelord.ckey = ckey
 		qdel(src)
 	else
-		to_chat(src, "My body has been destroyed! I'm trapped!")
+		to_chat(src, "¡Mi cuerpo ha sido destruido! ¡Estoy atrapado!")
 
 /mob/dead/observer/rogue/arcaneeye/proc/vampire_telepathy()
-	set name = "Telepathy"
+	set name = "Telepatía"
 	set category = "RoleUnique.Arcane Eye"
 
-	var/msg = input("Send a message.", "Command") as text|null
+	var/msg = input("Envía un mensaje.", "Command") as text|null
 	if(!msg)
 		return
 	for(var/datum/mind/V in SSmapping.retainer.vampires)
-		to_chat(V, span_boldnotice("A message from [src.real_name]:[msg]"))
+		to_chat(V, span_boldnotice("Un mensaje de [src.real_name]:[msg]"))
 	for(var/datum/mind/D in SSmapping.retainer.death_knights)
-		to_chat(D, span_boldnotice("A message from [src.real_name]:[msg]"))
+		to_chat(D, span_boldnotice("Un mensaje de [src.real_name]:[msg]"))
 	for(var/mob/dead/observer/rogue/arcaneeye/A in GLOB.mob_list)
-		to_chat(A, span_boldnotice("A message from [src.real_name]:[msg]"))
+		to_chat(A, span_boldnotice("Un mensaje de [src.real_name]:[msg]"))
 
 /mob/dead/observer/rogue/arcaneeye/proc/eye_up()
 	set category = "RoleUnique.Arcane Eye"
-	set name = "Move Up"
+	set name = "Subir"
 
 	if(zMove(UP, z_move_flags = ZMOVE_FEEDBACK))
-		to_chat(src, span_notice("I move upwards."))
+		to_chat(src, span_notice("Me muevo hacia arriba."))
 
 /mob/dead/observer/rogue/arcaneeye/proc/eye_down()
 	set category = "RoleUnique.Arcane Eye"
-	set name = "Move Down"
+	set name = "Mover hacia abajo"
 
 	if(zMove(DOWN, z_move_flags = ZMOVE_FEEDBACK))
-		to_chat(src, span_notice("I move downwards."))
+		to_chat(src, span_notice("Me muevo hacia abajo."))
 
 /mob/dead/observer/rogue/arcaneeye/proc/scry_tele()
 	set category = "RoleUnique.Arcane Eye"
@@ -100,7 +100,7 @@
 	set desc= "Teleport to a location"
 
 	if(!isobserver(src))
-		to_chat(src, span_warning("You're not an Eye!"))
+		to_chat(src, span_warning("¡No eres un ojo!"))
 		return
 
 	var/list/filtered = list()
@@ -119,7 +119,7 @@
 		L += T
 
 	if(!length(L))
-		to_chat(src, span_warning("No area available."))
+		to_chat(src, span_warning("No hay área disponible."))
 		return
 
 	forceMove(pick(L))

@@ -1,5 +1,5 @@
 /datum/brewing_recipe/aqua_vitae
-	name = "Aqua Vitae - Apple"
+	name = "Aqua Vitae - Manzana"
 	brewed_amount = 3
 	brew_time = 5 MINUTES
 	sell_value = 120
@@ -10,12 +10,12 @@
 	brewing_skill = /datum/attribute/skill/craft/cooking/preservation
 
 /datum/brewing_recipe/aqua_vitae/pear
-	name = "Aqua Vitae - Plum"
+	name = "Aqua Vitae - Ciruela"
 	needed_reagents = list(/datum/reagent/consumable/ethanol/brandy/pear = 150)
 	pre_reqs = /datum/reagent/consumable/ethanol/brandy/pear
 
 /datum/brewing_recipe/aqua_vitae/strawberry
-	name = "Aqua Vitae - Strawberry"
+	name = "Aqua Vitae - Fresa"
 	needed_reagents = list( /datum/reagent/consumable/ethanol/brandy/strawberry = 150)
 	pre_reqs = /datum/reagent/consumable/ethanol/brandy/strawberry
 
@@ -25,6 +25,6 @@
 	pre_reqs = /datum/reagent/consumable/ethanol/brandy/tangerine
 
 /datum/brewing_recipe/aqua_vitae/plum
-	name = "Aqua Vitae - Plum"
+	name = "Aqua Vitae - Ciruela"
 	needed_reagents = list(/datum/reagent/consumable/ethanol/plum_wine = 150)
 	pre_reqs = /datum/reagent/consumable/ethanol/brandy/plum

@@ -1,18 +1,18 @@
 /datum/action/cooldown/spell/undirected/list_target/convert_role
-	name = "Recruit Beggar"
-	desc = "Recruit someone to your cause."
+	name = "Reclutar mendigo"
+	desc = "Recluta a alguien para tu causa."
 	button_icon_state = "recruit_bog"
 	spell_flags = SPELL_UNETCHABLE
 	/// Role given if recruitment is accepted
 	var/new_role = JOB_BEGGAR
 	/// Faction shown to the user in the recruitment prompt
-	var/recruitment_faction = "Beggars"
+	var/recruitment_faction = "mendigos"
 	/// Message the recruiter gives
 	var/recruitment_message = "Join the Beggars, %RECRUIT!"
 	/// Even offer them a choice to become this?
 	var/give_choice = TRUE
 	/// Say message when the recruit accepts
-	var/accept_message = "I will serve!"
+	var/accept_message = "¡Yo serviré!"
 	/// Say message when the recruit refuses
 	var/refuse_message = "I refuse."
 

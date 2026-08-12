@@ -1,5 +1,5 @@
 /datum/animal_gene/coat_color
-	name = "Coat Color"
+	name = "Color del pelaje"
 	exclusion_group = GENE_GROUP_COAT_COLOR
 	dominant = TRUE
 	rarity = 10

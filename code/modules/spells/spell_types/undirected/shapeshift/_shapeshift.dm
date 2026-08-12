@@ -116,7 +116,7 @@
 	if(!shapechange)
 		// We failed to shift, maybe because we were already shapeshifted?
 		// Whatver the case, this shouldn't happen, so throw a stack trace.
-		to_chat(caster, span_warning("You can't shapeshift in this form!"))
+		to_chat(caster, span_warning("¡No puedes cambiar de forma en esta forma!"))
 		stack_trace("[type] do_shapeshift was called when the mob was already shapeshifted (from a spell).")
 		return
 

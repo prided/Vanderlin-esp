@@ -2,7 +2,7 @@
 /datum/culture
 	abstract_type = /datum/culture
 	var/name = "culture"
-	var/description = "A culture"
+	var/description = "una cultura"
 	/// string to add before examine strings, should include spaces
 	var/pre_append = ""
 	/// Default accent given to characters with this culture
@@ -24,13 +24,13 @@
 /// basically a stub for subtype iteration
 /datum/culture/universal
 	abstract_type = /datum/culture/universal
-	name = "univerisal culture"
-	description = "A universal culture"
+	name = "cultura universal"
+	description = "Una cultura universal"
 
 /// A culture associated with specific species
 /datum/culture/species
 	abstract_type = /datum/culture/species
-	name = "species culture"
+	name = "cultura de especies"
 	description = "A species culture"
 	var/list/species = list()
 

@@ -2,7 +2,7 @@
 	abstract_type = /datum/relation
 
 	/// Display name shown in UI.
-	var/name = "Relation"
+	var/name = "Relación"
 	/// Flavour description shown to the holder.
 	var/desc = ""
 	/// List of /datum/history attached to this relation.
@@ -23,7 +23,7 @@
 	/// Relation types this one supersedes, adding this relation will remove those.
 	var/list/upgrades = null
 	/// Category string used for UI tab sorting. e.g. "Rival", "Other"
-	var/category = "Known"
+	var/category = "Conocido"
 
 /// Called when this relation is first established. Override to do setup.
 /datum/relation/proc/on_created()

@@ -182,7 +182,7 @@ GLOBAL_LIST_INIT(roleplay_readme, file2list("strings/rt/Lore_Primer.txt"))
 	if(href_list["PossessVessel"])
 		var/id = href_list["PossessVessel"]
 		if(!client.is_whitelisted(id))
-			to_chat(src, span_boldwarning("You are not whitelisted for [id]."))
+			to_chat(src, span_boldwarning("No estás en la lista blanca para [id]."))
 			return
 		var/list/group = GLOB.active_ghost_vessels[id]
 		if(!length(group))
@@ -191,13 +191,13 @@ GLOBAL_LIST_INIT(roleplay_readme, file2list("strings/rt/Lore_Primer.txt"))
 		var/mob/living/carbon/human/vessel_mob = pick(group)
 		var/datum/component/ghost_vessel/gc = vessel_mob.GetComponent(/datum/component/ghost_vessel)
 		if(!gc || !gc.being_offered)
-			to_chat(src, span_warning("That vessel is no longer available."))
+			to_chat(src, span_warning("Ese barco ya no está disponible."))
 			return
 		gc.possess_vessel(src)
 
 	if(href_list["late_join"])
 		if(!SSticker?.IsRoundInProgress())
-			to_chat(usr, "<span class='boldwarning'>The game is starting. You cannot join yet.</span>")
+			to_chat(usr, "<span class='boldwarning'>El juego está comenzando. No puedes unirte todavía.</span>")
 			return
 
 		if(href_list["late_join"] == "override")
@@ -233,7 +233,7 @@ GLOBAL_LIST_INIT(roleplay_readme, file2list("strings/rt/Lore_Primer.txt"))
 
 		if(SSticker.queued_players.len && !(ckey(key) in GLOB.admin_datums))
 			if((living_player_count() >= relevant_cap) || (src != SSticker.queued_players[1]))
-				to_chat(usr, "<span class='warning'>Server is full.</span>")
+				to_chat(usr, "<span class='warning'>El servidor está lleno.</span>")
 				return
 
 		if(client && client.prefs.is_active_migrant())
@@ -265,7 +265,7 @@ GLOBAL_LIST_INIT(roleplay_readme, file2list("strings/rt/Lore_Primer.txt"))
 		ready = PLAYER_NOT_READY
 		return FALSE
 
-	var/this_is_like_playing_right = tgui_alert(src, "Are you sure you wish to observe? You will not be able to play this round!", "Player Setup", list("Yes","No"))
+	var/this_is_like_playing_right = tgui_alert(src, "¿Estás seguro de que deseas observar? ¡No podrás jugar esta ronda!", "Configuración del jugador", list("Yes","No"))
 
 	if(QDELETED(src) || !src.client || this_is_like_playing_right != "Yes")
 		ready = PLAYER_NOT_READY
@@ -438,7 +438,7 @@ GLOBAL_LIST_INIT(roleplay_readme, file2list("strings/rt/Lore_Primer.txt"))
 		return FALSE
 
 	if(SSticker.late_join_disabled)
-		alert(src, "Something went bad.")
+		alert(src, "Algo salió mal.")
 		return FALSE
 	if(!client.prefs.allowed_respawn())
 		to_chat(src, span_boldwarning("You cannot respawn."))

@@ -1,8 +1,8 @@
 /datum/relation/family
-	name = "Family"
+	name = "Familia"
 	desc = "You share blood, marriage, or adoption with this person."
 	symmetric = FALSE
-	category = "Family"
+	category = "Familia"
 
 	/// One of: "parent", "child", "sibling", "spouse", "adopted_parent",
 	/// "adopted_child", "step_parent", "step_child"
@@ -26,32 +26,32 @@
 		if(FAMILY_MEMBER_CHILD)
 			if(!adopted)
 				name = "Parent"
-				desc = "This person is one of your parents."
+				desc = "Esta persona es uno de tus padres."
 				if(in_law)
-					desc = "This person is one of your parent-in-laws."
+					desc = "Esta persona es uno de tus suegros."
 			else
-				name = "Adoptive Parent"
+				name = "Padre adoptivo"
 				desc = "This person is your parent through adoption."
 
 		if(FAMILY_MEMBER_PARENT)
 			if(!adopted)
 				name = "Child"
-				desc = "This person is one of your children."
+				desc = "Esta persona es uno de tus hijos."
 				if(in_law)
 					desc = "This person is one of your children-in-laws."
 			else
-				name = "Adopted Child"
+				name = "Niño adoptado"
 				desc = "This person is your child through adoption."
 
 		if(FAMILY_MEMBER_SIBLING)
 			name = "Sibling"
-			desc = "This person is your sibling."
+			desc = "Esta persona es tu hermano."
 			if(in_law)
-				desc = "This person is one of your sibling-in-laws."
+				desc = "Esta persona es uno de tus cuñados."
 
 		if(FAMILY_MEMBER_SPOUSE)
-			name = "Spouse"
-			desc = "You are married to this person."
+			name = "Cónyuge"
+			desc = "Estás casado con esta persona."
 		else
-			name = "Family"
+			name = "Familia"
 			desc = "You share a family bond with this person."

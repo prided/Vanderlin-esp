@@ -66,7 +66,7 @@
 		return FALSE
 
 	if(istype(stack) && !stack.use(2))
-		to_chat(user, span_warning("I don't have enough to attach \the [src]!"))
+		to_chat(user, span_warning("¡No tengo suficiente para adjuntar \the [src]!"))
 		return FALSE
 
 	user.visible_message(span_notice("<b>[user]</b> attaches \the [src] safely on \the <b>[owner]</b>."), \
@@ -128,7 +128,7 @@
 
 /obj/item/organ/proc/handle_cutting_away(obj/item/tool, mob/living/user, list/modifiers)
 	user.visible_message(
-		span_warning("[user] starts severing \the [name] from [owner]..."), \
+		span_warning("[user] comienza a separar \the [name] de [owner]..."), \
 		span_notice("I start severing \the [name] from [owner]..."), \
 		vision_distance = COMBAT_MESSAGE_RANGE
 	)
@@ -174,7 +174,7 @@
 
 	user.visible_message(
 		span_notice("[user] burn the rot away from \the [name]."), \
-		span_notice("I burn the rot away from \the [name]."), \
+		span_notice("Quemo la podredumbre de \the [name]."), \
 		vision_distance = COMBAT_MESSAGE_RANGE
 	)
 

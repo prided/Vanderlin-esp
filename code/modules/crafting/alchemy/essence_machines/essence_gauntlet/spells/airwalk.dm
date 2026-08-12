@@ -14,7 +14,7 @@
 	new /obj/effect/temp_visual/snake/swarm(null, L)
 
 /atom/movable/screen/alert/status_effect/air_walking
-	name = "Air Walking"
+	name = "Caminar en el aire"
 	desc = "You can step on solidified air over gaps."
 	icon_state = "buff"
 

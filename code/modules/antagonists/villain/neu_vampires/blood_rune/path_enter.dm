@@ -1,7 +1,7 @@
 
 /datum/rune_spell/portalentrance
 	name = "Path Entrance"
-	desc = "Take a shortcut through the veil between this world and the other one."
+	desc = "Toma un atajo a través del velo entre este mundo y el otro."
 	desc_talisman = "Use to remotely trigger the rune and force objects and creatures on top through the Path."
 	invocation = "Sas'so c'arta forbici!"
 	word1 = /datum/rune_word/travel

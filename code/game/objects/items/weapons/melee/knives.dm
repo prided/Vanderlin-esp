@@ -50,7 +50,7 @@
 
 //................ Hunting Knife ............... //
 /obj/item/weapon/knife/hunting
-	name = "hunting knife"
+	name = "cuchillo de caza"
 	desc = "Loyal companion to hunters and poachers, from humble bone to truest steel, disembowel your prey with glee."
 	icon_state = "huntingknife"
 	force = DAMAGE_DAGGER
@@ -94,7 +94,7 @@
 		wdefense = TERRIBLE_PARRY
 
 /obj/item/weapon/knife/scissors
-	name = "iron scissors"
+	name = "tijeras de hierro"
 	desc = "Scissors made of iron that may be used to salvage usable materials from clothing."
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	icon_state = "iscissors"
@@ -148,7 +148,7 @@
 
 	var/probability = max(0, 50 - (skill_level * 10))
 	if(prob(probability))
-		to_chat(user, span_warning("I ruined some of the materials due to my lack of skill..."))
+		to_chat(user, span_warning("Arruiné algunos de los materiales debido a mi falta de habilidad..."))
 		playsound(item, 'sound/foley/cloth_rip.ogg', 50, TRUE)
 		qdel(item)
 		user.mind.add_sleep_experience(item.sewrepair, GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)) //Getting exp for failing
@@ -167,7 +167,7 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/weapon/knife/scissors/steel
-	name = "steel scissors"
+	name = "tijeras de acero"
 	desc = "Scissors made of solid steel that may be used to salvage usable materials from clothing, more durable and a tad more deadly than their iron counterpart."
 	icon_state = "sscissors"
 	force = DAMAGE_DAGGER
@@ -210,7 +210,7 @@
 //................ Bronze Dagger ............... //s
 /obj/item/weapon/knife/dagger/bronze
 	name = "bronze dagger"
-	desc = "A dagger made out of bronze."
+	desc = "Una daga hecha de bronce."
 	icon_state = "dagger_bronze"
 	max_integrity = INTEGRITY_POOR
 	melting_material = /datum/material/bronze
@@ -219,7 +219,7 @@
 
 //................ Iron Dagger ............... //
 /obj/item/weapon/knife/dagger
-	name = "iron dagger"
+	name = "daga de hierro"
 	desc = "Thin, sharp, pointed death."
 	icon_state = "idagger"
 	force = DAMAGE_DAGGER
@@ -230,14 +230,14 @@
 	item_weight = 200 GRAMS
 
 /obj/item/weapon/knife/dagger/jile
-	name = "iron jile"
-	desc = "A curved iron dagger from the fallen east."
+	name = "jile de hierro"
+	desc = "Una daga de hierro curvada del este caído."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "jile_iron"
 	item_weight = 200 GRAMS
 
 /obj/item/weapon/knife/hunting/kukri/iron
-	name = "iron kukri"
+	name = "kukri de hierro"
 	icon_state = "kukri_iron"
 	desc = "A hefty knife that originated in the Southeastern reaches of Faience. Its design makes it great for chopping through vegetation and other obstacles."
 	force = DAMAGE_DAGGER
@@ -247,7 +247,7 @@
 	item_weight = 250 GRAMS
 
 /obj/item/weapon/knife/dagger/njora
-	name = "iron seme"
+	name = "seme de hierro"
 	desc = "A broad iron dagger from the fallen east. Popular amongst the elves."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "njora_iron"
@@ -277,7 +277,7 @@
 
 /obj/item/weapon/knife/dagger/steel/njora
 	name = "steel seme"
-	desc = "A broad steel dagger from the fallen east. Popular amongst elves."
+	desc = "Una amplia daga de acero del este caído. Popular entre los elfos."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "njora_steel"
 	wbalance = HARD_TO_DODGE
@@ -297,14 +297,14 @@
 
 /obj/item/weapon/knife/dagger/steel/stiletto
 	name = "stiletto"
-	desc = "A needle thin dagger made of refined steel, the favored weapon of assassins and angry nobles."
+	desc = "Una daga fina como una aguja hecha de acero refinado, el arma favorita de asesinos y nobles enojados."
 	icon_state = "stiletto"
 	possible_item_intents = list(STILETTO_THRUST, STILETTO_CUT)
 	melt_amount = 45
 	item_weight = 150 GRAMS
 
 /obj/item/weapon/knife/hunting/kukri
-	name = "steel kukri"
+	name = "kukri de acero"
 	icon_state = "kukri_steel"
 	desc = "A hefty knife that originated in the Southeastern reaches of Faience. Its design makes it great for chopping through vegetation and other obstacles."
 	force = DAMAGE_DAGGER + 1
@@ -328,7 +328,7 @@
 	item_weight = 220 GRAMS
 
 /obj/item/weapon/knife/dagger/steel/hand/parry
-	name = "\proper apathy"
+	name = "\proper apatía"
 	desc = "A greatly forged length of steel made to be able to parry. Defend with Apathy for any strike that approaches you, for you know they will not make contact."
 	wdefense = GOOD_PARRY
 	icon_state = "spdaggerhand"
@@ -356,7 +356,7 @@
 
 //................ Silver Dagger ............... //
 /obj/item/weapon/knife/dagger/silver
-	name = "silver dagger"
+	name = "daga de plata"
 	desc = "A dagger made of fine silver, the bane of the undead."
 	icon_state = "sildagger"
 	max_blade_int = 160
@@ -451,14 +451,14 @@
 	if(target.stat == DEAD || HAS_TRAIT(target, TRAIT_CRITICAL_CONDITION)) // Trigger soul steal or identity theft if the target is either dead or in crit
 		if(istype(user.used_intent, /datum/intent/peculate))
 			if(!ishuman(user)) // carbons don't have all features of a human
-				to_chat(user, span_danger("You can't do that!"))
+				to_chat(user, span_danger("¡No puedes hacer eso!"))
 				return
 			var/obj/item/bodypart/head/target_head = target.get_bodypart(BODY_ZONE_HEAD)
 			if(QDELETED(target_head))
-				to_chat(user, span_notice("I need their head or else I can't take their face!"))
+				to_chat(user, span_notice("¡Necesito su cabeza o no puedo tomar su cara!"))
 				return
 			if(!(target.dna?.species.id in RACES_PLAYER_ALL))
-				to_chat(user, span_warning("I can't steal this face!"))
+				to_chat(user, span_warning("¡No puedo robar esta cara!"))
 				return
 			var/datum/beam/transfer_beam = user.Beam(target, icon_state = "drain_life", time = 6 SECONDS)
 
@@ -491,7 +491,7 @@
 
 			human_user.copy_physical_features(target)
 			human_user.copy_visible_organs(target)
-			to_chat(user, span_purple("I take on a new face.."))
+			to_chat(user, span_purple("Asumo una nueva cara.."))
 			ADD_TRAIT(target, TRAIT_DISFIGURED, TRAIT_GENERIC)
 
 			return
@@ -503,7 +503,7 @@
 				record_featured_stat(FEATURED_STATS_CRIMINALS, user)
 				record_round_statistic(STATS_ASSASSINATIONS)
 				user.adjust_triumphs(1)
-				target.visible_message("<span class='danger'>[target]'s soul is pulled from their body and sucked into the profane dagger!</span>", "<span class='danger'>My soul is trapped within the profane dagger. Damnation!</span>")
+				target.visible_message("¡El alma de <span class='danger'>[target] es arrancada de su cuerpo y succionada por la daga profana!</span>", "<span class='danger'>My soul is trapped within the profane dagger. Damnation!</span>")
 				playsound(src, 'sound/magic/soulsteal.ogg', 100, extrarange = 5)
 				blade_int = max_blade_int // Stealing a soul successfully sharpens the blade.
 				repair_damage(max_integrity) // And fixes the dagger. No blacksmith required!
@@ -565,7 +565,7 @@
 
 //................ Stone Knife ............... //
 /obj/item/weapon/knife/stone
-	name = "stone knife"
+	name = "cuchillo de piedra"
 	desc = "A tool favored by the wood-elves, easy to make, useful for skinning the flesh of beast and man alike."
 	icon_state = "stone_knife"
 	wdefense = TERRIBLE_PARRY
@@ -612,7 +612,7 @@
 	item_weight = 120 GRAMS
 
 /obj/item/weapon/knife/copper
-	name = "copper knife"
+	name = "cuchillo de cobre"
 	desc = "A knife of an older design, the copper serves decent enough."
 	icon_state = "cdagger"
 	possible_item_intents = list(DAGGER_CUT, DAGGER_THRUST)

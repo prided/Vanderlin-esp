@@ -187,7 +187,7 @@ const EquippedPanel = ({
   };
 
   return (
-    <Section title="Loadout Slots" fill>
+    <Section title="Ranuras de equipamiento" fill>
       <Stack vertical>
         {slots.map((slot, i) => {
           const isOpen = !!slot.path && openSlotPath === slot.path;
@@ -216,7 +216,7 @@ const EquippedPanel = ({
                           ? 'average'
                           : 'transparent'
                       }
-                      tooltip="Set base color"
+                      tooltip="Establecer color base"
                       onClick={() => togglePicker(slot.path!, 'base')}
                       style={
                         slot.base_color
@@ -235,7 +235,7 @@ const EquippedPanel = ({
                           ? 'average'
                           : 'transparent'
                       }
-                      tooltip="Set accent/detail color"
+                      tooltip="Establecer color de acento/detalle"
                       onClick={() => togglePicker(slot.path!, 'detail')}
                       style={
                         slot.detail_color
@@ -281,7 +281,7 @@ const EquippedPanel = ({
                           onClick={() => setOpenLayer('detail')}
                           fontSize="0.8em"
                         >
-                          Accent
+                          Acento
                         </Button>
                       </Stack.Item>
                     </Stack>
@@ -308,7 +308,7 @@ const EquippedPanel = ({
 
         <Stack.Item>
           <Box mt={1} color="label" fontSize="0.8em">
-            Items and colors apply on your next spawn.
+            Los objetos y colores se aplican en tu próxima aparición.
           </Box>
         </Stack.Item>
       </Stack>
@@ -363,17 +363,17 @@ const LoadoutItemRow = ({
       <Stack.Item>
         {patreonLock && !owned && (
           <Box color="purple" fontSize="0.8em">
-            Patreon exclusive
+            Exclusivo de Patreon
           </Box>
         )}
          {giveawayLocked && !owned && (
           <Box color="purple" fontSize="0.8em">
-            Giveaway exclusive
+            Sorteo exclusivo
           </Box>
         )}
         {awardLocked && (
           <Box color="bad" fontSize="0.8em">
-            Achievement locked
+            Logro bloqueado
           </Box>
         )}
         {!awardLocked && !patreonLock && owned && (
@@ -383,7 +383,7 @@ const LoadoutItemRow = ({
         )}
         {!awardLocked && !patreonLock && !giveawayLocked && !owned && rented && (
           <Box color="average" fontSize="0.8em">
-            Rented this round
+            Alquilado esta ronda
           </Box>
         )}
       </Stack.Item>
@@ -396,17 +396,17 @@ const LoadoutItemRow = ({
               tooltip={slotsFull ? 'All slots full' : 'Equip'}
               onClick={() => onEquip(item.path)}
             >
-              Equip
+              Equipar
             </Button>
           )}
           {equipped && !noEquip && (
             <Button
               icon="minus"
               color="bad"
-              tooltip="Unequip"
+              tooltip="Desequipar"
               onClick={() => onUnequip(item.path)}
             >
-              Unequip
+              Desequipar
             </Button>
           )}
           {!owned &&
@@ -457,7 +457,7 @@ const LoadoutItemRow = ({
               }
               onClick={() => onBuyPermanent(item.path)}
             >
-              Unlock ({item.cost_permanent})
+              Desbloquear ({item.cost_permanent})
             </Button>
           )}
           {!owned &&
@@ -470,10 +470,10 @@ const LoadoutItemRow = ({
               <Button
                 icon="gift"
                 color="good"
-                tooltip="Claim permanently for free"
+                tooltip="Reclama permanentemente gratis"
                 onClick={() => onBuyPermanent(item.path)}
               >
-                Claim
+                Reclamar
               </Button>
             )}
         </Stack>
@@ -514,7 +514,7 @@ const LoadoutCategoryView = ({
   if (!filtered.length) {
     return (
       <NoticeBox>
-        No items found{search ? ` for "${search}"` : ''}.
+        No se encontraron objetos{search ? ` for "${search}"` : ''}.
       </NoticeBox>
     );
   }
@@ -561,8 +561,7 @@ const CollectionView = ({
   if (!items.length) {
     return (
       <NoticeBox>
-        You have not unlocked any items yet. Browse the shop tabs to spend
-        triumphs!
+        Aún no has desbloqueado ningún elemento. ¡Explora las pestañas de la tienda para gastar triunfos!
       </NoticeBox>
     );
   }
@@ -854,21 +853,20 @@ const SpecialsTab = ({
           <NoticeBox info>
             <Icon name="heart" mr={1} color="purple" />
             <Box as="span" bold>
-              Patreon Supporter perk:
+              Beneficio de partidario de Patreon:
             </Box>{' '}
-            Random rolls are free for you, and specific trait costs are 50% off.
+            Las tiradas aleatorias son gratis para ti y los rasgos específicos cuestan 50 % menos.
           </NoticeBox>
         ) : (
           <Box color="label" fontSize="0.8em" mb={0.5}>
             <Icon name="heart" mr={1} color="purple" />
-            Patreon supporters get free random rolls and 50% off specific trait
-            picks.
+            Los seguidores de Patreon obtienen tiradas aleatorias gratis y un descuento del 50 % en rasgos específicos.
           </Box>
         )}
       </Stack.Item>
 
       <Stack.Item>
-        <Section title="Next Round Special">
+        <Section title="Especial de próxima ronda">
           {showReel ? (
             <TraitReel
               specials={specials}
@@ -902,7 +900,7 @@ const SpecialsTab = ({
                   )}
                   {pendingTrait?.req_text && (
                     <Box color="label" fontSize="0.85em" mt={0.5}>
-                      Requirements: {pendingTrait.req_text}
+                      Requisitos: {pendingTrait.req_text}
                     </Box>
                   )}
                 </Stack.Item>
@@ -910,10 +908,10 @@ const SpecialsTab = ({
                   <Button
                     icon="times"
                     color="bad"
-                    tooltip="Clear pending special (no refund)"
+                    tooltip="Borrar oferta especial pendiente (sin reembolso)"
                     onClick={onClearPending}
                   >
-                    Clear
+                    Limpiar
                   </Button>
                 </Stack.Item>
               </Stack>
@@ -940,7 +938,7 @@ const SpecialsTab = ({
                 </Button>
               </Stack.Item>
               <Stack.Item color="label" fontSize="0.85em">
-                or pick a specific trait below, cost varies by rarity
+                o elige un rasgo específico a continuación, el costo varía según la rareza
               </Stack.Item>
             </Stack>
           )}
@@ -948,7 +946,7 @@ const SpecialsTab = ({
       </Stack.Item>
 
       <Stack.Item grow>
-        <Section title="Available Specials" fill scrollable>
+        <Section title="Especiales disponibles" fill scrollable>
           {specials.map((trait) => {
             const eligible = !!trait.eligible;
             const rarity = getRarity(trait.weight, allWeights);
@@ -975,16 +973,16 @@ const SpecialsTab = ({
                     {trait.name}
                     {!eligible && (
                       <Box as="span" color="average" fontSize="0.8em" ml={1}>
-                        (ineligible)
+                        (inelegible)
                       </Box>
                     )}
                   </Box>
                   <Box fontSize="0.75em" style={{ color }}>
-                    {RARITY_LABEL[rarity]} ~1 in {expectedRolls} rolls
+                    {RARITY_LABEL[rarity]} ~1 de cada {expectedRolls} rolls
                   </Box>
                   {!!trait.req_text && (
                     <Box color="label" fontSize="0.8em">
-                      Requires: {trait.req_text}
+                      Requiere: {trait.req_text}
                     </Box>
                   )}
                 </Stack.Item>
@@ -1006,7 +1004,7 @@ const SpecialsTab = ({
                     }
                     onClick={() => onBuySpecific(trait.path)}
                   >
-                    Pick ({trait.cost_specific})
+                    Elegir ({trait.cost_specific})
                   </Button>
                 </Stack.Item>
               </Stack>
@@ -1140,7 +1138,7 @@ export const TriumphShop = () => {
 
 
   return (
-    <Window title="Triumph Shop" width={860} height={620}>
+    <Window title="Tienda Triunfo" width={860} height={620}>
       <Window.Content>
         <Stack vertical fill>
           <Stack.Item>
@@ -1149,11 +1147,10 @@ export const TriumphShop = () => {
                 <Stack.Item grow>
                   <Box bold>
                     <Icon name="trophy" mr={1} color="average" />
-                    Triumph Shop
+                    Tienda Triunfo
                   </Box>
                   <Box color="label" fontSize="0.85em">
-                    Spend triumphs on loadout items, special traits, and server
-                    events.
+                    Gasta triunfos en elementos de equipamiento, rasgos especiales y eventos del servidor.
                   </Box>
                 </Stack.Item>
                 <Stack.Item>
@@ -1168,7 +1165,7 @@ export const TriumphShop = () => {
                       <Button
                         icon="ticket-alt"
                         color="transparent"
-                        tooltip="Convert triumphs into a tradeable ticket"
+                        tooltip="Convertir triunfos en un ticket intercambiable"
                         selected={showConvert}
                         onClick={() => setShowConvert(!showConvert)}
                       />
@@ -1179,7 +1176,7 @@ export const TriumphShop = () => {
                       <Stack.Item>
                         <Input
                           width="80px"
-                          placeholder="Amount"
+                          placeholder="Cantidad"
                           value={convertAmount}
                           onChange={(v: string) => setConvertAmount(v)}
                         />
@@ -1201,7 +1198,7 @@ export const TriumphShop = () => {
                           tooltip={`Convert ${convertAmount || '?'} triumphs into a tradeable ticket`}
                           onClick={handleConvertToTicket}
                         >
-                          Convert
+                          Convertir
                         </Button>
                       </Stack.Item>
                       <Stack.Item>
@@ -1361,7 +1358,7 @@ export const TriumphShop = () => {
                             }
                           >
                             <Icon name="receipt" mr={1} />
-                            My Purchases
+                            Mis compras
                             {active_triumph_buys.length > 0 && (
                               <Box
                                 as="span"
@@ -1392,7 +1389,7 @@ export const TriumphShop = () => {
                     </Stack.Item>
                     <Stack.Item grow>
                       {triumphShopSubTab === MY_PURCHASES_TAB ? (
-                        <Section fill scrollable title="My Purchases">
+                        <Section fill scrollable title="Mis compras">
                           <ActiveTriumphBuysView
                             items={active_triumph_buys}
                             onRefund={handleTriumphRefund}

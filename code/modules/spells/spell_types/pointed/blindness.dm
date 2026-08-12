@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/blindness
-	name = "Blindness"
-	desc = "Point at a target to blind them for few seconds."
+	name = "Ceguera"
+	desc = "Apunta a un objetivo para cegarlo durante unos segundos."
 	button_icon_state = "blindness"
 	sound = 'sound/magic/churn.ogg'
 
@@ -24,7 +24,7 @@
 /datum/action/cooldown/spell/blindness/cast(mob/living/cast_on)
 	. = ..()
 	cast_on.adjust_temp_blindness(6 SECONDS)
-	cast_on.visible_message(span_warning("[owner] points at [cast_on]'s eyes!"), span_warning("My eyes are covered in darkness!"))
+	cast_on.visible_message(span_warning("¡[owner] apunta a los ojos de [cast_on]!"), span_warning("¡Mis ojos están cubiertos de oscuridad!"))
 
 /datum/action/cooldown/spell/blindness/miracle
 	name = "Noc's Blindness"

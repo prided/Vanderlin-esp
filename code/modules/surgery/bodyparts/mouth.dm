@@ -3,7 +3,7 @@
 	name = "pile of teeth"
 	desc = "A digusting pile of bleeding teeth."
 	icon = 'icons/obj/surgery.dmi'
-	stackname = "teeth"
+	stackname = "dientes"
 	bundle_verb = "pile"
 	icon_state = "tooth1"
 	icon1 = "tooth1"
@@ -18,7 +18,7 @@
 
 /obj/item/natural/teeth
 	name = "tooth"
-	desc = "A tooth."
+	desc = "Un diente."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "tooth_4"
 	base_icon_state = "tooth"
@@ -39,7 +39,7 @@
 	name = "pile of gold teeth"
 	desc = "A digusting pile of gold teeth."
 	icon = 'icons/obj/surgery.dmi'
-	stackname = "teeth"
+	stackname = "dientes"
 	bundle_verb = "pile"
 	icon_state = "tooth1"
 	icon1 = "tooth1"
@@ -52,8 +52,8 @@
 	color = COLOR_ASSEMBLY_GOLD
 
 /obj/item/natural/teeth/gold
-	name = "gold tooth"
-	desc = "A golden tooth."
+	name = "diente de oro"
+	desc = "Un diente de oro."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "tooth_4"
 	base_icon_state = "tooth"
@@ -68,7 +68,7 @@
 	name = "pile of fangs"
 	desc = "A digusting pile of bleeding fangs."
 	icon = 'icons/obj/surgery.dmi'
-	stackname = "fangs"
+	stackname = "colmillos"
 	bundle_verb = "pile"
 	icon_state = "fang1"
 	icon1 = "fang1"
@@ -101,7 +101,7 @@
 
 /obj/item/bodypart/mouth
 	name = "jaw"
-	desc = "I have no mouth and I must scream."
+	desc = "No tengo boca y debo gritar."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "jaw"
 	base_icon_state = "jaw"

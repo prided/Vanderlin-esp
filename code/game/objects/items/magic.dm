@@ -23,8 +23,8 @@
 	var/cooldown = 30 SECONDS
 
 /obj/item/scrying/eye
-	name = "accursed eye"
-	desc = "It is pulsating."
+	name = "ojo maldito"
+	desc = "Está pulsando."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state ="scryeye"
 	cooldown = 5 MINUTES
@@ -42,7 +42,7 @@
 	if(!user.key)
 		return
 	if(!user.mind || !user.mind.do_i_know(name=input))
-		to_chat(user, span_warning("I don't know anyone by that name."))
+		to_chat(user, span_warning("No conozco a nadie con ese nombre."))
 		return
 	//check is applied twice to prevent someone from bypassing the cooldown
 	if(world.time < last_scry + cooldown)
@@ -55,7 +55,7 @@
 				continue
 			if(HAS_TRAIT(HL, TRAIT_ANTISCRYING))
 				to_chat(user, span_warning("I peer into [src], but an impenetrable fog shrouds [HL.real_name]."))
-				to_chat(HL, span_warning("My magical shrouding reacted to something."))
+				to_chat(HL, span_warning("Mi envoltura mágica reaccionó a algo."))
 				return
 			log_game("SCRYING: [user.real_name] ([user.ckey]) has used the scrying orb to leer at [HL.real_name] ([HL.ckey])")
 			ADD_TRAIT(user, TRAIT_NOSSDINDICATOR, "scryingorb")
@@ -76,7 +76,7 @@
 					to_chat(HL, span_warning("I can clearly see the face of an unknown [user.gender == FEMALE ? "woman" : "man"] staring at me!"))
 					return
 				if(GET_MOB_ATTRIBUTE_VALUE(HL, STAT_PERCEPTION) >= 11)
-					to_chat(HL, span_warning("I feel a pair of unknown eyes on me."))
+					to_chat(HL, span_warning("Siento un par de ojos desconocidos sobre mí."))
 			REMOVE_TRAIT(user, TRAIT_NOSSDINDICATOR, "scryingorb")
 			return
 	to_chat(user, span_warning("I peer into [src], but can't find [input]."))
@@ -116,7 +116,7 @@
 			to_chat(user, "<span class='warning'>I peer into the sky but cannot focus the lens on the face of Noc. Maybe I should wait.</span>")
 			return
 		if(!user.mind || !user.mind.do_i_know(name=input))
-			to_chat(user, "<span class='warning'>I don't know anyone by that name.</span>")
+			to_chat(user, "<span class='warning'>No conozco a nadie con ese nombre.</span>")
 			return
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)
 			if(HL.real_name == input)
@@ -144,4 +144,4 @@
 		to_chat(user, "<span class='warning'>I peer into the viewpiece, but Noc does not reveal where [input] is.</span>")
 		return
 	else
-		to_chat(user, "<span class='notice'>Noc looks angry with me...</span>")
+		to_chat(user, "<span class='notice'>Noc parece enojado conmigo...</span>")

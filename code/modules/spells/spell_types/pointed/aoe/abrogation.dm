@@ -1,7 +1,7 @@
 //Ported from Azure Peak made by Ephemeralis ?
 
 /datum/action/cooldown/spell/aoe/abrogation
-	name = "Abrogation"
+	name = "Abrogación"
 	desc = "Bring forth motes of the Undermaiden to weaken the unliving."
 	button_icon_state = "necra"
 	sound = 'sound/magic/churn.ogg'

@@ -42,7 +42,7 @@
 	database_id= MEDAL_MATERIALCRAFT
 
 /datum/award/achievement/misc/borbop_made_an_oopsie
-	name = "Borbop Broke Something!"
+	name = "¡Borbop rompió algo!"
 	desc = "You were in a round where Borbop tm'd something that broke"
 	icon = "oopsie"
 	database_id = "oopsie_borbop"
@@ -52,7 +52,7 @@
 /client/proc/borbop_oopsie()
 	set category = "Debug.Core"
 	set name = "The Borbop Fuck Up Award"
-	set desc = "Gives connected people an award."
+	set desc = "Da un premio a las personas conectadas."
 
 	if(key != "Dwasint")
 		return //lol lmao even

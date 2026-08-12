@@ -1,5 +1,5 @@
 /obj/item/neuFarm/seed/mixed_seed
-	name = "mixed seeds"
+	name = "semillas mixtas"
 
 /obj/item/neuFarm/seed/mixed_seed/Initialize()
 	plant_def_type = pick(GLOB.plant_defs)
@@ -58,7 +58,7 @@
 		var/datum/plant_genetics/seed_genetics_instance = seed_genetics
 		if(seed_genetics_instance.seed_identity_modifier)
 			examine_name = "[seed_genetics_instance.seed_identity_modifier] " + examine_name
-		. += span_info("I can tell these are [examine_name].")
+		. += span_info("Puedo decir que estos son [examine_name].")
 		if(HAS_TRAIT(user, TRAIT_SEEDKNOW) || GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/labor/farming) >= 2)
 			. += plant_def_instance.get_examine_details()
 
@@ -84,10 +84,10 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(!(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/labor/farming) >= SKILL_LEVEL_JOURNEYMAN))
-		balloon_alert(user, "not enough skill!")
+		balloon_alert(user, "¡No hay suficiente habilidad!")
 		return ITEM_INTERACT_BLOCKING
 
-	balloon_alert(user, "making a mound...")
+	balloon_alert(user, "haciendo un montículo...")
 	if(!do_after(user, get_farming_do_time(user, 10 SECONDS), target = src))
 		return ITEM_INTERACT_BLOCKING
 
@@ -100,11 +100,11 @@
 
 /obj/item/neuFarm/seed/proc/try_plant_seed(mob/living/user, obj/structure/soil/soil)
 	if(soil.plant)
-		to_chat(user, span_warning("There is already something planted in \the [soil]!"))
+		to_chat(user, span_warning("¡Ya hay algo plantado en \the [soil]!"))
 		return
 	if(!plant_def_type)
 		return
-	to_chat(user, span_notice("I plant \the [src] in \the [soil]."))
+	to_chat(user, span_notice("Planto \the [src] en \the [soil]."))
 	soil.insert_plant(GLOB.plant_defs[plant_def_type], seed_genetics)
 	qdel(src)
 

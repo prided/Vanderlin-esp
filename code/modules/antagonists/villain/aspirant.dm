@@ -38,7 +38,7 @@
 	switch(chosen)
 		if(CHOICE_POISON)
 			owner.special_items["Poison"] = /obj/item/reagent_containers/glass/bottle/killersice
-			to_chat(owner, span_notice("I can retrieve my item from a statue, tree or clock by right clicking it."))
+			to_chat(owner, span_notice("Puedo recuperar mi artículo de una estatua, árbol o reloj haciendo clic derecho en él."))
 
 		if(CHOICE_SKILL_SWORD)
 			aspirant_mob.clamped_adjust_skill_level(/datum/attribute/skill/combat/swords, 60, 60)
@@ -60,12 +60,12 @@
 			owner.special_items["Puffer Bullets"] = /obj/item/storage/belt/pouch/bullets
 			owner.special_items["Puffet Gunpowder"] = /obj/item/reagent_containers/glass/bottle/aflask
 			aspirant_mob.clamped_adjust_skill_level(/datum/attribute/skill/combat/firearms, 60, 60)
-			to_chat(owner, span_notice("I can retrieve my item from a statue, tree or clock by right clicking it."))
+			to_chat(owner, span_notice("Puedo recuperar mi artículo de una estatua, árbol o reloj haciendo clic derecho en él."))
 
 		if(CHOICE_BOMB)
 			owner.special_items["Bomb"] = /obj/item/explosive/canister_bomb
 			aspirant_mob.clamped_adjust_skill_level(/datum/attribute/skill/craft/bombs, 60, 60)
-			to_chat(owner, span_notice("I can retrieve my item from a statue, tree or clock by right clicking it."))
+			to_chat(owner, span_notice("Puedo recuperar mi artículo de una estatua, árbol o reloj haciendo clic derecho en él."))
 
 
 /datum/antagonist/aspirant/supporter
@@ -75,7 +75,7 @@
 	increase_votepwr = FALSE
 
 /datum/antagonist/aspirant/ruler
-	name = "Ruler"
+	name = "Gobernante"
 	show_name_in_check_antagonists = TRUE
 	show_in_roundend = FALSE
 	increase_votepwr = FALSE
@@ -163,7 +163,7 @@
 		return FALSE
 
 /datum/objective/aspirant/coup/two
-	name = "Support the Aspirant"
+	name = "Apoya al aspirante"
 	explanation_text = "I must ensure that the Aspirant takes the throne."
 	triumph_count = 3
 	var/our_aspirant
@@ -176,7 +176,7 @@
 
 /datum/objective/aspirant/loyal/one
 	name = "Keep the throne"
-	explanation_text = "I must remain the ruler."
+	explanation_text = "Debo seguir siendo el gobernante."
 	triumph_count = 3
 	hidden = TRUE
 
@@ -201,7 +201,7 @@
 				win = FALSE
 			objective_count++
 		if(win)
-			to_chat(world, span_greentext("The Aspirant has ascended! SUCCESS!"))
+			to_chat(world, span_greentext("¡El Aspirante ha ascendido! ¡ÉXITO!"))
 		else
 			to_chat(world, span_redtext("The Aspirant was thwarted! FAIL!"))
 
@@ -248,17 +248,17 @@
 		return span_nicegreen("I will hold the crown.")
 
 	if(examined_datum.type == /datum/antagonist/aspirant/supporter)
-		return span_nicegreen("It is one of my supporters.")
+		return span_nicegreen("Es uno de mis partidarios.")
 
 	if(examined_datum.type == /datum/antagonist/aspirant/ruler)
-		return span_userdanger("It is my rival.")
+		return span_userdanger("Es mi rival.")
 
 /datum/antagonist/aspirant/supporter/examine_friendorfoe(datum/antagonist/examined_datum, mob/examiner, mob/examined)
 	if(examined_datum.type == /datum/antagonist/aspirant)
-		return span_nicegreen("It is the Aspirant.")
+		return span_nicegreen("Es el Aspirante.")
 
 	if(examined_datum.type == /datum/antagonist/aspirant/supporter)
-		return span_nicegreen("It is another supporter of the Aspirant.")
+		return span_nicegreen("Es otro partidario del Aspirante.")
 
 	if(examined_datum.type == /datum/antagonist/aspirant/ruler)
 		return span_userdanger("No ruler of mine.")

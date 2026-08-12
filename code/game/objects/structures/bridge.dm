@@ -1,6 +1,6 @@
 /obj/structure/bridge
-	name = "makeshift bridge"
-	desc = "A makeshift bridge made of planks"
+	name = "puente improvisado"
+	desc = "Un puente improvisado hecho de tablas"
 	icon = 'icons/obj/structures/bridge/bridge.dmi'
 	icon_state = "planks_1"
 	density = FALSE
@@ -92,7 +92,7 @@
 /// Stakes at the end of a makeshift bridge
 /obj/structure/bridge_stakes
 	name = "makeshift bridge stakes"
-	desc = "Two crude wooden poles that have been hammered down into the ground."
+	desc = "Dos postes de madera toscos que han sido clavados en el suelo."
 	icon = 'icons/obj/structures/bridge/bridge_stakes.dmi'
 	icon_state = "stake_default"
 	density = FALSE

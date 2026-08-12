@@ -75,7 +75,7 @@
 /datum/job/bogwitch/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 
-	var/chosen_path = tgui_input_list(player_client, "Choose a specialist path", "SPECIALIST", list("Generalist", "Path of Bone", "Path of Nature", "Path of The Hunt"))
+	var/chosen_path = tgui_input_list(player_client, "Choose a specialist path", "SPECIALIST", list("generalista", "Path of Bone", "Path of Nature", "Path of The Hunt"))
 	switch(chosen_path)
 		if("Path of Bone")//Plus to Surgery
 			spawned.adjust_skillrank(/datum/attribute/skill/misc/medicine, 1, TRUE)

@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/projectile/swordfish
-	name = "Abyssor's Rage"
+	name = "La ira de Abyssor"
 	desc = "Throw a swordfish from Abyssor's domain."
 	button_icon_state = "curse2"
 	sound = 'sound/magic/whiteflame.ogg'
@@ -9,7 +9,7 @@
 	associated_skill = /datum/attribute/skill/magic/holy
 	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/abyssor)
 
-	invocation = "Feel Abyssor's rage!"
+	invocation = "¡Siente la ira de Abyssor!"
 	invocation_type = INVOCATION_SHOUT
 
 	charge_time = 2 SECONDS

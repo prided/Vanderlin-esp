@@ -280,20 +280,20 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 		balloon_alert(user, "[p_theyre()] stuck to your hand!")
 		return ITEM_INTERACT_BLOCKING
 
-	balloon_alert(user, "releasing fish...")
+	balloon_alert(user, "soltando peces...")
 	if(!do_after(user, 3 SECONDS, interacting_with))
 		return ITEM_INTERACT_BLOCKING
 
 	balloon_alert(user, "fish released")
 	var/goodbye_text = ""
 	if(status == FISH_DEAD)
-		goodbye_text = "[src] sinks motionlessly into [interacting_with]..."
+		goodbye_text = "[src] se hunde inmóvil en [interacting_with]..."
 	else
-		goodbye_text = "[src] dives into [interacting_with]!"
+		goodbye_text = "¡[src] se sumerge en [interacting_with]!"
 
 	user.visible_message(
-		span_notice("[user] releases [src] into [interacting_with]. [goodbye_text]"), \
-		span_notice("You release [src] into [interacting_with]. [goodbye_text]"), \
+		span_notice("[user] libera [src] en [interacting_with]. [goodbye_text]"), \
+		span_notice("Liberas [src] en [interacting_with]. [goodbye_text]"), \
 		span_notice("You hear a splash.")
 	)
 
@@ -375,8 +375,8 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	if(catcher_name && catch_date)
 		. += span_green("Caught by [catcher_name] on [catch_date].")
 
-	. += span_notice("It's [size] cm long.")
-	. += span_notice("It weighs [weight] g.")
+	. += span_notice("Mide [size] cm de largo.")
+	. += span_notice("Pesa [weight] g.")
 
 	. += get_health_warnings(user, always_deep = FALSE)
 
@@ -391,7 +391,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 		return
 
 	if(status == FISH_DEAD)
-		return span_warning("It's dead.")
+		return span_warning("Está muerto.")
 
 	var/list/warnings = list()
 	if(get_starvation_mult())
@@ -411,7 +411,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 			warnings += "mostly healthy"
 
 	if(length(warnings))
-		. += span_warning("It's [english_list(warnings)].")
+		. += span_warning("Es [english_list(warnings)].")
 
 	return .
 
@@ -779,7 +779,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 		return
 	time_passed_on_safe_turf += seconds_per_tick SECONDS
 	if(time_passed_on_safe_turf >= (get_starvation_mult() ? STARVING_FISH_SUBMERGING_THRESHOLD : FISH_SUBMERGING_THRESHOLD))
-		visible_message(span_notice("[src] disperses into \the [loc]"), span_notice("You hear a splash."))
+		visible_message(span_notice("[src] se dispersa en \the [loc]"), span_notice("You hear a splash."))
 		released(loc)
 
 /obj/item/reagent_containers/food/snacks/fish/proc/do_fish_process(seconds_per_tick)
@@ -1064,7 +1064,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 			)
 		else
 			user.visible_message(
-				span_warning("[src] bites [user]'s hand!"),
+				span_warning("¡[src] muerde la mano de [user]!"),
 				span_warning("You pet [src] as you hold it, only for [p_them()] to happily bite back!"),
 				vision_distance = DEFAULT_MESSAGE_RANGE - 3,
 			)
@@ -1218,7 +1218,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	faretype = FARE_NEUTRAL
 
 /obj/item/reagent_containers/food/snacks/fryfish/eel
-	name = "cooked eel"
+	name = "anguila cocida"
 	icon_state = "eelcooked"
 	faretype = FARE_NEUTRAL
 
@@ -1265,11 +1265,11 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/reagent_containers/food/snacks/chocolate_carp
-	name = "le carp au chocolat"
+	name = "la carpa de chocolate"
 	desc = "Plundered Grenzelhoftian chocolate drizzled over fish, this abomination is a delicacy to dark elves. In this case the eyeless cave fish has been substituted for a carp."
 	icon_state = "chocolatecarp"
 	bitesize = 4
-	tastes = list("a horrible clash of salty fish and sweet chocolate" = 1)
+	tastes = list("un horrible choque de pescado salado y chocolate dulce" = 1)
 	faretype = FARE_IMPOVERISHED
 	rotprocess = null
 	nutrition = CHOCCY_NUTRITION + RAWMEAT_NUTRITION*COOK_MOD

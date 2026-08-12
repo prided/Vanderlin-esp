@@ -55,11 +55,11 @@
 
 	var/muted = user.occult_muted()
 	if (muted)
-		to_chat(user, span_danger("You find yourself unable to focus your mind on the words of Nar-Sie.") )
+		to_chat(user, span_danger("Te encuentras incapaz de concentrar tu mente en las palabras de Nar-Sie.") )
 		return
 
 	if(!istype(user.loc, /turf))
-		to_chat(user, span_warning("You do not have enough space to write a proper rune.") )
+		to_chat(user, span_warning("No tienes suficiente espacio para escribir una runa adecuada.") )
 		return
 
 	var/turf/T = get_turf(user)
@@ -70,7 +70,7 @@
 			to_chat(user, span_warning("You can feel the presence of a concealed rune here. You have to reveal it before you can add more words to it.") )
 			return
 		else if (rune.word1 && rune.word2 && rune.word3)
-			to_chat(user, span_warning("You cannot add more than 3 words to a rune.") )
+			to_chat(user, span_warning("No puedes agregar más de 3 palabras a una runa.") )
 			return
 
 	var/datum/rune_word/word = GLOB.rune_words[word_to_draw]
@@ -79,11 +79,11 @@
 		return
 
 	if(rune)
-		user.visible_message(span_warning("\The [user] chants and paints more symbols on the floor.") , \
+		user.visible_message(span_warning("\The [user] canta y pinta más símbolos en el suelo.") , \
 				span_warning("You add another word to the rune.") , \
 				span_warning("You hear chanting.") )
 	else
-		user.visible_message(span_warning("\The [user] begins to chant and paint symbols on the floor.") , \
+		user.visible_message(span_warning("\The [user] comienza a cantar y pintar símbolos en el suelo.") , \
 				span_warning("You begin drawing a rune on the floor.") , \
 				span_warning("You hear some chanting.") )
 
@@ -92,7 +92,7 @@
 
 	if(rune)
 		if(rune.word1 && rune.word2 && rune.word3)
-			to_chat(user, span_warning("You cannot add more than 3 words to a rune.") )
+			to_chat(user, span_warning("No puedes agregar más de 3 palabras a una runa.") )
 			return
 	write_rune_word(get_turf(user), word, rune_blood_data["blood"], caster = user)
 
@@ -181,14 +181,14 @@
 			if (rune.word1 && rune.word1.type != initial(queued_rune.word1))
 				to_chat(user, span_warning("This rune's first word conflicts with the [initial(queued_rune.name)] rune's syntax.") )
 			else if (rune.word2 && rune.word2.type != initial(queued_rune.word2))
-				to_chat(user, span_warning("This rune's second word conflicts with the [initial(queued_rune.name)] rune's syntax.") )
+				to_chat(user, span_warning("La segunda palabra de esta runa entra en conflicto con la sintaxis de la runa [initial(queued_rune.name)].") )
 			else if (rune.word3)
-				to_chat(user, span_warning("You cannot add more than 3 words to a rune.") )
+				to_chat(user, span_warning("No puedes agregar más de 3 palabras a una runa.") )
 
 //------------------------------------------------------------
 
 /obj/abstract/visual_ui_element/hoverable/rune_close
-	name = "Hide Interface"
+	name = "Ocultar interfaz"
 	icon = 'icons/visual_ui/runes/32x32.dmi'
 	icon_state = "return"
 	layer = VISUAL_UI_BUTTON
@@ -246,7 +246,7 @@
 //------------------------------------------------------------
 
 /obj/abstract/visual_ui_element/hoverable/rune_word/rune_destroy
-	name = "Destroy"
+	name = "Destruir"
 	word = "destroy"
 	offset_x = 61
 	offset_y = 19
@@ -254,7 +254,7 @@
 //------------------------------------------------------------
 
 /obj/abstract/visual_ui_element/hoverable/rune_word/rune_technology
-	name = "Technology"
+	name = "Tecnología"
 	word = "technology"
 	offset_x = 61
 	offset_y = -19
@@ -270,7 +270,7 @@
 //------------------------------------------------------------
 
 /obj/abstract/visual_ui_element/hoverable/rune_word/rune_see
-	name = "See"
+	name = "Ver"
 	word = "see"
 	offset_x = 0
 	offset_y = -64

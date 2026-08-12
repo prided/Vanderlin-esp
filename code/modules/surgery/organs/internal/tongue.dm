@@ -5,7 +5,7 @@
 	zone = BODY_ZONE_PRECISE_MOUTH
 	slot = ORGAN_SLOT_TONGUE
 	organ_efficiency = list(ORGAN_SLOT_TONGUE = 100)
-	attack_verb = list("licked", "slobbered", "slapped", "frenched", "tongued")
+	attack_verb = list("licked", "slobbered", "slapped", "francés", "tongued")
 
 	organ_volume = 0.5
 	max_blood_storage = 5
@@ -112,7 +112,7 @@
 	speech_args[SPEECH_MESSAGE] = message
 
 /obj/item/organ/tongue/zombie
-	name = "rotting tongue"
+	name = "lengua podrida"
 	desc = ""
 	icon_state = "tonguezombie"
 	say_mod = "moans"
@@ -136,11 +136,11 @@
 	speech_args[SPEECH_MESSAGE] = jointext(message_list, " ")
 
 /obj/item/organ/tongue/bone
-	name = "bone \"tongue\""
+	name = "hueso \"lengua\""
 	desc = ""
 	icon_state = "tonguebone"
 	say_mod = "rattles"
-	attack_verb = list("bitten", "chattered", "chomped", "enamelled", "boned")
+	attack_verb = list("mordido", "chattered", "chomped", "esmaltado", "boned")
 	taste_sensitivity = 101 // skeletons cannot taste anything
 	modifies_speech = TRUE
 	var/chattering = FALSE
@@ -167,7 +167,7 @@
 	modifies_speech = FALSE
 
 /obj/item/organ/tongue/robot
-	name = "robotic voicebox"
+	name = "caja de voz robótica"
 	desc = ""
 	organ_flags = ORGAN_ROBOTIC
 	icon_state = "tonguerobot"
@@ -183,7 +183,7 @@
 	speech_args[SPEECH_SPANS] |= SPAN_ROBOT
 
 /obj/item/organ/tongue/snail
-	name = "snailtongue"
+	name = "lengua de caracol"
 	modifies_speech = TRUE
 
 /obj/item/organ/tongue/snail/handle_speech(datum/source, list/speech_args)

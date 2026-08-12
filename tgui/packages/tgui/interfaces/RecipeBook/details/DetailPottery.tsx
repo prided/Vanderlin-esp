@@ -8,18 +8,18 @@ export const DetailPottery = ({ r, lookup, pickerMap, allRecipes, essenceIndex, 
   const steps = r.steps as PotteryStep[] | undefined;
   return (
     <>
-      <Box className="RecipeBook__hint">⚙ Rotational sweetspot: <strong>{r.speed_sweetspot}</strong></Box>
-      <SectionHead>Steps</SectionHead>
+      <Box className="RecipeBook__hint">⚙ Punto dulce de rotación: <strong>{r.speed_sweetspot}</strong></Box>
+      <SectionHead>Pasos</SectionHead>
       <Box className="RecipeBook__step-block">
         {steps?.map((s, i) => (
           <Box key={i}>
             <Box className="RecipeBook__step-row">
               <Sprite icon={s.icon} icon_state={s.icon_state} />
-              Add{' '}
+              Agregar{' '}
               <RecipeLink name={s.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
-              {' '}to lathe
+              {' '}al torno
             </Box>
-            <Box className="RecipeBook__step-row RecipeBook__step-note">↻ Spin for {s.time_s}s</Box>
+            <Box className="RecipeBook__step-row RecipeBook__step-note">↻ Girar para {s.time_s}s</Box>
           </Box>
         ))}
       </Box>

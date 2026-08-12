@@ -1,5 +1,5 @@
 /datum/book_entry/container_craft
-	name = "Cooking With Pots and Pans"
+	name = "Cocinar con ollas y sartenes"
 
 /datum/book_entry/container_craft/inner_book_html(mob/user)
 	return {"

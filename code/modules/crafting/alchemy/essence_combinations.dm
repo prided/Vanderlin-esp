@@ -10,7 +10,7 @@
 
 // Tier 1 combinations (Basic essences -> First Compound)
 /datum/essence_combination/frost
-	name = "Frost Essence"
+	name = "Esencia de escarcha"
 	inputs = list(
 		/datum/thaumaturgical_essence/air = 2,
 		/datum/thaumaturgical_essence/water = 2
@@ -19,7 +19,7 @@
 	output_amount = 3
 
 /datum/essence_combination/light
-	name = "Light Essence"
+	name = "Esencia de luz"
 	inputs = list(
 		/datum/thaumaturgical_essence/fire = 2,
 		/datum/thaumaturgical_essence/order = 2
@@ -46,7 +46,7 @@
 	output_amount = 3
 
 /datum/essence_combination/energia
-	name = "Energia Essence"
+	name = "Esencia de energía"
 	inputs = list(
 		/datum/thaumaturgical_essence/fire = 2,
 		/datum/thaumaturgical_essence/chaos = 2,
@@ -55,7 +55,7 @@
 	output_amount = 3
 
 /datum/essence_combination/void
-	name = "Void Essence"
+	name = "Esencia del Vacío"
 	inputs = list(
 		/datum/thaumaturgical_essence/chaos = 2,
 		/datum/thaumaturgical_essence/earth = 2,
@@ -64,7 +64,7 @@
 	output_amount = 3
 
 /datum/essence_combination/poison
-	name = "Poison Essence"
+	name = "Esencia de veneno"
 	inputs = list(
 		/datum/thaumaturgical_essence/chaos = 2,
 		/datum/thaumaturgical_essence/water = 2,
@@ -73,7 +73,7 @@
 	output_amount = 3
 
 /datum/essence_combination/life
-	name = "Life Essence"
+	name = "Esencia de vida"
 	inputs = list(
 		/datum/thaumaturgical_essence/water = 2,
 		/datum/thaumaturgical_essence/order = 2,
@@ -82,7 +82,7 @@
 	output_amount = 3
 
 /datum/essence_combination/crystal
-	name = "Crystal Essence"
+	name = "Esencia de cristal"
 	inputs = list(
 		/datum/thaumaturgical_essence/earth = 2,
 		/datum/thaumaturgical_essence/order = 2,
@@ -92,7 +92,7 @@
 
 // Tier 2 combinations (First Compound -> Second Compound)
 /datum/essence_combination/magic
-	name = "Magic Essence"
+	name = "Esencia mágica"
 	inputs = list(
 		/datum/thaumaturgical_essence/energia = 2,
 		/datum/thaumaturgical_essence/void = 2,

@@ -45,7 +45,7 @@
 
 	// Check if target is still valid
 	if(QDELETED(target) || get_dist(user, target) > 2)
-		to_chat(user, span_warning("Your target has moved out of range!"))
+		to_chat(user, span_warning("¡Tu objetivo se ha movido fuera de alcance!"))
 		// Apply standard cooldown as a "miss"
 		user.changeNext_move(CLICK_CD_MELEE)
 		return FALSE

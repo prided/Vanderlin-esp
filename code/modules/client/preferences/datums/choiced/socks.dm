@@ -1,7 +1,7 @@
 /datum/preference/choiced/socks
 	savefile_key = "socks"
 	savefile_identifier = PREF_CHARACTER
-	category = "appearance"
+	category = "apariencia"
 	can_randomize = TRUE
 
 /datum/preference/choiced/socks/init_possible_values(datum/preferences/prefs)

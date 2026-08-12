@@ -48,7 +48,7 @@
 
 /mob/proc/haltyell()
 	set name = "HALT!"
-	set category = "Emotes.Noises"
+	set category = "Emotes.Ruidos"
 	emote("haltyell")
 
 /*
@@ -82,7 +82,7 @@
 		"Flail" = /obj/item/weapon/flail/militia, \
 		"Warhammer" = /obj/item/weapon/mace/warhammer, \
 	)
-	var/choice = spawned.select_equippable(player_client, selectable, message = "CHOOSE YOUR MAIN AND SIDE WEAPON", title = "FOOTMAN")
+	var/choice = spawned.select_equippable(player_client, selectable, message = "ELIGE TU ARMA PRINCIPAL Y SECUNDARIA", title = "FOOTMAN")
 	switch(choice)
 		if("Sword")
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/swords, 10)
@@ -198,7 +198,7 @@
 // City Watch Archer
 // Mostly support watchmen role.
 /datum/job/advclass/garrison/archer
-	title = "City Watch Archer"
+	title = "Arquero de la guardia de la ciudad"
 	tutorial = "You are a member of the City Watch. Your training with bows makes you a great support in battles or formidable threat when perched atop the walls or rooftops, raining arrows down upon foes with impunity."
 	outfit = /datum/outfit/guardsman/archer
 	category_tags = list(CTAG_GARRISON)
@@ -231,7 +231,7 @@
 	)
 
 /datum/outfit/guardsman/archer
-	name = "City Watch Archer"
+	name = "Arquero de la guardia de la ciudad"
 	shirt = /obj/item/clothing/armor/gambeson/heavy/colored/brown
 	pants = /obj/item/clothing/pants/trou
 	wrists = /obj/item/clothing/wrists/bracers/leather/scabbard

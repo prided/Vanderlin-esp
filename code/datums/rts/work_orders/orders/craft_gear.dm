@@ -35,5 +35,5 @@
 	var/gear_key = "[gear_type_path]_[crafting_node.get_stored_count(gear_type_path) + 1]"
 	crafting_node.store_gear(gear_item, gear_datum, gear_key)
 
-	worker.visible_message("<span class='notice'>[worker] finishes crafting [gear_item]!</span>")
+	worker.visible_message("<span class='notice'>[worker] termina de elaborar [gear_item]!</span>")
 	. = ..()

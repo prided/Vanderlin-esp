@@ -14,7 +14,7 @@
 	classic_keys = list("South")
 	name = "South"
 	full_name = "Move South"
-	description = "Moves your character south"
+	description = "Mueve tu personaje hacia el sur."
 
 /datum/keybinding/movement/west
 	hotkey_keys = list("A", "West")
@@ -28,11 +28,11 @@
 	classic_keys = list("East")
 	name = "East"
 	full_name = "Move East"
-	description = "Moves your character east"
+	description = "Mueve tu personaje hacia el este."
 
 /datum/keybinding/movement/zlevel_upwards
 	hotkey_keys = list("Northeast") // PGUP
-	name = "Upwards"
+	name = "Hacia arriba"
 	full_name = "Move Upwards"
 	description = "Moves your character up a z-level if possible"
 
@@ -45,7 +45,7 @@
 
 /datum/keybinding/movement/zlevel_downwards
 	hotkey_keys = list("Southeast") // PGDOWN
-	name = "Downwards"
+	name = "Hacia abajo"
 	full_name = "Move Downwards"
 	description = "Moves your character down a z-level if possible"
 

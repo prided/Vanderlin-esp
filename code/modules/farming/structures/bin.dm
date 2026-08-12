@@ -60,7 +60,7 @@
 			return
 		if(prob(GET_MOB_ATTRIBUTE_VALUE(L, STAT_STRENGTH) * 8))
 			playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
-			user.visible_message("<span class='warning'>[user] kicks over [src]!</span>", \
+			user.visible_message("<span class='warning'>[user] patea sobre [src]!</span>", \
 				"<span class='warning'>I kick over [src]!</span>")
 			kover = TRUE
 			playsound(src, pick('sound/foley/water_land1.ogg','sound/foley/water_land2.ogg', 'sound/foley/water_land3.ogg'), 100, FALSE)
@@ -99,14 +99,14 @@
 	if(!reagents.has_reagent(/datum/reagent/water, 5))
 		removereg = /datum/reagent/water/gross
 		if(!reagents.has_reagent(/datum/reagent/water/gross, 5))
-			to_chat(user, "<span class='warning'>No water to wash these stains.</span>")
+			to_chat(user, "<span class='warning'>No hay agua para lavar estas manchas.</span>")
 			return FALSE
 
 	var/list/wash = list('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg')
 	if(to_wash == user)
 		user.visible_message("<span class='info'>[user] starts to wash in [src].</span>")
 	else
-		user.visible_message("<span class='info'>[user] starts to wash [to_wash] in [src].</span>")
+		user.visible_message("<span class='info'>[user] comienza a lavar [to_wash] en [src].</span>")
 		if(istype(to_wash, /obj/item/clothing))
 			var/obj/item/clothing/clothing_item = to_wash
 			if(clothing_item.wetable)
@@ -199,7 +199,7 @@
 	return TRUE
 
 /obj/item/bin/trash
-	name = "trash bin"
+	name = "cubo de basura"
 	desc = "An eyesore that is meant to make things look cleaner."
 	icon_state = "trashbin"
 	base_state = "trashbin"

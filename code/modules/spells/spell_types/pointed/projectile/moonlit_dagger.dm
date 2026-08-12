@@ -42,5 +42,5 @@
 			return
 
 	if(wolf_datum?.transformed || sucker_datum)
-		target.visible_message(span_danger("\The [src] weakens [target]'s curse temporarily!"), span_userdanger("I'm hit by my BANE!"))
+		target.visible_message(span_danger("\The [src] weakens [target]'s curse temporarily!"), span_userdanger("¡Me golpea mi BANE!"))
 		target.apply_status_effect(/datum/status_effect/debuff/silver_bane)

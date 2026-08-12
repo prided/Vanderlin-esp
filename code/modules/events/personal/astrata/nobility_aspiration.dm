@@ -52,7 +52,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE ASTRATA'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE ASTRATA!"),
 		span_notice("Astrata wishes you to ascend in status! Become a part of the nobility to earn Astrata's favor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/magic/bless.ogg', 100)

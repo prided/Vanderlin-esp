@@ -1,6 +1,6 @@
 /datum/repeatable_crafting_recipe/cooking/tamtoplate_base
 	name = "Tamtoplate Base"
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/dough_flat = 1,
@@ -20,7 +20,7 @@
 /datum/repeatable_crafting_recipe/cooking/tamtoplate_cheese
 	name = "Unbaked Cheese Tamtoplate"
 	subtypes_allowed = TRUE
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/foodbase/tamtoplate_base = 1,
@@ -38,7 +38,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/uncooked_tamtoplate
-	category = "Vanderlin Cuisine"
+	category = "Vanderlin Cocina"
 	abstract_type = /datum/repeatable_crafting_recipe/cooking/uncooked_tamtoplate
 	required_table = TRUE
 	craft_time = 3 SECONDS

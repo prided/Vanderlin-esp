@@ -14,7 +14,7 @@
 	var/datum/plant_genetics/source_genetics
 
 /obj/item/reagent_containers/food/snacks/produce/fruit
-	name = "fruit"
+	name = "fruta"
 	naturalist = TRUE
 	nutrition = FRUIT_NUTRITION
 	foodtype = FRUIT
@@ -26,7 +26,7 @@
 	foodtype = VEGETABLES
 
 /obj/item/reagent_containers/food/snacks/produce/grain
-	name = "grain"
+	name = "grano"
 	naturalist = TRUE
 	nutrition = FLOUR_NUTRITION
 	foodtype = GRAIN
@@ -49,7 +49,7 @@
 	if(prob(20))
 		if(istype(H))
 			if(eat_effect == /datum/status_effect/debuff/rotfood)
-				visible_message("<span class='warning'>[H] crushes [src] underfoot.</span>")
+				visible_message("<span class='warning'>[H] aplasta [src] bajo sus pies.</span>")
 				qdel(src)
 
 /obj/item/reagent_containers/food/snacks/produce/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -67,12 +67,12 @@
 	user.changeNext_move(CLICK_CD_FAST)
 
 	if(prob(5))
-		user.visible_message("<span class='info'>[user] fails to extract the seeds.</span>")
+		user.visible_message("<span class='info'>[user] no logra extraer las semillas.</span>")
 		seed = null
 		qdel(src)
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message("<span class='info'>[user] extracts the seeds.</span>")
+	user.visible_message("<span class='info'>[user] extrae las semillas.</span>")
 
 	var/turf/location = get_turf(src)
 
@@ -91,7 +91,7 @@
 
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat
 	seed = /obj/item/neuFarm/seed/wheat
-	name = "wheat grain"
+	name = "grano de trigo"
 	desc = "A staple grain. Bread is made from this, and from bread, springs forth life."
 	icon_state = "wheat"
 	gender = PLURAL
@@ -113,7 +113,7 @@
 
 /obj/item/reagent_containers/food/snacks/produce/grain/oat
 	seed = /obj/item/neuFarm/seed/oat
-	name = "oat grain"
+	name = "grano de avena"
 	desc = "A staple grain. Used to create oatmeal, and to feed saigas."
 	icon_state = "oat"
 	gender = PLURAL
@@ -140,7 +140,7 @@
 	gender = PLURAL
 	filling_color = "#b9a917"
 	bitesize_mod = 2
-	tastes = list("chipping a tooth" = 1)
+	tastes = list("romperse un diente" = 1)
 	grind_results = list(/datum/reagent/flour = 10)
 	dropshrink = 0.9
 	mill_result = /obj/item/reagent_containers/powder/sunreed_flour
@@ -152,7 +152,7 @@
 /obj/item/reagent_containers/food/snacks/produce/fruit/apple
 	seed = /obj/item/neuFarm/seed/apple
 	name = "apple"
-	desc = "The humble apple. A sweet and nutritious fruit."
+	desc = "La humilde manzana. Una fruta dulce y nutritiva."
 	icon_state = "apple"
 	bitesize = 3
 	tastes = list("apple" = 1)
@@ -310,20 +310,20 @@
 		if(poisonous)
 			. += span_warning("This berry looks suspicious. I sense it might be poisoned.")
 		else
-			. += span_notice("This berry looks safe to eat.")
+			. += span_notice("Esta baya parece segura para comer.")
 
 /*	..................   Swamp weed   ................... */
 /obj/item/reagent_containers/food/snacks/produce/swampweed
 	seed = /obj/item/neuFarm/seed/swampleaf
 	name = "swampweed"
-	desc = "A weed that can be dried and smoked to induce a relaxed state."
+	desc = "Una hierba que se puede secar y fumar para inducir un estado de relajación."
 	icon_state = "swampweed"
 	filling_color = "#008000"
 	bitesize_mod = 1
 	foodtype = VEGETABLES
 	nutrition = SNACK_WORST
 	list_reagents = list(/datum/reagent/berrypoison = 1)
-	tastes = list("sweet" = 1,"bitterness" = 1)
+	tastes = list("dulce" = 1,"amargura" = 1)
 	eat_effect = /datum/status_effect/debuff/badmeal
 	rotprocess = SHELFLIFE_LONG
 	sellprice = 0 // only dried has value
@@ -333,7 +333,7 @@
 /obj/item/reagent_containers/food/snacks/produce/swampweed_dried
 	seed = null
 	name = "swampweed"
-	desc = "A dried weed that can be smoked to induce a relaxed state."
+	desc = "Una hierba seca que se puede fumar para inducir un estado de relajación."
 	icon_state = "swampweedd"
 	dry = TRUE
 	nutrition = SNACK_WORST
@@ -349,13 +349,13 @@
 /*	..................   Westleach leaf   ................... */
 /obj/item/reagent_containers/food/snacks/produce/westleach
 	seed = /obj/item/neuFarm/seed/westleach
-	name = "westleach leaf"
+	name = "hoja de westleach"
 	desc = "A common, strong-smelling leaf that is often dried and smoked. Also known as pipeweed."
 	icon_state = "westleach"
 	filling_color = "#008000"
 	bitesize_mod = 1
 	foodtype = VEGETABLES
-	tastes = list("sweet" = 1,"bitterness" = 1)
+	tastes = list("dulce" = 1,"amargura" = 1)
 	nutrition = SNACK_WORST
 	list_reagents = list(/datum/reagent/drug/nicotine = 2, /datum/reagent/berrypoison = 2)
 	grind_results = list(/datum/reagent/drug/nicotine = 5)
@@ -367,7 +367,7 @@
 
 /obj/item/reagent_containers/food/snacks/produce/dry_westleach
 	seed = null
-	name = "dried westleach leaf"
+	name = "hoja seca de westleach"
 	desc = "A common, strong-smelling leaf dried for smoking."
 	icon_state = "westleachd"
 	dry = TRUE
@@ -399,7 +399,7 @@
 /*	..................   Onions   ................... */
 /obj/item/reagent_containers/food/snacks/produce/vegetable/onion
 	name = "onion"
-	desc = "A wonderful vegetable with many layers and a broad flavor profile."
+	desc = "Una verdura maravillosa con muchas capas y un amplio perfil de sabor."
 	seed = /obj/item/neuFarm/seed/onion
 	icon_state = "onion"
 	dropshrink = 0.9
@@ -599,7 +599,7 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/fruit/tamto_slice
 	slices_num = 1
 	chopping_sound = TRUE
-	tastes = list("sweet tamto" = 1)
+	tastes = list("dulce tamto" = 1)
 	rotprocess = SHELFLIFE_SHORT
 	item_weight = 90 GRAMS
 
@@ -615,7 +615,7 @@
 	icon_state = "ollie"
 	bitesize = 2
 	dropshrink = 0.6
-	tastes = list("bitterness" = 1)
+	tastes = list("amargura" = 1)
 	rotprocess = SHELFLIFE_DECENT
 	item_weight = 15 GRAMS
 
@@ -636,7 +636,7 @@
 /*	..................   Turnip   ................... */ // only for veggie soup
 /obj/item/reagent_containers/food/snacks/produce/vegetable/turnip
 	name = "turnip"
-	desc = "A shield against hunger, naught else."
+	desc = "Un escudo contra el hambre, nada más."
 	seed = /obj/item/neuFarm/seed/turnip
 	icon_state = "turnip"
 	tastes = list("dirt" = 1)
@@ -691,7 +691,7 @@
 	desc ="Milled sugarcane, sweet as can be."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "salt"
-	tastes = list("sweet" = 1)
+	tastes = list("dulce" = 1)
 	foodtype = SUGAR
 	list_reagents = list(/datum/reagent/consumable/sugar = 15)
 	nutrition = SUGAR_NUTRITION
@@ -771,7 +771,7 @@
 	icon_state = "capillus"
 	seed = /obj/item/neuFarm/seed/spore/capillus
 	throwforce = 0
-	tastes = list("bitter" = 1,"fibrous" = 1)
+	tastes = list("amargo" = 1,"fibroso" = 1)
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 1
 	throw_range = 3
@@ -788,7 +788,7 @@
 	icon_state = "waddle"
 	seed = /obj/item/neuFarm/seed/spore/waddle
 	throwforce = 0
-	tastes = list("meaty" = 1)
+	tastes = list("carnoso" = 1)
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 1
 	throw_range = 3
@@ -802,7 +802,7 @@
 	icon_state = "merkel"
 	seed = /obj/item/neuFarm/seed/spore/merkel
 	throwforce = 0
-	tastes = list("sweet" = 1,"nutty" = 1,"rich" = 1)
+	tastes = list("dulce" = 1,"nutty" = 1,"rico" = 1)
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 1
 	throw_range = 3
@@ -816,7 +816,7 @@
 	icon_state = "caveweep"
 	seed = /obj/item/neuFarm/seed/spore/caveweep
 	throwforce = 0
-	tastes = list("sweet" = 1,"briny" = 1)
+	tastes = list("dulce" = 1,"salado" = 1)
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 1
 	throw_range = 3
@@ -831,7 +831,7 @@
 	icon_state = "borowiki"
 	seed = /obj/item/neuFarm/seed/spore/borowiki
 	throwforce = 0
-	tastes = list("earthy" = 1,"nutty" = 1)
+	tastes = list("terroso" = 1,"nutty" = 1)
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 1
 	throw_range = 3

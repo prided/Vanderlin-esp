@@ -5,20 +5,20 @@ import type { NavProps } from '../shared';
 
 export const DetailBrewing = ({ r, lookup, pickerMap, allRecipes, essenceIndex, nav }: NavProps) => (
   <>
-    <Box className="RecipeBook__brew-time">⏱ {r.brew_time_s}s brewing time</Box>
+    <Box className="RecipeBook__brew-time">⏱ {r.brew_time_s}s tiempo de preparación</Box>
     {r.heat_c !== undefined && (
-      <WarnFlag color="#e57c34">Requires heated vessel ≥ {Math.round(r.heat_c!)}C</WarnFlag>
+      <WarnFlag color="#e57c34">Requiere recipiente calentado ≥ {Math.round(r.heat_c!)}C</WarnFlag>
     )}
     {r.prereq_name && (
-      <WarnFlag color="#aaaaff">Requires {r.prereq_name} present in keg</WarnFlag>
+      <WarnFlag color="#aaaaff">Requiere {r.prereq_name} presente en barril</WarnFlag>
     )}
     {!!r.ages && (
-      <WarnFlag color="#aad4aa">Will continue to age after brewing</WarnFlag>
+      <WarnFlag color="#aad4aa">Continuará envejeciendo después de la elaboración de cerveza.</WarnFlag>
     )}
     {r.hints && <Box className="RecipeBook__hint">💡 {r.hints}</Box>}
     {!!(r.crops?.length || r.items?.length) && (
       <>
-        <SectionHead>Items Required</SectionHead>
+        <SectionHead>Artículos requeridos</SectionHead>
         {r.crops?.map((item, i) => (
           <ItemRow key={i} item={item} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
         ))}
@@ -29,21 +29,21 @@ export const DetailBrewing = ({ r, lookup, pickerMap, allRecipes, essenceIndex, 
     )}
     {!!r.reagents?.length && (
       <>
-        <SectionHead>Liquids Required</SectionHead>
+        <SectionHead>Líquidos requeridos</SectionHead>
         {r.reagents.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} ligulae of{' '}
+            {rg.amount} lígulas de{' '}
             <RecipeLink name={rg.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
         ))}
       </>
     )}
-    <SectionHead>Output</SectionHead>
+    <SectionHead>Salida</SectionHead>
     {r.output_liquid && (
       <Box className="RecipeBook__output-banner">
-        <span className="RecipeBook__output-label">Liquid</span>
+        <span className="RecipeBook__output-label">Líquido</span>
         <Box className="RecipeBook__output-body">
-          {r.output_volume} ligulae of <strong>{r.output_liquid}</strong>
+          {r.output_volume} lígulas de <strong>{r.output_liquid}</strong>
         </Box>
       </Box>
     )}
@@ -62,10 +62,10 @@ export const DetailBrewing = ({ r, lookup, pickerMap, allRecipes, essenceIndex, 
     )}
     {!!r.age_stages?.length && (
       <>
-        <SectionHead>Aging</SectionHead>
+        <SectionHead>Envejecimiento</SectionHead>
         {r.age_stages!.map((ag, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            After {ag.time_s}s →{' '}
+            Después {ag.time_s}s →{' '}
             <RecipeLink name={ag.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
         ))}

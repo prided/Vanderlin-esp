@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/conjure_item/brick
-	name = "Magician's Brick"
+	name = "Ladrillo del mago"
 	desc = "Conjure a magical brick in your hand for 3 minutes. \
 	This spell has been honed over centuries to bypass anti-magic defenses."
 	button_icon_state = "magicians_brick"
@@ -34,7 +34,7 @@
 	return brick
 
 /obj/item/weapon/magicbrick
-	name = "magician's brick"
+	name = "ladrillo de mago"
 	desc = "A brick formed out of arcyne energy. Makes for a deadly melee and throwing weapon."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "claybrickcook"

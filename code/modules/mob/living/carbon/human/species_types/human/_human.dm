@@ -1,5 +1,5 @@
 /datum/species/human
-	name = "Humanb"
+	name = "Humano"
 	id = SPEC_ID_HUMEN
 	multiple_accents = list(
 		"No Accent" = ACCENT_NONE,

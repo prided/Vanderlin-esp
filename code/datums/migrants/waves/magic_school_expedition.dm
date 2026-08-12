@@ -60,7 +60,7 @@
 	)
 
 /datum/migrant_role/magic_student
-	name = "Magic School Student"
+	name = "Estudiante de la escuela de magia"
 	greet_text = "When the call went out for daring pupils to join a great overland trek from Kingsfield, you eagerly volunteered, visions of adventure, discovery, and excitement dancing in your mind. \
 	Of course, the creatures that lurk along the road seem just as eager... though perhaps for very different reasons."
 	migrant_job = /datum/job/migrant/magic_student
@@ -83,7 +83,7 @@
 	)
 
 /datum/job/migrant/magic_student
-	title = "Magic School Student"
+	title = "Estudiante de la escuela de magia"
 	tutorial = "When the call went out for daring pupils to join a great overland trek from Kingsfield, you eagerly volunteered, visions of adventure, discovery, and excitement dancing in your mind. \
 	Of course, the creatures that lurk along the road seem just as eager... though perhaps for very different reasons."
 	outfit = /datum/outfit/magic_student
@@ -144,7 +144,7 @@
 		head = /obj/item/clothing/head/wizhat/witch
 
 /datum/migrant_wave/magic_school_expedition
-	name = "Magic School Expedition"
+	name = "Expedición de la escuela de magia"
 	max_spawns = 1
 	shared_wave_type = /datum/migrant_wave/magic_school_expedition
 	downgrade_wave = /datum/migrant_wave/magic_school_expedition_down
@@ -156,7 +156,7 @@
 	greet_text = "A teacher in travel-worn robes takes a seat, a cluster of young apprentices following close behind. Their satchels clink faintly with glass and metal, and the smell of old parchment drifts from their packs."
 
 /datum/migrant_wave/magic_school_expedition_down
-	name = "Magic School Expedition"
+	name = "Expedición de la escuela de magia"
 	shared_wave_type = /datum/migrant_wave/magic_school_expedition
 	downgrade_wave = /datum/migrant_wave/magic_school_expedition_two
 	can_roll = FALSE
@@ -167,7 +167,7 @@
 	greet_text = "The door opens to a weary teacher and a smaller band of pupils. Their robes are torn at the hems, and one student’s hands are wrapped in singed cloth."
 
 /datum/migrant_wave/magic_school_expedition_two
-	name = "Magic School Expedition"
+	name = "Expedición de la escuela de magia"
 	shared_wave_type = /datum/migrant_wave/magic_school_expedition
 	can_roll = FALSE
 	roles = list(

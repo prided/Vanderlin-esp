@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/energize
-	name = "Energize"
+	name = "Energizar"
 	desc = "Restores energy to magical devices or provides a burst of vitality."
 	button_icon_state = "primetriangle"
 	cast_range = 1

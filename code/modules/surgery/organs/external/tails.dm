@@ -1,7 +1,7 @@
 // Note: tails only work in humans. They use human-specific parameters and rely on human code for displaying.
 /obj/item/organ/tail
 	name = "tail"
-	desc = "A severed tail. What did you cut this off of?"
+	desc = "Una cola cortada. ¿De qué cortaste esto?"
 	icon_state = "tail-lizard"
 	visible_organ = TRUE
 	zone = BODY_ZONE_PRECISE_GROIN
@@ -17,10 +17,10 @@
 		organ_owner.dna.species.stop_wagging_tail(organ_owner)
 
 /obj/item/organ/tail/cat
-	name = "cat tail"
+	name = "cola de gato"
 
 /obj/item/organ/tail/demihuman
-	name = "hollowkin tail"
+	name = "cola hueca"
 	icon_state = "tail-furry"
 
 /obj/item/organ/tail/harpy
@@ -28,7 +28,7 @@
 	accessory_type = /datum/sprite_accessory/tail/hawk
 
 /obj/item/organ/tail/medicator
-	name = "medicator plumage"
+	name = "plumaje medicador"
 	desc = "A foul smelling substance drips from the tips, even without its host."
 	accessory_type = /datum/sprite_accessory/tail/medicator
 	var/datum/component/stillness_timer/stillness
@@ -70,12 +70,12 @@
 	QDEL_IN(mess, 30 SECONDS)
 
 /obj/item/organ/tail/kobold
-	name = "small lizard tail"
+	name = "cola de lagarto pequeño"
 	accessory_type = /datum/sprite_accessory/tail/kobold
 
 /obj/item/organ/tail/kobold/round
 	accessory_type = /datum/sprite_accessory/tail/kobold/round
 
 /obj/item/organ/tail/triton
-	name = "triton bell"
+	name = "campana de tritón"
 	accessory_type = /datum/sprite_accessory/tail/triton

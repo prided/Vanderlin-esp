@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/cows
-	name = "Mountain Cow Farm"
+	name = "Granja de vacas de montaña"
 	id = "feature_cowfarm"
 	mappath = "_maps/kalypso/cows.dmm"
 

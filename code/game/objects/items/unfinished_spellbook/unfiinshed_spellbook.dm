@@ -7,7 +7,7 @@
 	throw_speed = 1
 	throw_range = 5
 	w_class = WEIGHT_CLASS_NORMAL
-	attack_verb = list("bashed", "whacked", "educated")
+	attack_verb = list("bashed", "whacked", "educado")
 	resistance_flags = FLAMMABLE
 	drop_sound = 'sound/foley/dropsound/book_drop.ogg'
 	pickup_sound = 'sound/blank.ogg'

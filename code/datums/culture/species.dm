@@ -33,7 +33,7 @@
 	pre_append = "the "
 
 /datum/culture/species/elven/desert
-	name = "Desert Tribes"
+	name = "Tribus del desierto"
 	description = "Known by humens to be rebellious and unruly. Assumed to be involved with the Xylixian freemen of Zaladin."
 	pre_append = "the "
 
@@ -43,7 +43,7 @@
 	pre_append = "the "
 
 /datum/culture/species/elven/obsidian
-	name = "Obsidian Tribes"
+	name = "Tribus de obsidiana"
 	description = "Known by humens to be miserably devout Necrans. \
 	They worship their holy tree, \"The Waiting Wood,\" praying to its skulls for but a chance to speak to The Veiled Lady herself."
 	species = list(
@@ -80,7 +80,7 @@
 	accent = ACCENT_PIRATE
 
 /datum/culture/species/half_orc/blood_axe
-	name = "Blood Axe"
+	name = "Hacha de sangre"
 	description = "Known to humens as violent and brutal warriors in the Crimsonlands. They believe themselves to be Graggar's chosen. Humen steppesmen avoid their path. Never ask their opinion of the Splitjaw tribe."
 
 /datum/culture/species/half_orc/splitjaw
@@ -96,7 +96,7 @@
 	description = "Known to humens as one of the wilder half-orc tribes, originating from Ossland. Many of them follow the Great Hunt common in that land. The most valued trophy is a sapient being's head, ensuring reincarnation into a more powerful form."
 
 /datum/culture/species/half_orc/crescent_fang
-	name = "Crescent Fang"
+	name = "Colmillo creciente"
 	description = "Known to humens to live in the jungle between Grenzelhoft and Zaladin, hating both sides. They are isolationist and rarely engage in trade, preferring instead to take bounties from one of the warring nations to kill members of the other, or take payment to guide travelers across the jungle. They can also be found picking off undead that managed to get stranded in the jungle after Zizo's ascension. Don't ask their opinion on the quicksand rakshari."
 
 /datum/culture/species/half_orc/murkwater
@@ -123,15 +123,15 @@
 	description = "Known by humens to be greedy, and descended from desert or oasis rakshari, for the most part, who decided to pause their nomadic lifestyle and settle down in a city. They're as much of a melting pot as Zaladin itself is. City rakshari can be found in any social level of Zaladin, from merchant-kings who gained their wealth through trading, to the average commoner, to a slave. Many cities have districts full of rakshari as they naturally tend to gather together. Of course living in cities often comes with the temptation of thievery, and more criminals are found among this subculture. "
 
 /datum/culture/species/rakshari/desert
-	name = "Desert Tribes"
+	name = "Tribus del desierto"
 	description = "What humens think of as the 'baseline' rakshari. Desert rakshari are the most numerous, traveling from city to city through the sand. There's no singular tribe of desert rakshari, instead this is a grouping of multiple tribes of the same subculture. Customs can vary throughout individual tribes, due to their numbers."
 
 /datum/culture/species/rakshari/deep_desert
-	name = "Deep Desert Tribes"
+	name = "Tribus del desierto profundo"
 	description = "Barely known to humens as desert-maddened heretics. Deep desert tribes are isolated by choice, distrustful, or too arrogant to mingle with other species. Each tribe leans into a sort of folk mysticism. Handmade charms for luck or to ward off evil are common, tied onto rakshari clothing or beasts of burden. Some tribes take the rakshari not being chosen by any of the Ten to heart, and make their own religion, elaborate and secretive. Outsiders rarely see any of these tribesmen, and those that leave the isolation of the deep desert often have strong reasons to do so."
 
 /datum/culture/species/rakshari/mountain
-	name = "Mountain Tribes"
+	name = "Tribus de montaña"
 	description = "Known to humens as surprisingly welcoming to trade. These are the furthest tribes from the desert's centre, living in mountain caverns for generations. They have more fur than most rakshari, resembling the lykoi breed of cat. Heavier clothing is common here, swapping the flowy, covering desert robes for thicker fabric, often woven from the fur of the gotes that roam the mountain. These rakshari are isolated by happenstance, not by choice, and welcome traders who make the long journey to the mountains. They have a strong culture of passing down history and folk tales, and uncanny balance on the mountainside, with stronger, thicker claws for keeping their footing."
 
 /datum/culture/species/rakshari/oasis
@@ -143,7 +143,7 @@
 	description = "Known to humens as even more rich and elitist than oasis rakshari. These are the elite among the oasis rakshari. They trace their lineages with pride, and are those most likely to know the history of the rakshari, at least among their local tribes. Some opt to tattoo their history on their skin in an ink that stands out, depending on the skin tone of the individual. They value status highly. These are the rakshari most likely to turn up their nose at unfavourable courtships and deals."
 
 /datum/culture/species/rakshari/quicksand
-	name = "Quicksand Tribes"
+	name = "Tribus de arenas movedizas"
 	description = "Known to humens to be stern and quick to aggression. Quicksand rakshari are near the jungle at the edge of Zaladin. As inhospitable as the desert is, the jungle is just as dangerous, and these rakshari train all of their people in defending against it, as well as against any foreign soldiers, mostly from Grenzelhoft, who manage to navigate the jungle intact. They have a stronger warrior culture than the other rakshari tribes, valuing strength and discipline. They may be standoffish to foreigners, but a bit friendlier to Zaladin citizens. In either case, they come off as harsh at first. Don't ask their opinion of the Crescent Fang half-orcs."
 
 /datum/culture/species/kobold
@@ -196,15 +196,15 @@
 	accent = ACCENT_TRITON
 
 /datum/culture/species/triton/reef
-	name = "Reef colonies"
+	name = "Colonias de arrecifes"
 	description = "Known to humens to be fond of bright colours, these triton often collect shells and other trinkets to adorn themselves and impress their allies. They perform the most ritualistic traditions of the known triton cultures."
 
 /datum/culture/species/triton/depths
-	name = "Deepwater colonies"
+	name = "Colonias de aguas profundas"
 	description = "Barely known to humens, these triton tend to be solitary hunters. Those who come to the surface are often paranoid, with light-sensitive eyes. This caution makes them excellent guards."
 
 /datum/culture/species/triton/abyssal
-	name = "Abyssal colonies"
+	name = "Colonias abisales"
 	description = "Nearly entirely unknown to humens. Those deepest in the darkest depths hear Abyssor's demands for worship, and another voice whispering beneath."
 
 /datum/culture/species/triton/shallows
@@ -245,7 +245,7 @@
 	description = "Known to humens to be the most level-headed of aasimar, these were placed on Psydonia to serve a purpose there, and may vary in whether they have accomplished it at all, or been discarded."
 
 /datum/culture/species/aasimar/seer
-	name = "Great Tree"
+	name = "Gran árbol"
 	description = "Known by humens to originate from Kingsfield, falling from the crystal leaf buds of the great petrified tree. These aasimar have no memory of what they were doing within the tree, waking within craters from their fall."
 	pre_append = "the "
 

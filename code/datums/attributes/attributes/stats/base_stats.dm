@@ -19,7 +19,7 @@
 /datum/attribute/stat/intelligence
 	name = "Intelligence"
 	shorthand = "INT"
-	desc = "Intelligence measures your abilities to perform magic and retain information."
+	desc = "La inteligencia mide tus habilidades para realizar magia y retener información."
 	icon_state = "intelligence"
 
 /datum/attribute/stat/perception
@@ -35,7 +35,7 @@
 	icon_state = "willpower"
 
 /datum/attribute/stat/fortune
-	name = "Fortune"
+	name = "Fortuna"
 	shorthand = "FOR"
-	desc = "Fortune measures your luck and ability to defy odds."
+	desc = "La fortuna mide tu suerte y tu capacidad para desafiar las probabilidades."
 	icon_state = "willpower"

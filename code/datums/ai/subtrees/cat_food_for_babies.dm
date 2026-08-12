@@ -85,7 +85,7 @@
 
 	if(get_dist(cat_pawn, food) <= required_distance)
 		// We're close enough to pick up the food
-		cat_pawn.visible_message("<span class='notice'>\The [cat_pawn] picks up [food] in its mouth.</span>")
+		cat_pawn.visible_message("<span class='notice'>\The [cat_pawn] recoge [food] en su boca.</span>")
 
 		// Pick up the food
 		if(cat_pawn.held_item)

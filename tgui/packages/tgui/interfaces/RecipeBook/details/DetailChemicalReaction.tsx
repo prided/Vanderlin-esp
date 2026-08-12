@@ -9,33 +9,33 @@ export const DetailChemicalReaction = ({
   <>
     {!!r.is_cold_recipe && (
       <WarnFlag color="#88ccff">
-        Cold recipe — react BELOW {r.required_temp ? `${r.required_temp - 273.15}C` : 'required temp'}
+        Receta fría: reacciona ABAJO {r.required_temp ? `${r.required_temp - 273.15}C` : 'required temp'}
       </WarnFlag>
     )}
     {!r.is_cold_recipe && r.required_temp ? (
       <WarnFlag color="#e57c34">
-        Requires temperature ≥ {r.required_temp - 273.15}C
+        Requiere temperatura ≥ {r.required_temp - 273.15}C
       </WarnFlag>
     ) : null}
 
     {r.required_container && (
       <WarnFlag color="#aaaaff">
-        Must react inside: {r.required_container}
+        Debe reaccionar dentro de: {r.required_container}
       </WarnFlag>
     )}
 
     {r.mob_react === false && (
       <WarnFlag color="#cc6600">
-        Cannot react inside a living body
+        No puede reaccionar dentro de un cuerpo vivo.
       </WarnFlag>
     )}
 
     {!!r.required_reagents?.length && (
       <>
-        <SectionHead>Reagents</SectionHead>
+        <SectionHead>reactivos</SectionHead>
         {r.required_reagents.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} ligulae of{' '}
+            {rg.amount} lígulas de{' '}
             <RecipeLink
               name={rg.name}
               allRecipes={allRecipes}
@@ -51,10 +51,10 @@ export const DetailChemicalReaction = ({
 
     {!!r.required_catalysts?.length && (
       <>
-        <SectionHead>Catalysts (not consumed)</SectionHead>
+        <SectionHead>Catalizadores (no consumidos)</SectionHead>
         {r.required_catalysts.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} ligulae of{' '}
+            {rg.amount} lígulas de{' '}
             <RecipeLink
               name={rg.name}
               allRecipes={allRecipes}
@@ -70,10 +70,10 @@ export const DetailChemicalReaction = ({
 
     {!!r.results?.length && (
       <>
-        <SectionHead>Output Reagents</SectionHead>
+        <SectionHead>Reactivos de salida</SectionHead>
         {r.results.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} ligulae of <strong>{rg.name}</strong>
+            {rg.amount} lígulas de <strong>{rg.name}</strong>
           </Box>
         ))}
       </>

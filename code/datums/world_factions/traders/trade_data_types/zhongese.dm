@@ -37,7 +37,7 @@
 			"Ah, this item has caught my discerning eye! I would trade good coin for such quality.",
 		),
 		BUY_PHRASE = list(
-			"A most honorable transaction! May the spirits favor you.",
+			"¡Una transacción muy honorable! Que los espíritus te favorezcan.",
 		),
 		NO_CASH_PHRASE = list(
 			"Honorable customer, fine sake requires proper payment. Return when your purse matches your taste!",
@@ -55,23 +55,23 @@
 			"My cellars overflow with that particular item already.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
-			"I seek no purchases at this moment, honored one.",
+			"No busco compras en este momento, honorable.",
 		),
 		TRADER_NOT_SELLING_ANYTHING = list(
 			"My stores are barren at present. Please return when the next shipment arrives.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
-			"You dare steal from a merchant of the shogun?!",
+			"¿Te atreves a robarle a un comerciante del shogun?",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
-			"This... is not the honorable death I envisioned...",
+			"Esta... no es la muerte honorable que imaginé...",
 		),
 		TRADER_LORE_PHRASE = list(
 			"Sacred brews from the temples of distant Zhong!",
-			"Each bottle carries the blessing of ancient brewing masters!",
-			"Rice wine aged in the shadow of cherry blossoms!",
+			"¡Cada botella lleva la bendición de los antiguos maestros cerveceros!",
+			"¡Vino de arroz envejecido a la sombra de los cerezos en flor!",
 			"Sake fit for samurai and nobles alike!",
-			"Ancient recipes from the Land of the Rising Sun!",
+			"¡Recetas antiguas de la Tierra del Sol Naciente!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Welcome, honored customer! Behold the finest sake from across the eastern seas!",
@@ -107,7 +107,7 @@
 			"Perhaps the blade was not meant for your hands after all, honored one.",
 		),
 		ITEM_SELLING_ACCEPTED_PHRASE = list(
-			"May this blade serve you with honor and bring swift victory to your enemies!",
+			"¡Que esta espada te sirva con honor y traiga una rápida victoria a tus enemigos!",
 		),
 		INTERESTED_PHRASE = list(
 			"Ah! This material speaks to my craftsman's soul. I would pay handsomely for such quality!",
@@ -122,7 +122,7 @@
 			"Alas, that particular blade has already found its destined master.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
-			"I have no need for such items in my forge at this time.",
+			"No necesito esos artículos en mi forja en este momento.",
 		),
 		ITEM_IS_WORTHLESS_PHRASE = list(
 			"This scrap metal brings shame to all who work the forge!",
@@ -131,7 +131,7 @@
 			"My armory already overflows with that particular material.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
-			"I seek no materials at this moment, honored smith.",
+			"No busco materiales en este momento, honorable herrero.",
 		),
 		TRADER_NOT_SELLING_ANYTHING = list(
 			"My forge runs cold today. Return when the fires burn bright again.",
@@ -144,11 +144,11 @@
 		),
 		TRADER_LORE_PHRASE = list(
 			"Blades forged in the sacred fires of distant mountain temples!",
-			"Each sword carries the soul of its maker and the honor of ancient warriors!",
+			"¡Cada espada lleva el alma de su creador y el honor de los antiguos guerreros!",
 			"Steel folded a thousand times under the light of the eastern moon!",
 			"Hook swords - the weapon of choice for legendary duelists!",
 			"Ruma clan steel, blessed by the spirits of fallen samurai!",
-			"Foreign blades that have tasted victory in a hundred battles!",
+			"¡Espadas extranjeras que han probado la victoria en cien batallas!",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Welcome, warrior! Behold the finest eastern steel ever forged by mortal hands!",

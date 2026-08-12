@@ -394,7 +394,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 /obj/item/recipe_book/sewing_leather
 	can_spawn = FALSE
-	name = "High Fashion Encyclopedia"
+	name = "Enciclopedia de alta costura"
 	desc = "The combined works of famed Elise Heiran and Orym Vayore."
 	icon_state ="book7_0"
 	base_icon_state = "book7"
@@ -406,7 +406,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 		)
 
 /obj/item/recipe_book/cooking
-	name = "The Hearthstone Grimoire: Culinary Secrets of the Realm"
+	name = "El grimorio de Hearthstone: secretos culinarios del reino"
 	desc = "Penned by Aric Dunswell, Head Court Chef, Third Generation."
 	icon_state ="book6_0"
 	base_icon_state = "book6"
@@ -428,7 +428,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 	)
 
 /obj/item/recipe_book/survival
-	name = "The Wilderness Guide: Secrets of Survival"
+	name = "La guía del desierto: secretos de supervivencia"
 	desc = "Penned by Kaelen Stormrider, Fourth Generation Trailblazer."
 	icon_state ="book5_0"
 	base_icon_state = "book5"
@@ -468,7 +468,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 /obj/item/recipe_book/carpentry
 	name = "The Woodwright's Codex: Crafting with Timber and Grain"
-	desc = "Penned by Eadric Hollowell, Master Carpenter, Fourth Generation."
+	desc = "Escrito por Eadric Hollowell, maestro carpintero, cuarta generación."
 	icon_state ="book3_0"
 	base_icon_state = "book3"
 
@@ -493,7 +493,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 /obj/item/recipe_book/masonry
 	name = "The Stonebinder’s Manual: Foundations of Craft and Fortitude"
-	desc = "Penned by Garrin Ironvein, Master Mason, Third Generation."
+	desc = "Escrito por Garrin Ironvein, Maestro Masón, Tercera Generación."
 	icon_state ="book_0"
 	base_icon_state = "book"
 
@@ -520,8 +520,8 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 	)
 
 /obj/item/recipe_book/blacksmithing
-	name = "The Smith’s Legacy"
-	desc = "Penned by Aldric Forgeheart, Master Blacksmith and Keeper of the Ancestral Flame."
+	name = "El legado del herrero"
+	desc = "Escrito por Aldric Forgeheart, maestro herrero y guardián de la llama ancestral."
 	icon_state ="book3_0"
 	base_icon_state = "book3"
 
@@ -532,8 +532,8 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 	)
 
 /obj/item/recipe_book/arcyne
-	name = "The Arcanum of Arcyne"
-	desc = "Penned by Elyndor Starforge, Grand Arcanist and Keeper of the Ethereal Crucible."
+	name = "El Arcano de Arcyne"
+	desc = "Escrito por Elyndor Starforge, Gran Arcanista y Guardián del Crisol Etéreo."
 	icon_state ="book4_0"
 	base_icon_state = "book4"
 
@@ -550,8 +550,8 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 
 /obj/item/recipe_book/alchemy
-	name = "Codex Virellia"
-	desc = "Transcribed by Maerion Duskwind, Avid Hater of Gnomes."
+	name = "Códice Virellia"
+	desc = "Transcrito por Maerion Duskwind, Avid Hater of Gnomes."
 	icon_state ="book4_0"
 	base_icon_state = "book4"
 
@@ -573,15 +573,15 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 // Shown when MMBing the /atom/movable/screen/craft "craft" HUD element
 /obj/item/recipe_book/always_known
-	name = "Survival"
+	name = "Supervivencia"
 	can_spawn = FALSE
 	types = list(
 		/datum/repeatable_crafting_recipe/survival
 	)
 
 /obj/item/recipe_book/agriculture
-	name = "The Farmers Almanac: Principles of Growth and Harvest"
-	desc = "Compiled by Elira Greenshade."
+	name = "El Almanaque del Agricultor: Principios de Crecimiento y Cosecha"
+	desc = "Compilado por Elira Greenshade."
 	icon_state = "book_0"
 	base_icon_state = "book"
 
@@ -630,7 +630,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 /obj/item/recipe_book/gravemaking
 	name = "The Gravetender's Guide: Burials, Exhumations, and Unwanted Guests"
-	desc = "Penned by Chem and Terry Ditchdigger."
+	desc = "Escrito por Chem y Terry Ditchdigger."
 	icon_state ="book6_0"
 	base_icon_state = "book6"
 

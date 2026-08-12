@@ -9,7 +9,7 @@
 	required_form = FORM_ICE
 	required_technique = TECHNIQUE_ALTERATION
 
-	invocation = "Bite of Frost!!"
+	invocation = "¡¡Mordedura de escarcha!!"
 	invocation_type = INVOCATION_SHOUT
 
 	charge_time = 3 SECONDS

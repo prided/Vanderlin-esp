@@ -47,7 +47,7 @@
 		"Bow & Sword" = list(/obj/item/gun/ballistic/bow, /obj/item/weapon/sword/short/iron),
 	)
 
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose your weapon.", title = "TAKE UP ARMS.")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu arma.", title = "TAKE UP ARMS.")
 
 	switch(weapon_choice)
 		if("Crossbow & Dagger")

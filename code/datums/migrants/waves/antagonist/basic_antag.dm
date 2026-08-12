@@ -31,7 +31,7 @@
 	advclass_cat_rolls = list(CTAG_ADVENTURER = 15)
 
 /datum/migrant_wave/werewolf
-	name = "Exiled Adventurer (Verevolf)"
+	name = "Aventurero exiliado (Verevolf)"
 	roles = list(
 		/datum/migrant_role/advclass/adventurer/werewolf = 1,
 	)
@@ -43,7 +43,7 @@
 	advclass_cat_rolls = list(CTAG_ADVENTURER = 15)
 
 /datum/migrant_wave/vampire
-	name = "Exiled Adventurer (Vampire)"
+	name = "Aventurero exiliado (vampiro)"
 	roles = list(
 		/datum/migrant_role/advclass/adventurer/vampire = 1,
 	)

@@ -29,7 +29,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	outfit = /datum/outfit/adventurer/carpenter
 	category_tags = list(CTAG_PILGRIM)
-	apprentice_name = "Carpenter Apprentice"
+	apprentice_name = "Aprendiz de carpintero"
 	cmode_music = 'sound/music/cmode/towner/CombatBeggar.ogg'
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/pilgrim/carpenter

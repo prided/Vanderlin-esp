@@ -1,7 +1,7 @@
 /*****************************Dice Bags********************************/
 
 /obj/item/storage/pill_bottle/dice
-	name = "bag of dice"
+	name = "bolsa de dados"
 	desc = ""
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "dicebag"
@@ -132,13 +132,13 @@
 	microwave_riggable = FALSE // You can't melt wood in the microwave
 
 /obj/item/dice/d6/space
-	name = "space cube"
+	name = "cubo espacial"
 	icon_state = "spaced6"
 
 /obj/item/dice/d6/space/Initialize()
 	. = ..()
 	if(prob(10))
-		name = "spess cube"
+		name = "cubo de spess"
 
 /obj/item/dice/fudge
 	name = "fudge die"
@@ -189,7 +189,7 @@
 	return ..()
 
 /obj/item/dice/eightbd20
-	name = "strange d20"
+	name = "extraño d20"
 	icon_state = "8bd20"
 	sides = 20
 	special_faces = list("It is certain","It is decidedly so","Without a doubt","Yes, definitely","You may rely on it","As I see it, yes","Most likely","Outlook good","Yes","Signs point to yes","Reply hazy try again","Ask again later","Better not tell you now","Cannot predict now","Concentrate and ask again","Don't count on it","My reply is no","My sources say no","Outlook not so good","Very doubtful")

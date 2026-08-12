@@ -16,7 +16,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	alternate_worn_layer = TABARD_LAYER
 	boobed = FALSE
-	name = "tabard of malum"
+	name = "tabardo de malum"
 	desc = "Light blacks and greys, with a tinge of red, the everlasting fire of Malum's iron hammer as it strikes."
 	icon_state = "malumtabard"
 
@@ -48,7 +48,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	alternate_worn_layer = TABARD_LAYER
 	boobed = TRUE
-	name = "xylixian cloak"
+	name = "capa xylixiana"
 	desc = "Swirling cloth, jingling bells! Oh, how I love the path to hell!"
 	icon_state = "xylixcloak"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_cloaks.dmi'
@@ -59,14 +59,14 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	alternate_worn_layer = TABARD_LAYER
 	boobed = TRUE
-	name = "undivided tabard"
+	name = "tabardo indiviso"
 	desc = "The refuge of the TEN upon my back. An Undivided House, standing eternal against the encroaching darkness."
 	icon_state = "seetabard"
 
 
 /obj/item/clothing/cloak/wardencloak
 	name = "warden cloak"
-	desc = "A cloak worn by the Wardens of Azuria's Forests"
+	desc = "Una capa usada por los Guardianes de los Bosques de Azuria."
 	icon_state = "wardencloak"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
@@ -87,8 +87,8 @@
 	nodismemsleeves = TRUE
 
 /obj/item/clothing/cloak/forrestercloak
-	name = "forrester cloak"
-	desc = "A cloak worn by the Black Oaks of Azuria."
+	name = "capa de forrester"
+	desc = "Una capa usada por los Robles Negros de Azuria."
 	icon_state = "forestcloak"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
@@ -171,7 +171,7 @@
 
 
 /obj/item/clothing/head/veiled
-	name = "nurse's veil"
+	name = "velo de enfermera"
 	desc = "A chirurgeon's bonnet, veiled with petal-stuffed linen. The stitchwork is often donned by the likes of wandering plague doctors and clerics; especially, those who're beholden to Pestra and Psydon."
 	icon_state = "veil"
 	item_state = "veil"
@@ -300,7 +300,7 @@
 		return NONE
 
 	if(istype(tool, /obj/item/natural/feather))
-		var/choice = tgui_input_list(user, "Choose a color.", "Plume", colorlist)
+		var/choice = tgui_input_list(user, "Elige un color.", "Plume", colorlist)
 		detail_color = colorlist[choice]
 		detail_tag = "_detail"
 		user.visible_message(span_warning("[user] adds [tool] to [src]."))

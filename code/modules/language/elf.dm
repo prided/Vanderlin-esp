@@ -4,7 +4,7 @@
 	icon_state = "elf"
 	spans = list(SPAN_ELF)
 	speech_verb = "states"
-	ask_verb = "questions"
+	ask_verb = "preguntas"
 	exclaim_verb = "shouts"
 	key = "e"
 	space_chance = 75 //very high due to the potential length of each syllable

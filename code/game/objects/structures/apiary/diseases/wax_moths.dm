@@ -8,4 +8,4 @@
 		hive.update_appearance(UPDATE_ICON_STATE)
 
 /datum/bee_disease/wax_moths/get_inspection_message()
-	return span_warning("You see small moths and their larvae in the hive!")
+	return span_warning("¡Ves pequeñas polillas y sus larvas en la colmena!")

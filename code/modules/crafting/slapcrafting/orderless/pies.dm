@@ -14,7 +14,7 @@
 
 /datum/orderless_slapcraft/food/pie/step_process(mob/user, obj/item/attacking_item)
 	. = ..()
-	hosted_source.name = "unfinished [name]"
+	hosted_source.name = "sin terminar [name]"
 	var/total_number = 0
 	for(var/type in requirements)
 		total_number |= requirements[type]
@@ -119,7 +119,7 @@
 /// Tarts
 /datum/orderless_slapcraft/food/tart
 	abstract_type = /datum/orderless_slapcraft/food/tart
-	category = "Tarts"
+	category = "tartas"
 	finishing_item = /obj/item/reagent_containers/food/snacks/sugar
 	starting_item = /obj/item/reagent_containers/food/snacks/foodbase/tartcrust
 	related_skill = /datum/attribute/skill/craft/cooking/baking
@@ -130,7 +130,7 @@
 
 /datum/orderless_slapcraft/food/tart/step_process(mob/user, obj/item/attacking_item)
 	. = ..()
-	hosted_source.name = "unfinished [name]"
+	hosted_source.name = "sin terminar [name]"
 	var/total_number = 0
 	for(var/type in requirements)
 		total_number |= requirements[type]
@@ -150,14 +150,14 @@
 	output_item = /obj/item/reagent_containers/food/snacks/raw_tart/avocado
 
 /datum/orderless_slapcraft/food/tart/mango
-	name = "Unbaked Mangga Tart"
+	name = "Tarta De Mangga Sin Hornear"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/fruit/mango_half= 3
 	)
 	output_item = /obj/item/reagent_containers/food/snacks/raw_tart/mango
 
 /datum/orderless_slapcraft/food/tart/mangosteen
-	name = "Unbaked Mangosteen Tart"
+	name = "Tarta De Mangostán Sin Hornear"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/fruit/mangosteen_opened = 3
 	)
@@ -178,7 +178,7 @@
 	output_item = /obj/item/reagent_containers/food/snacks/raw_tart/dragonfruit
 
 /datum/orderless_slapcraft/food/tart/chocolate
-	name = "Unbaked Chocolate Tart"
+	name = "Tarta de chocolate sin hornear"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/chocolate/chunk = 3
 	)

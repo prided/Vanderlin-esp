@@ -74,7 +74,7 @@
 	if(!length(GLOB.court_agents))
 		to_chat(H, span_notice("You began the week with no agents."))
 	else
-		to_chat(H, span_notice("We began the week with these agents:"))
+		to_chat(H, span_notice("Comenzamos la semana con estos agentes:"))
 		for(var/name in GLOB.court_agents)
 			to_chat(H, span_notice(name))
 
@@ -118,7 +118,7 @@
 	)
 
 /datum/outfit/hand/handclassic
-	name = "Hand (Classic)"
+	name = "Mano (Clásico)"
 	shirt = /obj/item/clothing/shirt/undershirt/fancy
 	backr = /obj/item/storage/backpack/satchel/black
 	backpack_contents = list(
@@ -254,7 +254,7 @@
 	honorary = "Councilor"
 
 /datum/outfit/hand/advisor
-	name = "Advisor (Hand)"
+	name = "Asesor (mano)"
 	shirt = /obj/item/clothing/shirt/undershirt/fancy
 	backr = /obj/item/storage/backpack/satchel/black
 	armor = /obj/item/clothing/armor/gambeson/hand
@@ -353,7 +353,7 @@
 	)
 
 /datum/outfit/hand/huntsmaster
-	name = "Huntsmaster (Hand)"
+	name = "Maestro de caza (mano)"
 	head = /obj/item/clothing/head/roguehood/leather
 	shirt = /obj/item/clothing/armor/gambeson/hunts
 	backl = /obj/item/gun/ballistic/bow/long

@@ -358,7 +358,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	remove_verb(src, verbs)
 
 /client/proc/hide_most_verbs()//Allows you to keep some functionality while hiding some verbs
-	set name = "Adminverbs - Hide Most"
+	set name = "Adminverbs - Ocultar la mayoría"
 	set category = "Admin.Admin Preferences"
 
 	remove_verb(src, list(/client/proc/hide_most_verbs) + GLOB.admin_verbs_hideable)
@@ -492,7 +492,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/ban_panel()
 	set name = "Banning Panel"
-	set category = "Admin.Bans"
+	set category = "Prohibiciones de administrador"
 	if(!check_rights(R_BAN))
 		return
 	holder.ban_panel()
@@ -500,7 +500,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/role_ban_panel()
 	set name = "Role Ban Panel"
-	set category = "Admin.Bans"
+	set category = "Prohibiciones de administrador"
 	if(!check_rights(R_BAN))
 		return
 	holder.role_ban_panel.show_ui(usr)
@@ -508,7 +508,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/unban_panel()
 	set name = "Unbanning Panel"
-	set category = "Admin.Bans"
+	set category = "Prohibiciones de administrador"
 	if(!check_rights(R_BAN))
 		return
 	holder.unban_panel()
@@ -617,7 +617,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 			if(flash_range == null)
 				return
 			if(devastation_range > GLOB.MAX_EX_DEVESTATION_RANGE || heavy_impact_range > GLOB.MAX_EX_HEAVY_RANGE || light_impact_range > GLOB.MAX_EX_LIGHT_RANGE || flash_range > GLOB.MAX_EX_FLASH_RANGE)
-				if(tgui_alert(usr, "Bomb is bigger than the maxcap. Continue?","Confirm", list("Yes","No")) != "Yes")
+				if(tgui_alert(usr, "Bomb is bigger than the maxcap. Continue?","Confirmar", list("Yes","No")) != "Yes")
 					return
 			epicenter = mob.loc //We need to reupdate as they may have moved again
 			explosion(epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, TRUE, TRUE)
@@ -630,7 +630,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	set name = "Drop DynEx Bomb"
 	set desc = ""
 
-	var/ex_power = input("Explosive Power:") as null|num
+	var/ex_power = input("Poder explosivo:") as null|num
 	var/turf/epicenter = mob.loc
 	if(ex_power && epicenter)
 		dyn_explosion(epicenter, ex_power)
@@ -643,7 +643,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	set name = "Get DynEx Range"
 	set desc = ""
 
-	var/ex_power = input("Explosive Power:") as null|num
+	var/ex_power = input("Poder explosivo:") as null|num
 	if (isnull(ex_power))
 		return
 	var/range = round((2 * ex_power)**GLOB.DYN_EX_SCALE)
@@ -658,7 +658,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	if (isnull(ex_range))
 		return
 	var/power = (0.5 * ex_range)**(1/GLOB.DYN_EX_SCALE)
-	to_chat(usr, "Estimated Explosive Power: [power]")
+	to_chat(usr, "Potencia explosiva estimada: [power]")
 
 /client/proc/set_dynex_scale()
 	set category = "Debug.Debug"
@@ -670,7 +670,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		return
 	GLOB.DYN_EX_SCALE = ex_scale
 	log_admin("[key_name(usr)] has modified Dynamic Explosion Scale: [ex_scale]")
-	message_admins("[key_name_admin(usr)] has  modified Dynamic Explosion Scale: [ex_scale]")
+	message_admins("[key_name_admin(usr)] ha modificado la escala de explosión dinámica: [ex_scale]")
 
 /client/proc/give_spell(mob/spell_recipient in GLOB.mob_list)
 	set category = "GameMaster.Fun"
@@ -704,7 +704,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Give Spell") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_admin("[key_name(usr)] gave [key_name(spell_recipient)] the spell [chosen_spell].")
-	message_admins("[key_name_admin(usr)] gave [key_name_admin(spell_recipient)] the spell [chosen_spell].")
+	message_admins("[key_name_admin(usr)] le dio a [key_name_admin(spell_recipient)] el hechizo [chosen_spell].")
 
 	var/datum/action/cooldown/spell/new_spell = new spell_path(spell_recipient.mind || spell_recipient)
 
@@ -735,14 +735,14 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 	qdel(to_remove)
 	log_admin("[key_name(usr)] removed the spell [chosen_spell] from [key_name(removal_target)].")
-	message_admins("[key_name_admin(usr)] removed the spell [chosen_spell] from [key_name_admin(removal_target)].")
+	message_admins("[key_name_admin(usr)] eliminó el hechizo [chosen_spell] de [key_name_admin(removal_target)].")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Remove Spell") //If you are copy-pasting this, ensure the 2nd parameter is unique
 
 /client/proc/object_say(obj/O in world)
-	set category = "GameMaster.Interactions"
-	set name = "ObjectSay"
+	set category = "GameMaster.Interacciones"
+	set name = "objetodecir"
 	set desc = ""
-	var/message = input(usr, "What do you want the message to be?", "Make Sound") as text | null
+	var/message = input(usr, "What do you want the message to be?", "hacer sonido") as text | null
 	if(!message)
 		return
 	O.say(message)
@@ -786,7 +786,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		to_chat(src, span_info("I will hear like a mortal."))
 
 	// Messaging
-	to_chat(src, span_interface("I am now a normal player."))
+	to_chat(src, span_interface("Ahora soy un jugador normal."))
 	log_admin("[src] deadmined themself.")
 	message_admins("[src] deadmined themself.")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Deadmin")
@@ -814,7 +814,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	if(!holder)
 		return //This can happen if an admin attempts to vv themself into somebody elses's deadmin datum by getting ref via brute force
 
-	to_chat(src, "<span class='interface'>I am now an admin.</span>")
+	to_chat(src, "<span class='interface'>Ahora soy administrador.</span>")
 	message_admins("[src] re-adminned themselves.")
 	log_admin("[src] re-adminned themselves.")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Readmin")
@@ -845,8 +845,8 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		to_chat(src, "<span class='interface'>Ending DISABLED.</span>")
 
 /client/proc/manage_books()
-	set category = "GameMaster.Interactions"
-	set name = "Manage Books"
+	set category = "GameMaster.Interacciones"
+	set name = "Administrar libros"
 	if(!holder)
 		return
 
@@ -918,7 +918,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	src << browse(dat, "window=reading;size=800x600;can_close=1;can_minimize=1;can_maximize=1;can_resize=1;border=0")
 
 /client/proc/manage_paintings()
-	set category = "GameMaster.Interactions"
+	set category = "GameMaster.Interacciones"
 	set name = "Manage Paintings"
 	if(!holder)
 		return
@@ -966,7 +966,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 //Family Tree Subsystem
 /client/proc/ShowAllFamilies()
 	set category = "GameMaster"
-	set name = "Show All Families"
+	set name = "Mostrar todas las familias"
 	to_chat(src, "<span class='interface'>TBA.</span>")
 
 /client/proc/tracy_next_round()

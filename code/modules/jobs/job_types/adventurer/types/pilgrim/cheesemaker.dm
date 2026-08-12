@@ -34,7 +34,7 @@
 	animal.tamed(spawned)
 
 /datum/outfit/pilgrim/cheesemaker
-	name = "Cheesemaker (Pilgrim)"
+	name = "Quesero (Peregrino)"
 	belt = /obj/item/storage/belt/leather
 	pants = /obj/item/clothing/pants/tights/colored/random
 	shirt = /obj/item/clothing/shirt/shortshirt/colored/random

@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(fake_world)
-	name = "Zizo's Fake World"
+	name = "El mundo falso de Zizo"
 	flags = SS_NO_INIT
 	wait = 3 SECONDS
 

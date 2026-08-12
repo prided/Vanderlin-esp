@@ -1,6 +1,6 @@
 
 /datum/enchantment/briarcurse
-	enchantment_name = "Briar's curse"
+	enchantment_name = "La maldición de Briar"
 	examine_text = "Its grip seems thorny. Must hurt to use."
 	essence_recipe = list(
 		/datum/thaumaturgical_essence/poison = 40,

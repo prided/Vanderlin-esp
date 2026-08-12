@@ -13,7 +13,7 @@
 //print a warning message to world.log
 #define WARNING(MSG) warning("[MSG] in [__FILE__] at line [__LINE__] src: [UNLINT(src)] usr: [usr].")
 /proc/warning(msg)
-	msg = "## WARNING: [msg]"
+	msg = "## ADVERTENCIA: [msg]"
 	log_world(msg)
 
 //not an error or a warning, but worth to mention on the world log, just in case.

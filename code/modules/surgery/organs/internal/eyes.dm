@@ -18,12 +18,12 @@
 	high_threshold = 0.3 * STANDARD_ORGAN_THRESHOLD	//threshold at 30
 	low_threshold = 0.2 * STANDARD_ORGAN_THRESHOLD	//threshold at 20
 
-	low_threshold_passed = span_info("Distant objects become somewhat less tangible.")
-	high_threshold_passed = span_info("Everything starts to look a lot less clear.")
+	low_threshold_passed = span_info("Los objetos distantes se vuelven algo menos tangibles.")
+	high_threshold_passed = span_info("Todo empieza a parecer mucho menos claro.")
 	now_failing = span_warning("Darkness envelops me, as my eyes goes blind!")
 	now_fixed = span_info("Color and shapes are once again perceivable.")
 	high_threshold_cleared = span_info("My vision functions passably once more.")
-	low_threshold_cleared = span_info("My vision is cleared of any ailment.")
+	low_threshold_cleared = span_info("Mi visión está limpia de cualquier dolencia.")
 
 	pain_multiplier = 0.35 / 2
 	// remember that this is normally DOUBLED (2 eyes)
@@ -244,7 +244,7 @@
 	side = LEFT_SIDE
 
 /obj/item/organ/eyes/elf
-	name = "elf eye"
+	name = "ojo de elfo"
 	desc = ""
 	see_in_dark = 4
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
@@ -272,7 +272,7 @@
 	side = LEFT_SIDE
 
 /obj/item/organ/eyes/triton
-	name = "dead fish eye"
+	name = "ojo de pez muerto"
 	accessory_type = /datum/sprite_accessory/eyes/humanoid/triton
 	glows = TRUE
 	flash_protect = FLASH_PROTECTION_SENSITIVE
@@ -282,7 +282,7 @@
 	side = LEFT_SIDE
 
 /obj/item/organ/eyes/rakshari
-	name = "eye of cat"
+	name = "ojo de gato"
 	accessory_type = /datum/sprite_accessory/eyes/humanoid/rakshari
 
 /obj/item/organ/eyes/rakshari/left

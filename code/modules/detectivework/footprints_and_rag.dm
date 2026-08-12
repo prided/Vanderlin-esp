@@ -4,7 +4,7 @@
 
 
 /obj/item/reagent_containers/glass/rag
-	name = "damp rag"
+	name = "trapo húmedo"
 	desc = ""
 	w_class = WEIGHT_CLASS_TINY
 	icon = 'icons/obj/toy.dmi'
@@ -27,12 +27,12 @@
 		var/log_object = "containing [reagentlist]"
 		if(user.used_intent.type == INTENT_HARM && !C.is_mouth_covered())
 			reagents.trans_to(C, reagents.total_volume, transfered_by = user, method = INGEST)
-			C.visible_message("<span class='danger'>[user] has smothered \the [C] with \the [src]!</span>", "<span class='danger'>[user] has smothered you with \the [src]!</span>", "<span class='hear'>I hear some struggling and muffled cries of surprise.</span>")
+			C.visible_message("<span class='danger'>[user] ha asfixiado a \the [C] con \the [src]!</span>", "<span class='danger'>[user] has smothered you with \the [src]!</span>", "<span class='hear'>I hear some struggling and muffled cries of surprise.</span>")
 			log_combat(user, C, "smothered", src, log_object)
 		else
 			reagents.reaction(C, TOUCH)
 			reagents.clear_reagents()
-			C.visible_message("<span class='notice'>[user] has touched \the [C] with \the [src].</span>")
+			C.visible_message("<span class='notice'>[user] ha tocado \the [C] con \the [src].</span>")
 			log_combat(user, C, "touched", src, log_object)
 		return ITEM_INTERACT_SUCCESS
 

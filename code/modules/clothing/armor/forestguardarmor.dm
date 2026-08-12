@@ -25,7 +25,7 @@
 
 /obj/item/clothing/cloak/forrestercloak
 	name = "forrester's cloak"
-	desc = "A cloak worn by the forest guards."
+	desc = "Una capa usada por los guardias forestales."
 	icon = 'icons/roguetown/clothing/special/forest_guard.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/forest_guard.dmi'
 	icon_state = "forestcloak"
@@ -72,7 +72,7 @@
 	abstract_type = /obj/item/clothing/head/helmet/medium
 
 /obj/item/clothing/head/helmet/medium/decorated	// template
-	name = "a template"
+	name = "una plantilla"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
 	bloody_icon = 'icons/effects/blood.dmi'
 	bloody_icon_state = "helmetblood"
@@ -98,7 +98,7 @@
 		return
 	if(!picked)
 		var/list/icons = SKULLMET_ICONS
-		var/choice = tgui_input_list(user, "Choose a helmet design.", "Helmet designs", icons)
+		var/choice = tgui_input_list(user, "Elige un diseño de casco.", "Helmet designs", icons)
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice

@@ -1,5 +1,5 @@
 /obj/item/clothing/armor/medium	// Template, not for use
-	name = "Medium armor template"
+	name = "Plantilla de armadura media"
 	equip_delay_self = 4 SECONDS
 	unequip_delay_self = 3 SECONDS
 	anvilrepair = /datum/attribute/skill/craft/armor_repair
@@ -40,7 +40,7 @@
 
 //................ Armored surcoat (Heartfelt) ............... //
 /obj/item/clothing/armor/medium/surcoat/heartfelt
-	desc = "A lordly protection in Heartfelt colors. Masterfully crafted coat of plates, for important nobility."
+	desc = "Una protección señorial con los colores de Heartfelt. Una cota de placas elaborada con maestría para la alta nobleza."
 	color = CLOTHING_BLOOD_RED
 	sellprice = VALUE_SNOWFLAKE_STEEL+BONUS_VALUE_SMALL
 
@@ -71,7 +71,7 @@
 /obj/item/clothing/armor/medium/scale/inqcoat/attackby(obj/item/W, mob/living/user, list/modifiers)
 	..()
 	if(istype(W, /obj/item/clothing/armor/plate/fluted/ornate))
-		user.visible_message(span_warning("[user] starts to fit [W] inside the [src]."))
+		user.visible_message(span_warning("[user] comienza a encajar [W] dentro del [src]."))
 		if(do_after(user, 12 SECONDS))
 			var/obj/item/clothing/armor/medium/scale/inqcoat/armored/P = new /obj/item/clothing/armor/medium/scale/inqcoat/armored(get_turf(src.loc))
 			if(user.is_holding(src))

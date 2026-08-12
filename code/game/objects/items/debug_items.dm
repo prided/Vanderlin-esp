@@ -21,5 +21,5 @@
 
 /obj/item/debug/human_spawner/attack_self(mob/user, list/modifiers)
 	..()
-	var/choice = input("Select a species", "Human Spawner", null) in GLOB.species_list
+	var/choice = input("Seleccione una especie", "Human Spawner", null) in GLOB.species_list
 	selected_species = GLOB.species_list[choice]

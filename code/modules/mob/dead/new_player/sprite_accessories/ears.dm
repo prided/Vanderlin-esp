@@ -19,7 +19,7 @@
 	icon = 'icons/mob/sprite_accessory/ears/ears_big.dmi'
 
 /datum/sprite_accessory/ears/cat
-	name = "Cat"
+	name = "Gato"
 	icon_state = "cat"
 	extra_state = TRUE
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)
@@ -29,24 +29,24 @@
 	icon_state = "axolotl"
 
 /datum/sprite_accessory/ears/bat
-	name = "Bat"
+	name = "Murciélago"
 	icon_state = "bat"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
 	relevant_layers = list(BODY_ADJ_LAYER)
 
 /datum/sprite_accessory/ears/bear
-	name = "Bear"
+	name = "Oso"
 	icon_state = "bear"
 
 /datum/sprite_accessory/ears/bigwolf
-	name = "Big Wolf"
+	name = "gran lobo"
 	icon_state = "bigwolf"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/bigwolf_inner
-	name = "Big Wolf (Inner)"
+	name = "Gran Lobo (Interior)"
 	icon_state = "bigwolf_inner"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
@@ -65,23 +65,23 @@
 	color_key_names = list("Ears", "Inner", "Tips")
 
 /datum/sprite_accessory/ears/cat_big
-	name = "Cat, Big"
+	name = "gato, grande"
 	icon_state = "catbig"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/cat_normal
-	name = "Cat, Normal"
+	name = "gato normal"
 	icon_state = "catnormal"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/cow
-	name = "Cow"
+	name = "Vaca"
 	icon_state = "cow"
 
 /datum/sprite_accessory/ears/curled
-	name = "Curled Horn"
+	name = "Cuerno rizado"
 	icon_state = "horn"
 
 /datum/sprite_accessory/ears/deer
@@ -99,7 +99,7 @@
 	icon_state = "elf"
 
 /datum/sprite_accessory/ears/elephant
-	name = "Elephant"
+	name = "Elefante"
 	icon_state = "elephant"
 
 /datum/sprite_accessory/ears/fennec
@@ -141,7 +141,7 @@
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/lab
-	name = "Dog, Long"
+	name = "perro, largo"
 	icon_state = "lab"
 
 /datum/sprite_accessory/ears/murid
@@ -151,19 +151,19 @@
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/otie
-	name = "Otusian"
+	name = "otusiano"
 	icon_state = "otie"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/rabbit
-	name = "Rabbit"
+	name = "Conejo"
 	icon_state = "rabbitlop"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/big/rabbit_large
-	name = "Rabbit Ears (Large)"
+	name = "Orejas de conejo (grandes)"
 	icon_state = "rabbit_large"
 	color_keys = 3
 	color_key_names = list("Ears", "Inner", "Tips")
@@ -182,7 +182,7 @@
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/shark
-	name = "Shark"
+	name = "Tiburón"
 	icon_state = "shark"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
@@ -194,13 +194,13 @@
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/squirrel
-	name = "Squirrel"
+	name = "Ardilla"
 	icon_state = "squirrel"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/wolf
-	name = "Wolf"
+	name = "Lobo"
 	icon_state = "wolf"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
@@ -285,13 +285,13 @@
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/mouse
-	name = "Mouse"
+	name = "Ratón"
 	icon_state = "mouse"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/halforc
-	name = "Half Orc"
+	name = "Medio orco"
 	icon = 'icons/mob/sprite_accessory/halforc.dmi'
 	icon_state = "halforc"
 	color_key_defaults = list(KEY_SKIN_COLOR)
@@ -306,7 +306,7 @@
 	icon = 'icons/mob/sprite_accessory/ears/ears_big.dmi'
 
 /datum/sprite_accessory/ears/big/rabbit_large
-	name = "Rabbit Ears (Large)"
+	name = "Orejas de conejo (grandes)"
 	icon_state = "rabbit_large"
 	color_keys = 3
 	color_key_names = list("Ears", "Inner", "Tips")

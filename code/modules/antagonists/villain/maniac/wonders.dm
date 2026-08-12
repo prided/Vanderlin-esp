@@ -45,7 +45,7 @@
 			if(GLOB.maniac_highlander) // Has a Maniac already TRIUMPHED?
 				to_chat(user, span_danger("IT WAS ALL FOR NAUGHT! I CAN'T WAKE UP!"))
 			else
-				to_chat(user, span_userdanger("I must SUM the keys. I am WAKING up!"))
+				to_chat(user, span_userdanger("Debo SUMAR las claves. ¡Estoy DESPERTANDO!"))
 				dream_master.agony(user)
 				for(var/mob/living/carbon/C in GLOB.carbon_list - user) // Notify any other maniacs
 					var/datum/antagonist/maniac/competitor = C.mind?.has_antag_datum(/datum/antagonist/maniac)
@@ -119,6 +119,6 @@
 			SEND_SOUND(V, 'sound/villain/seen_wonder.ogg')
 			V.Paralyze(5 SECONDS)
 			gazed_at = TRUE
-			to_chat(V, span_userdanger("It is WONDERFUL!"))
+			to_chat(V, span_userdanger("¡Es MARAVILLOSO!"))
 			var/N = dream_master.owner?.name
 			V.log_message("was marked by Maniac [N ? "[N]'s " : ""]Wonder #[wonder_id]: \"[STRIP_HTML_SIMPLE(inscryption, MAX_MESSAGE_LEN)].\"", LOG_ATTACK)

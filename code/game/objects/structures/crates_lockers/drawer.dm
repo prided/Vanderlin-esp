@@ -1,7 +1,7 @@
 
 /obj/structure/closet/crate/drawer
-	name = "drawer"
-	desc = "A wooden drawer."
+	name = "cajón"
+	desc = "Un cajón de madera."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "drawer5"
 	base_icon_state = "drawer5"
@@ -16,8 +16,8 @@
 	lock = null
 
 /obj/structure/closet/crate/drawer/inn
-	name = "drawer"
-	desc = "A wooden drawer."
+	name = "cajón"
+	desc = "Un cajón de madera."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "drawer5"
 	base_icon_state = "drawer5"

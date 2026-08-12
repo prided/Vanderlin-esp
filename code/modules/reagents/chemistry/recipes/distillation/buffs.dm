@@ -1,17 +1,17 @@
 
 /datum/distillation_recipe/concentrated_strength
-	name = "Concentrated Strength"
+	name = "Fuerza concentrada"
 	id = "concentrated_strength"
 	distilled_reagent = /datum/reagent/buff/strength
 	required_temp = T0C + 78
 	results = list(
 		/datum/reagent/buff/strength/concentrated = 0.5
 	)
-	distill_message = "The raw strength essence condenses into something almost painfully potent!"
+	distill_message = "¡La esencia de fuerza bruta se condensa en algo casi dolorosamente potente!"
 	distill_sound = "bubbles"
 
 /datum/distillation_recipe/concentrated_perception
-	name = "Concentrated Perception"
+	name = "Percepción concentrada"
 	id = "concentrated_perception"
 	distilled_reagent = /datum/reagent/buff/perception
 	required_temp = T0C + 78
@@ -22,7 +22,7 @@
 	distill_sound = "bubbles"
 
 /datum/distillation_recipe/concentrated_intelligence
-	name = "Concentrated Intelligence"
+	name = "Inteligencia concentrada"
 	id = "concentrated_intelligence"
 	distilled_reagent = /datum/reagent/buff/intelligence
 	required_temp = T0C + 78
@@ -33,7 +33,7 @@
 	distill_sound = "bubbles"
 
 /datum/distillation_recipe/concentrated_constitution
-	name = "Concentrated Constitution"
+	name = "Constitución concentrada"
 	id = "concentrated_constitution"
 	distilled_reagent = /datum/reagent/buff/constitution
 	required_temp = T0C + 78
@@ -51,11 +51,11 @@
 	results = list(
 		/datum/reagent/buff/endurance/concentrated = 0.5
 	)
-	distill_message = "The endurance essence reduces into a tireless, burning concentrate!"
+	distill_message = "¡La esencia de resistencia se reduce a un concentrado ardiente e incansable!"
 	distill_sound = "bubbles"
 
 /datum/distillation_recipe/concentrated_speed
-	name = "Concentrated Speed"
+	name = "Velocidad concentrada"
 	id = "concentrated_speed"
 	distilled_reagent = /datum/reagent/buff/speed
 	required_temp = T0C + 78

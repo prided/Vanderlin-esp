@@ -1,6 +1,6 @@
 /obj/structure/plasticflaps
-	name = "iron bars"
-	desc = "It seems pretty rusty."
+	name = "barras de hierro"
+	desc = "Parece bastante oxidado."
 	gender = PLURAL
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "plasticflaps"

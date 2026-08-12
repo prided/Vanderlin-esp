@@ -66,7 +66,7 @@ export function TypesTab() {
       <Stack.Item>
         <Section>
           <ReportHeader
-            label="Capture census"
+            label="Capturar censo"
             busy={busy}
             onCapture={() => act('capture_census')}
             meta={metaFor(report_meta, 'census')}
@@ -76,8 +76,7 @@ export function TypesTab() {
       {!census ? (
         <Stack.Item>
           <EmptyState>
-            No census captured yet. A census walks the entire heap and freezes
-            the server while it runs.
+            Aún no se ha realizado ningún censo. Un censo recorre todo el montón y congela el servidor mientras se ejecuta.
           </EmptyState>
         </Stack.Item>
       ) : (
@@ -94,13 +93,13 @@ export function TypesTab() {
             <Section
               fill
               scrollable
-              title="Typepaths"
+              title="Rutas de tipo"
               buttons={
                 <SearchBar
                   expensive
                   query={search}
                   onSearch={setSearch}
-                  placeholder="Filter typepaths..."
+                  placeholder="Filtrar rutas de tipo..."
                   style={{ width: '20rem' }}
                 />
               }
@@ -112,7 +111,7 @@ export function TypesTab() {
                     desc={sort.desc}
                     onClick={() => toggle('typepath')}
                   >
-                    Typepath
+                    Ruta de tipo
                   </SortCell>
                   <SortCell
                     collapsing
@@ -120,14 +119,14 @@ export function TypesTab() {
                     desc={sort.desc}
                     onClick={() => toggle('count')}
                   >
-                    Instances
+                    Instancias
                   </SortCell>
                   <SortCell
                     active={sort.key === 'self_bytes'}
                     desc={sort.desc}
                     onClick={() => toggle('self_bytes')}
                   >
-                    Self bytes
+                    Bytes propios
                   </SortCell>
                 </Table.Row>
                 {rows.map((row) => (
@@ -137,7 +136,7 @@ export function TypesTab() {
                         {row.typepath}
                       </Box>
                       {!row.costed && (
-                        <Tooltip content="No verified base size for this type, so its bytes are not charged here. That is not the same as it being free.">
+                        <Tooltip content="No hay un tamaño base verificado para este tipo, por lo que sus bytes no se cargan aquí. Eso no es lo mismo que ser gratis.">
                           <Icon
                             name="triangle-exclamation"
                             ml={1}

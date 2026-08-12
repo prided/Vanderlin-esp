@@ -73,7 +73,7 @@
 
 //................ Psydon Whip ............... //
 /obj/item/weapon/whip/psydon
-	name = "psydonian whip"
+	name = "psydonian látigo"
 	desc = "A whip fashioned with the iconography of Psydon, and crafted entirely out of silver."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psywhip"
@@ -185,7 +185,7 @@
 //................ Urumi ............... //
 
 /obj/item/weapon/whip/urumi
-	name = "steel urumi"
+	name = "urumi de acero"
 	desc = "A long, flexible whip-like sword originally developed by the Savannah Elves. While an effective weapon, it requires more maintenance compared to other swords."
 	icon_state = "urumi_steel"
 	force = DAMAGE_WHIP + 3
@@ -204,7 +204,7 @@
 	item_weight = 800 GRAMS
 
 /obj/item/weapon/whip/urumi/iron
-	name = "iron urumi"
+	name = "urumi de hierro"
 	icon_state = "urumi_iron"
 	force = DAMAGE_WHIP
 	max_blade_int = 150
@@ -213,7 +213,7 @@
 	item_weight = 850 GRAMS
 
 /obj/item/weapon/whip/urumi/bronze
-	name = "bronze urumi"
+	name = "urumi de bronce"
 	icon_state = "urumi_bronze"
 	force = DAMAGE_WHIP
 	max_blade_int = 100

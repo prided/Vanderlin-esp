@@ -129,7 +129,7 @@
 
 /obj/effect/decal/cleanable/meatvine_acid
 	name = "acid pool"
-	desc = "A pool of corrosive acid on the ground."
+	desc = "Un charco de ácido corrosivo en el suelo."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "acid2"
 	layer = TURF_LAYER

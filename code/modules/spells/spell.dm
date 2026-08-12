@@ -494,7 +494,7 @@
 
 	if(!(spell_flags & SPELL_IGNORE_SPELLBLOCK) && HAS_TRAIT(owner, TRAIT_SPELLBLOCK))
 		if(feedback)
-			owner.balloon_alert(owner, "can't focus on casting...")
+			owner.balloon_alert(owner, "No puedo concentrarme en el casting...")
 		return FALSE
 
 	if(HAS_TRAIT(owner, TRAIT_NOC_CURSE))
@@ -507,7 +507,7 @@
 			continue
 		if(spell.currently_charging)
 			if(feedback)
-				owner.balloon_alert(owner, "already channeling!")
+				owner.balloon_alert(owner, "ya canalizando!")
 			return FALSE
 
 	if(!check_cost(feedback = feedback))
@@ -547,7 +547,7 @@
 	if(!ishuman(owner))
 		if(spell_requirements & (SPELL_REQUIRES_HUMAN))
 			if(feedback)
-				owner.balloon_alert(owner, "can only be cast by humans!")
+				owner.balloon_alert(owner, "¡Solo puede ser lanzado por humanos!")
 			return FALSE
 
 	if(LAZYLEN(required_items))
@@ -667,7 +667,7 @@
 			return sig_return
 
 		if(get_dist(owner, cast_on) > cast_range)
-			owner.balloon_alert(owner, "too far away!")
+			owner.balloon_alert(owner, "¡demasiado lejos!")
 			return sig_return | SPELL_CANCEL_CAST
 
 		if((spell_type == SPELL_MIRACLE) && HAS_TRAIT(cast_on, TRAIT_ATHEISM_CURSE))
@@ -675,13 +675,13 @@
 				var/mob/living/L = cast_on
 				L.visible_message(
 					span_danger("[L] recoils in disgust!"),
-					span_userdanger("These fools are trying to cure me with religion!!")
+					span_userdanger("¡¡Estos tontos están tratando de curarme con la religión!!")
 				)
 				L.cursed_freak_out()
 			return sig_return | SPELL_CANCEL_CAST
 
 		if((spell_type == SPELL_MIRACLE) && HAS_TRAIT(cast_on, TRAIT_SILVER_BLESSED) && !(spell_flags & SPELL_PSYDON))
-			cast_on.visible_message(span_info("[cast_on] stirs for a moment, the miracle dissipates."), span_notice("A dull warmth swells in your heart, only to fade as quickly as it arrived."))
+			cast_on.visible_message(span_info("[cast_on] se agita por un momento, el milagro se disipa."), span_notice("A dull warmth swells in your heart, only to fade as quickly as it arrived."))
 			playsound(cast_on, 'sound/magic/PSY.ogg', 100, FALSE, -1)
 			owner.playsound_local(owner, 'sound/magic/PSY.ogg', 100, FALSE, -1)
 			return sig_return | SPELL_CANCEL_CAST
@@ -855,7 +855,7 @@
 		owner.balloon_alert(owner, charge_message)
 
 	if(spell_requirements & SPELL_REQUIRES_NO_MOVE)
-		owner.balloon_alert(owner, "be still while channelling...")
+		owner.balloon_alert(owner, "quédate quieto mientras canalizas...")
 
 	if(owner?.mmb_intent)
 		owner.mmb_intent_change(null)
@@ -914,12 +914,12 @@
 	var/mob/living/living_owner = owner
 	if(invocation_type == INVOCATION_EMOTE && HAS_TRAIT(living_owner, TRAIT_EMOTEMUTE))
 		if(feedback)
-			owner.balloon_alert(owner, "can't position your hands correctly to invoke!")
+			owner.balloon_alert(owner, "¡No puedes colocar tus manos correctamente para invocar!")
 		return FALSE
 
 	if((invocation_type == INVOCATION_WHISPER || invocation_type == INVOCATION_SHOUT) && !ignore_can_speak && !living_owner.can_speak_vocal())
 		if(feedback)
-			owner.balloon_alert(owner, "can't get the words out to invoke!")
+			owner.balloon_alert(owner, "¡No puedo sacar las palabras para invocar!")
 		return FALSE
 
 	return TRUE
@@ -947,7 +947,7 @@
 		var/not_stamina_spell = (spell_type != SPELL_STAMINA)
 		if(!caster.check_stamina(used_cost / (1 + not_stamina_spell)))
 			if(feedback)
-				owner.balloon_alert(owner, "not enough stamina to cast!")
+				owner.balloon_alert(owner, "¡No hay suficiente resistencia para lanzar!")
 			return FALSE
 
 	if(spell_type == NONE || spell_type == SPELL_STAMINA)
@@ -957,7 +957,7 @@
 		if(SPELL_MANA)
 			if(!caster.has_mana_available(used_cost))
 				if(feedback)
-					owner.balloon_alert(owner, "not enough mana to cast!")
+					owner.balloon_alert(owner, "¡No hay suficiente maná para lanzar!")
 				return FALSE
 
 			return TRUE
@@ -974,7 +974,7 @@
 			var/mob/living/carbon/human/H = caster
 			if(!istype(H) || !H.cleric?.check_devotion(spell_cost))
 				if(feedback)
-					owner.balloon_alert(owner, "devotion too weak!")
+					owner.balloon_alert(owner, "¡La devoción es demasiado débil!")
 				return FALSE
 
 			return TRUE
@@ -1000,7 +1000,7 @@
 				return FALSE
 			if(!gaunt.can_consume_essence(used_cost, essences))
 				if(feedback)
-					owner.balloon_alert(owner, "not enough essence!")
+					owner.balloon_alert(owner, "¡No hay suficiente esencia!")
 				return FALSE
 
 			return TRUE
@@ -1067,7 +1067,7 @@
 				return
 
 			if(!gaunt.can_consume_essence(used_cost, essences))
-				owner.balloon_alert(owner, "not enough essence!")
+				owner.balloon_alert(owner, "¡No hay suficiente esencia!")
 				return
 
 			gaunt.consume_essence(used_cost, essences)
@@ -1216,6 +1216,6 @@
 /datum/action/cooldown/spell/proc/consume_hunt_bonus(obj/target)
 	if(!target)
 		return FALSE
-	target.visible_message(span_warning("[target] disintegrates into a red mist."))
+	target.visible_message(span_warning("[target] se desintegra en una niebla roja."))
 	qdel(target)
 	return TRUE

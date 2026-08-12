@@ -13,7 +13,7 @@ import { useSettings } from './use-settings';
 const tabViews = ['default', 'classic', 'scrollable'];
 
 function LinkedToChat() {
-  return <NoticeBox color="bad">Unlink Stat Panel from chat!</NoticeBox>;
+  return <NoticeBox color="bad">¡Desvincular el panel de estadísticas del chat!</NoticeBox>;
 }
 
 export function SettingsStatPanel(props) {
@@ -25,7 +25,7 @@ export function SettingsStatPanel(props) {
       <Stack fill vertical>
         <Stack.Item>
           <LabeledList>
-            <LabeledList.Item label="Tabs" verticalAlign="middle">
+            <LabeledList.Item label="Pestañas" verticalAlign="middle">
               {tabViews.map((view) => (
                 <Button
                   key={view}
@@ -37,7 +37,7 @@ export function SettingsStatPanel(props) {
                 </Button>
               ))}
             </LabeledList.Item>
-            <LabeledList.Item label="Font size">
+            <LabeledList.Item label="Tamaño de fuente">
               <Stack.Item grow>
                 {statLinked ? (
                   <LinkedToChat />

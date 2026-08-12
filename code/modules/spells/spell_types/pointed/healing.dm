@@ -3,7 +3,7 @@
 #define HEALING_HUNT "greathunt"
 
 /datum/action/cooldown/spell/healing
-	name = "Lesser Miracle"
+	name = "Milagro menor"
 	desc = "Call upon your patron to heal the wounds of yourself or others."
 	button_icon_state = "lesserheal"
 	sound = 'sound/magic/heal.ogg'
@@ -73,7 +73,7 @@
 			/// The Ten won't provide greater healing to centrist worshippers, they do not approve.
 			/// This is ignored if they're already a divine servant, like a Templar, as undivded can only become church roles from round start.
 			if(HAS_TRAIT(cast_on, TRAIT_DIVINE_CENTRIST) && !HAS_TRAIT(cast_on, TRAIT_DIVINE_SERVANT) && patron_restrictive)
-				cast_on.visible_message(span_danger("[cast_on] recoils in shame!"), span_userdanger("The Ten reject my indecisiveness!"))
+				cast_on.visible_message(span_danger("[cast_on] recoils in shame!"), span_userdanger("¡Los Diez rechazan mi indecisión!"))
 				cast_on.cursed_freak_out()
 				return
 			if(((cast_on.real_name in GLOB.excommunicated_players) || (cast_on.real_name in GLOB.heretical_players)) && !HAS_TRAIT(cast_on, TRAIT_FANATICAL))
@@ -95,13 +95,13 @@
 				cast_on.visible_message(span_info("A strange stirring feeling pours from [cast_on]!"), span_notice("Sentimental thoughts drive away my pains!"))
 
 			if(/datum/patron/divine/astrata)
-				cast_on.visible_message(span_info("A wreath of gentle light passes over [cast_on]!"), span_notice("I'm bathed in holy light!"))
+				cast_on.visible_message(span_info("¡Una corona de luz suave pasa sobre [cast_on]!"), span_notice("¡Estoy bañado en luz sagrada!"))
 				// during the day, heal 10 more (basic as fuck)
 				if(GLOB.tod == DAY)
 					conditional_buff = TRUE
 
 			if(/datum/patron/divine/noc)
-				cast_on.visible_message(span_info("A shroud of soft moonlight falls upon [cast_on]!"), span_notice("I'm shrouded in gentle moonlight!"))
+				cast_on.visible_message(span_info("¡Un manto de suave luz de luna cae sobre [cast_on]!"), span_notice("I'm shrouded in gentle moonlight!"))
 				// during the night, heal 10 more (i wish this was more interesting but they're twins so whatever)
 				if(GLOB.tod == NIGHT)
 					conditional_buff = TRUE
@@ -118,7 +118,7 @@
 					conditional_buff = TRUE
 
 			if(/datum/patron/divine/abyssor)
-				cast_on.visible_message(span_info("A mist of salt-scented vapour settles on [cast_on]!"), span_notice("I'm invigorated by healing vapours!"))
+				cast_on.visible_message(span_info("¡Una niebla de vapor con aroma a sal se posa sobre [cast_on]!"), span_notice("I'm invigorated by healing vapours!"))
 				// if our owner or cast_on is standing in water, heal a flat amount extra
 				if(istype(get_turf(cast_on), /turf/open/water) || istype(get_turf(owner), /turf/open/water))
 					conditional_buff = TRUE
@@ -126,7 +126,7 @@
 				situational_blood += BLOOD_VOLUME_SURVIVE/2
 
 			if(/datum/patron/divine/ravox)
-				cast_on.visible_message(span_info("An air of righteous defiance rises near [cast_on]!"), span_notice("I'm filled with an urge to fight on!"))
+				cast_on.visible_message(span_info("An air of righteous defiance rises near [cast_on]!"), span_notice("¡Estoy lleno de ganas de seguir luchando!"))
 				situational_bonus = 0
 				// the bloodier the area around our cast_on is, the more we heal
 				for(var/obj/effect/decal/cleanable/blood/O in oview(5, cast_on))
@@ -143,7 +143,7 @@
 						situational_bonus = 25
 
 			if(/datum/patron/divine/xylix)
-				cast_on.visible_message(span_info("A fugue seems to manifest briefly across [cast_on]!"), span_notice("My wounds vanish as if they had never been there! "))
+				cast_on.visible_message(span_info("A fugue seems to manifest briefly across [cast_on]!"), span_notice("¡Mis heridas desaparecen como si nunca hubieran estado allí! "))
 				// half of the time, heal a little (or a lot) more - flip the coin
 				if(prob(50))
 					conditional_buff = TRUE
@@ -166,7 +166,7 @@
 					conditional_buff = TRUE
 
 			if(/datum/patron/divine/eora)
-				cast_on.visible_message(span_info("An eminence of love blossoms around [cast_on]!"), span_notice("I'm filled with the restorative warmth of love!"))
+				cast_on.visible_message(span_info("¡Una eminencia de amor florece alrededor de [cast_on]!"), span_notice("I'm filled with the restorative warmth of love!"))
 				// if they're wearing an eoran bud (or are a pacifist), pretty much double the healing.
 				situational_bonus = 0
 				if (HAS_TRAIT(cast_on, TRAIT_PACIFISM))
@@ -234,20 +234,20 @@
 
 			else
 				if(istype(living_owner.patron, /datum/patron/godless))
-					cast_on.visible_message(span_info("No Gods answer these prayers."), span_notice("No Gods answer these prayers."))
+					cast_on.visible_message(span_info("Ningún dios responde a estas oraciones."), span_notice("Ningún dios responde a estas oraciones."))
 					return
-				cast_on.visible_message(span_info("A choral sound comes from above and [cast_on] is healed!"), span_notice("I am bathed in healing choral hymns!"))
+				cast_on.visible_message(span_info("A choral sound comes from above and [cast_on] is healed!"), span_notice("¡Estoy bañado en himnos corales curativos!"))
 	var/amount_healed = base_healing
 
 	if(conditional_buff)
-		to_chat(owner, span_greentext("Channeling my patron's power is easier in these conditions!"))
+		to_chat(owner, span_greentext("¡Canalizar el poder de mi patrón es más fácil en estas condiciones!"))
 		amount_healed += situational_bonus
 
 	if(vampire_disguise?.disguised) //vamps can pretend to be normal for a little bit
 		var/vitae_loss = amount_healed * (cast_on.mind?.has_antag_datum(/datum/antagonist/vampire/lord) ? 0.3 : 0.6)
 		cast_on.adjust_bloodpool(-vitae_loss)
 		if(cast_on.bloodpool)
-			to_chat(cast_on, span_danger("My disguise holds at the cost of [round(vitae_loss)] vitae!"))
+			to_chat(cast_on, span_danger("¡Mi disfraz se mantiene a costa de [round(vitae_loss)] vitae!"))
 		else
 			vampire_disguise.force_undisguise(cast_on)
 		return
@@ -264,7 +264,7 @@
 	var/mob/living/carbon/C = cast_on
 	var/obj/item/bodypart/affecting = C.get_bodypart(check_zone(owner.zone_selected))
 	if(!affecting)
-		to_chat(owner, span_danger("[C] is missing their [affecting]!"))
+		to_chat(owner, span_danger("¡A [C] le falta su [affecting]!"))
 		return
 
 	if(affecting.heal_wounds(amount_healed * wound_modifier, src))
@@ -284,7 +284,7 @@
 		possible_organ.applyOrganDamage(-amount_healed * wound_modifier)
 
 /datum/action/cooldown/spell/healing/profane
-	name = "Corrupt Lesser Miracle"
+	name = "Milagro menor corrupto"
 	antimagic_flags = MAGIC_RESISTANCE_UNHOLY
 	required_items = null
 	healing_type = HEALING_PROFANE
@@ -298,7 +298,7 @@
 	wound_modifier = 0.35
 
 /datum/action/cooldown/spell/healing/greater
-	name = "Miracle"
+	name = "Milagro"
 	button_icon_state = "astrata"
 
 	charge_required = TRUE

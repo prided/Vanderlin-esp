@@ -1,6 +1,6 @@
 /datum/chimeric_node/output/healing
-	name = "restoring"
-	desc = "When activated heals the corresponding damage type"
+	name = "restaurando"
+	desc = "Cuando se activa cura el tipo de daño correspondiente."
 	weight = 2
 
 	var/healing_type = BRUTE

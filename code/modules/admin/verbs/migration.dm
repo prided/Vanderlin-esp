@@ -1,10 +1,10 @@
 /client/proc/toggle_migrations()
-	set category = "GameMaster.Interactions"
+	set category = "GameMaster.Interacciones"
 	set name = "Toggle Migrations"
 	if(!check_rights(R_ADMIN))
 		return FALSE
 
-	var/choice = tgui_alert(src, "This will either enable or disable migrations, the current setting is [SSmigrants.get_current_disabled_status()]", "Are you sure?", list("Yes.", "No."))
+	var/choice = tgui_alert(src, "Esto habilitará o deshabilitará las migraciones, la configuración actual es [SSmigrants.get_current_disabled_status()]", "Are you sure?", list("Sí.", "No."))
 	if(choice == "No.")
 		return
 

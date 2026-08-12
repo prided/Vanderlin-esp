@@ -46,8 +46,8 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE EORA'S CHOSEN!"),
-		span_notice("Eora wishes to see love blossom! Arrange a marriage between any two people to earn Eora's favor!"),
+		span_userdanger("¡ERES EL ELEGIDO DE EORA!"),
+		span_notice("¡Eora desea ver florecer el amor! ¡Organiza un matrimonio entre dos personas para ganarte el favor de Eora!"),
 	))
 	to_chat(chosen_one, span_notice("You were given a power to conduct secret marriage ceremonies outside of the chapel. Let nothing stand in the way of true love!"))
 	chosen_one.playsound_local(chosen_one, 'sound/vo/female/gen/giggle (1).ogg', 100)

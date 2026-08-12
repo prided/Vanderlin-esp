@@ -1,5 +1,5 @@
 /datum/book_entry/essence_crafting
-	name = "Alchemical Combinations and You"
+	name = "Combinaciones alquímicas y tú"
 
 /datum/book_entry/essence_crafting/inner_book_html(mob/user)
 	return {"

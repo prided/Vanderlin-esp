@@ -7,7 +7,7 @@
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	swingdelay = 5
 	misscost = 5
-	attack_verb = list("strikes", "hits")
+	attack_verb = list("huelgas", "hits")
 	penfactor = AP_FLAIL_STRIKE
 	item_damage_type = "slash"
 	acc_bonus = 12

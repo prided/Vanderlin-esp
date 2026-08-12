@@ -2,7 +2,7 @@
 	icon = 'icons/roguetown/items/natural.dmi'
 	seed = null
 	name = "log"
-	desc = "Refined lumber, ready for use or processing."
+	desc = "Madera refinada, lista para su uso o procesamiento."
 	icon_state = "log"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
@@ -96,7 +96,7 @@
 			new I(drop_loc)
 
 /obj/item/grown/log/tree/small
-	name = "small log"
+	name = "pequeño tronco"
 	desc = "A smaller log that came from a larger log. Suitable for building."
 	icon_state = "logsmall"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
@@ -202,7 +202,7 @@
 
 /obj/item/grown/log/tree/stake
 	name = "stake"
-	desc = "A sharpened piece of wood, fantastic for piercing"
+	desc = "Un trozo de madera afilado, fantástico para perforar."
 	icon_state = "stake"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
@@ -266,7 +266,7 @@
 	smeltresult = /obj/item/fertilizer/ash
 
 /obj/item/grown/log/tree/essence
-	name = "essence of lumber"
+	name = "esencia de madera"
 	desc = "A mystical essence imbued with the power of Dendor. Very good source of fuel."
 	icon_state = "lessence"
 	attacked_sound = 'sound/misc/woodhit.ogg'

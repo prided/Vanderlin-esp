@@ -23,7 +23,7 @@
 
 /datum/job/persistence/stonemason
 	title = "Stonemason"
-	tutorial = "You're a stonemason, ensure the settlement isn't a bunch of tents."
+	tutorial = "Eres un cantero, asegúrate de que el asentamiento no sea un montón de tiendas de campaña."
 	department_flag = SERFS
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	factions = list(FACTION_TOWN)

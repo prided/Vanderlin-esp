@@ -26,17 +26,17 @@
 
 	var/the_time = world.time
 
-	var/design = tgui_input_list(user, "Select a design.","Tabard Design", list("None","Split", "Quadrants", "Boxes", "Diamonds"))
+	var/design = tgui_input_list(user, "Select a design.","Diseño de tabardo", list("None","Split", "Quadrants", "Boxes", "Diamonds"))
 	if(!design)
 		return
 
-	var/colorone = tgui_input_list(user, "Select a primary color.","Tabard Design", GLOB.noble_dyes)
+	var/colorone = tgui_input_list(user, "Seleccione un color primario.","Diseño de tabardo", GLOB.noble_dyes)
 	if(!colorone)
 		return
 
 	var/colortwo
 	if(design != "None")
-		colortwo = tgui_input_list(user, "Select a primary color.","Tabard Design", GLOB.noble_dyes)
+		colortwo = tgui_input_list(user, "Seleccione un color primario.","Diseño de tabardo", GLOB.noble_dyes)
 		if(!colortwo)
 			return
 
@@ -83,7 +83,7 @@
 	if(picked)
 		return
 	var/the_time = world.time
-	var/chosen = input(user, "Select a design.","Tabard Design") as null|anything in list("Split", "Quadrants", "Boxes", "Diamonds")
+	var/chosen = input(user, "Select a design.","Diseño de tabardo") as null|anything in list("Split", "Quadrants", "Boxes", "Diamonds")
 	if(world.time > (the_time + 10 SECONDS))
 		return
 	if(!chosen)
@@ -259,17 +259,17 @@
 
 	var/the_time = world.time
 
-	var/design = tgui_input_list(user, "Select a design.","Tabard Design", list("None", "Split", "Quadrants", "Boxes", "Diamonds"))
+	var/design = tgui_input_list(user, "Select a design.","Diseño de tabardo", list("None", "Split", "Quadrants", "Boxes", "Diamonds"))
 	if(!design)
 		return
 
-	var/colorone = tgui_input_list(user, "Select a primary color.","Tabard Design", GLOB.noble_dyes)
+	var/colorone = tgui_input_list(user, "Seleccione un color primario.","Diseño de tabardo", GLOB.noble_dyes)
 	if(!colorone)
 		return
 
 	var/colortwo
 	if(design != "None")
-		colortwo = tgui_input_list(user, "Select a primary color.","Tabard Design", GLOB.noble_dyes)
+		colortwo = tgui_input_list(user, "Seleccione un color primario.","Diseño de tabardo", GLOB.noble_dyes)
 		if(!colortwo)
 			return
 
@@ -302,7 +302,7 @@
 	picked = TRUE
 
 /obj/item/clothing/cloak/stabard/jupon/guard
-	desc = "A jupon with the lord's heraldic colors."
+	desc = "Un jupón con los colores heráldicos del señor."
 	color = CLOTHING_BLOOD_RED
 	detail_tag = "_quad"
 	detail_color = CLOTHING_PLUM_PURPLE
@@ -316,7 +316,7 @@
 	if(picked)
 		return
 	var/the_time = world.time
-	var/chosen = input(user, "Select a design.","Tabard Design") as null|anything in list("Split", "Quadrants", "Boxes", "Diamonds")
+	var/chosen = input(user, "Select a design.","Diseño de tabardo") as null|anything in list("Split", "Quadrants", "Boxes", "Diamonds")
 	if(world.time > (the_time + 10 SECONDS))
 		return
 	if(!chosen)

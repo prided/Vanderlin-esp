@@ -2,7 +2,7 @@
 	hotkey_keys = list("O")
 	name = "ooc"
 	full_name = "Open OOC"
-	description = "Opens OOC"
+	description = "Abre OOC"
 	category = CATEGORY_CLIENT
 
 /datum/keybinding/client/ooc/down(client/user, turf/target, mousepos_x, mousepos_y)
@@ -14,14 +14,14 @@
 	hotkey_keys = list("T")
 	name = "say"
 	full_name = "Open Say"
-	description = "Opens Say channel"
+	description = "Abre el canal Say"
 	category = CATEGORY_CLIENT
 
 /datum/keybinding/client/me
 	hotkey_keys = list("M")
 	name = "me"
 	full_name = "Open Me"
-	description = "Opens Me channel"
+	description = "Me abre el canal"
 	category = CATEGORY_CLIENT
 
 /datum/keybinding/client/me/down(client/user, turf/target, mousepos_x, mousepos_y)

@@ -1,6 +1,6 @@
 
 /datum/food_item
-	var/name = "Bread"
+	var/name = "Pan"
 	var/stamina_restore = 50
 	var/created_amount = 1
 
@@ -12,7 +12,7 @@
 	)
 
 /datum/food_item/bread
-	name = "Bread"
+	name = "Pan"
 	stamina_restore = 50
 
 	requirements = list(

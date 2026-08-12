@@ -1,5 +1,5 @@
 /datum/action/cooldown/meatvine/personal/healing_aura
-	name = "Regenerative Aura"
+	name = "Aura regenerativa"
 	desc = "Emit regenerative pheromones that heal nearby putrid entities."
 	button_icon_state = "healaura"
 	cooldown_time = 90 SECONDS
@@ -23,7 +23,7 @@
 		return FALSE
 
 	if(aura_active)
-		owner.balloon_alert(owner, "already healing")
+		owner.balloon_alert(owner, "ya sanando")
 		return FALSE
 
 	owner.balloon_alert(owner, "healing aura started")

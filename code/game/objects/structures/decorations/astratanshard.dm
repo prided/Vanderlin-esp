@@ -60,7 +60,7 @@ GLOBAL_LIST_EMPTY(street_lamp_lights)
 		send_to_necra(thingy)
 	if(istype(thingy,/obj))
 		var/obj/deadthing = thingy
-		src.visible_message(span_danger("\The [deadthing] vanishes in a violent flash on contact with \The [src]!"))
+		src.visible_message(span_danger("¡\The [deadthing] desaparece en un violento destello al entrar en contacto con \The [src]!"))
 		qdel(deadthing)
 
 /obj/structure/astratanshard/proc/send_to_necra(mob/living/fool,visible_message,mob_message,cause)

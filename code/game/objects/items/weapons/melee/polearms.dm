@@ -40,7 +40,7 @@
 
 //................ Wooden Staff ............... //
 /obj/item/weapon/polearm/woodstaff
-	name = "wooden staff"
+	name = "bastón de madera"
 	desc = "The ultimate tool of travel for weary wanderers, support your weight or crack the heads that don't support you."
 	icon_state = "woodstaff"
 	force =  DAMAGE_STAFF
@@ -135,7 +135,7 @@
 //................ Spear ............... //
 /obj/item/weapon/polearm/spear
 	name = "spear"
-	desc = "The humble spear, use the pointy end."
+	desc = "La humilde lanza, usa el extremo puntiagudo."
 	icon_state = "spear"
 	force = DAMAGE_SPEARPLUS
 	force_wielded = DAMAGE_SPEAR_WIELD
@@ -162,8 +162,8 @@
 
 
 /obj/item/weapon/polearm/spear/steel
-	name = "steel spear"
-	desc = "A spear with a steel head, more durable and effective than a simple iron spear."
+	name = "lanza de acero"
+	desc = "Una lanza con cabeza de acero, más duradera y eficaz que una simple lanza de hierro."
 	icon_state = "spear_sk"
 	force = DAMAGE_SPEARPLUS + 2
 	force_wielded = DAMAGE_SPEAR_WIELD + 2
@@ -185,7 +185,7 @@
 	sellprice = 50
 
 /obj/item/weapon/polearm/spear/silver
-	name = "silver spear"
+	name = "lanza de plata"
 	desc = "A spear with a silver head, more effective against supernatural foes than a steel spear."
 	icon_state = "silverspear"
 	force = DAMAGE_SPEARPLUS
@@ -202,8 +202,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/polearm/spear/abyssor
-	name = "depthseeker"
-	desc = "An instrument of Abyssor's wrath to punish the ignorant."
+	name = "buscador de profundidades"
+	desc = "Un instrumento de la ira de Abyssor para castigar a los ignorantes."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "gsspear"
 	force = DAMAGE_SPEARPLUS + 2
@@ -292,7 +292,7 @@
 
 //................ Stone Short Spear ............... //		- Short spears got shorter reach and worse wield effect, made for one handed and throwing
 /obj/item/weapon/polearm/spear/stone
-	name = "simple spear"
+	name = "lanza simple"
 	desc = "One of the first weapons wielded by humenity, still as versatile now as it was then."
 	icon_state = "stonespear"
 	force = DAMAGE_SPEAR - 2
@@ -311,7 +311,7 @@
 
 //................ Javelin ............... //
 /obj/item/weapon/polearm/spear/assegai
-	name = "iron assegai"
+	name = "azagaya de hierro"
 	desc = "A long throwing spear originating from the east."
 	icon = 'icons/roguetown/weapons/64/polearms.dmi'
 	icon_state = "assegai_iron"
@@ -340,7 +340,7 @@
 	item_weight = 1.5 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/javelin
-	name = "copper javelin"
+	name = "jabalina de cobre"
 	desc = "Made for throwing, long out of favor and using inferior metals, it can still kill when your aim is true."
 	icon_state = "cspear"
 	force = DAMAGE_SPEAR - 2
@@ -385,7 +385,7 @@
 	embedding = list("embedded_pain_multiplier" = 5, "embed_chance" = 60, "embedded_fall_chance" = 0, "embedded_ignore_throwspeed_threshold" = 1)
 
 /obj/item/weapon/polearm/spear/javelin/steel
-	name = "steel javelin"
+	name = "jabalina de acero"
 	desc = "A sturdy javelin made from steel, suitable for hunting knightly foes."
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "javelin"
@@ -402,7 +402,7 @@
 
 /obj/item/weapon/polearm/spear/javelin/silver
 	name = "silver javelin"
-	desc = "A sturdy javelin made from silver, suitable for hunting supernatural foes."
+	desc = "Una jabalina resistente hecha de plata, adecuada para cazar enemigos sobrenaturales."
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "sjavelin"
 	gripsprite = FALSE
@@ -446,7 +446,7 @@
 				return list("shrink" = 0.7,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 
 /obj/item/weapon/polearm/spear/trollbone
-	name = "troll-horn bone javelin"
+	name = "jabalina de hueso de cuerno de troll"
 	desc = "Made by the tribes of the wilds for hunting, and strengthened with a troll's horn, this spear will outlast your prey, if your aim remains true."
 	icon_state = "bspear"
 	throwforce = DAMAGE_SPEAR_WIELD
@@ -494,7 +494,7 @@
 	item_weight = 2.3 KILOGRAMS
 
 /obj/item/weapon/polearm/halberd/silver
-	name = "silver halberd"
+	name = "alabarda de plata"
 	desc = "A halberd forged from silver, laying low the beasts of the nite."
 	icon = 'icons/roguetown/weapons/64/axes.dmi'
 	icon_state = "silverhalberd"
@@ -588,7 +588,7 @@
 //originally in the axes.dm file, moved here because they inherit from the bardiche
 //................ Woodcutter Axe ............... //
 /obj/item/weapon/polearm/halberd/bardiche/woodcutter
-	name = "woodcutter axe"
+	name = "hacha de leñador"
 	desc = "The tool, weapon, and loyal companion of woodcutters. Able to chop mighty trees and repel the threats of the forest."
 	icon = 'icons/roguetown/weapons/64/axes.dmi'
 	icon_state = "woodcutter"
@@ -677,7 +677,7 @@
 	icon_state = "ancient_bardiche"
 
 /obj/item/weapon/polearm/halberd/bardiche/dendor
-	name = "summer scythe"
+	name = "guadaña de verano"
 	desc = "Summer's verdancy runs through the head of this scythe. All the more to sow."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "dendorscythe"
@@ -685,7 +685,7 @@
 	item_weight = 2.3 KILOGRAMS
 
 /obj/item/weapon/polearm/halberd/bardiche/captain
-	name = "\proper deliverance"
+	name = "\proper liberación"
 	desc = "A glaive decorated with gold forged for the Captain alongside their armor. To deliver justice with every wide swing."
 	sellprice = 200
 	icon_state = "capglaive"
@@ -706,7 +706,7 @@
 
 //................ Eagle Beak ............... //
 /obj/item/weapon/polearm/eaglebeak
-	name = "eagle's beak"
+	name = "pico de águila"
 	desc = "A reinforced pole affixed with an ornate steel eagle's head, of which it's beak is intended to pierce with great harm."
 	icon_state = "eaglebeak"
 	force = DAMAGE_SPEAR
@@ -742,7 +742,7 @@
 //................ Lucerne Hammer ............... //
 /obj/item/weapon/polearm/eaglebeak/lucerne
 	name = "lucerne"
-	desc = "A polehammer of simple iron, fracture bone and dissent with simple brute force."
+	desc = "Un martillo de asta de hierro sencillo que quiebra huesos y disidencia con pura fuerza bruta."
 	icon_state = "polehammer"
 	force_wielded = DAMAGE_HALBERD_WIELD -3
 	wbalance = VERY_EASY_TO_DODGE
@@ -756,7 +756,7 @@
 
 //................ Hoplite Spear ............... //
 /obj/item/weapon/polearm/spear/hoplite
-	name = "ancient spear"
+	name = "lanza antigua"
 	desc = "A humble spear with a bronze head, a rare survivor from the battles long past that nearly destroyed Psydonia."
 	icon_state = "bronzespear"
 	max_blade_int = 200
@@ -772,7 +772,7 @@
 	item_weight = 1 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/hoplite/abyssal
-	name = "abyssal spear"
+	name = "lanza abisal"
 	desc = "A spear with a toothed end, inspired after the teeth of an abyssal monstrosity"
 	icon = 'icons/roguetown/weapons/64/ancient.dmi'
 	icon_state = "ancient_spear"
@@ -780,7 +780,7 @@
 	item_weight = 1 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/bronze
-	name = "bronze spear"
+	name = "lanza de bronce"
 	desc = "A spear forged of bronze. Expensive but more durable than a regular iron one."
 	icon_state = "bronzespear"
 	max_blade_int = 200
@@ -822,8 +822,8 @@
 	AddElement(/datum/element/walking_stick)
 
 /obj/item/weapon/polearm/spear/bonespear
-	name = "bone spear"
-	desc = "A spear made of bones."
+	name = "lanza de hueso"
+	desc = "Una lanza hecha de huesos."
 	// icon_state = "bonespear"
 	icon_state = "stonespear_sk"
 	force = DAMAGE_SPEARPLUS
@@ -844,7 +844,7 @@
 	item_weight = 0.9 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/trollbonespear
-	name = "troll-horn bone spear"
+	name = "lanza de hueso de cuerno de troll"
 	desc = "A spear made of bones, strengthed with an troll's horn."
 	// icon_state = "bonespear"
 	icon_state = "stonespear_sk"

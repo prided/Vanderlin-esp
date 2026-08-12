@@ -58,7 +58,7 @@
 	bulb_colour = "#23b25a"
 
 /obj/machinery/light/fueled/firebowl/blackfire
-	desc = "A fire, black as death."
+	desc = "Un fuego, negro como la muerte."
 	icon_state = "blackfire1"
 	base_state = "blackfire"
 	bulb_colour = "#8468ff"
@@ -68,7 +68,7 @@
 	base_state = "churchfire"
 
 /obj/machinery/light/fueled/firebowl/church/magic
-	name = "magical bonfire"
+	name = "hoguera mágica"
 	color = "#6ab2ee"
 	bulb_colour = "#6ab2ee"
 	max_integrity = 30
@@ -80,7 +80,7 @@
 	bulb_colour = "#8468ff"
 
 /obj/machinery/light/fueled/firebowl/standing
-	name = "standing fire"
+	name = "fuego en pie"
 	icon_state = "standing1"
 	base_state = "standing"
 	bulb_colour = "#ff9e54"
@@ -110,7 +110,7 @@
 			return
 		if(prob(GET_MOB_ATTRIBUTE_VALUE(L, STAT_STRENGTH) * 8))
 			playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
-			user.visible_message("<span class='warning'>[user] kicks over [src]!</span>", \
+			user.visible_message("<span class='warning'>[user] patea sobre [src]!</span>", \
 				"<span class='warning'>I kick over [src]!</span>")
 			burn_out()
 			knock_over()
@@ -215,7 +215,7 @@
 
 /*	.............   Candle lamp   ................ */
 /obj/machinery/light/fueled/wallfire/candle/lamp // cant get them to start unlit but they work as is
-	name = "candle lamp"
+	name = "lámpara de vela"
 	icon_state = "candle"
 	base_state = "candle"
 	plane = GAME_PLANE_UPPER

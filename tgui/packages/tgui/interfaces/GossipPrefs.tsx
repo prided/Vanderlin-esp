@@ -20,22 +20,20 @@ export const GossipPrefs = () => {
   const [tab, setTab] = useState<TabKey>('rumors');
 
   return (
-    <Window width={400} height={480} title="Gossip & Rumors">
+    <Window width={400} height={480} title="Chismes y rumores">
       <Window.Content scrollable>
         <Box color="gray" italic mb={1}>
-          Rumors and gossip you author here will be spread to other characters
-          at roundstart. Write them as continuations of &quot;Did you hear
-          that [name]...&quot;
+          Los rumores y chismes que usted escriba aquí se difundirán a otros personajes al comienzo de la ronda. Escríbelos como continuación de &quot;¿Escuchaste que [name]...&quot;?
         </Box>
         <Tabs>
           <Tabs.Tab selected={tab === 'rumors'} onClick={() => setTab('rumors')}>
-            Rumors
+            Rumores
           </Tabs.Tab>
           <Tabs.Tab selected={tab === 'noble'} onClick={() => setTab('noble')}>
-            Noble Gossip
+            Chismes nobles
           </Tabs.Tab>
           <Tabs.Tab selected={tab === 'rivals'} onClick={() => setTab('rivals')}>
-            Rivals
+            Rivales
           </Tabs.Tab>
         </Tabs>
         {tab === 'rumors' && (
@@ -45,7 +43,7 @@ export const GossipPrefs = () => {
             addAction="add_rumor"
             removeAction="remove_rumor"
             editAction="edit_rumor"
-            placeholder="stole bread from the market stalls..."
+            placeholder="robó pan de los puestos del mercado..."
           />
         )}
         {tab === 'noble' && (
@@ -55,15 +53,15 @@ export const GossipPrefs = () => {
             addAction="add_noble_gossip"
             removeAction="remove_noble_gossip"
             editAction="edit_noble_gossip"
-            placeholder="was seen meeting with foreign envoys in secret..."
+            placeholder="fue visto reuniéndose con enviados extranjeros en secreto..."
           />
         )}
         {tab === 'rivals' && (
-          <Section title="Rival Count">
+          <Section title="Cantidad de rivales">
             <Stack vertical>
               <Stack.Item>
                 <Box color="gray" italic mb={1}>
-                  Number of rivals your character starts with at roundstart.
+                  Número de rivales con los que comienza tu personaje al inicio de la ronda.
                 </Box>
               </Stack.Item>
               <Stack.Item>
@@ -112,7 +110,7 @@ const GossipList = ({
       {entries.length === 0 && (
         <Stack.Item>
           <Box color="gray" italic>
-            No entries yet.
+            Aún no hay entradas.
           </Box>
         </Stack.Item>
       )}
@@ -124,7 +122,7 @@ const GossipList = ({
               <>
                 <Button
                   icon="pencil"
-                  tooltip="Edit"
+                  tooltip="Editar"
                   onClick={() => {
                     setEditingIdx(i);
                     setEditText(entry);
@@ -133,7 +131,7 @@ const GossipList = ({
                 <Button
                   icon="trash"
                   color="bad"
-                  tooltip="Remove"
+                  tooltip="Eliminar"
                   onClick={() => act(removeAction, { index: i + 1 })}
                 />
               </>
@@ -160,7 +158,7 @@ const GossipList = ({
                           setEditingIdx(null);
                         }}
                       >
-                        Save
+                        Guardar
                       </Button>
                     </Stack.Item>
                     <Stack.Item>
@@ -168,7 +166,7 @@ const GossipList = ({
                         icon="times"
                         onClick={() => setEditingIdx(null)}
                       >
-                        Cancel
+                        Cancelar
                       </Button>
                     </Stack.Item>
                   </Stack>
@@ -184,7 +182,7 @@ const GossipList = ({
       ))}
       {!atCap && (
         <Stack.Item>
-          <Section title="Add New">
+          <Section title="Agregar nuevo">
             <Stack vertical>
               <Stack.Item>
                 <Input
@@ -205,7 +203,7 @@ const GossipList = ({
                     setDraft('');
                   }}
                 >
-                  Add
+                  Agregar
                 </Button>
               </Stack.Item>
             </Stack>
@@ -215,7 +213,7 @@ const GossipList = ({
       {atCap && (
         <Stack.Item>
           <Box color="average" italic>
-            Maximum entries reached ({max}).
+            Entradas máximas alcanzadas ({max}).
           </Box>
         </Stack.Item>
       )}

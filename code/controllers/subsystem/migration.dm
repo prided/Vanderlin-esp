@@ -308,7 +308,7 @@ SUBSYSTEM_DEF(migrants)
 
 	/// And back to non copy pasta code
 
-	to_chat(character, span_alert("I am a [role_instance.name]!"))
+	to_chat(character, span_alert("¡Soy un [role_instance.name]!"))
 	to_chat(character, span_notice(wave.greet_text))
 	to_chat(character, span_notice(role_instance.greet_text))
 
@@ -545,7 +545,7 @@ SUBSYSTEM_DEF(migrants)
 	// Check if player has enough triumph
 	var/current_triumph = SStriumphs.get_triumphs(player.ckey)
 	if(current_triumph < amount)
-		to_chat(player, span_warning("You don't have enough triumph! You have [current_triumph], need [amount]."))
+		to_chat(player, span_warning("¡No tienes suficiente triunfo! Tienes [current_triumph], necesitas [amount]."))
 		return FALSE
 
 	// Deduct triumph from player
@@ -661,7 +661,7 @@ SUBSYSTEM_DEF(migrants)
 	return migrants
 
 /client/proc/admin_force_next_migrant_wave()
-	set category = "GameMaster.Interactions"
+	set category = "GameMaster.Interacciones"
 	set name = "Force Migrant Wave"
 	if(!holder)
 		return

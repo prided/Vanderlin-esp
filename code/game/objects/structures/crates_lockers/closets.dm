@@ -265,7 +265,7 @@
 		if(do_after(user, 4 SECONDS, O))
 			user.visible_message(span_notice("[user] stuffs [O] into [src]."), \
 								span_notice("I stuff [O] into [src]."), \
-								span_hear("I hear a loud bang."))
+								span_hear("Escucho un fuerte golpe."))
 			O.forceMove(T)
 			close()
 	else
@@ -330,7 +330,7 @@
 	//okay, so the closet is either welded or locked... resist!!!
 	user.changeNext_move(CLICK_CD_BREAKOUT)
 	user.last_special = world.time + CLICK_CD_BREAKOUT
-	user.visible_message("<span class='warning'>[src] shakes violently!</span>")
+	user.visible_message("¡<span class='warning'>[src] tiembla violentamente!</span>")
 
 /obj/structure/closet/proc/bust_open()
 	welded = FALSE //applies to all lockers

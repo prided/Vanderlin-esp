@@ -1,5 +1,5 @@
 /datum/bounty/zalad/nose_gold
-	name = "Adornment Order"
+	name = "Orden de adorno"
 	desc = "A desert chief wants golden nose rings as a gift for their kin."
 	required_path = /obj/item/clothing/face/facemask/goldnosechain
 	required_count = 2
@@ -10,7 +10,7 @@
 	faction_generation_weights = list(/datum/world_faction/zalad_traders = 20)
 
 /datum/bounty/zalad/khopesh_order
-	name = "Steel Khopesh Order"
+	name = "Orden Khopesh de acero"
 	desc = "The chief's honor guard wants new khopeshes forged."
 	required_path = /obj/item/weapon/sword/scimitar/lakkarikhopesh
 	required_count = 2

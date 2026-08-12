@@ -5,7 +5,7 @@
 	abstract_type = /datum/supply_pack/rawmats
 
 /datum/supply_pack/rawmats/glass
-	name = "Glass Panes (6)"
+	name = "Paneles de vidrio (6)"
 	cost = 60
 	contains = list(
 		/obj/item/natural/glass,
@@ -17,7 +17,7 @@
 	)
 
 /datum/supply_pack/rawmats/copper
-	name = "Copper Ore (4)"
+	name = "Mineral de cobre (4)"
 	cost = 20
 	contains = list(
 		/obj/item/ore/copper,
@@ -27,7 +27,7 @@
 	)
 
 /datum/supply_pack/rawmats/tin
-	name = "Tin Ore (4)"
+	name = "Mineral de estaño (4)"
 	cost = 35
 	contains = list(/obj/item/ore/tin,
 		/obj/item/ore/tin,
@@ -36,7 +36,7 @@
 	)
 
 /datum/supply_pack/rawmats/iron
-	name = "Iron Ore (4)"
+	name = "Mineral de hierro (4)"
 	cost = 40
 	contains = list(
 		/obj/item/ore/iron,
@@ -69,7 +69,7 @@
 	)
 
 /datum/supply_pack/rawmats/cloth
-	name = "Cloth (5)"
+	name = "Tela (5)"
 	cost = 20
 	contains = list(
 		/obj/item/natural/cloth,
@@ -80,7 +80,7 @@
 	)
 
 /datum/supply_pack/rawmats/feather
-	name = "Feathers (5)"
+	name = "Plumas (5)"
 	cost = 30
 	contains = list(
 		/obj/item/natural/feather,
@@ -91,7 +91,7 @@
 	)
 
 /datum/supply_pack/rawmats/silk
-	name = "Silk (5)"
+	name = "Seda (5)"
 	cost = 50
 	contains = list(
 		/obj/item/natural/silk,
@@ -102,7 +102,7 @@
 	)
 
 /datum/supply_pack/rawmats/ash
-	name = "Fertillizing Ash (6)"
+	name = "Ceniza Fertilizante (6)"
 	cost = 15
 	contains = list(
 		/obj/item/fertilizer/ash,
@@ -143,7 +143,7 @@
 	/obj/item/natural/wood/plank,)
 
 /datum/supply_pack/rawmats/blocks
-	name = "Stone Blocks"
+	name = "Bloques de piedra"
 	cost = 30
 	contains = list(/obj/item/natural/bundle/stoneblock,
 	/obj/item/natural/bundle/stoneblock,

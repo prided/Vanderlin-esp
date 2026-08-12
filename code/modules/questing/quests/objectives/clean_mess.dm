@@ -1,5 +1,5 @@
 /datum/quest/objective/clean_mess
-	title = "Clean Up the Mess"
+	title = "Limpiar el desorden"
 	quest_type = QUEST_OBJECTIVE
 	quest_difficulty = QUEST_DIFFICULTY_EASY
 	minimum_payout = QUEST_REWARD_EASY_LOW

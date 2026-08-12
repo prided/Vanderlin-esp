@@ -144,7 +144,7 @@ GLOBAL_LIST_EMPTY(rune_appearances_cache)
 			if (istype(active_spell, /datum/rune_spell/portalentrance))
 				var/datum/rune_spell/portalentrance/PE = active_spell
 				if (PE.network)
-					. += span_info("This entrance was attuned to the <b>[PE.network]</b> path.")
+					. += span_info("Esta entrada estaba en sintonía con el camino <b>[PE.network]</b>.")
 			if (istype(active_spell, /datum/rune_spell/portalexit))
 				var/datum/rune_spell/portalexit/PE = active_spell
 				if (PE.network)
@@ -355,7 +355,7 @@ GLOBAL_LIST_EMPTY(rune_appearances_cache)
 			return
 
 		if(HAS_TRAIT(user, TRAIT_MUTE))
-			to_chat(user, span_danger("You don't have the ability to perform rituals without voicing the incantations, there has to be some way...") )
+			to_chat(user, span_danger("No tienes la capacidad de realizar rituales sin expresar los encantamientos, tiene que haber alguna manera...") )
 			return
 
 	if(!word1 || !word2 || !word3)
@@ -452,7 +452,7 @@ GLOBAL_LIST_EMPTY(rune_appearances_cache)
 	if (caster)
 		if (newrune)
 			log_admin("BLOODCULT: [key_name(caster)] has created a new rune at [T.loc] (@[T.x], [T.y], [T.z]).")
-			message_admins("BLOODCULT: [key_name(caster)] has created a new rune at [ADMIN_JMP(T)].")
+			message_admins("BLOODCULT: [key_name(caster)] ha creado una nueva runa en [ADMIN_JMP(T)].")
 		rune.add_hiddenprint(caster)
 
 	rune.write_word(word.english, source)
@@ -514,7 +514,7 @@ GLOBAL_LIST_EMPTY(rune_appearances_cache)
 		rune.blood1 = null
 		qdel(rune)
 	else
-		message_admins("Error! Trying to erase a word from a rune with no words!")
+		message_admins("¡Error! ¡Intentando borrar una palabra de una runa sin palabras!")
 		qdel(rune)
 		return null
 	rune.activated = 0

@@ -49,7 +49,7 @@
 	ranged = TRUE
 	rapid = TRUE
 	projectiletype = /obj/projectile/magic/aoe/fireball/rogue
-	ranged_message = "throws fire"
+	ranged_message = "lanza fuego"
 
 	ai_controller = /datum/ai_controller/fiend
 

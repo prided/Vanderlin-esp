@@ -34,7 +34,7 @@
 	return (amount / minimum_damage) * (node_purity / 100)
 
 /datum/chimeric_node/input/damage/brute
-	name = "brute response"
+	name = "respuesta bruta"
 	desc = "Triggers when you take any brute damage."
 
 	weight = 10

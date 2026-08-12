@@ -1,5 +1,5 @@
 /obj/item/reagent_containers
-	name = "Container"
+	name = "Recipiente"
 	desc = ""
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = null
@@ -163,7 +163,7 @@
 		return NONE
 
 	reagents.expose_temperature(hotness)
-	to_chat(user, span_notice("I heat [name] with [tool]!"))
+	to_chat(user, span_notice("¡Caliento [name] con [tool]!"))
 
 	return ITEM_INTERACT_SUCCESS
 
@@ -185,7 +185,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(tool.w_class > WEIGHT_CLASS_NORMAL || tool.w_class > w_class)
-		to_chat(user, span_warning("\The [tool.name] is too large to fit in \the [name]."))
+		to_chat(user, span_warning("\The [tool.name] es demasiado grande para caber en \the [name]."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!user.transferItemToLoc(tool, src))
@@ -195,7 +195,7 @@
 
 	update_appearance(UPDATE_OVERLAYS)
 	START_PROCESSING(SSobj, src)
-	to_chat(user, span_notice("I submerge \the [tool.name] in \the [name]."))
+	to_chat(user, span_notice("Sumerjo \the [tool.name] en \the [name]."))
 
 	return ITEM_INTERACT_SUCCESS
 
@@ -214,7 +214,7 @@
 	returning.forceMove(get_turf(src))
 	user.put_in_hands(returning)
 	STOP_PROCESSING(SSobj, src)
-	to_chat(user, span_notice("You retrieve \the [returning.name] from \the [name]."))
+	to_chat(user, span_notice("Recupera \the [returning.name] de \the [name]."))
 
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
@@ -276,7 +276,7 @@
 		return FALSE
 
 	if(!reagents?.total_volume)
-		to_chat(user, span_danger("[src] is empty!"))
+		to_chat(user, span_danger("¡[src] está vacío!"))
 		return TRUE
 
 	var/punctuation = ismob(target) ? "!" : "."
@@ -293,7 +293,7 @@
 		target_mob.show_message(
 			span_userdanger("[user] splashes the contents of [src] onto you!"),
 			MSG_VISUAL,
-			span_userdanger("You feel drenched!"),
+			span_userdanger("¡Te sientes empapado!"),
 		)
 		SEND_SIGNAL(user, COMSIG_SPLASHED_MOB, target, reagents.reagent_list)
 	else if(isclosedturf(target))
@@ -322,7 +322,7 @@
 		return FALSE
 
 	if(!reagents?.total_volume)
-		to_chat(user, span_danger("[src] is empty!"))
+		to_chat(user, span_danger("¡[src] está vacío!"))
 		return TRUE
 
 	if(!canconsume(target, user))
@@ -378,11 +378,11 @@
 		return FALSE
 
 	if(!reagents?.total_volume)
-		to_chat(user, span_danger("[src] is empty!"))
+		to_chat(user, span_danger("¡[src] está vacío!"))
 		return TRUE
 
 	if(to_pour.reagents.holder_full())
-		to_chat(user, span_danger("[to_pour] is full."))
+		to_chat(user, span_danger("[to_pour] está lleno."))
 		return TRUE
 
 	var/stealthy = user.rogue_sneaking
@@ -391,7 +391,7 @@
 		to_chat(user, span_notice("I pour [src] into [to_pour]."))
 	else
 		user.visible_message(
-			span_notice("[user] pours [src] into [to_pour]."),
+			span_notice("[user] vierte [src] en [to_pour]."),
 			span_notice("I pour [src] into [to_pour]."),
 		)
 
@@ -418,21 +418,21 @@
 		return FALSE
 
 	if(!filling_from.reagents?.total_volume)
-		to_chat(user, span_danger("[filling_from] is empty!"))
+		to_chat(user, span_danger("¡[filling_from] está vacío!"))
 		return TRUE
 
 	if(reagents.holder_full())
-		to_chat(user, span_danger("[src] is full."))
+		to_chat(user, span_danger("[src] está lleno."))
 		return TRUE
 
 	var/stealthy = user.rogue_sneaking
 
 	if(stealthy)
-		to_chat(user, span_notice("I fill [src] with [filling_from]."))
+		to_chat(user, span_notice("Lleno [src] con [filling_from]."))
 	else
 		user.visible_message(
-			span_notice("[user] fills [src] with [filling_from]."),
-			span_notice("I fill [src] with [filling_from]."),
+			span_notice("[user] llena [src] con [filling_from]."),
+			span_notice("Lleno [src] con [filling_from]."),
 		)
 
 	if(!stealthy && fillsounds)
@@ -455,32 +455,32 @@
 		return FALSE
 
 	if(labelled)
-		to_chat(user, span_warning("\The [src] is already labelled."))
+		to_chat(user, span_warning("\The [src] ya está etiquetado."))
 		return FALSE
 
 	if(length(parchment.info))
-		to_chat(user, span_warning("I need a clean parchment."))
+		to_chat(user, span_warning("Necesito un pergamino limpio."))
 		return FALSE
 
 	if(!user.is_literate())
-		to_chat(user, span_warning("I do not know how to write."))
+		to_chat(user, span_warning("No sé escribir."))
 		return FALSE
 
 	var/other_hand = user.get_inactive_held_item()
 	if(!other_hand || !istype(other_hand, /obj/item/natural/feather))
-		to_chat(user, span_warning("I need a feather to write on the parchment."))
+		to_chat(user, span_warning("Necesito una pluma para escribir en el pergamino."))
 		return FALSE
 
 	var/label_name = browser_input_text(user, "Write a name.", max_length = 32)
 	if(QDELETED(src) || QDELETED(parchment))
 		return FALSE
 
-	var/label_desc = browser_input_text(user, "Write an optional description?")
+	var/label_desc = browser_input_text(user, "¿Escribir una descripción opcional?")
 	if(QDELETED(src) || QDELETED(parchment))
 		return FALSE
 
 	if(!label_name && !label_desc)
-		to_chat(user, span_warning("I decide not to label \the [src]."))
+		to_chat(user, span_warning("Decido no etiquetar \the [src]."))
 		return
 
 	label_container(user, label_name, label_desc)
@@ -499,7 +499,7 @@
 		return
 	if(labelled)
 		if(user)
-			to_chat(user, span_warning("\The [src] is already labelled."))
+			to_chat(user, span_warning("\The [src] ya está etiquetado."))
 		return
 	if(user)
 		playsound(src, 'sound/foley/dropsound/paper_drop.ogg', 70)
@@ -521,7 +521,7 @@
 		return
 	if(!do_after(user, 1 SECONDS, src))
 		return
-	user.visible_message(span_warning("[user] tears the label off of \the [src]!"), span_notice("I remove the label from \the [src]."), vision_distance = 3)
+	user.visible_message(span_warning("¡[user] arranca la etiqueta de \the [src]!"), span_notice("I remove the label from \the [src]."), vision_distance = 3)
 	name = initial(name)
 	if(desc != initial(desc))
 		desc = initial(desc)
@@ -605,7 +605,7 @@
 		else
 			CRASH("change_transfer_amount() called with invalid direction value")
 	amount_per_transfer_from_this = possible_transfer_amounts[index]
-	balloon_alert(user, "transferring [UNIT_FORM_STRING(amount_per_transfer_from_this)].")
+	balloon_alert(user, "transfiriendo [UNIT_FORM_STRING(amount_per_transfer_from_this)].")
 	mode_change_message(user)
 
 /obj/item/reagent_containers/proc/canconsume(mob/eater, mob/user, silent = FALSE)
@@ -646,8 +646,8 @@
 			reagents.total_volume *= rand(5,10) * 0.1 //Not all of it makes contact with the target
 		var/mob/M = target
 		var/R
-		target.visible_message("<span class='danger'>[M] has been splashed with something!</span>", \
-						"<span class='danger'>[M] has been splashed with something!</span>")
+		target.visible_message("¡<span class='danger'>[M] ha sido salpicado con algo!</span>", \
+						"¡<span class='danger'>[M] ha sido salpicado con algo!</span>")
 		for(var/datum/reagent/A in reagents.reagent_list)
 			R += "[A.type]  ([num2text(A.volume)]),"
 
@@ -656,7 +656,7 @@
 		reagents.reaction(target, TOUCH)
 
 	else if(bartender_check(target) && thrown)
-		visible_message("<span class='notice'>[src] lands onto the [target.name] without spilling a single drop.</span>")
+		visible_message("<span class='notice'>[src] aterriza en el [target.name] sin derramar una sola gota.</span>")
 		return
 
 	else

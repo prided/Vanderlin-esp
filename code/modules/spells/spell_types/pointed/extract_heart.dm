@@ -31,7 +31,7 @@
 	var/actual_time = max(extraction_time * skill_modifier, 7.5 SECONDS) // Minimum 7.5 seconds
 
 	owner.visible_message(span_warning("[owner] reaches for [cast_on]'s chest, chanting incoherently..."), \
-						span_notice("You begin the ritual extraction of [cast_on]'s heart."))
+						span_notice("Comienzas la extracción ritual del corazón de [cast_on]."))
 
 	if(!do_after(owner, actual_time, cast_on))
 		to_chat(owner, span_warning("The profane ritual was interrupted! SHAME!"))
@@ -55,5 +55,5 @@
 	chest.bodypart_attacked_by(BCLASS_PIERCE, 30)
 
 	owner.visible_message(span_warning("[owner] rips [cast_on]'s heart out with a roar!"), \
-						span_red("You present the heart to Graggar! The God chuckles upon this offering."))
+						span_red("¡Le presentas el corazón a Graggar! El Dios se ríe de esta ofrenda."))
 	owner.emote("rage", forced = TRUE)

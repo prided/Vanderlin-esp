@@ -83,7 +83,7 @@
 
 /datum/component/breed/proc/on_examine(datum/source, mob/user, list/examine_list)
 	if(pregnant)
-		examine_list += span_green("They are pregnant!")
+		examine_list += span_green("¡Están embarazadas!")
 
 /// Called by component on female source
 /datum/component/breed/proc/impregnate(mob/living/source, mob/living/target)

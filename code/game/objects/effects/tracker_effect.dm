@@ -18,7 +18,7 @@
 //object that moves constantly toward a target.
 
 /obj/effect/tracker
-	name = "tracker"
+	name = "rastreador"
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "soul2"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT

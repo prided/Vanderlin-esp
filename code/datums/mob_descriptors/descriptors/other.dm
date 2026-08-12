@@ -1,5 +1,5 @@
 /datum/mob_descriptor/age
-	name = "Age"
+	name = "Edad"
 	slot = MOB_DESCRIPTOR_SLOT_AGE
 	verbage = "looks"
 

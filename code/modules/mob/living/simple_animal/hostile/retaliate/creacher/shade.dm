@@ -34,7 +34,7 @@
 	mob_biotypes = MOB_UNDEAD|MOB_SPIRIT
 	//Thats a ghost dude how would it leave a corpse?
 	del_on_death = TRUE
-	deathmessage = "collapses into ash"
+	deathmessage = "se derrumba en cenizas"
 	speak_emote = list("sighs")
 	/*
 	* Immunity to brute damage has

@@ -18,7 +18,7 @@
 	)
 
 /datum/job/advclass/combat/longbeard
-	title = "Longbeard"
+	title = "barba larga"
 	tutorial = "You've earned your place as one of the old grumblers, a pinnacle of tradition, justice, and willpower. You've come to establish order in these lands, and with your hammer of grudges you'll see it through."
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	allowed_races = list(SPEC_ID_DWARF)
@@ -37,7 +37,7 @@
 	)
 
 /datum/outfit/longbeard
-	name = "Longbeard"
+	name = "barba larga"
 	pants = /obj/item/clothing/pants/tights/colored/black
 	backr = /obj/item/weapon/mace/goden/steel/warhammer
 	beltl = /obj/item/storage/belt/pouch/coins/mid

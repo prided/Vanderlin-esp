@@ -1,5 +1,5 @@
 /obj/item/contraption
-	name = "random piece of machinery"
+	name = "pieza aleatoria de maquinaria"
 	desc = "A cog with teeth meticulously crafted for tight interlocking."
 	icon_state = "gear"
 	var/on_icon
@@ -64,7 +64,7 @@
 		if(skill > 2)
 			. += span_warning("You calculate this contraptions chance of failure to be anywhere between [max(0, (misfire_chance - skill) - rand(4))]% and [max(2, (misfire_chance - skill) + rand(3))]%.")
 		else
-			. += span_warning("It seems slightly unstable...")
+			. += span_warning("Parece un poco inestable...")
 	if(skill >= 6 && sneaky_misfire_chance)
 		. += span_warning("This contraption has a chance for catastrophic failure in the hands of the inexperient.")
 
@@ -120,7 +120,7 @@
 		S.set_up(1, 1, front)
 		S.start()
 		if(current_charge)
-			to_chat(user, span_info("I try to insert the [tool.name] but there's already \a [initial(accepted_power_source.name)] inside!"))
+			to_chat(user, span_info("¡Intento insertar el [tool.name] pero ya hay \a [initial(accepted_power_source.name)] adentro!"))
 			playsound(src, 'sound/combat/hits/blunt/woodblunt (2).ogg', 100, TRUE)
 			shake_camera(user, 1, 1)
 		else
@@ -170,7 +170,7 @@
 	return ..()
 
 /obj/item/contraption/wood_metalizer
-	name = "wood metalizer"
+	name = "metalizador de madera"
 	desc = "A creation of genius or insanity. This cursed contraption is somehow able to turn wood into metal."
 	icon_state = "metalizer"
 	on_icon = "metalizer_flick"
@@ -197,7 +197,7 @@
 	var/obj/O = interacting_with
 
 	if(!O.metalizer_result)
-		to_chat(user, span_info("The [name] refuses to function."))
+		to_chat(user, span_info("El [name] se niega a funcionar."))
 		playsound(user, 'sound/items/flint.ogg', 100, FALSE)
 		flick(off_icon, src)
 		var/datum/effect_system/spark_spread/S = new()
@@ -246,7 +246,7 @@
 
 /obj/item/contraption/smelter
 	name = "portable smelter"
-	desc = "Furnaces are a thing of the past. The future is here!"
+	desc = "Los hornos son cosa del pasado. ¡El futuro está aquí!"
 	icon_state = "smelter"
 	on_icon = "smelter_flick"
 	off_icon = "smelter_off"
@@ -296,7 +296,7 @@
 	var/obj/O = interacting_with
 
 	if(!O.smeltresult)
-		to_chat(user, span_info("The [name] refuses to function."))
+		to_chat(user, span_info("El [name] se niega a funcionar."))
 		playsound(user, 'sound/items/flint.ogg', 100, FALSE)
 		flick(off_icon, src)
 		var/datum/effect_system/spark_spread/S = new()
@@ -324,7 +324,7 @@
 	addtimer(CALLBACK(O, PROC_REF(popcorn_smelt_result), turf), 20)
 
 /obj/item/contraption/shears
-	name = "amputation shears"
+	name = "tijeras de amputación"
 	desc = "A powered shear used for achieving a clean separation between limb and patient. Keeping the patient still is imperative to aligning the blades."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "shears"
@@ -348,7 +348,7 @@
 
 	var/targeted_zone = check_zone(user.zone_selected)
 	if(targeted_zone == BODY_ZONE_CHEST || targeted_zone == BODY_ZONE_HEAD)
-		to_chat(user, span_warning("I can't amputate that!"))
+		to_chat(user, span_warning("¡No puedo amputar eso!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/mob/living/carbon/amputee = interacting_with
@@ -382,7 +382,7 @@
 	limb_snip_candidate.drop_limb()
 	user.visible_message(
 		span_danger("[src] violently slams shut, amputating [amputee]'s [limb_snip_candidate.name]."),
-		span_notice("You amputate [amputee]'s [limb_snip_candidate.name] with [src].")
+		span_notice("Amputas el [limb_snip_candidate.name] de [amputee] con [src].")
 	)
 	charge_deduction(amputee, user, 1)
 
@@ -424,7 +424,7 @@
 		to_chat(user, "You wipe [src] of its stored buffer.")
 		remove_buffer(src)
 	else
-		to_chat(user, span_warning("I have no idea how to use [src]!"))
+		to_chat(user, span_warning("¡No tengo idea de cómo usar [src]!"))
 
 /obj/item/contraption/linker/proc/set_buffer(datum/buffer)
 	if(src.buffer)
@@ -446,7 +446,7 @@
 	buffer = null
 
 /obj/item/folding_table_stored
-	name = "folding table"
+	name = "mesa plegable"
 	desc = "A folding table, useful for setting up a temporary workspace."
 	icon = 'icons/roguetown/items/gadgets.dmi'
 	icon_state = "folding_table_stored"
@@ -460,7 +460,7 @@
 	. = ..()
 	var/turf/target_turf = get_step(user,user.dir)
 	if(target_turf.is_blocked_turf(TRUE) || (locate(/mob/living) in target_turf))
-		to_chat(user, span_danger("I can't deploy the folding table here!"))
+		to_chat(user, span_danger("¡No puedo desplegar la mesa plegable aquí!"))
 		return NONE
 	if(isopenspace(target_turf))
 		return NONE
@@ -470,12 +470,12 @@
 	return NONE
 
 /obj/item/folding_table_stored/proc/deploy_folding_table(mob/user, atom/location)
-	to_chat(user, "<span class='notice'>You deploy the folding table.</span>")
+	to_chat(user, "<span class='notice'>Despliegas la mesa plegable.</span>")
 	new /obj/structure/table/wood/folding(location)
 	qdel(src)
 
 /obj/structure/table/wood/folding
-	name = "folding table"
+	name = "mesa plegable"
 	desc = "A folding table, useful for setting up a temporary workspace."
 	icon = 'icons/roguetown/items/gadgets.dmi'
 	icon_state = "folding_table_deployed"
@@ -497,7 +497,7 @@
 	return ..()
 
 /obj/machinery/light/fueled/hearth/mobilestove
-	name = "mobile stove"
+	name = "estufa móvil"
 	desc = "A portable bronze stovetop. The underside is covered in an esoteric pattern of small tubes. Whatever heats the hob is hidden inside the body of the device"
 	icon_state = "hobostove1"
 	base_state = "hobostove"
@@ -521,7 +521,7 @@
 			attachment.forceMove(user.loc)
 		attachment = null
 	if(!on)
-		user.visible_message(span_notice("[user] begins packing up \the [src]."))
+		user.visible_message(span_notice("[user] comienza a empacar \the [src]."))
 		if(!do_after(user, 2 SECONDS, TRUE, src))
 			return
 		var/obj/item/mobilestove/new_mobilestove = new /obj/item/mobilestove(get_turf(src))
@@ -536,7 +536,7 @@
 	if(!do_after(H, 4 SECONDS, src))
 		return
 	var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
-	to_chat(H, span_warning("HOT! I burned myself!"))
+	to_chat(H, span_warning("¡CALIENTE! ¡Me quemé!"))
 	if(affecting && affecting.receive_damage(0, 5))
 		H.update_damage_overlays()
 	new /obj/item/mobilestove(get_turf(src))
@@ -544,7 +544,7 @@
 	qdel(src)
 
 /obj/item/mobilestove
-	name = "packed stove"
+	name = "estufa empaquetada"
 	desc = "A portable bronze stovetop. The underside is covered in an esoteric pattern of small tubes. Whatever heats the hob is hidden inside the body of the device"
 	icon = 'icons/roguetown/misc/lighting.dmi'
 	icon_state = "hobostovep"
@@ -564,7 +564,7 @@
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
 			to_chat(user, span_warning("There is already something here!</span>"))
 			return
-	user.visible_message(span_notice("[user] begins placing \the [src] down on the ground."))
+	user.visible_message(span_notice("[user] comienza a colocar \the [src] en el suelo."))
 	if(do_after(user, 2 SECONDS, src))
 		new /obj/machinery/light/fueled/hearth/mobilestove(get_turf(src))
 		qdel(src)

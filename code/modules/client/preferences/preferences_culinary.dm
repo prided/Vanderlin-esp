@@ -125,7 +125,7 @@ GLOBAL_LIST_EMPTY(cached_drink_flat_icons)
 			culinary[CULINARY_RANDOM_PREFERENCES] = !culinary[CULINARY_RANDOM_PREFERENCES]
 			write_preference(GLOB.preference_entries[/datum/preference/list_type/culinary_preferences], culinary)
 			if(culinary[CULINARY_RANDOM_PREFERENCES])
-				to_chat(user, span_notice("Random culinary preferences enabled."))
+				to_chat(user, span_notice("Preferencias culinarias aleatorias habilitadas."))
 			else
 				to_chat(user, span_notice("Random culinary preferences disabled."))
 			show_culinary_ui(user)
@@ -163,7 +163,7 @@ GLOBAL_LIST_EMPTY(cached_drink_flat_icons)
 				var/list/culinary = read_preference(/datum/preference/list_type/culinary_preferences)
 				var/opposite = (preference_type == CULINARY_FAVOURITE_DRINK) ? CULINARY_HATED_DRINK : CULINARY_FAVOURITE_DRINK
 				if(culinary[opposite] == drink_type)
-					to_chat(user, span_warning("You can't set the same drink as both favorite and hated!"))
+					to_chat(user, span_warning("¡No puedes establecer la misma bebida como favorita y odiada!"))
 				else
 					culinary[preference_type] = drink_type
 					write_preference(GLOB.preference_entries[/datum/preference/list_type/culinary_preferences], culinary)

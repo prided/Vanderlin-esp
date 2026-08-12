@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(blackbox)
-	name = "Blackbox"
+	name = "Caja negra"
 	wait = 6000
 	flags = SS_NO_TICK_CHECK
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
@@ -116,7 +116,7 @@ SUBSYSTEM_DEF(blackbox)
 	if(sealed)
 		return FALSE
 	if(IsAdminAdvancedProcCall())
-		message_admins("[key_name_admin(usr)] sealed the blackbox!")
+		message_admins("¡[key_name_admin(usr)] selló la caja negra!")
 	log_game("Blackbox sealed[IsAdminAdvancedProcCall() ? " by [key_name(usr)]" : ""].")
 	sealed = TRUE
 	return TRUE

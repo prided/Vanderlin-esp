@@ -1,6 +1,6 @@
 /datum/work_order/retrieve_gear
-	name = "Retrieve Gear"
-	visible_message = "is retrieving equipment."
+	name = "Recuperar equipo"
+	visible_message = "está recuperando el equipo."
 	work_time_left = 3 SECONDS
 	stamina_cost = 5
 	can_continue = TRUE

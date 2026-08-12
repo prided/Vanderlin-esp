@@ -47,7 +47,7 @@
 /*	.............   Raw meat   ................ */
 /obj/item/reagent_containers/food/snacks/meat/steak
 	ingredient_size = 2
-	name = "raw meat"
+	name = "carne cruda"
 	icon_state = "meat"
 	slices_num = 2
 	slice_path = /obj/item/reagent_containers/food/snacks/meat/mince/beef
@@ -57,7 +57,7 @@
 /*	.............   Ribs   ................ */
 /obj/item/reagent_containers/food/snacks/meat/ribs //This should be given to large vertebrates, usually on the perfect butcher result, unless they're especially meaty.
 	ingredient_size = 2
-	name = "raw ribs"
+	name = "costillas crudas"
 	icon_state = "raw_ribs"
 	slices_num = 1
 	slice_path = /obj/item/reagent_containers/food/snacks/meat/mince/beef
@@ -66,7 +66,7 @@
 
 /*	.............   Pigflesh, strange meat, birdmeat   ................ */
 /obj/item/reagent_containers/food/snacks/meat/fatty
-	name = "raw pigflesh"
+	name = "carne de cerdo cruda"
 	icon_state = "pigflesh"
 	slices_num = 2
 	slice_path = /obj/item/reagent_containers/food/snacks/meat/mince/beef
@@ -75,7 +75,7 @@
 	item_weight = 300 GRAMS
 
 /obj/item/reagent_containers/food/snacks/meat/strange // Low-nutrient, kind of gross. Survival food.
-	name = "strange meat"
+	name = "carne extraña"
 	icon_state = "strange_meat"
 	slice_path = null
 	slices_num = 0
@@ -93,7 +93,7 @@
 	item_weight = 800 GRAMS
 
 /obj/item/reagent_containers/food/snacks/meat/poultry/cutlet
-	name = "bird meat"
+	name = "carne de ave"
 	icon_state = "chickencutlet"
 	ingredient_size = 2
 	slices_num = 2
@@ -158,7 +158,7 @@
 	item_weight = 200 GRAMS
 
 /obj/item/reagent_containers/food/snacks/meat/triton
-	name = "deepflesh"
+	name = "carne profunda"
 	icon_state = "fishfillet"
 	slice_path = /obj/item/reagent_containers/food/snacks/meat/mince/fish
 	list_reagents = list(/datum/reagent/organpoison/human = 1)
@@ -228,7 +228,7 @@
 
 /*	........   Cooked food template   ................ */ // No choppping double cooking etc prefixed
 /obj/item/reagent_containers/food/snacks/cooked
-	name = "cooked meat"
+	name = "carne cocida"
 	desc = ""
 	icon_state = "frysteak"
 	nutrition = COOKED_MEAT_NUTRITION
@@ -263,11 +263,11 @@
 
 
 /obj/item/reagent_containers/food/snacks/meat/mince/beef
-	name = "minced meat"
+	name = "carne picada"
 	icon_state = "meatmince"
 
 /obj/item/reagent_containers/food/snacks/meat/mince/beef/cooked
-	name = "cooked minced meat"
+	name = "carne picada cocida"
 	eat_effect = null
 	foodtype = MEAT
 	rotprocess = SHELFLIFE_DECENT
@@ -275,11 +275,11 @@
 	color = "#a0655f"
 
 /obj/item/reagent_containers/food/snacks/meat/mince/fish
-	name = "minced fish"
+	name = "pescado picado"
 	icon_state = "fishmince"
 
 /obj/item/reagent_containers/food/snacks/meat/mince/fish/cooked
-	name = "cooked minced fish"
+	name = "pescado picado cocido"
 	eat_effect = null
 	foodtype = MEAT
 	rotprocess = SHELFLIFE_DECENT
@@ -325,7 +325,7 @@
 
 /*	..................   Sausage & Wiener   ................... */
 /obj/item/reagent_containers/food/snacks/meat/sausage
-	name = "raw sausage"
+	name = "salchicha cruda"
 	icon_state = "raw_wiener"
 	ingredient_size = 1
 	become_rot_type = /obj/item/reagent_containers/food/snacks/rotten/sausage
@@ -333,6 +333,6 @@
 	item_weight = 100 GRAMS
 
 /obj/item/reagent_containers/food/snacks/meat/sausage/wiener
-	name = "raw wiener"
+	name = "salchicha cruda"
 	nutrition = FATTYMEAT_NUTRITION
 	item_weight = 120 GRAMS

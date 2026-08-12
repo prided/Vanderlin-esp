@@ -38,7 +38,7 @@
 	return 0
 
 /obj/item/ammo_casing/xenospit/spread/lethal
-	name = "big glob of acid"
+	name = "gran masa de ácido"
 	projectile_type = /obj/projectile/neurotoxin/acid/spitter_spread
 	pellets = 4
 	variance = 30

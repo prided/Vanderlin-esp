@@ -11,7 +11,7 @@
 	associated_skill = /datum/attribute/skill/magic/holy
 	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/abyssor)
 
-	invocation = "Embrace the waters of Abyssor's domain!"
+	invocation = "¡Abraza las aguas del dominio de Abyssor!"
 	invocation_type = INVOCATION_SHOUT
 
 	charge_time = 1 SECONDS

@@ -93,7 +93,7 @@
 				swallowed_mob = null
 				body_eater = TRUE
 				adjustBruteLoss(-50)
-				visible_message(span_notice("The [src] starts to rapidly heal."))
+				visible_message(span_notice("El [src] comienza a sanar rápidamente."))
 				//Half the cooldown since they successfully killed their target. Worst possible outcome has occured.
 				swallow_cooldown = world.time + (swallow_cooldown_delay / 2)
 	return ..()

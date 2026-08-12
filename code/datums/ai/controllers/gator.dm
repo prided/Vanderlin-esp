@@ -42,7 +42,7 @@
 	// If in water, move less and occasionally enter ambush pose
 	if(in_water)
 		if(prob(ambush_pose_chance) && !gator_pawn.cmode)
-			gator_pawn.visible_message("<span class='notice'>[gator_pawn] goes still, with only its eyes above the water.</span>")
+			gator_pawn.visible_message("<span class='notice'>[gator_pawn] se queda quieto, con solo sus ojos sobre el agua.</span>")
 			gator_pawn.cmode = TRUE
 			addtimer(CALLBACK(src, PROC_REF(end_ambush_pose), gator_pawn), ambush_pose_time)
 			return

@@ -1,5 +1,5 @@
 /datum/map_template/dungeon/entry
-	name = "Entry Tile"
+	name = "Azulejo de entrada"
 	abstract_type = /datum/map_template/dungeon/entry
 	type_weight = 0
 

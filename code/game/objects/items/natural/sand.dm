@@ -1,6 +1,6 @@
 /obj/item/natural/clod/sand
 	name = "pile of sand"
-	desc = "A handful of sand."
+	desc = "Un puñado de arena."
 	icon_state = "sand1"
 	pile = /obj/structure/fluff/clodpile/sand
 	clod_type = "sand"
@@ -28,7 +28,7 @@
 			qdel(src)
 
 /obj/structure/fluff/clodpile/sand
-	name = "sand mound"
+	name = "montículo de arena"
 	desc = "A gathering of grains inedible to all but the bravest."
 	icon_state = "sandpile"
 	dirt_type = /obj/item/natural/clod/sand

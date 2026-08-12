@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/jaunt/illusory_prop
 	name = "Illusory Prop"
-	desc = "Assume the guise of a nearby coin, statue, or chest."
+	desc = "Asume la apariencia de una moneda, estatua o cofre cercano."
 	button_icon_state = "invisibility"
 	jaunt_type = /obj/effect/dummy/bush_disguise
 	sound = 'sound/magic/crystal.ogg'
@@ -80,7 +80,7 @@
 	holder.activate(cast_on, temp.appearance, src, temp.name)
 	cast_on.forceMove(holder)
 	cast_on.cancel_camera()
-	to_chat(cast_on, span_notice("Your form shimmers and hardens into an inanimate shape..."))
+	to_chat(cast_on, span_notice("Tu forma brilla y se endurece en una forma inanimada..."))
 	active_dummy = holder
 
 /datum/action/cooldown/spell/undirected/jaunt/illusory_prop/proc/end_jaunt(mob/living/cast_on)

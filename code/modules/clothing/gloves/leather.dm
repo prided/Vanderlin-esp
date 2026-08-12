@@ -22,7 +22,7 @@
 //KEEP THIS IN MIND
 
 /obj/item/clothing/gloves/leather/advanced
-	name = "hardened leather gloves"
+	name = "guantes de cuero endurecido"
 	desc = "Sturdy, durable, flexible. A marvel of the dark ages that exists solely to protect your fingers."
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
@@ -46,16 +46,16 @@
 
 /obj/item/clothing/gloves/leather/phys
 	name = "physicker's gloves"
-	desc = "Improved grip for wielding disemboweled organs."
+	desc = "Agarre mejorado para empuñar órganos destripados."
 	icon_state = "surggloves"
 
 /obj/item/clothing/gloves/leather/apothecary
-	name = "apothecary gloves"
+	name = "guantes de boticario"
 	desc = "Thick leather gloves for pulling thorny plants... or cracking skulls."
 	icon_state = "apothgloves"
 
 /obj/item/clothing/gloves/leather/grenzel
-	name = "grenzelhoftian leather gloves"
+	name = "grenzelhoftian guantes de cuero"
 	examine_name = "leather gloves"
 	desc = "A pair of heavy Grenzelhoftian leather gloves, commonly used by fencers, renowned for their quality."
 	icon_state = "fencergloves"
@@ -74,7 +74,7 @@
 	dyeable = TRUE
 
 /obj/item/clothing/gloves/leather/grenzel/inqgloves
-	name = "inquisitorial leather gloves"
+	name = "guantes de cuero inquisitoriales"
 	examine_name = "leather gloves"
 	desc = "Gloves of worn leather. Alas, the psydonian fetish wrapped around one is but a powerless replica."
 	icon_state = "inqgloves"
@@ -103,7 +103,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/courtphys.dmi'
 
 /obj/item/clothing/gloves/leather/courtphysician/female
-	name = "sanguine sleeves"
+	name = "mangas sanguíneas"
 	desc = "Carefully sewn leather gloves with silk sleeves covering them, unrestricting to your ability to wield surgical tools, and stylish!"
 	icon_state = "docsleeves"
 	item_state = "docsleeves"
@@ -112,7 +112,7 @@
 	uses_lord_coloring = LORD_PRIMARY
 
 /obj/item/clothing/gloves/leather/fencer
-	name = "fencing gloves"
+	name = "guantes de esgrima"
 	desc = "Lightweight leather gloves designed for fencers, they'll hopefully protect your fingers from stray blows."
 	icon_state = "fencergloves"
 	armor_type = /datum/armor/gloves/leather/fencer

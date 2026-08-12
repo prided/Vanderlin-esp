@@ -1,6 +1,6 @@
 /datum/talent_tree
-	var/name = "Talent Tree"
-	var/desc = "A talent tree"
+	var/name = "Árbol de talentos"
+	var/desc = "Un árbol de talentos"
 	var/list/tree_nodes = list() // List of talent node types that belong to this tree
 	var/list/unlocked_talents = list()
 	var/talent_points_available = 0
@@ -224,7 +224,7 @@
 		return FALSE
 
 	if(node_type in unlocked_talents)
-		to_chat(user, span_warning("You have already learned this talent."))
+		to_chat(user, span_warning("Ya has aprendido este talento."))
 		return FALSE
 
 	var/datum/talent_node/node = new node_type
@@ -240,6 +240,6 @@
 
 	node.on_talent_learned(user)
 
-	to_chat(user, span_notice("You have learned the talent: [node.name]"))
+	to_chat(user, span_notice("Has aprendido el talento: [node.name]"))
 	qdel(node)
 	return TRUE

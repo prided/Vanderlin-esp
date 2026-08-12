@@ -25,7 +25,7 @@
 	icon = 'icons/obj/projectiles_tracer.dmi'
 
 /obj/effect/projectile/tracer/stun
-	name = "stun beam"
+	name = "haz aturdidor"
 	icon_state = "stun"
 
 /obj/effect/projectile/tracer/blood

@@ -8,7 +8,7 @@
 	item_weight = 450 GRAMS
 
 /obj/item/clothing/head/roguehood/nochood
-	name = "moon hood"
+	name = "capucha lunar"
 	desc = "The face of the Moon Prince. Worn by the faithful of Noc."
 	icon_state = "nochood"
 	flags_inv = HIDEEARS|HIDEHAIR
@@ -77,7 +77,7 @@
 
 /obj/item/clothing/head/roguehood/astrata
 	name = "sun hood"
-	desc = "Worn by the faithful of Astrata."
+	desc = "Usado por los fieles de Astrata."
 	icon_state = "astratahood"
 	resistance_flags = FIRE_PROOF // Not the sun hat!
 
@@ -86,13 +86,13 @@
 
 /obj/item/clothing/head/padded/malumhood
 	name = "sculptor's mask"
-	desc = "As Malum sculpts his great works, so does he sculpt his workers."
+	desc = "Así como Malum esculpe sus grandes obras, también esculpe a sus trabajadores."
 	icon_state = "malumhood"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	item_weight = 250 GRAMS
 
 /obj/item/clothing/head/roguehood/priest
-	name = "solar visage"
+	name = "rostro solar"
 	desc = "The sanctified headwear of the most devoted. The mask can be removed."
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	icon_state = "solar"
@@ -146,7 +146,7 @@
 		. = ..()
 
 /obj/item/clothing/head/priestmask
-	name = "solar visage"
+	name = "rostro solar"
 	desc = "The sanctified helm of the most devoted. Thieves beware."
 	icon_state = "priesthead"
 	dynamic_hair_suffix = ""

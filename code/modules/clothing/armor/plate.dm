@@ -34,7 +34,7 @@
 	max_integrity = INTEGRITY_STRONG
 
 /obj/item/clothing/armor/plate/iron/banded
-	name = "banded iron armor"
+	name = "armadura de hierro con bandas"
 	desc = "An iron chestplate, pauldrons and tassets worn over a fur vest and padded with heavy leathers. It's primarily worn in the cold north, where armor has to sometimes be cobbled together due to logistical shortages. It leaves the stomach exposed for maneuverability."
 	max_integrity = ARMOR_INT_CHEST_PLATE_IRON + 25
 	icon_state = "ibandedarmor"
@@ -69,7 +69,7 @@
 
 //................ Full Plate Armor ............... //
 /obj/item/clothing/armor/plate/full
-	name = "plate armor"
+	name = "armadura de placas"
 	desc = "Full steel plate. Leg protecting tassets, groin cup, armored vambraces."
 	icon_state = "plate"
 	item_state = "plate"
@@ -95,14 +95,14 @@
 
 /obj/item/clothing/armor/plate/full/samsibsa/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
-	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	var/choice = tgui_input_list(user, "Elige un color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)
 		return
 	detail_color = GLOB.noble_dyes[choice]
 	update_appearance(UPDATE_ICON)
 
 /obj/item/clothing/armor/plate/full/iron
-	name = "iron plate armor"
+	name = "armadura de placas de hierro"
 	desc = "Full iron plate. Leg protecting tassets, groin cup, armored vambraces."
 	icon_state = "iplate"
 	item_state = "iplate"
@@ -313,7 +313,7 @@
 	REMOVE_TRAIT(owner, TRAIT_HEAVYARMOR, REF(src))
 
 /atom/movable/screen/alert/status_effect/buff/psydonic_endurance
-	name = "Psydonic Endurance"
+	name = "Psydonic Resistencia"
 	desc = "I am protected by blessed Psydonian plate armor."
 	icon_state = "buff"
 

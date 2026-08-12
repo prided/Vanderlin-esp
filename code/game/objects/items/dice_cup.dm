@@ -41,10 +41,10 @@
 		return NONE
 
 	if(length(dice_list) >= max_dice)
-		to_chat(user, span_warning("\The [name] is full."))
+		to_chat(user, span_warning("\The [name] está lleno."))
 		return ITEM_INTERACT_BLOCKING
 
-	to_chat(user, span_notice("I put [tool] into \the [name]."))
+	to_chat(user, span_notice("Puse [tool] en \the [name]."))
 	if(!user.temporarilyRemoveItemFromInventory(tool))
 		return ITEM_INTERACT_BLOCKING
 

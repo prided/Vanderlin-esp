@@ -57,7 +57,7 @@
 			"<span class='notice'>You begin to cut open [src]...</span>")
 		if(do_after(user, 5 SECONDS, src))
 			drop_organs(user)
-			user.visible_message("<span class='danger'>[user] cuts [src] open!</span>",\
+			user.visible_message("¡<span class='danger'>[user] corta [src] abierto!</span>",\
 				"<span class='notice'>You finish cutting [src] open.</span>")
 		return
 	return ..()

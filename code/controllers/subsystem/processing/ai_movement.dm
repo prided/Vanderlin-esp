@@ -1,6 +1,6 @@
 /// The subsystem used to tick [/datum/ai_movement] instances. Handling the movement of individual AI instances
 PROCESSING_SUBSYSTEM_DEF(ai_movement)
-	name = "AI movement"
+	name = "movimiento de IA"
 	flags = SS_KEEP_TIMING|SS_BACKGROUND
 	priority = FIRE_PRIORITY_NPC_MOVEMENT
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME

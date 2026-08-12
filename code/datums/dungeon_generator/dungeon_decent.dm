@@ -2,7 +2,7 @@ GLOBAL_LIST_INIT(dungeon_descents, list())
 GLOBAL_LIST_INIT(descent_level_map, list()) // Maps z-levels to their descent objects
 
 /obj/structure/dungeon_descent
-	name = "Ancient Stairway"
+	name = "Escalera antigua"
 	desc = "A crumbling stone stairway that descends into the depths below. The air grows colder as it winds downward."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "shitportal"
@@ -70,7 +70,7 @@ GLOBAL_LIST_INIT(descent_level_map, list()) // Maps z-levels to their descent ob
 	// Find available dungeon entries on the target level
 	var/list/available_entries = get_target_entries()
 	if(!length(available_entries))
-		to_chat(user, span_warning("The stairway seems to lead nowhere..."))
+		to_chat(user, span_warning("La escalera parece no llevar a ninguna parte..."))
 		return
 
 	// Pick random entry point on target level
@@ -86,7 +86,7 @@ GLOBAL_LIST_INIT(descent_level_map, list()) // Maps z-levels to their descent ob
 
 /obj/structure/dungeon_descent/proc/attempt_descent(mob/user, is_ghost = FALSE)
 	if(!is_ghost && !can_descend)
-		to_chat(user, span_warning("The passage seems blocked by some unseen force."))
+		to_chat(user, span_warning("El paso parece bloqueado por alguna fuerza invisible."))
 		return FALSE
 
 	if(descent_requirements && !is_ghost)

@@ -1,5 +1,5 @@
 /obj/item/clothing/head/beekeeper
-	name = "beekeeper's hood"
+	name = "capucha de apicultor"
 	desc = ""
 	flags_inv = HIDEEARS|HIDEHAIR
 	icon_state = "beekeeper"

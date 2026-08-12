@@ -11,7 +11,7 @@
 	l_sleeve_status = SLEEVE_NORMAL
 
 /obj/item/clothing/shirt/tunic/noblecoat
-	name = "fancy coat"
+	name = "abrigo elegante"
 	desc = "A fancy tunic and coat combo. How elegant."
 	icon_state = "noblecoat"
 	sleevetype = "noblecoat"

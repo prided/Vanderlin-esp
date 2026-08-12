@@ -1,6 +1,6 @@
 GLOBAL_LIST_EMPTY(boat_landmarks)
 /obj/effect/landmark/boat_transfer
-	name = "boat transfer point"
+	name = "punto de transferencia de barco"
 	desc = "Stand here to transfer between ship and island."
 	icon_state = "travel"
 	icon = 'icons/turf/floors.dmi'

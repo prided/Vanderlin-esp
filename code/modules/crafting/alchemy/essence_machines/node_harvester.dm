@@ -55,20 +55,20 @@
 /obj/machinery/essence/harvester/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_notice("Harvest rate: [harvest_rate] units/tick")
-	. += span_notice("Node recharge bonus: +[round((efficiency_bonus - 1) * 100)]%")
+	. += span_notice("Bonificación de recarga de nodo: +[round((efficiency_bonus - 1) * 100)]%")
 	if(installed_node)
 		var/datum/thaumaturgical_essence/tmp = new installed_node.essence_type.type
 		var/label = HAS_TRAIT(user, TRAIT_LEGENDARY_ALCHEMIST) \
 			? tmp.name : "essence smelling of [tmp.smells_like]"
-		. += span_notice("Node: [label] — Tier [installed_node.tier]")
+		. += span_notice("Nodo: [label] — Nivel [installed_node.tier]")
 		. += span_notice("Node charge: [installed_node.current_essence]/[installed_node.max_essence]")
-		. += span_notice("Effective recharge: [round(installed_node.recharge_rate * efficiency_bonus)] units/min")
+		. += span_notice("Recarga efectiva: [round(installed_node.recharge_rate * efficiency_bonus)] unidades/min")
 		qdel(tmp)
 	else
 		. += span_warning("No node installed. Use a node jar to insert one.")
 
 /obj/machinery/essence/harvester/attack_hand(mob/living/user)
-	var/choice = input(user, "Harvester Control", "Essence Harvester") \
+	var/choice = input(user, "Control de cosechadora", "Essence Harvester") \
 		in list("Help", "View Status", "Cancel")
 	switch(choice)
 		if("Help")
@@ -102,7 +102,7 @@
 		update_appearance(UPDATE_OVERLAYS)
 	else
 		if(!installed_node)
-			to_chat(user, span_warning("No node to remove."))
+			to_chat(user, span_warning("No hay ningún nodo que eliminar."))
 			return
 		if(!do_after(user, 3 SECONDS))
 			return

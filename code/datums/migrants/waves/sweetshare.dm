@@ -57,7 +57,7 @@
 	)
 
 /datum/migrant_wave/sweetshare
-	name = "The Candy Man"
+	name = "El hombre de los dulces"
 	max_spawns = 1
 	shared_wave_type = /datum/migrant_wave/sweetshare
 	weight = 7

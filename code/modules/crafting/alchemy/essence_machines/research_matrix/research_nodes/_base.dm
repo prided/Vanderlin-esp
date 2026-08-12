@@ -1,6 +1,6 @@
 /datum/thaumic_research_node
-	var/name = "Unknown Research"
-	var/desc = "A mysterious field of study."
+	var/name = "Investigación desconocida"
+	var/desc = "Un misterioso campo de estudio."
 	var/icon = 'icons/roguetown/misc/alchemy.dmi'
 	var/icon_state = "essence"
 	var/list/required_essences = list()
@@ -19,7 +19,7 @@
 	return ..()
 
 /datum/thaumic_research_node/basic_understanding
-	name = "Fundamental Thaumaturgy"
+	name = "Taumaturgia fundamental"
 	desc = "The foundational principles of essence manipulation and magical theory. Understanding the basic flow of arcane energies is essential before attempting more complex workings."
 	node_x = 140
 	node_y = 340

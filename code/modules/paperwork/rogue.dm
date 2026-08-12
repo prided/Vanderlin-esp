@@ -14,7 +14,7 @@
 /obj/item/paper/scroll/attackby(obj/item/P, mob/living/carbon/human/user, list/modifiers)
 	if(istype(P, /obj/item/natural/thorn) || istype(P, /obj/item/natural/feather))
 		if(!open)
-			to_chat(user, "<span class='warning'>Open me.</span>")
+			to_chat(user, "<span class='warning'>ábreme.</span>")
 			return
 	. = ..()
 
@@ -36,7 +36,7 @@
 
 /obj/item/paper/scroll/attack_self(mob/user, list/modifiers)
 	if(mailer)
-		user.visible_message("<span class='notice'>[user] opens the missive from [mailer].</span>")
+		user.visible_message("<span class='notice'>[user] abre la misiva de [mailer].</span>")
 		mailer = null
 		mailedto = null
 		update_appearance(UPDATE_ICON_STATE | UPDATE_NAME)
@@ -49,7 +49,7 @@
 
 /obj/item/paper/scroll/read(mob/user)
 	if(!open && !isobserver(user))
-		to_chat(user, "<span class='info'>Open me.</span>")
+		to_chat(user, "<span class='info'>ábreme.</span>")
 		return
 	. = ..()
 
@@ -125,7 +125,7 @@
 		name = initial(name)
 
 /obj/item/paper/scroll/cargo
-	name = "shipping order"
+	name = "orden de envío"
 	icon_state = "contractunsigned"
 	open = TRUE
 	textper = 150
@@ -170,7 +170,7 @@
 			if(signedname)
 				to_chat(user, span_warning("[signedname]"))
 				return
-			switch(tgui_alert(usr, "Sign your name?","Sign", list("Yes","No")))
+			switch(tgui_alert(usr, "Sign your name?","Firmar", list("Yes","No")))
 				if("No")
 					return
 				if("Yes")
@@ -178,7 +178,7 @@
 						if(do_after(user, 2 SECONDS, src))
 							signedname = user.real_name
 							signedjob = user.mind.assigned_role.get_informed_title(user)
-							user.visible_message(span_notice("[user] signs [src]."), span_notice("I sign [src]."))
+							user.visible_message(span_notice("[user] signs [src]."), span_notice("Firmo [src]."))
 							update_appearance(UPDATE_ICON_STATE)
 							playsound(src, 'sound/items/write.ogg', 100, FALSE)
 							rebuild_info()
@@ -249,10 +249,10 @@
 		else if(signee)
 			to_chat(user, span_notice("This writ is intended to be signed by [signee.real_name]."))
 		else
-			to_chat(user, span_notice("This writ has not yet been signed."))
+			to_chat(user, span_notice("Este escrito aún no ha sido firmado."))
 
 /obj/item/paper/inqslip/accusation
-	name = "accusation"
+	name = "acusación"
 	desc = "A writ of religious suspicion, printed on Grenzelhoftian parchment: one signed not in ink, but blood. Press the accusation against your own bleeding wound in order to obtain a signature. Then pair it with an INDEXER full of the accused's blood. Once done, it is ready to be mailed back to the Oratorium. Fold and seal it, it's only proper."
 	marquevalue = 4
 	sliptype = 0
@@ -281,14 +281,14 @@
 		if(paired.subject != user)
 			to_chat(M, span_warning("Why am I trying to make them sign this with the wrong [paired] paired with it?"))
 			return
-		else if(forced_signing || (tgui_alert(user, "SIGN THE CONFESSION?", "CONFIRM OR DENY", list("YES", "NO")) != "NO"))
+		else if(forced_signing || (tgui_alert(user, "¿FIRMAR LA CONFESIÓN?", "CONFIRMAR O NEGAR", list("YES", "NO")) != "NO"))
 			signed = TRUE
 			signee = user
 			marquevalue += 2
 			REMOVE_TRAIT(user, TRAIT_HAS_CONFESSED, TRAIT_GENERIC)
 			update_appearance()
 
-	else if(tgui_alert(user, "SIGN THE CONFESSION?", "CONFIRM OR DENY", list("YES", "NO")) != "NO")
+	else if(tgui_alert(user, "¿FIRMAR LA CONFESIÓN?", "CONFIRMAR O NEGAR", list("YES", "NO")) != "NO")
 		signed = TRUE
 		signee = user
 		marquevalue += 2
@@ -309,7 +309,7 @@
 	marquevalue = 6
 
 /obj/item/paper/inqslip/proc/attemptsign(mob/user, mob/living/carbon/human/M)
-	if(tgui_alert(user, "SIGN THE SLIP?", "CONFIRM OR DENY", list("YES", "NO")) != "NO")
+	if(tgui_alert(user, "SIGN THE SLIP?", "CONFIRMAR O NEGAR", list("YES", "NO")) != "NO")
 		signed = TRUE
 		signee = user
 		update_appearance()
@@ -324,7 +324,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(signed)
-		to_chat(user, span_warning("It's already been signed."))
+		to_chat(user, span_warning("Ya ha sido firmado."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(paired && !paired.full)
@@ -337,7 +337,7 @@
 			return ITEM_INTERACT_BLOCKING
 
 	if(!M.get_bleed_rate())
-		to_chat(user, span_warning("It must be signed in blood."))
+		to_chat(user, span_warning("Debe estar firmado con sangre."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(sliptype == 1)
@@ -402,7 +402,7 @@
 /obj/item/paper/inqslip/attacked_by(obj/item/I, mob/living/user)
 	if(istype(I, /obj/item/clothing/ring/signet))
 		if(waxed)
-			to_chat(user, span_warning("[src] has already been marked."))
+			to_chat(user, span_warning("[src] ya ha sido marcado."))
 			return
 		var/obj/item/clothing/ring/signet/S = I
 		if(S.tallowed && sealed)
@@ -415,7 +415,7 @@
 		else if(S.tallowed && !sealed)
 			to_chat(user,  span_warning("I need to fold the [src] first."))
 		else
-			to_chat(user,  span_warning("The ring hasn't been waxed."))
+			to_chat(user,  span_warning("El anillo no ha sido encerado."))
 
 	if(sliptype != 1)
 		if(istype(I, /obj/item/inqarticles/indexer))
@@ -438,16 +438,16 @@
 						update_appearance()
 					else
 						if(signed)
-							to_chat(user, span_warning("[Q] doesn't contain the blood of the one who signed [src]."))
+							to_chat(user, span_warning("[Q] no contiene la sangre de quien firmó [src]."))
 						else
-							to_chat(user, span_warning("I should get a signature before pairing [Q] with [src]."))
+							to_chat(user, span_warning("Debería obtener una firma antes de emparejar [Q] con [src]."))
 						return
 				else
 					paired = Q
 					user.transferItemToLoc(Q, src, TRUE)
 					update_appearance()
 			else
-				to_chat(user,  span_warning("[Q] isn't completely full."))
+				to_chat(user,  span_warning("[Q] no está completamente lleno."))
 
 /obj/item/merctoken
 	name = "mercenary token"
@@ -473,16 +473,16 @@
 /obj/item/merctoken/attackby(obj/item/P, mob/living/carbon/human/user, list/modifiers)
 	if(istype(P, /obj/item/natural/thorn) || istype(P, /obj/item/natural/feather))
 		if(!user.can_read(src))
-			to_chat(user, span_warning("Even a reader would find these verba incomprehensible."))
+			to_chat(user, span_warning("Incluso un lector encontraría estas palabras incomprensibles."))
 			return
 		if(signee)
-			to_chat(user, span_warning("This token has already been signed."))
+			to_chat(user, span_warning("Este token ya ha sido firmado."))
 			return
 		if(!is_tomb_warden_job(user.mind.assigned_role) && !is_merchant_job(user.mind.assigned_role))
 			if(is_mercenary_job(user.mind.assigned_role))
-				to_chat(user, span_warning("I can not sign my own commendation."))
+				to_chat(user, span_warning("No puedo firmar mi propio elogio."))
 			else
-				to_chat(user, span_warning("This is incomprehensible."))
+				to_chat(user, span_warning("Esto es incomprensible."))
 			return
 		else
 			signee = user.real_name
@@ -512,7 +512,7 @@
 		user.playsound_local(user, 'sound/misc/notice (2).ogg', 100, FALSE)
 		to_chat(user, span_smallgreen("I now know the names and faces of the Court Agents working in the Kingdom"))
 	if(!length(GLOB.court_agents))
-		to_chat(user, span_notice("There are no agents on the list currently in the Kingdom"))
+		to_chat(user, span_notice("No hay agentes en la lista actualmente en el Reino."))
 	else
 		to_chat(user, span_notice("Here are the currently active agents:"))
 		for(var/name in GLOB.court_agents)
@@ -539,16 +539,16 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(length(GLOB.court_agents) >= max_agents)
-		balloon_alert(user, "too many fingers!")
+		balloon_alert(user, "¡Demasiados dedos!")
 		return ITEM_INTERACT_BLOCKING
 
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.family_datum == SSfamilytree.ruling_family)
-			balloon_alert(user, "can't turn royalty!")
+			balloon_alert(user, "¡No puedo convertir a la realeza!")
 			return ITEM_INTERACT_BLOCKING
 
-	var/choice = tgui_alert(M, "Do you wish to become one of the Hand's fingers?", "Binding Contract", DEFAULT_INPUT_CHOICES)
+	var/choice = tgui_alert(M, "¿Quieres convertirte en uno de los dedos de la Mano?", "Contrato vinculante", DEFAULT_INPUT_CHOICES)
 	if(choice != CHOICE_YES)
 		return
 
@@ -580,7 +580,7 @@
 				balloon_alert(user, "there are no Ex-Fingers to reattach.")
 				return ITEM_INTERACT_BLOCKING
 
-			var/reattachChoice = tgui_input_list(user, "Reattach a Finger", "THE LIST", GLOB.ex_court_agents)
+			var/reattachChoice = tgui_input_list(user, "Reattach a Finger", "LA LISTA", GLOB.ex_court_agents)
 			if(!reattachChoice || QDELETED(src) || QDELETED(user))
 				return ITEM_INTERACT_BLOCKING
 
@@ -591,10 +591,10 @@
 
 		if("Sever")
 			if(length(GLOB.court_agents) <= 0)
-				balloon_alert(user, "there are no Fingers to sever.")
+				balloon_alert(user, "no hay Dedos que cortar.")
 				return ITEM_INTERACT_BLOCKING
 
-			var/severChoice = tgui_input_list(user, "Sever a Finger", "THE LIST", GLOB.court_agents)
+			var/severChoice = tgui_input_list(user, "Cortar un dedo", "LA LISTA", GLOB.court_agents)
 			if(!severChoice || QDELETED(src) || QDELETED (user))
 				return ITEM_INTERACT_BLOCKING
 
@@ -644,7 +644,7 @@
 
 
 /obj/item/paper/scroll/sell_price_changes
-	name = "updated purchasing prices"
+	name = "precios de compra actualizados"
 	icon_state = "contractsigned"
 	var/list/sell_prices
 	var/writers_name

@@ -32,7 +32,7 @@
 
 /datum/action/cooldown/spell/mimicry/proc/try_transform(mob/living/carbon/human/cast_on, mob/living/carbon/human/user)
 	user.visible_message(
-		"[user]'s skin starts to shift.",
+		"La piel de [user] comienza a cambiar.",
 		"I begin to shift into [cast_on].",
 	)
 	if(!do_after(user, 10 SECONDS, user))
@@ -41,8 +41,8 @@
 
 /datum/action/cooldown/spell/mimicry/proc/return_to_normal(mob/living/carbon/human/user)
 	user.visible_message(
-		"[user]'s skin starts to shift.",
-		"I begin to shift back to normal.",
+		"La piel de [user] comienza a cambiar.",
+		"Empiezo a volver a la normalidad.",
 	)
 	user.Immobilize(4 SECONDS)
 	if(!do_after(user, 10 SECONDS, user))

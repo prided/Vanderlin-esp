@@ -1,5 +1,5 @@
 /datum/island_feature_template/hotspring
-	name = "Hotspring Fountain"
+	name = "Fuente de aguas termales"
 	template_path = /datum/map_template/world_feature/hotspring
 	width = 12
 	height = 11
@@ -10,7 +10,7 @@
 	spawn_weight = 100
 
 /datum/island_feature_template/wishtree
-	name = "Wishing Tree"
+	name = "árbol de los deseos"
 	template_path = /datum/map_template/world_feature/wishtree
 	width = 11
 	height = 12

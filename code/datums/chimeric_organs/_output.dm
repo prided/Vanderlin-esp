@@ -1,6 +1,6 @@
 /datum/chimeric_node/output
 	abstract_type = /datum/chimeric_node/output
-	name = "Generic Output"
+	name = "Salida genérica"
 	desc = "This is a generic output you shouldn't be seeing this"
 	slot = OUTPUT_NODE
 

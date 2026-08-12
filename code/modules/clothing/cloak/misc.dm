@@ -39,8 +39,8 @@
 	icon_state = "stole_purple"
 
 /obj/item/clothing/cloak/black_cloak
-	name = "fur coat"
-	desc = "A coat made out of fur that covers chest, arms, groin and a chest. Has no protection capacities."
+	name = "abrigo de piel"
+	desc = "Un abrigo hecho de piel que cubre el pecho, los brazos, la ingle y el pecho. No tiene capacidades de protección."
 	icon_state = "black_cloak"
 	body_parts_covered = CHEST|GROIN|VITALS|ARMS
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -53,7 +53,7 @@
 	min_cold_protection_temperature = -20
 
 /obj/item/clothing/cloak/tribal
-	name = "tribal pelt"
+	name = "piel tribal"
 	desc = "A haphazardly cured pelt of a creecher, thrown on top of one's body or armor, to serve as additional protection against the cold. Itchy."
 	icon_state = "tribal"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
@@ -67,7 +67,7 @@
 	sellprice = 10
 
 /obj/item/clothing/cloak/heartfelt
-	name = "red cloak"
+	name = "capa roja"
 	desc = "A typical cloak, this one is in red colours."
 	icon_state = "heartfelt_cloak"
 	body_parts_covered = CHEST|GROIN|VITALS|ARMS
@@ -79,7 +79,7 @@
 	nodismemsleeves = TRUE
 
 /obj/item/clothing/cloak/half
-	name = "half cloak"
+	name = "media capa"
 	desc = "A cloak that covers only half of the body."
 	color = null
 	icon_state = "halfcloak"
@@ -99,14 +99,14 @@
 	has_storage = TRUE
 
 /obj/item/clothing/cloak/half/guard
-	name = "guard's half cloak"
+	name = "media capa de guardia"
 	color = CLOTHING_PLUM_PURPLE
 	icon_state = "guardcloak"
 	allowed_race = ALL_RACES_LIST
 	uses_lord_coloring = LORD_PRIMARY
 
 /obj/item/clothing/cloak/half/guardsecond
-	name = "guard's half cloak"
+	name = "media capa de guardia"
 	color = CLOTHING_BLOOD_RED
 	icon_state = "guardcloak"
 	allowed_race = ALL_RACES_LIST
@@ -194,7 +194,7 @@
 
 // Dumping old black knight stuff here
 /obj/item/clothing/cloak/cape/blkknight
-	name = "blood cape"
+	name = "capa de sangre"
 	icon_state = "bkcape"
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
@@ -208,7 +208,7 @@
 	detail_tag = null
 
 /obj/item/clothing/neck/blkknight
-	name = "dragonscale necklace"
+	name = "collar de escamas de dragón"
 	desc = ""
 	icon_state = "bktrinket"
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
@@ -251,7 +251,7 @@
 
 /obj/item/clothing/cloak/half/duelcape
 	name = "duelist cape"
-	desc = "A cape designed for mercenary bands hailing from Valoria."
+	desc = "Una capa diseñada para bandas de mercenarios provenientes de Valoria."
 	icon_state = "duelistcape"
 	item_state = "duelistcape"
 	color = null
@@ -279,7 +279,7 @@
 	sellprice = 0 // See above comment
 
 /obj/item/clothing/cloak/graggar/heavy
-	name = "vicious halfcloak"
+	name = "media capa viciosa"
 	icon = 'icons/roguetown/clothing/cloaks.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -287,7 +287,7 @@
 	icon_state = "graggarcloak_heavy"
 
 /obj/item/clothing/cloak/savage
-	name = "savage cloak"
+	name = "capa salvaje"
 	desc = "A cloak covered in an predatory aura, it seeks to bring about the natural chaos of the wild to you, dripping in gore and bloodied fur."
 	icon = 'icons/roguetown/clothing/cloaks.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -334,7 +334,7 @@
 
 /obj/item/clothing/cloak/poncho
 
-	name = "cloth poncho"
+	name = "poncho de tela"
 	desc = "A loose garment that is usually draped across ones upper body. No one's quite sure of its cultural origin."
 	icon_state = "poncho"
 	item_state = "poncho"
@@ -345,7 +345,7 @@
 	color = CLOTHING_MUSTARD_YELLOW
 
 /obj/item/clothing/cloak/pantheon
-	name = "pantheon cloak"
+	name = "manto del panteón"
 	desc = "A divine blue cloak with shimmering gold sewn in, it represents the ten in their whole. Typically worn by High Templars of the Ten"
 	icon_state = "seecloak"
 	item_state = "seecloak"
@@ -385,7 +385,7 @@
 	detail_color = "#405996"
 
 /obj/item/clothing/cloak/sleevedtabard
-	name = "sleeved tabard"
+	name = "tabardo con mangas"
 	desc = "A tabard with a light sleeve and pauldron sewn on, it lacks the explicit detailing of other tabards in exchange."
 	color = null
 	boobed = TRUE
@@ -405,7 +405,7 @@
 	salvage_amount = 4
 
 /obj/item/clothing/cloak/poncho/fancycoat
-	name = "fancy coat"
+	name = "abrigo elegante"
 	desc = "A loose garment that is usually draped across ones upper body. No one's quite sure of its cultural origin but it does look fancy."
 	icon_state = "fancycoat"
 	item_state = "fancycoat"
@@ -428,7 +428,7 @@
 
 //............... Cadwyn Order Cloaks ......................//
 /obj/item/clothing/cloak/cadwyn/astrata
-	name = "bright tabard"
+	name = "tabardo brillante"
 	desc = "A golden-coloured cloak, torn into strips at the ends. Let it mark you as a threat to any deadite monster as you stand tall above the charge."
 	icon_state = "cadwyncloak_astrata"
 	item_state = "cadwyncloak_astrata"

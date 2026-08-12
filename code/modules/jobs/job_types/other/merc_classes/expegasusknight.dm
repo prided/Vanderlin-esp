@@ -36,7 +36,7 @@
 	spawned.merctype = 11
 
 /datum/outfit/mercenary/expegasusknight
-	name = "Ex-Pegasus Knight (Mercenary)"
+	name = "Ex-Caballero Pegaso (Mercenario)"
 	shoes = /obj/item/clothing/shoes/ridingboots
 	cloak = /obj/item/clothing/cloak/pegasusknight
 	head = /obj/item/clothing/head/helmet/pegasusknight

@@ -1,5 +1,5 @@
 /obj/effect/decal/cleanable/ritual_rune/arcyne/summoning
-	name = "confinement matrix"
+	name = "matriz de confinamiento"
 	desc = "A relatively basic confinement matrix used to hold small things when summoned."
 	ritual_number = TRUE
 	invocation = "Rhegal vex'ultraa!"

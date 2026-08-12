@@ -1,5 +1,5 @@
 /datum/work_order/socialize_with
-	name = "Socializing with "
+	name = "Socializar con "
 	stamina_cost = 0
 	work_time_left = 15 SECONDS
 

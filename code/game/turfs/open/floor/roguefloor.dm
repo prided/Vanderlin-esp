@@ -174,25 +174,25 @@
 	neighborlay = "grass_yelmixedge"
 
 /turf/open/floor/grass/red
-	name = "red grass"
+	name = "hierba roja"
 	desc = "Grass, ripe with Dendor's bloody marrow."
 	icon_state = "grass_red"
 	neighborlay = "grass_rededge"
 
 /turf/open/floor/grass/yel
-	name = "yellow grass"
-	desc = "Grass, blessed by Astrata's light."
+	name = "hierba amarilla"
+	desc = "Hierba, bendecida por la luz de Astrata."
 	icon_state = "grass_yel"
 	neighborlay = "grass_yeledge"
 
 /turf/open/floor/grass/cold
-	name = "tundra grass"
+	name = "hierba de tundra"
 	desc = "Grass, frigid and touched by winter."
 	icon_state = "grass_cold"
 	neighborlay = "grass_coldedge"
 
 /turf/open/floor/grass/hell
-	name = "hell grass"
+	name = "hierba del infierno"
 	desc = "Grass, ominous and instilling uncomfort."
 	icon_state = "hellgrass"
 	neighborlay = "hellgrass"
@@ -230,7 +230,7 @@
 	neighborlay = "snowroughedge"
 
 /turf/open/floor/snow/patchy
-	name = "patchy snow"
+	name = "nieve irregular"
 	desc = "Half-melted snow revealing the hardy grass underneath."
 	icon_state = "snowpatchy_grass"
 	neighborlay = "snowpatchy_grassedge"
@@ -238,7 +238,7 @@
 /*	..................   Dirts   ................... */
 /turf/open/floor/dirt
 	name = "dirt"
-	desc = "The dirt is pocked with the scars of countless wars."
+	desc = "La tierra está llena de cicatrices de innumerables guerras."
 	icon = 'icons/turf/natural/soils.dmi'
 	icon_state = "dirt"
 	footstep = FOOTSTEP_GRASS
@@ -264,7 +264,7 @@
 		var/mob/living/L = user
 		var/obj/item/I = new /obj/item/natural/clod/dirt(src)
 		if(L.put_in_active_hand(I))
-			L.visible_message("<span class='warning'>[L] picks up some dirt.</span>")
+			L.visible_message("<span class='warning'>[L] recoge algo de suciedad.</span>")
 			dirt_amt--
 			if(dirt_amt <= 0)
 				src.ChangeTurf(/turf/open/floor/dirt/road, flags = CHANGETURF_INHERIT_AIR)
@@ -347,7 +347,7 @@
 /turf/open/floor/dirt/ambush
 
 /turf/open/floor/dirt/road
-	name = "dirt road"
+	name = "camino de tierra"
 	desc = "The dirt is pocked with the scars of countless steps."
 	icon_state = "road"
 	footstep = FOOTSTEP_SAND
@@ -366,7 +366,7 @@
 
 /turf/open/floor/underworld/road
 	name = "ash"
-	desc = "Smells like burnt wood."
+	desc = "Huele a madera quemada."
 	icon = 'icons/turf/natural/ash.dmi'
 	icon_state = "ash"
 	footstep = FOOTSTEP_SAND
@@ -380,7 +380,7 @@
 	dir = rand(0,8)
 
 /turf/open/floor/underworld/arena
-	name = "sandy ash"
+	name = "ceniza arenosa"
 	desc = "This has been pranced upon by countless skeletal fighters."
 	icon = 'icons/turf/natural/ash.dmi'
 	icon_state = "ash3"
@@ -435,7 +435,7 @@
 
 /turf/open/floor/hay
 	name = "hay"
-	desc = "A light covering of hay strewn across the ground."
+	desc = "Una ligera capa de heno esparcida por el suelo."
 	icon = 'icons/turf/constructed/misc.dmi'
 	icon_state = "hay"
 	footstep = FOOTSTEP_GRASS
@@ -1048,7 +1048,7 @@
 
 /*	..................  Platforms   ................... */
 /turf/open/floor/ruinedwood/platform
-	name = "wood platform"
+	name = "plataforma de madera"
 	desc = "A destructible platform to traverse gaps."
 	damage_deflection = 6
 	max_integrity = 600
@@ -1064,7 +1064,7 @@
 	attacked_sound = list('sound/combat/hits/onwood/fence_hit1.ogg','sound/combat/hits/onwood/fence_hit2.ogg','sound/combat/hits/onwood/fence_hit3.ogg')
 
 /turf/open/floor/blocks/platform
-	name = "stone platform"
+	name = "plataforma de piedra"
 	desc = "A destructible platform to traverse gaps."
 	damage_deflection = 8
 	max_integrity = 800
@@ -1084,7 +1084,7 @@
 
 
 /turf/open/floor/abyss_sand
-	name = "abyssal sand"
+	name = "arena abisal"
 	desc = "Warm sand that, sadly, have been mixed with dirt."
 	icon_state = "sand_abyss"
 	icon = 'icons/delver/abyss_objects.dmi'
@@ -1127,7 +1127,7 @@
 		var/mob/living/L = user
 		var/obj/item/I = new /obj/item/natural/clod/sand(src)
 		if(L.put_in_active_hand(I))
-			L.visible_message("<span class='warning'>[L] picks up some sand.</span>")
+			L.visible_message("<span class='warning'>[L] recoge un poco de arena.</span>")
 		else
 			qdel(I)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
@@ -1220,7 +1220,7 @@
 	dir = pick(GLOB.cardinals)
 
 /turf/open/floor/flesh
-	name = "nerve threads"
+	name = "hilos nerviosos"
 	icon = 'icons/turf/flesh_tile.dmi'
 	desc = "A pulsing mass of flesh. It shivers and writhes at any touch."
 	icon_state = MAP_SWITCH("flesh_tile", "flesh_tile-0")
@@ -1246,8 +1246,8 @@
 	underlay_appearance.transform = transform
 
 /turf/open/floor/mushroom
-	name = "mushroom floor"
-	desc = "A patch of mushrooms."
+	name = "piso de hongos"
+	desc = "Un parche de setas."
 	icon_state = "mushroom"
 	base_icon_state = "mushroom"
 	transform = MAP_SWITCH(TRANSLATE_MATRIX(-9, -9), matrix())

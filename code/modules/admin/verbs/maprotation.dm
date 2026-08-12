@@ -1,17 +1,17 @@
 /client/proc/forcerandomrotate()
 	set category = "Server"
-	set name = "Trigger Random Map Rotation"
-	var/rotate = tgui_alert(usr, "Force a random map rotation to trigger?", "Rotate map?", list("Yes", "Cancel"))
+	set name = "Activar rotación aleatoria del mapa"
+	var/rotate = tgui_alert(usr, "Force a random map rotation to trigger?", "¿Girar mapa?", list("Yes", "Cancel"))
 	if (rotate != "Yes")
 		return
-	message_admins("[key_name_admin(usr)] is forcing a random map rotation.")
+	message_admins("[key_name_admin(usr)] está forzando una rotación aleatoria del mapa.")
 	log_admin("[key_name(usr)] is forcing a random map rotation.")
 	SSticker.maprotatechecked = 1
 	SSmapping.maprotate()
 
 /client/proc/adminchangemap()
 	set category = "Server"
-	set name = "Change Map"
+	set name = "Cambiar mapa"
 	var/list/maprotatechoices = list()
 	for (var/map in config.maplist)
 		var/datum/map_config/VM = config.maplist[map]
@@ -33,26 +33,26 @@
 			mapname += "\]"
 
 		maprotatechoices[mapname] = VM
-	var/chosenmap = input("Choose a map to change to", "Change Map")  as null|anything in sortList(maprotatechoices)|"Custom"
+	var/chosenmap = input("Choose a map to change to", "Cambiar mapa")  as null|anything in sortList(maprotatechoices)|"Custom"
 	if (!chosenmap)
 		return
 
 	SSticker.maprotatechecked = 1
 	if(chosenmap == "Custom")
-		message_admins("[key_name_admin(usr)] is changing the map to a custom map")
+		message_admins("[key_name_admin(usr)] está cambiando el mapa a un mapa personalizado")
 		log_admin("[key_name(usr)] is changing the map to a custom map")
 		var/datum/map_config/VM = new
 
-		VM.map_name = input("Choose the name for the map", "Map Name") as null|text
+		VM.map_name = input("Choose the name for the map", "Nombre del mapa") as null|text
 		if(isnull(VM.map_name))
 			VM.map_name = "Custom"
 
-		var/map_file = input("Pick file:", "Map File") as null|file
+		var/map_file = input("Seleccionar archivo:", "Archivo de mapa") as null|file
 		if(isnull(map_file))
 			return
 
 		if(copytext("[map_file]",-4) != ".dmm")
-			to_chat(src, "<span class='warning'>Filename must end in '.dmm': [map_file]</span>")
+			to_chat(src, "<span class='warning'>El nombre del archivo debe terminar en '.dmm': [map_file]</span>")
 			return
 
 		if(!fcopy(map_file, "_maps/custom/[map_file]"))
@@ -61,11 +61,11 @@
 		// This is to make sure the map works so the server does not start without a map.
 		var/datum/parsed_map/M = new (map_file)
 		if(!M)
-			to_chat(src, "<span class='warning'>Map '[map_file]' failed to parse properly.</span>")
+			to_chat(src, "<span class='warning'>El mapa '[map_file]' no se pudo analizar correctamente.</span>")
 			return
 
 		if(!M.bounds)
-			to_chat(src, "<span class='warning'>Map '[map_file]' has non-existant bounds.</span>")
+			to_chat(src, "<span class='warning'>El mapa '[map_file]' tiene límites inexistentes.</span>")
 			qdel(M)
 			return
 
@@ -86,10 +86,10 @@
 		text2file(json_encode(json_value), PATH_TO_NEXT_MAP_JSON)
 
 		if(SSmapping.changemap(VM))
-			message_admins("[key_name_admin(usr)] has changed the map to [VM.map_name]")
+			message_admins("[key_name_admin(usr)] ha cambiado el mapa a [VM.map_name]")
 	else
 		var/datum/map_config/VM = maprotatechoices[chosenmap]
-		message_admins("[key_name_admin(usr)] is changing the map to [VM.map_name]")
+		message_admins("[key_name_admin(usr)] está cambiando el mapa a [VM.map_name]")
 		log_admin("[key_name(usr)] is changing the map to [VM.map_name]")
 		if (SSmapping.changemap(VM))
-			message_admins("[key_name_admin(usr)] has changed the map to [VM.map_name]")
+			message_admins("[key_name_admin(usr)] ha cambiado el mapa a [VM.map_name]")

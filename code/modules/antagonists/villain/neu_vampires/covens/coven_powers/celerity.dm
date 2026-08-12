@@ -1,6 +1,6 @@
 /datum/coven/celerity
 	name = "Celerity"
-	desc = "Boosts your speed."
+	desc = "Aumenta tu velocidad."
 	icon_state = "celerity"
 	power_type = /datum/coven_power/celerity
 
@@ -16,8 +16,8 @@
 
 
 /datum/coven_power/celerity
-	name = "Celerity power name"
-	desc = "Celerity power description"
+	name = "Nombre del poder de celeridad"
+	desc = "Descripción del poder de celeridad"
 	violates_masquerade = TRUE
 	refresh_violations = TRUE
 	duration_length = 3 SECONDS
@@ -51,7 +51,7 @@
 	owner.remove_status_effect(buff, -1)
 
 /datum/coven_power/celerity/one
-	name = "Celerity 1"
+	name = "Celeridad 1"
 	desc = "Enhances your speed to make everything a little bit easier."
 	level = 1
 	buff = /datum/status_effect/buff/celerity
@@ -59,21 +59,21 @@
 	violates_masquerade = FALSE
 
 /datum/coven_power/celerity/two
-	name = "Celerity 2"
-	desc = "Significantly improves your speed and reaction time."
+	name = "Celeridad 2"
+	desc = "Mejora significativamente tu velocidad y tiempo de reacción."
 	level = 2
 	buff = /datum/status_effect/buff/celerity/two
 	vitae_cost = 30
 
 /datum/coven_power/celerity/three
-	name = "Celerity 3"
+	name = "Celeridad 3"
 	desc = "Move faster. React in less time. Your body is under perfect control."
 	level = 3
 	buff = /datum/status_effect/buff/celerity/three
 	vitae_cost = 40
 
 /datum/coven_power/celerity/four
-	name = "Celerity 4"
+	name = "Celeridad 4"
 	desc = "Breach the limits of what is humanly possible. Move like a lightning bolt."
 	level = 4
 	buff = /datum/status_effect/buff/celerity/four

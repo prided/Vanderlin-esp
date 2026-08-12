@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/lemon
-	name = "Mountain Lemons"
+	name = "limones de montaña"
 	id = "feature_lemon"
 	mappath = "_maps/kalypso/lEmOn.dmm"
 

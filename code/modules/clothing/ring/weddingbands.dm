@@ -14,7 +14,7 @@
 		return
 	var/current_time = world.time
 	var/namechoice = input(user, "Input a new name", "Rename Object")
-	var/descchoice = input(user, "Input a new description", "Describe Object")
+	var/descchoice = input(user, "Input a new description", "Describir objeto")
 	if(namechoice)
 		name = namechoice
 		choicename = TRUE

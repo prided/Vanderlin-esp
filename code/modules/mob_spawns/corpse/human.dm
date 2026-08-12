@@ -1,5 +1,5 @@
 /obj/effect/mob_spawn/corpse/human
-	name = "human corpse spawner"
+	name = "generador de cadáveres humanos"
 	icon_state = "corpsehuman"
 	mob_type = /mob/living/carbon/human
 	mob_species = /datum/species/human/northern

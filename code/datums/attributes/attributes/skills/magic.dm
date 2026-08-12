@@ -3,7 +3,7 @@
 	difficulty = SKILL_DIFFICULTY_VERY_HARD
 
 /datum/attribute/skill/magic/holy
-	name = "Miracles"
+	name = "milagros"
 	desc = "Represents your character's ability to perform divine magic. The higher your skill in Miracles, the more powerful your divine magic will be."
 	governing_attribute = STAT_FORTUNE
 	default_attributes = list(
@@ -25,7 +25,7 @@
 	)
 
 /datum/attribute/skill/magic/arcane
-	name = "Arcyne Magic"
+	name = "Arcyne Magia"
 	desc = "Represents your character's ability to perform arcyne magic. The higher your skill in Arcyne Magic, the more powerful your arcyne magic will be and you'll have access to more spells."
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(

@@ -55,9 +55,9 @@
 
 	pref_patron = prefs.read_preference(/datum/preference/choiced/patron)
 	to_chat(user, "<font color='purple'>Patron: [pref_patron]</font>")
-	to_chat(user, "<font color='purple'>Domain: [pref_patron.domain]</font>")
+	to_chat(user, "<font color='purple'>Dominio: [pref_patron.domain]</font>")
 	to_chat(user, "<font color='purple'>Background: [pref_patron.desc]</font>")
-	to_chat(user, "<font color='purple'>Flawed aspects: [pref_patron.flaws]</font>")
-	to_chat(user, "<font color='purple'>Likely Worshippers: [pref_patron.worshippers]</font>")
+	to_chat(user, "<font color='purple'>Aspectos defectuosos: [pref_patron.flaws]</font>")
+	to_chat(user, "<font color='purple'>Posibles adoradores: [pref_patron.worshippers]</font>")
 	to_chat(user, "<font color='red'>Considers these to be Sins: [pref_patron.sins]</font>")
 	to_chat(user, "<font color='white'>Blessed with boon(s): [pref_patron.boons]</font>")

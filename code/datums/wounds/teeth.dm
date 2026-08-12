@@ -1,5 +1,5 @@
 /datum/wound/teeth
-	name = "Dental Avulsion"
+	name = "Avulsión dental"
 	desc = "Patient's teeth have been violently ripped off due to blunt trauma."
 	severity = WOUND_SEVERITY_LIGHT
 	associated_bclasses = FRACTURE_BCLASSES

@@ -14,7 +14,7 @@
 		return ELEMENT_INCOMPATIBLE
 
 	ADD_TRAIT(target_obj, TRAIT_FROZEN, ELEMENT_TRAIT(type))
-	target_obj.name = "frozen [target_obj.name]"
+	target_obj.name = "congelado [target_obj.name]"
 	target_obj.add_atom_colour(GLOB.freon_color_matrix, TEMPORARY_COLOUR_PRIORITY)
 	target_obj.alpha -= 25
 
@@ -27,7 +27,7 @@
 	var/obj/obj_source = source
 	REMOVE_TRAIT(obj_source, TRAIT_FROZEN, ELEMENT_TRAIT(type))
 	UnregisterSignal(obj_source, list(COMSIG_MOVABLE_MOVED, COMSIG_MOVABLE_THROW_LANDED, COMSIG_MOVABLE_IMPACT, COMSIG_OBJ_UNFREEZE))
-	obj_source.name = replacetext(obj_source.name, "frozen ", "")
+	obj_source.name = replacetext(obj_source.name, "congelado ", "")
 	obj_source.remove_atom_colour(TEMPORARY_COLOUR_PRIORITY, GLOB.freon_color_matrix)
 	obj_source.alpha += 25
 

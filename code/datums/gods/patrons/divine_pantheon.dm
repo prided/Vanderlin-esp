@@ -25,17 +25,17 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 /* ----------------- */
 /datum/patron/divine/centrist
 	name = DIVINE_CENTRIST
-	domain = "Unity and Conflict. Denizens of the Eternal Plane."
+	domain = "Unidad y conflicto. Habitantes del Plano Eterno."
 	desc = "Worshipping The Ten equally. Worship in such a manner is tolerated, but greatly disapproved of. The Ten rarely give their blessings to those who do not give single-minded adoration to a single diety."
-	flaws = "Discordant, Unyielding, Uninterested."
-	worshippers = "The Meek and The Indecisive"
-	sins = "Temptation, Ignorance, Denial"
+	flaws = "Discordante, Inflexible, Desinteresado."
+	worshippers = "Los mansos y los indecisos"
+	sins = "Tentación, ignorancia, negación"
 	boons = "The Ten pull for your devotion."
 	added_traits = list(TRAIT_DIVINE_CENTRIST)
 	devotion_holder = /datum/devotion/divine/centrist
 	confess_lines = list(
 		"THE TEN GUIDE US!",
-		"THE TEN PROTECT US!",
+		"¡LOS DIEZ NOS PROTEGEN!",
 		"I SERVE THE DIVINE TEN!",
 	)
 	associated_objects = alist(
@@ -51,11 +51,11 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/astrata
 	name = ASTRATA
-	domain = "Goddess of Order, the Sun Queen"
+	domain = "Diosa del Orden, la Reina del Sol"
 	desc = "Crafted from the head of Psydon, twin of Noc. She gifted mankind the Sun, protecting Psydonia from all forces which may seek it harm: from both outside and within."
 	flaws = "Tyrannical, Ill-Tempered, Uncompromising"
-	worshippers = "Nobles, Zealots, Commoners"
-	sins = "Betrayal, Sloth, Witchcraft"
+	worshippers = "Nobles, fanáticos, plebeyos"
+	sins = "Traición, Pereza, Brujería"
 	boons = "Your stamina regeneration delay is lowered during daytime."
 	added_traits = list(TRAIT_APRICITY)
 	devotion_holder = /datum/devotion/divine/astrata
@@ -78,18 +78,18 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/noc
 	name = NOC
-	domain = "God of Knowledge, the Moon Prince"
+	domain = "Dios del Conocimiento, el Príncipe de la Luna"
 	desc = "Crafted from the helmet of Psydon, twin of Astrata. He gifted mankind divine wisdom."
 	flaws = "Cynical, Isolationist, Unfiltered Honesty"
-	worshippers = "Magic Practitioners, Scholars, Scribes"
+	worshippers = "Practicantes de magia, eruditos, escribas"
 	sins = "Suppressing Truth, Burning Books, Censorship"
-	boons = "You learn, dream, and teach apprentices slightly better. Access to roles with magic."
+	boons = "Aprendes, sueñas y enseñas a los aprendices un poco mejor. Acceso a roles con magia."
 	added_traits = list(TRAIT_TUTELAGE)
 	devotion_holder = /datum/devotion/divine/noc
 	confess_lines = list(
-		"NOC IS NIGHT!",
+		"¡NOC ES LA NOCHE!",
 		"NOC SEES THE TRUTH!",
-		"I SEEK THE MYSTERIES OF THE MOON!",
+		"¡BUSCO LOS MISTERIOS DE LA LUNA!",
 	)
 	storyteller = /datum/storyteller/noc
 	associated_objects = alist(
@@ -104,10 +104,10 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/dendor
 	name = DENDOR
-	domain = "God of Nature and Beasts"
+	domain = "Dios de la naturaleza y las bestias."
 	desc = "Crafted from the bones of Psydon as the embodiment of the natural world. Driven mad with time."
-	flaws = "Madness, Rebelliousness, Disorderliness"
-	worshippers = "Druids, Beasts, Madmen"
+	flaws = "Locura, Rebeldía, Desorden"
+	worshippers = "Druidas, Bestias, Locos"
 	sins = "Deforestation, Overhunting, Disrespecting Nature"
 	boons = "You are immune to kneestingers."
 	added_traits = list(TRAIT_KNEESTINGER_IMMUNITY)
@@ -130,11 +130,11 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/abyssor
 	name = ABYSSOR
-	domain = "God of Seas and Storms"
+	domain = "Dios de los mares y las tormentas"
 	desc = "Crafted from the blood of Psydon as sovereign of the waters. Enraged by ignorance of Him from followers of The Ten."
 	flaws= "Reckless, Stubborn, Destructive"
 	worshippers = "Sailors of the Sea and Sky, Horrid Sea-Creachers, Fog Islanders"
-	sins = "Fear, Hubris, Forgetfulness"
+	sins = "Miedo, arrogancia, olvido"
 	boons = "Leeches will drain very little of your blood."
 	added_traits = list(TRAIT_LEECHIMMUNE)
 	devotion_holder = /datum/devotion/divine/abyssor
@@ -158,7 +158,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	name = NECRA
 	domain = "Mother Goddess of Death and Time"
 	desc = "The Veiled Lady, once close partner to Psydon. She created the Nine others from his corpse, guiding them from the Underworld."
-	flaws = "Unchanging, Apathetic, Easy to Bore"
+	flaws = "Inmutable, apático, fácil de aburrir"
 	worshippers = "Orderlies, Gravetenders, Mourners"
 	sins = "Heretical Magic, Untimely Death, Disturbance of Rest"
 	boons = "You may see the presence of a soul in a body."
@@ -167,7 +167,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	confess_lines = list(
 		"ALL SOULS FIND THEIR WAY TO NECRA!",
 		"THE UNDERMAIDEN IS OUR FINAL REPOSE!",
-		"I FEAR NOT DEATH, MY LADY AWAITS ME!",
+		"¡NO TEMO A LA MUERTE, MI SEÑORA ME ESPERA!",
 	)
 	storyteller = /datum/storyteller/necra
 	associated_objects = alist(
@@ -185,8 +185,8 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	domain = "God of Warfare, Justice, and Bravery"
 	desc = "Crafted from the blade of Psydon, a champion of all who seek righteousness for themselves and others."
 	flaws = "Carelessness, Aggression, Pride"
-	worshippers = "Warriors, Sellswords, Guardsmen"
-	sins = "Cowardice, Cruelty, Stagnation"
+	worshippers = "Guerreros, mercenarios, guardias."
+	sins = "Cobardía, crueldad, estancamiento"
 	boons = "Your used weapons dull slower."
 	added_traits = list(TRAIT_SHARPER_BLADES)
 	devotion_holder = /datum/devotion/divine/ravox
@@ -212,13 +212,13 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	desc = "Crafted from the silver tongue of Psydon. Xylix is a force of change and deceit, yet allows little known of their gender let alone presence."
 	flaws = "Petulance, Deception, Gambling-Prone"
 	worshippers = "Cheats, Performers, The Hopeless"
-	sins = "Boredom, Predictability, Routine"
-	boons = "You can rig different forms of gambling in your favor."
+	sins = "Aburrimiento, Previsibilidad, Rutina"
+	boons = "Puedes manipular diferentes formas de juego a tu favor."
 	added_traits = list(TRAIT_BLACKLEG)
 	devotion_holder = /datum/devotion/divine/xylix
 	confess_lines = list(
 		"ASTRATA IS MY LIGHT!",
-		"NOC IS NIGHT!",
+		"¡NOC ES LA NOCHE!",
 		"DENDOR PROVIDES!",
 		"ABYSSOR COMMANDS THE WAVES!",
 		"RAVOX IS JUSTICE!",
@@ -241,18 +241,18 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/pestra
 	name = PESTRA
-	domain = "Goddess of Disease, Alchemy, and Medicine"
+	domain = "Diosa de la enfermedad, la alquimia y la medicina"
 	desc = "A mistake; Psydon's intestines left behind. She slithered out, bringing forth the cycle of life and decay."
 	flaws = "Drunkenness, Crudeness, Irresponsibility"
 	worshippers = "The Ill and Infirm, Alchemists, Physicians"
 	sins = "´Curing´ Abnormalities, Refusing to Help Unfortunates, Groveling"
-	boons = "You may consume rotten food without being sick."
+	boons = "Puedes consumir comida podrida sin enfermarte."
 	added_traits = list(TRAIT_ROT_EATER)
 	devotion_holder = /datum/devotion/divine/pestra
 	confess_lines = list(
 		"PESTRA SOOTHES ALL ILLS!",
 		"DECAY IS A CONTINUATION OF LIFE!",
-		"MY AFFLICTION IS MY TESTAMENT!",
+		"¡MI AFLICCIÓN ES MI TESTAMENTO!",
 	)
 	storyteller = /datum/storyteller/pestra
 	associated_objects = alist(
@@ -275,7 +275,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/malum
 	name = MALUM
-	domain = "God of Toil, Innovation, and Creation"
+	domain = "Dios del trabajo, la innovación y la creación"
 	desc = "Crafted from the hands of Psydon. He would later use his own to construct wondrous inventions."
 	flaws = "Obsessive, Exacting, Overbearing"
 	worshippers = "Smiths, Miners, Sculptors"
@@ -301,7 +301,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/eora
 	name = EORA
-	domain = "Goddess of Love, Family, and Art"
+	domain = "Diosa del amor, la familia y el arte"
 	desc = "Crafted from the heart of Psydon, a spreader of love and beauty, and strengthener of bonds."
 	flaws= "Naivete, Impulsiveness, Bigotry"
 	worshippers = "Mothers, Artists, Married Couples"

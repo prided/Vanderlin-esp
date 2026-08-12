@@ -6,42 +6,42 @@ type SortType = {
 
 export const SORTING_TYPES: readonly SortType[] = [
   {
-    label: 'Alphabetical',
+    label: 'Alfabético',
     propName: 'name',
     inDeciseconds: false,
   },
   {
-    label: 'Cost',
+    label: 'Costo',
     propName: 'cost_ms',
     inDeciseconds: true,
   },
   {
-    label: 'Init Order',
+    label: 'Orden inicial',
     propName: 'init_order',
     inDeciseconds: false,
   },
   {
-    label: 'Last Fire',
+    label: 'Última ejecución',
     propName: 'last_fire',
     inDeciseconds: false,
   },
   {
-    label: 'Next Fire',
+    label: 'Próxima ejecución',
     propName: 'next_fire',
     inDeciseconds: false,
   },
   {
-    label: 'Tick Usage',
+    label: 'Uso por tick',
     propName: 'tick_usage',
     inDeciseconds: true,
   },
   {
-    label: 'Avg Usage Per Tick',
+    label: 'Uso promedio por tick',
     propName: 'usage_per_tick',
     inDeciseconds: true,
   },
   {
-    label: 'Subsystem Overtime',
+    label: 'Sobrecarga del subsistema',
     propName: 'overtime',
     inDeciseconds: true,
   },

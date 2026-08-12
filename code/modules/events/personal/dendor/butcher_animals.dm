@@ -46,7 +46,7 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE DENDOR'S CHOSEN!"),
+		span_userdanger("¡ERES EL ELEGIDO DE DENDOR!"),
 		span_notice("Predators must hunt the weak and old, clearing the way for a new generation. Such is nature. Butcher animals to enforce this order!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/magic/barbroar.ogg', 100)

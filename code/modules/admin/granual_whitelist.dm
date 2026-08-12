@@ -87,7 +87,7 @@ GLOBAL_LIST_INIT(required_whitelists, setup_whitelist_ids())
 			if(!selected_ckey)
 				to_chat(user, span_boldwarning("No ckey selected."))
 				return
-			var/wl_id = input(user, "Enter custom whitelist ID (must match vessel_id exactly)", "Custom Whitelist", "") as text|null
+			var/wl_id = input(user, "Enter custom whitelist ID (must match vessel_id exactly)", "Lista blanca personalizada", "") as text|null
 			if(!wl_id)
 				return
 			grant_whitelist(user, selected_ckey, wl_id)
@@ -97,21 +97,21 @@ GLOBAL_LIST_INIT(required_whitelists, setup_whitelist_ids())
 /datum/whitelist_panel/proc/grant_whitelist(mob/user, target_ckey, wl_id)
 	var/datum/save_manager/SM = get_save_manager(target_ckey)
 	if(!SM)
-		to_chat(user, span_boldwarning("Could not load save manager for [target_ckey]."))
+		to_chat(user, span_boldwarning("No se pudo cargar el administrador de guardado para [target_ckey]."))
 		return
 	SM.set_data("whitelists", wl_id, list(
 		"granted" = TRUE,
 		"granted_by" = ckey(user.ckey),
 		"granted_on" = world.realtime
 	))
-	var/msg = "[key_name_admin(user)] granted whitelist '[wl_id]' to [target_ckey]"
+	var/msg = "[key_name_admin(user)] otorgó la lista blanca '[wl_id]' a [target_ckey]"
 	message_admins(msg)
 	log_admin(msg)
 
 /datum/whitelist_panel/proc/revoke_whitelist(mob/user, target_ckey, wl_id)
 	var/datum/save_manager/SM = get_save_manager(target_ckey)
 	if(!SM)
-		to_chat(user, span_boldwarning("Could not load save manager for [target_ckey]."))
+		to_chat(user, span_boldwarning("No se pudo cargar el administrador de guardado para [target_ckey]."))
 		return
 	SM.set_data("whitelists", wl_id, list(
 		"granted" = FALSE,

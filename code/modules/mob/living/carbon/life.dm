@@ -132,7 +132,7 @@
 			if(prob(embedded.embedding.embedded_fall_chance))
 				bodypart.receive_damage(embedded.w_class*embedded.embedding.embedded_fall_pain_multiplier)
 				bodypart.remove_embedded_object(embedded)
-				to_chat(src,"<span class='danger'>[embedded] falls out of my [bodypart.name]!</span>")
+				to_chat(src,"¡<span class='danger'>[embedded] se cae de mi [bodypart.name]!</span>")
 
 /*
 Alcohol Poisoning Chart
@@ -466,13 +466,13 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		if(buckled?.sleepy)
 			if(eyesclosed && !cant_fall_asleep || (eyesclosed && !(fallingas >= 10 && cant_fall_asleep)))
 				if(!fallingas)
-					to_chat(src, span_warning("I'll fall asleep soon..."))
+					to_chat(src, span_warning("Me quedaré dormido pronto..."))
 				fallingas++
 				if(istype(buckled, /obj/structure/bed))
 					var/obj/structure/bed/bed_check = buckled
 					if(bed_check.sheet_tucked)
 						if(fallingas > 10)
-							to_chat(src, ("This bed is so cozy..."))
+							to_chat(src, ("Esta cama es tan acogedora..."))
 							add_stress(/datum/stress_event/cozy_sleep)
 							Sleeping(30 SECONDS)
 							bed_check.sheet_tucked = FALSE
@@ -481,7 +481,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 					Sleeping(300)
 			else if(eyesclosed && fallingas >= 10 && cant_fall_asleep)
 				if(fallingas != 13)
-					to_chat(src, span_boldwarning("I can't sleep...[cause]"))
+					to_chat(src, span_boldwarning("No puedo dormir...[cause]"))
 				fallingas -= 5
 			else
 				adjust_energy(buckled.sleepy * (max_energy * 0.01))
@@ -495,7 +495,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 					Sleeping(300)
 			else if(eyesclosed && fallingas >= 10 && cant_fall_asleep)
 				if(fallingas != 13)
-					to_chat(src, span_boldwarning("I can't sleep...[cause]"))
+					to_chat(src, span_boldwarning("No puedo dormir...[cause]"))
 				fallingas -= 5
 			else
 				adjust_energy((max_energy * 0.01))

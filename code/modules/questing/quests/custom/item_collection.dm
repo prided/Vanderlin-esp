@@ -35,7 +35,7 @@
 	if(!length(results))
 		return FALSE
 
-	var/chosen_name = tgui_input_list(user, "Select the item:", "Item Search Results", results)
+	var/chosen_name = tgui_input_list(user, "Seleccione el artículo:", "Item Search Results", results)
 	if(!chosen_name)
 		return FALSE
 
@@ -52,7 +52,7 @@
 	quest_giver_name = user.real_name
 
 	var/auto_title = get_title()
-	var/custom_title = tgui_input_text(user, "Give this quest a title (blank = auto):", "Quest Title", "", 80)
+	var/custom_title = tgui_input_text(user, "Dale un título a esta misión (en blanco = automático):", "Título de la misión", "", 80)
 	title = custom_title ? custom_title : auto_title
 	return TRUE
 

@@ -1,5 +1,5 @@
 /datum/enchantment/cursed_offering
-	enchantment_name = "Cursed Offering"
+	enchantment_name = "Ofrenda maldita"
 	examine_text = "This smells divine, I am tempted to eat it."
 
 	essence_recipe = list(

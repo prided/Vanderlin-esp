@@ -1,5 +1,5 @@
 /obj/structure/redstone
-	name = "redstone component"
+	name = "componente de piedra roja"
 	icon = 'icons/obj/redstone.dmi'
 	anchored = TRUE
 	density = FALSE

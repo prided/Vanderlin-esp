@@ -40,7 +40,7 @@
 		if(istype(held))
 			enchant_item = held
 	if(!enchant_item)
-		to_chat(owner, span_warning("There is nothing to enchant!"))
+		to_chat(owner, span_warning("¡No hay nada que encantar!"))
 		return
 	if(spell_type != SPELL_MIRACLE)
 		enchantment_duration *= spell_magnitude_modifier

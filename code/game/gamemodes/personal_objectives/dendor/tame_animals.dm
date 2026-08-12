@@ -28,7 +28,7 @@
 
 /datum/objective/personal/tame_animal/complete_objective(mob/living/simple_animal/animal)
 	. = ..()
-	to_chat(owner.current, span_greentext("You have tamed [animal], fulfilling Dendor's will!"))
+	to_chat(owner.current, span_greentext("¡Has domesticado a [animal], cumpliendo la voluntad de Dendor!"))
 	adjust_storyteller_influence(DENDOR, 20)
 	UnregisterSignal(owner.current, COMSIG_ANIMAL_TAMED)
 

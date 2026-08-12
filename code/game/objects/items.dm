@@ -601,7 +601,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	if(href_list["inspect"])
 		if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH))
 			return
-		var/list/inspec = list(span_notice("PROPERTIES OF [uppertext(src.name)]"))
+		var/list/inspec = list(span_notice("PROPIEDADES DE [uppertext(src.name)]"))
 		get_inspect_entries(inspec)
 		SEND_SIGNAL(src, COMSIG_TOPIC_INSPECT, inspec)
 
@@ -689,7 +689,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	if(HAS_TRAIT(src, TRAIT_NEEDS_QUENCH) && iscarbon(user))
 		var/mob/living/carbon/C = user
 		if(!C.can_touch_burning(src))
-			to_chat(user, "<span class='warning'>[src] is too hot to touch.</span>")
+			to_chat(user, "<span class='warning'>[src] está demasiado caliente para tocarlo.</span>")
 
 	if(resistance_flags & ON_FIRE)
 		var/can_handle_hot = FALSE
@@ -704,7 +704,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 		if(can_handle_hot)
 			extinguish()
-			user.visible_message("<span class='warning'>[user] puts out the fire on [src].</span>")
+			user.visible_message("<span class='warning'>[user] apaga el fuego en [src].</span>")
 		else
 			user.visible_message("<span class='warning'>[user] burns [user.p_their()] hand putting out the fire on [src]!</span>")
 			extinguish()
@@ -723,7 +723,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 		extinguish()
 
 		if(can_handle_hot)
-			user.visible_message("<span class='warning'>[user] puts out the fire on [src].</span>")
+			user.visible_message("<span class='warning'>[user] apaga el fuego en [src].</span>")
 			return
 
 		user.visible_message("<span class='warning'>[user] burns [user.p_their()] hand putting out the fire on [src]!</span>")
@@ -808,7 +808,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 		var/mob/living/carbon/human/C = user
 		if(!(src in C.held_items) && unequip_delay_self)
 			if(unequip_delay_self >= 10)
-				C.visible_message(span_smallnotice("[C] starts taking off [src]..."), span_smallnotice("I start taking off [src]..."))
+				C.visible_message(span_smallnotice("[C] comienza a despegar [src]..."), span_smallnotice("I start taking off [src]..."))
 
 			var/doafter_flags = edelay_type ? (IGNORE_USER_LOC_CHANGE) : (NONE)
 			return do_after(C, minone(unequip_delay_self-GET_MOB_ATTRIBUTE_VALUE(C, STAT_SPEED)), timed_action_flags = doafter_flags)
@@ -839,10 +839,10 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 // afterattack() and attack() prototypes moved to _onclick/item_attack.dm for consistency
 
-/obj/item/proc/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+/obj/item/proc/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "el ataque", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	SEND_SIGNAL(src, COMSIG_ITEM_HIT_REACT, args)
 	if(prob(final_block_chance))
-		owner.visible_message("<span class='danger'>[owner] blocks [attack_text] with [src]!</span>")
+		owner.visible_message("<span class='danger'>[owner] bloquea [attack_text] con [src]!</span>")
 		return 1
 	return 0
 
@@ -1049,12 +1049,12 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	user.do_attack_animation(M, used_intent = user.used_intent, used_item = src)
 
 	if(M != user)
-		M.visible_message("<span class='danger'>[user] has stabbed [M] in the eye with [src]!</span>", \
-							"<span class='danger'>[user] stabs you in the eye with [src]!</span>")
+		M.visible_message("¡<span class='danger'>[user] ha apuñalado a [M] en el ojo con [src]!</span>", \
+							"¡<span class='danger'>[user] te apuñala en el ojo con [src]!</span>")
 	else
 		user.visible_message( \
 			"<span class='danger'>[user] has stabbed [user.p_them()]self in the eyes with [src]!</span>", \
-			"<span class='danger'>I stab myself in the eyes with [src]!</span>" \
+			"<span class='danger'>¡Me apuñalo en los ojos con [src]!</span>" \
 		)
 	if(is_human_victim)
 		var/mob/living/carbon/human/U = M
@@ -1075,7 +1075,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	if(eyes.damage >= 10)
 		M.adjust_eye_blur(30 SECONDS)
 		if(M.stat != DEAD)
-			to_chat(M, "<span class='danger'>My eyes start to bleed profusely!</span>")
+			to_chat(M, "<span class='danger'>¡Mis ojos empiezan a sangrar profusamente!</span>")
 		if(!M.is_nearsighted_from(EYE_DAMAGE))
 			to_chat(M, "<span class='danger'>I become nearsighted!</span>")
 		M.become_nearsighted(EYE_DAMAGE)
@@ -1088,7 +1088,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 			M.Paralyze(40)
 		if (prob(eyes.damage - 10 + 1))
 			M.become_blind(EYE_DAMAGE)
-			to_chat(M, "<span class='danger'>I go blind!</span>")
+			to_chat(M, "<span class='danger'>¡Me quedo ciego!</span>")
 
 /obj/item/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(hit_atom && !QDELETED(hit_atom))
@@ -1483,7 +1483,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	if(user.get_active_held_item() == src)
 		user.update_a_intents()
 		if(altgripped)
-			to_chat(user, span_notice("I wield [src] with an alternate grip."))
+			to_chat(user, span_notice("Manejo [src] con un agarre alternativo."))
 		else
 			to_chat(user, span_notice("I wield [src] normally."))
 
@@ -1505,7 +1505,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	add_blood_DNA(GET_ATOM_BLOOD_DNA(impactee))
 	var/fall_factor = sqrt(max(levels, 1))
 	var/impact_damage = mass_kg * fall_factor * FALL_DAMAGE_SCALE
-	impactee.visible_message(span_danger("[src] crashes into [impactee]'s [target_zone]!"), span_danger("[src] hits you in your [target_zone]!"))
+	impactee.visible_message(span_danger("[src] crashes into [impactee]'s [target_zone]!"), span_danger("¡[src] te golpea en tu [target_zone]!"))
 	impactee.apply_damage(impact_damage, BRUTE, target_zone, impactee.run_armor_check(target_zone, "blunt"))
 
 /obj/item/proc/on_consume(mob/living/eater)
@@ -1651,13 +1651,13 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 						. += span_notice(" Smells intensely of [smell].")
 				if(10 to 14)
 					if(alch_skill >= SKILL_LEVEL_APPRENTICE)
-						. += span_notice(" Smells strongly of [smell].")
+						. += span_notice(" Huele fuertemente a [smell].")
 				if(5 to 9)
 					if(alch_skill >= SKILL_LEVEL_JOURNEYMAN)
-						. += span_notice(" Smells slightly of [smell].")
+						. += span_notice(" Huele ligeramente a [smell].")
 				if(1 to 4)
 					if(alch_skill >= SKILL_LEVEL_EXPERT)
-						. += span_notice(" Smells faintly of [smell].")
+						. += span_notice(" Huele ligeramente a [smell].")
 
 /**
  * Returns the atom(either itself or an internal module) that will interact/attack the target on behalf of us
@@ -1677,7 +1677,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 /obj/item/get_examine_string(mob/user, thats = FALSE, examine_list_bool = FALSE)
 	if(examine_name && examine_list_bool)
-		var/display_name = article ? "[article] <b>[examine_name]</b>" : gender == PLURAL ? "some <b>[examine_name]</b>" : "\a <b>[examine_name]</b>"
+		var/display_name = article ? "[article] <b>[examine_name]</b>" : gender == PLURAL ? "algunos <b>[examine_name]</b>" : "\a <b>[examine_name]</b>"
 		var/list/override = list(article || (gender == PLURAL ? "some" : "a"), " ", "[get_examine_name(user, FALSE)]")
 		if(SEND_SIGNAL(src, COMSIG_ATOM_GET_EXAMINE_NAME, user, override) & COMPONENT_EXNAME_CHANGED)
 			display_name = override.Join("")
@@ -1691,7 +1691,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 		return
 
 	if(!silent)
-		balloon_alert_to_viewers(("[name]<br>breaks!"))
+		balloon_alert_to_viewers(("[name]<br>se rompe!"))
 
 /obj/item/return_recipe_data()
 	var/has_grind = length(grind_results)

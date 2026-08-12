@@ -48,7 +48,7 @@
 		"Cane Blade" = /obj/item/weapon/sword/rapier/caneblade,
 	)
 
-	var/choice = spawned.select_equippable(player_client, selectable, time_limit = 1 MINUTES, message = "Choose your weapon", title = JOB_MINOR_NOBLE)
+	var/choice = spawned.select_equippable(player_client, selectable, time_limit = 1 MINUTES, message = "Elige tu arma", title = JOB_MINOR_NOBLE)
 
 	switch(choice)
 		if("Dagger")
@@ -68,7 +68,7 @@
 				qdel(scabbard)
 
 /datum/outfit/pilgrim/noble
-	name = "Noble (Pilgrim)"
+	name = "Noble (peregrino)"
 	shoes = /obj/item/clothing/shoes/boots/darkboots
 	backl = /obj/item/storage/backpack/satchel
 	neck = /obj/item/storage/belt/pouch/coins/veryrich

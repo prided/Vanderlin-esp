@@ -13,14 +13,14 @@
 	sound = null
 
 	/// The message displayed as the title of the browser target input list.
-	var/choose_target_message = "Choose a target."
+	var/choose_target_message = "Elige un objetivo."
 	/// Radius around the caster that living targets are picked to choose from
 	var/target_radius = 7
 
 /datum/action/cooldown/spell/undirected/list_target/PreActivate(atom/caster)
 	var/list/list_targets = get_list_targets(caster, target_radius)
 	if(!length(list_targets))
-		caster.balloon_alert(caster, "no valid targets!")
+		caster.balloon_alert(caster, "¡No hay objetivos válidos!")
 		return FALSE
 
 	var/atom/chosen = browser_input_list(caster, choose_target_message, name, sortList(list_targets))
@@ -28,7 +28,7 @@
 		return FALSE
 
 	if(get_dist(chosen, caster) > target_radius)
-		caster.balloon_alert(caster, "too far!")
+		caster.balloon_alert(caster, "¡demasiado lejos!")
 		return FALSE
 
 	return Activate(chosen)

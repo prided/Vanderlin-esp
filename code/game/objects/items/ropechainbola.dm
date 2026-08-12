@@ -1,7 +1,7 @@
 
 /obj/item/rope
 	name = "rope"
-	desc = "A series of threads intertwined to create a firm rope for binding, hanging and other jobs."
+	desc = "Una serie de hilos entrelazados para crear una cuerda firme para atar, colgar y otros trabajos."
 	gender = PLURAL
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "rope"
@@ -71,12 +71,12 @@
 	if(user.aimheight >= 5)
 		if(!C.handcuffed)
 			if(C.num_hands)
-				C.visible_message(span_warning("[user] is trying to tie [C]'s arms with [src.name]!"), \
+				C.visible_message(span_warning("¡[user] está intentando atar los brazos de [C] con [src.name]!"), \
 									span_danger("[user] is trying to tie my arms with [src.name]!"))
 				if(do_after(user, 6 SECONDS * (surrender_mod), C) && C.num_hands)
 					apply_cuffs(C, user, leg = FALSE)
 					C.visible_message(span_warning("[user] ties [C]' arms with [src.name]."), \
-										span_danger("[user] ties my arms up with [src.name]."))
+										span_danger("[user] me ata los brazos con [src.name]."))
 					SSblackbox.record_feedback("tally", "handcuffs", 1, type)
 					user.adjust_experience(/datum/attribute/skill/craft/traps, GET_MOB_ATTRIBUTE_VALUE(C, STAT_INTELLIGENCE), FALSE)
 					log_combat(user, C, "handcuffed")
@@ -87,7 +87,7 @@
 	else
 		if(!C.legcuffed)
 			if(C.num_legs)
-				C.visible_message(span_warning("[user] is trying to tie [C]'s legs with [src.name]!"), \
+				C.visible_message(span_warning("¡[user] está intentando atar las piernas de [C] con [src.name]!"), \
 									span_danger("[user] is trying to tie my legs with [src.name]!"))
 				if(do_after(user, 6 SECONDS * (C.surrendering ? 0.5 : 1), C) && C.num_legs)
 					apply_cuffs(C, user, leg = TRUE)
@@ -160,7 +160,7 @@
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 
 /obj/item/rope/net
-	name = "rope net"
+	name = "red de cuerda"
 	desc = "A rope mesh of designed to slow a person down."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "net"
@@ -188,7 +188,7 @@
 
 /obj/item/rope/net/proc/ensnare(mob/living/carbon/C)
 	if(C.num_legs >= 2 && apply_cuffs(C, leg = TRUE))
-		C.visible_message(span_danger("[src] ensnares [C]!"), span_userdanger("[src] entraps you!!"))
+		C.visible_message(span_danger("[src] ensnares [C]!"), span_userdanger("¡¡[src] te atrapa!!"))
 		SSblackbox.record_feedback("tally", "handcuffs", 1, type)
 		C.apply_status_effect(/datum/status_effect/debuff/netted)
 		playsound(src, 'sound/combat/hits/nodmg (2).ogg', 100, TRUE)

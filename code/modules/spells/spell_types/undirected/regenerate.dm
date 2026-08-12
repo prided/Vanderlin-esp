@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/regenerate // This is an aheal spell designed for the zizoid immortal abomination
 	name = "Regenerate"
-	desc = "Your wounds painfully mend back together."
+	desc = "Tus heridas se curan dolorosamente."
 	button_icon_state = "bloodrage"
 	sound = 'sound/misc/vampirespell.ogg'
 

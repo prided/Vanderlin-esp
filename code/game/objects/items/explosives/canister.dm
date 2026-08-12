@@ -1,5 +1,5 @@
 /obj/projectile/bullet/shrap
-	name = "lead fragment"
+	name = "fragmento de plomo"
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "small"
 	damage = 45

@@ -36,7 +36,7 @@
 				return BULLET_ACT_HIT
 			else
 				blocked = 100
-				target.visible_message(	span_danger("\The [src] was deflected!"), span_danger("My armor protected me against \the [src]!"))
+				target.visible_message(	span_danger("¡\The [src] fue desviado!"), span_danger("¡Mi armadura me protegió contra \the [src]!"))
 
 	..(target, blocked)
 	DISABLE_BITFIELD(reagents.flags, NO_REACT)
@@ -51,7 +51,7 @@
 	woundclass = BCLASS_STAB
 
 /obj/projectile/bullet/reusable/arrow/pyro
-	name = "pyroclastic arrow"
+	name = "flecha piroclástica"
 	desc = "An arrow with its tip smeared with a flammable tincture."
 	icon_state = "arrowpyro_proj"
 	ammo_type = null
@@ -106,7 +106,7 @@
 	reagent = /datum/reagent/water
 
 /obj/projectile/bullet/reusable/arrow/water
-	name = "water arrow"
+	name = "flecha de agua"
 	desc = "An arrow with its tip replaced by a water crystal, creates a splash on impact."
 	icon_state = "arrowwater_proj"
 	ammo_type = null

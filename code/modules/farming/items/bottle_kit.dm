@@ -1,6 +1,6 @@
 /obj/item/bottle_kit
 	name = "bottlin' kit"
-	desc = "A parcel of colored bottles and some labels."
+	desc = "Un paquete de botellas de colores y algunas etiquetas."
 	icon = 'icons/obj/brewing.dmi'
 	icon_state = "bottler_box"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -40,7 +40,7 @@
 		fake_glass_name = "Blue"
 		return
 
-	var/choice = tgui_input_list(user, "What colour do you pick?", name, options)
+	var/choice = tgui_input_list(user, "¿Qué color eliges?", name, options)
 
 	var/printing_choice = options[choice]
 

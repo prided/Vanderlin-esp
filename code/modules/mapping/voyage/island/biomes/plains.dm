@@ -1,6 +1,6 @@
 
 /datum/island_biome/plains
-	name = "Plains"
+	name = "llanuras"
 	terrain_weights = list(
 		/turf/open/floor/grass = 70,
 		/turf/open/floor/dirt = 20,

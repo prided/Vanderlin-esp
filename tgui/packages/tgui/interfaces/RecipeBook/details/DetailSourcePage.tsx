@@ -7,7 +7,7 @@ export const DetailSourcePage = ({ r, lookup, pickerMap, allRecipes, essenceInde
   <>
     {!!r.drops?.length && (
       <>
-        <SectionHead>Drops</SectionHead>
+        <SectionHead>Gotas</SectionHead>
         <Box className="RecipeBook__step-block">
           {r.drops!.map((d, i) => (
             <Box key={i} className="RecipeBook__step-row">

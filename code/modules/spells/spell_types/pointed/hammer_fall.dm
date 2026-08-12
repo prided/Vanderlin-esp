@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/hammer_fall
-	name = "Hammerfall"
+	name = "caída de martillo"
 	desc = ""
 	button_icon_state = "craft_buff"
 	sound = 'sound/items/bsmithfail.ogg'
@@ -32,7 +32,7 @@
 		if(is_type_in_typecache(I.type, hammer_weapons))
 			break
 		if(feedback)
-			to_chat(owner, "I need a hammer to cast this.")
+			to_chat(owner, "Necesito un martillo para lanzar esto.")
 		return FALSE
 
 /datum/action/cooldown/spell/hammer_fall/before_cast(atom/cast_on)

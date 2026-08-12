@@ -1,5 +1,5 @@
 /datum/migrant_role/rockhill/mayor
-	name = "Mayor of Rockhill"
+	name = "Alcalde de Rockhill"
 	greet_text = "You are the mayor of Rockhill, you've come to Vanderlin to discuss important matters with their Monarch."
 	migrant_job = /datum/job/migrant/rockhill/mayor
 
@@ -26,13 +26,13 @@
 	)
 
 /datum/job/migrant/rockhill/mayor
-	title = "Mayor of Rockhill"
+	title = "Alcalde de Rockhill"
 	tutorial = "You are the mayor of Rockhill, you've come to Vanderlin to discuss important matters with their Monarch."
 	outfit = /datum/outfit/rockhill/mayor
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	is_recognized = TRUE
-	honorary = "Mayor"
+	honorary = "Alcalde"
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/mayor
 
@@ -86,7 +86,7 @@
 	species.accent_language = species.get_accent(species.native_language)
 
 /datum/migrant_role/rockhill_knight
-	name = "Knight of Rockhill"
+	name = "Caballero de Rockhill"
 	greet_text = "You are a Knight of Rockhill, the notable of said town has taken the journey to your liege, you are to ensure their safety."
 	migrant_job = /datum/job/migrant/rockhill/knight
 
@@ -113,7 +113,7 @@
 	)
 
 /datum/job/migrant/rockhill/knight
-	title = "Knight of Rockhill"
+	title = "Caballero de Rockhill"
 	tutorial = "You are a Knight of Rockhill, the notable of said town has taken the journey to your liege, you are to ensure their safety."
 	outfit = /datum/outfit/rockhill/knight
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
@@ -146,7 +146,7 @@
 			index = copytext(spawned.real_name, 1,index)
 		if(!index)
 			index = spawned.real_name
-		S.name = "knight tabard ([index])"
+		S.name = "tabardo de caballero ([index])"
 	if(!spawned.dna?.species)
 		return
 	var/datum/species/species = spawned.dna.species
@@ -177,7 +177,7 @@
 		r_hand = /obj/item/weapon/mace/goden/steel
 
 /datum/migrant_role/rockhill/sergeant_at_arms
-	name = "Rockhill Serjeant"
+	name = "Rockhill Sargento"
 	greet_text = "The Mayor of Rockhill has conscripted you and your mens to go see the rulers of Vanderlin."
 	migrant_job = /datum/job/migrant/rockhill/serjeant_at_arms
 
@@ -228,12 +228,12 @@
 	)
 
 /datum/job/migrant/rockhill/serjeant_at_arms
-	title = "Rockhill Serjeant"
+	title = "Rockhill Sargento"
 	tutorial = "The Mayor of Rockhill has conscripted you and your mens to go see the rulers of Vanderlin."
 	outfit = /datum/outfit/rockhill/serjeant_at_arms
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	exp_types_granted  = list(EXP_TYPE_COMBAT)
-	honorary = "Serjeant"
+	honorary = "Sargento"
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/rockhill_serjeant_at_arms
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/migrant/rockhill_serjeant_at_arms/old
@@ -272,12 +272,12 @@
 	species.accent_language = species.get_accent(species.native_language)
 
 /datum/migrant_role/footman_guard
-	name = "Guardsmen of Rockhill"
+	name = "Guardias de Rockhill"
 	greet_text = "Your Serjeant has been ordered by the mayor of Rockhill to guard them as they visit the rulers of Vanderlin. Ensure they live."
 	migrant_job = /datum/job/migrant/footman_bannerman/rockhill
 
 /datum/job/migrant/footman_bannerman/rockhill
-	title = "Guardsmen of Rockhill"
+	title = "Guardias de Rockhill"
 	tutorial = "Your Serjeant has been ordered by the mayor of Rockhill to guard them as they visit the rulers of Vanderlin. Ensure they live."
 	is_foreigner = TRUE
 
@@ -298,7 +298,7 @@
 	species.accent_language = species.get_accent(species.native_language)
 
 /datum/migrant_wave/rockhill_wave
-	name = "The Mayor's Visit"
+	name = "La visita del alcalde"
 	shared_wave_type = list(/datum/migrant_wave/grenzelhoft_visit,/datum/migrant_wave/zalad_wave,/datum/migrant_wave/rockhill_wave,/datum/migrant_wave/heartfelt)
 	downgrade_wave = /datum/migrant_wave/rockhill_wave_down
 	max_spawns = 1
@@ -312,7 +312,7 @@
 	greet_text = "The Mayor has it, something must be discussed with the rulers of Vanderlin which is why we're on our way over there."
 
 /datum/migrant_wave/rockhill_wave_down
-	name = "The Mayor's Visit"
+	name = "La visita del alcalde"
 	shared_wave_type = list(/datum/migrant_wave/grenzelhoft_visit,/datum/migrant_wave/zalad_wave,/datum/migrant_wave/rockhill_wave,/datum/migrant_wave/heartfelt)
 	downgrade_wave = /datum/migrant_wave/rockhill_wave_down_one
 	can_roll = FALSE
@@ -325,7 +325,7 @@
 	greet_text = "The Mayor has it, something must be discussed with the rulers of Vanderlin which is why we're on our way over there."
 
 /datum/migrant_wave/rockhill_wave_down_one
-	name = "The Mayor's visit"
+	name = "La visita del alcalde"
 	shared_wave_type = list(/datum/migrant_wave/grenzelhoft_visit,/datum/migrant_wave/zalad_wave,/datum/migrant_wave/rockhill_wave,/datum/migrant_wave/heartfelt)
 	can_roll = FALSE
 	roles = list(

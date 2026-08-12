@@ -1,6 +1,6 @@
 
 /datum/rune_spell/deafmute
-	name = "Deaf-Mute"
+	name = "Sordomudo"
 	desc = "Deafen nearby enemies. Including robots."
 	desc_talisman = "Deafen nearby enemies. Including robots. The effect is shorter than when used from a rune."
 	invocation = "Sti' kaliedir!"

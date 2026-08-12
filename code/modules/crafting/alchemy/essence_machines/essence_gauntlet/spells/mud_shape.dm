@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/mud_shape
 	name = "Mud Shape"
-	desc = "Combines water and earth to create moldable mud for construction."
+	desc = "Combina agua y tierra para crear barro moldeable para la construcción."
 	button_icon_state = "stone1"
 	button_icon = 'icons/roguetown/items/natural.dmi'
 	cast_range = 2

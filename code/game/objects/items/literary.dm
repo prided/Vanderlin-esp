@@ -1,6 +1,6 @@
 
 /obj/item/textbook
-	name = "blank textbook"
+	name = "libro de texto en blanco"
 	desc = "A blank textbook, ready for the knowledge it will share to be prescribed into it."
 	icon = 'icons/roguetown/items/books.dmi'
 	icon_state = "book_blank"
@@ -14,7 +14,7 @@
 	throw_range = 5
 	dropshrink = 0.6
 	drop_sound = 'sound/foley/dropsound/book_drop.ogg'
-	attack_verb = list("bashed", "whacked", "educated")
+	attack_verb = list("bashed", "whacked", "educado")
 	drop_sound = 'sound/blank.ogg'
 	pickup_sound =  'sound/blank.ogg'
 	firefuel = 2 MINUTES
@@ -45,16 +45,16 @@
 	var/title = "nothing"
 	switch(skilltoteach)
 		if(/datum/attribute/skill/misc/reading)
-			title = "literature"
+			title = "literatura"
 		if(/datum/attribute/skill/labor/mathematics)
-			title = "mathematics"
+			title = "matemáticas"
 		if(/datum/attribute/skill/craft/engineering)
 			title = "engineering"
 		if(/datum/attribute/skill/craft/alchemy)
 			title = "alchemy"
 		if(/datum/attribute/skill/misc/medicine)
 			title = "medicine"
-	name = "[skill_name]'s guide to [title]"
+	name = "Guía de [skill_name] para [title]"
 
 /obj/item/textbook/update_desc()
 	. = ..()
@@ -75,7 +75,7 @@
 	if(istype(I, /obj/item/natural/feather))
 		if(skilltoteach)
 			return
-		var/skill = input(user, "What kind of textbook will you write", "NOC") as null|anything in teachable_skills
+		var/skill = input(user, "¿Qué tipo de libro de texto escribirás?", "NOC") as null|anything in teachable_skills
 		if(!skill)
 			return
 		var/userskill = GET_MOB_SKILL_VALUE_OLD(user, teachable_skills[skill])
@@ -105,7 +105,7 @@
 			maxskill = possible_skill_levels[level_name]
 			minskill = maxskill - 1
 			update_appearance(UPDATE_DESC | UPDATE_NAME)
-			to_chat(user, span_notice("You finish writing [src]."))
+			to_chat(user, span_notice("Terminas de escribir [src]."))
 			icon_state = "basic_book_1"
 			playsound(src, 'sound/items/write.ogg', 50, FALSE, ignore_walls = FALSE)
 		else
@@ -129,10 +129,10 @@
 			to_chat(user, span_warning("I can't understand anything from this theory! Practice should do me better."))
 			return
 		if(userskill < minskill)
-			to_chat(user, span_warning("This textbook is too advanced for me to study!"))
+			to_chat(user, span_warning("¡Este libro de texto es demasiado avanzado para que yo lo estudie!"))
 			return
 		if(userskill < maxskill)
-			to_chat(user, span_info("You begin to study the [src.name]."))
+			to_chat(user, span_info("Comienzas a estudiar el [src.name]."))
 			if(do_after(H, 5 SECONDS))
 				user.adjust_experience(skilltoteach, true_experience)
 				attemptlearn(user)

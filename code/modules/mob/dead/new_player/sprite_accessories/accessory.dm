@@ -33,7 +33,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF)
 
 /datum/sprite_accessory/accessories/earrings
-	name = "Earrings (G)"
+	name = "Pendientes (G)"
 	icon_state = "earrings"
 	gender = FEMALE
 	relevant_layers = list(BODY_FRONT_LAYER)
@@ -58,7 +58,7 @@
 	specuse = list(SPEC_ID_ELF)
 
 /datum/sprite_accessory/accessories/eyepierce
-	name = "Pierced Brow (L)"
+	name = "Ceja perforada (L)"
 	icon_state = "eyepierce"
 	gender = FEMALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF)
@@ -75,15 +75,15 @@
 	specuse = list(SPEC_ID_RAKSHARI)
 
 /datum/sprite_accessory/accessories/rakshari/gilded_g
-	name = "Gilded (G)"
+	name = "Dorado (G)"
 	icon_state = "gilded_g"
 
 /datum/sprite_accessory/accessories/rakshari/cat_earrings_g
-	name = "Cat Earrings (G)"
+	name = "Pendientes de gato (G)"
 	icon_state = "cat_earrings_g"
 
 /datum/sprite_accessory/accessories/rakshari/gilded_s
-	name = "Gilded (S)"
+	name = "Dorado (S)"
 	icon_state = "gilded_s"
 
 /datum/sprite_accessory/accessories/rakshari/cat_earrings_s
