@@ -1,6 +1,6 @@
 ////////////////////////////////
 /proc/message_admins(msg)
-	msg = span_admin("[span_prefix("ADMIN LOG: ")]<span class=\"message linkify\">[msg]</span>")
+	msg = span_admin("[span_prefix("REGISTRO ADMIN: ")]<span class=\"message linkify\">[msg]</span>")
 	for(var/client/C in GLOB.admins)
 		if(check_rights_for(C, R_ADMIN))
 			to_chat(C, msg)
@@ -14,7 +14,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
 
 /datum/admins/proc/show_player_panel(mob/M in GLOB.mob_list)
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Show Player Panel"
 	set desc="Edit player (respawn, ban, heal, etc)"
 
@@ -296,7 +296,7 @@
 /datum/admins/proc/admin_heal(mob/living/M in GLOB.mob_list)
 	set name = "Heal Mob"
 	set desc = "Heal a mob to full health"
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 
 	if(!check_rights())
 		return
@@ -307,7 +307,7 @@
 /datum/admins/proc/prompt_subclass(mob/living/mob in GLOB.mob_list)
 	set name = "Trigger Subclass Menu"
 	set desc = "Triggers the subclass menu of a mob."
-	set category = "Admin.Jobs"
+	set category = "Administracion.Jobs"
 
 	if(!check_rights())
 		return
@@ -321,7 +321,7 @@
 /datum/admins/proc/admin_curse(mob/living/carbon/human/M in GLOB.mob_list)
 	set name = "Curse"
 	set desc = "Curse or lift a curse from a character"
-	set category = "GameMaster.Dioses"
+	set category = "Director de juego.Dioses"
 	if(!check_rights())
 		return FALSE
 
@@ -383,7 +383,7 @@
 /datum/admins/proc/admin_sleep(mob/living/M in GLOB.mob_list)
 	set name = "Alternar dormir"
 	set desc = "Toggle a mob's sleeping state"
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 
 	if(!check_rights())
 		return
@@ -400,7 +400,7 @@
 /datum/admins/proc/start_vote()
 	set name = "Start Vote"
 	set desc = "Start a vote"
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 
 	if(!check_rights(R_POLL))
 		to_chat(usr, "<span class='warning'>You do not have the rights to start a vote.</span>")
@@ -508,7 +508,7 @@
 #define HARDEST_RESTART "Hardest Restart (No actions, just reboot)"
 #define TGS_RESTART "Server Restart (Kill and restart DD)"
 /datum/admins/proc/restart()
-	set category = "Server.Round Control"
+	set category = "Servidor.Round Control"
 	set name = "Reboot World"
 	set desc = "Reinicia el mundo inmediatamente."
 	if(!check_rights(R_SERVER))
@@ -561,7 +561,7 @@
 #undef TGS_RESTART
 
 /datum/admins/proc/end_round()
-	set category = "Server.Round Control"
+	set category = "Servidor.Round Control"
 	set name = "End Round"
 	set desc = ""
 
@@ -576,7 +576,7 @@
 
 
 /datum/admins/proc/announce()
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set name = "OOC Announcement"
 	set desc="Anuncia tus deseos al mundo"
 	if(!check_rights(0))
@@ -594,7 +594,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Announce") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/set_admin_notice()
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set name = "Set Admin Notice"
 	set desc ="Set an announcement that appears to everyone who joins the server. Only lasts this round"
 	if(!check_rights(0))
@@ -646,7 +646,7 @@
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Dead OOC", "[GLOB.dooc_allowed ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/startnow()
-	set category = "Server.Round Control"
+	set category = "Servidor.Round Control"
 	set desc="Comienza la ronda AHORA MISMO"
 	set name="Start Now"
 	if(SSticker.current_state == GAME_STATE_PREGAME || SSticker.current_state == GAME_STATE_STARTUP)
@@ -666,7 +666,7 @@
 	return 0
 
 /datum/admins/proc/toggleenter()
-	set category = "Server.Round Control"
+	set category = "Servidor.Round Control"
 	set desc="la gente no puede entrar"
 	set name="Toggle Entering"
 	GLOB.enter_allowed = !( GLOB.enter_allowed )
@@ -680,7 +680,7 @@
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Entering", "[GLOB.enter_allowed ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleAI()
-	set category = "Server"
+	set category = "Servidor"
 	set desc="La gente no puede ser IA"
 	set name="Toggle AI"
 	var/alai = CONFIG_GET(flag/allow_ai)
@@ -694,7 +694,7 @@
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle AI", "[!alai ? "Disabled" : "Enabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleaban()
-	set category = "Server"
+	set category = "Servidor"
 	set desc="Respawn basically"
 	set name="Toggle Respawn"
 	var/new_nores = !CONFIG_GET(flag/norespawn)
@@ -709,7 +709,7 @@
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Respawn", "[!new_nores ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/delay()
-	set category = "Server.Round Control"
+	set category = "Servidor.Round Control"
 	set desc="Delay the game start"
 	set name="Delay pre-game"
 
@@ -729,7 +729,7 @@
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Delay Game Start") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/accelerate_or_delay_round_end()
-	set category = "Server.Round Control"
+	set category = "Servidor.Round Control"
 	set desc="Retrasar / Acelerar el final de la ronda o el tiempo de votacion"
 	set name="Retrasar / Acelerar el final de la ronda o el tiempo de votacion"
 
@@ -772,7 +772,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////ADMIN HELPER PROCS
 
 /datum/admins/proc/spawn_atom(object as text)
-	set category = "Debug.Spawn"
+	set category = "Depuracion.Spawn"
 	set desc = ""
 	set name = "Spawn"
 
@@ -802,7 +802,7 @@
 	return initial(chosen.name)
 
 /datum/admins/proc/podspawn_atom(object as text)
-	set category = "Debug.Spawn"
+	set category = "Depuracion.Spawn"
 	set desc = ""
 	set name = "Podspawn"
 
@@ -826,7 +826,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Podspawn Atom") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/show_traitor_panel(mob/M in GLOB.mob_list)
-	set category = "GameMaster.Antags"
+	set category = "Director de juego.Antags"
 	set desc = ""
 	set name = "Mostrar panel de traidores"
 
@@ -841,7 +841,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Traitor Panel") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleguests()
-	set category = "Server"
+	set category = "Servidor"
 	set desc="Los invitados no pueden entrar."
 	set name="Alternar invitados"
 	var/new_guest_ban = !CONFIG_GET(flag/guest_ban)
@@ -896,7 +896,7 @@
 	browser.open()
 
 /datum/admins/proc/create_or_modify_area()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Create or modify area"
 	create_area(usr)
 
@@ -973,14 +973,14 @@
 
 
 /client/proc/returntolobby()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Return to Lobby"
 
 	var/mob/living/carbon/human/H = mob
 	H.returntolobby()
 
 /client/proc/spawn_liquid()
-	set category = "Debug.Spawn"
+	set category = "Depuracion.Spawn"
 	set name = "Spawn Liquid"
 	set desc = "Spawns an amount of chosen liquid at your current location."
 
@@ -1014,7 +1014,7 @@
 
 /client/proc/remove_liquid()
 	set name = "Remove Liquids"
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	set desc = "Fija el aire en un radio especificado."
 	var/turf/epicenter = get_turf(mob)
 
@@ -1028,7 +1028,7 @@
 	log_game("[key_name_admin(usr)] removed liquids with range [range] in [epicenter.loc.name]")
 
 /client/proc/adjust_personal_see_leylines()
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set name = "Hide Current Z-Level Leylines"
 	set desc = "Hides Leylines on the current z-level from your vision."
 
@@ -1036,7 +1036,7 @@
 	mob.hud_used?.plane_masters_update()
 
 /client/proc/spawn_pollution()
-	set category = "Debug.Spawn"
+	set category = "Depuracion.Spawn"
 	set name = "Spawn Pollution"
 	set desc = "Spawns an amount of chosen pollutant at your current location."
 
@@ -1053,7 +1053,7 @@
 	log_admin("[key_name(usr)] spawned pollution at [epicenter.loc] ([choice] - [amount_choice]).")
 
 /datum/admins/proc/anoint_priest(mob/living/carbon/human/M in GLOB.human_list)
-	set category = "GameMaster.Interacciones"
+	set category = "Director de juego.Interacciones"
 	set name = "Anoint New Priest"
 	set desc = "Choose a new priest. The previous one will be excommunicated."
 
@@ -1101,14 +1101,14 @@
 	priority_announce("Astrata has anointed [M.real_name] as the new head of the Church of the Ten!", title = "Astrata Shines!", sound = 'sound/misc/bell.ogg')
 
 /datum/admins/proc/fix_death_area()
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set desc="Toggle dis bitch"
 	set name="Fix Death Arena"
 	SSdeath_arena.admin_reset()
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle LOOC", "[GLOB.ooc_allowed ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggle_debug_pathfinding()
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set desc="Pathfinding Debug"
 	set name="Pathfinding Debug"
 	var/mob/user = usr
@@ -1121,7 +1121,7 @@
 		QDEL_NULL(user.client.holder.path_debug)
 
 /datum/admins/proc/give_all_triumphs()
-	set category = "GameMaster.Triunfos"
+	set category = "Director de juego.Triunfos"
 	set desc = "Triumph Giver"
 	set name = "Give All Triumphs"
 
@@ -1147,7 +1147,7 @@
 /datum/admins/proc/change_skill_exp_modifier()
 	set name = "Change Skill Experience Gain"
 	set desc = "Changes the experience gain of either the adjust_experience proc, or add_sleep_experience proc."
-	set category = "GameMaster"
+	set category = "Director de juego"
 
 	var/list/options = list("Adjust Experience Modifier", "Sleep Experience Modifier", "Both")
 

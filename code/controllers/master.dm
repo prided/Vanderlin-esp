@@ -112,7 +112,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 /client/proc/cmd_controller_view_ui()
 	set name = "Descripcion general del controlador"
 	set desc = "View the current states of the Subsystem Controllers."
-	set category = "Debug"
+	set category = "Depuracion"
 
 	if(!check_rights(R_SERVER|R_DEBUG))
 		return

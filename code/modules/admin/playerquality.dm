@@ -15,23 +15,23 @@
 		return the_pq
 	else
 		if(the_pq >= 100)
-			return "<span style='color: #00ff00;'>Legendary</span>"
+			return "<span style='color: #00ff00;'>Legendaria</span>"
 		if(the_pq >= 70)
-			return "<span style='color: #74cde0;'>Exceptional</span>"
+			return "<span style='color: #74cde0;'>Excepcional</span>"
 		if(the_pq >= 30)
-			return "<span style='color: #47b899;'>Great</span>"
+			return "<span style='color: #47b899;'>Excelente</span>"
 		if(the_pq >= 5)
-			return "<span style='color: #58a762;'>Good</span>"
+			return "<span style='color: #58a762;'>Buena</span>"
 		if(the_pq >= -4)
 			return "Normal"
 		if(the_pq >= -30)
-			return "<span style='color: #be6941;'>Poor</span>"
+			return "<span style='color: #be6941;'>Mala</span>"
 		if(the_pq >= -70)
 			return "<span style='color: #cd4232;'>Terrible</span>"
 		if(the_pq >= -99)
-			return "<span style='color: #e2221d;'>Abysmal</span>"
+			return "<span style='color: #e2221d;'>Abismal</span>"
 		if(the_pq <= -100)
-			return "<span style='color: #ff00ff;'>Shitter</span>"
+			return "<span style='color: #ff00ff;'>Desastrosa</span>"
 		return "Normal"
 
 /proc/adjust_playerquality(amt, key, admin, reason)
@@ -82,7 +82,7 @@
 			msg += " - RSN: [reason]"
 
 /client/proc/check_pq()
-	set category = "GameMaster.Triunfos"
+	set category = "Director de juego.Triunfos"
 	set name = "VerificarPQ"
 	if(!holder)
 		return
@@ -144,7 +144,7 @@
 	popup.open()
 
 /client/proc/stop_restart()
-	set category = "Server.Round Control"
+	set category = "Servidor.Round Control"
 	set name = "Detener Reiniciar"
 	if(!holder)
 		return
@@ -152,7 +152,7 @@
 	message_admins("[usr] detuvo el reinicio de 15 minutos despues de una votacion exitosa.")
 
 /client/proc/adjust_pq()
-	set category = "GameMaster.Triunfos"
+	set category = "Director de juego.Triunfos"
 	set name = "AjustarPQ"
 	if(!holder)
 		return
@@ -254,4 +254,3 @@
 	if(!curcomm)
 		curcomm = 0
 	return curcomm
-

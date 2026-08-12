@@ -7,19 +7,19 @@ GLOBAL_LIST_INIT(redeemed_codes, list())
 
 
 /client/proc/generate_codes()
-	set category = "GameMaster.Codes"
+	set category = "Director de juego.Codes"
 	set name = "Generar codigo"
 
 	generate_redemption_code()
 
 /client/proc/generate_bulk_codes()
-	set category = "GameMaster.Codes"
+	set category = "Director de juego.Codes"
 	set name = "Generate Bulk Codes"
 
 	generate_bulk_redemption_code()
 
 /client/proc/generate_custom_code()
-	set category = "GameMaster.Codes"
+	set category = "Director de juego.Codes"
 	set name = "Generar codigo personalizado"
 
 	generate_custom_redemption_code()

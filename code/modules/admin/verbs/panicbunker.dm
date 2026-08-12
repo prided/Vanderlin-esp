@@ -1,5 +1,5 @@
 /client/proc/panicbunker()
-	set category = "Server"
+	set category = "Servidor"
 	set name = "Toggle Panic Bunker"
 	if (!CONFIG_GET(flag/sql_enabled))
 		to_chat(usr, "<span class='adminnotice'>¡La base de datos no esta habilitada!</span>")

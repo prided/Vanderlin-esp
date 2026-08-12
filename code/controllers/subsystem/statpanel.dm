@@ -23,41 +23,41 @@ SUBSYSTEM_DEF(statpanels)
 		var/datum/map_config/cached = SSmapping.next_map_config
 
 		if(isnull(SSmapping.config))
-			global_data = list("Loading")
+			global_data = list("Cargando")
 		else
-			global_data = list("Map: [SSmapping.config.map_name]")
+			global_data = list("Mapa: [SSmapping.config.map_name]")
 
 		// if(SSmapping.config?.mapping_url)
 		// 	global_data += list(list("same_line", " | (View in Browser)", "action=openWebMap"))
 
 		if(cached)
-			global_data += "Next Map: [cached.map_name]"
+			global_data += "Siguiente mapa: [cached.map_name]"
 
 
 		var/true_round_time = "[ROUND_TIME()]"
 		if(SSticker.HasRoundStarted())
 			true_round_time = "[DisplayTimeText(world.time - SSticker.round_start_time, 1)]"
 		global_data += list(
-			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]",
-			"Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss", world.timezone)]",
-			"Round Time: [true_round_time]",
-			"In-Character Time: [station_time_timestamp()]",
-			"Time of Day: [GLOB.tod]",
-			"Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)",
+			"ID de ronda: [GLOB.round_id ? GLOB.round_id : "NULO"]",
+			"Hora del servidor: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss", world.timezone)]",
+			"Tiempo de ronda: [true_round_time]",
+			"Hora del mundo: [station_time_timestamp()]",
+			"Momento del dia: [GLOB.tod]",
+			"Dilatacion temporal: [round(SStime_track.time_dilation_current,1)]% PROM:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)",
 		)
 
 		if(SSgamemode.roundvoteend)
 			var/ticker_time = world.time - SSticker.round_start_time
 			var/time_left = SSgamemode.round_ends_at - ticker_time
-			global_data += "Round End: [DisplayTimeText(time_left, 1)]"
+			global_data += "Fin de ronda: [DisplayTimeText(time_left, 1)]"
 
 		if(SSticker.reboot_timer)
 			var/reboot_time = timeleft(SSticker.reboot_timer)
 			if(reboot_time)
-				global_data += "Reboot: [DisplayTimeText(reboot_time, 1)]"
+				global_data += "Reinicio: [DisplayTimeText(reboot_time, 1)]"
 		// admin must have delayed round end
 		else if(SSticker.ready_for_reboot)
-			global_data += "Reboot: DELAYED"
+			global_data += "Reinicio: DEMORADO"
 
 		src.currentrun = GLOB.clients.Copy()
 		mc_data = null
@@ -125,7 +125,7 @@ SUBSYSTEM_DEF(statpanels)
 		return
 	target.stat_panel.send_message("update_stat", list(
 		"global_data" = global_data,
-		"ping_str" = "Ping: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)",
+		"ping_str" = "Ping: [round(target.lastping, 1)]ms (Promedio: [round(target.avgping, 1)]ms)",
 		"other_str" = target.mob?.get_status_tab_items(),
 	))
 

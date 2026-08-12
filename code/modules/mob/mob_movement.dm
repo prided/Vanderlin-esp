@@ -588,7 +588,7 @@
 	playsound_local(src, 'sound/misc/click.ogg', 100)
 
 /client/proc/ghostears()
-	set category = "Admin.Ghost"
+	set category = "Administracion.Ghost"
 	set name = "Hear Speech"
 	if(!holder)
 		return
@@ -602,7 +602,7 @@
 		to_chat(src, span_info("I will hear like a mortal."))
 
 /client/proc/ghostwhispers()
-	set category = "Admin.Ghost"
+	set category = "Administracion.Ghost"
 	set name = "Hear Whispers"
 	if(!holder)
 		return
@@ -616,7 +616,7 @@
 		to_chat(src, span_info("I will hear like a mortal."))
 
 /client/proc/ghosteyes()
-	set category = "Admin.Ghost"
+	set category = "Administracion.Ghost"
 	set name = "See Emotes"
 	if(!holder)
 		return
@@ -631,7 +631,7 @@
 
 
 /client/proc/ghost_up()
-	set category = "Admin.Ghost"
+	set category = "Administracion.Ghost"
 	set name = "GhostUp"
 	if(!holder)
 		return
@@ -640,7 +640,7 @@
 		mob.up()
 
 /client/proc/ghost_down()
-	set category = "Admin.Ghost"
+	set category = "Administracion.Ghost"
 	set name = "GhostDown"
 	if(!holder)
 		return

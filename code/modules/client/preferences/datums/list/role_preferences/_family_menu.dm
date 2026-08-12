@@ -11,7 +11,7 @@
 /datum/family_middleware/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new /datum/tgui(user, src, "FamilyPrefs", "Family & Bonds")
+		ui = new /datum/tgui(user, src, "FamilyPrefs", "Familia y vinculos")
 		ui.open()
 
 /datum/family_middleware/ui_state(mob/user)
@@ -34,16 +34,16 @@
 	var/list/job_filter = prefs.read_preference(/datum/preference/list_type/role_setting/picker/family_job_filler) || list()
 
 	var/list/ui_family_modes = list(
-		list("key" = FAMILY_NONE, "label" = "None", "icon" = "ban", "desc" = "No family assignment. You arrive as a stranger."),
-		list("key" = FAMILY_PARTIAL, "label" = "Partial", "icon" = "seedling", "desc" = "Join a local house as a child or, if older, as an aunt or uncle."),
-		list("key" = FAMILY_NEWLYWED, "label" = "Newlywed", "icon" = "ring", "desc" = "Arrive with a spouse only, no broader house assignment."),
-		list("key" = FAMILY_FULL, "label" = "Full", "icon" = "crown", "desc" = "Become a house founder or patriarch/matriarch of an existing house.")
+		list("key" = FAMILY_NONE, "label" = "Ninguna", "icon" = "ban", "desc" = "Sin asignacion familiar. Llegas como desconocido."),
+		list("key" = FAMILY_PARTIAL, "label" = "Parcial", "icon" = "seedling", "desc" = "Unete a una casa local como hijo o, si eres mayor, como tia o tio."),
+		list("key" = FAMILY_NEWLYWED, "label" = "Recien casado", "icon" = "ring", "desc" = "Llegas solo con pareja, sin una casa familiar mas amplia."),
+		list("key" = FAMILY_FULL, "label" = "Completa", "icon" = "crown", "desc" = "Conviertete en fundador, patriarca o matriarca de una casa existente.")
 	)
 
 	var/list/ui_gender_prefs = list(
-		list("key" = ANY_GENDER, "label" = "Any", "icon" = "genderless"),
-		list("key" = SAME_GENDER, "label" = "Same", "icon" = "venus-mars"),
-		list("key" = DIFFERENT_GENDER, "label" = "Opposite", "icon" = "transgender")
+		list("key" = ANY_GENDER, "label" = "Cualquiera", "icon" = "genderless"),
+		list("key" = SAME_GENDER, "label" = "Mismo", "icon" = "venus-mars"),
+		list("key" = DIFFERENT_GENDER, "label" = "Diferente", "icon" = "transgender")
 	)
 
 	var/list/all_species = list()
@@ -60,16 +60,16 @@
 		all_faiths += list(list("name" = F.name, "path" = "[faith_type]"))
 
 	var/list/all_job_groups = list(
-		list("label" = "Noble", "key" = "noble"),
-		list("label" = "Garrison", "key" = "garrison"),
+		list("label" = "Nobleza", "key" = "noble"),
+		list("label" = "Guarnicion", "key" = "garrison"),
 		list("label" = "Gallowband", "key" = "gallowband"),
-		list("label" = "Church", "key" = "church"),
-		list("label" = "Inquisition", "key" = "inquisition"),
-		list("label" = "Serf", "key" = "serf"),
-		list("label" = "Company", "key" = "company"),
-		list("label" = "Peasant", "key" = "peasant"),
-		list("label" = "Apprentice", "key" = "apprentice"),
-		list("label" = "Wanderer", "key" = "allmig"),
+		list("label" = "Iglesia", "key" = "church"),
+		list("label" = "Inquisicion", "key" = "inquisition"),
+		list("label" = "Siervos", "key" = "serf"),
+		list("label" = "Compania", "key" = "company"),
+		list("label" = "Campesinos", "key" = "peasant"),
+		list("label" = "Aprendices", "key" = "apprentice"),
+		list("label" = "Errantes", "key" = "allmig"),
 	)
 
 
@@ -142,7 +142,7 @@
 
 			var/pronoun_pref = prefs.read_preference(/datum/preference/choiced/pronouns)
 			if((pronoun_pref == THEY_THEM || pronoun_pref == IT_ITS) && choice != ANY_GENDER)
-				to_chat(owner, span_warning("With neutral pronouns, you may only choose [ANY_GENDER]."))
+				to_chat(owner, span_warning("Con pronombres neutrales solo puedes elegir [spanish_gender_pref_label(ANY_GENDER)]."))
 				return FALSE
 
 			prefs.write_preference(/datum/preference/choiced/gender_choice, choice)

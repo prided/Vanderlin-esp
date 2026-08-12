@@ -24,12 +24,17 @@
 		allowed_voices = VOICE_TYPES_LIST
 	if(length(allowed_voices) == 1)
 		prefs.write_preference(/datum/preference/choiced/voice_type, allowed_voices[1])
-		to_chat(user, span_warning("This species can only use the [prefs.read_preference(/datum/preference/choiced/voice_type)] voice type."))
+		to_chat(user, span_warning("Esta especie solo puede usar el tipo de voz [spanish_voice_type_label(prefs.read_preference(/datum/preference/choiced/voice_type))]."))
 		return
 
-	var/voicetype_input = browser_input_list(user, "CHOOSE YOUR HERO'S VOICE TYPE", "DISCARD SOCIETY'S EXPECTATIONS", allowed_voices)
-	if(voicetype_input)
-		prefs.write_preference(/datum/preference/choiced/voice_type, voicetype_input)
-		if(voicetype_input == VOICE_TYPE_ANDRO)
-			to_chat(user, span_warning("This will use the feminine voicepack pitched down a bit to achieve a more androgynous sound."))
-		to_chat(user, span_warning("Your character will now vocalize with a [LOWER_TEXT(prefs.read_preference(/datum/preference/choiced/voice_type))] affect."))
+	var/list/labelled_voices = list()
+	for(var/voice_value in allowed_voices)
+		labelled_voices[spanish_voice_type_label(voice_value)] = voice_value
+	var/current_voice = prefs.read_preference(/datum/preference/choiced/voice_type)
+	var/voice_label = browser_input_list(user, "ELIGE EL TIPO DE VOZ DE TU HEROE", "IGNORA LAS EXPECTATIVAS SOCIALES", labelled_voices, spanish_voice_type_label(current_voice))
+	if(voice_label)
+		var/voice_value = labelled_voices[voice_label]
+		prefs.write_preference(/datum/preference/choiced/voice_type, voice_value)
+		if(voice_value == VOICE_TYPE_ANDRO)
+			to_chat(user, span_warning("Se usara el paquete de voz femenino con un tono un poco mas grave para lograr un sonido mas androgino."))
+		to_chat(user, span_warning("Tu personaje ahora vocalizara con una voz [LOWER_TEXT(spanish_voice_type_label(prefs.read_preference(/datum/preference/choiced/voice_type)))]."))

@@ -1,5 +1,5 @@
 /client/proc/edit_admin_permissions()
-	set category = "Admin.Gestion"
+	set category = "Administracion.Gestion"
 	set name = "Panel de permisos"
 	set desc = "Editar permisos de administrador"
 	if(!check_rights(R_PERMISSIONS))

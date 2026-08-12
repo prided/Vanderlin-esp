@@ -1,5 +1,5 @@
 /client/proc/toggle_jobs_for_persistent()
-	set category = "Admin.Jobs"
+	set category = "Administracion.Jobs"
 	set name = "Toggle all jobs for persistent"
 
 	if(!check_rights(R_ADMIN))

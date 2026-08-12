@@ -29,7 +29,11 @@
 	H.age = value
 
 /datum/preference/choiced/age/handle_link(datum/preferences/prefs, mob/user)
-	var/new_age = browser_input_list(user, "SELECT YOUR HERO'S AGE", "YILS DEAD", prefs.pref_species.possible_ages, prefs.read_preference(/datum/preference/choiced/age))
-	if(new_age)
-		prefs.write_preference(/datum/preference/choiced/age, new_age)
+	var/list/labelled_ages = list()
+	for(var/age_value in prefs.pref_species.possible_ages)
+		labelled_ages[spanish_age_label(age_value)] = age_value
+	var/current_age = prefs.read_preference(/datum/preference/choiced/age)
+	var/new_age_label = browser_input_list(user, "ELIGE LA EDAD DE TU HEROE", "YILS TRANSCURRIDOS", labelled_ages, spanish_age_label(current_age))
+	if(new_age_label)
+		prefs.write_preference(/datum/preference/choiced/age, labelled_ages[new_age_label])
 		prefs.reset_jobs(user)

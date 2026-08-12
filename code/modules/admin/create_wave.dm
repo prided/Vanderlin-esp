@@ -753,7 +753,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 		view_outfit(usr, O)
 
 /client/proc/wave_creation_tools()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Wave Creation Tools"
 
 	if(!check_rights(R_DEBUG))

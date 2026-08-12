@@ -97,7 +97,7 @@
 
 /client/proc/test_achievement_toast()
 	set name = "Test Achievement Toast"
-	set category = "Debug"
+	set category = "Depuracion"
 
 	var/datum/award/achievement/boss/deep/test_award = new()
 

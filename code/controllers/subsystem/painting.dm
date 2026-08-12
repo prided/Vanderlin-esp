@@ -28,7 +28,7 @@ SUBSYSTEM_DEF(paintings)
 		var/json_list = json_decode(file2text(json_file))
 		return json_list
 	else
-		message_admins("!!! _painting_titles.json no longer exists, previous painting title list has been lost. !!!")
+		message_admins("!!! _painting_titles.json ya no existe; se perdio la lista anterior de titulos de pinturas. !!!")
 
 /datum/controller/subsystem/paintings/proc/file2playerpainting(filename)
 	if(!filename)
@@ -43,7 +43,7 @@ SUBSYSTEM_DEF(paintings)
 
 /datum/controller/subsystem/paintings/proc/playerpainting2file(icon/painting, painting_title = "Unknown", author = "Unknown", author_ckey = "Unknown", canvas_size, obj/item/canvas/canvas)
 	if(!painting)
-		return "There is no provided painting!"
+		return "No se proporciono ninguna pintura."
 	if(fexists("data/player_generated_paintings/[url_encode(painting_title)].json"))
 		var/list/painting_data = paintings[painting_title]
 		if(painting_data["author_ckey"] == author_ckey)
@@ -51,17 +51,17 @@ SUBSYSTEM_DEF(paintings)
 				for(var/client/client in GLOB.clients)
 					if(client.ckey == author_ckey)
 						if(is_misc_banned(author_ckey, BAN_MISC_PUBLISH))
-							return "This author is banned from uploading!"
+							return "Este autor tiene prohibido subir pinturas."
 						if(!(istext(painting_title) && istext(author) && istext(author_ckey)))
-							return "This painting is incorrectly formatted!"
-						var/replace = tgui_alert(client, "Someone wants to replace [painting_title] with another one by you, do you want to replace this?", "Confirmar", list("Yes", "No"))
-						if(replace != "Yes")
+							return "Esta pintura tiene un formato incorrecto."
+						var/replace = tgui_alert(client, "Alguien quiere reemplazar [painting_title] por otra pintura tuya. Deseas reemplazarla?", "Confirmar", list("Si", "No"))
+						if(replace != "Si")
 							canvas.reject = TRUE
-							return "there is already a painting by this title!"
+							return "Ya existe una pintura con este titulo."
 						else
 							del_player_painting(painting_title)
 	if(!(istext(painting_title) && istext(author) && istext(author_ckey)))
-		return "This painting is incorrectly formatted!"
+		return "Esta pintura tiene un formato incorrecto."
 
 	var/list/contents = list("painting_title" = "[painting_title]", "author" = "[author]", "author_ckey" = "[author_ckey]", "canvas_size" = canvas_size)
 	//url_encode should escape all the characters that do not belong in a file name. If not, god help us
@@ -73,14 +73,14 @@ SUBSYSTEM_DEF(paintings)
 		_painting_titles_contents += "[url_encode(painting_title)]"
 		fdel("data/player_generated_paintings/_painting_titles.json")
 		text2file(json_encode(_painting_titles_contents), "data/player_generated_paintings/_painting_titles.json")
-		message_admins("Book [painting_title] has been saved to the player book database by [author_ckey]([author])")
+		message_admins("La pintura [painting_title] fue guardada en la base de pinturas por [author_ckey] ([author]).")
 		fcopy(painting, "data/player_generated_paintings/paintings/[painting_title].png")
-		return "You have a feeling the newly written book will remain in the archive for a very long time..."
+		return "Sientes que la nueva pintura permanecera en el archivo durante mucho tiempo..."
 	else
-		message_admins("!!! _painting_titles.json no longer exists, previous book title list has been lost. making a new one without old books... !!!")
+		message_admins("!!! _painting_titles.json ya no existe; se perdio la lista anterior de titulos. Se creara una nueva sin las pinturas antiguas... !!!")
 		text2file(json_encode(list(painting_title)), "data/player_generated_paintings/_painting_titles.json")
 		fcopy(painting, "data/player_generated_paintings/paintings/[painting_title].png")
-		return "_painting_titles.json no longer exists, yell at your server host that some paintings have been lost!"
+		return "_painting_titles.json ya no existe; avisa al administrador del servidor que se perdieron algunas pinturas."
 
 /datum/controller/subsystem/paintings/proc/get_random_painting(canvas_size)
 	var/list/painting_titles = pull_player_painting_titles()

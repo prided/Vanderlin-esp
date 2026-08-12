@@ -329,7 +329,7 @@
 
 
 /client/proc/run_particle_weather()
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set name = "Run Particle Weather"
 	set desc = "Triggers a particle weather"
 

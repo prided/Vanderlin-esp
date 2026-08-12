@@ -1,5 +1,5 @@
 /client/proc/play_sound(S as sound)
-	set category = "GameMaster.Sonido"
+	set category = "Director de juego.Sonido"
 	set name = "Play Global Sound"
 	if(!check_rights(R_SOUND))
 		return
@@ -96,7 +96,7 @@
 		mob.update_channel_volume(CHANNEL_AMBIENCE, prefs.read_preference(/datum/preference/numeric/mastervol))
 
 /client/proc/play_local_sound(S as sound)
-	set category = "GameMaster.Sonido"
+	set category = "Director de juego.Sonido"
 	set name = "Play Local Sound"
 	if(!check_rights(R_SOUND))
 		return
@@ -107,7 +107,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Play Local Sound") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/play_web_sound()
-	set category = "GameMaster.Sonido"
+	set category = "Director de juego.Sonido"
 	set name = "Play Internet Sound"
 	if(!check_rights(R_SOUND))
 		return
@@ -190,7 +190,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Play Internet Sound")
 
 /client/proc/set_round_end_sound(S as sound)
-	set category = "GameMaster.Sonido"
+	set category = "Director de juego.Sonido"
 	set name = "Set Round End Sound"
 	if(!check_rights(R_SOUND))
 		return
@@ -202,7 +202,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Set Round End Sound") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/stop_sounds()
-	set category = "GameMaster.Sonido"
+	set category = "Director de juego.Sonido"
 	set name = "Stop All Playing Sounds"
 	if(!src.holder)
 		return

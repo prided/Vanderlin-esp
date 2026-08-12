@@ -182,7 +182,7 @@
 
 /* Complex Spans */
 /// Ones where span_X isn't just the class
-#define span_admin_log(str) ("<span class='admin'><span class='prefix'>ADMIN LOG: </span><span class='message linkify'>" + str + "</span></span>")
+#define span_admin_log(str) ("<span class='admin'><span class='prefix'>REGISTRO ADMIN: </span><span class='message linkify'>" + str + "</span></span>")
 
 /* Tooltips */
 #define span_tooltip(tip, main_text) ("<span data-component=\"Tooltip\" data-content=\"" + tip + "\" class=\"tooltip\">" + main_text + "</span>")

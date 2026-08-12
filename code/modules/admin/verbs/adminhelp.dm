@@ -612,7 +612,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	adminhelp(msg)
 
 /client/verb/adminhelp(msg as message)
-	set category = "Admin"
+	set category = "Administracion"
 	set name = "Adminhelp"
 
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
@@ -649,13 +649,13 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 /client/proc/self_notes()
 	set name = "View Admin Remarks"
-	set category = "Admin"
+	set category = "Administracion"
 	set desc = "Ver las notas que los administradores han escrito sobre usted"
 
 	browse_messages(null, usr.ckey, null, TRUE)
 
 /client/verb/view_latest_ticket()
-	set category = "Admin"
+	set category = "Administracion"
 	set name = "View Latest Ticket"
 
 

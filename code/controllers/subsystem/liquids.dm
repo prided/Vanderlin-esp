@@ -189,7 +189,7 @@ SUBSYSTEM_DEF(liquids)
 
 
 /client/proc/toggle_liquid_debug()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Liquid Groups Color Debug"
 	set desc = "Liquid Groups Color Debug."
 	if(!holder)

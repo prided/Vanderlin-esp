@@ -4,6 +4,110 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 GLOBAL_LIST_INIT(name_adjustments, list())
 
+/proc/spanish_age_label(value)
+	switch(value)
+		if(AGE_CHILD)
+			return "Joven"
+		if(AGE_ADULT)
+			return "Adulto"
+		if(AGE_MIDDLEAGED)
+			return "Mediana edad"
+		if(AGE_OLD)
+			return "Anciano"
+		if(AGE_IMMORTAL)
+			return "Inmortal"
+	return value
+
+/proc/spanish_pronoun_label(value)
+	switch(value)
+		if(HE_HIM)
+			return "El/lo"
+		if(SHE_HER)
+			return "Ella/la"
+		if(THEY_THEM)
+			return "Elle/le"
+		if(IT_ITS)
+			return "Ello/lo"
+	return value
+
+/proc/spanish_voice_type_label(value)
+	switch(value)
+		if(VOICE_TYPE_MASC)
+			return "Masculina (especie)"
+		if(VOICE_TYPE_MASC_FOP)
+			return "Masculina (humen, petimetre)"
+		if(VOICE_TYPE_FEM)
+			return "Femenina (especie)"
+		if(VOICE_TYPE_FEM_DAINTY)
+			return "Femenina (humen, delicada)"
+		if(VOICE_TYPE_FEM_HAUGHTY)
+			return "Femenina (humen, altiva)"
+		if(VOICE_TYPE_ANDRO)
+			return "Androgina"
+	return value
+
+/proc/spanish_accent_label(value)
+	switch(value)
+		if(ACCENT_NONE)
+			return "Sin acento"
+		if(ACCENT_DEFAULT)
+			return "Acento de especie"
+		if(ACCENT_DWARF)
+			return "Acento enano"
+		if(ACCENT_DELF)
+			return "Acento de elfo oscuro"
+		if(ACCENT_ELF)
+			return "Acento elfico"
+		if(ACCENT_TIEFLING)
+			return "Acento tiefling"
+		if(ACCENT_HORC)
+			return "Acento semiorco"
+		if(ACCENT_TRITON)
+			return "Acento triton"
+		if(ACCENT_GRENZ)
+			return "Acento grenzelhoft"
+		if(ACCENT_PIRATE)
+			return "Acento pirata"
+		if(ACCENT_MIDDLE_SPEAK)
+			return "Habla media (semiorco antiguo)"
+		if(ACCENT_ZALAD)
+			return "Acento zalad"
+		if(ACCENT_HALFLING)
+			return "Sin maldecir"
+		if(ACCENT_KOBOLD)
+			return "Habla escamosa"
+		if(ACCENT_ROUSMAN)
+			return "Acento rousman"
+		if(ACCENT_WINTERMARE)
+			return "Acento wintermare"
+		if(ACCENT_OSSLAND)
+			return "Acento ossland"
+		if(ACCENT_ROCKHILL)
+			return "Acento rockhill"
+	return value
+
+/proc/spanish_family_label(value)
+	switch(value)
+		if(FAMILY_NONE, null)
+			return "Ninguna"
+		if(FAMILY_PARTIAL)
+			return "Hermanos"
+		if(FAMILY_NEWLYWED)
+			return "Recien casado"
+		if(FAMILY_FULL)
+			return "Progenitor"
+	return value
+
+/proc/spanish_gender_pref_label(value)
+	switch(value)
+		if(ANY_GENDER, null)
+			return "Cualquier genero"
+		if(SAME_GENDER)
+			return "Mismo genero"
+		if(DIFFERENT_GENDER)
+			return "Genero diferente"
+	return value
+
 /datum/preferences
 	var/client/parent
 	//doohickeys for savefiles
@@ -180,6 +284,12 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	var/datum/culture/pref_culture = read_preference(/datum/preference/choiced/culture)
 	var/datum/faith/selected_faith = GLOB.faith_list[pref_patron.associated_faith]
 	var/datum/job/high_job
+	var/display_age = spanish_age_label(read_preference(/datum/preference/choiced/age))
+	var/display_pronouns = spanish_pronoun_label(read_preference(/datum/preference/choiced/pronouns))
+	var/display_voice_type = spanish_voice_type_label(read_preference(/datum/preference/choiced/voice_type))
+	var/display_accent = spanish_accent_label(read_preference(/datum/preference/choiced/selected_accent))
+	var/display_family = spanish_family_label(read_preference(/datum/preference/choiced/family_mode))
+	var/display_gender_pref = spanish_gender_pref_label(read_preference(/datum/preference/choiced/gender_choice))
 
 	var/loadout1_str = _get_loadout_slot(1)
 	var/datum/loadout_item/loadout1_item = loadout1_str ? GLOB.loadout_items[text2path(loadout1_str)] : null
@@ -197,7 +307,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	user?.client.acquire_dpi()
 
 	dat += {"
-<html lang="en">
+<html lang="es">
 <head>
 	<style>
 		body {
@@ -397,7 +507,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 			// Update fields only if they exist in data
 			if('name' in data) updateField('char-name', data.name || '');
-			if('job' in data) updateField('char-job', data.job || 'None');
+			if('job' in data) updateField('char-job', data.job || 'Ninguna');
 			if('faith' in data) updateField('char-faith', data.faith || '');
 			if('species' in data) updateField('char-species', data.species || '');
 			if('patron' in data) updateField('char-patron', data.patron || '');
@@ -405,16 +515,16 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			if('age' in data) updateField('char-age', data.age || '');
 			if('domhand' in data) updateField('char-domhand', data.domhand || '');
 			if('pronouns' in data) updateField('char-pronouns', data.pronouns || '');
-			if('family' in data) updateField('char-family', data.family || 'None');
-			if('genderpref' in data) updateField('char-genderpref', data.genderpref || 'Any');
-			if('spouse' in data) updateField('char-spouse', data.spouse || 'None');
+			if('family' in data) updateField('char-family', data.family || 'Ninguna');
+			if('genderpref' in data) updateField('char-genderpref', data.genderpref || 'Cualquiera');
+			if('spouse' in data) updateField('char-spouse', data.spouse || 'Ninguna');
 			if('voicetype' in data) updateField('char-voicetype', data.voicetype || '');
 			if('accent' in data) updateField('char-accent', data.accent || '');
-			if('loadout1' in data) updateField('char-loadout1', data.loadout1 || 'None');
-			if('loadout2' in data) updateField('char-loadout2', data.loadout2 || 'None');
-			if('loadout3' in data) updateField('char-loadout3', data.loadout3 || 'None');
+			if('loadout1' in data) updateField('char-loadout1', data.loadout1 || 'Ninguno');
+			if('loadout2' in data) updateField('char-loadout2', data.loadout2 || 'Ninguno');
+			if('loadout3' in data) updateField('char-loadout3', data.loadout3 || 'Ninguno');
 			if('triumphs' in data) updateField('char-triumphs', data.triumphs || '0');
-			if('culture' in data) updateField('char-culture', data.culture || 'None');
+			if('culture' in data) updateField('char-culture', data.culture || 'Ninguna');
 
 			if('headshot' in data) updateHeadshot(data.headshot);
 			if('bespecial' in data) updateBeSpecial(data.bespecial === '1');
@@ -468,7 +578,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	</div>
 	<div class="sprite" style="top:11px; left:122px; width:46px; height:9px; background-image: url('header_class.png');">
 		<a href='byond://?_src_=prefs;preference=job;task=menu' style="text-decoration: none; display: block; width: 100%; height: 100%;">
-			<div id="char-job" class="clickable-text auto-shrink" style="width:46px; height:9px;">[high_job || "None"]</div>
+			<div id="char-job" class="clickable-text auto-shrink" style="width:46px; height:9px;">[high_job || "Ninguna"]</div>
 		</a>
 	</div>
 	<div class="sprite" style="top:11px; left:172px; width:42px; height:9px; background-image: url('header_faith.png');">
@@ -497,27 +607,27 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 
 	<div class="sprite" style="top:70px; left:118px; width:46px; height:9px; background-image: url('body_age.png');">
 		<a href='byond://?_src_=prefs;preference=age;task=input' style="text-decoration: none; display: block; width: 100%; height: 100%;">
-			<div id="char-age" class="clickable-text auto-shrink" style="width:46px; height:9px;">[read_preference(/datum/preference/choiced/age)]</div>
+			<div id="char-age" class="clickable-text auto-shrink" style="width:46px; height:9px;">[display_age]</div>
 		</a>
 	</div>
 	<div class="sprite" style="top:70px; left:168px; width:53px; height:9px; background-image: url('body_flaw.png');">
 		<a href='byond://?_src_=prefs;task=select_quirks' style="text-decoration: none; display: block; width: 100%; height: 100%;">
-			<div class="clickable-text auto-shrink" style="width:53px; height:9px;">Select Quirks</div>
+			<div class="clickable-text auto-shrink" style="width:53px; height:9px;">Elegir rasgos</div>
 		</a>
 	</div>
 	<div class="sprite" style="top:89px; left:119px; width:46px; height:9px; background-image: url('body_dominanthand.png');">
 		<a href='byond://?_src_=prefs;preference=domhand' style="text-decoration: none; display: block; width: 100%; height: 100%;">
-			<div id="char-domhand" class="clickable-text auto-shrink" style="width:46px; height:9px;">[read_preference(/datum/preference/choiced/domhand) == 1 ? "Left" : "Right"]</div>
+			<div id="char-domhand" class="clickable-text auto-shrink" style="width:46px; height:9px;">[read_preference(/datum/preference/choiced/domhand) == 1 ? "Izquierda" : "Derecha"]</div>
 		</a>
 	</div>
 	<div class="sprite" style="top:89px; left:168px; width:53px; height:9px; background-image: url('body_ancestry.png');">
 		<a href='byond://?_src_=prefs;preference=skin_tone;task=input' style="text-decoration: none; display: block; width: 100%; height: 100%;">
-			<div class="clickable-text auto-shrink" style="width:53px; height:9px;">Change</div>
+			<div class="clickable-text auto-shrink" style="width:53px; height:9px;">Cambiar</div>
 		</a>
 	</div>
 	<div class="sprite" style="top:108px; left:119px; width:46px; height:9px; background-image: url('body_pronouns.png');">
 		<a href='byond://?_src_=prefs;preference=pronouns;task=input' style="text-decoration: none; display: block; width: 100%; height: 100%;">
-			<div id="char-pronouns" class="clickable-text auto-shrink" style="width:46px; height:9px;">[read_preference(/datum/preference/choiced/pronouns)]</div>
+			<div id="char-pronouns" class="clickable-text auto-shrink" style="width:46px; height:9px;">[display_pronouns]</div>
 		</a>
 	</div>
 	<a href='byond://?_src_=prefs;preference=gender'><div class="sprite" style="top:108px; left:169px; width:53px; height:9px; background-image: url('body_bodytype.png');">
@@ -525,34 +635,34 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	</div></a>
 
 	<a href='byond://?_src_=prefs;preference=family'><div class="sprite" style="top:150px; left:120px; width:73px; height:9px; background-image: url('family_type.png');">
-		<div id="char-family" class="clickable-text auto-shrink" style="width:73px; height:9px;">[read_preference(/datum/preference/choiced/family_mode) ? read_preference(/datum/preference/choiced/family_mode) : "None"]</div>
+		<div id="char-family" class="clickable-text auto-shrink" style="width:73px; height:9px;">[display_family]</div>
 	</div></a>
 	<a href='byond://?_src_=prefs;preference=family'><div class="sprite" style="top:169px; left:120px; width:73px; height:9px; background-image: url('gender_pref.png');">
-		<div id="char-genderpref" class="clickable-text auto-shrink" style="width:73px; height:9px;">[read_preference(/datum/preference/choiced/gender_choice) ? read_preference(/datum/preference/choiced/gender_choice) : "Any"]</div>
+		<div id="char-genderpref" class="clickable-text auto-shrink" style="width:73px; height:9px;">[display_gender_pref]</div>
 	</div></a>
 	<a href='byond://?_src_=prefs;preference=family'><div class="sprite" style="top:188px; left:120px; width:73px; height:9px; background-image: url('spouse_pref.png');">
-		<div id="char-spouse" class="clickable-text auto-shrink" style="width:73px; height:9px;">[read_preference(/datum/preference/text/setspouse) ? read_preference(/datum/preference/text/setspouse) : "None"]</div>
+		<div id="char-spouse" class="clickable-text auto-shrink" style="width:73px; height:9px;">[read_preference(/datum/preference/text/setspouse) ? read_preference(/datum/preference/text/setspouse) : "Ninguna"]</div>
 	</div></a>
 
 	<a href='byond://?_src_=prefs;preference=culture;task=input'><div class="sprite" style="top:150px; left:207px; width:51px; height:9px; background-image: url('flavour_culture.png');">
-		<div id="char-culture" class="clickable-text auto-shrink" style="width:51px; height:9px;">[pref_culture ? pref_culture::name : "None"]</div>
+		<div id="char-culture" class="clickable-text auto-shrink" style="width:51px; height:9px;">[pref_culture ? pref_culture::name : "Ninguna"]</div>
 	</div></a>
 
 	<a href='byond://?_src_=prefs;preference=voice_type;task=input'><div class="sprite" style="top:154px; left:10px; width:46px; height:9px; background-image: url('voice_type.png');">
-		<div id="char-voicetype" class="clickable-text auto-shrink" style="width:46px; height:9px;">[read_preference(/datum/preference/choiced/voice_type)]</div>
+		<div id="char-voicetype" class="clickable-text auto-shrink" style="width:46px; height:9px;">[display_voice_type]</div>
 	</div></a>
 	<a href='byond://?_src_=prefs;preference=selected_accent;task=input'><div class="sprite" style="top:154px; left:60px; width:42px; height:9px; background-image: url('voice_accent.png');">
-		<div id="char-accent" class="clickable-text auto-shrink" style="width:42px; height:9px;">[read_preference(/datum/preference/choiced/selected_accent)]</div>
+		<div id="char-accent" class="clickable-text auto-shrink" style="width:42px; height:9px;">[display_accent]</div>
 	</div></a>
 
 	<a href='byond://?_src_=prefs;preference=loadout_item;loadout_number=1;task=loadout_store'><div class="sprite" style="top:194px; left:10px; width:51px; height:9px; background-image: url('loadout_item1.png');">
-		<div id="char-loadout1" class="clickable-text auto-shrink" style="width:51px; height:9px;">[loadout1_item ? loadout1_item.name : "None"]</div>
+		<div id="char-loadout1" class="clickable-text auto-shrink" style="width:51px; height:9px;">[loadout1_item ? loadout1_item.name : "Ninguno"]</div>
 	</div></a>
 	<a href='byond://?_src_=prefs;preference=loadout_item;loadout_number=2;task=loadout_store'><div class="sprite" style="top:213px; left:10px; width:51px; height:9px; background-image: url('loadout_item2.png');">
-		<div id="char-loadout2" class="clickable-text auto-shrink" style="width:51px; height:9px;">[loadout2_item ? loadout2_item.name : "None"]</div>
+		<div id="char-loadout2" class="clickable-text auto-shrink" style="width:51px; height:9px;">[loadout2_item ? loadout2_item.name : "Ninguno"]</div>
 	</div></a>
 	<a href='byond://?_src_=prefs;preference=loadout_item;loadout_number=3;task=loadout_store'><div class="sprite" style="top:232px; left:10px; width:51px; height:9px; background-image: url('loadout_item3.png');">
-		<div id="char-loadout3" class="clickable-text auto-shrink" style="width:51px; height:9px;">[loadout3_item ? loadout3_item.name : "None"]</div>
+		<div id="char-loadout3" class="clickable-text auto-shrink" style="width:51px; height:9px;">[loadout3_item ? loadout3_item.name : "Ninguno"]</div>
 	</div></a>
 
 	<div class="sprite" style="top:195px; left:82px; width:22px; height:7px; background-image: url('triumphs_display.png');">
@@ -620,7 +730,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	if(update_all || ("real_name" in fields_to_update))
 		params["name"] = read_preference(/datum/preference/text/real_name)
 	if(update_all || ("job" in fields_to_update))
-		params["job"] = high_job || "None"
+		params["job"] = high_job || "Ninguna"
 	if(update_all || ("faith" in fields_to_update))
 		params["faith"] = selected_faith?.name || ""
 	if(update_all || ("species" in fields_to_update))
@@ -630,35 +740,35 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	if(update_all || ("pq" in fields_to_update))
 		params["pq"] = get_playerquality(user.ckey, text = TRUE)
 	if(update_all || ("age" in fields_to_update))
-		params["age"] = read_preference(/datum/preference/choiced/age)
+		params["age"] = spanish_age_label(read_preference(/datum/preference/choiced/age))
 	if(update_all || ("domhand" in fields_to_update))
-		params["domhand"] = read_preference(/datum/preference/choiced/domhand) == 1 ? "Left" : "Right"
+		params["domhand"] = read_preference(/datum/preference/choiced/domhand) == 1 ? "Izquierda" : "Derecha"
 	if(update_all || ("pronouns" in fields_to_update))
-		params["pronouns"] = read_preference(/datum/preference/choiced/pronouns)
+		params["pronouns"] = spanish_pronoun_label(read_preference(/datum/preference/choiced/pronouns))
 	if(update_all || ("gender" in fields_to_update))
 		params["gender"] = read_preference(/datum/preference/choiced/gender) == MALE ? "M" : "F"
 	if(update_all || ("family" in fields_to_update))
-		params["family"] = read_preference(/datum/preference/choiced/family_mode) ? read_preference(/datum/preference/choiced/family_mode) : "None"
+		params["family"] = spanish_family_label(read_preference(/datum/preference/choiced/family_mode))
 	if(update_all || ("genderpref" in fields_to_update))
-		params["genderpref"] = read_preference(/datum/preference/choiced/gender_choice) ? read_preference(/datum/preference/choiced/gender_choice) : "Any"
+		params["genderpref"] = spanish_gender_pref_label(read_preference(/datum/preference/choiced/gender_choice))
 	if(update_all || ("spouse" in fields_to_update))
-		params["spouse"] = read_preference(/datum/preference/text/setspouse) ? read_preference(/datum/preference/text/setspouse) : "None"
+		params["spouse"] = read_preference(/datum/preference/text/setspouse) ? read_preference(/datum/preference/text/setspouse) : "Ninguna"
 	if(update_all || ("voice_type" in fields_to_update))
-		params["voicetype"] = read_preference(/datum/preference/choiced/voice_type)
+		params["voicetype"] = spanish_voice_type_label(read_preference(/datum/preference/choiced/voice_type))
 	if(update_all || ("accent" in fields_to_update))
-		params["accent"] = read_preference(/datum/preference/choiced/selected_accent)
+		params["accent"] = spanish_accent_label(read_preference(/datum/preference/choiced/selected_accent))
 	if(update_all || ("loadout1" in fields_to_update))
 		var/loadout1_str = _get_loadout_slot(1)
 		var/datum/loadout_item/loadout1_item = loadout1_str ? GLOB.loadout_items[text2path(loadout1_str)] : null
-		params["loadout1"] = loadout1_item ? loadout1_item.name : "None"
+		params["loadout1"] = loadout1_item ? loadout1_item.name : "Ninguno"
 	if(update_all || ("loadout2" in fields_to_update))
 		var/loadout2_str = _get_loadout_slot(2)
 		var/datum/loadout_item/loadout2_item = loadout2_str ? GLOB.loadout_items[text2path(loadout2_str)] : null
-		params["loadout2"] = loadout2_item ? loadout2_item.name : "None"
+		params["loadout2"] = loadout2_item ? loadout2_item.name : "Ninguno"
 	if(update_all || ("loadout3" in fields_to_update))
 		var/loadout3_str = _get_loadout_slot(3)
 		var/datum/loadout_item/loadout3_item = loadout3_str ? GLOB.loadout_items[text2path(loadout3_str)] : null
-		params["loadout3"] = loadout3_item ? loadout3_item.name : "None"
+		params["loadout3"] = loadout3_item ? loadout3_item.name : "Ninguno"
 	if(update_all || ("triumphs" in fields_to_update))
 		params["triumphs"] = user.get_triumphs() ? "\Roman [user.get_triumphs()]" : "0"
 	if(update_all || ("headshot" in fields_to_update))

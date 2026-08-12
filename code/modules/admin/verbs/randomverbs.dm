@@ -24,7 +24,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Drop Everything") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_subtle_message(mob/target in GLOB.mob_list)
-	set category = "GameMaster.Dioses"
+	set category = "Director de juego.Dioses"
 	set name = "Subtle Message"
 
 	if(!ismob(target))
@@ -125,7 +125,7 @@
 	return SPAN_PRAYER_WRAPPER(atmosphere_message)
 
 /client/proc/cmd_admin_mod_antag_rep(client/C in GLOB.clients, operation)
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set name = "Modify Antagonist Reputation"
 
 	if(!check_rights(R_ADMIN))
@@ -171,7 +171,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Modify Antagonist Reputation") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_world_narrate()
-	set category = "GameMaster.Narrar"
+	set category = "Director de juego.Narrar"
 	set name = "Global Narrate"
 
 	if(!check_rights(R_ADMIN))
@@ -187,7 +187,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Global Narrate") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/send_to_cryo(mob/M in GLOB.mob_list)
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Send To Cryo"
 
 	if(!check_rights(R_ADMIN))
@@ -208,7 +208,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Send To Cryo") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_direct_narrate(mob/M)
-	set category = "GameMaster.Narrar"
+	set category = "Director de juego.Narrar"
 	set name = "Direct Narrate"
 
 	if(!check_rights(R_ADMIN))
@@ -233,7 +233,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Direct Narrate") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_local_narrate(atom/A)
-	set category = "GameMaster.Narrar"
+	set category = "Director de juego.Narrar"
 	set name = "Local Narrate"
 
 	if(!check_rights(R_ADMIN))
@@ -254,7 +254,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Local Narrate") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_godmode(mob/M in GLOB.mob_list)
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	set name = "Godmode"
 	if(!check_rights(R_ADMIN))
 		return
@@ -356,7 +356,7 @@ Works kind of like entering the game with a new character. Character receives a 
 Traitors and the like can also be revived with the previous role mostly intact.
 /N */
 /client/proc/respawn_character()
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set name = "Respawn Character"
 	set desc = ""
 	if(!check_rights(R_ADMIN))
@@ -432,7 +432,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	return new_character
 
 /client/proc/cmd_admin_rejuvenate(mob/living/M in GLOB.mob_list)
-	set category = "GameMaster.Dioses"
+	set category = "Director de juego.Dioses"
 	set name = "Rejuvenecer"
 
 	if(!check_rights(R_ADMIN))
@@ -452,7 +452,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Rejuvinate") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_delete(atom/A as obj|mob|turf in world)
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Delete"
 
 	if(!check_rights(R_SPAWN|R_DEBUG))
@@ -461,7 +461,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	admin_delete(A)
 
 /client/proc/cmd_admin_list_open_jobs()
-	set category = "Admin.Jobs"
+	set category = "Administracion.Jobs"
 	set name = "Manage Job Slots"
 
 	if(!check_rights(R_DEBUG))
@@ -470,7 +470,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Manage Job Slots") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/add_job_key_whitelist()
-	set category = "Admin.Jobs"
+	set category = "Administracion.Jobs"
 	set name = "Whitelist a Job"
 
 	if(!check_rights(R_FUN))
@@ -507,7 +507,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	return TRUE
 
 /client/proc/cmd_admin_explosion(atom/O as obj|mob|turf in world)
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	set name = "Explosion"
 
 	if(!check_rights(R_ADMIN))
@@ -546,7 +546,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		return
 
 /client/proc/cmd_admin_gib(mob/living/M in GLOB.mob_list)
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	set name = "Gib"
 
 	if(!check_rights(R_ADMIN))
@@ -573,7 +573,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/cmd_admin_gib_self()
 	set name = "Gibself"
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 
 	if(!isliving(mob))
 		return
@@ -586,7 +586,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		living_mob.gib(1, 1, 1)
 
 /client/proc/cmd_admin_check_contents(mob/living/M in GLOB.mob_list)
-	set category = "GameMaster.Equipping"
+	set category = "Director de juego.Equipping"
 	set name = "Check Contents"
 
 	var/list/L = M.get_contents()
@@ -595,7 +595,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Check Contents") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_view_range()
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Change View Range"
 	set desc = ""
 
@@ -617,7 +617,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Change View Range", "[view]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/everyone_random()
-	set category = "GameMaster.Equipping"
+	set category = "Director de juego.Equipping"
 	set name = "Make Everyone Random"
 	set desc = ""
 
@@ -650,7 +650,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 
 /client/proc/toggle_random_events()
-	set category = "Server"
+	set category = "Servidor"
 	set name = "Toggle random events on/off"
 	set desc = ""
 	var/new_are = !CONFIG_GET(flag/allow_random_events)
@@ -664,7 +664,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Random Events", "[new_are ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_combo_hud()
-	set category = "Admin.Admin Preferences"
+	set category = "Administracion.Admin Preferences"
 	set name = "Toggle Combo HUD"
 	set desc = ""
 
@@ -696,7 +696,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	return A.hud_users_all_z_levels[mob]
 
 /client/proc/show_tip()
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Show Tip"
 	set desc = "Sends a tip (that you specify) to all players. After all \
 		you're the experienced player here."
@@ -723,7 +723,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Tip")
 
 /client/proc/toggle_hub()
-	set category = "Server"
+	set category = "Servidor"
 	set name = "Toggle Hub"
 
 	world.update_hub_visibility(!GLOB.hub_visibility)
@@ -737,7 +737,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/smite(mob/living/target as mob)
 	set name = "Smite"
-	set category = "GameMaster.Dioses"
+	set category = "Director de juego.Dioses"
 	if(!check_rights(R_ADMIN) || !check_rights(R_FUN))
 		return
 	var/static/list/punishment_list = list(
@@ -878,7 +878,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/heart_attack(mob/living/carbon/target as mob)
 	set name = "Heart Attack"
-	set category = "GameMaster.Dioses"
+	set category = "Director de juego.Dioses"
 	if(!check_rights(R_ADMIN) || !check_rights(R_FUN))
 		return
 
@@ -920,7 +920,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	log_admin("[key_name(usr)] punished [key_name(whom)] with [punishment].")
 
 /client/proc/cmd_admin_check_player_exp()	//Allows admins to determine who the newer players are.
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Tiempo de juego del jugador"
 	if(!check_rights(R_ADMIN))
 		return
@@ -1025,7 +1025,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/send_bird_letter(mob/M in GLOB.player_list)
 	set name = "Enviar carta de pajaro mensajero"
-	set category = "GameMaster.Interacciones"
+	set category = "Director de juego.Interacciones"
 
 	if(!ismob(M))
 		return
@@ -1061,7 +1061,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 ///This isn't showing in verbs for some reason??
 /client/proc/grant_ticket_to(mob/M in GLOB.player_list)
 	set name = "Grant Ticket To"
-	set category = "GameMaster.Interacciones"
+	set category = "Director de juego.Interacciones"
 
 	if(!ismob(M))
 		return

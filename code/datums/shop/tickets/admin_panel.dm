@@ -224,7 +224,7 @@
 
 /client/proc/open_ticket_granter()
 	set name = "Grant Ticket"
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 
 	if(!check_rights(R_ADMIN))
 		return

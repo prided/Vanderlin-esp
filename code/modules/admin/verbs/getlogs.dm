@@ -2,14 +2,14 @@
 /client/proc/getserverlogs()
 	set name = "Get Server Logs"
 	set desc = ""
-	set category = "Admin.Logs"
+	set category = "Administracion.Logs"
 
 	browseserverlogs()
 
 /client/proc/getcurrentlogs()
 	set name = "Get Current Logs"
 	set desc = ""
-	set category = "Admin.Logs"
+	set category = "Administracion.Logs"
 
 	browseserverlogs("[GLOB.log_directory]/")
 

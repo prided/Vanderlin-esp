@@ -85,7 +85,7 @@
 
 	var/channels_json = "\[[jointext(js_channels, ", ")]\]"
 	var/quiet_json = "\[[jointext(js_quiet, ", ")]\]"
-	var/default_channel = current_channel?.name || "Say"
+	var/default_channel = current_channel?.name || "Hablar"
 
 	return {"<!DOCTYPE html>
 <html>

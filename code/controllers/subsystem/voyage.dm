@@ -692,7 +692,7 @@ SUBSYSTEM_DEF(terrain_generation)
 
 /client/proc/list_all_ships_and_islands()
 	set name = "Lista de barcos e islas"
-	set category = "Debug"
+	set category = "Depuracion"
 
 	to_chat(src, "<b>==== BARCOS ====</b>")
 	for(var/datum/ship_data/ship in SSterrain_generation.ship_registry)

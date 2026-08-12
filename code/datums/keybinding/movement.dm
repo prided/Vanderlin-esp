@@ -33,8 +33,8 @@
 /datum/keybinding/movement/zlevel_upwards
 	hotkey_keys = list("Northeast") // PGUP
 	name = "Hacia arriba"
-	full_name = "Move Upwards"
-	description = "Moves your character up a z-level if possible"
+	full_name = "Subir"
+	description = "Mueve a tu personaje un nivel hacia arriba si es posible."
 
 /datum/keybinding/movement/zlevel_upwards/down(client/user, turf/target, mousepos_x, mousepos_y)
 	. = ..()
@@ -46,8 +46,8 @@
 /datum/keybinding/movement/zlevel_downwards
 	hotkey_keys = list("Southeast") // PGDOWN
 	name = "Hacia abajo"
-	full_name = "Move Downwards"
-	description = "Moves your character down a z-level if possible"
+	full_name = "Bajar"
+	description = "Mueve a tu personaje un nivel hacia abajo si es posible."
 
 /datum/keybinding/movement/zlevel_downwards/down(client/user, turf/target, mousepos_x, mousepos_y)
 	. = ..()

@@ -1,5 +1,5 @@
 /mob/dead/observer/verb/show_notificationprefs()
-	set category = "Spirit"
+	set category = "Espiritu"
 	set name = "Preferencias de notificacion"
 	set desc = ""
 	set hidden = 1

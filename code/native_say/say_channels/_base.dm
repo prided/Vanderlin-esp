@@ -1,6 +1,6 @@
 
 /datum/say_channel
-	var/name = "Say"
+	var/name = "Hablar"
 	var/color = "#aebfd4"
 	var/quiet = FALSE
 

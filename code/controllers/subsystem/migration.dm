@@ -661,7 +661,7 @@ SUBSYSTEM_DEF(migrants)
 	return migrants
 
 /client/proc/admin_force_next_migrant_wave()
-	set category = "GameMaster.Interacciones"
+	set category = "Director de juego.Interacciones"
 	set name = "Force Migrant Wave"
 	if(!holder)
 		return

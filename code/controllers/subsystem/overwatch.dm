@@ -442,7 +442,7 @@ SUBSYSTEM_DEF(overwatch)
 	return FALSE
 
 /client/proc/Overwatch_toggle()
-	set category = "Server"
+	set category = "Servidor"
 	set name = "Toggle Overwatch"
 
 	if(!check_rights(R_SERVER))

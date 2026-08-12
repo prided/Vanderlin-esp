@@ -50,7 +50,7 @@
 	triumph_reward = 10
 
 /client/proc/borbop_oopsie()
-	set category = "Debug.Core"
+	set category = "Depuracion.Core"
 	set name = "The Borbop Fuck Up Award"
 	set desc = "Da un premio a las personas conectadas."
 

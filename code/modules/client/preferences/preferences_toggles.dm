@@ -41,7 +41,7 @@
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_ears)()
 	set name = "Show/Hide GhostEars"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/chat_toggles) ^= CHAT_GHOSTEARS
@@ -53,7 +53,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_ears)(
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_sight)()
 	set name = "Show/Hide GhostSight"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/chat_toggles) ^= CHAT_GHOSTSIGHT
@@ -65,7 +65,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_sight)
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_whispers)()
 	set name = "Show/Hide GhostWhispers"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/chat_toggles) ^= CHAT_GHOSTWHISPER
@@ -77,7 +77,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_whispe
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_radio)()
 	set name = "Show/Hide GhostRadio"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/chat_toggles) ^= CHAT_GHOSTRADIO
@@ -89,7 +89,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_radio)
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_pda)()
 	set name = "Show/Hide GhostPDA"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/chat_toggles) ^= CHAT_GHOSTPDA
@@ -105,7 +105,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox, toggle_ghost_pda)()
 //please be aware that the following two verbs have inverted stat output, so that "Toggle Deathrattle|1" still means you activated it
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox/Events, toggle_deathrattle)()
 	set name = "Toggle Deathrattle"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/toggles) ^= DISABLE_DEATHRATTLE
@@ -117,7 +117,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox/Events, toggle_death
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox/Events, toggle_arrivalrattle)()
 	set name = "Toggle Arrivalrattle"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/toggles) ^= DISABLE_ARRIVALRATTLE
@@ -129,7 +129,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost/chatterbox/Events, toggle_arriv
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost, togglemidroundantag)()
 	set name = "Toggle Midround Antagonist"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/toggles) ^= MIDROUND_ANTAG
@@ -141,7 +141,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Ghost, togglemidroundantag)()
 /*
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggletitlemusic)()
 	set name = "LobbyMusic"
-	set category = "Preferences.Options"
+	set category = "Preferencias.Options"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/toggles) ^= SOUND_LOBBY
@@ -160,7 +160,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggletitlemusic)()
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, togglemidis)()
 	set name = "Hear/Silence Midis"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/toggles) ^= SOUND_MIDI
@@ -180,7 +180,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, togglemidis)()
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggle_instruments)()
 	set name = "Hear/Silence Instruments"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/toggles) ^= SOUND_INSTRUMENTS
@@ -196,7 +196,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggle_instruments)()
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, Toggle_Soundscape)()
 	set name = "Hear/Silence Ambience"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/toggles) ^= SOUND_AMBIENCE
@@ -214,7 +214,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, Toggle_Soundscape)()
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggle_ship_ambience)()
 	set name = "Hear/Silence Ship Ambience"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/toggles) ^= SOUND_SHIP_AMBIENCE
@@ -232,7 +232,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggle_ship_ambience)()
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggle_announcement_sound)()
 	set name = "Hear/Silence Announcements"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/toggles) ^= SOUND_ANNOUNCEMENTS
@@ -245,7 +245,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggle_announcement_sound)()
 
 /datum/verbs/menu/Settings/Sound/verb/stop_client_sounds()
 	set name = "Stop Sounds"
-	set category = "Preferences.Options"
+	set category = "Preferencias.Options"
 	set desc = ""
 	SEND_SOUND(usr, sound(null))
 	var/client/C = usr.client
@@ -256,7 +256,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings/Sound, toggle_announcement_sound)()
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, listen_ooc)()
 	set name = "Show/Hide OOC"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/chat_toggles) ^= CHAT_OOC
@@ -268,7 +268,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, listen_ooc)()
 
 TOGGLE_CHECKBOX(/datum/verbs/menu/Settings, listen_bank_card)()
 	set name = "Show/Hide Income Updates"
-	set category = "Preferences"
+	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	usr.client.prefs.read_preference(/datum/preference/bitwise/chat_toggles) ^= CHAT_BANKCARD

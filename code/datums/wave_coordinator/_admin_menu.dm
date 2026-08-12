@@ -125,7 +125,7 @@
 
 /client/proc/open_wave_creator()
 	set name = "Open Wave Creator"
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	if(!check_rights(R_ADMIN))
 		return
 	var/datum/tgui_wave_creator/creator = new

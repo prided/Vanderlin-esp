@@ -32,18 +32,17 @@
 		prefs.change_accent = FALSE
 
 	if(!prefs.donator && !prefs.change_accent)
-		to_chat(user, "Sorry, this option is Donator-exclusive or unavailable to your race and culture.")
+		to_chat(user, "Esta opcion es exclusiva para donadores o no esta disponible para tu especie y cultura.")
 		prefs.write_preference(/datum/preference/choiced/selected_accent, ACCENT_DEFAULT)
 		return
-	var/accent
 	if(prefs.donator)
 		for(var/accent_name in GLOB.accent_list)
 			available |= accent_name
-		accent = browser_input_list(user, "CHOOSE YOUR HERO'S ACCENT", "VOICE OF THE WORLD", available, prefs.read_preference(/datum/preference/choiced/selected_accent))
-		if(accent)
-			prefs.write_preference(/datum/preference/choiced/selected_accent, accent)
-	else if(prefs.change_accent)
-		accent = browser_input_list(user, "CHOOSE YOUR HERO'S ACCENT", "VOICE OF THE WORLD", available, prefs.read_preference(/datum/preference/choiced/selected_accent))
-		if(accent)
-			prefs.write_preference(/datum/preference/choiced/selected_accent, accent)
 
+	var/list/labelled_accents = list()
+	for(var/accent_name in available)
+		labelled_accents[spanish_accent_label(accent_name)] = accent_name
+	var/current_accent = prefs.read_preference(/datum/preference/choiced/selected_accent)
+	var/accent_label = browser_input_list(user, "ELIGE EL ACENTO DE TU HEROE", "VOZ DEL MUNDO", labelled_accents, spanish_accent_label(current_accent))
+	if(accent_label)
+		prefs.write_preference(/datum/preference/choiced/selected_accent, labelled_accents[accent_label])

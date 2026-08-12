@@ -1,7 +1,7 @@
 GLOBAL_VAR_INIT(nya_catmodder_go, FALSE)
 
 /client/proc/nya()
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	set name = "Equestria Crossover"
 	set desc = ":3."
 

@@ -1,6 +1,6 @@
 //replaces the old Ticklag verb, fps is easier to understand
 /client/proc/set_server_fps()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Set Server FPS"
 	set desc = ""
 

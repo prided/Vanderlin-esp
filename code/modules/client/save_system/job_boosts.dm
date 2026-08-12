@@ -83,7 +83,7 @@
 	return null
 
 /client/proc/cmd_view_job_boosts(target_ckey as text)
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "View Job Boosts"
 	set desc = "View a player's active job boosts"
 
@@ -114,7 +114,7 @@
 		to_chat(src, "<span class='notice'>- [boost.name]: Amount [boost.boost_amount][expiry_info][uses_info] - [validity]</span>")
 
 /client/proc/cmd_give_job_boost()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Give Job Boost"
 	set desc = "Give a job priority boost to a player"
 

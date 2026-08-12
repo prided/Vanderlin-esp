@@ -949,7 +949,7 @@
 
 /client/proc/spawn_faction_trader()
 	set name = "Spawn Faction Trader"
-	set category = "Debug.Spawn"
+	set category = "Depuracion.Spawn"
 
 	if(!check_rights(R_ADMIN))
 		return

@@ -15,7 +15,7 @@
 
 //shows a list of clients we could send PMs to, then forwards our choice to cmd_admin_pm
 /client/proc/cmd_admin_pm_panel()
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Admin PM"
 	if(!holder)
 		to_chat(src, "<span class='danger'>Error: Admin-PM-Panel: solo los administradores pueden usar este comando.</span>")

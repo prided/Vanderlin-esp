@@ -14,7 +14,7 @@
  * overridden here and in /mob/dead/observer for different point span classes and sanity checks
  */
 /mob/verb/pointed(atom/pointed_atom as mob|obj|turf in view())
-	set name = "Point To"
+	set name = "apuntar"
 	set category = "IC"
 
 	if(istype(pointed_atom, /obj/effect/temp_visual/point))

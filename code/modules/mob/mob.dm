@@ -675,7 +675,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 /*
 /mob/verb/abandon_mob()
 	set name = "{RETURN TO LOBBY}"
-	set category = "Preferences.Admin"
+	set category = "Preferencias.Admin"
 	set hidden = 1
 	if(!check_rights(R_ADMIN))
 		return

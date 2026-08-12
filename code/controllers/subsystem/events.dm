@@ -88,7 +88,7 @@ SUBSYSTEM_DEF(events)
 
 /client/proc/forceEvent()
 	set name = "Evento desencadenante"
-	set category = "GameMaster.Interacciones"
+	set category = "Director de juego.Interacciones"
 	if(!holder ||!check_rights(R_FUN))
 		return
 	holder.forceEvent(usr)
@@ -98,7 +98,7 @@ SUBSYSTEM_DEF(events)
 
 /client/proc/forceGamemode()
 	set name = "Open Gamemode Panel"
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 
 	if(!holder ||!check_rights(R_FUN))
 		return

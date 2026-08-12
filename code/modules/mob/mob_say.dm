@@ -2,8 +2,8 @@
 
 
 /mob/verb/say_verb(message as text)
-	set name = "Say"
-	set category = "IC.Speech"
+	set name = "Hablar"
+	set category = "IC.Habla"
 	set hidden = 1
 
 	if(!message)
@@ -22,7 +22,7 @@
 ///Whisper verb
 /mob/verb/whisper_verb(message as text)
 	set name = "Susurro"
-	set category = "IC.Speech"
+	set category = "IC.Habla"
 	set hidden = 1
 
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
@@ -36,8 +36,8 @@
 
 ///The me emote verb
 /mob/verb/me_verb(message as text)
-	set name = "Me"
-	set category = "IC.Speech"
+	set name = "Yo"
+	set category = "IC.Habla"
 	set hidden = 1
 
 	#ifdef USES_PQ
@@ -62,7 +62,7 @@
 ///The big me emote verb
 /mob/verb/me_big_verb()
 	set name = "Yo (grande)"
-	set category = "IC.Speech"
+	set category = "IC.Habla"
 	set hidden = TRUE
 
 	#ifdef USES_PQ

@@ -1,5 +1,5 @@
 /datum/say_channel/say
-	name = "Say"
+	name = "Hablar"
 	color = "#aebfd4"
 	quiet = FALSE
 

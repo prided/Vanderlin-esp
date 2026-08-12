@@ -85,7 +85,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Intercom Range") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/enable_debug_verbs()
-	set category = "Debug.Core"
+	set category = "Depuracion.Core"
 	set name = "Verbos de depuracion: habilitar"
 	if(!check_rights(R_DEBUG))
 		return
@@ -97,7 +97,7 @@ GLOBAL_LIST_EMPTY(dirty_vars)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Enable Debug Verbs") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/disable_debug_verbs()
-	set category = "Debug.Core"
+	set category = "Depuracion.Core"
 	set name = "Debug verbs - Disable"
 
 	remove_verb(src, GLOB.admin_verbs_debug_mapping)

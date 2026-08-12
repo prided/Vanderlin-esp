@@ -53,7 +53,7 @@
 	to_chat(src, msg)
 
 /client/verb/adminwho()
-	set category = "Admin"
+	set category = "Administracion"
 	set name = "Adminwho"
 
 	var/list/lines = list()

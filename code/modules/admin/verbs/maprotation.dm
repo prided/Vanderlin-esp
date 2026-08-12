@@ -1,5 +1,5 @@
 /client/proc/forcerandomrotate()
-	set category = "Server"
+	set category = "Servidor"
 	set name = "Activar rotacion aleatoria del mapa"
 	var/rotate = tgui_alert(usr, "Force a random map rotation to trigger?", "¿Girar mapa?", list("Yes", "Cancel"))
 	if (rotate != "Yes")
@@ -10,7 +10,7 @@
 	SSmapping.maprotate()
 
 /client/proc/adminchangemap()
-	set category = "Server"
+	set category = "Servidor"
 	set name = "Cambiar mapa"
 	var/list/maprotatechoices = list()
 	for (var/map in config.maplist)

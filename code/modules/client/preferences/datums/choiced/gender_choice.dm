@@ -16,10 +16,13 @@
 /datum/preference/choiced/gender_choice/handle_link(datum/preferences/prefs, mob/user)
 	// If pronouns are neutral, lock to ANY_GENDER
 	if(prefs.read_preference(/datum/preference/choiced/pronouns) == THEY_THEM || prefs.read_preference(/datum/preference/choiced/pronouns) == IT_ITS)
-		to_chat(user, span_warning("With neutral pronouns, you may only choose [ANY_GENDER]."))
+		to_chat(user, span_warning("Con pronombres neutrales solo puedes elegir [spanish_gender_pref_label(ANY_GENDER)]."))
 		prefs.write_preference(/datum/preference/choiced/gender_choice, ANY_GENDER)
 	else
-		var/list/gender_choice_option_list = list(ANY_GENDER, SAME_GENDER, DIFFERENT_GENDER)
-		var/new_gender_choice  = browser_input_list(user, "SELECT YOUR HERO'S PREFERENCE", "TO LOVE AND TO CHERISH", gender_choice_option_list, prefs.read_preference(/datum/preference/choiced/gender_choice))
-		if(new_gender_choice)
-			prefs.write_preference(/datum/preference/choiced/gender_choice, new_gender_choice)
+		var/list/labelled_gender_choices = list()
+		for(var/gender_choice_value in list(ANY_GENDER, SAME_GENDER, DIFFERENT_GENDER))
+			labelled_gender_choices[spanish_gender_pref_label(gender_choice_value)] = gender_choice_value
+		var/current_gender_choice = prefs.read_preference(/datum/preference/choiced/gender_choice)
+		var/new_gender_label = browser_input_list(user, "ELIGE LA PREFERENCIA DE TU HEROE", "PARA AMAR Y CUIDAR", labelled_gender_choices, spanish_gender_pref_label(current_gender_choice))
+		if(new_gender_label)
+			prefs.write_preference(/datum/preference/choiced/gender_choice, labelled_gender_choices[new_gender_label])

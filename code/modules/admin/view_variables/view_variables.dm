@@ -2,7 +2,7 @@
 #define ICON_STATE_NULL 2 /// this dmi has null-named icon_state, allowing it to show a sprite on vv editor.
 
 /client/proc/debug_variables(datum/thing in world)
-	set category = "Debug.Core"
+	set category = "Depuracion.Core"
 	set name = "Ver variables"
 	//set src in world
 	var/static/cookieoffset = rand(1, 9999) //to force cookies to reset after the round.

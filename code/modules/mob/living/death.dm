@@ -93,7 +93,7 @@ GLOBAL_LIST_EMPTY(last_words)
 	update_health_hud()
 	stop_pulling()
 
-	to_chat(src, span_green("A bleak afterlife awaits... but the Gods may let you walk again in another shape! Spirit, you must descend in a Journey to the Underworld and wait there for judgment..."))
+	to_chat(src, span_green("Te espera un mas alla desolado... pero los Dioses podrian permitirte caminar de nuevo bajo otra forma. Espiritu, debes emprender un viaje al Inframundo y esperar alli el juicio..."))
 
 	SEND_SIGNAL(src, COMSIG_LIVING_DEATH, gibbed)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src , gibbed)

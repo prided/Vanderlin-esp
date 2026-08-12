@@ -1,6 +1,6 @@
 /client/proc/end_triumph_season()
 	set name = "End Current Triumph Season"
-	set category = "Server"
+	set category = "Servidor"
 
 	if(!check_rights(R_SERVER))
 		return

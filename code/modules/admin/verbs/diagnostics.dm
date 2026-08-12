@@ -1,5 +1,5 @@
 /client/proc/fix_next_move()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Unfreeze Everyone"
 	var/largest_move_time = 0
 	var/largest_click_time = 0
@@ -30,7 +30,7 @@
 	return
 
 /client/proc/radio_report()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Radio report"
 
 	var/output = "<b>Radio Report</b><hr>"
@@ -58,7 +58,7 @@
 
 /client/proc/reload_admins()
 	set name = "Reload Admins"
-	set category = "Admin.Gestion"
+	set category = "Administracion.Gestion"
 
 	if(!src.holder)
 		return
@@ -73,7 +73,7 @@
 
 /client/proc/toggle_cdn()
 	set name = "Alternar CDN"
-	set category = "Server"
+	set category = "Servidor"
 	var/static/admin_disabled_cdn_transport = null
 	if (tgui_alert(usr, "Are you sure you want to toggle the CDN asset transport?", "Confirmar", list("Yes", "No")) != "Yes")
 		return

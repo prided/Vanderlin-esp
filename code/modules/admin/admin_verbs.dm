@@ -359,7 +359,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/hide_most_verbs()//Allows you to keep some functionality while hiding some verbs
 	set name = "Adminverbs - Ocultar la mayoria"
-	set category = "Admin.Admin Preferences"
+	set category = "Administracion.Admin Preferences"
 
 	remove_verb(src, list(/client/proc/hide_most_verbs) + GLOB.admin_verbs_hideable)
 	add_verb(src, /client/proc/show_verbs)
@@ -370,7 +370,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/hide_verbs()
 	set name = "Adminverbs - Hide All"
-	set category = "Admin.Admin Preferences"
+	set category = "Administracion.Admin Preferences"
 
 	remove_admin_verbs()
 	add_verb(src, /client/proc/show_verbs)
@@ -382,7 +382,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/show_verbs()
 	set name = "Adminverbs - Show"
-	set category = "Admin.Admin Preferences"
+	set category = "Administracion.Admin Preferences"
 
 	remove_verb(src, /client/proc/show_verbs)
 	add_admin_verbs()
@@ -391,7 +391,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Show Adminverbs") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_context_menu()
-	set category = "Admin.Admin Preferences"
+	set category = "Administracion.Admin Preferences"
 	set name = "Right-click Menu"
 	if(!holder)
 		return
@@ -401,7 +401,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	log_admin("[key_name(usr)] toggled context menu [show_popup_menus ? "ON" : "OFF"].")
 
 /client/proc/toggle_aghost_invis()
-	set category = "Admin.Ghost"
+	set category = "Administracion.Ghost"
 	set name = "Aghost (Toggle Invisibility)"
 	if (!holder)
 		return
@@ -409,7 +409,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	to_chat(src, aghost_toggle ? "Aghosting will now turn your mob invisible." : "Aghost will no longer turn your mob invisible.")
 
 /client/proc/admin_ghost()
-	set category = "Admin.Ghost"
+	set category = "Administracion.Ghost"
 	set name = "Aghost"
 	if(!holder)
 		return
@@ -457,7 +457,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/invisimin()
 	set name = "Invisimin"
-	set category = "Admin.Admin Preferences"
+	set category = "Administracion.Admin Preferences"
 	set desc = ""
 	if(holder && mob)
 		if(mob.invisibility == INVISIBILITY_OBSERVER)
@@ -469,7 +469,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/check_antagonists()
 	set name = "Check Antagonists"
-	set category = "GameMaster.Antags"
+	set category = "Director de juego.Antags"
 	if(holder)
 		holder.check_antagonists()
 		log_admin("[key_name(usr)] checked antagonists.")	//for tsar~
@@ -478,7 +478,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Check Antagonists") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/set_tod_override()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "SetTODOverride"
 	var/list/TODs = list(DAWN,DAY,DUSK,NIGHT)
 	var/choice = input(src,"","Set time of day override") as null|anything in TODs
@@ -516,21 +516,21 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/game_panel()
 	set name = "Game Panel"
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	if(holder)
 		holder.Game()
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Game Panel") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/secrets()
 	set name = "Secrets"
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	if (holder)
 		holder.Secrets()
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Secrets Panel") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/poll_panel()
 	set name = "Server Poll Management"
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	if(!check_rights(R_POLL))
 		return
 	holder.poll_list_panel()
@@ -556,7 +556,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	GLOB.stealthminID["[ckey]"] = "@[num2text(num)]"
 
 /client/proc/stealth()
-	set category = "Admin.Admin Preferences"
+	set category = "Administracion.Admin Preferences"
 	set name = "Stealth Mode"
 	if(holder)
 		if(holder.fakekey)
@@ -584,7 +584,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Stealth Mode") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/drop_bomb()
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	set name = "Drop Bomb"
 	set desc = ""
 
@@ -626,7 +626,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Drop Bomb") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/drop_dynex_bomb()
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	set name = "Drop DynEx Bomb"
 	set desc = ""
 
@@ -639,7 +639,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Drop Dynamic Bomb") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/get_dynex_range()
-	set category = "Debug.Debug"
+	set category = "Depuracion.Debug"
 	set name = "Get DynEx Range"
 	set desc = ""
 
@@ -650,7 +650,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	to_chat(usr, "Estimated Explosive Range: (Devastation: [round(range*0.25)], Heavy: [round(range*0.5)], Light: [round(range)])")
 
 /client/proc/get_dynex_power()
-	set category = "Debug.Debug"
+	set category = "Depuracion.Debug"
 	set name = "Get DynEx Power"
 	set desc = ""
 
@@ -661,7 +661,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	to_chat(usr, "Potencia explosiva estimada: [power]")
 
 /client/proc/set_dynex_scale()
-	set category = "Debug.Debug"
+	set category = "Depuracion.Debug"
 	set name = "Set DynEx Scale"
 	set desc = ""
 
@@ -673,7 +673,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	message_admins("[key_name_admin(usr)] ha modificado la escala de explosion dinamica: [ex_scale]")
 
 /client/proc/give_spell(mob/spell_recipient in GLOB.mob_list)
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	set name = "Give Spell"
 	set desc = "Gives a spell to a mob."
 
@@ -715,7 +715,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 			and as such will not be transferred if their mind changes body (Such as from Mindswap)."))
 
 /client/proc/remove_spell(mob/removal_target in GLOB.mob_list)
-	set category = "GameMaster.Fun"
+	set category = "Director de juego.Fun"
 	set name = "Remove Spell"
 	set desc = "Remove a spell from the selected mob."
 
@@ -739,7 +739,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Remove Spell") //If you are copy-pasting this, ensure the 2nd parameter is unique
 
 /client/proc/object_say(obj/O in world)
-	set category = "GameMaster.Interacciones"
+	set category = "Director de juego.Interacciones"
 	set name = "objetodecir"
 	set desc = ""
 	var/message = input(usr, "What do you want the message to be?", "hacer sonido") as text | null
@@ -752,7 +752,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/togglebuildmodeself()
 	set name = "Toggle Build Mode Self"
-	set category = "GameMaster"
+	set category = "Director de juego"
 	if (!(holder.rank.rights & R_BUILD))
 		return
 	if(src.mob)
@@ -762,7 +762,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/deadmin()
 	set name = "Deadmin"
-	set category = "Admin.Admin Preferences"
+	set category = "Administracion.Admin Preferences"
 	set desc = ""
 
 	if(!holder)
@@ -793,7 +793,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/readmin()
 	set name = "Readmin"
-	set category = "Admin.Admin Preferences"
+	set category = "Administracion.Admin Preferences"
 	set desc = ""
 
 	var/datum/admins/A = GLOB.deadmins[ckey]
@@ -821,7 +821,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 /client/proc/toggle_AI_interact()
 	set name = "Toggle Admin AI Interact"
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set desc = ""
 
 	AI_Interact = !AI_Interact
@@ -832,7 +832,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	message_admins("[key_name_admin(usr)] has [AI_Interact ? "activated" : "deactivated"] their AI interaction")
 
 /client/proc/end_party()
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set name = "EndPlaytest"
 	set hidden = 1
 	if(!holder)
@@ -845,7 +845,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		to_chat(src, "<span class='interface'>Ending DISABLED.</span>")
 
 /client/proc/manage_books()
-	set category = "GameMaster.Interacciones"
+	set category = "Director de juego.Interacciones"
 	set name = "Administrar libros"
 	if(!holder)
 		return
@@ -918,7 +918,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	src << browse(dat, "window=reading;size=800x600;can_close=1;can_minimize=1;can_maximize=1;can_resize=1;border=0")
 
 /client/proc/manage_paintings()
-	set category = "GameMaster.Interacciones"
+	set category = "Director de juego.Interacciones"
 	set name = "Manage Paintings"
 	if(!holder)
 		return
@@ -965,14 +965,14 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 //Family Tree Subsystem
 /client/proc/ShowAllFamilies()
-	set category = "GameMaster"
+	set category = "Director de juego"
 	set name = "Mostrar todas las familias"
 	to_chat(src, "<span class='interface'>TBA.</span>")
 
 /client/proc/tracy_next_round()
 	set name = "Toggle Tracy Next Round"
 	set desc = "Toggle running the byond-tracy profiler next round"
-	set category = "Debug"
+	set category = "Depuracion"
 
 	if(!check_rights_for(src, R_DEBUG))
 		return
@@ -994,7 +994,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 /client/proc/start_tracy()
 	set name = "Run Tracy Now"
 	set desc = "Start running the byond-tracy profiler immediately."
-	set category = "Debug"
+	set category = "Depuracion"
 
 	if(!check_rights_for(src, R_DEBUG))
 		return
@@ -1028,7 +1028,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 /// Debug verb for seeing at a glance what all spells have as set requirements
 /client/proc/debug_spell_requirements()
 	set name = "Show Spell Requirements"
-	set category = "Debug"
+	set category = "Depuracion"
 
 	var/header = "<tr><th>Name</th> <th>Requirements</th>"
 	var/all_requirements = list()

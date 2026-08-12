@@ -1,6 +1,6 @@
 /mob/dead/observer/verb/ghost_upward()
 	set name = "Fantasma arriba"
-	set category = "Spirit"
+	set category = "Espiritu"
 
 	if(!isobserver(usr))
 		return
@@ -8,7 +8,7 @@
 
 /mob/dead/observer/verb/ghost_downward()
 	set name = "Fantasma abajo"
-	set category = "Spirit"
+	set category = "Espiritu"
 
 	if(!isobserver(usr))
 		return
@@ -23,7 +23,7 @@
 
 /mob/dead/observer/verb/dead_to_underworld()
 	set name = "Viaje al inframundo"
-	set category = "Spirit"
+	set category = "Espiritu"
 
 	if(can_enter_underworld())
 		enter_underworld()

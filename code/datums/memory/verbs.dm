@@ -1,5 +1,5 @@
 /client/proc/memory_profiler()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Memory Profiler"
 	set desc = "Browse the byond_memprofile heap census: instance counts, list owners, var rows, retained size and round-over-round diffs."
 
@@ -11,7 +11,7 @@
 
 
 /client/proc/memory_profile_census()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Memory Census (Text)"
 	set desc = "Run a full heap census and print it to chat and world.log. Freezes the server for several seconds."
 
@@ -38,7 +38,7 @@
 
 
 /client/proc/memory_profile_dump()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Memory Profile Dump"
 	set desc = "Stream a full census or list table to a JSON Lines file and download it. Freezes the server while it walks and writes."
 

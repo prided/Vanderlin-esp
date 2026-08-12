@@ -20,20 +20,25 @@
 
 /datum/preference/choiced/family_mode/handle_link(datum/preferences/prefs, mob/user)
 	var/list/labelled = list(
-		"None (disabled)" = "[FAMILY_NONE]",
-		"Partial (join a house)" = "[FAMILY_PARTIAL]",
-		"Newlywed (spouse only)" = "[FAMILY_NEWLYWED]",
-		"Full (found a house)" = "[FAMILY_FULL]",
+		"Ninguna (desactivada)" = "[FAMILY_NONE]",
+		"Parcial (unirse a una casa)" = "[FAMILY_PARTIAL]",
+		"Recien casado (solo pareja)" = "[FAMILY_NEWLYWED]",
+		"Completa (fundar una casa)" = "[FAMILY_FULL]",
 	)
 	var/current = prefs.read_preference(/datum/preference/choiced/family_mode)
-	var/result = browser_input_list(user, "SELECT YOUR HERO'S BOND", "BLOOD IS THICKER THAN WATER", labelled, current)
+	var/current_label
+	for(var/family_label in labelled)
+		if(labelled[family_label] == current)
+			current_label = family_label
+			break
+	var/result = browser_input_list(user, "ELIGE EL VINCULO DE TU HEROE", "LA SANGRE PESA MAS QUE EL AGUA", labelled, current_label)
 	if(!result)
 		return
 	prefs.write_preference(/datum/preference/choiced/family_mode, labelled[result])
-	to_chat(user, span_purple("Family mode set to: [labelled[result]]"))
+	to_chat(user, span_purple("Modo familiar establecido en: [result]"))
 	to_chat(user, span_notice("\
-		[FAMILY_NONE] — disabled.\n\
-		[FAMILY_PARTIAL] — join a local house as a child or aunt/uncle.\n\
-		[FAMILY_NEWLYWED] — get a spouse; setspouse takes priority.\n\
-		[FAMILY_FULL] — become a house founder; setspouse blocks unknown matches.\
+		[spanish_family_label(FAMILY_NONE)] - desactivado.\n\
+		[spanish_family_label(FAMILY_PARTIAL)] - unete a una casa local como hijo, tia o tio.\n\
+		[spanish_family_label(FAMILY_NEWLYWED)] - obtienes pareja; la pareja designada tiene prioridad.\n\
+		[spanish_family_label(FAMILY_FULL)] - conviertete en fundador de una casa; la pareja designada bloquea coincidencias desconocidas.\
 	"))

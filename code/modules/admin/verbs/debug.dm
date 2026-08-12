@@ -1,5 +1,5 @@
 /client/proc/Debug2()
-	set category = "Debug.Debug"
+	set category = "Depuracion.Debug"
 	set name = "Debug-Game"
 	if(!check_rights(R_DEBUG))
 		return
@@ -25,7 +25,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 */
 
 /client/proc/cmd_admin_animalize(mob/M in GLOB.mob_list)
-	set category = "GameMaster.Equipping"
+	set category = "Director de juego.Equipping"
 	set name = "Make Simple Animal"
 
 	if(!SSticker.HasRoundStarted())
@@ -46,7 +46,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 //TODO: merge the vievars version into this or something maybe mayhaps
 /client/proc/cmd_debug_del_all(object as text)
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Del-All"
 
 	var/list/matches = get_fancy_list_of_atom_types()
@@ -69,7 +69,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Delete All") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_assume_direct_control(mob/M in GLOB.mob_list)
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Asumir el control directo"
 	set desc = ""
 
@@ -88,7 +88,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Assume Direct Control") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_give_control_to_player(mob/M in GLOB.mob_list, client/player in GLOB.clients)
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Give Control To Player"
 	set desc = ""
 
@@ -230,7 +230,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	cmd_admin_areatest(FALSE)
 
 /client/proc/cmd_admin_dress(mob/M in GLOB.mob_list)
-	set category = "GameMaster.Equipping"
+	set category = "Director de juego.Equipping"
 	set name = "Seleccionar Equipo"
 
 	if(!(ishuman(M) || isobserver(M)))
@@ -345,7 +345,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	return dresscode
 
 /client/proc/cmd_debug_mob_lists()
-	set category = "Debug.Debug"
+	set category = "Depuracion.Debug"
 	set name = "Debug Mob Lists"
 	set desc = ""
 
@@ -366,7 +366,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			to_chat(usr, jointext(GLOB.joined_player_list,","))
 
 /client/proc/cmd_display_del_log()
-	set category = "Debug.Debug"
+	set category = "Depuracion.Debug"
 	set name = "Display del() Log"
 	set desc = ""
 
@@ -404,21 +404,21 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	usr << browse(dellog.Join(), "window=dellog")
 
 /client/proc/cmd_display_overlay_log()
-	set category = "Debug.Debug"
+	set category = "Depuracion.Debug"
 	set name = "Display overlay Log"
 	set desc = ""
 
 	render_stats(SSoverlays.stats, src)
 
 /client/proc/cmd_display_init_log()
-	set category = "Debug.Debug"
+	set category = "Depuracion.Debug"
 	set name = "Display Initialize() Log"
 	set desc = ""
 
 	usr << browse(replacetext(SSatoms.InitLog(), "\n", "<br>"), "window=initlog")
 
 /client/proc/debug_huds(i as num)
-	set category = "Debug.Debug"
+	set category = "Depuracion.Debug"
 	set name = "Debug HUDs"
 	set desc = ""
 
@@ -427,7 +427,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	debug_variables(GLOB.huds[i])
 
 /client/proc/jump_to_ruin()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Jump to Ruin"
 	set desc = ""
 	if(!holder)
@@ -459,7 +459,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		//this goes after it's logged, incase something horrible happens.
 
 /client/proc/toggle_medal_disable()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Toggle Medal Disable"
 	set desc = "Toggles the safety lock on trying to contact the medal hub."
 
@@ -473,7 +473,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	log_admin("[key_name(src)] [SSachievements.achievements_enabled ? "disabled" : "enabled"] the medal hub lockout.")
 
 /client/proc/view_runtimes()
-	set category = "Debug.Core"
+	set category = "Depuracion.Core"
 	set name = "View Runtimes"
 	set desc = ""
 
@@ -483,7 +483,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	GLOB.error_cache.show_to(src)
 
 /client/proc/pump_random_event()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Pump Random Event"
 	set desc = ""
 	if(!holder)
@@ -496,7 +496,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	log_admin("[key_name(src)] pumped a random event.")
 
 /client/proc/start_line_profiling()
-	set category = "Debug.Profiler"
+	set category = "Depuracion.Profiler"
 	set name = "Start Line Profiling"
 	set desc = ""
 
@@ -507,7 +507,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	log_admin("[key_name(src)] started line by line profiling.")
 
 /client/proc/stop_line_profiling()
-	set category = "Debug.Profiler"
+	set category = "Depuracion.Profiler"
 	set name = "Stops Line Profiling"
 	set desc = ""
 
@@ -518,7 +518,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	log_admin("[key_name(src)] stopped line by line profiling.")
 
 /client/proc/show_line_profiling()
-	set category = "Debug.Profiler"
+	set category = "Depuracion.Profiler"
 	set name = "Show Line Profiling"
 	set desc = ""
 
@@ -534,7 +534,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	profile_show(src, sort)
 
 /client/proc/reload_configuration()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Recargar configuracion"
 	set desc = ""
 	if(!check_rights(R_DEBUG))
@@ -544,7 +544,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 /// A debug verb to check the sources of currently running timers
 /client/proc/check_timer_sources()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Verificar fuentes del temporizador"
 	set desc = "Checks the sources of the running timers"
 	if (!check_rights(R_DEBUG))
@@ -604,7 +604,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	return b["count"] - a["count"]
 
 /client/proc/cmd_regenerate_asset_cache()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Regenerate Asset Cache"
 	set desc = "Clears the asset cache and regenerates it immediately."
 	if(!CONFIG_GET(flag/cache_assets))
@@ -622,7 +622,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	to_chat(usr, "<span class='notice'>Regenerated [regenerated] asset\s.</span>")
 
 /client/proc/cmd_clear_smart_asset_cache()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Clear Smart Asset Cache"
 	set desc = "Clears the smart asset cache."
 	if(!CONFIG_GET(flag/smart_cache_assets))
@@ -637,7 +637,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	to_chat(usr, "<span class='notice'>Cleared [cleared] asset\s.</span>")
 
 /client/proc/select_job_pack_debug()
-	set category = "Debug"
+	set category = "Depuracion"
 	set name = "Select Jobpack"
 
 	if(!check_rights(R_DEBUG))

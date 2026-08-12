@@ -13,15 +13,15 @@
 /datum/keybinding/client/say
 	hotkey_keys = list("T")
 	name = "say"
-	full_name = "Open Say"
-	description = "Abre el canal Say"
+	full_name = "Abrir Hablar"
+	description = "Abre el canal Hablar"
 	category = CATEGORY_CLIENT
 
 /datum/keybinding/client/me
 	hotkey_keys = list("M")
 	name = "me"
-	full_name = "Open Me"
-	description = "Me abre el canal"
+	full_name = "Abrir Yo"
+	description = "Abre el canal Yo"
 	category = CATEGORY_CLIENT
 
 /datum/keybinding/client/me/down(client/user, turf/target, mousepos_x, mousepos_y)

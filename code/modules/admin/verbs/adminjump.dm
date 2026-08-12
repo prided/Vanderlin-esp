@@ -1,7 +1,7 @@
 /client/proc/jumptoarea()
 	set name = "Jump to Area"
 	set desc = ""
-	set category = "Admin.Jump"
+	set category = "Administracion.Jump"
 
 	if(!holder)
 		return
@@ -28,7 +28,7 @@
 
 /client/proc/jumptoturf(turf/T in world)
 	set name = "Jump to Turf"
-	set category = "Admin.Jump"
+	set category = "Administracion.Jump"
 
 	if(!holder)
 		return
@@ -40,7 +40,7 @@
 	return
 
 /client/proc/jumptomob()
-	set category = "Admin.Jump"
+	set category = "Administracion.Jump"
 	set name = "Jump to Mob"
 
 	if(!holder)
@@ -68,7 +68,7 @@
 		to_chat(A, span_warning("Esta mafia no se encuentra en el mundo del juego."))
 
 /client/proc/jumptocoord(tx as num, ty as num, tz as num)
-	set category = "Admin.Jump"
+	set category = "Administracion.Jump"
 	set name = "Saltar a coordinar"
 
 	if(!holder)
@@ -82,7 +82,7 @@
 	message_admins("[key_name_admin(usr)] salto a las coordenadas [tx], [ty], [tz]")
 
 /client/proc/jumptokey()
-	set category = "Admin.Jump"
+	set category = "Administracion.Jump"
 	set name = "Jump to Key"
 
 	if(!holder)
@@ -107,7 +107,7 @@
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Jump To Key") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/Getmob()
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Get Mob"
 	set desc = ""
 
@@ -145,7 +145,7 @@
 	return ..()
 
 /client/proc/search_mob_dir()
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Search Mob Directory"
 
 	if(!holder)
@@ -158,7 +158,7 @@
 	debug_variables(locate(chosen_mob))
 
 /client/proc/Getkey()
-	set category = "Admin.Admin"
+	set category = "Administracion.Admin"
 	set name = "Get Key"
 	set desc = ""
 
@@ -189,7 +189,7 @@
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Get Key") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/sendmob()
-	set category = "Admin.Jump"
+	set category = "Administracion.Jump"
 	set name = "Send Mob"
 
 	if(!holder)
@@ -224,7 +224,7 @@
 /client/proc/spawn_in_test_area()
 	set name = "Spawn in Test Area"
 	set desc = ""
-	set category = "Admin.Jump"
+	set category = "Administracion.Jump"
 
 	if(!holder)
 		return
@@ -244,7 +244,7 @@
 /client/proc/jump_to_test_area()
 	set name = "Jump to Test Area"
 	set desc = ""
-	set category = "Admin.Jump"
+	set category = "Administracion.Jump"
 
 	if(!holder)
 		return

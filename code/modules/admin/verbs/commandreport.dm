@@ -3,7 +3,7 @@
 
 /// Verb to open the create command report window and send command reports.
 /client/proc/cmd_admin_create_announcement()
-	set category = "GameMaster.Dioses"
+	set category = "Director de juego.Dioses"
 	set name = "Announcement"
 
 	if(!check_rights(R_ADMIN))

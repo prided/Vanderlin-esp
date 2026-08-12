@@ -36,7 +36,7 @@
 	set hidden = TRUE
 
 	if(native_say)
-		native_say.open_say_window("Say")
+		native_say.open_say_window("Hablar")
 
 /client/verb/open_radio()
 	set name = ".open_radio"
