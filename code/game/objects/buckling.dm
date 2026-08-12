@@ -311,8 +311,8 @@
 	// If the mob we're attempting to buckle is not stood on this atom's turf and it isn't the user buckling themselves,
 	// we'll try it with a 2 second do_after delay.
 	if(M != user && (get_turf(M) != get_turf(src)))
-		M.visible_message(span_warning("[user] starts buckling [M] to [src]!"),\
-			span_userdanger("[user] starts buckling me to [src]!"))
+		M.visible_message(span_warning("¡[user] comienza a ceder [M] a [src]!"),\
+			span_userdanger("¡[user] comienza a doblegarme a [src]!"))
 		if(!do_after(user, buckle_delay, M))
 			return FALSE
 
@@ -329,13 +329,13 @@
 /atom/movable/proc/buckle_feedback(mob/living/being_buckled, mob/buckler)
 	if(being_buckled == buckler)
 		being_buckled.visible_message(
-			span_notice("[buckler] [buckleverb]s [buckler.p_them()]self to [src]."),
-			span_notice("I [buckleverb] myself to [src].")
+			span_notice("[buckler] [buckleverb]s [buckler.p_them()]se a [src]."),
+			span_notice("Me [buckleverb] yo mismo a [src].")
 		)
 	else
 		being_buckled.visible_message(
 			span_warning("[buckler] [buckleverb]s [being_buckled] a [src]!"),
-			span_warning("[buckler] [buckleverb]s me to [src]!")
+			span_warning("[buckler] [buckleverb] ¡me envia a [src]!")
 		)
 
 /**
@@ -363,11 +363,11 @@
 /atom/movable/proc/unbuckle_feedback(mob/living/unbuckled_mob, mob/unbuckler)
 	if(unbuckled_mob == unbuckler)
 		unbuckled_mob.visible_message(
-			span_notice("[unbuckler] un[buckleverb]s [unbuckler.p_them()]self from [src]."),
-			span_notice("I un[buckleverb] myself from [src].")
+			span_notice("[unbuckler] un[buckleverb]s [unbuckler.p_them()]self de [src]."),
+			span_notice("Me desator[buckleverb] de [src].")
 		)
 	else
 		unbuckled_mob.visible_message(
-			span_notice("[unbuckler] un[buckleverb]s [unbuckled_mob] from [src]."),
-			span_notice("[unbuckler] un[buckleverb]es me from [src].")
+			span_notice("[unbuckler] des[buckleverb] de [unbuckled_mob] de [src]."),
+			span_notice("[unbuckler] me [buckleverb] de [src].")
 		)

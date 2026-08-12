@@ -1,6 +1,6 @@
 /obj/machinery/tanningrack
-	name = "drying rack"
-	desc = "A drying rack for the preparation of food or curing of hides into leather, it can be moved with the help of a wooden stake."
+	name = "tendedero"
+	desc = "Un tendedero para la preparacion de alimentos o el curado de pieles para convertirlo en cuero, se puede mover con la ayuda de una estaca de madera."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "dryrack"
 	var/obj/item/stored_item
@@ -15,9 +15,9 @@
 /obj/machinery/tanningrack/examine(mob/user)
 	. = ..()
 	if(stored_item)
-		. += span_warning("There is a piece of [stored_item.name] ready to be worked. I might need a knife for this.")
+		. += span_warning("Hay un trozo de [stored_item.name] listo para ser trabajado. Podria necesitar un cuchillo para esto.")
 	if(!anchored)
-		. += span_warning("It is unanchored and able to be moved.")
+		. += span_warning("No esta anclado y se puede mover.")
 
 /obj/machinery/tanningrack/attack_hand(mob/user, list/modifiers)
 	if(stored_item)
@@ -63,12 +63,12 @@
 			update_appearance(UPDATE_OVERLAYS)
 			return
 		else
-			to_chat(user, span_warning("I need to anchor this down with a wooden stake before I can work this [stored_item.name]."))
+			to_chat(user, span_warning("Necesito anclar esto con una estaca de madera antes de poder trabajar en este [stored_item.name]."))
 			return
 	if(istype(I, /obj/item/grown/log/tree/stake))
 		if(anchored)
 			anchored = FALSE
-			to_chat(user, span_warning("The [src] can now be moved."))
+			to_chat(user, span_warning("El [src] ahora se puede mover."))
 		else
 			anchored = TRUE
 			to_chat(user, span_warning("Anclas [src]."))

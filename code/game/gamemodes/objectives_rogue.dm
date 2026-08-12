@@ -1,6 +1,6 @@
 /datum/objective/bandit
 	name = "bandido"
-	explanation_text = "Feed valuables to the idol."
+	explanation_text = "Entrega objetos de valor al idolo."
 
 /datum/objective/bandit/check_completion()
 	if(SSmapping.retainer.bandit_contribute >= SSmapping.retainer.bandit_goal)
@@ -8,7 +8,7 @@
 
 /datum/objective/bandit/update_explanation_text()
 	..()
-	explanation_text = "Feed [SSmapping.retainer.bandit_goal] mammon to an idol of greed."
+	explanation_text = "Entrega [SSmapping.retainer.bandit_goal] mammon a un idolo de la avaricia."
 
 
 /datum/objective/delf
@@ -21,12 +21,12 @@
 
 /datum/objective/delf/update_explanation_text()
 	..()
-	explanation_text = "Feed [SSmapping.retainer.delf_goal] EARS to the mother."
+	explanation_text = "Entrega [SSmapping.retainer.delf_goal] OREJAS a la Madre."
 
 
 /datum/objective/rt_maniac
-	name = "slaying"
-	explanation_text = "Mark pieces of flesh and leave them to be discovered. Have at least 4 different people witness your crimes."
+	name = "matanza"
+	explanation_text = "Marca trozos de carne y dejalos para que los encuentren. Haz que al menos 4 personas distintas presencien tus crimenes."
 	martyr_compatible = 0
 	triumph_count = 10
 	var/people_seen[0]
@@ -45,16 +45,16 @@
 	return (vampire_werewolf() == faction_ident)
 
 /datum/objective/dominate/vampire
-	explanation_text = "Purge this land of all elder werevolves."
+	explanation_text = "Purga estas tierras de todos los Werevolves ancianos."
 	faction_ident = "vampire"
 
 /datum/objective/dominate/werewolf
-	explanation_text = "Purge this land of all vampire lords."
+	explanation_text = "Purga estas tierras de todos los Señores Vampiro."
 	faction_ident = "werewolf"
 
 /datum/objective/werewolf/spread
-	name = "spread"
-	explanation_text = "Have 6 lesser werevolfs."
+	name = "propagacion"
+	explanation_text = "Ten 6 Werevolves menores."
 	triumph_count = 5
 
 /datum/objective/werewolf/spread/check_completion()
@@ -63,7 +63,7 @@
 
 /datum/objective/werewolf/infiltrate/one
 	name = "infiltrarse1"
-	explanation_text = "Infect a member of the Church as my spawn."
+	explanation_text = "Infecta a un miembro de la Iglesia y conviertelo en mi engendro."
 	triumph_count = 5
 
 /datum/objective/werewolf/infiltrate/one/check_completion()

@@ -1,6 +1,6 @@
 /obj/item/storage/magebag
-	name = "summoners pouch"
-	desc = "A pouch for carrying handfuls of summoning ingredients."
+	name = "bolsa de invocadores"
+	desc = "Una bolsa para llevar puñados de ingredientes de invocacion."
 	icon_state = "summoning"
 	item_state = "summoning"
 	icon = 'icons/roguetown/clothing/storage.dmi'
@@ -14,7 +14,7 @@
 /obj/item/storage/magebag/examine(mob/user)
 	. = ..()
 	if(contents.len)
-		. += span_notice("[contents.len] thing[contents.len > 1 ? "s" : ""] in the pouch.")
+		. += span_notice("[contents.len] cosa[contents.len > 1 ? "s" : ""] en la bolsa.")
 
 /obj/item/storage/magebag/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
@@ -66,8 +66,8 @@
 	)
 
 /obj/item/chalk
-	name = "stick of chalk"
-	desc = "A stark-white stick of chalk, possibly made from quicksilver. "
+	name = "barra de tiza"
+	desc = "Una barra de tiza de color blanco intenso, posiblemente hecha de mercurio. "
 	icon = 'icons/roguetown/misc/rituals.dmi'
 	icon_state = "chalk"
 	dropshrink = 0.7
@@ -83,23 +83,23 @@
 	var/amount = 8
 
 /obj/item/chalk/natural
-	name = "natural stick of chalk"
+	name = "barra de tiza natural"
 	amount = 3
 
 /obj/item/chalk/examine(mob/user)
 	. = ..()
-	. += span_info("It has [amount] uses left.")
+	. += span_info("Tiene [amount] usos restantes.")
 
 /obj/item/chalk/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(istype(tool, /obj/item/ore/cinnabar))
 		if(amount < 8)
 			amount = 8
-			to_chat(user, span_notice("I press arcyne magic into \the [tool/name] and the red crystals within melt into quicksilver, quickly sinking into \the [name]."))
+			to_chat(user, span_notice("Presiono arcyne la magia en \the [tool/name] y los cristales rojos dentro se derriten en mercurio, hundiendose rapidamente en \the [name]."))
 			return ITEM_INTERACT_SUCCESS
 
 /obj/item/chalk/attack_self(mob/living/carbon/human/user, list/modifiers)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)//We'll set up other items for other types of rune rituals
-		to_chat(user, span_cult("Nothing comes in mind to draw with the chalk."))
+		to_chat(user, span_cult("Nada se me ocurre para dibujar con la tiza."))
 		return
 	var/obj/effect/decal/cleanable/ritual_rune/pickrune
 	var/runenameinput = browser_input_list(user, "Runes", "Tier 1&2 Runes", GLOB.t2rune_types)
@@ -112,18 +112,18 @@
 		return
 	var/structures_in_way = check_for_structures_and_closed_turfs(loc, pickrune)
 	if(structures_in_way == TRUE)
-		to_chat(user, span_cult("There is a structure, rune or wall in the way."))
+		to_chat(user, span_cult("Hay una estructura, una runa o una pared en el camino."))
 		return
 	var/crafttime = (10 SECONDS - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/magic/arcane)) * 5))
 
-	user.visible_message(span_warning("[user] begins to scribe something [user.p_their()] [src]!"), \
-		span_notice("I start to drag the [src] in the shape of symbols and sigils"))
+	user.visible_message(span_warning("[user] comienza a escribir algo [user.p_their()] [src] ¡Vaya!"), \
+		span_notice("Empiezo a arrastrar el [src] en forma de simbolos y sellos magicos"))
 	playsound(src, 'sound/magic/chalkdraw.ogg', 100, TRUE)
 	if(do_after(user, crafttime, target = src))
 		if(QDELETED(src) || !pickrune)
 			return
 		user.visible_message(span_warning("¡[user] escribe una runa arcyne con [user.p_their()] [src]!"), \
-		span_notice("I finish dragging the [src] in symbols and circles, leaving behind a [pickrune.name]."))
+		span_notice("Termine arrastrando el [src] en simbolos y circulos, dejando atras un [pickrune.name]."))
 		src.amount--
 		new pickrune(Turf)
 	if(amount <= 0)
@@ -146,8 +146,8 @@
 	return FALSE
 
 /obj/item/weapon/knife/dagger/silver/arcyne
-	name = "glowing purple silver dagger"
-	desc = "This dagger glows a faint purple. Quicksilver runs across its blade."
+	name = "daga de plata purpura brillante"
+	desc = "Esta daga brilla con un tenue color purpura. Quicksilver corre a traves de su espada."
 	var/is_bled = FALSE
 
 /obj/item/weapon/knife/dagger/silver/arcyne/Initialize()
@@ -163,7 +163,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	playsound(src, 'sound/magic/scrapeblade.ogg', 100, TRUE)
-	to_chat(user, span_notice("I press arcyne magic into the blade and it throbs in a deep purple..."))
+	to_chat(user, span_notice("Aplico arcyne magia a la hoja y vibra con un tono morado oscuro..."))
 	var/obj/arcyne_knife = new /obj/item/weapon/knife/dagger/silver/arcyne
 	qdel(tool)
 	qdel(src)
@@ -184,7 +184,7 @@
 		return
 	var/structures_in_way = check_for_structures_and_closed_turfs(loc, pickrune)
 	if(structures_in_way == TRUE)
-		to_chat(user, span_cult("There is a structure, rune or wall in the way."))
+		to_chat(user, span_cult("Hay una estructura, una runa o una pared en el camino."))
 		return
 	var/chosen_keyword
 	if(pickrune.req_keyword)
@@ -194,20 +194,20 @@
 	if(!is_bled)
 		playsound(src, get_sfx("genslash"), 100, TRUE)
 		user.visible_message(span_warning("¡[user] corta la palma de [user.p_their()]!"), \
-			span_cult("I slice open my palm!"))
+			span_cult("¡Corto mi palma!"))
 		if(user.get_blood_volume())
 			user.apply_damage(pickrune.scribe_damage, BRUTE, pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM), damage_type = BCLASS_CUT, can_crit = FALSE)
 		is_bled = TRUE
 	var/crafttime = (10 SECONDS - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/magic/arcane)) * 5))
 
-	user.visible_message(span_warning("[user] begins to carve something with [user.p_their()] blade!"), \
-		span_notice("I start to drag the blade in the shape of symbols and sigils."))
+	user.visible_message(span_warning("[user] comienza a tallar algo con la hoja de [user.p_their()] ¡"), \
+		span_notice("Empiezo a arrastrar la hoja en forma de simbolos y sellos."))
 	playsound(src, 'sound/magic/bladescrape.ogg', 100, TRUE)
 	if(do_after(user, crafttime, target = src))
 		if(QDELETED(src) || !pickrune)
 			return
-		user.visible_message(span_warning("[user] carves an arcyne rune with [user.p_their()] [src]!"), \
-		span_notice("I finish dragging the blade in symbols and circles, leaving behind a [pickrune.name]."))
+		user.visible_message(span_warning("[user] talla una arcyne runa con [user.p_their()] [src]!"), \
+		span_notice("Termine de arrastrar la hoja en simbolos y circulos, dejando atras un [pickrune.name]."))
 		new pickrune(Turf, chosen_keyword)
 
 /obj/item/weapon/knife/dagger/proc/check_for_structures_and_closed_turfs(loc, obj/effect/decal/cleanable/ritual_rune/rune_to_scribe)
@@ -229,13 +229,13 @@
 	icon_state = "amethyst"
 	sellprice = 18
 	arcyne_potency = 25
-	desc = "A pink crystal, it surges with magical energy, yet its artificial nature means it's worth little."
+	desc = "Un cristal rosa que irradia energia magica, pero su naturaleza artificial significa que vale poco."
 	item_weight = 8 GRAMS
 	attuned = /datum/attunement/arcyne
 
 /obj/item/mimictrinket
-	name = "mimic trinket"
-	desc = "A small mimic, imbued with the arcyne to make it docile. It can transform into most things it touches."
+	name = "imitar baratija"
+	desc = "Un pequeño imitador, imbuido del arcyne para hacerlo docil. Puede transformarse en la mayoria de las cosas que toca."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "mimic_trinket"
 	possible_item_intents = list(/datum/intent/use)
@@ -287,7 +287,7 @@
 
 /obj/item/hourglass/temporal
 	name = "reloj de arena temporal"
-	desc = "An arcyne infused hourglass that glows with magick."
+	desc = "Un reloj de arena infundido arcyne que brilla con magia."
 	icon = 'icons/obj/hourglass.dmi'
 	icon_state = "hourglass_idle"
 	item_weight = 300 GRAMS
@@ -296,13 +296,13 @@
 
 /obj/item/hourglass/temporal/toggle(mob/user)
 	if(!timing_id)
-		to_chat(user,span_notice("I flip the [src]."))
+		to_chat(user,span_notice("Doy la vuelta al [src]."))
 		start()
 		flick("hourglass_flip",src)
 		target = get_turf(src)
 		victim = user
 	else
-		to_chat(user,span_notice("I stop the [src].")) //Sand magically flows back because that's more convinient to use.
+		to_chat(user,span_notice("Dejo de lado el [src].")) //Sand magically flows back because that's more convinient to use.
 		stop()
 
 /obj/item/hourglass/temporal/stop()
@@ -313,13 +313,13 @@
 	name = "pluma infernal"
 	icon_state = "hellfeather"
 	possible_item_intents = list(/datum/intent/use)
-	desc = "A fluffy feather."
+	desc = "Una pluma esponjosa."
 
 /obj/item/flashlight/flare/torch/lantern/voidlamptern
-	name = "void lamptern"
+	name = "farol del vacio"
 	icon_state = "voidlamp"
 	item_state = "voidlamp"
-	desc = "An old lamptern that seems darker and darker the longer you look at it."
+	desc = "Una vieja lampara que parece cada vez mas oscura cuanto mas la miras."
 	light_outer_range = 8
 	light_color = "#000000"
 	light_power = -3
@@ -327,8 +327,8 @@
 	item_weight = 500 GRAMS
 
 /obj/item/clothing/ring/arcanesigil
-	name = "arcyne sigil"
-	desc = "A radiantly shimmering sigil within an amulet, It seems to pulse with intense arcynic flows."
+	name = "Sello arcyne"
+	desc = "Un sello radiantemente reluciente dentro de un amuleto, parece palpitar con intensos flujos arcinicos."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "amulet"
 	item_weight = 30 GRAMS
@@ -338,19 +338,19 @@
 /obj/item/clothing/ring/arcanesigil/attack_self(mob/living/carbon/human/user, list/modifiers)
 	if(ready)
 		if(do_after(user, 25, target = src))
-			to_chat(user,span_notice("[src] heats up to an almost burning temperature, flooding you with overwhelming arcyne knowledge!"))
+			to_chat(user,span_notice("[src] se calienta hasta una temperatura casi ardiente, inundandote con un abrumador arcyne conocimiento."))
 			ready = FALSE
 			addtimer(CALLBACK(src, PROC_REF(revert), user), cdtime,TIMER_STOPPABLE) // Minus two so we play the sound and decap faster
 			user.adjust_stat_modifier(STATMOD_SIGIL, list(/datum/attribute/skill/magic/arcane = 10))
 	else
-		to_chat(user,span_notice("[src] remains inert. It must be gathering arcana!"))
+		to_chat(user,span_notice("[src] permanece inerte. ¡Debe estar recolectando arcanas!"))
 
 /obj/item/clothing/ring/arcanesigil/proc/revert()
 	ready = TRUE
 
 /obj/item/clothing/ring/shimmeringlens
 	name = "lente brillante"
-	desc = "A radiantly shimmering glass of lens that shimmers with magick. Looking through it gives you a bit of a headache."
+	desc = "Un cristal de lente radiantemente reluciente que brilla con magia. Mirarlo te da un poco de dolor de cabeza."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "lens"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -365,11 +365,11 @@
 	if(loc != user)
 		return
 	if(!active)
-		user.visible_message(span_warning("[user] looks through the [src]!"))
+		user.visible_message(span_warning("¡[user] mira a traves de el [src]!"))
 		active = TRUE
 		activate(user)
 	else
-		user.visible_message(span_warning("[user] stops looking through the [src]!"))
+		user.visible_message(span_warning("¡[user] deja de mirar a traves del [src]!"))
 		demagicify()
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
@@ -386,7 +386,7 @@
 	active = FALSE
 
 /obj/item/sendingstonesummoner
-	name = "sending stone summoner"
+	name = "enviando invocador de piedra"
 
 /obj/item/sendingstonesummoner/OnCrafted(dirin, mob/user)
 	. = ..()
@@ -403,18 +403,18 @@
 	qdel(src)
 
 /obj/item/natural/stone/sending
-	name = "sending stone"
-	desc = "One of a pair of sending stones."
+	name = "enviando piedra"
+	desc = "Uno de un par de piedras de envio."
 	item_weight = 50 GRAMS
 	var/obj/item/natural/stone/sending/paired_with
 
 /obj/item/natural/stone/sending/attack_self(mob/user, list/modifiers)
-	var/input_text = input(user, "Enter your message:", "Message")
+	var/input_text = input(user, "Introduce tu mensaje:", "Mensaje")
 	if(input_text)
 		paired_with.say(input_text)
 
 /obj/item/clothing/gloves/nomagic
-	name = "mana binding gloves"
+	name = "guantes de union de mana"
 	icon = 'icons/roguetown/clothing/gloves.dmi'
 	bloody_icon_state = "bloodyhands"
 	icon_state = "angle"
@@ -437,8 +437,8 @@
 	. = ..()
 
 /obj/item/rope/chain/bindingshackles
-	name = "planar binding shackles"
-	desc = "arcyne shackles imbued to bind other-planar creatures intelligence to this plane. They will not be under your thrall and a deal will need to be made."
+	name = "grilletes de vinculacion planar"
+	desc = "Grilletes arcyne imbuidos para unir la inteligencia de otras criaturas planas a este plano. No estaran bajo su esclavitud y sera necesario llegar a un acuerdo."
 	item_weight = 400 GRAMS
 	var/mob/living/fam
 	var/tier = 1
@@ -457,16 +457,16 @@
 			var/crafttime = (100 - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/magic/arcane))*5))
 			if(do_after(user, crafttime, target = src))
 				playsound(src, 'sound/items/book_close.ogg', 100, TRUE)
-				to_chat(user, span_notice("I mold the [P] into the [src] with my arcyne power."))
+				to_chat(user, span_notice("Moldeo el [P] en el [src] con mi poder arcyne."))
 				new /obj/item/rope/chain/bindingshackles/t2(loc)
 				qdel(P)
 				qdel(src)
 		else
-			to_chat(user, "<span class='warning'>You need to put the [src] on a table to work on it.</span>")
+			to_chat(user, "<span class='warning'>Necesitas poner el [src] sobre una mesa para trabajar en el.</span>")
 	else
 		return ..()
 /obj/item/rope/chain/bindingshackles/t2
-	name = "greater planar binding shackles"
+	name = "grilletes de union planos mas grandes"
 	tier = 2
 
 /obj/item/rope/chain/bindingshackles/t2/attackby(obj/item/P, mob/living/carbon/human/user, list/modifiers)
@@ -476,16 +476,16 @@
 			var/crafttime = (100 - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/magic/arcane))*5))
 			if(do_after(user, crafttime, target = src))
 				playsound(src, 'sound/items/book_close.ogg', 100, TRUE)
-				to_chat(user, span_notice("I mold the [P] into the [src] with my arcyne power."))
+				to_chat(user, span_notice("Moldeo el [P] en el [src] con mi poder arcyne."))
 				new /obj/item/rope/chain/bindingshackles/t3(loc)
 				qdel(P)
 				qdel(src)
 		else
-			to_chat(user, "<span class='warning'>You need to put the [src] on a table to work on it.</span>")
+			to_chat(user, "<span class='warning'>Necesitas poner el [src] sobre una mesa para trabajar en el.</span>")
 	else
 		return ..()
 /obj/item/rope/chain/bindingshackles/t3
-	name = "woven planar binding shackles"
+	name = "grilletes tejidos de vinculacion planar"
 	tier = 3
 
 /obj/item/rope/chain/bindingshackles/t3/attackby(obj/item/P, mob/living/carbon/human/user, list/modifiers)
@@ -495,16 +495,16 @@
 			var/crafttime = (100 - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/magic/arcane))*5))
 			if(do_after(user, crafttime, target = src))
 				playsound(src, 'sound/items/book_close.ogg', 100, TRUE)
-				to_chat(user, span_notice("I mold the [P] into the [src] with my arcyne power."))
+				to_chat(user, span_notice("Moldeo el [P] en el [src] con mi poder arcyne."))
 				new /obj/item/rope/chain/bindingshackles/t4(loc)
 				qdel(P)
 				qdel(src)
 		else
-			to_chat(user, "<span class='warning'>You need to put the [src] on a table to work on it.</span>")
+			to_chat(user, "<span class='warning'>Necesitas poner el [src] sobre una mesa para trabajar en el.</span>")
 	else
 		return ..()
 /obj/item/rope/chain/bindingshackles/t4
-	name = "confluent planar binding shackles"
+	name = "grilletes de union planos confluentes"
 	tier = 4
 
 /obj/item/rope/chain/bindingshackles/t4/attackby(obj/item/P, mob/living/carbon/human/user, list/modifiers)
@@ -514,17 +514,17 @@
 			var/crafttime = (100 - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/magic/arcane))*5))
 			if(do_after(user, crafttime, target = src))
 				playsound(src, 'sound/items/book_close.ogg', 100, TRUE)
-				to_chat(user, span_notice("I mold the [P] into the [src] with my arcyne power."))
+				to_chat(user, span_notice("Moldeo el [P] en el [src] con mi poder arcyne."))
 				new /obj/item/rope/chain/bindingshackles/t5(loc)
 				qdel(P)
 				qdel(src)
 		else
-			to_chat(user, "<span class='warning'>You need to put the [src] on a table to work on it.</span>")
+			to_chat(user, "<span class='warning'>Necesitas poner el [src] sobre una mesa para trabajar en el.</span>")
 	else
 		return ..()
 
 /obj/item/rope/chain/bindingshackles/t5
-	name = "aberrant planar binding shackles"
+	name = "grilletes de union planos aberrantes"
 	tier = 5
 
 /obj/item/rope/chain/bindingshackles/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
@@ -551,15 +551,15 @@
 	var/mob/living/simple_animal/hostile/retaliate/captive = interacting_with
 
 	if(!is_type_in_list(interacting_with, summon_types))
-		to_chat(user, span_warning("[captive] cannot be bound by these shackles!"))
+		to_chat(user, span_warning("¡[captive] no puede ser atado por estas cadenas!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(captive.tier > tier)
-		to_chat(user, span_warning("[src] is not strong enough to bind [captive]!"))
+		to_chat(user, span_warning("¡[src] no es lo suficientemente fuerte para atar a [captive]!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/mob/living/simple_animal/hostile/retaliate/target = captive
-	target.visible_message(span_warning("[target.real_name]'s body is entangled by glowing chains..."), runechat_message = TRUE)
+	target.visible_message(span_warning("El cuerpo de [target.real_name] esta atrapado por cadenas brillantes..."), runechat_message = TRUE)
 
 	if(!target.ckey) //player is not inside body or has refused, poll for candidates
 		var/list/candidates = pollCandidatesForMob("Do you want to play as a Mage's summon?", null, null, null, 100, target, POLL_IGNORE_MAGE_SUMMON, new_players = TRUE)
@@ -568,10 +568,10 @@
 		if(LAZYLEN(candidates))
 			var/mob/C = pick(candidates)
 			target.awaken_summon(user, C.ckey)
-			target.visible_message(span_warning("[target.real_name]'s eyes light up with an intelligence as it awakens fully on this plane."), runechat_message = TRUE)
+			target.visible_message(span_warning("Los ojos de [target.real_name] se iluminan con inteligencia mientras despierta completamente en este plano."), runechat_message = TRUE)
 			custom_name(user, target)
 		else
-			to_chat(user, span_notice("The [captive] stares at you with mindless hate. The binding attempt failed to draw out its intelligence!"))
+			to_chat(user, span_notice("El [captive] te mira con odio sin sentido. ¡El intento de enlace no logro extraer su inteligencia!"))
 
 	return ITEM_INTERACT_SUCCESS
 
@@ -582,7 +582,7 @@
 	if(ckey) //player
 		src.ckey = ckey
 
-	to_chat(src, span_userdanger("My summoner is [master.real_name]. They will need to convince me to obey them."))
+	to_chat(src, span_userdanger("Mi invocador es [master.real_name]. Tendran que convencerme para que les obedezca."))
 	to_chat(src, span_warning("[summon_primer]"))
 
 /obj/item/rope/chain/bindingshackles/proc/custom_name(mob/awakener, mob/chosen_one, iteration = 1)
@@ -590,7 +590,7 @@
 		return
 	var/chosen_name = sanitize_name(stripped_input(chosen_one, "What are you named?"))
 	if(!chosen_name) // with the way that sanitize_name works, it'll actually send the error message to the awakener as well.
-		to_chat(awakener, span_warning("Your weapon did not select a valid name! Please wait as they try again.")) // more verbose than what sanitize_name might pass in it's error message
+		to_chat(awakener, span_warning("¡Tu arma no selecciono un nombre valido! Por favor, espera mientras intentan de nuevo.")) // more verbose than what sanitize_name might pass in it's error message
 		return custom_name(awakener, iteration++)
 	return chosen_one.fully_replace_character_name(chosen_one.name, chosen_name)
 
@@ -601,25 +601,25 @@
 	name = "fragmento de obsidiana"
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "obsidian"
-	desc = "Volcanic glass cooled from molten lava rapidly."
+	desc = "El vidrio volcanico se enfrio rapidamente a partir de lava fundida."
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
 	item_weight = 80 GRAMS
 
 /obj/item/natural/leyline
-	name = "leyline shards"
+	name = "fragmentos de linea ley"
 	icon = 'icons/roguetown/items/natural.dmi'
 	icon_state = "leyline"
-	desc = "A shard of a fractured leyline, it glows with lost power."
+	desc = "Un fragmento de una linea ley fracturada que brilla con el poder perdido."
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
 	item_weight = 30 GRAMS
 
 /obj/item/reagent_containers/food/snacks/produce/manabloom
-	name = "mana bloom"
+	name = "manabloom"
 	icon_state = "manabloom"
 	icon = 'icons/roguetown/items/natural.dmi'
-	desc = "Dense mana that has taken the form of plant life."
+	desc = "Mana denso que ha tomado la forma de vida vegetal."
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
@@ -632,24 +632,24 @@
 
 
 /obj/item/natural/artifact
-	name = "runed artifact"
+	name = "artefacto runico"
 	icon_state = "runedartifact"
-	desc = "An old stone from age long ago, marked with glowing sigils."
+	desc = "Una piedra antigua de hace mucho tiempo, marcada con sellos brillantes."
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
 	item_weight = 100 GRAMS
 
 /obj/item/natural/voidstone
-	name = "Voidstone"
+	name = "Piedra vacia"
 	icon_state = "wessence"
-	desc = "A piece of blackstone, it feels off to stare at it for long."
+	desc = "Un trozo de piedra negra, da sensacion mirarlo durante mucho tiempo."
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
 	item_weight = 60 GRAMS
 
 //combined items
 /obj/item/natural/melded
-	name = "arcyne meld"
+	name = "Fusion arcyne"
 	icon_state = "wessence"
 	desc = "No deberias estar viendo esto"
 	resistance_flags = FLAMMABLE
@@ -661,16 +661,16 @@
 	var/amplifier = 1
 
 /obj/item/natural/melded/t1
-	name = "arcanic meld"
+	name = "fusion arcanica"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "meld"
-	desc = "A melding of infernal ash, fairy dust and elemental mote."
+	desc = "Una fusion de ceniza infernal, polvo de hadas y mota elemental."
 
 /obj/item/natural/melded/t2
-	name = "dense arcanic meld"
+	name = "densa fusion arcanica"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "dmeld"
-	desc = "A melding of hellhound fang, iridescent scales and elemental shard."
+	desc = "Una combinacion de colmillos de perro del infierno, escamas iridiscentes y fragmento elemental."
 	item_flags = OBTAINED_DATA
 	obtained_from = list(list("Killing a Sylph", /mob/living/simple_animal/hostile/retaliate/fae/sylph))
 	item_weight = 50 GRAMS
@@ -682,7 +682,7 @@
 	name = "tejido hechicero"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "wessence"
-	desc = "A melding of molten core, heartwood core and elemental fragment."
+	desc = "Una fusion de nucleo fundido, nucleo de duramen y fragmento elemental."
 	item_weight = 60 GRAMS
 	melded_quality = /obj/item/spellbook/master
 	shock_damage = 60
@@ -692,23 +692,23 @@
 	name = "confluencia magica"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "wessence"
-	desc = "A melding of abyssal flame, sylvan essence and elemental relic."
+	desc = "Una fusion de llama abisal, esencia selvatica y reliquia elemental."
 	item_weight = 70 GRAMS
 	melded_quality = /obj/item/spellbook/legendary
 	shock_damage = 80
 	amplifier = 1.75
 
 /obj/item/natural/melded/t5
-	name = "arcanic aberation"
+	name = "aberacion arcanica"
 	icon_state = "wessence"
-	desc = "A melding of arcyne fusion and voidstone. It pulses erratically, power coiled tightly within and dangerous. Many would be afraid of going near this, let alone holding it."
+	desc = "Una fusion de fusion arcyne y piedra vacia. Pulsa de forma erratica, con un poder fuertemente enrollado en su interior y peligroso. Muchos tendrian miedo de acercarse a esto, y mucho menos de sostenerlo."
 	item_weight = 80 GRAMS
 	melded_quality = /obj/item/spellbook/legendary
 	shock_damage = 40
 	amplifier = 2
 
 /obj/structure/soul
-	name = "soul"
+	name = "alma"
 	desc = "El alma de los muertos"
 	icon = 'icons/roguetown/misc/mana.dmi'
 	icon_state = "soul"
@@ -776,7 +776,7 @@
 
 /obj/item/pylon_linker
 	name = "enlazador de ley"
-	desc = "A mystical tool used to bind mana pylons together, allowing mana to flow between them."
+	desc = "Una herramienta mistica utilizada para unir pilones de mana, permitiendo que el mana fluya entre ellos."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "dbrush"
 	grid_width = 32
@@ -795,15 +795,15 @@
 
 	if(!source_pylon)
 		source_pylon = pylon
-		user.balloon_alert(user, "source set: [pylon.name]")
+		user.balloon_alert(user, "Conjunto de origen: [pylon.name]")
 		return
 
 	if(source_pylon == pylon)
-		user.balloon_alert(user, "can't link to itself!")
+		user.balloon_alert(user, "¡No puede vincularse a si mismo!")
 		return
 
 	source_pylon.link_pylon(pylon)
-	user.balloon_alert(user, "pylons linked!")
+	user.balloon_alert(user, "¡Pylones enlazados!")
 	source_pylon = null
 
 /obj/item/pylon_linker/afterattack_secondary(atom/target, mob/living/user, proximity_flag, list/modifiers)
@@ -813,15 +813,15 @@
 
 	if(!istype(target, /obj/structure/mana_pylon))
 		if(source_pylon)
-			user.balloon_alert(user, "source cleared!")
+			user.balloon_alert(user, "¡Fuente despejada!")
 			source_pylon = null
 		return
 
 	var/obj/structure/mana_pylon/pylon = target
 
 	if(!pylon.linked_pylon)
-		user.balloon_alert(user, "not linked!")
+		user.balloon_alert(user, "¡No esta vinculado!")
 		return
 
 	pylon.unlink_pylon(pylon.linked_pylon)
-	user.balloon_alert(user, "link broken!")
+	user.balloon_alert(user, "¡El enlace esta roto!")

@@ -1,6 +1,6 @@
 /obj/structure/beehive/wild
 	name = "colmena salvaje"
-	desc = "A natural bee colony formed in the wild."
+	desc = "Una colonia natural de abejas formada en la naturaleza."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "wild_hive"
 	density = TRUE
@@ -54,7 +54,7 @@
 	addtimer(CALLBACK(src, PROC_REF(send_out_bees)), rand(100, 300))
 
 /obj/structure/beehive/wild/attack_hand(mob/user)
-	user.visible_message(span_warning("¡[user] molesta a [src]!"), span_warning("You disturb the wild beehive!"))
+	user.visible_message(span_warning("¡[user] molesta a [src]!"), span_warning("¡Usted perturba la colmena salvaje!"))
 
 	var/protected = is_wearing_bee_protection(user)
 
@@ -62,11 +62,11 @@
 		agitate_bees(user)
 
 	if(protected && prob(30))
-		to_chat(user, span_notice("You manage to extract some honey!"))
+		to_chat(user, span_notice("¡Lograste extraer un poco de miel!"))
 		new /obj/item/reagent_containers/food/snacks/spiderhoney/honey/wild(get_turf(src))
 
 /obj/structure/beehive/wild/proc/agitate_bees(mob/target)
-	visible_message(span_danger("Bees swarm out of [src] angrily!"))
+	visible_message(span_danger("¡Las abejas salen de [src] enojadas!"))
 
 	var/release_count = min(bee_count, rand(3, 8))
 	bee_count -= release_count

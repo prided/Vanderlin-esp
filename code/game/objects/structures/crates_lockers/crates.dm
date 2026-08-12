@@ -1,5 +1,5 @@
 /obj/structure/closet/crate
-	name = "crate"
+	name = "caja"
 	desc = ""
 	icon = 'icons/obj/crates.dmi'
 	icon_state = "crate"
@@ -36,8 +36,8 @@
 	. = ..()
 
 /obj/structure/closet/crate/coffin
-	name = "casket"
-	desc = "Death basket."
+	name = "ataud"
+	desc = "Cesta de la muerte."
 	icon_state = "casket"
 	resistance_flags = FLAMMABLE
 	max_integrity = 70
@@ -55,7 +55,7 @@
 	if (!sealed) // if it's not sealed, process as usual.
 		. = ..()
 	else // if it's sealed, you must unseal it with a sharp object first.
-		to_chat(user, span_warning("[src] is sealed with red tallow, you must slice it open with a dagger or knife first."))
+		to_chat(user, span_warning("[src] esta sellado con sebo rojo, primero debes cortarlo con una daga o cuchillo."))
 
 /obj/structure/closet/crate/coffin/examine(mob/user)
 	. = ..()
@@ -69,7 +69,7 @@
 	if(istype(I, /obj/item/inqarticles/tallowpot)) // consecrating and sealing a coffin with tallow.
 		var/obj/item/inqarticles/tallowpot/pot = I
 		if(istype(src, /obj/structure/closet/crate/coffin/vampire)) // you cannot seal a vampire lord's casket.
-			to_chat(user, span_warning("The coffin's material prevents the tallow from sticking, it's seeping right off!"))
+			to_chat(user, span_warning("El material del ataud impide que la grasa se pegue, ¡se esta escurriendo!"))
 			return
 
 		if(!pot.tallow)
@@ -77,19 +77,19 @@
 			return
 
 		if(!pot.heatedup)
-			to_chat(user, span_warning("The tallow is not warm enough."))
+			to_chat(user, span_warning("La grasa no esta lo suficientemente caliente."))
 			return
 
 		to_chat(user, span_info("Empiezo a sellar el ataud con sebo."))
 		if(!do_after(user, 5 SECONDS, src))
 			return
 		if(pacify_coffin(src, user))
-			user.visible_message(span_rose("[user] sella y consagra [src]."), span_rose("I seal the coffin, consecrating it. I may bury it to protect it's inhabitant further."))
+			user.visible_message(span_rose("[user] sella y consagra [src]."), span_rose("Sello el ataud, consagrandolo. Puedo enterrarlo para proteger mas al habitante."))
 			SEND_SIGNAL(user, COMSIG_GRAVE_CONSECRATED, src)
 			record_round_statistic(STATS_GRAVES_CONSECRATED)
 			consecrated = TRUE
 		else
-			to_chat(user, span_warning("The consecration failed, but you did seal the coffin."))
+			to_chat(user, span_warning("La consagracion fallo, pero si sellaste el ataud."))
 		sealed = TRUE
 		icon_state = "casketconsecrated"
 		pot.remaining = max(pot.remaining - 150, 0) // take only 150 since each process tick removes 20 from the tallow pot, and sometimes people wait.
@@ -108,9 +108,9 @@
 				if(isliving(user) && src.consecrated)
 					var/mob/living/L = user
 					if(HAS_TRAIT(L, TRAIT_GRAVEROBBER))
-						to_chat(user, "<span class='warning'>Necra turns a blind eye to my deeds.</span>")
+						to_chat(user, "<span class='warning'>Necra hace la vista gorda ante mis actos.</span>")
 					else
-						to_chat(user, "<span class='warning'>Necra shuns my blasphemous deeds, I am cursed!</span>")
+						to_chat(user, "<span class='warning'>Necra rechaza mis actos blasfemos, estoy maldito!</span>")
 						L.remove_status_effect(/datum/status_effect/debuff/cursed_t1)
 						if(!(L.has_status_effect(/datum/status_effect/debuff/cursed_t3)) || !(L.has_status_effect(/datum/status_effect/debuff/cursed_t4)))
 							L.apply_status_effect(/datum/status_effect/debuff/cursed_t2)
@@ -122,7 +122,7 @@
 		. = ..()
 
 /obj/structure/closet/crate/coffin/vampire
-	name = "sleep casket"
+	name = "ataud para dormir"
 	desc = "Un ataud elegante."
 	icon_state = "vcasket"
 	resistance_flags = FLAMMABLE

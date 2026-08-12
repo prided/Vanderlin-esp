@@ -228,12 +228,12 @@
 	if(W.firefuel)
 		if(initial(fueluse))
 			if(fueluse > initial(fueluse) - 5 SECONDS)
-				to_chat(user, span_warning("[src] is fully fueled."))
+				to_chat(user, span_warning("[src] esta completamente abastecido."))
 				return
 		else
 			if(!on)
 				return
-		if(tgui_alert(usr, "Feed [W] to the fire?", "VANDERLIN", list("Yes", "No")) != "Yes")
+		if(tgui_alert(usr, "¿Le das [W] al fuego?", "VANDERLIN", list("Si", "No")) != "Si")
 			return
 		if(!(W in user.held_items)|| !user.temporarilyRemoveItemFromInventory(W))
 			return
@@ -253,7 +253,7 @@
 				update()
 				update_appearance(UPDATE_ICON_STATE)
 				qdel(W)
-				src.visible_message("<span class='warning'>[user] snuffs the fire.</span>")
+				src.visible_message("<span class='warning'>[user] sopla las llamas.</span>")
 				return
 			if(user.used_intent?.type != INTENT_SPLASH)
 				W.spark_act()

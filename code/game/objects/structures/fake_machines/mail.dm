@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 
 /obj/structure/fake_machine/mail
 	name = "HERMES"
-	desc = "Carrier zads have fallen severely out of fashion ever since the advent of this hydropneumatic mail system."
+	desc = "Los transportistas han pasado de moda desde la llegada de este sistema de correo hidroneumatico."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "mail"
 	density = FALSE
@@ -21,10 +21,10 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		"WARDROBE"
 	)
 	var/list/category = list(
-		"SUPPLIES",
-		"ARTICLES",
-		"EQUIPMENT",
-		"WARDROBE"
+		"SUMINISTROS",
+		"ARTICULOS",
+		"EQUIPO;",
+		"ARMADIO"
 	)
 	var/list/inq_category = list("RELIQUARY")
 	var/ournum
@@ -61,20 +61,20 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		return
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))
 		if(!coin_loaded && !inqcoins)
-			to_chat(user, span_notice("It needs a Marque."))
+			to_chat(user, span_notice("Necesita una Marque."))
 			return
 		user.changeNext_move(CLICK_CD_MELEE)
 		display_marquette(usr)
 
 /obj/structure/fake_machine/mail/examine(mob/user)
 	. = ..()
-	. += span_info("Load a coin inside, then right click to send a letter.")
-	. += span_info("Left click with a paper to send a prewritten letter for free.")
+	. += span_info("Coloca una moneda en su interior y luego haz clic derecho para enviar una carta.")
+	. += span_info("Haz clic izquierdo con un papel para enviar una carta preescrita de forma gratuita.")
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))
-		. += span_info("<br>The Oratorium's reliquary can be accessed via a secret compartment fitted within the HERMES. Load a Marque to access it.")
+		. += span_info("<br>Se puede acceder al relicario del Oratorium a traves de un compartimento secreto instalado dentro del HERMES. Cargue una marca para acceder a ella.")
 
-		. += span_info("You can send arrival slips, accusation slips, fully loaded INDEXERs or confessions here.")
-		. += span_info("Properly sign them. Include an INDEXER where needed. Stamp them for two additional Marques.")
+		. += span_info("Puede enviar aqui los comprobantes de llegada, los comprobantes de acusacion, los INDEXER totalmente cargados o las confesiones.")
+		. += span_info("Firme adecuadamente. Incluya un INDEXER donde sea necesario. Estampados para dos Marques adicionales.")
 
 /obj/structure/fake_machine/mail/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
@@ -96,7 +96,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	var/t = stripped_multiline_input("Write Your Letter", "VANDERLIN", no_trim=TRUE)
 	if(t)
 		if(length(t) > 2000)
-			to_chat(user, span_warning("Too long. Try again."))
+			to_chat(user, span_warning("Demasiado largo. Intenta de nuevo."))
 			return
 	if(!coin_loaded)
 		return
@@ -132,7 +132,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			update_appearance()
 			return
 		else
-			to_chat(user, span_warning("Failed to send it. Bad number?"))
+			to_chat(user, span_warning("No se pudo enviar. ¿Numero incorrecto?"))
 	else
 		if(!send2place)
 			return
@@ -151,7 +151,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 				if(H.real_name == send2place)
 					H.playsound_local(H, 'sound/misc/mail.ogg', 100, FALSE, -1)
 		else
-			to_chat(user, span_warning("The master of mails has perished?"))
+			to_chat(user, span_warning("¿Ha perecido el maestro de correos?"))
 			return
 		if(P.info)
 			var/stripped_info = remove_color_tags(P.info)
@@ -200,14 +200,14 @@ GLOBAL_LIST_EMPTY(letters_sent)
 
 /obj/structure/fake_machine/mail/proc/handle_merctoken(obj/item/merctoken/token, mob/user)
 	if(!ishuman(user))
-		to_chat(user, span_warning("I do not know what this is, and I do not particularly care."))
+		to_chat(user, span_warning("No se que es esto y tampoco me importa en particular."))
 		return
 
 	var/mob/living/carbon/human/H = user
 
 	// Check job restrictions
 	if(is_merchant_job(H.mind.assigned_role) || is_tomb_warden_job(H.mind.assigned_role))
-		to_chat(H, span_warning("This is of no use to me - I may give this to a mercenary so they may send it themselves."))
+		to_chat(H, span_warning("Esto no me sirve para nada; puedo dar esto a un mercenario para que lo envien ellos mismos."))
 		return
 
 	if(!is_mercenary_job(H.mind.assigned_role))
@@ -215,7 +215,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		return
 
 	if(H.tokenclaimed)
-		to_chat(H, span_warning("I have already received my commendation. There's always next month to look forward to."))
+		to_chat(H, span_warning("Ya he recibido mi elogio. Siempre hay que esperar al proximo mes."))
 		return
 
 	if(!token.signee)
@@ -232,7 +232,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	say("GRACIAS POR SU SERVICIO.")
 	playsound(src, 'sound/misc/mercsuccess.ogg', 100, FALSE, -1)
 	playsound(src, 'sound/misc/hiss.ogg', 100, FALSE, -1)
-	to_chat(H, span_warning("A trinket comes tumbling down from the machine. Proof of your distinction."))
+	to_chat(H, span_warning("Un objeto de adorno cae de la maquina. Prueba de tu distincion."))
 
 	H.adjust_triumphs(3)
 	H.tokenclaimed = TRUE
@@ -258,11 +258,11 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		playsound(src, 'sound/misc/beep.ogg', 100, FALSE, -1)
 		for(var/obj/structure/fake_machine/mail/hermes in SSroguemachine.hermailers)
 			hermes.inqlock()
-		to_chat(user, span_warning("I [inqonly ? "enable" : "disable"] the Puritan's Lock."))
+		to_chat(user, span_warning("Tengo [inqonly ? "enable" : "disable"] la Cerradura Puritana."))
 		display_marquette(user)
 		return TRUE
 
-	to_chat(user, span_warning("Wrong key."))
+	to_chat(user, span_warning("Llave incorrecta."))
 	return TRUE
 
 /obj/structure/fake_machine/mail/proc/handle_keyring(obj/item/storage/keyring/K, mob/user)
@@ -274,7 +274,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			playsound(src, 'sound/misc/beep.ogg', 100, FALSE, -1)
 			for(var/obj/structure/fake_machine/mail/hermes in SSroguemachine.hermailers)
 				hermes.inqlock()
-			to_chat(user, span_warning("I [inqonly ? "enable" : "disable"] the Puritan's Lock."))
+			to_chat(user, span_warning("Tengo [inqonly ? "enable" : "disable"] la Cerradura Puritana."))
 			display_marquette(user)
 			return TRUE
 
@@ -290,7 +290,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		if(!mirror.broken)
 			to_chat(user, span_warning("No esta roto."))
 		else if(mirror.bloody)
-			to_chat(user, span_warning("Clean it first."))
+			to_chat(user, span_warning("Limpie primero."))
 
 /obj/structure/fake_machine/mail/proc/handle_confession(obj/item/paper/inqslip/confession/confession, mob/living/carbon/human/user)
 	if(!confession.signee || !confession.signed)
@@ -340,7 +340,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		cleanup_confession(confession, user)
 
 		if(is_duplicate)
-			to_chat(user, span_notice("They've already confessed."))
+			to_chat(user, span_notice("Ya se confesaron."))
 		else if(is_selfreport)
 			to_chat(user, span_notice("¿Por que esa confesion fue firmada por un miembro de la inquisicion? ¿Que?"))
 			if(is_indexed)
@@ -355,7 +355,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		var/mob/living/carbon/human/human = confession.signee
 		if(human)
 			human.inquisition_position.merits -= 4
-		to_chat(user, span_notice("To lie to the church is a sin my son, do not do it again."))
+		to_chat(user, span_notice("Mentirle a la iglesia es un pecado, hijo, no lo vuelvas a hacer."))
 
 	else if(confession.paired && !is_indexed && !is_correct)
 		marque_value = 2
@@ -367,9 +367,9 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		if(is_accused)
 			marque_value -= 4
 		if(confession.signee?.mind?.has_antag_datum(/datum/antagonist/vampire/lord/daewalker))
-			to_chat(user, SPAN_GOD_PSYDON("Wunderbar. This was no small task to undertake.\
-			\nThe House of Thronleer wishes you to speak. Finish your duties and return immediately.\
-			\nCongratulations."))
+			to_chat(user, SPAN_GOD_PSYDON("Wunderbar. Esta no fue una tarea menor.\
+			\nLa Casa de Thronleer desea hablar contigo. Termina tus deberes y regresa de inmediato.\
+			\nFelicidades."))
 			marque_value += 50
 
 		GLOB.vanderlin_round_stats[STATS_MARQUES_MADE] += marque_value
@@ -438,9 +438,9 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			visible_message(span_warning("[user] recibe algo."))
 
 			if(is_selfreport)
-				to_chat(user, span_notice("Why did that INDEXER contain Inquisitional blood? What am I doing?"))
+				to_chat(user, span_notice("¿Por que ese INDEXER contenia sangre inquisitorial? ¿Que estoy haciendo?"))
 			else
-				to_chat(user, span_notice("It appears we already had them INDEXED. I've been issued a replacement."))
+				to_chat(user, span_notice("Parece que ya las habiamos REGISTRADO. Me han emitido un reemplazo."))
 
 			var/obj/item/inqarticles/indexer/replacement = new /obj/item/inqarticles/indexer(get_turf(user))
 			user.put_in_hands(replacement)
@@ -470,14 +470,14 @@ GLOBAL_LIST_EMPTY(letters_sent)
 
 /obj/structure/fake_machine/mail/proc/handle_accusation(obj/item/paper/inqslip/accusation/accusation, mob/living/carbon/human/user)
 	if(!accusation.paired)
-		to_chat(user, span_warning("[accusation] is missing an INDEXER."))
+		to_chat(user, span_warning("[accusation] le falta un INDEXER."))
 		return
 
 	if(!accusation.signee || !accusation.paired.full || !accusation.paired.subject)
 		if(!accusation.paired.full)
-			to_chat(user, span_warning("[accusation.paired] needs to be full of the accused's blood."))
+			to_chat(user, span_warning("[accusation.paired] necesita estar lleno de la sangre del acusado."))
 		else
-			to_chat(user, span_warning("[accusation] is missing a signature."))
+			to_chat(user, span_warning("[accusation] le falta una firma."))
 		return
 
 	var/is_duplicate = FALSE
@@ -545,9 +545,9 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 
 		if(is_confessed)
-			to_chat(user, span_notice("They've confessed."))
+			to_chat(user, span_notice("Ellos confesaron."))
 		else if(is_selfreport)
-			to_chat(user, span_notice("Why are we accusing our own? What have we come to?"))
+			to_chat(user, span_notice("¿Por que estamos acusando a los nuestros? ¿A que nos hemos llegado?"))
 			var/obj/item/inqarticles/indexer/replacement = new /obj/item/inqarticles/indexer(get_turf(user))
 			user.put_in_hands(replacement)
 		else
@@ -560,7 +560,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		if(!is_indexed)
 			marque_value += 2
 		if(subject?.mind?.has_antag_datum(/datum/antagonist/vampire/lord/daewalker))
-			to_chat(user, SPAN_GOD_PSYDON("The Daewalker is among you?! Get their confession immediately, my child. You will be well rewarded for your efforts."))
+			to_chat(user, SPAN_GOD_PSYDON("¿El Daewalker esta entre ustedes?! ¡Obtenga su confesion inmediatamente, hijo mio! Sera bien recompensado por sus esfuerzos."))
 			marque_value += 6
 		budget2change(marque_value, user, "MARQUE")
 		GLOB.vanderlin_round_stats[STATS_MARQUES_MADE] += marque_value
@@ -577,7 +577,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 		to_chat(user, span_warning("La maquina no responde."))
 		return
 
-	if(tgui_alert(user, "¿Enviar correo?", "Confirmar", list("YES","NO")) != "YES")
+	if(tgui_alert(user, "¿Enviar correo?", "Confirmar", list("SI","NO")) != "SI")
 		return
 
 	var/send_to = browser_input_text(user, "Where to? (Person or #number)", "Vanderlin", null)
@@ -610,12 +610,12 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			visible_message(span_warning("[user] envia algo."))
 			playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 		else
-			to_chat(user, span_warning("Cannot send it. Bad number?"))
+			to_chat(user, span_warning("No se puede enviar. ¿Numero incorrecto?"))
 		return
 
 	// Handle person name sending
 	if(!SSroguemachine.hermailermaster)
-		to_chat(user, span_warning("The master of mails has perished?"))
+		to_chat(user, span_warning("¿Ha perecido el maestro de correos?"))
 		return
 
 	var/obj/item/fake_machine/mastermail/master = SSroguemachine.hermailermaster
@@ -729,7 +729,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	popup.open(FALSE)
 
 /obj/item/fake_machine/mastermail
-	name = "MASTER OF MAILS"
+	name = "MAESTRO DE CORREOS"
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "mailspecial"
 	SET_BASE_PIXEL(0, 32)
@@ -771,7 +771,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 			PA.cached_mailer = null
 			PA.cached_mailedto = null
 			PA.update_appearance()
-			to_chat(user, span_warning("I carefully re-seal the letter and place it back in the machine, no one will know."))
+			to_chat(user, span_warning("Vuelvo a sellar cuidadosamente la carta y la coloco de nuevo en la maquina, nadie lo sabra."))
 		P.forceMove(loc)
 		var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 		STR.handle_item_insertion(P, prevent_warning=TRUE)
@@ -801,7 +801,7 @@ GLOBAL_LIST_EMPTY(letters_sent)
 	PA.remaining -= 1
 	PA.name = "[initial(PA.name)] ([PA.remaining]/[PA.maximum]) - [PA.marquescost]"
 	if(!PA.remaining)
-		PA.name = "[initial(PA.name)] (OUT OF STOCK) - [PA.marquescost]"
+		PA.name = "[initial(PA.name)] (AGOTADO) - [PA.marquescost]"
 	return
 
 /obj/structure/fake_machine/mail/proc/display_marquette(mob/user)

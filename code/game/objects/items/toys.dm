@@ -65,7 +65,7 @@
 	if(ishuman(H)) //i guess carp and shit shouldn't set them off
 		var/mob/living/carbon/M = H
 		if(M.m_intent == MOVE_INTENT_RUN)
-			to_chat(M, span_danger("I step on the snap pop!"))
+			to_chat(M, span_danger("¡Pies en el snap pop!"))
 			pop_burst(2, 0)
 
 /obj/item/toy/snappop/phoenix
@@ -98,7 +98,7 @@
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/toy/cards/suicide_act(mob/living/carbon/user)
-	user.visible_message(span_suicide("[user] is slitting [user.p_their()] wrists with \the [src]! It looks like [user.p_they()] [user.p_have()] a crummy hand!"))
+	user.visible_message(span_suicide("[user] se esta cortando los [user.p_their()] puños con \the [src] ¡Parece que [user.p_they()] [user.p_have()] una mano de mala calidad!"))
 	playsound(src, 'sound/blank.ogg', 50, TRUE)
 	return BRUTELOSS
 
@@ -134,7 +134,7 @@
 	. = ..()
 	if(ishuman(user))
 		if(HAS_TRAIT(user, TRAIT_BLACKLEG))
-			. += span_notice("Peeking under the top card, you see it reads: [cards[1]].")
+			. += span_notice("Al levantar la primera carta, ves que dice: [cards[1]].")
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE
 //ATTACK HAND NOT CALLING PARENT
@@ -148,7 +148,7 @@
 			return
 	var/choice = null
 	if(cards.len == 0)
-		to_chat(user, span_warning("There are no more cards to draw!"))
+		to_chat(user, span_warning("¡No hay mas cartas para sacar!"))
 		return
 	var/obj/item/toy/cards/singlecard/H = new/obj/item/toy/cards/singlecard(user.loc)
 	choice = cards[1]
@@ -159,7 +159,7 @@
 	cards -= choice
 	H.pickup(user)
 	user.put_in_hands(H)
-	user.visible_message(span_notice("[user] saca una carta del mazo."), span_notice("I draw a card from the deck."))
+	user.visible_message(span_notice("[user] saca una carta del mazo."), span_notice("Arranco una carta del mazo."))
 	update_appearance(UPDATE_ICON_STATE)
 
 /obj/item/toy/cards/deck/update_icon_state()
@@ -177,12 +177,12 @@
 /obj/item/toy/cards/deck/attack_self(mob/user, list/modifiers)
 	if(cooldown < world.time - 50)
 		if(HAS_TRAIT(user, TRAIT_BLACKLEG))
-			var/outcome = tgui_alert(user, "How do you want to shuffle the deck?","XYLIX", list("False Shuffle","Force Top Card","Play fair"))
+			var/outcome = tgui_alert(user, "¿Como quieres barajar el mazo?","XYLIX", list("Barajar cartas de forma falsa","Fuerza la carta superior","Jueguen limpio"))
 			switch(outcome)
 				if("False Shuffle")
 					record_featured_stat(FEATURED_STATS_CRIMINALS, user)
 					record_round_statistic(STATS_GAMES_RIGGED)
-					to_chat(user, span_notice("I shuffle the cards, then reverse the shuffle. Sneaky."))
+					to_chat(user, span_notice("Barajo las cartas y luego cambio el orden. Eso es travieso."))
 				if("Force Top Card")
 					record_featured_stat(FEATURED_STATS_CRIMINALS, user)
 					record_round_statistic(STATS_GAMES_RIGGED)
@@ -192,9 +192,9 @@
 					to_chat(user, span_notice("Yo, en una sorprendente muestra de buena fe, barajo la baraja de manera justa."))
 					cards = shuffle(cards)
 		else
-			to_chat(user, span_notice("I shuffle the deck."))
+			to_chat(user, span_notice("Mezcla las cartas."))
 			cards = shuffle(cards)
-		user.visible_message(span_notice("[user] shuffles the deck."))
+		user.visible_message(span_notice("[user] mezcla el mazo."))
 		playsound(src, 'sound/blank.ogg', 50, TRUE)
 		cooldown = world.time
 
@@ -221,7 +221,7 @@
 		cards -= choice
 		cards = shuffle(cards)
 		cards.Insert(1,choice)
-		to_chat(cardUser, span_notice("I shuffle the deck, sneakily putting the [choice] on top."))
+		to_chat(cardUser, span_notice("Mezclare el mazo, colocando el [choice] en la parte superior de forma sigilosa."))
 		cardUser << browse(null, "window=deck")
 		return
 
@@ -230,10 +230,10 @@
 		var/obj/item/toy/cards/singlecard/SC = tool
 		if(SC.parentdeck == src)
 			if(!user.temporarilyRemoveItemFromInventory(SC))
-				to_chat(user, span_warning("The card is stuck to your hand, you can't add it to the deck!"))
+				to_chat(user, span_warning("¡La carta esta pegada a tu mano, no puedes añadirla a la baraja!"))
 				return ITEM_INTERACT_BLOCKING
 			cards += SC.cardname
-			user.visible_message(span_notice("[user] adds a card to the bottom of the deck."), span_notice("I add the card to the bottom of the deck."))
+			user.visible_message(span_notice("[user] añade una carta al fondo de la baraja."), span_notice("Agrego la carta al fondo de la baraja."))
 			qdel(SC)
 		else
 			to_chat(user, span_warning("¡No puedo mezclar cartas de otros mazos!"))
@@ -244,10 +244,10 @@
 		var/obj/item/toy/cards/cardhand/CH = tool
 		if(CH.parentdeck == src)
 			if(!user.temporarilyRemoveItemFromInventory(CH))
-				to_chat(user, span_warning("The hand of cards is stuck to your hand, you can't add it to the deck!"))
+				to_chat(user, span_warning("¡La mano de cartas esta pegada a tu mano, no puedes añadirla al mazo!"))
 				return ITEM_INTERACT_BLOCKING
 			cards += CH.currenthand
-			user.visible_message(span_notice("[user] puts [user.p_their()] hand of cards in the deck."), span_notice("I put the hand of cards in the deck."))
+			user.visible_message(span_notice("[user] pone [user.p_their()] mano de cartas en el mazo."), span_notice("Coloque la mano de cartas en el mazo."))
 			qdel(CH)
 		else
 			to_chat(user, span_warning("¡No puedo mezclar cartas de otros mazos!"))
@@ -262,12 +262,12 @@
 	if(Adjacent(usr))
 		if(over_object == M && loc != M)
 			M.put_in_hands(src)
-			to_chat(usr, span_notice("I pick up the deck."))
+			to_chat(usr, span_notice("Recojo el mazo."))
 
 		else if(istype(over_object, /atom/movable/screen/inventory/hand))
 			var/atom/movable/screen/inventory/hand/H = over_object
 			if(M.putItemFromInventoryInHandIfPossible(src, H.held_index))
-				to_chat(usr, span_notice("I pick up the deck."))
+				to_chat(usr, span_notice("Recojo el mazo."))
 
 	else
 		to_chat(usr, span_warning("¡No puedo alcanzarlo desde aqui!"))
@@ -318,7 +318,7 @@
 			C.apply_card_vars(C,O)
 			C.pickup(cardUser)
 			cardUser.put_in_hands(C)
-			cardUser.visible_message(span_notice("[cardUser] draws a card from [cardUser.p_their()] hand."), span_notice("Tomo el [C.cardname] de tu mano."))
+			cardUser.visible_message(span_notice("[cardUser] saca una carta de la mano de [cardUser.p_their()]."), span_notice("Tomo el [C.cardname] de tu mano."))
 
 			interact(cardUser)
 			if(length(currenthand) < 3)
@@ -350,7 +350,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	currenthand += card.cardname
-	user.visible_message(span_notice("[user] adds a card to [user.p_their()] hand."), span_notice("I add the [card.cardname] to your hand."))
+	user.visible_message(span_notice("[user] añade una carta a la mano de [user.p_their()]."), span_notice("Yo añado el [card.cardname] a tu mano."))
 	qdel(card)
 	interact(user)
 	if(length(currenthand) > 4)
@@ -389,15 +389,15 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/cardUser = user
 		if(cardUser.is_holding(src))
-			cardUser.visible_message(span_notice("[cardUser] checks [cardUser.p_their()] card."), span_notice("La tarjeta dice: [cardname]."))
+			cardUser.visible_message(span_notice("[cardUser] revisa la tarjeta [cardUser.p_their()]."), span_notice("La tarjeta dice: [cardname]."))
 		else if(HAS_TRAIT(user, TRAIT_BLACKLEG))
-			. += span_notice("Peeking under the card, you see the card reads: [cardname].")
+			. += span_notice("Al mirar debajo de la tarjeta, ves que la tarjeta dice: [cardname].")
 		else
-			. += span_warning("You need to have the card in your hand to check it!")
+			. += span_warning("¡Necesitas tener la carta en tu mano para revisarla!")
 
 
 /obj/item/toy/cards/singlecard/verb/Flip()
-	set name = "Flip Card"
+	set name = "Tarjeta invertida"
 	set hidden = 1
 	set src in range(1)
 
@@ -440,7 +440,7 @@
 		var/obj/item/toy/cards/cardhand/H = tool
 		if(H.parentdeck == parentdeck)
 			H.currenthand += cardname
-			user.visible_message(span_notice("[user] adds a card to [user.p_their()] hand."), span_notice("I add the [cardname] to your hand."))
+			user.visible_message(span_notice("[user] añade una carta a la mano de [user.p_their()]."), span_notice("Añado el [cardname] a tu mano."))
 			qdel(src)
 			H.interact(user)
 			if(length(H.currenthand) > 4)
@@ -482,7 +482,7 @@
 
 /obj/item/toy/cards/deck/syndicate
 	name = "tarjetas"
-	desc = "A pack of cards."
+	desc = "Una baraja de cartas."
 	icon_state = "deck_syndicate_full"
 	deckstyle = "syndicate"
 	card_hitsound = 'sound/blank.ogg'

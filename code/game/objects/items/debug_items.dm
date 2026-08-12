@@ -1,7 +1,7 @@
 /* This file contains standalone items for debug purposes. */
 
 /obj/item/debug/human_spawner
-	name = "human spawner"
+	name = "reproductor humano"
 	desc = ""
 	icon = 'icons/obj/guns/magic.dmi'
 	icon_state = "nothingwand"
@@ -21,5 +21,5 @@
 
 /obj/item/debug/human_spawner/attack_self(mob/user, list/modifiers)
 	..()
-	var/choice = input("Seleccione una especie", "Human Spawner", null) in GLOB.species_list
+	var/choice = input("Seleccione una especie", "Engendro humano", null) in GLOB.species_list
 	selected_species = GLOB.species_list[choice]

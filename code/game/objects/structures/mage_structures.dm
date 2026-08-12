@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 	icon_state = "imbuement2"
 
 /obj/structure/door/arcyne
-	name = "arcyne door"
+	name = "Puerta arcyne"
 	icon_state = "arcyne"
 	blade_dulling = DULLING_BASH
 	resistance_flags = FIRE_PROOF
@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 		LAZYADD(mana_beams, movable)
 
 /obj/structure/well/fountain/mana
-	name = "mana fountain"
+	name = "fuente de mana"
 	desc = ""
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "manafountain"
@@ -140,7 +140,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 			mana_pool.adjust_mana(-mana_amount * 25)
 			var/list/waterl = list(/datum/reagent/medicine/manapot/weak = mana_amount)
 			W.reagents.add_reagent_list(waterl)
-			to_chat(user, "<span class='notice'>I fill [W] from [src].</span>")
+			to_chat(user, "<span class='notice'>Relleno [W] desde [src].</span>")
 			playsound(user, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 80, FALSE)
 			return
 	if(istype(I, /obj/item/grabbing))
@@ -150,7 +150,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 		var/atom/movable/grabbed = I:grabbed
 		if(!grabbed.mana_pool)
 			return
-		user.visible_message(span_notice("[user] starts to submerge [grabbed]."), span_notice("You start to submerge [grabbed]."))
+		user.visible_message(span_notice("[user] comienza a sumergirse [grabbed]."), span_notice("Comienzas a sumergirte [grabbed]."))
 		if(!do_after(user, 10 SECONDS, src))
 			return
 		grabbed.mana_pool.set_intrinsic_recharge(MANA_ALL_LEYLINES)
@@ -162,8 +162,8 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 
 /obj/machinery/light/fueled/forge/arcane
 	icon = 'icons/roguetown/misc/forge.dmi'
-	name = "infernal forge"
-	desc = "This forge uses cycling magma from an internal core to heat things."
+	name = "fragua infernal"
+	desc = "Esta forja utiliza magma ciclico de un nucleo interno para calentar cosas."
 	icon_state = "infernal0"
 	base_state = "infernal"
 
@@ -181,7 +181,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 		update_appearance(UPDATE_ICON_STATE)
 
 /obj/structure/leyline
-	name = "inactive leyline"
+	name = "linea ley inactiva"
 	desc = "Una curiosa disposicion de piedras."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "inactiveleyline"
@@ -201,62 +201,62 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 	if(.)
 		return
 	if(last_process + time_between_uses > world.time)
-		to_chat(user, span_notice("The leyline appears to be drained of energy."))
+		to_chat(user, span_notice("La leyline parece estar agotada de energia."))
 		return
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
 		if(!active)
-			to_chat(user, span_notice("I wave a hand through the circle of rocks. Nothing happens."))
+			to_chat(user, span_notice("Muevo la mano a traves del circulo de rocas. No pasa nada."))
 			return
 		else
 			if(prob(60) && (!guardian))
 				if(do_after(user, 60))
-					to_chat(user, span_notice("I reach out towards the active leyline, peering within- and something peers back!"))
+					to_chat(user, span_notice("Me acerco a la linea ley activa, observando dentro, ¡y algo me observa a mi!"))
 					sleep(2 SECONDS)
 					guardian = new /mob/living/simple_animal/hostile/retaliate/leylinelycan(src.loc, src)
-					src.visible_message(span_danger("[src] emerges from the leyline rupture!"))
+					src.visible_message(span_danger("¡[src] emerge de la ruptura de la ley de la linea!"))
 			else
 				if(do_after(user, 60))
-					to_chat(user, span_notice("I reach out towards the active leyline, and it shatters! A large, usable piece of it drops at your feet."))
+					to_chat(user, span_notice("Me acerco hacia la leyline activa, ¡y se desintegra! Un gran pedazo utilizable de ella cae a tus pies."))
 					new /obj/item/natural/leyline(user.loc)
 					active = FALSE
 					icon_state = "inactiveleyline"
-					name = "inactive leyline"
+					name = "linea ley inactiva"
 					desc = "Una curiosa disposicion de piedras."
 					last_process = world.time
 
 	else
 		if(!active)
-			to_chat(user, span_notice("I wave a hand through the circle of rocks, and pulse my arcyne magic through it. The leyline activates!"))
+			to_chat(user, span_notice("Muevo la mano a traves del circulo de rocas y pulso mi arcyne magia a traves de el. ¡La ley linea se activa!"))
 			icon_state = "leylinerupture"
-			name = "active leyline"
-			desc = "An active tear into the leyline. It gives off plenty of energy."
+			name = "linea ley activa"
+			desc = "Un desgarro activo en la linea ley. Desprende mucha energia."
 			active = TRUE
 		else
 			if(guardian)
 				if(do_after(user, 60))
-					to_chat(user, span_danger("The leyline is abuzz with energy in a feedback from \the [guardian]! It lashes out at me!"))
+					to_chat(user, span_danger("La leyenda esta llena de energia en una retroalimentacion de \the [guardian] ¡Se abalanza contra mi!"))
 					user.electrocute_act(10)
 
 			if(prob(60) && (!guardian))
 				if(do_after(user, 60))
-					to_chat(user, span_notice("I reach out towards the active leyline, peering within- and something peers back!"))
+					to_chat(user, span_notice("Me acerco a la linea ley activa, observando dentro, ¡y algo me observa a mi!"))
 					sleep(2 SECONDS)
 					guardian = new /mob/living/simple_animal/hostile/retaliate/leylinelycan(src.loc, src)
-					src.visible_message(span_danger("\The [guardian] emerges from the leyline rupture!"))
+					src.visible_message(span_danger("¡\The [guardian] emerge de la ruptura de la leyenda!"))
 
 			else
 				if(do_after(user, 60))
-					to_chat(user, span_notice("I reach out towards the active leyline, and it shatters! A large, usable piece of it drops at my feet."))
+					to_chat(user, span_notice("Me acerco a la linea ley activa, ¡y se desmorona! Una gran pieza util de la misma cae a mis pies."))
 					new /obj/item/natural/leyline(user.loc)
 					active = FALSE
 					icon_state = "inactiveleyline"
-					name = "inactive leyline"
+					name = "linea ley inactiva"
 					desc = "Una curiosa disposicion de piedras."
 					last_process = world.time
 
 /obj/structure/voidstoneobelisk
-	name = "Voidstone Obelisk"
-	desc = "A smooth unnatural Obelisk, looking at it provides the sense of unease."
+	name = "Obelisco de Piedra del Vacio"
+	desc = "Un Obelisco suave y antinatural, mirarlo proporciona una sensacion de inquietud."
 	icon = 'icons/mob/summonable/32x32.dmi'
 	icon_state = "dormantobelisk"
 	anchored = TRUE
@@ -277,15 +277,15 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 	if(newforce > 1)
 		if(user.adjust_stamina(5))
 			user.visible_message(span_danger("[user] [verbu] [src] con [I]!"))
-	user.visible_message(span_danger("[src] comes to life, archaic stone shifting into position!"))
+	user.visible_message(span_danger("[src] cobra vida, la piedra arcaica se mueve en posicion."))
 	sleep(2)
 	new /mob/living/simple_animal/hostile/retaliate/voidstoneobelisk(src.loc)
 	qdel(src)
 
 /obj/structure/voidstoneobelisk/attack_hand(mob/living/carbon/human/user)
-	to_chat(user, span_notice("You reach out to touch the aberrant obelisk..."))
+	to_chat(user, span_notice("Alcanza el obelisco aberrante..."))
 	if(do_after(user, 3 SECONDS, target = src))
-		user.visible_message(span_danger("[src] comes to life, archaic stone shifting into position!"))
+		user.visible_message(span_danger("[src] cobra vida, la piedra arcaica se mueve en posicion."))
 		sleep(2)
 		new /mob/living/simple_animal/hostile/retaliate/voidstoneobelisk(src.loc)
 		qdel(src)

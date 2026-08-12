@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		to_chat(user, span_warning("¡No tengo idea de como usar [multitool]!"))
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message("[user] comienza a jugar con [src].", "You start tinkering with [src].")
+	user.visible_message("[user] comienza a jugar con [src].", "Comienzas a jugar con [src].")
 	if(!do_after(user, 8 SECONDS, src))
 		return ITEM_INTERACT_BLOCKING
 
@@ -76,8 +76,8 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	return
 
 /obj/structure/lever
-	name = "lever"
-	desc = "I want to pull it."
+	name = "palanca"
+	desc = "Quiero tirarlo."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "leverfloor0"
 	density = FALSE
@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	icon_state = "leverwall[toggled]"
 
 /obj/structure/lever/hidden
-	name = "hidden lever"
+	name = "palanca oculta"
 	desc = "Si puedes ver esto... ¿como?"
 	icon = null
 	//the perception DC to use this
@@ -147,7 +147,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		if(GET_MOB_ATTRIBUTE_VALUE(L, STAT_PERCEPTION) + bonuses < hidden_dc)
 			return // nothing here!
 	L.changeNext_move(CLICK_CD_MELEE)
-	user.visible_message(span_danger("[user] presiona un boton oculto."), span_notice("I push a hidden button."))
+	user.visible_message(span_danger("[user] presiona un boton oculto."), span_notice("Yo presiono un boton oculto."))
 	user.log_message("pulled the lever with redstone id \"[redstone_id]\"", LOG_GAME)
 	for(var/obj/structure/structure in redstone_attached)
 		INVOKE_ASYNC(structure, PROC_REF(redstone_triggered), user)
@@ -184,8 +184,8 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	accessor_trait = TRAIT_KNOW_ROUS_DOORS
 
 /obj/structure/repeater
-	name = "repeater"
-	desc = "Repeats a signal a set amount of times into an adjacently linked machine when activated by a signal. Looks suspiciously like a barrel."
+	name = "repetidor"
+	desc = "Repite una señal una cantidad determinada de veces en una maquina vinculada adyacentemente cuando se activa mediante una señal. Se parece sospechosamente a un barril."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "repeater"
 	w_class = WEIGHT_CLASS_HUGE // mechanical stuff is usually pretty heavy.
@@ -233,7 +233,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 	if(input)
 		playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
 		if(istype(linked_thing, /obj/structure/repeater))
-			say("BZZZZZZZZ!!!")
+			say("¡ZAPZZZZZZZZ!!!")
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 			sleep(10)
 			explosion(src, light_impact_range = 1, flame_range = 2, smoke = TRUE, soundin = pick('sound/misc/explode/bottlebomb (1).ogg','sound/misc/explode/bottlebomb (2).ogg'))
@@ -275,7 +275,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 
 /obj/structure/pressure_plate
 	name = "placa de presion"
-	desc = "Be careful. Stepping on this could either mean a bomb exploding or a door closing on you."
+	desc = "Ten cuidado. Pisar esto podria significar que explote una bomba o que se te cierre una puerta."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "pressureplate"
 	max_integrity = 45 // so it gets destroyed when used to explode a bomb
@@ -320,8 +320,8 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		anchored = !anchored
 
 /obj/structure/activator
-	name = "activator"
-	desc = "A strange structure with an opening for an item on the top with an arrow etched into it pointing to where it is possibly aiming."
+	name = "activador"
+	desc = "Una estructura extraña con una abertura para un objeto en la parte superior con una flecha grabada que apunta hacia donde posiblemente apunta."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "activator"
 	max_integrity = 45 // so it gets destroyed when used to explode a bomb
@@ -402,8 +402,8 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 					break
 
 /obj/structure/floordoor
-	name = "floorhatch"
-	desc = "A handy floor hatch for people who need privacy upstairs."
+	name = "trampa de piso"
+	desc = "Una practica trampilla de suelo para personas que necesitan privacidad en el piso de arriba."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "floorhatch1"
 	density = FALSE
@@ -502,7 +502,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 
 /obj/structure/kybraxor
 	name = "Kybraxor el Devorador"
-	desc = "Two massive slabs of metal flooring which threaten to swallow you whole. Watch out!"
+	desc = "Dos enormes losas de suelo metalico que amenazan con tragarte entero. ¡Cuidado!"
 	density = FALSE
 	no_over_text = TRUE
 	icon = 'icons/roguetown/misc/96x96.dmi'

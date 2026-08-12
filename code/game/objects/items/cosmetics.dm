@@ -1,6 +1,6 @@
 /obj/item/lipstick
 	gender = PLURAL
-	name = "red lipstick"
+	name = "lapiz labial rojo"
 	desc = ""
 	icon = 'icons/roguetown/items/perfume.dmi'
 	icon_state = "lipstick"
@@ -10,7 +10,7 @@
 	var/open = FALSE
 
 /obj/item/lipstick/purple
-	name = "purple lipstick"
+	name = "lapiz labial morado"
 	colour = "#3f1462"
 
 /obj/item/lipstick/jade
@@ -18,29 +18,29 @@
 	colour = "#0f5335"
 
 /obj/item/lipstick/black
-	name = "black lipstick"
+	name = "lapiz labial negro"
 	colour = "#010517"
 
 /obj/item/lipstick/green
-	name = "green lipstick"
+	name = "lapiz labial verde"
 	colour = "#27853c"
 
 /obj/item/lipstick/blue
-	name = "blue lipstick"
+	name = "lapiz labial azul"
 	colour = "#241e80"
 
 /obj/item/lipstick/white
-	name = "white lipstick"
+	name = "lapiz labial blanco"
 	colour = "#efeff7"
 
 /obj/item/lipstick/random
-	name = "lipstick"
+	name = "lapiz labial"
 	icon_state = MAP_SWITCH("lipstick", "random_lipstick")
 
 /obj/item/lipstick/random/Initialize()
 	. = ..()
 	colour = pick("#821d2c","#3f1462","#0f5335","#010517","#27853c","#241e80","#efeff7")
-	name = "lipstick"
+	name = "lapiz labial"
 
 /obj/item/lipstick/update_icon_state()
 	. = ..()
@@ -54,7 +54,7 @@
 		. += colored_overlay
 
 /obj/item/lipstick/attack_self(mob/user, list/modifiers)
-	to_chat(user, "<span class='notice'>I twist \the [src] [open ? "closed" : "open"].</span>")
+	to_chat(user, "<span class='notice'>Cambio el estado de \the [src] a [open ? "closed" : "open"].</span>")
 	open = !open
 	update_appearance(UPDATE_ICON)
 
@@ -72,24 +72,24 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(H.lip_style)	//if they already have lipstick on
-		to_chat(user, "<span class='warning'>I need to wipe off the old lipstick first!</span>")
+		to_chat(user, "<span class='warning'>Primero tengo que quitar el lapiz labial viejo. </span>")
 		return ITEM_INTERACT_BLOCKING
 
 	if(H == user)
 		user.visible_message(
-			"<span class='notice'>[user] does [user.p_their()] lips with \the [src].</span>",
-			"<span class='notice'>I take a moment to apply \the [src]. Perfect!</span>",
+			"<span class='notice'>[user] pinta los labios de [user.p_their()] con \the [src].</span>",
+			"<span class='notice'>Me tomo un momento para aplicar \the [src]. ¡Perfecto!</span>",
 		)
 	else
 		user.visible_message(
-			"<span class='warning'>[user] begins to do [H]'s lips with \the [src].</span>",
-			"<span class='notice'>I begin to apply \the [src] on [H]'s lips...</span>",
+			"<span class='warning'>[user] comienza a maquillar los labios de [H] con \the [src].</span>",
+			"<span class='notice'>Empiezo a aplicar \the [src] en los labios de [H]...</span>",
 		)
 		if(!do_after(user, 2 SECONDS, H))
 			return ITEM_INTERACT_BLOCKING
 		user.visible_message(
-			"<span class='notice'>[user] does [H]'s lips with \the [src].</span>",
-			"<span class='notice'>I apply \the [src] on [H]'s lips.</span>",
+			"<span class='notice'>[user] pinta los labios de [H] con \the [src].</span>",
+			"<span class='notice'>Aplico \the [src] en los labios de [H].</span>",
 		)
 
 	H.lip_style = "lipstick"
@@ -112,14 +112,14 @@
 		return NONE
 
 	if(H == user)
-		to_chat(user, "<span class='notice'>I wipe off the lipstick with [src].</span>")
+		to_chat(user, "<span class='notice'>Me quito el lapiz labial con [src].</span>")
 	else
-		user.visible_message("<span class='warning'>[user] begins to wipe [H]'s lipstick off with \the [src].</span>", \
-							"<span class='notice'>I begin to wipe off [H]'s lipstick...</span>")
+		user.visible_message("<span class='warning'>[user] comienza a limpiar el labial de [H] con \the [src].</span>", \
+							"<span class='notice'>Empiezo a limpiar el lapiz labial de [H]...</span>")
 		if(do_after(user, 1 SECONDS, H))
 			return ITEM_INTERACT_BLOCKING
-		user.visible_message("<span class='notice'>[user] wipes [H]'s lipstick off with \the [src].</span>", \
-							"<span class='notice'>I wipe off [H]'s lipstick.</span>")
+		user.visible_message("<span class='notice'>[user] limpia el labial de [H] con \the [src].</span>", \
+							"<span class='notice'>Borro el lapiz labial de [H].</span>")
 
 	H.lip_style = null
 	H.update_body_parts()

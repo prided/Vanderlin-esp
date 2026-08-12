@@ -16,11 +16,11 @@
 	var/permanent
 
 /obj/machinery/light/fueled/lanternpost/fixed
-	desc = "The lamptern is permanently built into the structure of this one."
+	desc = "La farola esta integrada permanentemente en la estructura de esta."
 	permanent = TRUE
 
 /obj/machinery/light/fueled/lanternpost/unfixed
-	desc = "A wooden post that can have a lamptern or a noose attached to it."
+	desc = "Un poste de madera al que se le puede colocar una lampara o un lazo."
 	permanent = FALSE
 	on = FALSE
 
@@ -92,7 +92,7 @@
 					return
 				else
 					torchy.spark_act()
-					user.visible_message("<span class='info'>[user] lights [src].</span>")
+					user.visible_message("<span class='info'>[user] ilumina [src].</span>")
 					playsound(src, 'sound/items/firelight.ogg', 100)
 					on = TRUE
 					update()
@@ -101,7 +101,7 @@
 			if(!LR.on && on)
 				if(LR.fuel > 0)
 					LR.spark_act()
-					user.visible_message("<span class='info'>[user] lights [LR] in [src].</span>")
+					user.visible_message("<span class='info'>[user] ilumina [LR] en [src].</span>")
 					user.update_inv_hands()
 		else
 			if(LR.on)
@@ -118,7 +118,7 @@
 		return
 	if(istype(W, /obj/item/rope)&&!istype(W, /obj/item/rope/chain))
 		if(!torchy)
-			user.visible_message(span_notice("[user] begins to tie a noose on [src]..."), span_notice("I begin to tie a noose on [src]..."))
+			user.visible_message(span_notice("[user] comienza a atar una soga en [src]..."), span_notice("Comienzo a atar un nudo en [src]..."))
 			if(do_after(user, 2 SECONDS, src))
 				new /obj/structure/noose/gallows(loc)
 				playsound(src, 'sound/foley/noose_idle.ogg', 100)
@@ -126,8 +126,8 @@
 				qdel(src)
 		else
 			if(torchy && !permanent)
-				to_chat(user, span_warning("I must remove [torchy] from [src] before I can tie [W]."))
+				to_chat(user, span_warning("Debo quitar [torchy] de [src] antes de poder atar [W]."))
 			else
-				to_chat(user, span_warning("There's no place for a rope on this one."))
+				to_chat(user, span_warning("En este caso no hay lugar para una cuerda."))
 	else
 		. = ..()

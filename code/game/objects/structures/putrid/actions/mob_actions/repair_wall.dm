@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/repair_walls
-	name = "Repair Walls"
-	desc = "Repairs all connected meatvine walls."
+	name = "Reparacion de paredes"
+	desc = "Repara todas las paredes de Meatvine conectadas."
 	personal_resource_cost = 30
 	cooldown_time = 15 SECONDS
 	button_icon_state = "repair_walls"
@@ -9,7 +9,7 @@
 	var/mob/living/simple_animal/hostile/retaliate/meatvine/mob = owner
 
 	if(mob.personal_resource_pool < personal_resource_cost)
-		to_chat(owner, span_warning("You don't have enough energy to repair walls!"))
+		to_chat(owner, span_warning("¡No tienes suficiente energia para reparar las paredes!"))
 		return FALSE
 
 	// Find all connected walls via flood fill
@@ -48,7 +48,7 @@
 		wall.update_appearance()
 
 	mob.visible_message(
-		span_danger("[mob] pulses with energy, repairing nearby meatvine walls!"),
+		span_danger("¡[mob] pulsa con energia y repara los muros cercanos de Meatvine!"),
 		span_alertalien("Canalizas energia para reparar todas las paredes conectadas.")
 	)
 

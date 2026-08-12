@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/charge_attack
-	name = "Charge Attack"
-	desc = "Charge at a target location, trampling anything in your path."
+	name = "Ataque de carga"
+	desc = "Carga en una ubicacion objetivo, pisoteando todo lo que encuentres en tu camino."
 	button_icon_state = "defender_charge"
 	cooldown_time = 15 SECONDS
 	personal_resource_cost = 20
@@ -123,11 +123,11 @@
 
 /datum/action/cooldown/meatvine/personal/charge_attack/proc/hit_target(atom/movable/source, atom/target, damage_dealt)
 	if(!isliving(target))
-		source.visible_message(span_danger("[source] smashes into [target]!"))
+		source.visible_message(span_danger("¡[source] se estrella contra [target]!"))
 		return
 
 	var/mob/living/living_target = target
-	living_target.visible_message(span_danger("[source] charges into [living_target]!"), span_userdanger("[source] charges into you!"))
+	living_target.visible_message(span_danger("[source] carga hacia [living_target] ¡!"), span_userdanger("¡[source] carga contra ti!"))
 	living_target.Knockdown(0.6 SECONDS)
 	living_target.apply_damage(damage_dealt, BRUTE, damage_type = BCLASS_BLUNT)
 	playsound(living_target, 'sound/misc/meteorimpact.ogg', 100, TRUE)

@@ -1,8 +1,8 @@
 /datum/objective/personal/abyssor_splash
-	name = "Splash Water"
-	category = "Abyssor's Chosen"
+	name = "Salpicar con agua"
+	category = "Elegido de Abyssor"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Abyssor grows stronger", "Abyssor blesses you (+1 Strength)")
+	rewards = list("2 Triunfos", "Abyssor se fortalece", "Abyssor te bendice (+1 Fuerza)")
 
 /datum/objective/personal/abyssor_splash/on_creation()
 	. = ..()
@@ -30,7 +30,7 @@
 
 /datum/objective/personal/abyssor_splash/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've unleashed Abyssor's rage, completing the objective!"))
+	to_chat(owner.current, span_greentext("¡Has desatado la furia de Abyssor y completado el objetivo!"))
 	adjust_storyteller_influence(ABYSSOR, 20)
 	UnregisterSignal(owner.current, COMSIG_SPLASHED_MOB)
 
@@ -39,4 +39,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_ABYSSOR_BLESSING, list(STAT_STRENGTH =  1))
 
 /datum/objective/personal/abyssor_splash/update_explanation_text()
-	explanation_text = "Abyssor is RAGING! Splash some ingrate who forgot his name with a bucket full of water!"
+	explanation_text = "¡Abyssor esta FURIOSO! ¡Vacia un balde de agua sobre algun ingrato que haya olvidado su nombre!"

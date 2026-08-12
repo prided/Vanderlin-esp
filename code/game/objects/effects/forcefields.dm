@@ -1,7 +1,7 @@
 /// A transparent wall, not to be confused with the breakable structure.
 /obj/effect/forcefield
 	name = "FORCEWALL"
-	desc = "A wizard's magic wall."
+	desc = "El muro magico de un mago."
 	icon_state = "m_shield"
 	anchored = TRUE
 	opacity = FALSE
@@ -41,7 +41,7 @@
 /// A BREAKABLE, transparent wall, not to be confused with the effect.
 /obj/structure/forcefield
 	name = "arcyne pared"
-	desc = "A wall of pure arcyne force."
+	desc = "Un muro de pura fuerza arcyne."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "forcefield"
 	break_sound = 'sound/combat/hits/onstone/stonedeath.ogg'

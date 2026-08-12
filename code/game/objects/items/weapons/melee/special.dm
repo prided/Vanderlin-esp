@@ -1,6 +1,6 @@
 /obj/item/weapon/lordscepter
-	name = "master's rod"
-	desc = "Bend the knee."
+	name = "vara del maestro"
+	desc = "Doble la rodilla."
 	icon_state = "scepter"
 	icon = 'icons/roguetown/weapons/32/special.dmi'
 	force = DAMAGE_MACE
@@ -29,15 +29,15 @@
 	AddElement(/datum/element/walking_stick)
 
 /datum/intent/lordbash
-	name = "bash"
+	name = "golpe"
 	blade_class = BCLASS_BLUNT
 	icon_state = "inbash"
-	attack_verb = list("bashes", "huelgas")
+	attack_verb = list("golpea", "huelgas")
 	penfactor = 10
 	item_damage_type = "blunt"
 
 /datum/intent/lord_electrocute
-	name = "shock"
+	name = "choque"
 	blade_class = null
 	icon_state = "inshock"
 	tranged = TRUE
@@ -77,7 +77,7 @@
 		if(ishuman(target))
 			var/mob/living/carbon/human/H = target
 
-			user.visible_message(span_warning("[user] points [src] at [target].</span>"))
+			user.visible_message(span_warning("[user] puntos [src] en [target].</span>"))
 
 			if(H == HU)
 				return
@@ -89,7 +89,7 @@
 				return
 
 			if(!COOLDOWN_FINISHED(src, scepter))
-				to_chat(user, span_danger("The [src] is not ready yet! [round(COOLDOWN_TIMELEFT(src, scepter) / 10, 1)] seconds left!"))
+				to_chat(user, span_danger("¡El [src] aun no esta listo! ¡Quedan [round(COOLDOWN_TIMELEFT(src, scepter) / 10, 1)] segundos!"))
 				return
 
 			if(istype(user.used_intent, /datum/intent/lord_electrocute))
@@ -112,8 +112,8 @@
 
 //................ Staff of the Testimonium ............... //
 /obj/item/weapon/polearm/woodstaff/aries
-	name = "staff of the testimonium"
-	desc = "A symbolic staff, granted to enlightened acolytes who have achieved and bear witnessed to the miracles of the Gods."
+	name = "personal del testimonio"
+	desc = "Un baston simbolico, otorgado a acolitos iluminados que han logrado y han sido testigos de los milagros de los dioses."
 	icon_state = "aries"
 	force_wielded =  DAMAGE_STAFF_WIELD + 1
 	resistance_flags = FIRE_PROOF // Leniency for unique items
@@ -128,7 +128,7 @@
 	melt_amount = 0
 
 /datum/intent/priest_smite
-	name = "smite"
+	name = "herir"
 	blade_class = null
 	icon_state = "inshock"
 	tranged = TRUE
@@ -172,7 +172,7 @@
 			return
 
 		if(!COOLDOWN_FINISHED(src, staff))
-			to_chat(user, span_danger("The [src] is not ready yet! [round(COOLDOWN_TIMELEFT(src, staff) / 10, 1)] seconds left!"))
+			to_chat(user, span_danger("¡El [src] aun no esta listo! ¡Quedan [round(COOLDOWN_TIMELEFT(src, staff) / 10, 1)] segundos!"))
 			return
 
 		if(istype(user.used_intent, /datum/intent/priest_smite))
@@ -181,7 +181,7 @@
 			playsound(user, 'sound/magic/lightningshock.ogg', 70, TRUE)
 			H.electrocute_act(5, src)
 			HU.log_message("has smitten [H.real_name] with the [src]!", LOG_ATTACK)
-			to_chat(H, span_danger("I'm smitten by the staff!"))
+			to_chat(H, span_danger("¡Estoy enamorado del baston!"))
 			COOLDOWN_START(src, staff, 20 SECONDS)
 			return
 
@@ -189,14 +189,14 @@
 			HU.visible_message(span_warning("[HU] silencia [H] con \the [src]."))
 			H.set_silence(20 SECONDS)
 			HU.log_message("has silenced [H.real_name] with the [src]!", LOG_ATTACK)
-			to_chat(H, span_danger("I'm silenced by the staff!"))
+			to_chat(H, span_danger("¡Me silenciaron con el baston!"))
 			COOLDOWN_START(src, staff, 10 SECONDS)
 
 /obj/item/weapon/mace/stunmace
-	name = "stunmace"
+	name = "maza paralizante"
 	icon = 'icons/roguetown/weapons/32/special.dmi'
 	icon_state = "stunmace0"
-	desc = "A dwarven invention, a mace that bears tiny soul-gems that imbue the crown of the mace with lightning mana."
+	desc = "Un invento enano, una maza que lleva pequeñas gemas del alma que imbuyen la corona de la maza con mana relampago."
 	force = DAMAGE_CLUB
 	force_wielded = DAMAGE_CLUB
 	wdefense = BAD_PARRY
@@ -257,9 +257,9 @@
 		on = FALSE
 	else
 		if(charge <= 33)
-			to_chat(user, "<span class='warning'>It's out of mana.</span>")
+			to_chat(user, "<span class='warning'>Se quedo sin mana.</span>")
 			return
-		user.visible_message("<span class='warning'>[user] flicks [src] on.</span>")
+		user.visible_message("<span class='warning'>[user] da [src] la vuelta.</span>")
 		on = TRUE
 		charge--
 	playsound(user, pick('sound/items/stunmace_toggle (1).ogg','sound/items/stunmace_toggle (2).ogg','sound/items/stunmace_toggle (3).ogg'), 100, TRUE)
@@ -300,9 +300,9 @@
 		playsound(src, pick('sound/items/stunmace_toggle (1).ogg','sound/items/stunmace_toggle (2).ogg','sound/items/stunmace_toggle (3).ogg'), 100, TRUE)
 
 /datum/intent/katar/cut
-	name = "cut"
+	name = "cortar"
 	icon_state = "incut"
-	attack_verb = list("cuts", "slashes")
+	attack_verb = list("corta", "corta")
 	animname = "cut"
 	blade_class = BCLASS_CUT
 	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
@@ -314,9 +314,9 @@
 	item_damage_type = "slash"
 
 /datum/intent/katar/thrust
-	name = "thrust"
+	name = "empujar"
 	icon_state = "instab"
-	attack_verb = list("thrusts")
+	attack_verb = list("estoca")
 	animname = "stab"
 	blade_class = BCLASS_STAB
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
@@ -328,7 +328,7 @@
 
 /obj/item/weapon/katar
 	name = "katar"
-	desc = "A blade that sits above the users fist. Commonly used by those proficient at unarmed fighting"
+	desc = "Una hoja que se ubica sobre el puño del usuario. Comunmente utilizado por aquellos que dominan la lucha sin armas."
 	icon = 'icons/roguetown/weapons/32/fists_claws.dmi'
 	icon_state = "katar"
 	force = DAMAGE_KATAR
@@ -351,8 +351,8 @@
 	item_weight = 400 GRAMS
 
 /obj/item/weapon/katar/psydon
-	name = "psydonian katar"
-	desc = "An exotic weapon taken from the hands of wandering monks, an esoteric design to the Grenzelhoftian nation. Special care was taken into account towards the user's knuckles: silver-tipped steel from tip to edges, and His holy cross reinforcing the heart of the weapon, with curved shoulders to allow its user to deflect incoming blows - provided they lead it in with the blade."
+	name = "katar psydonian"
+	desc = "Un arma exotica tomada de las manos de monjes errantes, un diseño esoterico para la nacion Grenzelhoftian. Se tuvo especial cuidado en los nudillos del usuario: acero con punta de plata desde la punta hasta los bordes, y su santa cruz que refuerza el corazon del arma, con hombros curvados para permitir al usuario desviar los golpes entrantes, siempre que lo guien con la hoja."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psykatar"
 	item_weight = 400 GRAMS
@@ -364,7 +364,7 @@
 
 /obj/item/weapon/katar/psydon/relic
 	name = "\proper angustia"
-	desc = "An exotic weapon unfamiliar to Grenzelhoft, but taken and given blessings to fit in the Armoury of Psydon. May its blows cause naught but anguish to those who dare raise up arms against you."
+	desc = "Un arma exotica desconocida para Grenzelhoft, pero tomada y bendecida para que quepa en la Armeria de Psydon. Que sus golpes no causen mas que angustia a quienes se atrevan a alzar las armas contra ti."
 
 /obj/item/weapon/katar/psydon/relic/Initialize(mapload)
 	. = ..()
@@ -372,19 +372,19 @@
 
 /obj/item/weapon/katar/psydon/relic/alt
 	name = "\proper agonia"
-	desc = "An exotic weapon unfamiliar to Grenzelhoft, but taken and given blessings to fit in the Armoury of Psydon. May the agony it inflicts upon your foes leave a mark, so that they never forget His name."
+	desc = "Un arma exotica desconocida para Grenzelhoft, pero tomada y bendecida para que quepa en la Armeria de Psydon. Que la agonia que inflige a tus enemigos deje una marca, para que nunca olviden Su nombre."
 
 /obj/item/weapon/katar/abyssor
 	name = "barotrauma"
-	desc = "A gift from a creature of the sea. The claw is sharpened to a wicked edge."
+	desc = "Un regalo de una criatura del mar. La garra esta afilada hasta obtener un borde perverso."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "abyssorclaw"
 	item_weight = 350 GRAMS
 
 /datum/intent/knuckles/strike
-	name = "punch"
+	name = "golpe de puño"
 	blade_class = BCLASS_BLUNT
-	attack_verb = list("punches", "relojes")
+	attack_verb = list("golpea", "relojes")
 	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
 	penfactor = AP_CLUB_STRIKE
 	icon_state = "inpunch"
@@ -392,9 +392,9 @@
 	item_damage_type = "blunt"
 
 /datum/intent/knuckles/smash
-	name = "smash"
+	name = "aplastar"
 	blade_class = BCLASS_SMASH
-	attack_verb = list("smashes")
+	attack_verb = list("aplasta")
 	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
 	damfactor = 1.1
 	penfactor = AP_CLUB_STRIKE
@@ -406,7 +406,7 @@
 
 /obj/item/weapon/knuckles
 	name = "nudillos de acero"
-	desc = "A mean looking pair of steel knuckles."
+	desc = "Un par de nudillos de acero de aspecto malvado."
 	icon = 'icons/roguetown/weapons/32/fists_claws.dmi'
 	icon_state = "steelknuckle"
 	force = DAMAGE_KNUCKLES
@@ -442,8 +442,8 @@
 				return list("shrink" = 0.1,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/knuckles/psydon
-	name = "psydonian knuckles"
-	desc = "A simple piece of harm molded in a holy mixture of steel and silver, finished with three stumps - Psydon's crown - to crush the heretics' garments and armor into smithereens."
+	name = "Nudillos psydonian"
+	desc = "Una simple pieza de daño moldeada en una mezcla sagrada de acero y plata, rematada con tres muñones (la corona de Psydon) para aplastar las vestiduras y armaduras de los herejes en pedazos."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psyknuckle"
 	item_weight = 200 GRAMS
@@ -454,19 +454,19 @@
 	AddComponent(/datum/component/psyblessed, FALSE, 3, FALSE, 50, 1, TRUE)
 
 /obj/item/weapon/knuckles/psydon/relic
-	name = "\proper confidence"
-	desc = "Silver knuckles, fashioned in the iconography of Psydon. May your strikes be confident and true, and done in His name."
+	name = "\proper Confianza"
+	desc = "Nudillos plateados, diseñados con la iconografia de Psydon. Que tus golpes sean seguros y verdaderos, y hechos en Su nombre."
 
 /obj/item/weapon/knuckles/psydon/relic/Initialize(mapload)
 	. = ..()							//+5 force, +100 int, +1 def, make silver
 	AddComponent(/datum/component/psyblessed, TRUE, 5, FALSE, 100, 1, TRUE)
 
 /obj/item/weapon/knuckles/psydon/relic/alt
-	name = "\proper conviction"
-	desc = "Silver knuckles, fashioned in the iconography of Psydon. May your convicition to the Faith be ever unwavering, lest you begin to doubt yourself and bring harm to your siblings."
+	name = "\proper Condena"
+	desc = "Nudillos de plata, forjados con la iconografia de Psydon. Que tu conviccion en la Fe sea siempre inquebrantable, para que no dudes de ti ni dañes a tus hermanos."
 
 /obj/item/weapon/knuckles/eora
-	name = "close caress"
+	name = "caricia cercana"
 	desc = "Algunas veces requieren un enfoque mas intimo."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "eoraknuckle"

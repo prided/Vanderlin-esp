@@ -1,5 +1,5 @@
 /datum/action/cooldown/meatvine/personal/triple_charge
-	name = "Triple Charge Attack"
+	name = "Ataque de triple carga"
 	desc = "Carga tres veces en rapida sucesion en un lugar, abrumando a tu presa."
 	button_icon_state = "ravager_charge"
 	cooldown_time = 30 SECONDS
@@ -126,11 +126,11 @@
 
 /datum/action/cooldown/meatvine/personal/triple_charge/proc/hit_target(atom/movable/source, atom/target, damage_dealt)
 	if(!isliving(target))
-		source.visible_message(span_danger("[source] smashes into [target]!"))
+		source.visible_message(span_danger("¡[source] se estrella contra [target]!"))
 		return
 
 	var/mob/living/living_target = target
-	living_target.visible_message(span_danger("[source] charges into [living_target]!"), span_userdanger("[source] charges into you!"))
+	living_target.visible_message(span_danger("[source] carga hacia [living_target] ¡!"), span_userdanger("¡[source] carga contra ti!"))
 	living_target.Knockdown(0.6 SECONDS)
 	living_target.apply_damage(damage_dealt, BRUTE, damage_type = BCLASS_BLUNT)
 	playsound(living_target, 'sound/misc/meteorimpact.ogg', 100, TRUE)

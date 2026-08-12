@@ -1,6 +1,6 @@
 //The effect when you wrap a dead body in gift wrap
 /obj/effect/spresent
-	name = "strange present"
+	name = "presente extraño"
 	desc = ""
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "strangepresent"
@@ -8,7 +8,7 @@
 	anchored = FALSE
 
 /obj/effect/beam
-	name = "beam"
+	name = "haz"
 	var/def_zone
 	pass_flags = PASSTABLE
 
@@ -62,7 +62,7 @@
 
 
 /obj/effect/dummy/lighting_obj
-	name = "lighting fx obj"
+	name = "objeto de efectos de iluminacion"
 	desc = ""
 	icon_state = "nothing"
 	light_color = "#FFFFFF"
@@ -83,7 +83,7 @@
 		QDEL_IN(src, _duration)
 
 /obj/effect/dummy/lighting_obj/moblight
-	name = "mob lighting fx"
+	name = "efectos de iluminacion de la multitud"
 
 /obj/effect/dummy/lighting_obj/moblight/Initialize(mapload, _color, _range, _power, _duration)
 	. = ..()

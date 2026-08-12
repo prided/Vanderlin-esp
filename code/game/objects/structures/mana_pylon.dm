@@ -1,5 +1,5 @@
 /obj/structure/mana_pylon
-	name = "mana pylon"
+	name = "pilon de mana"
 	desc = ""
 	icon_state = "pylon"
 	icon = 'icons/roguetown/misc/mana_pylon.dmi'
@@ -18,10 +18,10 @@
 /obj/structure/mana_pylon/examine(mob/user)
 	. = ..()
 	if(different_z)
-		. += span_notice("It appears to be transporting mana vertically!")
+		. += span_notice("Parece que esta transportando el mana de forma vertical.")
 	if(mana_pool.network_attunement)
 		var/datum/attunement/attunement = mana_pool.network_attunement
-		. += span_blue("It is attuned to [initial(attunement.name)]")
+		. += span_blue("Esta sintonizado con [initial(attunement.name)]")
 
 /obj/structure/mana_pylon/Initialize(mapload, ...)
 	. = ..()
@@ -33,11 +33,11 @@
 	if(!user.client)
 		return
 	var/datum/mana_pool/mana_pylon/pool = mana_pool
-	var/new_threshold = input(user, "Establece la reserva minima de mana para este pilon (actual: [pool.transfer_threshold]):", "Pylon Threshold", pool.transfer_threshold) as num|null
+	var/new_threshold = input(user, "Establece la reserva minima de mana para este pilon (actual: [pool.transfer_threshold]):", "Umbral del pilon", pool.transfer_threshold) as num|null
 	if(isnull(new_threshold))
 		return
 	pool.transfer_threshold = max(0, new_threshold)
-	user.balloon_alert(user, "threshold set: [pool.transfer_threshold]")
+	user.balloon_alert(user, "limite establecido: [pool.transfer_threshold]")
 
 /obj/structure/mana_pylon/Destroy()
 	if(linked_pylon)
@@ -142,13 +142,13 @@
 		to_chat(user, span_warning("Estas demasiado lejos del pilon."))
 		return
 	if(mana_pool.amount < 10)
-		to_chat(user, span_warning("The pylon doesn't have enough mana to carry you."))
+		to_chat(user, span_warning("El pilar no tiene suficiente mana para llevarte."))
 		return
 
 	mana_pool.amount -= 10
 	user.visible_message(
-		span_notice("[user] dissolves into the leyline!"),
-		span_notice("You dissolve into the leyline, riding the flow of mana.")
+		span_notice("¡[user] se disuelve en la linea ley!"),
+		span_notice("Te disuelves en la linea ley, montando el flujo de mana.")
 	)
 	user.forceMove(get_turf(src))
 	new /obj/effect/bloodcult_jaunt/visible/ley(get_turf(user), user, get_turf(linked_pylon), null)

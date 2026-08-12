@@ -83,22 +83,22 @@
 
 /obj/structure/flora/tree/wise
 	name = "arbol sabio"
-	desc = "Dendor's favored. It seems to watch you with ancient awareness."
+	desc = "El favorito de Dendor. Parece mirarte con conciencia antigua."
 	icon_state = "mystical"
 	var/activated = FALSE
 	var/cooldown = FALSE
 	var/retaliation_messages = list(
-		"LEAVE FOREST ALONE!",
-		"DENDOR PROTECTS!",
-		"NATURE'S WRATH!",
-		"BEGONE, INTERLOPER!",
-		"BEGONE, DESTROYER!",
-		"NATURE SHALL PREVAIL!",
+		"¡DEJEN AL BOSQUE EN SOLA!",
+		"DENDOR ¡PROTEGE!",
+		"¡LA IRA DE LA NATURALEZA!",
+		"¡VAYA, INTRODUCTOR!",
+		"¡VAYA, DESTRUCTOR!",
+		"¡LA NATURALEZA PREVALECERA!",
 		"¡LA NATURALEZA RECLAMARA LA TIERRA!",
-		"LEAVE US BE!",
-		"YOU HAVE DESTROYED ENOUGH!",
-		"DENDOR SMITES THE INTERLOPERS!",
-		"DENDOR SMITES THE DESTROYERS!",
+		"¡DEJENNOS EN SER!",
+		"¡HAS DESTRUIDO BASTANTE!",
+		"¡DENDOR HIERRE A LOS INTRODUCTORS!",
+		"¡DENDOR HIERRE A LOS DESTRUCTORES!",
 	)
 
 /obj/structure/flora/tree/wise/Initialize()
@@ -167,8 +167,8 @@
 	metalizer_result = /obj/machinery/anvil
 
 /obj/structure/flora/tree/underworld
-	name = "screaming tree"
-	desc = "humen faces everywhere."
+	name = "arbol gritando"
+	desc = "humen mira por todas partes."
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "screaming1"
 	base_icon_state = "screaming"
@@ -205,7 +205,7 @@
 	qdel(src)
 
 /obj/structure/flora/tree/pine/dead
-	name = "burnt pine tree"
+	name = "pino quemado"
 	icon_state = "dead1"
 	base_icon_state = "dead"
 	num_random_icons = 3
@@ -216,8 +216,8 @@
 
 /*	.............  Treestump   ................ */	// Treestumps are now tables, so you can tablecraft with them and so on.
 /obj/structure/table/wood/treestump
-	name = "tree stump"
-	desc = "Someone cut this tree down."
+	name = "tocon de arbol"
+	desc = "Alguien talo este arbol."
 	icon = 'icons/roguetown/misc/tree.dmi'
 	icon_state = "stumpt1"
 	max_integrity = 100
@@ -237,15 +237,15 @@
 	if(!istype(tool, /obj/item/weapon/shovel))
 		return ..()
 
-	to_chat(user, "I start unearthing the stump...")
+	to_chat(user, "Comienzo a desenterrar el tocon...")
 	playsound(src,'sound/items/dig_shovel.ogg', 100, TRUE)
 
 	if(!do_after(user, 5 SECONDS, src))
 		return ITEM_INTERACT_BLOCKING
 
 	user.visible_message(
-		span_notice("[user] unearths [src]."),
-		span_notice("I unearth [src].")
+		span_notice("[user] desentierra [src]."),
+		span_notice("Desentierro [src].")
 	)
 
 	playsound(src,'sound/items/dig_shovel.ogg', 100, TRUE)
@@ -258,8 +258,8 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/structure/table/wood/treestump/burnt
-	name = "tree stump"
-	desc = "This stump is burnt. Maybe someone is trying to get coal the easy way."
+	name = "tocon de arbol"
+	desc = "Este muñon esta quemado. Quizas alguien este intentando conseguir carbon de la manera mas facil."
 	icon = 'icons/roguetown/misc/tree.dmi'
 	icon_state = "st1"
 	isunburnt = FALSE
@@ -275,7 +275,7 @@
 /*	.............   Ancient log   ................ */	// Functionally a sofa, slightly better than sleeping on the ground
 /obj/structure/chair/bench/ancientlog
 	name = "tronco antiguo"
-	desc = "A felled piece of tree long forgotten, the poorman's sofa."
+	desc = "Un trozo de arbol talado y olvidado hace mucho tiempo, el sofa del pobre."
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "log1"
 	blade_dulling = DULLING_CUT
@@ -302,8 +302,8 @@
 
 //newbushes
 /obj/structure/flora/grass
-	name = "grass"
-	desc = "The kindest blades you will ever meet in this world."
+	name = "pasto"
+	desc = "Los espadachines mas amables que jamas hayas conocido en este mundo."
 	icon = 'icons/roguetown/misc/foliage.dmi'
 	icon_state = "grass1"
 	base_icon_state = "grass"
@@ -372,7 +372,7 @@
 			if(world.time > res_replenish)
 				grass_replenish_loot()
 			else
-				to_chat(user, span_warning("Picked clean... I should try later."))
+				to_chat(user, span_warning("Limpiado... Deberia intentarlo mas tarde."))
 				return
 
 		if(!do_after(user, SEARCHTIME, target = src) || QDELETED(src) || QDELETED(user))
@@ -400,13 +400,13 @@
 	base_icon_state = "tundragrass"
 
 /obj/structure/flora/grass/water
-	desc = "This grass is sodden and muddy."
+	desc = "Esta hierba esta empapada y fangosa."
 	icon_state = "swampgrass"
 	num_random_icons = 0
 
 /obj/structure/flora/grass/water/reeds
-	name = "reeds"
-	desc = "This plant thrives in water, and shelters dangers."
+	name = "juncos"
+	desc = "Esta planta prospera en el agua y protege los peligros."
 	icon_state = "reeds"
 	opacity = TRUE
 	layer = ABOVE_MOB_LAYER
@@ -448,8 +448,8 @@
 
 // normal bush. Oldstyle. Kept for the managed palace hedges for now.
 /obj/structure/flora/grass/bush
-	name = "bush"
-	desc = "A bush, a den for critters and treasures."
+	name = "maleza"
+	desc = "Un arbusto, una guarida de bichos y tesoros."
 	icon_state = "bush"
 	num_random_icons = 0
 	layer = ABOVE_ALL_MOB_LAYER
@@ -460,7 +460,7 @@
 	bonus_loot = list(/obj/item/natural/thorn)
 
 /obj/structure/flora/grass/bush/tundra
-	name = "tundra bush"
+	name = "arbusto de tundra"
 	icon_state = "bush_tundra"
 
 /obj/structure/flora/grass/bush/Initialize()
@@ -485,10 +485,10 @@
 		L.visible_message(span_warning("¡[L] choca contra \a [src]!"), span_danger("Me encuentro con \a [src]."))
 		log_combat(L, src, "ran into")
 	else if(L.currently_z_moving)
-		L.visible_message(span_warning("[L] falls onto \a [src]!"), span_danger("Caigo sobre \a [src]."))
+		L.visible_message(span_warning("[L] cae sobre \a [src] ¡Cuidado!"), span_danger("Caigo sobre \a [src]."))
 		log_combat(L, src, "ran into")
 	else
-		to_chat(L, span_warning("I get stuck in \a [src]."))
+		to_chat(L, span_warning("Me quedo atrapado en \a [src]."))
 
 	if(!ishuman(L))
 		return
@@ -499,12 +499,12 @@
 		return
 	var/obj/item/bodypart/BP = pick(H.bodyparts)
 	BP.receive_damage(10)
-	to_chat(H, span_warning("A thorn [pick("slices","cuts","nicks")] my [BP.name]."))
+	to_chat(H, span_warning("Un esputo [pick("slices","cuts","nicks")] mi [BP.name]."))
 	if(HAS_TRAIT(src, TRAIT_PIERCEIMMUNE))
 		return
 	var/obj/item/natural/thorn/TH = new(src.loc)
 	BP.add_embedded_object(TH, silent = TRUE)
-	to_chat(H, span_danger("\A [TH] impales my [BP.name]."))
+	to_chat(H, span_danger("\A [TH] me clava en el [BP.name]."))
 	if(H.can_feel_pain())
 		H.emote("painscream")
 		L.Stun(3 SECONDS) //that fucking hurt
@@ -533,7 +533,7 @@
 
 /obj/structure/flora/grass/bush/wall/tall
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
-	desc = "A tall bush that has grown into a hedge."
+	desc = "Un arbusto alto que se ha convertido en un seto."
 	icon_state = "tallbush1"
 	base_icon_state = "tallbush"
 	opacity = TRUE
@@ -547,15 +547,15 @@
 	base_icon_state = "tallbush_tundra"
 
 /obj/structure/flora/grass/bush/wall/tall/bog
-	name = "bog great bush"
-	desc = "A tall bush that has grown into a hedge... but this one seems diseased."
+	name = "pantano gran arbusto"
+	desc = "Un arbusto alto que se ha convertido en un seto... pero este parece enfermo."
 	icon_state = "tallbush_bog1"
 	base_icon_state = "tallbush_bog"
 
 // fyrituis bush
 /obj/structure/flora/grass/pyroclasticflowers
-	name = "odd group of flowers"
-	desc = "A cluster of dangerously combustible flowers."
+	name = "extraño grupo de flores"
+	desc = "Un racimo de flores peligrosamente combustibles."
 	icon_state = "pyroflower1"
 	base_icon_state = "pyroflower"
 	num_random_icons = 3
@@ -571,7 +571,7 @@
 
 // swarmpweed bush
 /obj/structure/flora/grass/swampweed
-	name = "bunch of swampweed"
+	name = "manojo de hierba pantanosa"
 	desc = "Una raiz verde, buena para fumar."
 	icon_state = "swampweed1"
 	base_icon_state = "swampweed"
@@ -587,7 +587,7 @@
 
 /obj/structure/flora/shroom_tree
 	name = "hongo"
-	desc = "A ginormous mushroom, prized by dwarves for their shroomwood."
+	desc = "Un hongo descomunal, apreciado por los enanos por su madera."
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "mush1"
 	base_icon_state = "mush"
@@ -643,8 +643,8 @@
 			new I(loc)
 
 /obj/structure/table/wood/treestump/shroomstump
-	name = "shroom stump"
-	desc = "It was a very happy shroom. Not anymore."
+	name = "tocon de hongo"
+	desc = "Era un hongo muy feliz. Ya no."
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "stump_mush1"
 	alpha = 255
@@ -657,7 +657,7 @@
 	icon_state = "stump_mush[rand(1, 5)]"
 
 /obj/structure/roguerock
-	name = "rock"
+	name = "roca"
 	desc = "Piedra, fiel herramienta, arma y compañera."
 	icon = 'icons/roguetown/misc/foliage.dmi'
 	icon_state = "rock1"
@@ -680,8 +680,8 @@
 
 /*	..................   Thorn Bush   ................... */	// Updated to use searcher perception, can yield thorns
 /obj/structure/flora/grass/thorn_bush
-	name = "thorn bush"
-	desc = "A thorny bush, bearing a bountiful collection of razor sharp thorns!"
+	name = "arbusto espinoso"
+	desc = "¡Un arbusto espinoso que contiene una abundante coleccion de espinas afiladas!"
 	icon_state = "thornbush1"
 	base_icon_state = "thornbush"
 	num_random_icons = 2
@@ -701,7 +701,7 @@
 	if(do_after(L, rand(5 DECISECONDS, 2 SECONDS), src))
 
 		if(islooted)
-			to_chat(user, span_warning("Picked clean."))
+			to_chat(user, span_warning("Limpio."))
 			return
 
 		if(prob(prob2findstuff))
@@ -718,7 +718,7 @@
 					hand.bodypart_attacked_by(BCLASS_CUT, 5)
 				else
 					user.apply_damage(5, BRUTE, damage_type = BCLASS_CUT)
-			to_chat(user, span_warning("You cut yourself on the thorns!"))
+			to_chat(user, span_warning("¡Te has cortado con las espinas!"))
 
 	prob2findstuff = 15
 
@@ -733,13 +733,13 @@
 			if(!ishuman(L))
 				return
 			else
-				to_chat(L, span_warning("I'm scratched by the thorns."))
+				to_chat(L, span_warning("Me han arañado las espinas."))
 				L.apply_damage(5, BRUTE, damage_type = BCLASS_CUT, can_crit = FALSE)
 				L.Immobilize(10)
 
 		if(L.m_intent == MOVE_INTENT_RUN || HAS_TRAIT(L, TRAIT_STUMBLE))
 			if(!ishuman(L))
-				to_chat(L, span_warning("I'm cut on a thorn!"))
+				to_chat(L, span_warning("¡Me he cortado con una zarza!"))
 				L.apply_damage(5, BRUTE, damage_type = BCLASS_CUT)
 			else
 				var/mob/living/carbon/human/H = L
@@ -749,18 +749,18 @@
 						var/obj/item/natural/thorn/TH = new(src.loc)
 						BP.add_embedded_object(TH, silent = TRUE)
 						BP.receive_damage(10)
-						to_chat(H, span_danger("\A [TH] impales my [BP.name]!"))
+						to_chat(H, span_danger("¡\A [TH] empala mi [BP.name]!"))
 						L.Paralyze(10)
 				else
 					var/obj/item/bodypart/BP = pick(H.bodyparts)
-					to_chat(H, span_warning("A thorn [pick("slices","cuts","nicks")] my [BP.name]."))
+					to_chat(H, span_warning("Un esputo [pick("slices","cuts","nicks")] mi [BP.name]."))
 					BP.receive_damage(10)
 					L.Immobilize(10)
 
 
 /*	..................   Meagre Bush   ................... */	// This works on the characters stats and doesnt have a preset vendor content. Hardmode compared to the OG one.
 /obj/structure/flora/grass/bush_meagre
-	name = "bush"
+	name = "maleza"
 	desc = "Hogar de espinas, arañas y tal vez algunas bayas."
 	icon_state = "bush1"
 	base_icon_state = "bush"
@@ -775,12 +775,12 @@
 	var/trashie = /obj/item/natural/thorn
 
 /obj/structure/flora/grass/bush_meagre/tundra
-	name = "tundra bush"
+	name = "arbusto de tundra"
 	icon_state = "bush_tundra1"
 	base_icon_state = "bush_tundra"
 
 /obj/structure/flora/grass/bush_meagre/yellow
-	name = "bog bush"
+	name = "arbusto de pantano"
 	icon_state = "bush_bog1"
 	base_icon_state = "bush_bog"
 
@@ -816,7 +816,7 @@
 			L.Immobilize(5)
 		if(L.m_intent == MOVE_INTENT_RUN || HAS_TRAIT(L, TRAIT_STUMBLE))
 			if(!ishuman(L))
-				to_chat(L, span_warning("I'm cut on a thorn!"))
+				to_chat(L, span_warning("¡Me he cortado con una zarza!"))
 				L.apply_damage(5, BRUTE, damage_type = BCLASS_CUT)
 				L.Immobilize(5)
 			else
@@ -827,11 +827,11 @@
 						var/obj/item/natural/thorn/TH = new(src.loc)
 						BP.add_embedded_object(TH, silent = TRUE)
 						BP.receive_damage(10)
-						to_chat(H, span_danger("\A [TH] impales my [BP.name]!"))
+						to_chat(H, span_danger("¡\A [TH] empala mi [BP.name]!"))
 						L.Paralyze(5)
 				else
 					var/obj/item/bodypart/BP = pick(H.bodyparts)
-					to_chat(H, span_warning("A thorn [pick("slices","cuts","nicks")] my [BP.name]."))
+					to_chat(H, span_warning("Un esputo [pick("slices","cuts","nicks")] mi [BP.name]."))
 					BP.receive_damage(10)
 
 /obj/structure/flora/grass/bush_meagre/attack_hand(mob/living/user)
@@ -846,7 +846,7 @@
 	if(do_after(L, rand(5 DECISECONDS, 2 SECONDS), src))
 
 		if(islooted)
-			to_chat(user, span_warning("Picked clean."))
+			to_chat(user, span_warning("Limpio."))
 			return
 
 		if(prob(prob2findstuff))
@@ -887,7 +887,7 @@
 	luckydouble	= 3
 
 /obj/structure/flora/grass/bush_meagre/bog
-	desc = "These large bushes are known to be well-liked by silkworms who make their nests in their dark depths."
+	desc = "Se sabe que estos grandes arbustos son muy apreciados por los gusanos de seda que hacen sus nidos en sus oscuras profundidades."
 	icon = 'icons/mob/creacher/trolls/troll.dmi'
 	icon_state = "troll_hide"
 	SET_BASE_PIXEL(-16, -1)
@@ -895,8 +895,8 @@
 	silky = TRUE
 
 /obj/structure/flora/grass/mushroom
-	name = "leafy mushrooms"
-	desc = "A number of mushrooms, each of which surrounds a greenish sporangium with a number of leaf-like structures."
+	name = "hongos de hoja"
+	desc = "Varios hongos, cada uno de los cuales rodea un esporangio verdoso con varias estructuras en forma de hojas."
 	icon_state = "l_mushroom_red1"
 
 /obj/structure/flora/grass/mushroom/Initialize()
@@ -909,15 +909,15 @@
 	icon_state = "[pick(list("l", "r", "t"))]_mushroom_[shroom_color]1"
 
 /obj/structure/flora/tree/dead_bush
-	name = "dead brush"
-	desc = "The blazing sun has killed this brush."
+	name = "matorral muerto"
+	desc = "El sol abrasador ha matado este matorral."
 	icon_state = "deadbush_1"
 	base_icon_state = "deadbush_"
 	num_random_icons = 3
 
 /obj/structure/flora/tree/dying_bush
-	name = "dying brush"
-	desc = "The blazing sun is killing this brush."
+	name = "matorral moribundo"
+	desc = "El sol abrasador esta matando esta maleza."
 	icon_state = "livebush_1"
 	base_icon_state = "livebush_"
 	num_random_icons = 3

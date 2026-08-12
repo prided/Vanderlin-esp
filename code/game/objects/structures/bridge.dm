@@ -91,7 +91,7 @@
 
 /// Stakes at the end of a makeshift bridge
 /obj/structure/bridge_stakes
-	name = "makeshift bridge stakes"
+	name = "estacas de puente improvisadas"
 	desc = "Dos postes de madera toscos que han sido clavados en el suelo."
 	icon = 'icons/obj/structures/bridge/bridge_stakes.dmi'
 	icon_state = "stake_default"

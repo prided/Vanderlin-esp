@@ -119,7 +119,7 @@
 	icon = 'icons/turf/smooth/floors/wood_turned_alt.dmi'
 
 /turf/open/floor/rooftop
-	name = "roof"
+	name = "tejado"
 	icon = 'icons/turf/constructed/roof.dmi'
 	icon_state = MAP_SWITCH("roof", "roof-arw")
 	footstep = FOOTSTEP_WOOD
@@ -138,8 +138,8 @@
 
 /*	..................   Grasses   ................... */
 /turf/open/floor/grass
-	name = "grass"
-	desc = "Grass, sodden in mud and bogwater."
+	name = "pasto"
+	desc = "Pasto empapado de lodo y agua de cienaga."
 	icon = 'icons/turf/natural/grasses.dmi'
 	icon_state = "grass"
 	footstep = FOOTSTEP_GRASS
@@ -164,8 +164,8 @@
 	ChangeTurf(/turf/open/floor/dirt, flags = CHANGETURF_INHERIT_AIR)
 
 /turf/open/floor/grass/healthy
-	name = "healthy grass"
-	desc = "Grass, somehow greener on this side."
+	name = "pasto saludable"
+	desc = "Pasto que, de algun modo, es mas verde de este lado."
 	icon_state = "grass_healthy"
 	neighborlay = "grass_healthyedge"
 
@@ -175,7 +175,7 @@
 
 /turf/open/floor/grass/red
 	name = "hierba roja"
-	desc = "Grass, ripe with Dendor's bloody marrow."
+	desc = "Pasto rebosante de la medula sangrienta de Dendor."
 	icon_state = "grass_red"
 	neighborlay = "grass_rededge"
 
@@ -187,13 +187,13 @@
 
 /turf/open/floor/grass/cold
 	name = "hierba de tundra"
-	desc = "Grass, frigid and touched by winter."
+	desc = "Pasto gelido, marcado por el invierno."
 	icon_state = "grass_cold"
 	neighborlay = "grass_coldedge"
 
 /turf/open/floor/grass/hell
 	name = "hierba del infierno"
-	desc = "Grass, ominous and instilling uncomfort."
+	desc = "Pasto siniestro que provoca desasosiego."
 	icon_state = "hellgrass"
 	neighborlay = "hellgrass"
 
@@ -204,8 +204,8 @@
 /*	..................   Snow   ................... */
 
 /turf/open/floor/snow
-	name = "snow"
-	desc = "A gentle blanket of snow."
+	name = "nieve"
+	desc = "Un suave manto de nieve."
 	icon = 'icons/turf/natural/snow.dmi'
 	icon_state = "snow"
 	footstep = FOOTSTEP_GRASS
@@ -224,20 +224,20 @@
 	. = ..()
 
 /turf/open/floor/snow/rough
-	name = "rough snow"
-	desc = "A rugged blanket of snow."
+	name = "nieve agreste"
+	desc = "Un manto agreste de nieve."
 	icon_state = "snowrough"
 	neighborlay = "snowroughedge"
 
 /turf/open/floor/snow/patchy
 	name = "nieve irregular"
-	desc = "Half-melted snow revealing the hardy grass underneath."
+	desc = "Nieve medio derretida que deja ver el resistente pasto debajo."
 	icon_state = "snowpatchy_grass"
 	neighborlay = "snowpatchy_grassedge"
 
 /*	..................   Dirts   ................... */
 /turf/open/floor/dirt
-	name = "dirt"
+	name = "tierra"
 	desc = "La tierra esta llena de cicatrices de innumerables guerras."
 	icon = 'icons/turf/natural/soils.dmi'
 	icon_state = "dirt"
@@ -337,7 +337,7 @@
 		muddy = TRUE
 		icon = 'icons/turf/natural/soils.dmi'
 		icon_state = "mud[rand (1,3)]"
-		name = "mud"
+		name = "barro"
 		slowdown = 2
 		footstep = FOOTSTEP_MUD
 		barefootstep = FOOTSTEP_MUD
@@ -348,7 +348,7 @@
 
 /turf/open/floor/dirt/road
 	name = "camino de tierra"
-	desc = "The dirt is pocked with the scars of countless steps."
+	desc = "La tierra esta marcada por incontables pisadas."
 	icon_state = "road"
 	footstep = FOOTSTEP_SAND
 	smoothing_flags = NONE
@@ -365,7 +365,7 @@
 	ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 
 /turf/open/floor/underworld/road
-	name = "ash"
+	name = "ceniza"
 	desc = "Huele a madera quemada."
 	icon = 'icons/turf/natural/ash.dmi'
 	icon_state = "ash"
@@ -381,7 +381,7 @@
 
 /turf/open/floor/underworld/arena
 	name = "ceniza arenosa"
-	desc = "This has been pranced upon by countless skeletal fighters."
+	desc = "Incontables guerreros esqueleticos han brincado sobre esto."
 	icon = 'icons/turf/natural/ash.dmi'
 	icon_state = "ash3"
 	footstep = FOOTSTEP_SAND
@@ -395,8 +395,8 @@
 	//dir = rand(0,8)   Need to add variants.
 
 /turf/open/floor/underworld/space
-	name = "void"
-	desc = "The shifting blanket of Necra's realm."
+	name = "vacio"
+	desc = "El manto cambiante del reino de Necra."
 	icon_state = "undervoid"
 	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SOFT_BAREFOOT
@@ -405,18 +405,18 @@
 	slowdown = 50
 
 /turf/open/floor/underworld/space/sparkle_quiet
-	name = "void"
-	desc = "The shifting blanket of Necra's realm."
+	name = "vacio"
+	desc = "El manto cambiante del reino de Necra."
 	icon_state = "undervoid2"
 
 /turf/open/floor/underworld/space/quiet
-	name = "void"
-	desc = "The shifting blanket of Necra's realm."
+	name = "vacio"
+	desc = "El manto cambiante del reino de Necra."
 	icon_state = "undervoid3"
 
 /turf/open/floor/volcanic
-	name = "dirt"
-	desc = "The dirt is pocked with the scars of tectonic movement."
+	name = "tierra"
+	desc = "La tierra esta marcada por cicatrices del movimiento tectonico."
 	icon = 'icons/turf/natural/soils.dmi'
 	icon_state = "lavafloor"
 	footstep = FOOTSTEP_SAND
@@ -434,7 +434,7 @@
 	. = ..()
 
 /turf/open/floor/hay
-	name = "hay"
+	name = "paja"
 	desc = "Una ligera capa de heno esparcida por el suelo."
 	icon = 'icons/turf/constructed/misc.dmi'
 	icon_state = "hay"
@@ -1049,15 +1049,15 @@
 /*	..................  Platforms   ................... */
 /turf/open/floor/ruinedwood/platform
 	name = "plataforma de madera"
-	desc = "A destructible platform to traverse gaps."
+	desc = "Una plataforma destructible para atravesar huecos."
 	damage_deflection = 6
 	max_integrity = 600
 	break_sound = 'sound/combat/hits/onwood/destroywalldoor.ogg'
 	attacked_sound = list('sound/combat/hits/onwood/fence_hit1.ogg','sound/combat/hits/onwood/fence_hit2.ogg','sound/combat/hits/onwood/fence_hit3.ogg')
 
 /turf/open/floor/twig/platform
-	name = "twig platform"
-	desc = "A destructible platform to traverse gaps."
+	name = "plataforma de ramas"
+	desc = "Una plataforma destructible para atravesar huecos."
 	damage_deflection = 4
 	max_integrity = 150
 	break_sound = 'sound/combat/hits/onwood/destroywalldoor.ogg'
@@ -1065,7 +1065,7 @@
 
 /turf/open/floor/blocks/platform
 	name = "plataforma de piedra"
-	desc = "A destructible platform to traverse gaps."
+	desc = "Una plataforma destructible para atravesar huecos."
 	damage_deflection = 8
 	max_integrity = 800
 	break_sound = 'sound/combat/hits/onstone/stonedeath.ogg'
@@ -1073,7 +1073,7 @@
 
 
 /turf/open/glass
-	name = "Glass floor"
+	name = "suelo de vidrio"
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "woodglass"
 
@@ -1085,7 +1085,7 @@
 
 /turf/open/floor/abyss_sand
 	name = "arena abisal"
-	desc = "Warm sand that, sadly, have been mixed with dirt."
+	desc = "Arena calida que, por desgracia, se ha mezclado con tierra."
 	icon_state = "sand_abyss"
 	icon = 'icons/delver/abyss_objects.dmi'
 	layer = MID_TURF_LAYER
@@ -1099,8 +1099,8 @@
 	icon_state = "path_abyss"
 
 /turf/open/floor/sand
-	name = "gravelly sand"
-	desc = "Dark grey gravel which has been ground smooth by water over aeons."
+	name = "arena con grava"
+	desc = "Grava gris oscura que el agua ha pulido durante eones."
 	icon_state = "gravel"
 	icon = 'icons/turf/natural/soils.dmi'
 	layer = MID_TURF_LAYER
@@ -1133,15 +1133,15 @@
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /turf/open/floor/sand/sandstone
-	name = "sandstone gravel"
-	desc = "Chunky sandstone, disintegrated naturally over time into a less-than-comfortable cobble."
+	name = "grava de arenisca"
+	desc = "Arenisca gruesa, desintegrada con el tiempo hasta formar un adoquin nada comodo."
 	icon_state = "sandgravel"
 
 /turf/open/floor/sand/desert
 	icon = 'icons/delver/desert_objects.dmi'
 	icon_state = "sand-1"
-	name = "sand"
-	desc = "Warm sand that, sadly, have been mixed with dirt."
+	name = "arena"
+	desc = "Arena calida que, por desgracia, se ha mezclado con tierra."
 
 /turf/open/floor/sand/desert/Initialize()
 	. = ..()
@@ -1222,7 +1222,7 @@
 /turf/open/floor/flesh
 	name = "hilos nerviosos"
 	icon = 'icons/turf/flesh_tile.dmi'
-	desc = "A pulsing mass of flesh. It shivers and writhes at any touch."
+	desc = "Una masa palpitante de carne. Tiembla y se retuerce ante cualquier toque."
 	icon_state = MAP_SWITCH("flesh_tile", "flesh_tile-0")
 	transform = MAP_SWITCH(TRANSLATE_MATRIX(-16, -16), matrix())
 	smoothing_flags = SMOOTH_BITMASK

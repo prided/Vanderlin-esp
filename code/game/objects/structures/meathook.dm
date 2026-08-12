@@ -1,9 +1,9 @@
 ////// Roguetown version of the kitchen spike
 /obj/structure/meathook
-	name = "meathook"
+	name = "gancho para carne"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "meathook"
-	desc = "A hook used to secure livestock for butchering."
+	desc = "Un gancho utilizado para asegurar el ganado para su matanza."
 	density = TRUE
 	anchored = TRUE
 	max_integrity = 250
@@ -19,7 +19,7 @@
 		if(!container.is_open_container())
 			return
 		container.forceMove(get_turf(src))
-		to_chat(user, span_notice("You place [I] under [src]"))
+		to_chat(user, span_notice("Debes colocar [I] debajo de [src]"))
 		return TRUE
 	. = ..()
 
@@ -30,23 +30,23 @@
 		if(L.stat == DEAD)
 			if(L.blood_drained >= 60)
 				if(L.skinned)
-					. += span_warning("[L] has been fully drained of blood and skinned. I can butcher it with a knife.")
+					. += span_warning("[L] ha sido completamente desangrado y desollado. Puedo descuartizarlo con un cuchillo.")
 				else
-					. += span_warning("[L] has had its blood fully drained. I can skin it with a knife.")
+					. += span_warning("[L] ha sido completamente desangrado. Puedo despellejarlo con un cuchillo.")
 			else
 				if(draining_blood && L.blood_drained > 0)
-					. += span_warning("[L] is having its blood drained. If I try to skin or butcher it now, I may lose some parts.")
+					. += span_warning("[L] esta perdiendo sangre. Si intento curtir o desollarlo ahora, podria perder algunas partes.")
 				else
-					. += span_warning("There is a corpse ready to be worked on. I might need a knife for this.")
+					. += span_warning("Hay un cadaver listo para ser intervenido. Podria necesitar un cuchillo para esto.")
 
 /obj/structure/meathook/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_notice("To see the next step of butchering examine the meat hook.")
-	. += span_notice("To hang a mob from a meat hook aggressively grab them then click drag them on the meat hook.")
-	. += span_notice("If the mob is dead using middle click will start draining blood, using a bucket on the meathook will allow you to collect the blood.")
-	. += span_notice("Waiting for blood to drain fully will yield larger amounts of resources, but is not required.")
-	. += span_notice("Middle click the mob with a short sharp object to skin it.")
-	. += span_notice("Middle click the mob with a short sharp object after skining it to butcher it.")
+	. += span_notice("Para ver el siguiente paso del despiece, examine el gancho para carne.")
+	. += span_notice("Para colgar a un mob de un gancho de carne, agarralo con fuerza y luego haz clic y arrastralo sobre el gancho de carne.")
+	. += span_notice("Si la multitud esta muerta, al hacer clic en el medio se comenzara a drenar la sangre, al usar un balde en el gancho para carne podras recoger la sangre.")
+	. += span_notice("Esperar a que la sangre se escurra por completo permitira obtener mayores cantidades de recursos, pero no es necesario.")
+	. += span_notice("Haz clic en el medio con un objeto corto y afilado en el enemigo para despielarlo.")
+	. += span_notice("Haz clic en el medio con un objeto corto y afilado en el monstruo despues de despielarlo para desmembrarlo.")
 
 /obj/structure/meathook/attack_paw(mob/user)
 	return attack_hand(user)
@@ -59,7 +59,7 @@
 
 	var/mob/living/L = user.pulling
 	playsound(src, 'sound/foley/butcher.ogg', 25, TRUE)
-	L.visible_message(span_danger("¡[user] comienza a colgar [L] en [src]!"), span_danger("[user] starts hanging you on [src]]!"), span_hear("I hear the sound of clanging chains..."))
+	L.visible_message(span_danger("¡[user] comienza a colgar [L] en [src]!"), span_danger("[user] comienza a colgarte en [src]"), span_hear("Escucho el sonido de las cadenas tintineantes..."))
 	if(!do_after(user, 12 SECONDS, src))
 		return FALSE
 
@@ -70,7 +70,7 @@
 	if(user.pulling != L)
 		return FALSE
 
-	L.visible_message(span_danger("¡[user] cuelga [L] en [src]!"), span_danger("[user] hangs you on [src]]!"))
+	L.visible_message(span_danger("¡[user] cuelga [L] en [src]!"), span_danger("[user] te cuelga en [src] ¡!"))
 	L.forceMove(drop_location())
 	L.emote("scream")
 	L.add_splatter_floor()
@@ -88,17 +88,17 @@
 		var/mob/living/M = buckled_mob
 		if (M != user)
 			M.visible_message(span_notice("¡[user] esta intentando liberar a [M] de [src]!"),\
-				span_notice("[user] is trying to pull me off [src]! It hurts!"),\
-				span_hear("I hear the sound of torn flesh and whimpering..."))
+				span_notice("¡[user] esta intentando despegarme de [src]! ¡Duele!"),\
+				span_hear("Escucho el sonido de carne desgarrada y lamentos..."))
 			if(!do_after(user, 12 SECONDS, src))
 				if(M && M.buckled)
-					M.visible_message(span_notice("[user] fails to free [M]!"),\
+					M.visible_message(span_notice("¡[user] no logra liberar a [M]!"),\
 					span_notice("¡[user] no logra sacarme de [src]!"))
 				return
 		else
 			M.visible_message(span_warning("¡[M] lucha por liberarse de [src]!"),\
-				span_notice("I struggle to break free from [src], tearing my legs! (Stay still for two minutes.)"),\
-				span_hear("I hear the sound of torn flesh and whimpering..."))
+				span_notice("¡Lucho por liberarme de [src], desgarrando mis piernas! (Quedate quieto por dos minutos.)"),\
+				span_hear("Escucho el sonido de carne desgarrada y lamentos..."))
 			M.adjustBruteLoss(30, damage_type = BCLASS_PIERCE)
 			if(!do_after(M, 30 SECONDS, src))
 				if(M && M.buckled)
@@ -143,7 +143,7 @@
 /obj/structure/meathook/proc/release_mob(mob/living/M)
 	REMOVE_TRAIT(M, TRAIT_EASYDISMEMBER, "[type]")
 	M.adjustBruteLoss(30, damage_type = BCLASS_PIERCE)
-	src.visible_message(span_danger("[M] falls free of [src]!"))
+	src.visible_message(span_danger("¡[M] cae libremente de [src]!"))
 	unbuckle_mob(M,force=1)
 	M.set_lying_angle(pick(90,270))
 	M.emote("painscream", forced = TRUE)
@@ -187,7 +187,7 @@
 
 	if(!butchery_target.skinned && (user.used_intent.type == /datum/intent/dagger/cut || user.used_intent.type == /datum/intent/dagger/chop/cleaver || user.used_intent.type == /datum/intent/sword/cut || user.used_intent.type == /datum/intent/axe/cut))
 		var/cut_time = 6 SECONDS - (0.5 SECONDS * GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/labor/butchering))
-		to_chat(user, span_notice("I start to skin [butchery_target]."))
+		to_chat(user, span_notice("Empiezo a despellejar [butchery_target]."))
 		if(do_after(user, cut_time, src, (IGNORE_HELD_ITEM)))
 			var/first_fail = TRUE
 			var/total_bonus_items = 0
@@ -203,7 +203,7 @@
 						final_amount += round(base_amount * 0.5)
 					if(prob((60 - butchery_target.blood_drained)))
 						if(first_fail)
-							to_chat(user, span_notice("The flowing blood got in the way and messed up some of the skin."))
+							to_chat(user, span_notice("La sangre fluida se interpuso en el camino y ensucio algo de la piel."))
 							first_fail = FALSE
 						final_amount -= round(base_amount * 0.5)
 
@@ -234,7 +234,7 @@
 			if(total_bonus_items > 0)
 				var/happiness_message = butchery_target.get_happiness_butcher_message(happiness_bonus)
 				if(happiness_message)
-					to_chat(user, span_notice("[happiness_message] (+[total_bonus_items] bonus hide/fur)"))
+					to_chat(user, span_notice("[happiness_message] (+[total_bonus_items] piel/lana extra)"))
 
 			var/boon = user.get_learning_boon(/datum/attribute/skill/labor/butchering)
 			var/amt2raise = GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)
@@ -247,7 +247,7 @@
 
 	if(user.used_intent.type == /datum/intent/dagger/cut || user.used_intent.type == /datum/intent/dagger/chop/cleaver || user.used_intent.type == /datum/intent/sword/cut || user.used_intent.type == /datum/intent/axe/cut)
 		var/cut_time = 6 SECONDS - (0.5 SECONDS * GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/labor/butchering))
-		to_chat(user, span_notice("I start to butcher [butchery_target]."))
+		to_chat(user, span_notice("Empiezo a desollar [butchery_target]."))
 		if(do_after(user, cut_time, src, (IGNORE_HELD_ITEM)))
 			var/first_fail = TRUE
 			var/total_bonus_items = 0
@@ -265,7 +265,7 @@
 						final_amount += round(base_amount * 0.5)
 					if(prob((60 - butchery_target.blood_drained)))
 						if(first_fail)
-							to_chat(user, span_notice("The flowing blood got in the way and messed up some of the meat."))
+							to_chat(user, span_notice("La sangre que fluia se interpuso en el camino y ensucio un poco la carne."))
 							first_fail = FALSE
 						final_amount -= round(base_amount * 0.5)
 

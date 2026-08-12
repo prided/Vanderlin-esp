@@ -7,8 +7,8 @@
 	var/list/cart = list() // Key: pack datum -> Value: Quantity
 
 /obj/item/book/secret/ledger/fence
-	name = "Smuggler's Manifest"
-	title = " Smuggler's Manifest"
+	name = "Manifiesto del contrabandista"
+	title = " Manifiesto del contrabandista"
 
 /obj/item/book/secret/ledger/attack_self(mob/user)
 	ui_interact(user)
@@ -204,7 +204,7 @@
 
 	var/datum/world_faction/faction = SSmerchant.active_faction
 	if(!faction)
-		to_chat(usr, "<span class='warning'>No active faction found!</span>")
+		to_chat(usr, "<span class='warning'>¡No se encontro ninguna faccion activa!</span>")
 		return
 
 	var/obj/item/paper/scroll/cargo/order = new(get_turf(usr))
@@ -212,7 +212,7 @@
 
 	// Track the active faction on the scroll instance
 	order.buying_from = faction
-	order.name = "[faction.faction_name] order scroll ([length(cart)] items)"
+	order.name = "Desplazamiento de pedidos [faction.faction_name] (articulos [length(cart)])"
 
 	// Calculate total costs
 	var/total_mammon_cost = 0
@@ -220,10 +220,10 @@
 		var/quantity = cart[pack]
 		total_mammon_cost += pack.cost * quantity
 
-	to_chat(usr, "<span class='notice'>Order scroll created! Cost: [total_mammon_cost] mammons from [faction.faction_name]</span>")
+	to_chat(usr, "<span class='notice'> ¡Desplazamiento de pedido creado! Costo: mammons [total_mammon_cost] de [faction.faction_name]</span>")
 	order.rebuild_info()
 
 	// Clear the cart
 	cart.Cut()
 	current_reader.put_in_hands(order)
-	to_chat(current_reader, "<span class='notice'>Your order has been written on a scroll.</span>")
+	to_chat(current_reader, "<span class='notice'>Tu pedido ha sido escrito en un pergamino.</span>")

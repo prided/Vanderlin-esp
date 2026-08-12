@@ -69,7 +69,7 @@
 
 /// tiles that zip you to the top z level of vanderlin
 /turf/open/dungeon_trap/australia
-	name = "deep abyss"
+	name = "abismo profundo"
 	desc = "Es un largo camino hacia arriba..."
 	icon_state = "undervoid2"
 	color = null

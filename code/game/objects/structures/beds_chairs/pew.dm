@@ -1,5 +1,5 @@
 /obj/structure/chair/pew
-	name = "wooden pew"
+	name = "banco de madera"
 	desc = ""
 	icon = 'icons/obj/sofa.dmi'
 	icon_state = "pewmiddle"

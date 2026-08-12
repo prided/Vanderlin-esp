@@ -1,6 +1,6 @@
 /datum/bee_disease/wax_moths
-	name = "Wax Moths"
-	description = "Moth larvae that consume honeycomb"
+	name = "Molienda de cera"
+	description = "Larvas de polilla que consumen panal."
 
 /datum/bee_disease/wax_moths/apply_effects(obj/structure/apiary/hive)
 	if(prob(hive.disease_severity / 5) && hive.stored_combs > 0)

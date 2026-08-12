@@ -2,8 +2,8 @@
 ==========================================================*/
 
 /obj/item/weapon/whip
-	name = "whip"
-	desc = "A leather whip, intertwining rope, leather and a fanged tip to inflict enormous pain. Favored by slavers and beast-tamers."
+	name = "garrucha"
+	desc = "Un latigo de cuero, cuerda entrelazada, cuero y una punta con colmillos para infligir un dolor enorme. Favorecido por esclavistas y domadores de bestias."
 	icon_state = "whip"
 	icon = 'icons/roguetown/weapons/32/whips_flails.dmi'
 	force = DAMAGE_WHIP
@@ -41,7 +41,7 @@
 //................ Repenta En ............... //
 /obj/item/weapon/whip/antique
 	name = "\proper repenta en"
-	desc = "An extremely well maintained whip, with a polished steel tip and gilded handle."
+	desc = "Un latigo muy bien cuidado, con punta de acero pulido y mango dorado."
 	icon_state = "gwhip"
 	force = DAMAGE_WHIP + 4
 	resistance_flags = FIRE_PROOF
@@ -52,12 +52,12 @@
 
 //................ Butler Whip ............... //
 /obj/item/weapon/whip/butler
-	name = "crown's will"
+	name = "testamento de la corona"
 
 //................ Silver Whip ............... //
 /obj/item/weapon/whip/silver
-	name = "silver whip"
-	desc = "A whip with a silver handle, core and tip. It has been modified for inflicting burning pain on nitebeasts."
+	name = "latigo de plata"
+	desc = "Un latigo con mango, nucleo y punta de plata. Ha sido modificado para infligir dolor ardiente en nitebeasts."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psywhip_lesser"
 	force = DAMAGE_WHIP + 2
@@ -74,7 +74,7 @@
 //................ Psydon Whip ............... //
 /obj/item/weapon/whip/psydon
 	name = "psydonian latigo"
-	desc = "A whip fashioned with the iconography of Psydon, and crafted entirely out of silver."
+	desc = "Un latigo diseñado con la iconografia de Psydon y elaborado integramente en plata."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psywhip"
 	force = DAMAGE_WHIP + 2
@@ -89,8 +89,8 @@
 	AddComponent(/datum/component/psyblessed, FALSE, 3, FALSE, 50, 1, TRUE)
 
 /obj/item/weapon/whip/psydon/relic
-	name = "Daybreak"
-	desc = "Holding this blessed silver evokes memories of the grand cathedrals, testaments to humanity’s faith. There, upon the ceiling, was painted a scene-most-beautiful: of Psydon, robed, in battle against the archdevils. Bring daelight to the faithful."
+	name = "Recreo de dia"
+	desc = "Sostener esta plata bendita evoca recuerdos de las grandes catedrales, testimonios de la fe de la humanidad. Alli, en el techo, estaba pintada una escena de lo mas hermosa: la de Psydon, vestido con una tunica, en batalla contra los archidemonios. Lleva la luz a los fieles."
 	item_weight = 550 GRAMS
 
 /obj/item/weapon/whip/psydon/relic/Initialize(mapload)
@@ -99,8 +99,8 @@
 
 //................ Caning Stick.................//
 /obj/item/weapon/whip/cane
-	name = "caning stick"
-	desc = "A thin cane meant for striking others as punishment."
+	name = "palo de azote"
+	desc = "Un baston delgado destinado a golpear a otros como castigo."
 	icon = 'icons/roguetown/weapons/32/special.dmi'
 	icon_state = "canestick"
 	force = DAMAGE_WHIP / 2
@@ -143,8 +143,8 @@
 
 //................ Lashkiss Whip ............... //
 /obj/item/weapon/whip/spiderwhip
-	name = "lashkiss whip"
-	desc = "A dark whip with segmented, ashen spines for a base. Claimed to be hewn from dendrified prisoners of terror."
+	name = "latigo de beso de pestañas"
+	desc = "Un latigo oscuro con espinas cenicientas segmentadas como base. Se dice que fue tallado a partir de prisioneros del terror dendrificados."
 	icon = 'icons/roguetown/weapons/32/elven.dmi'
 	icon_state = "spiderwhip"
 	force = DAMAGE_WHIP + 3
@@ -152,8 +152,8 @@
 
 //................ Chain Whip ............... //
 /obj/item/weapon/whip/chain
-	name = "chain whip"
-	desc = "An iron chain, fixed to a leather grip. Its incredibly heavy, and unwieldy. You'll likely hurt yourself more than anyone else with this."
+	name = "latigo de cadena"
+	desc = "Una cadena de hierro, fijada a una empuñadura de cuero. Es increiblemente pesado y dificil de manejar. Probablemente te lastimes mas que nadie con esto."
 	icon_state = "whip_chain"
 	force = DAMAGE_WHIP + 3
 	possible_item_intents = list(WHIP_MTLCRACK, WHIP_MTLLASH)
@@ -167,7 +167,7 @@
 //................ Xylix Whip ............... //
 /obj/item/weapon/whip/xylix
 	name = "cackle lash"
-	desc = "The chimes of this whip are said to sound as the trickster's laughter itself."
+	desc = "Se dice que las campanadas de este latigo suenan como la propia risa del embaucador."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "xylixwhip"
 	force = DAMAGE_WHIP + 4
@@ -175,8 +175,8 @@
 	item_weight = 500 GRAMS
 
 /obj/item/weapon/whip/nagaika //Import only
-	name = "nagaika whip"
-	desc = "A short but heavy leather whip, sporting a blunt reinforced tip and a longer handle."
+	name = "latigo nagaika"
+	desc = "Un latigo de cuero corto pero pesado, con una punta roma reforzada y un mango mas largo."
 	icon_state = "nagaika"
 	force = DAMAGE_WHIP + 5		//Same as a cudgel/sword for intent purposes. Basically a 2 range cudgel while one-handing.
 	possible_item_intents = list(WHIP_MTLCRACK, WHIP_LASH, SWORD_STRIKE)
@@ -186,7 +186,7 @@
 
 /obj/item/weapon/whip/urumi
 	name = "urumi de acero"
-	desc = "A long, flexible whip-like sword originally developed by the Savannah Elves. While an effective weapon, it requires more maintenance compared to other swords."
+	desc = "Una espada larga y flexible con forma de latigo desarrollada originalmente por los elfos de Savannah. Si bien es un arma eficaz, requiere mas mantenimiento en comparacion con otras espadas."
 	icon_state = "urumi_steel"
 	force = DAMAGE_WHIP + 3
 	wbalance = HARD_TO_DODGE
@@ -222,7 +222,7 @@
 	item_weight = 800 GRAMS
 
 /obj/item/weapon/whip/urumi/silver
-	name = "silver urumi"
+	name = "urumi plateado"
 	icon_state = "urumi_silver"
 	force = DAMAGE_WHIP + 1
 	max_blade_int = 160

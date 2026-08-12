@@ -10,8 +10,8 @@
  */
 
 /obj/item/kitchen/fork
-	name = "fork"
-	desc = "A wooden utenisle with pointed tines on the end. Helps you eat without dirtying your hands. "
+	name = "tenedor"
+	desc = "Un utensilio de madera con puas puntiagudas en el extremo. Te ayuda a comer sin ensuciarte las manos. "
 	icon_state = "fork"
 	force = 5
 	w_class = WEIGHT_CLASS_TINY
@@ -20,14 +20,14 @@
 	throw_range = 5
 	flags_1 = CONDUCT_1
 	possible_item_intents = list(/datum/intent/food, /datum/intent/stab)
-	attack_verb = list("attacked", "stabbed", "poked")
+	attack_verb = list("ataco", "apuñalado", "pinchado")
 	hitsound = 'sound/blank.ogg'
 	armor_type = /datum/armor/fork
 	item_weight = 30 GRAMS
 	tool_behaviour = TOOL_FORK
 
 /obj/item/kitchen/fork/suicide_act(mob/living/carbon/user)
-	user.visible_message("<span class='suicide'>[user] stabs \the [src] into [user.p_their()] chest! It looks like [user.p_theyre()] trying to take a bite out of [user.p_them()]self!</span>")
+	user.visible_message("¡<span class='suicide'>[user] apuñala a \the [src] en el cofre de [user.p_their()]! ¡Parece que [user.p_theyre()] intenta darle un mordisco a [user.p_them()]self!</span>")
 	playsound(src, 'sound/blank.ogg', 50, TRUE)
 	return BRUTELOSS
 
@@ -44,8 +44,8 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/kitchen/rollingpin
-	name = "rolling pin"
-	desc = "A wooden pin primarily used to shape and flatten dough for baking."
+	name = "rodillo"
+	desc = "Un alfiler de madera que se utiliza principalmente para dar forma y aplanar la masa para hornear."
 	icon_state = "rolling_pin"
 	item_state = "rolling_pin"
 	slot_flags = ITEM_SLOT_HIP
@@ -57,7 +57,7 @@
 	throw_speed = 1
 	throw_range = 7
 	w_class = WEIGHT_CLASS_SMALL
-	attack_verb = list("bashed", "battered", "bludgeoned", "thrashed", "whacked")
+	attack_verb = list("golpeado", "aporreado", "apaleado", "azotado", "aporreado")
 	custom_price = 5
 	resistance_flags = FLAMMABLE // Weapon made mostly of wood
 	possible_item_intents = list(/datum/intent/use, /datum/intent/mace/strike/wood)
@@ -78,5 +78,5 @@
 	return ..()
 
 /obj/item/kitchen/rollingpin/suicide_act(mob/living/carbon/user)
-	user.visible_message("<span class='suicide'>[user] begins flattening [user.p_their()] head with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] comienza a aplanar la cabeza de [user.p_their()] con \the [src] ¡Parece que [user.p_theyre()] esta intentando suicidarse!</span>")
 	return BRUTELOSS

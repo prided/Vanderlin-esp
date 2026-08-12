@@ -2,7 +2,7 @@
 	var/list/channels = list()
 
 /obj/structure/metal_channel
-	name = "metal channel"
+	name = "canal metalico"
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
 	icon_state = "channel"

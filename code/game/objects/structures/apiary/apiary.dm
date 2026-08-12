@@ -20,7 +20,7 @@
 // ============================================================================
 
 /obj/structure/apiary
-	name = "apiary"
+	name = "colmenar"
 	desc = "Una estructura que alberga abejas que producen miel y polinizan plantas."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "beebox-empty"
@@ -144,7 +144,7 @@
 
 /obj/structure/apiary/attack_hand(mob/user)
 	if(queen_bee && user.a_intent == INTENT_HELP && is_wearing_bee_protection(user))
-		user.visible_message("[user] carefully reaches into [src].", "You carefully extract the queen bee from [src].")
+		user.visible_message("[user] cuidadosamente se introduce en [src].", "Usted extrae cuidadosamente la abeja reina de [src].")
 
 		if(!do_after(user, 5 SECONDS, src))
 			return
@@ -171,7 +171,7 @@
 		agitate_bees(80, user)
 		return
 
-	user.visible_message("[user] comienza a recolectar panales de [src].", "You start to collect combs from [src]")
+	user.visible_message("[user] comienza a recolectar panales de [src].", "Comienza a recolectar panales de [src]")
 
 	if(!do_after(user, 2.5 SECONDS, src))
 		return
@@ -187,7 +187,7 @@
 /obj/structure/apiary/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(istype(tool, /obj/item/queen_bee))
 		if(queen_bee)
-			to_chat(user, span_warning("There's already a queen!"))
+			to_chat(user, span_warning("¡Ya hay una reina!"))
 			return
 		insert_queen(tool)
 		return ITEM_INTERACT_SUCCESS
@@ -240,7 +240,7 @@
 	disease.apply_effects(src)
 
 	if(disease_severity >= disease.severity_threshold)
-		visible_message(span_warning("[src] colony collapses from disease!"))
+		visible_message(span_warning("¡La colonia [src] colapsa debido a una enfermedad!"))
 		bee_count = 0
 		outside_bees = 0
 		for(var/obj/effect/bees/B in bee_objects)
@@ -286,7 +286,7 @@
 		bee_count -= agitated_count
 		outside_bees += agitated_count
 
-		visible_message(span_warning("Bees swarm out of [src] angrily!"))
+		visible_message(span_warning("¡Las abejas salen de [src] enojadas!"))
 
 		for(var/i in 1 to agitated_count)
 			var/obj/effect/bees/B = new(get_turf(src))
@@ -380,7 +380,7 @@
 	swarm_progress += 0.1
 
 	if(swarm_progress > SWARM_THRESHOLD && prob(10))
-		visible_message(span_warning("The bees in [src] are extremely active!"))
+		visible_message(span_warning("¡Las abejas en [src] estan extremadamente activas!"))
 
 	if(swarm_progress >= 100)
 		create_swarm()
@@ -463,7 +463,7 @@
 	queen_deceased = FALSE
 	max_bees = APIARY_BASE_MAX_BEES + (genetics.efficiency * 10)
 	bee_count++
-	visible_message(span_notice("The bees in [src] welcome their new queen!"))
+	visible_message(span_notice("¡Las abejas en [src] dan la bienvenida a su nueva reina!"))
 	new_queen.forceMove(src)
 
 /obj/structure/apiary/starter

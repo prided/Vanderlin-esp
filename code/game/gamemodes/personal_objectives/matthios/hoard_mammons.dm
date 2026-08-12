@@ -1,8 +1,8 @@
 /datum/objective/personal/hoard_mammons
-	name = "Hoard Mammons"
+	name = "Acumular mammons"
 	category = "Matthios' Elegido"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Matthios grows stronger", "Ability to see item's value on examine", "Matthios blesses you (+1 Fortune)")
+	rewards = list("2 Triunfos", "Matthios se fortalece", "Habilidad para ver el valor de los objetos al examinarlos", "Matthios te bendice (+1 Fortuna)")
 	var/target_mammons = 300
 	var/current_amount = 0
 	var/check_cooldown = 20 SECONDS
@@ -36,7 +36,7 @@
 
 /datum/objective/personal/hoard_mammons/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have accumulated enough mammons, completing Matthios' objective!"))
+	to_chat(owner.current, span_greentext("¡Has acumulado suficientes mammons y completado el objetivo de Matthios!"))
 	adjust_storyteller_influence(MATTHIOS, 20)
 	STOP_PROCESSING(SSprocessing, src)
 
@@ -46,4 +46,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_MATTHIOS_BLESSING, list(STAT_FORTUNE = 1))
 
 /datum/objective/personal/hoard_mammons/update_explanation_text()
-	explanation_text = "Accumulate at least [target_mammons] mammons in your possession to demonstrate your greediness to Matthios."
+	explanation_text = "Acumula al menos [target_mammons] mammons para demostrar tu avaricia a Matthios."

@@ -1,8 +1,8 @@
 /datum/objective/personal/butcher_animals
-	name = "Butcher Animals"
-	category = "Dendor's Chosen"
+	name = "Descuartizar animales"
+	category = "Elegido de Dendor"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Dendor grows stronger", "Butchering knowledge")
+	rewards = list("2 Triunfos", "Dendor se fortalece", "Conocimientos de descuartizamiento")
 	var/animals_butchered = 0
 	var/animals_required = 2
 
@@ -26,11 +26,11 @@
 	if(animals_butchered >= animals_required)
 		complete_objective()
 	else
-		to_chat(owner.current, span_notice("Animal butchered! Butcher [animals_required - animals_butchered] more to complete Dendor's will."))
+		to_chat(owner.current, span_notice("¡Animal descuartizado! Descuartiza [animals_required - animals_butchered] mas para cumplir la voluntad de Dendor."))
 
 /datum/objective/personal/butcher_animals/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've butchered enough animals to satisfy Dendor!"))
+	to_chat(owner.current, span_greentext("¡Has descuartizado suficientes animales para satisfacer a Dendor!"))
 	adjust_storyteller_influence(DENDOR, 20)
 	UnregisterSignal(owner.current, COMSIG_MOB_BUTCHERED)
 

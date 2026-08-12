@@ -1,6 +1,6 @@
 /obj/item/clothing/barding
-	name = "padded barding"
-	desc = "A set of padded body armor for a Saiga, designed to protect your mount's vital organs."
+	name = "barda acolchada"
+	desc = "Un conjunto de chaleco antibalas acolchado para Saiga, diseñado para proteger los organos vitales de su montura."
 	slot_flags = null
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "sewingkit"
@@ -28,30 +28,30 @@
 		return NONE
 
 	if(!is_type_in_list(interacting_with, valid_animal_types))
-		to_chat(user, span_warning("\The [src] cannot be used on [interacting_with]! It is only meant for specific animals."))
+		to_chat(user, span_warning("¡\The [src] no se puede usar en [interacting_with]! ¡Solo esta destinado para animales especificos!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/mob/living/simple_animal/animal = interacting_with
 	if(animal.adult_growth)
-		to_chat(user, span_warning("[animal] is a juvenile and cannot wear a bard!"))
+		to_chat(user, span_warning("[animal] es un joven y no puede usar una bardana."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(animal.bbarding)
-		to_chat(user, span_warning("[animal] is already wearing a bard!"))
+		to_chat(user, span_warning("¡El [animal] ya esta usando una bardana!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!animal.ssaddle)
-		to_chat(user, span_warning("[animal] needs to be saddled before you can fit a bard onto it!"))
+		to_chat(user, span_warning("¡[animal] necesita ser montada antes de que puedas ponerle un barding!"))
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_notice("[user] is fitting a bard onto [animal]..."), span_notice("I start fitting a bard onto [animal]..."))
+	user.visible_message(span_notice("[user] esta colocando una bardilla en [animal]..."), span_notice("Empiezo a ponerle una bardilla al [animal]..."))
 	if(!do_after(user, 5 SECONDS, animal))
 		return ITEM_INTERACT_BLOCKING
 
 	animal.bbarding = src
 	forceMove(animal)
 	animal.update_appearance(UPDATE_ICON)
-	user.visible_message(span_notice("[user] encaja un bardo en [animal]."), span_notice("I fit a bard onto [animal]."))
+	user.visible_message(span_notice("[user] encaja un bardo en [animal]."), span_notice("Pongo una bardina a [animal]."))
 
 	return ITEM_INTERACT_SUCCESS
 
@@ -64,8 +64,8 @@
 	. = ..()
 
 /obj/item/clothing/barding/chain
-	name = "chainmail barding"
-	desc = "A set of chainmail body armor for a Saiga, designed to protect your mount's vital organs."
+	name = "barda de cota de malla"
+	desc = "Un conjunto de armadura de cota de malla para un Saiga, diseñado para proteger los organos vitales de tu montura."
 	icon_state = "armorkit"
 	barding_state = "barding_chain"
 	female_barding_state = "barding_chain-f"
@@ -82,7 +82,7 @@
 	item_weight = 8 KILOGRAMS
 
 /obj/item/clothing/barding/honse
-	name = "padded barding"
+	name = "barda acolchada"
 	desc = "Un conjunto de armadura acolchada para un Honse, diseñada para proteger los organos vitales de tu montura."
 	icon_state = "sewingkit"
 	barding_icon = 'icons/mob/monster/fogbeast.dmi'
@@ -94,8 +94,8 @@
 	item_weight = 4 KILOGRAMS
 
 /obj/item/clothing/barding/honse/chain
-	name = "chainmail barding"
-	desc = "A set of chainmail body armor for a Honse, designed to protect your mount's vital organs."
+	name = "barda de cota de malla"
+	desc = "Un conjunto de armadura de cota de malla para un Honse, diseñada para proteger los organos vitales de tu montura."
 	icon_state = "armorkit"
 	barding_state = "barding_chain"
 	female_barding_state = "barding_chain"

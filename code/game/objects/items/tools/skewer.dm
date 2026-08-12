@@ -1,7 +1,7 @@
 /obj/item/cooking/skewer
 	force = DAMAGE_DAGGER + 3
 	possible_item_intents = list(INTENT_GENERIC)
-	name = "skewer"
+	name = "pincho"
 	desc = ""
 	icon_state = "skewer"
 	icon = 'icons/roguetown/items/cooking.dmi'

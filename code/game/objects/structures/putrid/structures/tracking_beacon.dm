@@ -1,8 +1,8 @@
 /obj/structure/meatvine/tracking_beacon
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "tracking_beacon"
-	name = "probing mass"
-	desc = "A pulsating organic sensor that marks intruders for the putrid's attention."
+	name = "masa de sondeo"
+	desc = "Un sensor organico pulsante que marca a los intrusos para llamar la atencion del putrido."
 	density = FALSE
 	opacity = FALSE
 	pass_flags = LETPASSTHROW
@@ -73,7 +73,7 @@
 	if(master)
 		master.add_hive_tracker(L, mark_duration)
 
-	to_chat(L, span_danger("You feel a creeping sensation as something marks your presence!"))
+	to_chat(L, span_danger("Sientes una sensacion de inquietud, ¡ya que algo ha detectado tu presencia!"))
 
 	return TRUE
 
@@ -131,12 +131,12 @@
 	. = ..()
 	if(!.)
 		return
-	to_chat(owner, span_danger("You've been marked by the meatvine!"))
+	to_chat(owner, span_danger("¡Has sido marcado por Meatvine!"))
 	return TRUE
 
 /atom/movable/screen/alert/status_effect/meatvine_tracked
-	name = "Tracked"
-	desc = "The meatvine knows where you are!"
+	name = "Seguimiento"
+	desc = "¡Meatvine sabe donde estas!"
 	icon_state = "tracked"
 
 /obj/effect/temp_visual/meatvine_mark

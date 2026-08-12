@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/crushing_sweep
-	name = "Crushing Sweep"
-	desc = "Sweep your appendages in a wide arc, crushing and throwing back nearby enemies."
+	name = "Barrido aplastante"
+	desc = "Desliza tus apendices en un amplio arco, aplastando y haciendo retroceder a los enemigos cercanos."
 	button_icon_state = "crush_tail"
 	cooldown_time = 60 SECONDS
 	personal_resource_cost = 25
@@ -46,7 +46,7 @@
 	victim.apply_damage(sweep_damage, BRUTE, BODY_ZONE_CHEST, damage_type = BCLASS_BLUNT)
 	shake_camera(victim, 4, 3)
 	playsound(victim, impact_sound, 100, TRUE, 8, 0.9)
-	to_chat(victim, span_userdanger("[caster]'s appendages slam into you, throwing you back!"))
+	to_chat(victim, span_userdanger("Los apendices de [caster] te golpean, ¡y te lanzan hacia atras!"))
 	victim.safe_throw_at(throwtarget, ((clamp((max_throw - (clamp(dist_from_caster - 2, 0, dist_from_caster))), 3, max_throw))), 1, caster, force = MOVE_FORCE_EXTREMELY_STRONG)
 
 /datum/action/cooldown/meatvine/personal/crushing_sweep/evaluate_ai_score(datum/ai_controller/controller)

@@ -1,7 +1,7 @@
 
 /datum/action/cooldown/meatvine/personal/corrosion
 	name = "Acido corrosivo"
-	desc = "Drench an object in acid, destroying it over time."
+	desc = "Empapa un objeto en acido, destruyendolo con el tiempo."
 	button_icon_state = "alien_acid"
 	personal_resource_cost = 20
 	click_to_activate = TRUE
@@ -12,7 +12,7 @@
 	if(!.)
 		return
 
-	to_chat(on_who, span_noticealien("You prepare to vomit acid. <b>Click a target to acid it!</b>"))
+	to_chat(on_who, span_noticealien("Te preparas para vomitar acido. <b>Haz clic en un objetivo para acidificarlo!</b>"))
 	on_who.update_icons()
 
 /datum/action/cooldown/meatvine/personal/corrosion/unset_click_ability(mob/on_who, refund_cooldown = TRUE)
@@ -21,17 +21,17 @@
 		return
 
 	if(refund_cooldown)
-		to_chat(on_who, span_noticealien("You empty your corrosive acid glands."))
+		to_chat(on_who, span_noticealien("Vacias tus glandulas de acido corrosivo."))
 	on_who.update_icons()
 
 /datum/action/cooldown/meatvine/personal/corrosion/PreActivate(atom/target)
 	if(get_dist(owner, target) > 1)
 		return FALSE
 	if(ismob(target))
-		owner.balloon_alert(owner, "doesn't work on mobs!")
+		owner.balloon_alert(owner, "¡No funciona en los mobs!")
 		return FALSE
 	if(isfloorturf(target))
-		owner.balloon_alert(owner, "doesn't work on floors!")
+		owner.balloon_alert(owner, "¡No funciona en los suelos!")
 		return FALSE
 
 	return ..()
@@ -42,8 +42,8 @@
 		return FALSE
 
 	owner.visible_message(
-		span_alertalien("[owner] vomits globs of vile stuff all over [target]. It begins to sizzle and melt under the bubbling mess of acid!"),
-		span_noticealien("You vomit globs of acid over [target]. It begins to sizzle and melt."),
+		span_alertalien("[owner] vomita bolas de una sustancia repugnante por todo [target]. Comienza a hacer ruido y a derretirse bajo el revoltoso liquido acido."),
+		span_noticealien("Vomitos de acido sobre [target]. Comienza a silbar y derretirse."),
 	)
 	return ..()
 

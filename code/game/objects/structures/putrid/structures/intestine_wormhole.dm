@@ -1,6 +1,6 @@
 /obj/structure/meatvine/intestine_wormhole
 	name = "pasaje intestinal pulsante"
-	desc = "A grotesque tunnel of writhing intestinal tissue. You could probably enter it..."
+	desc = "Un tunel grotesco de tejido intestinal retorcido. Probablemente podrias ingresarlo..."
 	icon_state = "intestine_wormhole"
 	density = FALSE
 	max_integrity = 200
@@ -16,7 +16,7 @@
 	RegisterSignal(T, COMSIG_QDELETING, PROC_REF(on_floor_destroyed))
 
 /obj/structure/meatvine/intestine_wormhole/proc/on_floor_destroyed()
-	visible_message("<span class='warning'>[src] collapses as its foundation is destroyed!</span>")
+	visible_message("<span class='warning'>[src] se desmorona al ser destruida su base.</span>")
 	qdel(src)
 
 /obj/structure/meatvine/intestine_wormhole/proc/try_use(mob/living/user)
@@ -27,7 +27,7 @@
 				network_wormholes += wormhole
 
 	if(network_wormholes.len <= 1) // Need at least 2 wormholes to travel
-		to_chat(user, "<span class='warning'>This passage leads nowhere...</span>")
+		to_chat(user, "<span class='warning'>Este pasaje no lleva a ninguna parte...</span>")
 		return
 
 	enter_wormhole(user, network_wormholes)
@@ -38,7 +38,7 @@
 
 	user.alpha = 0
 
-	to_chat(user, "<span class='notice'>You squeeze into the pulsating passage. You feel other exits nearby...</span>")
+	to_chat(user, "<span class='notice'>Te metes en el pasaje pulsatil. Sientes otras salidas cercanas...</span>")
 
 	var/datum/wormhole_travel_ui/ui = new(user, src, destinations)
 	ui.show()
@@ -136,7 +136,7 @@
 
 	cleanup()
 
-	to_chat(traveler, "<span class='notice'>You squeeze out of the passage!</span>")
+	to_chat(traveler, "<span class='notice'>¡Saliste del pasillo!</span>")
 
 	animate(traveler, alpha = 255, time = 0.5 SECONDS)
 
@@ -163,7 +163,7 @@
 	qdel(src)
 
 /obj/screen/wormhole_navigate
-	name = "Navigate"
+	name = "Navegar por"
 	icon = 'icons/obj/cellular/putrid_abilities.dmi'
 	icon_state = "button_bg"
 	plane = HUD_PLANE
@@ -178,7 +178,7 @@
 		name = "Salida anterior"
 	else
 		icon_state = "button_bg"
-		name = "Next Exit"
+		name = "La proxima salida"
 
 /obj/screen/wormhole_navigate/Click()
 	if(!ui)

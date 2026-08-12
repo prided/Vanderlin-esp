@@ -1,6 +1,6 @@
 /obj/structure/redstone/comparator
 	name = "comparador de piedra roja"
-	desc = "Compares redstone signal strengths. Can read containers and signals through walls."
+	desc = "Compara la intensidad de la señal de Redstone. Puede leer contenedores y señales a traves de las paredes."
 	icon_state = "comparator"
 	redstone_role = REDSTONE_ROLE_PROCESSOR
 
@@ -238,6 +238,6 @@
 	if(!Adjacent(user))
 		return
 	dir = turn(dir, 90)
-	to_chat(user, "<span class='notice'>You rotate the [name].</span>")
+	to_chat(user, "<span class='notice'>Usted hace girar el [name].</span>")
 	schedule_network_update()
 	on_power_changed()

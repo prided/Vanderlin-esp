@@ -1,5 +1,5 @@
 /obj/item/gravedecor
-	name = "grave decoration"
+	name = "decoracion de tumbas"
 	desc = "Si estas viendo esto, grita a los codificadores."
 	icon = 'icons/roguetown/items/graveitems.dmi'
 	icon_state = "headstone_basic"
@@ -37,26 +37,26 @@
 		if(/datum/patron/divine/abyssor in patrons)
 			. += SPAN_GOD_ABYSSOR("Esta decoracion venera a Abyssor, Señor de las Profundidades.")
 		if(/datum/patron/divine/dendor in patrons)
-			. += SPAN_GOD_DENDOR("This decoration venerates Dendor, the Beastfather.")
+			. += SPAN_GOD_DENDOR("Esta decoracion venera a Dendor, el Padre de las Bestias.")
 		if(/datum/patron/divine/necra in patrons)
-			. += SPAN_GOD_NECRA("This decoration venerates Necra, the Undermaiden.")
+			. += SPAN_GOD_NECRA("Esta decoracion venera a Necra, la doncella de los infiernos.")
 		if(/datum/patron/divine/ravox in patrons)
 			. += SPAN_GOD_RAVOX("Esta decoracion venera a Ravox, la Encarnacion de la Justicia.")
 		if(/datum/patron/divine/xylix in patrons)
-			. += SPAN_GOD_XYLIX("This decoration venerates Xylix, the Silvertongued.")
+			. += SPAN_GOD_XYLIX("Esta decoracion venera a Xylix, el de lengua plateada.")
 		if((/datum/patron/divine/pestra || /datum/patron/alternate/wurm) in patrons)
-			. += SPAN_GOD_PESTRA("This decoration venerates Pestra, the Plaguebearer.")
+			. += SPAN_GOD_PESTRA("Esta decoracion venera a Pestra, el Portador de la Peste.")
 		if(/datum/patron/divine/malum in patrons)
 			. += SPAN_GOD_MALUM("Esta decoracion venera a Malum, el Gran Artesano.")
 		if(/datum/patron/divine/eora in patrons)
 			. += SPAN_GOD_EORA("Esta decoracion venera a Eora, el Patron del Amor.")
 		if(/datum/patron/alternate/great_hunt in patrons)
-			. += SPAN_GOD_GREATHUNT("This decoration venerates the Great Hunt.")
+			. += SPAN_GOD_GREATHUNT("Esta decoracion venera la Gran Caceria.")
 		if(/datum/patron/psydon in patrons)
 			. += SPAN_GOD_PSYDON("Esta decoracion venera a Psydon, el Dios Antiguo.")
 
 /obj/item/gravedecor/headstone
-	name = "peaked headstone"
+	name = "lapida puntiaguda"
 	desc = "Una lapida con un pico afilado y mucho espacio para una inscripcion."
 	icon_state = "headstone_basic"
 	decorationquality = 2
@@ -71,9 +71,9 @@
 
 	if(inscription)
 		. += "<br>[inscription]"
-		. += span_warning("Wait... shouldn't this be attached to a grave?")
+		. += span_warning("Espera… ¿no deberia estar adjunto a una tumba?")
 	else if(custom_message) // Not inscribed, but there is a custom_message
-		. += span_info("There is a message carved onto \the [src]...<br>")
+		. += span_info("Hay un mensaje tallado en \the [src]...<br>")
 		. += span_italics("[custom_message]")
 
 
@@ -87,43 +87,43 @@
 	if(!(tool.get_sharpness()))
 		return NONE
 
-	var/new_message = tgui_input_text(user, "What would you like to be inscribed on \the [src]?", "Inscripcion personalizada", custom_message, 150, TRUE)
+	var/new_message = tgui_input_text(user, "¿Que te gustaria que estuviera inscrito en \the [src]?", "Inscripcion personalizada", custom_message, 150, TRUE)
 	if(!new_message || new_message == custom_message)
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_info("[user] comienza a grabar un mensaje en \the [src] con \a [tool]."), span_info("You begin to engrave a message into \the [src]."), span_info("You hear someone cutting into stone."))
+	user.visible_message(span_info("[user] comienza a grabar un mensaje en \the [src] con \a [tool]."), span_info("Comienzas a grabar un mensaje en \the [src]."), span_info("Escuchas a alguien tallando piedra."))
 	playsound(src, pick('sound/combat/hits/onrock/onrock (1).ogg', 'sound/combat/hits/onrock/onrock (2).ogg', 'sound/combat/hits/onrock/onrock (3).ogg', 'sound/combat/hits/onrock/onrock (4).ogg'), 100)
 	if(!do_after(user, 5 SECONDS, src, progress=TRUE, display_over_user=TRUE))
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_info("[user] finishes working on \the [src]."), span_info("You finish engraving \the [src] with your message."))
+	user.visible_message(span_info("[user] termina trabajando en \the [src]."), span_info("Termina de grabar \the [src] con tu mensaje."))
 	custom_message = new_message
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/gravedecor/headstone/crude
-	name = "crude headstone"
+	name = "lapida tosca"
 	desc = ""
 	icon_state = "headstone_crude"
 	sourceitem = /obj/item/grown/log/tree/stick
 	decorationquality = 1
 
 /obj/item/gravedecor/headstone/obelisk
-	name = "headstone obelisk"
+	name = "Obelisco de lapida"
 	desc = "Una lapida alta con incrustaciones de hierro, para que tus obras nunca sean olvidadas."
 	icon_state = "headstone_obelisk"
 	dropshrink = 0.8
 	decorationquality = 3
 
 /obj/item/gravedecor/headstone/psydon
-	name = "psydonic headstone"
-	desc = "A psycross shaped headstone, may be considered heretical by some, but to disturb the graves it lies upon even more so."
+	name = "Lapida psydonic"
+	desc = "Una lapida con forma de psycross puede ser considerada heretica por algunos, pero perturbar las tumbas sobre las que se encuentra aun mas."
 	icon_state = "headstone_psydon"
 	dropshrink = 0.8
 	decorationquality = 2
 	patrons = list(/datum/patron/psydon, /datum/patron/psydon/extremist)
 
 /obj/item/gravedecor/headstone/astrata
-	name = "astratan headstone"
+	name = "Lapida astratan"
 	desc = "La cruz dorada de Astrata, nada menos que para el Tirano del Sol."
 	icon_state = "headstone_astrata"
 	dropshrink = 0.8
@@ -131,70 +131,70 @@
 	patrons = list(/datum/patron/divine/astrata)
 
 /obj/item/gravedecor/headstone/pestra
-	name = "pestran headstone"
-	desc = "Any grave this is on is practically begging to be robbed. Maybe that's the intent."
+	name = "lapida de pestran"
+	desc = "Cualquier tumba en la que se encuentre practicamente esta pidiendo a gritos que la roben. Quizas esa sea la intencion."
 	icon_state = "headstone_pestra"
 	dropshrink = 0.8
 	decorationquality = 2
 	patrons = list(/datum/patron/divine/pestra, /datum/patron/alternate/wurm)
 
 /obj/item/gravedecor/headstone/abyssor
-	name = "abyssorite headstone"
-	desc = "Not a common sight, most corpses are lost to his briny embrace before they can see land."
+	name = "lapida abissorita"
+	desc = "No es una vision comun, la mayoria de los cadaveres se pierden en su abrazo salobre antes de que puedan ver tierra."
 	icon_state = "headstone_abyssor"
 	dropshrink = 0.8
 	decorationquality = 2
 	patrons = list(/datum/patron/divine/abyssor)
 
 /obj/item/gravedecor/headstone/hunt
-	name = "skull headstone"
-	desc = "An uncommon sight in these lands, though it can barely be called a headstone, it is prestigious for those who earn it."
+	name = "lapida del craneo"
+	desc = "Una vision poco comun en estas tierras, aunque apenas se la puede llamar una lapida, es prestigiosa para quienes la ganan."
 	icon_state = "headstone_hunt"
 	dropshrink = 0.8
 	decorationquality = 1
 	patrons = list(/datum/patron/alternate/great_hunt, /datum/patron/alternate/great_hunt/proven)
 
 /obj/item/gravedecor/headstone/necra
-	name = "necran headstone"
-	desc = "This one's time is up. Perhaps they never had any. Does it really matter?"
+	name = "Lapida de Necran"
+	desc = "A este se le acabo el tiempo. Quizas nunca tuvieron ninguno. ¿Realmente importa?"
 	icon_state = "headstone_necra"
 	dropshrink = 0.8
 	decorationquality = 2
 	patrons = list(/datum/patron/divine/necra)
 
 /obj/item/gravedecor/headstone/malum
-	name = "malumite headstone"
-	desc = "It's a toil to even install this."
+	name = "lapida de malumita"
+	desc = "Es un trabajo pesado incluso instalar esto."
 	icon_state = "headstone_malum"
 	dropshrink = 0.8
 	decorationquality = 3
 	patrons = list(/datum/patron/divine/malum)
 
 /obj/item/gravedecor/headstone/eora
-	name = "eoran headstone"
-	desc = "Made for those TRULY dear departed."
+	name = "Lapida eoran"
+	desc = "Hecho para aquellos VERDADERAMENTE queridos difuntos."
 	icon_state = "headstone_eora"
 	dropshrink = 0.8
 	decorationquality = 3
 	patrons = list(/datum/patron/divine/eora)
 
 /obj/item/gravedecor/gravefence
-	name = "crude gravefence"
-	desc = "A crude fence made of unshaped pebbles, made to deliniate a grave (somewhat) exactly."
+	name = "cerca de tumbas tosca"
+	desc = "Una tosca valla hecha de guijarros sin forma, hecha para delimitar una tumba (mas o menos) exactamente."
 	icon_state = "gravefence_stone"
 	dropshrink = 0.8
 	decorationquality = 1
 
 /obj/item/gravedecor/gravefence/block
-	name = "chiseled gravefence"
-	desc = "A gravefence of blocks to be embedded in the earth, made to deliniate a grave exactly."
+	name = "valla cincelada"
+	desc = "Una valla de bloques para incrustar en la tierra, hecha para delimitar exactamente una tumba."
 	icon_state = "gravefence_block"
 	dropshrink = 0.8
 	decorationquality = 2
 
 /obj/item/gravedecor/gravefence/iron
-	name = "iron gravefence"
-	desc = "A wrought iron grave fence. Ominous."
+	name = "valla de hierro"
+	desc = "Una valla para tumbas de hierro forjado. Ominoso."
 	icon_state = "gravefence_iron"
 	dropshrink = 0.8
 	decorationquality = 3

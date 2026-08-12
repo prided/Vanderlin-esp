@@ -1,6 +1,6 @@
 /obj/structure/redstone/repeater
-	name = "redstone repeater"
-	desc = "Amplifies and delays redstone signals. Can be locked by a powered repeater from the side."
+	name = "repetidor de piedra roja"
+	desc = "Amplifica y retrasa las señales de Redstone. Puede bloquearse mediante un repetidor alimentado desde el lateral."
 	icon_state = "repeater"
 	redstone_role = REDSTONE_ROLE_PROCESSOR
 	true_pattern = "repeater"
@@ -239,14 +239,14 @@
 		to_chat(user, "<span class='warning'>¡El repetidor esta bloqueado!</span>")
 		return
 	delay_ticks = (delay_ticks % 4) + 1
-	to_chat(user, "<span class='notice'>Delay set to [delay_ticks] tick\s.</span>")
+	to_chat(user, "<span class='notice'>Retraso ajustado a [delay_ticks] tic \s.</span>")
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/structure/redstone/repeater/AltClick(mob/user, list/modifiers)
 	if(!Adjacent(user)) return
 	facing_dir = turn(facing_dir, 90)
 	dir = facing_dir
-	to_chat(user, "<span class='notice'>You rotate the [name].</span>")
+	to_chat(user, "<span class='notice'>Usted hace girar el [name].</span>")
 	schedule_network_update()
 
 /obj/structure/redstone/repeater/proc/dir2text_readable(direction)

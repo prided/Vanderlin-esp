@@ -1,7 +1,7 @@
 //Barricades/cover
 
 /obj/structure/barricade
-	name = "chest high wall"
+	name = "pared hasta el pecho"
 	anchored = TRUE
 	density = TRUE
 	max_integrity = 100
@@ -24,7 +24,7 @@
 /////BARRICADE TYPES///////
 
 /obj/structure/barricade/wooden
-	name = "wooden barricade"
+	name = "barricada de madera"
 	icon = 'icons/obj/structures/barricade.dmi'
 	icon_state = "barricade_wood"
 	/// Amount of wood planks to drop
@@ -36,7 +36,7 @@
 		new /obj/item/natural/wood/plank(loc)
 
 /obj/structure/barricade/wooden/crude
-	name = "plank barricade"
+	name = "barricada de tablones"
 	icon_state = "barricade_wood_plank"
 	max_integrity = 60
 	drop_amount = 1

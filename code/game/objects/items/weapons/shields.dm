@@ -37,7 +37,7 @@
 	if(istype(attackby_item, /obj/item/weapon) && !istype(attackby_item, /obj/item/weapon/hammer))
 		if(!COOLDOWN_FINISHED(src, shield_bang))
 			return
-		user.visible_message("<span class='danger'>[user] bangs [src] with [attackby_item]!</span>")
+		user.visible_message("<span class='danger'>[user] golpea [src] con [attackby_item]!</span>")
 		playsound(user, 'sound/combat/shieldbang.ogg', 50, TRUE)
 		COOLDOWN_START(src, shield_bang, SHIELD_BANG_COOLDOWN)
 		return
@@ -50,7 +50,7 @@
 		if(istype(hitby, /obj/projectile))
 			var/obj/projectile/P = hitby
 			if(P.armor_penetration >= 80)
-				owner.visible_message("<span class='danger'>The [hitby] pierces [owner]'s [src]!</span>")
+				owner.visible_message("<span class='danger'>La [hitby] espada atraviesa el [owner] [src]¡</span>")
 				return 0
 		if(owner.client?.chargedprog == 100 && owner.used_intent?.tranged)
 			owner.visible_message("<span class='danger'>[owner] bloquea [hitby] con [src]!</span>")
@@ -74,7 +74,7 @@
 	return proc_value
 
 /datum/intent/shield/bash
-	name = "bash"
+	name = "golpe"
 	icon_state = "inbash"
 	hitsound = list('sound/combat/shieldbash_wood.ogg')
 	chargetime = 0
@@ -84,7 +84,7 @@
 	hitsound = list('sound/combat/shieldbash_metal.ogg')
 
 /datum/intent/shield/block
-	name = "block"
+	name = "bloquear"
 	icon_state = "inblock"
 	tranged = 1 //we can't attack directly with this intent, but we can charge it
 	tshield = 1
@@ -100,7 +100,7 @@
 
 /obj/item/weapon/shield/wood
 	name = "escudo de madera"
-	desc = "A simple, emblazoned round wooden shield with leather padding. \nCan exceptionally block attacks, but is more brittle than metal ones."
+	desc = "Un escudo redondo de madera sencillo, blasonado y acolchado de cuero. \nCan bloquea excepcionalmente los ataques, pero es mas fragil que los de metal."
 	icon_state = "woodsh"
 	coverage = 60
 	max_integrity = INTEGRITY_STANDARD - 25
@@ -126,7 +126,7 @@
 	add_overlay(MU)
 
 	design_chosen = TRUE
-	if(tgui_alert(user, "Are you pleased with your heraldry?", "Heraldry", DEFAULT_INPUT_CHOICES) != CHOICE_YES)
+	if(tgui_alert(user, "¿Esta satisfecho con su heraldica?", "Heraldicia", DEFAULT_INPUT_CHOICES) != CHOICE_YES)
 		cut_overlays()
 		design_chosen = FALSE
 
@@ -154,8 +154,8 @@
 	. += M
 
 /obj/item/weapon/shield/tower
-	name = "tower shield"
-	desc = "A gigantic, iron reinforced shield that covers the entire body, a design-copy of the Aasimar shields of an era gone by."
+	name = "escudo de la torre"
+	desc = "Un gigantesco escudo reforzado con hierro que cubre todo el cuerpo, una copia del diseño de los escudos Aasimar de una epoca pasada."
 	icon_state = "shield_tower"
 	force = DAMAGE_SHIELD + 5
 	throwforce = DAMAGE_SHIELD
@@ -171,7 +171,7 @@
 
 /obj/item/weapon/shield/tower/spidershield
 	name = "escudo de araña"
-	desc = "A bulky shield of spike-like lengths molten together. The motifs evoke anything but safety and protection."
+	desc = "Un escudo voluminoso de longitudes en forma de puas fundidas. Los motivos evocan todo menos seguridad y proteccion."
 	icon = 'icons/roguetown/weapons/32/elven.dmi'
 	icon_state = "spidershield"
 
@@ -186,7 +186,7 @@
 
 /obj/item/weapon/shield/tower/hoplite
 	name = "escudo antiguo"
-	desc = "A gigantic, bronze reinforced shield that covers the entire body. An Aasimar relic from an era long past."
+	desc = "Un gigantesco escudo reforzado con bronce que cubre todo el cuerpo. Una reliquia Aasimar de una epoca pasada."
 	icon_state = "boeotian"
 	force = DAMAGE_SHIELD + 5
 	wdefense = ULTMATE_PARRY + 3
@@ -211,8 +211,8 @@
 				return list("shrink" = 0.6,"sx" = 1,"sy" = 4,"nx" = 1,"ny" = 2,"wx" = 3,"wy" = 3,"ex" = 0,"ey" = 2,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/weapon/shield/tower/metal
-	name = "kite shield"
-	desc = "A knightly, kite shaped steel shield, emblazoned with heraldry. \nBoasts superior coverage and durability, owed to its exquisite craftsmanship."
+	name = "escudo de cometa"
+	desc = "Un escudo de acero caballeroso con forma de cometa y adornado con heraldica. \nBoasts cobertura y durabilidad superiores, debido a su exquisita artesania."
 	icon_state = "ironsh"
 	force = DAMAGE_SHIELD * 2
 	wdefense = ULTMATE_PARRY + 2
@@ -258,7 +258,7 @@
 	add_overlay(MU)
 
 	design_chosen = TRUE
-	if(tgui_alert(user, "Are you pleased with your heraldry?", "Heraldry", DEFAULT_INPUT_CHOICES) != CHOICE_YES)
+	if(tgui_alert(user, "¿Esta satisfecho con su heraldica?", "Heraldicia", DEFAULT_INPUT_CHOICES) != CHOICE_YES)
 		cut_overlays()
 		design_chosen = FALSE
 
@@ -268,12 +268,12 @@
 
 /obj/item/weapon/shield/tower/metal/ancient
 	name = "escudo antiguo"
-	desc = "An ancient, knightly, kite-shaped steel shield."
+	desc = "Un antiguo escudo de acero con forma de cometa y caballero."
 	icon_state = "ancientsh"
 
 /obj/item/weapon/shield/tower/metal/psy
 	name = "Pacto"
-	desc = "The Ordo Benetarus holds a mantra: A Psydonian endures. A Psydonian preserves themselves. A Psydonian preserves His flock. Protect them."
+	desc = "El Ordo Benetarus tiene un mantra: un Psydonian perdura. Un Psydonian se conserva. A Psydonian preserva Su rebaño. Protegelos."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psyshield"
 	wdefense = ULTMATE_PARRY + 3
@@ -286,7 +286,7 @@
 	AddComponent(/datum/component/psyblessed, TRUE, 0, FALSE, 100, 1, TRUE)
 
 /obj/item/weapon/shield/tower/buckleriron
-	name = "iron buckler"
+	name = "escudo de hierro"
 	desc = "Un escudo de hierro de pequeño tamaño, popular entre los mercenarios debido a su peso ligero y facilidad de movilidad."
 	icon_state = "ironbuckler"
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_BACK
@@ -314,7 +314,7 @@
 
 /obj/item/weapon/shield/tower/buckleriron/captain
 	name = "Orden"
-	desc = "A buckler decorated with gold made specifically for the Captain alongside their armor. To bring order to the lands with every blow deflected."
+	desc = "Un escudo decorado con oro hecho especificamente para el Capitan junto con su armadura. Poner orden en las tierras con cada golpe desviado."
 	icon_state = "capbuckler"
 	sellprice = 60
 	max_integrity = INTEGRITY_STRONG
@@ -323,8 +323,8 @@
 	item_weight = 0.7 KILOGRAMS
 
 /obj/item/weapon/shield/heater
-	name = "heater shield"
-	desc = "A sturdy wood and leather shield. Made to not be too encumbering while still providing good protection."
+	name = "escudo calentador"
+	desc = "Un escudo resistente de madera y cuero. Hecho para no ser demasiado pesado y al mismo tiempo brindar una buena proteccion."
 	icon_state = "heatershield"
 	force = DAMAGE_SHIELD + 5
 	throwforce = DAMAGE_SHIELD
@@ -352,7 +352,7 @@
 	add_overlay(MU)
 
 	design_chosen = TRUE
-	if(tgui_alert(user, "Are you pleased with your heraldry?", "Heraldry", DEFAULT_INPUT_CHOICES) != CHOICE_YES)
+	if(tgui_alert(user, "¿Esta satisfecho con su heraldica?", "Heraldicia", DEFAULT_INPUT_CHOICES) != CHOICE_YES)
 		cut_overlays()
 		design_chosen = FALSE
 

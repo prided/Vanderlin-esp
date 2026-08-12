@@ -1,6 +1,6 @@
 /obj/structure/flora/newtree
-	name = "tree"
-	desc = "The thick core of a tree."
+	name = "arbol"
+	desc = "El nucleo grueso de un arbol."
 	icon = 'icons/roguetown/misc/tree.dmi'
 	icon_state = "treenew"
 	base_icon_state = "tree"
@@ -61,7 +61,7 @@
 	var/used_time = max(7 SECONDS - (myskill * 1 SECONDS) - (GET_MOB_ATTRIBUTE_VALUE(user, STAT_SPEED) * 3), 3 SECONDS)
 	if(user.m_intent != MOVE_INTENT_SNEAK)
 		playsound(user, 'sound/foley/climb.ogg', 100, TRUE)
-	user.visible_message(span_warning("[user] starts to climb [src]."), span_warning("I start to climb [src]..."))
+	user.visible_message(span_warning("[user] comienza a trepar [src]."), span_warning("Empiezo a trepar [src]..."))
 	if(do_after(user, used_time, src, display_over_user = TRUE))
 		user.zMove(target = target, z_move_flags = Z_MOVE_CLIMBING_FLAGS)
 		if(user.m_intent != MOVE_INTENT_SNEAK)
@@ -310,8 +310,8 @@
 	START BURNT
 				*/
 /obj/structure/flora/newtree/scorched
-	name = "scorched tree"
-	desc = "A tree trunk scorched to ruin."
+	name = "arbol chamuscado"
+	desc = "El tronco de un arbol quemado hasta quedar arruinado."
 	icon = 'icons/roguetown/misc/tree.dmi'
 	icon_state = "treeburnt"
 	num_random_icons = 0
@@ -364,7 +364,7 @@
 
 /obj/structure/flora/newbranch
 	name = "rama"
-	desc = "A stable branch, should be safe to walk on."
+	desc = "Una rama estable deberia ser segura para caminar."
 	icon = 'icons/roguetown/misc/tree.dmi'
 	icon_state = "branch-end1"
 	base_icon_state = "branch-end"

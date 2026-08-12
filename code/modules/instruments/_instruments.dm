@@ -325,7 +325,7 @@
 	"El Odio" = 'sound/instruments/guitar (17).ogg',
 	"Danza De Las Lanzas" = 'sound/instruments/guitar (18).ogg',
 	"The Feline, Forever Returning" = 'sound/instruments/guitar (19).ogg',
-	"El Beso Carmesí" = 'sound/instruments/guitar (20).ogg',
+	"El Beso Carmesi" = 'sound/instruments/guitar (20).ogg',
 	"Dont Let Your Guard Down" = 'sound/instruments/guitar (21).ogg',
 	)
 

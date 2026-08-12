@@ -1,9 +1,9 @@
 /obj/effect/countdown
-	name = "countdown"
-	desc = "We're leaving together\n\
-		But still it's farewell\n\
-		And maybe we'll come back\n\
-		To Earth, who can tell?"
+	name = "cuenta atras"
+	desc = "Partimos juntos\n\
+		Pero aun asi es una despedida\n\
+		Y quizas regresemos\n\
+		A la Tierra, ¿quien sabe?"
 
 	invisibility = INVISIBILITY_OBSERVER
 	anchored = TRUE
@@ -65,7 +65,7 @@
 	return
 
 /obj/effect/countdown/hourglass
-	name = "hourglass countdown"
+	name = "cuenta regresiva del reloj de arena"
 
 /obj/effect/countdown/hourglass/get_value()
 	var/obj/item/hourglass/H = attached_to

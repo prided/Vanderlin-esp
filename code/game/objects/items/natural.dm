@@ -25,11 +25,11 @@
 		if(B.amount < B.maxamount)
 			B.amount++
 			B.update_bundle()
-			user.balloon_alert(user, "[name] added.")
+			user.balloon_alert(user, "[name] añadido.")
 			qdel(src)
 			user.changeNext_move(CLICK_CD_RANGE)
 		else
-			user.balloon_alert(user, "no space!")
+			user.balloon_alert(user, "¡no hay espacio!")
 
 		return ITEM_INTERACT_SUCCESS
 
@@ -43,7 +43,7 @@
 			return ITEM_INTERACT_BLOCKING
 
 		var/obj/item/natural/bundle/N = new bundletype(loc)
-		user.balloon_alert(user, "[N.stackname] bundled.")
+		user.balloon_alert(user, "[N.stackname] en paquete.")
 		qdel(natural)
 		qdel(src)
 		user.put_in_hands(N)
@@ -57,7 +57,7 @@
 	return item_interaction(user, tool, modifiers)
 
 /obj/item/natural/bundle
-	name = "bundle"
+	name = "atado"
 	desc = "No deberias estar viendo esto."
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
@@ -73,7 +73,7 @@
 	var/icon2step = 6
 	var/icon3 = null
 	var/obj/item/stacktype = /obj/item/natural/fibers
-	var/stackname = "fibers"
+	var/stackname = "fibras"
 	var/bundle_verb = "bundle"
 	/// For every amount / items_per_increase, increase a storage dimension by 1.
 	var/items_per_increase = 5
@@ -101,10 +101,10 @@
 			return NONE
 
 		if(amount >= maxamount)
-			user.balloon_alert(user, "full!")
+			user.balloon_alert(user, "¡completo!")
 			return ITEM_INTERACT_BLOCKING
 
-		user.balloon_alert(user, "[tool.name] added.")
+		user.balloon_alert(user, "[tool.name] añadido.")
 		amount++
 		qdel(tool)
 		return ITEM_INTERACT_SUCCESS
@@ -118,7 +118,7 @@
 			return NONE
 
 		if((amount + B.amount) < maxamount)
-			user.balloon_alert(user, "[tool.name] added.")
+			user.balloon_alert(user, "[tool.name] añadido.")
 			B.amount += amount
 			update_bundle()
 			qdel(src)
@@ -155,8 +155,8 @@
 
 	user.changeNext_move(CLICK_CD_FAST)
 	user.visible_message(
-		span_notice("[user] begins to gather all the [stackname] in front of them."),
-		span_notice("I begin gathering all the [stackname] in front of me..."),
+		span_notice("[user] comienza a reunir a todos los [stackname] delante de ellos."),
+		span_notice("Comienzo a recopilar todos los [stackname] frente a mi..."),
 	)
 
 	var/turf/turflocation = get_turf(interacting_with)
@@ -230,7 +230,7 @@
 			amount -= 1
 			var/obj/F = new stacktype(get_turf(src))
 			H.put_in_hands(F)
-			user.balloon_alert(user, "i remove \a [F].")
+			user.balloon_alert(user, "quito \a [F].")
 
 	update_bundle()
 
@@ -271,7 +271,7 @@
 		storage.orient2hud()
 
 /obj/item/natural/clod
-	name = "generic clod"
+	name = "terron generico"
 	desc = "Un puñado de nada."
 	icon_state = "clod1"
 	dropshrink = 0
@@ -302,12 +302,12 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/natural/clod/attack_self(mob/living/user, params)
-	user.visible_message("<span class='warning'>[user] scatters [src].</span>")
+	user.visible_message("<span class='warning'>[user] esparce [src].</span>")
 	qdel(src)
 
 /obj/structure/fluff/clodpile
-	name = "mystery pile"
-	desc = "There is no telling what this is or why it exists. In fact, it shouldn't."
+	name = "pila misteriosa"
+	desc = "No se sabe que es esto ni por que existe. De hecho, no deberia ser asi."
 	icon = 'icons/roguetown/items/natural.dmi'
 	icon_state = "clodpile"
 	var/dirtamt = 5
@@ -352,7 +352,7 @@
 /obj/item/natural/infernalash//T1 mage summon loot
 	name = "ceniza infernal"
 	icon_state = "infernalash"
-	desc = "Ash burnt and burnt once again. Smells of brimstone and hellfire. Still has embers within."
+	desc = "Ash ardio y ardio una vez mas. Huele a azufre y fuego del infierno. Todavia tiene brasas dentro."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -365,9 +365,9 @@
 	item_weight = 30 GRAMS
 
 /obj/item/natural/hellhoundfang//T2 mage summon loot
-	name = "hellhound fang"
+	name = "colmillo de perro del infierno"
 	icon_state = "hellhound_fang"
-	desc = "A sharp fang that glows bright red, no matter how long it's left to cool."
+	desc = "Un colmillo afilado que brilla de color rojo brillante, sin importar cuanto tiempo se deje enfriar."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -381,9 +381,9 @@
 	item_weight = 40 GRAMS
 
 /obj/item/natural/moltencore// T3 mage summon loot
-	name = "molten core"
+	name = "nucleo fundido"
 	icon_state = "wessence"
-	desc = "A molten orb of rock and magick. It gives off waves of magical heat and energy."
+	desc = "Un orbe fundido de roca y magia. Emite ondas de calor y energia magicos."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -399,7 +399,7 @@
 /obj/item/natural/abyssalflame//T4 mage summon loot
 	name = "llama abisal"
 	icon_state = "abyssalflame"
-	desc = "A flickering, black flame contained in a crystal; the heart of an archfiend. Or, at least, what passes for one. It pulses with dense thrums of magick."
+	desc = "Una llama negra parpadeante contenida en un cristal; el corazon de un archidemonio. O, al menos, lo que pasa por serlo. Pulsa con densos golpes de magia."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -414,9 +414,9 @@
 
 //FAIRY
 /obj/item/natural/fairydust	//T1 mage summon loot
-	name = "fairy dust"
+	name = "polvo de hadas"
 	icon_state = "fairy_dust"
-	desc = "A glittering powder from a fae sprite."
+	desc = "Un polvo brillante de un duende fae."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -435,7 +435,7 @@
 /obj/item/natural/iridescentscale	//T2 mage summon loot
 	name = "escamas iridiscentes"
 	icon_state = "iridescent_scale"
-	desc = "Tiny, colorful scales from a glimmerwing, they shine with inate magic"
+	desc = "Escamas diminutas y coloridas de un ala brillante que brillan con magia innata."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -452,9 +452,9 @@
 	item_weight = 15 GRAMS
 
 /obj/item/natural/heartwoodcore	//T3 mage summon loot
-	name = "heartwood core"
+	name = "nucleo de duramen"
 	icon_state = "heartwood_core"
-	desc = "A piece of enchanted wood imbued with the dryad’s essence. Merely holding it transports one's mind to ancient times."
+	desc = "Un trozo de madera encantada imbuida de la esencia de la driada. Simplemente sostenerlo transporta la mente a tiempos antiguos."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -470,9 +470,9 @@
 	item_weight = 60 GRAMS
 
 /obj/item/natural/sylvanessence	//T4 mage summon loot
-	name = "sylvan essence"
+	name = "esencia selvatica"
 	icon_state = "sylvanessence"
-	desc = "A swirling, multicolored liquid with emitting a dizzying array of lights."
+	desc = "Un liquido multicolor arremolinado que emite una vertiginosa variedad de luces."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -489,9 +489,9 @@
 
 //ELEMENTAL
 /obj/item/natural/elementalmote
-	name = "elemental mote"
+	name = "mota elemental"
 	icon_state = "mote"
-	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
+	desc = "Una esencia mistica imbuida del poder de Dendor. Simplemente sostenerlo transporta la mente a tiempos antiguos."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -509,7 +509,7 @@
 /obj/item/natural/elementalshard
 	name = "fragmento elemental"
 	icon_state = "shard"
-	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
+	desc = "Una esencia mistica imbuida del poder de Dendor. Simplemente sostenerlo transporta la mente a tiempos antiguos."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -527,7 +527,7 @@
 /obj/item/natural/elementalfragment
 	name = "fragmento elemental"
 	icon_state = "fragment"
-	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
+	desc = "Una esencia mistica imbuida del poder de Dendor. Simplemente sostenerlo transporta la mente a tiempos antiguos."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -545,7 +545,7 @@
 /obj/item/natural/elementalrelic
 	name = "reliquia elemental"
 	icon_state = "relic"
-	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
+	desc = "Una esencia mistica imbuida del poder de Dendor. Simplemente sostenerlo transporta la mente a tiempos antiguos."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -562,9 +562,9 @@
 
 //Nullmagic
 /obj/item/natural/voidstone
-	name = "voidstone"
+	name = "piedra vacia"
 	icon_state = "voidstone"
-	desc = "An incredibly rare substance torn from creatures immune to magick. This material forsakes Noc's gifts."
+	desc = "Una sustancia increiblemente rara extraida de criaturas inmunes a la magia. Este material abandona los obsequios de Noc."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20

@@ -1,7 +1,7 @@
 GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 
 /obj/effect/decal/cleanable/blood
-	name = "blood"
+	name = "sangre"
 	desc = ""
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "floor1"
@@ -47,7 +47,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		to_chat(H, "<span class='notice'>I get my hands bloody.</span>")
+		to_chat(H, "<span class='notice'>Me pongo las manos en sangre.</span>")
 		H.bloody_hands++
 		H.update_inv_gloves()
 
@@ -140,7 +140,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 	beauty = -50
 
 /obj/effect/decal/cleanable/trail_holder //not a child of blood on purpose
-	name = "blood"
+	name = "sangre"
 	icon = 'icons/effects/blood.dmi'
 	desc = ""
 	beauty = -50
@@ -175,7 +175,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 	return TRUE
 
 /obj/effect/decal/cleanable/blood/gibs
-	name = "gibs"
+	name = "restos"
 	desc = ""
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "gib1"
@@ -222,7 +222,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 	random_icon_states = list("gibmid1", "gibmid2", "gibmid3")
 
 /obj/effect/decal/cleanable/blood/gibs/old
-	name = "old rotting gibs"
+	name = "restos viejos en descomposicion"
 	desc = ""
 	bloodiness = 0
 	already_rotting = TRUE
@@ -417,7 +417,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 	return 0
 
 /obj/effect/decal/cleanable/blood/over_wall
-	name = "blood splatter"
+	name = "salpicadura de sangre"
 	icon_state = "splatter1"
 	plane = GAME_PLANE
 	layer = BULLET_HOLE_LAYER //For obvious reasons.
@@ -432,9 +432,9 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 
 	switch(spray_amounts)
 		if(2)
-			name = "gruesome blood splatter"
+			name = "salpicadura de sangre espantosa"
 		if(3)
-			name = "BRUTAL blood splatter"
+			name = "Salpicadura de sangre BRUTAL"
 
 	add_overlay(pick_n_take(splattericons))
 	return FALSE
@@ -447,7 +447,7 @@ GLOBAL_VAR_INIT(dryblood_colormatrix, color_hex2color_matrix("#967c69"))
 	return
 
 /obj/effect/decal/cleanable/blood/wallsplatter
-	name = "flying blood splatter"
+	name = "salpicadura de sangre voladora"
 	icon_state = "splatter1"
 	plane = GAME_PLANE
 	layer = BULLET_HOLE_LAYER //For obvious reasons.

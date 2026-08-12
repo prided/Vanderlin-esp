@@ -140,7 +140,7 @@
 
 /turf/open/openspace/proc/start_traveling(mob/living/user, direction)
 	var/turf/target = get_step_multiz(src, direction)
-	user.visible_message(span_warning("[user] starts to climb down."), span_warning("Empiezo a bajar."))
+	user.visible_message(span_warning("[user] comienza a bajar."), span_warning("Empiezo a bajar."))
 	if(user.m_intent != MOVE_INTENT_SNEAK)
 		playsound(user, 'sound/foley/climb.ogg', 100, TRUE)
 	if(do_after(user, 3 SECONDS, src))
@@ -154,8 +154,8 @@
 	if(!user.Adjacent(src))
 		return
 	if(!target)
-		to_chat(user, "<span class='warning'>I can't go there.</span>")
+		to_chat(user, "<span class='warning'>No puedo ir alli.</span>")
 		return
 	user.forceMove(target)
-	to_chat(user, "<span class='warning'>I glide down.</span>")
+	to_chat(user, "<span class='warning'>Desciendo planeando.</span>")
 	. = ..()

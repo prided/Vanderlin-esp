@@ -3,7 +3,7 @@
 \---------*/
 
 /obj/item/weapon/shovel
-	name = "shovel"
+	name = "Pala"
 	desc = ""
 	icon_state = "shovel"
 	icon = 'icons/roguetown/weapons/tools.dmi'
@@ -61,7 +61,7 @@
 	item_damage_type = "blunt"
 
 /datum/intent/irrigate
-	name = "irrigate"
+	name = "irrigar"
 	icon_state = "inhoe"
 	chargetime = 0
 	noaa = TRUE
@@ -146,10 +146,10 @@
 	if(istype(used_intent, /datum/intent/irrigate))
 		var/obj/structure/soil/located = locate(/obj/structure/soil) in turf
 		if(located)
-			to_chat(user, span_notice("[located] is in the way!"))
+			to_chat(user, span_notice("¡[located] esta en el camino!"))
 			return ITEM_INTERACT_BLOCKING
 		if(istype(turf, /turf/open/floor/dirt))
-			user.visible_message("[user] starts digging an irrigation channel.", "You start digging an irrigation channel.")
+			user.visible_message("[user] comienza a cavar un canal de irrigacion.", "Comienzas a cavar un canal de irrigacion.")
 			if(!do_after(user, 5 SECONDS * toolspeed, turf))
 				return ITEM_INTERACT_BLOCKING
 
@@ -212,7 +212,7 @@
 // --------- SPADE -----------
 
 /obj/item/weapon/shovel/small
-	name = "spade"
+	name = "pala"
 	icon_state = "spade"
 	item_state = "spade"
 	force = DAMAGE_STAFF - 8
@@ -245,7 +245,7 @@
 
 /obj/item/weapon/shovel/necran
 	name = "pala de batalla necran"
-	desc = "This polearm esque great-shovel is granted for the completion of a gravetenders final initiation rites, for the wielder of this shovel shall rise no more, and with it in hand, neither shall their quarry."
+	desc = "Esta gran pala estilo arma de asta se otorga para completar los ritos de iniciacion finales de un sepulturero, ya que el portador de esta pala no se levantara mas y, con ella en la mano, tampoco su presa."
 	icon = 'icons/roguetown/weapons/64/polearms.dmi'
 	icon_state = "battleshovel"
 	SET_BASE_PIXEL(-16, -16)
@@ -289,8 +289,8 @@
 // --------- BURIAL SHROUD -----------
 
 /obj/item/burial_shroud
-	name = "winding sheet"
-	desc = "A sheet used to drag bodies easier and shield them from the elements."
+	name = "mortaja"
+	desc = "Una sabana utilizada para arrastrar los cuerpos mas facilmente y protegerlos de los elementos."
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "shroud_folded"
 	w_class = WEIGHT_CLASS_SMALL
@@ -314,7 +314,7 @@
 	user.update_a_intents()
 
 /obj/structure/closet/burial_shroud
-	name = "winding sheet"
+	name = "mortaja"
 	desc = ""
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "shroud"
@@ -356,7 +356,7 @@
 		if(!ishuman(usr))
 			return
 		if(contents.len)
-			to_chat(usr, "<span class='warning'>There are too many things inside of [src] to fold it up!</span>")
+			to_chat(usr, "<span class='warning'>¡Hay demasiadas cosas dentro de [src] como para doblarlo!</span>")
 			return
 		visible_message("<span class='notice'>[usr] se pliega [src].</span>")
 		var/obj/item/burial_shroud/B = foldedbag_instance || new foldedbag_path

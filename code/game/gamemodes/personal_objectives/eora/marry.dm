@@ -1,9 +1,9 @@
 /datum/objective/personal/marry
 	name = "encontrar el amor"
-	category = "Eora's Lovebird"
+	category = "Enamorado de Eora"
 	triumph_count = 2
-	immediate_effects = list("You will feel stressed until you marry someone or enough time has passed (+2 Stress)", "Gained an ability to find marital status of others")
-	rewards = list("2 Triumphs", "Eora grows stronger", "True Love", "Eora blesses you (+1 Fortune)")
+	immediate_effects = list("Sentiras estres hasta que te cases o pase suficiente tiempo (+2 Estres)", "Obtuviste una habilidad para conocer el estado civil de otros")
+	rewards = list("2 Triunfos", "Eora se fortalece", "Amor verdadero", "Eora te bendice (+1 Fortuna)")
 	var/lovebird_name
 	var/lovebird_job
 
@@ -46,4 +46,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_EORA_MARRIAGE, list(STAT_FORTUNE = 1))
 
 /datum/objective/personal/marry/update_explanation_text()
-	explanation_text = "Eora wants you to find your true love and marry them! Perhaps [lovebird_name], the [lovebird_job] could be a good match?"
+	explanation_text = "¡Eora quiere que encuentres el amor verdadero y te cases! ¿Quizas [lovebird_name], [lovebird_job], sea una buena pareja?"

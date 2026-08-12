@@ -1,8 +1,8 @@
 /obj/item/dice_cup
-	name = "metal dice cup"
+	name = "cubilete metalico"
 	//in an ideal world, would make it both a reagent container and a dice cup, but I don't want to deal with issues of
 	//rolling dice with a liquid inside. Like you would probably have to make a way for the insides to spill out right?
-	desc = "An iron dice cup, used for rolling dice in secret."
+	desc = "Un cubilete de hierro que se utiliza para lanzar dados en secreto."
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "iron_cup"
 	force = 5
@@ -73,17 +73,17 @@
 		return
 	if(length(dice_list))
 		var/obj/item/dice/die = pick_dice(user)
-		to_chat(user, span_notice("I remove \a [die] from [src]."))
+		to_chat(user, span_notice("Quito \a [die] de [src]."))
 		user.put_in_active_hand(die)
 		if(!length(dice_list))
 			last_roll.Cut()
 	else
-		to_chat(user, span_notice("No dice."))//heh
+		to_chat(user, span_notice("Sin dados."))//heh
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/dice_cup/attack_self(mob/user, list/modifiers)
 	if(!length(dice_list))
-		to_chat(user, span_warning("There are no dice to roll!"))
+		to_chat(user, span_warning("¡No hay dados para tirar!"))
 		return
 	var/option = browser_input_list(user, "Do you wish to roll the die in secret?", "XYLIX", DEFAULT_INPUT_CHOICES)
 	if(!option)
@@ -96,15 +96,15 @@
 		die.diceroll(user, public_roll)
 		last_roll += die.result
 	if(!public_roll)
-		user.visible_message(span_notice("[user] rolls dice in secret using [src]."), span_notice("I roll dice in secret using [src]."))
+		user.visible_message(span_notice("[user] lanza los dados en secreto usando [src]."), span_notice("Lanzo dados en secreto usando [src]."))
 
 /obj/item/dice_cup/examine(mob/user)
 	. = ..()
 	if(length(last_roll))
-		. += span_info("Last rolls were: [last_roll.Join(", ")]")
+		. += span_info("Ultimos lanzamientos fueron: [last_roll.Join(", ")]")
 
 	if(length(contents))
-		. += span_info("Contains [length(contents)] dice.")
+		. += span_info("Contiene [length(contents)] dados.")
 
 /obj/item/dice_cup/proc/rig_dice_cup(user)
 	var/obj/item/dice/which_one = browser_input_list(user, "Which die will you rig in your next roll?", "XYLIX", dice_list)
@@ -120,8 +120,8 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/dice_cup/wooden
-	name = "wooden dice cup"
-	desc = "A wooden dice cup, used for rolling dice."
+	name = "cubilete de madera"
+	desc = "Un cubilete de madera que se utiliza para tirar dados."
 	icon_state = "wood_cup"
 	resistance_flags = FLAMMABLE
 	drop_sound = 'sound/foley/dropsound/wooden_drop.ogg'

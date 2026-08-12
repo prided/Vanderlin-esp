@@ -1,6 +1,6 @@
 /*	.................   Luxury dye bin   ................... */
 /obj/structure/dye_bin
-	name = "dye bin"
+	name = "contenedor de tinte"
 	desc = "Un barril de madera con varios tintes, utilizado para teñir la ropa con nuevos colores."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "dye_bin"
@@ -31,9 +31,9 @@
 
 /obj/structure/dye_bin/atom_deconstruct(disassembled)
 	visible_message( \
-		span_warning("[src] falls over, spilling out [p_their()] contents!"), \
+		span_warning("[src] se cae y derrama su contenido [p_their()] ¡Que desastre!"), \
 		null, \
-		span_warning("Something was knocked over!")
+		span_warning("¡Algo se cayo!")
 	)
 	new /obj/effect/decal/cleanable/dyes(loc)
 	var/obj/item/bin/I = new(loc)
@@ -60,8 +60,8 @@
 		. = TRUE
 		var/obj/item/dye_pack/pack = I
 		user.visible_message( \
-			span_notice("[user] begins to add [pack] to [src]..."), \
-			span_notice("I begin to add [pack] to [src]...") \
+			span_notice("[user] comienza a añadir [pack] a [src]..."), \
+			span_notice("Comienzo a añadir [pack] a [src]...") \
 		)
 		if(do_after(user, 3 SECONDS, src))
 			add_dye_pack(pack)
@@ -71,7 +71,7 @@
 
 	if(!(I.dyeable)) // ????
 		if(I.force < 8) // ?????????
-			to_chat(user, span_warning("I do not think \the [I] can be dyed this way."))
+			to_chat(user, span_warning("No creo que \the [I] pueda teñirse de esta manera."))
 		return ..()
 
 	/* ---------- */
@@ -88,7 +88,7 @@
 		to_chat(user, span_warning("Ya hay algo dentro del contenedor de tinte."))
 		return
 	if(!user.transferItemToLoc(I, src))
-		to_chat(user, span_warning("I can not let go of [I]!"))
+		to_chat(user, span_warning("¡No puedo dejar ir a [I]!"))
 		return
 
 	user.visible_message( \
@@ -167,8 +167,8 @@
 					inserted.add_atom_colour(active_color, FIXED_COLOUR_PRIORITY)
 
 				user.visible_message( \
-					span_notice("[user] dyes [inserted] in [src]."), \
-					span_notice("I dye [inserted] in [src]."), \
+					span_notice("[user] tintes [inserted] en [src]."), \
+					span_notice("Teño [inserted] en [src]."), \
 				)
 
 		if("eject")
@@ -178,7 +178,7 @@
 			user.put_in_hands(inserted)
 			user.visible_message( \
 				span_notice("[user] elimina [inserted] de [src]."), \
-				span_notice("I remove [inserted] from [src].") \
+				span_notice("Quito [inserted] de [src].") \
 			)
 			inserted = null
 
@@ -193,8 +193,8 @@
 	playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
 	user.visible_message( \
 		span_warning("¡[user] patea a [src]!"), \
-		span_warning("I kick [src]!"), \
-		span_warning("I hear a loud bang!") \
+		span_warning("¡Pienso en [src]!"), \
+		span_warning("¡Escucho un fuerte estruendo!") \
 	)
 
 	if(prob(GET_MOB_ATTRIBUTE_VALUE(user, STAT_STRENGTH) * 8))
@@ -213,17 +213,17 @@
 /obj/item/dye_pack/examine(mob/user)
 	. = ..()
 	. += span_info("Ponerlos en un contenedor de madera lo convertira en un contenedor de tinte.")
-	. += span_info("Putting these into an existing dye bin will add the colors into it.")
+	. += span_info("Al colocarlos en un contenedor de tinte existente, se añadiran los colores al mismo.")
 	var/colors_ref = "byond://?src=[REF(src)];action=colors"
-	. += span_info(span_notice("I could look at the selection of <a href=[colors_ref]>colors</a>...")) //ew
+	. += span_info(span_notice("Podria ver la seleccion de <a href=[colors_ref]>colores</a>...")) //ew
 
 /obj/item/dye_pack/Topic(href, href_list)
 	. = ..()
 	switch(href_list["action"])
 		if("colors")
 			if(!length(selectable_colors))
-				to_chat(usr, span_warning("I am looking at [src], but there are no colors?"))
-				to_chat(usr, span_ooc("<i>This is a bug. Please report this on the GitHub.</i>"))
+				to_chat(usr, span_warning("Estoy viendo [src], pero no hay colores."))
+				to_chat(usr, span_ooc("<i>Este es un error. Por favor, reporta esto en GitHub.</i>"))
 				return
 
 			var/list/message_parts = list(span_info("Puedo discernir estos colores..."))
@@ -242,7 +242,7 @@
 
 /obj/item/dye_pack/cheap
 	name = "tintes baratos"
-	desc = "A handful of muted dyes made from natural elements."
+	desc = "Un puñado de tintes apagados elaborados a partir de elementos naturales."
 	icon_state = "cheap_dyes"
 	sellprice = 3
 
@@ -252,7 +252,7 @@
 
 /obj/item/dye_pack/luxury
 	name = "tintes de lujo"
-	desc = "An assortment of rich, colorful dyes, hailing from all across Psydonia. This would certainly cost a pretty zenny."
+	desc = "Una variedad de tintes ricos y coloridos, provenientes de todo Psydonia. Esto sin duda costaria una buena cantidad de zenny."
 	icon_state = "luxury_dyes"
 	sellprice = 30
 
@@ -262,8 +262,8 @@
 
 /obj/item/dye_pack/royal
 	name = "tintes reales"
-	desc = "Dyes with powders hailing from all across Psydonia, from Kingsfield to Heartfelt. \
-		Vibrant and pleasing to the eyes, only the highest in the social hierarchy are seen with these colors."
+	desc = "Tintes elaborados con polvos de toda Psydonia, desde Kingsfield hasta Heartfelt. \
+		Vibrantes y agradables a la vista, solo las personas de mayor rango social lucen estos colores."
 	icon_state = "luxury_dyes"
 	sellprice = 70
 
@@ -273,8 +273,8 @@
 
 // No clue where to sort these so...
 /obj/item/dye_pack/mage
-	name = "magician dyes"
-	desc = "The pigmentation in these colors are bright and rich. Unusual."
+	name = "tintes de mago"
+	desc = "La pigmentacion de estos colores es brillante y rica. Inusual."
 	selectable_colors = list(
 		"Mage Green" = CLOTHING_MAGE_GREEN,
 		"Mage Yellow" = CLOTHING_MAGE_YELLOW,

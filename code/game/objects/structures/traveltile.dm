@@ -23,18 +23,18 @@
 		if(T.aportalloc == aportalloc)
 			if(T == src)
 				continue
-			to_chat(user, "<b>I teleport to [T].</b>")
+			to_chat(user, "<b>Me teletransporto a [T].</b>")
 			playsound(src, 'sound/misc/portal_enter.ogg', 100, TRUE)
 			user.forceMove(T.loc)
 			fou = TRUE
 			break
 	if(!fou)
-		to_chat(user, "<b>There is no portal connected to this. Report it as a bugs.</b>")
+		to_chat(user, "<b>No hay ningun portal conectado a esto. Reportalo como un error.</b>")
 	. = ..()
 
 
 /obj/structure/fluff/traveltile
-	name = "travel"
+	name = "viaje"
 	icon_state = "travel"
 	icon = 'icons/turf/floors.dmi'
 	density = FALSE
@@ -117,7 +117,7 @@
 
 	var/turf/target_loc = get_other_end_turf()
 	if(!target_loc)
-		to_chat(user, "<b>It is a dead end.</b>")
+		to_chat(user, "<b>Es un callejon sin salida.</b>")
 		return
 
 	user.forceMove(target_loc)
@@ -164,7 +164,7 @@
 /obj/structure/fluff/traveltile/proc/user_try_travel(mob/living/user)
 	var/obj/structure/fluff/traveltile/the_tile = get_other_end_turf(TRUE)
 	if(!get_turf(the_tile))
-		to_chat(user, "<b>I can't find the other side.</b>")
+		to_chat(user, "<b>No puedo encontrar el otro lado.</b>")
 		return
 
 	if(!can_go(user))
@@ -174,7 +174,7 @@
 	if(check_other_side && the_tile.required_trait)
 		for(var/mob/living/M in hearers(7, get_turf(the_tile)))
 			if(!HAS_TRAIT(M, the_tile.required_trait))
-				to_chat(user, span_warning("I sense something off at the end of the trail."))
+				to_chat(user, span_warning("Siento que algo no esta bien al final del camino."))
 				time2go = 7 SECONDS
 				break
 
@@ -210,7 +210,7 @@
 
 	for(var/mob/living/carbon/human/H in view(6, src))
 		if(!HAS_CHARACTER_TRAIT(H, required_trait) && !H.is_blind())
-			to_chat(H, "<b>I discover a well hidden entrance</b>")
+			to_chat(H, "<b>Descubro una entrada muy bien escondida</b>")
 			ADD_TRAIT(H, required_trait, TRAIT_GENERIC)
 
 /obj/structure/fluff/traveltile/proc/show_travel_tile(mob/living/user)

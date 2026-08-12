@@ -1,5 +1,5 @@
 /obj/item/natural/glass
-	name = "glass"
+	name = "vaso"
 	desc = "Un panel de vidrio para construir ventanas."
 	icon_state = "glasspane"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
@@ -15,7 +15,7 @@
 
 /obj/item/natural/bundle/glass
 	name = "pila de vidrio"
-	desc = "A stack of fragile glass panes."
+	desc = "Una pila de fragiles paneles de vidrio."
 	icon_state = "glasspane1"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
@@ -28,7 +28,7 @@
 	resistance_flags = null
 	firemod = null
 	w_class = WEIGHT_CLASS_HUGE
-	stackname = "glass"
+	stackname = "vaso"
 	stacktype = /obj/item/natural/glass
 	maxamount = 3
 	icon1 = "glasspane1"
@@ -37,8 +37,8 @@
 	icon2step = 3
 
 /obj/item/natural/glass/shard
-	name = "shard"
-	desc = "A sharp shard of glass."
+	name = "fragmento de vidrio"
+	desc = "Un fragmento de vidrio afilado."
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "large"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
@@ -49,6 +49,6 @@
 	throwforce = 5
 	resistance_flags = null
 	w_class = WEIGHT_CLASS_TINY
-	attack_verb = list("stabbed", "slashed", "sliced", "cut")
+	attack_verb = list("apuñalado", "cortado", "rebanado", "corta")
 	max_integrity = 40
 	smeltresult = /obj/item/natural/glass

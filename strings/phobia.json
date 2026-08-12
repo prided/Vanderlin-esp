@@ -2,16 +2,16 @@
 	"spiders": [
 		"araña",
 		"telaraña",
-		"arácnido"
+		"aracnido"
 	],
 
 	"lizards": [
 		"lagarto",
 		"siseo",
-		"siseó",
+		"siseo",
 		"siseando",
 		"kobold",
-		"dragón"
+		"dragon"
 	],
 
 	"undead": [
@@ -29,20 +29,20 @@
 		"reptar",
 		"colmillos",
 		"anaconda",
-		"víbora",
-		"pitón"
+		"vibora",
+		"piton"
 	],
 
 	"robots": [
-		"autómata",
+		"automata",
 		"sentimental"
 	],
 
 	"doctors": [
 		"curandero",
-		"médico",
+		"medico",
 		"feldsher",
-		"clínica",
+		"clinica",
 		"facultativo",
 		"cirujano",
 		"doctor",
@@ -63,38 +63,38 @@
 		"pluma",
 		"aviar",
 		"aviario",
-		"búho",
+		"buho",
 		"grifo",
-		"águila",
+		"aguila",
 		"polluelo",
-		"pájaro",
-		"arpía",
+		"pajaro",
+		"arpia",
 		"medicator"
 	],
 
 	"falling": [
-		"agárrate",
+		"agarrate",
 		"resiste",
 		"abismo",
 		"foso",
 		"agujero",
 		"caer",
-		"cayó",
-		"suéltate",
-		"te atraparé",
+		"cayo",
+		"sueltate",
+		"te atrapare",
 		"resbalar"
 	],
 
 	"religion": [
 		"dios",
 		"diosa",
-		"religión",
+		"religion",
 		"milagro",
 		"divino",
 		"cielo",
 		"infierno",
 		"inframundo",
-		"más allá",
+		"mas alla",
 		"psydon",
 		"astrata",
 		"noc",
@@ -114,7 +114,7 @@
 
 	"jesters": [
 		"bufones",
-		"bufón",
+		"bufon",
 		"payaso",
 		"payasos",
 		"bromista",

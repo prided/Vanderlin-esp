@@ -2,7 +2,7 @@
 
 /obj/machinery/light/fueled/oven
 	icon = 'icons/roguetown/misc/lighting.dmi'
-	name = "oven"
+	name = "horno"
 	icon_state = "oven1"
 	base_state = "oven"
 	density = FALSE

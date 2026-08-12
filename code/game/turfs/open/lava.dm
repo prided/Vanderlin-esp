@@ -206,7 +206,7 @@
 	return FALSE
 
 /turf/open/lava/acid
-	name = "acid"
+	name = "acido"
 	icon_state = "acid"
 	light_outer_range =  4
 	light_power = 1

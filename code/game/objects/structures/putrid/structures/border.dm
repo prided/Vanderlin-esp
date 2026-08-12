@@ -1,5 +1,5 @@
 /obj/structure/meatvineborder
-	name = "meat clump"
+	name = "trozo de carne"
 	desc = "¡¿Que es eso?!"
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "border"

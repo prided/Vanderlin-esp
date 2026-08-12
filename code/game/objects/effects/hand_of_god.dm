@@ -3,7 +3,7 @@
 #define ANIMATION_Z 5
 
 /obj/effect/god_hand
-	name = "Hand of God"
+	name = "Mano de Dios"
 	icon = 'icons/misc/god_hand.dmi'
 	icon_state = "astrata"
 	layer = GOD_HAND_LAYER

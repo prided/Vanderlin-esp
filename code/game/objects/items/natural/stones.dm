@@ -127,8 +127,8 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 
 
 /obj/item/natural/stone
-	name = "stone"
-	desc = "A piece of rough ground stone."
+	name = "piedra"
+	desc = "Un trozo de piedra molida en bruto."
 	icon_state = "stone1"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
@@ -266,7 +266,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 /obj/item/natural/stone/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_ROTMAN))
-		to_chat(user, span_info("The [src] slips through dead fingers..."))
+		to_chat(user, span_info("El [src] se desliza entre dedos muertos..."))
 		user.dropItemToGround(src, TRUE)
 
 /obj/item/natural/stone/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
@@ -346,8 +346,8 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 		return ITEM_INTERACT_SUCCESS
 
 /obj/item/natural/rock
-	name = "rock"
-	desc = "A large stone that looks breakable."
+	name = "roca"
+	desc = "Una piedra grande que parece quebradiza."
 	icon_state = "stonebig1"
 	dropshrink = 0
 	throwforce = 25
@@ -379,7 +379,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 /obj/item/natural/rock/Crossed(mob/living/L)
 	if(istype(L) && !L.throwing)
 		if(L.m_intent == MOVE_INTENT_RUN || HAS_TRAIT(L, TRAIT_STUMBLE))
-			L.visible_message(span_warning("[L] trips over the rock!"),span_warning("I trip over the rock!"))
+			L.visible_message(span_warning("¡[L] tropieza con la roca!"),span_warning("¡Tropece con la roca!"))
 			L.Knockdown(10)
 			L.consider_ambush()
 	..()
@@ -461,7 +461,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	if(istype(tool, /obj/item/natural/rock))
 		playsound(src, pick('sound/items/stonestone.ogg'), 100)
 		if(prob(10))
-			user.visible_message(span_info("[user] strikes the rocks together."))
+			user.visible_message(span_info("[user] golpea las rocas entre si."))
 			var/datum/effect_system/spark_spread/S = new()
 			var/turf/front = get_step(user,user.dir)
 			S.set_up(1, 1, front)

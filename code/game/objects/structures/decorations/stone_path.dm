@@ -4,7 +4,7 @@
 #define UNIQUE_EFFECT 3 //The tile has some sort of unique effect when crossed.
 //stone tiles for boss arenas
 /obj/structure/stone_tile
-	name = "stone tile"
+	name = "azulejo de piedra"
 	icon = 'icons/turf/boss_floors.dmi'
 	icon_state = "pristine_tile1"
 	layer = ABOVE_OPEN_TURF_LAYER
@@ -98,31 +98,31 @@
 	tile_random_sprite_max = 4
 
 /obj/structure/stone_tile/center
-	name = "stone center tile"
+	name = "azulejo central de piedra"
 	icon_state = "pristine_center1"
 	tile_key = "pristine_center"
 	tile_random_sprite_max = 4
 
 /obj/structure/stone_tile/surrounding
-	name = "stone surrounding slab"
+	name = "losa circundante de piedra"
 	icon_state = "pristine_surrounding1"
 	tile_key = "pristine_surrounding"
 	tile_random_sprite_max = 2
 
 /obj/structure/stone_tile/surrounding_tile
-	name = "stone surrounding tile"
+	name = "azulejo circundante de piedra"
 	icon_state = "pristine_surrounding_tile1"
 	tile_key = "pristine_surrounding_tile"
 	tile_random_sprite_max = 2
 
 //cracked stone tiles
 /obj/structure/stone_tile/cracked
-	name = "cracked stone tile"
+	name = "Baldosa de piedra agrietada"
 	icon_state = "cracked_tile1"
 	tile_key = "cracked_tile"
 
 /obj/structure/stone_tile/block/cracked
-	name = "cracked stone block"
+	name = "bloque de piedra agrietado"
 	icon_state = "cracked_block1"
 	tile_key = "cracked_block"
 
@@ -133,24 +133,24 @@
 	tile_random_sprite_max = 1
 
 /obj/structure/stone_tile/center/cracked
-	name = "cracked stone center tile"
+	name = "azulejo central de piedra agrietada"
 	icon_state = "cracked_center1"
 	tile_key = "cracked_center"
 
 /obj/structure/stone_tile/surrounding/cracked
-	name = "cracked stone surrounding slab"
+	name = "losa circundante de piedra agrietada"
 	icon_state = "cracked_surrounding1"
 	tile_key = "cracked_surrounding"
 	tile_random_sprite_max = 1
 
 /obj/structure/stone_tile/surrounding_tile/cracked
-	name = "cracked stone surrounding tile"
+	name = "baldosas circundantes de piedra agrietada"
 	icon_state = "cracked_surrounding_tile1"
 	tile_key = "cracked_surrounding_tile"
 
 //burnt stone tiles
 /obj/structure/stone_tile/burnt
-	name = "burnt stone tile"
+	name = "teja de piedra quemada"
 	icon_state = "burnt_tile1"
 	tile_key = "burnt_tile"
 
@@ -165,17 +165,17 @@
 	tile_key = "burnt_slab"
 
 /obj/structure/stone_tile/center/burnt
-	name = "burnt stone center tile"
+	name = "azulejo central de piedra quemada"
 	icon_state = "burnt_center1"
 	tile_key = "burnt_center"
 
 /obj/structure/stone_tile/surrounding/burnt
-	name = "burnt stone surrounding slab"
+	name = "losa circundante de piedra quemada"
 	icon_state = "burnt_surrounding1"
 	tile_key = "burnt_surrounding"
 
 /obj/structure/stone_tile/surrounding_tile/burnt
-	name = "burnt stone surrounding tile"
+	name = "baldosas circundantes de piedra quemada"
 	icon_state = "burnt_surrounding_tile1"
 	tile_key = "burnt_surrounding_tile"
 

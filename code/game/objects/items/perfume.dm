@@ -1,6 +1,6 @@
 /obj/item/perfume
 	name = "botella de perfume"
-	desc = "A bottle of pleasantly smelling fragrance."
+	desc = "Una botella de fragancia de olor agradable."
 	icon = 'icons/roguetown/items/perfume.dmi'
 	icon_state = "perfume-bottle-empty"
 	w_class = WEIGHT_CLASS_TINY
@@ -63,9 +63,9 @@
 		return
 
 	if(target == user)
-		user.visible_message(span_notice("[user] sprays [user.p_them()]self with \the [src]."), span_notice("You spray yourself with \the [src]."))
+		user.visible_message(span_notice("[user] rocia [user.p_them()] a si mismo con \the [src]."), span_notice("Te rocia \the [src]."))
 	else
-		user?.visible_message(span_notice("[user] sprays [target] with \the [src]."), span_notice("You spray [target] with \the [src]."))
+		user?.visible_message(span_notice("[user] rocia a [target] con \the [src]."), span_notice("Le rocias a [target] con \the [src]."))
 
 	var/turf/my_turf = get_turf(target)
 	my_turf.pollute_turf(fragrance_type, 20)
@@ -77,7 +77,7 @@
 	target.AddComponent(/datum/component/temporary_pollution_emission, fragrance_type, 5, 10 MINUTES)
 
 /obj/item/perfume/proc/spawn_perfume_cloud(atom/target, mob/user)
-	user.visible_message(span_notice("[user] sprays \the [src] toward [target]."), span_notice("You spray \the [src] toward [target]."))
+	user.visible_message(span_notice("[user] pulveriza \the [src] hacia [target]."), span_notice("Rocias \the [src] hacia [target]."))
 
 	var/obj/projectile/perfume_cloud/cloud = new(get_turf(user))
 	cloud.fragrance_type = fragrance_type
@@ -87,7 +87,7 @@
 
 // Perfume cloud projectile
 /obj/projectile/perfume_cloud
-	name = "perfume cloud"
+	name = "nube de perfumes"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "smoke" // You may want to create a custom sprite cause smoke is fucked
 	pass_flags = PASSTABLE | PASSGRILLE

@@ -1,7 +1,7 @@
 
 /datum/action/cooldown/meatvine/personal/ground_slam
-	name = "Ground Slam"
-	desc = "Slam the ground with tremendous force, creating a 5x5 shockwave that knocks down all hostiles. Crushes anyone beneath you for 65 damage to a random body part. Cost: 20 resources."
+	name = "Golpe de tierra"
+	desc = "Golpea el suelo con una fuerza tremenda, creando una onda de choque de 5x5 que derriba a todos los enemigos. Aplasta a cualquiera que este debajo de ti y le inflige 65 de daño en una parte aleatoria del cuerpo. Costo: 20 recursos."
 	button_icon_state = "ground_slam"
 	cooldown_time = 20 SECONDS
 	personal_resource_cost = 20
@@ -17,12 +17,12 @@
 
 	var/turf/user_turf = get_turf(user)
 	if(!user_turf)
-		to_chat(user, span_warning("You must be on solid ground to slam!"))
+		to_chat(user, span_warning("¡Debes estar en terreno firme para golpear!"))
 		return FALSE
 
 	user.visible_message(
-		span_danger("[user] rears up, preparing to slam the ground!"),
-		span_boldnotice("You prepare to slam the ground!")
+		span_danger("¡[user] se levanta y se prepara para golpear el suelo!"),
+		span_boldnotice("¡Te preparas para golpear el suelo!")
 	)
 	animate(user, pixel_y = user.base_pixel_y + 8, time = 0.3 SECONDS)
 	sleep(0.3 SECONDS)
@@ -39,8 +39,8 @@
 
 /datum/action/cooldown/meatvine/personal/ground_slam/proc/perform_slam(mob/living/simple_animal/hostile/retaliate/meatvine/user, turf/epicenter)
 	user.visible_message(
-		span_danger("[user] slams the ground with devastating force!"),
-		span_boldnotice("You slam the ground!")
+		span_danger("[user] golpea el suelo con fuerza devastadora."),
+		span_boldnotice("¡Das con el puño en el suelo!")
 	)
 
 	playsound(epicenter, 'sound/misc/meteorimpact.ogg', 80, TRUE)
@@ -70,7 +70,7 @@
 
 /datum/action/cooldown/meatvine/personal/ground_slam/proc/crush_victim(mob/living/victim, mob/living/user)
 	victim.visible_message(
-		span_danger("[victim] is crushed under [user]'s massive weight!"),
+		span_danger("¡[victim] queda aplastado bajo el peso masivo de [user]!"),
 		span_userdanger("¡Estas aplastado por [user]!")
 	)
 
@@ -110,7 +110,7 @@
 	shake_camera(target, shake_intensity, 2)
 
 	to_chat(target, span_danger("¡El suelo tiembla violentamente debajo de ti!"))
-	target.balloon_alert(target, "knocked down!")
+	target.balloon_alert(target, "¡Derribado!")
 
 	var/shockwave_damage = max(5, 15 - (distance * 3))
 	target.apply_damage(shockwave_damage, BRUTE, spread_damage = TRUE, damage_type = BCLASS_BLUNT)

@@ -38,7 +38,7 @@ So should you read this and should you get the chance, raise a glass in his memo
 That’s how he would have wanted it.
 */
 /obj/item/clothing/accessory/medal/gold/ordom
-	name = "Tomb of the Paperwork Employee"
+	name = "Tumba del empleado del papeleo"
 	desc = ""
 	icon = 'icons/obj/tomb.dmi'
 	icon_state = "memorial"

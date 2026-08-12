@@ -1,25 +1,25 @@
 {
 	"suspicion": [
 		"@pick(add_name)te estoy observando...",
-		"@pick(add_name)sé lo que estás haciendo",
-		"@pick(add_name)¿qué estás ocultando?",
+		"@pick(add_name)se lo que estas haciendo",
+		"@pick(add_name)¿que estas ocultando?",
 		"Vi eso"
 	],
 
 	"conversation": [
-		"Sí",
-		"Sí",
-		"Ajá",
+		"Si",
+		"Si",
+		"Aja",
 		"No",
 		"Nah",
 		"Lo dudo",
 		"Eh...",
-		"¿Por qué?",
+		"¿Por que?",
 		"Pero...",
 		"Espera",
 		"Hmm",
-		"Sí, lo sé",
-		"Qué raro"
+		"Si, lo se",
+		"Que raro"
 	],
 
 	"greetings": [
@@ -32,9 +32,9 @@
 	],
 
 	"getout": [
-		"@pick(add_name)sal de aquí",
-		"@pick(add_name)¡sal de aquí!",
-		"@pick(add_name)lárgate",
+		"@pick(add_name)sal de aqui",
+		"@pick(add_name)¡sal de aqui!",
+		"@pick(add_name)largate",
 		"@pick(add_name)vete a la mierda",
 		"¡FUERA!",
 		"@pick(add_name)¡fuera!"
@@ -51,9 +51,9 @@
 	],
 
 	"didyouhearthat": [
-		"¿Oíste eso?",
+		"¿Oiste eso?",
 		"¿Viste eso?",
-		"¿Qué fue eso?"
+		"¿Que fue eso?"
 	],
 
 	"add_name": [
@@ -63,9 +63,9 @@
 	],
 
 	"doubt": [
-		"¿Por qué?",
-		"¿Qué?",
-		"Espera, ¿qué?",
+		"¿Por que?",
+		"¿Que?",
+		"Espera, ¿que?",
 		"@pick(add_name)espera",
 		"@pick(add_name)un momento",
 		"Eh..."
@@ -84,32 +84,32 @@
 		"AYUDA",
 		"AYUDA",
 		"AYUDA",
-		"AYÚDAME",
-		"AYÚDALO",
-		"AYÚDALA",
-		"AYÚDALOS",
-		"AYÚDENNOS",
-		"AYÚDATE"
+		"AYUDAME",
+		"AYUDALO",
+		"AYUDALA",
+		"AYUDALOS",
+		"AYUDENNOS",
+		"AYUDATE"
 	],
 
 	"escape": [
 		"@pick(add_name)¡¡CORRE!!",
-		"¡Están detrás de mí!",
-		"¡Está aquí!",
-		"@pick(add_name)¡sígueme!",
-		"@pick(add_name)sígueme"
+		"¡Estan detras de mi!",
+		"¡Esta aqui!",
+		"@pick(add_name)¡sigueme!",
+		"@pick(add_name)sigueme"
 	],
 
 	"infection_advice": [
 		"@pick(add_name)mantente lejos",
 		"@pick(add_name)no te acerques",
 		"@pick(add_name)ten cuidado",
-		"@pick(add_name)ayúdame",
-		"@pick(add_name)mátame"
+		"@pick(add_name)ayudame",
+		"@pick(add_name)matame"
 	],
 
 	"people": [
-		"Capitán",
+		"Capitan",
 		"Hos",
 		"Cmo",
 		"Rd",
@@ -131,7 +131,7 @@
 		"un cultista del reloj",
 		"un revhead",
 		"un rev",
-		"un líder de pandilla",
+		"un lider de pandilla",
 		"un pandillero",
 		"un traidor",
 		"un tator",
@@ -160,63 +160,63 @@
 	"location": [
 		"el espacio cerca de @pick(sublocation)",
 		"el puente",
-		"la armería",
+		"la armeria",
 		"sec",
 		"seguridad",
 		"ciencia",
 		"xenobio",
-		"ingeniería",
+		"ingenieria",
 		"carga",
-		"enfermería",
+		"enfermeria",
 		"atmos",
 		"mantenimiento",
 		"mantenimiento de @pick(sublocation)",
-		"virología",
+		"virologia",
 		"morgue",
 		"oficina del HoP",
-		"oficina del Capitán",
+		"oficina del Capitan",
 		"la capilla",
 		"la biblioteca",
-		"almacén de herramientas",
-		"botánica",
+		"almacen de herramientas",
+		"botanica",
 		"la cocina",
-		"el satélite de la IA"
+		"el satelite de la IA"
 	],
 
 	"sublocation": [
 		"el puente",
-		"la armería",
+		"la armeria",
 		"sec",
 		"seguridad",
 		"ciencia",
 		"xenobio",
-		"ingeniería",
+		"ingenieria",
 		"carga",
-		"enfermería",
+		"enfermeria",
 		"atmos",
 		"mantenimiento",
-		"virología",
+		"virologia",
 		"morgue",
 		"oficina del HoP",
-		"oficina del Capitán",
+		"oficina del Capitan",
 		"la capilla",
 		"la biblioteca",
-		"almacén de herramientas",
-		"botánica",
+		"almacen de herramientas",
+		"botanica",
 		"la cocina",
-		"el satélite de la IA"
+		"el satelite de la IA"
 	],
 
 	"advice": [
 		"Hmm... no estoy seguro de eso.",
-		"Sí. Estás haciendo lo correcto.",
-		"No. Deja de hacer lo que estás haciendo.",
-		"Deberías desconfiar de esa persona.",
-		"Confía en esa persona.",
+		"Si. Estas haciendo lo correcto.",
+		"No. Deja de hacer lo que estas haciendo.",
+		"Deberias desconfiar de esa persona.",
+		"Confia en esa persona.",
 		"Esa persona quiere matarte.",
-		"Mata a esa persona. Sabes quién.",
-		"Deberías ir a otro lugar. Rápido.",
-		"Buena suerte. La necesitarás.",
+		"Mata a esa persona. Sabes quien.",
+		"Deberias ir a otro lugar. Rapido.",
+		"Buena suerte. La necesitaras.",
 		"Tienes mi permiso. Hazlo.",
 		"Solo hazlo."
 	],
@@ -230,14 +230,14 @@
 		"Aire",
 		"Magia",
 		"Arañas",
-		"Botón",
+		"Boton",
 		"Sorpresa",
 		"Felicidad",
-		"Desesperación",
+		"Desesperacion",
 		"Sangre",
-		"Increíble",
+		"Increible",
 		"Infinito",
-		"Electrónica",
+		"Electronica",
 		"Tiempo",
 		"Espacio",
 		"Dolor",
@@ -245,8 +245,8 @@
 		"Vida",
 		"Muerte",
 		"Phlebotinium",
-		"Maná",
-		"Energía",
+		"Mana",
+		"Energia",
 		"?????"
 	]
 

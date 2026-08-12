@@ -1,9 +1,9 @@
 /datum/objective/personal/build_zizo_shrine
-	name = "Construct  Inverted Crosses"
-	category = "Zizo's Chosen"
+	name = "Construir cruces invertidas"
+	category = "Elegido de Zizo"
 	triumph_count = 2
-	immediate_effects = list("Gained an ability to construct inverted crosses")
-	rewards = list("2 Triumphs", "Zizo grows stronger", "Zizo blesses you (+2 Fortune)")
+	immediate_effects = list("Obtuviste una habilidad para construir cruces invertidas")
+	rewards = list("2 Triunfos", "Zizo se fortalece", "Zizo te bendice (+2 Fortuna)")
 	var/target_type = /obj/structure/fluff/psycross/zizocross
 	var/target_count = 2
 	var/current_count = 0
@@ -26,7 +26,7 @@
 
 	current_count++
 	if(current_count < target_count)
-		to_chat(owner.current, span_notice("You have built [current_count] out of [target_count] inverted crosses."))
+		to_chat(owner.current, span_notice("Has construido [current_count] de [target_count] cruces invertidas."))
 		return
 
 	complete_objective()
@@ -42,5 +42,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_ZIZO_BLESSING, list(STAT_FORTUNE = 2))
 
 /datum/objective/personal/build_zizo_shrine/update_explanation_text()
-	explanation_text = "Construct [target_count] inverted cross[target_count > 1 ? "s" : ""] to spread Zizo's corruption!"
-
+	explanation_text = "¡Construye [target_count] altar[target_count > 1 ? "s" : ""] con cruces invertidas para propagar la corrupcion de Zizo!"

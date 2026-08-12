@@ -1,9 +1,9 @@
 /datum/objective/personal/retainer
-	name = "Recruit Retainer"
-	category = "Astrata's Chosen"
+	name = "Reclutar vasallo"
+	category = "Elegido de Astrata"
 	triumph_count = 2
-	immediate_effects = list("Gained an ability to recruit retainers")
-	rewards = list("2 Triumphs", "Astrata grows stronger", "Astrata blesses you (+1 Fortune)")
+	immediate_effects = list("Obtuviste una habilidad para reclutar vasallos")
+	rewards = list("2 Triunfos", "Astrata se fortalece", "Astrata te bendice (+1 Fortuna)")
 	var/retainers_recruited = 0
 
 /datum/objective/personal/retainer/on_creation()
@@ -28,7 +28,7 @@
 
 /datum/objective/personal/retainer/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have recruited a retainer and completed Astrata's objective!"))
+	to_chat(owner.current, span_greentext("¡Has reclutado un vasallo y completado el objetivo de Astrata!"))
 	adjust_storyteller_influence(ASTRATA, 20)
 
 /datum/objective/personal/retainer/reward_owner()
@@ -36,16 +36,16 @@
 	owner.current.adjust_stat_modifier(STATMOD_ASTRATA_BLESSING, list(STAT_FORTUNE = 1))
 
 /datum/objective/personal/retainer/update_explanation_text()
-	explanation_text = "Recruit at least one retainer to serve you and to demonstrate your ability to lead to Astrata."
+	explanation_text = "Recluta al menos un vasallo que te sirva y demuestra a Astrata tu capacidad de liderazgo."
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/retainer
-	name = "Recruit Retainer"
+	name = "Reclutar vasallo"
 	button_icon_state = "recruit_servant"
 
 	new_role = "Retainer"
-	recruitment_faction = "Retainers"
-	recruitment_message = "Join my service as a retainer, %RECRUIT!"
-	accept_message = "I pledge my service to you!"
+	recruitment_faction = "Vasallos"
+	recruitment_message = "¡Unete a mi servicio como vasallo, %RECRUIT!"
+	accept_message = "¡Juro servirte!"
 	refuse_message = "Debo rechazar tu oferta."
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/retainer/cast(mob/living/carbon/human/cast_on)

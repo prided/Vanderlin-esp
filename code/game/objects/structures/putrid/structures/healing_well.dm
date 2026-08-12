@@ -1,7 +1,7 @@
 /obj/structure/meatvine/healing_well
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "heal_pool"
-	name = "healing well"
+	name = "pozo curativo"
 	desc = "Una masa pulsante de carne que emana un aura regenerativa."
 	density = FALSE
 	opacity = FALSE

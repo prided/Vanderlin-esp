@@ -48,7 +48,7 @@
 		next_decree = world.time + rand(3 MINUTES, 8 MINUTES)
 		var/datum/job/lord_job = SSjob.GetJobType(/datum/job/lord)
 		if(GLOB.lord_decrees.len)
-			say("The [lord_job.get_informed_title()] Decrees: [pick(GLOB.lord_decrees)]", spans = list("info"))
+			say("Los [lord_job.get_informed_title()] Decretos: [pick(GLOB.lord_decrees)]", spans = list("info"))
 
 /obj/structure/fake_machine/scomm/attack_hand(mob/living/user)
 	. = ..()
@@ -60,7 +60,7 @@
 	playsound(src, 'sound/misc/beep.ogg', 100, FALSE, -1)
 	listening = !listening
 	speaking = !speaking
-	to_chat(user, "<span class='info'>I [speaking ? "unmute" : "mute"] the SCOM.</span>")
+	to_chat(user, "<span class='info'>Yo [speaking ? "unmute" : "mute"] la SCOM.</span>")
 	update_appearance(UPDATE_ICON_STATE)
 
 /obj/structure/fake_machine/scomm/attack_hand_secondary(mob/user, list/modifiers)
@@ -170,7 +170,7 @@
 
 /obj/item/scomstone
 	name = "anillo de piedra scom"
-	desc = "Gold and glittering green."
+	desc = "Dorado y verde brillante."
 	icon = 'icons/roguetown/clothing/rings.dmi'
 	icon_state = "ring_emerald"
 	gripped_intents = null
@@ -201,7 +201,7 @@
 		return
 	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	user.changeNext_move(CLICK_CD_MELEE)
-	var/input_text = input(user, "Enter your message:", "Message")
+	var/input_text = input(user, "Introduce tu mensaje:", "Mensaje")
 	if(input_text)
 		for(var/obj/structure/fake_machine/scomm/S in SSroguemachine.scomm_machines)
 			S.repeat_message(input_text)
@@ -215,7 +215,7 @@
 	playsound(src, 'sound/misc/beep.ogg', 100, FALSE, -1)
 	listening = !listening
 	speaking = !speaking
-	to_chat(user, "<span class='info'>I [speaking ? "unmute" : "mute"] the scomstone.</span>")
+	to_chat(user, "<span class='info'>Yo [speaking ? "unmute" : "mute"] la piedra de Scomm.</span>")
 
 /obj/item/scomstone/Destroy()
 	SSroguemachine.scomm_machines -= src

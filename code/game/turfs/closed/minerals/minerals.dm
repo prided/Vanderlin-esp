@@ -1,7 +1,7 @@
 /**********************Mineral deposits**************************/
 
 /turf/closed/mineral //wall piece
-	name = "rock"
+	name = "roca"
 	desc = "Parece esteril."
 	icon = 'icons/turf/smooth/walls/mineral.dmi'
 	icon_state = MAP_SWITCH("mineral", "mineral-0")
@@ -210,7 +210,7 @@
 	T.ChangeTurf(type)
 
 /turf/closed/mineral/random
-	name = "rock"
+	name = "roca"
 	desc = "Parece esteril."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/mineral.dmi', 'icons/turf/mining/mining.dmi')
 	icon_state = MAP_SWITCH("mineral", "rand_low")
@@ -415,7 +415,7 @@
 	spread = 2
 
 /turf/closed/mineral/bedrock
-	name = "rock"
+	name = "roca"
 	desc = "Parece esteril y casi indestructible."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/mineral.dmi', 'icons/turf/mining/mining.dmi')
 	icon_state = MAP_SWITCH("mineral", "bedrock")
@@ -424,7 +424,7 @@
 	above_floor = /turf/closed/mineral/bedrock
 
 /turf/closed/mineral/bedrock/attackby(obj/item/I, mob/user, list/modifiers)
-	to_chat(user, span_warning("This is far too sturdy to be destroyed!"))
+	to_chat(user, span_warning("¡Esto es demasiado resistente para destruirlo!"))
 	return FALSE
 
 /turf/closed/mineral/bedrock/TerraformTurf(path, new_baseturf, flags, defer_change = FALSE, ignore_air = FALSE)

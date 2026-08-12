@@ -1,9 +1,9 @@
 /datum/objective/personal/torture
 	name = "Extraer la verdad a traves del dolor"
-	category = "Zizo's Chosen"
+	category = "Elegido de Zizo"
 	triumph_count = 3
-	immediate_effects = list("Gained an ability to torture others for information")
-	rewards = list("3 Triumphs", "Zizo grows stronger", "Zizo blesses you (+1 Strength, +1 Endurance)")
+	immediate_effects = list("Obtuviste una habilidad para torturar a otros y obtener informacion")
+	rewards = list("3 Triunfos", "Zizo se fortalece", "Zizo te bendice (+1 Fuerza, +1 Resistencia)")
 	var/torture_count = 0
 	var/required_count = 1
 
@@ -29,7 +29,7 @@
 
 /datum/objective/personal/torture/complete_objective(mob/living/victim)
 	. = ..()
-	to_chat(owner.current, span_greentext("You have extracted the truth through pain, satisfying Zizo!"))
+	to_chat(owner.current, span_greentext("¡Has extraido la verdad mediante el dolor y satisfecho a Zizo!"))
 	adjust_storyteller_influence(ZIZO, 20)
 	UnregisterSignal(owner.current, COMSIG_TORTURE_PERFORMED)
 
@@ -41,4 +41,4 @@
 	))
 
 /datum/objective/personal/torture/update_explanation_text()
-	explanation_text = "Torture someone until they beg for mercy to please Zizo!"
+	explanation_text = "¡Tortura a alguien hasta que suplique clemencia para complacer a Zizo!"

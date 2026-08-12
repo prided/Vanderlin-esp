@@ -1,6 +1,6 @@
 /obj/item/weapon/clenched_fist
 	name = "puño cerrado"
-	desc = "The fist was humenity's first weapon, and still sees much use."
+	desc = "El puño fue la primera arma de la humanidad y todavia tiene mucha utilidad."
 	icon = 'icons/roguetown/weapons/32/fists_claws.dmi'
 	icon_state = "clenchedfist"
 	item_flags = ABSTRACT | DROPDEL
@@ -44,7 +44,7 @@
 	. = ..()
 
 /datum/intent/unarmed/punch/closecombat
-	name = "punch"
+	name = "golpe de puño"
 	acc_bonus = 15
 	penfactor = 18
 	damfactor = 1.2
@@ -52,7 +52,7 @@
 	animname = "stab"
 
 /datum/intent/unarmed/punch/jab
-	name = "jab"
+	name = "golpe rapido"
 	icon_state = "injab"
 	acc_bonus = 5
 	penfactor = 10
@@ -63,7 +63,7 @@
 	animname = "stab"
 
 /datum/intent/unarmed/punch/slug
-	name = "slug"
+	name = "golpe fuerte"
 	icon_state = "inslug"
 	acc_bonus = 15
 	penfactor = 30
@@ -75,7 +75,7 @@
 	animname = "stab"
 
 /datum/intent/unarmed/punch/slam
-	name = "slam"
+	name = "golpe de puño"
 	icon_state = "inslam"
 	acc_bonus = 5
 	penfactor = 40

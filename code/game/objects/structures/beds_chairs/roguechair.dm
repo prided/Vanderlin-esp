@@ -1,5 +1,5 @@
 /obj/structure/chair/bench
-	name = "bench"
+	name = "banco"
 	icon_state = "bench"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	buildstackamount = 1
@@ -116,7 +116,7 @@
 
 /obj/structure/chair/wood/alt/uncomfortable
 	icon_state = "chair_bronze"
-	desc = "This has to be the most uncomfortable chair in Psydonia. It looks like it will *violate* your backside." //This is a DE reference don't be fucking weird about it.
+	desc = "Esta tiene que ser la silla mas incomoda de Psydonia. Parece que *violara* tu trasero." //This is a DE reference don't be fucking weird about it.
 	item_chair = /obj/item/chair/bronze
 	attacked_sound = "sound/combat/hits/onmetal/metalimpact (1).ogg"
 
@@ -138,7 +138,7 @@
 
 /*	..................   "Noble" chairs   ................... */
 /obj/structure/chair/wood/alt/chair_noble
-	name = "fine chair"
+	name = "silla elegante"
 	icon_state = "chair_green"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	item_chair = /obj/item/chair/chair_nobles
@@ -193,8 +193,8 @@
 	if(!user)
 		return
 	if(isturf(loc))
-		user.visible_message(span_warning("[user] kicks \the [src] down!"), \
-			span_notice("I kick \the [src] down!"))
+		user.visible_message(span_warning("[user] ¡empuja a \the [src] al suelo!"), \
+			span_notice("¡Le doy una patada a \the [src]!"))
 		playsound(src, 'sound/foley/chairfall.ogg', 100, FALSE)
 		var/obj/item/I = new item_chair(loc)
 		item_chair = null
@@ -244,7 +244,7 @@
 	density = FALSE
 
 /obj/item/chair/stool/bar
-	name = "barstool"
+	name = "taburete de bar"
 	icon_state = "barstoolover"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	origin_type = /obj/structure/chair/stool/bar
@@ -307,8 +307,8 @@
 	sleepy = 2
 
 /obj/structure/bed/wool/double
-	name = "big wool bed"
-	desc = "A large soft bed, could fit two people."
+	name = "cama grande de lana"
+	desc = "Una cama grande y blanda, con capacidad para dos personas."
 	icon_state = "double_wool"
 	max_buckled_mobs = 2
 	debris = list(/obj/item/grown/log/tree/small = 2)
@@ -340,7 +340,7 @@
 
 // Inhumen boss bed. Sleeping on a bear! Kinda comfy, sort of
 /obj/structure/bed/bear
-	desc = "A hide of a slain bear. It looks like someone sleeps on it often."
+	desc = "La piel de un oso asesinado. Parece que alguien duerme encima de el a menudo."
 	icon = 'icons/obj/bear.dmi'
 	icon_state = "bear"
 	sleepy = 1
@@ -349,19 +349,19 @@
 // ------------ UNCOMFORTABLE BEDS ----------------------
 /obj/structure/bed/shit
 	name = "cama incomoda"
-	desc = "Slightly better than a patch of grass."
+	desc = "Ligeramente mejor que un trozo de hierba."
 	icon_state = "shitbed"
 	sleepy = 0.75
 
 /obj/structure/bed/stone
 	name = "cama de piedra"
-	desc = "A bed made of stone.  The face of it is intricately carved, but it doesn't look very comfortable."
+	desc = "Una cama hecha de piedra.  La cara esta intrincadamente tallada, pero no parece muy comoda."
 	icon_state = "stonebed"
 	sleepy = 0.75
 
 /obj/structure/bed/sleepingbag
-	name = "bedroll"
-	desc = "So you can sleep on the ground in relative peace."
+	name = "petate"
+	desc = "Asi podras dormir en el suelo con relativa tranquilidad."
 	icon_state = "sleepingcloth"
 	attacked_sound = 'sound/foley/cloth_rip.ogg'
 	break_sound = 'sound/foley/cloth_rip.ogg'
@@ -370,7 +370,7 @@
 
 /obj/structure/bed/sleepingbag/MiddleClick(mob/user, list/modifiers)
 	..()
-	user.visible_message("<span class='notice'>[user] begins rolling up \the [src].</span>")
+	user.visible_message("<span class='notice'>[user] comienza a enrollar \the [src].</span>")
 	if(do_after(user, 2 SECONDS, target = src))
 		var/obj/item/new_bedroll = new item_path(get_turf(src))
 		new_bedroll.color = color
@@ -378,13 +378,13 @@
 		qdel(src)
 
 /obj/structure/bed/sleepingbag/deluxe
-	name = "deluxe bedroll"
-	desc = "For people who want to sleep on the ground in a relatively more comfortable peace."
+	name = "petate de lujo"
+	desc = "Para personas que quieren dormir en el suelo en una paz relativamente mas comoda."
 	sleepy = 1
 	item_path = /obj/item/sleepingbag/deluxe
 
 /obj/item/sleepingbag
-	name = "rolled-up bedroll"
+	name = "petate enrollado"
 	desc = "Una forma rapida y sencilla de crear un lugar de descanso en el suelo."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "sleepingcloth_rolled"
@@ -398,11 +398,11 @@
 	..()
 	var/turf/T = get_turf(loc)
 	if(!isfloorturf(T))
-		to_chat(user, "<span class='warning'>I need ground to plant this on!</span>")
+		to_chat(user, "<span class='warning'>¡Necesito tierra para plantar esto!</span>")
 		return
 	for(var/obj/A in T)
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
-			to_chat(user, "<span class='warning'>There is already something here!</span>")
+			to_chat(user, "<span class='warning'>¡Aqui ya hay algo!</span>")
 			return
 	user.visible_message("<span class='notice'>[user] comienza a colocar \the [src] en el suelo.</span>")
 	if(do_after(user, 2 SECONDS, src, (IGNORE_HELD_ITEM)))
@@ -415,8 +415,8 @@
 	attack_self(user, modifiers)
 
 /obj/item/sleepingbag/deluxe
-	name = "rolled-up deluxe bedroll"
-	desc = "A portable bedroll made from durable and comfortable material."
+	name = "petate de lujo enrollado"
+	desc = "Un petate portatil fabricado con un material duradero y comodo."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "bedroll_r"
 	bed_path = /obj/structure/bed/sleepingbag/deluxe

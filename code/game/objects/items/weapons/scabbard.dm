@@ -20,7 +20,7 @@
 */
 /obj/item/weapon/scabbard/knife
 	name = "funda de cuchillo"
-	desc = "A slingable sheath made of leather, meant to host surprises of smaller sizes."
+	desc = "Una funda portaobjetos hecha de cuero, pensada para albergar sorpresas de tamaños mas pequeños."
 	icon_state = "sheath"
 	force = DAMAGE_KNIFE - 7
 	throwforce = DAMAGE_KNIFE - 7
@@ -59,22 +59,22 @@
 				return list("shrink" = 0.5, "sx" = -2, "sy" = -5, "nx" = 4, "ny" = -5, "wx" = 0, "wy" = -5, "ex" = 2, "ey" = -5, "nturn" = 0, "sturn" = 0, "wturn" = 0, "eturn" = 0, "nflip" = 0, "sflip" = 0, "wflip" = 0, "eflip" = 0, "northabove" = 0, "southabove" = 1, "eastabove" = 1, "westabove" = 1)
 
 /obj/item/weapon/scabbard/knife/noble
-	name = "silver decorated knife sheath"
-	desc = "A slingable sheath made of leather, enamored with elaborate silver decorations, often seen on the hips of nobles"
+	name = "funda para cuchillo decorada en plata"
+	desc = "Una vaina de cuero que se puede colgar, adornada con elaboradas decoraciones plateadas, que a menudo se ve en las caderas de los nobles."
 	icon_state = "nsheath"
 	sellprice = 50
 	item_weight = 100 GRAMS
 
 /obj/item/weapon/scabbard/knife/royal
-	name = "gold decorated knife sheath"
-	desc = "A slingable sheath made of leather, enamored with exquisite golden decorations, often seen on the hips of royalty"
+	name = "funda de cuchillo decorada en oro"
+	desc = "Una vaina de cuero que se puede colgar, adornada con exquisitas decoraciones doradas, que a menudo se ve en las caderas de la realeza."
 	icon_state = "rsheath"
 	sellprice = 100
 	item_weight = 120 GRAMS
 
 /obj/item/weapon/scabbard/sword
-	name = "scabbard"
-	desc = "A scabbard designed to hold a sword. The natural conclusion for those wishing to carry longblades."
+	name = "vainilla"
+	desc = "Una funda diseñada para sostener una espada. La conclusion natural para aquellos que deseen llevar espadas largas."
 	icon_state = "scabbard"
 	force = DAMAGE_SWORD - 15
 	force_wielded = DAMAGE_SWORD - 15
@@ -103,22 +103,22 @@
 				return list("shrink" = 0.5, "sx" = -2, "sy" = -5, "nx" = 4, "ny" = -5, "wx" = 0, "wy" = -5, "ex" = 2, "ey" = -5, "nturn" = 0, "sturn" = 0, "wturn" = -90, "eturn" = 0, "nflip" = 0, "sflip" = 0, "wflip" = 0, "eflip" = 0, "northabove" = 0, "southabove" = 1, "eastabove" = 1, "westabove" = 1)
 
 /obj/item/weapon/scabbard/sword/noble
-	name = "silver decorated scabbard"
-	desc = "A scabbard designed to hold a sword. This one is decorated on a silver platter."
+	name = "vaina decorada en plata"
+	desc = "Una funda diseñada para sostener una espada. Este esta decorado en bandeja de plata."
 	icon_state = "nscabbard"
 	sellprice = 50
 	item_weight = 350 GRAMS
 
 /obj/item/weapon/scabbard/sword/royal
-	name = "gold decorated scabbard"
-	desc = "A scabbard designed to hold a sword. This one is lined with golden fittings, fit for a royal."
+	name = "vaina decorada en oro"
+	desc = "Una funda diseñada para sostener una espada. Este esta forrado con accesorios dorados, dignos de una realeza."
 	icon_state = "rscabbard"
 	sellprice = 100
 	item_weight = 400 GRAMS
 
 /obj/item/weapon/scabbard/cane
 	name = "baston elegante"
-	desc = "A polished, dark wooden cane, decorated with gold and silver. Often carried by nobility, even those without a limp, simply to flaunt their wealth to the peasantry. This one contains a concealed blade!"
+	desc = "Un baston de madera oscura pulida, decorado con oro y plata. A menudo lo lleva la nobleza, incluso aquellos que no cojean, simplemente para hacer alarde de su riqueza ante el campesinado. ¡Este contiene una espada oculta!"
 	icon_state = "canesheath"
 	force = DAMAGE_MACE - 4
 	force_wielded = DAMAGE_MACE - 2
@@ -133,12 +133,12 @@
 
 /obj/item/weapon/scabbard/cane/courtphysician
 	name = "baston elegante"
-	desc = "A decorated cane bearing the visage of a vulture."
+	desc = "Un baston decorado con el rostro de un buitre."
 	icon_state = "doccanesheath"
 
 /obj/item/weapon/scabbard/cane/hand
 	name = "baston elegante"
-	desc = "A decorated silver cane bearing a rontz at the top."
+	desc = "Un baston de plata decorado que lleva un rontz en la parte superior."
 	icon_state = "staffsheath"
 
 /obj/item/weapon/scabbard/cane/apply_components()
@@ -205,7 +205,7 @@
 
 /obj/item/weapon/scabbard/blackmeadow
 	name = "vaina oriental simple"
-	desc = "A piece of steel lined with wood. Great for batting away blows."
+	desc = "Una pieza de acero revestida de madera. Ideal para rechazar golpes."
 	icon_state = "kazscab"
 	item_state = "kazscab"
 	force = DAMAGE_SWORD - 15
@@ -224,16 +224,16 @@
 	AddComponent(/datum/component/storage/concrete/scabbard/blackmeadow)
 
 /obj/item/weapon/scabbard/blackmeadow/steel
-	name = "hwang scabbard"
-	desc = "A cloud-patterned scabbard with a cloth sash. Used for blocking."
+	name = "vaina hwang"
+	desc = "Una vaina con estampado de nubes y una faja de tela. Utilizado para bloquear."
 	icon_state = "kazscab_steel"
 	item_state = "kazscab_steel"
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 450 GRAMS
 
 /obj/item/weapon/scabbard/blackmeadow/gold
-	name = "gold-stained scabbard"
-	desc = "An ornate, wooden scabbard with a sash. Great for parrying."
+	name = "vaina teñida de oro"
+	desc = "Una vaina de madera ornamentada con una faja. Genial para parar."
 	icon_state = "kazscab_gold"
 	item_state = "kazscab_gold"
 	max_integrity = INTEGRITY_STRONGEST

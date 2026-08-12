@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/healing_aura
 	name = "Aura regenerativa"
-	desc = "Emit regenerative pheromones that heal nearby putrid entities."
+	desc = "Emite feromonas regenerativas que curan entidades putridas cercanas."
 	button_icon_state = "healaura"
 	cooldown_time = 90 SECONDS
 	personal_resource_cost = 30
@@ -26,8 +26,8 @@
 		owner.balloon_alert(owner, "ya sanando")
 		return FALSE
 
-	owner.balloon_alert(owner, "healing aura started")
-	to_chat(owner, span_notice("You emit regenerative pheromones, encouraging rapid healing in nearby putrid flesh."))
+	owner.balloon_alert(owner, "aura curativa iniciada")
+	to_chat(owner, span_notice("Emites feromonas regenerativas que fomentan la rapida curacion de la carne putrefacta cercana."))
 	addtimer(CALLBACK(src, PROC_REF(aura_deactivate)), aura_duration)
 	aura_active = TRUE
 	aura_healing_component = owner.AddComponent(/datum/component/aura_healing, range = aura_range, requires_visibility = TRUE, brute_heal = aura_healing_amount, burn_heal = aura_healing_amount, limit_to_trait = TRAIT_PUTRID, healing_color = aura_healing_color)
@@ -39,7 +39,7 @@
 		return
 	aura_active = FALSE
 	QDEL_NULL(aura_healing_component)
-	owner.balloon_alert(owner, "healing aura ended")
+	owner.balloon_alert(owner, "el aura curativa termino")
 
 /datum/action/cooldown/meatvine/personal/healing_aura/evaluate_ai_score(datum/ai_controller/controller)
 	if(aura_active)

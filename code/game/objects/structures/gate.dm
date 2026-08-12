@@ -1,8 +1,8 @@
 GLOBAL_LIST_EMPTY(biggates)
 
 /obj/structure/gate
-	name = "gate"
-	desc = "A strong steel gate."
+	name = "puerta"
+	desc = "Una puerta de acero resistente."
 	icon = 'icons/roguetown/misc/gate.dmi'
 	icon_state = "gate1"
 	density = TRUE
@@ -174,7 +174,7 @@ GLOBAL_LIST_EMPTY(biggates)
 
 /obj/structure/winch
 	name = "winch"
-	desc = "A Gatekeeper's only, and most important responsibility."
+	desc = "La unica y mas importante responsabilidad de un Guardian."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "winch"
 	density = TRUE
@@ -205,6 +205,6 @@ GLOBAL_LIST_EMPTY(biggates)
 		INVOKE_ASYNC(structure, PROC_REF(redstone_triggered), user)
 
 	trigger_wire_network(user)
-	user.visible_message(span_warning("[user] cranks [src]."), span_warning("I crank [src]."))
+	user.visible_message(span_warning("[user] gira [src]."), span_warning("Yo giro [src]."))
 	user.log_message("pulled the winch with id \"[redstone_id]\"", LOG_GAME)
 	playsound(src, 'sound/foley/winch.ogg', 100, extrarange = 3)

@@ -1,6 +1,6 @@
 // Basic ladder. By default links to the z-level above/below.
 /obj/structure/ladder
-	name = "ladder"
+	name = "escalera"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "ladder01"
@@ -30,7 +30,7 @@
 
 /obj/structure/ladder/examine(mob/user)
 	. = ..()
-	. += span_info("[EXAMINE_HINT("Left-click")] it to start moving up; [EXAMINE_HINT("Right-click")] to start moving down.")
+	. += span_info("[EXAMINE_HINT("Left-click")] para empezar a subir; [EXAMINE_HINT("Right-click")] para empezar a bajar.")
 
 /obj/structure/ladder/Destroy(force)
 	GLOB.ladders -= src
@@ -113,16 +113,16 @@
 		return
 
 	if(!up && !down)
-		balloon_alert(user, "doesn't lead anywhere!")
+		balloon_alert(user, "¡No conduce a ninguna parte!")
 		return
 	if(going_up ? !up : !down)
-		balloon_alert(user, "can't go any further [going_up ? "up" : "down"]")
+		balloon_alert(user, "no se puede avanzar mas [going_up ? "up" : "down"]")
 		return
 	if(user.buckled && user.buckled.anchored)
-		balloon_alert(user, "buckled to something anchored!")
+		balloon_alert(user, "¡Atado a algo anclado!")
 		return
 	if(user.incapacitated())
-		to_chat(user, span_warning("I can't do that right now!"))
+		to_chat(user, span_warning("¡No puedo hacer eso ahora mismo!"))
 		return
 	if(travel_time)
 		INVOKE_ASYNC(src, PROC_REF(start_traveling), user, going_up)
@@ -147,12 +147,12 @@
 /// The message shown when the player starts climbing the ladder
 /obj/structure/ladder/proc/show_initial_fluff_message(mob/user, going_up)
 	var/up_down = going_up ? "up" : "down"
-	user.balloon_alert_to_viewers("climbing [up_down]...")
+	user.balloon_alert_to_viewers("Subiendo [up_down]...")
 
 /obj/structure/ladder/proc/travel(mob/user, going_up = TRUE, is_ghost = FALSE, grant_exp = FALSE)
 	var/obj/structure/ladder/ladder = going_up ? up : down
 	if(!ladder)
-		balloon_alert(user, "there's nothing that way!")
+		balloon_alert(user, "¡No hay nada por aqui!")
 		return
 	var/response = SEND_SIGNAL(user, COMSIG_LADDER_TRAVEL, src, ladder, going_up)
 	if(response & LADDER_TRAVEL_BLOCK)
@@ -181,7 +181,7 @@
 	var/up_down = going_up ? "up" : "down"
 
 	//POV of players around the source
-	visible_message(span_notice("[user] climbs [up_down] [src]."))
+	visible_message(span_notice("[user] escala [up_down] [src]."))
 	//POV of players around the destination
 	user.balloon_alert_to_viewers("subio [up_down]")
 
@@ -253,7 +253,7 @@
 ///Ghosts use the byond default popup menu function on right click, so this is going to work a little differently for them.
 /obj/structure/ladder/proc/ghost_use(mob/user)
 	if (!up && !down)
-		balloon_alert(user, "doesn't lead anywhere!")
+		balloon_alert(user, "¡No conduce a ninguna parte!")
 		return
 	if(!up) //only goes down
 		travel(user, going_up = FALSE, is_ghost = TRUE)
@@ -264,7 +264,7 @@
 
 // Indestructible away mission ladders which link based on a mapped ID and height value rather than X/Y/Z.
 /obj/structure/ladder/unbreakable
-	name = "sturdy ladder"
+	name = "escalera robusta"
 	desc = ""
 	resistance_flags = INDESTRUCTIBLE
 	var/id

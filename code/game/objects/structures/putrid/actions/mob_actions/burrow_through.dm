@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/burrow_through
-	name = "Burrow Through"
-	desc = "Burrow underground through walls, emerging on the other side and spreading meatvine floor in your path."
+	name = "Excavar a traves"
+	desc = "Excava bajo tierra a traves de los muros, emerge del otro lado y extiende el suelo de Meatvine a tu paso."
 	button_icon_state = "burrow"
 	cooldown_time = 45 SECONDS
 	personal_resource_cost = 30
@@ -22,7 +22,7 @@
 		return FALSE
 
 	if(is_burrowing)
-		owner.balloon_alert(owner, "already burrowing")
+		owner.balloon_alert(owner, "ya cavando")
 		return FALSE
 
 	var/turf/target_turf = get_turf(target)
@@ -60,12 +60,12 @@
 			break
 
 	if(!exit_turf)
-		owner.balloon_alert(owner, "walls too thick")
+		owner.balloon_alert(owner, "las paredes son demasiado gruesas")
 		return FALSE
 
 	// Check if exit turf is valid
 	if(!exit_turf.Enter(owner))
-		owner.balloon_alert(owner, "cannot emerge there")
+		owner.balloon_alert(owner, "no puede salir de alli")
 		return FALSE
 
 	is_burrowing = TRUE
@@ -85,7 +85,7 @@
 	if(consumed.master)
 		consumed.master.spawn_spacevine_piece(start_turf, /obj/structure/meatvine/intestine_wormhole)
 
-	owner.visible_message(span_danger("[owner] burrows underground!"))
+	owner.visible_message(span_danger("[owner] ¡se entierra bajo tierra!"))
 	playsound(owner, 'sound/misc/bamf.ogg', 50, TRUE)
 
 	// Make invisible and intangible while underground
@@ -108,7 +108,7 @@
 	if(consumed.master)
 		consumed.master.spawn_spacevine_piece(exit_turf, /obj/structure/meatvine/intestine_wormhole)
 
-	owner.visible_message(span_danger("[owner] bursts out from underground!"))
+	owner.visible_message(span_danger("¡[owner] sale disparado desde el subsuelo!"))
 	//playsound(owner, 'sound/effects/break_stone.ogg', 75, TRUE)
 
 	owner.alpha = 255

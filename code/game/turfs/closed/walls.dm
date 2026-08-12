@@ -34,7 +34,7 @@
 
 /turf/closed/wall/atom_destruction(damage_flag)
 	. = ..()
-	visible_message(span_notice("\The [src] crumbles!"))
+	visible_message(span_notice("¡\The [src] se desmorona!"))
 	dismantle_wall(TRUE, FALSE)
 
 /turf/closed/wall/proc/dismantle_wall(devastated=0, explode=0)
@@ -118,7 +118,7 @@
 	if(istype(W, /obj/item/instrument))
 		user.do_attack_animation(src, used_item = W, item_animation_override = ATTACK_ANIMATION_BONK)
 		visible_message("<span class='warning'>[user] golpea a \the [W] contra \the [src]!</span>",
-						"<span class='warning'>I slam \the [W] against \the [src]!</span>",null ,COMBAT_MESSAGE_RANGE)
+						"<span class='warning'>¡Golpeo \the [W] contra \the [src]!</span>",null ,COMBAT_MESSAGE_RANGE)
 		W.take_damage(10, BRUTE, "blunt")
 		return
 
@@ -132,10 +132,10 @@
 		if(!W.tool_start_check(user, amount=0))
 			return FALSE
 
-		to_chat(user, "<span class='notice'>I begin fixing dents on the wall...</span>")
+		to_chat(user, "<span class='notice'>Empiezo a reparar las abolladuras de la pared...</span>")
 		if(W.use_tool(src, user, 0, volume=100))
 			if(iswallturf(src) && LAZYLEN(dent_decals))
-				to_chat(user, "<span class='notice'>I fix some dents on the wall.</span>")
+				to_chat(user, "<span class='notice'>Reparo algunas abolladuras de la pared.</span>")
 				cut_overlay(dent_decals)
 				dent_decals.Cut()
 			return TRUE
@@ -150,10 +150,10 @@
 		if(!I.tool_start_check(user, amount=0))
 			return FALSE
 
-		to_chat(user, "<span class='notice'>I begin slicing through the outer plating...</span>")
+		to_chat(user, "<span class='notice'>Comienzo a cortar la cubierta exterior...</span>")
 		if(I.use_tool(src, user, slicing_duration, volume=100))
 			if(iswallturf(src))
-				to_chat(user, "<span class='notice'>I remove the outer plating.</span>")
+				to_chat(user, "<span class='notice'>Quito la placa exterior.</span>")
 				dismantle_wall()
 			return TRUE
 

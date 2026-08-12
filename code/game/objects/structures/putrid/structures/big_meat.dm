@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(putrid_evolutions)
 
 /obj/structure/meatvine/papameat
 	name = "carne de papa"
-	desc = "You feel a combination of fear and disgust, just by looking at that thing."
+	desc = "Sientes una combinacion de miedo y disgusto con solo mirar esa cosa."
 	icon = 'icons/obj/cellular/papameat.dmi'
 	icon_state = "papameat"
 	density = TRUE
@@ -28,7 +28,7 @@ GLOBAL_LIST_EMPTY(putrid_evolutions)
 	return ..()
 
 /obj/structure/meatvine/papameat/proc/begin_evolution(mob/living/simple_animal/hostile/retaliate/meatvine/evolving_mob)
-	to_chat(evolving_mob, span_boldnotice("You begin burrowing into the papa meat..."))
+	to_chat(evolving_mob, span_boldnotice("Comienzas a excavar en la carne de papa..."))
 
 	if(!do_after(evolving_mob, 5 SECONDS, src))
 		to_chat(evolving_mob, span_warning("¡El proceso de evolucion fue interrumpido!"))
@@ -76,7 +76,7 @@ GLOBAL_LIST_EMPTY(putrid_evolutions)
 		organic_value = 30
 
 	if(organic_value > 0)
-		to_chat(user, span_notice("The meatvine absorbs [I]!"))
+		to_chat(user, span_notice("¡Meatvine absorbe [I]!"))
 		master.feed_organic_matter(organic_value)
 
 		// Grant evolution progress to user if they're a meatvine mob
@@ -143,6 +143,6 @@ GLOBAL_LIST_EMPTY(putrid_evolutions)
 /obj/structure/meatvine/papameat/proc/sacrifice_living_mob(mob/living/sacrifice)
 	if(!istype(sacrifice) || sacrifice.stat == DEAD)
 		return FALSE
-	visible_message(span_danger("[sacrifice] throws itself into [src], being consumed alive!"))
+	visible_message(span_danger("[sacrifice] se lanza a [src], ¡y es consumido vivo!"))
 	sacrifice.adjustBruteLoss(sacrifice.health + 10, damage_type = BCLASS_BITE)
 	return consume_mob(sacrifice)

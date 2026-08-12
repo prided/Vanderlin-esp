@@ -2,8 +2,8 @@
 #define BOMBARD_NEUROTOXIN 2
 
 /datum/action/cooldown/meatvine/personal/bombard
-	name = "Bombard"
-	desc = "Dig in and fire acidic or neurotoxic globs at distant targets. Takes 5 seconds to prepare."
+	name = "Bombardear"
+	desc = "Profundiza y dispara bolas acidas o neurotoxicas a objetivos distantes. Tarda 5 segundos en prepararse."
 	button_icon_state = "bombard"
 	cooldown_time = 30 SECONDS
 	personal_resource_cost = 25
@@ -38,8 +38,8 @@
 	consumed.client.eye = camera_mob
 	camera_mob.key = consumed.key
 
-	to_chat(camera_mob, span_notice("You are now aiming the bombard. <b>Click</b> a location to fire. <b>Alt-click</b> to toggle projectile type. You have 30 seconds."))
-	to_chat(camera_mob, span_notice("Current mode: <b>[projectile_type == BOMBARD_ACID ? "ACID" : "NEUROTOXIN"]</b>"))
+	to_chat(camera_mob, span_notice("Ahora estas apuntando con la bombard. <b>Haz clic</b> en un lugar para disparar. <b>Haz clic con Alt</b> para cambiar el tipo de proyectil. Tienes 30 segundos."))
+	to_chat(camera_mob, span_notice("Modo actual: <b>[projectile_type == BOMBARD_ACID ? "ACID" : "NEUROTOXIN"]</b>"))
 
 	addtimer(CALLBACK(src, PROC_REF(cancel_bombard)), 30 SECONDS)
 
@@ -85,7 +85,7 @@
 		cancel_bombard()
 		return FALSE
 
-	consumed.visible_message(span_danger("[consumed] fires a glob of [projectile_type == BOMBARD_ACID ? "acid" : "neurotoxin"]!"))
+	consumed.visible_message(span_danger("¡[consumed] dispara una bola de [projectile_type == BOMBARD_ACID ? "acid" : "neurotoxin"]!"))
 
 	if(projectile_type == BOMBARD_ACID)
 		new /obj/effect/temp_visual/bombard_incoming/acid(target_turf)
@@ -172,10 +172,10 @@
 /datum/action/cooldown/meatvine/personal/bombard/proc/toggle_projectile_type()
 	if(projectile_type == BOMBARD_ACID)
 		projectile_type = BOMBARD_NEUROTOXIN
-		to_chat(camera_mob || owner, span_notice("Switched to <b>NEUROTOXIN</b> globs."))
+		to_chat(camera_mob || owner, span_notice("Cambiado a <b>GLOBOS DE NEUROTOXICOS</b>."))
 	else
 		projectile_type = BOMBARD_ACID
-		to_chat(camera_mob || owner, span_notice("Switched to <b>ACID</b> globs."))
+		to_chat(camera_mob || owner, span_notice("Cambio a globulos de <b>ACID</b>."))
 
 /datum/action/cooldown/meatvine/personal/bombard/evaluate_ai_score(datum/ai_controller/controller)
 	if(!IsAvailable())
@@ -244,8 +244,8 @@
 	return null
 
 /mob/camera/bombard_eye
-	name = "bombard targeting"
-	desc = "An ethereal eye surveying the battlefield."
+	name = "bombardear objetivos"
+	desc = "Un ojo etereo que contempla el campo de batalla."
 	icon = 'icons/mob/cameramob.dmi'
 	icon_state = "generic_camera"
 	see_invisible = SEE_INVISIBLE_LIVING
@@ -352,7 +352,7 @@
 
 /obj/effect/bombard_zone
 	name = "zona de peligro"
-	desc = "A dangerous area."
+	desc = "Una zona peligrosa."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "smoke"
 	anchored = TRUE
@@ -389,7 +389,7 @@
 	return
 
 /obj/effect/bombard_zone/acid
-	name = "acid pool"
+	name = "piscina de acido"
 	desc = "Un charco de acido altamente corrosivo."
 	icon_state = "acid_weak"
 	color = "#00ff00"

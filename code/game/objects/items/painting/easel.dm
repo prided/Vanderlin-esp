@@ -4,7 +4,7 @@
 ///////////
 
 /obj/structure/easel
-	name = "easel"
+	name = "caballete"
 	desc = ""
 	icon = 'icons/paint_supplies/paint_items.dmi'
 	icon_state = "easel"
@@ -26,7 +26,7 @@
 	painting.pixel_y = painting.base_pixel_y + painting.easel_offset
 	C.forceMove(get_turf(src))
 	C.layer = layer+0.1
-	user.visible_message("<span class='notice'>[user] pone \the [C] en \the [src].</span>","<span class='notice'>I place \the [C] on \the [src].</span>")
+	user.visible_message("<span class='notice'>[user] pone \the [C] en \the [src].</span>","<span class='notice'>Coloco \the [C] sobre \the [src].</span>")
 	return ITEM_INTERACT_SUCCESS
 
 //Stick to the easel like glue

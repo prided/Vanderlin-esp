@@ -1,7 +1,7 @@
 
 /obj/machinery/light/fueled/forge
 	icon = 'icons/roguetown/misc/forge.dmi'
-	name = "forge"
+	name = "forja"
 	icon_state = "forge0"
 	base_state = "forge"
 	density = TRUE
@@ -25,6 +25,6 @@
 	if(istype(tool, /obj/item/storage/crucible))
 		if(!user.temporarilyRemoveItemFromInventory(tool))
 			return ITEM_INTERACT_BLOCKING
-		user.visible_message("<span class='info'>[user] places [tool] onto [src].</span>")
+		user.visible_message("<span class='info'>[user] coloca [tool] sobre [src].</span>")
 		user.transferItemToLoc(tool, get_turf(src), silent = TRUE)
 		return ITEM_INTERACT_SUCCESS

@@ -7,7 +7,7 @@ GLOBAL_VAR_INIT(hsboxspawn, TRUE)
 		sandbox.admin = 1
 	add_verb(src, new/mob/proc/sandbox_panel)
 /mob/proc/sandbox_panel()
-	set name = "Sandbox Panel"
+	set name = "Panel de juego libre"
 	if(sandbox)
 		sandbox.update()
 
@@ -69,11 +69,11 @@ GLOBAL_VAR_INIT(hsboxspawn, TRUE)
 			if("hsbtobj")
 				if(!admin) return
 				if(GLOB.hsboxspawn)
-					to_chat(world, "<span class='boldannounce'>Sandbox:</span> <b>\black[usr.key] has disabled object spawning!</b>")
+					to_chat(world, "<span class='boldannounce'>Juego libre:</span> <b>¡\black[usr.key] ha desactivado la generacion de objetos!</b>")
 					GLOB.hsboxspawn = FALSE
 					return
 				else
-					to_chat(world, "<span class='boldnotice'>Sandbox:</span> <b>\black[usr.key] has enabled object spawning!</b>")
+					to_chat(world, "<span class='boldnotice'>Juego libre:</span> <b>¡\black[usr.key] ha activado la generacion de objetos!</b>")
 					GLOB.hsboxspawn = TRUE
 					return
 			//
@@ -83,9 +83,9 @@ GLOBAL_VAR_INIT(hsboxspawn, TRUE)
 				if(!admin) return
 				var/sbac = CONFIG_GET(flag/sandbox_autoclose)
 				if(sbac)
-					to_chat(world, "<span class='boldnotice'>Sandbox:</span> <b>\black [usr.key] has removed the object spawn limiter.</b>")
+					to_chat(world, "<span class='boldnotice'>Juego libre:</span> <b>\black [usr.key] ha eliminado el limite de generacion de objetos.</b>")
 				else
-					to_chat(world, "<span class='danger'>Sandbox:</span> <b>\black [usr.key] has added a limiter to object spawning. The window will now auto-close after use.</b>")
+					to_chat(world, "<span class='danger'>Juego libre:</span> <b>\black [usr.key] ha limitado la generacion de objetos. La ventana se cerrara automaticamente despues de usarla.</b>")
 				CONFIG_SET(flag/sandbox_autoclose, !sbac)
 				return
 			//
@@ -145,7 +145,7 @@ GLOBAL_VAR_INIT(hsboxspawn, TRUE)
 
 				var/typepath = text2path(href_list["path"])
 				if(!typepath)
-					to_chat(usr, "Bad path: \"[href_list["path"]]\"")
+					to_chat(usr, "Ruta no valida: \"[href_list["path"]]\"")
 					return
 				new typepath(usr.loc)
 
@@ -157,7 +157,7 @@ GLOBAL_VAR_INIT(hsboxspawn, TRUE)
 			if("hsbspawn")
 				var/typepath = text2path(href_list["path"])
 				if(!typepath)
-					to_chat(usr, "Bad path: \"[href_list["path"]]\"")
+					to_chat(usr, "Ruta no valida: \"[href_list["path"]]\"")
 					return
 				new typepath(usr.loc)
 

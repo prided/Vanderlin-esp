@@ -91,7 +91,7 @@
         "g",
         "calamar",
         "r",
-        "dióxido de carbono"
+        "dioxido de carbono"
     ],
     "y_replacements": [
         "y",
@@ -138,10 +138,10 @@
         "MORTALES",
         "HEREJES",
         "INSECTOS",
-        "INCRÉDULOS",
+        "INCREDULOS",
         "BLASFEMOS",
-        "PARÁSITOS",
-        "DÉBILES",
+        "PARASITOS",
+        "DEBILES",
         "CAMPESINOS"
     ],
     "god_aggressive": [
@@ -149,7 +149,7 @@
         "¡MUERE, @pick(god_foe)!",
         "¡SANGRA, @pick(god_foe)!",
         "¡ARDE, @pick(god_foe)!",
-        "¡TODOS CAERÁN ANTE MÍ!",
+        "¡TODOS CAERAN ANTE MI!",
         "UN SUFRIMIENTO ETERNO TE ESPERA, @pick(god_foe).",
         "¡MUERTE A @pick(god_foe)!"
     ],
@@ -162,21 +162,21 @@
         "MORTALES, DIGAN SU NOMBRE",
         "FUERA, MORTALES.",
         "SANEN, MORTALES. HOY ME SIENTO MISERICORDIOSO.",
-        "BAILEN PARA MÍ, PEQUEÑOS MORTALES.",
-        "TÚ. DETENTE.",
-        "DESCANSEN, MORTALES, MAÑANA SERÁ UN DÍA LARGO.",
+        "BAILEN PARA MI, PEQUEÑOS MORTALES.",
+        "TU. DETENTE.",
+        "DESCANSEN, MORTALES, MAÑANA SERA UN DIA LARGO.",
         "USTEDES, MORTALES, ME REPUGNAN.",
         "HONK..."
     ],
     "god_unstun": [
-        "LEVÁNTATE. NO TENGO TIEMPO QUE PERDER.",
-        "LEVÁNTATE, SACERDOTE.",
-        "LEVÁNTATE."
+        "LEVANTATE. NO TENGO TIEMPO QUE PERDER.",
+        "LEVANTATE, SACERDOTE.",
+        "LEVANTATE."
     ],
     "god_heal": [
-        "VIVIRÁS PARA VER OTRO DÍA.",
-        "SOBREVIVIRÁS A ESTO, MI SACERDOTE.",
+        "VIVIRAS PARA VER OTRO DIA.",
+        "SOBREVIVIRAS A ESTO, MI SACERDOTE.",
         "SANA, SACERDOTE.",
-        "TU VIDA ES IMPORTANTE. CONSÉRVALA."
+        "TU VIDA ES IMPORTANTE. CONSERVALA."
     ]
 }

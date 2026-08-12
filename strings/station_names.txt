@@ -17,7 +17,7 @@ Paranoia
 Explosivo
 Neckbear
 Donk
-Títere
+Titere
 Norte
 Oeste
 Este
@@ -53,9 +53,9 @@ Spess
 Estrella
 Luna
 Sistema
-Minería
+Mineria
 Barbadecuello
-Investigación
+Investigacion
 Suministros
 Militar
 Orbital
@@ -63,7 +63,7 @@ Batalla
 Ciencia
 Asteroide
 Hogar
-Producción
+Produccion
 Transporte
 Entrega
 Extraplanetario

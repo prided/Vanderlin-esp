@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/mark_target
 	name = "Marcar objetivo"
-	desc = "Mark a living target, making them visible to all putrid. Uses 15 personal resources."
+	desc = "Marca un objetivo vivo, haciendolo visible para todos los putridos. Utiliza 15 recursos personales."
 	button_icon_state = "mark_target"
 	cooldown_time = 45 SECONDS
 	personal_resource_cost = 15
@@ -34,7 +34,7 @@
 	if(consumed.master)
 		consumed.master.add_hive_tracker(living_target, mark_duration)
 
-	to_chat(owner, span_notice("You mark [living_target] for the hive!"))
+	to_chat(owner, span_notice("¡Marcas a [living_target] para la colmena!"))
 	living_target.visible_message(
 		span_danger("¡[consumed] marca a [living_target] con una energia extraña!"),
 		span_userdanger("¡[consumed] te marca con una energia extraña!")

@@ -1,5 +1,5 @@
 /obj/item/canvas
-	name = "canvas"
+	name = "lienzo"
 	desc = "Un lugar perfecto para capturar Psydonia a traves del arte."
 
 	icon = 'icons/paint_supplies/canvas_32.dmi'
@@ -63,7 +63,7 @@
 		if(!do_after(user, 3 SECONDS, src))
 			return
 		anchored = FALSE
-		to_chat(user, "I unmount [src].")
+		to_chat(user, "Desmontare [src].")
 		user.put_in_hands(src)
 
 /obj/item/canvas/attack_hand_secondary(mob/user, list/modifiers)
@@ -82,7 +82,7 @@
 		author = browser_input_text(user, "Who's the author of this painting?", "NAME YOURSELF", max_length = MAX_NAME_LEN)
 		author_ckey = user.ckey
 		SEND_SIGNAL(user, COMSIG_ART_CREATED)
-		title = browser_input_text(user, "What's the title of this painting?", "NAME YOUR MASTERPIECE", max_length = MAX_CHARTER_LEN)
+		title = browser_input_text(user, "¿Cual es el titulo de este cuadro?", "NOMBRE TU OBRA MAESTRA", max_length = MAX_CHARTER_LEN)
 		if(title)
 			name = title
 		if(author)
@@ -109,7 +109,7 @@
 	if(!isclosedturf(interacting_with))
 		return NONE
 
-	to_chat(user, "I start mounting [src] to [interacting_with]...")
+	to_chat(user, "Empiezo a montar [src] en [interacting_with]...")
 	if(!do_after(user, 3 SECONDS, interacting_with))
 		return ITEM_INTERACT_BLOCKING
 

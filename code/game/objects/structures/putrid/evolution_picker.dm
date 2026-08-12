@@ -1,5 +1,5 @@
 /mob/camera/evolution_picker
-	name = "evolution viewer"
+	name = "visualizador de evolucion"
 	real_name = "evolution viewer"
 	icon = 'icons/mob/screen_gen.dmi'
 	icon_state = "x"
@@ -187,9 +187,9 @@
 	new_mob.density = TRUE
 	new_mob.invisibility = 0
 
-	papa_meat.visible_message(span_danger("[papa_meat] bulges and births a transformed creature!"))
+	papa_meat.visible_message(span_danger("¡[papa_meat] crece y da a luz a una criatura transformada!"))
 
-	to_chat(new_mob, span_nicegreen("You have evolved into [new_mob.name]!"))
+	to_chat(new_mob, span_nicegreen("¡Has evolucionado a [new_mob.name]!"))
 
 	qdel(evolving_mob)
 

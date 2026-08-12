@@ -1,5 +1,5 @@
 /datum/intent/shoot //shooting crossbows or other guns, no parrydrain
-	name = "shoot"
+	name = "disparar"
 	icon_state = "inshoot"
 	tranged = TRUE
 	warnie = "aimwarn"
@@ -18,7 +18,7 @@
 	var/mob/master_mob = get_master_mob()
 	var/obj/item/master_item = get_master_item()
 	if(master_item && master_mob)
-		master_mob.visible_message("<span class='warning'>[master_mob] aims [master_item]!</span>")
+		master_mob.visible_message("<span class='warning'>[master_mob] apunta [master_item]¡</span>")
 
 /datum/intent/shoot/airgun
 	chargedrain = 0 //no drain to aim
@@ -55,7 +55,7 @@
 /datum/intent/shoot/blowgun/prewarning()
 	var/mob/master = get_master_mob()
 	if(master)
-		master.visible_message("<span class='warning'>[master] takes a deep breath!</span>")
+		master.visible_message("<span class='warning'>[master] toma una respiracion profunda!</span>")
 
 /datum/intent/shoot/blowgun/get_chargetime()
 	var/mob/living/master = get_master_mob()
@@ -180,14 +180,14 @@
 	var/mob/master_mob = get_master_mob()
 	var/obj/item/master_item = get_master_item()
 	if(master_mob && master_item)
-		master_mob.visible_message("<span class='warning'>[master_mob] draws [master_item]!</span>")
+		master_mob.visible_message("<span class='warning'>[master_mob] dispara [master_item]!</span>")
 		playsound(master_mob, pick('sound/combat/Ranged/bow-draw-01.ogg'), 100, FALSE)
 
 /datum/intent/shoot/bow/long/prewarning()
 	var/mob/master_mob = get_master_mob()
 	var/obj/item/master_item = get_master_item()
 	if(master_mob && master_item)
-		master_mob.visible_message("<span class='warning'>[master_mob] draws [master_item]!</span>")
+		master_mob.visible_message("<span class='warning'>[master_mob] dispara [master_item]!</span>")
 		playsound(master_mob, pick('sound/combat/Ranged/bow-draw-04.ogg'), 100, FALSE)
 
 /datum/intent/shoot/bow/get_chargetime()
@@ -213,7 +213,7 @@
 	var/mob/master_mob = get_master_mob()
 	var/obj/item/master_item = get_master_item()
 	if(master_item && master_mob)
-		master_mob.visible_message("<span class='warning'>[master_mob] aims [master_item]!</span>")
+		master_mob.visible_message("<span class='warning'>[master_mob] apunta [master_item]¡</span>")
 
 /datum/intent/shoot/bow/turbulenta
 	chargetime = 1
@@ -242,7 +242,7 @@
 	var/mob/master_mob = get_master_mob()
 	var/obj/item/master_item = get_master_item()
 	if(master_item && master_mob)
-		master_mob.visible_message("<span class='warning'>[master_mob] aims [master_item]!</span>")
+		master_mob.visible_message("<span class='warning'>[master_mob] apunta [master_item]¡</span>")
 
 /datum/intent/arc/airgun
 	chargetime = 1
@@ -317,14 +317,14 @@
 	var/mob/master_mob = get_master_mob()
 	var/obj/item/master_item = get_master_item()
 	if(master_item && master_mob)
-		master_mob.visible_message("<span class='warning'>[master_mob] draws [master_item]!</span>")
+		master_mob.visible_message("<span class='warning'>[master_mob] dispara [master_item]!</span>")
 		playsound(master_mob, pick('sound/combat/Ranged/bow-draw-01.ogg'), 100, FALSE)
 
 /datum/intent/arc/bow/long/prewarning()
 	var/mob/master_mob = get_master_mob()
 	var/obj/item/master_item = get_master_item()
 	if(master_mob && master_item)
-		master_mob.visible_message("<span class='warning'>[master_mob] draws [master_item]!</span>")
+		master_mob.visible_message("<span class='warning'>[master_mob] dispara [master_item]!</span>")
 		playsound(master_mob, pick('sound/combat/Ranged/bow-draw-04.ogg'), 100, FALSE)
 
 /datum/intent/arc/bow/get_chargetime()
@@ -361,7 +361,7 @@
 /datum/intent/arc/blowgun/prewarning()
 	var/mob/master = get_master_mob()
 	if(master)
-		master.visible_message("<span class='warning'>[master] takes a deep breath!</span>")
+		master.visible_message("<span class='warning'>[master] toma una respiracion profunda!</span>")
 
 /datum/intent/arc/blowgun/get_chargetime()
 	var/mob/living/master = get_master_mob()

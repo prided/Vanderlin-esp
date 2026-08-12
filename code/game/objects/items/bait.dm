@@ -27,18 +27,18 @@
 /obj/item/bait/attack_self(mob/user, list/modifiers)
 	. = ..()
 	user.visible_message("<span class='notice'>[user] comienza a desplegar el cebo...</span>", \
-						"<span class='notice'>I begin deploying the bait...</span>")
+						"<span class='notice'>Comienzo a colocar el cebo...</span>")
 	if(do_after(user, deploy_speed * (1/(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/traps) + 1)), src)) //rogtodo hunting skill
 		user.dropItemToGround(src, TRUE)
 		START_PROCESSING(SSobj, src)
-		name = "bait"
+		name = "cebo"
 		icon_state = "[icon_state]1"
 		deployed = 1
 
 /obj/item/bait/attack_hand(mob/user)
 	if(deployed)
 		user.visible_message("<span class='notice'>[user] comienza a recoger el cebo...</span>", \
-							"<span class='notice'>I begin gathering up the bait...</span>")
+							"<span class='notice'>Empiezo a juntar el cebo...</span>")
 		if(do_after(user, deploy_speed * (1/(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/traps) + 1)), src)) //rogtodo hunting skill
 			STOP_PROCESSING(SSobj, src)
 			name = initial(name)
@@ -102,7 +102,7 @@
 	..()
 
 /obj/item/bait/sweet
-	name = "bag of sweetbait"
+	name = "bolsa de cebo dulce"
 	desc = "Este cebo no huele tan mal. Incluso podria probar un bocado..."
 	icon_state = "baitp"
 	attracted_types = list(/mob/living/simple_animal/hostile/retaliate/goat = 33,
@@ -130,8 +130,8 @@
 	item_weight = 250 GRAMS
 
 /obj/item/bait/greasy
-	name = "bag of greasebait"
-	desc = "A very powerful stench emits from this bait, carrying far and wide.. This is bound to attract something dangerous."
+	name = "bolsa de cebo graso"
+	desc = "Un hedor muy poderoso emite desde este cebo, que se propaga a todas partes. Esto seguramente atraera algo peligroso."
 	icon_state = "baitg"
 	attracted_types = list(/mob/living/simple_animal/hostile/retaliate/wolf = 40,
 						/mob/living/simple_animal/hostile/retaliate/direbear = 15,

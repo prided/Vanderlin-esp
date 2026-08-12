@@ -4,9 +4,9 @@ Hacha
 Escudo
 Hongo
 Hierba
-Dragón
+Dragon
 Serpiente
-Gorrión
+Gorrion
 Cristal
 Torre
 Castillo
@@ -18,11 +18,11 @@ Pez
 Catte
 Frogge
 Sherax
-Púa
+Pua
 Oro
 Xan
 Gema
-Carbón
+Carbon
 Joya
 Alabarda
 Lanza

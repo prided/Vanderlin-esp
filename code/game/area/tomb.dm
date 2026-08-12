@@ -5,7 +5,7 @@
 /area/under/tomb
 	name = "Tumba de Matthios"
 	icon_state = "basement"
-	first_time_text = "THE TOMB OF MATTHIOS"
+	first_time_text = "LA TUMBA DE MATTHIOS"
 	custom_area_sound = 'sound/misc/stings/TombSting.ogg'
 	soundenv = 5
 	droning_index = DRONING_BASEMENT

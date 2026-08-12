@@ -1,8 +1,8 @@
 /////////////////////////////////////////Scrying///////////////////
 
 /obj/item/scrying
-	name = "scrying orb"
-	desc = "On its glass depths, you can scry on many unsuspecting beings..."
+	name = "orbe de vision"
+	desc = "En sus profundidades de cristal, podras adivinar a muchos seres desprevenidos..."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state ="scrying"
 	throw_speed = 3
@@ -33,9 +33,9 @@
 /obj/item/scrying/attack_self(mob/user, list/modifiers)
 	. = ..()
 	if(world.time < last_scry + cooldown)
-		to_chat(user, span_warning("I look into [src] but only see inky smoke. Maybe I should wait."))
+		to_chat(user, span_warning("Miro dentro de [src], pero solo veo humo negro. Tal vez deberia esperar."))
 		return
-	var/input = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(user, "Who are you looking for?", "Scrying Orb")))
+	var/input = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(user, "¿A quien estas buscando?", "Esfera de adivinacion")))
 
 	if(!input)
 		return
@@ -46,7 +46,7 @@
 		return
 	//check is applied twice to prevent someone from bypassing the cooldown
 	if(world.time < last_scry + cooldown)
-		to_chat(user, span_warning("I look into [src] but only see inky smoke. Maybe I should wait."))
+		to_chat(user, span_warning("Miro dentro de [src], pero solo veo humo negro. Tal vez deberia esperar."))
 		return
 	for(var/mob/living/carbon/human/HL in GLOB.human_list)
 		if(HL.real_name == input)
@@ -54,7 +54,7 @@
 			if(!T)
 				continue
 			if(HAS_TRAIT(HL, TRAIT_ANTISCRYING))
-				to_chat(user, span_warning("I peer into [src], but an impenetrable fog shrouds [HL.real_name]."))
+				to_chat(user, span_warning("Miro dentro de [src], pero una niebla impenetrable envuelve [HL.real_name]."))
 				to_chat(HL, span_warning("Mi envoltura magica reacciono a algo."))
 				return
 			log_game("SCRYING: [user.real_name] ([user.ckey]) has used the scrying orb to leer at [HL.real_name] ([HL.ckey])")
@@ -64,22 +64,22 @@
 				return
 			S.ManualFollow(HL)
 			last_scry = world.time
-			user.visible_message(span_danger("[user] stares into [src], [p_their()] eyes rolling back into [p_their()] head."))
+			user.visible_message(span_danger("[user] mira dentro de [src], los ojos de [p_their()] se enrollan hacia atras en la cabeza de [p_their()]."))
 			addtimer(CALLBACK(S, TYPE_PROC_REF(/mob/dead/observer, reenter_corpse)), 8 SECONDS)
 			if(!HL.stat)
 				if(GET_MOB_ATTRIBUTE_VALUE(HL, STAT_PERCEPTION) >= 15)
 					if(HL.mind)
 						if(HL.mind.do_i_know(name=user.real_name))
-							to_chat(HL, span_warning("I can clearly see the face of [user.real_name] staring at me!"))
-							to_chat(user, span_warning("[HL.real_name] stares back at me!"))
+							to_chat(HL, span_warning("¡Puedo ver claramente el rostro de [user.real_name] mirandome!"))
+							to_chat(user, span_warning("¡[HL.real_name] me mira!"))
 							return
-					to_chat(HL, span_warning("I can clearly see the face of an unknown [user.gender == FEMALE ? "woman" : "man"] staring at me!"))
+					to_chat(HL, span_warning("¡Puedo ver claramente el rostro de un desconocido [user.gender == FEMALE ? "woman" : "man"] que me esta mirando!"))
 					return
 				if(GET_MOB_ATTRIBUTE_VALUE(HL, STAT_PERCEPTION) >= 11)
 					to_chat(HL, span_warning("Siento un par de ojos desconocidos sobre mi."))
 			REMOVE_TRAIT(user, TRAIT_NOSSDINDICATOR, "scryingorb")
 			return
-	to_chat(user, span_warning("I peer into [src], but can't find [input]."))
+	to_chat(user, span_warning("Miro en [src], pero no puedo encontrar [input]."))
 	return
 
 //23.08.2025
@@ -88,13 +88,13 @@
 /////////////////////////////////////////Crystal ball ghsot vision///////////////////
 
 /obj/item/crystalball/attack_self(mob/user, list/modifiers)
-	user.visible_message("<span class='danger'>[user] stares into [src], their eyes rolling back into their head.</span>")
+	user.visible_message("<span class='danger'>[user] mira dentro de [src], sus ojos se le salen de la cabeza.</span>")
 	user.ghostize(1)
 
 /*	..................   NOC Device (Fixed scrying ball)   ................... */
 /obj/structure/nocdevice
-	name = "NOC Device"
-	desc = "An intricate lunar observation machine, that allows its user to study the face of Noc in the sky, reflecting the true whereabouts of hidden beings..."
+	name = "Dispositivo NOC"
+	desc = "Una intrincada maquina de observacion lunar que permite a su usuario estudiar la cara de Noc en el cielo, reflejando el verdadero paradero de seres ocultos..."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "nocdevice"
 	layer = 4.2
@@ -105,7 +105,7 @@
 	var/mob/living/carbon/human/H = user
 	if(HAS_TRAIT(H, TRAIT_VIRGIN))
 		if(world.time < last_scry + 30 SECONDS)
-			to_chat(user, "<span class='warning'>I peer into the sky but cannot focus the lens on the face of Noc. Maybe I should wait.</span>")
+			to_chat(user, "<span class='warning'>Miro al cielo, pero no puedo enfocar la lente en el rostro de Noc. Quizas deba esperar.</span>")
 			return
 		var/input = stripped_input(user, "Who are you looking for?", "Scrying Orb")
 		if(!input)
@@ -113,7 +113,7 @@
 		if(!user.key)
 			return
 		if(world.time < last_scry + 30 SECONDS)
-			to_chat(user, "<span class='warning'>I peer into the sky but cannot focus the lens on the face of Noc. Maybe I should wait.</span>")
+			to_chat(user, "<span class='warning'>Miro al cielo, pero no puedo enfocar la lente en el rostro de Noc. Quizas deba esperar.</span>")
 			return
 		if(!user.mind || !user.mind.do_i_know(name=input))
 			to_chat(user, "<span class='warning'>No conozco a nadie con ese nombre.</span>")
@@ -128,20 +128,20 @@
 					return
 				S.ManualFollow(HL)
 				last_scry = world.time
-				user.visible_message("<span class='danger'>[user] stares into [src], [p_their()] squinting and concentrating...</span>")
+				user.visible_message("<span class='danger'>[user] mira [src], [p_their()] con los ojos entrecerrados y concentrado...</span>")
 				addtimer(CALLBACK(S, TYPE_PROC_REF(/mob/dead/observer, reenter_corpse)), 8 SECONDS)
 				if(!HL.stat)
 					if(GET_MOB_ATTRIBUTE_VALUE(HL, STAT_PERCEPTION) >= 15)
 						if(HL.mind)
 							if(HL.mind.do_i_know(name=user.real_name))
-								to_chat(HL, "<span class='warning'>I can clearly see the face of [user.real_name] staring at me!.</span>")
+								to_chat(HL, "<span class='warning'>¡Puedo ver claramente el rostro de [user.real_name] mirandome!.</span>")
 								return
 						to_chat(HL, "<span class='warning'>I can clearly see the face of an unknown [user.gender == FEMALE ? "woman" : "man"] staring at me!</span>")
 						return
 					if(GET_MOB_ATTRIBUTE_VALUE(HL, STAT_PERCEPTION) >= 11)
-						to_chat(HL, "<span class='warning'>I feel a pair of unknown eyes on me.</span>")
+						to_chat(HL, "<span class='warning'>Siento un par de ojos desconocidos sobre mi.</span>")
 				return
-		to_chat(user, "<span class='warning'>I peer into the viewpiece, but Noc does not reveal where [input] is.</span>")
+		to_chat(user, "<span class='warning'>Pirando en el mirador, pero Noc no revela donde esta [input].</span>")
 		return
 	else
 		to_chat(user, "<span class='notice'>Noc parece enojado conmigo...</span>")

@@ -1,5 +1,5 @@
 /area/outdoors/bog
-	name = "the bog"
+	name = "la cienaga"
 	icon = 'icons/turf/areas/bog.dmi'
 	icon_state = "bog"
 	droning_index = DRONING_BOG_DAY
@@ -32,7 +32,7 @@
 	area_flags = VALID_TERRITORY | UNIQUE_AREA | BOGGY_AREA
 
 /area/indoors/shelter/bog
-	name = "bog dwelling"
+	name = "refugio de la cienaga"
 	icon = 'icons/turf/areas/bog.dmi'
 	icon_state = "bog_indoors"
 	background_track = 'sound/music/area/bog.ogg'
@@ -42,8 +42,8 @@
 
 // ###############
 /area/outdoors/bog/e_highroad
-	name = "the eastern highroad"
-	first_time_text = "THE EASTERN HIGHROAD"
+	name = "el camino real oriental"
+	first_time_text = "EL CAMINO REAL ORIENTAL"
 	custom_area_sound = 'sound/misc/stings/RosewoodSting.ogg'
 
 /area/indoors/shelter/bog/e_highroad_camp
@@ -51,18 +51,18 @@
 
 // ###############
 /area/outdoors/bog/w_highroad
-	name = "the western highroad"
-	first_time_text = "THE WESTERN HIGHROAD"
+	name = "el camino real occidental"
+	first_time_text = "EL CAMINO REAL OCCIDENTAL"
 	custom_area_sound = 'sound/misc/stings/RosewoodSting.ogg'
 
 // ###############
 /area/outdoors/bog/witch
 	name = "isla de la bruja del pantano"
 	icon_state = "bog_witch"
-	first_time_text = "Bog Witch's Hut"
+	first_time_text = "Cabaña de la Bruja del Pantano"
 
 /area/indoors/shelter/bog/witch
-	name = "bog witch's hut"
+	name = "cabaña de la Bruja del Pantano"
 	icon_state = "bog_witch_indoors"
 
 // ###############
@@ -77,11 +77,11 @@
 
 // ###############
 /area/outdoors/bog/central
-	name = "Central Terrorbog"
+	name = "Terrorbog central"
 
 /area/outdoors/bog/east
 	icon_state = "bog_east"
-	name = "Eastern Terrorbog"
+	name = "Terrorbog oriental"
 
 /area/outdoors/bog/west
 	icon_state = "bog_west"
@@ -101,7 +101,7 @@
 
 // ###############
 /area/outdoors/bog/south
-	name = "Southern Terrorbog"
+	name = "Terrorbog meridional"
 
 /area/outdoors/bog/south/east
 	icon_state = "bog_east"
@@ -109,13 +109,13 @@
 
 /area/outdoors/bog/south/west
 	icon_state = "bog_west"
-	name = "South-Western Terrorbog"
+	name = "Terrorbog sudoccidental"
 
 // ###############
 /area/outdoors/bog/beach
 	name = "Terrorbog Costa"
 	icon_state = "bog_beach"
-	first_time_text = "THE TERRORBOG COAST"
+	first_time_text = "LA COSTA DE TERRORBOG"
 
 /area/outdoors/bog/beach/east
 	name = "Costa Este Terrorbog"

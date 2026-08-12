@@ -1,8 +1,8 @@
 /* FLAILS - Zero wdefense, can´t parry, best AP
 ==========================================================*/
 /obj/item/weapon/flail
-	name = "iron flail"
-	desc = "A sturdy handle affixed to a cruel spiked ball with a harrowing metal chain."
+	name = "mayal de hierro"
+	desc = "Un mango resistente sujeto a una cruel bola con puas con una desgarradora cadena de metal."
 	icon_state = "iflail"
 	icon = 'icons/roguetown/weapons/32/whips_flails.dmi'
 	force = DAMAGE_NORMAL_FLAIL
@@ -42,15 +42,15 @@
 
 //................ Militia Flail ............... //
 /obj/item/weapon/flail/militia
-	name = "militia flail"
-	desc = "A lucky hit from such a flail can squash a cheap helmet along with the wearer's skull."
+	name = "mayal de la milicia"
+	desc = "Un golpe afortunado de tal mayal puede aplastar un casco barato junto con el craneo de su portador."
 	icon_state = "militiaflail"
 	item_weight = 1.5 KILOGRAMS
 
 //................ Wooden Flail ............... // Obsolete by the thresher? No smash so its bad
 /obj/item/weapon/flail/towner
-	name = "wooden flail"
-	desc = "During peacetime these flails are used to thresh wheat. During wartime - to chase off marauders."
+	name = "mayal de madera"
+	desc = "En tiempos de paz estos mayales se utilizan para trillar el trigo. En tiempos de guerra, para ahuyentar a los merodeadores."
 	icon_state = "peasantflail"
 	force = DAMAGE_WEAK_FLAIL
 	possible_item_intents = list(MACE_WDSTRIKE)
@@ -63,8 +63,8 @@
 
 //................ Steel Flail ............... //
 /obj/item/weapon/flail/sflail
-	name = "steel flail"
-	desc = "A knightly flail made of worked steel, with a flanged head. An effective and brutal design."
+	name = "mayal de acero"
+	desc = "Mayal de caballero hecho de acero trabajado, con cabeza con bridas. Un diseño efectivo y brutal."
 	icon_state = "flail"
 	force = DAMAGE_GOOD_FLAIL
 	max_integrity = INTEGRITY_STRONGEST
@@ -74,22 +74,22 @@
 	item_weight = 1.4 KILOGRAMS
 
 /obj/item/weapon/flail/sflail/ancient
-	name = "ancient flail"
-	desc = "An ancient knightly flail made of worked steel, with a flanged head. An effective and brutal design."
+	name = "mayal antiguo"
+	desc = "Un antiguo mayal de caballero hecho de acero trabajado, con una cabeza con bridas. Un diseño efectivo y brutal."
 	icon_state = "aflail"
 	item_weight = 1.4 KILOGRAMS
 
 /obj/item/weapon/flail/sflail/necraflail
 	name = "viaje rapido"
-	desc = "The striking head resembles Necra's original skull, striking true with a sculpted emblem of love and sacrifice. Perhaps one of the few Psydonic-designed emblems of The Ten left."
+	desc = "La cabeza que golpea se asemeja al craneo original de Necra, golpeando con precision con un emblema tallado de amor y sacrificio. Quizas uno de los pocos emblemas de los Diez diseñados por Psydonic."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "necraflail"
 	item_weight = 1.4 KILOGRAMS
 
 //................ Silver Flail ............... //
 /obj/item/weapon/flail/silver
-	name = "silver flail"
-	desc = "A shining silver flail, bane of all who lurk in the night. Crush the skull of the nitebeast."
+	name = "mayal de plata"
+	desc = "Un mayal de plata brillante, azote de quienes acechan en la noche. Aplasta el craneo de Nitebeast."
 	icon_state = "silverflail"
 	force = DAMAGE_GOOD_FLAIL - 1
 	max_integrity = INTEGRITY_STRONGEST * 0.8
@@ -104,8 +104,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/flail/silver/noc
-	name = "lunar flail"
-	desc = "A shining silver flail, bane of all who lurk in the night and mounted with a crescent moon. Slice the nitebeasts apart."
+	name = "mayal lunar"
+	desc = "Un mayal plateado brillante, la pesadilla de todos los que acechan en la noche y montado con una luna creciente. Corta las nitebeasts."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "moonflail"
 	sharpness = IS_SHARP
@@ -115,8 +115,8 @@
 
 //................ Psydon Flail ............... //
 /obj/item/weapon/flail/psydon
-	name = "psydonian flail"
-	desc = "A flail fashioned with the iconography of Psydon, and crafted entirely out of silver."
+	name = "mayal psydonian"
+	desc = "Un mayal diseñado con la iconografia de Psydon y elaborado integramente en plata."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psyflail"
 	force = DAMAGE_GOOD_FLAIL
@@ -131,8 +131,8 @@
 	AddComponent(/datum/component/psyblessed, FALSE, 3, FALSE, 50, 1, TRUE)
 
 /obj/item/weapon/flail/psydon/relic
-	name = "\proper consecratia"
-	desc = "The weight of His anguish, His pain, His hope and His love for humenkind - all hanging on this ornamental silver-steel head chained to this arm. A declaration of love for all that Psydon lives for, and a crushing reminder that the Ordo Benetarus will endure anything to defend it."
+	name = "\proper consagraciones"
+	desc = "El peso de Su angustia, Su dolor, Su esperanza y Su amor por la humanidad, todo colgando de esta cabeza ornamental de acero plateado encadenada a este brazo. Una declaracion de amor por todo aquello por lo que vive el Psydon y un recordatorio aplastante de que el Ordo Benetarus soportara cualquier cosa para defenderlo."
 	icon_state = "psymorningstar"
 	item_weight = 1.5 KILOGRAMS
 
@@ -143,8 +143,8 @@
 
 //................ Peasant Flail ............... // A little confusing still
 /obj/item/weapon/flail/peasant
-	name = "peasant flail"
-	desc = "What used to be a humble thresher by design, has become a deadly flail with extended range and punch. Favored by the peasantry militia or knight errants."
+	name = "mayal campesino"
+	desc = "Lo que solia ser un humilde trillador por diseño, se ha convertido en un mayal mortal con alcance y golpe extendidos. Favorecido por la milicia campesina o los caballeros andantes."
 	icon = 'icons/roguetown/weapons/64/flails.dmi'
 	icon_state = "bigflail"
 	force = DAMAGE_NORMAL_FLAIL
@@ -175,8 +175,8 @@
 
 
 /obj/item/weapon/flail/peasantwarflail //Unattainable
-	name = "militia thresher"
-	desc = "Just like how a sling's bullet can fell a giant, so too does this great flail follow the principle of converting 'momentum' into 'plate-rupturing force'."
+	name = "trilladora de la milicia"
+	desc = "Asi como la bala de una honda puede derribar a un gigante, este gran latigo tambien sigue el principio de convertir el 'momento' en 'fuerza que rompe la placa'."
 	icon = 'icons/roguetown/weapons/64/flails.dmi'
 	icon_state = "peasantwarflail"
 	force = DAMAGE_WEAK_FLAIL - 7
@@ -209,8 +209,8 @@
 
 
 /obj/item/weapon/flail/peasantwarflail/matthios
-	name = "\proper gilded flail"
-	desc = "Weight of wealth in a deadly striking end."
+	name = "\proper mayal dorado"
+	desc = "El peso de la riqueza en un final mortal y sorprendente."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "matthiosflail"
 	force_wielded = DAMAGE_GOOD_FLAIL + 7

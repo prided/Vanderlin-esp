@@ -1,9 +1,9 @@
 /datum/objective/personal/ravox_duel
 	name = "Duelos de honor"
-	category = "Ravox's Chosen"
+	category = "Elegido de Ravox"
 	triumph_count = 3
-	immediate_effects = list("Gained an ability to challenge others")
-	rewards = list("3 Triumphs", "Ravox grows stronger", "Ravox blesses you (+1 Strength)")
+	immediate_effects = list("Obtuviste una habilidad para desafiar a otros")
+	rewards = list("3 Triunfos", "Ravox se fortalece", "Ravox te bendice (+1 Fuerza)")
 	var/duels_won = 0
 	var/duels_required = 1
 
@@ -21,7 +21,7 @@
 
 /datum/objective/personal/ravox_duel/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have proven your worth in combat! Ravox is pleased!"))
+	to_chat(owner.current, span_greentext("¡Has demostrado tu valia en combate! ¡Ravox esta complacido!"))
 	adjust_storyteller_influence(RAVOX, 20)
 
 /datum/objective/personal/ravox_duel/reward_owner()
@@ -29,7 +29,7 @@
 	owner.current.adjust_stat_modifier(STATMOD_RAVOX_BLESSING, list(STAT_STRENGTH = 1))
 
 /datum/objective/personal/ravox_duel/update_explanation_text()
-	explanation_text = "Win [duels_required] duel\s with honor against other warriors to prove your might!"
+	explanation_text = "¡Gana con honor [duels_required] duelo\s contra otros guerreros para demostrar tu poder!"
 
 /datum/duel
 	var/ongoing = TRUE
@@ -59,11 +59,11 @@
 		qdel(src)
 
 	if(challenger_mob.surrendering || challenger_mob.incapacitated(IGNORE_GRAB))
-		challenged_mob.visible_message(span_notice("[challenged_mob] defeats [challenger_mob] in the honor duel!"))
+		challenged_mob.visible_message(span_notice("¡[challenged_mob] derrota a [challenger_mob] en el duelo de honor!"))
 		finish_duel(challenger_mob, challenged_mob)
 		return
 	else if(challenged_mob.surrendering || challenged_mob.incapacitated(IGNORE_GRAB))
-		challenger_mob.visible_message(span_notice("[challenger_mob] defeats [challenged_mob] in the honor duel!"))
+		challenger_mob.visible_message(span_notice("¡[challenger_mob] derrota a [challenged_mob] en el duelo de honor!"))
 		finish_duel(challenged_mob, challenger_mob)
 		return
 
@@ -75,10 +75,10 @@
 	ongoing = FALSE
 	var/mob/living/carbon/human/challenger_mob = challenger.resolve()
 	if(challenger_mob)
-		to_chat(challenger_mob, span_notice("The duel has gone on too long and is declared a draw!"))
+		to_chat(challenger_mob, span_notice("¡El duelo ha durado demasiado y se declara un empate!"))
 	var/mob/living/carbon/human/challenged_mob = challenged.resolve()
 	if(challenged_mob)
-		to_chat(challenged_mob, span_notice("The duel has gone on too long and is declared a draw!"))
+		to_chat(challenged_mob, span_notice("¡El duelo ha durado demasiado y se declara un empate!"))
 
 	qdel(src)
 

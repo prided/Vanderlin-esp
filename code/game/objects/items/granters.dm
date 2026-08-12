@@ -26,13 +26,13 @@
 	return FALSE
 
 /obj/item/book/granter/proc/on_reading_start(mob/user)
-	to_chat(user, "<span class='notice'>I start reading [name]...</span>")
+	to_chat(user, "<span class='notice'>Empiezo a leer [name]...</span>")
 
 /obj/item/book/granter/proc/on_reading_stopped(mob/user)
-	to_chat(user, "<span class='notice'>I stop reading...</span>")
+	to_chat(user, "<span class='notice'>Dejo de leer...</span>")
 
 /obj/item/book/granter/proc/on_reading_finished(mob/user)
-	to_chat(user, "<span class='notice'>I finish reading [name]!</span>")
+	to_chat(user, "<span class='notice'>Termino de leer [name]¡! </span>")
 
 /obj/item/book/granter/proc/onlearned(mob/user)
 	used = TRUE
@@ -43,7 +43,7 @@
 
 /obj/item/book/granter/attack_self(mob/user, list/modifiers)
 	if(user.mind?.has_studied == TRUE)
-		to_chat(user, span_notice("I struggle to study my arcane notes more. Perhaps a good rest would help."))
+		to_chat(user, span_notice("Lucho por estudiar mis notas arcanas mas. Tal vez un buen descanso me ayudaria."))
 		return FALSE
 	if(reading)
 		to_chat(user, span_notice("¡Ya estoy leyendo esto!"))
@@ -79,15 +79,15 @@
 		return TRUE
 	for(var/datum/action/A in user.actions)
 		if(A.type == granted_action)
-			to_chat(user, "<span class='warning'>I already know all about [actionname]!</span>")
+			to_chat(user, "<span class='warning'>¡Ya se todo sobre [actionname]!</span>")
 			return TRUE
 	return FALSE
 
 /obj/item/book/granter/action/on_reading_start(mob/user)
-	to_chat(user, "<span class='notice'>I start reading about [actionname]...</span>")
+	to_chat(user, "<span class='notice'>Empiezo a leer sobre [actionname]...</span>")
 
 /obj/item/book/granter/action/on_reading_finished(mob/user)
-	to_chat(user, "<span class='notice'>I feel like you've got a good handle on [actionname]!</span>")
+	to_chat(user, "<span class='notice'> ¡Siento que tienes un buen manejo de [actionname]! </span>")
 	var/datum/action/G = new granted_action
 	G.Grant(user)
 	onlearned(user)
@@ -103,7 +103,7 @@
 		return
 	for(var/datum/blueprint_recipe/R as anything in crafting_recipe_types)
 		user.mind.teach_crafting_recipe(R)
-		to_chat(user,"<span class='notice'>I learned how to make [initial(R.name)].</span>")
+		to_chat(user,"<span class='notice'>Aprendi a hacer [initial(R.name)].</span>")
 
 //! --MAGICK SCROLLS-- !/
 
@@ -118,29 +118,29 @@
 	if(!spell)
 		return TRUE
 	if(user.get_spell(spell))
-		to_chat(user,"<span class='warning'>You've already read this one!</span>")
+		to_chat(user,"<span class='warning'>¡Ya has leido este!</span>")
 		return TRUE
 	return FALSE
 
 /obj/item/book/granter/spell/on_reading_start(mob/user)
-	to_chat(user, "<span class='notice'>I start reading about casting [spellname]...</span>")
+	to_chat(user, "<span class='notice'>Empiezo a estudiar como lanzar [spellname]...</span>")
 
 /obj/item/book/granter/spell/on_reading_finished(mob/living/user)
-	to_chat(user, "<span class='notice'>I feel like you've experienced enough to cast [spellname]!</span>")
+	to_chat(user, "<span class='notice'>Siento que has tenido suficiente experiencia para lanzar [spellname]!</span>")
 	user.add_spell(spell)
 	user.log_message("learned the spell [spellname]", LOG_ATTACK, color="orange")
 	onlearned(user)
 
 /obj/item/book/granter/spell/recoil(mob/user)
-	user.visible_message("<span class='warning'>[src] glows in a black light!</span>")
+	user.visible_message("<span class='warning'>[src] brilla con luz negra!</span>")
 
 /obj/item/book/granter/spell/onlearned(mob/user)
 	..()
 	if(oneuse)
-		user.visible_message("<span class='warning'>[src] glows dark for a second!</span>")
+		user.visible_message("<span class='warning'>[src] brilla en tono oscuro por un segundo!</span>")
 
 /obj/item/book/granter/spell/magick/
-	desc = "A scroll of potential known only to those that can decipher its secrets."
+	desc = "Un pergamino de potencial conocido solo por aquellos que pueden descifrar sus secretos."
 	icon = 'icons/roguetown/items/misc.dmi'
 	oneuse = TRUE
 	drop_sound = 'sound/foley/dropsound/paper_drop.ogg'
@@ -149,10 +149,10 @@
 /obj/item/book/granter/spell/magick/onlearned(mob/living/carbon/user)
 	..()
 	if(oneuse == TRUE)
-		name = "siphoned scroll"
-		desc = "A scroll once inscribed with magical scripture. The surface is now barren of knowledge, siphoned by someone else. It's utterly useless."
+		name = "pergamino sifonado"
+		desc = "Un pergamino que alguna vez tuvo inscritas escrituras magicas. La superficie ahora esta vacia de conocimiento, desviado por otra persona. Es completamente inutil."
 		icon_state = "scroll"
-		user.visible_message(span_warning("[src] has had its magic ink ripped from the scroll!"))
+		user.visible_message(span_warning("¡El [src] ¡ha tenido su tinta magica arrancada del pergamino!"))
 
 /obj/item/book/granter/spell/magick/fireball
 	name = "Pergamino de bola de fuego"
@@ -176,7 +176,7 @@
 	remarks = list("Essentia fulgurum digitorum..", "Fulgur de nubibus desuper..", "Fulgur eiecit digitos..", "Praecipe intus aedificatur..")
 
 /obj/item/book/granter/spell/magick/fetch
-	name = "Scroll of Fetch"
+	name = "Pergamino de busqueda"
 	spell =  /datum/action/cooldown/spell/projectile/fetch
 	spellname = "fetch"
 	icon_state = "scrollpurple"
@@ -212,12 +212,12 @@
 		user.adjust_form_mastery_points(1)
 		onlearned(user)
 	else
-		to_chat(user, span_notice("I don't know what to make of this."))
+		to_chat(user, span_notice("No se que pensar de esto."))
 
 /obj/item/book/granter/spell_points/onlearned(mob/living/carbon/user)
 	..()
 	if(oneuse == TRUE)
-		name = "siphoned scroll"
-		desc = "A scroll once inscribed with magical scripture. The surface is now barren of knowledge, siphoned by someone else. It's utterly useless."
+		name = "pergamino sifonado"
+		desc = "Un pergamino que alguna vez tuvo inscritas escrituras magicas. La superficie ahora esta vacia de conocimiento, desviado por otra persona. Es completamente inutil."
 		icon_state = "scroll"
-		user.visible_message(span_warning("[src] has had its magic ink ripped from the scroll!"))
+		user.visible_message(span_warning("¡El [src] ¡ha tenido su tinta magica arrancada del pergamino!"))

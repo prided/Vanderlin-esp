@@ -1,7 +1,7 @@
 
 /obj/structure/redstone/observer
 	name = "observador de piedra roja"
-	desc = "Detects changes in the block it's observing and emits a redstone pulse."
+	desc = "Detecta cambios en el bloque que esta observando y emite un pulso de piedra roja."
 	icon_state = "comparator"
 	redstone_role = REDSTONE_ROLE_SOURCE
 	var/turf/observing_turf
@@ -100,4 +100,4 @@
 	update_observing_turf()
 	register_observation_signals()
 	update_appearance(UPDATE_ICON_STATE)
-	to_chat(user, "<span class='notice'>You rotate the [name].</span>")
+	to_chat(user, "<span class='notice'>Usted hace girar el [name].</span>")

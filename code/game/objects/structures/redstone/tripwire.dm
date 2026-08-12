@@ -1,7 +1,7 @@
 
 /obj/structure/redstone/tripwire_hook
-	name = "tripwire hook"
-	desc = "Creates an invisible tripwire that detects movement."
+	name = "gancho trampa"
+	desc = "Crea un cable trampa invisible que detecta movimiento."
 	icon_state = "tripwire_hook"
 	redstone_role = REDSTONE_ROLE_SOURCE
 	var/obj/structure/redstone/tripwire_hook/connected_hook

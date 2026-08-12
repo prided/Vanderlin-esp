@@ -3,27 +3,27 @@
 // god weapons should have 720 durability, and can reach 0 and become unusable but do not break and can be repaired
 
 #define GOREFEAST_UNWORTHY list(\
-	span_danger("Unworthy..."),\
+	span_danger("No digno..."),\
 	span_danger("Eres demasiado debil para manejarme."),\
-	span_danger("How did you get your hands on me?"),\
-	span_danger("Find the nearest orc, and hand me to them."),\
+	span_danger("¿Como conseguiste ponerte las manos encima de mi?"),\
+	span_danger("Encuentra al orco mas cercano y entregamelo."),\
 	span_danger("No estas preparado."),\
 )
 
 #define GOREFEAST_WORTHY list(\
-	span_danger("A worthy one!"),\
-	span_danger("Bathe me in their blood."),\
+	span_danger("¡Un digno!"),\
+	span_danger("Bañame en su sangre."),\
 	span_danger("Puedes oler su miedo, ¿no?"),\
-	span_danger("Unleash your fury, soak the soil in their blood."),\
-	span_danger("Feast on their organs."),\
-	span_danger("Cull the world of the weak!"),\
+	span_danger("Desata tu furia, empapa el suelo con su sangre."),\
+	span_danger("Delicurense con sus organos."),\
+	span_danger("¡Elimina al mundo de los debiles!"),\
 	span_danger("Tontos por desafiarnos, señor de la guerra."),\
 )
 
 //┌─────────────── GOREFEAST ───────────────┐//
 /obj/item/weapon/polearm/halberd/bardiche/woodcutter/gorefeast
-	name = "gorefeast"
-	desc = "It is said that with this axe alone, Graggar slew a thousand men. With you, it will slay a thousand more."
+	name = "festin de sangre"
+	desc = "Se dice que solo con esta hacha, Graggar mato a mil hombres. Contigo, matara a mil mas."
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	icon_state = "gorefeast"
 	parrysound = "sword"
@@ -51,7 +51,7 @@
 	. = ..()
 	var/message
 	if(!HAS_TRAIT(user, TRAIT_ORGAN_EATER))
-		to_chat(user, span_danger("The beating heart of the blade seems to slow down at the sight of you... disinterested."))
+		to_chat(user, span_danger("El corazon palpitante de la hoja parece disminuir al verte... desinteresado."))
 		user.playsound_local(user, pick('sound/misc/godweapons/gorefeast1.ogg', 'sound/misc/godweapons/gorefeast2.ogg', 'sound/misc/godweapons/gorefeast3.ogg'), 70)
 		message = pick(GOREFEAST_UNWORTHY)
 	else
@@ -84,9 +84,9 @@
 		var/fast = heart_crit || dead
 		var/obj/item/organ/heart/heart = H.getorganslot(ORGAN_SLOT_HEART)
 		if(!heart)
-			to_chat(user, span_warning("Only a hollow chest remains!"))
+			to_chat(user, span_warning("¡Solo queda un pecho hueco!"))
 			return FALSE
-		to_chat(user, span_notice("I begin to pull the heart from [H]..."))
+		to_chat(user, span_notice("Comienzo a arrancar el corazon de [H]..."))
 		if(do_after(user, fast ? 5 SECONDS : 10 SECONDS, H))
 			heart.Remove(H)
 			heart.forceMove(H.drop_location())
@@ -94,7 +94,7 @@
 			H.add_splatter_floor()
 			var/obj/item/bodypart/chest = H.get_bodypart(BODY_ZONE_CHEST)
 			chest.bodypart_attacked_by(BCLASS_PIERCE, 50, incoming_germ = germ_level)
-			to_chat(user, span_notice("I finish pulling the heart from [H]!"))
+			to_chat(user, span_notice("¡Acabo de sacar el corazon de [H]!"))
 	. = ..()
 
 #undef GOREFEAST_UNWORTHY
@@ -103,7 +103,7 @@
 //┌─────────────── NEANT ───────────────┐//
 /obj/item/weapon/polearm/neant
 	name = "neant"
-	desc = "A dark scythe with a long chain, used to cut the life essence from people, or whip them into shape. The blade is an ominous purple."
+	desc = "Una guadaña oscura con una cadena larga, utilizada para cortar la esencia vital de las personas o para darles forma. La hoja es de un siniestro color purpura."
 	icon_state = "neant"
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	drop_sound = 'sound/foley/dropsound/blade_drop.ogg'
@@ -152,7 +152,7 @@
 	var/dead = H.stat == DEAD
 	if(HAS_TRAIT(H, TRAIT_CRITICAL_CONDITION) || dead)
 		var/speed = dead ? 3 SECONDS : 7 SECONDS
-		visible_message(user, span_notice("Neant lights up and begins to tear at [target]..."))
+		visible_message(user, span_notice("El Neant se ilumina y comienza a destrozar a [target]..."))
 		if(!do_after(user, speed, H))
 			return
 		var/obj/item/bodypart/chest/C = H.get_bodypart(BODY_ZONE_CHEST)
@@ -176,7 +176,7 @@
 		H.add_splatter_floor()
 		var/obj/item/bodypart/chest = H.get_bodypart(BODY_ZONE_CHEST)
 		chest.bodypart_attacked_by(BCLASS_PIERCE, 50, incoming_germ = germ_level)
-		visible_message(user, span_notice("Neant's blade draws the lux from [target]!"))
+		visible_message(user, span_notice("¡La espada de Neant atrae a lux de [target]!"))
 
 /obj/item/weapon/polearm/neant/proc/handle_magick(mob/living/user, atom/target)
 	if(!COOLDOWN_FINISHED(src, fire_projectile))
@@ -230,7 +230,7 @@
 
 /obj/item/gun/ballistic/bow/turbulenta
 	name = "turbulenta"
-	desc = "Rarely does she even care about combat, but when she does... Baotha was quite the markswoman."
+	desc = "Rara vez le importa el combate, pero cuando lo hace... Baotha era toda una tiradora."
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	icon_state = "turbulenta"
 	base_icon_state = "turbulenta"
@@ -347,7 +347,7 @@
 	icon_state = "pleonexia"
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	name = "pleonexia"
-	desc = "A sword of legend. If they are true, then this is the blade of Matthios himself. Rumor has it, it steals space and time."
+	desc = "Una espada de leyenda. Si son ciertas, entonces esta es la espada del propio Matthios. Se rumorea que roba espacio y tiempo."
 	possible_item_intents = list(SWORD_STRIKE, SWORD_CUT)
 	gripped_intents = list(SWORD_STRIKE, SWORD_CHOP, SWORD_THRUST, PLEX_BLINK)
 	max_integrity = INTEGRITY_STRONGEST + 220
@@ -368,10 +368,10 @@
 		return ..()
 	. = TRUE
 	if(!isturf(user.loc))
-		to_chat(user, span_notice("I cannot do this from inside of [user.loc]!"))
+		to_chat(user, span_notice("¡No puedo hacer esto desde dentro de [user.loc]!"))
 		return
 	if(!COOLDOWN_FINISHED(src, pleonexia_blink))
-		to_chat(user, span_notice("Pleonexia is not ready to blink again! [COOLDOWN_TIMELEFT(src, pleonexia_blink)/10] Seconds."))
+		to_chat(user, span_notice("¡Pleonexia no esta lista para parpadear de nuevo! [COOLDOWN_TIMELEFT(src, pleonexia_blink)/10] Segundos."))
 		return
 	var/turf/target = get_turf(A)
 	if(target.is_blocked_turf(TRUE, user))
@@ -381,8 +381,8 @@
 	if(!LAZYLEN(affected_turfs))
 		to_chat(user, span_notice("¡No hay nada que cortar!"))
 		return
-	user.visible_message(span_warning("[user] blinks through space!"),
-		span_notice("I tear through space with Pleonexia."))
+	user.visible_message(span_warning("[user] parpadea a traves del espacio."),
+		span_notice("Atraveso el espacio con Pleonexia."))
 	playsound(starting, "pleonexiaphase", 70, TRUE, -1)
 	new /obj/effect/temp_visual/cut(starting)
 	for(var/turf/affected_turf in affected_turfs)
@@ -404,8 +404,8 @@
 	duration = 3 DECISECONDS
 
 /datum/intent/plex_dash
-	name = "blink"
-	desc = "Blink two tiles ahead, stunning those in your path."
+	name = "parpadear"
+	desc = "Haz parpadear dos fichas mas adelante, aturdiendo a quienes se encuentren en tu camino."
 	icon_state = "peculate"
 	hitsound = null
 	noaa = TRUE
@@ -415,7 +415,7 @@
 
 /obj/item/weapon/sword/long/grandmaster
 	name = "espada larga divina"
-	desc = "The Blade of Saint Altierre. A holy sword forged of silver, said to represent her will to fight for us all, and the Justice she stood for."
+	desc = "La espada de Saint Altierre. Una espada sagrada forjada en plata, que se dice representa su voluntad de luchar por todos nosotros y la justicia que ella representa."
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	icon_state = "martyrsword"
 	item_weight = 1.5 KILOGRAMS
@@ -449,8 +449,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/greataxe/steel/grandmaster
-	name = "divine greataxe"
-	desc = "The Axe of Saint Altierre. A holy great axe forged of silver, said to represent the brutal attack she struck Graggar with, mortally wounding him and nearly killing him."
+	name = "gran hacha divina"
+	desc = "El Hacha de San Altierre. Una gran hacha sagrada forjada en plata, que se dice que representa el brutal ataque con el que golpeo a Graggar, hiriendolo mortalmente y casi matandolo."
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	icon_state = "martyraxe"
 	item_weight = 4.5 KILOGRAMS
@@ -503,7 +503,7 @@
 
 /obj/item/weapon/polearm/spear/grandmaster
 	name = "tridente divino"
-	desc = "The Trident of Saint Altierre. A holy spear forged of silver in the form of a holy weapon of Abyssor, said to represent her unfathomable Rage against the inhumen gods."
+	desc = "El Tridente de San Altierre. Una lanza sagrada forjada en plata en forma de arma sagrada de Abyssor, que se dice que representa su insondable ira contra los dioses inhumen."
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	icon_state = "martyrtrident"
 	item_weight = 2.5 KILOGRAMS
@@ -529,8 +529,8 @@
 	blade_class = BCLASS_SMASH
 
 /obj/item/weapon/mace/goden/steel/grandmaster
-	name = "divine grandmace"
-	desc = "The Mace of Saint Altierre. A holy mace forged of silver, said to represent her unyielding Might that turned upon Graggar before his ascension."
+	name = "gran maza divina"
+	desc = "La Maza de Saint Altierre. Una maza sagrada forjada en plata, que se dice representa su poder inquebrantable que se volvio contra Graggar antes de su ascension."
 	icon = 'icons/roguetown/weapons/64/godweapons.dmi'
 	icon_state = "martyrmace"
 	item_weight = 3.5 KILOGRAMS

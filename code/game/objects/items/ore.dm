@@ -1,5 +1,5 @@
 /obj/item/ore
-	name = "ore"
+	name = "mineral"
 	icon = 'icons/roguetown/items/ore.dmi'
 	icon_state = "ore"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -25,7 +25,7 @@
 	melt_amount = round(initial(melt_amount) * quality_multiplier)
 
 /obj/item/ore/gold
-	name = "raw gold"
+	name = "oro crudo"
 	icon_state = "oregold1"
 	smeltresult = /obj/item/ingot/gold
 	melting_material = /datum/material/gold
@@ -38,7 +38,7 @@
 	icon_state = "oregold[rand(1,3)]"
 
 /obj/item/ore/silver
-	name = "raw silver"
+	name = "plata cruda"
 	icon_state = "oresilv1"
 	smeltresult = /obj/item/ingot/silver
 	melting_material = /datum/material/silver
@@ -52,7 +52,7 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/ore/iron
-	name = "raw iron"
+	name = "hierro crudo"
 	icon_state = "oreiron1"
 	smeltresult = /obj/item/ingot/iron
 	melting_material = /datum/material/iron
@@ -65,7 +65,7 @@
 	icon_state = "oreiron[rand(1,3)]"
 
 /obj/item/ore/copper
-	name = "raw copper"
+	name = "cobre crudo"
 	icon_state = "orecop1"
 	smeltresult = /obj/item/ingot/copper
 	melting_material = /datum/material/copper
@@ -78,8 +78,8 @@
 	icon_state = "orecop[rand(1,3)]"
 
 /obj/item/ore/tin
-	name = "raw tin"
-	desc = "A mass of soft, almost malleable white ore."
+	name = "estaño crudo"
+	desc = "Una masa de mineral blanco blando, casi maleable."
 	icon_state = "oretin1"
 	smeltresult = /obj/item/ingot/tin
 	melting_material = /datum/material/tin
@@ -92,7 +92,7 @@
 	icon_state = "oretin[rand(1,3)]"
 
 /obj/item/ore/coal
-	name = "coal"
+	name = "carbon"
 	icon_state = "orecoal1"
 	firefuel = 10 MINUTES
 	smeltresult = /obj/item/ore/coal
@@ -106,8 +106,8 @@
 	icon_state = "orecoal[rand(1,3)]"
 
 /obj/item/ore/cinnabar
-	name = "cinnabar"
-	desc = "Red gems that contain the essence of quicksilver."
+	name = "cinabrio"
+	desc = "Gemas rojas que contienen la esencia del mercurio."
 	icon_state = "orecinnabar"
 	grind_results = list(/datum/reagent/mercury = 15)
 	sellprice = 5
@@ -115,9 +115,9 @@
 	indexed = TRUE
 
 /obj/item/ore/coal/charcoal
-	name = "charcoal"
+	name = "carbon"
 	icon_state = "oreada"
-	desc = "Burnt lumps of wood."
+	desc = "Trozos de madera quemados."
 	dropshrink = 0.8
 	color = "#929292"
 	firefuel = 30 MINUTES
@@ -128,7 +128,7 @@
 /* ............Black Briar............ */
 
 /obj/item/ore/cursedrosa
-	name = "black briar rosa"
+	name = "rosa de zarza negra"
 	icon_state = "cursedrosa"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head_items.dmi'
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK|ITEM_SLOT_MOUTH
@@ -160,9 +160,9 @@
 /obj/item/ore/cursedrosa/examine(mob/user)
 	. = ..()
 	if(GetComponent(/datum/component/cursedrosa))
-		. += span_briar("Its thorns have not been trimmed.")
+		. += span_briar("Sus espinas no han sido recortadas.")
 	else
-		. += span_info("Its thorns have been trimmed.")
+		. += span_info("Sus espinas han sido recortadas.")
 
 /obj/item/ore/cursedrosa/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(user.cmode)
@@ -173,9 +173,9 @@
 
 	var/datum/component/thorns = GetComponent(/datum/component/cursedrosa)
 	if(QDELETED(thorns))
-		to_chat(user, span_warning("It has no thorns to trim."))
+		to_chat(user, span_warning("No tiene espinas para cortar."))
 	else
-		user.visible_message(span_notice("[user] trims the thorns from [src]."), span_notice("I trim the thorns from [src]."))
+		user.visible_message(span_notice("[user] corta las espinas de [src]."), span_notice("Recorto las espinas de [src]."))
 		playsound(tool, 'sound/items/flint.ogg', 100, TRUE)
 		qdel(thorns)
 
@@ -183,8 +183,8 @@
 
 /* ............Ingots............ */
 /obj/item/ingot
-	name = "ingot"
-	desc = "A parent bar of metal. If you see this, report it on github."
+	name = "lingote"
+	desc = "Una barra matriz de metal. Si ves esto, informalo en github."
 	icon = 'icons/roguetown/items/ore.dmi'
 	icon_state = "ingot"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -209,7 +209,7 @@
 
 /obj/item/ingot/attack_hand_secondary(mob/user, list/modifiers)
 	if(currecipe)
-		to_chat(user, span_notice("You begin canceling the recipe of \the [currecipe.name]."))
+		to_chat(user, span_notice("Usted comienza a cancelar la receta de \the [currecipe.name]."))
 		if(do_after(user, 5 SECONDS, src, display_over_user = TRUE))
 			QDEL_NULL(currecipe)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
@@ -241,7 +241,7 @@
 	item_weight = 5 KILOGRAMS
 
 /obj/item/ingot/thaumic
-	name = "thaumic iron bar"
+	name = "barra de hierro taumico"
 	desc = "Una barra de hierro forjado templado con esencia de fuego."
 	icon_state = "infused_iron"
 	icon = 'icons/roguetown/misc/alchemy.dmi'
@@ -261,7 +261,7 @@
 
 /obj/item/ingot/tin
 	name = "barra de estaño"
-	desc = "An ingot of strangely soft and malleable essence."
+	desc = "Un lingote de esencia extrañamente suave y maleable."
 	icon_state = "ingottin"
 	smeltresult = /obj/item/ingot/tin
 	melting_material = /datum/material/tin
@@ -270,7 +270,7 @@
 
 /obj/item/ingot/bronze
 	name = "barra de bronce"
-	desc = "A hard and durable alloy favored by engineers and followers of Malum alike."
+	desc = "Una aleacion dura y duradera preferida tanto por los ingenieros como por los seguidores de Malum."
 	icon_state = "ingotbronze"
 	smeltresult = /obj/item/ingot/bronze
 	melting_material = /datum/material/bronze
@@ -279,7 +279,7 @@
 
 /obj/item/ingot/silver
 	name = "barra de plata"
-	desc = "A bar of glistening silver. The bane of nitewalkers."
+	desc = "Una barra de plata reluciente. La pesadilla de los nitewalkers."
 	icon_state = "ingotsilv"
 	smeltresult = /obj/item/ingot/silver
 	melting_material = /datum/material/silver
@@ -300,8 +300,8 @@
 	item_weight = 5 KILOGRAMS
 
 /obj/item/ingot/steelholy
-	name = "holy steel bar"
-	desc = "This ingot of steel has been touched by Malum. It radiates heat, even when outside a forge."
+	name = "barra de acero santa"
+	desc = "Este lingote de acero ha sido tocado por Malum. Irradia calor, incluso fuera de una fragua."
 	icon_state = "ingotsteelholy"
 	smeltresult = /obj/item/ingot/steel
 	melting_material = /datum/material/steel //Smelting it removes the blessing
@@ -310,7 +310,7 @@
 
 /obj/item/ingot/silverblessed
 	name = "barra de plata bendita"
-	desc = "This bar radiates a divine purity that is treasured by the Psydonic faith. The Psycross and holy liturgies are transcribed on the surface."
+	desc = "Esta barra irradia una pureza divina que es atesorada por la fe Psydonic. El Psycross y las sagradas liturgias se transcriben en la superficie."
 	icon_state = "ingotsilvblessed"
 	smeltresult = /obj/item/ingot/silver
 	melting_material = /datum/material/silver //Smelting it removes the blessing
@@ -318,8 +318,8 @@
 	item_weight = 6.65 KILOGRAMS
 
 /obj/item/ingot/blacksteel
-	name = "blacksteel bar"
-	desc = "Sacrificing the holy elements of silver for raw strength, this strange and powerful ingot's origin carries dark rumors..."
+	name = "Barra blacksteel"
+	desc = "Sacrificando los elementos sagrados de la plata por fuerza bruta, el origen de este extraño y poderoso lingote conlleva oscuros rumores..."
 	icon_state = "ingotblacksteel"
 	sellprice = M_BLACKSTEEL
 	smeltresult = /obj/item/ingot/blacksteel
@@ -336,8 +336,8 @@
 	item_weight = 5.5 KILOGRAMS
 
 /obj/item/ingot/aalloy
-	name = "decrepit ingot"
-	desc = "A decrepit slab of wrought bronze, uncomfortably cold to the touch. The gales shift into whispers, when held for long enough; 'progress commands sacrifice'."
+	name = "lingote decrepito"
+	desc = "Una losa decrepitud de bronce forjado, incomodamente fria al tacto. Los vientos se convierten en susurros cuando se sostiene el objeto durante un tiempo suficiente; 'el progreso exige sacrificio'."
 	icon_state = "ingotancient"
 	smeltresult = /obj/item/ingot/aaslag
 	melting_material = /datum/material/ancient_alloy
@@ -347,7 +347,7 @@
 
 /obj/item/ingot/purifiedaalloy
 	name = "aleacion antigua"
-	desc = "An ingot of polished gilbranze, teeming with forbidden knowledge. The reflection on its surface isn't yours; it smiles back at you with eternal malice."
+	desc = "Un lingote de gilbranze pulido, repleto de conocimientos prohibidos. El reflejo en su superficie no es tuyo; te devuelve la sonrisa con eterna malicia."
 	icon_state = "ingotancient"
 	smeltresult = /obj/item/ingot/purifiedaalloy
 	melting_material = /datum/material/purified_alloy
@@ -356,7 +356,7 @@
 
 /obj/item/ingot/aaslag
 	name = "escoria brillante"
-	desc = "A mass of wrought bronze, rendered lame from the forge's heat. Sometimes, dead is better. </br>Yet, perhaps alloying it in equal parts with another glimmering piece of ore could resurrect its secrets."
+	desc = "Una masa de bronce labrado, cojo por el calor de la forja. A veces, muerto es mejor. </br>YSin embargo, tal vez fusionarlo en partes iguales con otro trozo de mineral brillante podria resucitar sus secretos."
 	icon_state = "ancientslag"
 	smeltresult = /obj/item/ingot/aaslag
 	melting_material = /datum/material/glimmering_slag
@@ -369,8 +369,8 @@
 
 //Anomalous Smeltings
 /obj/item/ingot/weeping
-	name = "enduring ingot"
-	desc = "A slab of metal, aged and bare. You finally know what it is, yet no word can be sired to describe it. </br>'..none will ever know the greatest truths; of Aeon's grasp, of Adonai's presence, of Psydon's fate..' </br>'..but, perhaps, that's for the better. The malaise is gone, but the evils of this world are still very real..' </br>'..find a way to give the remains a new life; a new vessel that may yet make the followers of evil weep..'"
+	name = "lingote duradero"
+	desc = "Una losa de metal, envejecida y desnuda. Finalmente sabes que es, pero no se puede encontrar ninguna palabra para describirlo. </br>'...nadie conocera jamas las verdades mas grandes; del alcance de Aeon, de la presencia de Adonai, del destino de Psydon...' </br>'...pero, tal vez, eso sea para mejor. El malestar ha desaparecido, pero los males de este mundo siguen siendo muy reales...' </br>'...encuentra una manera de darle una nueva vida a los restos; un nuevo recipiente que aun puede hacer llorar a los seguidores del mal..'"
 	icon_state = "ingotsilv"
 	smeltresult = /obj/item/ingot/weeping
 	melting_material = /datum/material/weeping
@@ -383,8 +383,8 @@
 	add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#8B0000", "alpha" = 100, "size" = 1))
 
 /obj/item/ingot/draconic
-	name = "draconic ingot"
-	desc = "A slab of obsidian, crackling with energy. Your fingers blister from the sheer heat, radiating off of its glassy surface. </br>'..no man, be-they a saint or sinner, can truly withstand such power..' </br>'..but, perhaps, you are different..' </br>'..find a way to give the remains a new life; a new vessel that may yet make the followers of evil weep..'"
+	name = "lingote draconico"
+	desc = "Una losa de obsidiana que crepitaba de energia. Tus dedos se ampollan por el puro calor que irradia su superficie vidriosa. </br>'..ningun hombre, sea santo o pecador, puede realmente resistir tal poder..' </br>'..pero, tal vez, tu eres diferente..' </br>'..encuentra una manera de darle una nueva vida a los restos; un nuevo recipiente que aun puede hacer llorar a los seguidores del mal..'"
 	icon_state = "ingotblacksteel"
 	smeltresult = /obj/item/ingot/draconic
 	melting_material = /datum/material/draconic
@@ -397,8 +397,8 @@
 	add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#FF4500", "alpha" = 100, "size" = 1))
 
 /obj/item/ingot/avantyne
-	name = "avantyne wafer"
-	desc = "This ingot, though borne of unholy circumstance, rumbles with otherworldly potential. Chiseled onto the darksteel is a forbidden iteration of the psycross; a foreboding sign for those who bow to lesser gods."
+	name = "oblea avantyne"
+	desc = "Este lingote, aunque surgio de circunstancias impias, retumba con un potencial sobrenatural. Cincelada en el acero oscuro hay una iteracion prohibida del psycross; una señal de mal augurio para aquellos que se inclinan ante dioses menores."
 	icon_state = "ingotavantyne"
 	smeltresult = null
 	sellprice = 130
@@ -406,8 +406,8 @@
 	melting_material = /datum/material/avantyne
 
 /obj/item/ingot/ketryl
-	name = "ketryl ingot"
-	desc = "Named after its mythical status, this ingot is forged as per the dwarven standards etched in a small imprint on the ingot's surface. Ketryl is often folded in thin layers, stronger than steel, yet unusually light at the same time."
+	name = "lingote de ketril"
+	desc = "Este lingote, que lleva el nombre de su estatus mitico, esta forjado segun los estandares enanos grabados en una pequeña huella en la superficie del lingote. El Ketryl suele estar plegado en capas finas, mas resistentes que el acero y, al mismo tiempo, inusualmente ligeras."
 	icon_state = "ingotketryl"
 	smeltresult = null
 	sellprice = 555
@@ -415,8 +415,8 @@
 	melting_material = /datum/material/ketryl
 
 /obj/item/ingot/lithmyc
-	name = "lithmyc ingot"
-	desc = "A strange green ingot. It seems to be covered in an oily metal-liquid, though it refuses to leave the ingot-shape no matter how you much you try. No one in the region yet knows what the metal can be shaped into, as it's exceedingly stubborn. But, it sure seems priceless."
+	name = "lingote litmico"
+	desc = "Un extraño lingote verde. Parece estar cubierto de un liquido metalico aceitoso, aunque se niega a dejar la forma de lingote por mucho que lo intentes. Nadie en la region sabe aun en que se puede moldear el metal, ya que es extremadamente resistente. Pero seguro que parece impagable."
 	icon_state = "ingotlithmyc"
 	smeltresult = /obj/item/ingot/lithmyc
 	melting_material = /datum/material/lithmyc
@@ -429,15 +429,15 @@
 
 /obj/item/ingot/component //Root. Don't use under most circumstances.
 	name = "presencia sin sustancia"
-	desc = "Something that you were likely never meant to see. Pray to a higher presence for assistance, before rendering it asunder in the forge's flames once more."
+	desc = "Algo que probablemente nunca debiste ver. Reza a una presencia superior para que te ayude antes de volver a hacerla pedazos en las llamas de la forja."
 	icon_state = "oreada"
 	smeltresult = /obj/item/ingot/iron
 	melting_material = /datum/material/iron
 	sellprice = 1
 
 /obj/item/ingot/component/glutcrystal
-	name = "crystalline glut"
-	desc = "Fractal violence, gleaming with a crimson haze that beckons for its final purpose to be accomplished."
+	name = "glut cristalino"
+	desc = "Violencia fractal, brillando con una neblina carmesi que invita a cumplir su proposito final."
 	icon_state = "component_blood"
 	smeltresult = /obj/item/gem/blood_diamond //Ensures that it can be reused for any Glut-specific ritual, should one find this in its crystalline form.
 	sellprice = 33
@@ -447,49 +447,49 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.patron.type == /datum/patron/inhumen/graggar)
-			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors. </br>Fleshcrafting it with the meat of whatever warrior birthed this gem will allow me to summon another of their kind into this world.  </br>Melting away its crystalline shell is ideal, if you wish to ensure no chance for error while conducting such a ritual.")
+			. += span_danger("Conoces bien esta gema. Nacen de una gran violencia, pero solo si involucra a los mas poderosos de los guerreros. </br>Fabricar carne con la carne de cualquier guerrero que haya dado a luz a esta gema me permitira convocar a otro de su tipo a este mundo. </br>Derretir su caparazon cristalino es ideal, si deseas asegurarte de que no haya posibilidad de error al realizar tal ritual.")
 
 /obj/item/ingot/component/glutcrystal/Initialize()
 	. = ..()
 	add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#8B0000", "alpha" = 120, "size" = 1))
 
 /obj/item/ingot/component/heapofrawiron
-	name = "heap of raw iron"
-	desc = "A massive hunk, born from the incoherent fusion of molten iron. Chunks of ore-and-ingotry peak out from its jagged surface, yearning to be refined - be it into ingots, or something more purposeful."
+	name = "monton de hierro crudo"
+	desc = "Un trozo enorme, nacido de la fusion incoherente de hierro fundido. Trozos de mineral e lingotes emergen de su superficie irregular, anhelando ser refinados, ya sea en lingotes o en algo mas util."
 	icon_state = "component_berserkheap"
 	melting_material = /datum/material/iron
 	melt_amount = 300
 	sellprice = 44
 
 /obj/item/ingot/component/berserkswordblade
-	name = "blade of the berserkers sword"
-	desc = "A massive blade, forged from a raw heap of iron. The unique spike-styled tang seems to be longer than what'd be seen on most greatswords, stowable only by the innards of a fittingly large handle."
+	name = "hoja de la espada berserker"
+	desc = "Una hoja enorme, forjada a partir de un monton de hierro en bruto. La espiga unica en forma de pua parece ser mas larga de lo que se ve en la mayoria de las grandes espadas, y solo se puede guardar mediante las entrañas de un mango adecuadamente grande."
 	icon_state = "component_berserkblade"
 	melting_material = /datum/material/iron
 	melt_amount = 400
 	sellprice = 33
 
 /obj/item/ingot/component/berserkswordgrip
-	name = "handle of the berserkers sword"
-	desc = "A massive handle, assembled from the double-handed grip of an Executioner's Sword. The unique crescent-styled crossguard seems to have a slot, fittable only by the tang of a fittingly large blade."
+	name = "mango de la espada berserker"
+	desc = "Un mango enorme, ensamblado a partir de la empuñadura a dos manos de una espada de verdugo. La exclusiva guarda cruzada en forma de media luna parece tener una ranura, a la que solo se puede acceder mediante la espiga de una hoja adecuadamente grande."
 	icon_state = "component_berserkhandle"
 	sellprice = 33
 
 /obj/item/ingot/component/threadavantyne
-	name = "avantyne thread"
-	desc = "These strands, though borne of unholy circumstance, shimmer with otherworldly potential. Each wire of darksteel seem to twitch with vigor, whenever brought close to another alloy; like a parasite drawn to a host."
+	name = "hilo avantyne"
+	desc = "Estos hilos, aunque surgen de circunstancias impias, brillan con un potencial de otro mundo. Cada alambre de acero oscuro parece contraerse con vigor cada vez que se acerca a otra aleacion; como un parasito atraido por un huesped."
 	icon_state = "component_avantynethread"
 	sellprice = 66
 
 /obj/item/ingot/component/threadketryl
-	name = "ketryl thread"
-	desc = "Named after its mythical status, these glimmering strands are stronger than steel, yet unusually light at the same time."
+	name = "hilo de ketril"
+	desc = "Estas hebras brillantes, que reciben su nombre de su estatus mitico, son mas fuertes que el acero y, al mismo tiempo, inusualmente ligeras."
 	icon_state = "component_ketrylthread"
 	sellprice = 111
 
 /obj/item/ingot/component/zizo
-	name = "avantyne fragment"
-	desc = "Whispering fragments of an otherworldly alloy. </br>Power always comes at a price."
+	name = "fragmento de avantyne"
+	desc = "Fragmentos susurrantes de una aleacion de otro mundo. </br>La potencia siempre tiene un precio."
 	icon_state = "component_zizo"
 	dropshrink = 0.7
 
@@ -501,12 +501,12 @@
 
 /obj/item/ingot/component/matthios
 	name = "fragmento dorado"
-	desc = "Glimmering fragments of an otherworldly alloy. </br>Wealth drags even the noblest souls down to perdition."
+	desc = "Fragmentos relucientes de una aleacion de otro mundo. </br>La riqueza arrastra hasta las almas mas nobles a la perdicion."
 	icon_state = "component_matthios"
 	dropshrink = 0.7
 
 /obj/item/ingot/component/baotha
-	name = "saccharine fragment"
-	desc = "Aromatic fragments of an otherworldly alloy. </br>Despair is the gravest, most agonizing poison of them all."
+	name = "fragmento de sacarina"
+	desc = "Fragmentos aromaticos de una aleacion de otro mundo. </br>La desesperacion es el veneno mas grave y agonizante de todos."
 	icon_state = "component_baotha"
 	dropshrink = 0.7

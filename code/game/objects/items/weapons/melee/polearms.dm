@@ -41,7 +41,7 @@
 //................ Wooden Staff ............... //
 /obj/item/weapon/polearm/woodstaff
 	name = "baston de madera"
-	desc = "The ultimate tool of travel for weary wanderers, support your weight or crack the heads that don't support you."
+	desc = "La herramienta de viaje definitiva para los vagabundos cansados, soporta tu peso o rompe las cabezas que no te soportan."
 	icon_state = "woodstaff"
 	force =  DAMAGE_STAFF
 	force_wielded =  DAMAGE_STAFF_WIELD
@@ -69,8 +69,8 @@
 
 //................ Quarterstaff ............... //!
 /obj/item/weapon/polearm/woodstaff/quarterstaff
-	name = "wooden quarterstaff"
-	desc = "A staff that makes any journey easier. Durable and swift, capable of bludgeoning stray volves and ruffians alike."
+	name = "baston de madera"
+	desc = "Un personal que hace mas facil cualquier viaje. Durable y veloz, capaz de golpear tanto a los volves perdidos como a los rufianes."
 	icon_state = "quarterstaff"
 	force_wielded =  DAMAGE_STAFF_WIELD + 3
 	max_integrity = INTEGRITY_STRONG * 0.8
@@ -79,8 +79,8 @@
 
 //................ Iron-shod Staff ............... //
 /obj/item/weapon/polearm/woodstaff/quarterstaff/iron
-	name = "iron quarterstaff"
-	desc = "A perfect tool for bounty hunters who prefer their prisoners broken and bruised but not slain. This reinforced staff is capable of clubbing even an armed opponent into submission with some carefully placed strikes."
+	name = "baston de hierro"
+	desc = "Una herramienta perfecta para los cazarrecompensas que prefieren que sus prisioneros esten rotos y magullados, pero no asesinados. Este baston reforzado es capaz de someter incluso a un oponente armado con algunos golpes cuidadosamente colocados."
 	icon_state = "quarterstaff_iron"
 	force = DAMAGE_STAFF + 4
 	force_wielded = DAMAGE_STAFF_WIELD + 5
@@ -93,8 +93,8 @@
 	melt_amount = 75
 
 /obj/item/weapon/polearm/woodstaff/quarterstaff/steel
-	name = "steel quarterstaff"
-	desc = "An unusual sight, a knightly combat staff made out of worked steel and reinforced wood. It is a heavy and powerful weapon, more than capable of beating the living daylights out of any brigand."
+	name = "baston de acero"
+	desc = "Una vista inusual, un baston de combate caballeresco hecho de acero trabajado y madera reforzada. Es un arma pesada y poderosa, mas que capaz de darle una paliza a cualquier bandido."
 	icon_state = "quarterstaff_steel"
 	force = DAMAGE_STAFF + 6
 	force_wielded =  DAMAGE_STAFF_WIELD + 7
@@ -107,8 +107,8 @@
 	melt_amount = 75
 
 /obj/item/weapon/polearm/woodstaff/quarterstaff/silver
-	name = "silver quarterstaff"
-	desc = "A quarterstaff with silver reinforcements, more effective against supernatural foes than a steel quarterstaff."
+	name = "baston de plata"
+	desc = "Un baston con refuerzos plateados, mas eficaz contra enemigos sobrenaturales que un baston de acero."
 	icon_state = "quarterstaff_silver"
 	force = DAMAGE_STAFF + 6
 	force_wielded =  DAMAGE_STAFF_WIELD + 7
@@ -125,8 +125,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/polearm/woodstaff/seer
-	name = "staff of the rous seer"
-	desc = "A staff used by the rousman seers, mainly to protect themselves."
+	name = "baston de la vidente rous"
+	desc = "Un baston utilizado por los videntes rousman, principalmente para protegerse."
 	icon_state = "seerstaff"
 	force_wielded =  DAMAGE_STAFF_WIELD + 3
 	sellprice = 100
@@ -134,7 +134,7 @@
 
 //................ Spear ............... //
 /obj/item/weapon/polearm/spear
-	name = "spear"
+	name = "lanza"
 	desc = "La humilde lanza, usa el extremo puntiagudo."
 	icon_state = "spear"
 	force = DAMAGE_SPEARPLUS
@@ -175,8 +175,8 @@
 	item_weight = 1 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/steel/partizan
-	name = "partizan"
-	desc = "A spear with a heavy steel head, designed for stabbing and chopping."
+	name = "partesana"
+	desc = "Una lanza con una pesada cabeza de acero, diseñada para apuñalar y cortar."
 	icon_state = "partizan"
 	force = DAMAGE_SPEARPLUS + 3
 	force_wielded = DAMAGE_SPEAR_WIELD + 5
@@ -186,7 +186,7 @@
 
 /obj/item/weapon/polearm/spear/silver
 	name = "lanza de plata"
-	desc = "A spear with a silver head, more effective against supernatural foes than a steel spear."
+	desc = "Una lanza con punta plateada, mas eficaz contra enemigos sobrenaturales que una lanza de acero."
 	icon_state = "silverspear"
 	force = DAMAGE_SPEARPLUS
 	force_wielded = DAMAGE_SPEAR_WIELD
@@ -215,8 +215,8 @@
 
 //................ Psydonian Spear ............... //
 /obj/item/weapon/polearm/spear/psydon
-	name = "psydonian spear"
-	desc = "A polearm with a twisting trident head perfect for mangling the bodies of the impure."
+	name = "Lanza psydonian"
+	desc = "Un arma de asta con una cabeza de tridente giratoria perfecta para destrozar los cuerpos de los impuros."
 	icon = 'icons/roguetown/weapons/64/psydonite.dmi'
 	icon_state = "psyspear"
 	drop_sound = 'sound/foley/dropsound/blade_drop.ogg'
@@ -250,8 +250,8 @@
 
 //................ Billhook ............... //
 /obj/item/weapon/polearm/spear/billhook
-	name = "billhook"
-	desc = "A polearm with a curved krag, a Valorian design for dismounting mounted warriors and to strike down monstrous beasts."
+	name = "podadera"
+	desc = "Un arma de asta con un krag curvo, un diseño Valorian para desmontar guerreros montados y derribar bestias monstruosas."
 	icon_state = "billhook"
 	wbalance = EASY_TO_DODGE
 	possible_item_intents = list(POLEARM_THRUST, POLEARM_BASH) //bash is for nonlethal takedowns, only targets limbs
@@ -263,14 +263,14 @@
 	item_weight = 2 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/billhook/ji
-	name = "steel dagger-ax"
-	desc = "An eastern polearm of ancient design. It's rarely seen on the battlefield these daes."
+	name = "hacha-daga de acero"
+	desc = "Un arma de asta oriental de diseño antiguo. Rara vez se ve en el campo de batalla estos dias."
 	icon_state = "ji_steel"
 	gripsprite = FALSE
 	item_weight = 2 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/billhook/ji/iron
-	name = "iron dagger-ax"
+	name = "hacha-daga de hierro"
 	icon_state = "ji_iron"
 	force = DAMAGE_SPEAR
 	force_wielded = DAMAGE_SPEAR_WIELD - 2
@@ -280,7 +280,7 @@
 	item_weight = 2 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/billhook/ji/bronze
-	name = "bronze dagger-ax"
+	name = "hacha-daga de bronce"
 	icon_state = "ji_bronze"
 	force = DAMAGE_SPEAR
 	force_wielded = DAMAGE_SPEAR_WIELD - 3
@@ -293,7 +293,7 @@
 //................ Stone Short Spear ............... //		- Short spears got shorter reach and worse wield effect, made for one handed and throwing
 /obj/item/weapon/polearm/spear/stone
 	name = "lanza simple"
-	desc = "One of the first weapons wielded by humenity, still as versatile now as it was then."
+	desc = "Una de las primeras armas empuñadas por la humanidad, todavia tan versatil como lo era entonces."
 	icon_state = "stonespear"
 	force = DAMAGE_SPEAR - 2
 	force_wielded = DAMAGE_SPEAR + 2
@@ -312,7 +312,7 @@
 //................ Javelin ............... //
 /obj/item/weapon/polearm/spear/assegai
 	name = "azagaya de hierro"
-	desc = "A long throwing spear originating from the east."
+	desc = "Una lanza arrojadiza larga que se origina en el este."
 	icon = 'icons/roguetown/weapons/64/polearms.dmi'
 	icon_state = "assegai_iron"
 	force = DAMAGE_SPEAR
@@ -327,7 +327,7 @@
 	item_weight = 1.5 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/assegai/steel
-	name = "steel assegai"
+	name = "azagaya de acero"
 	icon = 'icons/roguetown/weapons/64/polearms.dmi'
 	icon_state = "assegai_steel"
 	force = DAMAGE_SPEARPLUS
@@ -341,7 +341,7 @@
 
 /obj/item/weapon/polearm/spear/javelin
 	name = "jabalina de cobre"
-	desc = "Made for throwing, long out of favor and using inferior metals, it can still kill when your aim is true."
+	desc = "Hecho para lanzar, durante mucho tiempo en desuso y usando metales inferiores, aun puede matar cuando tu punteria es correcta."
 	icon_state = "cspear"
 	force = DAMAGE_SPEAR - 2
 	force_wielded = DAMAGE_SPEAR + 2
@@ -369,8 +369,8 @@
 				return list("shrink" = 0.7,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 
 /obj/item/weapon/polearm/spear/javelin/iron
-	name = "iron javelin"
-	desc = "Heavier than a copper javelin, best suited for hunting beasts."
+	name = "jabalina de hierro"
+	desc = "Mas pesada que una jabalina de cobre, mas adecuada para cazar bestias."
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "ijavelin"
 	gripsprite = FALSE
@@ -386,7 +386,7 @@
 
 /obj/item/weapon/polearm/spear/javelin/steel
 	name = "jabalina de acero"
-	desc = "A sturdy javelin made from steel, suitable for hunting knightly foes."
+	desc = "Una jabalina resistente hecha de acero, adecuada para cazar enemigos caballerosos."
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "javelin"
 	melting_material = /datum/material/steel
@@ -401,7 +401,7 @@
 	embedding = list("embedded_pain_multiplier" = 5, "embed_chance" = 75, "embedded_fall_chance" = 0, "embedded_ignore_throwspeed_threshold" = 1)
 
 /obj/item/weapon/polearm/spear/javelin/silver
-	name = "silver javelin"
+	name = "jabalina de plata"
 	desc = "Una jabalina resistente hecha de plata, adecuada para cazar enemigos sobrenaturales."
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "sjavelin"
@@ -421,8 +421,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/polearm/spear/bone
-	name = "bone javelin"
-	desc = "Made by the tribes of the wilds for hunting, this spear will eventually kill your prey, if your aim remains true."
+	name = "jabalina de hueso"
+	desc = "Fabricada por las tribus de la naturaleza para la caza, esta lanza eventualmente matara a tu presa, si tu punteria sigue siendo cierta."
 	icon_state = "bspear"
 	throwforce = DAMAGE_SPEAR_WIELD
 	max_blade_int = 60
@@ -447,7 +447,7 @@
 
 /obj/item/weapon/polearm/spear/trollbone
 	name = "jabalina de hueso de cuerno de troll"
-	desc = "Made by the tribes of the wilds for hunting, and strengthened with a troll's horn, this spear will outlast your prey, if your aim remains true."
+	desc = "Fabricada por las tribus salvajes para la caza y reforzada con un cuerno de troll, esta lanza durara mas que tu presa, si tu punteria sigue siendo fiel."
 	icon_state = "bspear"
 	throwforce = DAMAGE_SPEAR_WIELD
 	max_blade_int = 60
@@ -473,8 +473,8 @@
 
 //................ Halberd ............... //
 /obj/item/weapon/polearm/halberd
-	name = "halberd"
-	desc = "A reinforced polearm for clobbering ordained with a crested ax head, pick and sharp point, a royal arm for defence and aggression."
+	name = "alabarda"
+	desc = "Un arma de asta reforzada para golpear con una cabeza de hacha con cresta, pico y punta afilada, un brazo real para la defensa y la agresion."
 	icon_state = "halberd"
 	force = DAMAGE_SPEAR
 	force_wielded = DAMAGE_HALBERD_WIELD
@@ -495,7 +495,7 @@
 
 /obj/item/weapon/polearm/halberd/silver
 	name = "alabarda de plata"
-	desc = "A halberd forged from silver, laying low the beasts of the nite."
+	desc = "Una alabarda forjada en plata que derriba a las bestias de la noche."
 	icon = 'icons/roguetown/weapons/64/axes.dmi'
 	icon_state = "silverhalberd"
 	force = DAMAGE_SPEAR
@@ -525,8 +525,8 @@
 
 //................ Psydonian Halberd ............... //
 /obj/item/weapon/polearm/halberd/psydon
-	name = "psydonian halberd"
-	desc = "A mighty halberd capable of cutting down the heretical with remarkable ease, be it effigy, man, or beast."
+	name = "Alabarda psydonian"
+	desc = "Una poderosa alabarda capaz de derribar al hereje con notable facilidad, ya sea una efigie, un hombre o una bestia."
 	icon = 'icons/roguetown/weapons/64/psydonite.dmi'
 	icon_state = "psyhalberd"
 	swingsound = BLADEWOOSH_MED
@@ -555,7 +555,7 @@
 
 /obj/item/weapon/polearm/halberd/psydon/relic
 	name = "\proper sanctum"
-	desc = "These silver-tipped polearms are the bulwark of the Ordo Venatari, borrowing techniques from the Ordo Benetarus. During the early sieges, the Ordos used these to hold the horrors at bay for forty days-and-nites. A time always comes to fight - strike true."
+	desc = "Estas armas de asta con punta plateada son el baluarte del Ordo Venatari, tomando prestadas tecnicas del Ordo Benetarus. Durante los primeros asedios, los Ordos los utilizaron para mantener a raya los horrores durante cuarenta dias y noches. Siempre llega el momento de luchar, de dar el golpe verdadero."
 	icon_state = "psyhalberd"
 	item_weight = 3.5 KILOGRAMS
 
@@ -566,7 +566,7 @@
 //................ Bardiche ............... //
 /obj/item/weapon/polearm/halberd/bardiche
 	name = "bardiche"
-	desc = "A grand axe of northernly design, renowned for easily chopping off limbs clean with brutal strength."
+	desc = "Una gran hacha de diseño norteño, famosa por cortar facilmente extremidades con una fuerza brutal."
 	icon_state = "bardiche"
 	force = DAMAGE_AXE
 	force_wielded = DAMAGE_HEAVYAXE_WIELD
@@ -589,7 +589,7 @@
 //................ Woodcutter Axe ............... //
 /obj/item/weapon/polearm/halberd/bardiche/woodcutter
 	name = "hacha de leñador"
-	desc = "The tool, weapon, and loyal companion of woodcutters. Able to chop mighty trees and repel the threats of the forest."
+	desc = "La herramienta, arma y fiel compañero de los leñadores. Capaz de talar arboles poderosos y repeler las amenazas del bosque."
 	icon = 'icons/roguetown/weapons/64/axes.dmi'
 	icon_state = "woodcutter"
 	force = DAMAGE_AXE
@@ -620,8 +620,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/polearm/halberd/bardiche/woodcutter/steel
-	name = "felling axe"
-	desc = "This is not just a tool, weapon, or loyal companion. It is a true feller of wood, able to drop the mightiest of the trees and beasts."
+	name = "hacha de tala"
+	desc = "Esto no es solo una herramienta, un arma o un compañero leal. Es un verdadero talador de madera, capaz de derribar a los arboles y a las bestias mas poderosas."
 	icon_state = "swoodcutter"
 	force = DAMAGE_AXE + 2
 	wlength = WLENGTH_LONG
@@ -641,8 +641,8 @@
 //................ War Axe ............... //
 //attempting to fix transformation issues//it worked wohoo, don't touch it.
 /obj/item/weapon/polearm/halberd/bardiche/warcutter
-	name = "footman war axe"
-	desc = "An enormous spiked axe. The ideal choice for a militiaman wanting to cut a fancy noble whoreson down to size."
+	name = "hacha de guerra lacayo"
+	desc = "Un enorme hacha con puas. La eleccion ideal para un miliciano que quiere reducir a su tamaño a un elegante y noble hijo de puta."
 	icon = 'icons/roguetown/weapons/64/axes.dmi'
 	icon_state = "warcutter"
 	slot_flags = ITEM_SLOT_BACK
@@ -673,12 +673,12 @@
 
 /obj/item/weapon/polearm/halberd/bardiche/ancient
 	name = "bardiche"
-	desc = "A grand axe of northern design, renowned for easily chopping off limbs clean with brutal strength."
+	desc = "Una gran hacha de diseño norteño, famosa por cortar facilmente extremidades con una fuerza brutal."
 	icon_state = "ancient_bardiche"
 
 /obj/item/weapon/polearm/halberd/bardiche/dendor
 	name = "guadaña de verano"
-	desc = "Summer's verdancy runs through the head of this scythe. All the more to sow."
+	desc = "El verdor del verano corre por la cabeza de esta guadaña. Tanto mas para sembrar."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "dendorscythe"
 	gripped_intents = list(POLEARM_THRUST, SPEAR_CUT, POLEARM_CHOP, POLEARM_BASH)
@@ -686,7 +686,7 @@
 
 /obj/item/weapon/polearm/halberd/bardiche/captain
 	name = "\proper liberacion"
-	desc = "A glaive decorated with gold forged for the Captain alongside their armor. To deliver justice with every wide swing."
+	desc = "Una guja decorada con oro forjado para el Capitan junto con su armadura. Para impartir justicia con cada gran movimiento."
 	sellprice = 200
 	icon_state = "capglaive"
 	smeltresult = /obj/item/ingot/steel_slag
@@ -694,8 +694,8 @@
 	item_weight = 2.3 KILOGRAMS
 
 /obj/item/weapon/polearm/halberd/bardiche/glaive
-	name = "steel glaive"
-	desc = "A uniquely designed polearm, modeled after Deliverance. Excellent for chopping down your foes."
+	name = "guja de acero"
+	desc = "Un arma de asta de diseño exclusivo, inspirada en Deliverance. Excelente para derribar a tus enemigos."
 	icon_state = "glaive"
 	force = DAMAGE_AXE + 2
 	max_blade_int = 200
@@ -707,7 +707,7 @@
 //................ Eagle Beak ............... //
 /obj/item/weapon/polearm/eaglebeak
 	name = "pico de aguila"
-	desc = "A reinforced pole affixed with an ornate steel eagle's head, of which it's beak is intended to pierce with great harm."
+	desc = "Un poste reforzado al que se le ha fijado una ornamentada cabeza de aguila de acero, cuyo pico pretende perforar con gran daño."
 	icon_state = "eaglebeak"
 	force = DAMAGE_SPEAR
 	force_wielded = DAMAGE_HALBERD_WIELD
@@ -741,7 +741,7 @@
 
 //................ Lucerne Hammer ............... //
 /obj/item/weapon/polearm/eaglebeak/lucerne
-	name = "lucerne"
+	name = "martillo de Lucerna"
 	desc = "Un martillo de asta de hierro sencillo que quiebra huesos y disidencia con pura fuerza bruta."
 	icon_state = "polehammer"
 	force_wielded = DAMAGE_HALBERD_WIELD -3
@@ -757,7 +757,7 @@
 //................ Hoplite Spear ............... //
 /obj/item/weapon/polearm/spear/hoplite
 	name = "lanza antigua"
-	desc = "A humble spear with a bronze head, a rare survivor from the battles long past that nearly destroyed Psydonia."
+	desc = "Una humilde lanza con cabeza de bronce, un raro superviviente de las batallas del pasado que casi destruyeron Psydonia."
 	icon_state = "bronzespear"
 	max_blade_int = 200
 	smeltresult = /obj/item/ingot/bronze
@@ -765,15 +765,15 @@
 	item_weight = 1 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/hoplite/winged // Winged version has +1 weapon defence and sells for a bit more, but is identical otherwise
-	name = "ancient winged spear"
-	desc = "A spear with a winged bronze head, a rare survivor from the battles long past that nearly destroyed Psydonia."
+	name = "lanza alada antigua"
+	desc = "Una lanza con una cabeza de bronce alada, un raro superviviente de las batallas pasadas que casi destruyeron Psydonia."
 	icon_state = "bronzespear_winged"
 	sellprice = 150 // A noble collector would love to get his/her hands on one of these spears
 	item_weight = 1 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/hoplite/abyssal
 	name = "lanza abisal"
-	desc = "A spear with a toothed end, inspired after the teeth of an abyssal monstrosity"
+	desc = "Una lanza con un extremo dentado, inspirada en los dientes de una monstruosidad abisal."
 	icon = 'icons/roguetown/weapons/64/ancient.dmi'
 	icon_state = "ancient_spear"
 	sellprice = 40
@@ -781,7 +781,7 @@
 
 /obj/item/weapon/polearm/spear/bronze
 	name = "lanza de bronce"
-	desc = "A spear forged of bronze. Expensive but more durable than a regular iron one."
+	desc = "Una lanza forjada en bronce. Caro pero mas duradero que uno de hierro normal."
 	icon_state = "bronzespear"
 	max_blade_int = 200
 	smeltresult = /obj/item/ingot/bronze
@@ -789,8 +789,8 @@
 
 //scythe
 /obj/item/weapon/sickle/scythe //This is supposed to be bad
-	name = "scythe"
-	desc = "A humble farming tool with long reach, traditionally used to cut grass or wheat."
+	name = "guadaña"
+	desc = "Una humilde herramienta agricola de largo alcance, utilizada tradicionalmente para cortar pasto o trigo."
 	icon = 'icons/roguetown/weapons/64/polearms.dmi'
 	icon_state = "scythe"
 	force = DAMAGE_STAFF
@@ -845,7 +845,7 @@
 
 /obj/item/weapon/polearm/spear/trollbonespear
 	name = "lanza de hueso de cuerno de troll"
-	desc = "A spear made of bones, strengthed with an troll's horn."
+	desc = "Una lanza hecha de huesos, reforzada con un cuerno de troll."
 	// icon_state = "bonespear"
 	icon_state = "stonespear_sk"
 	force = DAMAGE_SPEARPLUS
@@ -866,7 +866,7 @@
 
 /obj/item/weapon/polearm/spear/naginata
 	name = "naginata"
-	desc = "A traditional eastern polearm, combining the reach of a spear with the cutting power of a curved blade. Due to the brittle quality of certain eastern bladesmithing, weaponsmiths have adapted its blade to be easily replaceable when broken by a peg upon the end of the shaft."
+	desc = "Un arma de asta tradicional oriental que combina el alcance de una lanza con el poder cortante de una hoja curva. Debido a la calidad fragil de cierta cuchilleria oriental, los armeros han adaptado su hoja para que sea facilmente reemplazable cuando se rompe con una clavija en el extremo del eje."
 	icon = 'icons/roguetown/weapons/64/polearms.dmi'
 	icon_state = "naginata"
 	force_wielded = DAMAGE_SPEAR_WIELD + 3
@@ -886,8 +886,8 @@
 				return list("shrink" = 0.6,"sx" = 4,"sy" = -2,"nx" = -3,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 
 /obj/item/weapon/polearm/woodstaff/psydonian
-	name = "psydonian warstaff"
-	desc = "A staff carrying the black and gold insignia of the war scholars."
+	name = "Baston de guerra psydonian"
+	desc = "Un baston que porta la insignia negra y dorada de los eruditos de la guerra."
 	icon_state = "naledistaff"
 	force = DAMAGE_SPEARPLUS
 	force_wielded = DAMAGE_SPEAR_WIELD

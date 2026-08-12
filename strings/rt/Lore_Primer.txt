@@ -1,11 +1,11 @@
 <p><strong><em><span style="font-size:115%"> ¡Bienvenido a Vanderlin! </span></em></strong></p>
-<p> Esta introducción al lore sirve como presentación al mundo y la historia de Vanderlin. <br>
-Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encontrar útil esta información para interpretar sus puestos. Lo mismo aplica a cualquiera interesado en jugar un personaje con mayor conocimiento del escenario. No toda la información está disponible aquí, y algunos secretos siguen ocultos en descripciones de objetos, inscripciones o folletos: esto es una introducción, no un compendio. </p>
+<p> Esta introduccion al lore sirve como presentacion al mundo y la historia de Vanderlin. <br>
+Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encontrar util esta informacion para interpretar sus puestos. Lo mismo aplica a cualquiera interesado en jugar un personaje con mayor conocimiento del escenario. No toda la informacion esta disponible aqui, y algunos secretos siguen ocultos en descripciones de objetos, inscripciones o folletos: esto es una introduccion, no un compendio. </p>
 <hr>
-<strong><span style="font-size:105%"> Algunos conceptos y términos rápidos importantes para el escenario: </span></strong>
-<p><strong> Psydonia </strong> - El mundo en el que transcurre Vanderlin, llamado así por su dios creador, Psydon. Actualmente es el año 2516, milenios después de Su muerte. </p>
+<strong><span style="font-size:105%"> Algunos conceptos y terminos rapidos importantes para el escenario: </span></strong>
+<p><strong> Psydonia </strong> - El mundo en el que transcurre Vanderlin, llamado asi por su dios creador, Psydon. Actualmente es el año 2516, milenios despues de Su muerte. </p>
 <p><strong> Faience </strong> - El continente en el que transcurre Vanderlin. Moldeado por Su mano. </p>
-<p><strong> Lux </strong> - El vínculo central de divinidad que posee una persona; el alma. Una esquirla de Psydon presente en cada especie que alguna vez fue tocada por una mano divina. Se dice que contiene el poder de un único milagro de vida, enfocado y concentrado; sin embargo, extraerlo condena al alma a no poder pasar jamás al inframundo. </p>
+<p><strong> Lux </strong> - El vinculo central de divinidad que posee una persona; el alma. Una esquirla de Psydon presente en cada especie que alguna vez fue tocada por una mano divina. Se dice que contiene el poder de un unico milagro de vida, enfocado y concentrado; sin embargo, extraerlo condena al alma a no poder pasar jamas al inframundo. </p>
 <hr>
 
 <details>
@@ -13,14 +13,14 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 
 
 
-	<p><strong>  Isle of Enigma </strong><em> - "Antiguo centro comercial del mundo, hoy un cáncer supurante de petróleo derramado, metralla y tierra destrozada por bombas."  </em>
+	<p><strong>  Isle of Enigma </strong><em> - "Antiguo centro comercial del mundo, hoy un cancer supurante de petroleo derramado, metralla y tierra destrozada por bombas."  </em>
 	<br></p>
 
 	<details>
-		<summary><em> Puntos de interés </em></summary>
+		<summary><em> Puntos de interes </em></summary>
 
-		<p><strong> - Town of Rockhill </strong><br>  Un antiguo y bullicioso centro comercial conocido coloquialmente como Roguetown. Ahora es una zona de guerra y el último asentamiento en pie frente a la armada de autómatas. </p>
-		<p><strong> - Kingdom of Heartfelt </strong><br>  El próspero núcleo del progreso tecnológico de Isle of Enigma, ahora sumido en el desastre mientras sus propias construcciones autómatas se vuelven contra ellos y devastan sus tierras.  </p>
+		<p><strong> - Town of Rockhill </strong><br>  Un antiguo y bullicioso centro comercial conocido coloquialmente como Roguetown. Ahora es una zona de guerra y el ultimo asentamiento en pie frente a la armada de automatas. </p>
+		<p><strong> - Kingdom of Heartfelt </strong><br>  El prospero nucleo del progreso tecnologico de Isle of Enigma, ahora sumido en el desastre mientras sus propias construcciones automatas se vuelven contra ellos y devastan sus tierras.  </p>
 	</details>
 	<br>
 
@@ -28,13 +28,13 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 	<p><strong>  Peninsula of Vanderlin </strong><em> - "La nueva capital comercial del mundo."  </em></p>
 
 	<details>
-		<summary><em> Puntos de interés </em></summary>
+		<summary><em> Puntos de interes </em></summary>
 
-		<p><strong> - City of Vanderlin </strong><br> Un asentamiento en un cañón situado en una península cercana, al este de Isle of Enigma. Beneficiándose de ambas regiones, Vanderlin es una ciudad de comercio y prosperidad. Construida sobre la primera entrada descubierta a la Tomb of Matthios, atrae aventureros de toda Psydonia que descienden en busca de fortuna.  </p>
-		<p><strong> - County of Daftmarsh </strong><br> Un castillo hundido tres veces, convertido ahora en un pueblo sobre pilotes construido con sus ruinas. Daftmarsh protege el delta del río directamente al norte de Vanderlin. Suele servir como refugio seguro para piratas, permitiendo el paso de los barcos mercantes de Vanderlin a cambio de que la Corona mire hacia otro lado. </p>
-		<p><strong> - Mire of the Terrorbog </strong><br> Una zona fértil y pantanosa de la península, cubierta de vegetación y asediada por una invasión de beespiders.  </p>
+		<p><strong> - City of Vanderlin </strong><br> Un asentamiento en un cañon situado en una peninsula cercana, al este de Isle of Enigma. Beneficiandose de ambas regiones, Vanderlin es una ciudad de comercio y prosperidad. Construida sobre la primera entrada descubierta a la Tomb of Matthios, atrae aventureros de toda Psydonia que descienden en busca de fortuna.  </p>
+		<p><strong> - County of Daftmarsh </strong><br> Un castillo hundido tres veces, convertido ahora en un pueblo sobre pilotes construido con sus ruinas. Daftmarsh protege el delta del rio directamente al norte de Vanderlin. Suele servir como refugio seguro para piratas, permitiendo el paso de los barcos mercantes de Vanderlin a cambio de que la Corona mire hacia otro lado. </p>
+		<p><strong> - Mire of the Terrorbog </strong><br> Una zona fertil y pantanosa de la peninsula, cubierta de vegetacion y asediada por una invasion de beespiders.  </p>
 		<p><strong> - Shire of Murderwood </strong><br> Bosque ancestral repleto de claros, invadido por villanos, bribones y todo tipo de forajidos. Como testimonio de la locura de Dendor, su espesura en constante cambio se extiende por el oeste de Vanderlin. </p>
-		<p><strong> - Malum's Anvil </strong><br> Una montaña escarpada llena de minerales, tesoros y lava. También es una cacofonía de horribles goblins, bestias y otras desgracias. El cráter dejado por el fragmento caído de Astrata aún marca su cima. </p>
+		<p><strong> - Malum's Anvil </strong><br> Una montaña escarpada llena de minerales, tesoros y lava. Tambien es una cacofonia de horribles goblins, bestias y otras desgracias. El crater dejado por el fragmento caido de Astrata aun marca su cima. </p>
 	</details>
 	<br>
 
@@ -42,22 +42,22 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 	<p><strong>  Kingsfield  </strong><em> - "El orgullo de la humanidad. Corona de Psydonia"	</em></p>
 
 	<details>
-		<summary><em> Puntos de interés </em></summary>
+		<summary><em> Puntos de interes </em></summary>
 
-		<p><strong> - City of Kingsfield </strong><br>  Una ciudad enorme construida entre bosques templados, muy al norte de Isle of Enigma. Kingsfield es la ciudad más próspera y poblada del mundo, además de ser una de sus mayores potencias culturales. No debe confundirse con el estado de Kingsfield, que la engloba. Sus sistemas ferroviarios se extienden por todo el oeste de Faience, en buena medida gracias al esfuerzo de los artífices de Heartfelt. </p>
+		<p><strong> - City of Kingsfield </strong><br>  Una ciudad enorme construida entre bosques templados, muy al norte de Isle of Enigma. Kingsfield es la ciudad mas prospera y poblada del mundo, ademas de ser una de sus mayores potencias culturales. No debe confundirse con el estado de Kingsfield, que la engloba. Sus sistemas ferroviarios se extienden por todo el oeste de Faience, en buena medida gracias al esfuerzo de los artifices de Heartfelt. </p>
 	</details>
 	<br>
 
 
-	<p><strong>  Tundras of Wintermare </strong><em> - "El mayor territorio élfico aceptado por los humanos, aunque la mayor parte de sus tierras está cubierta por un duro permafrost."  </em></p>
+	<p><strong>  Tundras of Wintermare </strong><em> - "El mayor territorio elfico aceptado por los humanos, aunque la mayor parte de sus tierras esta cubierta por un duro permafrost."  </em></p>
 
 	<details>
-		<summary><em>Puntos de interés</em></summary>
+		<summary><em>Puntos de interes</em></summary>
 
 		<p><strong> - City of Rosewood </strong><br> Capital del Wintermare Empire, situada cerca de su mar interior sudoriental. Alberga academias noccianas de fama mundial y es considerada ampliamente la capital mundial de la magia. </p>
-		<p><strong> - White Palace Pass </strong><br> Uno de los pocos pasos que atraviesan The Howling Mountains entre Grenzelhoft y Rosewood. Un lugar marcado por una gran tensión y conflictos pasados. </p>
-		<p><strong> - Noc's Crown </strong><br> Una cumbre imponente que oculta ruinas de una civilización pasada.  </p>
-		<p><strong> - Morvael Sink </strong><br> Un pantano gélido. Antiguos templos dedicados a Zizo yacen en ruinas.  </p>
+		<p><strong> - White Palace Pass </strong><br> Uno de los pocos pasos que atraviesan The Howling Mountains entre Grenzelhoft y Rosewood. Un lugar marcado por una gran tension y conflictos pasados. </p>
+		<p><strong> - Noc's Crown </strong><br> Una cumbre imponente que oculta ruinas de una civilizacion pasada.  </p>
+		<p><strong> - Morvael Sink </strong><br> Un pantano gelido. Antiguos templos dedicados a Zizo yacen en ruinas.  </p>
 		<p><strong> - Snowdust Glade </strong><br> Un bosque encantado que alberga los peligros de fae sin control e invocaciones abandonadas.  </p>
 	</details>
 	<br>
@@ -65,25 +65,25 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 	<p><strong>  Necral Forests </strong><em> - "Bosques ancestrales dispersos por Psydonia. Los antiguos hogares de los elfos." </em></p>
 
 	<details>
-		<summary><em> Puntos de interés </em></summary>
+		<summary><em> Puntos de interes </em></summary>
 
-		<p><strong> - Amber Hollow </strong><br> En el centro de los bosques de secuoyas del noroeste, un anillo de raíces retorcidas y entrelazadas descansa sobre un enorme montículo de tierra. En su interior se encuentra la mayor entrada occidental a Subterra. Experimentos hollowkin escapados y, posteriormente, arpías, llaman hogar a este asentamiento. Casi todos los hollowkin pueden rastrear su ascendencia hasta esta boca. Aunque hostil a los forasteros, sirve como uno de los principales puntos defensivos contra las fuerzas de los elfos oscuros. </p>
-		<p><strong> - The Tree of Psydonia </strong><br> Una enorme secuoya que empequeñece a todas las demás, situada muy al noroeste de Amber Hollow. Se dice que es un monumento creado por el propio Psydon para honrar la muerte original de Necra. Los elfos veneran este lugar pese a su inquietante corteza con apariencia de calavera.  </p>
+		<p><strong> - Amber Hollow </strong><br> En el centro de los bosques de secuoyas del noroeste, un anillo de raices retorcidas y entrelazadas descansa sobre un enorme monticulo de tierra. En su interior se encuentra la mayor entrada occidental a Subterra. Experimentos hollowkin escapados y, posteriormente, arpias, llaman hogar a este asentamiento. Casi todos los hollowkin pueden rastrear su ascendencia hasta esta boca. Aunque hostil a los forasteros, sirve como uno de los principales puntos defensivos contra las fuerzas de los elfos oscuros. </p>
+		<p><strong> - The Tree of Psydonia </strong><br> Una enorme secuoya que empequeñece a todas las demas, situada muy al noroeste de Amber Hollow. Se dice que es un monumento creado por el propio Psydon para honrar la muerte original de Necra. Los elfos veneran este lugar pese a su inquietante corteza con apariencia de calavera.  </p>
 	</details>
 	<br>
 
-	<p><strong>  The Barrows </strong><em> - "Antiguos bosques boreales que fueron hogar de los elfos de nieve, convertidos ahora en una tierra muerta de ruina y decadencia tras la ascensión de Zizo. Aquí se encuentra el gran frente de guerra contra sus ejércitos de no muertos." </em></p>
+	<p><strong>  The Barrows </strong><em> - "Antiguos bosques boreales que fueron hogar de los elfos de nieve, convertidos ahora en una tierra muerta de ruina y decadencia tras la ascension de Zizo. Aqui se encuentra el gran frente de guerra contra sus ejercitos de no muertos." </em></p>
 
 	<details>
-		<summary><em> Puntos de interés </em></summary>
-		<p><strong> - The Realm of Z </strong><br> Las zonas septentrionales de The Barrows son conocidas coloquialmente como «The Realm of Z» debido al control casi absoluto de ella sobre la región. Quedan pocos supervivientes, si es que queda alguno, aunque circulan rumores de un último asentamiento bastión que resiste contra todo pronóstico en las heladas tierras montañosas del norte.  </p>
+		<summary><em> Puntos de interes </em></summary>
+		<p><strong> - The Realm of Z </strong><br> Las zonas septentrionales de The Barrows son conocidas coloquialmente como «The Realm of Z» debido al control casi absoluto de ella sobre la region. Quedan pocos supervivientes, si es que queda alguno, aunque circulan rumores de un ultimo asentamiento bastion que resiste contra todo pronostico en las heladas tierras montañosas del norte.  </p>
 	</details>
 	<br>
 
-	<p><strong>  Subterra </strong><em> - "Un vasto sistema subterráneo de cavernas con su propia biosfera de flora y fauna hostiles. Antiguamente albergó un imperio ancestral de elfos oscuros ravoxianos, pero hoy es el núcleo conquistado de la malvada matriarquía de Zizo." </em></p>
+	<p><strong>  Subterra </strong><em> - "Un vasto sistema subterraneo de cavernas con su propia biosfera de flora y fauna hostiles. Antiguamente albergo un imperio ancestral de elfos oscuros ravoxianos, pero hoy es el nucleo conquistado de la malvada matriarquia de Zizo." </em></p>
 
 	<details>
-		<summary><em> Puntos de interés </em></summary>
+		<summary><em> Puntos de interes </em></summary>
 
 		<p><strong> - Zizo's Claw Marquisate </strong><br> Situado bajo Amber Hollow, marca el extremo occidental de las cavernas de Subterra. Funciona como base avanzada de operaciones para fuerzas y esclavos elfos oscuros mientras preparan otro intento de irrumpir en la superficie.  </p>
 		</details>
@@ -101,43 +101,43 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 		<br>
 		<em>La Corona de Psydonia</em>
 		<br><br>
-		Kingsfield se extiende por el noroeste de Faience y alberga el centro cultural del mundo en sus enormes ciudades y su impresionante población. A diferencia de muchas poblaciones mayoritariamente humanas, sus habitantes y su historia están definidos por la bondad más que por la conquista. Cierto sector de los Kingsfieldians se distingue por su peculiar pronunciación de algunas palabras imperiales y por añadir «eh?» al final de comentarios o preguntas. Especies de todo el mundo visitan y se establecen en estas ciudades, incluida una población considerable de elfos oscuros antes de la conquista de Zizo. Como resultado, quizá sean quienes más toleran a los half-drow, lo que los convierte en objeto de burlas para el resto de Faience.
+		Kingsfield se extiende por el noroeste de Faience y alberga el centro cultural del mundo en sus enormes ciudades y su impresionante poblacion. A diferencia de muchas poblaciones mayoritariamente humanas, sus habitantes y su historia estan definidos por la bondad mas que por la conquista. Cierto sector de los Kingsfieldians se distingue por su peculiar pronunciacion de algunas palabras imperiales y por añadir «eh?» al final de comentarios o preguntas. Especies de todo el mundo visitan y se establecen en estas ciudades, incluida una poblacion considerable de elfos oscuros antes de la conquista de Zizo. Como resultado, quiza sean quienes mas toleran a los half-drow, lo que los convierte en objeto de burlas para el resto de Faience.
 		<br><br>
-		La prominencia de Kingsfield se construyó mediante alianzas tácticas y desarrollo de infraestructura impulsado por la industrialización. Gracias a su estrecha cooperación con Heartfelt, los ferrocarriles de Kingsfield recorren todo el oeste del continente, desde el extremo de las tundras de Kingsfield hasta el sur de la península de Vanderlin. Su población, famosa mundialmente por sus artes y cultura, sigue principalmente a Eora y Xylix; los estudiosos de Noc ocupan un cercano tercer lugar.
+		La prominencia de Kingsfield se construyo mediante alianzas tacticas y desarrollo de infraestructura impulsado por la industrializacion. Gracias a su estrecha cooperacion con Heartfelt, los ferrocarriles de Kingsfield recorren todo el oeste del continente, desde el extremo de las tundras de Kingsfield hasta el sur de la peninsula de Vanderlin. Su poblacion, famosa mundialmente por sus artes y cultura, sigue principalmente a Eora y Xylix; los estudiosos de Noc ocupan un cercano tercer lugar.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> EMPIRE OF WINTERMARE </strong></summary>
 		<br>
-		<em>Los Abrazados de Noc, El Imperio Élfico, La Tundra Arcyne</em>
+		<em>Los Abrazados de Noc, El Imperio Elfico, La Tundra Arcyne</em>
 		<br><br>
-		Wintermare es la mayor potencia élfica de Psydonia y, con frecuencia, el único territorio élfico señalado en los mapas humanos. Pese a su tamaño, la mayor parte de su territorio está cubierta por permafrost septentrional inutilizable. Aun así, Wintermare conserva una enorme influencia, y la mayoría de sus ciudades del sur producen magos célebres y eruditos noccianos. Las líneas ferroviarias de Kingsfield recorren las cordilleras meridionales y proporcionan recursos esenciales a una zona fronteriza tensa entre el imperio élfico y Grenzelhoft al sur.
+		Wintermare es la mayor potencia elfica de Psydonia y, con frecuencia, el unico territorio elfico señalado en los mapas humanos. Pese a su tamaño, la mayor parte de su territorio esta cubierta por permafrost septentrional inutilizable. Aun asi, Wintermare conserva una enorme influencia, y la mayoria de sus ciudades del sur producen magos celebres y eruditos noccianos. Las lineas ferroviarias de Kingsfield recorren las cordilleras meridionales y proporcionan recursos esenciales a una zona fronteriza tensa entre el imperio elfico y Grenzelhoft al sur.
 		<br><br>
-		Los asentamientos abandonados y pueblos fantasma de la frontera de Wintermare permanecen como tumbas y monumentos a guerras y genocidios del pasado. Las poblaciones que aún sobreviven están plagadas de armas de guerra desechadas, algunas posiblemente todavía activas. En las que ya no están pobladas... desde el ascenso de Zizo, nadie entra.
+		Los asentamientos abandonados y pueblos fantasma de la frontera de Wintermare permanecen como tumbas y monumentos a guerras y genocidios del pasado. Las poblaciones que aun sobreviven estan plagadas de armas de guerra desechadas, algunas posiblemente todavia activas. En las que ya no estan pobladas... desde el ascenso de Zizo, nadie entra.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> GRENZELHOFT IMPIRATE </strong></summary>
 		<br>
-		<em>El Imperio Negro, El Trono Vacío, Imperio del Tridente</em>
+		<em>El Imperio Negro, El Trono Vacio, Imperio del Tridente</em>
 		<br><br>
-		Grenzelhoft es un estado imperialista forjado en el noreste de Faience mediante agitación política y acción militar. Es conocido principalmente por su peculiar gastronomía, sus mercenarios honorables y leales, y su abrumador monopolio de la pólvora negra. Pese a su cultura ampliamente supremacista humana, los enanos son aceptados y considerados amigos y constructores de la visión de Psydon.
+		Grenzelhoft es un estado imperialista forjado en el noreste de Faience mediante agitacion politica y accion militar. Es conocido principalmente por su peculiar gastronomia, sus mercenarios honorables y leales, y su abrumador monopolio de la polvora negra. Pese a su cultura ampliamente supremacista humana, los enanos son aceptados y considerados amigos y constructores de la vision de Psydon.
 		<br><br>
-		Los Grenzelhoftians asimilan orgullosamente a todos los humanos que caen bajo su dominio, incorporando identidades locales y culturales a su imperio antes de aplastarlas en favor de la propia. Grenzelhoft posee los ejércitos más grandes del mundo y un poder militar extraordinario, cada vez más cuestionado y repudiado a medida que se desesperan por conservarlo. Su historia está definida por cruzadas, genocidio élfico y agresión general en el supuesto nombre de Psydon y de Su regreso al trono. El Psydonismo Ortodoxo es la religión dominante. Críticos y paganos son perseguidos.
+		Los Grenzelhoftians asimilan orgullosamente a todos los humanos que caen bajo su dominio, incorporando identidades locales y culturales a su imperio antes de aplastarlas en favor de la propia. Grenzelhoft posee los ejercitos mas grandes del mundo y un poder militar extraordinario, cada vez mas cuestionado y repudiado a medida que se desesperan por conservarlo. Su historia esta definida por cruzadas, genocidio elfico y agresion general en el supuesto nombre de Psydon y de Su regreso al trono. El Psydonismo Ortodoxo es la religion dominante. Criticos y paganos son perseguidos.
 		<br><br>
-		Su pueblo no recuerda una época en la que el Imperio no estuviera en guerra, y muchos sirven en sus fuerzas militares para escapar de la pobreza extrema de las clases bajas. Un conflicto a escala mundial entre Grenzelhoft y sus vecinos apenas fue evitado a comienzos del siglo XXII por el surgimiento de un nuevo enemigo común: Zizo. Las fuerzas, explosivos y armas de fuego de Grenzelhoft abastecen ahora el frente oriental con apoyo vital bajo el mando explícito de su camarilla de condes y condesas que rehúyen el sol.
+		Su pueblo no recuerda una epoca en la que el Imperio no estuviera en guerra, y muchos sirven en sus fuerzas militares para escapar de la pobreza extrema de las clases bajas. Un conflicto a escala mundial entre Grenzelhoft y sus vecinos apenas fue evitado a comienzos del siglo XXII por el surgimiento de un nuevo enemigo comun: Zizo. Las fuerzas, explosivos y armas de fuego de Grenzelhoft abastecen ahora el frente oriental con apoyo vital bajo el mando explicito de su camarilla de condes y condesas que rehuyen el sol.
 		<br><br>
 
 		<details>
 		<summary><strong> THE ORATORIUM THRONI VACUI </strong> </summary>
 		<br><br>
-		La Inquisición, conocida formalmente como Oratorium Throni Vacui, es una orden de guerreros, investigadores y fieles psydonitas dedicada a limpiar de Psydonia la podredumbre de los dioses inhumen y, finalmente, propiciar el regreso de Psydon.
+		La Inquisicion, conocida formalmente como Oratorium Throni Vacui, es una orden de guerreros, investigadores y fieles psydonitas dedicada a limpiar de Psydonia la podredumbre de los dioses inhumen y, finalmente, propiciar el regreso de Psydon.
 		<br><br>
-		Se divide en tres órdenes principales: la sigilosa y astuta Ordo Venatari, la caballeresca y honorable Ordo Benetarus y la recluida y devota Ordo Sanctae Cruoris. Sus dirigentes son tan poderosos como fieles y, bajo ellos, operando en pequeños equipos, están los Inquisidores, cuyo rango más alto corresponde a los Herrs Prefekt. Los aspirantes a inquisidor son conocidos como Sacrestants y suelen unirse a un Prefekt en parejas o tríos, compitiendo en el Iter Maledictum por el derecho a convertirse en inquisidores plenos.
+		Se divide en tres ordenes principales: la sigilosa y astuta Ordo Venatari, la caballeresca y honorable Ordo Benetarus y la recluida y devota Ordo Sanctae Cruoris. Sus dirigentes son tan poderosos como fieles y, bajo ellos, operando en pequeños equipos, estan los Inquisidores, cuyo rango mas alto corresponde a los Herrs Prefekt. Los aspirantes a inquisidor son conocidos como Sacrestants y suelen unirse a un Prefekt en parejas o trios, compitiendo en el Iter Maledictum por el derecho a convertirse en inquisidores plenos.
 		<br><br>
-		Puedes encontrar más información sobre las divisiones del Oratorium en la wiki: https://wiki.monkestation.com/Oratorium_Throni_Vacui
+		Puedes encontrar mas informacion sobre las divisiones del Oratorium en la wiki: https://wiki.monkestation.com/Oratorium_Throni_Vacui
 		<br><br>
 		</details>
 		<br><br>
@@ -148,11 +148,11 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 		<br>
 		<em>Las Arenas Rojas, Imperio de las Dunas, Mercaderes del Pasha</em>
 		<br><br>
-		Un vasto imperio mercantilista que encontró prosperidad y riqueza mediante la exportación de especias. Zaladin alberga algunas de las mayores maravillas del mundo, aunque los obreros que las construyeron trabajaron bajo fuerza y amenazas, no por pasión. Las ideologías dominantes son el Astratanismo y el Xylixianismo. Los hombres libres xylixianos y los guardianes del orden astratanos chocan con frecuencia en representaciones mortales del conflicto divino. Los Zaladians se han acostumbrado tanto a la posibilidad de una guerra civil que estas escaramuzas son ya otro aspecto de la vida cotidiana.
+		Un vasto imperio mercantilista que encontro prosperidad y riqueza mediante la exportacion de especias. Zaladin alberga algunas de las mayores maravillas del mundo, aunque los obreros que las construyeron trabajaron bajo fuerza y amenazas, no por pasion. Las ideologias dominantes son el Astratanismo y el Xylixianismo. Los hombres libres xylixianos y los guardianes del orden astratanos chocan con frecuencia en representaciones mortales del conflicto divino. Los Zaladians se han acostumbrado tanto a la posibilidad de una guerra civil que estas escaramuzas son ya otro aspecto de la vida cotidiana.
 		<br><br>
-		Zaladin fue conocido como «Zybantine» durante la ocupación de Grenzelhoft. Era un título impuesto, no elegido, y fue rechazado violentamente junto con las cruzadas meridionales de Grenzelhoft por los ejércitos Zalad. En tiempos modernos, el término se considera un insulto grave y discriminatorio.
+		Zaladin fue conocido como «Zybantine» durante la ocupacion de Grenzelhoft. Era un titulo impuesto, no elegido, y fue rechazado violentamente junto con las cruzadas meridionales de Grenzelhoft por los ejercitos Zalad. En tiempos modernos, el termino se considera un insulto grave y discriminatorio.
 		<br><br>
-		Desesperadas tras el fracaso de la conquista, las menguantes fuerzas de Zaladin recurrieron al reclutamiento de prisioneros de guerra, formando los primeros de sus ejércitos de esclavos e incorporando por la fuerza a numerosos Grenzelhoftians capturados. Estas tropas son enviadas a apoyar las líneas del frente de los estados aliados valorianos al norte contra los ejércitos de Zizo en The Barrows. Sin importar su origen, los célebres «Desert Riders» de Zaladin son una fuerza temible, especialmente cuando cabalgan sus pegasos de dos jorobas.
+		Desesperadas tras el fracaso de la conquista, las menguantes fuerzas de Zaladin recurrieron al reclutamiento de prisioneros de guerra, formando los primeros de sus ejercitos de esclavos e incorporando por la fuerza a numerosos Grenzelhoftians capturados. Estas tropas son enviadas a apoyar las lineas del frente de los estados aliados valorianos al norte contra los ejercitos de Zizo en The Barrows. Sin importar su origen, los celebres «Desert Riders» de Zaladin son una fuerza temible, especialmente cuando cabalgan sus pegasos de dos jorobas.
 		<br><br>
 	</details>
 
@@ -166,35 +166,35 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 		<br>
 		<em> Los Estados Libres, Viñedos de Valoria, Los Señores de la Moneda </em>
 		<br><br>
-		Valoria es una tierra de conflicto constante, formada por ciudades-estado enfrentadas con numerosos intereses contrapuestos. Aun así, sienten orgullo por sus tierras y se unen para expulsar al invasor Imperio de Grenzelhoft por un deseo compartido de libertad. Del conflicto nace la innovación: las tierras valorianas se enorgullecen de haber revolucionado las estrategias y posturas del combate con espada. Mayoritariamente seguidores de Ravox, valoran el honor y los duelos como expresión de estatus.
+		Valoria es una tierra de conflicto constante, formada por ciudades-estado enfrentadas con numerosos intereses contrapuestos. Aun asi, sienten orgullo por sus tierras y se unen para expulsar al invasor Imperio de Grenzelhoft por un deseo compartido de libertad. Del conflicto nace la innovacion: las tierras valorianas se enorgullecen de haber revolucionado las estrategias y posturas del combate con espada. Mayoritariamente seguidores de Ravox, valoran el honor y los duelos como expresion de estatus.
 		<br><br>
-		Valoria es famosa por sus exportaciones y comercio de alcohol, solo superada por Zaladin entre los bienes más codiciados.
+		Valoria es famosa por sus exportaciones y comercio de alcohol, solo superada por Zaladin entre los bienes mas codiciados.
 		<br><br>
 	</details>
 	<details>
 		<summary><strong> DWARVEN CONFEDERACY </strong></summary>
 		<br>
-		<em> Las Grandes Huestes, La Confederación Trenzada, Siete Martillos </em>
+		<em> Las Grandes Huestes, La Confederacion Trenzada, Siete Martillos </em>
 		<br><br>
-		Situada en montañas de continentes de toda Psydonia. Su estructura política surge de federaciones compuestas por clanes enanos únicos, con sus propios dirigentes, industrias y culturas. Su mayor asentamiento se encuentra en la gran cordillera al sureste de los desiertos de Zaladin. Los enanos y los imperios humanos mantienen una larga historia de alianza. Aunque los enanos suelen escoger la neutralidad en conflictos entre humanos, para la mayoría de estos un rostro enano es un rostro digno de confianza.
+		Situada en montañas de continentes de toda Psydonia. Su estructura politica surge de federaciones compuestas por clanes enanos unicos, con sus propios dirigentes, industrias y culturas. Su mayor asentamiento se encuentra en la gran cordillera al sureste de los desiertos de Zaladin. Los enanos y los imperios humanos mantienen una larga historia de alianza. Aunque los enanos suelen escoger la neutralidad en conflictos entre humanos, para la mayoria de estos un rostro enano es un rostro digno de confianza.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> OSSLAND </strong></summary>
 		<br>
-		<em> Los Cazadores, El Norte Frío, Aquellos que Portan Calaveras </em>
+		<em> Los Cazadores, El Norte Frio, Aquellos que Portan Calaveras </em>
 		<br><br>
-		Originarios de las tundras heladas del extremo norte, reciben su nombre de los huesos que llegan arrastrados hasta sus costas. Su peculiar culto despierta miradas sospechosas entre la mayoría, pero son conocidos por su feroz lealtad hacia quienes consiguen formar parte de su círculo íntimo.
+		Originarios de las tundras heladas del extremo norte, reciben su nombre de los huesos que llegan arrastrados hasta sus costas. Su peculiar culto despierta miradas sospechosas entre la mayoria, pero son conocidos por su feroz lealtad hacia quienes consiguen formar parte de su circulo intimo.
 		<br><br>
 	</details>
 
 	<details>
-		<summary><strong> ENCLAVES ÉLFICOS </strong></summary>
+		<summary><strong> ENCLAVES ELFICOS </strong></summary>
 		<br>
-		<em> Guardianes de Psydonia, Refugios de la Edad Antigua, Guías Olvidados de la Muerte </em>
+		<em> Guardianes de Psydonia, Refugios de la Edad Antigua, Guias Olvidados de la Muerte </em>
 		<br><br>
-		El declive de su población ha llevado a los elfos a retirarse a comunidades pequeñas y aisladas fuera de Wintermare. Defienden hasta la muerte y sin piedad los hogares que aún conservan entre las maravillas naturales de Psydonia. Se dividen en culturas distintas como bosque, oscuridad, arena, montaña, mar y muchas más. Antaño existió una cultura de elfos de nieve, pero la ascensión de Zizo provocó el genocidio casi total de la tribu. La mayoría de asentamientos élficos ni siquiera son reconocidos, y mucho menos aparecen sus territorios en los mapas humanos modernos.
+		El declive de su poblacion ha llevado a los elfos a retirarse a comunidades pequeñas y aisladas fuera de Wintermare. Defienden hasta la muerte y sin piedad los hogares que aun conservan entre las maravillas naturales de Psydonia. Se dividen en culturas distintas como bosque, oscuridad, arena, montaña, mar y muchas mas. Antaño existio una cultura de elfos de nieve, pero la ascension de Zizo provoco el genocidio casi total de la tribu. La mayoria de asentamientos elficos ni siquiera son reconocidos, y mucho menos aparecen sus territorios en los mapas humanos modernos.
 		<br><br>
 	</details>
 
@@ -203,9 +203,9 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 		<br>
 		<em> Cruzados de Graggar, Graggarspawn, Herederos de Psydonia  </em>
 		<br><br>
-		Fortalezas y poblados espontáneos de origen Crimsonland, establecidos mediante formas de vida nómadas. Estos campamentos aprovechan los recursos naturales y asentamientos cercanos para saquear, conquistar, consumir y luego trasladarse hacia objetivos más prometedores. Son hordas siempre en movimiento de gula y furia que siguen un patrón constante de grandes pérdidas seguidas de recuperación gradual. La mayoría de estas fuerzas todavía se recupera de la Goblin War más reciente.
+		Fortalezas y poblados espontaneos de origen Crimsonland, establecidos mediante formas de vida nomadas. Estos campamentos aprovechan los recursos naturales y asentamientos cercanos para saquear, conquistar, consumir y luego trasladarse hacia objetivos mas prometedores. Son hordas siempre en movimiento de gula y furia que siguen un patron constante de grandes perdidas seguidas de recuperacion gradual. La mayoria de estas fuerzas todavia se recupera de la Goblin War mas reciente.
 		<br><br>
-		Una cultura misógina y autodestructiva llevada al extremo. Los estudiosos afirman que han desarrollado varios términos lingüísticos únicamente para describir la masculinidad. Cualquier persona cuerda pierde el hilo cuando un orco empieza a divagar sobre masculinidad de clase &Sigma; o sobre la última estafa que estén impulsando los Graggarspawn. Como resultado, los registros son escasos.
+		Una cultura misogina y autodestructiva llevada al extremo. Los estudiosos afirman que han desarrollado varios terminos lingüisticos unicamente para describir la masculinidad. Cualquier persona cuerda pierde el hilo cuando un orco empieza a divagar sobre masculinidad de clase &Sigma; o sobre la ultima estafa que esten impulsando los Graggarspawn. Como resultado, los registros son escasos.
 		<br><br>
 	</details>
 	<br><br>
@@ -217,155 +217,155 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 	<br>
 	<strong><span style="font-size:115%"> EL DIOS ANTIGUO </span></strong>
 	<br>
-	<em> El único dios bueno está muerto. A Él corresponde nuestra verdadera adoración. </em>
+	<em> El unico dios bueno esta muerto. A El corresponde nuestra verdadera adoracion. </em>
 	<br><br>
 	<details>
 		<summary><strong> Psydonismo Ortodoxo </strong></summary>
 		<br>
-		La inmensa mayoría de la iglesia de Psydon en Grenzelhoft. Los psydonitas ortodoxos creen que Psydon aún vive, aunque dividido en nueve fragmentos. Pretenden destruir a The Ten para que el verdadero Dios pueda recomponerse, sin importar cuánto tiempo requiera. Sienten un profundo odio hacia Necra por haber descuartizado y traicionado a Psydon.
+		La inmensa mayoria de la iglesia de Psydon en Grenzelhoft. Los psydonitas ortodoxos creen que Psydon aun vive, aunque dividido en nueve fragmentos. Pretenden destruir a The Ten para que el verdadero Dios pueda recomponerse, sin importar cuanto tiempo requiera. Sienten un profundo odio hacia Necra por haber descuartizado y traicionado a Psydon.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Psydonismo Extremista </strong></summary>
 		<br>
-		Una pequeña escisión del Psydonismo Ortodoxo que considera que los nueve fragmentos son mentiras y propaganda, y que Psydon continúa vivo.
+		Una pequeña escision del Psydonismo Ortodoxo que considera que los nueve fragmentos son mentiras y propaganda, y que Psydon continua vivo.
 		<br><br>
 	</details>
 
 	<hr>
-	<strong><span style="font-size:115%"> EL PANTEÓN DIVINO </span></strong>
+	<strong><span style="font-size:115%"> EL PANTEON DIVINO </span></strong>
 	<br>
-	<em> El tiempo de Psydon ha pasado. The Ten son justos. Necra nos guía hacia la salvación. </em>
+	<em> El tiempo de Psydon ha pasado. The Ten son justos. Necra nos guia hacia la salvacion. </em>
 	<br><br>
 
 	<details>
 		<summary><strong> Centrismo Divino </strong></summary>
 		<br>
-		<em>Adoración igualitaria, y quizá confusa, de The Ten.</em>
+		<em>Adoracion igualitaria, y quiza confusa, de The Ten.</em>
 		<br><br>
-		Es una postura común entre jóvenes demasiado pequeños o poco informados para consagrarse realmente a un único patrón. Es deber de la Iglesia guiarlos para que elijan y profesen devoción hacia un solo dios patrono.
+		Es una postura comun entre jovenes demasiado pequeños o poco informados para consagrarse realmente a un unico patron. Es deber de la Iglesia guiarlos para que elijan y profesen devocion hacia un solo dios patrono.
 		<br><br>
-		Que un adulto que no sirve directamente al panteón profese una fe así constituye una afrenta a los dioses. Debe ser avergonzado, educado y conducido hacia la luz de un único patrono. Astrata aparta la mirada ante semejante indecisión.
+		Que un adulto que no sirve directamente al panteon profese una fe asi constituye una afrenta a los dioses. Debe ser avergonzado, educado y conducido hacia la luz de un unico patrono. Astrata aparta la mirada ante semejante indecision.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Astrata </strong></summary>
 		<br>
-		<b><span style="display:block; color:#e5d569; font-size:130%"> "TU DEVOCIÓN NO ES UNA SIMPLE SUGERENCIA. LA EXIJO." </span></b>
+		<b><span style="display:block; color:#e5d569; font-size:130%"> "TU DEVOCION NO ES UNA SIMPLE SUGERENCIA. LA EXIJO." </span></b>
 		<br>
 		<em>La Reina del Sol, La Tirana de The Ten.</em>
 		<br><br>
-		Diosa de la luz y el fuego. Su dominio abarca el sol, la curación y, por encima de todo, la resurrección de los muertos. Fue creada a partir de la cabeza de Psydon.
+		Diosa de la luz y el fuego. Su dominio abarca el sol, la curacion y, por encima de todo, la resurreccion de los muertos. Fue creada a partir de la cabeza de Psydon.
 		<br><br>
-		Astrata gobierna The Ten con puño de hierro. Exige obediencia y respeto mientras conduce los mundos mortal y divino de calamidad en calamidad. Con el paso del tiempo, su control se vuelve cada vez más férreo y su paciencia ante la herejía, más escasa. Simplemente no puede permitirse perder la concentración. Desde la década de 2430, llena los ciclos de oscuridad con llamaradas periódicas que iluminan la noche.
+		Astrata gobierna The Ten con puño de hierro. Exige obediencia y respeto mientras conduce los mundos mortal y divino de calamidad en calamidad. Con el paso del tiempo, su control se vuelve cada vez mas ferreo y su paciencia ante la herejia, mas escasa. Simplemente no puede permitirse perder la concentracion. Desde la decada de 2430, llena los ciclos de oscuridad con llamaradas periodicas que iluminan la noche.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Noc </strong></summary>
 		<br>
-		<i><span style="display:block; color:#82a1d9; font-size:120%">"Los sueños son tu puerta hacia la sabiduría, si eres digno." </span></i>
+		<i><span style="display:block; color:#82a1d9; font-size:120%">"Los sueños son tu puerta hacia la sabiduria, si eres digno." </span></i>
 		<br>
-		<em>El Príncipe de la Luna, El Guardián de la Magia.</em>
+		<em>El Principe de la Luna, El Guardian de la Magia.</em>
 		<br>
-		Dios del conocimiento y la magia. Su dominio abarca la luna, el estudio, el registro y la superación personal. Fue creado a partir del yelmo de plata de Psydon.
+		Dios del conocimiento y la magia. Su dominio abarca la luna, el estudio, el registro y la superacion personal. Fue creado a partir del yelmo de plata de Psydon.
 		<br><br>
-		Noc guía a eruditos, a menudo nobles, mediante una vida de dedicación para dominar las artes de la magia arcyne. Desde la ascensión de Zizo se ha vuelto todavía más estricto respecto a quién considera digno de practicar este don. Es conocido por vestir los atuendos más fabulosos.
+		Noc guia a eruditos, a menudo nobles, mediante una vida de dedicacion para dominar las artes de la magia arcyne. Desde la ascension de Zizo se ha vuelto todavia mas estricto respecto a quien considera digno de practicar este don. Es conocido por vestir los atuendos mas fabulosos.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Abyssor </strong></summary>
 		<br>
-		<span style="display:block; color:#8b2d39; font-size:120%"> "No pesques más profundo de lo que puedas atrapar." </span>
+		<span style="display:block; color:#8b2d39; font-size:120%"> "No pesques mas profundo de lo que puedas atrapar." </span>
 		<br>
-		Dios del mar y las tormentas. Su dominio comprende todo cuanto existe en los océanos, el agua y la sangre. Defiende el mundo natural junto a su hermano, Dendor. Abyssor fue creado a partir de la sangre drenada de Psydon.
+		Dios del mar y las tormentas. Su dominio comprende todo cuanto existe en los oceanos, el agua y la sangre. Defiende el mundo natural junto a su hermano, Dendor. Abyssor fue creado a partir de la sangre drenada de Psydon.
 		<br><br>
-		Con la destrucción del mundo natural, ambos hermanos de la naturaleza fueron llevados a la locura. Mientras Dendor cayó en la demencia, Abyssor encarna la furia del mar. Desdichado aquel que lo ofenda.
+		Con la destruccion del mundo natural, ambos hermanos de la naturaleza fueron llevados a la locura. Mientras Dendor cayo en la demencia, Abyssor encarna la furia del mar. Desdichado aquel que lo ofenda.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Dendor </strong></summary>
 		<br>
-		<span style="display:block; color:#74875a; font-size:120%"> "¿Profecía? Eh... ¿qué profecía? ¿Locura? ¿Desvaríos? ¡Tonterías, todo!" </span>
+		<span style="display:block; color:#74875a; font-size:120%"> "¿Profecia? Eh... ¿que profecia? ¿Locura? ¿Desvarios? ¡Tonterias, todo!" </span>
 		<br>
-		Dios de la naturaleza y las bestias. Su dominio abarca las tierras salvajes de la superficie y toda su flora y fauna. No reclama ninguna forma de vida de Subterra debido a su corrupción infernal. Dendor fue creado a partir de los huesos de Psydon.
+		Dios de la naturaleza y las bestias. Su dominio abarca las tierras salvajes de la superficie y toda su flora y fauna. No reclama ninguna forma de vida de Subterra debido a su corrupcion infernal. Dendor fue creado a partir de los huesos de Psydon.
 		<br><br>
-		Enloquecido por la industrialización del mundo y la destrucción de la naturaleza. Sus seguidores luchan por encontrar significado en sus palabras y por comprender la creciente hostilidad de los claros y bosques antaño prístinos. Guarda un profundo resentimiento hacia Malum por su participación en esa devastación.
+		Enloquecido por la industrializacion del mundo y la destruccion de la naturaleza. Sus seguidores luchan por encontrar significado en sus palabras y por comprender la creciente hostilidad de los claros y bosques antaño pristinos. Guarda un profundo resentimiento hacia Malum por su participacion en esa devastacion.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Ravox </strong></summary>
 		<br>
-		<span style="display:block; color:#774b44; font-size:120%"> "Es un mundo duro ahí fuera, chico. Mantente a salvo. Mantente santo." </span>
+		<span style="display:block; color:#774b44; font-size:120%"> "Es un mundo duro ahi fuera, chico. Mantente a salvo. Mantente santo." </span>
 		<br>
-		Dios de la guerra y la justicia. Su dominio comprende el combate justo y la valentía. Se retiró al inframundo y lo reformó junto a Necra para incluir pruebas de combate y adversidad. Fue creado a partir del mandoble aún ensangrentado de Psydon.
+		Dios de la guerra y la justicia. Su dominio comprende el combate justo y la valentia. Se retiro al inframundo y lo reformo junto a Necra para incluir pruebas de combate y adversidad. Fue creado a partir del mandoble aun ensangrentado de Psydon.
 		<br><br>
-		Sombrío y retraído, Ravox lucha por mantener a sus seguidores alejados del Graggarismo. Como ha descubierto, ni siquiera seguir con vida basta para impedir que sus palabras y su dominio sean retorcidos hasta convertirse en herejía. Los ravoxianos suelen afirmar que su ideología es la más cercana a las enseñanzas de Psydon, aunque pocos, si alguno, las recuerdan con verdadera certeza.
+		Sombrio y retraido, Ravox lucha por mantener a sus seguidores alejados del Graggarismo. Como ha descubierto, ni siquiera seguir con vida basta para impedir que sus palabras y su dominio sean retorcidos hasta convertirse en herejia. Los ravoxianos suelen afirmar que su ideologia es la mas cercana a las enseñanzas de Psydon, aunque pocos, si alguno, las recuerdan con verdadera certeza.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Malum</strong></summary>
 		<br>
-		<b><span style="display:block; color:#d39459; font-size:120%"> "Golpea con PROPÓSITO. ¡Golpea la PIEDRA!" </span></b>
+		<b><span style="display:block; color:#d39459; font-size:120%"> "Golpea con PROPOSITO. ¡Golpea la PIEDRA!" </span></b>
 		<br>
-		Dios del oficio, la forja y el trabajo. Su dominio comprende la arquitectura, la minería y la escultura. Considera a los enanos su pueblo elegido, apoyando y guiando con orgullo sus avances tecnológicos. Fue creado a partir de las manos de Psydon.
+		Dios del oficio, la forja y el trabajo. Su dominio comprende la arquitectura, la mineria y la escultura. Considera a los enanos su pueblo elegido, apoyando y guiando con orgullo sus avances tecnologicos. Fue creado a partir de las manos de Psydon.
 		<br><br>
-		La rivalidad entre Malum y Dendor, definida casi tanto por el conflicto como por la creación, se extiende a lo largo de milenios. Sus disputas se reflejan en el plano mortal mediante enfrentamientos entre elfos y enanos.
+		La rivalidad entre Malum y Dendor, definida casi tanto por el conflicto como por la creacion, se extiende a lo largo de milenios. Sus disputas se reflejan en el plano mortal mediante enfrentamientos entre elfos y enanos.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Eora </strong></summary>
 		<br>
-		<span style="display:block; color:#e4bae6; font-size:115%"> "Siempre te amaré, cariño. Sin importar con qué malhechores decidas juntarte."</span>
+		<span style="display:block; color:#e4bae6; font-size:115%"> "Siempre te amare, cariño. Sin importar con que malhechores decidas juntarte."</span>
 		<br>
-		Diosa del amor, la familia y el arte. Su dominio abarca el matrimonio, la pintura, el canto y la literatura, especialmente el romance. Es considerada la columna vertebral de The Ten, apenas capaz de mantenerlos unidos y oficialmente aliados. Fue creada a partir del corazón de Psydon.
+		Diosa del amor, la familia y el arte. Su dominio abarca el matrimonio, la pintura, el canto y la literatura, especialmente el romance. Es considerada la columna vertebral de The Ten, apenas capaz de mantenerlos unidos y oficialmente aliados. Fue creada a partir del corazon de Psydon.
 		<br><br>
-		Pese al apoyo abierto de Astrata hacia las parejas del mismo sexo, Eora se muestra, como mínimo, reacia. Algunos creen que es odio; otros, celos. Sea como sea, su fallido intento de seducir a Pestra al comienzo de su historia y el Gran Insulto que intercambiaron dejaron una marca duradera en la llamada diosa del amor.
+		Pese al apoyo abierto de Astrata hacia las parejas del mismo sexo, Eora se muestra, como minimo, reacia. Algunos creen que es odio; otros, celos. Sea como sea, su fallido intento de seducir a Pestra al comienzo de su historia y el Gran Insulto que intercambiaron dejaron una marca duradera en la llamada diosa del amor.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Xylix </strong></summary>
 		<br>
-		<i><span style="display:block; color:#dfe6ba; font-size:120%"> "Por favor, cariño. ¡El mundo sieeempre necesita más DRAMA!"</span></i>
+		<i><span style="display:block; color:#dfe6ba; font-size:120%"> "Por favor, cariño. ¡El mundo sieeempre necesita mas DRAMA!"</span></i>
 		<br>
-		Deidad del engaño, la libertad y la inspiración. Su dominio abarca las bromas amistosas, los bardos, el teatro y la interpretación. Se le considera ampliamente sin género, pues ve tales conceptos como simples máscaras con las que interpretar un papel. Fue creado a partir de la lengua de Psydon.
+		Deidad del engaño, la libertad y la inspiracion. Su dominio abarca las bromas amistosas, los bardos, el teatro y la interpretacion. Se le considera ampliamente sin genero, pues ve tales conceptos como simples mascaras con las que interpretar un papel. Fue creado a partir de la lengua de Psydon.
 		<br><br>
-		De todos los miembros de The Ten, Xylix es considerado el mayor «niño problemático». Ya sea discutiendo con Astrata por cuestiones de libertad o causando problemas por puro gusto, es una especie de marginado frente a la naturaleza ordenada del resto, y está perfectamente conforme con ello. Para los xylixianos, una vida aburrida no merece ser vivida.
+		De todos los miembros de The Ten, Xylix es considerado el mayor «niño problematico». Ya sea discutiendo con Astrata por cuestiones de libertad o causando problemas por puro gusto, es una especie de marginado frente a la naturaleza ordenada del resto, y esta perfectamente conforme con ello. Para los xylixianos, una vida aburrida no merece ser vivida.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Pestra </strong></summary>
 		<br>
-		<b><span style="display:block; color:#8aa01c; font-size:120%"> "¿Qué ves? ¿Pérdida? ¿Imperfección? ¿Enfermedad? No. Todo son únicamente los ciclos cambiantes del mundo. Esfuérzate por comprender, necio." </span></b>
+		<b><span style="display:block; color:#8aa01c; font-size:120%"> "¿Que ves? ¿Perdida? ¿Imperfeccion? ¿Enfermedad? No. Todo son unicamente los ciclos cambiantes del mundo. Esfuerzate por comprender, necio." </span></b>
 		<br>
-		Diosa de la enfermedad, la alquimia y la medicina. Su dominio comprende todos los ciclos de cambio, desde la podredumbre y la descomposición hasta el refinamiento y la transformación. El dominio de la alquimia es motivo de disputa entre Pestra y Noc con una frecuencia que a ella le resulta irritante, pero mantiene un control firme sobre él. Su existencia fue un accidente: surgió reptando de los intestinos abandonados de Psydon.
+		Diosa de la enfermedad, la alquimia y la medicina. Su dominio comprende todos los ciclos de cambio, desde la podredumbre y la descomposicion hasta el refinamiento y la transformacion. El dominio de la alquimia es motivo de disputa entre Pestra y Noc con una frecuencia que a ella le resulta irritante, pero mantiene un control firme sobre el. Su existencia fue un accidente: surgio reptando de los intestinos abandonados de Psydon.
 		<br><br>
-		Pese a su cercanía con Astrata, Pestra sigue siendo una especie de marginada entre The Ten por su origen accidental. Su Gran Insulto al rechazar a Eora dañó aún más sus relaciones, aunque Pestra prospera en su aislamiento. Para ella, significa simplemente menos cadenas limitando sus experimentos.
+		Pese a su cercania con Astrata, Pestra sigue siendo una especie de marginada entre The Ten por su origen accidental. Su Gran Insulto al rechazar a Eora daño aun mas sus relaciones, aunque Pestra prospera en su aislamiento. Para ella, significa simplemente menos cadenas limitando sus experimentos.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Necra </strong></summary>
 		<br>
-		<i><span style="display:block; color:#5a53d5; font-size:125%"> "Concédeme serenidad por una vez, criatura. Un breve descanso. Seguramente otra calamidad llegará pronto..." </span></i>
+		<i><span style="display:block; color:#5a53d5; font-size:125%"> "Concedeme serenidad por una vez, criatura. Un breve descanso. Seguramente otra calamidad llegara pronto..." </span></i>
 		<br>
-		Diosa de la muerte y el tiempo. En otro tiempo fue una compañera cercana de Psydon. Fue la primera mortal, la primera en morir y la segunda en alcanzar la divinidad. Su dominio comprende las almas que parten, el inframundo y el ciclo de reencarnación. Creó a los otros Nueve a partir del desmembramiento de Psydon.
+		Diosa de la muerte y el tiempo. En otro tiempo fue una compañera cercana de Psydon. Fue la primera mortal, la primera en morir y la segunda en alcanzar la divinidad. Su dominio comprende las almas que parten, el inframundo y el ciclo de reencarnacion. Creo a los otros Nueve a partir del desmembramiento de Psydon.
 		<br><br>
-		Necra es la figura más controvertida entre The Ten. Los fieles de Psydon la detestan por haberlo descuartizado y por su supuesta traición, mientras que los Tennites de todo el mundo la defienden afirmando que actuó por necesidad. Las circunstancias exactas de la muerte de Psydon no están claras, pero Necra es sin duda responsable, y no hace ningún esfuerzo por ocultarlo.
+		Necra es la figura mas controvertida entre The Ten. Los fieles de Psydon la detestan por haberlo descuartizado y por su supuesta traicion, mientras que los Tennites de todo el mundo la defienden afirmando que actuo por necesidad. Las circunstancias exactas de la muerte de Psydon no estan claras, pero Necra es sin duda responsable, y no hace ningun esfuerzo por ocultarlo.
 		<br><br>
 	</details>
 
 	<hr>
-	<strong><span style="font-size:115%"> EL PANTEÓN INHUMEN </span></strong>
+	<strong><span style="font-size:115%"> EL PANTEON INHUMEN </span></strong>
 	<br>
 	<em> Los mortales tienen derecho a la divinidad. Seguimos el nuevo camino. </em>
 	<br><br>
@@ -373,118 +373,118 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 	<details>
 		<summary><strong> Matthios </strong></summary>
 		<br>
-		<span style="display:block; color:#17181a; font-size:120%"> "Lo que diga no es asunto tuyo, imbécil." </span>
+		<span style="display:block; color:#17181a; font-size:120%"> "Lo que diga no es asunto tuyo, imbecil." </span>
 		<br>
-		Dios del robo, las ganancias mal habidas y los salteadores de caminos. Una figura envuelta en misterio. Aunque se supone que alguna vez fue humano, no existen registros de su apariencia. Sus hazañas se difundieron de boca en boca y mediante rumores, con escasa conexión con una figura tangible. Fue el primero de The Four en ascender.
+		Dios del robo, las ganancias mal habidas y los salteadores de caminos. Una figura envuelta en misterio. Aunque se supone que alguna vez fue humano, no existen registros de su apariencia. Sus hazañas se difundieron de boca en boca y mediante rumores, con escasa conexion con una figura tangible. Fue el primero de The Four en ascender.
 		<br><br>
-		Matthios es utilizado como figura simbólica tanto por bandidos como por campesinos oprimidos. Aunque se desconocen sus creencias exactas, su odio específico hacia la nobleza resulta evidente. Prefiere saciar su codicia insaciable con las arcas de los nobles antes que con las de otros. Es venerado como símbolo de rebelión y de una libertad similar a la de Xylix, resonando entre quienes se sienten abandonados por The Ten.
+		Matthios es utilizado como figura simbolica tanto por bandidos como por campesinos oprimidos. Aunque se desconocen sus creencias exactas, su odio especifico hacia la nobleza resulta evidente. Prefiere saciar su codicia insaciable con las arcas de los nobles antes que con las de otros. Es venerado como simbolo de rebelion y de una libertad similar a la de Xylix, resonando entre quienes se sienten abandonados por The Ten.
 		<br><br>
-		Tras su ascensión, comenzaron a aparecer por todo el mundo entradas a una tumba de otro plano. The Tomb of Matthios prometía riquezas y recompensas, pero también un peligro equivalente. La mayoría de quienes entran solo terminan formando parte de su colección o cayendo ante las bandas errantes de orcos y goblins de su interior.
+		Tras su ascension, comenzaron a aparecer por todo el mundo entradas a una tumba de otro plano. The Tomb of Matthios prometia riquezas y recompensas, pero tambien un peligro equivalente. La mayoria de quienes entran solo terminan formando parte de su coleccion o cayendo ante las bandas errantes de orcos y goblins de su interior.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Baotha </strong></summary>
 		<br>
-		<i><span style="display:block; color:#88528d; font-size:110%"> "RrRíndete a la decadencia, mi dulzura. Es la única escapatoria en este mundo podrido. Estoy aquí para ti, cuando nadie más lo esté." </span></i>
+		<i><span style="display:block; color:#88528d; font-size:110%"> "RrRindete a la decadencia, mi dulzura. Es la unica escapatoria en este mundo podrido. Estoy aqui para ti, cuando nadie mas lo este." </span></i>
 		<br>
-		Diosa de las drogas, la autopreservación y la Alegría sin remordimientos. La primera tiefling; una consorte «exótica» convertida en regente, cuya autocomplacencia llevó a su antes próspero reino directo a la ruina. Predica «¡Alegría a cualquier precio!» a sus seguidores. Fue la segunda de The Four en ascender.
+		Diosa de las drogas, la autopreservacion y la Alegria sin remordimientos. La primera tiefling; una consorte «exotica» convertida en regente, cuya autocomplacencia llevo a su antes prospero reino directo a la ruina. Predica «¡Alegria a cualquier precio!» a sus seguidores. Fue la segunda de The Four en ascender.
 		<br><br>
-		Un seguidor de Baotha es inconfundible. Cabello teñido de colores brillantes para hacer llorar a Eora, jerga ridícula capaz de hacer sangrar los oídos de quien escucha, gustos musicales de otro mundo y, por supuesto, la sobriedad como concepto completamente ajeno. El statu quo existe para ser subvertido. Solo mediante una alegría rebelde merece la pena vivir en este mundo decadente... no tiene sentido intentar salvarlo.
+		Un seguidor de Baotha es inconfundible. Cabello teñido de colores brillantes para hacer llorar a Eora, jerga ridicula capaz de hacer sangrar los oidos de quien escucha, gustos musicales de otro mundo y, por supuesto, la sobriedad como concepto completamente ajeno. El statu quo existe para ser subvertido. Solo mediante una alegria rebelde merece la pena vivir en este mundo decadente... no tiene sentido intentar salvarlo.
 		<br><br>
-		La ascensión de Baotha marcó la expansión de su especie, los tieflings, por toda Psydonia. La anomalía se convirtió de golpe en una especie durante un acontecimiento conocido como The Hellspawn Scourge. Su voz comenzó a susurrar al oído de borrachos, adictos y desesperados, predicando no un futuro mejor, sino un éxtasis con el que distraerse de él.
+		La ascension de Baotha marco la expansion de su especie, los tieflings, por toda Psydonia. La anomalia se convirtio de golpe en una especie durante un acontecimiento conocido como The Hellspawn Scourge. Su voz comenzo a susurrar al oido de borrachos, adictos y desesperados, predicando no un futuro mejor, sino un extasis con el que distraerse de el.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Graggar </strong></summary>
 		<br>
-		<b><span style="display:block; color:#2a7b32; font-size:125%"> "DEVOREN SU CARNE. REGOCÍJENSE EN EL ASESINATO." </span></b>
+		<b><span style="display:block; color:#2a7b32; font-size:125%"> "DEVOREN SU CARNE. REGOCIJENSE EN EL ASESINATO." </span></b>
 		<br>
-		Dios de las bestias antinaturales, el consumo insaciable y el odio desenfrenado. Conocido por fieles y enemigos como la Dark Sini-Star. El primer orco, un señor de la guerra célebre por devorar a sus enemigos caídos en festines rituales. Fue el tercero de The Four en ascender.
+		Dios de las bestias antinaturales, el consumo insaciable y el odio desenfrenado. Conocido por fieles y enemigos como la Dark Sini-Star. El primer orco, un señor de la guerra celebre por devorar a sus enemigos caidos en festines rituales. Fue el tercero de The Four en ascender.
 		<br><br>
-		Los seguidores de Graggar «ponen a las mujeres en su lugar». El Graggarismo es una cultura construida sobre la fuerza, la misoginia y el júbilo por destruir o corromper todo lo existente. Es un hambre adictiva e interminable de carne, devorando hasta que la piel se vuelve verde y brotan colmillos. Resiste esos impulsos tanto como puedas, necio. Lo consumen todo.
+		Los seguidores de Graggar «ponen a las mujeres en su lugar». El Graggarismo es una cultura construida sobre la fuerza, la misoginia y el jubilo por destruir o corromper todo lo existente. Es un hambre adictiva e interminable de carne, devorando hasta que la piel se vuelve verde y brotan colmillos. Resiste esos impulsos tanto como puedas, necio. Lo consumen todo.
 		<br><br>
-		Eora sintió compasión por Graggar mientras ascendía y le ofreció una parte de su propia divinidad en un intento de sanar al hombre que, ingenuamente, creyó poder «arreglar». Graggar fue agradecido, por supuesto: utilizó esa esquirla para crear hordas de goblins y monstruos extraños destinados a aterrorizar Psydonia por toda la eternidad. Hasta hoy sigue riéndose de su ingenuidad.
+		Eora sintio compasion por Graggar mientras ascendia y le ofrecio una parte de su propia divinidad en un intento de sanar al hombre que, ingenuamente, creyo poder «arreglar». Graggar fue agradecido, por supuesto: utilizo esa esquirla para crear hordas de goblins y monstruos extraños destinados a aterrorizar Psydonia por toda la eternidad. Hasta hoy sigue riendose de su ingenuidad.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Zizo </strong></summary>
 		<br>
-		<i><span style="display:block; color:#791f3f; font-size:125%"> "Solo es cuestión de tiempo antes de que este orden caiga. ¿Elegirás el lado corrrecto?" </span></i>
+		<i><span style="display:block; color:#791f3f; font-size:125%"> "Solo es cuestion de tiempo antes de que este orden caiga. ¿Elegiras el lado corrrecto?" </span></i>
 		<br>
-		Diosa de la magia prohibida, la dominación y el poder. Una lich elfa de nieve que alcanzó la divinidad sacrificando a todo su pueblo. Conquistó el imperio de los elfos oscuros y lo transformó violentamente en la entidad malvada que existe hoy. Fue la última mortal en ascender... por ahora.
+		Diosa de la magia prohibida, la dominacion y el poder. Una lich elfa de nieve que alcanzo la divinidad sacrificando a todo su pueblo. Conquisto el imperio de los elfos oscuros y lo transformo violentamente en la entidad malvada que existe hoy. Fue la ultima mortal en ascender... por ahora.
 		<br><br>
-		Los seguidores de Zizo «ponen a los hombres en su lugar». La cultura zizónica es un terror misándrico de puñaladas por la espalda y conspiraciones en las sombras. Nadie está a salvo de la traición cuando esta permite asegurar una posición al servicio de la Reina. Expertos practicantes de fleshcrafting y subversores del Arcyne de Noc, los zizónicos creen que la magia debe estar disponible para cualquiera con la determinación necesaria para levantarse y <em>tomarla.</em>
+		Los seguidores de Zizo «ponen a los hombres en su lugar». La cultura zizonica es un terror misandrico de puñaladas por la espalda y conspiraciones en las sombras. Nadie esta a salvo de la traicion cuando esta permite asegurar una posicion al servicio de la Reina. Expertos practicantes de fleshcrafting y subversores del Arcyne de Noc, los zizonicos creen que la magia debe estar disponible para cualquiera con la determinacion necesaria para levantarse y <em>tomarla.</em>
 		<br><br>
-		Las reglas milenarias de Necra sobre vida y muerte quedaron prácticamente destruidas con la ascensión de Zizo. Los cadáveres ya no permanecían en reposo: tras varios minutos se levantaban de nuevo para caminar y alimentarse de los vivos, propagando su maldición de muerte. La plaga deadite fue la calamidad más devastadora que jamás golpeó Psydonia. La sociedad apenas consiguió adaptarse y seguir adelante con esta nueva realidad y no pudo ayudar al imperio de los elfos oscuros a defenderse de los ejércitos de la reina lich.
+		Las reglas milenarias de Necra sobre vida y muerte quedaron practicamente destruidas con la ascension de Zizo. Los cadaveres ya no permanecian en reposo: tras varios minutos se levantaban de nuevo para caminar y alimentarse de los vivos, propagando su maldicion de muerte. La plaga deadite fue la calamidad mas devastadora que jamas golpeo Psydonia. La sociedad apenas consiguio adaptarse y seguir adelante con esta nueva realidad y no pudo ayudar al imperio de los elfos oscuros a defenderse de los ejercitos de la reina lich.
 		<br><br>
 	</details>
 
 	<hr>
 	<strong><span style="font-size:115%"> DIOSES FALSOS </span></strong>
 	<br>
-	<em> Adoración nacida del rencor. </em>
+	<em> Adoracion nacida del rencor. </em>
 	<br><br>
 
   	<details>
 		<summary><strong> Heartfeltian Horror </strong></summary>
 		<br>
-		Algo se agita en las profundidades bajo la ciudad. Circulan rumores sobre una gran máquina que dirige con propósito a los autómatas rabiosos.
+		Algo se agita en las profundidades bajo la ciudad. Circulan rumores sobre una gran maquina que dirige con proposito a los automatas rabiosos.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Galadros </strong></summary>
 		<br>
-		Un antiguo wyrm de roca, encarnación de codicia y gula, con un hambre insaciable de Lux. Algunos Kobolds lo veneran como el Great Wyrm.
+		Un antiguo wyrm de roca, encarnacion de codicia y gula, con un hambre insaciable de Lux. Algunos Kobolds lo veneran como el Great Wyrm.
 		<br><br>
-		En los confines más remotos de Faience, dentro de una cordillera imposible de atravesar salvo para criaturas subterráneas, generaciones de Kobolds han excavado su fortaleza, Kruskros. Allí permanece enroscado, esperando y hambriento. Su tamaño es tan enorme que nadie puede determinar por completo su verdadera forma. La corta esperanza de vida de los Kobolds limita el conocimiento actual, y muchos de quienes quedan ligados a él jamás abandonan su santuario. Aun así, su nombre aparece en textos que se remontan a la época de Psydon.
+		En los confines mas remotos de Faience, dentro de una cordillera imposible de atravesar salvo para criaturas subterraneas, generaciones de Kobolds han excavado su fortaleza, Kruskros. Alli permanece enroscado, esperando y hambriento. Su tamaño es tan enorme que nadie puede determinar por completo su verdadera forma. La corta esperanza de vida de los Kobolds limita el conocimiento actual, y muchos de quienes quedan ligados a el jamas abandonan su santuario. Aun asi, su nombre aparece en textos que se remontan a la epoca de Psydon.
 		<br><br>
-		Los Kobolds que decepcionan a Galadros son devorados por él o desterrados de Kruskros. Esto último se considera un castigo peor, pues la mayoría ha desarrollado una codependencia que puede tardar el resto de sus vidas en desaparecer. La vergüenza de fallarle al Great Wyrm se considera peor que la muerte.
+		Los Kobolds que decepcionan a Galadros son devorados por el o desterrados de Kruskros. Esto ultimo se considera un castigo peor, pues la mayoria ha desarrollado una codependencia que puede tardar el resto de sus vidas en desaparecer. La vergüenza de fallarle al Great Wyrm se considera peor que la muerte.
 		<br><br>
 	</details>
 
   	<details>
 		<summary><strong> Rashan-Kahl </strong></summary>
 		<br>
-		El dios de dos rostros de la ambición y las cadenas. Venerado principalmente por los rakshari como desafío a The Ten.
+		El dios de dos rostros de la ambicion y las cadenas. Venerado principalmente por los rakshari como desafio a The Ten.
 		<br><br>
-		Rashan representa tanto la creación como la destrucción, la libertad y la esclavitud: una dualidad que refleja la compleja relación de los rakshari con el poder. Los templos de Rashan-Kahl suelen funcionar también como mercados, simbolizando la naturaleza transaccional de la vida.
+		Rashan representa tanto la creacion como la destruccion, la libertad y la esclavitud: una dualidad que refleja la compleja relacion de los rakshari con el poder. Los templos de Rashan-Kahl suelen funcionar tambien como mercados, simbolizando la naturaleza transaccional de la vida.
 		<br><br>
 	</details>
 
 	<hr>
 	<strong><span style="font-size:115%"> ARCHIDIABLOS </span></strong>
 	<br>
-	<em> Quémalo todo hasta los cimientos. </em>
+	<em> Quemalo todo hasta los cimientos. </em>
 	<br><br>
 	<details>
 		<summary><strong> Abraxas </strong></summary>
 		<br>
-		Rey de los infiernos, archidiablo de la sabiduría. Abraxas dirigió el ataque contra Psydon. Es la mente maestra y el estratega de las profundidades. Afirmó que Baotha era su propia descendiente, aunque el rechazo público de ella dejó confundidas a poblaciones de todo el mundo. Solo es cuestión de tiempo antes de que vuelva a atacar la superficie.
+		Rey de los infiernos, archidiablo de la sabiduria. Abraxas dirigio el ataque contra Psydon. Es la mente maestra y el estratega de las profundidades. Afirmo que Baotha era su propia descendiente, aunque el rechazo publico de ella dejo confundidas a poblaciones de todo el mundo. Solo es cuestion de tiempo antes de que vuelva a atacar la superficie.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Abaddon </strong></summary>
 		<br>
-		Archidiablo de la destrucción. Se dice que consume los espíritus de todos aquellos que carecen de alma. De él proviene la asociación de los diablos con el fuego infernal y el azufre. La influencia de Abaddon provoca muerte y devastación desenfrenadas dondequiera que arraigue. No deja nada en pie a su paso.
+		Archidiablo de la destruccion. Se dice que consume los espiritus de todos aquellos que carecen de alma. De el proviene la asociacion de los diablos con el fuego infernal y el azufre. La influencia de Abaddon provoca muerte y devastacion desenfrenadas dondequiera que arraigue. No deja nada en pie a su paso.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Mephistopheles </strong></summary>
 		<br>
-		Archidiablo de la oscuridad y el engaño. Un demonio cambiaformas cuyos pactos siempre terminan mal. Golpeó a Psydon con su hoja corrupta, dejando la herida supurante que provocó la caída del Creador. Mephistopheles deformó a los primeros vampiros, los malditos de Psydon, convirtiéndolos en los monstruos chupasangre conocidos hoy.
+		Archidiablo de la oscuridad y el engaño. Un demonio cambiaformas cuyos pactos siempre terminan mal. Golpeo a Psydon con su hoja corrupta, dejando la herida supurante que provoco la caida del Creador. Mephistopheles deformo a los primeros vampiros, los malditos de Psydon, convirtiendolos en los monstruos chupasangre conocidos hoy.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Leviathan </strong></summary>
 		<br>
-		Archidiablo del vacío y la locura, la gran anguila de sombra. No está claro dónde comienza o termina su cuerpo, y cualquiera que se atreva a mirar las profundidades azul oscuro de los mares de tinta del infierno y contemple sus masas arremolinadas cae en la locura. Los marineros perdidos en el mar juran escuchar su voz cantando junto a la de Abyssor, relatando historias de océanos que se vuelven sangre y los engullen por completo en unas fauces infinitas.
+		Archidiablo del vacio y la locura, la gran anguila de sombra. No esta claro donde comienza o termina su cuerpo, y cualquiera que se atreva a mirar las profundidades azul oscuro de los mares de tinta del infierno y contemple sus masas arremolinadas cae en la locura. Los marineros perdidos en el mar juran escuchar su voz cantando junto a la de Abyssor, relatando historias de oceanos que se vuelven sangre y los engullen por completo en unas fauces infinitas.
 		<br><br>
 	</details>
 	<hr>
@@ -501,50 +501,50 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 		<summary><strong> Humens </strong></summary>
 		<br>
 		La humanidad, creada a imagen de Psydon.
-		Los humanos proceden de una enorme variedad de culturas y etnias repartidas por toda Psydonia, muchas de las cuales han estado históricamente enfrentadas tanto entre sí como con otras especies. Gracias a su tenacidad y enorme población, los humanos superan ampliamente en número al resto. Su predominio provoca que la mayoría de los mapas del mundo representen fronteras y estados humanos por encima de los territorios de otras especies. Los humanos tienden a encontrar fortuna con mayor facilidad y son tan diversos que ningún otro rasgo resulta dominante...
+		Los humanos proceden de una enorme variedad de culturas y etnias repartidas por toda Psydonia, muchas de las cuales han estado historicamente enfrentadas tanto entre si como con otras especies. Gracias a su tenacidad y enorme poblacion, los humanos superan ampliamente en numero al resto. Su predominio provoca que la mayoria de los mapas del mundo representen fronteras y estados humanos por encima de los territorios de otras especies. Los humanos tienden a encontrar fortuna con mayor facilidad y son tan diversos que ningun otro rasgo resulta dominante...
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Elfos </strong></summary>
 		<br>
-		Los elfos, creados por Necra para guiar a la humanidad, se caracterizan por su gran longevidad, baja fertilidad y aptitud mágica derivada de una enorme variedad de culturas tribales. Con la ascensión de Zizo, la cultura de los elfos de nieve fue prácticamente destruida, lo que llevó a las tribus restantes a vivir con miedo y paranoia de sufrir el mismo destino. Muchos elfos buscaron seguridad mezclándose culturalmente y colocándose bajo la protección de sus equivalentes humanos, físicamente más fuertes. Sigue existiendo una enemistad ancestral entre elfos y enanos. Los elfos aún no perdonan a los enanos por destruir su tierra natal y saquear los recursos naturales del antiguo territorio de los elfos de nieve. Para ellos, aquello fue la mayor falta de respeto hacia los caídos.
+		Los elfos, creados por Necra para guiar a la humanidad, se caracterizan por su gran longevidad, baja fertilidad y aptitud magica derivada de una enorme variedad de culturas tribales. Con la ascension de Zizo, la cultura de los elfos de nieve fue practicamente destruida, lo que llevo a las tribus restantes a vivir con miedo y paranoia de sufrir el mismo destino. Muchos elfos buscaron seguridad mezclandose culturalmente y colocandose bajo la proteccion de sus equivalentes humanos, fisicamente mas fuertes. Sigue existiendo una enemistad ancestral entre elfos y enanos. Los elfos aun no perdonan a los enanos por destruir su tierra natal y saquear los recursos naturales del antiguo territorio de los elfos de nieve. Para ellos, aquello fue la mayor falta de respeto hacia los caidos.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Semielfos </strong></summary>
 		<br>
-		Hijos de un elfo y un humano. Los semielfos suelen ser mal vistos por los pueblos más conservadores, aunque conforme disminuyen las tensiones entre especies nacen cada vez más, hasta el punto de que algunos estudiosos temen que algún día resulte imposible distinguir ambas especies. Los semielfos son extraordinariamente diversos, pues combinan cultura humana y élfica. Se considera ampliamente que su cultura es un crisol donde muchas otras se condensan en una sola entidad vibrante. Al vivir demasiado para un humano y demasiado poco para un elfo, suelen agruparse entre ellos. Dependiendo de su herencia, pueden desarrollar rasgos raciales según la fuerza de los genes de su padre o de su madre. Los semielfos suelen tener dificultades para encontrar una identidad propia.
+		Hijos de un elfo y un humano. Los semielfos suelen ser mal vistos por los pueblos mas conservadores, aunque conforme disminuyen las tensiones entre especies nacen cada vez mas, hasta el punto de que algunos estudiosos temen que algun dia resulte imposible distinguir ambas especies. Los semielfos son extraordinariamente diversos, pues combinan cultura humana y elfica. Se considera ampliamente que su cultura es un crisol donde muchas otras se condensan en una sola entidad vibrante. Al vivir demasiado para un humano y demasiado poco para un elfo, suelen agruparse entre ellos. Dependiendo de su herencia, pueden desarrollar rasgos raciales segun la fuerza de los genes de su padre o de su madre. Los semielfos suelen tener dificultades para encontrar una identidad propia.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Enanos </strong></summary>
 		<br>
-		Moldeados por Psydon y Necra, elegidos por Malum. Una especie orgullosa y robusta de baja estatura, los enanos son conocidos por su fuerza marcial y por su firme apego a sus antiguas costumbres de artesanía y honor. Los enanos mantienen una fuerte alianza con la humanidad desde tiempos remotos, tal como Psydon dispuso originalmente. Un enano, al igual que la roca de la que talla su fortaleza, es obstinado y antiguo. Son artesanos, escultores, herreros y mineros venerados. Como dice un viejo refrán ya casi olvidado: «Si quieres que algo se haga bien, pierde dos pies de altura y déjate crecer la barba». Pese al prestigio de su cultura, persiste una enemistad ancestral entre enanos y elfos derivada de antiguas prácticas industriales.
+		Moldeados por Psydon y Necra, elegidos por Malum. Una especie orgullosa y robusta de baja estatura, los enanos son conocidos por su fuerza marcial y por su firme apego a sus antiguas costumbres de artesania y honor. Los enanos mantienen una fuerte alianza con la humanidad desde tiempos remotos, tal como Psydon dispuso originalmente. Un enano, al igual que la roca de la que talla su fortaleza, es obstinado y antiguo. Son artesanos, escultores, herreros y mineros venerados. Como dice un viejo refran ya casi olvidado: «Si quieres que algo se haga bien, pierde dos pies de altura y dejate crecer la barba». Pese al prestigio de su cultura, persiste una enemistad ancestral entre enanos y elfos derivada de antiguas practicas industriales.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Aasimar </strong></summary>
 		<br>
-		Descendientes inmortales esculpidos por los dioses para servir. Los Aasimar que vagan solos por Psydonia suelen haber sido abandonados tras cumplir su propósito. Esta especie es venerada con frecuencia por su origen celestial, pero padece una gran soledad debido a lo escasos que son. Muchos Aasimar detestan la reverencia con la que son recibidos, pues el fracaso o la pérdida de utilidad que condujo a su descarte no es motivo de celebración. Un Aasimar puede ser creado con cualquier cantidad de materiales. Muchos parecen esculturas de piedra o poseen piel de cerámica, aunque por dentro son tan mortales como cualquiera. La mayoría fueron creados para servir a The Ten, y hoy quedan pocos Aasimar psydónicos, si es que queda alguno: cáscaras decrépitas de quienes alguna vez fueron grandes guerreros.
+		Descendientes inmortales esculpidos por los dioses para servir. Los Aasimar que vagan solos por Psydonia suelen haber sido abandonados tras cumplir su proposito. Esta especie es venerada con frecuencia por su origen celestial, pero padece una gran soledad debido a lo escasos que son. Muchos Aasimar detestan la reverencia con la que son recibidos, pues el fracaso o la perdida de utilidad que condujo a su descarte no es motivo de celebracion. Un Aasimar puede ser creado con cualquier cantidad de materiales. Muchos parecen esculturas de piedra o poseen piel de ceramica, aunque por dentro son tan mortales como cualquiera. La mayoria fueron creados para servir a The Ten, y hoy quedan pocos Aasimar psydonicos, si es que queda alguno: cascaras decrepitas de quienes alguna vez fueron grandes guerreros.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Halflings </strong></summary>
 		<br>
-		Halflings, gente alegre, fumadores de pipa: este pueblo recibe muchos nombres y pocos insultos. Son queridos no por su gloria y honor, como los hombres, ni por sus artesanías y fuertes cervezas, como los enanos, ni por la elegante mística de los elfos, sino por sus sonrisas brillantes y la calidez con la que reciben incluso al visitante más grosero. Se cuenta que son una especie más joven que la mayoría. Los registros más antiguos hablan de la unión entre la diminuta hija del alcalde de una aldea situada al este de la capital de Vanderlin, cerca de los pantanos de Daftmarsh, y el heredero de una fortaleza de enanos de Brass construida en las colinas vecinas. Ella no podía ser prometida a otra familia acomodada debido a su baja estatura, pese a ser hermosa. El heredero enano sabía que necesitaba unir a ambas poblaciones para evitar la decadencia de su clan, pues las bestias de los pantanos cercanos y los trolls de las colinas estaban cobrando un alto precio. El comercio de los enanos había disminuido, mientras que los humanos de la aldea seguían vendiendo su codiciada pipeweed y sus vinos de intenso sabor.
+		Halflings, gente alegre, fumadores de pipa: este pueblo recibe muchos nombres y pocos insultos. Son queridos no por su gloria y honor, como los hombres, ni por sus artesanias y fuertes cervezas, como los enanos, ni por la elegante mistica de los elfos, sino por sus sonrisas brillantes y la calidez con la que reciben incluso al visitante mas grosero. Se cuenta que son una especie mas joven que la mayoria. Los registros mas antiguos hablan de la union entre la diminuta hija del alcalde de una aldea situada al este de la capital de Vanderlin, cerca de los pantanos de Daftmarsh, y el heredero de una fortaleza de enanos de Brass construida en las colinas vecinas. Ella no podia ser prometida a otra familia acomodada debido a su baja estatura, pese a ser hermosa. El heredero enano sabia que necesitaba unir a ambas poblaciones para evitar la decadencia de su clan, pues las bestias de los pantanos cercanos y los trolls de las colinas estaban cobrando un alto precio. El comercio de los enanos habia disminuido, mientras que los humanos de la aldea seguian vendiendo su codiciada pipeweed y sus vinos de intenso sabor.
 		<br><br>
-		El esfuerzo tuvo éxito y de aquella unión nació algo que no era exactamente humanidad ni linaje enano. Al principio no tuvo nombre; pasaron décadas y siglos mientras aquel remoto lugar seguía incorporando exclusivamente a este nuevo «pueblo». La ruidosa alegría enana mezclada con la naturaleza industrial de los humanos, sus viñedos y smokeleaves, definió el condado nacido de la unión de ambos grupos. El registro más antiguo e importante lo llama «The Hearth-hills», nombre que pronto se aplicó a las colinas y pequeños valles al este de la capital de Vanderlin y al noreste de Daftmarsh, hasta formar una pequeña región de condados como Leafland, el distrito comercialmente más poderoso de esta nación recluida de gente pequeña. Prácticamente ignoradas por los poderes mayores de Vanderlin, The Hearth-hills desarrollaron una cultura casi completamente ajena al resto del mundo, y muchos siguieron los pasos de la hija del alcalde y de su esposo barbudo. Poco a poco dejaron de ser humanos y enanos quienes habitaban aquellas colinas: eran halflings. Un pueblo resistente, hábil con las plantas, que caminaba descalzo por los dominios de Dendor y cultivaba hojas de westleach y vides de bayas para producir vino mientras el resto de Psydonia se teñía de rojo por la sangre. Ni siquiera la guerra de Zizo los alcanzó; eran un pueblo reservado y pocos sabían siquiera de su existencia hasta que el alcalde más reciente de Leafland, Geldon Winefoot, envió a sus Hill-Trodders con mensajes para establecer comercio con los gobernantes vecinos.
+		El esfuerzo tuvo exito y de aquella union nacio algo que no era exactamente humanidad ni linaje enano. Al principio no tuvo nombre; pasaron decadas y siglos mientras aquel remoto lugar seguia incorporando exclusivamente a este nuevo «pueblo». La ruidosa alegria enana mezclada con la naturaleza industrial de los humanos, sus viñedos y smokeleaves, definio el condado nacido de la union de ambos grupos. El registro mas antiguo e importante lo llama «The Hearth-hills», nombre que pronto se aplico a las colinas y pequeños valles al este de la capital de Vanderlin y al noreste de Daftmarsh, hasta formar una pequeña region de condados como Leafland, el distrito comercialmente mas poderoso de esta nacion recluida de gente pequeña. Practicamente ignoradas por los poderes mayores de Vanderlin, The Hearth-hills desarrollaron una cultura casi completamente ajena al resto del mundo, y muchos siguieron los pasos de la hija del alcalde y de su esposo barbudo. Poco a poco dejaron de ser humanos y enanos quienes habitaban aquellas colinas: eran halflings. Un pueblo resistente, habil con las plantas, que caminaba descalzo por los dominios de Dendor y cultivaba hojas de westleach y vides de bayas para producir vino mientras el resto de Psydonia se teñia de rojo por la sangre. Ni siquiera la guerra de Zizo los alcanzo; eran un pueblo reservado y pocos sabian siquiera de su existencia hasta que el alcalde mas reciente de Leafland, Geldon Winefoot, envio a sus Hill-Trodders con mensajes para establecer comercio con los gobernantes vecinos.
 		<br><br>
-		De este diminuto pueblo se conoce su inclinación a la camaradería sincera y su falta casi total de frugalidad o apego a la moneda, prefiriendo el trueque y los regalos. Habitan pequeñas casas con forma de tienda sobre colinas verdes, con sótanos repletos de los mejores vinos y smokeleaves capaces de rivalizar incluso con productos élficos. En su cultura, la carpintería, la agricultura y la elaboración de vino son las profesiones más nobles; prestan poca atención a quienes se inclinan por la guerra. Aunque estos son necesarios para mantener a los volves lejos de los corrales, son el arte de la comida y fumar en pipa lo que realmente valoran. No son raras las historias de viajeros abrumados por la alegría de este lugar tan extraño, lleno de carcajadas y grandes festivales durante los solsticios. Concursos de banquetes, carreras de sacos y competencias de trepar árboles son sus actividades más populares y, desde que se reveló públicamente su presencia en las colinas de Vanderlin, se han convertido en la principal atracción de su civilización.
+		De este diminuto pueblo se conoce su inclinacion a la camaraderia sincera y su falta casi total de frugalidad o apego a la moneda, prefiriendo el trueque y los regalos. Habitan pequeñas casas con forma de tienda sobre colinas verdes, con sotanos repletos de los mejores vinos y smokeleaves capaces de rivalizar incluso con productos elficos. En su cultura, la carpinteria, la agricultura y la elaboracion de vino son las profesiones mas nobles; prestan poca atencion a quienes se inclinan por la guerra. Aunque estos son necesarios para mantener a los volves lejos de los corrales, son el arte de la comida y fumar en pipa lo que realmente valoran. No son raras las historias de viajeros abrumados por la alegria de este lugar tan extraño, lleno de carcajadas y grandes festivales durante los solsticios. Concursos de banquetes, carreras de sacos y competencias de trepar arboles son sus actividades mas populares y, desde que se revelo publicamente su presencia en las colinas de Vanderlin, se han convertido en la principal atraccion de su civilizacion.
 		<br><br>
-		Fieles a su naturaleza, los Halflings suelen ser conocidos por tener el estómago lleno, cuerpos más bajos que los de los enanos y bastante menos anchos. Suelen tener cabello rizado de tonos cálidos y terrosos, con mechones ásperos sobre el empeine de sus pies proporcionalmente grandes, en lugar de usar zapatos para proteger unas plantas ya endurecidas como cuero. No existe gran magia entre ellos: no fueron bendecidos con la poderosa hechicería de Noc, sino con esas pequeñas magias cotidianas del mundo, pues un halfling puede pasar desapercibido con la misma facilidad con la que sopla el viento.
+		Fieles a su naturaleza, los Halflings suelen ser conocidos por tener el estomago lleno, cuerpos mas bajos que los de los enanos y bastante menos anchos. Suelen tener cabello rizado de tonos calidos y terrosos, con mechones asperos sobre el empeine de sus pies proporcionalmente grandes, en lugar de usar zapatos para proteger unas plantas ya endurecidas como cuero. No existe gran magia entre ellos: no fueron bendecidos con la poderosa hechiceria de Noc, sino con esas pequeñas magias cotidianas del mundo, pues un halfling puede pasar desapercibido con la misma facilidad con la que sopla el viento.
 		<br><br>
-		En verdad, son un hogar cálido en esta era.
+		En verdad, son un hogar calido en esta era.
 		<br><br>
 	</details>
 
@@ -555,39 +555,39 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 	<details>
 		<summary><strong> Tritones </strong></summary>
 		<br>
-		Los Hijos de Abyssor, también conocidos como Tritones o coloquialmente como «Deep Folk», son una extraña especie que vive bajo las olas de Psydonia. Nacidos de criaturas de las profundidades bajo la guía de Abyssor, estos viajeros acuáticos comparten varios rasgos comunes.
+		Los Hijos de Abyssor, tambien conocidos como Tritones o coloquialmente como «Deep Folk», son una extraña especie que vive bajo las olas de Psydonia. Nacidos de criaturas de las profundidades bajo la guia de Abyssor, estos viajeros acuaticos comparten varios rasgos comunes.
 		<br><br>
-		Al igual que otras criaturas que viven bajo la superficie, sus ojos están apagados por falta de uso. Los Tritones sienten dolor al contemplar aquello que la luz directa de la propia Astrata ilumina.
+		Al igual que otras criaturas que viven bajo la superficie, sus ojos estan apagados por falta de uso. Los Tritones sienten dolor al contemplar aquello que la luz directa de la propia Astrata ilumina.
 		<br><br>
-		A diferencia de la mayoría de pueblos de Psydonia, su cultura suele considerarse fría y sombría, con una actitud apática frente a casi cualquier noticia, positiva o negativa. Para ellos, las profundidades de los océanos de Psydonia son frías e implacables. Grandes bestias recorren las aguas y devoran enteros a miembros de su especie... pero la presión aplastante de las profundidades les ha otorgado un carácter resistente y defensa frente a muchas amenazas. Nacidos de Abyssor, sus emociones normalmente serenas pueden convertirse en furia salvaje cuando presencian una injusticia cometida contra los suyos por un ser consciente.
+		A diferencia de la mayoria de pueblos de Psydonia, su cultura suele considerarse fria y sombria, con una actitud apatica frente a casi cualquier noticia, positiva o negativa. Para ellos, las profundidades de los oceanos de Psydonia son frias e implacables. Grandes bestias recorren las aguas y devoran enteros a miembros de su especie... pero la presion aplastante de las profundidades les ha otorgado un caracter resistente y defensa frente a muchas amenazas. Nacidos de Abyssor, sus emociones normalmente serenas pueden convertirse en furia salvaje cuando presencian una injusticia cometida contra los suyos por un ser consciente.
 		 <br><br>
-		 Los Tritones que aparecen en la superficie son socios comerciales muy importantes, mercenarios y, sorprendentemente, académicos. Los mercaderes suelen gastar enormes sumas para llevarlos a bordo de sus navíos comerciales, defenderse de piratas o guiar las embarcaciones a través de tormentas. Sobre o dentro del mar destacan; en tierra, sin embargo, tienen dificultades. Con sus aletas torpes y alargadas, garras largas y afiladas, dientes horribles sin labios y ojos blanquecinos y extraños, parecen poco adecuados para caminar entre otras gentes. Los niños humanos suelen temerlos por su aspecto.
+		 Los Tritones que aparecen en la superficie son socios comerciales muy importantes, mercenarios y, sorprendentemente, academicos. Los mercaderes suelen gastar enormes sumas para llevarlos a bordo de sus navios comerciales, defenderse de piratas o guiar las embarcaciones a traves de tormentas. Sobre o dentro del mar destacan; en tierra, sin embargo, tienen dificultades. Con sus aletas torpes y alargadas, garras largas y afiladas, dientes horribles sin labios y ojos blanquecinos y extraños, parecen poco adecuados para caminar entre otras gentes. Los niños humanos suelen temerlos por su aspecto.
 		 <br><br>
-		 Su especie tampoco está libre de tribalismo. Grandes grupos han abandonado a su padre y se consideran elegidos de Noc. Debido a su pronunciado dimorfismo sexual, semejante al del rape común, los machos de la especie, físicamente más débiles que las hembras, tienen mayor tendencia a perseguir el estudio de la magia.
+		 Su especie tampoco esta libre de tribalismo. Grandes grupos han abandonado a su padre y se consideran elegidos de Noc. Debido a su pronunciado dimorfismo sexual, semejante al del rape comun, los machos de la especie, fisicamente mas debiles que las hembras, tienen mayor tendencia a perseguir el estudio de la magia.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Medicators / "Feculents" </strong></summary>
 		<br>
-		Los Medicators se originaron en los pantanos fétidos y aguas turbias de Isle of Enigma. Históricamente, su especie se concentró en esa región, aunque el Brass Cataclysm provocado por la caída de Heartfelt hizo que grandes cantidades de ellos buscaran refugio en otras tierras. Son una forma de vida consciente relativamente reciente, con registros que solo aparecen después de la ascensión de Zizo.
+		Los Medicators se originaron en los pantanos fetidos y aguas turbias de Isle of Enigma. Historicamente, su especie se concentro en esa region, aunque el Brass Cataclysm provocado por la caida de Heartfelt hizo que grandes cantidades de ellos buscaran refugio en otras tierras. Son una forma de vida consciente relativamente reciente, con registros que solo aparecen despues de la ascension de Zizo.
 		<br><br>
-		De apariencia demacrada, con zonas de piel desnuda cubiertas de plumas y cicatrices de viruela, los Medicators son una horrible fusión de ave y humano, a diferencia de sus adversarias mucho más atractivas, las arpías. Sus largos picos colgantes repiquetean mientras respiran, y otras especies los consideran desagradables en el mejor de los casos y repulsivos en el peor. Pese a ello, sus ojos revelan una enorme inteligencia detrás de su aspecto monstruoso.
+		De apariencia demacrada, con zonas de piel desnuda cubiertas de plumas y cicatrices de viruela, los Medicators son una horrible fusion de ave y humano, a diferencia de sus adversarias mucho mas atractivas, las arpias. Sus largos picos colgantes repiquetean mientras respiran, y otras especies los consideran desagradables en el mejor de los casos y repulsivos en el peor. Pese a ello, sus ojos revelan una enorme inteligencia detras de su aspecto monstruoso.
 		<br><br>
-		Nacidas de carcinógenos, contaminación y residuos mecánicos y biológicos, estas criaturas no siempre fueron conscientes. Su apariencia, origen accidental y enfermedades innatas despertaron la fascinación de Pestra, quien las elevó y les transmitió parte de los rasgos de la diosa serpentina. Los Medicators, como se llamaron a sí mismos, heredaron también los modales médicos —o la ausencia de ellos— de los peores Pestrans. Su cultura concede el mayor valor al descubrimiento y a los avances medicinales, ya sea experimentando para alterar sus propias enfermedades o las de otros. Poco les importa el apodo que otras especies les dieron, «feculents», siempre que nadie cuestione su capacidad médica.
+		Nacidas de carcinogenos, contaminacion y residuos mecanicos y biologicos, estas criaturas no siempre fueron conscientes. Su apariencia, origen accidental y enfermedades innatas despertaron la fascinacion de Pestra, quien las elevo y les transmitio parte de los rasgos de la diosa serpentina. Los Medicators, como se llamaron a si mismos, heredaron tambien los modales medicos —o la ausencia de ellos— de los peores Pestrans. Su cultura concede el mayor valor al descubrimiento y a los avances medicinales, ya sea experimentando para alterar sus propias enfermedades o las de otros. Poco les importa el apodo que otras especies les dieron, «feculents», siempre que nadie cuestione su capacidad medica.
 		<br><br>
-		Medicators y arpías suelen entrar en conflicto, reflejando las disputas entre sus patronos, sean o no conscientes de su fe.
+		Medicators y arpias suelen entrar en conflicto, reflejando las disputas entre sus patronos, sean o no conscientes de su fe.
 		<br><br>
 	</details>
 
 	<details>
-		<summary><strong> Arpías </strong></summary>
+		<summary><strong> Arpias </strong></summary>
 		<br>
-		Las arpías, conocidas de manera menos ceremoniosa como «urracas», recuerdan a primera vista a los despreciados hollowkin. Sería razonable pensar que su naturaleza es similar y, para desgracia de las arpías, no sería del todo incorrecto. Eora las elevó y las reconectó con la divinidad tras desarrollar una cultura de música y canto que llamó la atención de la diosa. Sus canciones y voces pueden ser propias o imitaciones orgullosas, realizadas con precisión antinatural, de voces escuchadas anteriormente.
+		Las arpias, conocidas de manera menos ceremoniosa como «urracas», recuerdan a primera vista a los despreciados hollowkin. Seria razonable pensar que su naturaleza es similar y, para desgracia de las arpias, no seria del todo incorrecto. Eora las elevo y las reconecto con la divinidad tras desarrollar una cultura de musica y canto que llamo la atencion de la diosa. Sus canciones y voces pueden ser propias o imitaciones orgullosas, realizadas con precision antinatural, de voces escuchadas anteriormente.
 		<br><br>
-		Aunque las arpías pueden volar, su libertad sigue limitada por la corrupción del fleshcrafting. La auténtica libertad del cielo abierto todavía les resulta extraña. Suelen vivir y reunirse en colonias sobre las copas de grandes bosques de secuoyas y en acantilados cercanos. Debido a las limitaciones de su vuelo, deben aprovechar corrientes ascendentes y la proximidad de grandes objetos o estructuras para aumentar su alcance y realizar sus danzas aéreas. Sus cantos serenos y música dichosa se escuchan muy por debajo, guiando tanto a viajeros como a ladrones hacia descanso... o tesoros. Por mucha gracia divina que hayan recuperado, estas «urracas» se ganan su apodo por una codicia matthiosita instintiva y amor por todo cuanto brilla. Sin embargo, si alguien logra superar la desconfianza y pagarles bien, pocas criaturas igualan a una arpía como mensajera.
+		Aunque las arpias pueden volar, su libertad sigue limitada por la corrupcion del fleshcrafting. La autentica libertad del cielo abierto todavia les resulta extraña. Suelen vivir y reunirse en colonias sobre las copas de grandes bosques de secuoyas y en acantilados cercanos. Debido a las limitaciones de su vuelo, deben aprovechar corrientes ascendentes y la proximidad de grandes objetos o estructuras para aumentar su alcance y realizar sus danzas aereas. Sus cantos serenos y musica dichosa se escuchan muy por debajo, guiando tanto a viajeros como a ladrones hacia descanso... o tesoros. Por mucha gracia divina que hayan recuperado, estas «urracas» se ganan su apodo por una codicia matthiosita instintiva y amor por todo cuanto brilla. Sin embargo, si alguien logra superar la desconfianza y pagarles bien, pocas criaturas igualan a una arpia como mensajera.
 		<br><br>
-		Arpías y Feculents suelen entrar en conflicto, reflejando las disputas de sus patronos, sean o no conscientes de su fe.
+		Arpias y Feculents suelen entrar en conflicto, reflejando las disputas de sus patronos, sean o no conscientes de su fe.
 		<br><br>
 	</details>
 
@@ -598,58 +598,58 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 	<details>
 		<summary><strong> Tieflings </strong></summary>
 		<br>
-		También conocidos como Infernal-Spawn, Hell-Bloods, Surface-Devils y, de forma quizá más humorística, <em>thief</em>-lings. Dependiendo de la región, su trato oscila entre el rechazo y la desconfianza. Tenderos y mercaderes vigilan con atención a cualquier tiefling que pase cerca. El resentimiento se alimenta a sí mismo, aumentando a su vez la ira y los robos de tieflings contra otras especies. Muchos terminan buscando una vida solitaria y nómada, reuniéndose en pequeños grupos lejos de las miradas ajenas. También suelen ser extremadamente perceptivos y paranoicos, pues la suerte rara vez está de su lado.
+		Tambien conocidos como Infernal-Spawn, Hell-Bloods, Surface-Devils y, de forma quiza mas humoristica, <em>thief</em>-lings. Dependiendo de la region, su trato oscila entre el rechazo y la desconfianza. Tenderos y mercaderes vigilan con atencion a cualquier tiefling que pase cerca. El resentimiento se alimenta a si mismo, aumentando a su vez la ira y los robos de tieflings contra otras especies. Muchos terminan buscando una vida solitaria y nomada, reuniendose en pequeños grupos lejos de las miradas ajenas. Tambien suelen ser extremadamente perceptivos y paranoicos, pues la suerte rara vez esta de su lado.
 		<br><br>
-		Los tieflings comenzaron a aparecer por toda Psydonia después de la ascensión de Baotha durante el siglo XXI y fueron expulsados en masa mientras el mundo intentaba adaptarse. Con frecuencia se cree erróneamente que están emparentados con ella.
+		Los tieflings comenzaron a aparecer por toda Psydonia despues de la ascension de Baotha durante el siglo XXI y fueron expulsados en masa mientras el mundo intentaba adaptarse. Con frecuencia se cree erroneamente que estan emparentados con ella.
 		<br><br>
-		Los tieflings no pueden reproducirse con mortales y, por tanto, son descendientes de diablos, demonios u otros tieflings. Pueden desarrollar toda clase de rasgos infernales: una amplia variedad de cuernos, posibles pezuñas, espinas extrañas, protuberancias o escamas. Las escamas situadas en lugares poco habituales, huesos huecos y otras anomalías constantes de su biología los vuelven considerablemente frágiles. No es raro que un tiefling resulte desagradable a la vista de la gente común. Para empeorar las cosas, sus progenitores infernales parecen haberlos condenado a una vida de mala fortuna, aunque quizá su inmunidad al fuego les abra nuevas oportunidades...
+		Los tieflings no pueden reproducirse con mortales y, por tanto, son descendientes de diablos, demonios u otros tieflings. Pueden desarrollar toda clase de rasgos infernales: una amplia variedad de cuernos, posibles pezuñas, espinas extrañas, protuberancias o escamas. Las escamas situadas en lugares poco habituales, huesos huecos y otras anomalias constantes de su biologia los vuelven considerablemente fragiles. No es raro que un tiefling resulte desagradable a la vista de la gente comun. Para empeorar las cosas, sus progenitores infernales parecen haberlos condenado a una vida de mala fortuna, aunque quiza su inmunidad al fuego les abra nuevas oportunidades...
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Semielfos oscuros / "Half-drow" </strong></summary>
 		<br>
-		Hijos de un elfo oscuro y un humano. La distinción entre semielfos y «half-drow» lleva siglos siendo objeto de debate. Aunque físicamente y en longevidad son similares a sus primos no drow, su origen hace que sufran una discriminación semejante a la dirigida contra su lado élfico. Se sabe de grupos de semielfos y half-drow que se reúnen y se consideran una sola especie. Según algunos estudiosos académicos radicales, quizá sean realmente la misma especie; sin embargo, la población de Psydonia en general no comparte esa opinión.
+		Hijos de un elfo oscuro y un humano. La distincion entre semielfos y «half-drow» lleva siglos siendo objeto de debate. Aunque fisicamente y en longevidad son similares a sus primos no drow, su origen hace que sufran una discriminacion semejante a la dirigida contra su lado elfico. Se sabe de grupos de semielfos y half-drow que se reunen y se consideran una sola especie. Segun algunos estudiosos academicos radicales, quiza sean realmente la misma especie; sin embargo, la poblacion de Psydonia en general no comparte esa opinion.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Elfos oscuros </strong></summary>
 		<br>
-		Los conquistados de Zizo. Estos elfos proceden de una extensión subterránea de imperios renacidos. Viven bajo una dura sociedad matriarcal sometida a la atenta mirada de Zizo, y la inmensa mayoría espera alcanzar algún día para sí misma semejante poder y dominación.
+		Los conquistados de Zizo. Estos elfos proceden de una extension subterranea de imperios renacidos. Viven bajo una dura sociedad matriarcal sometida a la atenta mirada de Zizo, y la inmensa mayoria espera alcanzar algun dia para si misma semejante poder y dominacion.
 		<br><br>
-		Los descendientes de Zizo, los últimos elfos de nieve, se integraron —con entusiasmo o resentimiento— en la cultura de los elfos oscuros que su abuela había forjado mediante la conquista.
+		Los descendientes de Zizo, los ultimos elfos de nieve, se integraron —con entusiasmo o resentimiento— en la cultura de los elfos oscuros que su abuela habia forjado mediante la conquista.
 		<br><br>
-		Para la mayoría de Psydonia, un elfo oscuro no es más que un sirviente de Zizo esperando la oportunidad de traicionar a alguien para obtener poder, por lo que la mayoría permanece dentro de sus seguras fortalezas subterráneas. Quienes alcanzan la superficie rara vez reciben un trato justo. Los elfos oscuros de más de 500 años quizá recuerden el antiguo imperio ravoxiano, aunque quedan pocos que no hayan sido asesinados o convertidos.
+		Para la mayoria de Psydonia, un elfo oscuro no es mas que un sirviente de Zizo esperando la oportunidad de traicionar a alguien para obtener poder, por lo que la mayoria permanece dentro de sus seguras fortalezas subterraneas. Quienes alcanzan la superficie rara vez reciben un trato justo. Los elfos oscuros de mas de 500 años quiza recuerden el antiguo imperio ravoxiano, aunque quedan pocos que no hayan sido asesinados o convertidos.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Semiorcos </strong></summary>
 		<br>
-		Los bastardos de Graggar. Los semiorcos son descendientes de orcos y otra especie, de otros semiorcos, o incluso individuos de otra especie que consumieron suficiente carne de sus semejantes durante su camino hacia la transformación en orco. A simple vista, un forastero no puede saber si un semiorco nació de su herencia o del canibalismo, lo que provoca un fuerte rechazo social.
+		Los bastardos de Graggar. Los semiorcos son descendientes de orcos y otra especie, de otros semiorcos, o incluso individuos de otra especie que consumieron suficiente carne de sus semejantes durante su camino hacia la transformacion en orco. A simple vista, un forastero no puede saber si un semiorco nacio de su herencia o del canibalismo, lo que provoca un fuerte rechazo social.
 		<br><br>
-		Debido a que uno de sus progenitores suele negarse a criarlos y el otro con frecuencia los rechaza o ataca, la mayoría de semiorcos crece como huérfana. El rechazo del resto de la sociedad limita su desarrollo y a menudo los vuelve hostiles y propensos a la violencia. Por ello, muchos asumen lo peor de ellos y creen que están condenados a seguir los pasos de su progenitor orco, devorando carne de sus semejantes.
+		Debido a que uno de sus progenitores suele negarse a criarlos y el otro con frecuencia los rechaza o ataca, la mayoria de semiorcos crece como huerfana. El rechazo del resto de la sociedad limita su desarrollo y a menudo los vuelve hostiles y propensos a la violencia. Por ello, muchos asumen lo peor de ellos y creen que estan condenados a seguir los pasos de su progenitor orco, devorando carne de sus semejantes.
 		<br><br>
-		Un semiorco puede presentar rasgos orcos, como colmillos y fuerza natural. Muchos resultan casi indistinguibles a simple vista de un orco completo, salvo por el dominio de sí mismos que todavía conservan.
+		Un semiorco puede presentar rasgos orcos, como colmillos y fuerza natural. Muchos resultan casi indistinguibles a simple vista de un orco completo, salvo por el dominio de si mismos que todavia conservan.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Hollowkin </strong></summary>
 		<br>
-		Los Hollowkin tienen vidas cortas, una enorme diversidad y un odio insaciable hacia los elfos oscuros. Este odio nace de su antiguo vecino y rival político: los reinos zizónicos de elfos oscuros de Subterra. Dendor y Xylix actúan como «deidades patronas» de esta especie pese a no haber participado en su creación. Los Hollowkin consideran la libertad de máxima importancia debido a la tendencia esclavista de sus vecinos y a su propia historia de sometimiento. También suelen adorar, a menudo erróneamente, a Dendor por el don de su naturaleza animal, creyéndolo responsable de sus rasgos, talentos e instintos.
+		Los Hollowkin tienen vidas cortas, una enorme diversidad y un odio insaciable hacia los elfos oscuros. Este odio nace de su antiguo vecino y rival politico: los reinos zizonicos de elfos oscuros de Subterra. Dendor y Xylix actuan como «deidades patronas» de esta especie pese a no haber participado en su creacion. Los Hollowkin consideran la libertad de maxima importancia debido a la tendencia esclavista de sus vecinos y a su propia historia de sometimiento. Tambien suelen adorar, a menudo erroneamente, a Dendor por el don de su naturaleza animal, creyendolo responsable de sus rasgos, talentos e instintos.
 		<br><br>
-		Su verdadero origen es mucho más oscuro. Los Hollowkin son producto de la inventiva y el fleshcrafting de los elfos oscuros. Su creación es una simple historia de malicia y codicia: homúnculos esclavos híbridos de animales conscientes, personas convertidas en productos que podían venderse a las grandes casas de la moderna Subterra zizónica. Con el paso de los siglos, la verdadera naturaleza de su existencia se perdió entre los Hollowkin. Los elfos oscuros, por supuesto, todavía la recuerdan y se burlan cruelmente de sus creaciones desde las profundidades de sus cuevas, afirmando que no son más que animales o mascotas. Los Hollowkin reaccionan violentamente ante cualquier intento de opresión por parte de los elfos oscuros, provocando conflictos por toda Psydonia.
+		Su verdadero origen es mucho mas oscuro. Los Hollowkin son producto de la inventiva y el fleshcrafting de los elfos oscuros. Su creacion es una simple historia de malicia y codicia: homunculos esclavos hibridos de animales conscientes, personas convertidas en productos que podian venderse a las grandes casas de la moderna Subterra zizonica. Con el paso de los siglos, la verdadera naturaleza de su existencia se perdio entre los Hollowkin. Los elfos oscuros, por supuesto, todavia la recuerdan y se burlan cruelmente de sus creaciones desde las profundidades de sus cuevas, afirmando que no son mas que animales o mascotas. Los Hollowkin reaccionan violentamente ante cualquier intento de opresion por parte de los elfos oscuros, provocando conflictos por toda Psydonia.
 		<br><br>
-		 Para un observador neutral, los Hollowkin aparecen con frecuencia entre bandas de bandidos, trabajando abiertamente con Agentes de Matthios y mezclando el concepto de libertad representado por ambas deidades. También circulan, por supuesto, viejas historias que afirman que los Hollowkin provocan infestaciones de hombres lobo. La gente común desconoce si esto es cierto, pero quienes conocen las horribles magias empleadas por los elfos oscuros no pueden evitar imaginar lo peor.
+		 Para un observador neutral, los Hollowkin aparecen con frecuencia entre bandas de bandidos, trabajando abiertamente con Agentes de Matthios y mezclando el concepto de libertad representado por ambas deidades. Tambien circulan, por supuesto, viejas historias que afirman que los Hollowkin provocan infestaciones de hombres lobo. La gente comun desconoce si esto es cierto, pero quienes conocen las horribles magias empleadas por los elfos oscuros no pueden evitar imaginar lo peor.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Kobolds </strong></summary>
 		<br>
-		Se cree que los Kobolds surgieron de las húmedas profundidades de Subterra. Son una especie de robustos hombres lagarto marineros y habitantes de montaña, famosos por su habilidad fabricando trampas, su costumbre de acumular enormes cantidades de baratijas y artefactos y su oportunismo. Suelen servir a grandes bestias como dragones y gigantes, llenando sus guaridas de trampas y utilizando tácticas de grupo para eliminar tanto a aventureros ambiciosos como a ladrones. Sin su manada, sin embargo, los Kobolds suelen ser débiles y mueren con facilidad, pues carecen notablemente de la constitución, fuerza y resistencia que otras especies poseen.
+		Se cree que los Kobolds surgieron de las humedas profundidades de Subterra. Son una especie de robustos hombres lagarto marineros y habitantes de montaña, famosos por su habilidad fabricando trampas, su costumbre de acumular enormes cantidades de baratijas y artefactos y su oportunismo. Suelen servir a grandes bestias como dragones y gigantes, llenando sus guaridas de trampas y utilizando tacticas de grupo para eliminar tanto a aventureros ambiciosos como a ladrones. Sin su manada, sin embargo, los Kobolds suelen ser debiles y mueren con facilidad, pues carecen notablemente de la constitucion, fuerza y resistencia que otras especies poseen.
 		<br><br>
 	</details>
 
@@ -659,96 +659,96 @@ Aunque no es lectura obligatoria, quienes ocupen roles de liderazgo pueden encon
 <details>
 	<summary><strong><span style="font-size:130%"> HISTORIA RECIENTE: ACONTECIMIENTOS IMPORTANTES </span></strong></summary>
 	<br>
-	Aunque la historia reciente del mundo es interesante y puede influir en muchos personajes y escenarios, mientras lees pregúntate: «¿Mi personaje sabría realmente esto?»
+	Aunque la historia reciente del mundo es interesante y puede influir en muchos personajes y escenarios, mientras lees preguntate: «¿Mi personaje sabria realmente esto?»
 	No todos los personajes son expertos en historia. Tenlo en cuenta.
 	<br><br>
 	<details>
-		<summary><strong> El Último Gran Golpe de Matthios - 2001 </strong></summary>
+		<summary><strong> El Ultimo Gran Golpe de Matthios - 2001 </strong></summary>
 		<br>
-		Durante una mañana que de otro modo habría sido tranquila, los habitantes de Heartfelt despertaron entre alarmas y pánico económico. La noche anterior había ocurrido un gran robo: innumerables artefactos de valor incalculable, gemas e incluso registros de deuda habían desaparecido de bóvedas de toda la ciudad. Toda la reserva había desaparecido, dejando únicamente las monedas ensangrentadas características de Matthios y ninguna otra señal visible de entrada. Como la mayoría de robos de la época, fue atribuido al misterioso ladrón Matthios pese a los crecientes rumores sobre su muerte. La economía mundial sufrió debido al repentino colapso de este centro comercial. Heartfelt tardó cinco décadas en recuperarse.
+		Durante una mañana que de otro modo habria sido tranquila, los habitantes de Heartfelt despertaron entre alarmas y panico economico. La noche anterior habia ocurrido un gran robo: innumerables artefactos de valor incalculable, gemas e incluso registros de deuda habian desaparecido de bovedas de toda la ciudad. Toda la reserva habia desaparecido, dejando unicamente las monedas ensangrentadas caracteristicas de Matthios y ninguna otra señal visible de entrada. Como la mayoria de robos de la epoca, fue atribuido al misterioso ladron Matthios pese a los crecientes rumores sobre su muerte. La economia mundial sufrio debido al repentino colapso de este centro comercial. Heartfelt tardo cinco decadas en recuperarse.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> El Descubrimiento de la Tumba - 2003 </strong></summary>
 		<br>
-		Un enano de Vanderlin excavó profundamente bajo el asentamiento en crecimiento y encontró ladrillos sólidos en lugar de piedra o metal. Había descubierto la tumba del fallecido Matthios, de quien se rumoreaba que llevaba décadas enterrado... pero no había cadáver en su interior. El contenido de la tumba cambiaba y rebosaba de su poder y riqueza, aunque escondía un peligro equivalente. Aventureros de todas las tierras acudieron y aumentaron todavía más la influencia y el poder de Vanderlin. Pronto comenzaron a aparecer nuevas entradas por todo el continente, cerca de grandes asentamientos.
+		Un enano de Vanderlin excavo profundamente bajo el asentamiento en crecimiento y encontro ladrillos solidos en lugar de piedra o metal. Habia descubierto la tumba del fallecido Matthios, de quien se rumoreaba que llevaba decadas enterrado... pero no habia cadaver en su interior. El contenido de la tumba cambiaba y rebosaba de su poder y riqueza, aunque escondia un peligro equivalente. Aventureros de todas las tierras acudieron y aumentaron todavia mas la influencia y el poder de Vanderlin. Pronto comenzaron a aparecer nuevas entradas por todo el continente, cerca de grandes asentamientos.
 		<br><br>
 	</details>
 
 	<details>
-		<summary><strong> La Caída de Baotha - 2019 </strong></summary>
+		<summary><strong> La Caida de Baotha - 2019 </strong></summary>
 		<br>
-		«La Reina Demonio», «El Príncipe del Vino», «Consorte de la Desgracia». Sin importar qué título despectivo se escogiera, la condición de consorte de Baotha y su posterior regencia fueron blanco constante de desprecio y comentarios venenosos entre la nobleza. Sus gustos y exigencias por sustancias cada vez más exóticas condenaban su reino día tras día, hasta que las antaño prósperas costas azules no conservaron más que recuerdos de lucha y sufrimiento.
+		«La Reina Demonio», «El Principe del Vino», «Consorte de la Desgracia». Sin importar que titulo despectivo se escogiera, la condicion de consorte de Baotha y su posterior regencia fueron blanco constante de desprecio y comentarios venenosos entre la nobleza. Sus gustos y exigencias por sustancias cada vez mas exoticas condenaban su reino dia tras dia, hasta que las antaño prosperas costas azules no conservaron mas que recuerdos de lucha y sufrimiento.
 		<br><br>
-		Nobleza y campesinado celebraron por igual cuando se difundió la noticia de su muerte. Sobredosis de Lux, decían. Una plaga parecía haberse levantado de aquellas tierras... o eso creían. Sus oscuros susurros comenzaron a alcanzar cada vez más oídos: borrachos, miserables y desesperados, ofreciéndoles una falsa salvación basada en escapar de la realidad. Para empeorar las cosas, la ascensión de Su Gracia, la Primera Tiefling, marcó la aparición de todavía más miembros de su especie por toda Psydonia.
+		Nobleza y campesinado celebraron por igual cuando se difundio la noticia de su muerte. Sobredosis de Lux, decian. Una plaga parecia haberse levantado de aquellas tierras... o eso creian. Sus oscuros susurros comenzaron a alcanzar cada vez mas oidos: borrachos, miserables y desesperados, ofreciendoles una falsa salvacion basada en escapar de la realidad. Para empeorar las cosas, la ascension de Su Gracia, la Primera Tiefling, marco la aparicion de todavia mas miembros de su especie por toda Psydonia.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> The Hellspawn Scourge - 2020 </strong></summary>
 		<br>
-		Lo que al principio pareció otra invasión proveniente del infierno acabó considerándose una plaga, una molestia: el surgimiento de una nueva especie, los tieflings. Padres de toda Psydonia dieron a luz, incubaron o simplemente encontraron la inesperada sorpresa de hijos tocados por el infierno que compartían la mitad de sus rasgos. Casi nadie podía explicarlo. Muchos culparon a la influencia de Baotha, recién ascendida, aunque la nueva diosa insistía en negar que aquello tuviera relación alguna con su vida.
+		Lo que al principio parecio otra invasion proveniente del infierno acabo considerandose una plaga, una molestia: el surgimiento de una nueva especie, los tieflings. Padres de toda Psydonia dieron a luz, incubaron o simplemente encontraron la inesperada sorpresa de hijos tocados por el infierno que compartian la mitad de sus rasgos. Casi nadie podia explicarlo. Muchos culparon a la influencia de Baotha, recien ascendida, aunque la nueva diosa insistia en negar que aquello tuviera relacion alguna con su vida.
 		<br><br>
-		Tras ser rechazados y expulsados de nación tras nación, los tieflings desarrollaron una cultura basada en la vida nómada. Con el paso del tiempo, algunos incluso lograron integrarse en los estratos más bajos de la sociedad humana. Sin embargo, toda la nobleza coincidía en algo: ningún tiefling volvería a presidir una corte, y mucho menos recibiría la gracia de la sangre noble divina.
+		Tras ser rechazados y expulsados de nacion tras nacion, los tieflings desarrollaron una cultura basada en la vida nomada. Con el paso del tiempo, algunos incluso lograron integrarse en los estratos mas bajos de la sociedad humana. Sin embargo, toda la nobleza coincidia en algo: ningun tiefling volveria a presidir una corte, y mucho menos recibiria la gracia de la sangre noble divina.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Graggar, El Primer Pielverde - 2053 </strong></summary>
 		<br>
-		Mientras bribones y bandidos descendían sobre las ruinas de las tierras de Baotha, un señor de la guerra adquirió rápidamente fama y poder por encima del resto. Graggar, temido por seguidores y enemigos por su costumbre de devorar la carne de sus oponentes caídos, abrió un camino de destrucción por las estepas y bosques al norte de Zaladin, saqueando, destruyendo y consumiendo en una sucesión interminable de devastación y gula. Nadie se sorprendió cuando su exterior se volvió tan monstruoso como su interior. Festín tras festín, conquista tras conquista, el primer orco se dio a conocer ante todos, especialmente ante la Iglesia, que terminaría respondiendo a su violencia desenfrenada.
+		Mientras bribones y bandidos descendian sobre las ruinas de las tierras de Baotha, un señor de la guerra adquirio rapidamente fama y poder por encima del resto. Graggar, temido por seguidores y enemigos por su costumbre de devorar la carne de sus oponentes caidos, abrio un camino de destruccion por las estepas y bosques al norte de Zaladin, saqueando, destruyendo y consumiendo en una sucesion interminable de devastacion y gula. Nadie se sorprendio cuando su exterior se volvio tan monstruoso como su interior. Festin tras festin, conquista tras conquista, el primer orco se dio a conocer ante todos, especialmente ante la Iglesia, que terminaria respondiendo a su violencia desenfrenada.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> La Tragedia de Santa Altierre - 2053 </strong></summary>
 		<br>
-		Poco después de la ascensión de Baotha, la Iglesia de The Ten logró determinar los requisitos de la Ascensión Mortal e identificó al señor de la guerra Graggar como el siguiente mortal destinado a alcanzar la Divinidad. En respuesta, la Iglesia ordenó a la fundadora de la Orden Templaria y mayor combatiente de sus filas, Altierre de Ravox, encabezar una cruzada de los cien mejores templarios de la Orden para combatir a Graggar e impedir su ascensión. Cuando ambos bandos se encontraron y el combate estalló rápidamente, los dos comandantes se enfrentaron y se hirieron mortalmente. Graggar realizó entonces su mayor hazaña: atravesó de un puñetazo el pecho de Altierre, le arrancó el corazón y lo devoró, <b>junto con su Lux</b>. Aunque Graggar todavía estaba a uno o dos meses de ascender por sus propios medios, Altierre había sido bendecida por varios dioses del Panteón en su intento de detenerlo, por lo que su Lux contenía más divinidad que cualquier otro de la época. El plan se volvió contra ellos cuando Graggar lo consumió y quedó marcado como el Tercer Ascendente y el Primer Orco. Después, el cuerpo destrozado de Altierre fue recuperado y su nombre quedó grabado en la historia como Santa de Ravox.
+		Poco despues de la ascension de Baotha, la Iglesia de The Ten logro determinar los requisitos de la Ascension Mortal e identifico al señor de la guerra Graggar como el siguiente mortal destinado a alcanzar la Divinidad. En respuesta, la Iglesia ordeno a la fundadora de la Orden Templaria y mayor combatiente de sus filas, Altierre de Ravox, encabezar una cruzada de los cien mejores templarios de la Orden para combatir a Graggar e impedir su ascension. Cuando ambos bandos se encontraron y el combate estallo rapidamente, los dos comandantes se enfrentaron y se hirieron mortalmente. Graggar realizo entonces su mayor hazaña: atraveso de un puñetazo el pecho de Altierre, le arranco el corazon y lo devoro, <b>junto con su Lux</b>. Aunque Graggar todavia estaba a uno o dos meses de ascender por sus propios medios, Altierre habia sido bendecida por varios dioses del Panteon en su intento de detenerlo, por lo que su Lux contenia mas divinidad que cualquier otro de la epoca. El plan se volvio contra ellos cuando Graggar lo consumio y quedo marcado como el Tercer Ascendente y el Primer Orco. Despues, el cuerpo destrozado de Altierre fue recuperado y su nombre quedo grabado en la historia como Santa de Ravox.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Goblin War I - 2054 </strong></summary>
 		<br>
-		Producto directo de la ingenuidad de Eora, según cuentan las historias. Su ofrenda a Graggar —una esquirla de divinidad destinada a aliviar la tensión entre los panteones antiguo y nuevo— fue aceptada con gratitud y utilizada para formar por toda Psydonia monstruos apenas conscientes de hambre y furia. Igual que la maldición creciente de la transformación en orco, estos pieles verdes obedecieron a su nuevo dios y atacaron casi todos los asentamientos capaces de dejar registros. El intento de conquista mundial fue aplastado después de dos años, cuando los esfuerzos de la humanidad por resistir la calamidad dieron resultado.
+		Producto directo de la ingenuidad de Eora, segun cuentan las historias. Su ofrenda a Graggar —una esquirla de divinidad destinada a aliviar la tension entre los panteones antiguo y nuevo— fue aceptada con gratitud y utilizada para formar por toda Psydonia monstruos apenas conscientes de hambre y furia. Igual que la maldicion creciente de la transformacion en orco, estos pieles verdes obedecieron a su nuevo dios y atacaron casi todos los asentamientos capaces de dejar registros. El intento de conquista mundial fue aplastado despues de dos años, cuando los esfuerzos de la humanidad por resistir la calamidad dieron resultado.
 		<br><br>
 	</details>
 
 	<details>
-		<summary><strong> Ascensión de Zizo - 2102 </strong></summary>
+		<summary><strong> Ascension de Zizo - 2102 </strong></summary>
 		<br>
-		<em>«Jamás olvidaré la noche de los hilos de plata. Estaba sentado junto a la hoguera con la familia de elfos de nieve que me había acogido. Había llegado a konsiderarlos amigos, incluso familia, mientras estudiaba sus costumbres y kultura. Imagina mi horror cuando hebras de luz plateada descendieron del cielo hacia sus corazones, arqueándose desde algún origen desconocido más allá del horizonte. Mi breve fascinación se convirtió en pánico cuando su Lux fue arrancado violentamente de cada corazón, dejando sobre la nieve únicamente sangre, huesos y los ojos rrojos sin vida de quienes antes habían sido mis kompañeros. No pude salvarlos. Nadie pudo salvar a ninguno. Siglos después, esos recuerdos siguen atormentándome con la misma fuerza.»</em>- Aspen Uki, erudito elfo del bosque.
+		<em>«Jamas olvidare la noche de los hilos de plata. Estaba sentado junto a la hoguera con la familia de elfos de nieve que me habia acogido. Habia llegado a konsiderarlos amigos, incluso familia, mientras estudiaba sus costumbres y kultura. Imagina mi horror cuando hebras de luz plateada descendieron del cielo hacia sus corazones, arqueandose desde algun origen desconocido mas alla del horizonte. Mi breve fascinacion se convirtio en panico cuando su Lux fue arrancado violentamente de cada corazon, dejando sobre la nieve unicamente sangre, huesos y los ojos rrojos sin vida de quienes antes habian sido mis kompañeros. No pude salvarlos. Nadie pudo salvar a ninguno. Siglos despues, esos recuerdos siguen atormentandome con la misma fuerza.»</em>- Aspen Uki, erudito elfo del bosque.
 		<br><br>
-		La lich elfa de nieve Zizo, tras siglos acumulando poder y aislándose, finalmente actuó. Robó por la fuerza las almas de todo su pueblo, perdonando únicamente a sus descendientes. Utilizando el enorme poder de aquella divinidad capturada, tomó su lugar como la cuarta diosa ascendida. Mientras ascendía y ponía a prueba los límites de su nuevo poder, las propias reglas de la muerte se deformaron. Cadáveres de todas partes comenzaron a levantarse de nuevo, equilibrando su hambre con la voluntad de su nueva matriarca.
+		La lich elfa de nieve Zizo, tras siglos acumulando poder y aislandose, finalmente actuo. Robo por la fuerza las almas de todo su pueblo, perdonando unicamente a sus descendientes. Utilizando el enorme poder de aquella divinidad capturada, tomo su lugar como la cuarta diosa ascendida. Mientras ascendia y ponia a prueba los limites de su nuevo poder, las propias reglas de la muerte se deformaron. Cadaveres de todas partes comenzaron a levantarse de nuevo, equilibrando su hambre con la voluntad de su nueva matriarca.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Conquista del Imperio de los Elfos Oscuros - 2104 </strong></summary>
 		<br>
-		En medio del caos de la calamidad deadite, Zizo dirigió un asalto organizado dentro de las cavernas de Subterra. El imperio de los elfos oscuros fue sometido por completo, y sus costumbres ravoxianas fueron aplastadas violentamente en favor de la matriarquía de Zizo. La mayoría de ancianos y dirigentes fueron asesinados, dejando aquella cultura antaño respetada y venerada convertida en una sombra temida de lo que había sido.
+		En medio del caos de la calamidad deadite, Zizo dirigio un asalto organizado dentro de las cavernas de Subterra. El imperio de los elfos oscuros fue sometido por completo, y sus costumbres ravoxianas fueron aplastadas violentamente en favor de la matriarquia de Zizo. La mayoria de ancianos y dirigentes fueron asesinados, dejando aquella cultura antaño respetada y venerada convertida en una sombra temida de lo que habia sido.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> El Cometa de Astrata - 2402 </strong></summary>
 		<br>
-		Un extraño cometa impactó contra la cima de Malum's Anvil. En su centro quedó una cápsula oxidada que contenía un fragmento divino y cristalino de la luz de Astrata. El primer artífice que tocó el fragmento no pudo soportar su divinidad pura y quedó reducido a cenizas. Finalmente fue contenido con éxito en Vanderlin, donde ahora sirve para iluminar el camino de los viajeros.
+		Un extraño cometa impacto contra la cima de Malum's Anvil. En su centro quedo una capsula oxidada que contenia un fragmento divino y cristalino de la luz de Astrata. El primer artifice que toco el fragmento no pudo soportar su divinidad pura y quedo reducido a cenizas. Finalmente fue contenido con exito en Vanderlin, donde ahora sirve para iluminar el camino de los viajeros.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> Goblin War II - 2470 </strong></summary>
 		<br>
-		La «Goblin War» más reciente según la memoria de la población general. Los ejércitos de Graggar atacaron con más ferocidad que nunca, pero siglos de preparación condujeron a una derrota abrumadora tras cinco años de combate brutal y agotador. Los últimos años de la década de 2470 estuvieron marcados por la alegría de los veteranos que regresaban a casa y por el dolor de las familias que habían perdido a los suyos durante la carnicería.
+		La «Goblin War» mas reciente segun la memoria de la poblacion general. Los ejercitos de Graggar atacaron con mas ferocidad que nunca, pero siglos de preparacion condujeron a una derrota abrumadora tras cinco años de combate brutal y agotador. Los ultimos años de la decada de 2470 estuvieron marcados por la alegria de los veteranos que regresaban a casa y por el dolor de las familias que habian perdido a los suyos durante la carniceria.
 		<br><br>
 	</details>
 
 	<details>
 		<summary><strong> La Soberbia de Heartfelt, The Brass Cataclysm - 2501 </strong></summary>
 		<br>
-		Los sirvientes autómatas creados por los artífices de Heartfelt perdieron el control y comenzaron a devastar su ciudad natal y las tierras circundantes mientras emprendían una conquista interminable en busca de biomasa con la que alimentarse. La ya contaminada Enigma cayó todavía más en el caos y la destrucción. Rockhill se fortificó y se consolidó como bastión contra las fuerzas autómatas durante la creciente Machine War.
+		Los sirvientes automatas creados por los artifices de Heartfelt perdieron el control y comenzaron a devastar su ciudad natal y las tierras circundantes mientras emprendian una conquista interminable en busca de biomasa con la que alimentarse. La ya contaminada Enigma cayo todavia mas en el caos y la destruccion. Rockhill se fortifico y se consolido como bastion contra las fuerzas automatas durante la creciente Machine War.
 		<br><br>
 	</details>
 

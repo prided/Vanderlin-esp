@@ -1,5 +1,5 @@
 /obj/structure/sacrificealtar
-	name = "sacrificial altar"
+	name = "altar de sacrificios"
 	desc = ""
 	icon = 'icons/obj/hand_of_god_structures.dmi'
 	icon_state = "sacrificealtar"
@@ -16,7 +16,7 @@
 	var/mob/living/L = locate() in buckled_mobs
 	if(!L)
 		return
-	to_chat(user, "<span class='notice'>I attempt to sacrifice [L] by invoking the sacrificial ritual.</span>")
+	to_chat(user, "<span class='notice'>Intento sacrificar a [L] invocando el ritual de sacrificio.</span>")
 	L.gib()
 	message_admins("[ADMIN_LOOKUPFLW(user)] has sacrificed [key_name_admin(L)] on the sacrificial altar at [AREACOORD(src)].")
 

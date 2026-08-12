@@ -3,9 +3,9 @@
 | Chop intent |
 \------------*/
 /datum/intent/sword/chop
-	name = "chop"
+	name = "cortar"
 	icon_state = "inchop"
-	attack_verb = list("chops", "hacks")
+	attack_verb = list("taja", "machetea")
 	animname = "chop"
 	blade_class = BCLASS_CHOP
 	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')
@@ -35,9 +35,9 @@
 | Stab intent |
 \------------*/
 /datum/intent/sword/thrust
-	name = "stab"
+	name = "apuntar con la espada"
 	icon_state = "instab"
-	attack_verb = list("stabs")
+	attack_verb = list("apuñala")
 	animname = "stab"
 	blade_class = BCLASS_STAB
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
@@ -59,12 +59,12 @@
 	acc_bonus = 20
 
 /datum/intent/sword/thrust/estoc
-	name = "thrust"
+	name = "empujar"
 	penfactor = AP_SWORD_THRUST+10 //30 total
 	acc_bonus = 20
 
 /datum/intent/sword/thrust/zwei
-	name = "thrust"
+	name = "empujar"
 	clickcd = 14
 	warnie = "mobwarning"
 	swingdelay = 1
@@ -87,9 +87,9 @@
 | Strike intent |	Pommel strike, some AP
 \--------------*/
 /datum/intent/sword/strike
-	name = "pommel strike"
+	name = "golpe de pomo"
 	icon_state = "instrike"
-	attack_verb = list("bashes", "clubs")
+	attack_verb = list("golpea", "apalea")
 	animname = "strike"
 	blade_class = BCLASS_BLUNT
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
@@ -104,9 +104,9 @@
 	misscost = 90
 
 /datum/intent/sword/bash
-	name = "pommel bash"
+	name = "golpe con pomo"
 	icon_state = "inbash"
-	attack_verb = list("bashes", "huelgas")
+	attack_verb = list("golpea", "huelgas")
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
 	blade_class = BCLASS_BLUNT
 	clickcd = 14
@@ -118,9 +118,9 @@
 | Cut intent |
 \-----------*/
 /datum/intent/sword/cut
-	name = "cut"
+	name = "cortar"
 	icon_state = "incut"
-	attack_verb = list("cuts", "slashes")
+	attack_verb = list("corta", "corta")
 	animname = "cut"
 	blade_class = BCLASS_CUT
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
@@ -132,14 +132,14 @@
 	reach = 2
 
 /datum/intent/sword/cut/zwei
-	name = "cut"
+	name = "cortar"
 	damfactor = 0.8
 	reach = 1
 	swingdelay = 1
 	item_damage_type = "slash"
 
 /datum/intent/sword/cut/zwei/reach
-	name = "cut"
+	name = "cortar"
 	damfactor = 1
 	reach = 2
 	swingdelay = 1
@@ -160,9 +160,9 @@
 	misscost = 90
 
 /datum/intent/katana/cut
-	name = "cut"
+	name = "cortar"
 	icon_state = "incut"
-	attack_verb = list("cuts", "slashes")
+	attack_verb = list("corta", "corta")
 	animname = "cut"
 	blade_class = BCLASS_CUT
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
@@ -180,9 +180,9 @@
 \-----------*/
 
 /datum/intent/sword/lunge
-	name = "lunge"
+	name = "ataque con la espada"
 	icon_state = "inimpale"
-	attack_verb = list("lunges")
+	attack_verb = list("se abalanza sobre")
 	animname = "stab"
 	blade_class = BCLASS_STAB
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
@@ -193,9 +193,9 @@
 	acc_bonus = 15
 
 /datum/intent/katana/arc
-	name = "arc slash"
+	name = "barra de arco"
 	icon_state = "inarc"
-	attack_verb = list("sweeps", "arcos")
+	attack_verb = list("barre", "arcos")
 	animname = "cut"
 	blade_class = BCLASS_CHOP
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
@@ -207,7 +207,7 @@
 /datum/intent/katana/precision_cut
 	name = "corte de precision"
 	icon_state = "incut"
-	attack_verb = list("cortes de precision", "clean-slashes")
+	attack_verb = list("cortes de precision", "corta limpiamente")
 	animname = "cut"
 	blade_class = BCLASS_CUT
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
@@ -222,9 +222,9 @@
 	charging_slowdown = 1
 
 /datum/intent/sword/chop/cleave
-	name = "cleave"
+	name = "tajo"
 	icon_state = "incleave"
-	attack_verb = list("cleaves", "slices")
+	attack_verb = list("cercena", "rebana")
 	animname = "cut"
 	damfactor = 3
 	penfactor = AP_SWORD_CHOP + 5

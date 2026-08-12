@@ -1,6 +1,6 @@
 
 /obj/item/reagent_containers/food/snacks/spiderhoney
-	name = "honeycomb"
+	name = "panal"
 	desc = ""
 	icon_state = "honey"
 	dropshrink = 0.8
@@ -23,18 +23,18 @@
 /obj/item/reagent_containers/food/snacks/spiderhoney/proc/set_reagent(reagent)
 	var/datum/reagent/R = GLOB.chemical_reagents_list[reagent]
 	if(istype(R))
-		name = "honeycomb ([R.name])"
+		name = "panal ([R.name])"
 		reagents.add_reagent(R.type,5)
 
 /obj/item/reagent_containers/food/snacks/spiderhoney/honey
-	name = "honey"
+	name = "miel"
 	icon_state = "honeycomb"
 	item_weight = 50 GRAMS
 	tastes = list("dulzura" = 1)
 
 /obj/item/reagent_containers/food/snacks/spiderhoney/honey/mad
 	name = "miel loca"
-	desc = "Dark green honey tainted by the strange plants of the bog, yet often sought by Dendorite Melissae."
+	desc = "Miel de color verde oscuro contaminada por las extrañas plantas del pantano, pero a menudo buscada por Dendorite Melissae."
 	icon_state = "honey_green"
 	volume = 20
 	tastes = list("dulzura terrosa" = 1, "algo picante" = 1)
@@ -49,18 +49,18 @@
 	list_reagents = list(/datum/reagent/consumable/honey = 4, /datum/reagent/ozium = 10, /datum/reagent/medicine/herbal/herbalist_panacea = 5)
 
 /obj/item/reagent_containers/food/snacks/spiderhoney/honey/toxic
-	name = "honey"
+	name = "miel"
 	desc = ""
 	icon_state = "honeycomb"
 	tastes = list("amargura" = 1)
 	list_reagents = list(/datum/reagent/consumable/honey = 5, /datum/reagent/berrypoison = 5)
 
 /obj/item/reagent_containers/food/snacks/spiderhoney/honey/luminescent
-	name = "moon honey"
-	desc = "Strange blue honey, softly glowing with all the promise and danger of Noc's starborne knowledge."
+	name = "miel de luna"
+	desc = "Extraña miel azul, que brilla suavemente con toda la promesa y el peligro del conocimiento estelar de Noc."
 	icon_state = "honey_glowing"
 	volume = 20
-	tastes = list("dulzura compleja" = 1, "sharp floral tones" = 1)
+	tastes = list("dulzura compleja" = 1, "tonos florales nitidos" = 1)
 	list_reagents = list(/datum/reagent/consumable/honey = 5, /datum/reagent/toxin/manabloom_juice = 2, /datum/reagent/medicine/manapot = 10)
 	light_system = MOVABLE_LIGHT
 	light_outer_range = 2
@@ -69,7 +69,7 @@
 
 /obj/item/reagent_containers/food/snacks/spiderhoney/honey/wild
 	name = "miel silvestre"
-	desc = "Sweet wild honey. It has a more complex flavor than regular honey."
+	desc = "Dulce miel silvestre. Tiene un sabor mas complejo que la miel normal."
 	icon_state = "honey_wild"
 	honey_color = "#6d4633"
 	list_reagents = list(/datum/reagent/consumable/honey = 7)

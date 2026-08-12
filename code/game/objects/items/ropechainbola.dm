@@ -1,6 +1,6 @@
 
 /obj/item/rope
-	name = "rope"
+	name = "cuerda"
 	desc = "Una serie de hilos entrelazados para crear una cuerda firme para atar, colgar y otros trabajos."
 	gender = PLURAL
 	icon = 'icons/roguetown/items/misc.dmi'
@@ -35,7 +35,7 @@
 		qdel(src)
 
 /datum/intent/tie
-	name = "tie"
+	name = "lazo de cadena con bola"
 	icon_state = "intie"
 	chargetime = 0
 	noaa = TRUE
@@ -72,34 +72,34 @@
 		if(!C.handcuffed)
 			if(C.num_hands)
 				C.visible_message(span_warning("¡[user] esta intentando atar los brazos de [C] con [src.name]!"), \
-									span_danger("[user] is trying to tie my arms with [src.name]!"))
+									span_danger("¡[user] esta tratando de atarme los brazos con [src.name]!"))
 				if(do_after(user, 6 SECONDS * (surrender_mod), C) && C.num_hands)
 					apply_cuffs(C, user, leg = FALSE)
-					C.visible_message(span_warning("[user] ties [C]' arms with [src.name]."), \
+					C.visible_message(span_warning("[user] ata [C]' brazos con [src.name]."), \
 										span_danger("[user] me ata los brazos con [src.name]."))
 					SSblackbox.record_feedback("tally", "handcuffs", 1, type)
 					user.adjust_experience(/datum/attribute/skill/craft/traps, GET_MOB_ATTRIBUTE_VALUE(C, STAT_INTELLIGENCE), FALSE)
 					log_combat(user, C, "handcuffed")
 				else
-					to_chat(user, span_warning("I fail to tie up [C]'s arms!</span>"))
+					to_chat(user, span_warning("¡No logro atar los brazos de [C]¡</span>"))
 			else
-				to_chat(user, span_warning("[C] is missing two or one arms."))
+				to_chat(user, span_warning("[C] le faltan dos o un brazo."))
 	else
 		if(!C.legcuffed)
 			if(C.num_legs)
 				C.visible_message(span_warning("¡[user] esta intentando atar las piernas de [C] con [src.name]!"), \
-									span_danger("[user] is trying to tie my legs with [src.name]!"))
+									span_danger("¡[user] esta tratando de atar mis piernas con [src.name]!"))
 				if(do_after(user, 6 SECONDS * (C.surrendering ? 0.5 : 1), C) && C.num_legs)
 					apply_cuffs(C, user, leg = TRUE)
-					C.visible_message(span_warning("[user] ties [C]' legs with [src.name]."), \
-										span_danger("[user] ties my legs up with [src.name]."))
+					C.visible_message(span_warning("[user] ata [C]' piernas con [src.name]."), \
+										span_danger("[user] ata mis piernas con [src.name]."))
 					SSblackbox.record_feedback("tally", "legcuffs", 1, type)
 					user.adjust_experience(/datum/attribute/skill/craft/traps, GET_MOB_ATTRIBUTE_VALUE(C, STAT_INTELLIGENCE), FALSE)
 					log_combat(user, C, "legcuffed")
 				else
-					to_chat(user, span_warning("I fail to tie up [C]'s legs!</span>"))
+					to_chat(user, span_warning("¡No consigo atar las piernas de [C]! </span>"))
 			else
-				to_chat(user, span_warning("[C] is missing two or one legs."))
+				to_chat(user, span_warning("[C] le faltan una o dos piernas."))
 
 /obj/item/rope/proc/apply_cuffs(mob/living/carbon/target, mob/user, leg = FALSE)
 	if(!leg)
@@ -134,8 +134,8 @@
 		return TRUE
 
 /obj/item/rope/chain
-	name = "chain"
-	desc = "Metal chains designed to interlock and apply the harshest confinement on the villainous."
+	name = "cadena"
+	desc = "Cadenas de metal diseñadas para entrelazarse y aplicar el confinamiento mas duro a los villanos."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "chain"
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_WRISTS
@@ -161,7 +161,7 @@
 
 /obj/item/rope/net
 	name = "red de cuerda"
-	desc = "A rope mesh of designed to slow a person down."
+	desc = "Una malla de cuerda diseñada para frenar a una persona."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "net"
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_WRISTS
@@ -188,7 +188,7 @@
 
 /obj/item/rope/net/proc/ensnare(mob/living/carbon/C)
 	if(C.num_legs >= 2 && apply_cuffs(C, leg = TRUE))
-		C.visible_message(span_danger("[src] ensnares [C]!"), span_userdanger("¡¡[src] te atrapa!!"))
+		C.visible_message(span_danger("¡[src] atrapa a [C]!"), span_userdanger("¡¡[src] te atrapa!!"))
 		SSblackbox.record_feedback("tally", "handcuffs", 1, type)
 		C.apply_status_effect(/datum/status_effect/debuff/netted)
 		playsound(src, 'sound/combat/hits/nodmg (2).ogg', 100, TRUE)

@@ -1,8 +1,8 @@
 /datum/objective/personal/energy_expenditure
 	name = "Gastar energia"
-	category = "Malum's Chosen"
+	category = "Elegido de Malum"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Malum grows stronger", "Malum blesses you (+1 Endurance)")
+	rewards = list("2 Triunfos", "Malum se fortalece", "Malum te bendice (+1 Resistencia)")
 	var/energy_spent = 0
 	var/energy_required = 1000
 
@@ -37,4 +37,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_MALUM_BLESSING, list(STAT_ENDURANCE = 1))
 
 /datum/objective/personal/energy_expenditure/update_explanation_text()
-	explanation_text = "Don't be a slacker! Spend at least [energy_required] energy working to satisfy Malum."
+	explanation_text = "¡No seas holgazan! Gasta al menos [energy_required] de energia trabajando para satisfacer a Malum."

@@ -20,14 +20,14 @@
 		return TRUE
 	for(var/i in 1 to amount)
 		new /obj/item/natural/silk (get_turf(src))
-	user.visible_message(span_notice("[user] snips [src] up into silk."))
+	user.visible_message(span_notice("[user] corta [src] en seda."))
 	user.mind.add_sleep_experience(/datum/attribute/skill/misc/sewing, (GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) / 2)) //We're getting experience for harvesting silk!
 	playsound(src, 'sound/items/flint.ogg', 100, TRUE)
 	qdel(src)
 	return TRUE
 
 /obj/structure/spider/stickyweb
-	name = "web"
+	name = "telaraña"
 	icon = 'icons/roguetown/misc/webbing.dmi'
 	icon_state = "stickyweb1"
 	resistance_flags = FLAMMABLE
@@ -39,7 +39,7 @@
 	. = ..()
 	if(!HAS_TRAIT(mover, TRAIT_WEBWALK) && isliving(mover))
 		if(prob(50))
-			to_chat(mover, "<span class='danger'>I get stuck in \the [src] for a moment.</span>")
+			to_chat(mover, "<span class='danger'>Me quedo atascado en \the [src] por un momento.</span>")
 			return FALSE
 	else if(istype(mover, /obj/projectile))
 		return prob(30)
@@ -65,7 +65,7 @@
 	. = ..()
 
 /obj/structure/spider/cocoon
-	name = "cocoon"
+	name = "capullo"
 	desc = ""
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "cocoon1"
@@ -101,8 +101,8 @@
 	var/breakout_time = 1 MINUTES
 	user.changeNext_move(CLICK_CD_BREAKOUT)
 	user.last_special = world.time + CLICK_CD_BREAKOUT
-	to_chat(user, "<span class='notice'>I struggle against the tight bonds... (This will take about [DisplayTimeText(breakout_time)].)</span>")
-	visible_message("<span class='notice'>I see something struggling and writhing in \the [src]!</span>")
+	to_chat(user, "<span class='notice'>Lucho contra las ataduras... (Esto tomara aproximadamente [DisplayTimeText(breakout_time)].)</span>")
+	visible_message("<span class='notice'>¡Veo algo luchando y retorciendose en \the [src]!</span>")
 	if(do_after(user, breakout_time, src))
 		if(!user || user.stat != CONSCIOUS || user.loc != src)
 			return

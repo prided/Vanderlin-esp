@@ -1,6 +1,6 @@
 /obj/item/reagent_containers/glass/cup
-	name = "metal cup"
-	desc = "An iron cup, its rim gnawed-upon and grimey."
+	name = "taza de metal"
+	desc = "Una taza de hierro, con el borde roido y sucio."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "cup_iron"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
@@ -28,7 +28,7 @@
 
 /obj/item/reagent_containers/glass/cup/wooden
 	name = "taza de madera"
-	desc = "A wooden cup that has seen its fair share of use and barfights."
+	desc = "Una taza de madera que ha tenido una buena cantidad de uso y peleas de bar."
 	icon_state = "cup_wooden"
 	resistance_flags = FLAMMABLE
 	grid_height = 32
@@ -37,15 +37,15 @@
 	item_weight = 80 GRAMS
 
 /obj/item/reagent_containers/glass/cup/steel
-	name = "goblet"
-	desc = "A steel goblet that bears a few dents from previous scuffles."
+	name = "copa"
+	desc = "Una copa de acero que tiene algunas abolladuras de peleas anteriores."
 	icon_state = "cup_steel"
 	sellprice = 10
 	item_weight = 180 GRAMS
 
 /obj/item/reagent_containers/glass/cup/silver
 	name = "copa de plata"
-	desc = "A silver goblet, its surface adorned with intricate carvings and runes."
+	desc = "Una copa de plata, cuya superficie esta adornada con intrincados grabados y runas."
 	icon_state = "cup_silver"
 	dropshrink = 0.65
 	sellprice = 30
@@ -57,23 +57,23 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/reagent_containers/glass/cup/golden
-	name = "golden goblet"
-	desc = "A golden gilded goblet which gleams pathetically despite its illustrious metal."
+	name = "copa de oro"
+	desc = "Una copa dorada que brilla pateticamente a pesar de su ilustre metal."
 	icon_state = "cup_golden"
 	dropshrink = 0.65
 	sellprice = 50
 	item_weight = 200 GRAMS
 
 /obj/item/reagent_containers/glass/cup/skull
-	name = "skull goblet"
-	desc = "The hollow eye sockets tell you of forgotten, dark rituals."
+	name = "copa de calavera"
+	desc = "Las cuencas de los ojos huecas te hablan de rituales oscuros y olvidados."
 	icon_state = "cup_skull"
 	dropshrink = 0.8
 	item_weight = 120 GRAMS
 
 /obj/item/reagent_containers/glass/cup/teacup
-	name = "teacup"
-	desc = "A fancy tea cup made out of ceramic. Used to serve tea."
+	name = "taza de te"
+	desc = "Una elegante taza de te hecha de ceramica. Solia ​​​​servir te."
 	icon_state = "teacup"
 	volume = 25
 	dropshrink = 0.7
@@ -83,13 +83,13 @@
 
 /obj/item/reagent_containers/glass/cup/teacup/fancy
 	name = "taza de te elegante"
-	desc = "A fancy tea cup made out of ceramic, decorated with an ornate glaze. Used to serve tea."
+	desc = "Una elegante taza de te hecha de ceramica, decorada con un esmalte ornamentado. Solia ​​​​servir te."
 	icon_state = "teacup_fancy"
 	sellprice = 20
 
 /obj/item/reagent_containers/glass/cup/jade
-	name = "joapstone cup"
-	desc = "A simple cup carved out of joapstone."
+	name = "copa de joapstone"
+	desc = "Una copa sencilla tallada en joapstone."
 	dropshrink = null
 	icon_state = "cup_jade"
 	fill_icon_state = "fancycup"
@@ -97,8 +97,8 @@
 	item_weight = 250 GRAMS
 
 /obj/item/reagent_containers/glass/cup/turq
-	name = "ceruleabaster cup"
-	desc = "A simple cup carved out of ceruleabaster."
+	name = "taza de ceruleabaster"
+	desc = "Una simple copa tallada en ceruleabaster."
 	dropshrink = null
 	icon_state = "cup_turq"
 	fill_icon_state = "fancycup"
@@ -106,8 +106,8 @@
 	item_weight = 230 GRAMS
 
 /obj/item/reagent_containers/glass/cup/amber
-	name = "petriamber cup"
-	desc = "A simple cup carved out of petriamber."
+	name = "copa petriamber"
+	desc = "Una copa sencilla tallada en petriamber."
 	dropshrink = null
 	icon_state = "cup_amber"
 	fill_icon_state = "fancycup"
@@ -115,8 +115,8 @@
 	item_weight = 80 GRAMS
 
 /obj/item/reagent_containers/glass/cup/coral
-	name = "aoetal cup"
-	desc = "A simple cup carved out of aoetal."
+	name = "taza de aoetal"
+	desc = "Una copa sencilla tallada en aoetal."
 	dropshrink = null
 	icon_state = "cup_coral"
 	fill_icon_state = "fancycup"
@@ -124,8 +124,8 @@
 	item_weight = 200 GRAMS
 
 /obj/item/reagent_containers/glass/cup/onyxa
-	name = "onyxa cup"
-	desc = "A simple cup carved out of onyxa."
+	name = "taza de onyxa"
+	desc = "Una taza simple tallada en onyxa."
 	dropshrink = null
 	icon_state = "cup_onyxa"
 	fill_icon_state = "fancycup"
@@ -134,7 +134,7 @@
 
 /obj/item/reagent_containers/glass/cup/shell
 	name = "taza de concha"
-	desc = "A simple cup carved out of shell."
+	desc = "Una taza sencilla tallada en concha."
 	dropshrink = null
 	icon_state = "cup_shell"
 	fill_icon_state = "fancycup"
@@ -142,8 +142,8 @@
 	item_weight = 100 GRAMS
 
 /obj/item/reagent_containers/glass/cup/opal
-	name = "opaloise cup"
-	desc = "A simple cup carved out of opaloise."
+	name = "copa opaloise"
+	desc = "Una taza sencilla tallada en opaloise."
 	dropshrink = null
 	icon_state = "cup_opal"
 	fill_icon_state = "fancycup"
@@ -151,8 +151,8 @@
 	item_weight = 180 GRAMS
 
 /obj/item/reagent_containers/glass/cup/rose
-	name = "rosellusk cup"
-	desc = "A simple cup carved out of rosellusk."
+	name = "taza de rosellusk"
+	desc = "Un simple vaso tallado de rosellusk."
 	dropshrink = null
 	icon_state = "cup_rose"
 	fill_icon_state = "fancycup"
@@ -160,8 +160,8 @@
 	item_weight = 120 GRAMS
 
 /obj/item/reagent_containers/glass/cup/jadefancy
-	name = "fancy joapstone cup"
-	desc = "A fancy cup carved out of joapstone."
+	name = "copa de joapstone elegante"
+	desc = "Una elegante copa tallada en joapstone."
 	dropshrink = null
 	icon_state = "fancycup_jade"
 	fill_icon_state = "fancycup"
@@ -169,8 +169,8 @@
 	item_weight = 250 GRAMS
 
 /obj/item/reagent_containers/glass/cup/turqfancy
-	name = "fancy ceruleabaster cup"
-	desc = "A fancy cup carved out of ceruleabaster."
+	name = "Taza de ceruleabaster elegante"
+	desc = "Una taza elegante tallada de ceruleabaster."
 	dropshrink = null
 	icon_state = "fancycup_turq"
 	fill_icon_state = "fancycup"
@@ -178,8 +178,8 @@
 	item_weight = 230 GRAMS
 
 /obj/item/reagent_containers/glass/cup/opalfancy
-	name = "fancy opaloise cup"
-	desc = "A fancy cup carved out of opaloise."
+	name = "elegante taza opaloise"
+	desc = "Una elegante taza tallada en opaloise."
 	dropshrink = null
 	icon_state = "fancycup_opal"
 	fill_icon_state = "fancycup"
@@ -187,8 +187,8 @@
 	item_weight = 180 GRAMS
 
 /obj/item/reagent_containers/glass/cup/coralfancy
-	name = "fancy aoetal cup"
-	desc = "A fancy cup carved out of aoetal."
+	name = "taza elegante de aoetal"
+	desc = "Una elegante taza tallada en aoetal."
 	dropshrink = null
 	icon_state = "fancycup_coral"
 	fill_icon_state = "fancycup"
@@ -196,8 +196,8 @@
 	item_weight = 200 GRAMS
 
 /obj/item/reagent_containers/glass/cup/amberfancy
-	name = "fancy petriamber cup"
-	desc = "A fancy cup carved out of petriamber."
+	name = "taza elegante de petriamber"
+	desc = "Una elegante copa tallada en petriamber."
 	dropshrink = null
 	icon_state = "fancycup_amber"
 	fill_icon_state = "fancycup"
@@ -206,7 +206,7 @@
 
 /obj/item/reagent_containers/glass/cup/shellfancy
 	name = "taza de concha elegante"
-	desc = "A fancy cup carved out of shell."
+	desc = "Una elegante taza tallada en concha."
 	dropshrink = null
 	icon_state = "fancycup_shell"
 	fill_icon_state = "fancycup"
@@ -214,8 +214,8 @@
 	item_weight = 100 GRAMS
 
 /obj/item/reagent_containers/glass/cup/rosefancy
-	name = "fancy rosellusk cup"
-	desc = "A fancy cup carved out of rosellusk."
+	name = "Taza de rosellusk elegante"
+	desc = "Una copa elegante tallada en rosellusk."
 	dropshrink = null
 	icon_state = "fancycup_rose"
 	fill_icon_state = "fancycup"
@@ -223,8 +223,8 @@
 	item_weight = 120 GRAMS
 
 /obj/item/reagent_containers/glass/cup/onyxafancy
-	name = "fancy onyxa cup"
-	desc = "A fancy cup carved out of onyxa."
+	name = "taza elegante de onyxa"
+	desc = "Una taza elegante tallada de onyxa."
 	dropshrink = null
 	icon_state = "fancycup_onyxa"
 	fill_icon_state = "fancycup"
@@ -233,7 +233,7 @@
 
 /obj/item/reagent_containers/glass/cup/cocaudo_husk
 	name = "cascara de cocaudo"
-	desc = "A hollowed out half of a cocaudo. It holds liquid."
+	desc = "La mitad ahuecada de un cocaudo. Contiene liquido."
 	icon_state = "cocaudo_empty"
 	dropshrink = 1
 	fill_icon_state = "cocaudo_empty"
@@ -242,8 +242,8 @@
 	item_weight = 200 GRAMS
 
 /obj/item/reagent_containers/glass/cup/clay
-	name = "clay cup"
-	desc = "A cup made from fired clay."
+	name = "taza de barro"
+	desc = "Taza hecha de barro cocido."
 	icon = 'icons/obj/handmade/cup.dmi'
 	icon_state = "world"
 	dropshrink = 1
@@ -252,11 +252,11 @@
 
 /obj/item/reagent_containers/glass/cup/clay/set_material_information()
 	. = ..()
-	name = "[LOWER_TEXT(initial(main_material.name))] clay cup"
+	name = "Taza de arcilla [LOWER_TEXT(initial(main_material.name))]"
 
 /obj/item/reagent_containers/glass/cup/fancy_clay
 	name = "taza de arcilla elegante"
-	desc = "A cup made from fired clay."
+	desc = "Taza hecha de barro cocido."
 	icon = 'icons/obj/handmade/cup_fancy.dmi'
 	icon_state = "world"
 	dropshrink = 1
@@ -264,11 +264,11 @@
 
 /obj/item/reagent_containers/glass/cup/fancy_clay/set_material_information()
 	. = ..()
-	name = "[LOWER_TEXT(initial(main_material.name))] fancy clay cup"
+	name = "[LOWER_TEXT(initial(main_material.name))] taza de arcilla elegante"
 
 /obj/item/reagent_containers/glass/cup/clay_mug
-	name = "clay mug"
-	desc = "A mug made from fired clay."
+	name = "taza de arcilla"
+	desc = "Taza hecha de barro cocido."
 	icon = 'icons/obj/handmade/mug.dmi'
 	icon_state = "world"
 	dropshrink = 1
@@ -276,13 +276,13 @@
 
 /obj/item/reagent_containers/glass/cup/clay_mug/set_material_information()
 	. = ..()
-	name = "[LOWER_TEXT(initial(main_material.name))] clay mug"
+	name = "Taza de arcilla [LOWER_TEXT(initial(main_material.name))]"
 
 // ----- Glassware -----
 
 /obj/item/reagent_containers/glass/cup/glassware
-	name = "glass cup"
-	desc = "A fancy glass cup; the few scratches that are upon it tell grand tales of lies and betrayal. It tends to break easily..."
+	name = "taza de cristal"
+	desc = "Una elegante copa de cristal; los pocos rasguños que tiene cuentan grandes historias de mentiras y traicion. Suele romperse con facilidad..."
 	icon = 'icons/roguetown/items/glass_reagent_container.dmi'
 	icon_state = "clear_cup1"
 	reagent_flags = OPENCONTAINER
@@ -316,8 +316,8 @@
 	qdel(src)
 
 /obj/item/reagent_containers/glass/cup/glassware/shotglass
-	name = "shot glass"
-	desc = "A fancy shot glass; the few scratches that are upon it tell grand tales of lies and betrayal. It tends to break easily..."
+	name = "vaso de chupito"
+	desc = "Un vaso de chupito elegante; los pocos rasguños que tiene cuentan grandes historias de mentiras y traicion. Suele romperse con facilidad..."
 	icon_state = "clear_shotglass1"
 	sellprice = VALUE_COMMON_GOODS * 1.5
 	volume = 5 //You drink 5 units at a time, now its an ACTUAL shot.
@@ -325,7 +325,7 @@
 	item_weight = 40 GRAMS
 
 /obj/item/reagent_containers/glass/cup/glassware/wineglass
-	name = "wine glass"
-	desc = "A fancy wine glass; the few scratches that are upon it tell grand tales of lies and betrayal. It tends to break easily..."
+	name = "copa de vino"
+	desc = "Una copa de vino elegante; los pocos rasguños que tiene cuentan grandes historias de mentiras y traicion. Suele romperse con facilidad..."
 	icon_state = "clear_wineglass1"
 	item_weight = 60 GRAMS

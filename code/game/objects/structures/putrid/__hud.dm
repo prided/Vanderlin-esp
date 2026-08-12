@@ -85,7 +85,7 @@
 		UnregisterSignal(hud.mymob, COMSIG_MEATVINE_RESOURCE_CHANGE)
 
 /atom/movable/screen/putrid/bar/resource_bar
-	name = "Meatvine Resources"
+	name = "Recursos de Meatvine"
 	icon_state = "points"
 	color = "#800000"
 	screen_loc = "WEST,CENTER-2:+22"

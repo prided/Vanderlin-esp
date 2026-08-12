@@ -7,7 +7,7 @@
 #define ANALYSIS_PERFECT 5
 
 /obj/effect/skill_tracker
-	name = "\improper track"
+	name = "\improper pista"
 	desc = null
 	anchored = TRUE
 	resistance_flags = FIRE_PROOF | UNACIDABLE | ACID_PROOF

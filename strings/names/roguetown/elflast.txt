@@ -66,7 +66,7 @@ Calarel
 Cameron
 Cauladra
 Celeborn
-Celebrían
+Celebrian
 Celebrimbor
 Chandrelle
 Chasianna
@@ -75,7 +75,7 @@ Cheyrth
 Chichlandra
 Chin’nesstre
 Chomylla
-Círdan
+Cirdan
 Ciyradyl
 Cluhurach
 Cluym
@@ -115,7 +115,7 @@ Eldaernth
 Eldar
 Eldrin
 Elaria
-Elénaril
+Elenaril
 Elenshaer
 Elenwe
 Ellania
@@ -258,7 +258,7 @@ Leilatha
 Liluth
 Llamryl
 Lorelei
-Lúthien
+Luthien
 Lyraesel
 
 
@@ -344,7 +344,7 @@ Rubrae
 Ryllae
 Saelethil
 Saelihn
-Saélihn
+Saelihn
 Saevel
 Saeya
 Sasha

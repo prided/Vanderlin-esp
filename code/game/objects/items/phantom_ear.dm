@@ -1,6 +1,6 @@
 /obj/item/phantom_ear
-	name = "Phantom Ear"
-	desc = "A spectral facsimile of an ear."
+	name = "oreja fantasma"
+	desc = "Un facsimil espectral de un oido."
 	var/chat_icon = 'icons/Phantom_Ear_Icon.dmi'
 	var/chat_icon_state = "sparkly_ear_icon"
 	icon = 'icons/roguetown/misc/phantomear.dmi'
@@ -44,42 +44,42 @@
 /obj/item/phantom_ear/proc/timed_delete()
 	if(QDELETED(src))
 		return
-	src.visible_message(span_warning("The [src] escapes this world's grasp!"))
+	src.visible_message(span_warning("¡El [src] escapa del alcance de este mundo!"))
 	if(linked_living)
-		to_chat(linked_living.resolve(), span_warning("I feel a tension release, my phantom ear has safely escaped!"))
+		to_chat(linked_living.resolve(), span_warning("Siento que se me quita la tension, ¡mi oreja fantasma ha escapado con exito!"))
 	qdel(src)
 
 /obj/item/phantom_ear/attack_hand(mob/user)
 	. = ..()
-	user.visible_message(span_warning("[user] thrusts [user.p_their()] hand into the air and clenches tightly, as a pale ear materializes in its grasp!"))
+	user.visible_message(span_warning("[user] lanza la mano de [user.p_their()] en el aire y la aprieta con fuerza, ¡mientras una oreja palida se materializa en su agarre!"))
 	playsound(src, 'sound/vo/mobs/rat/rat_life.ogg', 100, FALSE, -1)
-	name = "Phantom Ear"
-	desc = "A spectral facsimile of an ear that squirms in your hand."
+	name = "oreja fantasma"
+	desc = "Un facsimil espectral de una oreja que se retuerce en la mano."
 	icon_state = "round_round_ear"
 	hear_radius = 0
 	invisibility = NONE
 	if(linked_living)
-		to_chat(linked_living.resolve(), span_warning("I feel a strange tightness in the side of my head."))
+		to_chat(linked_living.resolve(), span_warning("Siento una extraña presion en el costado de mi cabeza."))
 	addtimer(CALLBACK(src, PROC_REF(timed_delete)), 2 MINUTES)
 
 /obj/item/phantom_ear/attack_self(mob/user, list/modifiers)
 	if(user != linked_living?.resolve())
-		user.visible_message(span_boldwarning("[user] crushed the [src] in [user.p_their()] hand!"))
+		user.visible_message(span_boldwarning("¡[user] aplasto a [src] con la mano [user.p_their()]!"))
 		playsound(src, 'sound/vo/mobs/rat/rat_death.ogg', 100, FALSE, -1)
 		if(linked_living)
 			hurt_caster()
-			to_chat(linked_living.resolve(), span_boldwarning("I feel a splitting pain in the side of my head, my phantom ear has been crushed!"))
+			to_chat(linked_living.resolve(), span_boldwarning("¡Siento un dolor agudo en el costado de mi cabeza, mi oreja fantasma ha sido aplastada!"))
 	else
-		to_chat(user, span_warning("I discretely palm the ear and dispel it."))
+		to_chat(user, span_warning("Disimulo y le doy un cachete al oido para deshacerlo."))
 	qdel(src)
 
 /obj/item/phantom_ear/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
-	src.visible_message(span_warning("The [src] shatters against the [hit_atom]!"))
+	src.visible_message(span_warning("¡El [src] se rompe contra el [hit_atom]!"))
 	playsound(src, 'sound/magic/glass.ogg', 100, FALSE, -1)
 	if(linked_living)
 		hurt_caster()
-		to_chat(linked_living.resolve(), span_boldwarning("I feel a hundred needles pierce the side of my head, my phantom ear has been shattered!"))
+		to_chat(linked_living.resolve(), span_boldwarning("¡Siento como cien agujas me atraviesan el costado de la cabeza, mi oido fantasma se ha roto!"))
 	qdel(src)
 
 /obj/item/phantom_ear/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods = list())
@@ -114,6 +114,6 @@
 			return
 		to_chat(living_speaker, span_warning("No estamos solos, las paredes tienen oidos..."))
 		name = "Aura fantasmal"
-		desc = "You feel a strange presence watching you..."
+		desc = "Sientes una presencia extraña observandote..."
 		invisibility = NONE
 		addtimer(CALLBACK(src, PROC_REF(reset_visibility)), 5 SECONDS)

@@ -31,7 +31,7 @@
 	var/last_effect = 0
 
 /obj/effect/portal/anom
-	name = "wormhole"
+	name = "agujero de gusano"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "anom"
 	layer = RIPPLE_LAYER

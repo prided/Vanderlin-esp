@@ -1,13 +1,13 @@
 /obj/item/spellbook_unfinished
-	name = "bound scrollpaper"
+	name = "papel de pergamino encuadernado"
 	dropshrink = 0.6
 	icon = 'icons/roguetown/items/books.dmi'
 	icon_state = "basic_book_0"
-	desc = "Thick scroll paper bound at the spine. It lacks pages."
+	desc = "Papel de pergamino grueso encuadernado en el lomo. Carece de paginas."
 	throw_speed = 1
 	throw_range = 5
 	w_class = WEIGHT_CLASS_NORMAL
-	attack_verb = list("bashed", "whacked", "educado")
+	attack_verb = list("golpeado", "aporreado", "educado")
 	resistance_flags = FLAMMABLE
 	drop_sound = 'sound/foley/dropsound/book_drop.ogg'
 	pickup_sound = 'sound/blank.ogg'
@@ -21,9 +21,9 @@
 	QDEL_NULL(session)
 
 /obj/item/spellbook_unfinished/pre_arcyne
-	name = "tome in waiting"
+	name = "tomo en espera"
 	icon_state = "spellbook_unfinished"
-	desc = "A fully bound tome of scroll paper. It's lacking a certain arcyne energy."
+	desc = "Un tomo completamente encuadernado en papel de pergamino. Le falta cierta energia arcyne."
 
 /obj/item/spellbook_unfinished/pre_arcyne/attack_self(mob/living/user)
 	if(!session)
@@ -46,7 +46,7 @@
 		return NONE
 
 	if(!isturf(loc) || !locate(/obj/structure/table) in loc)
-		to_chat(user, "<span class='warning'>You need to put the [src] on a table to work on it.</span>")
+		to_chat(user, "<span class='warning'>Necesitas poner el [src] sobre una mesa para trabajar en el.</span>")
 		return ITEM_INTERACT_BLOCKING
 
 	var/crafttime = max(0, 60 - GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/magic/arcane) * 5)
@@ -56,16 +56,16 @@
 	pages_left--
 	if(pages_left > 0)
 		playsound(src, 'sound/items/book_page.ogg', 100, TRUE)
-		to_chat(user, span_notice("[pages_left] left..."))
+		to_chat(user, span_notice("[pages_left] se fue..."))
 		qdel(tool)
 		return ITEM_INTERACT_SUCCESS
 
 	//promote to pre_arcyne.
 	playsound(src, 'sound/items/book_open.ogg', 100, TRUE)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) > SKILL_LEVEL_NONE)
-		to_chat(user, span_notice("The book is bound. I must find a catalyst to channel the arcyne into it now."))
+		to_chat(user, span_notice("El libro esta encuadernado. Debo encontrar un catalizador para canalizar el arcyne en el ahora."))
 	else
-		to_chat(user, span_notice("I've made an empty book of thick, useless scroll paper. I can't even thumb through it!"))
+		to_chat(user, span_notice("He hecho un libro vacio de papel grueso e inutil para pergaminos. ¡Ni siquiera puedo hojearlo!"))
 	new /obj/item/spellbook_unfinished/pre_arcyne(loc)
 	qdel(tool)
 	qdel(src)

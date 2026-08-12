@@ -1,5 +1,5 @@
 /obj/structure/fake_machine/stockpile
-	name = "stockpile"
+	name = "almacen"
 	desc = ""
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "stockpile_vendor"
@@ -60,7 +60,7 @@
 	contents += "<BR>"
 
 	for(var/datum/stock/stockpile/R in SStreasury.stockpile_datums)
-		var/message = "[R.name] - Payout: [R.get_payout_price()] - Stockpiled: [R.get_held_count()] - Oversupply at: [R.oversupply_amount]"
+		var/message = "[R.name] - Pago: [R.get_payout_price()] - Acumulado: [R.get_held_count()] - Sobreoferta en: [R.oversupply_amount]"
 		if(R.get_held_count() >= R.oversupply_amount)
 			message += " - !OVERSUPPLIED!"
 		contents += message
@@ -106,7 +106,7 @@
 					if(sound == TRUE)
 						playsound(src, 'sound/misc/hiss.ogg', 100, FALSE, -1)
 					if(!SStreasury.give_money_account(amt, H, "+[amt] from [R.name] bounty") && message == TRUE)
-						say("No account found. Submit your fingers to a Meister for inspection.")
+						say("No se encontro ninguna cuenta. Someta sus dedos a un Meister para su inspeccion.")
 					record_round_statistic(STATS_STOCKPILE_EXPANSES, amt)
 					return amt
 			continue
@@ -122,12 +122,12 @@
 					if(sound == TRUE)
 						playsound(src, 'sound/misc/hiss.ogg', 100, FALSE, -1)
 				else
-					say("Stockpile area not accessible.")
+					say("El area de almacenamiento no es accesible.")
 					return
 			else
 				var/area/A = GLOB.areas_by_type[R.transport_item]
 				if(!A && message == TRUE)
-					say("Couldn't find where to send the submission.")
+					say("No pude encontrar a donde enviar el envio.")
 					return
 				var/list/turfs = list()
 				for(var/turf/T in A.get_turfs_from_all_zlevels())
@@ -139,14 +139,14 @@
 					playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 			if(amt)
 				if(!SStreasury.give_money_account(amt, H, "+[amt] from [R.name] bounty") && message == TRUE)
-					say("No account found. Submit your fingers to a Meister for inspection.")
+					say("No se encontro ninguna cuenta. Someta sus dedos a un Meister para su inspeccion.")
 				record_round_statistic(STATS_STOCKPILE_EXPANSES, amt)
 			return amt
 
 /obj/structure/fake_machine/stockpile/attackby(obj/item/P, mob/user, list/modifiers)
 	if(ishuman(user))
 		if(user.real_name in GLOB.outlawed_players)
-			say("OUTLAW DETECTED! REFUSING SERVICE!")
+			say("¡DETECTADO UN FORAGIDO! ¡NEGAR SERVICIO!")
 			return
 		if(istype(P, /obj/item/coin))
 			withdraw_tab.insert_coins(P)
@@ -161,7 +161,7 @@
 	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(ishuman(user))
 		if(user.real_name in GLOB.outlawed_players)
-			say("OUTLAW DETECTED! REFUSING SERVICE!")
+			say("¡DETECTADO UN FORAGIDO! ¡NEGAR SERVICIO!")
 			return
 		var/total_value = 0
 		for(var/obj/I in get_turf(src))
@@ -169,9 +169,9 @@
 		playsound(src, 'sound/misc/hiss.ogg', 100, FALSE, -1)
 		playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 		if(user in SStreasury.bank_accounts)
-			say("Bulk sold for [total_value] mammon...")
+			say("La mercancia se vende por [total_value] mammon...")
 		else
-			say("No account found. Submit your fingers to a Meister for inspection.")
+			say("No se encontro ninguna cuenta. Someta sus dedos a un Meister para su inspeccion.")
 
 /datum/withdraw_tab
 	var/stockpile_index = -1
@@ -224,13 +224,13 @@
 		if(D.withdraw_disabled)
 			return FALSE
 		if(D.get_held_count() <= 0)
-			parent_structure.say("Insufficient stock.")
+			parent_structure.say("Stock insuficiente.")
 		else if(total_price > budget)
-			parent_structure.say("Insufficient mammon.")
+			parent_structure.say("Poco mammon.")
 		else
 			var/obj/item/I = D.withdraw_item()
 			if(!I)
-				parent_structure.say("Could not retrieve item from stockpile.")
+				parent_structure.say("No se pudo recuperar el item del almacen.")
 				return FALSE
 
 			budget -= total_price

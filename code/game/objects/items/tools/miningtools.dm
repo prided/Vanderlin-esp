@@ -3,7 +3,7 @@
 	force_wielded = DAMAGE_PICK_WIELD
 	possible_item_intents = list(PICK_INTENT)
 	gripped_intents = list(PICK_INTENT)
-	name = "pick"
+	name = "pico"
 	desc = ""
 	icon_state = "pick"
 	icon = 'icons/roguetown/weapons/tools.dmi'
@@ -47,7 +47,7 @@
 
 /obj/item/weapon/pick/steel
 	name = "pico de acero"
-	desc = "With a reinforced handle and sturdy shaft, this is a superior tool for delving in the darkness."
+	desc = "Con un mango reforzado y un eje resistente, esta es una herramienta superior para profundizar en la oscuridad."
 	icon_state = "steelpick"
 	force = DAMAGE_PICK + 3
 	force_wielded = DAMAGE_PICK_WIELD +3
@@ -58,7 +58,7 @@
 
 /obj/item/weapon/pick/stone
 	name = "pico de piedra"
-	desc = "Stone versus sharp stone, who wins?"
+	desc = "Piedra versus piedra afilada, ¿quien gana?"
 	icon_state = "stonepick"
 	force = DAMAGE_PICK - 6
 	force_wielded = DAMAGE_PICK_WIELD - 6
@@ -71,7 +71,7 @@
 
 /obj/item/weapon/pick/drill
 	name = "taladro de relojeria"
-	desc = "A wonderfully complex work of engineering capable of shredding walls in seconds as opposed to hours."
+	desc = "Una obra de ingenieria maravillosamente compleja capaz de destruir paredes en segundos en lugar de horas."
 	force_wielded = DAMAGE_HEAVYCLUB_WIELD
 	icon_state = "drill"
 	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
@@ -104,7 +104,7 @@
 
 /obj/item/weapon/pick/drill/proc/pre_wield_check(datum/source, mob/living/carbon/user)
 	if(!SEND_SIGNAL(src, COMSIG_ATOM_STEAM_USE, 1))
-		to_chat(user, span_warning("[src] doesn't have enough power to be wielded!"))
+		to_chat(user, span_warning("¡[src] no tiene suficiente potencia para ser empuñada!"))
 		return COMPONENT_TWOHANDED_BLOCK_WIELD
 
 /obj/item/weapon/pick/drill/process()

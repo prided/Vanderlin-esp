@@ -154,7 +154,7 @@
 			M.reagents.add_reagent(/datum/reagent/miasmagas, 1)
 			M.emote("cough")
 			if(prob(5))
-				to_chat(M, span_warning("You feel numbness spreading through your body..."))
+				to_chat(M, span_warning("Sientes que la entumecimiento se propaga por tu cuerpo..."))
 			return 1
 
 

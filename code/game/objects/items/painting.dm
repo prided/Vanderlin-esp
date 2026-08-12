@@ -1,6 +1,6 @@
 
 /obj/item/painting
-	name = "painting"
+	name = "pintura"
 	icon_state = "painting"
 	desc = ""
 	w_class = WEIGHT_CLASS_NORMAL
@@ -40,8 +40,8 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/structure/fluff/walldeco/painting
-	name = "painting"
-	desc = "The artist is unknown. The subject is unknown. Maybe a memorial to a corpse that was trampled on the trail to this reality."
+	name = "pintura"
+	desc = "El artista es desconocido. El tema es desconocido. Quizas un monumento a un cadaver que fue pisoteado en el camino hacia esta realidad."
 	icon = 'icons/roguetown/misc/decoration.dmi'
 	icon_state = "painting_deployed"
 	anchored = TRUE
@@ -64,55 +64,55 @@
 /* Paintings */
 /obj/item/painting/queen
 	icon_state = "queenpainting"
-	desc = "A portrait of Queen Samantha I of Psydonia. Her sudden disappearance marked a day of tragedy and mourning still practiced to this year."
+	desc = "Un retrato de la reina Samantha I de Psydonia. Su repentina desaparicion marco un dia de tragedia y el duelo aun se practica este año."
 	sellprice = 40
 	deployed_structure = /obj/structure/fluff/walldeco/painting/queen
 
 /obj/structure/fluff/walldeco/painting/queen
-	desc = "A portrait of Queen Samantha I of Psydonia. Her sudden disappearance marked a day of tragedy and mourning still practiced to this year."
+	desc = "Un retrato de la reina Samantha I de Psydonia. Su repentina desaparicion marco un dia de tragedia y el duelo aun se practica este año."
 	icon_state = "queenpainting_deployed"
 	stolen_painting = /obj/item/painting/queen
 
 /obj/item/painting/seraphina
 	icon_state = "seraphinapainting"
-	desc = "A portrait of holy priest Seraphina, first of her name, blessed be her name."
+	desc = "Un retrato de la santa sacerdote Serafina, primera de su nombre, bendito sea su nombre."
 	sellprice = 40
 	deployed_structure = /obj/structure/fluff/walldeco/painting/seraphina
 
 /obj/structure/fluff/walldeco/painting/seraphina
-	desc = "A portrait of holy priest Seraphina, first of her name, blessed be her name."
+	desc = "Un retrato de la santa sacerdote Serafina, primera de su nombre, bendito sea su nombre."
 	icon_state = "seraphinapainting_deployed"
 	stolen_painting = /obj/item/painting/seraphina
 
 /obj/item/painting/skull
 	icon_state = "skullpainting"
-	desc = "A moody scene depicting a skull and candles on a table. Memento mori."
+	desc = "Una escena de mal humor que representa una calavera y velas sobre una mesa. Recuerdo mori."
 	sellprice = 40
 	deployed_structure = /obj/structure/fluff/walldeco/painting/skull
 
 /obj/structure/fluff/walldeco/painting/skull
-	desc = "A moody scene depicting a skull and candles on a table. Memento mori."
+	desc = "Una escena de mal humor que representa una calavera y velas sobre una mesa. Recuerdo mori."
 	icon_state = "skullpainting_deployed"
 	stolen_painting = /obj/item/painting/skull
 
 /obj/item/painting/castle
 	icon_state = "castlepainting"
-	desc = "A painting of a dark tower looming beyond mountains and mist."
+	desc = "Una pintura de una torre oscura que se alza mas alla de las montañas y la niebla."
 	sellprice = 40
 	deployed_structure = /obj/structure/fluff/walldeco/painting/castle
 
 /obj/structure/fluff/walldeco/painting/castle
-	desc = "A painting of a dark tower looming beyond mountains and mist."
+	desc = "Una pintura de una torre oscura que se alza mas alla de las montañas y la niebla."
 	icon_state = "castlepainting_deployed"
 	stolen_painting = /obj/item/painting/castle
 
 /obj/item/painting/crown
 	icon_state = "crownpainting"
-	desc = "A painting of a kingly crown resting on a book."
+	desc = "Una pintura de una corona real apoyada sobre un libro."
 	sellprice = 40
 	deployed_structure = /obj/structure/fluff/walldeco/painting/crown
 
 /obj/structure/fluff/walldeco/painting/crown
-	desc = "A painting of a kingly crown resting on a book."
+	desc = "Una pintura de una corona real apoyada sobre un libro."
 	icon_state = "crownpainting_deployed"
 	stolen_painting = /obj/item/painting/crown

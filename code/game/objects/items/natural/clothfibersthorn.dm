@@ -1,6 +1,6 @@
 /obj/item/natural/fibers
 	name = "fibra"
-	desc = "Plant fiber. The peasants make their living sewing these into fabrics and clothing."
+	desc = "Fibra vegetal. Los campesinos se ganan la vida confeccionandolos en telas y prendas de vestir."
 	icon_state = "fibers"
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
@@ -26,7 +26,7 @@
 
 /obj/item/natural/fibers/sinew
 	name = "fibra de tendon"
-	desc = "Sinew fiber. Made from butchered animals sinew, commonly used by hunters for leatherworking and bowcrafting."
+	desc = "Fibra de tendon. Hecho de tendones de animales sacrificados, comunmente utilizado por los cazadores para trabajar el cuero y fabricar arcos."
 	icon_state = "fibers"
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
@@ -45,7 +45,7 @@
 	name = "seda"
 	icon_state = "fibers"
 	possible_item_intents = list(/datum/intent/use)
-	desc = "Silken strands. Their usage in clothing is exotic in all places save the Underdark."
+	desc = "Hilos de seda. Su uso en la ropa es exotico en todos los lugares excepto en la Infraoscuridad."
 	force = 0
 	throwforce = 0
 	color = "#e6e3db"
@@ -77,8 +77,8 @@
 #endif
 
 /obj/item/natural/thorn
-	name = "thorn"
-	desc = "This bog-grown thorn is sharp and resistant like a needle."
+	name = "espino"
+	desc = "Esta espina cultivada en el pantano es afilada y resistente como una aguja."
 	icon_state = "thorn"
 	force = 10
 	throwforce = 0
@@ -92,7 +92,7 @@
 	grind_results = list(/datum/reagent/thorn_essence = 10)
 
 /obj/item/natural/thorn/attack_self(mob/living/user, list/modifiers)
-	user.visible_message("<span class='warning'>[user] snaps [src].</span>")
+	user.visible_message("<span class='warning'>[user] hace *clic* [src].</span>")
 	playsound(user,'sound/items/seedextract.ogg', 100, FALSE)
 	qdel(src)
 
@@ -112,8 +112,8 @@
 			L.consider_ambush()
 
 /obj/item/natural/bundle/fibers
-	name = "fiber bundle"
-	desc = "Fibers, bundled together."
+	name = "haz de fibras"
+	desc = "Fibras agrupadas."
 	icon_state = "fibersroll1"
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
@@ -137,8 +137,8 @@
 	. = ..()
 
 /obj/item/natural/bundle/fibers/sinew
-	name = "sinew fiber bundle"
-	desc = "Sinewy fibers, tightly bound together."
+	name = "haz de fibras tendinosas"
+	desc = "Fibras fibrosas, muy unidas entre si."
 	icon_state = "fibersroll1"
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
@@ -160,7 +160,7 @@
 	name = "tejido de seda"
 	icon_state = "fibersroll1"
 	possible_item_intents = list(/datum/intent/use)
-	desc = "Silk neatly woven together."
+	desc = "Seda cuidadosamente tejida."
 	force = 0
 	throwforce = 0
 	maxamount = 6
@@ -177,10 +177,10 @@
 	icon2step = 6
 
 /obj/item/natural/bundle/cloth
-	name = "bundle of cloth"
+	name = "paquete de tela"
 	icon_state = "clothroll1"
 	possible_item_intents = list(/datum/intent/use)
-	desc = "A cloth roll of several pieces of fabric."
+	desc = "Un rollo de tela con varios trozos de tela."
 	force = 0
 	throwforce = 0
 	maxamount = 10
@@ -189,7 +189,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
 	stacktype = /obj/item/natural/cloth
-	stackname = "cloth"
+	stackname = "tela"
 	icon1 = "clothroll1"
 	icon1step = 5
 	icon2 = "clothroll2"
@@ -202,8 +202,8 @@
 	update_bundle()
 
 /obj/item/natural/bundle/stick
-	name = "bundle of sticks"
-	desc = "A bundle of wooden sticks, looks like they all need to stick together!"
+	name = "manojo de palos"
+	desc = "Un manojo de palos de madera, ¡parece que todos necesitan mantenerse unidos!"
 	icon_state = "stickbundle1"
 	possible_item_intents = list(/datum/intent/use)
 	maxamount = 10
@@ -222,7 +222,7 @@
 	icon3 = "stickbundle3"
 
 /obj/item/natural/bowstring
-	name = "bowstring"
+	name = "cuerda del arco"
 	desc = "Una simple cuerda de arco."
 	icon_state = "fibers"
 	possible_item_intents = list(/datum/intent/use)
@@ -239,7 +239,7 @@
 
 /obj/item/natural/bundle/worms
 	name = "gusanos"
-	desc = "Multiple wriggly worms."
+	desc = "Multiples gusanos retorcidos."
 	icon_state = "worm2"
 	color = "#964B00"
 	maxamount = 6
@@ -255,7 +255,7 @@
 	name = "pila de huesos"
 	icon_state = "bonestack1"
 	possible_item_intents = list(/datum/intent/use)
-	desc = "Bones stacked upon one another."
+	desc = "Huesos apilados unos sobre otros."
 	force = 0
 	throwforce = 0
 	maxamount = 6
@@ -269,7 +269,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
 	stacktype = /obj/item/alch/bone
-	stackname = "bones"
+	stackname = "huesos"
 	icon1 = "bonestack1"
 	icon1step = 2
 	icon2 = "bonestack2"

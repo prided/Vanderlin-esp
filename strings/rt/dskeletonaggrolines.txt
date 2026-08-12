@@ -1,11 +1,11 @@
-,d ¡Más materia prima para la Señora!
-,d Tu sangre será un excelente lubricante para las máquinas.
-,d Más lux para la fundición.
+,d ¡Mas materia prima para la Señora!
+,d Tu sangre sera un excelente lubricante para las maquinas.
+,d Mas lux para la fundicion.
 ,d Te reharemos en Su nombre.
-,d Te sacrificaré a la Madre Oscura.
-,d ¡Cómo te atreves a pisar estos salones sagrados! ¡Muere!
+,d Te sacrificare a la Madre Oscura.
+,d ¡Como te atreves a pisar estos salones sagrados! ¡Muere!
 ,d ¡Muere, mortal!
-,d Tu forma es ofensiva; entréganos tu carne y tu alma.
-*reír
-*reír entre dientes
+,d Tu forma es ofensiva; entreganos tu carne y tu alma.
+*reir
+*reir entre dientes
 *blande su arma con floritura.

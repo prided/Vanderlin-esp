@@ -28,13 +28,13 @@
 	item_weight = 150 GRAMS
 
 /obj/item/storage/pill_bottle/dice/suicide_act(mob/user)
-	user.visible_message(span_suicide("[user] is gambling with death! It looks like [user.p_theyre()] trying to commit suicide!"))
+	user.visible_message(span_suicide("¡[user] esta jugando con la muerte! ¡Parece que [user.p_theyre()] esta intentando suicidarse!"))
 	return (OXYLOSS)
 
 /*****************************Dice********************************/
 
 /obj/item/dice //depreciated d6, use /obj/item/dice/d6 if you actually want a d6
-	name = "die"
+	name = "dado"
 	desc = ""
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "d6"
@@ -56,7 +56,7 @@
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/dice/suicide_act(mob/user)
-	user.visible_message(span_suicide("[user] is gambling with death! It looks like [user.p_theyre()] trying to commit suicide!"))
+	user.visible_message(span_suicide("¡[user] esta jugando con la muerte! ¡Parece que [user.p_theyre()] esta intentando suicidarse!"))
 	return (OXYLOSS)
 
 /obj/item/dice/proc/rig_dice(user)
@@ -68,7 +68,7 @@
 	else
 		for(var/i in 1 to sides)
 			possible_outcomes += i
-	var/outcome = input(user, "What will you rig the next roll to?", "XYLIX") as null|anything in possible_outcomes
+	var/outcome = input(user, "¿Con que prepararas el proximo rollo?", "XYLIX") as null|anything in possible_outcomes
 	if(special)
 		outcome = special_faces.Find(outcome)
 	if(!outcome)
@@ -118,16 +118,16 @@
 	name = "d6"
 
 /obj/item/dice/d6/wood
-	name = "die"
-	desc = "A six sided die carved from wood."
+	name = "dado"
+	desc = "Un troquel de seis caras tallado en madera."
 
 /obj/item/dice/d6/bone
-	name = "bone die"
+	name = "dado de hueso"
 	icon_state = "bone_d6"
-	desc = "A six sided die carved from bone."
+	desc = "Un dado de seis caras tallado en hueso."
 
 /obj/item/dice/d6/ebony
-	name = "ebony die"
+	name = "dado de ebano"
 	icon_state = "de6"
 	microwave_riggable = FALSE // You can't melt wood in the microwave
 
@@ -141,7 +141,7 @@
 		name = "cubo de spess"
 
 /obj/item/dice/fudge
-	name = "fudge die"
+	name = "dado trucado"
 	sides = 3 //shhh
 	icon_state = "fudge"
 	special_faces = list("minus","blank","plus")
@@ -244,13 +244,13 @@
 		result = special_faces[result]
 	if(user != null) //Dice was rolled by someone
 		if(shown)
-			user.visible_message(span_notice("[user] has rolled [src]. It lands on [result]. [comment]"), \
-								span_notice("I roll [src]. It lands on [result]. [comment]"), \
-								span_hear("I hear [src] rolling, it sounds like a [fake_result]."))
+			user.visible_message(span_notice("[user] ha lanzado [src]. Se detiene en [result]. [comment]"), \
+								span_notice("Yo lanzo [src]. Cae en [result]. [comment]"), \
+								span_hear("Escucho [src] rodando, suena como un [fake_result]."))
 		else
-			to_chat(user, span_notice("I roll [src] in secret. It lands on [result]. [comment]"))
+			to_chat(user, span_notice("Ruedo [src] en secreto. Cae en [result]. [comment]"))
 	else if(!src.throwing) //Dice was knocked around and is coming to rest
-		visible_message(span_notice("[src] rolls to a stop, landing on [result]. [comment]"))
+		visible_message(span_notice("[src] se detiene rodando y cae sobre [result]. [comment]"))
 
 /obj/item/dice/update_overlays()
 	. = ..()

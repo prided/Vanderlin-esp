@@ -1,10 +1,10 @@
 
 // AXE CHOP INTENTS //
 /datum/intent/axe/chop
-	name = "chop"
+	name = "cortar"
 	icon_state = "inchop"
 	blade_class = BCLASS_CHOP
-	attack_verb = list("chops", "hacks")
+	attack_verb = list("taja", "machetea")
 	animname = "chop"
 	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')
 	penfactor = AP_AXE_CHOP
@@ -38,7 +38,7 @@
 	misscost = 18 // Costs more if you miss
 
 /datum/intent/axe/chop/greataxe/slayer
-	name = "cleave"
+	name = "tajo"
 	icon_state = "incleave"
 	penfactor = AP_GREATAXE_CHOP + 10
 	clickcd = 30
@@ -51,10 +51,10 @@
 
 // AXE CUT INTENTS //
 /datum/intent/axe/cut
-	name = "cut"
+	name = "cortar"
 	icon_state = "incut"
 	blade_class = BCLASS_CUT
-	attack_verb = list("cuts", "slashes")
+	attack_verb = list("corta", "corta")
 	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
 	animname = "cut"
 	penfactor = AP_AXE_CUT
@@ -79,9 +79,9 @@
 
 // AXE THRUST INTENTS //
 /datum/intent/axe/thrust
-	name = "impale"
+	name = "empalar"
 	blade_class = BCLASS_STAB
-	attack_verb = list("stabs")
+	attack_verb = list("apuñala")
 	animname = "stab"
 	icon_state = "instab"
 	reach = 2

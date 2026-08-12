@@ -274,13 +274,13 @@ INITIALIZE_IMMEDIATE(/atom/movable/virtualspeaker)
 		if(findjob)
 			job = findjob.fields["rank"]
 		else
-			job = "Unknown"
+			job = "Desconocido"
 	else if(iscarbon(M))  // Carbon nonhuman
 		job = "Sin identificacion"
 	else if(isobj(M))  // Cold, emotionless machines
 		job = "Maquina"
 	else  // Unidentifiable mob
-		job = "Unknown"
+		job = "Desconocido"
 
 /atom/movable/virtualspeaker/GetJob()
 	return job

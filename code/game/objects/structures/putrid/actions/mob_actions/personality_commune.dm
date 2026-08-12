@@ -1,6 +1,6 @@
 // This can probably be changed to use mind linker at some point
 /datum/action/personality_commune
-	name = "Personality Commune"
+	name = "Comuna de la personalidad"
 	desc = "Envia pensamientos a tu conciencia alternativa."
 	background_icon_state = "bg_spell"
 	button_icon = 'icons/mob/actions/actions_spells.dmi'
@@ -31,7 +31,7 @@
 	var/mob/living/split_personality/non_controller = usr
 	var/client/non_controller_client = non_controller.client
 
-	var/to_send = tgui_input_text(non_controller, "What would you like to tell your other self?", "Commune", max_length = MAX_MESSAGE_LEN)
+	var/to_send = tgui_input_text(non_controller, "¿Que te gustaria decirle a tu otro yo?", "Comuna", max_length = MAX_MESSAGE_LEN)
 	if(QDELETED(src) || QDELETED(trauma) || !to_send)
 		return FALSE
 

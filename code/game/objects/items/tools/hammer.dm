@@ -1,5 +1,5 @@
 /obj/item/weapon/hammer
-	name = "hammer"
+	name = "martillo"
 	desc = ""
 	icon_state = "hammer"
 	icon = 'icons/roguetown/weapons/tools.dmi'
@@ -48,10 +48,10 @@
 		if(!attacked_prosthetic.anvilrepair)
 			return NONE
 		if(!interacting_with.ontable() && !istype(interacting_with.loc, /obj/machinery/anvil))
-			to_chat(user, span_warning("I should put [interacting_with] on a table or an anvil first."))
+			to_chat(user, span_warning("Deberia poner [interacting_with] en una mesa o en un yunque primero."))
 			return ITEM_INTERACT_BLOCKING
 		if(attacked_prosthetic.get_integrity() >= attacked_prosthetic.max_integrity && attacked_prosthetic.brute_dam == 0 && attacked_prosthetic.burn_dam == 0 && attacked_prosthetic.wounds == null && attacked_prosthetic.bodypart_disabled == BODYPART_NOT_DISABLED) //A mouthful
-			to_chat(user, span_warning("There is nothing to further repair on [attacked_prosthetic]."))
+			to_chat(user, span_warning("No hay nada mas que reparar en [attacked_prosthetic]."))
 			return ITEM_INTERACT_BLOCKING
 
 		if(GET_MOB_SKILL_VALUE_OLD(user, attacked_prosthetic.anvilrepair) <= 0)
@@ -70,14 +70,14 @@
 			attacked_prosthetic.brute_dam = max(attacked_prosthetic.brute_dam - 10, 0)
 			attacked_prosthetic.burn_dam = max(attacked_prosthetic.burn_dam - 10, 0)
 			if(repair_percent == 0.01) // If an inexperienced repair attempt has been successful
-				to_chat(user, span_warning("You fumble your way into slightly repairing [attacked_prosthetic]."))
+				to_chat(user, span_warning("Logra reparar un poco [attacked_prosthetic] a tientas."))
 			else
-				user.visible_message(span_info("[user] repairs [attacked_prosthetic]!"))
+				user.visible_message(span_info("[user]repara [attacked_prosthetic]¡!"))
 				attacked_prosthetic.wounds = null //You need actual skill to do this
 				attacked_prosthetic.bodypart_disabled = BODYPART_NOT_DISABLED
 			blacksmith_mind.add_sleep_experience(attacked_prosthetic.anvilrepair, amt2raise)
 		else
-			user.visible_message(span_warning("[user] fumbles trying to repair [attacked_prosthetic]!"))
+			user.visible_message(span_warning("[user] torpe intentando reparar [attacked_prosthetic]"))
 			attacked_prosthetic.take_damage(attacked_prosthetic.max_integrity * 0.1, BRUTE, "blunt")
 
 		user.changeNext_move(CLICK_CD_MELEE)
@@ -90,14 +90,14 @@
 			return NONE
 
 		if(!attacked_item.ontable() && !istype(interacting_with.loc, /obj/machinery/anvil))
-			to_chat(user, span_warning("I should put [attacked_item] on a table or an anvil first."))
+			to_chat(user, span_warning("Deberia poner [attacked_item] en una mesa o en un yunque primero."))
 			return ITEM_INTERACT_BLOCKING
 
 		var/skill_value = GET_MOB_SKILL_VALUE(user, attacked_item.anvilrepair) // 0-60 range typically
 		var/was_broken = attacked_item.obj_broken
 
 		if(!was_broken && attacked_item.get_integrity() >= attacked_item.max_integrity)
-			to_chat(user, span_warning("There is nothing to further repair on [attacked_item]."))
+			to_chat(user, span_warning("No hay nada mas que reparar en [attacked_item]."))
 			return ITEM_INTERACT_BLOCKING
 
 		if(skill_value <= 0)
@@ -129,9 +129,9 @@
 			attacked_item.atom_fix()
 			attacked_item.modify_max_integrity(max(1, attacked_item.max_integrity - integrity_loss), FALSE)
 
-			to_chat(user, span_warning("I manage to repair [attacked_item], but its integrity has been permanently damaged."))
+			to_chat(user, span_warning("Logro reparar [attacked_item], pero su integridad ha sido dañada permanentemente."))
 		else if(repair_percent)
-			user.visible_message(span_info("[user] repairs [attacked_item]!"))
+			user.visible_message(span_info("[user] repara [attacked_item]"))
 
 		var/amt2raise = floor(GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) * 0.25)
 		if(!repair_percent)
@@ -147,7 +147,7 @@
 			return NONE
 
 		if(GET_MOB_SKILL_VALUE_OLD(user, attacked_structure.hammer_repair) <= 0)
-			to_chat(user, span_warning("I don't know how to repair this.."))
+			to_chat(user, span_warning("No se como reparar esto..."))
 			return ITEM_INTERACT_BLOCKING
 
 		var/amt2raise = floor(GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) * 0.25)
@@ -156,7 +156,7 @@
 		attacked_structure.repair_damage(attacked_structure.max_integrity * repair_percent)
 		blacksmith_mind.add_sleep_experience(attacked_structure.hammer_repair, amt2raise)
 		playsound(src,'sound/items/bsmithfail.ogg', 100, FALSE)
-		user.visible_message(span_info("[user] repairs [attacked_structure]!"))
+		user.visible_message(span_info("[user] repara [attacked_structure]"))
 
 		user.changeNext_move(CLICK_CD_MELEE)
 
@@ -169,11 +169,11 @@
 		return FALSE
 
 	if (!affecting.brute_dam && !affecting.burn_dam && !length(affecting.wounds))
-		balloon_alert(user, "limb not damaged")
+		balloon_alert(user, "miembro no dañado")
 		return TRUE
 
-	user.visible_message(span_notice("[user] starts to fix some of the dents on [attacked_carbon == user ? user.p_their() : "[attacked_carbon]'s"] [affecting.name]."),
-		span_notice("You start fixing some of the dents on [attacked_carbon == user ? "your" : "[attacked_carbon]'s"] [affecting.name]."))
+	user.visible_message(span_notice("[user] comienza a arreglar algunas de las abolladuras en [attacked_carbon == user ? user.p_their() : "[attacked_carbon]'s"] [affecting.name]."),
+		span_notice("Empiezas a arreglar algunos de los abolladuras en [attacked_carbon == user ? "your" : "[attacked_carbon]'s"] [affecting.name]."))
 	var/use_delay = repeating ? 1 SECONDS : 0.5 SECONDS
 	if(user == attacked_carbon)
 		use_delay = 5 SECONDS
@@ -183,7 +183,7 @@
 		return TRUE
 
 	var/heal_value = force * max(1, (0.5 * GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering)))
-	if(!attacked_carbon.item_heal(user, brute_heal = heal_value, burn_heal = heal_value, heal_message_brute = "dents", heal_message_burn = "metal quemado", required_bodytype = BODYPART_ROBOTIC, item_source = src))
+	if(!attacked_carbon.item_heal(user, brute_heal = heal_value, burn_heal = heal_value, heal_message_brute = "abolladuras", heal_message_burn = "metal quemado", required_bodytype = BODYPART_ROBOTIC, item_source = src))
 		return TRUE
 
 	user.adjust_experience(/datum/attribute/skill/craft/engineering, 1)
@@ -217,8 +217,8 @@
 
 // --------- MALLET -----------
 /obj/item/weapon/hammer/wood
-	name = "wooden mallet"
-	desc = "A wooden mallet is an artificer's second-best friend! But it may also come in handy to a smith..."
+	name = "mazo de madera"
+	desc = "¡Un mazo de madera es el segundo mejor amigo de un artifice! Pero tambien puede resultarle util a un herrero..."
 	icon_state = "hammer_w"
 	force = DAMAGE_HAMMER - 5
 	dropshrink = 0.9
@@ -264,8 +264,8 @@
 	item_weight = 1.1 KILOGRAMS
 
 /obj/item/weapon/hammer/stone/rock
-	name = "hammerstone"
-	desc = "A simple rock, rounded and turned almost into a proper tool."
+	name = "piedra de martillo"
+	desc = "Una simple roca, redondeada y convertida casi en una verdadera herramienta."
 	icon_state = "hammerstone"
 	force = DAMAGE_HAMMER - 6
 	max_integrity = INTEGRITY_WORST
@@ -273,8 +273,8 @@
 	item_weight = 0.8 KILOGRAMS
 
 /obj/item/weapon/hammer/sledgehammer
-	name = "sledgehammer"
-	desc = "It's almost asking to be put to work."
+	name = "martillo de demolicion"
+	desc = "Es casi pedir que le pongan a trabajar."
 	icon = 'icons/roguetown/weapons/32/clubs.dmi'
 	icon_state = "sledgehammer"
 	force_wielded = DAMAGE_HAMMER_WIELD + 5
@@ -301,8 +301,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/hammer/sledgehammer/war
-	name = "steel sledgehammer"
-	desc = "A heavy steel sledgehammer, a weapon designed to make knights run in fear, the best option for a common soldier against a knight."
+	name = "mazo de acero"
+	desc = "Un pesado mazo de acero, un arma diseñada para hacer correr a los caballeros con miedo, la mejor opcion para un soldado comun contra un caballero."
 	icon = 'icons/roguetown/weapons/32/clubs.dmi'
 	icon_state = "warbonker"
 	force = DAMAGE_HAMMER + 5
@@ -313,8 +313,8 @@
 	item_weight = 8.4 KILOGRAMS
 
 /obj/item/weapon/hammer/sledgehammer/war/malum
-	name = "forgefiend"
-	desc = "This hammer's creation took a riddle in its own making. A great sacrifice for perfect quality"
+	name = "demonio de la forja"
+	desc = "La creacion de este martillo supuso un enigma en su propia creacion. Un gran sacrificio por una calidad perfecta."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "malumhammer"
 	force = DAMAGE_MACE

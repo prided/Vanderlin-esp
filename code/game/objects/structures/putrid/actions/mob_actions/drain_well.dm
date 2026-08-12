@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/drain_well
-	name = "Drain Healing Well"
-	desc = "Drain a healing well to gain personal resources. Must be adjacent. Cost: None, Cooldown: 60s"
+	name = "Drenar pozo curativo"
+	desc = "Drena un pozo de curacion para obtener recursos personales. Debe ser adyacente. Costo: Ninguno, Enfriamiento: 60s"
 	button_icon_state = "drain_well"
 	cooldown_time = 0
 	personal_resource_cost = 0
@@ -14,7 +14,7 @@
 
 	var/obj/structure/meatvine/healing_well/well = target
 	if(!istype(well))
-		to_chat(owner, span_warning("Must target a healing well!"))
+		to_chat(owner, span_warning("¡Debe seleccionar un pozo de curacion!"))
 		return FALSE
 
 	if(!consumed.start_draining_well(well))

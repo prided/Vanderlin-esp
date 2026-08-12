@@ -1,8 +1,8 @@
 /datum/objective/personal/improve_craft
-	name = "Improve Craft Skills"
-	category = "Malum's Chosen"
+	name = "Mejorar habilidades de artesania"
+	category = "Elegido de Malum"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Malum grows stronger", "Malum blesses you (+1 Intelligence)")
+	rewards = list("2 Triunfos", "Malum se fortalece", "Malum te bendice (+1 Inteligencia)")
 	var/levels_gained = 0
 	var/required_levels = 2
 
@@ -37,7 +37,7 @@
 		complete_objective()
 	else
 		var/remaining = required_levels - levels_gained
-		to_chat(owner.current, span_notice("Craft skill improved! [remaining] more level[remaining == 1 ? "" : "s"] needed to fulfill Malum's task!"))
+		to_chat(owner.current, span_notice("¡Habilidad de artesania mejorada! Faltan [remaining] rango[remaining == 1 ? "" : "s"] para cumplir la tarea de Malum."))
 
 /datum/objective/personal/improve_craft/complete_objective()
 	. = ..()
@@ -50,4 +50,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_MALUM_BLESSING, list(STAT_INTELLIGENCE = 1))
 
 /datum/objective/personal/improve_craft/update_explanation_text()
-	explanation_text = "Improve your craft skills by gaining [required_levels] new skill levels through practice or dreams. For Malum!"
+	explanation_text = "Mejora tus habilidades de artesania al obtener [required_levels] niveles nuevos mediante la practica o los sueños. ¡Por Malum!"

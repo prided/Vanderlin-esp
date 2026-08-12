@@ -12,9 +12,9 @@
 			. +="|[parse_zone(part)]| "
 
 /datum/intent/effect/daze
-	name = "dazing strike"
+	name = "golpe aturdidor"
 	icon_state = "indaze"
-	attack_verb = list("dazes")
+	attack_verb = list("aturde")
 	animname = "strike"
 	blade_class = BCLASS_BLUNT
 	hitsound = list('sound/combat/hits/blunt/daze_hit.ogg')
@@ -44,6 +44,6 @@
 	owner.OffBalance(4 SECONDS)
 
 /atom/movable/screen/alert/status_effect/debuff/dazed
-	name = "Dazed"
-	desc = "You've been smacked on the head very hard. That way is left, right?"
+	name = "aturdido"
+	desc = "Te han golpeado muy fuerte en la cabeza. Asi queda la izquierda, ¿no?"
 	icon_state = "dazed"

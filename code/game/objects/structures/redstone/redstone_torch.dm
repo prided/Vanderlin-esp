@@ -1,6 +1,6 @@
 /obj/structure/redstone/torch
 	name = "antorcha de piedra roja"
-	desc = "A torch that provides constant redstone power. Inverts when the attached block is powered."
+	desc = "Una antorcha que proporciona energia constante de piedra roja. Se invierte cuando el bloque adjunto esta encendido."
 	icon_state = "torch"
 	redstone_role = REDSTONE_ROLE_SOURCE
 	var/attached_dir = SOUTH
@@ -126,7 +126,7 @@
 		return
 	attached_dir = turn(attached_dir, 90)
 	dir = attached_dir
-	to_chat(user, "<span class='notice'>You rotate the [name] to attach to the [dir2text_readable(attached_dir)] side.</span>")
+	to_chat(user, "<span class='notice'>Usted gira el [name] para fijarlo al lado [dir2text_readable(attached_dir)].</span>")
 	schedule_network_update()
 
 /obj/structure/redstone/torch/proc/dir2text_readable(direction)

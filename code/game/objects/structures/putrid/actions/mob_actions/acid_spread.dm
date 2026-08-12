@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/ranged/spread/lethal
-	name = "Spit Acid Spread"
-	desc = "Spits a spread of acid at someone, burning them."
+	name = "Escupir acido para untar"
+	desc = "Escupe una cantidad de acido a alguien y lo quema."
 	acid_projectile = null
 	acid_casing = /obj/item/ammo_casing/xenospit/spread/lethal
 	button_icon_state = "acidspit_0"
@@ -44,7 +44,7 @@
 	variance = 30
 
 /obj/projectile/neurotoxin/acid/spitter_spread
-	name = "acid spit"
+	name = "saliva acida"
 	icon_state = "toxin"
 	damage = 15
 	damage_type = BURN

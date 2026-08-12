@@ -1,6 +1,6 @@
 /obj/structure/closet/crate/miningcar
-	name = "mine cart"
-	desc = "A cart for use on rails. Or off rails, if you're so inclined."
+	name = "carro de mina"
+	desc = "Un carro para uso sobre rieles. O descarrilarse, si asi lo desea."
 	icon = 'icons/obj/track.dmi'
 	icon_state = "minecart"
 	base_icon_state = "minecart"
@@ -32,9 +32,9 @@
 /obj/structure/closet/crate/miningcar/examine(mob/user)
 	. = ..()
 	if(on_rails)
-		. += span_notice("You can give this a bump to send it on its way, or drag it off the rails to drag it around.")
+		. += span_notice("Puedes empujarlo para enviarlo a su destino, o arrastrarlo fuera de los rieles para moverlo.")
 	else
-		. += span_notice("Drag this onto a mine cart rail to set it on the rails.")
+		. += span_notice("Arrastre esto sobre un carril de carrito minero para colocarlo en los rieles.")
 
 /obj/structure/closet/crate/miningcar/Move(atom/newloc, direct, glide_size_override, update_dir)
 	if(isnull(newloc))
@@ -60,7 +60,7 @@
 				if(item.anchored)
 					continue
 				item.forceMove(src)
-				visible_message(span_notice("[src] hopper up [item]."))
+				visible_message(span_notice("[src] tolva hacia arriba [item]."))
 
 	// Handling running OVER people
 	for(var/mob/living/smacked in loc)
@@ -99,16 +99,16 @@
 		return
 	if(atom_integrity <= max_integrity * 0.05)
 		smacked.visible_message(
-			span_danger("[src] smashes into [smacked], breaking into pieces!"),
-			span_userdanger("You are smacked by [src] as it breaks into pieces!"),
+			span_danger("[src] se estrella contra [smacked], rompiendose en pedazos."),
+			span_userdanger("¡Te golpea [src] mientras se rompe en pedazos!"),
 		)
 		//playsound(src, 'sound/effects/break_stone.ogg', 50, vary = TRUE)
 		momentum = 0
 
 	else
 		smacked.visible_message(
-			span_danger("[src] smashes into [smacked]!"),
-			span_userdanger("You are smacked by [src]!"),
+			span_danger("¡[src] se estrella contra [smacked]!"),
+			span_userdanger("¡Te golpean con [src]!"),
 		)
 	//playsound(src, 'sound/effects/bang.ogg', 50, vary = TRUE)
 	take_damage(max_integrity * 0.05)
@@ -347,7 +347,7 @@
 	obj_flags &= ~BLOCK_Z_OUT_DOWN
 	RemoveElement(/datum/element/give_turf_traits, string_list(list(TRAIT_IMMERSE_STOPPED, TRAIT_CHASM_STOPPED)))
 	if(momentum >= 12)
-		visible_message(span_warning("[src] comes to a violent halt!"))
+		visible_message(span_warning("¡[src] se detiene de forma violenta!"))
 		throw_contents()
 	else
 		visible_message(span_notice("[src] se detiene lentamente."))
@@ -362,7 +362,7 @@
 		// There is a break and it is powered, so STOP
 		if(stop_break && !stop_break.force_disabled && stop_break.rotations_per_minute)
 			if(momentum >= 8)
-				visible_message(span_notice("[src] comes to a sudden stop."))
+				visible_message(span_notice("[src] se detiene de repente."))
 			else
 				visible_message(span_notice("[src] se detiene."))
 			SSmove_manager.stop_looping(src, SSminecarts)
@@ -480,7 +480,7 @@
 		visible_message(span_warning("¡[src] derrama su contenido!"))
 	else
 		// Update this message if someone allows multiple people to ride one minecart
-		visible_message(span_warning("[src] breaks open, spilling its contents[yeet_rider ? " and throwing its rider":""]!"))
+		visible_message(span_warning("¡[src] se abre, derramando su contenido[yeet_rider ? " and throwing its rider":""]!"))
 
 	for(var/obj/structure/minecart_rail/rail in get_turf(src))
 		update_rail_state(TRUE)

@@ -1,7 +1,7 @@
 // Note: BYOND is object oriented. There is no reason for this to be copy/pasted blood code.
 
 /obj/effect/decal/cleanable/xenoblood
-	name = "xeno blood"
+	name = "sangre xenobiotica"
 	desc = ""
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "xfloor1"
@@ -19,7 +19,7 @@
 	random_icon_states = list("xgibbl1", "xgibbl2", "xgibbl3", "xgibbl4", "xgibbl5")
 
 /obj/effect/decal/cleanable/xenoblood/xgibs
-	name = "xeno gibs"
+	name = "restos xeno"
 	desc = ""
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "xgib1"

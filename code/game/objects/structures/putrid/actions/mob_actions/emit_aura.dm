@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/emit_aura
 	name = "Aura"
-	desc = "Emit an aura that buffs nearby meatvines."
+	desc = "Emite un aura que mejora las enredaderas de carne cercanas."
 	button_icon_state = "aura"
 	cooldown_time = 30 SECONDS
 	personal_resource_cost = 15
@@ -78,7 +78,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/meatvine_speed
 	name = "Aura de velocidad"
-	desc = "Your speed is enhanced by a nearby ally's aura!"
+	desc = "¡Tu velocidad se ve reforzada por el aura de un aliado cercano!"
 	icon_state = "buff_speed"
 
 /datum/status_effect/buff/meatvine_endurance
@@ -89,7 +89,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/meatvine_endurance
 	name = "Aura de resistencia"
-	desc = "Your endurance and constitution are enhanced by a nearby ally's aura!"
+	desc = "¡Tu resistencia y constitucion mejoran con el aura de un aliado cercano!"
 	icon_state = "buff_endurance"
 
 /datum/status_effect/buff/meatvine_gigantism
@@ -98,8 +98,8 @@
 	duration = 20 SECONDS
 
 /atom/movable/screen/alert/status_effect/buff/meatvine_gigantism
-	name = "Enduring Aura"
-	desc = "Your size and health are doubled by a nearby ally's aura!"
+	name = "Aura duradera"
+	desc = "¡Tu tamaño y salud se duplican con el aura de un aliado cercano!"
 	icon_state = "buff_gigantism"
 
 /datum/status_effect/buff/meatvine_gigantism/on_apply()
@@ -122,5 +122,5 @@
 	target.maxHealth *= 0.5
 	target.health = min(target.health * 0.5, target.maxHealth)
 
-	to_chat(target, span_warning("You feel your enhanced size fade away."))
+	to_chat(target, span_warning("Sientes que tu tamaño aumentado se desvanece."))
 	return ..()

@@ -1,7 +1,7 @@
 //................	Chisel	............... //
 /obj/item/weapon/chisel
-	name = "chisel"
-	desc = "Hold it in one hand with a mallet or stone in the other. Strike with this to stonework."
+	name = "cincel"
+	desc = "Sostengalo en una mano con un mazo o una piedra en la otra. Golpea con esto la mamposteria."
 	icon_state = "chisel"
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	force = DAMAGE_KNIFE
@@ -29,7 +29,7 @@
 	item_weight = 212 GRAMS
 
 /datum/intent/chisel
-	name = "chisel"
+	name = "cincel"
 	icon_state = "inchisel"
 	attack_verb = list("cinceles")
 	hitsound = list('sound/combat/hits/pick/genpick (1).ogg', 'sound/combat/hits/pick/genpick (2).ogg')

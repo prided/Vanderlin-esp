@@ -1,6 +1,6 @@
 /obj/item/weapon
 	abstract_type = /obj/item/weapon
-	name = "weapon"
+	name = "arma"
 	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
 	force = 15
@@ -57,7 +57,7 @@
 
 	if(HAS_TRAIT(user, TRAIT_RAVOX_CURSE) && prob(33))
 		var/mob/living/carbon/human/H = user
-		to_chat(H, span_warning("The idea repulses me!"))
+		to_chat(H, span_warning("¡La idea me repela!"))
 		H.cursed_freak_out()
 		H.Paralyze(4 SECONDS)
 		return FALSE

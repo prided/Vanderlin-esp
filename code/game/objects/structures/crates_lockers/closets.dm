@@ -1,7 +1,7 @@
 #define LOCKER_FULL -1
 
 /obj/structure/closet
-	name = "closet"
+	name = "armario"
 	desc = ""
 	icon = 'icons/obj/closet.dmi'
 	icon_state = "generic"
@@ -103,12 +103,12 @@
 		return TRUE
 	if(welded || locked())
 		if(user)
-			to_chat(user, span_warning("Locked."))
+			to_chat(user, span_warning("Cerrado."))
 		return FALSE
 	//MONKESTATION EDIT START - Allow a strong grabber to open their own pulled closet
 	if(strong_grab && pulledby != user)
 		if(user)
-			to_chat(user, span_danger("[pulledby] has an incredibly strong grip on [src], preventing it from opening."))
+			to_chat(user, span_danger("[pulledby] tiene un agarre increiblemente fuerte en [src], impidiendo que se abra."))
 		return FALSE
 	return TRUE
 
@@ -258,13 +258,13 @@
 		return
 	var/turf/T = get_turf(src)
 	add_fingerprint(user)
-	user.visible_message("<span class='warning'>[user] [actuallyismob ? "tries to ":""]stuff [O] into [src].</span>", \
-						"<span class='warning'>I [actuallyismob ? "try to ":""]stuff [O] into [src].</span>", \
-						"<span class='hear'>I hear clanging.</span>")
+	user.visible_message("<span class='warning'>[user] [actuallyismob ? "tries to ":""]meter [O] en [src].</span>", \
+						"<span class='warning'>Me [actuallyismob ? "try to ":""]arrepando [O] en [src].</span>", \
+						"<span class='hear'>Escucho ruido metalico.</span>")
 	if(actuallyismob)
 		if(do_after(user, 4 SECONDS, O))
-			user.visible_message(span_notice("[user] stuffs [O] into [src]."), \
-								span_notice("I stuff [O] into [src]."), \
+			user.visible_message(span_notice("[user] mete [O] en [src]."), \
+								span_notice("Yo meto [O] en [src]."), \
 								span_hear("Escucho un fuerte golpe."))
 			O.forceMove(T)
 			close()
@@ -278,7 +278,7 @@
 	if(locked())
 		if(message_cooldown <= world.time)
 			message_cooldown = world.time + 50
-			to_chat(user, "<span class='warning'>I'm trapped!</span>")
+			to_chat(user, "<span class='warning'> ¡Estoy atrapado! </span>")
 		return
 	container_resist(user)
 
@@ -295,7 +295,7 @@
 /obj/structure/closet/verb/verb_toggleopen()
 	set src in view(1)
 	set hidden = 1
-	set name = "Toggle Open"
+	set name = "Alternar abrir"
 
 	if(!usr.can_perform_action(src, FORBID_TELEKINESIS_REACH) || !isturf(loc))
 		return
@@ -303,7 +303,7 @@
 	if(iscarbon(usr))
 		return toggle(usr)
 	else
-		to_chat(usr, "<span class='warning'>This mob type can't use this verb.</span>")
+		to_chat(usr, "<span class='warning'>Este tipo de mob no puede usar este verbo.</span>")
 
 // Objects that try to exit a locker by stepping were doing so successfully,
 // and due to an oversight in turf/Enter() were going through walls.  That

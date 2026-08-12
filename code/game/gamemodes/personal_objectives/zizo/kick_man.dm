@@ -1,8 +1,8 @@
 /datum/objective/personal/kick_groin
-	name = "Kick Groin"
-	category = "Zizo's Chosen"
+	name = "Patear la entrepierna"
+	category = "Elegido de Zizo"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Zizo grows stronger", "Your nutcracks will be stronger", "Zizo blesses you (+1 Strength)")
+	rewards = list("2 Triunfos", "Zizo se fortalece", "Tus golpes en los huevos seran mas fuertes", "Zizo te bendice (+1 Fuerza)")
 
 /datum/objective/personal/kick_groin/on_creation()
 	. = ..()
@@ -27,7 +27,7 @@
 
 /datum/objective/personal/kick_groin/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've established your dominance over this man and completed Zizo's objective!"))
+	to_chat(owner.current, span_greentext("¡Has impuesto tu dominio sobre este hombre y completado el objetivo de Zizo!"))
 	adjust_storyteller_influence(ZIZO, 20)
 	UnregisterSignal(owner.current, COMSIG_MOB_KICK)
 
@@ -37,4 +37,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_ZIZO_BLESSING, list(STAT_STRENGTH = 1))
 
 /datum/objective/personal/kick_groin/update_explanation_text()
-	explanation_text = "Kick a man in the balls to show your dominance and earn Zizo's approval!"
+	explanation_text = "¡Patea a un hombre en los huevos para demostrar tu dominio y obtener la aprobacion de Zizo!"

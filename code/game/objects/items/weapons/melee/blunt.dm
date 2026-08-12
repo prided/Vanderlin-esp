@@ -3,7 +3,7 @@
 //................ Mace ............... //
 /obj/item/weapon/mace
 	name = "maza de hierro"
-	desc = "A heavy iron mace, preferred by those with a grudge against knightly whoresons."
+	desc = "Una maza de hierro pesada, preferida por aquellos que guardan rencor contra los hijos de puta de los caballeros."
 	icon_state = "mace"
 	icon = 'icons/roguetown/weapons/32/clubs.dmi'
 	force = DAMAGE_MACE
@@ -45,7 +45,7 @@
 
 /obj/item/weapon/mace/rungu
 	name = "rungu de hierro"
-	desc = "An iron from the fallen east. Possesses a smoothed out head."
+	desc = "Un hierro del este caido. Posee la cabeza alisada."
 	icon_state = "rungu_iron"
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	item_weight = 1.5 KILOGRAMS
@@ -63,7 +63,7 @@
 
 /obj/item/weapon/mace/shishpar
 	name = "shishpar de hierro"
-	desc = "A heavy foreign mace with a sword-like handle. Its weight makes it a little hard to wield, but its capable of delivering devastating blows."
+	desc = "Una pesada maza extranjera con mango en forma de espada. Su peso hace que sea un poco dificil de manejar, pero es capaz de asestar golpes devastadores."
 	icon_state = "shishpar_iron"
 	force = DAMAGE_MACE + 1
 	force_wielded = DAMAGE_MACE_WIELD + 2
@@ -76,7 +76,7 @@
 
 /obj/item/weapon/mace/cane
 	name = "baston de madera"
-	desc = "A simple wooden cane, whittled from wood. Good for supporting your weight."
+	desc = "Un simple baston de madera, tallado en madera. Bueno para soportar tu peso."
 	icon = 'icons/roguetown/weapons/32/canes.dmi'
 	icon_state = "simple_cane"
 	force = DAMAGE_MACE - 4
@@ -90,7 +90,7 @@
 
 /obj/item/weapon/mace/cane/noble
 	name = "baston elegante"
-	desc = "A polished, dark wooden cane, decorated with gold and silver. Often carried by nobility, even those without a limp, simply to flaunt their wealth to the peasantry."
+	desc = "Un baston de madera oscura pulida, decorado con oro y plata. A menudo lo lleva la nobleza, incluso aquellos que no cojean, simplemente para hacer alarde de su riqueza ante el campesinado."
 	icon_state = "noble_cane"
 	force = DAMAGE_MACE - 3
 	force_wielded = DAMAGE_MACE - 1
@@ -98,8 +98,8 @@
 	item_weight = 500 GRAMS
 
 /obj/item/weapon/mace/cane/courtphysician
-	name = "physician's cane"
-	desc = "A prized cane. Embellished with a golden serpent, representing the Kingsfield university. The pointy end is quite sharp."
+	name = "baston de medico"
+	desc = "Un baston preciado. Adornado con una serpiente dorada, que representa la universidad Kingsfield. El extremo puntiagudo es bastante afilado."
 	icon_state = "physician_cane"
 	force = DAMAGE_MACE - 3
 	force_wielded = DAMAGE_MACE - 1
@@ -108,15 +108,15 @@
 	item_weight = 450 GRAMS
 
 /obj/item/weapon/mace/cane/merchant
-	name = "merchant's cane"
-	desc = "An expensive cane, decorated with gold and inlaid with a gem. A symbol of great wealth for the owner."
+	name = "baston de comerciante"
+	desc = "Un baston caro, decorado con oro y con incrustaciones de una gema. Un simbolo de gran riqueza para el propietario."
 	icon_state = "merchant_cane"
 	sellprice = 300
 	item_weight = 500 GRAMS
 
 /obj/item/weapon/mace/cane/natural
 	name = "baston de madera natural"
-	desc = "A primitive cane, crudely carved from a thick tree branch. It still has a leaf on it."
+	desc = "Un baston primitivo, toscamente tallado en una gruesa rama de arbol. Todavia tiene una hoja."
 	icon_state = "natural_cane"
 	force = DAMAGE_MACE - 5
 	force_wielded = DAMAGE_MACE - 3
@@ -125,7 +125,7 @@
 
 /obj/item/weapon/mace/cane/bronze
 	name = "baston de bronce"
-	desc = "A walking stick made from bronze and copper. The light on the top is entirely contained within, serving no functional purpose."
+	desc = "Baston fabricado en bronce y cobre. La luz en la parte superior esta completamente contenida en el interior y no tiene ningun proposito funcional."
 	icon_state = "artificer_cane"
 	force = DAMAGE_MACE - 3
 	force_wielded = DAMAGE_MACE - 1
@@ -134,8 +134,8 @@
 	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/weapon/mace/cane/necran
-	name = "necran rod"
-	desc = "Carved from dark stone, engraved with gold. Often carried by elderly Necrans."
+	name = "varilla de necrano"
+	desc = "Tallado en piedra oscura, grabado en oro. A menudo lo llevan Necrans ancianos."
 	icon_state = "necran_cane"
 	force = DAMAGE_MACE - 3
 	force_wielded = DAMAGE_MACE - 1
@@ -205,7 +205,7 @@
 //................ Bell ringer ............... //
 /obj/item/weapon/mace/church
 	name = "campanero"
-	desc = "Faith is sometimes best administered with steel and blood."
+	desc = "A veces la fe se administra mejor con acero y sangre."
 	icon_state = "churchmace"
 	force = DAMAGE_MACE + 3
 	force_wielded = DAMAGE_MACE_WIELD + 3
@@ -216,8 +216,8 @@
 
 //................ Steel mace ............... //	Better wbalance and wdefense
 /obj/item/weapon/mace/steel
-	name = "steel mace"
-	desc = "A well-crafted mace with a steel head. Easier to control and hits just as hard."
+	name = "maza de acero"
+	desc = "Una maza bien elaborada con cabeza de acero. Mas facil de controlar y golpea con la misma fuerza."
 	icon_state = "smace"
 	force = DAMAGE_MACE + 2
 	force_wielded = DAMAGE_MACE_WIELD
@@ -231,8 +231,8 @@
 	item_weight = 1.6 KILOGRAMS
 
 /obj/item/weapon/mace/steel/rungu
-	name = "steel rungu"
-	desc = "A steel mace from the fallen east. Possesses a smoothed out head."
+	name = "rungu de acero"
+	desc = "Una maza de acero del este caido. Posee la cabeza alisada."
 	icon_state = "rungu_steel"
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	wdefense = AVERAGE_PARRY //Due to costing less bars
@@ -243,7 +243,7 @@
 
 /obj/item/weapon/mace/steel/shishpar //More damage, but less versatile with bonuses
 	name = "shishpar de acero"
-	desc = "A heavy foreign mace with a sword-like handle. Its weight makes it a little hard to wield, but it's capable of delivering devastating blows."
+	desc = "Una pesada maza extranjera con mango en forma de espada. Su peso hace que sea un poco dificil de manejar, pero es capaz de asestar golpes devastadores."
 	icon_state = "shishpar_steel"
 	force_wielded = DAMAGE_MACE_WIELD + 3
 	wdefense = AVERAGE_PARRY
@@ -274,7 +274,7 @@
 //................ Iron Bludgeon ............... // Less damage, more accurate, similar to a cudgel
 /obj/item/weapon/mace/bludgeon
 	name = "garrote de hierro"
-	desc = "An iron headed club, useful for beating the dregs back into their gutters."
+	desc = "Un garrote con cabeza de hierro, util para devolver la escoria a sus alcantarillas."
 	icon_state = "ibludgeon"
 	force = DAMAGE_CLUB + 3
 	force_wielded = DAMAGE_CLUB_WIELD + 2
@@ -297,7 +297,7 @@
 //................ Copper bludgeon ............... //
 /obj/item/weapon/mace/bludgeon/copper
 	name = "garrote de cobre"
-	desc = "An extremely crude weapon for cruder bastards."
+	desc = "Un arma extremadamente tosca para bastardos mas toscos."
 	icon_state = "cbludgeon"
 	force = DAMAGE_CLUB + 1
 	force_wielded = DAMAGE_CLUB_WIELD + 1
@@ -310,7 +310,7 @@
 
 //................ Club ............... //
 /obj/item/weapon/mace/woodclub
-	name = "club"
+	name = "garrote"
 	desc = "Un arma mas antigua que el tiempo registrado."
 	icon_state = "club1"
 	force = DAMAGE_CLUB
@@ -335,9 +335,9 @@
 
 //................ Cudgel ............... //
 /obj/item/weapon/mace/cudgel
-	name = "cudgel"
+	name = "garrote"
 	icon_state = "cudgel"
-	desc = "A stubby little club favored for thwacking thieves and smart-mouthed peasant folk."
+	desc = "Un pequeño club rechoncho preferido por ladrones y campesinos habladores."
 	force = DAMAGE_CLUB
 	force_wielded = DAMAGE_CLUB_WIELD
 	wdefense = MEDIOCRE_PARRY
@@ -363,8 +363,8 @@
 				return list("shrink" = 0.4,"sx" = -3,"sy" = -4,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 70,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 1,"wflip" = 0,"eflip" = 0)
 
 /obj/item/weapon/mace/cudgel/psy
-	name = "psydonian handmace"
-	desc = "A shorthanded mace, a convenient sleeping aid, or a means to root out heresy. It's all in the wrist."
+	name = "Maza de mano psydonian"
+	desc = "Una maza escasa, una comoda ayuda para dormir o un medio para erradicar la herejia. Esta todo en la muñeca."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psyflangedmace"
 	wdefense = AVERAGE_PARRY
@@ -379,8 +379,8 @@
 	AddComponent(/datum/component/psyblessed, FALSE, 3, 100, 50, 1, TRUE)
 
 /obj/item/weapon/mace/cudgel/shellrungu
-	name = "shell rungu"
-	desc = "A ceremonial rungu carved out of a clam shell. Not intended for combat. It's used in various Sea and Coastal Elven rituals and ceremonies."
+	name = "rungu de concha"
+	desc = "Un rungu ceremonial tallado en una concha de almeja. No esta destinado al combate. Se utiliza en varios rituales y ceremonias elficas costeras y marinas."
 	icon = 'icons/roguetown/gems/gem_shell.dmi'
 	icon_state = "rungu_shell"
 	max_integrity = INTEGRITY_POOR
@@ -392,9 +392,9 @@
 
 //................ Alt cudgel ............... //
 /obj/item/weapon/mace/cudgel/carpenter
-	name = "peasant cudgel"
+	name = "garrote campesino"
 	icon_state = "carpentercudgel"
-	desc = "A stubby club reinforced with iron bits, popular among village watchmen and peasant militias. Despite being reinforced and hard-hitting, it still cannot compare to a proper mace."
+	desc = "Un garrote rechoncho reforzado con piezas de hierro, popular entre los vigilantes de las aldeas y las milicias campesinas. A pesar de estar reforzado y ser contundente, todavia no se puede comparar con una maza adecuada."
 	item_weight = 600 GRAMS
 	smeltresult = /obj/item/fertilizer/ash
 	melting_material = null
@@ -403,7 +403,7 @@
 //................ Wooden sword ............... //
 /obj/item/weapon/mace/woodclub/train_sword
 	name = "espada de madera"
-	desc = "Crude wood assembled into the shape of a sword, a terrible weapon to be on the receiving end of during a training spat."
+	desc = "Madera tosca ensamblada en forma de espada, un arma terrible de la que estar en el lado receptor durante una disputa de entrenamiento."
 	icon = 'icons/roguetown/weapons/32/swords.dmi'
 	icon_state = "wsword"
 	force = DAMAGE_CLUB - 10
@@ -433,7 +433,7 @@
 //................ Goedendag ............... //
 /obj/item/weapon/mace/goden
 	name = "club de guerra"
-	desc = "A two-handed club, decorated with a spiked cap crown. A perfect way to say Good Morning to any would be noble-knight."
+	desc = "Un garrote de dos manos, decorado con una corona con puntas. Una manera perfecta de decir buenos dias a cualquiera seria noble caballero."
 	icon = 'icons/roguetown/weapons/64/maces.dmi'
 	icon_state = "goedendag"
 	force = DAMAGE_CLUB
@@ -474,7 +474,7 @@
 
 /obj/item/weapon/mace/goden/deepduke //Boss loot
 	name = "baston del duque profundo"
-	desc = "A staff made of seaglass and sturdy but unusual metal, holding no power after its misled owner's death. More useful as a bashing tool than a magic focus."
+	desc = "Un baston hecho de vidrio marino y metal resistente pero inusual, que no tiene poder despues de la muerte de su dueño engañado. Mas util como herramienta de ataque que como foco magico."
 	icon = 'icons/roguetown/mob/monster/pufferboss.dmi'
 	icon_state = "pufferprod"
 	force = DAMAGE_MACE - 5
@@ -485,8 +485,8 @@
 
 //................ Grand mace ............... //
 /obj/item/weapon/mace/goden/steel
-	name = "grand mace"
-	desc = "A cast polearm, rumored to be the weapon-design used by Psydon himself."
+	name = "gran maza"
+	desc = "Un arma de asta fundida, que se rumorea que es el diseño de arma utilizado por el propio Psydon."
 	icon_state = "polemace"
 	gripped_intents = list(MACE_HVYSMASH) // It's a 2h flanged mace, not a goedendag.
 	wbalance = DODGE_CHANCE_NORMAL
@@ -511,8 +511,8 @@
 
 //................ Psydonian Grand Mace ............... //
 /obj/item/weapon/mace/goden/psydon
-	name = "psydonian grand mace"
-	desc = "A mighty mace which seems to be a large psycross with a handle, though no less effective at crushing the spirit and bones of the inhumen."
+	name = "psydonian gran maza"
+	desc = "Una poderosa maza que parece ser un gran psycross con mango, aunque no menos efectiva para aplastar el espiritu y los huesos del inhumen."
 	icon = 'icons/roguetown/weapons/64/psydonite.dmi'
 	icon_state = "psymace"
 	wbalance = DODGE_CHANCE_NORMAL
@@ -544,7 +544,7 @@
 //................ Shillelagh ............... //
 /obj/item/weapon/mace/goden/shillelagh		// The Briar signature weapon. Sturdy oak war club.
 	name = "shillelagh"
-	desc = "Big old oak branch, carved to a deadly weapon."
+	desc = "Gran y vieja rama de roble, tallada en forma de arma mortal."
 	icon = 'icons/roguetown/weapons/32/clubs.dmi'
 	icon_state = "shillelagh"
 	gripped_intents = list(MACE_WOODSMASH)
@@ -576,7 +576,7 @@
 //................ Dwarf Warhammer ............... // - Unique Langobardo weapon
 /obj/item/weapon/mace/goden/steel/warhammer
 	name = "martillo de guerra enano"
-	desc = "A great dwarven warhammer made of stern steel, engraved with oaths of battle and time."
+	desc = "Un gran martillo de guerra enano hecho de acero severo, grabado con juramentos de batalla y tiempo."
 	icon_state = "warhammer"
 	wlength = WLENGTH_GREAT
 	swingsound = BLUNTWOOSH_HUGE
@@ -596,8 +596,8 @@
 
 //................ Copper goden ............... //
 /obj/item/weapon/mace/goden/copper
-	name = "copper warclub"
-	desc = "A two-handed club, decorated with a crown of spikes. A barbaric design, good enough to be used as a weapon."
+	name = "garrote de guerra de cobre"
+	desc = "Un garrote de dos manos, decorado con una corona de puas. Un diseño barbaro, lo suficientemente bueno como para usarlo como arma."
 	icon_state = "cwarclub"
 	force = DAMAGE_CLUB - 5
 	force_wielded = DAMAGE_CLUB_WIELD
@@ -613,7 +613,7 @@
 //................ Warhammers ............... //
 /obj/item/weapon/mace/warhammer
 	name = "martillo de guerra de hierro"
-	desc = "Made to punch through armor and skull alike."
+	desc = "Hecho para perforar armaduras y craneos por igual."
 	icon_state = "iwarhammer"
 	possible_item_intents = list(MACE_STRIKE, MACE_SMASH, WARHM_IMPALE)
 	gripped_intents = null
@@ -633,7 +633,7 @@
 
 /obj/item/weapon/mace/warhammer/steel
 	name = "martillo de guerra de acero"
-	desc = "A fine steel warhammer, makes a satisfying sound when paired with a knight's helm."
+	desc = "Un fino martillo de guerra de acero que produce un sonido satisfactorio cuando se combina con un yelmo de caballero."
 	icon_state = "swarhammer"
 	force = DAMAGE_MACE_WIELD
 	wdefense = GOOD_PARRY
@@ -645,7 +645,7 @@
 
 /obj/item/weapon/mace/warhammer/silver
 	name = "martillo de guerra de plata"
-	desc = "A silver warhammer, made to fight nite-creachers. It makes a satisfying sound when paired with a skeleton's skull."
+	desc = "Un martillo de guerra plateado, diseñado para luchar contra los creadores nocturnos. Produce un sonido satisfactorio cuando se combina con el craneo de un esqueleto."
 	icon_state = "silverhammer"
 	force = DAMAGE_MACE_WIELD
 	wdefense = GOOD_PARRY
@@ -664,8 +664,8 @@
 //................ Elven Club  ............... //
 
 /obj/item/weapon/mace/elvenclub
-	name = "elven war club"
-	desc = "A one-handed war club with a sharp end."
+	name = "club de guerra elfico"
+	desc = "Un garrote de guerra de una mano con un extremo afilado."
 	icon_state = "elvenclub"
 	force = DAMAGE_MACE - 1
 	force_wielded = DAMAGE_MACE_WIELD - 1
@@ -676,8 +676,8 @@
 	item_weight = 1.3 KILOGRAMS
 
 /obj/item/weapon/mace/elvenclub/steel
-	name = "steel elven war club"
-	desc = "A sleek, one-handed war club, reforged from captured Grenzel steel. Its elegant bead designs channel elven grace, It is capable of delivering swift, painful blows."
+	name = "club de guerra de los elfos de acero"
+	desc = "Un elegante garrote de guerra de una mano, reforjado con acero Grenzel capturado. Sus elegantes diseños de cuentas canalizan la gracia elfica. Es capaz de asestar golpes rapidos y dolorosos."
 	icon_state = "elvenclubsteel"
 	force = DAMAGE_MACE
 	force_wielded = DAMAGE_MACE_WIELD
@@ -692,8 +692,8 @@
 	item_weight = 1.5 KILOGRAMS
 
 /obj/item/weapon/mace/elvenclub/bronze
-	name = "bronze elven war club"
-	desc = "A bronze one-handed war club with a sharp end. It's been long favoured by the Elves of Heartfelt, despite its foreign origins."
+	name = "garrote de guerra elfico de bronce"
+	desc = "Un garrote de guerra de bronce con una sola mano y un extremo afilado. Ha sido favorecido durante mucho tiempo por los Elfos de Heartfelt, a pesar de sus origenes extranjeros."
 	icon_state = "elvenclub_bronze"
 	max_integrity = INTEGRITY_STANDARD
 	smeltresult = /obj/item/ingot/bronze
@@ -702,8 +702,8 @@
 	item_weight = 1.4 KILOGRAMS
 
 /obj/item/weapon/mace/elvenclub/silver
-	name = "regal elven war club"
-	desc = "A fashionable silver war club of elvish design, beautifully decorated with golden filigree."
+	name = "club de guerra real de los elfos"
+	desc = "Un moderno garrote de guerra plateado con diseño elfico, bellamente decorado con filigrana dorada."
 	icon_state = "regalelvenclub"
 	force = DAMAGE_MACE
 	force_wielded = DAMAGE_MACE_WIELD
@@ -724,7 +724,7 @@
 //................ Silver ............... //
 /obj/item/weapon/mace/silver
 	name = "maza de plata"
-	desc = "A fanged silver mace, used to ward away creatures of the nite."
+	desc = "Una maza plateada con colmillos, utilizada para ahuyentar a las criaturas de la noche."
 	icon_state = "silvermace"
 	force = DAMAGE_MACE + 1
 	force_wielded = DAMAGE_MACE_WIELD
@@ -742,8 +742,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/mace/rungu/silver
-	name = "silver rungu"
-	desc = "A silver mace from the fallen east. Made to fight nite-creachers."
+	name = "rungu plateado"
+	desc = "Una maza plateada del este caido. Hecho para luchar contra los noctambulos."
 	icon_state = "rungu_silver"
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	wdefense = GOOD_PARRY
@@ -762,7 +762,7 @@
 /obj/item/weapon/mace/gada
 	name = "gada real"
 	icon_state = "gada"
-	desc = "A luxurious silver mace that's been reinforced and embellished with gold. It's considerably heavier compared to other maces."
+	desc = "Una lujosa maza plateada reforzada y adornada con oro. Es considerablemente mas pesado en comparacion con otras mazas."
 	force = DAMAGE_MACE + 2
 	wbalance = DODGE_CHANCE_NORMAL
 	max_integrity = INTEGRITY_STRONGEST * 0.8
@@ -779,7 +779,7 @@
 /obj/item/weapon/mace/bronze
 	name = "maza de bronce"
 	icon_state = "mace_bronze"
-	desc = "A spiked bronze mace. A weapon thats seen a revival in use amidst the cataclysm in Heartfelt."
+	desc = "Una maza de bronce con puas. Un arma que ha resurgido en medio del cataclismo en Heartfelt."
 	force = DAMAGE_MACE + 1
 	force_wielded = DAMAGE_MACE_WIELD + 1 //Spiked
 	max_integrity = INTEGRITY_STANDARD
@@ -789,7 +789,7 @@
 
 /obj/item/weapon/mace/bronze/shishpar
 	name = "shishpar de bronce"
-	desc = "A heavy foreign mace with a sword-like handle. It's weight makes it a little hard to wield, but its capable of delivering devastating blows."
+	desc = "Una pesada maza extranjera con mango en forma de espada. Su peso hace que sea un poco dificil de manejar, pero es capaz de asestar golpes devastadores."
 	icon_state = "shishpar_bronze"
 	force = DAMAGE_MACE_WIELD + 2
 	force_wielded = DAMAGE_MACE_WIELD + 3

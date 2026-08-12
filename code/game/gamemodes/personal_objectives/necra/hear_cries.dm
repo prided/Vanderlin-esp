@@ -1,9 +1,9 @@
 /datum/objective/personal/listen_whispers
-	name = "Listen to Dead's Whispers"
-	category = "Necra's Chosen"
+	name = "Escuchar los susurros de los muertos"
+	category = "Elegido de Necra"
 	triumph_count = 2
-	immediate_effects = list("Gained a temporary ability to listen to the cries of the dead")
-	rewards = list("2 Triumphs", "Necra grows stronger", "Death and suffering won't disturb you")
+	immediate_effects = list("Obtuviste temporalmente una habilidad para escuchar los lamentos de los muertos")
+	rewards = list("2 Triunfos", "Necra se fortalece", "La muerte y el sufrimiento no te perturbaran")
 	var/time_required = 3 MINUTES
 	var/time_spent = 0
 	var/last_check = 0
@@ -66,4 +66,4 @@
 	ADD_TRAIT(owner.current, TRAIT_STEELHEARTED, OBJECTIVE_TRAIT)
 
 /datum/objective/personal/listen_whispers/update_explanation_text()
-	explanation_text = "Necra wants you to understand death better. Spend at least [time_required / (1 MINUTES)] minutes in the church listening to the whispers of the dead while wearing an amulet of Necra."
+	explanation_text = "Necra quiere que comprendas mejor la muerte. Pasa al menos [time_required / (1 MINUTES)] minutos en la iglesia, escucha los susurros de los muertos y lleva puesto un amuleto de Necra."

@@ -1,6 +1,6 @@
 /obj/structure/fake_machine/lottery_roguetown
-	name = "XYLIX'S FORTUNE"
-	desc = "An infinite, yawning hole that makes or breaks men. Come and play!"
+	name = "LA FORTUNA DE XYLIX"
+	desc = "Un agujero infinito y enorme que hace o deshace a los hombres. ¡Ven y juega!"
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "lottery"
 	density = FALSE
@@ -26,7 +26,7 @@
 	var/chatterbox = 0
 
 /obj/structure/fake_machine/lottery_roguetown/attack_hand(mob/living/user)
-	say("Your current tithe is [gamblingprice] mammons. Care to spin?")
+	say("Tu actual diezmo es [gamblingprice] mammon. ¿Te animas a girar?")
 	playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 
 /obj/structure/fake_machine/lottery_roguetown/attack_hand_secondary(mob/user, list/modifiers)
@@ -38,7 +38,7 @@
 		return
 
 	if(gamblingprice <= 0)
-		say("Poor thing, you are coinless.")
+		say("Pobre cosa, estas sin dinero.")
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	if(gamblingprice < 0)
@@ -64,7 +64,7 @@
 	if(selection == "SILVER")
 		mod = 5
 
-	var/coin_amt = input(user, "Sayyid, you have [gamblingprice] mammon in tithes. You may withdraw [floor(gamblingprice/mod)] [selection] COINS.", src) as null|num
+	var/coin_amt = input(user, "Sayyid, tienes [gamblingprice] mammon en las diezmos. Puedes retirar [floor(gamblingprice/mod)] [selection] MONEDAS.", src) as null|num
 	coin_amt = round(coin_amt)
 
 	if(coin_amt < 1)
@@ -98,12 +98,12 @@
 
 	// Validate tithe amount
 	if(new_total > maxtithing)
-		say("This puts the starting tithe over [maxtithing] mammons.")
+		say("Esto pone el diezmo inicial sobre [maxtithing] de las riquezas.")
 		playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		return ITEM_INTERACT_BLOCKING
 
 	if(new_total < mintithing)
-		say("This is below [mintithing] mammons.")
+		say("Esto esta por debajo de [mintithing] los bienes materiales.")
 		playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		return ITEM_INTERACT_BLOCKING
 
@@ -111,7 +111,7 @@
 	gamblingprice += coin_value
 
 	qdel(coin)
-	say("Your current tithe is now [gamblingprice] mammons. Care to spin?")
+	say("Tu decima actual es ahora [gamblingprice] mammons. ¿Te animas a jugar?")
 	playsound(src, 'sound/misc/machinequestion.ogg', 100, FALSE, -1)
 
 	return ITEM_INTERACT_SUCCESS
@@ -123,9 +123,9 @@
 	// Check if player has bet
 	if(gamblingprice == 0)
 		say(pick(
-			"Eager fool; you need mammons to gamble your life away.", \
+			"Tonto ansioso; Necesitas dinero para jugar tu vida.", \
 			"Te falta tu diezmo.", \
-			"A lord without land is no lord at all."\
+			"Un señor sin tierra no es ningun señor."\
 		))
 		stopgambling = 1
 		sleep(20)
@@ -135,16 +135,16 @@
 	// Start gambling sequence
 	diceroll = rand(1, 100)
 	say(pick(
-		"Around and around I go, where I stop, only I know.",\
-		"Xylix smiles upon your idiocy, child.",\
+		"Doy vueltas y vueltas, donde me detengo, solo yo lo se.",\
+		"Xylix sonrie ante tu idiotez, niña.",\
 		"La rueda del destino gira y gira.",\
 		"Oh, pobre tonto.",\
-		"This is going to hurt for one of us.",\
-		"I laugh, you cry; I weep, you cheer..",\
+		"Esto va a doler a uno de nosotros.",\
+		"Yo rio, tu lloras; Yo lloro, tu animas..",\
 		"Sere tu tonto; actuare para ti...",\
-		"Let's go gambling!",\
-		"Around and around, folly abounds.",\
-		"Dance with ruin and wealth."\
+		"¡Vamos a apostar!",\
+		"Alrededor y alrededor abunda la locura.",\
+		"Danza con la ruina y la riqueza."\
 	))
 
 	playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
@@ -178,8 +178,8 @@
 	letsgogamblinggamblers()
 
 	say(pick(
-		"Well-maneuvered, aristocrat! Your peasant's tithe is now [gamblingprice] mammons. Play again?",\
-		"A bountiful harvest, this year- the peasant's tithe rises to [gamblingprice] mammons. Spin me again?"\
+		"¡Bien maniobrado, aristocrata! El diezmo de su campesino ahora es mammons [gamblingprice]. ¿Jugar de nuevo?",\
+		"Este año hay una cosecha abundante: el diezmo del campesino asciende a mammons [gamblingprice]. ¿Girarme de nuevo?"\
 	))
 
 	playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
@@ -194,23 +194,23 @@
 		"DIEZ, RUEDA DE LA FORTUNA - invertida.",\
 		"El Castillo. ¡Oh, presagio!",\
 		"¡Una cosecha de langostas...!",\
-		"Look into my eyes and whisper your woes.",\
-		"Aw, dangit.",\
-		"Fool. Poor fool.",\
+		"Mirame a los ojos y susurra tus aflicciones.",\
+		"Oh, maldita sea.",\
+		"Tonto. Pobre tonto.",\
 		"Tus ojos se salen de tu craneo, la baba cae de tus labios.",\
 		"Divina idiotez.",\
-		"You stand just as I did; loser and a freek."\
+		"Estas igual que yo; perdedor y un libertino."\
 	))
 
 	playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 	sleep(20)
 
 	say(pick(
-		"King of fools, your land is barren. Play again?",\
-		"Divine comedy. Play again?",\
-		"Next time, surely. Play again?",\
-		"Haha-...ah-ha-ha! Again! Play again, jester!",\
-		"Poor beggar! Spin me again?"\
+		"Rey de los tontos, tu tierra es esteril. ¿Jugar de nuevo?",\
+		"Divina comedia. ¿Jugar de nuevo?",\
+		"La proxima vez, seguramente. ¿Jugar de nuevo?",\
+		"¡Ja-...ja-ja-ja! ¡De nuevo! ¡Juega de nuevo, bufon!",\
+		"¡Pobre mendigo! ¿Girarme de nuevo?"\
 	))
 
 	playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
@@ -235,87 +235,87 @@
 			say("Todavia recuerdo la lluvia en mi piel.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("The wind in my fur...or was it hair? Either way...")
+			say("El viento en mi pelaje... ¿o era el cabello? De cualquier manera...")
 			playsound(src, 'sound/misc/machinequestion.ogg', 100, FALSE, -1)
 
 		if(2)
-			say("The worship of gods is pernicious.")
+			say("La adoracion a los dioses es perniciosa.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(20)
-			say("But this punishment is not as bad as others'! Ha-ha-ha!")
+			say("¡Pero este castigo no es tan malo como otros! ¡Ja, ja, ja!")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 
 		if(3)
 			say("Hay destinos peores que la muerte...")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("...especially for a lowly fool who thought himself a king.")
+			say("...especialmente para un pobre tonto que se creia un rey.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		if(4)
 			say("Ella no se dio cuenta de que su maquina la mataria, por supuesto.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("...though 'tis difficult to argue what happened after that didn't benefit Her.")
+			say("...aunque es dificil discutir que lo que paso despues no le beneficio a Ella.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		if(5)
-			say("Oh, Psydon?")
+			say("Ah, ¿Psydon?")
 			playsound(src, 'sound/misc/machinequestion.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("To be honest, I'm about PSY-DONE with this whole debate! Ha-ha-h- ...No? Too soon? Alright.")
+			say("Para ser honesto, ¡ya estoy harto de todo este debate! Ja, ja, ja... ¿No? ¿Demasiado pronto? Esta bien.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 
 		if(6)
 			say("Sabes, bufon, esos eclesiales tienen la idea correcta.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("Won't someone think of the deadite-loving, tax-hating, drug-using murderers?!")
+			say("¡¿No le va a importar a alguien a los asesinos que aman a los muertos, que odian los impuestos y que consumen drogas?!")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		if(7)
-			say("...well, don't look at me for conversation.")
+			say("Bueno, no me mires a mi para conversar.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("I've been the one doing all the chatting.")
+			say("He sido yo quien ha estado hablando todo el tiempo.")
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 
 		if(8)
 			say("¿No puedes oler el hedor en el aire? Es terrible.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("It wasn't nearly so bad, before. Rot and puss. Oh, well.")
+			say("No era tan malo antes. Podredumbre y pus. Oh, bueno.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		if(9)
 			say("¿No puedes oler el hedor en el aire, tonto? Es terrible.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("I don't know how you could miss it. Rot and puss. Oh, well.")
+			say("No se como pudiste perderla. Pus y podredumbre. Bueno, pues.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		if(10)
-			say("Maybe you ought stop while you are ahead, jester.")
+			say("Tal vez deberias detenerte mientras estas adelante, bufon.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("...greed is what got your lot into this mess, after all.")
+			say("...la avaricia es lo que metio a tu lote en este lio, despues de todo.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		if(11)
-			say("A father and his son are riding a carriage through a forrest. Suddenly, Z's curse! The axle snaps!")
+			say("Un padre y su hijo van en un carruaje por un bosque. ¡De repente, la maldicion de Z! ¡El eje se rompe!")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("El padre muere, pero el hijo... ¡el hijo aun vive! Lo llevan al medico del pueblo cercano.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("Upon seeing him, the physician ga-...what do you mean, you've heard this one before?")
+			say("Al verlo, el medico ga-... ¿que quieres decir, que has oido esto antes?")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		else
-			say("Me? Am I anybody important...? Oh, no.")
+			say("Yo? ¿Soy alguien importante...? Oh, no.")
 			playsound(src, 'sound/misc/machineyes.ogg', 100, FALSE, -1)
 			sleep(25)
-			say("I am nothing but a lowly jester, just like you! Ha-ha-ha!")
+			say("¡Soy nada mas que un bufon miserable, igual que tu! ¡Ja, ja, ja!")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 	sleep(40)

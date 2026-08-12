@@ -10,7 +10,7 @@
 	. = ..()
 
 /obj/structure/flora/ocean_plants
-	name = "abyssor plants"
+	name = "Plantas abyssor"
 	desc = ""
 	icon = 'icons/delver/abyss_objects.dmi'
 	icon_state = "clutter1"
@@ -20,7 +20,7 @@
 	. = ..()
 
 /obj/structure/flora/starfish
-	name = "starfish"
+	name = "estrella de mar"
 	desc = ""
 	icon = 'icons/delver/abyss_objects.dmi'
 	icon_state = "starfish-1"
@@ -30,7 +30,7 @@
 	. = ..()
 
 /obj/structure/flora/driftwood
-	name = "driftwood"
+	name = "madera flotante"
 	desc = ""
 	icon = 'icons/delver/abyss_objects.dmi'
 	icon_state = "driftwood-1"
@@ -46,7 +46,7 @@
 
 // ausbush
 /obj/structure/flora/ausbushes
-	name = "bush"
+	name = "maleza"
 	desc = ""
 	icon = 'icons/obj/flora/ausflora.dmi'
 	icon_state = "firstbush_1"
@@ -183,7 +183,7 @@
 	desc = ""
 
 /obj/structure/flora/rock/pile/largejungle
-	name = "rocks"
+	name = "rocas"
 	icon_state = "rocks"
 	icon = 'icons/obj/flora/largejungleflora.dmi'
 	density = FALSE
@@ -212,7 +212,7 @@
 	icon_state = "coral-[rand(1,32)]"
 
 /obj/structure/flora/pillar
-	name = "pillar"
+	name = "pilar"
 	icon_state = "pillar1"
 	icon = 'icons/delver/abyss_objects.dmi'
 	resistance_flags = FIRE_PROOF
@@ -249,7 +249,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/abyss_window, 32)
 	density = FALSE
 
 /obj/structure/boards
-	name = "boards"
+	name = "tableros"
 	icon_state = "boards"
 	icon = 'icons/delver/desert_objects.dmi'
 
@@ -280,13 +280,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/desert_window/open, 32)
 	icon_state = "astrata[rand(1,3)]"
 
 /obj/structure/flora/sandbrick
-	name = "sandstone brick"
+	name = "ladrillo de arenisca"
 	icon_state = "sandstone_brick"
 	icon = 'icons/delver/desert_objects.dmi'
 	resistance_flags = FIRE_PROOF
 
 /obj/structure/flora/kelp
-	name = "kelp"
+	name = "alga"
 	icon_state = "kelp-1"
 	icon = 'icons/delver/kelp.dmi'
 	resistance_flags = FIRE_PROOF

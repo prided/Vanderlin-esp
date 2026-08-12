@@ -4,8 +4,8 @@
 #define MULTI_CONSTRUCT_SQUARE 3  // Square pattern
 
 /datum/action/cooldown/meatvine
-	name = "Putrid Ability"
-	desc = "Spread the putrid"
+	name = "Habilidad putrida"
+	desc = "difundir el putrefacto"
 	button_icon = 'icons/obj/cellular/putrid_abilities.dmi'
 	background_icon = 'icons/obj/cellular/putrid_abilities.dmi'
 	base_background_icon_state = "button_bg"
@@ -168,13 +168,13 @@
 
 	// Check range
 	if(get_dist(owner, T) > spread_range)
-		to_chat(owner, "<span class='warning'>Too far away!</span>")
+		to_chat(owner, "<span class='warning'>¡Demasiado lejos!</span>")
 		return FALSE
 
 	// Get all turfs to build on based on pattern
 	var/list/build_turfs = get_build_turfs(T)
 	if(!build_turfs.len)
-		to_chat(owner, "<span class='warning'>Cannot spread there!</span>")
+		to_chat(owner, "<span class='warning'>No se puede esparcir alli!</span>")
 		return FALSE
 
 	// Calculate total cost
@@ -192,9 +192,9 @@
 			spawned_count++
 
 	if(spawned_count > 0)
-		to_chat(owner, "<span class='notice'>Spread complete ([spawned_count] piece\s). Resources: [consumed.master.consumed_resource_pool]/[consumed.master.consumed_resource_max]</span>")
+		to_chat(owner, "<span class='notice'>Extender completo ([spawned_count] pieza\s). Recursos: [consumed.master.consumed_resource_pool]/[consumed.master.consumed_resource_max]</span>")
 	else
-		to_chat(owner, "<span class='warning'>Failed to spread!</span>")
+		to_chat(owner, "<span class='warning'>No se pudo propagar!</span>")
 		// Refund resources if nothing was built
 		consumed.master.consumed_resource_pool += total_cost
 	. = ..()
@@ -294,16 +294,16 @@
 			var/turf/throw_target = get_edge_target_turf(bumper, throw_dir)
 
 			bumper.visible_message(
-				"<span class='danger'>[bumper] is violently repelled!</span>",
-				"<span class='userdanger'>You are violently thrown back!</span>"
+				"<span class='danger'>[bumper] es rechazado violentamente!</span>",
+				"<span class='userdanger'>¡Eres violentamente rechazado!</span>"
 			)
 
 			bumper.throw_at(throw_target, 3, 2)
 	return TRUE
 
 /datum/action/cooldown/meatvine/spread_floor
-	name = "Spread Floor"
-	desc = "Spread meatvine floor to target location. Cost: 10 resources."
+	name = "Extender suelo"
+	desc = "Extienda el piso de Meatvine en la ubicacion objetivo. Costo: 10 recursos."
 	button_icon_state = "spread"
 	resource_cost = 10
 	spread_type = /obj/structure/meatvine/floor
@@ -311,8 +311,8 @@
 	should_replace = TRUE
 
 /datum/action/cooldown/meatvine/spread_wall
-	name = "Spread Wall"
-	desc = "Spread meatvine wall to target location. Cost: 25 resources."
+	name = "Extender muro"
+	desc = "Extiende la pared de Meatvine hasta la ubicacion objetivo. Costo: 25 recursos."
 	button_icon_state = "wall"
 	resource_cost = 25
 	spread_type = /obj/structure/meatvine/heavy
@@ -334,7 +334,7 @@
 
 /datum/action/cooldown/meatvine/spread_wall_multi
 	name = "Linea de pared extendida (x3)"
-	desc = "Spread 3 meatvine walls in a line perpendicular to your facing direction. Cost: 75 resources."
+	desc = "Extiende 3 muros de Meatvine en una linea perpendicular a la direccion en la que miras. Costo: 75 recursos."
 	button_icon_state = "wall"
 	resource_cost = 25
 	spread_type = /obj/structure/meatvine/heavy
@@ -362,8 +362,8 @@
 	return has_adjacent
 
 /datum/action/cooldown/meatvine/spread_lair
-	name = "Spread Lair"
-	desc = "Spread meatvine lair to target location. Spawns hostile creatures. Cost: 200 resources."
+	name = "Extender guarida"
+	desc = "Distribuya la guarida de Meatvine en la ubicacion objetivo. Genera criaturas hostiles. Costo: 200 recursos."
 	button_icon_state = "lair"
 	resource_cost = 200
 	spread_type = /obj/structure/meatvine/lair
@@ -401,8 +401,8 @@
 	return consumed.master.can_spawn_lair_at(T)
 
 /datum/action/cooldown/meatvine/spread_spike
-	name = "Build Tentacle Spike"
-	desc = "Build a tentacle spike on meatvine floor. Can stack up to 5 spikes on one tile. Cost: 50 resources."
+	name = "Construir pico de tentaculo"
+	desc = "Construye una pua de tentaculo sobre suelo de Meatvine. Puede haber hasta 5 puas en una casilla. Costo: 50 recursos."
 	button_icon_state = "tentacle_spikes"
 	resource_cost = 50
 	spread_type = /obj/structure/meatvine/tentacle_spike
@@ -435,10 +435,10 @@
 	if(existing_spike)
 		// Add to existing spike
 		if(existing_spike.add_spike())
-			to_chat(owner, "<span class='notice'>Added spike to existing cluster. ([existing_spike.spike_count]/[existing_spike.max_spikes])</span>")
+			to_chat(owner, "<span class='notice'>Se añadio una espiga al grupo existente. ([existing_spike.spike_count]/[existing_spike.max_spikes])</span>")
 			return TRUE
 		else
-			to_chat(owner, "<span class='warning'>Maximum spikes reached!</span>")
+			to_chat(owner, "<span class='warning'>¡Pico maximo alcanzado!</span>")
 			return FALSE
 
 	// Create new spike
@@ -448,8 +448,8 @@
 	return TRUE
 
 /datum/action/cooldown/meatvine/spread_healing_well
-	name = "Build Healing Well"
-	desc = "Build a healing well on meatvine floor. Provides regenerative aura to nearby creatures. Only one per area. Cost: 200 resources."
+	name = "Construir pozo curativo"
+	desc = "Construye un pozo de curacion en el suelo de Meatvine. Proporciona aura regenerativa a las criaturas cercanas. Solo uno por zona. Costo: 200 recursos."
 	button_icon_state = "heal_pool"
 	resource_cost = 200
 	spread_type = /obj/structure/meatvine/healing_well
@@ -483,7 +483,7 @@
 
 	// Additional check for nearby wells
 	for(var/obj/structure/meatvine/healing_well/existing_well in range(7, T))
-		to_chat(owner, "<span class='warning'>Too close to another healing well!</span>")
+		to_chat(owner, "<span class='warning'>¡Demasiado cerca de otro pozo de curacion!</span>")
 		return FALSE
 
 	return ..()
@@ -496,8 +496,8 @@
 	return TRUE
 
 /datum/action/cooldown/meatvine/spread_wormhole
-	name = "Build Intestinal Passage"
-	desc = "Build an intestinal wormhole on meatvine floor. Connect multiple to create a travel network. Cost: 150 resources."
+	name = "Construir el pasaje intestinal"
+	desc = "Construye un agujero de gusano intestinal sobre suelo de Meatvine. Conecta varios para crear una red de viaje. Costo: 150 recursos."
 	button_icon_state = "intestine_wormhole"
 	resource_cost = 150
 	spread_type = /obj/structure/meatvine/intestine_wormhole
@@ -533,12 +533,12 @@
 		if(wormhole.wormhole_id == wormhole_network_id)
 			network_count++
 
-	to_chat(owner, "<span class='notice'>Intestinal passage created. Network size: [network_count]</span>")
+	to_chat(owner, "<span class='notice'>Pasaje intestinal creado. Tamaño de red: [network_count]</span>")
 	return TRUE
 
 /datum/action/cooldown/meatvine/spread_tracking_beacon
-	name = "Erect Probing Mass"
-	desc = "Erects a probing mass on meatvine floor. Marks any creature that enters its range for tracking. Cost: 150 resources."
+	name = "Erigir masa exploradora"
+	desc = "Erige una masa exploradora sobre suelo de Meatvine. Marca para rastreo a cualquier criatura que entre en su alcance. Costo: 150 recursos."
 	button_icon_state = "tracking_beacon"
 	resource_cost = 150
 	spread_type = /obj/structure/meatvine/tracking_beacon
@@ -571,8 +571,8 @@
 	return ..()
 
 /datum/action/cooldown/meatvine/spread_spike_multi
-	name = "Spread Spike Line (x3)"
-	desc = "Spread 3 tentacle spikes in a line perpendicular to your facing direction. Can stack up to 5 spikes per tile. Cost: 150 resources."
+	name = "Linea de puas extendidas (x3)"
+	desc = "Extienda 3 puntas de tentaculos en una linea perpendicular a la direccion en la que mira. Puede apilar hasta 5 puas por ficha. Costo: 150 recursos."
 	button_icon_state = "tentacle_spikes_multi"
 	resource_cost = 50
 	spread_type = /obj/structure/meatvine/tentacle_spike
@@ -624,7 +624,7 @@
 		return FALSE
 
 	if(!user.master)
-		to_chat(user, span_warning("You have no master controller!"))
+		to_chat(user, span_warning("¡No tienes controlador maestro!"))
 		return FALSE
 
 	var/obj/effect/meatvine_controller/controller = user.master
@@ -648,7 +648,7 @@
 
 	if(use_consumed_resources)
 		if(controller.consumed_resource_pool < total_cost)
-			to_chat(user, span_warning("Not enough resources! Need [total_cost], have [controller.consumed_resource_pool]."))
+			to_chat(user, span_warning("¡No hay suficientes recursos! Necesitas [total_cost], tienes [controller.consumed_resource_pool]."))
 			return FALSE
 
 	var/successful_placements = 0
@@ -656,7 +656,7 @@
 	for(var/turf/T as anything in construct_turfs)
 		if(use_consumed_resources)
 			if(controller.consumed_resource_pool < resource_cost)
-				to_chat(user, span_warning("Ran out of resources after placing [successful_placements] spikes!"))
+				to_chat(user, span_warning("¡Se quedaron sin recursos despues de colocar [successful_placements] ¡espinas!"))
 				break
 
 		if(do_spread(T, controller))
@@ -668,7 +668,7 @@
 		. = ..()
 		return TRUE
 	else
-		to_chat(user, span_warning("Failed to place any spikes!"))
+		to_chat(user, span_warning("¡No se pudo colocar ninguna punta!"))
 		return FALSE
 
 #undef MULTI_CONSTRUCT_NONE

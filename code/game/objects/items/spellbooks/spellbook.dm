@@ -7,8 +7,8 @@
 	drop_sound = 'sound/foley/dropsound/book_drop.ogg'
 	force = 5
 	associated_skill = /datum/attribute/skill/misc/reading
-	name = "tome of the arcyne"
-	desc = "A crackling, glowing book, filled with runes and symbols that hurt the mind to stare at."
+	name = "tomo del arcyne"
+	desc = "Un libro crepitante y resplandeciente, lleno de runas y simbolos que duelen la mente al mirarlos."
 	item_weight = 547 GRAMS
 	grid_height = 64
 	grid_width = 32
@@ -144,7 +144,7 @@
 /obj/item/spellbook/attack_hand_secondary(mob/user, list/modifiers)
 	if(!picked)
 		var/the_time = world.time
-		var/design = tgui_input_list(user, "Select a design.", "Diseño de libro de hechizos", designlist)
+		var/design = tgui_input_list(user, "Selecciona un diseño.", "Diseño de libro de hechizos", designlist)
 		if(!design || world.time > (the_time + 30 SECONDS))
 			return
 		base_icon_state = "spellbook[design]"
@@ -212,12 +212,12 @@
 		return
 
 	if(user == target)
-		to_chat(user, span_warning("I'm already chained to this tome!"))
+		to_chat(user, span_warning("¡Yo ya estoy encadenado a este tomo!"))
 		return
 
 	target.visible_message(
-		span_danger("[user] beats [target] over the head with [src]!"),
-		span_danger("[user] beats [target] over the head with [src]!")
+		span_danger("¡[user] golpea a [target] en la cabeza con [src]!"),
+		span_danger("¡[user] golpea a [target] en la cabeza con [src]!")
 	)
 
 	if(length(allowed_readers) > 2 || (target in allowed_readers))
@@ -229,48 +229,48 @@
 	playsound(src, "punch", 25, TRUE, -1)
 
 /obj/item/spellbook/proc/recoil(mob/user)
-	user.visible_message(span_warning("[src] shoots out a spark of angry, arcyne energy at [user]!"))
+	user.visible_message(span_warning("¡[src] dispara una chispa de energia enojada, arcyne hacia [user]!"))
 	var/mob/living/gamer = user
 	gamer.electrocute_act(5, src)
 
 /obj/item/spellbook/horrible
-	name = "poorly made tome of the arcyne"
-	desc = "A poorly made book, it barely glows with arcyne and has only small notes on arcyne symbols."
+	name = "tomo mal hecho del arcyne"
+	desc = "Un libro mal hecho, apenas brilla con arcyne y solo tiene pequeñas notas sobre los simbolos arcyne."
 	bookquality = 1
 	sellprice = 15
 
 /obj/item/spellbook/mid
-	name = "beginners tome of the arcyne"
-	desc = "An obviously handcrafted book, it glows occasionally with arcyne and has a meager amount of notes on arcyne symbols."
+	name = "tomo para principiantes del arcyne"
+	desc = "Un libro obviamente hecho a mano, brilla ocasionalmente con arcyne y tiene una escasa cantidad de notas sobre los simbolos arcyne."
 	bookquality = 2
 	sellprice = 30
 
 /obj/item/spellbook/apprentice
-	name = "apprentice tome of the arcyne"
-	desc = "A carefully made book, faintly glowing with arcyne and half filled with notes and theory on arcyne symbols."
+	name = "tomo de aprendiz del arcyne"
+	desc = "Un libro cuidadosamente elaborado, que brilla debilmente con arcyne y medio lleno de notas y teoria sobre los simbolos arcyne."
 	bookquality = 3
 	sellprice = 75
 
 /obj/item/spellbook/adept
-	name = "adept tome of the arcyne"
-	desc = "A well-made book, it shines moderately with arcyne light. It has been filled with notes of varying degrees on the arcyne."
+	name = "tomo experto del arcyne"
+	desc = "Un libro bien hecho, brilla moderadamente con la luz arcyne. Se ha llenado de notas de diversos grados sobre el arcyne."
 	bookquality = 4
 	sellprice = 150
 
 /obj/item/spellbook/expert
-	name = "expert tome of the arcyne"
-	desc = "A well cared for book, shining brightly with arcyne. It has many runes and arcyne symbols scribed within, with detailed notes."
+	name = "tomo experto del arcyne"
+	desc = "Un libro bien cuidado, que brilla intensamente con arcyne. Tiene muchas runas y simbolos arcyne escritos en su interior, con notas detalladas."
 	bookquality = 6
 	sellprice = 200
 
 /obj/item/spellbook/master
-	name = "masterful tome of the arcyne"
-	desc = "A crackling, glowing book, filled with advanced arcyne runes and symbols that hurt the mind to stare at. A true master of the arcyne has left their mark behind."
+	name = "tomo magistral del arcyne"
+	desc = "Un libro chispeante y resplandeciente, lleno de runas y simbolos avanzados arcyne que duelen la mente al mirarlos. Un verdadero maestro del arcyne ha dejado su huella."
 	bookquality = 8
 	sellprice = 250
 
 /obj/item/spellbook/legendary
-	name = "legendary tome of the arcyne"
-	desc = "An incredible book that gives off glowing arcyne motes, it is filled with runes and arcyne theories that is hard for even masters of arcyne to understand. The arcyne script glows and practically whispers from the page..."
+	name = "tomo legendario del arcyne"
+	desc = "Un libro increible que emite motas brillantes arcyne, esta lleno de runas y teorias de arcyne que son dificiles de entender incluso para los maestros de arcyne. El guion arcyne brilla y practicamente susurra desde la pagina..."
 	bookquality = 12
 	sellprice = 400

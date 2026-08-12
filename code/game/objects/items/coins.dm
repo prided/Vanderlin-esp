@@ -61,7 +61,7 @@
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_MATTHIOS_CURSE) && prob(33))
 		var/mob/living/carbon/human/H = user
-		to_chat(H, span_warning("The idea repulses me!"))
+		to_chat(H, span_warning("¡La idea me repela!"))
 		H.cursed_freak_out()
 		H.Paralyze(4 SECONDS)
 		return
@@ -128,18 +128,18 @@
 		return
 
 	if(pellet_type && quantity >= 6 && GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/combat/firearms) >= SKILL_LEVEL_NOVICE)
-		. += span_info("It looks like you could rig this up to be fired as ammunition.")
+		. += span_info("Parece que podrias arreglar esto para que se dispare como municion.")
 
 	if(HAS_TRAIT(user, TRAIT_COIN_ILLITERATE))
 		if(quantity <= 1)
 			. += span_info("Una moneda.")
 		else
-			. += span_info("[quantity_to_words(quantity)] coins.")
+			. += span_info("[quantity_to_words(quantity)] monedas.")
 		return
 
 	var/intelligence = GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)
 	if(quantity <= 1)  // Just so you don't count single coins, observers don't need to count.
-		. += span_info("One [name] ([sellprice] mammon)")
+		. += span_info("Uno [name] ([sellprice] mammon)")
 		return
 
 	var/list/skill_data = coin_skill(user, quantity)
@@ -148,13 +148,13 @@
 
 	switch(intelligence)						// Intelligence-based messaging
 		if(0 to 6)
-			user.visible_message(span_small(span_notice("[user] comienza torpemente a contar [src].")),span_small(span_notice("I clumsily start counting [src]...")), vision_distance = 2)
+			user.visible_message(span_small(span_notice("[user] comienza torpemente a contar [src].")),span_small(span_notice("Empiezo a contar [src] de manera torpe...")), vision_distance = 2)
 		if(7 to 9)
-			user.visible_message(span_small(span_notice("[user] comienza a contar [src].")),span_small(span_notice("I begin counting [src].")), vision_distance = 2)
+			user.visible_message(span_small(span_notice("[user] comienza a contar [src].")),span_small(span_notice("Comienzo a contar [src].")), vision_distance = 2)
 		if(10 to 13)
 			user.visible_message(span_small(span_notice("[user] cuenta [src].")),span_small(span_notice("Cuento [src].")), vision_distance = 2)
 		if(14 to INFINITY)
-			user.visible_message(span_small(span_info("[user] effortlessly tallies [src].")),span_small(span_notice("I effortlessly tally [src].")), vision_distance = 2)
+			user.visible_message(span_small(span_info("[user] cuenta sin esfuerzo [src].")),span_small(span_notice("Sin esfuerzo conteo [src].")), vision_distance = 2)
 
 	if(!do_after(user, skill_data["delay"]))
 		return
@@ -175,7 +175,7 @@
 
 /obj/item/coin/attack_hand(mob/user)
 	if(user.get_inactive_held_item() == src && quantity > 1)
-		var/intended = input(user, "How many [plural_name] to split?", null, 1) as null|num
+		var/intended = input(user, "¿Cuantos [plural_name] dividir?", null, 1) as null|num
 		if(QDELETED(src) || !user.is_holding(src))
 			return
 		intended = clamp(intended, 0, quantity)
@@ -187,11 +187,11 @@
 		var/delay_time = skill_data["delay"]
 
 		if(delay_time > 5 SECONDS)			// Chat feedback
-			user.visible_message(span_small(span_notice("[user] fumbles through [src].")),span_small(span_warning("You struggle to count while separating [src]!")), vision_distance = 2)
+			user.visible_message(span_small(span_notice("[user] busca a tirabuscas en [src].")),span_small(span_warning("¡Lucha por contar mientras separas [src]!")), vision_distance = 2)
 		else if(delay_time >= 1 SECONDS)
-			user.visible_message(span_small(span_notice("[user] separa cuidadosamente [src].")),span_small(span_notice("You concentrate on separating [src].")), vision_distance = 2)
+			user.visible_message(span_small(span_notice("[user] separa cuidadosamente [src].")),span_small(span_notice("Usted se concentra en separar [src].")), vision_distance = 2)
 		else if(delay_time == 0)
-			user.visible_message(span_small(span_notice("[user] quickly splits [src].")),span_small(span_notice("You effortlessly divide [src].")), vision_distance = 2)
+			user.visible_message(span_small(span_notice("[user] se divide rapidamente [src].")),span_small(span_notice("Divides [src] sin esfuerzo.")), vision_distance = 2)
 
 		if(delay_time > 0 && !do_after(user, delay_time))	// Make sure people don't move to cancel the delay
 			return
@@ -296,7 +296,7 @@
 	playsound(src, 'sound/foley/coins1.ogg', 100, TRUE, -2)
 
 /obj/item/coin/proc/rig_coin(mob/user)
-	var/outcome = tgui_alert(user, "What will you rig the next coin flip to?","XYLIX", list("Heads","Tails","Play fair"))
+	var/outcome = tgui_alert(user, "¿Con que manipularas el proximo lanzamiento de moneda?","XYLIX", list("Cara","Cola","Jueguen limpio"))
 	if(QDELETED(src) || !user.is_holding(src))
 		return
 	switch(outcome)
@@ -320,10 +320,10 @@
 	//turn coins into pellets! fucking fuck whoever snowflaked coins quantity...
 	if(pellet_type && quantity >= 6 && GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/combat/firearms) >= 10)
 		//crafting timer
-		to_chat(user, span_notice("You start rigging up [src] to be fired as ammunition..."))
+		to_chat(user, span_notice("Comienzas a preparar [src] para ser disparado como municion..."))
 		playsound(src, 'sound/foley/lockrattle.ogg', 100, TRUE, -2)
 		if(!do_after(user, 3 SECONDS, src))
-			to_chat(user, span_warning("You stop rigging up [src]."))
+			to_chat(user, span_warning("Dejas de armar [src]."))
 			return
 
 		quantity -= 6
@@ -378,13 +378,13 @@
 	var/outcome_text
 	switch(flip_outcome)
 		if(1)
-			user.visible_message(span_info("[user] flips the coin. Heads!"))
+			user.visible_message(span_info("[user] lanza la moneda. ¡Cara!"))
 			heads_tails = TRUE
-			outcome_text = "heads"
+			outcome_text = "cabezas"
 		if(0,2)
-			user.visible_message(span_info("[user] flips the coin. Tails!"))
+			user.visible_message(span_info("[user] da la vuelta a la moneda. ¡Cola!"))
 			heads_tails = FALSE
-			outcome_text = "tails"
+			outcome_text = "colas"
 
 	SEND_SIGNAL(user, COMSIG_COIN_FLIPPED, user, src, outcome_text)
 
@@ -442,7 +442,7 @@
 //GOLD
 /obj/item/coin/gold
 	name = "zenar"
-	desc = "A gold coin bearing the symbol of the Taurus and the pre-kingdom psycross. These were in the best condition of the provincial gold mints, the rest were melted down. It's valued at 10 mammon per coin."
+	desc = "Una moneda de oro que lleva el simbolo del Tauro y el pre-reino psycross. Estas estaban en las mejores condiciones de las cecas provinciales de oro, el resto fue derretido. Su valor es de 10 mammon por moneda."
 	icon_state = "g1"
 	sellprice = 10
 	base_type = CTYPE_GOLD
@@ -454,7 +454,7 @@
 // SILVER
 /obj/item/coin/silver
 	name = "ziliqua"
-	desc = "An ancient silver coin still in use due to its remarkable ability to last the ages. Though silver in name, the metal was alloyed and treated long ago, stripping it of any bane against the undead. It's valued at 5 mammon per coin."
+	desc = "Una antigua moneda de plata que aun esta en uso debido a su notable capacidad para durar a traves de los siglos. Aunque su nombre es plata, el metal fue aleado y tratado hace mucho tiempo, despojandolo de cualquier maldicion contra los no muertos. Se valora en 5 mammon por moneda."
 	icon_state = "s1"
 	sellprice = 5
 	base_type = CTYPE_SILV
@@ -466,7 +466,7 @@
 // COPPER
 /obj/item/coin/copper
 	name = "zenny"
-	desc = "A brand-new bronze coin minted by the capital in an effort to be rid of the financial use of silver. It's valued at 1 mammon per coin."
+	desc = "Una moneda de bronce nueva, acuñada por la capital en un esfuerzo por deshacerse del uso financiero de la plata. Su valor es de 1 mammon por moneda."
 	icon_state = "c1"
 	sellprice = 1
 	base_type = CTYPE_COPP
@@ -489,15 +489,15 @@
 		set_quantity(rand(4,14))
 
 /obj/item/coin/silver/pile/xylix
-	name = MAP_SWITCH("ziliqua", "INFINTE COIN PILE")
+	name = MAP_SWITCH("ziliqua", "PILA INFINITA DE MONEDAS")
 
 /obj/item/coin/silver/pile/xylix/Initialize()
 	. = ..()
 	set_quantity(rand(6,9))
 
 /obj/item/coin/inqcoin
-	name = "oratorium marque"
-	desc = "A blessed silver coin finished with a unique wash of black dye, bearing the post-kingdom Psycross. Kingsfield has denied the existence of such a coin when queried, as such coinage is rumoured to be used internally by the Oratorium Throni Vacui."
+	name = "marca oratorium"
+	desc = "Una moneda de plata bendecida terminada con un lavado unico de tinte negro, que lleva el mensaje Psycross posterior al reino. Kingsfield ha negado la existencia de dicha moneda cuando se le pregunto, ya que se rumorea que dicha moneda es utilizada internamente por el Oratorium Throni Vacui."
 	icon_state = "i1"
 	sellprice = 0
 	base_type = CTYPE_INQU
@@ -515,15 +515,15 @@
 	COOLDOWN_START(src, flip_cd, 3 SECONDS)
 	playsound(user, 'sound/foley/coinphy (1).ogg', 100, FALSE)
 	if(prob(50))
-		user.visible_message(span_info("[user] flips the coin. ENDURE!"))
+		user.visible_message(span_info("[user] da la vuelta a la moneda. ¡ENDURECE!"))
 		heads_tails = TRUE
 	else
-		user.visible_message(span_info("[user] flips the coin. LIVE!"))
+		user.visible_message(span_info("[user] da la vuelta a la moneda. ¡EN VIVO!"))
 		heads_tails = FALSE
 	update_appearance(UPDATE_ICON_STATE)
 
 /obj/item/coin/wood
-	name = "chip"
+	name = "ficha"
 	icon = 'icons/obj/orphanage.dmi'
 	icon_state = "w1"
 	sellprice = 0

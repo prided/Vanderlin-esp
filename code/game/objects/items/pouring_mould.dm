@@ -1,5 +1,5 @@
 /obj/item/mould
-	name = "mould"
+	name = "moho"
 	desc = "No deberias estar viendo este."
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
@@ -121,7 +121,7 @@
 	user.mind.add_sleep_experience(/datum/attribute/skill/craft/smelting, amt2raise)
 	SEND_SIGNAL(user, COMSIG_ITEM_SMELTED)
 
-	to_chat(user, span_notice("I pour [UNIT_FORM_STRING(metal_amount)] of [filling_metal.name] into [src]."))
+	to_chat(user, span_notice("Viero [UNIT_FORM_STRING(metal_amount)] de [filling_metal.name] en [src]."))
 	fufilled_metal += metal_amount
 	update_appearance(UPDATE_OVERLAYS)
 	check_start_conditions()
@@ -180,7 +180,7 @@
 	if(cooling)
 		return
 	reset_state()
-	to_chat(user, span_notice("I reset the state of [src]."))
+	to_chat(user, span_notice("Restablezco el estado de [src]."))
 
 /obj/item/mould/proc/reset_state()
 	// Reset all variables
@@ -194,7 +194,7 @@
 
 /obj/item/mould/ingot
 	name = "molde de lingote"
-	desc = "A clay mould for making metal ingots."
+	desc = "Un molde de arcilla para fabricar lingotes de metal."
 
 	icon_state = "ingot_mould"
 	fill_icon_state = "ingot_filling"
@@ -227,14 +227,14 @@
 	output_atom = null
 
 /obj/item/mould/ingot/advanced
-	name = "advanced ingot mould"
-	desc = "An ingot mould that utilizes water for faster cooling."
+	name = "lingotera avanzada"
+	desc = "Una lingotera que utiliza agua para un enfriamiento mas rapido."
 	cooling_amount = 7.5
 
 // --------- CUSTOMIZABLE -----------
 /obj/item/mould/customizable
-	name = "custom casting mould"
-	desc = "A blank mould that is ready to have its shape set by steady hands."
+	name = "molde de fundicion personalizado"
+	desc = "Un molde en blanco que esta listo para que le den forma con manos firmes."
 	icon_state = "base_large_mould"
 	fill_icon_state = "base_large_filling"
 	smeltresult = /obj/item/mould/customizable // melt it down to reset it
@@ -247,19 +247,19 @@
 
 /obj/item/mould/customizable/custom_examine(list/examine_list)
 	if(!moulded_recipe)
-		examine_list += span_info("Use an item with an anvil recipe to set the shape of the mould.")
+		examine_list += span_info("Utiliza un objeto con una receta de yunque para establecer la forma del molde.")
 	else
 		var/list/metal_examine = list()
 		for(var/datum/material/material as anything in metals_needed)
 			metal_examine += "[metals_needed[material]] [material.name]"
 		if(length(metal_examine))
-			examine_list += span_info("Needs [metal_examine.Join(", ")]")
+			examine_list += span_info("Necesita [metal_examine.Join(", ")]")
 
 		var/list/item_examine = list()
 		for(var/atom/thing as anything in additional_items)
 			item_examine += "[thing.name]"
 		if(length(item_examine))
-			examine_list += span_info("Needs [item_examine.Join(", ")]")
+			examine_list += span_info("Necesita [item_examine.Join(", ")]")
 	return examine_list
 
 /obj/item/mould/customizable/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
@@ -289,7 +289,7 @@
 	if(!found_recipe)
 		return
 
-	var/confirmation = tgui_alert(user, "Do you want to set the mould cast to [found_recipe.name]?", "[name]", DEFAULT_INPUT_CHOICES)
+	var/confirmation = tgui_alert(user, "¿Quiere configurar el molde en [found_recipe.name]?", "[name]", DEFAULT_INPUT_CHOICES)
 	if(!confirmation || confirmation != CHOICE_YES)
 		return
 	if(moulded_recipe)
@@ -313,8 +313,8 @@
 	else
 		base_icon_state = "plate"
 
-	name = LOWER_TEXT("[moulded_recipe.name] mould")
-	desc = "Hollowed out and ready to accept liquid metal for casting."
+	name = LOWER_TEXT("Molde [moulded_recipe.name]")
+	desc = "Ahuecado y listo para aceptar metal liquido para fundicion."
 	update_appearance(UPDATE_ICON_STATE)
 	find_recipe_requirements()
 
@@ -386,7 +386,7 @@
 		if(!metals_needed[material])
 			metals_needed -= material
 
-		to_chat(user, span_notice("I pour [UNIT_FORM_STRING(metal_amount)] of [material.name] into [src]."))
+		to_chat(user, span_notice("Vaso [UNIT_FORM_STRING(metal_amount)] de [material.name] en [src]."))
 		fufilled_metal += metal_amount
 
 	update_appearance(UPDATE_OVERLAYS)
@@ -398,7 +398,7 @@
 
 	if(interacting_with.type in additional_items)
 		additional_items -= interacting_with.type
-		to_chat(user, span_notice("I add [interacting_with] to [src]."))
+		to_chat(user, span_notice("Añado [interacting_with] a [src]."))
 		qdel(interacting_with)
 
 	check_start_conditions(user)

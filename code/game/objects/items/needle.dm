@@ -1,6 +1,6 @@
 /obj/item/needle
-	name = "needle"
-	desc = "A firm needle affixed with a simple thread, used to sew up cloth and wounds alike."
+	name = "aguja"
+	desc = "Aguja firme fijada con un hilo simple, utilizada para coser telas y heridas por igual."
 	icon_state = "needle"
 	icon = 'icons/roguetown/items/misc.dmi'
 	w_class = WEIGHT_CLASS_TINY
@@ -29,11 +29,11 @@
 	. = ..()
 	if(!infinite)
 		if(stringamt > 0)
-			. += span_bold("It has [stringamt] uses left.")
+			. += span_bold("Le quedan [stringamt] usos.")
 		else
-			. += span_bold("It has no uses left.")
+			. += span_bold("No tiene mas usos.")
 	else
-		. += span_bold("Can be used indefinitely.")
+		. += span_bold("Se puede usar indefinidamente.")
 
 /obj/item/needle/Initialize()
 	. = ..()
@@ -69,13 +69,13 @@
 		return NONE
 
 	if(maxstring - stringamt < 5)
-		to_chat(user, span_warning("Not enough room for more thread!"))
+		to_chat(user, span_warning("¡No hay suficiente espacio para mas hilo!"))
 		return ITEM_INTERACT_BLOCKING
 
-	to_chat(user, "I begin threading the needle with additional fibers...")
+	to_chat(user, "Comienzo a enhebrar la aguja con fibras adicionales...")
 	if(do_after(user, 6 SECONDS - GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/misc/sewing), tool))
 		stringamt += 5
-		to_chat(user, "I replenish the needle's thread!")
+		to_chat(user, "¡Recargo el hilo de la aguja!")
 		qdel(tool)
 		update_appearance(UPDATE_OVERLAYS)
 	return ITEM_INTERACT_SUCCESS
@@ -88,11 +88,11 @@
 		return FALSE
 
 	if(!I.uses_integrity)
-		to_chat(user, span_warning("[I] can't be repaired!"))
+		to_chat(user, span_warning("¡No se puede reparar [I]!"))
 		return FALSE
 
 	if(stringamt < 1)
-		to_chat(user, span_warning("[src] has no thread left!"))
+		to_chat(user, span_warning("¡[src] no tiene mas hilo!"))
 		return FALSE
 
 	if(!can_repair)
@@ -107,11 +107,11 @@
 
 	if(!I.obj_broken && I.get_integrity() >= I.max_integrity && (I.max_integrity != initial(I.max_integrity)))
 		if(!I.salvage_result)
-			to_chat(user, span_warning("[I] can't be melded with a needle."))
+			to_chat(user, span_warning("[I] no se puede unir con una aguja."))
 			return FALSE
 
 		if(I.integrity_restores >= 3)
-			to_chat(user, span_warning("[I] has been melded too many times. The fabric won't take any more material."))
+			to_chat(user, span_warning("[I] ha sido cosida demasiadas veces. El tejido no aceptara mas material."))
 			return FALSE
 
 		var/obj/item/patch = locate(I.salvage_result) in range(1, I.loc)
@@ -134,23 +134,23 @@
 		var/restore_amount = round(I.max_integrity * base_restore * diminish_factor)
 
 		if(restore_amount <= 0)
-			to_chat(user, span_warning("[I] won't take any more material."))
+			to_chat(user, span_warning("[I] no tomara mas material."))
 			return TRUE
 
 		I.max_integrity += restore_amount
 		I.integrity_restores++
 		qdel(patch)
 
-		user.visible_message(span_info("[user] melds new material into [I], restoring some of its integrity."))
+		user.visible_message(span_info("[user] mezcla nuevo material en [I], restaurando algo de su integridad."))
 		if(restores_done >= 2)
-			to_chat(user, span_warning("The fabric is taking the new material less readily now. Further melding will be less effective."))
+			to_chat(user, span_warning("El tejido esta aceptando el nuevo material con menos prontitud ahora. La fusion adicional sera menos efectiva."))
 
 		var/amt2raise = GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) * 0.25
 		user.mind.add_sleep_experience(I.sewrepair, amt2raise)
 		return TRUE
 
 	if(!I.obj_broken && I.get_integrity() >= I.max_integrity)
-		to_chat(user, span_warning("There is nothing to further repair on [I]."))
+		to_chat(user, span_warning("No hay nada mas que reparar en [I]."))
 		return FALSE
 
 	var/repair_percent = 0.025
@@ -179,16 +179,16 @@
 		I.max_integrity = max(1, I.max_integrity - integrity_loss)
 		I.obj_broken = FALSE
 		I.repair_damage(max(I.max_integrity * repair_percent, 10))
-		to_chat(user, span_warning("You patch [I] back together, but the damage has left its mark, it will never be quite as strong as it once was."))
+		to_chat(user, span_warning("Suelas [I] de nuevo, pero el daño ha dejado su huella, nunca volvera a ser tan fuerte como antes."))
 		if(skill_level < SKILL_MIDDLING)
-			to_chat(user, span_warning("Your inexperience made things worse. The repair is rough."))
+			to_chat(user, span_warning("Tu inexperiencia empeoro las cosas. El arreglo es chapucero."))
 	else
 		if(repair_percent)
-			user.visible_message(span_info("[user] patches up [I]!"))
+			user.visible_message(span_info("¡[user] repara [I]!"))
 			I.repair_damage(I.max_integrity * repair_percent)
 		else
 			I.take_damage(I.max_integrity * 0.1, BRUTE, "slash")
-			user.visible_message(span_warning("[user] damages [I] further!"))
+			user.visible_message(span_warning("¡[user] daña a [I] aun mas!"))
 			playsound(src, 'sound/foley/cloth_rip.ogg', 50, TRUE)
 
 	use(1)
@@ -205,19 +205,19 @@
 	if(!istype(user) || !istype(target))
 		return FALSE
 	if(stringamt < 1)
-		to_chat(user, span_warning("The needle has no thread left!"))
+		to_chat(user, span_warning("¡La aguja no tiene hilo!"))
 		return FALSE
 	var/mob/living/doctor = user
 	var/mob/living/carbon/patient = target
 	if(!get_location_accessible(patient, check_zone(doctor.zone_selected)))
-		to_chat(doctor, span_warning("Something is in the way."))
+		to_chat(doctor, span_warning("Algo esta en el camino."))
 		return FALSE
 	var/obj/item/bodypart/affecting = patient.get_bodypart(check_zone(doctor.zone_selected))
 	if(!affecting)
-		to_chat(doctor, span_warning("That limb is missing."))
+		to_chat(doctor, span_warning("Ese miembro falta."))
 		return FALSE
 	if(affecting.bandage)
-		to_chat(doctor, span_warning("There is a bandage in the way."))
+		to_chat(doctor, span_warning("Hay un vendaje en el camino."))
 		return FALSE
 
 	var/doctor_skill = GET_MOB_SKILL_VALUE(doctor, /datum/attribute/skill/misc/medicine)
@@ -229,19 +229,19 @@
 		time *= perception_mod * doctor_mod
 		playsound(patient, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
 		if(!do_after(doctor, time, patient))
-			to_chat(doctor, span_warning("I must stand still!"))
+			to_chat(doctor, span_warning("¡Debo permanecer quieto!"))
 			return FALSE
 		if(!use(1))
-			to_chat(doctor, span_warning("The needle has no thread left!"))
+			to_chat(doctor, span_warning("¡La aguja no tiene hilo!"))
 			return FALSE
 		var/amt2raise = GET_MOB_ATTRIBUTE_VALUE(doctor, STAT_INTELLIGENCE) * doctor.get_learning_boon(/datum/attribute/skill/misc/medicine)
 		if(doctor.diceroll(doctor_skill - 1, context = DICE_CONTEXT_PHYSICAL) <= DICE_FAILURE)
-			to_chat(doctor, span_warning("My hand slips!"))
+			to_chat(doctor, span_warning("¡Mi mano se resbala!"))
 			return FALSE
 		user.adjust_experience(/datum/attribute/skill/misc/medicine, amt2raise * 0.1)
 		doctor.visible_message(
-			span_green("<b>[doctor]</b> sutures <b>[patient]</b>'s [affecting.name] arteries with \the [src]."),
-			span_green("I suture <b>[patient]</b>'s [affecting.name] arteries with \the [src]."))
+			span_green("<b>[doctor]</b> sutura las arterias de <b>[patient]</b>'s [affecting.name] con \the [src]."),
+			span_green("Suto <b>[patient]</b>'s [affecting.name] arterias con \the [src]."))
 		for(var/obj/item/organ/artery in affecting.getorganslotlist(ORGAN_SLOT_ARTERY))
 			if(artery.damage)
 				artery.applyOrganDamage(-artery.maxHealth/3)
@@ -268,10 +268,10 @@
 		time *= perception_mod * doctor_mod
 		playsound(target, 'sound/foley/sewflesh.ogg', 65, FALSE)
 		if(!do_after(user, time, target))
-			to_chat(user, span_warning("I must stand still!"))
+			to_chat(user, span_warning("¡Debo permanecer quieto!"))
 			return
 		if(!use(1))
-			to_chat(doctor, span_warning("The needle has no thread left!"))
+			to_chat(doctor, span_warning("¡La aguja no tiene hilo!"))
 			return
 		var/amt2raise = GET_MOB_ATTRIBUTE_VALUE(doctor, STAT_INTELLIGENCE) * doctor.get_learning_boon(/datum/attribute/skill/misc/medicine)
 		user.adjust_experience(/datum/attribute/skill/misc/medicine, amt2raise)
@@ -281,23 +281,23 @@
 		injury.heal_damage(injury_heal, TRUE)
 		if(injury.damage_per_injury() > injury.autoheal_cutoff)
 			user.visible_message(span_green("<b>[user]</b> cose parcialmente \a [injury.get_desc(FALSE)] en <b>[target]</b> [affecting.name] con \the [src]."), \
-								span_green("I partially stitch \a [injury.get_desc(FALSE)] on \the [affecting.name] with \the [src]."))
+								span_green("Costuro parcialmente \a [injury.get_desc(FALSE)] en \the [affecting.name] con \the [src]."))
 		else
-			user.visible_message(span_green("<b>[user]</b> stitches \a [injury.get_desc(FALSE)] shut on <b>[target]</b>'s [affecting.name] with \the [src]."), \
-								span_green("I stitch \a [injury.get_desc(FALSE)] shut on \the [affecting.name] with \the [src]."))
+			user.visible_message(span_green("<b>[user]</b> puntos de sutura \a [injury.get_desc(FALSE)] cerraron en <b>[target]</b>'s [affecting.name] con \the [src]."), \
+								span_green("Coso \a [injury.get_desc(FALSE)] para cerrar \the [affecting.name] con \the [src]."))
 			injury.suture_injury()
 			break
 
 	if(.)
 		return TRUE
 
-	to_chat(doctor, span_warning("There aren't any wounds or injuries left to be sewn."))
+	to_chat(doctor, span_warning("No quedan heridas ni lesiones para coser."))
 	return FALSE
 
 /obj/item/needle/thorn
-	name = "needle"
+	name = "aguja"
 	icon_state = "thornneedle"
-	desc = "This needle uses a rough thorn, limiting the amount of thread that can be threaded."
+	desc = "Esta aguja utiliza una espina aspera, lo que limita la cantidad de hilo que se puede enhebrar."
 	stringamt = 12
 	maxstring = 12
 	anvilrepair = null
@@ -305,8 +305,8 @@
 	item_weight = 3 GRAMS
 
 /obj/item/needle/blessed
-	name = "blessed needle"
-	desc = span_hierophant("A needle blessed by the ordained Pestrans of the Church. A coveted item, for its thread will never end. \n This thread however can only be used to sew wounds.")
+	name = "bendita aguja"
+	desc = span_hierophant("Una aguja bendecida por los Pestrans ordenados de la Iglesia. Un articulo codiciado, porque su hilo nunca terminara. \n Sin embargo, este hilo solo se puede utilizar para coser heridas.")
 	infinite = TRUE
 	can_repair = FALSE
 	item_weight = 5 GRAMS

@@ -131,7 +131,7 @@
 	check_other_side = TRUE
 
 /obj/structure/fluff/traveltile/to_acid_caves
-	name = "to the Acid Caves"
+	name = "A las Cuevas de Acido"
 	aportalid = "acid_out"
 	aportalgoesto = "acid_in"
 	check_other_side = TRUE
@@ -142,14 +142,14 @@
 	check_other_side = TRUE
 
 /obj/structure/fluff/traveltile/inquisition
-	name = "To the Vanderlin Basin"
+	name = "A la Cuenca de Vanderlin"
 	aportalid = "inq_exit"
 	aportalgoesto = "inq_enter"
 	required_trait = TRAIT_INQUISITION
 	check_other_side = TRUE
 
 /obj/structure/fluff/traveltile/exit_inquisition
-	name = "To the Inquisitorial Lodge"
+	name = "A la Logia Inquisitorial"
 	aportalid = "inq_enter"
 	aportalgoesto = "inq_exit"
 	required_trait = TRAIT_INQUISITION
@@ -163,7 +163,7 @@
 	check_other_side = TRUE
 
 /obj/structure/fluff/traveltile/bog_gallowband
-	name = "To the Gallowband"
+	name = "Hacia Gallowband"
 	aportalid = "bog_gallow"
 	aportalgoesto = "gallow_bog"
 	required_trait = TRAIT_GALLOWBAND

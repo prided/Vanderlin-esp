@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(trackables)
-	name = "Trackable Effect Manager"
+	name = "Administrador de efectos rastreables"
 	flags = SS_NO_FIRE
 
 	var/list/trackables_to_trait = list()

@@ -1,6 +1,6 @@
 /obj/item/storage/crucible
-	name = "crucible"
-	desc = "A large crucible in which metal items can be molten down."
+	name = "crisol"
+	desc = "Un gran crisol en el que se pueden fundir objetos metalicos."
 	layer = ABOVE_ALL_MOB_LAYER
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
@@ -18,7 +18,7 @@
 
 /obj/item/storage/crucible/set_material_information()
 	. = ..()
-	name = "[LOWER_TEXT(initial(main_material.name))] crucible"
+	name = "Crisol [LOWER_TEXT(initial(main_material.name))]"
 
 /obj/item/storage/crucible/Initialize()
 	. = ..()

@@ -1,6 +1,6 @@
 /obj/structure/channel_connector/drain
-	name = "channel drain"
-	desc = "A drain that connects to metal channels and automatically pours molten metal into moulds placed beneath it."
+	name = "canal de drenaje"
+	desc = "Un drenaje que se conecta a canales metalicos y vierte automaticamente el metal fundido en moldes colocados debajo."
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
 	icon_state = "drain"
@@ -119,7 +119,7 @@
 	for(var/obj/structure/metal_channel/channel_update in channel.info?.channels)
 		channel_update.update_appearance(UPDATE_OVERLAYS)
 	if(prob(25))
-		visible_message("<span class='notice'>Molten metal drips from [src] into the mould below.</span>")
+		visible_message("<span class='notice'>El metal fundido gotea de [src] en el molde de abajo.</span>")
 
 /obj/structure/channel_connector/drain/update_overlays()
 	. = ..()

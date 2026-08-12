@@ -74,9 +74,9 @@
 /obj/structure/flora/grass/tangler/real/update_name()
 	. = ..()
 	if(obj_broken)
-		name = "dry vine"
+		name = "vid seca"
 	else if(aggroed)
-		name = "twisting vine"
+		name = "vid torcida"
 	else
 		name = "arbusto retorcido"
 
@@ -128,7 +128,7 @@
 		START_PROCESSING(SSobj, src)
 		if(L.can_feel_pain())
 			L.emote("painscream", forced = FALSE)
-		src.visible_message("<span class='danger'>[src] snatches [L]!</span>")
+		src.visible_message("<span class='danger'>[src] roba [L]¡</span>")
 		playsound(src, "plantcross", 100, FALSE, -1)
 	else if(istype(AM, /obj/item))
 		if(is_type_in_list(AM, eatablez))
@@ -144,7 +144,7 @@
 /obj/structure/flora/grass/tangler/real/CanPass(atom/movable/mover, turf/target)
 	if(isliving(mover))
 		if(prob(50) && !HAS_TRAIT(mover, TRAIT_BRUSHWALK))
-			to_chat(mover, "<span class='danger'>I get stuck in \the [src] for a moment.</span>")
+			to_chat(mover, "<span class='danger'>Me quedo atascado en \the [src] por un momento.</span>")
 			return FALSE
 	else if(istype(mover, /obj/projectile) && prob(30))
 		return ..()

@@ -1,8 +1,8 @@
 /datum/objective/personal/rotten_feast
-	name = "Rotten Feast"
-	category = "Pestra's Chosen"
+	name = "Festin podrido"
+	category = "Elegido de Pestra"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Pestra grows stronger", "Pestra blesses you (+1 Constitution)")
+	rewards = list("2 Triunfos", "Pestra se fortalece", "Pestra te bendice (+1 Constitucion)")
 	var/meals_eaten = 0
 	var/meals_required = 1
 
@@ -26,7 +26,7 @@
 	if(meals_eaten >= meals_required)
 		complete_objective()
 	else
-		to_chat(owner.current, span_notice("Rotten meal consumed! Eat [meals_required - meals_eaten] more to complete Pestra's objective."))
+		to_chat(owner.current, span_notice("¡Comida podrida consumida! Come [meals_required - meals_eaten] mas para completar el objetivo de Pestra."))
 
 /datum/objective/personal/rotten_feast/complete_objective()
 	. = ..()
@@ -39,4 +39,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_PESTRA_BLESSING, list(STAT_CONSTITUTION = 1))
 
 /datum/objective/personal/rotten_feast/update_explanation_text()
-	explanation_text = "Let nothing go to waste! Consume [meals_required] piece of rotten food to gain Pestra's favor!"
+	explanation_text = "¡No desperdicies nada! ¡Consume [meals_required] porcion de comida podrida para obtener el favor de Pestra!"

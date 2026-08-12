@@ -1,5 +1,5 @@
 /obj/structure/toilet
-	name = "toilet"
+	name = "inodoro"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "toilet"
@@ -20,7 +20,7 @@
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage/concrete/toilet)
 	var/list/things = STR.contents()
 	if(!length(things))
-		to_chat(user, span_notice("The toilet is empty."))
+		to_chat(user, span_notice("El inodoro esta vacio."))
 		return
 	var/obj/item/I = pick(things)
 	STR.remove_from_storage(I, get_turf(user))

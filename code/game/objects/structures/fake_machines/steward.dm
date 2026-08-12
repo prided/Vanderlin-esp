@@ -55,7 +55,7 @@
 	if(.)
 		return
 	if(locked())
-		to_chat(user, "<span class='warning'>It's locked. Of course.</span>")
+		to_chat(user, "<span class='warning'>Esta bloqueado. Claro.</span>")
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	playsound(src, 'sound/misc/keyboard_enter.ogg', 100, FALSE, -1)
@@ -261,7 +261,7 @@
 			if(!D)
 				return
 			if(SStreasury.treasury_value < D.get_import_price())
-				say("Insufficient mammon.")
+				say("Poco mammon.")
 				return
 			var/amt = D.get_import_price()
 			SStreasury.treasury_value -= amt
@@ -270,7 +270,7 @@
 			if(amt >= 100)
 				scom_announce("[SSmapping.config.map_name] imports [D.name] for [amt] mammon.")
 			else
-				say("[SSmapping.config.map_name] imports [D.name] for [amt] mammon.")
+				say("[SSmapping.config.map_name] importa [D.name] para [amt] Mammon.")
 			D.raise_demand()
 			addtimer(CALLBACK(src, PROC_REF(do_import), D.type), 10 SECONDS)
 			. = TRUE
@@ -280,7 +280,7 @@
 			if(!D)
 				return
 			if(D.get_held_count() < D.importexport_amt)
-				say("Insufficient stock.")
+				say("Stock insuficiente.")
 				return
 
 			var/items_exported = 0
@@ -292,7 +292,7 @@
 				qdel(exported_item)
 
 			if(items_exported == 0)
-				say("Could not retrieve items from stockpile for export.")
+				say("No se pudieron recuperar articulos del almacen para la exportacion.")
 				return
 
 			var/total_value = D.get_export_price() * (items_exported / D.importexport_amt)
@@ -303,7 +303,7 @@
 			if(total_value >= 100)
 				scom_announce("[SSmapping.config.map_name] exports [items_exported] [D.name] for [total_value] mammon.")
 			else
-				say("[SSmapping.config.map_name] exports [items_exported] [D.name] for [total_value] mammon.")
+				say("[SSmapping.config.map_name] exporta [items_exported] [D.name] por [total_value] mammon.")
 
 			D.lower_demand()
 			. = TRUE
@@ -391,7 +391,7 @@
 			if(!X)
 				return
 			if(X.job == /datum/job/lord::title)
-				to_chat(usr, "<span class='warning'>The MASTER OF NERVES does not permit reassigning the current Monarch.</span>")
+				to_chat(usr, "<span class='warning'>EL MAESTRO DE LOS NERVIOS no permite reasignar al Monarca actual.</span>")
 				return
 			var/new_pos = params["job"]
 			if(!(new_pos in get_assignable_jobs()))
@@ -447,7 +447,7 @@
 					return
 			var/datum/stock/stockpile/custom/new_stock = new /datum/stock/stockpile/custom(item_path, usr.real_name)
 			SStreasury.stockpile_datums += new_stock
-			say("Custom stock created for [found_name].")
+			say("El stock personalizado se creo para [found_name].")
 			scom_announce("New custom stock created for [found_name] by [usr.real_name].")
 			. = TRUE
 

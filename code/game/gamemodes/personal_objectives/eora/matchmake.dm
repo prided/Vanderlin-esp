@@ -1,9 +1,9 @@
 /datum/objective/personal/marriage_broker
 	name = "arreglar el matrimonio"
-	category = "Eora's Chosen"
+	category = "Elegido de Eora"
 	triumph_count = 3
-	immediate_effects = list("Gained an ability to conduct secret marriage ceremonies", "Gained an ability to find marital status of others")
-	rewards = list("3 Triumphs", "Eora grows stronger", "Eora blesses you (+1 Fortune)")
+	immediate_effects = list("Obtuviste una habilidad para celebrar matrimonios secretos", "Obtuviste una habilidad para conocer el estado civil de otros")
+	rewards = list("3 Triunfos", "Eora se fortalece", "Eora te bendice (+1 Fortuna)")
 
 /datum/objective/personal/marriage_broker/on_creation()
 	. = ..()
@@ -26,7 +26,7 @@
 
 /datum/objective/personal/marriage_broker/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("A marriage has happened, completing Eora's objective!"))
+	to_chat(owner.current, span_greentext("¡Se ha celebrado un matrimonio y se completo el objetivo de Eora!"))
 	adjust_storyteller_influence(EORA, 20)
 	UnregisterSignal(SSdcs, COMSIG_GLOBAL_MARRIAGE)
 
@@ -35,4 +35,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_EORA_BLESSING, list(STAT_FORTUNE =  1))
 
 /datum/objective/personal/marriage_broker/update_explanation_text()
-	explanation_text = "Be a matchmaker! Make any marriage happen to please Eora!"
+	explanation_text = "¡Haz de casamentero! ¡Consigue que se celebre un matrimonio para complacer a Eora!"

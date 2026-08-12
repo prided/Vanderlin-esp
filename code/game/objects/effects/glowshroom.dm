@@ -2,7 +2,7 @@
 
 /obj/structure/kneestingers
 	name = "kneestingers"
-	desc = "They're said to glow with Dendor's wrath."
+	desc = "Se dice que brillan con la ira de Dendor."
 	anchored = TRUE
 	opacity = FALSE
 	density = FALSE
@@ -74,7 +74,7 @@
 
 /obj/structure/kneestingers/acid_act(acidpwr, acid_volume)
 	. = 1
-	visible_message(span_danger("[src] melts away!"))
+	visible_message(span_danger("¡[src] se derrite!"))
 	var/obj/effect/decal/cleanable/molten_object/I = new (get_turf(src))
 	I.desc = ""
 	qdel(src)

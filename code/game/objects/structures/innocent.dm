@@ -1,7 +1,7 @@
 /*	..................   Innocent Bush   ................... */
 /obj/structure/innocent_bush
-	name = "bush"
-	desc = "These large bushes are known to be well-liked by silkworms who make their nests in their dark depths."
+	name = "maleza"
+	desc = "Se sabe que estos grandes arbustos son muy apreciados por los gusanos de seda que hacen sus nidos en sus oscuras profundidades."
 	icon = 'icons/mob/creacher/trolls/troll.dmi'
 	icon_state = "troll_hide"
 	SET_BASE_PIXEL(-16, 0)
@@ -34,7 +34,7 @@
 
 /obj/structure/innouous_rock
 	name = "mana crystal deposit"
-	desc = "These large mana crystals deposit are known to bring fortune to miners who venture into the deep dark depths of the world."
+	desc = "Se sabe que estos grandes depositos de cristales de mana traen fortuna a los mineros que se aventuran en las profundidades mas oscuras del mundo."
 	icon = 'icons/mob/creacher/trolls/troll_cave.dmi'
 	icon_state = "troll_hide"
 	SET_BASE_PIXEL(-16, 0)
@@ -59,13 +59,13 @@
 		spawn_troll()
 		return
 
-	to_chat(user, span_notice("You carefully detach the crystals from the rock..."))
+	to_chat(user, span_notice("Desprendes cuidadosamente los cristales de la roca..."))
 	if(!do_after(user, 3 SECONDS, src))
-		to_chat(user, span_warning("The crystals crumble as you try to detach it!"))
+		to_chat(user, span_warning("¡Los cristales se desmoronan cuando intentas separarlos!"))
 		qdel(src)
 		return
 
-	to_chat(user, span_warning("You successfully detach the crystals from the rock!"))
+	to_chat(user, span_warning("¡Has logrado desprender los cristales de la roca!"))
 	for(var/i in 1 to 3)
 		new /obj/item/mana_battery/mana_crystal/standard(loc)
 	qdel(src)
@@ -78,13 +78,13 @@
 	if(!istype(item, /obj/item/weapon/pick/paxe))
 		return
 
-	to_chat(user, span_notice("You carefully detach the crystals from the rock..."))
+	to_chat(user, span_notice("Desprendes cuidadosamente los cristales de la roca..."))
 	if(!do_after(user, 1.5 SECONDS, src))
-		to_chat(user, span_warning("The crystals crumble as you try to detach it!"))
+		to_chat(user, span_warning("¡Los cristales se desmoronan cuando intentas separarlos!"))
 		qdel(src)
 		return
 
-	to_chat(user, span_warning("You successfully detach the crystals from the rock!"))
+	to_chat(user, span_warning("¡Has logrado desprender los cristales de la roca!"))
 	for(var/i in 1 to 3)
 		new /obj/item/mana_battery/mana_crystal/standard(loc)
 	qdel(src)

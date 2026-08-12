@@ -1,8 +1,8 @@
 // POLEARM THRUST INTENTS //
 /datum/intent/polearm/thrust
-	name = "thrust"
+	name = "empujar"
 	blade_class = BCLASS_STAB
-	attack_verb = list("stabs")
+	attack_verb = list("apuñala")
 	animname = "stab"
 	icon_state = "instab"
 	reach = 2
@@ -20,10 +20,10 @@
 
 //POLEARM BASH INTENTS //
 /datum/intent/polearm/bash
-	name = "bash"
+	name = "golpe"
 	blade_class = BCLASS_BLUNT
 	icon_state = "inbash"
-	attack_verb = list("bashes", "huelgas")
+	attack_verb = list("golpea", "huelgas")
 	hitsound = list('sound/combat/hits/blunt/woodblunt (1).ogg', 'sound/combat/hits/blunt/woodblunt (2).ogg')
 	penfactor = AP_POLEARM_BASH
 	damfactor = 0.9
@@ -33,9 +33,9 @@
 
 // POLEARM CUT INTENTS //
 /datum/intent/polearm/cut
-	name = "cut"
+	name = "cortar"
 	blade_class = BCLASS_CUT
-	attack_verb = list("cuts", "slashes")
+	attack_verb = list("corta", "corta")
 	icon_state = "incut"
 	animname = "cut"
 	damfactor = 0.8
@@ -50,9 +50,9 @@
 
 // POLEARM CHOP INTENTS //
 /datum/intent/polearm/chop
-	name = "chop"
+	name = "cortar"
 	icon_state = "inchop"
-	attack_verb = list("chops", "hacks")
+	attack_verb = list("taja", "machetea")
 	animname = "chop"
 	blade_class = BCLASS_CHOP
 	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')
@@ -68,7 +68,7 @@
 
 // POLEARM REND INTENTS //
 /datum/intent/rend
-	name = "rend"
+	name = "desgarrar"
 	icon_state = "inrend"
 	attack_verb = list("desgarra")
 	animname = "cut"
@@ -80,7 +80,7 @@
 	misscost = 8
 
 /datum/intent/rend/reach
-	name = "long rend"
+	name = "largo desgarro"
 	penfactor = AP_POLEARM_CHOP - 5
 	misscost = 10
 	reach = 2

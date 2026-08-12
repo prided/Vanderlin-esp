@@ -1,5 +1,5 @@
 /obj/effect/mine
-	name = "dummy mine"
+	name = "mina ficticia"
 	desc = ""
 	density = FALSE
 	anchored = TRUE
@@ -22,7 +22,7 @@
 /obj/effect/mine/proc/triggermine(mob/victim)
 	if(triggered)
 		return
-	visible_message("<span class='danger'>[victim] sets off [icon2html(src, viewers(src))] [src]!</span>")
+	visible_message("<span class='danger'>[victim] detona [icon2html(src, viewers(src))] [src]¡Oh, no!</span>")
 	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
 	s.set_up(3, 1, src)
 	s.start()
@@ -43,7 +43,7 @@
 
 
 /obj/effect/mine/stun
-	name = "stun mine"
+	name = "mina aturdidora"
 	var/stun_time = 80
 
 /obj/effect/mine/stun/mineEffect(mob/living/victim)
@@ -51,15 +51,15 @@
 		victim.Paralyze(stun_time)
 
 /obj/effect/mine/kickmine
-	name = "kick mine"
+	name = "mina de patada"
 
 /obj/effect/mine/kickmine/mineEffect(mob/victim)
 	if(isliving(victim) && victim.client)
-		to_chat(victim, "<span class='danger'>I have been kicked FOR NO REISIN!</span>")
+		to_chat(victim, "<span class='danger'>¡Me han expulsado SIN RAZON!</span>")
 		qdel(victim.client)
 
 /obj/effect/mine/sound
-	name = "honkblaster 1000"
+	name = "Bocinador 1000"
 	var/sound = 'sound/blank.ogg'
 
 /obj/effect/mine/sound/mineEffect(mob/victim)
@@ -67,11 +67,11 @@
 
 
 /obj/effect/mine/sound/bwoink
-	name = "bwoink mine"
+	name = "mina bwoink"
 	sound = 'sound/blank.ogg'
 
 /obj/effect/mine/pickup
-	name = "pickup"
+	name = "recogida"
 	desc = ""
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "electricity2"
@@ -91,18 +91,18 @@
 	qdel(src)
 
 /obj/effect/mine/pickup/healing
-	name = "Blue Orb"
+	name = "Orbe azul"
 	desc = ""
 	color = "#0000FF"
 
 /obj/effect/mine/pickup/healing/mineEffect(mob/living/carbon/victim)
 	if(!victim.client || !istype(victim))
 		return
-	to_chat(victim, "<span class='notice'>I feel great!</span>")
+	to_chat(victim, "<span class='notice'> ¡Me siento genial! </span>")
 	victim.revive(ADMIN_HEAL_ALL)
 
 /obj/effect/mine/pickup/speed
-	name = "Yellow Orb"
+	name = "Orbe amarillo"
 	desc = ""
 	color = "#FFFF00"
 	duration = 300
@@ -110,8 +110,8 @@
 /obj/effect/mine/pickup/speed/mineEffect(mob/living/carbon/victim)
 	if(!victim.client || !istype(victim))
 		return
-	to_chat(victim, "<span class='notice'>I feel fast!</span>")
+	to_chat(victim, "<span class='notice'> ¡Me siento rapido! </span>")
 	victim.add_movespeed_modifier(MOVESPEED_ID_YELLOW_ORB, update=TRUE, priority=100, multiplicative_slowdown=-2, blacklisted_movetypes=(FLYING|FLOATING))
 	sleep(duration)
 	victim.remove_movespeed_modifier(MOVESPEED_ID_YELLOW_ORB)
-	to_chat(victim, "<span class='notice'>I slow down.</span>")
+	to_chat(victim, "<span class='notice'>Me estoy desacelerando.</span>")

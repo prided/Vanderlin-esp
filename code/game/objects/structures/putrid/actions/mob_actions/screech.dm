@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/deafening_screech
-	name = "Deafening Screech"
-	desc = "Emit a horrifying screech that incapacitates those who can hear it."
+	name = "Chillido ensordecedor"
+	desc = "Emite un chillido espantoso que incapacita a quienes pueden oirlo."
 	button_icon_state = "screech"
 	cooldown_time = 5 MINUTES
 	personal_resource_cost = 50
@@ -19,7 +19,7 @@
 	for(var/mob/living/carbon/human/screech_target in get_hearers_in_view(screech_range, get_turf(consumed)))
 		screech_target.soundbang_act(intensity = 5, stun_pwr = 50, damage_pwr = 10, deafen_pwr = 30)
 		shake_camera(screech_target, 4, 3)
-		to_chat(screech_target, span_userdanger("[consumed] lets out a deafening screech!"))
+		to_chat(screech_target, span_userdanger("¡[consumed] emite un grito ensordecedor!"))
 
 	return TRUE
 

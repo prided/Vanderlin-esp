@@ -15,12 +15,12 @@
 
 /obj/item/restraints/legcuffs/beartrap
 	icon = 'icons/roguetown/items/misc.dmi'
-	name = "mantrap"
+	name = "cepo"
 	gender = NEUTER
 	throw_speed = 1
 	throw_range = 1
 	icon_state = "beartrap"
-	desc = "A crude and old spring trap, used to snare interlopers, or prey on a hunt. Looks almost like it'll break at any moment."
+	desc = "Una tosca y vieja trampa de resorte, utilizada para atrapar a intrusos o cazar. Parece casi que se va a romper en cualquier momento."
 	var/old = TRUE // Is it an old trap? Will most likely be destroyed if not handled right
 	var/armed = FALSE // Is it armed?
 	var/trap_damage = 90 // How much brute damage the trap will do to its victim
@@ -45,7 +45,7 @@
 				BP.add_embedded_object(src)
 			close_trap(user)
 			C.visible_message("<span class='boldwarning'>[C] activa \the [src].</span>", \
-					"<span class='userdanger'>I trigger \the [src]!</span>")
+					"<span class='userdanger'>Activo \the [src]!</span>")
 			C.emote("agony")
 			C.Stun(80)
 			BP.add_wound(/datum/wound/fracture)
@@ -63,8 +63,8 @@
 				anchored = FALSE
 				update_appearance(UPDATE_ICON_STATE)
 				src.alpha = 255
-				C.visible_message("<span class='notice'>[C] disarms \the [src].</span>", \
-						"<span class='notice'>I disarm \the [src].</span>")
+				C.visible_message("<span class='notice'>[C] desarmar a \the [src].</span>", \
+						"<span class='notice'>Desarmo \the [src].</span>")
 				C.adjust_experience(/datum/attribute/skill/craft/traps, GET_MOB_ATTRIBUTE_VALUE(C, STAT_INTELLIGENCE) * boon, FALSE)
 				return FALSE
 			else
@@ -73,7 +73,7 @@
 					BP.add_embedded_object(src)
 				close_trap(user)
 				C.visible_message("<span class='boldwarning'>[C] activa \the [src].</span>", \
-						"<span class='userdanger'>I trigger \the [src]!</span>")
+						"<span class='userdanger'>Activo \the [src]!</span>")
 				C.emote("agony")
 				BP.add_wound(/datum/wound/fracture)
 				if(BP.can_be_disabled)
@@ -88,7 +88,7 @@
 	if(!armed || !W.force)
 		return ..()
 	user.visible_message("<span class='warning'>[user] activa \the [src] con [W].</span>", \
-			"<span class='danger'>I trigger \the [src] with [W]!</span>")
+			"<span class='danger'>¡Activo \the [src] con [W]!</span>")
 	W.take_damage(20)
 	close_trap(user, W)
 	if(isliving(user))
@@ -113,7 +113,7 @@
 	icon_state = "[initial(icon_state)][armed]"
 
 /obj/item/restraints/legcuffs/beartrap/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is sticking [user.p_their()] head in the [src.name]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] esta metiendo la [user.p_their()] cabeza en el [src.name] ¡Parece que [user.p_theyre()] esta intentando suicidarse!</span>")
 	playsound(src, 'sound/blank.ogg', 50, TRUE, -1)
 	return (BRUTELOSS)
 
@@ -133,14 +133,14 @@
 				update_appearance(UPDATE_ICON_STATE)
 				src.alpha = 80 // Set lower visibility for everyone
 				L.adjust_experience(/datum/attribute/skill/craft/traps, GET_MOB_ATTRIBUTE_VALUE(L, STAT_INTELLIGENCE) * boon, FALSE) // We learn how to set them better, little by little.
-				to_chat(user, span_notice("I arm \the [src]."))
+				to_chat(user, span_notice("Armo \the [src]."))
 			else
 				if(old)
 					user.visible_message(span_warning("¡El viejo [src.name] se rompe bajo tension!"))
 					playsound(src, 'sound/foley/breaksound.ogg', 100, TRUE, -1)
 					qdel(src)
 				else
-					user.visible_message(span_warning("Curses! I couldn't keep [src.name] open tight enough!"))
+					user.visible_message(span_warning("¡Malditas! ¡No pude mantener [src.name] lo suficientemente cerrado!"))
 					playsound(src, 'sound/items/beartrap.ogg', 300, TRUE, -1)
 					return
 
@@ -194,14 +194,14 @@
 // When craftable beartraps get added, make these the ones crafted.
 /obj/item/restraints/legcuffs/beartrap/crafted
 	old = FALSE
-	desc = "Curious is the trapmaker's art. Their efficacy unwitnessed by their own eyes."
+	desc = "Curioso es el arte del trampero. Su eficacia no fue presenciada por sus propios ojos."
 	melting_material = /datum/material/iron
 	melt_amount = 75
 
 /obj/item/restraints/legcuffs/beartrap/crafted/makeshift
 	makeshift_prob = 15 //50 - 15 = 35% chance to set up instead of flat 50%
 	trap_damage = 80 //10 less damage than the actual metal beartrap
-	name = "makeshift mantrap"
+	name = "cepo improvisado"
 	melting_material = null
 	item_weight = 1.5 KILOGRAMS
 

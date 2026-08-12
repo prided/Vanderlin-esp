@@ -1,6 +1,6 @@
 /obj/item/smokebomb
 	name = "bomba de humo"
-	desc = "A soft sphere with an alchemical mixture and a dispersion mechanism hidden inside. Will shatter on impact."
+	desc = "Una esfera blanda con una mezcla alquimica y un mecanismo de dispersion escondido en su interior. Se rompera con el impacto."
 	icon = 'icons/obj/bombs.dmi'
 	icon_state = "smokebomb"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -45,7 +45,7 @@
 	datum_to_spread = /datum/effect_system/smoke_spread/poison
 
 /obj/item/holy_grenade
-	name = "\improper The Holy Hand Grenade of Antioch"
+	name = "\improper La Santa Granada de Mano de Antioquia"
 	desc = "Una reliquia sagrada llevada por el hermano Maynard."
 	icon = 'icons/obj/holy_grenade.dmi'
 	icon_state = "holy_grenade"
@@ -85,7 +85,7 @@
 
 /obj/item/holy_grenade/equipped(mob/user, slot, initial)
 	. = ..()
-	to_chat(user, span_nicegreen("You hear a chant: \"Pie lesu domine, dona eis requiem.\""))
+	to_chat(user, span_nicegreen("Escuchas un canto: \"Pie lesu domine, dona eis requiem.\""))
 
 /obj/item/holy_grenade/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, message_mode, original_message)
 	if(findtext(html_decode(original_message), scripture_wanted))
@@ -98,9 +98,9 @@
 /obj/item/holy_grenade/attack_self(mob/user, list/modifiers)
 	. = ..()
 	if(scripture_heard < length(scripture_required))
-		to_chat(user, span_notice("I pull the holy pin... but it doesn't release! Bring forth the Book of Armaments!"))
+		to_chat(user, span_notice("Arranco el seguro sagrado... ¡pero no se libera! ¡Trae el Libro de Armamentos!"))
 		return
-	to_chat(user, span_userdanger("I pull the holy pin! Count to three!"))
+	to_chat(user, span_userdanger("¡Arranco el pin sagrado! ¡Cuentas hasta tres!"))
 	playsound(user, 'sound/foley/industrial/clunk.ogg', 40, FALSE, -1)
 	icon_state = "[icon_state]_armed"
 	primed = TRUE

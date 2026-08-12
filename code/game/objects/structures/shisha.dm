@@ -1,6 +1,6 @@
 /obj/structure/fluff/statue/shisha
-	name = "shisha pipe"
-	desc = "A traditional shisha pipe. It looks like it could be packed and smoked."
+	name = "pipa shisha"
+	desc = "Una shisha tradicional. Parece que se puede envasar y fumar."
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "zbuski"
 	density = FALSE
@@ -53,13 +53,13 @@
 /obj/structure/fluff/statue/shisha/examine(mob/user)
 	. = ..()
 	if(length(loaded_coals))
-		. += span_notice("It has [length(loaded_coals)] coal\s loaded on top.")
+		. += span_notice("Tiene [length(loaded_coals)] carbon\s cargado en la parte superior.")
 	else
-		. += span_warning("No coals are loaded. Add some ore coal to heat the bowl.")
+		. += span_warning("No hay carbon cargado. Añade algo de carbon de mineral para calentar el recipiente.")
 	if(bowl_contents)
-		. += span_notice("The bowl is packed with [bowl_contents.name]. ([puffs_remaining] puffs remaining.)")
+		. += span_notice("El bol esta lleno de [bowl_contents.name]. ([puffs_remaining] bocanadas restantes.)")
 	else
-		. += span_warning("The bowl is empty.")
+		. += span_warning("El tazon esta vacio.")
 	if(liquid_contents.total_volume > 0)
 		. += span_notice("La base contiene [liquid_contents.total_volume]u de liquido.")
 	else
@@ -67,7 +67,7 @@
 	if(current_smoker)
 		. += span_notice("[current_smoker.name] esta humeando.")
 	else
-		. += span_notice("Click it to smoke.")
+		. += span_notice("Haz clic en el para fumar.")
 
 
 /obj/structure/fluff/statue/shisha/attack_hand(mob/living/user, list/modifiers)
@@ -80,19 +80,19 @@
 		return
 
 	if(current_smoker)
-		to_chat(user, span_warning("[current_smoker.name] is already using the [name]."))
+		to_chat(user, span_warning("[current_smoker.name] ya esta utilizando el [name]."))
 		return
 
 	if(!length(loaded_coals))
-		to_chat(user, span_warning("There are no coals loaded. Place some coal on top first."))
+		to_chat(user, span_warning("No hay carbon cargado. Coloca primero algo de carbon encima."))
 		return
 
 	if(!bowl_contents || puffs_remaining <= 0)
-		to_chat(user, span_warning("The bowl is empty. Pack it with something first."))
+		to_chat(user, span_warning("El tazon esta vacio. ¡Logalo primero con algo!"))
 		return
 
 	if(liquid_contents.total_volume <= 0)
-		to_chat(user, span_warning("The base is dry. Add some liquid first."))
+		to_chat(user, span_warning("La base esta seca. Añade un poco de liquido primero."))
 		return
 
 	start_smoking(user)
@@ -101,13 +101,13 @@
 /obj/structure/fluff/statue/shisha/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/ore/coal))
 		if(length(loaded_coals) >= max_coals)
-			to_chat(user, span_warning("The hookah already has [max_coals] coals loaded. That's the max."))
+			to_chat(user, span_warning("La hookah ya tiene [max_coals] carbones cargados. Eso es lo maximo."))
 			return
 		user.transferItemToLoc(I, src)
 		loaded_coals += I
 		coal_puff_counts[I] = 0
 		puffs_remaining = bowl_contents ? calc_puffs() : 0
-		to_chat(user, span_notice("You place the coal on top of the hookah. ([length(loaded_coals)]/[max_coals] coals)"))
+		to_chat(user, span_notice("Coloques el carbon encima del narguile. ([length(loaded_coals)]/[max_coals] carbones)"))
 		return
 
 	if(istype(I, /obj/item/reagent_containers/glass))
@@ -118,27 +118,27 @@
 			to_chat(user, span_warning("La base ya esta llena."))
 			return
 		I.reagents.trans_to(liquid_contents, min(I.reagents.total_volume, liquid_max_volume - liquid_contents.total_volume))
-		to_chat(user, span_notice("You pour liquid into the base of the [name]."))
+		to_chat(user, span_notice("Vapora liquido en la base del [name]."))
 		return
 
 	if(istype(I, /obj/item/reagent_containers/powder))
 		if(bowl_contents)
-			to_chat(user, span_warning("The bowl is already packed. Empty it first."))
+			to_chat(user, span_warning("El recipiente ya esta lleno. Valalo primero."))
 			return
 		user.transferItemToLoc(I, src)
 		bowl_contents = I
 		puffs_remaining = calc_puffs()
-		to_chat(user, span_notice("You pack the bowl with [I.name]."))
+		to_chat(user, span_notice("Usted llena el recipiente con [I.name]."))
 		return
 
 	if(istype(I, /obj/item/reagent_containers/food/snacks))
 		if(bowl_contents)
-			to_chat(user, span_warning("The bowl is already packed. Empty it first."))
+			to_chat(user, span_warning("El recipiente ya esta lleno. Valalo primero."))
 			return
 		user.transferItemToLoc(I, src)
 		bowl_contents = I
 		puffs_remaining = calc_puffs()
-		to_chat(user, span_notice("You crumble [I.name] into the bowl of the [name]."))
+		to_chat(user, span_notice("Trituras [I.name] en el tazon de [name]."))
 		return
 
 	return ..()
@@ -156,14 +156,14 @@
 	bowl_contents.forceMove(get_turf(src))
 	bowl_contents = null
 	puffs_remaining = 0
-	to_chat(user, span_notice("You empty the bowl of the [name]."))
+	to_chat(user, span_notice("Vacias el recipiente del [name]."))
 
 
 /obj/structure/fluff/statue/shisha/proc/start_smoking(mob/living/user)
 	current_smoker = user
 	var/n = length(loaded_coals)
-	var/heat_desc = n >= 3 ? "fierce" : n == 2 ? "comfortable" : "gentle"
-	to_chat(user, span_notice("You settle in and take a draw from the [name]. The [heat_desc] heat of the coals warms the bowl."))
+	var/heat_desc = n >= 3 ? "feroz" : n == 2 ? "comodo" : "amable"
+	to_chat(user, span_notice("Te acomodas y das un trago del [name]. El calor de las [heat_desc] brasas calienta el recipiente."))
 	visible_message(span_notice("[user.name] comienza a fumar el [name]."))
 	AddComponent(/datum/component/rope, user, \
 		icon = 'icons/effects/beam.dmi', \
@@ -183,13 +183,13 @@
 	current_smoker = null
 	STOP_PROCESSING(SSobj, src)
 	qdel(GetComponent(/datum/component/rope))
-	visible_message(span_notice("[was_smoker.name] pulls away from the [name]."))
+	visible_message(span_notice("[was_smoker.name] se aleja de [name]."))
 	icon_state = "zbuski"
 
 
 /obj/structure/fluff/statue/shisha/proc/on_rope_broken()
 	if(current_smoker)
-		to_chat(current_smoker, span_warning("You wander too far from the [name] and lose your draw."))
+		to_chat(current_smoker, span_warning("Te alejas demasiado del [name] y pierdes tu turno."))
 	stop_smoking()
 
 
@@ -208,17 +208,17 @@
 
 /obj/structure/fluff/statue/shisha/proc/deliver_puff()
 	if(!bowl_contents || puffs_remaining <= 0)
-		to_chat(current_smoker, span_warning("The bowl has burned out."))
+		to_chat(current_smoker, span_warning("La taza se ha quemado."))
 		stop_smoking()
 		return
 
 	var/n = length(loaded_coals)
 
 	if(n >= 3 && prob(25))
-		to_chat(current_smoker, span_warning("The coal runs too hot, a scorching hit sears your throat!"))
+		to_chat(current_smoker, span_warning("¡El carbon esta demasiado caliente, un golpe abrasador te quema la garganta!"))
 		current_smoker.adjustOrganLoss(ORGAN_SLOT_LUNGS, 5)
 	else if(n == 2 && prob(8))
-		to_chat(current_smoker, span_warning("A slightly harsh hit catches the back of your throat."))
+		to_chat(current_smoker, span_warning("Un golpe un poco fuerte te golpea en la parte posterior de la garganta."))
 		current_smoker.adjustOrganLoss(ORGAN_SLOT_LUNGS, 2)
 
 	if(bowl_contents.reagents && bowl_contents.reagents.total_volume > 0)
@@ -236,14 +236,14 @@
 	T.pollute_turf(/datum/pollutant/smoke, 120 + (n * 40))
 
 	if(n >= 3)
-		to_chat(current_smoker, span_notice("You take a deep, intense draw. Rich smoke floods your lungs."))
+		to_chat(current_smoker, span_notice("Das un profundo y intenso trago. El rico humo inunda tus pulmones."))
 		visible_message(span_notice("[current_smoker.name] exhala una espesa nube de humo."))
 	else if(n == 2)
-		to_chat(current_smoker, span_notice("You take a smooth, full draw from the [name]. Fragrant smoke fills your lungs."))
+		to_chat(current_smoker, span_notice("Tomas una suave y completa calada del [name]. El humo fragante llena tus pulmones."))
 		visible_message(span_notice("[current_smoker.name] exhala una nube constante de humo."))
 	else
-		to_chat(current_smoker, span_notice("You take a soft, mild draw from the [name]. A wisp of lightly scented smoke drifts through."))
-		visible_message(span_notice("[current_smoker.name] exhales a thin wisp of smoke."))
+		to_chat(current_smoker, span_notice("Das una calada suave y ligera en el [name]. Una ligera nube de humo perfumado se desliza a traves de el."))
+		visible_message(span_notice("[current_smoker.name] exhala una fina rafaga de humo."))
 
 	// tick the oldest coal and delete it if spent
 	if(length(loaded_coals))
@@ -253,14 +253,14 @@
 			coal_puff_counts.Remove(C)
 			loaded_coals.Remove(C)
 			qdel(C)
-			to_chat(current_smoker, span_warning("A coal burns out and crumbles away. ([length(loaded_coals)]/[max_coals] remaining)"))
+			to_chat(current_smoker, span_warning("El carbon se quema y se desmorona. ([length(loaded_coals)]/[max_coals] restante)"))
 			if(!length(loaded_coals))
-				to_chat(current_smoker, span_warning("The last coal dies out. The bowl goes cold."))
+				to_chat(current_smoker, span_warning("El ultimo carbon se apaga. El recipiente se enfria."))
 				stop_smoking()
 				return
 
 	if(puffs_remaining <= 0)
-		to_chat(current_smoker, span_warning("The bowl burns out. Time to repack."))
+		to_chat(current_smoker, span_warning("La taza se quema. Es hora de volver a empaquetar."))
 		if(bowl_contents)
 			qdel(bowl_contents)
 			bowl_contents = null

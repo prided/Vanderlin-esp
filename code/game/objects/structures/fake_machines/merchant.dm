@@ -1,6 +1,6 @@
 /obj/item/fake_machine/merchant
-	name = "SKY HANDLER"
-	desc = "A machine that attracts the attention of trading balloons."
+	name = "MANEJADOR DEL CIELO"
+	desc = "Una maquina que llama la atencion de los globos comerciales."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "ballooner"
 	density = TRUE
@@ -76,7 +76,7 @@
 				if(prize >= 1)
 					play_sound=TRUE
 					budgie += prize
-					I.visible_message("<span class='warning'>[I] is sucked into the air!</span>")
+					I.visible_message("<span class='warning'>[I] ¡se eleva en el aire!</span>")
 					qdel(I)
 			budgie = round(budgie)
 			if(budgie > 0)
@@ -96,7 +96,7 @@
 
 /obj/structure/fake_machine/merchantvend
 	name = "GOLDFACE"
-	desc = "Gilded tombs do worms enfold."
+	desc = "Las tumbas doradas envuelven a los gusanos."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "goldvendor"
 	density = TRUE
@@ -141,7 +141,7 @@
 		var/money = I.get_real_price()
 		budget += money
 		qdel(I)
-		to_chat(user, span_info("I put [money] mammon in [src]."))
+		to_chat(user, span_info("Coloque [money] mammon en [src]."))
 		playsound(src, 'sound/misc/machinevomit.ogg', 100, TRUE, -1)
 		return attack_hand(user)
 	return ..()
@@ -224,7 +224,7 @@
 	if(!ishuman(user))
 		return
 	if(locked())
-		to_chat(user, "<span class='warning'>It's locked. Of course.</span>")
+		to_chat(user, "<span class='warning'>Esta bloqueado. Claro.</span>")
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	playsound(src, 'sound/misc/beep.ogg', 100, FALSE, -1)

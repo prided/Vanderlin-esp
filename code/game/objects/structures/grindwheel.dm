@@ -1,5 +1,5 @@
 /obj/structure/grindwheel
-	name = "grind wheel"
+	name = "muela"
 	desc = ""
 	icon = 'icons/roguetown/misc/forge.dmi'
 	icon_state = "grindwheel"
@@ -24,7 +24,7 @@
 			playsound(src, pick('sound/misc/slide_wood (2).ogg', 'sound/misc/slide_wood (1).ogg'), 100, FALSE)
 			if(do_after(user, wood_time, src))
 				if(prob(max(40 - (skill_level * 10), 0)) || !skill_level) //Chance maxes at level 4 (standard woodcutter)
-					to_chat(user, span_info("Curses! I ruined this piece of wood..."))
+					to_chat(user, span_info("¡Maldicion! He arruinado este trozo de madera..."))
 					playsound(src,'sound/combat/hits/onwood/destroyfurniture.ogg', 100, FALSE)
 				else
 					new /obj/item/natural/wood/plank(get_turf(src))
@@ -36,7 +36,7 @@
 /obj/structure/grindwheel/proc/handle_profession_sharpen(obj/item/weapon, mob/user)
 	var/sharpen_level = get_mob_highest_passive_level(user, /datum/passive/sharpening)
 	if(!sharpen_level)
-		to_chat(user, span_notice("Try as I might I can't figure out how to use this thing."))
+		to_chat(user, span_notice("Por mucho que lo intente, no puedo entender como usar esta cosa."))
 		return
 
 	var/maxium_repair = weapon.max_blade_int * (0.25 * sharpen_level)

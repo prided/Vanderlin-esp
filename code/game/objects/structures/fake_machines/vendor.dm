@@ -1,6 +1,6 @@
 /obj/structure/fake_machine/vendor
 	name = "PEDDLER"
-	desc = "The stomach of this thing can be stuffed with fun things for you to buy."
+	desc = "El estomago de esta cosa se puede llenar con cosas divertidas para que las compres."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "streetvendor1"
 	density = TRUE
@@ -84,13 +84,13 @@
 		return NONE
 
 	if(!lock_check())
-		to_chat(user, span_notice("There is no lock on \the [src]! It is not ready to sell!"))
+		to_chat(user, span_notice("¡No hay candado en \the [src]! ¡No esta lista para venderse!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/money = tool.get_real_price()
 	budget += money
 	qdel(tool)
-	to_chat(user, span_info("I put [money] mammon in \the [src]."))
+	to_chat(user, span_info("Coloque [money] mammon en \the [src]."))
 	playsound(src, 'sound/misc/machinevomit.ogg', 100, TRUE, -1)
 	attack_hand(user)
 
@@ -101,7 +101,7 @@
 		return NONE
 
 	if(!lock_check())
-		to_chat(user, span_notice("There is no lock on \the [src]! I won't be able to sell this!"))
+		to_chat(user, span_notice("¡No hay ningun candado en \the [src]! ¡No podre vender esto!"))
 		return ITEM_INTERACT_BLOCKING
 
 	add_merchandise(tool, user)
@@ -141,7 +141,7 @@
 					budget -= held_items[O]["PRICE"]
 					wgain += held_items[O]["PRICE"]
 				else
-					say("NO MONEY NO HONEY!")
+					say("¡SIN DINERO, SIN AMOR!")
 					return
 			record_round_statistic(STATS_PEDDLER_REVENUE, held_items[O]["PRICE"])
 			held_items -= O
@@ -259,7 +259,7 @@
 			var/item = pick(held_items)
 			var/sale = LAZYACCESSASSOC(held_items, item, "NAME")
 			var/price = LAZYACCESSASSOC(held_items, item, "PRICE")
-			say("[sale] for sale! [price] mammons!")
+			say("¡[sale] a la venta! [price] ¡mammons!")
 
 /obj/structure/fake_machine/vendor/nolock
 	lock = null
@@ -314,7 +314,7 @@
 	held_items[I]["PRICE"] = 120
 
 /obj/structure/fake_machine/vendor/apothecary
-	name = "DRUG PEDDLER"
+	name = "VENDEDOR DE DROGAS"
 	lockids = list(ACCESS_APOTHECARY)
 	lighting_color = "#8f06b5"
 	filled_overlay = "vendor-drug"
@@ -350,7 +350,7 @@
 
 /obj/structure/fake_machine/vendor/centcom
 	name = "LANDLORD"
-	desc = "Give this thing money, and you will immediately buy a neat property in the capital."
+	desc = "Dale dinero a esta cosa e inmediatamente compraras una bonita propiedad en la capital."
 	icon_state = "streetvendor1"
 	var/list/cachey = list()
 
@@ -369,17 +369,17 @@
 			if(!cachey[user]["trisawarded"])
 				cachey[user]["trisawarded"] = 1
 				user.adjust_triumphs(1)
-				say("[user] has purchased a prole dwelling.")
+				say("[user] ha comprado una vivienda de proceres.")
 				playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		if(cachey[user]["moneydonate"] > 499)
 			if(cachey[user]["trisawarded"] < 2)
 				cachey[user]["trisawarded"] = 2
 				user.adjust_triumphs(1)
-				say("[user] has been upgraded to a space in a serf apartment.")
+				say("[user] ha sido mejorado a un espacio en un apartamento de siervo.")
 				playsound(src, pick('sound/misc/machinetalk.ogg'), 100, FALSE, -1)
 		if(cachey[user]["moneydonate"] > 999)
 			if(cachey[user]["trisawarded"] < 3)
 				cachey[user]["trisawarded"] = 3
 				user.adjust_triumphs(1)
-				say("[user] HAS BEEN UPGRADED TO A NOBLE BEDCHAMBER!")
+				say("¡[user] HA SIDO ACTUALIZADO A UN DORMITORIO NOBLE!")
 				playsound(src, 'sound/misc/machinelong.ogg', 100, FALSE, -1)

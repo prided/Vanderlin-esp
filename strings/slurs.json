@@ -4,9 +4,9 @@
             "oreja de cuchara",
             "oreja redonda",
             "humanito",
-            "efímero",
+            "efimero",
             "error de Psydon",
-            "lo último de Psydon"
+            "lo ultimo de Psydon"
         ],
         "Elf": [
             "oreja de cuchillo",
@@ -14,13 +14,13 @@
             "oreja afilada",
             "oreja de daga",
             "cabeza de daga",
-            "abrazárboles",
+            "abrazarboles",
             "amante de hojas",
             "olisca cortezas",
             "comedor de hierbas",
-            "follárboles",
-            "dendrófilo con forma de poste",
-            "bailarín de hongos"
+            "follarboles",
+            "dendrofilo con forma de poste",
+            "bailarin de hongos"
         ],
         "Dark Elf": [
             "oreja de cuchillo",
@@ -84,7 +84,7 @@
             "manchacerveza de barba pulgosa",
             "retaco",
             "cagapiedras",
-            "rata de túnel",
+            "rata de tunel",
             "barriga de barril",
             "lameoro"
         ],
@@ -116,16 +116,16 @@
         "Tiefling": [
             "engendro infernal",
             "demonio",
-            "engendro demoníaco",
-            "engendro diabólico",
+            "engendro demoniaco",
+            "engendro diabolico",
             "medio infierno",
             "diablillo alto",
             "tocado por el infierno",
             "ladronfling"
         ],
         "Rakshari": [
-            "ladrón calvo",
-            "gato doméstico",
+            "ladron calvo",
+            "gato domestico",
             "rata de las dunas",
             "rata topo",
             "saco de pelotas",
@@ -136,11 +136,11 @@
         "Kobold": [
             "comepiedras",
             "mascapiedras",
-            "sierpe raquítica",
+            "sierpe raquitica",
             "gnomo escamoso",
             "comemoscas",
-            "lengua bífida",
-            "desecho de dragón",
+            "lengua bifida",
+            "desecho de dragon",
             "troglodita",
             "termita",
             "habitante de cueva",
@@ -156,15 +156,15 @@
             "mascota drow",
             "engendro drow",
             "pulguiento",
-            "homúnculo",
+            "homunculo",
             "peludo"
         ],
         "Harpy": [
             "mascota de Eora",
-            "cerebro de pájaro",
+            "cerebro de pajaro",
             "ponedora",
             "cabeza de plumas",
-            "pájaro de mierda",
+            "pajaro de mierda",
             "aliento de gusano",
             "rata del cielo",
             "roedor del cielo",

@@ -1,8 +1,8 @@
 /datum/objective/personal/proper_burial
-	name = "Consecrate Graves"
-	category = "Necra's Chosen"
+	name = "Consagrar tumbas"
+	category = "Elegido de Necra"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Necra grows stronger", "You won't get sick from unpleasant smells")
+	rewards = list("2 Triunfos", "Necra se fortalece", "No enfermaras por olores desagradables")
 	var/burials_completed = 0
 	var/required_burials = 1
 
@@ -28,11 +28,11 @@
 	if(burials_completed >= required_burials)
 		complete_objective()
 	else
-		to_chat(owner.current, span_notice("Grave consecrated! Consecrate [required_burials - burials_completed] more to complete Necra's trial."))
+		to_chat(owner.current, span_notice("¡Tumba consagrada! Consagra [required_burials - burials_completed] mas para completar la prueba de Necra."))
 
 /datum/objective/personal/proper_burial/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have consecrated enough graves to earn Necra's approval!"))
+	to_chat(owner.current, span_greentext("¡Has consagrado suficientes tumbas para obtener la aprobacion de Necra!"))
 	adjust_storyteller_influence(NECRA, 20)
 	UnregisterSignal(owner.current, COMSIG_GRAVE_CONSECRATED)
 
@@ -41,4 +41,4 @@
 	ADD_TRAIT(owner.current, TRAIT_DEADNOSE, OBJECTIVE_TRAIT)
 
 /datum/objective/personal/proper_burial/update_explanation_text()
-	explanation_text = "Consecrate [required_burials] grave\s by building a grave marker or using funeral rites to earn Necra's approval."
+	explanation_text = "Consagra [required_burials] tumba\s mediante una lapida o ritos funerarios para obtener la aprobacion de Necra."

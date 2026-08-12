@@ -728,7 +728,7 @@ GLOBAL_LIST_EMPTY(active_lifts_by_type)
 		if(total_coin_value < total_required_cost)
 			spawn_coins(total_coin_value, platform, crate_type = /obj/structure/closet/crate/chest/merchant)
 			var/obj/item/paper/failure_note = new(get_turf(platform))
-			failure_note.name = "delivery failure notice"
+			failure_note.name = "aviso de fallo de entrega"
 			failure_note.info = "Order rejected: Insufficient payment. Required: [total_required_cost] mammons, Provided: [total_coin_value]."
 			total_coin_value = 0
 			continue
@@ -809,7 +809,7 @@ GLOBAL_LIST_EMPTY(active_lifts_by_type)
 		location = get_turf(picked)
 	if(ispath(crate_type))
 		location = new crate_type(location)
-		location.name = "currency chest"
+		location.name = "cofre de moneda"
 
 	var/gold_coins = floor(total_coin_value/10)
 	if(gold_coins >= 1)

@@ -1,5 +1,5 @@
 /obj/structure/closet/crate/chest
-	name = "chest"
+	name = "cofre"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "chestweird2"
@@ -70,7 +70,7 @@
 	max_integrity = 2000
 
 /obj/structure/closet/crate/chest/wicker
-	name = "wicker basket"
+	name = "cesta de mimbre"
 	desc = "Fibras entrelazadas para hacer un contenedor de almacenamiento barato."
 	base_icon_state = "wicker"
 	icon_state = "wicker"
@@ -107,32 +107,32 @@
 	. = ..()
 
 /obj/structure/closet/crate/chest/neu
-	name = "sturdy oak chest"
+	name = "comoda de roble resistente"
 	icon_state = "chest_neu"
 	base_icon_state = "chest_neu"
 
 /obj/structure/closet/crate/chest/neu_iron
-	name = "reinforced chest"
+	name = "pecho reforzado"
 	icon_state = "chestiron_neu"
 	base_icon_state = "chestiron_neu"
 
 /obj/structure/closet/crate/chest/neu_fancy
-	name = "fancy chest"
+	name = "cofre elegante"
 	icon_state = "chestfancy_neu"
 	base_icon_state = "chestfancy_neu"
 
 /obj/structure/closet/crate/chest/old_crate
-	name = "old crate"
+	name = "caja vieja"
 	base_icon_state = "woodchestalt"
 	icon_state = "woodchestalt"
 
 /obj/structure/closet/crate/chest/crate
-	name = "crate"
+	name = "caja"
 	base_icon_state = "woodchest"
 	icon_state = "woodchest"
 
 /obj/structure/closet/crate/chest/crafted
-	name = "handcrafted chest"
+	name = "cofre hecho a mano"
 	icon_state = "chest_neu"
 	base_icon_state = "chest_neu"
 	sellprice = 6

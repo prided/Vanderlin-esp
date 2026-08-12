@@ -1,8 +1,8 @@
 /datum/objective/personal/tame_animal
-	name = "Tame an Animal"
-	category = "Dendor's Chosen"
+	name = "Domesticar un animal"
+	category = "Elegido de Dendor"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Dendor grows stronger", "Taming knowledge")
+	rewards = list("2 Triunfos", "Dendor se fortalece", "Conocimientos de domesticacion")
 	var/tamed_count = 0
 	var/required_tames = 1
 
@@ -37,4 +37,4 @@
 	owner.current.adjust_skill_level(/datum/attribute/skill/labor/taming, 10)
 
 /datum/objective/personal/tame_animal/update_explanation_text()
-	explanation_text = "Tame an animal, either by feeding it or any other means until it acknowledges you as a friend. Dendor wills it!"
+	explanation_text = "Domestica un animal, alimentandolo o por cualquier otro medio, hasta que te reconozca como amigo. ¡Dendor asi lo quiere!"

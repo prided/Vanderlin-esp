@@ -48,7 +48,7 @@
 	return 1000000
 
 /turf/closed/proc/feel_turf(mob/living/user)
-	to_chat(user, span_notice("I start feeling around [src]"))
+	to_chat(user, span_notice("Empiezo a tantear [src]"))
 	if(!do_after(user, 1.5 SECONDS, src))
 		return
 
@@ -65,7 +65,7 @@
 		return
 	user.wallpressed = dir2wall
 	user.update_wallpress_slowdown()
-	user.visible_message("<span class='info'>[user] leans against [src].</span>")
+	user.visible_message("<span class='info'>[user] se apoya contra [src].</span>")
 	switch(dir2wall)
 		if(NORTH)
 			user.setDir(SOUTH)
@@ -120,7 +120,7 @@
 				H.apply_damage(15, BRUTE, BODY_ZONE_HEAD, H.run_armor_check("head", "blunt", damage = 15), damage_type = BCLASS_BLUNT)
 				H.toggle_rogmove_intent(MOVE_INTENT_WALK, TRUE)
 				playsound(src, "genblunt", 100, TRUE)
-				H.visible_message("<span class='warning'>[H] runs into [src]!</span>", "<span class='warning'>I run into [src]!</span>")
+				H.visible_message("<span class='warning'>¡[H] choca contra [src]!</span>", "<span class='warning'>¡Choco contra [src]!</span>")
 				addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, Knockdown), 10), 10)
 
 /turf/closed/Initialize()
@@ -200,7 +200,7 @@
 	var/used_time = max(70 - (myskill * 10) - (GET_MOB_ATTRIBUTE_VALUE(user, STAT_SPEED) * 3), 30)
 	if(user.m_intent != MOVE_INTENT_SNEAK)
 		playsound(user, climbsound, 100, TRUE)
-	user.visible_message(span_warning("[user] starts to climb [src]."), span_warning("I start to climb [src]..."))
+	user.visible_message(span_warning("[user] comienza a trepar por [src]."), span_warning("Empiezo a trepar por [src]..."))
 	if(do_after(user, used_time, src, display_over_user = TRUE, interaction_key = DOAFTER_SOURCE_CLIMBING_LADDER))
 		user.zMove(target = target, z_move_flags = Z_MOVE_CLIMBING_FLAGS)
 		if(user.m_intent != MOVE_INTENT_SNEAK)
@@ -219,20 +219,20 @@
 		return
 	var/turf/target = GET_TURF_ABOVE(get_turf(user))
 	if(!target)
-		to_chat(user, "<span class='warning'>I can't go there.</span>")
+		to_chat(user, "<span class='warning'>No puedo ir alli.</span>")
 		return
 	if(!istype(target, /turf/open/openspace))
-		to_chat(user, "<span class='warning'>I can't go there.</span>")
+		to_chat(user, "<span class='warning'>No puedo ir alli.</span>")
 		return
 	user.forceMove(target)
-	to_chat(user, "<span class='warning'>I crawl up the wall.</span>")
+	to_chat(user, "<span class='warning'>Trepo por la pared.</span>")
 	. = ..()
 
 /turf/closed/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	return FALSE
 
 /turf/closed/indestructible
-	name = "wall"
+	name = "pared"
 	icon = 'icons/turf/walls.dmi'
 	explosion_block = 50
 
@@ -248,13 +248,13 @@
 
 // Dakkatown Turfs
 /turf/closed/indestructible/wooddark
-	name = "wall"
+	name = "pared"
 	desc = ""
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "corner"
 
 /turf/closed/indestructible/roguewindow
-	name = "window"
+	name = "ventana"
 	desc = ""
 	opacity = FALSE
 	icon = 'icons/roguetown/misc/structure.dmi'
@@ -262,9 +262,9 @@
 
 // Boat
 /turf/closed/indestructible/wooddark/hull
-	name = "hull"
+	name = "casco"
 	color = "#d6d5a8"
 
 /turf/closed/indestructible/wooddark/mast
-	name = "mast"
+	name = "mastil"
 	color = "#a6a68b"

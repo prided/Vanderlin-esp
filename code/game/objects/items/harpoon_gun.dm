@@ -20,8 +20,8 @@
 	return bullet
 
 /obj/item/harpoon_gun
-	name = "harpoon gun"
-	desc = "Steam powered harpoon gun, lets you fly around, and subdue outlaws."
+	name = "arma de arpon"
+	desc = "Arpon a vapor que te permite volar y someter a los forajidos."
 
 	icon = 'icons/obj/guns/harpoon.dmi'
 	icon_state = "harpoon"
@@ -131,7 +131,7 @@
 	if(href_list["pull_harpoon"])
 		if(leash_target != usr)
 			return
-		leash_target.visible_message(span_danger("¡[leash_target] comienza a quitar el arpon incrustado en ellos!"), span_danger("You start to remove the harpoon embedded in you!"))
+		leash_target.visible_message(span_danger("¡[leash_target] comienza a quitar el arpon incrustado en ellos!"), span_danger("¡Estas empezando a quitar la arpon que esta incrustada en ti!"))
 		if(!do_after(leash_target, 5 SECONDS, src))
 			return
 		QDEL_NULL(leash)
@@ -179,7 +179,7 @@
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
 	if(leashed)
-		user.visible_message(span_danger("[user] comienza a retraerse [src]."), span_danger("You start to retract [src]."))
+		user.visible_message(span_danger("[user] comienza a retraerse [src]."), span_danger("Comienzas a retraer [src]."))
 		if(!do_after(user, 2.5 SECONDS, src))
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 		QDEL_NULL(leash)
@@ -190,7 +190,7 @@
 /obj/item/harpoon_gun/attack_self(mob/user, list/modifiers)
 	. = ..()
 	if(leashed)
-		user.visible_message(span_danger("[user] starts to reel in [src]."), span_danger("You start to reel in [src]."))
+		user.visible_message(span_danger("[user] comienza a enrollar [src]."), span_danger("Comienzas a enrollar [src]."))
 		if(!do_after(user, 2.5 SECONDS, src))
 			return
 		reel()
@@ -272,7 +272,7 @@
 		icon_state = initial(icon_state)
 
 /obj/projectile/grapple_hook
-	name = "grapple hook"
+	name = "gancho de agarre"
 	icon = 'icons/obj/guns/harpoon.dmi'
 	icon_state = "grapple_gun_hook"
 	damage = 0

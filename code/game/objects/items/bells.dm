@@ -21,15 +21,15 @@
 		return
 	playsound(src, 'sound/misc/handbell.ogg', 50, 1)
 
-	user.visible_message(span_notice("[user] rings [src]."), span_notice("You ring [src]."))
+	user.visible_message(span_notice("[user] suena [src]."), span_notice("Usted toca [src]."))
 	for(var/mob/M in view(10, src.loc))
 		if(M != user && M.client)
-			to_chat(M, span_notice("You hear a small bell ringing."))
+			to_chat(M, span_notice("Escuchas una pequeña campana."))
 
 	COOLDOWN_START(src, bell_ring, 4 SECONDS)
 
 /obj/item/handheld_bell/proc/sound_bell(mob/living/user)
-	user.visible_message(span_warning("[user] rings the bell!"))
+	user.visible_message(span_warning("¡[user] hace sonar la campana!"))
 	playsound(src, 'sound/misc/handbell.ogg', 100, TRUE)
 	var/turf/origin_turf = get_turf(src)
 
@@ -68,7 +68,7 @@
 			if(0 to 20)
 				disttext = " muy cerca"
 			if(20 to 40)
-				disttext = " close"
+				disttext = " cerrar"
 			if(40 to 80)
 				disttext = ""
 			if(80 to 160)
@@ -78,7 +78,7 @@
 
 		//sound played for other players
 		player.playsound_local(get_turf(player), 'sound/misc/handbell.ogg', 35, FALSE, pressure_affected = FALSE)
-		to_chat(player, span_warning("I hear the bell ring somewhere[disttext][dirtext]!"))
+		to_chat(player, span_warning("Escucho la campana sonar en algun lugar [disttext][dirtext] ¡!"))
 
 /obj/item/handheld_bell/getonmobprop(tag)
 	. = ..()
@@ -122,18 +122,18 @@
 	for(var/mob/M as anything in GLOB.player_list) // @everyone
 		if(!M.client || HAS_TRAIT(M, TRAIT_DEAF)) // Disregard NPC's with no mind and sleeping/unconscious people
 			continue
-		to_chat(M, span_notice("[src] rings, echoing solemnly far and wide across the realm."))
+		to_chat(M, span_notice("[src] suena, resonando solemnemente en todas partes del reino."))
 		M.playsound_local(M, 'sound/misc/bell.ogg', 50, 1)
 
-	visible_message(span_notice("[user] uses the [tool] to ring the [src]."))
+	visible_message(span_notice("[user] usa el [tool] para hacer sonar la [src]."))
 	COOLDOWN_START(src, bell_ring, 5 SECONDS)
 	return ITEM_INTERACT_SUCCESS
 
 //////////Jingle Bells
 
 /obj/item/jingle_bells
-	name = "jingling bells"
-	desc = "A set of small bells that jingle when shaken."
+	name = "cascabeles"
+	desc = "Un conjunto de campanillas que suenan al agitarlas."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state =  "jingle_bells"
 	throwforce = 5

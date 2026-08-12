@@ -1,6 +1,6 @@
 /obj/structure/dryclothes
-	name = "clothline"
-	desc = "This seems like a nice place to dry some clothes."
+	name = "tendedero"
+	desc = "Este parece un buen lugar para secar algo de ropa."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "dryclothes"
 	max_integrity = 200

@@ -1,7 +1,7 @@
 
 /obj/item/breach_charge // TODO: make an actual explosive instead of an item.
-	name = "breaching charge"
-	desc = "A sack of foul-smelling explosive powder designed to rip through walls."
+	name = "carga de brecha"
+	desc = "Un saco de polvora explosiva maloliente diseñada para atravesar paredes."
 	icon_state = "breach_charge"
 	icon = 'icons/roguetown/items/misc.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -28,14 +28,14 @@
 	if((!iswallturf(interacting_with)  && !ismineralturf(interacting_with)) || isindestructiblewall(interacting_with))
 		return NONE
 
-	user.visible_message(span_warning("[user] begins deploying [src]..."), \
-		span_warning("I begin deploying [src]..."))
+	user.visible_message(span_warning("[user] comienza a desplegar [src]..."), \
+		span_warning("Comienzo a desplegar [src]..."))
 
 	if(!do_after(user, deploy_time, target = interacting_with))
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_warning("[user] deploys [src]."), \
-		span_warning("I deploy [src]."))
+	user.visible_message(span_warning("[user] despliega [src]."), \
+		span_warning("Despliego [src]."))
 
 	user.dropItemToGround(src)
 	deployed = TRUE
@@ -89,14 +89,14 @@
 /obj/item/breach_charge/attack_hand(mob/user)
 	if(deployed)
 		if(ignited)
-			user.visible_message(span_notice("[user] begins defusing [src]..."), \
-				span_notice("I begin defusing [src]..."))
+			user.visible_message(span_notice("[user] empieza a desactivar [src]..."), \
+				span_notice("Empiezo a desactivar [src]..."))
 			if(do_after(user, defuse_time, target = src))
 				defuse(user)
 				return
 		else
 			user.visible_message(span_notice("[user] comienza a recoger [src]..."), \
-				span_notice("I begin picking up [src]..."))
+				span_notice("Comienzo a recoger [src]..."))
 
 		if(do_after(user, defuse_time, target = src))
 			user.visible_message(span_notice("[user] recoge [src]."), \
@@ -115,7 +115,7 @@
 	fuse_timer = null
 	icon_state = "[initial(icon_state)]_deployed"
 	defuser.visible_message(span_notice("[defuser] desactiva [src]..."), \
-				span_notice("I successfully defuse [src]..."))
+				span_notice("Desarme con exito [src]..."))
 
 /obj/item/breach_charge/proc/detonate(detonator)
 	var/turf/target_turf = get_step(get_turf(src), aim_dir) // The turf we are exploding.
@@ -123,7 +123,7 @@
 	if(isindestructiblewall(target_turf))
 		defuse()
 		return
-	visible_message(span_danger("[src] detonates!"))
+	visible_message(span_danger("¡[src] se detona!"))
 	if(iswallturf(target_turf) && !ismineralturf(target_turf))
 		target_turf.ScrapeAway()
 	explosion(target_turf, exp_devi, exp_heavy, exp_light, soundin = explode_sound)

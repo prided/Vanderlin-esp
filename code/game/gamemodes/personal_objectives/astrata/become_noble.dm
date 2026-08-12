@@ -1,8 +1,8 @@
 /datum/objective/personal/nobility
 	name = "Conviertete en noble"
-	category = "Astrata's Chosen"
+	category = "Elegido de Astrata"
 	triumph_count = 3
-	rewards = list("3 Triumphs", "Astrata grows stronger", "Astrata blesses you (+1 Fortune)")
+	rewards = list("3 Triunfos", "Astrata se fortalece", "Astrata te bendice (+1 Fortuna)")
 
 /datum/objective/personal/nobility/on_creation()
 	. = ..()
@@ -27,7 +27,7 @@
 
 /datum/objective/personal/nobility/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have earned nobility and completed Astrata's objective!"))
+	to_chat(owner.current, span_greentext("¡Te has ganado la nobleza y completado el objetivo de Astrata!"))
 	adjust_storyteller_influence(ASTRATA, 20)
 	UnregisterSignal(owner.current, SIGNAL_ADDTRAIT(TRAIT_NOBLE_POWER))
 

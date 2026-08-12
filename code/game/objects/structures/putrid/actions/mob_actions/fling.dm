@@ -1,7 +1,7 @@
 
 /datum/action/cooldown/meatvine/personal/fling
-	name = "Fling"
-	desc = "Fling a target 3 tiles backwards with a short stun. Deals 22 armor-piercing damage if they hit an obstacle. Requires direct sprite click."
+	name = "Arrojar"
+	desc = "Lanza a un objetivo 3 casillas hacia atras con un breve aturdimiento. Inflige 22 daños perforantes si golpean un obstaculo. Requiere clic directo del sprite."
 	button_icon_state = "fling"
 	cooldown_time = 7 SECONDS
 	personal_resource_cost = 0
@@ -32,7 +32,7 @@
 
 	// Must target a living creature
 	if(!isliving(target))
-		to_chat(user, span_warning("You must target a living creature!"))
+		to_chat(user, span_warning("¡Debes dirigirte a una criatura viva!"))
 		return FALSE
 
 	var/mob/living/victim = target
@@ -44,7 +44,7 @@
 
 	// Check if target can be flung (not too heavy, not anchored, etc)
 	if(victim.anchored)
-		to_chat(user, span_warning("[victim] is anchored and cannot be flung!"))
+		to_chat(user, span_warning("¡[victim] esta anclado y no se puede lanzar!"))
 		return FALSE
 
 	// Face the target
@@ -65,11 +65,11 @@
 
 	// Visual and audio feedback
 	user.visible_message(
-		span_danger("[user] violently flings [victim] backwards!"),
-		span_boldnotice("You fling [victim] away!")
+		span_danger("¡[user] lanza violentamente a [victim] hacia atras!"),
+		span_boldnotice("¡Lanzas a [victim] lejos!")
 	)
 
-	victim.balloon_alert(victim, "flung!")
+	victim.balloon_alert(victim, "¡lanzado!")
 	playsound(user, 'sound/items/weapons/thudswoosh.ogg', 50, TRUE)
 
 	victim.Knockdown(stun_duration)
@@ -93,7 +93,7 @@
 	if(distance_traveled < fling_distance)
 		victim.visible_message(
 			span_danger("¡[victim] choca contra un obstaculo!"),
-			span_userdanger("You slam into something!")
+			span_userdanger("¡Te has chocado contra algo!")
 		)
 
 		victim.apply_damage(collision_damage, BRUTE, def_zone = null, blocked = FALSE, forced = TRUE, damage_type = BCLASS_BLUNT)

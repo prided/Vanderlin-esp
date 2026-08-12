@@ -1,6 +1,6 @@
 /obj/item/explosive/bottle
 	name = "bomba de botella"
-	desc = "Dangerous explosion, in a bottle."
+	desc = "Explosion peligrosa, en una botella."
 	icon = 'icons/obj/bombs.dmi'
 	icon_state = "clear_bomb"
 	w_class = WEIGHT_CLASS_NORMAL

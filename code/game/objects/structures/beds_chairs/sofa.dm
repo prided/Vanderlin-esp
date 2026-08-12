@@ -1,5 +1,5 @@
 /obj/structure/chair/sofa
-	name = "old ratty sofa"
+	name = "viejo sofa andrajoso"
 	icon_state = "sofamiddle"
 	icon = 'icons/obj/sofa.dmi'
 	buildstackamount = 1
@@ -17,7 +17,7 @@
 // -------- CannibalHunter's Le' Fancy Couch --------
 /obj/structure/chair/bench/couch
 	name = "sofa elegante"
-	desc = "It's quite an elegant couch of the finest quality and color. Crumbs and strands of various hair color are stuffed in the cracks."
+	desc = "Es un sofa bastante elegante de la mejor calidad y color. En las grietas se meten migas y mechones de cabello de varios colores."
 	icon = 'icons/roguetown/misc/couch.dmi'
 	icon_state = "couch_single"
 	greyscale_config = /datum/greyscale_config/couch

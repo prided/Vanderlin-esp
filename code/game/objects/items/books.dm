@@ -4,7 +4,7 @@
  * Book
  */
 /obj/item/book
-	name = "book"
+	name = "libro"
 	icon = 'icons/roguetown/items/books.dmi'
 	icon_state = "basic_book_0"
 	desc = ""
@@ -15,7 +15,7 @@
 	throw_range = 5
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_NORMAL		 //upped to three because books are, y'know, pretty big. (and you could hide them inside eachother recursively forever)
-	attack_verb = list("bashed", "whacked", "educado")
+	attack_verb = list("golpeado", "aporreado", "educado")
 	resistance_flags = FLAMMABLE
 	drop_sound = 'sound/blank.ogg'
 	pickup_sound =  'sound/blank.ogg'
@@ -219,7 +219,7 @@
 	icon_state = "[base_icon_state]_[open]"
 
 /obj/item/book/bibble
-	name = "The Book"
+	name = "Biblia"
 	icon_state = "bibble_0"
 	base_icon_state = "bibble"
 	title = "Biblia"
@@ -259,7 +259,7 @@
 	. = ..()
 	if(!can_select_verse_ranges)
 		return
-	. += span_notice("Alt click this book to select which section to read verses from.")
+	. += span_notice("Haz clic alternativamente en este libro para seleccionar que seccion leer de los versos.")
 
 /obj/item/book/bibble/read(mob/user)
 	if(!open)
@@ -299,7 +299,7 @@
 	if(!can_select_verse_ranges)
 		return ..()
 
-	var/choice = tgui_input_list(user, "Choose a section:", title, verse_ranges)
+	var/choice = tgui_input_list(user, "Elige una seccion:", title, verse_ranges)
 	if(!choice)
 		return
 
@@ -317,7 +317,7 @@
 	var/mob/living/M = interacting_with
 
 	M.apply_status_effect(/datum/status_effect/buff/blessed)
-	user.visible_message(span_notice("[user] bendice a [M]."), span_notice("I bless [M]."))
+	user.visible_message(span_notice("[user] bendice a [M]."), span_notice("Yo bendigo [M]."))
 	playsound(user, 'sound/magic/bless.ogg', 100, FALSE)
 
 	return ITEM_INTERACT_SUCCESS
@@ -329,7 +329,7 @@
 	duration = 20 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/blessed
-	name = "Blessed"
+	name = "Bendecido"
 	desc = ""
 	icon_state = "buff"
 
@@ -346,15 +346,15 @@
 		C.remove_stress(/datum/stress_event/blessed)
 
 /obj/item/book/law
-	name = "Tome of Justice"
+	name = "Tomo de la justicia"
 	desc = ""
 	icon_state ="lawtome_0"
 	base_icon_state = "lawtome"
 	bookfile = "law.json"
 
 /obj/item/book/law/small
-	name = "Pocket Tome of Justice"
-	desc = "A copy of the Tome of Justice with smaller print for easier carrying."
+	name = "Tomo de bolsillo de la justicia"
+	desc = "Una copia del Tomo de la Justicia con letra mas pequeña para facilitar su transporte."
 	icon_state ="lawtomesmall_0"
 	base_icon_state = "lawtomesmall"
 	grid_height = 32
@@ -369,7 +369,7 @@
 
 /obj/item/book/secret/xylix
 	name = "Libro de oro"
-	desc = "{<font color='red'><blink>An ominous book with untold powers.</blink></font>}"
+	desc = "{<font color='red'><blink>A Un libro siniestro con poderes incalculables.</blink></font>}"
 	icon_state ="xylix_0"
 	base_icon_state = "xylix"
 	icon_state ="spellbookmimic_0"
@@ -378,7 +378,7 @@
 
 /obj/item/book/xylix/attack_self(mob/user, list/modifiers)
 	user.update_inv_hands()
-	to_chat(user, "<span class='notice'>You feel laughter echo in your head.</span>")
+	to_chat(user, "<span class='notice'>Sientes que la risa resuena en tu cabeza.</span>")
 
 //player made books
 /obj/item/book/tales1
@@ -410,7 +410,7 @@
 	bookfile = "holyguide.json"
 
 /obj/item/book/robber
-	name = "Reading for Robbers"
+	name = "Lectura para ladrones"
 	desc = "Por Flavio de Dendor"
 	icon_state ="basic_book_0"
 	base_icon_state = "basic_book"
@@ -418,27 +418,27 @@
 
 /obj/item/book/cardgame
 	name = "Reglas basicas del tormento de Graystone"
-	desc = "By Johnus of Doe"
+	desc = "Por Juan de Doe"
 	icon_state ="basic_book_0"
 	base_icon_state = "basic_book"
 	bookfile = "tales5.json"
 
 /obj/item/book/blackmountain
 	name = "Zabrekalrek, La saga de la Montaña Negra: Primera parte"
-	desc = "Written by Gorrek Tale-Writer, translated by Hargrid Men-Speaker."
+	desc = "Escrito por Gorrek Tale-Writer, traducido por Hargrid Men-Speaker."
 	icon_state ="book6_0"
 	base_icon_state = "book6"
 	bookfile = "tales6.json"
 
 /obj/item/book/beardling
-	name = "Rock and Stone - ABC & Tales for Beardlings"
-	desc = "Distributed by the Dwarven Federation"
+	name = "Roca y piedra - ABC y cuentos para barbudos"
+	desc = "Distribuido por la Federacion Enana"
 	icon_state ="book8_0"
 	base_icon_state = "book8"
 	bookfile = "tales7.json"
 
 /obj/item/book/abyssor
-	name = "A Tale of Those Who Live At Sea"
+	name = "Una historia de los que viven en el mar"
 	desc = "Por Bellum Aegir"
 	icon_state ="book2_0"
 	base_icon_state = "book2"
@@ -446,14 +446,14 @@
 
 /obj/item/book/necra
 	name = "Ritos de entierro para Necra"
-	desc = "By Hunlaf, Gravedigger. Revised by Lenore, Priest of Necra."
+	desc = "Por Hunlaf, sepulturero. Revisado por Lenore, Sacerdote de Necra."
 	icon_state ="book6_0"
 	base_icon_state = "book6"
 	bookfile = "tales9.json"
 
 /obj/item/book/noc
 	name = "Buscador de sueños"
-	desc = "By Hunlaf, Gravedigger. Revised by Lenore, Priest of Necra."
+	desc = "Por Hunlaf, sepulturero. Revisado por Lenore, Sacerdote de Necra."
 	icon_state ="book6_0"
 	base_icon_state = "book6"
 	bookfile = "tales10.json"
@@ -473,21 +473,21 @@
 	bookfile = "tales12.json"
 
 /obj/item/book/arcyne
-	name = "Latent Magicks, where does Arcyne Power come from?"
-	desc = "By Kildren Birchwood, scholar of Magicks"
+	name = "Magias Latentes, ¿de donde viene el poder Arcyne?"
+	desc = "Por Kildren Birchwood, estudioso de la magia"
 	icon_state ="book4_0"
 	base_icon_state = "book4"
 	bookfile = "tales13.json"
 
 /obj/item/book/nitebeast
-	name = "Legend of the Nitebeast"
+	name = "Leyenda de Nitebeast"
 	desc = "Por Paquetto el Erudito"
 	icon_state ="book8_0"
 	base_icon_state = "book8"
 	bookfile = "tales14.json"
 
 /obj/item/book/mysticalfog
-	name = "Studie of the Etheral Foge phenomenon"
+	name = "Estudio del fenomeno de la Niebla Eterea"
 	desc = "Por Roubert el Viejo"
 	icon_state ="book7_0"
 	base_icon_state = "book8"
@@ -512,7 +512,7 @@
 	"Red with embossed sapphire" = "book2",
 	"Brown with embossed gold" = "book1",
 	"Brown without embossed material" = "basic_book")
-	name = "unknown title"
+	name = "Titulo desconocido"
 	desc = "por un autor desconocido"
 	icon_state = "basic_book_0"
 	base_icon_state = "basic_book"
@@ -520,7 +520,7 @@
 
 /obj/item/book/playerbook/proc/get_player_input(mob/living/in_round_player_mob, text)
 	player_book_author_ckey = in_round_player_mob.ckey
-	player_book_title = dd_limittext(capitalize(SANITIZE_HEAR_MESSAGE(input(in_round_player_mob, "What title do you want to give the book? (max 42 characters)", "Titulo", "Unknown"))), MAX_NAME_LEN)
+	player_book_title = dd_limittext(capitalize(SANITIZE_HEAR_MESSAGE(input(in_round_player_mob, "¿Que titulo le quieres poner al libro? (maximo 42 caracteres)", "Titulo", "Desconocido"))), MAX_NAME_LEN)
 	player_book_author = "[dd_limittext(SANITIZE_HEAR_MESSAGE(input(in_round_player_mob, "Do you want to preface your author name with an author title? (max 42 characters)", "Author Title", "")), MAX_NAME_LEN)] [in_round_player_mob.real_name]"
 	player_book_icon = book_icons[input(in_round_player_mob, "Elige un estilo de libro", "Book Style") as anything in book_icons]
 	player_book_text = text
@@ -549,12 +549,12 @@
 		player_book_author = player_book_content["author"]
 		player_book_author_ckey = player_book_content["author_ckey"]
 		player_book_icon = player_book_content["icon"]
-		player_book_text = player_book_content["text"]
+		player_book_text = player_book_content["texto"]
 		update_book_data()
 
 /obj/item/manuscript
-	name = "manuscript"
-	desc = "A written piece with aspirations of becoming a book."
+	name = "manuscrito"
+	desc = "Una pieza escrita con aspiraciones de convertirse en libro."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "manuscript"
 	dir = 2 //! dir is used to decide how many pages are displayed in the icon
@@ -598,7 +598,7 @@
 /// Called when our pages have been updated.
 /obj/item/manuscript/proc/update_pages()
 	number_of_pages = length(pages)
-	desc = "A [number_of_pages]-page written piece, with aspirations of becoming a book."
+	desc = "Un escrito de paginas [number_of_pages], con aspiraciones de convertirse en libro."
 	update_appearance(UPDATE_ICON_STATE)
 
 	compiled_pages = null
@@ -642,15 +642,15 @@
 		return NONE
 
 	if(written)
-		to_chat(user, "<span class='notice'>The manuscript has already been authored and titled.</span>")
+		to_chat(user, "<span class='notice'>El manuscrito ya ha sido escrito y titulado.</span>")
 		return ITEM_INTERACT_BLOCKING
 
 	// Prompt user to populate manuscript fields
 
-	var/newtitle = SANITIZE_HEAR_MESSAGE(tgui_input_text(user, "Enter the title of the manuscript:", max_length = MAX_CHARTER_LEN))
+	var/newtitle = SANITIZE_HEAR_MESSAGE(tgui_input_text(user, "Ingresa el titulo del manuscrito:", max_length = MAX_CHARTER_LEN))
 	var/newauthor = SANITIZE_HEAR_MESSAGE(tgui_input_text(user, "Introduzca el nombre del autor:", max_length = MAX_CHARTER_LEN))
-	var/newcategory = tgui_input_list(user, "Seleccione la categoria del manuscrito:", list("Apocrypha & Grimoires", "Myths & Tales", "Legends & Accounts", "Thesis", "Eoratica"))
-	var/selection = tgui_input_list(user, "Elige un estilo de libro", "Book Style", book_icons)
+	var/newcategory = tgui_input_list(user, "Seleccione la categoria del manuscrito:", list("Apocrifos y grimorios", "Mitos y cuentos", "Leyendas y relatos", "Tesis", "Eoratica"))
+	var/selection = tgui_input_list(user, "Elige un estilo de libro", "Estilo de libro", book_icons)
 	if(!selection)
 		return
 	var/newicon = book_icons[selection]
@@ -662,19 +662,19 @@
 		ckey = user.ckey
 		select_icon = newicon
 		icon_state = "paperwrite"
-		to_chat(user, "<span class='notice'>You have successfully authored and titled the manuscript.</span>")
+		to_chat(user, "<span class='notice'>Has escrito y titulado el manuscrito con exito.</span>")
 		var/complete = tgui_alert(user, "¿Esta terminado el manuscrito?", "PALABRAS DE NOC", DEFAULT_INPUT_CHOICES)
 		SEND_SIGNAL(user, COMSIG_BOOK_WRITTEN)
 		if(complete == CHOICE_YES && compiled_pages)
 			written = TRUE
 	else
-		to_chat(user, "<span class='notice'>You must fill out all fields to complete the manuscript.</span>")
+		to_chat(user, "<span class='notice'>Debes llenar todos los campos para completar el manuscrito.</span>")
 
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/manuscript/examine(mob/user)
 	. = ..()
-	. += span_info("<a href='byond://?src=[REF(src)];read=1'>Read</a>")
+	. += span_info("<a href='byond://?src=[REF(src)];read=1'>Leer</a>")
 
 /obj/item/manuscript/Topic(href, href_list)
 	..()
@@ -705,7 +705,7 @@
 	if(!user.hud_used.reads)
 		return
 	if(!user.can_read(src))
-		to_chat(user, span_warning("I study [src], but this verba still eludes me..."))
+		to_chat(user, span_warning("Estudio [src], pero este verbo aun me esquiva..."))
 		user.adjust_experience(/datum/attribute/skill/misc/reading, 4, FALSE) //?
 		return
 	if(!in_range(user, src) && !isobserver(user))
@@ -887,7 +887,7 @@ ____________End of Example*/
 	duration = 20 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/blessed
-	name = "Blessed"
+	name = "Bendecido"
 	desc = "El poder divino fluye a traves de mi."
 	icon_state = "buff"
 
@@ -904,7 +904,7 @@ ____________End of Example*/
 		C.remove_stress(/datum/stress_event/blessed)
 
 /obj/item/book/rogue/howtogaffer
-	name = "Dont be a gaff, the guild masters manual"
+	name = "No seas un error, el manual de los maestros del gremio."
 	desc = "La pagina del autor se ha podrido con el tiempo."
 	bookfile = "Gaff.json"
 	random_cover = TRUE

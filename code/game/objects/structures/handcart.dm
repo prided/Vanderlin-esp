@@ -1,6 +1,6 @@
 /obj/structure/handcart
-	name = "cart"
-	desc = "A wooden cart that will help you carry many things."
+	name = "carro"
+	desc = "Un carrito de madera que te ayudara a llevar muchas cosas."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "cart-empty"
 	density = TRUE
@@ -21,7 +21,7 @@
 /obj/structure/handcart/examine(mob/user)
 	. = ..()
 	if(upgrade)
-		. += span_notice("This cart has \an [upgrade] installed.")
+		. += span_notice("Este carro tiene \an [upgrade] instalado.")
 
 /obj/structure/handcart/Initialize(mapload)
 	if(mapload)		// if closed, any item at the crate's loc is put in the contents
@@ -82,7 +82,7 @@
 	if(istype(I, /obj/item/gear/wood))
 		var/obj/item/gear/wood/cog = I
 		if(cog.cart_capacity <= maximum_capacity)
-			to_chat(user, span_warning("[src] already has a better upgrade installed!"))
+			to_chat(user, span_warning("¡[src] ya tiene una mejora mejor instalada!"))
 			return
 		upgrade = I
 		maximum_capacity = cog.cart_capacity
@@ -236,7 +236,7 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	if(length(stuff_shit))
 		dump_contents()
-		visible_message(span_info("[user] dumps out [src]!"))
+		visible_message(span_info("¡[user] se desborda con [src]!"))
 		playsound(src, 'sound/foley/cartdump.ogg', 100, FALSE, -1)
 		update_appearance(UPDATE_ICON)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN

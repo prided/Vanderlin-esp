@@ -1,5 +1,5 @@
 /obj/structure/carpet
-	name = "carpet"
+	name = "alfombra"
 	layer = MID_TURF_LAYER
 	icon = 'icons/obj/smooth_structures/carpet_brown.dmi'
 	icon_state = "carpet_brown"
@@ -13,7 +13,7 @@
 		return
 
 	if(over_object == user && Adjacent(user))
-		user.visible_message(span_notice("[user] comienza a enrollarse [src]."), span_notice("You start to roll up [src]."))
+		user.visible_message(span_notice("[user] comienza a enrollarse [src]."), span_notice("Usted comienza a enrollar [src]."))
 		if(!do_after(user, 3 SECONDS, src))
 			return
 
@@ -50,7 +50,7 @@
 
 /obj/item/natural/bundle/carpet_roll
 	name = "rollo de alfombra"
-	desc = "A roll of carpet fibers. Use it to place carpet tiles."
+	desc = "Un rollo de fibras de alfombra. Uselo para colocar losetas de alfombra."
 	icon_state = "carpetroll1"
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
@@ -76,23 +76,23 @@
 	// Check if there's already a carpet here thats the EXACT type
 	for(var/obj/structure/carpet/C in T)
 		if(C.type == carpet_type)
-			to_chat(user, "<span class='warning'>There's already carpet here!</span>")
+			to_chat(user, "<span class='warning'>¡Ya hay una alfombra aqui!</span>")
 			return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_notice("[user] starts to lay down [src]."), span_notice("You start to lay down [src]."))
+	user.visible_message(span_notice("[user] comienza a colocar [src]."), span_notice("Comienzas a tender [src]."))
 
 	if(!do_after(user, 1 SECONDS, T))
 		return ITEM_INTERACT_BLOCKING
 
 	// Place the carpet
 	new carpet_type(T)
-	to_chat(user, "<span class='notice'>You place down some carpet.</span>")
+	to_chat(user, "<span class='notice'>Dejas una alfombra en el suelo.</span>")
 
 	// Place the carpet
 	new carpet_type(T)
 	amount--
 	update_bundle()
-	to_chat(user, "<span class='notice'>You unroll some carpet.</span>")
+	to_chat(user, "<span class='notice'>Desenrollas un poco de alfombra.</span>")
 
 	if(amount <= 0)
 		qdel(src)
@@ -100,8 +100,8 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/natural/carpet_fibers
-	name = "carpet"
-	desc = "Singular carpet."
+	name = "alfombra"
+	desc = "Alfombra singular."
 	icon_state = "carpet"
 	color = "#8B4513"
 	w_class = WEIGHT_CLASS_TINY
@@ -118,17 +118,17 @@
 	// Check if there's already a carpet here thats the EXACT type
 	for(var/obj/structure/carpet/C in T)
 		if(C.type == carpet_type)
-			to_chat(user, "<span class='warning'>There's already carpet here!</span>")
+			to_chat(user, "<span class='warning'>¡Ya hay una alfombra aqui!</span>")
 			return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_notice("[user] starts to lay down [src]."), span_notice("You start to lay down [src]."))
+	user.visible_message(span_notice("[user] comienza a colocar [src]."), span_notice("Comienzas a tender [src]."))
 
 	if(!do_after(user, 1 SECONDS, T))
 		return ITEM_INTERACT_BLOCKING
 
 	// Place the carpet
 	new carpet_type(T)
-	to_chat(user, "<span class='notice'>You place down some carpet.</span>")
+	to_chat(user, "<span class='notice'>Dejas una alfombra en el suelo.</span>")
 	qdel(src)
 
 	return ITEM_INTERACT_SUCCESS
@@ -140,7 +140,7 @@
 	stacktype = /obj/item/natural/carpet_fibers/blue
 
 /obj/item/natural/bundle/carpet_roll/cyan
-	name = "cyan carpet roll"
+	name = "rollo de alfombra cian"
 	color = "#00FFFF"
 	carpet_type = /obj/structure/carpet/cyan
 	stacktype = /obj/item/natural/carpet_fibers/cyan
@@ -171,7 +171,7 @@
 	bundletype = /obj/item/natural/bundle/carpet_roll/blue
 
 /obj/item/natural/carpet_fibers/cyan
-	name = "cyan carpet"
+	name = "alfombra cian"
 	color = "#00FFFF"
 	carpet_type = /obj/structure/carpet/cyan
 	bundletype = /obj/item/natural/bundle/carpet_roll/cyan
@@ -196,19 +196,19 @@
 
 // Technically carpets
 /obj/structure/giantfur
-	name = "giant fur"
-	desc = "Pelt of some gigantic animal, made into a mat."
+	name = "pelaje gigante"
+	desc = "Piel de algun animal gigantesco, convertida en estera."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "fur"
 	density = FALSE
 	anchored = TRUE
 
 /obj/structure/giantfur/small // the irony
-	name = "fur pelt"
-	desc = "Pelt of a young animal, made into a mat."
+	name = "piel"
+	desc = "Piel de un animal joven, convertida en estera."
 	icon_state = "fur_alt"
 
 /obj/structure/giantfur/smaller
-	name = "fur pelt"
-	desc = "Pelt of some foreign creachur."
+	name = "piel"
+	desc = "Piel de algun creachur extranjero."
 	icon_state = "fur_alt2"

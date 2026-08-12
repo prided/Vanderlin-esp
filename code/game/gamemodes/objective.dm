@@ -4,7 +4,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 	var/datum/mind/owner				//The primary owner of the objective. !!SOMEWHAT DEPRECATED!! Prefer using 'team' for new code.
 	var/datum/team/team					//An alternative to 'owner': a team. Use this when writing new code.
 	var/name = "objetivo generico" 		//Name for admin prompts
-	var/explanation_text = "Nothing"	//What that person is supposed to do.
+	var/explanation_text = "Nada"	//What that person is supposed to do.
 	var/team_explanation_text			//For when there are multiple owners.
 	var/datum/mind/target = null		//If they are focused on a particular person.
 	var/target_amount = 0				//If they are focused on a particular number. Steal objectives have their own counter.
@@ -44,7 +44,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 	if(target && target.current)
 		def_value = target.current
 
-	var/mob/new_target = input(admin,"Select target:", "Objective target", def_value) as null|anything in sortNames(possible_targets)
+	var/mob/new_target = input(admin,"Selecciona un objetivo:", "Objetivo", def_value) as null|anything in sortNames(possible_targets)
 	if (!new_target)
 		return
 
@@ -153,7 +153,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/assassinate/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Put [target.name] the [!target_role_type ? target.assigned_role.title : target.special_role] to sleep forever."
+		explanation_text = "Haz que [target.name], [!target_role_type ? target.assigned_role.title : target.special_role], duerma para siempre."
 
 /datum/objective/assassinate/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
@@ -164,7 +164,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/assassinate/internal/update_explanation_text()
 	..()
 	if(target && !target.current)
-		explanation_text = "Assassinate [target.name], who was obliterated"
+		explanation_text = "Asesina a [target.name], quien ya fue aniquilado."
 
 /datum/objective/mutiny
 	name = "motin"
@@ -180,12 +180,12 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/mutiny/update_explanation_text()
 	..()
 	if(target && target.current)
-		explanation_text = "Assassinate or exile [target.name], the [!target_role_type ? target.assigned_role.title : target.special_role]."
+		explanation_text = "Asesina o exilia a [target.name], [!target_role_type ? target.assigned_role.title : target.special_role]."
 	else
 		explanation_text = "Objetivo libre"
 
 /datum/objective/debrain
-	name = "debrain"
+	name = "extraer el cerebro"
 	var/target_role_type=0
 
 /datum/objective/debrain/check_completion()
@@ -238,8 +238,8 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/escape/prisoner
 	name = "sobrevivir"
-	explanation_text = "Escape the prison."
-	team_explanation_text = "Escape the prison."
+	explanation_text = "Escapa de la prision."
+	team_explanation_text = "Escapa de la prision."
 
 /datum/objective/escape
 	name = "sobrevivir"
@@ -267,7 +267,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/survive
 	name = "sobrevivir"
-	explanation_text = "Stay alive until the end."
+	explanation_text = "Sigue con vida hasta el final."
 
 /datum/objective/survive/check_completion()
 	var/list/datum/mind/owners = get_owners()
@@ -277,7 +277,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 	return TRUE
 
 /datum/objective/survive/exist //Like survive, but works for silicons and zombies and such.
-	name = "survive nonhuman"
+	name = "sobrevivir como no humano"
 
 /datum/objective/survive/exist/check_completion()
 	var/list/datum/mind/owners = get_owners()
@@ -287,7 +287,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 	return TRUE
 
 /datum/objective/martyr
-	name = "martyr"
+	name = "martir"
 	explanation_text = "Muere una muerte gloriosa."
 
 /datum/objective/martyr/check_completion()
@@ -338,12 +338,12 @@ GLOBAL_LIST_EMPTY(possible_items)
 		give_special_equipment(targetinfo.special_equipment)
 		return steal_target
 	else
-		explanation_text = "Free objective"
+		explanation_text = "Objetivo libre"
 		return
 
 /datum/objective/steal/admin_edit(mob/admin)
 	var/list/possible_items_all = GLOB.possible_items
-	var/new_target = input(admin,"Select target:", "Objective target", steal_target) as null|anything in sortNames(possible_items_all)+"custom"
+	var/new_target = input(admin,"Selecciona un objetivo:", "Objetivo", steal_target) as null|anything in sortNames(possible_items_all)+"personalizado"
 	if (!new_target)
 		return
 
@@ -357,7 +357,7 @@ GLOBAL_LIST_EMPTY(possible_items)
 		if (!custom_name)
 			return
 		steal_target = custom_target
-		explanation_text = "Steal [custom_name]."
+		explanation_text = "Roba [custom_name]."
 
 	else
 		set_target(new_target)
@@ -393,7 +393,7 @@ GLOBAL_LIST_EMPTY(possible_items)
 	return target_amount
 
 /datum/objective/protect_object
-	name = "protect object"
+	name = "proteger un objeto"
 	var/obj/protect_target
 
 /datum/objective/protect_object/proc/set_target(obj/O)
@@ -416,7 +416,7 @@ GLOBAL_LIST_EMPTY(possible_items)
 
 /datum/objective/steal_five_of_type
 	name = "robar cinco de"
-	explanation_text = "Steal at least five items!"
+	explanation_text = "¡Roba al menos cinco objetos!"
 	var/list/wanted_items = list()
 
 /datum/objective/steal_five_of_type/New()
@@ -437,7 +437,7 @@ GLOBAL_LIST_EMPTY(possible_items)
 
 //Created by admin tools
 /datum/objective/custom
-	name = "custom"
+	name = "personalizado"
 
 /datum/objective/custom/admin_edit(mob/admin)
 	var/expl = stripped_input(admin, "Custom objective:", "Objective", explanation_text)
@@ -450,7 +450,7 @@ GLOBAL_LIST_EMPTY(possible_items)
 
 /datum/objective/changeling_team_objective //Abstract type
 	martyr_compatible = 0	//Suicide is not teamwork!
-	explanation_text = "Changeling Friendship!"
+	explanation_text = "¡Amistad entre Changelings!"
 	var/min_lings = 3 //Minimum amount of lings for this team objective to be possible
 	var/escape_objective_compatible = FALSE
 

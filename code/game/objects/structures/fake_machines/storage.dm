@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(storage_objects)
 
 /obj/structure/stockpile_storage
 	name = "almacenamiento de existencias"
-	desc = "A designated storage area for stockpiled goods."
+	desc = "Un area de almacenamiento designada para mercancias almacenadas."
 	icon = 'icons/roguetown/misc/pipes.dmi'
 	icon_state = "drain"
 	density = FALSE
@@ -62,12 +62,12 @@ GLOBAL_LIST_EMPTY(storage_objects)
 /obj/structure/stockpile_storage/examine(mob/user)
 	. = ..()
 	. += span_notice("ID de almacenamiento: [storage_id]")
-	. += span_notice("Storage Range: [storage_range] tiles")
+	. += span_notice("Rango de almacenamiento: [storage_range] baldosas")
 	if(linked_stocks.len)
-		. += span_notice("Linked to [linked_stocks.len] stock type(s).")
+		. += span_notice("Vinculado al tipo de stock [linked_stocks.len].")
 		for(var/datum/stock/S as anything in linked_stocks)
 			var/count = S.get_held_count()
-			. += span_notice("- [S.name]: [count] items")
+			. += span_notice("- [S.name]: [count] articulos")
 
 /datum/proximity_monitor/advanced/stockpile_storage
 	var/obj/structure/stockpile_storage/storage_obj

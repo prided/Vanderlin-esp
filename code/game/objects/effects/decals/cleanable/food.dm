@@ -43,7 +43,7 @@
 		AM.salt_act()
 
 /obj/effect/decal/cleanable/food/flour
-	name = "flour"
+	name = "harina"
 	desc = ""
 	icon_state = "flour"
 	clean_type = CLEAN_TYPE_LIGHT_DECAL

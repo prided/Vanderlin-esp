@@ -2,9 +2,9 @@
 // MACE DERIVING INTENTS //
 // MACE STRIKE INTENTS
 /datum/intent/mace/strike
-	name = "strike"
+	name = "golpear"
 	blade_class = BCLASS_BLUNT
-	attack_verb = list("huelgas", "hits")
+	attack_verb = list("huelgas", "golpea")
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
 	penfactor = AP_CLUB_STRIKE
 	icon_state = "instrike"
@@ -32,9 +32,9 @@
 
 // MACE SMASH INTENTS //
 /datum/intent/mace/smash
-	name = "smash"
+	name = "aplastar"
 	blade_class = BCLASS_SMASH
-	attack_verb = list("smashes")
+	attack_verb = list("aplasta")
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
 	penfactor = AP_CLUB_SMASH
 	damfactor = 1.1
@@ -57,9 +57,9 @@
 	warnie = "mobwarning"
 
 /datum/intent/mace/thrust
-	name = "thrust"
+	name = "empujar"
 	blade_class = BCLASS_STAB
-	attack_verb = list("stabs")
+	attack_verb = list("apuñala")
 	animname = "stab"
 	icon_state = "instab"
 	reach = 2
@@ -73,10 +73,10 @@
 	acc_bonus = 12
 
 /datum/intent/mace/warhammer/stab
-	name = "thrust"
+	name = "empujar"
 	icon_state = "instab"
 	blade_class = BCLASS_STAB
-	attack_verb = list("thrusts", "stabs")
+	attack_verb = list("estoca", "apuñala")
 	animname = "stab"
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
 	penfactor = 20
@@ -86,10 +86,10 @@
 	acc_bonus = 12
 
 /datum/intent/mace/warhammer/impale
-	name = "impale"
+	name = "empalar"
 	icon_state = "inimpale"
 	blade_class = BCLASS_PICK
-	attack_verb = list("picks", "impales")
+	attack_verb = list("perfora", "impales")
 	animname = "stab"
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
 	clickcd = 20

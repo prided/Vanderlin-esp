@@ -14,7 +14,7 @@
 
 // the standard tube light fixture
 /obj/machinery/light
-	name = "light fixture"
+	name = "lampara"
 	icon = 'icons/obj/lighting.dmi'
 	var/overlayicon = 'icons/obj/lighting_overlay.dmi'
 	var/base_state = "tube"		// base description and icon_state

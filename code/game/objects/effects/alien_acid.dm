@@ -1,6 +1,6 @@
 /obj/effect/acid
 	gender = PLURAL
-	name = "acid"
+	name = "acido"
 	desc = ""
 	icon_state = "acid"
 	density = FALSE

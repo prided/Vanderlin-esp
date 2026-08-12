@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/acid_spray
-	name = "Acid Spray"
-	desc = "Sprays acid in a line along the ground, covering tiles and damaging limbs. Extinguishes fires and burning allies."
+	name = "Aerosol acido"
+	desc = "Rocia acido en linea a lo largo del suelo, cubriendo losas y dañando las extremidades. Extingue incendios y aliados en llamas."
 	button_icon_state = "acid_spray"
 	cooldown_time = 15 SECONDS
 	personal_resource_cost = 15
@@ -128,7 +128,7 @@
 	return (end in line)
 
 /obj/effect/decal/cleanable/meatvine_acid
-	name = "acid pool"
+	name = "piscina de acido"
 	desc = "Un charco de acido corrosivo en el suelo."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "acid2"

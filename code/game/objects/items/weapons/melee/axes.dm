@@ -28,7 +28,7 @@
 //................ Stone Axe ............... //
 /obj/item/weapon/axe/stone
 	name = "hacha de piedra"
-	desc = "Hewn wood, steadfast thread, a chipped stone. A recipe to bend nature to your will."
+	desc = "Madera labrada, hilo firme, piedra labrada. Una receta para doblegar la naturaleza a tu voluntad."
 	icon_state = "stoneaxe"
 	force = DAMAGE_BAD_AXE
 	force_wielded = DAMAGE_BAD_AXE_WIELD
@@ -59,7 +59,7 @@
 //................ Battle Axe ............... //
 /obj/item/weapon/axe/battle
 	name = "hacha de batalla"
-	desc = "A masterfully constructed ax, with additional weights in the form of ornate spikes and practical edges."
+	desc = "Un hacha magistralmente construida, con pesos adicionales en forma de puas ornamentadas y practicos bordes."
 	icon_state = "battleaxe"
 	force_wielded = DAMAGE_HEAVYAXE_WIELD
 	max_blade_int = 300
@@ -88,7 +88,7 @@
 //................ Iron Axe ............... //
 /obj/item/weapon/axe/iron
 	name = "hacha de hierro"
-	desc = "Tool, weapon, loyal iron companion."
+	desc = "Herramienta, arma y fiel compañero de hierro."
 	icon_state = "axe"
 	wdefense = MEDIOCRE_PARRY
 	max_blade_int = 200
@@ -113,8 +113,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0)
 
 /obj/item/weapon/axe/iron/nsapo
-	name = "iron kasuyu"
-	desc = "An iron axe hailing from the fallen east. Great for felling trees and foes alike."
+	name = "kasuyu de hierro"
+	desc = "Un hacha de hierro proveniente del este caido. Ideal para talar arboles y enemigos por igual."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "nsapo_iron"
 	item_weight = 1.2 KILOGRAMS
@@ -131,8 +131,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0)
 
 /obj/item/weapon/axe/iron/troll
-	name = "splitter axe"
-	desc = "A crudely made axe, more reminiscent to one used for splitting logs if it was made with tree trunk and a shiny sharpened rock; which does make you think, what use does a troll have for wood?"
+	name = "hacha divisoria"
+	desc = "Un hacha de fabricacion tosca, que recuerda mas a una utilizada para partir troncos si esta hecha con tronco de arbol y una piedra brillante y afilada; lo cual te hace pensar, ¿para que le sirve un troll a la madera?"
 	icon_state = "troll_axe"
 	force = DAMAGE_AXE + 3
 	force_wielded = DAMAGE_HEAVYAXE_WIELD
@@ -143,7 +143,7 @@
 //................ Bronze ............... //
 /obj/item/weapon/axe/bronze
 	name = "hacha de bronce"
-	desc = "Tool, weapon, loyal bronze companion."
+	desc = "Herramienta, arma, leal compañera de bronce."
 	icon_state = "axe_bronze"
 	wdefense = MEDIOCRE_PARRY
 	max_blade_int = 150
@@ -169,8 +169,8 @@
 
 //................ Psydonian Axe ............... //
 /obj/item/weapon/axe/psydon
-	name = "psydonian axe"
-	desc = "An axe forged of silver with a small psycross attached, Dendor and his foul beastmen be damned."
+	name = "Hacha psydonian"
+	desc = "Un hacha forjada en plata con un pequeño psycross adjunto, Dendor y sus repugnantes hombres bestia al diablo."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psyaxe"
 	max_blade_int = 240
@@ -203,8 +203,8 @@
 // Pickaxe-axe ; Technically both a tool and weapon, but it goes here due to weapon function.
 // Same stats as steel axe, but refactored for pickaxe quality purposes.
 /obj/item/weapon/pick/paxe
-	name = "pickaxe"
-	desc = "An odd mix of a pickaxe front and a hatchet blade back, capable of being switched between."
+	name = "piqueta"
+	desc = "Una mezcla extraña de un frente de pico y una hoja de hacha en la parte posterior, que se pueden cambiar entre si."
 	icon = 'icons/roguetown/weapons/32/axes_picks.dmi'
 	icon_state = "paxe"
 	force = DAMAGE_AXE
@@ -235,7 +235,7 @@
 //................ Steel Axe ............... //
 /obj/item/weapon/axe/steel
 	name = "hacha de acero"
-	desc = "A bearded steel axe revered by dwarf, humen and elf alike. Performs much better than its iron counterpart."
+	desc = "Un hacha de acero barbuda venerada tanto por los enanos humen como por los elfos. Funciona mucho mejor que su homologo de hierro."
 	icon_state = "saxe"
 	max_blade_int = 300
 	max_integrity = INTEGRITY_STRONGEST
@@ -260,7 +260,7 @@
 //------------------ Silver Axe ---------------//
 /obj/item/weapon/axe/silver
 	name = "hacha de plata"
-	desc = "A silver axe, not as strong as steel but more effective against supernatural foes."
+	desc = "Un hacha plateada, no tan fuerte como el acero pero mas eficaz contra enemigos sobrenaturales."
 	icon_state = "silveraxe"
 	max_blade_int = 200
 	max_integrity = INTEGRITY_STRONGEST * 0.8
@@ -290,8 +290,8 @@
 
 //.................. Bearded Axe ...............//
 /obj/item/weapon/axe/steel/bearded
-	name = "bearded axe"
-	desc = "A large axe easily wielded in one hand or two, With a large hooked axe head to tearing into flesh and armor and ripping it away brutally."
+	name = "hacha barbuda"
+	desc = "Un hacha grande que se puede manejar facilmente con una o dos manos, con una gran cabeza en forma de gancho para desgarrar carne y armaduras y arrancarlas brutalmente."
 	icon_state = "atgervi_axe"
 	item_state = "atgervi_axe"
 	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
@@ -313,8 +313,8 @@
 
 
 /obj/item/weapon/axe/steel/nsapo
-	name = "steel kasuyu"
-	desc = "A steel axe hailing from the fallen east. Great for felling trees and foes alike."
+	name = "kasuyu de acero"
+	desc = "Un hacha de acero proveniente del este caido. Ideal para talar arboles y enemigos por igual."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "nsapo_steel"
 	sellprice = 45
@@ -335,7 +335,7 @@
 //................ Copper Hatchet ............... //
 /obj/item/weapon/axe/copper
 	name = "hacha de cobre"
-	desc = "A simple designed handaxe, an outdated weapon from simpler times."
+	desc = "Un hacha de mano de diseño simple, un arma obsoleta de tiempos mas simples."
 	icon_state = "chatchet"
 	force = DAMAGE_BAD_AXE
 	force_wielded = DAMAGE_BAD_AXE_WIELD
@@ -365,7 +365,7 @@
 //................ Bone Axe ............... //
 /obj/item/weapon/axe/boneaxe
 	name = "hacha de hueso"
-	desc = "A rough axe made of bones."
+	desc = "Un hacha tosca hecha de huesos."
 	icon_state = "boneaxe"
 	force = DAMAGE_BAD_AXE
 	force_wielded =	DAMAGE_BAD_AXE_WIELD
@@ -391,7 +391,7 @@
 
 /obj/item/weapon/axe/trollboneaxe
 	name = "hacha de hueso de cuerno de troll"
-	desc = "A rough axe made of bones, strengthed with an troll's horn."
+	desc = "Un hacha tosca hecha de huesos, reforzada con un cuerno de troll."
 	icon_state = "boneaxe"
 	force = DAMAGE_BAD_AXE
 	force_wielded =	DAMAGE_BAD_AXE_WIELD
@@ -417,8 +417,8 @@
 
 //................ Great Axe ............... //
 /obj/item/weapon/greataxe
-	name = "greataxe"
-	desc = "An iron great axe, a long-handled axe with a single blade made for ruining someone's day beyond any measure."
+	name = "gran hacha"
+	desc = "Una gran hacha de hierro, un hacha de mango largo con una sola hoja hecha para arruinarle el dia a alguien sin medida."
 	icon = 'icons/roguetown/weapons/64/axes.dmi'
 	icon_state = "igreataxe"
 	force = DAMAGE_AXE
@@ -465,8 +465,8 @@
 
 
 /obj/item/weapon/greataxe/psy
-	name = "psydonic poleaxe"
-	desc = "A poleaxe, fitted with a reinforced shaft and a beaked axe head of alloyed silver. As the fragility of swords has become more apparent, the Psydonic Orders have shifted their focus towards arming their paladins with longer-lasting greatweapons."
+	name = "Hacha de asta psydonic"
+	desc = "Un hacha de asta, provista de un eje reforzado y una cabeza picuda de aleacion de plata. A medida que la fragilidad de las espadas se ha vuelto mas evidente, las Ordenes Psydonic han cambiado su enfoque hacia armar a sus paladines con grandes armas mas duraderas."
 	icon = 'icons/roguetown/weapons/64/axes.dmi'
 	icon_state = "silverpolearm"
 	possible_item_intents = list(AXE_CUT, AXE_CHOP, MACE_STRIKE) //When possible, add the longsword's 'alternate grip' mechanic to let people flip this around into a Mace-scaling weapon with swapped damage.
@@ -481,8 +481,8 @@
 	AddComponent(/datum/component/psyblessed, FALSE, 3, FALSE, 50, 1, TRUE)
 
 /obj/item/weapon/greataxe/steel
-	name = "steel greataxe"
-	desc = "A steel great axe, a long-handled axe with a single blade made for ruining someone's day beyond any measure."
+	name = "gran hacha de acero"
+	desc = "Una gran hacha de acero, un hacha de mango largo con una sola hoja hecha para arruinarle el dia a alguien sin medida alguna."
 	icon_state = "sgreataxe"
 	force_wielded = DAMAGE_HEAVYAXE_WIELD
 	max_blade_int = 300
@@ -494,8 +494,8 @@
 	item_weight = 4.5 KILOGRAMS
 
 /obj/item/weapon/greataxe/steel/doublehead // Trades more damage for being worse to parry with and easier to dodge of.
-	name = "double-headed steel greataxe"
-	desc = "A steel great axe with a wicked double-bladed head. Perfect for cutting either men or trees into stumps."
+	name = "gran hacha de acero de doble cabeza"
+	desc = "Una gran hacha de acero con una perversa cabeza de doble hoja. Perfecto para cortar hombres o arboles en tocones."
 	icon_state = "doublegreataxe"
 	wbalance = VERY_EASY_TO_DODGE
 	possible_item_intents = list(AXE_CUT, AXE_CHOP, POLEARM_BASH) //bash is for nonlethal takedowns, only targets limbs
@@ -507,8 +507,8 @@
 	item_weight = 5.5 KILOGRAMS
 
 /obj/item/weapon/greataxe/steel/slayer
-	name = "dragonslayer axe"
-	desc = "A mighty axe made of heavy, durable metal. The head alone is as big as a man, used to cleave heads from beasts and men alike."
+	name = "hacha matadragones"
+	desc = "Una poderosa hacha hecha de metal pesado y duradero. La cabeza por si sola es tan grande como un hombre y se utiliza para cortar cabezas tanto de bestias como de hombres."
 	icon_state = "oath"
 	wbalance = EASY_TO_DODGE
 	possible_item_intents = list(AXE_CUT, AXE_CHOP, POLEARM_BASH)
@@ -520,7 +520,7 @@
 
 /obj/item/weapon/greataxe/steel/doublehead/graggar
 	name = "vicious greataxe"
-	desc = "A greataxe who's edge thrums with the motive force, violence, oh, sweet violence!"
+	desc = "Un gran hacha cuyo filo vibra con la fuerza motriz, violencia, ¡oh, dulce violencia!"
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "graggargaxe"
 	alt_intents = list(AXE_CUT, AXE_CHOP)
@@ -529,7 +529,7 @@
 
 /obj/item/weapon/greataxe/dreamscape
 	name = "hacha de otro mundo"
-	desc = "A strange axe, who knows where it came from. It feels cold and unusually heavy."
+	desc = "Un hacha extraña, quien sabe de donde vino. Se siente frio e inusualmente pesado."
 	icon_state = "dreamaxe"
 	force = DAMAGE_AXE - 10
 	force_wielded = DAMAGE_HEAVYAXE_WIELD + 5
@@ -542,7 +542,7 @@
 
 /obj/item/weapon/greataxe/dreamscape/active
 	// to do, make this burn you if you don't regularly soak it.
-	desc = "A strange axe, who knows where it came from. It is searing hot to the blade, the hilt is barely able to be held."
+	desc = "Un hacha extraña, quien sabe de donde vino. La hoja esta abrasadora y apenas se puede sujetar la empuñadura."
 	icon_state = "dreamaxeactive"
 	force = DAMAGE_AXE - 5
 	force_wielded = DAMAGE_HEAVYAXE_WIELD + 10

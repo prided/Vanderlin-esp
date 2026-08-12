@@ -1,5 +1,5 @@
 /obj/item/gem
-	name = "random gem"
+	name = "gema aleatoria"
 	desc = "Si encuentras esto, grita a Coderbus."
 	icon_state = "aros"
 	icon = 'icons/roguetown/items/gems.dmi'
@@ -131,7 +131,7 @@
 	name = "[cut_name] [name]"
 	desc += " This gem has been cut with a [cut_name] pattern."
 
-	to_chat(user, "You cut [src] with a [cut_name] pattern!")
+	to_chat(user, "¡Cortaste [src] con un patron [cut_name]!")
 	if(failed)
 		to_chat(user, "¡Te equivocaste al cortar [src] y cayo de [GLOB.gem_quality_names[original_quality]] a [GLOB.gem_quality_names[quality]]!")
 	return TRUE
@@ -167,7 +167,7 @@
 	name = "glut"
 	icon_state = "blood"
 	sellprice = 188
-	desc = "Something about this gem just doesn't sit right with you. Holding it makes the blood leave your fingertips."
+	desc = "Algo en esta joya simplemente no te sienta bien. Sostenerlo hace que la sangre salga de tus dedos."
 	smeltresult = /obj/item/ingot/component/glutcrystal
 	dropshrink = 1
 
@@ -176,7 +176,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.patron.type == /datum/patron/inhumen/graggar)
-			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors. </br>Fleshcrafting it with the meat of whatever warrior birthed this gem will allow me to summon another of their kind into this world.")
+			. += span_danger("Conoces bien esta gema. Nacen de una gran violencia, pero solo si involucra a los guerreros mas poderosos. </br>Fabricar carne con la carne de cualquier guerrero que haya dado a luz a esta gema me permitira convocar a otro de su tipo en este mundo.")
 
 /obj/item/gem/blood_diamond/Initialize()
 	. = ..()
@@ -184,7 +184,7 @@
 
 /obj/item/gem/green
 	name = "gemerald"
-	desc = "Glints with verdant brilliance."
+	desc = "Destellos con brillo verde."
 	//color = "#15af158c"
 	icon_state = "emerald_cut"
 	sellprice = 44
@@ -208,7 +208,7 @@
 
 /obj/item/gem/yellow
 	name = "toper"
-	desc = "Its amber hues remind you of the sunset."
+	desc = "Sus tonalidades ambarinas te recuerdan al atardecer."
 	//color = "#e6a0088c"
 	icon_state = "topaz_cut"
 	sellprice = 25
@@ -219,7 +219,7 @@
 	item_weight = 21 GRAMS
 
 /obj/item/gem/violet
-	name = "saffira"
+	name = "Zafiro"
 	desc = "Esta joya es admirada por muchos magos."
 	//color = "#1733b38c"
 	icon_state = "sapphire_cut"
@@ -232,7 +232,7 @@
 
 /obj/item/gem/diamond
 	name = "dorpel"
-	desc = "Beautifully pure, it demands respect."
+	desc = "Bellamente pura, exige respeto."
 	//color = "#ffffff8c"
 	icon_state = "diamond_cut"
 	sellprice = 121
@@ -244,7 +244,7 @@
 
 /obj/item/gem/red
 	name = "rontz"
-	desc = "Glistening with unkempt rage."
+	desc = "Brillando con ira descuidada."
 	//color = "#ff00008c"
 	icon_state = "ruby_cut"
 	sellprice = 100
@@ -253,16 +253,16 @@
 	item_weight = 24 GRAMS
 
 /obj/item/gem/onyxa
-	name = "raw onyxa"
-	desc = "A piece of fossilized spider honey that glimmers in the dark. It was once prized by the Drow, but it's significance to their culture has long been replaced by the more common saffira."
+	name = "onyxa cruda"
+	desc = "Un trozo de miel de araña fosilizada que brilla en la oscuridad. Alguna vez fue apreciada por el Drow, pero su importancia para su cultura ha sido reemplazada durante mucho tiempo por la saffira mas comun."
 	icon = 'icons/roguetown/gems/gem_onyxa.dmi'
 	icon_state = "raw_onyxa"
 	sellprice = 30
 	item_weight = 45 GRAMS
 
 /obj/item/gem/jade
-	name = "raw joapstone"
-	desc = "A dull green gem. Joapstone is valued in multiple humen cultures and is believed to bring good fortune."
+	name = "joapstone en bruto"
+	desc = "Una joya verde apagada. Joapstone es valorado en multiples culturas humen y se cree que trae buena fortuna."
 	icon = 'icons/roguetown/gems/gem_jade.dmi'
 	icon_state = "raw_jade"
 	sellprice = 50
@@ -270,39 +270,39 @@
 
 /obj/item/gem/oyster
 	name = "almeja fosilizada"
-	desc = "A fossilized clamshell. It would be a good idea to pry it open with a knife."
+	desc = "Una concha fosilizada. Seria una buena idea abrirlo con un cuchillo."
 	icon = 'icons/roguetown/gems/gem_shell.dmi'
 	icon_state = "oyster_closed"
 	sellprice = 5
 	item_weight = 75 GRAMS
 
 /obj/item/gem/coral
-	name = "raw aoetal"
-	desc = "Jagged like a hounds tooth. Aoetal is speculated to be the crystallized blood of fallen sailors. It is sacred to Abyssorians and is used in numerous Abyssorian rituals."
+	name = "aoetal en bruto"
+	desc = "Dentado como un diente de perro. Se especula que Aoetal es la sangre cristalizada de marineros caidos. Es sagrado para los abisorianos y se utiliza en numerosos rituales abisorianos."
 	icon = 'icons/roguetown/gems/gem_coral.dmi'
 	icon_state = "raw_coral"
 	sellprice = 60
 	item_weight = 54 GRAMS
 
 /obj/item/gem/turq
-	name = "raw ceruleabaster"
-	desc = "A beautiful teal gem that is easily carved."
+	name = "ceruleabaster en bruto"
+	desc = "Una hermosa gema verde azulada que se talla facilmente."
 	icon = 'icons/roguetown/gems/gem_turq.dmi'
 	icon_state = "raw_turq"
 	sellprice = 75
 	item_weight = 66 GRAMS
 
 /obj/item/gem/amber
-	name = "raw petriamber"
-	desc = "A chunk of fossilized mushroom that shines radiantly in sunlight. It's prized amongst Astratans."
+	name = "petriamber crudo"
+	desc = "Un trozo de hongo fosilizado que brilla radiante bajo la luz del sol. Es muy apreciado entre los astratanos."
 	icon = 'icons/roguetown/gems/gem_amber.dmi'
 	icon_state = "raw_amber"
 	sellprice = 50
 	item_weight = 36 GRAMS
 
 /obj/item/gem/opal
-	name = "raw opaloise"
-	desc = "A dazzling gem that is remarkably valuable. Opaloise is widely speculated to be the crystallized essence left behind by rainbows, and is greatly prized by aboriginal Crimson Elves."
+	name = "opaloise crudo"
+	desc = "Una joya deslumbrante que es notablemente valiosa. Se especula ampliamente que la opaloise es la esencia cristalizada que deja el arco iris, y es muy apreciada por los aborigenes Crimson Elves."
 	icon = 'icons/roguetown/gems/gem_opal.dmi'
 	icon_state = "raw_opal"
 	sellprice = 80
@@ -312,7 +312,7 @@
 
 
 /obj/item/riddleofsteel
-	name = "riddle of steel"
+	name = "acertijo de acero"
 	icon_state = "ros"
 	icon = 'icons/roguetown/items/gems.dmi'
 	desc = "Carne, mente."

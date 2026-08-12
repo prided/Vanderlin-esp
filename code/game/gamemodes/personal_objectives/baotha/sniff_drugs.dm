@@ -1,8 +1,8 @@
 /datum/objective/personal/sniff_drugs
 	name = "Oler drogas"
-	category = "Baotha's Chosen"
+	category = "Elegido de Baotha"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Baotha grows stronger", "Ability to recognize alcoholics and junkies on examine", "Baotha blesses you (+1 Fortune)")
+	rewards = list("2 Triunfos", "Baotha se fortalece", "Habilidad para reconocer alcoholicos y drogadictos al examinarlos", "Baotha te bendice (+1 Fortuna)")
 	var/sniff_count = 0
 	var/required_count = 2
 
@@ -26,7 +26,7 @@
 	if(sniff_count >= required_count)
 		complete_objective()
 	else
-		to_chat(owner.current, span_notice("Drug sniffed! Sniff [required_count - sniff_count] more to complete Baotha's objective."))
+		to_chat(owner.current, span_notice("¡Droga inhalada! Inhala [required_count - sniff_count] mas para completar el objetivo de Baotha."))
 
 /datum/objective/personal/sniff_drugs/complete_objective()
 	. = ..()
@@ -40,4 +40,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_BAOTHA_BLESSING, list(STAT_FORTUNE = 1))
 
 /datum/objective/personal/sniff_drugs/update_explanation_text()
-	explanation_text = "Sniff [required_count] drugs for Baotha's pleasure!"
+	explanation_text = "¡Inhala [required_count] drogas para complacer a Baotha!"

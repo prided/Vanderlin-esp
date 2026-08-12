@@ -1,7 +1,7 @@
 /obj/item/key
-	name = "old key"
+	name = "llave vieja"
 	examine_name = "key"
-	desc = "A simple key of simple uses."
+	desc = "Una clave sencilla de usos sencillos."
 	icon_state = "brownkey"
 	icon = 'icons/roguetown/items/keys.dmi'
 	w_class = WEIGHT_CLASS_TINY
@@ -21,7 +21,7 @@
 
 
 /obj/item/lockpick
-	name = "lockpick"
+	name = "ganzua"
 	desc = "Una pequeña pieza de metal afilada para ayudar a abrir cerraduras en ausencia de llave."
 	icon_state = "lockpick"
 	icon = 'icons/roguetown/items/keys.dmi'
@@ -38,7 +38,7 @@
 
 //custom key
 /obj/item/key/custom
-	name = "custom key"
+	name = "llave personalizada"
 	desc = "Una llave personalizada diseñada por un herrero."
 	icon_state = "brownkey"
 	var/access2add
@@ -61,7 +61,7 @@
 		. += span_info("Ha sido grabado con [access2string()].")
 		. += span_info("Puede tener un nombre grabado con un martillo.")
 		return
-	. += span_info("Its teeth can be set with a hammer or copied from an existing lock or key.")
+	. += span_info("Sus dientes pueden ajustarse con un martillo o copiarse de una cerradura o llave existente.")
 	if(access2add)
 		. += span_info("Ha sido marcado con [access2add[1]], pero no ha sido terminado.")
 
@@ -73,19 +73,19 @@
 		return NONE
 
 	if(lockids)
-		var/input = (input(user, "What would you name this key?", "", "") as text)
+		var/input = (input(user, "¿Como llamarias a esta clave?", "", "") as text)
 		if(!input)
 			return ITEM_INTERACT_BLOCKING
-		name = input + " key"
-		to_chat(user, span_notice("You rename the key to [name]."))
+		name = input + " llave"
+		to_chat(user, span_notice("Renombraras la llave a [name]."))
 		return ITEM_INTERACT_SUCCESS
 
-	var/input = input(user, "What would you like to set the key ID to?", "", 0) as num
+	var/input = input(user, "¿En que le gustaria configurar la ID de clave?", "", 0) as num
 	input = abs(input)
 	if(!input)
 		return ITEM_INTERACT_BLOCKING
 
-	to_chat(user, span_notice("You set the key ID to [input]."))
+	to_chat(user, span_notice("Usted configuro el ID de la llave como [input]."))
 	access2add = list("[input]")
 
 	return ITEM_INTERACT_SUCCESS
@@ -95,12 +95,12 @@
 		return NONE
 
 	if(lockids)
-		to_chat(user, span_warning("[src] has been finished, it cannot be adjusted again!"))
+		to_chat(user, span_warning("[src] ha terminado, ¡no se puede ajustar de nuevo!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(istype(tool, /obj/item/weapon/hammer))
 		if(!access2add)
-			to_chat(user, span_warning("[src] is not ready, its teeth are not set!"))
+			to_chat(user, span_warning("[src] no esta listo, ¡sus dientes no estan puestos!"))
 			return ITEM_INTERACT_BLOCKING
 		lockids = access2add
 		access2add = null
@@ -108,10 +108,10 @@
 		return ITEM_INTERACT_SUCCESS
 
 	if(!copy_access(tool))
-		to_chat(user, span_warning("I cannot forge a key from [tool]!"))
+		to_chat(user, span_warning("¡No puedo forjar una llave a partir de [tool]!"))
 		return ITEM_INTERACT_BLOCKING
 
-	to_chat(user, span_notice("I forge the key based on the workings of [tool]."))
+	to_chat(user, span_notice("Forjo la llave basandome en el funcionamiento de [tool]."))
 
 	return ITEM_INTERACT_SUCCESS
 
@@ -132,7 +132,7 @@
 	return ..()
 
 /obj/item/key/lord/proc/anti_stall()
-	visible_message(span_warning("[src] flies up into the sky and into the direction of the keep!"))
+	visible_message(span_warning("[src] vuela hacia el cielo y en direccion a la fortaleza."))
 	qdel(src) //Anti-stall
 
 ///// TOWN KEYS
@@ -140,25 +140,25 @@
 // Worksmen
 
 /obj/item/key/apothecary
-	name = "apothecary's key"
-	desc = "Master key of the bathhouse."
+	name = "llave de boticario"
+	desc = "Llave maestra de la casa de baños."
 	icon_state = "rustkey"
 	lockids = list(ACCESS_APOTHECARY)
 
 /obj/item/key/blacksmith
-	name = "blacksmith key"
-	desc = "The master key for the town Smithy."
+	name = "llave de herrero"
+	desc = "La llave maestra de la herreria del pueblo."
 	icon_state = "brownkey"
 	lockids = list(ACCESS_SMITH)
 
 /obj/item/key/butcher
-	name = "butcher key"
-	desc = "There's some dried blood on this key, it's probably the butchers."
+	name = "llave de carnicero"
+	desc = "Hay algo de sangre seca en esta llave, probablemente sean los carniceros."
 	icon_state = "rustkey"
 	lockids = list(ACCESS_BUTCHER)
 
 /obj/item/key/tailor
-	name = "tailor's key"
+	name = "llave de sastre"
 	icon_state = "rustkey"
 	lockids = list(ACCESS_TAILOR)
 
@@ -169,62 +169,62 @@
 	lockids = list(ACCESS_CLINIC)
 
 /obj/item/key/soilson
-	name = "Soilson Key"
-	desc = "This key is used by the Soilsons."
+	name = "llave Soilson"
+	desc = "Esta clave es utilizada por los Soilson."
 	icon_state = "rustkey"
 	lockids = list(ACCESS_FARM, ACCESS_BUTCHER)
 
 /obj/item/key/merchant
 	name = "llave del comerciante"
-	desc = "A key used by the Merchant's Guild."
+	desc = "Una llave utilizada por el Gremio de Comerciantes."
 	icon_state = "cheesekey"
 	lockids = list(ACCESS_MERCHANT)
 
 /obj/item/key/tavern // Room keys at bottom of file
-	name = "inn key"
-	desc = "This key should open and close any Inn door."
+	name = "llave de posada"
+	desc = "Esta llave deberia abrir y cerrar cualquier puerta de la posada."
 	icon_state = "hornkey"
 	lockids = list(ACCESS_INN)
 
 /obj/item/key/hunter
 	name = "llave del cazador"
-	desc = "This key should open the Hunter's Lodge."
+	desc = "Esta llave deberia abrir Hunter's Lodge."
 	icon_state = "hornkey"
 	lockids = list(ACCESS_HUNTER)
 
 /obj/item/key/artificer
-	name = "artificer's key"
-	desc = "This bronze key should open the Artificer's guild."
+	name = "llave del artifice"
+	desc = "Esta llave de bronce deberia abrir el gremio de artifices."
 	icon_state = "brownkey"
 	lockids = list(ACCESS_ARTIFICER)
 
 /obj/item/key/miner
-	name = "miner's key"
+	name = "llave de minero"
 	desc = "Esta llave de bronce deberia abrir las habitaciones del minero."
 	icon_state = "brownkey"
 	lockids = list(ACCESS_MINER)
 
 /obj/item/key/sweeper
-	name = "sweeper's key"
-	desc = "This key opens the Sweeper's room. It smells foul."
+	name = "llave del barrendero"
+	desc = "Esta llave abre la habitacion del barrendero. Huele mal."
 	icon_state = "rustkey"
 	lockids = list(ACCESS_SWEEPER)
 
 // Residents
 
 /obj/item/key/matron
-	name = "matron's key"
+	name = "llave de matrona"
 	icon_state = "rustkey"
 	lockids = list(ACCESS_MATRON)
 
 /obj/item/key/elder
-	name = "elder's key"
+	name = "llave del anciano"
 	icon_state = "rustkey"
 	lockids = list(ACCESS_ELDER)
 
 /obj/item/key/feldsher
-	name = "feldsher's key"
-	desc = "The key to the Feldsher's own clinic."
+	name = "llave de feldsher"
+	desc = "La llave de la propia clinica del Feldsher."
 	icon_state = "birdkey"
 	lockids = list(ACCESS_FELDSHER)
 
@@ -235,7 +235,7 @@
 	lockids = list(ACCESS_TOWER)
 
 /obj/item/key/bathhouse
-	name = "bathhouse key"
+	name = "llave de la casa de baños"
 	desc = "Una llave para la casa de baños."
 	icon_state = "brownkey"
 	lockids = list(ACCESS_BATHHOUSE)
@@ -243,13 +243,13 @@
 // Garrison
 
 /obj/item/key/garrison
-	name = "city watch key"
+	name = "llave de vigilancia de la ciudad"
 	desc = "Esta llave pertenece a la Guardia de la Ciudad."
 	icon_state = "spikekey"
 	lockids = list(ACCESS_GARRISON)
 
 /obj/item/key/lieutenant
-	name = "city watch lieutenant key"
+	name = "llave del teniente de vigilancia de la ciudad"
 	desc = "Esta llave pertenece al teniente de la guardia de la ciudad."
 	icon_state = "spikekey"
 	lockids = list(ACCESSS_LIEUTENANT)
@@ -269,31 +269,31 @@
 /// Mercs
 
 /obj/item/key/tombwarden
-	name = "warden's key"
+	name = "llave del guardian"
 	icon_state = "rustkey"
 	lockids = list(ACCESS_TOMBWARDEN)
 
 /obj/item/key/mercenary
 	name = "llave mercenaria"
-	desc = "Why, a mercenary would not kick doors down."
+	desc = "Vaya, un mercenario no derribaria puertas a patadas."
 	icon_state = "greenkey"
 	lockids = list(ACCESS_MERC)
 
 /obj/item/key/tomb
-	name = "delver's key"
-	desc = span_red("Down we go...")
+	name = "llave del excavador"
+	desc = span_red("Bajamos...")
 	icon_state = "tombkey"
 	lockids = list(ACCESS_TOMB)
 
 /obj/item/key/warehouse
-	name = "Warehouse key"
+	name = "llave del almacen"
 	desc = "Esta llave abre el almacen del mayordomo."
 	icon_state = "rustkey"
 	lockids = list(ACCESS_WAREHOUSE)
 
 /obj/item/key/bogwitch
-	name = "bogwitch key"
-	desc = "This key opens the Bog Witch's hut."
+	name = "llave de la bruja"
+	desc = "Esta llave abre la cabaña de Bog Witch."
 	icon_state = "hornkey"
 	lockids = list(ACCESS_BOGWITCH)
 
@@ -306,49 +306,49 @@
 	lockids = list(ACCESS_MANOR)
 
 /obj/item/key/butler
-	name = "keep master key"
+	name = "llave maestra de la fortaleza"
 	desc = "Esta llave abrira casi todas las puertas de la Fortaleza."
 	icon_state = "royalkey"
 	lockids = list(ACCESS_MANOR, ACCESS_BUTLER, ACCESS_SERVANT)
 
 /obj/item/key/servant
-	name = "keep servants key"
+	name = "llave de servicio de la fortaleza"
 	lockids = list(ACCESS_MANOR, ACCESS_SERVANT)
 	icon_state = "servekey"
 
 /obj/item/key/hand
-	name = "hand's key"
-	desc = "This regal key belongs to the Monarch's Right Hand."
+	name = "llave de la mano"
+	desc = "Esta llave regia pertenece a la Mano Derecha del Monarca."
 	icon_state = "cheesekey"
 	lockids = list(ACCESS_HAND, ACCESS_COURTAGENT, ACCESS_SERVANT)
 
 /obj/item/key/courtagent
-	name = "court agent hideout key"
-	desc = "This key should open the doors in the Court Agent's Hideout"
+	name = "llave del escondite del agente judicial"
+	desc = "Esta llave deberia abrir las puertas del escondite del agente judicial."
 	icon_state = "rustkey"
 	lockids = list(ACCESS_COURTAGENT)
 
 /obj/item/key/steward
 	name = "llave del mayordomo"
-	desc = "This key belongs to the Monarch's greedy Steward."
+	desc = "Esta llave pertenece al codicioso mayordomo del Monarca."
 	icon_state = "cheesekey"
 	lockids = list(ACCESS_STEWARD)
 
 /obj/item/key/vault
-	name = "vault key"
+	name = "llave de la boveda"
 	desc = "Esta llave abre la poderosa Boveda."
 	icon_state = "cheesekey"
 	lockids = list(ACCESS_VAULT)
 
 /obj/item/key/dungeon
-	name = "dungeon key"
-	desc = "This key should unlock the rusty bars and doors of the dungeon."
+	name = "llave de mazmorra"
+	desc = "Esta llave deberia abrir las barras y puertas oxidadas de la mazmorra."
 	icon_state = "rustkey"
 	lockids = list(ACCESS_DUNGEON)
 
 /obj/item/key/consort
-	name = "consort key"
-	desc = "The Consort's key."
+	name = "llave consorte"
+	desc = "La llave de la Consorte."
 	icon_state = "royalkey"
 	lockids = list(ACCESS_MANOR, ACCESS_SERVANT, ACCESS_BUTLER, ACCESS_CONSORT)
 
@@ -357,68 +357,68 @@
 	desc = "La llave de repuesto del monarca."
 
 /obj/item/key/heir
-	name = "heir's key"
-	desc = "The key of a royal arse."
+	name = "llave del heredero"
+	desc = "La llave de un culo real."
 	icon_state = "lessroyalkey"
 	lockids = list(ACCESS_HEIR, ACCESS_MANOR)
 
 /obj/item/key/gatehouse
-	name = "keep gatehouse key"
-	desc = "This is a rusty key for the Keep Gatehouse."
+	name = "llave de la entrada de la fortaleza"
+	desc = "Esta es una llave oxidada de Keep Gatehouse."
 	icon_state = "rustkey"
 	lockids = list(ACCESS_MANOR_GATE)
 
 /obj/item/key/archivist
-	name = "archivist's key"
-	desc = "A smell of ink, parchment and dust clings to this key."
+	name = "llave del archivero"
+	desc = "Un olor a tinta, pergamino y polvo se pega a esta llave."
 	icon_state = "ekey"
 	lockids = list(ACCESS_ARCHIVIST)
 
 /obj/item/key/archive
 	name = "clave de archivo"
-	desc = "This key looks barely used."
+	desc = "Esta llave parece apenas utilizada."
 	icon_state = "ekey"
 	lockids = list(ACCESS_LIBRARY)
 
 /obj/item/key/mage
-	name = "magicians's key"
-	desc = "This is the Court Magician's key. It watches you..."
+	name = "la llave de los magos"
+	desc = "Esta es la clave del Mago de la Corte. Te observa..."
 	icon_state = "eyekey"
 	lockids = list(ACCESS_MAGE)
 
 /obj/item/key/atarms
-	name = "keep garrison key"
-	desc = "A key given to the Monarch's men-at-arms."
+	name = "llave de la guarnicion de la fortaleza"
+	desc = "Una llave entregada a los hombres de armas del Monarca."
 	icon_state = "spikekey"
 	lockids = list(ACCESS_AT_ARMS)
 
 /obj/item/key/guest
 	name = "llave maestra de la habitacion de invitados"
-	desc = "The key to the keep guest rooms. Not for distribution."
+	desc = "La llave de las habitaciones de huespedes. No para distribucion."
 	icon_state = "greenkey"
 	lockids = list(ACCESS_GUEST1, ACCESS_GUEST2, ACCESS_GUEST3)
 
 /obj/item/key/guest/one
 	name = "habitacion de invitados 1 llave"
-	desc = "The key to the keep guest room. Given to visiting nobles."
+	desc = "La llave de la habitacion de invitados. Entregado a los nobles visitantes."
 	icon_state = "brownkey"
 	lockids = list(ACCESS_GUEST1)
 
 /obj/item/key/guest/two
-	name = "guest room 2 key"
-	desc = "The key to the keep guest room. Given to visiting nobles."
+	name = "llave de la habitacion de invitados 2"
+	desc = "La llave de la habitacion de invitados. Entregado a los nobles visitantes."
 	icon_state = "brownkey"
 	lockids = list(ACCESS_GUEST2)
 
 /obj/item/key/guest/three
-	name = "guest room 3 key"
-	desc = "The key to the keep guest room. Given to visiting nobles."
+	name = "llave de la habitacion de invitados 3"
+	desc = "La llave de la habitacion de invitados. Entregado a los nobles visitantes."
 	icon_state = "brownkey"
 	lockids = list(ACCESS_GUEST3)
 
 /obj/item/key/courtphys
 	name = "llave del medico de la corte"
-	desc = "A key granted to the honored Court Physician."
+	desc = "Una llave concedida al honorable Medico de la Corte."
 	icon_state = "ankhkey"
 	lockids = list(ACCESS_PHYSICIAN)
 
@@ -432,7 +432,7 @@
 
 /obj/item/key/priest
 	name = "llave del sacerdote"
-	desc = "The key to the Priest's chambers."
+	desc = "La llave de los aposentos del sacerdote."
 	icon_state = "cheesekey"
 	lockids = list(ACCESS_PRIEST)
 
@@ -443,7 +443,7 @@
 
 /obj/item/key/inquisition
 	name = "llave de la inquisicion"
-	desc = "This is an intricate key."
+	desc = "Esta es una clave compleja."
 	icon_state = "mazekey"
 	lockids = list(ACCESS_RITTER)
 
@@ -454,7 +454,7 @@
 	icon_state = "brownkey"
 
 /obj/item/key/houses/house1
-	name = "house I key"
+	name = "llave de la casa I"
 	lockids = list("house1")
 
 /obj/item/key/houses/house2
@@ -490,23 +490,23 @@
 	lockids = list("house9")
 
 /obj/item/key/houses/waterfront1
-	name = "I waterfront street key"
+	name = "llave de la calle costera I"
 	lockids = list("waterfront1")
 
 /obj/item/key/houses/waterfront2
-	name = "II waterfront street key"
+	name = "llave de la calle costera II"
 	lockids = list("waterfront2")
 
 /obj/item/key/houses/waterfront3
-	name = "III waterfront street key"
+	name = "llave de la calle costera III"
 	lockids = list("waterfront3")
 
 /obj/item/key/houses/waterfront4
-	name = "IV waterfront street key"
+	name = "llave de la calle costera IV"
 	lockids = list("waterfront4")
 
 /obj/item/key/houses/waterfront5
-	name = "V waterfront street key"
+	name = "llave de la calle costera V"
 	lockids = list("waterfront5")
 
 // APARTMENTS AND PENTHOUSES
@@ -516,27 +516,27 @@
 	icon_state = "brownkey"
 
 /obj/item/key/apartments/slums1
-	name = "slums I key"
+	name = "llave de los barrios bajos I"
 	lockids = list("slums1")
 
 /obj/item/key/apartments/slums2
-	name = "slums II key"
+	name = "llave de los barrios bajos II"
 	lockids = list("slums2")
 
 /obj/item/key/apartments/slums3
-	name = "slums III key"
+	name = "llave de los barrios bajos III"
 	lockids = list("slums3")
 
 /obj/item/key/apartments/slums4
-	name = "slums IV key"
+	name = "llave de los barrios bajos IV"
 	lockids = list("slums4")
 
 /obj/item/key/apartments/slums5
-	name = "slums V key"
+	name = "llave de los barrios bajos V"
 	lockids = list("slums5")
 
 /obj/item/key/apartments/slums6
-	name = "slums VI key"
+	name = "llave de los barrios bajos VI"
 	lockids = list("slums6")
 
 /obj/item/key/apartments/apartment1
@@ -552,7 +552,7 @@
 	lockids = list("apartment3")
 
 /obj/item/key/apartments/apartment4
-	name = "apartment iv key"
+	name = "llave del apartamento IV"
 	lockids = list("apartment4")
 
 /obj/item/key/apartments/apartment5
@@ -560,7 +560,7 @@
 	lockids = list("apartment5")
 
 /obj/item/key/apartments/apartment6
-	name = "apartment vi key"
+	name = "llave del apartamento VI"
 	lockids = list("apartment6")
 
 /obj/item/key/apartments/apartment7
@@ -576,7 +576,7 @@
 	lockids = list("apartment9")
 
 /obj/item/key/apartments/apartment10
-	name = "apartment x key"
+	name = "llave del apartamento X"
 	lockids = list("apartment10")
 
 /obj/item/key/apartments/apartment11
@@ -584,7 +584,7 @@
 	lockids = list("apartment11")
 
 /obj/item/key/apartments/apartment12
-	name = "apartment xii key"
+	name = "llave del apartamento XII"
 	lockids = list("apartment12")
 
 /obj/item/key/apartments/apartment13
@@ -592,7 +592,7 @@
 	lockids = list("apartment13")
 
 /obj/item/key/apartments/apartment14
-	name = "apartment xiv key"
+	name = "llave del apartamento XIV"
 	lockids = list("apartment14")
 
 /obj/item/key/apartments/apartment15
@@ -600,7 +600,7 @@
 	lockids = list("apartment15")
 
 /obj/item/key/apartments/apartment16
-	name = "apartment xvi key"
+	name = "llave del apartamento XVI"
 	lockids = list("apartment16")
 
 /obj/item/key/apartments/apartment17
@@ -612,7 +612,7 @@
 	lockids = list("apartment18")
 
 /obj/item/key/apartments/apartment19
-	name = "apartment xix key"
+	name = "llave del apartamento XIX"
 	lockids = list("apartment19")
 
 /obj/item/key/apartments/apartment20
@@ -624,43 +624,43 @@
 	lockids = list("apartment21")
 
 /obj/item/key/apartments/apartment22
-	name = "apartment xxii key"
+	name = "llave del apartamento XXII"
 	lockids = list("apartment22")
 
 /obj/item/key/apartments/apartment23
-	name = "apartment xxiii key"
+	name = "llave del apartamento XXIII"
 	lockids = list("apartment23")
 
 /obj/item/key/apartments/apartment24
-	name = "apartment xxiv key"
+	name = "llave del apartamento XXIV"
 	lockids = list("apartment24")
 
 /obj/item/key/apartments/apartment25
-	name = "apartment xxv key"
+	name = "llave del apartamento XXV"
 	lockids = list("apartment25")
 
 /obj/item/key/apartments/penthouse1
-	name = "penthouse i key"
+	name = "llave del atico I"
 	lockids = list("penthouse1")
 
 /obj/item/key/apartments/penthouse2
-	name = "penthouse ii key"
+	name = "llave del atico II"
 	lockids = list("penthouse2")
 
 /obj/item/key/apartments/merc1
-	name = "mercenary apartment i key"
+	name = "llave del apartamento de mercenarios I"
 	lockids = list("merc1")
 
 /obj/item/key/apartments/merc2
-	name = "mercenary apartment ii key"
+	name = "llave del apartamento de mercenarios II"
 	lockids = list("merc2")
 
 /obj/item/key/apartments/merc3
-	name = "mercenary apartment iii key"
+	name = "llave del apartamento de mercenarios III"
 	lockids = list("merc3")
 
 /obj/item/key/apartments/merc4
-	name = "mercenary apartment iv key"
+	name = "llave del apartamento de mercenarios IV"
 	lockids = list("merc4")
 
 /obj/item/key/apartments/merc5
@@ -668,31 +668,31 @@
 	lockids = list("merc5")
 
 /obj/item/key/apartments/merc6
-	name = "mercenary apartment vi key"
+	name = "llave del apartamento de mercenarios VI"
 	lockids = list("merc6")
 
 /obj/item/key/apartments/adv1
-	name = "adventurer apartment i key"
+	name = "llave del apartamento de aventureros I"
 	lockids = list("adv1")
 
 /obj/item/key/apartments/adv2
-	name = "adventurer apartment ii key"
+	name = "llave del apartamento de aventureros II"
 	lockids = list("adv2")
 
 /obj/item/key/apartments/adv3
-	name = "adventurer apartment iii key"
+	name = "llave del apartamento de aventureros III"
 	lockids = list("adv3")
 
 /obj/item/key/apartments/adv4
-	name = "adventurer apartment iv key"
+	name = "llave del apartamento de aventureros IV"
 	lockids = list("adv4")
 
 /obj/item/key/apartments/adv5
-	name = "adventurer apartment v key"
+	name = "llave del apartamento de aventureros V"
 	lockids = list("adv5")
 
 /obj/item/key/apartments/adv6
-	name = "adventurer apartment vi key"
+	name = "llave del apartamento de aventureros VI"
 	lockids = list("adv6")
 
 // SHOP KEYS
@@ -702,45 +702,45 @@
 	icon_state = "rustkey"
 
 /obj/item/key/shops/shop1
-	name = "shop I key"
+	name = "llave de la tienda I"
 	lockids = list("shop1")
 
 /obj/item/key/shops/shop2
-	name = "shop II key"
+	name = "llave de la tienda II"
 	lockids = list("shop2")
 
 /obj/item/key/shops/shop3
-	name = "shop III key"
+	name = "llave de la tienda III"
 	lockids = list("shop3")
 
 /obj/item/key/shops/shop4
-	name = "shop IV key"
+	name = "llave de la tienda IV"
 	lockids = list("shop4")
 
 /obj/item/key/shops/shop5
-	name = "shop V key"
+	name = "llave de la tienda V"
 	lockids = list("shop5")
 
 /obj/item/key/shops/shop6
-	name = "shop VI key"
+	name = "llave de la tienda VI"
 	lockids = list("shop6")
 
 /obj/item/key/shops/shop7
-	name = "shop VII key"
+	name = "llave de la tienda VII"
 	lockids = list("shop7")
 
 /obj/item/key/shops/shop8
-	name = "shop VIII key"
+	name = "llave de la tienda VIII"
 	lockids = list("shop8")
 
 /obj/item/key/shops/shop9
-	name = "shop IX key"
+	name = "llave de la tienda IX"
 	lockids = list("shop9")
 
 // INN ROOMS
 
 /obj/item/key/roomi
-	name = "room I key"
+	name = "llave de la habitacion I"
 	desc = "La llave de la primera habitacion."
 	icon_state = "brownkey"
 	lockids = list("roomi")
@@ -752,13 +752,13 @@
 	lockids = list("roomii")
 
 /obj/item/key/roomiii
-	name = "room III key"
+	name = "llave de la habitacion III"
 	desc = "La llave de la tercera habitacion."
 	icon_state = "brownkey"
 	lockids = list("roomiii")
 
 /obj/item/key/roomiv
-	name = "room IV key"
+	name = "llave de la habitacion IV"
 	desc = "La llave de la cuarta habitacion."
 	icon_state = "brownkey"
 	lockids = list("roomiv")
@@ -770,49 +770,49 @@
 	lockids = list("roomv")
 
 /obj/item/key/roomvi
-	name = "room VI key"
+	name = "llave de la habitacion VI"
 	desc = "La llave de la sexta habitacion."
 	icon_state = "brownkey"
 	lockids = list("roomvi")
 
 /obj/item/key/medroomi
-	name = "medium room I key"
+	name = "llave de la habitacion mediana I"
 	desc = "La llave de la primera habitacion mediana."
 	icon_state = "brownkey"
 	lockids = list("medroomi")
 
 /obj/item/key/medroomii
-	name = "medium room II key"
+	name = "llave de la habitacion mediana II"
 	desc = "La llave de la segunda habitacion mediana."
 	icon_state = "brownkey"
 	lockids = list("medroomii")
 
 /obj/item/key/medroomiii
-	name = "medium room III key"
+	name = "llave de la habitacion mediana III"
 	desc = "La llave de la tercera habitacion mediana."
 	icon_state = "brownkey"
 	lockids = list("medroomiii")
 
 /obj/item/key/medroomiv
-	name = "medium room IV key"
-	desc = "The key to the fourth medium room."
+	name = "llave de la habitacion mediana IV"
+	desc = "La llave de la cuarta habitacion mediana."
 	icon_state = "brownkey"
 	lockids = list("medroomiv")
 
 /obj/item/key/medroomv
-	name = "medium room V key"
+	name = "llave de la habitacion mediana V"
 	desc = "La llave de la quinta habitacion mediana."
 	icon_state = "brownkey"
 	lockids = list("medroomv")
 
 /obj/item/key/medroomvi
-	name = "medium room VI key"
-	desc = "The key to the sixth medium room."
+	name = "llave de la habitacion mediana VI"
+	desc = "La llave de la sexta habitacion mediana."
 	icon_state = "brownkey"
 	lockids = list("medroomvi")
 
 /obj/item/key/luxroomi
-	name = "luxury room I key"
+	name = "llave de la habitacion de lujo I"
 	desc = "La llave de la primera habitacion de lujo."
 	icon_state = "brownkey"
 	lockids = list("luxroomi")
@@ -836,52 +836,52 @@
 	lockids = list("luxroomiv")
 
 /obj/item/key/luxroomv
-	name = "luxury room V key"
+	name = "llave de la habitacion de lujo V"
 	desc = "La llave de la quinta habitacion de lujo."
 	icon_state = "brownkey"
 	lockids = list("luxroomv")
 
 /obj/item/key/luxroomvi
-	name = "luxury room VI key"
+	name = "llave de la habitacion de lujo VI"
 	desc = "La llave de la sexta habitacion de lujo."
 	icon_state = "brownkey"
 	lockids = list("luxroomvi")
 
 /obj/item/key/roomhunt
-	name = "room HUNT key"
-	desc = "The key to the most luxurious Inn room."
+	name = "llave de la habitacion HUNT"
+	desc = "La llave de la posada mas lujosa."
 	icon_state = "brownkey"
 	lockids = list("roomhunt")
 
 /obj/item/key/thatchwood
 	name = "ABSTRACT THATCHWOOD KEY CALL CODERS"
-	desc = "Contact a dev on the discord, or make a bug report"
+	desc = "Pongase en contacto con un desarrollador en Discord o haga un informe de error"
 	icon_state = "brownkey"
 	abstract_type = /obj/item/key/thatchwood
 
 /obj/item/key/thatchwood/farm
-	name = "old farmhouse key"
-	desc = "A rusty key. Specs of dirt and soil cover its handle."
+	name = "antigua llave de granja"
+	desc = "Una llave oxidada. Motas de suciedad y tierra cubren su mango."
 	lockids = list("oldfarm")
 
 /obj/item/key/thatchwood/smithy
-	name = "old smithy key"
+	name = "vieja llave de herreria"
 	desc = "Una llave oxidada."
 	lockids = list("oldsmith")
 
 /obj/item/key/thatchwood/inn1
-	name = "room I key"
-	desc = "A rusty key. The number I has been engraved on its handle."
+	name = "llave de la habitacion I"
+	desc = "Una llave oxidada. En su mango lleva grabado el numero I."
 	lockids = list("oldinn1")
 
 /obj/item/key/thatchwood/inn2
 	name = "llave de la habitacion II"
-	desc = "A rusty key. The number II has been engraved on its handle."
+	desc = "Una llave oxidada. En su mango lleva grabado el numero II."
 	lockids = list("oldinn2")
 
 /obj/item/key/thatchwood/inn3
 	name = "llave de la habitacion lateral"
-	desc = "A rusty key. Something was engraved on its handle, but you can't make it out anymore."
+	desc = "Una llave oxidada. Algo estaba grabado en su mango, pero ya no puedes distinguirlo."
 	lockids = list("oldinn3")
 
 // Special Keys
@@ -889,12 +889,12 @@
 // grenchensnacker
 /obj/item/key/porta
 	name = "llave extraña"
-	desc = "Was this key enchanted by a locksmith...?"
+	desc = "¿Esta llave fue encantada por un cerrajero...?"
 	icon_state = "eyekey"
 	lockids = list("porta")
 
 /obj/item/key/vampire
-	desc = "This key is awfully pink and weirdly shaped."
+	desc = "Esta llave es terriblemente rosa y tiene una forma extraña."
 	icon_state = "vampkey"
 	lockids = list("mansionvampire")
 
@@ -906,18 +906,18 @@
 ////// MINOR NOBLES
 /obj/item/key/mnoble1_blue
 	name = "Llave de la casa noble 1"
-	desc = "A very detailed steel key, has gold details and a purple gemstone on it... is for the noble house number one."
+	desc = "Una llave de acero muy detallada, tiene detalles dorados y una piedra preciosa morada... es para la casa noble numero uno."
 	icon_state = "noble1"
 	lockids = list(ACCESS_NOBLE1)
 
 /obj/item/key/mnoble2_yellow
 	name = "Llave de la casa noble 2"
-	desc = "A very detailed steel key, has gold details and a yellow gemstone on it... is for the noble house number two."
+	desc = "Una llave de acero muy detallada, tiene detalles dorados y una piedra preciosa amarilla... es para la casa noble numero dos."
 	icon_state = "noble2"
 	lockids = list(ACCESS_NOBLE2)
 
 /obj/item/key/mnoble3_red
 	name = "Llave de la casa noble 3"
-	desc = "A very detailed steel key, has gold details and a red gemstone on it... is for the noble house number three?"
+	desc = "Una llave de acero muy detallada, tiene detalles dorados y una piedra preciosa roja... ¿es para la casa noble numero tres?"
 	icon_state = "noble3"
 	lockids = list(ACCESS_NOBLE3)

@@ -1,5 +1,5 @@
 /obj/structure/chem_separator
-	name = "alembic"
+	name = "alambique"
 	desc = "Dispositivo que realiza la separacion de liquidos por destilacion."
 	icon = 'icons/obj/medical/chemical.dmi'
 	icon_state = "separator"
@@ -132,7 +132,7 @@
 		if(!user.transferItemToLoc(new_beaker, src))
 			return FALSE
 		replace_beaker(user, new_beaker)
-		balloon_alert(user, "added beaker")
+		balloon_alert(user, "se añadio el matraz")
 		update_appearance(UPDATE_ICON)
 		return TRUE // no afterattack
 	return ..()

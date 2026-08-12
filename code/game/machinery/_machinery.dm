@@ -2,7 +2,7 @@
 	name = "maquinaria"
 	icon = 'icons/obj/stationobjs.dmi'
 	desc = ""
-	verb_say = "beeps"
+	verb_say = "emite pitidos"
 	verb_yell = "blares"
 	max_integrity = 200
 	layer = BELOW_OBJ_LAYER //keeps shit coming out of the machine from ending up underneath it.
@@ -110,7 +110,7 @@
 	else
 		user.changeNext_move(CLICK_CD_MELEE)
 //		user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
-		user.visible_message("<span class='danger'>[user.name] smashes against \the [src.name] with its paws.</span>", null, null, COMBAT_MESSAGE_RANGE)
+		user.visible_message("<span class='danger'>[user.name] golpea a \the [src.name] con las patas.</span>", null, null, COMBAT_MESSAGE_RANGE)
 		take_damage(4, BRUTE, "blunt", 1)
 
 /obj/machinery/_try_interact(mob/user)
@@ -211,7 +211,7 @@
 
 /obj/proc/can_be_unfasten_wrench(mob/user, silent) //if we can unwrench this object; returns SUCCESSFUL_UNFASTEN and FAILED_UNFASTEN, which are both TRUE, or CANT_UNFASTEN, which isn't.
 	if(!(isfloorturf(loc)) && !anchored)
-		to_chat(user, "<span class='warning'>[src] needs to be on the floor to be secured!</span>")
+		to_chat(user, "<span class='warning'>¡[src] debe estar en el suelo para asegurarlo!</span>")
 		return FAILED_UNFASTEN
 	return SUCCESSFUL_UNFASTEN
 
@@ -339,8 +339,8 @@
 	if(do_after(user, adjusted_climb_time))
 		if(src.loc) //Checking if structure has been destroyed
 			if(do_climb(user))
-				user.visible_message("<span class='warning'>[user] climbs onto [src].</span>", \
-									"<span class='notice'>I climb onto [src].</span>")
+				user.visible_message("<span class='warning'>[user] se sube a [src].</span>", \
+									"<span class='notice'>Me subo a [src].</span>")
 				log_combat(user, src, "climbed onto")
 				if(climb_stun)
 					user.Stun(climb_stun)
@@ -348,5 +348,5 @@
 					playsound(src, climb_sound, 100)
 				. = 1
 			else
-				to_chat(user, "<span class='warning'>I fail to climb onto [src].</span>")
+				to_chat(user, "<span class='warning'>No puedo subirme a [src].</span>")
 	structureclimber = null

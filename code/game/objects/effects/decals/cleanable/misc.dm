@@ -34,7 +34,7 @@
 
 // For Stonekeep Undead Alchemy
 /obj/effect/decal/cleanable/undeadash
-	name = "glimmering ashes"
+	name = "cenizas relucientes"
 	desc = ""
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "special_ash"
@@ -45,7 +45,7 @@
 	reagents.add_reagent(/datum/reagent/undeadash, 20)
 
 /obj/effect/decal/cleanable/dirt
-	name = "dirt"
+	name = "suciedad"
 	desc = ""
 	icon_state = "dirt"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
@@ -55,11 +55,11 @@
 	return ..()
 
 /obj/effect/decal/cleanable/dirt/dust
-	name = "dust"
+	name = "polvo"
 	desc = ""
 
 /obj/effect/decal/cleanable/greenglow
-	name = "glowing goo"
+	name = "sustancia viscosa brillante"
 	desc = ""
 	icon_state = "greenglow"
 	light_power = 3
@@ -94,13 +94,13 @@
 	beauty = -150
 
 /obj/effect/decal/cleanable/molten_object/large
-	name = "big gooey grey mass"
+	name = "gran masa gris pegajosa"
 	icon_state = "big_molten"
 	beauty = -300
 
 //Vomit (sorry)
 /obj/effect/decal/cleanable/vomit
-	name = "vomit"
+	name = "vomito"
 	desc = ""
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "vomit_1"
@@ -119,14 +119,14 @@
 	icon_state += "-old"
 
 /obj/effect/decal/cleanable/chem_pile
-	name = "chemical pile"
+	name = "pila quimica"
 	desc = ""
 	gender = NEUTER
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "ash"
 
 /obj/effect/decal/cleanable/shreds
-	name = "shreds"
+	name = "fragmentos"
 	desc = ""
 	icon_state = "shreds"
 	gender = PLURAL
@@ -147,7 +147,7 @@
 	color = "#916258"
 
 /obj/effect/decal/cleanable/glitter
-	name = "generic glitter pile"
+	name = "pila generica de brillo"
 	desc = ""
 	icon = 'icons/effects/atmospherics.dmi'
 	icon_state = "plasma_old"
@@ -155,15 +155,15 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/decal/cleanable/glitter/pink
-	name = "pink glitter"
+	name = "brillo rosa"
 	icon_state = "plasma"
 
 /obj/effect/decal/cleanable/glitter/white
-	name = "white glitter"
+	name = "brillo blanco"
 	icon_state = "nitrous_oxide"
 
 /obj/effect/decal/cleanable/glitter/blue
-	name = "blue glitter"
+	name = "brillo azul"
 	icon_state = "freon"
 
 /obj/effect/decal/cleanable/plasma
@@ -174,7 +174,7 @@
 	color = "#2D2D2D"
 
 /obj/effect/decal/cleanable/insectguts
-	name = "insect guts"
+	name = "tripas de insectos"
 	desc = ""
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "xfloor1"
@@ -183,7 +183,7 @@
 
 /*	.................   Dye spill   ................... */
 /obj/effect/decal/cleanable/dyes
-	name = "spilled dyes"
+	name = "tintes derramados"
 	icon = 'icons/effects/tomatodecal.dmi'
 	icon_state = "flour"
 	random_icon_states = list("flour", "smashed_plant")
@@ -206,7 +206,7 @@
 	setDir(pick(GLOB.cardinals))
 
 /obj/effect/decal/cleanable/debris/glass
-	name = "glass shards"
+	name = "fragmentos de vidrio"
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "tiny"
 	beauty = -100
@@ -216,13 +216,13 @@
 	playsound(src,'sound/foley/glass_step.ogg', 50, FALSE)
 
 /obj/effect/decal/cleanable/debris/stone
-	name = "stone chippings"
+	name = "gravilla de piedra"
 	icon_state = "pebbly"
 	beauty = -50
 	clean_type = CLEAN_TYPE_LIGHT_DECAL
 
 /obj/effect/decal/cleanable/debris/wood
-	name = "sawdust"
+	name = "serrin"
 	icon_state = "woody"
 	beauty = -50
 	clean_type = CLEAN_TYPE_LIGHT_DECAL

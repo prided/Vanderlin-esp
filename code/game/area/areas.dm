@@ -5,7 +5,7 @@
  */
 /area
 	level = null
-	name = "unknown"
+	name = "desconocido"
 	icon = 'icons/turf/areas/areas.dmi'
 	icon_state = "unknown"
 	layer = AREA_LAYER
@@ -39,7 +39,7 @@
 	/// Bonus mood for being in this area
 	var/mood_bonus = 0
 	/// Mood message for being here, only shows up if mood_bonus != 0
-	var/mood_message = "<span class='nicegreen'>This area is pretty nice!\n</span>"
+	var/mood_message = "<span class='nicegreen'>¡Esta zona es muy agradable!\n</span>"
 
 	var/parallax_movedir = 0
 

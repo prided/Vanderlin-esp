@@ -2,7 +2,7 @@
 	name = "Robar articulos"
 	category = "Matthios' Elegido"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Matthios grows stronger", "Pickpocketing knowledge", "Matthios blesses you (+1 Speed)")
+	rewards = list("2 Triunfos", "Matthios se fortalece", "Conocimientos de carterismo", "Matthios te bendice (+1 Velocidad)")
 	var/stolen_count = 0
 	var/required_count = 2
 
@@ -26,7 +26,7 @@
 	if(stolen_count >= required_count)
 		complete_objective()
 	else
-		to_chat(owner.current, span_notice("Item stolen! Steal [required_count - stolen_count] more to complete Matthios' objective."))
+		to_chat(owner.current, span_notice("¡Objeto robado! Roba [required_count - stolen_count] mas para completar el objetivo de Matthios."))
 
 /datum/attribute_modifier/steal_items
 	attribute_list = list(
@@ -35,7 +35,7 @@
 
 /datum/objective/personal/steal_items/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have stolen enough items to complete Matthios' objective!"))
+	to_chat(owner.current, span_greentext("¡Has robado suficientes objetos para completar el objetivo de Matthios!"))
 	adjust_storyteller_influence(MATTHIOS, 20)
 	UnregisterSignal(owner.current, COMSIG_ITEM_STOLEN)
 
@@ -45,4 +45,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_MATTHIOS_BLESSING, list(STAT_SPEED = 1))
 
 /datum/objective/personal/steal_items/update_explanation_text()
-	explanation_text = "Steal [required_count] item\s from others to prove your cunning to Matthios!"
+	explanation_text = "¡Roba [required_count] objeto\s ajenos para demostrar tu astucia a Matthios!"

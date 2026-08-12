@@ -1,12 +1,12 @@
 GLOBAL_LIST_EMPTY(street_lamp_lights)
 
 /obj/structure/astratanshard
-	name = "astratan shard"
+	name = "Fragmento astratan"
 	max_integrity = 1500
 	integrity_failure = 1
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "clockcrystal"
-	desc = "The crystal within the comet landed at Malum's Anvil. Gathered and contained by the finest artificers, it now lies here to light the way for travellers and boats alike. Bask in its divinity."
+	desc = "El cristal dentro del cometa aterrizo en el Anvil de Malum. Reunido y contenido por los mejores artifices, ahora se encuentra aqui para iluminar el camino tanto para los viajeros como para los barcos. Disfruta de su divinidad."
 	var/datum/looping_sound/the_hum
 	var/broken_containment = FALSE
 	anchored = TRUE
@@ -67,12 +67,12 @@ GLOBAL_LIST_EMPTY(street_lamp_lights)
 	if(isdead(fool))
 		return
 	if(!visible_message)
-		visible_message = span_danger("[fool] reaches out and touches \the [src], on making contact,[fool.p_they()] turn to dust!")
+		visible_message = span_danger("[fool] extiende su mano y toca a \the [src], al hacer contacto, ¡[fool.p_they()] se convierten en polvo!")
 	if(!mob_message)
-		mob_message = span_userdanger("You reach out and touch \the [src]. Your body is filled with undescribable pain, your mind unable to even comprehend the divinity you make contact with. Your consciousness fades in a flash... lost to infinite agony.")
+		mob_message = span_userdanger("Extiendes la mano y tocas \the [src]. Tu cuerpo esta lleno de un dolor indescriptible, tu mente es incapaz incluso de comprender la divinidad con la que haces contacto. Tu conciencia se desvanece en un instante... perdida en una agonia infinita.")
 	if(!cause)
 		cause = "contact"
-	fool.visible_message(visible_message,mob_message,span_hear("You hear a pained, echoing scream."))
+	fool.visible_message(visible_message,mob_message,span_hear("Escuchas un grito de dolor, que resuena."))
 	src.investigate_log("has been attacked ([cause]) by [key_name(fool)]", INVESTIGATE_SUPERMATTER)
 	fool.dust(drop_items = TRUE)
 

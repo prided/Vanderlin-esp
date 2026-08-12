@@ -2,7 +2,7 @@
 	//NOTE: Floor code has been refactored, many procs were removed and refactored
 	//- you should use istype() if you want to find out whether a floor has a certain type
 	//- floor_tile is now a path, and not a tile obj
-	name = "floor"
+	name = "suelo"
 	desc = ""
 	icon = 'icons/turf/floors.dmi'
 	baseturfs = /turf/open/openspace
@@ -144,10 +144,10 @@
 		broken = 0
 		burnt = 0
 		if(user && !silent)
-			to_chat(user, "<span class='notice'>I remove the broken plating.</span>")
+			to_chat(user, "<span class='notice'>Retiro el revestimiento roto.</span>")
 	else
 		if(user && !silent)
-			to_chat(user, "<span class='notice'>I remove the floor tile.</span>")
+			to_chat(user, "<span class='notice'>Retiro la baldosa del suelo.</span>")
 		if(floor_tile && make_tile)
 			new floor_tile(src)
 	return make_plating()

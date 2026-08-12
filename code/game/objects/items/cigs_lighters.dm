@@ -16,7 +16,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 //MATCHES//
 ///////////
 /obj/item/match
-	name = "match"
+	name = "fosforo"
 	desc = ""
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "match_unlit"
@@ -49,9 +49,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		force = 3
 		set_light(3)
 		hitsound = list('sound/blank.ogg')
-		name = "lit [initial(name)]"
+		name = "encendido [initial(name)]"
 		desc = ""
-		attack_verb = list("burnt","singed")
+		attack_verb = list("quemado","chamuscado")
 		START_PROCESSING(SSobj, src)
 
 /obj/item/match/proc/matchburnout()
@@ -65,7 +65,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		item_state = "cigoff"
 		name = "quemado [initial(name)]"
 		desc = ""
-		attack_verb = list("flicked")
+		attack_verb = list("golpeado")
 		STOP_PROCESSING(SSobj, src)
 
 /obj/item/match/extinguish()
@@ -111,7 +111,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	return lit * heat
 
 /obj/item/match/firebrand
-	name = "firebrand"
+	name = "tizon"
 	desc = ""
 	smoketime = 20 //40 seconds
 
@@ -123,7 +123,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 //FINE SMOKABLES//
 //////////////////
 /obj/item/clothing/face/cigarette
-	name = "cigarette"
+	name = "cigarrillo"
 	desc = ""
 	icon_state = "spliffoff"
 	throw_speed = 0.5
@@ -157,7 +157,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	abstract_type = /obj/item/clothing/face/cigarette
 
 /obj/item/clothing/face/cigarette/suicide_act(mob/user)
-	user.visible_message(span_suicide("[user] is huffing [src] as quickly as [user.p_they()] can! It looks like [user.p_theyre()] trying to give [user.p_them()]self cancer."))
+	user.visible_message(span_suicide("[user] esta inhalando [src] tan rapido como [user.p_they()] puede. Parece que [user.p_theyre()] esta intentando darle cancer a [user.p_them()] mismo."))
 	return (TOXLOSS|OXYLOSS)
 
 /obj/item/clothing/face/cigarette/Initialize()
@@ -196,7 +196,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	lit = TRUE
-	attack_verb = list("burnt", "singed")
+	attack_verb = list("quemado", "chamuscado")
 	hitsound = list('sound/blank.ogg')
 	damtype = "fire"
 	force = 4
@@ -244,7 +244,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	lit = FALSE
 	if(ismob(loc))
 		var/mob/living/M = loc
-		to_chat(M, span_notice("My [name] goes out."))
+		to_chat(M, span_notice("Mi [name] se apaga."))
 		M.update_inv_mouth()
 		M.update_inv_hands()
 
@@ -291,7 +291,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/face/cigarette/attack_self(mob/user, list/modifiers)
 	if(lit)
-		user.visible_message(span_notice("[user] calmly drops and treads on \the [src], putting it out instantly."))
+		user.visible_message(span_notice("[user] calmamente se cae y pisa \the [src], apagandolo de inmediato."))
 		new type_butt(user.loc)
 		new /obj/item/fertilizer/ash(user.loc)
 		qdel(src)
@@ -302,7 +302,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return ..()
 
 	if(M.on_fire && !lit)
-		light(span_notice("[user] lights [src] with [M]'s burning body. What a cold-blooded badass."))
+		light(span_notice("[user] ilumina [src] con el cuerpo ardiente de [M]. ¡Que asesino frio!"))
 		return
 
 	var/obj/item/clothing/face/cigarette/cig = help_light_cig(M)
@@ -330,7 +330,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/face/cigarette/rollie
 	abstract_type = /obj/item/clothing/face/cigarette/rollie
-	name = "zig"
+	name = "cigarrillo enrollado"
 	desc = ""
 	icon_state = "spliffoff"
 	icon_on = "spliffon"
@@ -359,7 +359,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	list_reagents = list(/datum/reagent/drug/space_drugs = 30)
 
 /obj/item/cigbutt
-	name = "zig butt"
+	name = "colilla de zig"
 	desc = ""
 	icon = 'icons/roguetown/items/lighting.dmi'
 	icon_state = "roach"
@@ -378,7 +378,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/face/cigarette/rollie/nicotine/zigar
 	name = "zigar"
-	desc = "A strong, manly verison of the common zig, this isnt your average smokers treat- No, this is for the humble, the wise, the ones 'in' on it. You know who you are."
+	desc = "Una version fuerte y varonil del zig comun, este no es el tratamiento tipico para los fumadores. No, esto es para los humildes, los sabios, los que estan interesados ​​en esto. Sabes quien eres."
 	icon_state = "zigaroff"
 	icon_on = "zigaron"
 	type_butt = /obj/item/cigbutt/zigar
@@ -386,13 +386,13 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	list_reagents = list(/datum/reagent/drug/nicotine = 120)
 
 /obj/item/cigbutt/zigar
-	name = "zigar butt"
+	name = "colilla de zigar"
 
 /////////////////
 //SMOKING PIPES//
 /////////////////
 /obj/item/clothing/face/cigarette/pipe
-	name = "pipe"
+	name = "pipa"
 	desc = ""
 	icon_state = "pipeoff"
 	item_state = "pipeoff"
@@ -408,7 +408,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	muteinmouth = FALSE
 
 /obj/item/clothing/face/cigarette/pipe/westman
-	name = "westman pipe"
+	name = "pipa westman"
 	desc = ""
 	icon_state = "longpipeoff"
 	item_state = "longpipeoff"
@@ -418,7 +418,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/clothing/face/cigarette/pipe/crafted/Initialize()
 	. = ..()
 	if(prob(50))
-		name = "westman pipe"
+		name = "pipa westman"
 		icon_state = "longpipeoff"
 		item_state = "longpipeoff"
 		icon_on = "longpipeon"
@@ -455,14 +455,14 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	if(packeditem)
-		to_chat(user, span_warning("It is already packed!"))
+		to_chat(user, span_warning("¡Ya esta empacado!"))
 		return
 
 	var/list/reagent_list = list()
 	if(istype(attacking_item, /obj/item/reagent_containers/food/snacks/produce))
 		var/obj/item/reagent_containers/food/snacks/produce/to_smoke = attacking_item
 		if(!to_smoke.dry && to_smoke.should_dry)
-			to_chat(user, span_warning("It has to be dried first!"))
+			to_chat(user, span_warning("¡Primero tiene que secarse!"))
 			return
 		if(to_smoke.pipe_reagents)
 			reagent_list = to_smoke.pipe_reagents
@@ -475,7 +475,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		for(var/datum/reagent/reagent as anything in to_smoke.reagents?.reagent_list)
 			reagent_list |= reagent.type
 			reagent_list[reagent.type] = reagent.volume
-	to_chat(user, span_notice("I stuff [attacking_item] into [src]."))
+	to_chat(user, span_notice("Metemos [attacking_item] en [src]."))
 	packeditem = TRUE
 	if(length(reagent_list))
 		reagents.add_reagent_list(reagent_list)
@@ -490,10 +490,10 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/face/cigarette/pipe/attack_self(mob/user, list/modifiers)
 	if(lit)
-		user.visible_message(span_notice("[user] apaga [src]."), span_notice("I put out [src]."))
+		user.visible_message(span_notice("[user] apaga [src]."), span_notice("Apago [src]."))
 		extinguish()
 	else if (packeditem)
-		to_chat(user, span_notice("I empty [src] onto the floor."))
+		to_chat(user, span_notice("Vaso [src] en el suelo."))
 		new /obj/item/fertilizer/ash(get_turf(user))
 		packeditem = FALSE
 		reagents.clear_reagents()
@@ -507,7 +507,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 //ZIPPO//
 /////////
 /obj/item/lighter
-	name = "\improper Zippo lighter"
+	name = "\improper Encendedor Zippo"
 	desc = ""
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "zippo"
@@ -536,11 +536,11 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/lighter/suicide_act(mob/living/carbon/user)
 	if (lit)
-		user.visible_message(span_suicide("[user] begins holding \the [src]'s flame up to [user.p_their()] face! It looks like [user.p_theyre()] trying to commit suicide!"))
+		user.visible_message(span_suicide("[user] comienza a sostener la llama de \the [src] frente al rostro de [user.p_their()]. ¡Parece que [user.p_theyre()] esta intentando suicidarse!"))
 		playsound(src, 'sound/blank.ogg', 50, TRUE)
 		return FIRELOSS
 	else
-		user.visible_message(span_suicide("[user] begins whacking [user.p_them()]self with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
+		user.visible_message(span_suicide("[user] comienza a golpear a [user.p_them()] si mismo con \the [src] ¡Parece que [user.p_theyre()] esta intentando suicidarse!"))
 		return BRUTELOSS
 
 /obj/item/lighter/update_overlays()
@@ -551,7 +551,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/lighter/ignition_effect(atom/A, mob/user)
 	if(get_temperature())
-		. = span_rose("With a single flick of [user.p_their()] wrist, [user] smoothly lights [A] with [src]. Damn [user.p_theyre()] cool.")
+		. = span_rose("Con un solo movimiento de [user.p_their()] muñeca, [user] enciende suavemente [A] con [src]. Maldita [user.p_theyre()] genial.")
 
 /obj/item/lighter/proc/set_lit(new_lit)
 	lit = new_lit
@@ -559,7 +559,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		force = 5
 		damtype = "fire"
 		hitsound = list('sound/blank.ogg')
-		attack_verb = list("burnt", "singed")
+		attack_verb = list("quemado", "chamuscado")
 		set_light(1)
 		START_PROCESSING(SSobj, src)
 	else
@@ -579,7 +579,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		if(!lit)
 			set_lit(TRUE)
 			if(fancy)
-				user.visible_message(span_notice("Without even breaking stride, [user] flips open and lights [src] in one smooth movement."), span_notice("Without even breaking stride, you flip open and light [src] in one smooth movement."))
+				user.visible_message(span_notice("Sin siquiera detenerse, [user] abre y enciende [src] en un solo movimiento fluido."), span_notice("Sin siquiera detenerse, abre y enciende [src] en un solo movimiento fluido."))
 			else
 				var/prot = FALSE
 				var/mob/living/carbon/human/H = user
@@ -596,15 +596,15 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 				else
 					var/hitzone = user.held_index_to_dir(user.active_hand_index) == "r" ? BODY_ZONE_PRECISE_R_HAND : BODY_ZONE_PRECISE_L_HAND
 					user.apply_damage(5, BURN, hitzone)
-					user.visible_message(span_warning("After a few attempts, [user] manages to light [src] - however, [user.p_they()] burn [user.p_their()] finger in the process."), span_warning("I burn myself while lighting the lighter!"))
+					user.visible_message(span_warning("Despues de algunos intentos, [user] logra encender [src], pero [user.p_they()] se quema el dedo [user.p_their()] en el proceso."), span_warning("¡Me queme mientras encendia el encendedor!"))
 					user.add_stress(/datum/stress_event/burnt_thumb)
 
 		else
 			set_lit(FALSE)
 			if(fancy)
-				user.visible_message(span_notice("I hear a quiet click, as [user] shuts off [src] without even looking at what [user.p_theyre()] doing. Wow."), span_notice("I quietly shut off [src] without even looking at what you're doing. Wow."))
+				user.visible_message(span_notice("Escucho un clic suave, mientras [user] apaga [src] sin siquiera mirar lo que [user.p_theyre()] esta haciendo. ¡Vaya!"), span_notice("Apague silenciosamente [src] sin siquiera mirar lo que estas haciendo. ¡Vaya!"))
 			else
-				user.visible_message(span_notice("[user] quietly shuts off [src]."), span_notice("I quietly shut off [src]."))
+				user.visible_message(span_notice("[user] se apaga silenciosamente [src]."), span_notice("Silenciosamente apague [src]."))
 	else
 		. = ..()
 
@@ -625,9 +625,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(M == user)
 		cig.attackby(src, user)
 	else if(fancy)
-		cig.light(span_rose("[user] whips the [name] out and holds it for [M]. [user.p_their(TRUE)] arm is as steady as the unflickering flame [user.p_they()] light[user.p_s()] \the [cig] with."))
+		cig.light(span_rose("[user] saca el [name] y se lo entrega a [M]. El brazo de [user.p_their(TRUE)] es tan firme como la llama incesante de la [user.p_they()] luz [user.p_s()] \the [cig]."))
 	else
-		cig.light(span_notice("[user] holds the [name] out for [M], and lights [M.p_their()] [cig.name]."))
+		cig.light(span_notice("[user] sostiene el [name] para [M] y enciende [M.p_their()] [cig.name]."))
 
 /obj/item/lighter/process()
 	open_flame()
@@ -682,4 +682,4 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/lighter/greyscale/ignition_effect(atom/A, mob/user)
 	if(get_temperature())
-		. = span_notice("After some fiddling, [user] manages to light [A] with [src].")
+		. = span_notice("Despues de un poco de esfuerzo, [user] logra encender [A] con [src].")

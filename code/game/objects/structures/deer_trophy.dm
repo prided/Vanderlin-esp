@@ -1,6 +1,6 @@
 /obj/structure/trophy/deer
-	name = "saiga trophy"
-	desc = "A saiga head, mounted on a display as a trophy of a good hunt. An unsavory decoration for Dendorites."
+	name = "Trofeo saiga"
+	desc = "Una cabeza saiga, montada en un expositor como trofeo de una buena caza. Una decoracion desagradable para los dendoritas."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "deer_trophy"
 	dir = SOUTH

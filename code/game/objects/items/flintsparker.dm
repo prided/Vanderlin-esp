@@ -1,6 +1,6 @@
 /obj/item/flint
-	name = "flint"
-	desc = "A jagged piece of flint, witness to the dances of fire and stone."
+	name = "pedernal"
+	desc = "Un trozo de pedernal dentado, testigo de las danzas del fuego y la piedra."
 	icon_state = "flint"
 	gripped_intents = null
 	//dropshrink = 0.75

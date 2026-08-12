@@ -1,6 +1,6 @@
 //wip wip wup
 /obj/structure/mirror
-	name = "mirror"
+	name = "espejo"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "mirror"
@@ -17,7 +17,7 @@
 	icon_state = "fancymirror"
 
 /obj/structure/mirror/courtagent
-	name = "magick mirror"
+	name = "espejo magico"
 	magick_mirror = TRUE
 
 /obj/structure/mirror/Initialize(mapload)
@@ -160,7 +160,7 @@
 		if("eye color")
 			var/list/eye_list = H.getorganslotlist(ORGAN_SLOT_EYES)
 			for(var/obj/item/organ/eyes/eyes as anything in eye_list)
-				var/new_eyes = input(user, "Choose your character's eye color:", "Character Preference", eyes.eye_color) as color|null
+				var/new_eyes = input(user, "Elige el color de ojos de tu personaje:", "Preferencias de personaje", eyes.eye_color) as color|null
 				if(new_eyes)
 					eyes.eye_color = sanitize_hexcolor(new_eyes, default = "#1753a8")
 					should_update = TRUE
@@ -192,7 +192,7 @@
 			)
 			jobs += "Cancel"
 
-			var/cover_job = tgui_input_list(user, "Select Cover Job", "COVER JOB", jobs)
+			var/cover_job = tgui_input_list(user, "Seleccionar trabajo de portada", "CUBRIR TRABAJO", jobs)
 			if(cover_job == "Cancel")
 				return
 			H.job = cover_job

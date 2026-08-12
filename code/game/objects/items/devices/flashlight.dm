@@ -1,5 +1,5 @@
 /obj/item/flashlight
-	name = "flashlight"
+	name = "linterna"
 	desc = ""
 	custom_price = 10
 	icon = 'icons/obj/lighting.dmi'
@@ -38,15 +38,15 @@
 
 /obj/item/flashlight/suicide_act(mob/living/carbon/human/user)
 	if (user.is_blind())
-		user.visible_message("<span class='suicide'>[user] is putting [src] close to [user.p_their()] eyes and turning it on... but [user.p_theyre()] blind!</span>")
+		user.visible_message("<span class='suicide'>[user] esta poniendo [src] cerca de los ojos de [user.p_their()] y encendendolo... pero [user.p_theyre()] ¡esta ciego!</span>")
 		return SHAME
-	user.visible_message("<span class='suicide'>[user] is putting [src] close to [user.p_their()] eyes and turning it on! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] esta poniendo [src] cerca de los ojos de [user.p_their()] y ¡encenderla! Parece que [user.p_theyre()] esta intentando suicidarse </span>")
 	return (FIRELOSS)
 
 // FLARES
 
 /obj/item/flashlight/flare
-	name = "flare"
+	name = "destello"
 	desc = ""
 	w_class = WEIGHT_CLASS_SMALL
 	light_outer_range = 7 // Pretty bright.
@@ -98,16 +98,16 @@
 
 	// Usual checks
 	if(!fuel)
-		to_chat(user, "<span class='warning'>[src] is out of fuel!</span>")
+		to_chat(user, "¡<span class='warning'>[src]se quedo sin combustible!</span>")
 		return
 	if(on)
-		to_chat(user, "<span class='warning'>[src] is already on!</span>")
+		to_chat(user, "¡<span class='warning'>[src] ya esta encendida!</span>")
 		return
 
 	. = ..()
 	// All good, turn it on.
 	if(.)
-		user.visible_message("<span class='notice'>[user] lights \the [src].</span>", "<span class='notice'>I light \the [src]!</span>")
+		user.visible_message("<span class='notice'>[user] ilumina \the [src].</span>", "<span class='notice'>Ilumino \the [src]¡</span>")
 		force = on_damage
 //		damtype = "fire"
 		START_PROCESSING(SSobj, src)
@@ -116,7 +116,7 @@
 	return on * heat
 
 /obj/item/flashlight/flare/torch
-	name = "torch"
+	name = "antorcha"
 	desc = ""
 	w_class = WEIGHT_CLASS_NORMAL
 	light_outer_range = 5
@@ -179,7 +179,7 @@
 
 	// Usual checks
 	if(!fuel)
-		to_chat(user, "<span class='warning'>[src] doesn't have any pitch left!</span>")
+		to_chat(user, "¡<span class='warning'>[src] no tiene mas luz!</span>")
 		return
 	if(on)
 		turn_off()
@@ -243,7 +243,7 @@
 	spark_act()
 
 /obj/item/flashlight/flare/torch/metal
-	name = "torch"
+	name = "antorcha"
 	force = 1
 	icon_state = "mtorch"
 	light_outer_range = 6
@@ -259,7 +259,7 @@
 	spark_act()
 
 /obj/item/flashlight/flare/torch/lantern
-	name = "iron lamptern"
+	name = "farol de hierro"
 	icon_state = "lamp"
 	desc = "Una luz para guiar el camino."
 	light_outer_range = 7
@@ -303,7 +303,7 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/flashlight/flare/torch/lantern/bronzelamptern
-	name = "bronze lamptern"
+	name = "farol de bronce"
 	icon_state = "bronzelamp"
 	item_state = "bronzelamp"
 	desc = "Una maravilla de la ingenieria que emite un extraño brillo verde."
@@ -317,9 +317,9 @@
 	item_weight = 453 GRAMS
 
 /obj/item/flashlight/flare/torch/lantern/copper
-	name = "copper lamptern"
+	name = "farola de cobre"
 	icon_state = "clamp"
-	desc = "A simple and cheap lamptern."
+	desc = "Una lampara sencilla y economica."
 	light_outer_range = 7
 	on = FALSE
 	flags_1 = CONDUCT_1

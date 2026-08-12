@@ -1,5 +1,5 @@
 /obj/structure/fireaxecabinet
-	name = "sword rack"
+	name = "estante de espada"
 	desc = ""
 	icon = 'icons/obj/wallmounts.dmi'
 	icon_state = "fireaxe"
@@ -25,12 +25,12 @@
 	if(istype(I, /obj/item/weapon/sword/long/heirloom) && !heirloom)
 		var/obj/item/weapon/sword/long/heirloom/F = I
 		if(HAS_TRAIT(F, TRAIT_WIELDED))
-			to_chat(user, "<span class='warning'>Unwield \the [F] first.</span>")
+			to_chat(user, "<span class='warning'>USin manejar \the [F] primero.</span>")
 			return
 		if(!user.transferItemToLoc(F, src))
 			return
 		heirloom = F
-		to_chat(user, "<span class='notice'>I place \the [F] back in \the [src].</span>")
+		to_chat(user, "<span class='notice'>Devuelvo \the [F] a \the [src].</span>")
 		update_appearance(UPDATE_ICON_STATE)
 		return
 	return ..()
@@ -41,7 +41,7 @@
 		return
 	if(heirloom)
 		user.put_in_hands(heirloom)
-		to_chat(user, "<span class='notice'>I take \the [heirloom] from \the [src].</span>")
+		to_chat(user, "<span class='notice'>Tomo \the [heirloom] de \the [src].</span>")
 		heirloom = null
 		src.add_fingerprint(user)
 		update_appearance(UPDATE_ICON_STATE)
@@ -69,8 +69,8 @@
 	update_appearance(UPDATE_ICON_STATE)
 
 /obj/structure/fireaxecabinet/unforgotten
-	name = "unforgotten blade mantle"
-	desc = "A fitting resting place for a Psydonian sword etched and scratched by endurance long past."
+	name = "manto de hoja inolvidable"
+	desc = "Un lugar de descanso apropiado para una espada Psydonian grabada y rayada por la resistencia del pasado."
 	icon = 'icons/obj/wallmounts.dmi'
 	icon_state = "fireaxe"
 	heirloom = /obj/item/weapon/sword/long/greatsword/psydon/unforgotten/
@@ -92,7 +92,7 @@
 			if(!user.transferItemToLoc(F, src))
 				return
 			heirloom = F
-			to_chat(user, "<span class='notice'>I place \the [F] back in \the [src].</span>")
+			to_chat(user, "<span class='notice'>Devuelvo \the [F] a \the [src].</span>")
 			desc = F.desc
 			update_appearance(UPDATE_ICON_STATE)
 			return

@@ -130,7 +130,7 @@
 /obj/throw_at(atom/target, range, speed, mob/thrower, spin = TRUE, diagonals_first = 0, datum/callback/callback, force, gentle = FALSE)
 	..()
 	if(obj_flags & FROZEN)
-		visible_message("<span class='danger'>[src] shatters into a million pieces!</span>")
+		visible_message("<span class='danger'>[src] se desintegra en un millon de pedazos!</span>")
 		qdel(src)
 
 /obj/proc/updateUsrDialog()
@@ -226,14 +226,14 @@
 			usr.client.object_say(src)
 	if(href_list[VV_HK_MASS_DEL_TYPE])
 		if(check_rights(R_DEBUG|R_SERVER))
-			var/action_type = tgui_alert(usr, "¿Tipo estricto ([type]) o tipo y todos los subtipos?", "Type", list("Strict type","Type and subtypes","Cancel"))
+			var/action_type = tgui_alert(usr, "¿Tipo estricto ([type]) o tipo y todos los subtipos?", "Tipo", list("Tipo estricto","Tipo y todos los subtipos","Cancelar"))
 			if(action_type == "Cancel" || !action_type)
 				return
 
-			if(tgui_alert(usr, "¿Esta realmente seguro de que desea eliminar todos los objetos del tipo [type]?", "Mass Delete", list("Yes","No")) != "Yes")
+			if(tgui_alert(usr, "¿Esta realmente seguro de que desea eliminar todos los objetos del tipo [type]?", "Eliminar Masivamente", list("Si","No")) != "Si")
 				return
 
-			if(tgui_alert(usr, "Second confirmation required. Delete?", "Confirmar", list("Yes","No")) != "Yes")
+			if(tgui_alert(usr, "Se requiere una segunda confirmacion. ¿Eliminar?", "Confirmar", list("Si","No")) != "Si")
 				return
 
 			var/O_type = type
@@ -278,18 +278,18 @@
 /obj/proc/reskin_obj(mob/M)
 	if(!LAZYLEN(unique_reskin))
 		return
-	to_chat(M, "<b>Reskin options for [name]:</b>")
+	to_chat(M, "<b>Ropciones de Reskin para [name]:</b>")
 	for(var/V in unique_reskin)
 		var/output = icon2html(src, M, unique_reskin[V])
 		to_chat(M, "[V]: <span class='reallybig'>[output]</span>")
 
-	var/choice = input(M,"Warning, you can only reskin [src] once!","Reskin Object") as null|anything in sortList(unique_reskin)
+	var/choice = input(M,"Advertencia, ¡solo puedes cambiar la apariencia de [src] una vez!","Objeto reskin") as null|anything in sortList(unique_reskin)
 	if(!QDELETED(src) && choice && !current_skin && !M.incapacitated(IGNORE_GRAB) && in_range(M,src))
 		if(!unique_reskin[choice])
 			return
 		current_skin = choice
 		icon_state = unique_reskin[choice]
-		to_chat(M, "[src] is now skinned as '[choice].'")
+		to_chat(M, "[src] ahora tiene la piel de '[choice]'.")
 
 // Should move all contained objects to it's location.
 /obj/proc/dump_contents()

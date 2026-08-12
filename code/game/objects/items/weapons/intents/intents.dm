@@ -3,7 +3,7 @@
 	var/desc = ""
 //	icon = 'icons/mob/roguehud.dmi'		so you can find the icons
 	var/icon_state = "instrike"
-	var/list/attack_verb = list("hits", "huelgas")
+	var/list/attack_verb = list("golpea", "huelgas")
 	/// Weakref to the item the mastermob is holding
 	var/datum/weakref/masteritem
 	/// Weakref to the master mob or our holder
@@ -223,7 +223,7 @@
 
 
 /datum/intent/use
-	name = "use"
+	name = "usar"
 	icon_state = "inuse"
 	chargetime = 0
 	noaa = TRUE
@@ -236,7 +236,7 @@
 	item_damage_type = "blunt"
 
 /datum/intent/kick
-	name = "kick"
+	name = "patada"
 	candodge = TRUE
 	canparry = TRUE
 	chargetime = 0
@@ -250,7 +250,7 @@
 	item_damage_type = "blunt"
 
 /datum/intent/bite
-	name = "bite"
+	name = "mordisco"
 	candodge = TRUE
 	canparry = TRUE
 	chargedrain = 0
@@ -258,11 +258,11 @@
 	swingdelay = 0
 	unarmed = TRUE
 	noaa = FALSE
-	attack_verb = list("bites")
+	attack_verb = list("muerde")
 	item_damage_type = "stab"
 
 /datum/intent/jump
-	name = "jump"
+	name = "saltar"
 	candodge = FALSE
 	canparry = FALSE
 	chargedrain = 0
@@ -317,17 +317,17 @@
 
 
 /datum/intent/hit
-	name = "hit"
+	name = "golpe (en el juego)"
 	icon_state = "instrike"
-	attack_verb = list("hit", "strike")
+	attack_verb = list("golpea", "golpea")
 	item_damage_type = "blunt"
 	chargetime = 0
 	swingdelay = 0
 
 /datum/intent/stab
-	name = "stab"
+	name = "apuntar con la espada"
 	icon_state = "instab"
-	attack_verb = list("stab")
+	attack_verb = list("apuñala")
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
 	animname = "stab"
 	blade_class = BCLASS_STAB
@@ -336,9 +336,9 @@
 	swingdelay = 0
 
 /datum/intent/pick
-	name = "pick"
+	name = "pico"
 	icon_state = "inpick"
-	attack_verb = list("picks","impales")
+	attack_verb = list("perfora","impales")
 	hitsound = list('sound/combat/hits/pick/genpick (1).ogg', 'sound/combat/hits/pick/genpick (2).ogg')
 	item_damage_type = "stab"
 	animname = "strike"
@@ -347,9 +347,9 @@
 	swingdelay = 3
 
 /datum/intent/drill
-	name = "drill"
+	name = "taladro"
 	icon_state = "inpick"
-	attack_verb = list("drills","augers")
+	attack_verb = list("perfora","perfora")
 	hitsound = list('sound/combat/hits/pick/genpick (1).ogg', 'sound/combat/hits/pick/genpick (2).ogg')
 	animname = "strike"
 	item_damage_type = "stab"
@@ -358,9 +358,9 @@
 	swingdelay = 3
 
 /datum/intent/simple/headbutt
-	name = "headbutt"
+	name = "cabezazo"
 	icon_state = "instrike"
-	attack_verb = list("headbutts", "rams")
+	attack_verb = list("da un cabezazo a", "embiste")
 	animname = "smash"
 	blade_class = BCLASS_BLUNT
 	hitsound = "punch_hard"
@@ -370,13 +370,13 @@
 	candodge = TRUE
 	canparry = TRUE
 	item_damage_type = "blunt"
-	miss_text = "thrusts their head at nothing!"
+	miss_text = "¡Mete la cabeza ante la nada!"
 	miss_sound = PUNCHWOOSH
 
 /datum/intent/simple/hind_kick
-	name = "kick"
+	name = "patada"
 	icon_state = "instrike"
-	attack_verb = list("kicks", "rams")
+	attack_verb = list("patea", "embiste")
 	animname = "smash"
 	blade_class = BCLASS_BLUNT
 	hitsound = "punch_hard"
@@ -386,13 +386,13 @@
 	candodge = TRUE
 	canparry = TRUE
 	item_damage_type = "blunt"
-	miss_text = "thrusts their legs at nothing!"
+	miss_text = "¡empuja sus piernas a la nada!"
 	miss_sound = PUNCHWOOSH
 
 /datum/intent/simple/claw
-	name = "claw"
+	name = "garra"
 	icon_state = "inclaw"
-	attack_verb = list("slashes", "claws")
+	attack_verb = list("corta", "desgarra")
 	animname = "claw"
 	blade_class = BCLASS_CUT
 	hitsound = "smallslash"
@@ -401,13 +401,13 @@
 	swingdelay = 1
 	candodge = TRUE
 	canparry = TRUE
-	miss_text = "slashes the air!"
+	miss_text = "corta el aire!"
 	item_damage_type = "slash"
 
 /datum/intent/simple/peck
-	name = "peck"
+	name = "picotear"
 	icon_state = "instrike"
-	attack_verb = list("pecks", "scratches")
+	attack_verb = list("picotea", "araña")
 	animname = "blank22"
 	blade_class = BCLASS_CUT
 	hitsound = "smallslash"
@@ -416,13 +416,13 @@
 	swingdelay = 1
 	candodge = TRUE
 	canparry = TRUE
-	miss_text = "pecks the air!"
+	miss_text = "picotea el aire!"
 	item_damage_type = "stab"
 
 /datum/intent/simple/bite
-	name = "bite"
+	name = "mordisco"
 	icon_state = "instrike"
-	attack_verb = list("bites")
+	attack_verb = list("muerde")
 	animname = "bite"
 	blade_class = BCLASS_CUT
 	hitsound = "smallslash"
@@ -432,13 +432,13 @@
 	candodge = TRUE
 	canparry = TRUE
 	item_damage_type = "stab"
-	miss_text = "bites the air!"
+	miss_text = "muerde el aire!"
 
 //Applies no wounds.
 /datum/intent/simple/touch
-	name = "touch"
+	name = "tocar"
 	icon_state = "instrike"
-	attack_verb = list("agarra", "toca", "taps")
+	attack_verb = list("agarra", "toca", "golpea suavemente")
 	animname = "blank22"
 	blade_class = null
 	hitsound = "punch_hard"
@@ -449,16 +449,16 @@
 	canparry = TRUE
 
 /datum/intent/unarmed/claw	// defined as attack with some AP
-	name = "claw"
+	name = "garra"
 	icon_state = "inclaw"
-	attack_verb = list("claws", "scratches", "desgarra", "tears")
+	attack_verb = list("desgarra", "araña", "desgarra", "desgarra")
 	animname = "claw"
 	blade_class = BCLASS_CUT
 	hitsound = "smallslash"
 	penfactor = 20
 	candodge = TRUE
 	canparry = TRUE
-	miss_text = "claws the air!"
+	miss_text = "¡garra el aire!"
 	miss_sound = "blunthwoosh"
 	chargetime = 0
 	misscost = 5
@@ -468,9 +468,9 @@
 	item_damage_type = "slash"
 
 /datum/intent/unarmed/ascendedclaw
-	name = "claw"
+	name = "garra"
 	icon_state = "inclaw"
-	attack_verb = list("claws", "mauls", "eviscera")
+	attack_verb = list("desgarra", "despedaza", "eviscera")
 	animname = "claw"
 	blade_class = BCLASS_CHOP
 	hitsound = "genslash"
@@ -478,14 +478,14 @@
 	damfactor = 40
 	candodge = TRUE
 	canparry = TRUE
-	miss_text = "slashes the air!"
+	miss_text = "corta el aire!"
 	miss_sound = "bluntwooshlarge"
 	item_damage_type = "slash"
 
 /datum/intent/simple/sting
-	name = "sting"
+	name = "picadura"
 	icon_state = "instrike"
-	attack_verb = list("stings")
+	attack_verb = list("pica")
 	animname = "blank22"
 	blade_class = BCLASS_STAB
 	hitsound = "smallslash"
@@ -498,9 +498,9 @@
 	item_damage_type = "stab"
 
 /datum/intent/simple/bigbite
-	name = "big bite"
+	name = "gran bocado"
 	icon_state = "instrike"
-	attack_verb = list("gnashes", "viciously bites")
+	attack_verb = list("muerde", "muerde brutalmente")
 	animname = "bite"
 	blade_class = BCLASS_CHOP
 	hitsound = "smallslash"
@@ -510,13 +510,13 @@
 	candodge = TRUE
 	canparry = TRUE
 	item_damage_type = "stab"
-	miss_text = "bites the air!"
+	miss_text = "muerde el aire!"
 	miss_sound = PUNCHWOOSH
 
 /datum/intent/simple/stab
-	name = "stab"
+	name = "apuntar con la espada"
 	icon_state = "instrike"
-	attack_verb = list("impales", "stabs")
+	attack_verb = list("impales", "apuñala")
 	animname = "stab"
 	blade_class = BCLASS_STAB
 	hitsound = "smallslash"
@@ -525,13 +525,13 @@
 	swingdelay = 1
 	candodge = TRUE
 	canparry = TRUE
-	miss_text = "stabs the air!"
+	miss_text = "apuñala el aire!"
 	item_damage_type = "stab"
 
 /datum/intent/simple/axe
-	name = "hack"
+	name = "cortar"
 	icon_state = "instrike"
-	attack_verb = list("hacks at", "chops at", "bashes")
+	attack_verb = list("machetea", "taja", "golpea")
 	animname = "chop"
 	blade_class = BCLASS_CUT
 	hitsound = list("genchop", "genslash")
@@ -543,9 +543,9 @@
 	item_damage_type = "slash"
 
 /datum/intent/simple/spear
-	name = "spear"
+	name = "lanza"
 	icon_state = "instrike"
-	attack_verb = list("stabs", "skewers", "bashes")
+	attack_verb = list("apuñala", "ensarta", "golpea")
 	animname = "stab"
 	blade_class = BCLASS_CUT
 	hitsound = list("genthrust", "genstab")
@@ -557,9 +557,9 @@
 	item_damage_type = "stab"
 
 /datum/intent/simple/wereclaw
-	name = "claw"
+	name = "garra"
 	icon_state = "instrike"
-	attack_verb = list("claws", "pecks")
+	attack_verb = list("desgarra", "picotea")
 	animname = "claw"
 	blade_class = BCLASS_CHOP
 	hitsound = "genslash"
@@ -568,14 +568,14 @@
 	swingdelay = 3
 	candodge = TRUE
 	canparry = TRUE
-	miss_text = "slashes the air!"
+	miss_text = "corta el aire!"
 	miss_sound = BLADEWOOSH_LARGE
 	item_damage_type = "slash"
 
 /datum/intent/simple/werebite
-	name = "bite"
+	name = "mordisco"
 	icon_state = "instrike"
-	attack_verb = list("bites")
+	attack_verb = list("muerde")
 	animname = "bite"
 	blade_class = BCLASS_BITE
 	hitsound = "smallslash"
@@ -584,6 +584,6 @@
 	swingdelay = 3
 	candodge = TRUE
 	canparry = TRUE
-	miss_text = "bites the air!"
+	miss_text = "muerde el aire!"
 	miss_sound = PUNCHWOOSH
 	item_damage_type = "stab"

@@ -7,16 +7,16 @@
  */
 /atom/proc/get_examine_name(mob/user, use_article = TRUE)
 	if(use_article)
-		return article ? "[article] <b>[name]</b>" : gender == PLURAL ? "some <b>[name]</b>" : "\a <b>[name]</b>"
+		return article ? "[article] <b>[name]</b>" : gender == PLURAL ? "unos <b>[name]</b>" : "\a <b>[name]</b>"
 	return "<b>[name]</b>"
 
 ///Generate the full examine string of this atom (including icon for goonchat)
 /atom/proc/get_examine_string(mob/user, thats = FALSE)
 	. = get_examine_name(user)
-	var/list/override = list(article || (gender == PLURAL ? "some" : "a"), " ", "[get_examine_name(user, FALSE)]")
+	var/list/override = list(article || (gender == PLURAL ? "unos" : "un"), " ", "[get_examine_name(user, FALSE)]")
 	if(SEND_SIGNAL(src, COMSIG_ATOM_GET_EXAMINE_NAME, user, override) & COMPONENT_EXNAME_CHANGED)
 		. = override.Join("")
-	return "[thats ? ismob(src) ? "This is " : "That's " : ""][.]"
+	return "[thats ? ismob(src) ? "Esto es " : "Eso es " : ""][.]"
 
 /atom/proc/get_examine_desc(mob/user)
 	return desc
@@ -53,23 +53,23 @@
 		if(reagents.flags & TRANSPARENT)
 			if(length(reagents.reagent_list))
 				if(user.can_see_reagents()) //Show each individual reagent
-					. += "It contains:"
+					. += "Contiene:"
 					for(var/datum/reagent/R in reagents.reagent_list)
-						. += "[(UNIT_FORM_STRING(R.volume))] of <font color=[R.color]>[R.name]</font>"
+						. += "[(UNIT_FORM_STRING(R.volume))] de <font color=[R.color]>[R.name]</font>"
 				else //Otherwise, just show the total volume
 					var/total_volume = 0
 					var/reagent_color
 					for(var/datum/reagent/R in reagents.reagent_list)
 						total_volume += R.volume
 					reagent_color = mix_color_from_reagents(reagents.reagent_list)
-					. += "It contains [(UNIT_FORM_STRING(total_volume))] of <font color=[reagent_color]>something.</font>"
+					. += "Contiene [(UNIT_FORM_STRING(total_volume))] de <font color=[reagent_color]>algo.</font>"
 			else
-				. += "It's empty."
+				. += "Esta vacio."
 		else if(reagents.flags & AMOUNT_VISIBLE)
 			if(reagents.total_volume)
-				. += "<span class='notice'>It has [(UNIT_FORM_STRING(round(reagents.total_volume, 0.1)))] left.</span>"
+				. += "<span class='notice'>Le quedan [(UNIT_FORM_STRING(round(reagents.total_volume, 0.1)))].</span>"
 			else
-				. += "<span class='danger'>It's empty.</span>"
+				. += "<span class='danger'>Esta vacio.</span>"
 		//SNIFFING
 		if (user.zone_selected == BODY_ZONE_PRECISE_NOSE && get_dist(src, user) <= 1)
 			// if atom's path is item/reagent_containers/glass/carafe
@@ -81,7 +81,7 @@
 				var/obj/item/reagent_containers/glass/alchemical/A = src
 				is_not_closed = !A.closed
 			if(is_not_closed && reagents.total_volume) // if the container is open, and there's liquids in there
-				user.visible_message(span_info("[user] takes a whiff of [src]."))
+				user.visible_message(span_info("[user] olfatea [src]."))
 				. += span_notice("Huelo [src.reagents.generate_scent_message()].")
 				if(HAS_TRAIT(user, TRAIT_LEGENDARY_ALCHEMIST))
 					var/list/full_reagents = list()
@@ -89,7 +89,7 @@
 						if(R.volume > 0)
 							full_reagents += "[LOWER_TEXT(R.name)]"
 					if(length(full_reagents))
-						. += span_notice("I can identity this smell as [full_reagents.Join(", ")].")
+						. += span_notice("Puedo identificar este olor como [full_reagents.Join(", ")].")
 	SEND_SIGNAL(src, COMSIG_ATOM_EXAMINE, user, .)
 
 /**

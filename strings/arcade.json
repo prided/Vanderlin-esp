@@ -1,7 +1,7 @@
 {
 	"rpg_adjective": [
 		"Angustiado",
-		"Automático",
+		"Automatico",
 		"Cubano",
 		"Duque",
 		"Rey del Terror",
@@ -17,15 +17,15 @@
 
 	"rpg_adjective_halloween": [
 		"Sanguinario",
-		"Cadavérico",
+		"Cadaverico",
 		"Escalofriante",
 		"Demente",
-		"Demoníaco",
+		"Demoniaco",
 		"Desquiciado",
 		"Aterrador",
 		"Eldritch",
 		"Espectral",
-		"Necrófago",
+		"Necrofago",
 		"Siniestro",
 		"Espantoso",
 		"Horrendo",
@@ -34,11 +34,11 @@
 		"Macabro",
 		"Armado con machete",
 		"Agusanado",
-		"Malévolo",
-		"Maníaco",
-		"Mórbido",
+		"Malevolo",
+		"Maniaco",
+		"Morbido",
 		"Fantasmal",
-		"Poseído",
+		"Poseido",
 		"Putrefacto",
 		"Tenebroso",
 		"Repulsivo",
@@ -123,13 +123,13 @@
 	],
 
 	"rpg_enemy_halloween": [
-		"Artífice",
+		"Artifice",
 		"Banshee",
 		"Hombre del saco",
 		"Quimera",
 		"Payaso",
-		"Cadáver",
-		"Críptido",
+		"Cadaver",
+		"Criptido",
 		"Dullahan",
 		"Gibdo",
 		"Rey Goblin",
@@ -141,7 +141,7 @@
 		"Segador",
 		"Shoggoth",
 		"Esqueleto",
-		"Tarántula",
+		"Tarantula",
 		"Tomate",
 		"Vampiro",
 		"Wendigo",
@@ -160,22 +160,22 @@
 		"Krampus",
 		"Pequeño tamborilero",
 		"Scrooge",
-		"Calcetín acechante",
+		"Calcetin acechante",
 		"Yeti",
 		"Yuki-Onna"
 	],
 
 	"rpg_weapon": [
-		"bate de béisbol",
+		"bate de beisbol",
 		"bocina de bicicleta",
 		"botella rota",
 		"cuchillo de chef",
 		"claymore",
 		"palanca",
-		"látigo del curador",
+		"latigo del curador",
 		"hacha de incendios",
 		"extintor",
-		"tanque de oxígeno lleno",
+		"tanque de oxigeno lleno",
 		"fragmento de vidrio",
 		"liz o' nine tails",
 		"null rod",
@@ -191,17 +191,17 @@
 		"jack-o'-lantern encendida",
 		"machete",
 		"daga de plata",
-		"fémur de esqueleto",
+		"femur de esqueleto",
 		"estaca de madera"
 	],
 	
 	"rpg_weapon_xmas": [
-		"cúter",
+		"cuter",
 		"garrote de luces navideñas",
-		"carámbano afilado",
-		"ramita de muérdago",
+		"carambano afilado",
+		"ramita de muerdago",
 		"bola de nieve arrojada",
-		"árbol de Navidad entero"
+		"arbol de Navidad entero"
 	]
 
 }

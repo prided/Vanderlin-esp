@@ -1,8 +1,8 @@
 /datum/objective/personal/lux_extraction
 	name = "Extracto Lux"
-	category = "Pestra's Chosen"
+	category = "Elegido de Pestra"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Pestra grows stronger", "Medicine knowledge")
+	rewards = list("2 Triunfos", "Pestra se fortalece", "Conocimientos de medicina")
 
 /datum/objective/personal/lux_extraction/on_creation()
 	. = ..()
@@ -24,7 +24,7 @@
 
 /datum/objective/personal/lux_extraction/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have extracted lux and completed Pestra's objective!"))
+	to_chat(owner.current, span_greentext("¡Has extraido Lux y completado el objetivo de Pestra!"))
 	adjust_storyteller_influence(PESTRA, 20)
 	UnregisterSignal(owner.current, COMSIG_LUX_EXTRACTED)
 
@@ -33,4 +33,4 @@
 	owner.current.adjust_skill_level(/datum/attribute/skill/misc/medicine, 10)
 
 /datum/objective/personal/lux_extraction/update_explanation_text()
-	explanation_text = "Extract lux from a living being to sate Pestra's curiosity!"
+	explanation_text = "¡Extrae Lux de un ser vivo para saciar la curiosidad de Pestra!"

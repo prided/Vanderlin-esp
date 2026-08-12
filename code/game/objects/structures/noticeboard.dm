@@ -1,5 +1,5 @@
 /obj/structure/noticeboard
-	name = "notice board"
+	name = "tablon de anuncios"
 	desc = ""
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "nboard00"
@@ -30,9 +30,9 @@
 				return
 			notices++
 			icon_state = "nboard0[notices]"
-			to_chat(user, "<span class='notice'>I pin the [O] to the noticeboard.</span>")
+			to_chat(user, "<span class='notice'>Fijo el [O] en el tablon de anuncios.</span>")
 		else
-			to_chat(user, "<span class='warning'>The notice board is full!</span>")
+			to_chat(user, "<span class='warning'>¡El tablon de anuncios esta lleno!</span>")
 	else
 		return ..()
 
@@ -71,7 +71,7 @@
 				add_fingerprint(usr)
 				P.attackby(I, usr)
 			else
-				to_chat(usr, "<span class='warning'>You'll need something to write with!</span>")
+				to_chat(usr, "<span class='warning'>¡Necesitaras algo con que escribir!</span>")
 
 	if(href_list["read"])
 		var/obj/item/I = locate(href_list["read"]) in contents

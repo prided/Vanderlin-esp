@@ -1,5 +1,5 @@
 /datum/action/cooldown/meatvine/personal/slow_ground
-	name = "Slow Ground"
+	name = "Terreno lento"
 	desc = "Cubre el suelo con una sustancia pegajosa que ralentiza el movimiento."
 	button_icon_state = "slow_ground"
 	cooldown_time = 20 SECONDS
@@ -111,7 +111,7 @@
 
 /obj/effect/decal/cleanable/meatvine_slow
 	name = "residuo pegajoso"
-	desc = "A sticky substance that slows movement."
+	desc = "Sustancia pegajosa que ralentiza el movimiento."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "acid_strong"
 	layer = TURF_LAYER

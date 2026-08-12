@@ -1,5 +1,5 @@
 /obj/item/teleportation_scroll
-	name = "scroll of teleportation"
+	name = "pergamino de teletransportacion"
 	desc = ""
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "scroll"
@@ -12,7 +12,7 @@
 	item_weight = 65 GRAMS
 
 /obj/item/teleportation_scroll/apprentice
-	name = "lesser scroll of teleportation"
+	name = "pergamino menor de teletransportacion"
 	uses = 1
 
 
@@ -49,7 +49,7 @@
 
 	var/A
 
-	A = input(user, "Area to jump to", "BOOYEA", A) as null|anything in GLOB.teleportlocs
+	A = input(user, "Area a la que saltar", "BOOYEA", A) as null|anything in GLOB.teleportlocs
 	if(!src || QDELETED(src) || !user || !user.is_holding(src) || user.incapacitated(IGNORE_GRAB) || !A || !uses)
 		return
 	var/area/thearea = GLOB.teleportlocs[A]
@@ -64,7 +64,7 @@
 			L += T
 
 	if(!L.len)
-		to_chat(user, "The spell matrix was unable to locate a suitable teleport destination for an unknown reason. Sorry.")
+		to_chat(user, "La matriz de hechizos no pudo localizar un destino de teletransporte adecuado por una razon desconocida. Lo sentimos.")
 		return
 
 	if(do_teleport(user, pick(L), forceMove = TRUE, channel = TELEPORT_CHANNEL_MAGIC, forced = TRUE))

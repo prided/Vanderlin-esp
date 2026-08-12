@@ -1,7 +1,7 @@
 ///// KEEP AREAS //////
 
 /area/indoors/town/keep
-	name = "Keep"
+	name = "Fortaleza"
 	icon = 'icons/turf/areas/manor.dmi'
 	icon_state = "manor"
 	background_track = 'sound/music/area/manor.ogg'
@@ -11,27 +11,27 @@
 
 /area/indoors/town/keep/Initialize()
 	. = ..()
-	first_time_text = "THE KEEP OF [uppertext(SSmapping.config.map_name)]"
+	first_time_text = "LA FORTALEZA DE [uppertext(SSmapping.config.map_name)]"
 
 /area/indoors/town/keep/thewall
-	name = "Keep Wall"
+	name = "muro de la fortaleza"
 	icon_state = "wall"
 
 /area/outdoors/town/keep
-	name = "Keep Grounds"
+	name = "terrenos de la fortaleza"
 	icon = 'icons/turf/areas/manor.dmi'
 	icon_state = "manor_out"
 
 /area/outdoors/town/keep/Initialize()
 	. = ..()
-	first_time_text = "[uppertext(SSmapping.config.map_name)] KEEP GROUNDS"
+	first_time_text = "[uppertext(SSmapping.config.map_name)]: TERRENOS DE LA FORTALEZA"
 
 /area/outdoors/town/keep/roof
-	name = "Keep Roof"
+	name = "tejado de la fortaleza"
 	icon_state = "manor_roof"
 
 /area/indoors/town/keep/throne
-	name = "Throne Room"
+	name = "Salon del Trono"
 	icon_state = "throne"
 
 /area/indoors/town/keep/lord_appt
@@ -39,47 +39,47 @@
 	icon_state = "lord_appt"
 
 /area/indoors/town/keep/captain
-	name = "Captain's Room"
+	name = "habitacion del Capitan"
 	icon_state = "captain"
 
 /area/indoors/town/keep/hand
-	name = "Hand's Room"
+	name = "habitacion de la Mano"
 	icon_state = "hand"
 
 /area/indoors/town/keep/courtagent
-	name = "Court Agent's Hideout"
+	name = "escondite del Agente de la Corte"
 	icon_state = "court agent"
 	background_track = 'sound/music/area/manorgarri.ogg'
 	background_track_dusk = null
 	background_track_night = null
 
 /area/indoors/town/keep/passages
-	name = "Keep Passages"
+	name = "pasadizos de la fortaleza"
 	icon_state = "passage"
 
 /area/indoors/town/keep/passages/basement
-	name = "Keep Passages (Basement)"
+	name = "pasadizos de la fortaleza (sotano)"
 	icon_state = "passage_base"
 	converted_type = /area/outdoors/exposed
 
 /area/indoors/town/keep/passages/groundfloor
-	name = "Keep Passages (Ground)"
+	name = "pasadizos de la fortaleza (planta baja)"
 	icon_state = "passage_ground"
 
 /area/indoors/town/keep/passages/firstfloor
-	name = "Keep Passages (First Floor)"
+	name = "pasadizos de la fortaleza (primer piso)"
 	icon_state = "passage_first"
 
 /area/indoors/town/keep/passages/secondfloor
-	name = "Keep Passages (Second Floor)"
+	name = "pasadizos de la fortaleza (segundo piso)"
 	icon_state = "passage_second"
 
 /area/indoors/town/keep/phys
-	name = "Court Physician's Office"
+	name = "consultorio del Medico de la Corte"
 	icon_state = "physician"
 
 /area/indoors/town/keep/heir
-	name = "Heirs' Room"
+	name = "aposentos de los herederos"
 	icon_state = "heir"
 
 /area/indoors/town/keep/heir/heir1
@@ -91,7 +91,7 @@
 	icon_state = "heir2"
 
 /area/indoors/town/keep/knight
-	name = "Knights' Quarters"
+	name = "aposentos de los caballeros"
 	icon_state = "knight"
 
 /area/indoors/town/keep/knight/knight1
@@ -99,51 +99,51 @@
 	icon_state = "knight1"
 
 /area/indoors/town/keep/knight/knight2
-	name = "Second Knight's Quarters"
+	name = "aposentos del segundo caballero"
 	icon_state = "knight2"
 
 /area/indoors/town/keep/squire
-	name = "Squires' Quarters"
+	name = "aposentos de los escuderos"
 	icon_state = "squire"
 
 /area/indoors/town/keep/squire/squire1
-	name = "First Squire's Quarters"
+	name = "aposentos del primer escudero"
 	icon_state = "squire1"
 
 /area/indoors/town/keep/squire/squire2
-	name = "Second Squire's Quarters"
+	name = "aposentos del segundo escudero"
 	icon_state = "squire2"
 
 /area/indoors/town/keep/kitchen
-	name = "Keep Kitchen"
+	name = "cocina de la fortaleza"
 	icon_state = "kitchen"
 
 /area/indoors/town/keep/kitchen/cellar
-	name = "Keep Kitchen Cellar"
+	name = "bodega de la cocina de la fortaleza"
 	icon_state = "kitchen"
 
 /area/indoors/town/keep/servant
-	name = "Servants' Quarters"
+	name = "aposentos de los sirvientes"
 	icon_state = "servant"
 
 /area/indoors/town/keep/servanthead
-	name = "Head Servant's Quarters"
+	name = "aposentos del jefe de sirvientes"
 	icon_state = "servant_head"
 
 /area/indoors/town/keep/library
-	name = "Keep Libray"
+	name = "biblioteca de la fortaleza"
 	icon_state = "library"
 
 /area/indoors/town/keep/archivist
-	name = "Archivist's Quarters"
+	name = "aposentos del archivista"
 	icon_state = "archivists_quarters"
 
 /area/indoors/town/keep/feast
-	name = "Keep Feast Hall"
+	name = "salon de banquetes de la fortaleza"
 	icon_state = "feast_hall"
 
 /area/indoors/town/keep/dungeoneer
-	name = "Court Dungeoneer's Quarters"
+	name = "aposentos del Dungeoneer de la Corte"
 	icon_state = "dungeoneer"
 
 /area/indoors/town/keep/jester
@@ -151,15 +151,15 @@
 	icon_state = "jester"
 
 /area/indoors/town/keep/guest
-	name = "Keep Guest Room"
+	name = "habitacion de invitados de la fortaleza"
 	icon_state = "guest"
 
 /area/indoors/town/keep/guest/guest1
-	name = "Keep Guest Room 1"
+	name = "habitacion de invitados 1 de la fortaleza"
 	icon_state = "guest1"
 
 /area/indoors/town/keep/guest/guest2
-	name = "Keep Guest Room 2"
+	name = "habitacion de invitados 2 de la fortaleza"
 	icon_state = "guest2"
 
 /area/indoors/town/keep/guest/guest3
@@ -167,63 +167,63 @@
 	icon_state = "guest3"
 
 /area/indoors/town/keep/guest/meeting
-	name = "Keep Meeting Room"
+	name = "sala de reuniones de la fortaleza"
 	icon_state = "meeting"
 
 /area/indoors/town/keep/halls
-	name = "Keep Halls"
+	name = "salones de la fortaleza"
 	icon_state = "halls"
 
 /area/indoors/town/keep/halls/n
-	name = "Keep Halls (North)"
+	name = "salones de la fortaleza (norte)"
 	icon_state = "halls_n"
 
 /area/indoors/town/keep/halls/e
-	name = "Keep Halls (East)"
+	name = "salones de la fortaleza (este)"
 	icon_state = "halls_e"
 
 /area/indoors/town/keep/halls/s
-	name = "Keep Halls (South)"
+	name = "salones de la fortaleza (sur)"
 	icon_state = "halls_s"
 
 /area/indoors/town/keep/halls/w
-	name = "Keep Halls (West)"
+	name = "salones de la fortaleza (oeste)"
 	icon_state = "halls_w"
 
 /area/indoors/town/keep/garrison
-	name = "Keep Garrison"
+	name = "guarnicion de la fortaleza"
 	icon_state = "manorgarri"
 
 /area/indoors/town/keep/gate
-	name = "Keep Gate"
+	name = "puerta de la fortaleza"
 	icon_state = "manorgate"
 	background_track = 'sound/music/area/manorgarri.ogg'
 	background_track_dusk = null
 	background_track_night = 'sound/music/area/deliverer.ogg'
 
 /area/indoors/town/keep/basement
-	name = "Keep Basement"
+	name = "sotano de la fortaleza"
 	icon_state = "manor_basement"
 	converted_type = /area/outdoors/exposed
 
 /area/indoors/town/keep/basement/royalknight
-	name = "Royal Guard Storage"
+	name = "almacen de la Guardia Real"
 	icon_state = "manor_knightstore"
 
 /area/indoors/town/keep/basement/thepit
-	name = "Execution Pit"
+	name = "foso de ejecucion"
 	icon_state = "manor_pit"
 
 /area/indoors/town/keep/basement/wine
-	name = "Royal Wine Cellar"
+	name = "bodega real de vino"
 	icon_state = "manor_wine"
 
 /area/indoors/town/keep/basement/ale
-	name = "Royal Ale Cellar"
+	name = "bodega real de cerveza"
 	icon_state = "manor_ale"
 
 /area/indoors/town/keep/basement/bath
-	name = "Royal Baths"
+	name = "baños reales"
 	icon_state = "manor_bath"
 
 /area/outdoors/exposed/manorgarri
@@ -239,7 +239,7 @@
 	background_track_night = null
 
 /area/indoors/town/keep/magician
-	name = "Wizard's Tower"
+	name = "torre del mago"
 	icon_state = "magiciantower"
 	ambient_index = AMBIENCE_MYSTICAL
 	background_track = 'sound/music/area/magiciantower.ogg'
@@ -276,17 +276,17 @@
 	icon_state = "noble1_out"
 
 /area/indoors/town/noble_manor/yellow
-	name = "Yellow Noble Manor"
+	name = "Mansion Noble Amarilla"
 	icon_state = "noble2"
 
 /area/outdoors/town/noble_manor/yellow
 	icon_state = "noble2_out"
-	first_time_text = "Green Noble Manor"
+	first_time_text = "Mansion Noble Verde"
 
 /area/indoors/town/noble_manor/red
-	name = "Red Noble Manor"
+	name = "Mansion Noble Roja"
 	icon_state = "noble3"
 
 /area/outdoors/town/noble_manor/red
 	icon_state = "noble3_out"
-	first_time_text = "Red Noble Manor"
+	first_time_text = "Mansion Noble Roja"

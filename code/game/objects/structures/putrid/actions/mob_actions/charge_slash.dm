@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/charge_slash
-	name = "Charge Slash"
-	desc = "Charge through enemies up to 4 tiles. Upon stopping, activate again to immediately perform a 3x3 AoE slash, or wait 3 seconds for it to activate automatically. Cost: 10 resources."
+	name = "Tajo de carga"
+	desc = "Carga a traves de enemigos hasta 4 fichas. Al detenerte, activalo nuevamente para realizar inmediatamente un corte de area de efecto de 3x3, o espera 3 segundos para que se active automaticamente. Costo: 10 recursos."
 	button_icon_state = "charge_slash"
 	cooldown_time = 13 SECONDS
 	personal_resource_cost = 10
@@ -49,7 +49,7 @@
 
 	// Otherwise, start the charge
 	if(!target)
-		to_chat(user, span_warning("You must target a location to charge to!"))
+		to_chat(user, span_warning("¡Debes seleccionar un lugar al que cargar!"))
 		return FALSE
 
 	do_charge(user, target, charge_delay, charge_past)
@@ -83,7 +83,7 @@
 	charger.setDir(dir)
 
 	charger.visible_message(
-		span_danger("[charger] charges forward with tremendous speed!"),
+		span_danger("¡[charger] carga hacia adelante con una velocidad tremenda!"),
 		span_boldnotice("¡Cargas hacia adelante!")
 	)
 
@@ -170,13 +170,13 @@
 
 /datum/action/cooldown/meatvine/personal/charge_slash/proc/hit_target(atom/movable/source, atom/target, damage_dealt)
 	if(!isliving(target))
-		source.visible_message(span_danger("[source] smashes into [target]!"))
+		source.visible_message(span_danger("¡[source] se estrella contra [target]!"))
 		return
 
 	var/mob/living/living_target = target
 	living_target.visible_message(
-		span_danger("[source] charges through [living_target]!"),
-		span_userdanger("[source] charges through you!")
+		span_danger("[source] carga contra [living_target] ¡Uf!"),
+		span_userdanger("¡[source] carga contra ti!")
 	)
 	living_target.Knockdown(0.6 SECONDS)
 	living_target.apply_damage(damage_dealt, BRUTE, damage_type = BCLASS_CUT)
@@ -190,8 +190,8 @@
 	slash_ready = TRUE
 
 	user.visible_message(
-		span_danger("[user] skids to a halt, readying for a devastating strike!"),
-		span_boldnotice("You're ready to unleash a devastating slash! Click the ability again or wait 3 seconds.")
+		span_danger("[user] se detiene de golpe, listo para asestar un golpe devastador."),
+		span_boldnotice("¡Estas listo para desencadenar un devastador ataque con la espada! Haz clic en la habilidad de nuevo o espera 3 segundos.")
 	)
 
 	// Update button appearance to show it's ready
@@ -227,8 +227,8 @@
 
 	// Visual and audio effects
 	user.visible_message(
-		span_danger("[user] unleashes a whirlwind of slashing attacks!"),
-		span_boldnotice("You unleash a devastating slash!")
+		span_danger("¡[user] desencadena un torbellino de ataques de sable!"),
+		span_boldnotice("¡Desencadenas un ataque devastador con un corte!")
 	)
 
 	//playsound(user, 'sound/weapons/bladeslice.ogg', 100, TRUE)
@@ -248,7 +248,7 @@
 			// Apply damage
 			victim.visible_message(
 				span_danger("¡[victim] esta atrapado en la furia cortante de [user]!"),
-				span_userdanger("You're caught in [user]'s slashing fury!")
+				span_userdanger("¡Estas atrapado en la furia de cortes de [user]!")
 			)
 
 			victim.apply_damage(slash_damage, BRUTE, damage_type = BCLASS_CUT)
@@ -262,9 +262,9 @@
 			hit_count++
 
 	if(hit_count > 0)
-		to_chat(user, span_boldnotice("You hit [hit_count] target[hit_count > 1 ? "s" : ""]!"))
+		to_chat(user, span_boldnotice("¡Has dado en el blanco [hit_count] [hit_count > 1 ? "s" : ""]!"))
 	else
-		to_chat(user, span_warning("Your slash hits nothing!"))
+		to_chat(user, span_warning("¡Tu golpe de espada no ha alcanzado nada!"))
 
 /datum/action/cooldown/meatvine/personal/charge_slash/evaluate_ai_score(datum/ai_controller/controller)
 	var/mob/living/simple_animal/hostile/retaliate/meatvine/user = owner

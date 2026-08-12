@@ -1,5 +1,5 @@
 /obj/structure/spirit_board
-	name = "spirit board"
+	name = "tablero espiritual"
 	desc = ""
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "spirit_board"
@@ -32,9 +32,9 @@
 
 	if(virgin)
 		virgin = FALSE
-		notify_ghosts("Someone has begun playing with a [src.name] in [get_area(src)]!", source = src, header = "Spirit board")
+		notify_ghosts("¡Alguien ha comenzado a jugar con un [src.name] en [get_area(src)]!", source = src, header = "tablero de espiritu")
 
-	planchette = input("Elige la letra.", "Seance!") as null|anything in list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
+	planchette = input("Elige la letra.", "¡Sesion!") as null|anything in list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
 	if(!planchette || !Adjacent(M) || next_use > world.time)
 		return
 	M.log_message("picked a letter on [src], which was \"[planchette]\".", LOG_GAME)
@@ -60,7 +60,7 @@
 
 
 	if(light_amount > 0.2)
-		to_chat(M, "<span class='warning'>It's too bright here to use [src.name]!</span>")
+		to_chat(M, "<span class='warning'>¡Aqui hay demasiado brillo para usar [src.name]!</span>")
 		return FALSE
 
 	//mobs in range check

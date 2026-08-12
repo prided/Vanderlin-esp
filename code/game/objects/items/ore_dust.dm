@@ -13,13 +13,13 @@
 
 /obj/item/ore/dust/gold
 	name = "polvo de oro"
-	desc = "Fine particles of gold ore."
+	desc = "Finas particulas de mineral de oro."
 	melting_material = /datum/material/gold
 	item_weight = 500 GRAMS
 
 /obj/item/ore/dust/silver
 	name = "polvo de plata"
-	desc = "Fine particles of silver ore."
+	desc = "Finas particulas de mineral de plata."
 	melting_material = /datum/material/silver
 	item_weight = 400 GRAMS
 
@@ -29,18 +29,18 @@
 
 /obj/item/ore/dust/iron
 	name = "polvo de hierro"
-	desc = "Fine particles of iron ore."
+	desc = "Finas particulas de mineral de hierro."
 	melting_material = /datum/material/iron
 	item_weight = 350 GRAMS
 
 /obj/item/ore/dust/copper
 	name = "polvo de cobre"
-	desc = "Fine particles of copper ore."
+	desc = "Finas particulas de mineral de cobre."
 	melting_material = /datum/material/copper
 	item_weight = 350 GRAMS
 
 /obj/item/ore/dust/tin
 	name = "polvo de estaño"
-	desc = "Fine particles of tin ore."
+	desc = "Finas particulas de mineral de estaño."
 	melting_material = /datum/material/tin
 	item_weight = 300 GRAMS

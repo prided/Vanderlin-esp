@@ -10,8 +10,8 @@
 	can_hold = typecacheof(list(/obj/item/kitchen, /obj/item/folding_table_stored, /obj/item/cooking, /obj/item/reagent_containers/food/snacks, /obj/item/reagent_containers, /obj/item/mobilestove))
 
 /obj/item/storage/messkit
-	name = "mess kit"
-	desc = "A small, portable mess kit. It can be used to cook food."
+	name = "kit de desorden"
+	desc = "Un pequeño kit de desorden portatil. Se puede utilizar para cocinar alimentos."
 	slot_flags = ITEM_SLOT_HIP
 	grid_width = 64
 	grid_height = 32

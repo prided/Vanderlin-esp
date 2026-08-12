@@ -1,6 +1,6 @@
 /obj/item/natural/cloth
-	name = "cloth"
-	desc = "A square of cloth mended from fibers."
+	name = "tela"
+	desc = "Un cuadrado de tela remendado con fibras."
 	icon_state = "cloth"
 	possible_item_intents = list(/datum/intent/use, INTENT_SOAK, INTENT_WRING)
 	force = 0
@@ -32,7 +32,7 @@
 
 /obj/item/natural/cloth/examine(mob/user)
 	. = ..()
-	. += span_notice("[src] is [PERCENT((initial(bandage_health) - bandage_health)/initial(bandage_health))]% soaked in blood.")
+	. += span_notice("[src] es [PERCENT((initial(bandage_health) - bandage_health)/initial(bandage_health))]% sempapado en sangre.")
 
 /obj/item/natural/cloth/Initialize(mapload, vol)
 	. = ..()
@@ -59,7 +59,7 @@
 	if(istype(atom_to_clean, /turf/open/water) || istype(atom_to_clean, /turf/open/openspace) || istype(atom_to_clean, /obj/item/plate) || istype(atom_to_clean, /obj/item/reagent_containers/glass/bowl) || istype(atom_to_clean, /obj/item/clothing/shoes))
 		return DO_NOT_CLEAN
 	if(cleaner.client && ((atom_to_clean in cleaner.client.screen) && !cleaner.is_holding(atom_to_clean)))
-		to_chat(cleaner, span_warning("I need to take \the [atom_to_clean] off before cleaning it!"))
+		to_chat(cleaner, span_warning("¡Necesito quitar \the [atom_to_clean] antes de limpiarla!"))
 		return DO_NOT_CLEAN
 	if(reagents.total_volume < 0.1)
 		to_chat(cleaner, span_warning("¡[src] esta demasiado seco para limpiarlo!"))
@@ -143,11 +143,11 @@
 		if(!O.reagents || !O.is_open_container())
 			return FALSE
 		if(O.reagents.total_volume == 0)
-			to_chat(user, span_warning("It's empty."))
+			to_chat(user, span_warning("Esta vacio."))
 			return FALSE
 		if(do_after(user, clean_speed, O))
 			O.reagents.trans_to(src, reagents.maximum_volume, 1, transfered_by = user)
-			user.visible_message(span_small("[user] empapa \the [src] en \the [O]."), span_small("I soak \the [src] in \the [O]."), vision_distance = 2)
+			user.visible_message(span_small("[user] empapa \the [src] en \the [O]."), span_small("Hijo de la \the [src] en \the [O]."), vision_distance = 2)
 			playsound(O, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 25, FALSE)
 	else if(isturf(target))
 		var/turf/T = target
@@ -162,11 +162,11 @@
 		else
 			var/datum/liquid_group/lg = T.liquids?.liquid_group
 			if(!lg)
-				to_chat(user, span_warning("Nothing there to soak."))
+				to_chat(user, span_warning("No hay nada alli para empapar."))
 				return FALSE
 			if(do_after(user, clean_speed * 2, T))
 				lg.transfer_to_atom(null, reagents.maximum_volume, src)
-				user.visible_message(span_small("[user] soaks \the [src]."), span_small("I soak \the [src]."), vision_distance = 2)
+				user.visible_message(span_small("[user] se moja \the [src]."), span_small("Hiero \the [src]."), vision_distance = 2)
 				playsound(T, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 25, FALSE)
 
 	update_appearance(UPDATE_OVERLAYS)
@@ -185,7 +185,7 @@
 			return FALSE
 		if(do_after(user, clean_speed * 2.5, O))
 			reagents.trans_to(O, reagents.total_volume, 1, transfered_by = user)
-			user.visible_message(span_small("[user] wrings out \the [src] in \the [O]."), span_small("I wring out \the [src] in \the [O]."), vision_distance = 2)
+			user.visible_message(span_small("[user] escurre \the [src] en \the [O]."), span_small("Yo escurro \the [src] en \the [O]."), vision_distance = 2)
 			playsound(O, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 25, FALSE)
 			bandage_health = initial(bandage_health)
 			bandage_effectiveness = initial(bandage_effectiveness)
@@ -194,13 +194,13 @@
 		if(istype(T, /turf/open/water))
 			if(do_after(user, clean_speed * 2.5, T))
 				reagents.clear_reagents()
-				user.visible_message(span_small("[user] wrings out \the [src] in \the [T]."), span_small("I wring out \the [src] in \the [T]."), vision_distance = 2)
+				user.visible_message(span_small("[user] escurre \the [src] en \the [T]."), span_small("Yo escurro \the [src] en \the [T]."), vision_distance = 2)
 				playsound(T, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 25, FALSE)
 		else
 			if(do_after(user, clean_speed * 2.5, T))
 				T.add_liquid_from_reagents(reagents, amount = reagents.maximum_volume)
 				reagents.clear_reagents()
-				user.visible_message(span_small("[user] escurre \the [src]."), span_small("I wring out \the [src]."), vision_distance = 2)
+				user.visible_message(span_small("[user] escurre \the [src]."), span_small("Estoy escurriendo \the [src]."), vision_distance = 2)
 				playsound(T, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 25, FALSE)
 				bandage_health = initial(bandage_health)
 				bandage_effectiveness = initial(bandage_effectiveness)
@@ -239,9 +239,9 @@
 	H.update_damage_overlays()
 
 	if(M == user)
-		user.visible_message(span_notice("[user] bandages [user.p_their()] [affecting.name]."), span_notice("I bandage my [affecting.name]."))
+		user.visible_message(span_notice("[user] vendara [user.p_their()] [affecting.name]."), span_notice("Me vendo mi [affecting.name]."))
 	else
-		user.visible_message(span_notice("[user] bandages [M]'s [affecting.name]."), span_notice("I bandage [M]'s [affecting.name]."))
+		user.visible_message(span_notice("[user] envuelve en vendas [M]'s [affecting.name]."), span_notice("Estoy vendando [M]'s [affecting.name]."))
 
 	return TRUE
 

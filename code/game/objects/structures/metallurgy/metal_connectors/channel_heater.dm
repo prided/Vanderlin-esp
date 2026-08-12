@@ -56,7 +56,7 @@
 	// Fuel the heater
 	if(I.firefuel > 0)
 		if(fuel_left >= max_fuel)
-			to_chat(user, "<span class='warning'>[src] is already fully fueled.</span>")
+			to_chat(user, "<span class='warning'>[src] ya esta completamente alimentada.</span>")
 			return
 
 		var/fuel_to_add = min(I.firefuel, max_fuel - fuel_left)
@@ -64,21 +64,21 @@
 
 		qdel(I)
 
-		user.visible_message("[user] fuels [src].", "You fuel [src].")
+		user.visible_message("[user] alimenta [src].", "Alimentas [src] con combustible.")
 		return
 
 	// Light the heater
 	if(istype(I, /obj/item/flint) || istype(I, /obj/item/flashlight/flare/torch))
 		if(!fuel_left)
-			to_chat(user, "<span class='warning'>[src] needs fuel before it can be lit.</span>")
+			to_chat(user, "<span class='warning'>[src] necesita combustible antes de que pueda encenderse.</span>")
 			return
 
 		if(on)
-			to_chat(user, "<span class='warning'>[src] is already running.</span>")
+			to_chat(user, "<span class='warning'>[src] ya esta en funcionamiento.</span>")
 			return
 
 		on = TRUE
-		user.visible_message("[user] lights [src].", "Enciendes [src].")
+		user.visible_message("[user] ilumina [src].", "Enciendes [src].")
 		update_appearance(UPDATE_OVERLAYS)
 		return
 

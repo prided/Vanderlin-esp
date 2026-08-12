@@ -1,9 +1,9 @@
 /datum/objective/personal/consume_organs
 	name = "Consumir organos"
-	category = "Graggar's Chosen"
+	category = "Elegido de Graggar"
 	triumph_count = 2
-	immediate_effects = list("Gained an ability to rip hearts out of corpses")
-	rewards = list("2 Triumphs", "Graggar grows stronger", "Graggar blesses you (+1 Strength, +1 Constitution)")
+	immediate_effects = list("Obtuviste una habilidad para arrancar corazones de cadaveres")
+	rewards = list("2 Triunfos", "Graggar se fortalece", "Graggar te bendice (+1 Fuerza, +1 Constitucion)")
 	var/organs_consumed = 0
 	var/hearts_consumed = 0
 	var/organs_required = 3
@@ -29,16 +29,16 @@
 
 	if(ispath(organ_type, /obj/item/reagent_containers/food/snacks/meat/organ/heart))
 		hearts_consumed++
-		to_chat(owner.current, span_cult("You feel Graggar's pleasure as you consume a heart!"))
+		to_chat(owner.current, span_cult("¡Sientes el placer de Graggar mientras consumes un corazon!"))
 	else
-		to_chat(owner.current, span_notice("Organ consumed! [organs_required - organs_consumed] more organ\s needed."))
+		to_chat(owner.current, span_notice("¡Organo consumido! Faltan [organs_required - organs_consumed] organo\s."))
 
 	if(organs_consumed >= organs_required && hearts_consumed >= hearts_required)
 		complete_objective()
 
 /datum/objective/personal/consume_organs/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have consumed enough organs and hearts to satisfy Graggar!"))
+	to_chat(owner.current, span_greentext("¡Has consumido suficientes organos y corazones para satisfacer a Graggar!"))
 	adjust_storyteller_influence(GRAGGAR, 20)
 	UnregisterSignal(owner.current, COMSIG_ORGAN_CONSUMED)
 
@@ -50,4 +50,4 @@
 	))
 
 /datum/objective/personal/consume_organs/update_explanation_text()
-	explanation_text = "Consume [organs_required] organ\s, including [hearts_required] heart\s, to appease Graggar!"
+	explanation_text = "¡Consume [organs_required] organo\s, incluidas [hearts_required] pieza\s de corazon, para aplacar a Graggar!"

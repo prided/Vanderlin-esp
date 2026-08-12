@@ -1,5 +1,5 @@
-ERROR. Fallo de interfaz de Lux. Por favor, +mátame+... Interfaz reiniciada.
-Depón tus armas y sométete a la extracción de Lux.
-Advertencia. Esta es una zona restringida; serás purgado en Su nombre.
-Correr provoca accidentes. Permanece inmóvil durante el protocolo de purificación.
-Te estás poniendo histérico.
+ERROR. Fallo de interfaz de Lux. Por favor, +matame+... Interfaz reiniciada.
+Depon tus armas y sometete a la extraccion de Lux.
+Advertencia. Esta es una zona restringida; seras purgado en Su nombre.
+Correr provoca accidentes. Permanece inmovil durante el protocolo de purificacion.
+Te estas poniendo histerico.

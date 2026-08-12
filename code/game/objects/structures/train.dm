@@ -1,8 +1,8 @@
 //AKA cryosleep.
 
 /obj/structure/train //Shamelessly jury-rigged from the way Fallout13 handles this and shamelessly borrowed from AzurePeak's further iteraiton of this system
-	name = "train"
-	desc = "Your heart yearns to wander.\n(Drag your sprite onto this to exit the round!)"
+	name = "tren"
+	desc = "Tu corazon anhela vagar. \n (¡Arrastra tu objeto sobre esto para salir de la ronda!)"
 	icon = 'icons/roguetown/items/train.dmi'
 	icon_state = "train"
 	layer = TABLE_LAYER
@@ -32,16 +32,16 @@
 		return
 	var/mob/living/carbon/human/departing_mob = dropping
 	if(departing_mob != user && departing_mob.client)
-		to_chat(user, span_warning("This one retains their free will. It's their choice if they want to leave for [SSmapping.config.immigrant_origin] or not."))
+		to_chat(user, span_warning("Este mantiene su libre albedrio. Es su eleccion si quiere irse a [SSmapping.config.immigrant_origin] o no."))
 		return //prevents people from forceghosting others
 	if(departing_mob.stat == DEAD)
-		say("The dead cannot leave for [SSmapping.config.immigrant_origin], ensure they get a proper burial in [SSmapping.config.map_name].")
+		say("Los muertos no pueden partir hacia [SSmapping.config.immigrant_origin], asegurate de que reciban un entierro adecuado en [SSmapping.config.map_name].")
 		return
 	if(is_type_in_list(departing_mob.mind?.assigned_role, uncryoable))
-		var/title = departing_mob.gender == FEMALE ? "dama" : "lord"
-		say("Surely you jest, my [title], you have a kingdom to rule over!")
+		var/title = departing_mob.gender == FEMALE ? "dama" : "señor"
+		say("¡Claro que estas bromeando, mi [title], ¡tienes un reino para gobernar!")
 		return //prevents noble roles from cryoing as per request of Aberra
-	if(tgui_alert(user, "Are you sure you want to [departing_mob == user ? "leave for [SSmapping.config.immigrant_origin] (you" : "send this person to [SSmapping.config.immigrant_origin] (they"] will be removed from the current round, the job slot freed)?", "Partiendo", list("Confirmar", "Cancel")) != "Confirmar")
+	if(tgui_alert(user, "¿Estas seguro de que quieres que [departing_mob == user ? "leave for [SSmapping.config.immigrant_origin] (you" : "send this person to [SSmapping.config.immigrant_origin] (they"] sea eliminado de la ronda actual, liberando el espacio del trabajo)?", "Partiendo", list("Confirmar", "Cancelar")) != "Confirmar")
 		return //doublechecks that people actually want to leave the round
 	if(user.incapacitated(IGNORE_GRAB) || QDELETED(departing_mob) || (departing_mob != user && departing_mob.client) || get_dist(src, dropping) > 2 || get_dist(src, user) > 2)
 		return //Things have changed since the alert happened.
@@ -68,7 +68,7 @@
 		GLOB.ex_court_agents -= departing_mob.real_name
 	message_admins(dat)
 	log_admin(dat)
-	say(span_notice("[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] is departing from [SSmapping.config.map_name]."))
+	say(span_notice("[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] esta saliendo de [SSmapping.config.map_name]."))
 	cryo_mob(departing_mob)
 
 /proc/cryo_mob(mob/departing_mob, admin = FALSE)
@@ -110,7 +110,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/structure/train/carriage/not_train
-	name = "carriage"
-	desc = "A wooden carriage to carry passengers across land without the blessings of Heartfeltian underground train infrastructure."
+	name = "carro"
+	desc = "Un vagon de madera para transportar pasajeros por tierra sin las ventajas de la infraestructura del tren subterraneo Heartfeltian."
 	icon = 'icons/roguetown/underworld/enigma_carriage.dmi'
 	icon_state = "carriage_normal"

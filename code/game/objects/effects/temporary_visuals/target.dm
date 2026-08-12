@@ -57,7 +57,7 @@
 			L.adjustFireLoss(40)
 			L.adjust_fire_stacks(8)
 			L.IgniteMob()
-			to_chat(L, span_userdanger("You're hit by a meteor!"))
+			to_chat(L, span_userdanger("¡Te ha dado un meteorito!"))
 			hit_atoms[L] = TRUE
 		else
 			L.adjustFireLoss(10) //if we've already hit them, do way less damage

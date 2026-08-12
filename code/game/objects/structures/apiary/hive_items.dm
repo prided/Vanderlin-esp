@@ -1,6 +1,6 @@
 
 /obj/item/bee_treatment
-	name = "bee medication"
+	name = "medicacion para abejas"
 	desc = "Un tratamiento para las enfermedades de las abejas."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "cream"
@@ -17,7 +17,7 @@
 		to_chat(user, span_notice("Las abejas no parecen necesitar tratamiento."))
 		return ITEM_INTERACT_BLOCKING
 
-	to_chat(user, span_notice("You apply [src] to [A]."))
+	to_chat(user, span_notice("Aplicas [src] a [A]."))
 
 	var/effectiveness = treatment_strength
 
@@ -33,7 +33,7 @@
 		A.treatment_progress = 0
 		to_chat(user, span_notice("¡Las abejas parecen estar recuperandose!"))
 	else
-		to_chat(user, span_notice("The treatment seems to be having some effect."))
+		to_chat(user, span_notice("El tratamiento parece estar surtiendo efecto."))
 
 	A.agitate_bees(20, user)
 
@@ -42,13 +42,13 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/bee_treatment/antiviral
-	name = "bee antiviral"
+	name = "antiviral de abejas"
 	desc = "Un tratamiento para enfermedades virales de las abejas como la loque."
 	treatment_type = "Foulbrood"
 	treatment_strength = 40
 
 /obj/item/bee_treatment/miticide
-	name = "bee miticide"
+	name = "acaricida de abejas"
 	desc = "Un tratamiento para los acaros varroa que infestan las colonias de abejas."
 	treatment_type = "Varroa Mites"
 	treatment_strength = 40
@@ -60,7 +60,7 @@
 	treatment_strength = 40
 
 /obj/item/bee_smoker
-	name = "bee smoker"
+	name = "fumador de abejas"
 	desc = "Un dispositivo utilizado para calmar a las abejas con humo."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "smoker"
@@ -76,11 +76,11 @@
 		update_appearance(UPDATE_ICON_STATE)
 		process_smoker(user)
 	else if(active)
-		to_chat(user, span_notice("You extinguish [src]."))
+		to_chat(user, span_notice("Apaga [src]."))
 		active = FALSE
 		update_appearance(UPDATE_ICON_STATE)
 	else
-		to_chat(user, span_warning("[src] is out of fuel!"))
+		to_chat(user, span_warning("¡El [src] se quedo sin combustible!"))
 
 /obj/item/bee_smoker/proc/process_smoker(mob/user)
 	if(!active)
@@ -89,7 +89,7 @@
 	if(fuel <= 0)
 		active = FALSE
 		update_appearance(UPDATE_ICON_STATE)
-		to_chat(user, span_warning("[src] runs out of fuel!"))
+		to_chat(user, span_warning("¡Se le acaba el combustible a [src]!"))
 		return
 
 	var/turf/T = get_turf(src)
@@ -118,14 +118,14 @@
 	if(istype(tool, /obj/item/natural/bundle/cloth))
 		var/obj/item/natural/bundle/cloth/C = tool
 		if(C.amount >= 1 && fuel < max_fuel)
-			to_chat(user, span_notice("You stuff some cloth into [src]."))
+			to_chat(user, span_notice("Metes un poco de tela en [src]."))
 			C.use(1)
 			fuel = min(fuel + 5, max_fuel)
 			return ITEM_INTERACT_SUCCESS
 
 /obj/item/magnifying_glass
-	name = "magnifying glass"
-	desc = "A tool for detailed inspection."
+	name = "lupa"
+	desc = "Una herramienta para la inspeccion detallada."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "magnifying_glass"
 	grid_height = 64
@@ -137,7 +137,7 @@
 
 	var/obj/structure/apiary/A = interacting_with
 
-	to_chat(user, span_notice("You carefully inspect [A]."))
+	to_chat(user, span_notice("Inspeccionas cuidadosamente [A]."))
 
 	if(A.has_disease && A.disease)
 		to_chat(user, A.disease.get_inspection_message())

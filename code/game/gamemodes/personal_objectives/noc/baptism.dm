@@ -1,8 +1,8 @@
 /datum/objective/personal/baptism
-	name = "Receive Baptism"
-	category = "Noc's Chosen"
+	name = "Recibir el bautismo"
+	category = "Elegido de Noc"
 	triumph_count = 3
-	rewards = list("3 Triumphs", "Noc grows stronger", "Noc blesses you (+1 Intelligence)")
+	rewards = list("3 Triunfos", "Noc se fortalece", "Noc te bendice (+1 Inteligencia)")
 
 /datum/objective/personal/baptism/on_creation()
 	. = ..()
@@ -36,4 +36,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_NOC_BLESSING, list(STAT_INTELLIGENCE = 1))
 
 /datum/objective/personal/baptism/update_explanation_text()
-	explanation_text = "Receive mana baptism in Noc's name to gain their favor!"
+	explanation_text = "¡Recibe el bautismo de mana en nombre de Noc para obtener su favor!"

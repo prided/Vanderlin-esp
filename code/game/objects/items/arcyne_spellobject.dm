@@ -9,8 +9,8 @@
 	var/datum/action/cooldown/spell/live_spell = null
 
 /obj/item/arcyne_spellobject
-	name = "arcyne spell object"
-	desc = "An object threaded with arcyne filaments."
+	name = "objeto de hechizo arcyne"
+	desc = "Un objeto ensartado con filamentos arcyne."
 	w_class = WEIGHT_CLASS_SMALL
 
 	grid_width = 64
@@ -38,17 +38,17 @@
 /obj/item/arcyne_spellobject/examine(mob/user)
 	. = ..()
 	if(!length(stored_spells))
-		. += span_warning("It is cold and empty.")
+		. += span_warning("Esta frio y vacio.")
 		return
-	. += span_notice("Spells stored within ([length(stored_spells)]/[max_spells]):")
+	. += span_notice("Conjuros almacenados dentro de ([length(stored_spells)]/[max_spells]):")
 	for(var/datum/spellobject_entry/E in stored_spells)
 		// Chaotic items obscure their spell names
 		if(spellobject_flags & SPELLOBJECT_CHAOTIC)
-			. += span_notice("  ??? - [E.charges] charge\s remaining.")
+			. += span_notice("  ??? - [E.charges] carga\s restante.")
 		else
-			. += span_notice("  [E.spell_name] - [E.charges] charge\s remaining.")
+			. += span_notice("  [E.spell_name] - [E.charges] carga\s restante.")
 	if(spellobject_flags & SPELLOBJECT_HIJACK_CLICK)
-		. += span_notice("It crackles faintly, point and click to unleash its magic.")
+		. += span_notice("Se escucha un crujido debil, haga clic para liberar su magia.")
 	if(spellobject_flags & SPELLOBJECT_CHAOTIC)
 		. += span_warning("La magia interior se siente salvaje e impredecible.")
 
@@ -85,7 +85,7 @@
 		return ..()
 	//no proximity check; works at any distance
 	if(!length(stored_spells))
-		to_chat(user, span_warning("Nothing is stored within."))
+		to_chat(user, span_warning("No hay nada almacenado dentro."))
 		return
 	fire_hijack_spell(user, target)
 
@@ -119,13 +119,13 @@
 			if(DICE_CRIT_SUCCESS)
 				actual_target = intended_target
 				user.visible_message(
-					span_notice("[user] levels [src], a searing bolt lances straight and true!"),
-					span_notice("The magic responds perfectly [E.spell_name] fires true.")
+					span_notice("[user] niveles [src], ¡un rayo abrasador se lanza recto y verdadero!"),
+					span_notice("La magia responde perfectamente [E.spell_name] los disparos son precisos.")
 				)
 			if(DICE_SUCCESS)
 				actual_target = intended_target
 				user.visible_message(
-					span_notice("[user] levels [src] and a burst of energy lances toward [intended_target]!"),
+					span_notice("[user] niveles [src] y una rafaga de lanzas de energia hacia [intended_target] ¡Vaya!"),
 					span_notice("El hechizo se dispara hacia [intended_target].")
 				)
 			if(DICE_FAILURE)
@@ -133,28 +133,28 @@
 					var/list/nearby = get_hearers_in_view(7, user) - user
 					actual_target = length(nearby) ? pick(nearby) : user
 					user.visible_message(
-						span_warning("[user]'s [src] sputters, the magic lurches wildly toward [actual_target]!"),
-						span_warning("The magic slips your control the spell careens toward [actual_target]!")
+						span_warning("¡[user] ve como [src] chisporrotea y la magia se lanza descontrolada hacia [actual_target]!"),
+						span_warning("La magia escapa de tu control, el hechizo se dirige hacia [actual_target] ¡!")
 					)
 				else
 					actual_target = user
 					user.visible_message(
-						span_warning("[user]'s [src] sputters, the magic turns back on them!"),
-						span_warning("The magic slips your control [E.spell_name] snaps back at you!")
+						span_warning("¡[user] ve como [src] chisporrotea y la magia se vuelve contra su creador!"),
+						span_warning("La magia se te escapa de control [E.spell_name] ¡y rebota en ti!")
 					)
 			if(DICE_CRIT_FAILURE)
 				if(spellobject_flags & SPELLOBJECT_CHAOTIC)
 					var/list/wild = get_hearers_in_view(14, user) - user
 					actual_target = length(wild) ? pick(wild) : user
 					user.visible_message(
-						span_boldwarning("[user]'s [src] erupts in wild light, the spell screams toward [actual_target]!"),
-						span_boldwarning("Catastrophic misfire the spell explodes toward [actual_target]!")
+						span_boldwarning("¡[user]'s [src] estalla en una luz salvaje, el hechizo grita hacia [actual_target]!"),
+						span_boldwarning("¡Explosion catastrofica, el hechizo explota hacia [actual_target]!")
 					)
 				else
 					actual_target = user
 					user.visible_message(
-						span_boldwarning("[user]'s [src] violently misfires, the spell explodes back into them!"),
-						span_boldwarning("The magic catastrophically misfires [E.spell_name] erupts into you!")
+						span_boldwarning("[user]'s [src] ¡se descontrola violentamente, el hechizo explota y rebota en ellos!"),
+						span_boldwarning("¡La magia falla estrepitosamente [E.spell_name] y explota en tu cara!")
 					)
 
 	var/datum/action/cooldown/spell/instance = new E.spell_type(user)
@@ -176,8 +176,8 @@
 			revoke_entry(user, E)
 		stored_spells -= E
 		user.visible_message(
-			span_notice("A thread of light unravels from [user]'s [name], [E.spell_name] is spent."),
-			span_notice("The last charge of [E.spell_name] is spent.")
+			span_notice("Un hilo de luz se desenrolla desde [user]'s [name], [E.spell_name] se ha gastado."),
+			span_notice("La ultima carga de [E.spell_name] se ha gastado.")
 		)
 		qdel(E)
 		update_appearance(UPDATE_OVERLAYS)
@@ -186,13 +186,13 @@
 				UnregisterSignal(user, COMSIG_MOB_ABILITY_FINISHED)
 				active = FALSE
 			user.visible_message(
-				span_warning("[user]'s [name] dims — all spells exhausted."),
+				span_warning("Las dimensiones de [user]'s [name] — todos los hechizos agotados."),
 				span_warning("El [name] ahora esta vacio.")
 			)
 			if(spellobject_flags & SPELLOBJECT_CONSUMABLE)
 				qdel(src)
 	else
-		to_chat(user, span_notice("[E.spell_name]: [E.charges] charge\s remaining."))
+		to_chat(user, span_notice("[E.spell_name]: [E.charges] carga\s restante."))
 
 /obj/item/arcyne_spellobject/proc/grant_all_spells(mob/user)
 	if(active)
@@ -201,7 +201,7 @@
 	for(var/datum/spellobject_entry/E in stored_spells)
 		grant_entry(user, E)
 	RegisterSignal(user, COMSIG_MOB_ABILITY_FINISHED, PROC_REF(on_spell_fired))
-	to_chat(user, span_hierophant_warning("The [name] thrums, [length(stored_spells)] spell\s ready."))
+	to_chat(user, span_hierophant_warning("Los [name] truenos, [length(stored_spells)] hechizos \s listos."))
 
 /obj/item/arcyne_spellobject/proc/revoke_all_spells(mob/user)
 	if(!active)
@@ -263,12 +263,12 @@
 			live = S
 			break
 	if(!live)
-		to_chat(caster, span_warning("You don't know that spell, you can't store what you don't have."))
+		to_chat(caster, span_warning("No conoces ese hechizo, no puedes guardar lo que no tienes."))
 		return FALSE
 
 	var/mana_cost = live.spell_cost * 2
 	if(caster.mana_pool.amount < mana_cost)
-		to_chat(caster, span_phobia("You need [mana_cost] mana to imbue this spell (you have [caster.mana_pool.amount])."))
+		to_chat(caster, span_phobia("Necesitas [mana_cost] mana para impartir este hechizo (tienes [caster.mana_pool.amount])."))
 		return FALSE
 	caster.mana_pool.adjust_mana(-mana_cost)
 	live.StartCooldown()
@@ -280,7 +280,7 @@
 	stored_spells += E
 
 	update_appearance(UPDATE_OVERLAYS)
-	to_chat(caster, span_hierophant_warning("You pour [mana_cost] mana into the [name], [live.name] is sealed within."))
+	to_chat(caster, span_hierophant_warning("Vierte [mana_cost] mana en el [name], [live.name] esta sellado dentro."))
 	return TRUE
 
 /obj/item/arcyne_spellobject/Destroy()
@@ -290,9 +290,9 @@
 	return ..()
 
 /obj/item/arcyne_spellobject/scroll
-	name = "arcyne scroll"
+	name = "pergamino arcyne"
 	icon = 'icons/roguetown/items/misc.dmi'
-	desc = "Dry parchment veined with cold arcyne light. Whatever is written here was not meant to last."
+	desc = "Pergamino seco veteado con luz fria arcyne. Lo que este escrito aqui no esta destinado a durar."
 	icon_state = "scroll"
 	max_spells = 1
 	w_class = WEIGHT_CLASS_SMALL
@@ -302,8 +302,8 @@
 	has_random_spells = TRUE
 
 /obj/item/arcyne_spellobject/spellstone
-	name = "arcyne spellstone"
-	desc = "A polished stone threaded with arcyne filaments. Hold it to channel its spells."
+	name = "piedra de hechizo arcyne"
+	desc = "Una piedra pulida roscada con filamentos arcyne. Mantenlo para canalizar sus hechizos."
 	icon = 'icons/roguetown/items/gems.dmi'
 	icon_state = "quartz"
 	max_spells = 3
@@ -313,28 +313,28 @@
 	has_random_spells = TRUE
 
 /obj/item/arcyne_spellobject/spellstone/lesser
-	name = "lesser arcyne spellstone"
+	name = "piedra de hechizo arcyne menor"
 	icon_state = "quartz"
 	max_spells = 2
 	max_spell_tier = 1
 
 /obj/item/arcyne_spellobject/spellstone/greater
-	name = "greater arcyne spellstone"
+	name = "piedra de hechizo arcyne mayor"
 	icon_state = "sapphire"
 	max_spells = 3
 	min_spell_tier = 1
 	max_spell_tier = 2
 
 /obj/item/arcyne_spellobject/spellstone/supreme
-	name = "supreme arcyne spellstone"
+	name = "piedra de hechizo arcyne suprema"
 	icon_state = "ruby"
 	max_spells = 4
 	min_spell_tier = 2
 	max_spell_tier = 3
 
 /obj/item/arcyne_spellobject/wand
-	name = "arcyne wand"
-	desc = "A slender wand crackling with stored magic. Point and click to fire."
+	name = "Varita arcyne"
+	desc = "Una varita delgada que crepita con magia almacenada. Apunta y haz clic para disparar."
 	icon = 'icons/roguetown/items/wands.dmi'
 	icon_state = "wand_lesser"
 	w_class = WEIGHT_CLASS_SMALL
@@ -343,22 +343,22 @@
 	max_spell_tier = 1
 
 /obj/item/arcyne_spellobject/wand/greater
-	name = "greater arcyne wand"
+	name = "varita mayor arcyne"
 	icon_state = "wand_greater"
 	max_spells = 2
 	min_spell_tier = 1
 	max_spell_tier = 2
 
 /obj/item/arcyne_spellobject/wand/chaotic
-	name = "chaotic arcyne wand"
-	desc = "A warped wand fizzing with wild magic. Something is inside but what?"
+	name = "varita caotica arcyne"
+	desc = "Una varita deformada que burbujea con magia salvaje. Hay algo dentro pero ¿que?"
 	spellobject_flags = SPELLOBJECT_HIJACK_CLICK | SPELLOBJECT_CHAOTIC
 	max_spells = 1
 	max_spell_tier = 2
 
 /obj/item/arcyne_spellobject/wand/chaotic/random
-	name = "chaotic arcyne wand"
-	desc = "A warped wand fizzing with wild magic. Something is inside but what?"
+	name = "varita caotica arcyne"
+	desc = "Una varita deformada que burbujea con magia salvaje. Hay algo dentro pero ¿que?"
 	has_random_spells = TRUE
 
 /obj/item/arcyne_spellobject/proc/generate_random_spells()

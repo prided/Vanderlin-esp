@@ -1,5 +1,5 @@
 /obj/structure/spawner
-	name = "monster nest"
+	name = "nido de monstruo"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "shitportal"
 	max_integrity = 500

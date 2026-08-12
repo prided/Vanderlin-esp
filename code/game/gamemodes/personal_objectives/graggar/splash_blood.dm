@@ -1,8 +1,8 @@
 /datum/objective/personal/blood_splash
-	name = "Splash Blood"
-	category = "Graggar's Chosen"
+	name = "Salpicarse con sangre"
+	category = "Elegido de Graggar"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Graggar grows stronger", "Graggar blesses you (+1 Strength, +1 Constitution)")
+	rewards = list("2 Triunfos", "Graggar se fortalece", "Graggar te bendice (+1 Fuerza, +1 Constitucion)")
 
 /datum/objective/personal/blood_splash/on_creation()
 	. = ..()
@@ -30,7 +30,7 @@
 
 /datum/objective/personal/blood_splash/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have performed the blood ritual, appeasing Graggar!"))
+	to_chat(owner.current, span_greentext("¡Has realizado el ritual de sangre y aplacado a Graggar!"))
 	adjust_storyteller_influence(GRAGGAR, 20)
 	UnregisterSignal(owner.current, COMSIG_SPLASHED_MOB)
 
@@ -42,4 +42,4 @@
 	))
 
 /datum/objective/personal/blood_splash/update_explanation_text()
-	explanation_text = "There is much power in blood. Splash a bucket full of blood on yourself to appease Graggar!"
+	explanation_text = "Hay gran poder en la sangre. ¡Vierte sobre ti un balde lleno de sangre para aplacar a Graggar!"

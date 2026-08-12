@@ -1,7 +1,7 @@
 /obj/structure/meatvine/tentacle_spike
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "spike"
-	name = "tentacle spike"
+	name = "punta de tentaculo"
 	desc = "Una punta afilada y retorcida de carne corrupta."
 	density = FALSE
 	opacity = FALSE
@@ -76,7 +76,7 @@
 			return
 		var/damage = 5 * spike_count
 		L.adjustBruteLoss(damage, damage_type = BCLASS_PIERCE)
-		to_chat(L, "<span class='userdanger'>You are impaled by [src]!</span>")
+		to_chat(L, "<span class='userdanger'>¡Estas empalado por [src]!</span>")
 
 		for(var/obj/effect/spike_visual/spike in spike_visuals)
 			flick("spike_trigger", spike)

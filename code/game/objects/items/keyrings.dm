@@ -46,7 +46,7 @@
 
 /obj/item/storage/keyring/examine(mob/user)
 	. = ..()
-	. += span_info("Holds \Roman[length(contents)] key\s, including:")
+	. += span_info("Contiene \Roman[length(contents)] llave\s, incluyendo:")
 	for(var/obj/item/key/KE in contents)
 		. += span_info("- [KE.name ? "\A [KE.name]." : "An unknown key."]")
 
@@ -109,8 +109,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/lockpickring
-	name = "lockpick ring"
-	desc = "A piece of bent wire to store lockpicking tools. Too bulky for fine work."
+	name = "anillo de ganzua"
+	desc = "Un trozo de alambre doblado para guardar herramientas para abrir cerraduras. Demasiado voluminoso para un trabajo fino."
 	icon_state = "pickring0"
 	icon = 'icons/roguetown/items/keys.dmi'
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
@@ -180,7 +180,7 @@
 /obj/item/lockpickring/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(istype(tool, /obj/item/lockpick))
 		if(length(picks) >= how_many_lockpicks)
-			to_chat(user, span_warning("Too many lockpicks."))
+			to_chat(user, span_warning("Demasiados ganzues."))
 			return
 		user.dropItemToGround(tool)
 		addtoring(tool)
@@ -191,11 +191,11 @@
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
 	if(length(picks))
-		to_chat(user, span_notice("I steal a pick off the ring."))
+		to_chat(user, span_notice("Robo un ganzu de un anillo."))
 		var/obj/item/lockpick/K = removefromring(user)
 		user.put_in_active_hand(K)
 	else
-		to_chat(user, span_notice("No picks."))
+		to_chat(user, span_notice("No hay ganzuas."))
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/lockpickring/update_icon_state()
@@ -206,7 +206,7 @@
 	if(!length(contents))
 		desc = initial(desc)
 		return
-	desc = span_info("\Roman[length(contents)] lockpick\s.")
+	desc = span_info("\Roman[length(contents)] ganzua\s.")
 	return ..()
 
 /obj/item/lockpickring/mundane

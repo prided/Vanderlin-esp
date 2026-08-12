@@ -14,7 +14,7 @@
 #define GUILLOTINE_ACTION_WRENCH     6
 
 /obj/structure/guillotine
-	name = "guillotine"
+	name = "guillotina"
 	desc = "Este es el final."
 	icon = 'icons/obj/guillotine.dmi'
 	icon_state = "guillotine_raised"
@@ -38,7 +38,7 @@
 /obj/structure/guillotine/examine(mob/user)
 	. = ..()
 
-	var/msg = "The blade "
+	var/msg = "la espada "
 
 	if (blade_status == GUILLOTINE_BLADE_RAISED)
 		msg += "is raised, ready to fall, and"
@@ -94,7 +94,7 @@
 		if (GUILLOTINE_BLADE_RAISED)
 			if (LAZYLEN(buckled_mobs))
 				user.visible_message("¡<span class='warning'>[user] comienza a tirar de la palanca!</span>",
-									"<span class='warning'>I begin to pull the lever!</span>")
+									"<span class='warning'>Empiezo a tirar del gatillo!</span>")
 				current_action = GUILLOTINE_ACTION_INUSE
 
 				if (do_after(user, GUILLOTINE_ACTIVATE_DELAY, src) && blade_status == GUILLOTINE_BLADE_RAISED)
@@ -180,8 +180,8 @@
 				blade_status = GUILLOTINE_BLADE_SHARPENING
 				if(do_after(user, 7 DECISECONDS, src))
 					blade_status = GUILLOTINE_BLADE_RAISED
-					user.visible_message(span_notice("[user] sharpens the large blade of the guillotine."),
-						              span_notice("I sharpen the large blade of the guillotine."))
+					user.visible_message(span_notice("[user] afila la gran hoja de la guillotina."),
+						              span_notice("Afilare la gran hoja de la guillotina."))
 					blade_sharpness += 1
 					playsound(src, 'sound/items/sharpen_long1.ogg', 100, TRUE)
 					return
@@ -189,7 +189,7 @@
 					blade_status = GUILLOTINE_BLADE_RAISED
 					return
 			else
-				to_chat(user, span_warning("The blade is sharp enough!"))
+				to_chat(user, span_warning("¡La hoja esta lo suficientemente afilada!"))
 				return
 		else
 			to_chat(user, span_warning("¡Necesito levantar la hoja para afilarla!"))
@@ -202,11 +202,11 @@
 		return FALSE
 
 	if (!istype(M, /mob/living/carbon/human))
-		to_chat(usr, "<span class='warning'>It doesn't look like [M.p_they()] can fit into this properly!</span>")
+		to_chat(usr, "<span class='warning'>¡No parece que [M.p_they()] pueda caber en esto correctamente!</span>")
 		return FALSE // Can't decapitate non-humans
 
 	if (blade_status != GUILLOTINE_BLADE_RAISED)
-		to_chat(usr, "<span class='warning'>I need to raise the blade before placing someone!</span>")
+		to_chat(usr, "<span class='warning'>¡Necesito levantar la cuchilla antes de colocar a alguien!</span>")
 		return FALSE
 
 	if(iscarbon(M))
@@ -218,7 +218,7 @@
 		if(G.grab_state >= GRAB_AGGRESSIVE)
 			return ..(M, force, FALSE)
 
-	to_chat(usr, span_warning("I must grab them more forcefully to put them in [src]."))
+	to_chat(usr, span_warning("Tengo que agarrarlos con mas fuerza para ponerlos en [src]."))
 	return FALSE
 
 /obj/structure/guillotine/post_buckle_mob(mob/living/M)

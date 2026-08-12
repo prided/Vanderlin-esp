@@ -1,8 +1,8 @@
 /datum/objective/personal/abyssor_bath
-	name = "Take Bath"
-	category = "Abyssor's Chosen"
+	name = "Tomar un baño"
+	category = "Elegido de Abyssor"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Abyssor grows stronger", "Permanent Serenity (-1 Stress)")
+	rewards = list("2 Triunfos", "Abyssor se fortalece", "Serenidad permanente (-1 Estres)")
 
 /datum/objective/personal/abyssor_bath/on_creation()
 	. = ..()
@@ -32,7 +32,7 @@
 
 /datum/objective/personal/abyssor_bath/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have honored Abyssor by taking a relaxing bath while wearing his amulet!"))
+	to_chat(owner.current, span_greentext("¡Has honrado a Abyssor al tomar un baño relajante mientras llevabas su amuleto!"))
 	adjust_storyteller_influence(ABYSSOR, 20)
 	UnregisterSignal(owner.current, COMSIG_BATH_TAKEN)
 
@@ -41,4 +41,4 @@
 	owner.current.add_stress(/datum/stress_event/abyssor_serenity)
 
 /datum/objective/personal/abyssor_bath/update_explanation_text()
-	explanation_text = "Abyssor is calm at the moment. Take a relaxing bath while wearing his amulet to honor him!"
+	explanation_text = "Abyssor esta tranquilo por ahora. ¡Toma un baño relajante mientras llevas su amuleto para honrarlo!"

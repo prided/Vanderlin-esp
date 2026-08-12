@@ -13,7 +13,7 @@
  */
 
 /obj/structure/table
-	name = "table"
+	name = "mesa"
 	desc = ""
 	//icon = 'icons/obj/smooth_structures/table.dmi'
 	icon_state = "table"
@@ -57,15 +57,15 @@
 				return
 			if(user.used_intent.type == INTENT_GRAB)
 				if(user.grab_state < GRAB_AGGRESSIVE)
-					to_chat(user, "<span class='warning'>I need a better grip to do that!</span>")
+					to_chat(user, "<span class='warning'>Necesito un agarre mejor para hacer eso!</span>")
 					return
 				if(user.grab_state >= GRAB_NECK)
 					tableheadsmash(user, pushed_mob)
 				else
 					tablepush(user, pushed_mob)
 			if(user.used_intent.type == INTENT_HELP)
-				pushed_mob.visible_message("<span class='notice'>[user] begins to place [pushed_mob] onto [src]...</span>", \
-									"<span class='danger'>[user] begins to place [pushed_mob] onto [src]...</span>")
+				pushed_mob.visible_message("<span class='notice'>[user] comienza a colocar [pushed_mob] sobre [src]...</span>", \
+									"<span class='danger'>[user] comienza a colocar [pushed_mob] sobre [src]...</span>")
 				if(do_after(user, 3.5 SECONDS, pushed_mob))
 					tableplace(user, pushed_mob)
 				else
@@ -74,8 +74,8 @@
 		else if(user.pulling.pass_flags & PASSTABLE)
 			user.Move_Pulled(src)
 			if (user.pulling.loc == loc)
-				user.visible_message("<span class='notice'>[user] places [user.pulling] onto [src].</span>",
-					"<span class='notice'>I place [user.pulling] onto [src].</span>")
+				user.visible_message("<span class='notice'>[user] coloca [user.pulling] sobre [src].</span>",
+					"<span class='notice'>Coloco [user.pulling] sobre [src].</span>")
 				user.stop_pulling()
 	return ..()
 
@@ -99,13 +99,13 @@
 /obj/structure/table/proc/tableplace(mob/living/user, mob/living/pushed_mob)
 	pushed_mob.forceMove(loc)
 	pushed_mob.set_resting(TRUE, TRUE)
-	pushed_mob.visible_message("<span class='notice'>[user] places [pushed_mob] onto [src].</span>", \
-								"<span class='notice'>[user] places [pushed_mob] onto [src].</span>")
+	pushed_mob.visible_message("<span class='notice'>[user] coloca [pushed_mob] sobre [src].</span>", \
+								"<span class='notice'>[user] coloca [pushed_mob] sobre [src].</span>")
 	log_combat(user, pushed_mob, "places", null, "onto [src]")
 
 /obj/structure/table/proc/tablepush(mob/living/user, mob/living/pushed_mob)
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
-		to_chat(user, "<span class='danger'>Throwing [pushed_mob] onto the table might hurt them!</span>")
+		to_chat(user, "<span class='danger'>Si lanzas [pushed_mob] sobre la mesa, ¡podrias lastimarlos!</span>")
 		return
 	var/added_passtable = FALSE
 	if(!(pushed_mob.pass_flags & PASSTABLE))
@@ -122,8 +122,8 @@
 	if(user.mind?.martial_art.smashes_tables && user.mind?.martial_art.can_use(user))
 		deconstruct(FALSE)
 	playsound(pushed_mob, "sound/effects/tableslam.ogg", 90, TRUE)
-	pushed_mob.visible_message("<span class='danger'>[user] slams [pushed_mob] onto \the [src]!</span>", \
-								"<span class='danger'>[user] slams you onto \the [src]!</span>")
+	pushed_mob.visible_message("<span class='danger'>[user] golpea [pushed_mob] en \the [src] ¡</span>", \
+								"<span class='danger'>[user] te golpea contra \the [src]!</span>")
 	log_combat(user, pushed_mob, "tabled", null, "onto [src]")
 
 /obj/structure/table/proc/tableheadsmash(mob/living/user, mob/living/pushed_mob)
@@ -134,8 +134,8 @@
 	if(user.mind?.martial_art.smashes_tables && user.mind?.martial_art.can_use(user))
 		deconstruct(FALSE)
 	playsound(pushed_mob, "sound/effects/tableheadsmash.ogg", 90, TRUE)
-	pushed_mob.visible_message("<span class='danger'>[user] smashes [pushed_mob]'s head against \the [src]!</span>",
-								"<span class='danger'>[user] smashes your head against \the [src]</span>")
+	pushed_mob.visible_message("<span class='danger'>[user] destroza la cabeza de [pushed_mob] contra \the [src] ¡</span>",
+								"<span class='danger'>[user] golpea tu cabeza contra \the [src]</span>")
 	log_combat(user, pushed_mob, "head slammed", null, "against [src]")
 	pushed_mob.add_stress(/datum/stress_event/table_headsmash)
 
@@ -239,7 +239,7 @@
 	debris = list(/obj/item/natural/stone = 1)
 
 /obj/structure/table/vtable
-	name = "ancient wooden table"
+	name = "mesa de madera antigua"
 	icon = 'icons/roguetown/misc/tables.dmi'
 	icon_state = "vtable"
 	max_integrity = 300
@@ -252,7 +252,7 @@
 	debris = list(/obj/item/grown/log/tree/small = 1)
 
 /obj/structure/table/wood/counter
-	name = "counter"
+	name = "encimera"
 	icon_state = "longtable_mid"
 
 /obj/structure/table/wood/counter/end
@@ -308,23 +308,23 @@
 
 /obj/structure/table/map/rosewood
 	icon_state = "map_rosewood"
-	desc = "A table displaying a map of Rosewood and White Palace Pass."
+	desc = "Una tabla que muestra un mapa de Rosewood y White Palace Pass."
 
 /obj/structure/table/map/deshret
 	icon_state = "map_deshret"
-	desc = "A table displaying a map of Deshret and surrounding deserts."
+	desc = "Una tabla que muestra un mapa de Deshret y los desiertos circundantes."
 
 /obj/structure/table/map/amber
 	icon_state = "map_amber"
-	desc = "A table displaying a map of Amber Hollow. Regardless of serene appearance, the threat of Zizo's Claw underneath never lessens."
+	desc = "Una tabla que muestra un mapa de Amber Hollow. Independientemente de su apariencia serena, la amenaza de la Garra de Zizo debajo nunca disminuye."
 
 /obj/structure/table/map/kingsfield
 	icon_state = "map_kingsfield"
-	desc = "A table displaying a map of the capital of Kingsfield."
+	desc = "Una tabla que muestra un mapa de la capital de Kingsfield."
 
 /obj/structure/table/map/baotha
 	icon_state = "map_baotha"
-	desc = "A table displaying the lands surrounding the fallen kingdom of Azuria, doomed to ash."
+	desc = "Una tabla que muestra las tierras que rodean el reino caido de Azuria, condenado a cenizas."
 
 /obj/structure/table/wood/fine
 	icon = 'icons/roguetown/misc/tables.dmi'
@@ -482,7 +482,7 @@
 	climb_offset = 10
 
 /obj/structure/rack/shelf
-	name = "shelf"
+	name = "estante"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "shelf"
 	climbable = FALSE
@@ -522,7 +522,7 @@
 /obj/structure/table/optable/tablepush(mob/living/user, mob/living/pushed_mob)
 	pushed_mob.forceMove(loc)
 	pushed_mob.set_resting(TRUE, TRUE)
-	visible_message("<span class='notice'>[user] has laid [pushed_mob] on [src].</span>")
+	visible_message("<span class='notice'>[user] ha colocado [pushed_mob] sobre [src].</span>")
 	check_patient()
 
 /obj/structure/table/optable/proc/check_patient()

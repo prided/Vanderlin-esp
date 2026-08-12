@@ -1,6 +1,6 @@
 /obj/structure/door
 	name = "puerta de madera"
-	desc = "A door that can open and close."
+	desc = "Una puerta que se puede abrir y cerrar."
 	icon = 'icons/roguetown/misc/doors.dmi'
 	icon_state = "woodhandle"
 	density = TRUE
@@ -102,44 +102,44 @@
 /obj/structure/door/examine(mob/user)
 	. = ..()
 	if(has_viewport)
-		. += span_info("It has a built-in viewport.")
+		. += span_info("Tiene una ventana incorporada.")
 	if(has_bolt)
-		. += span_info("Its lock is a deadbolt.")
+		. += span_info("Su cerradura es una cerradura de seguridad.")
 	if(lock?.uses_key)
-		. += span_info("There is a keyhole below the handle.")
+		. += span_info("Hay un agujero para la llave debajo del mango.")
 
 /obj/structure/door/onkick(mob/user)
 	if(obj_broken || switching_states)
 		return
 	if(door_opened)
 		playsound(src, pick(attacked_sound), 100)
-		user.visible_message(span_warning("[user] kicks [src] shut!"), \
-			span_notice("I kick [src] shut!"))
+		user.visible_message(span_warning("¡[user] patea a [src] para cerrarlo!"), \
+			span_notice("¡Pechota [src] ¡zas!"))
 		force_closed()
 		return
 	if(!locked())
 		playsound(src, pick(attacked_sound), 100)
-		user.visible_message(span_warning("[user] kicks [src] open!"), \
-			span_notice("I kick [src] open!"))
+		user.visible_message(span_warning("¡[user] da patadas para abrir [src]!"), \
+			span_notice("¡Le doy una patada a [src] para abrirla!"))
 		force_open(user)
 		return
 	if(isliving(user))
 		var/mob/living/L = user
 		if(GET_MOB_ATTRIBUTE_VALUE(L, STAT_STRENGTH) < initial(kickthresh))
 			playsound(src, pick(attacked_sound), 100)
-			user.visible_message(span_warning("[user] kicks [src]! It's not effective."), \
-			span_notice("I kick [src]! It's not effective."))
+			user.visible_message(span_warning("[user] da una patada a [src] ¡No es efectivo!"), \
+			span_notice("¡Le pego patadas a [src]! No es efectivo."))
 			return
 		if((prob(GET_MOB_ATTRIBUTE_VALUE(L, STAT_STRENGTH) * 0.5) || kickthresh-- == 0))
 			playsound(src, pick(attacked_sound), 100)
-			user.visible_message(span_warning("[user] kicks open [src]!"), \
-				span_notice("I kick open [src]!"))
+			user.visible_message(span_warning("¡[user] patea la puerta [src] abierta!"), \
+				span_notice("¡Arrojo la puerta de [src] ¡abierta!"))
 			unlock()
 			force_open(user)
 			return
 		playsound(src, pick(attacked_sound), 100)
 		user.visible_message(span_warning("¡[user] patea a [src]!"), \
-			span_notice("I kick [src]!"))
+			span_notice("¡Pienso en [src]!"))
 
 /obj/structure/door/attack_paw(mob/user)
 	return attack_hand(user)
@@ -157,7 +157,7 @@
 
 	if(user.used_intent.type == /datum/intent/unarmed/claw)
 		user.changeNext_move(CLICK_CD_MELEE)
-		to_chat(user, span_warning("I claw at [src]"))
+		to_chat(user, span_warning("Garrasco en [src]"))
 		take_damage(40, BRUTE, BCLASS_CUT, TRUE)
 		return
 
@@ -170,12 +170,12 @@
 		if(can_knock)
 			if(user.a_intent?.name == "punch")
 				playsound(src, 'sound/foley/doors/knocking.ogg', 100)
-				user.visible_message(span_warning("[user] knocks on [src]."), \
-					span_notice("I knock on [src]."))
+				user.visible_message(span_warning("[user] golpea [src]."), \
+					span_notice("Golpeo la puerta [src]."))
 				return
 			rattle()
-			user.visible_message(span_warning("[user] tries the handle, but the door does not move."), \
-				span_notice("I try the handle, but the door does not move."))
+			user.visible_message(span_warning("[user] intenta mover la manilla, pero la puerta no se mueve."), \
+				span_notice("Pruebo el mango, pero la puerta no se mueve."))
 
 /obj/structure/door/pre_lock_interact(mob/living/user)
 	if(switching_states)
@@ -210,7 +210,7 @@
 	user.changeNext_move(CLICK_CD_FAST)
 	if(has_bolt)
 		if(obj_broken)
-			to_chat(user, span_warning("The bolt has nothing to latch to!"))
+			to_chat(user, span_warning("¡El pestillo no tiene nada a lo que engancharse!"))
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 		if((get_dir(src, user) == dir) || omni_bolt)
 			lock?.toggle(user)
@@ -220,12 +220,12 @@
 
 	if(has_viewport)
 		if(obj_broken)
-			to_chat(user, span_warning("The viewport is broken!"))
+			to_chat(user, span_warning("¡El visor esta roto!"))
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 		if(get_dir(src, user) == dir)
 			viewport_toggle(user)
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-		to_chat(user, span_notice("The viewport does not open from this side."))
+		to_chat(user, span_notice("El visor no se abre desde este lado."))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/structure/door/attack_ghost(mob/dead/observer/user)	// lets ghosts click on windows to transport across
@@ -245,21 +245,21 @@
 		var/mob/user = AM
 		if(HAS_TRAIT(user, TRAIT_BASHDOORS))
 			if(locked())
-				user.visible_message(span_warning("[user] bashes into [src]!"))
+				user.visible_message(span_warning("¡[user] golpea a [src]!"))
 				take_damage(200, BRUTE, BCLASS_BLUNT, TRUE)
 			else
 				playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
 				force_open(AM)
-				user.visible_message(span_warning("[user] smashes through [src]!"))
+				user.visible_message(span_warning("[user] destroza [src] ¡!"))
 			return
 		if(HAS_TRAIT(user, TRAIT_ROTMAN))
 			if(locked())
-				user.visible_message(span_warning("The deadite bashes into [src]!"))
+				user.visible_message(span_warning("¡El muerto se estrella contra [src]!"))
 				take_damage(50, BRUTE, BCLASS_BLUNT, TRUE)
 			else
 				playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 90)
 				force_open(AM)
-				user.visible_message(span_warning("The deadite smashes through [src]!"))
+				user.visible_message(span_warning("¡El muerto atraviesa [src]!"))
 			return
 		if(locked())
 			rattle()
@@ -409,12 +409,12 @@
 	if(switching_states || door_opened)
 		return
 	if(!windowed)
-		to_chat(user, span_info("I slide the viewport open."))
+		to_chat(user, span_info("Deslizo el visor para abrirlo."))
 		windowed = TRUE
 		set_opacity(FALSE)
 		playsound(src, 'sound/foley/doors/windowup.ogg', 100)
 		return
-	to_chat(user, span_info("I slide the viewport closed."))
+	to_chat(user, span_info("Arrastro el visor hacia abajo."))
 	windowed = FALSE
 	set_opacity(TRUE)
 	playsound(src, 'sound/foley/doors/windowup.ogg', 100)
@@ -449,7 +449,7 @@
 
 /obj/structure/door/swing
 	name = "puerta batiente"
-	desc = "A door that swings."
+	desc = "Una puerta que se abre."
 	icon_state = "swing"
 	windowed = TRUE
 	opacity = FALSE
@@ -473,8 +473,8 @@
 	lock = /datum/lock
 
 /obj/structure/door/weak/bolt/shutter
-	name = "serving hatch"
-	desc = "Can be locked from the inside."
+	name = "trampilla de servicio"
+	desc = "Se puede cerrar desde el interior."
 	icon_state = "serving"
 	max_integrity = 250
 	open_sound = 'sound/foley/blindsopen.ogg'

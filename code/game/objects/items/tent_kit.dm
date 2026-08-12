@@ -1,6 +1,6 @@
 /obj/item/tent_kit
-	name = "tent kit"
-	desc = "A compact kit containing everything needed to set up a weatherproof tent. The tent will be oriented based on the direction you're facing when assembling."
+	name = "equipo de tienda"
+	desc = "Un kit compacto que contiene todo lo necesario para montar una tienda de campaña resistente a la intemperie. La tienda se orientara segun la direccion en la que mires al montarla."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "tent_kit"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -44,7 +44,7 @@
 
 /obj/item/tent_kit/attack_self(mob/user)
 	if(assembled)
-		to_chat(user, "<span class='warning'>The tent is already assembled! Use it to disassemble.</span>")
+		to_chat(user, "<span class='warning'>¡La tienda ya esta montada! Usala para desmontarla.</span>")
 		return
 
 	var/turf/setup_turf = get_turf(user)
@@ -55,9 +55,9 @@
 	if(!check_assembly_space(setup_turf, user, assembly_dir))
 		return
 
-	to_chat(user, "<span class='notice'>You begin assembling the tent facing [dir2text(assembly_dir)]...</span>")
+	to_chat(user, "<span class='notice'>Comienzas a armar la tienda de campaña frente a [dir2text(assembly_dir)]...</span>")
 	if(!do_after(user, 10 SECONDS, target = src))
-		to_chat(user, "<span class='warning'>Your tent assembly was interrupted!</span>")
+		to_chat(user, "<span class='warning'>Tu montaje de tienda fue interrumpido!</span>")
 		return
 
 	assemble_tent(setup_turf, user, assembly_dir)
@@ -69,12 +69,12 @@
 	// Check ground level space
 	for(var/turf/check_turf in tent_coords)
 		if(!check_turf || check_turf.density)
-			to_chat(user, "<span class='warning'>There isn't enough clear ground space here!</span>")
+			to_chat(user, "<span class='warning'>¡No hay suficiente espacio en el suelo aqui!</span>")
 			return FALSE
 
 		for(var/obj/O in check_turf)
 			if(O.density)
-				to_chat(user, "<span class='warning'>There are objects blocking the tent area!</span>")
+				to_chat(user, "<span class='warning'>¡Hay objetos que bloquean el area de la tienda de campaña!</span>")
 				return FALSE
 
 	// Check upper level space if possible
@@ -96,7 +96,7 @@
 					break
 
 	if(!can_build_above)
-		to_chat(user, "<span class='notice'>No room above - tent will provide overhead protection via roof coverage.</span>")
+		to_chat(user, "<span class='notice'>No hay espacio arriba, la tienda proporcionara proteccion superior mediante la cobertura del techo.</span>")
 
 	return TRUE
 
@@ -251,7 +251,7 @@
 					can_build_above = FALSE
 					break
 
-	visible_message("<span class='notice'>[user] assembles [src] into a [can_build_above ? "full tent structure" : "ground-level shelter"].</span>")
+	visible_message("<span class='notice'>[user] ensambla [src] en una [can_build_above ? "full tent structure" : "ground-level shelter"]</span>")
 
 	var/list/door_coords = get_door_coordinates(center_turf, assembly_dir)
 	var/list/wall_coords = get_wall_coordinates(center_turf, assembly_dir)
@@ -323,19 +323,19 @@
 	assembled = TRUE
 	forceMove(center_turf)
 	anchored = TRUE
-	name = "assembled tent kit ([tent_width]x[tent_length])"
-	desc = "An assembled [tent_width]x[tent_length] tent kit facing [dir2text(assembly_dir)]. Use it to disassemble the tent and pack it back up."
+	name = "kit de tienda ensamblada ([tent_width]x[tent_length])"
+	desc = "Un kit de tienda de campaña [tent_width]x[tent_length] ensamblado frente a [dir2text(assembly_dir)]. Uselo para desmontar la tienda y volver a empaquetarla."
 
 /obj/item/tent_kit/proc/disassemble_tent(mob/user)
 	if(!assembled)
 		return
 
-	to_chat(user, "<span class='notice'>You begin disassembling the tent...</span>")
+	to_chat(user, "<span class='notice'>Empiezas a desmontar la tienda...</span>")
 	if(!do_after(user, 8 SECONDS, target = src))
-		to_chat(user, "<span class='warning'>Your tent disassembly was interrupted!</span>")
+		to_chat(user, "<span class='warning'>Tu desmontaje de la tienda de campaña fue interrumpido!</span>")
 		return
 
-	visible_message("<span class='notice'>[user] disassembles the tent and packs it away.</span>")
+	visible_message("<span class='notice'>[user] desarma la tienda y la guarda.</span>")
 
 	// Pack up all deployed walls
 	for(var/obj/structure/tent_wall/wall in tent_walls)
@@ -383,13 +383,13 @@
 	return TRUE
 
 /obj/item/tent_kit/proc/part_destroyed(obj/source)
-	to_chat(usr, "<span class='warning'>A tent component has been destroyed! The tent automatically packs itself up.</span>")
+	to_chat(usr, "<span class='warning'>¡Un componente de la tienda ha sido destruido! La tienda se guarda automaticamente.</span>")
 	disassemble_tent(usr)
 
 /obj/item/tent_kit/proc/part_moved(obj/source, atom/old_loc)
 	// If a tent part was moved away from its position, pack up
 	if(source.loc != old_loc && source.loc != src)
-		to_chat(usr, "<span class='warning'>A tent component has been moved! The tent automatically packs itself up.</span>")
+		to_chat(usr, "<span class='warning'>¡Un componente de la tienda de campaña se ha movido! La tienda se guarda automaticamente.</span>")
 		disassemble_tent(usr)
 
 /obj/item/tent_kit/examine(mob/user)
@@ -426,8 +426,8 @@
 
 // Tent wall object - NOT the turf varient so we can store damage and other vars between placements
 /obj/structure/tent_wall
-	name = "tent wall"
-	desc = "Made from durable fabric and wooden branches. Provides excellent protection from weather."
+	name = "pared de la tienda"
+	desc = "Fabricado con tela duradera y ramas de madera. Proporciona una excelente proteccion contra el clima."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "tent"
 	density = TRUE

@@ -1,5 +1,5 @@
 /obj/structure/fake_machine/submission
-	name = "HOLE OF SUBMISSION"
+	name = "AGUJERO DE PRESENTACION"
 	desc = ""
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "submit"
@@ -32,7 +32,7 @@
 			else
 				var/area/A = GLOB.areas_by_type[R.transport_item]
 				if(!A && message == TRUE)
-					say("Couldn't find where to send the submission.")
+					say("No pude encontrar a donde enviar el envio.")
 					return
 				var/list/turfs = list()
 				for(var/turf/T in A.get_turfs_from_all_zlevels())
@@ -86,7 +86,7 @@
 	if(ishuman(user))
 		for(var/obj/I in get_turf(src))
 			attemptsell(I, user, FALSE, FALSE)
-		say("Bulk submission in progress...")
+		say("Envio masivo en proceso...")
 		playsound(src, 'sound/misc/hiss.ogg', 100, FALSE, -1)
 		playsound(src, 'sound/misc/disposalflush.ogg', 100, FALSE, -1)
 		return TRUE
@@ -97,7 +97,7 @@ GLOBAL_VAR(feeding_hole_reset_timer)
 */
 			//WIP for now it does really nothing, but people will be gaslighted into thinking it does.
 /obj/structure/feedinghole
-	name = "FEEDING HOLE"
+	name = "AGUJERO DE ALIMENTACION"
 	desc = ""
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "feedinghole"
@@ -114,15 +114,15 @@ GLOBAL_VAR(feeding_hole_reset_timer)
 		GLOB.feeding_hole_wheat_count++
 */
 		playsound(src, 'sound/misc/beep.ogg', 100, FALSE, -1)
-		user.visible_message("<span class='notice'>[user] feeds [P] into the [src].</span>",
-			"<span class='notice'>You feed the [P] into the [src].</span>")
+		user.visible_message("<span class='notice'>[user] alimenta a [P] en el [src].</span>",
+			"<span class='notice'>Usted alimenta el [P] en el [src].</span>")
 	else if(istype(P, /obj/item/reagent_containers/food/snacks/meat/steak))
 		// Handle the steak item and spawn bigrat
 		qdel(P)
 		playsound(src, 'sound/vo/mobs/rat/rat_death.ogg', 100, FALSE, -1)
 		new /mob/living/simple_animal/hostile/retaliate/bigrat(loc)
-		user.visible_message("<span class='notice'>[user] feeds [P] into the [src], and something emerges!</span>",
-			"<span class='danger'>You feed the [P] into the [src], and something emerges!</span>")
+		user.visible_message("<span class='notice'>[user] alimenta [P] en el [src], y algo emerge </span>",
+			"<span class='danger'>Usted alimenta [P] en [src], y algo emerge!</span>")
 	else
 
 		..()

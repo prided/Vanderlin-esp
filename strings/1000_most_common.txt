@@ -3,13 +3,13 @@ capaz
 sobre
 arriba
 aceptar
-a través
+a traves
 actuar
 realmente
 agregar
 admitir
 asustado
-después
+despues
 tarde
 otra vez
 contra
@@ -26,7 +26,7 @@ solo
 a lo largo
 ya
 bien
-también
+tambien
 aunque
 siempre
 soy
@@ -49,7 +49,7 @@ aparentemente
 aparecer
 acercarse
 son
-área
+area
 no son
 no son
 brazo
@@ -62,12 +62,12 @@ trasero
 en
 atacar
 intento
-atención
-tía
+atencion
+tia
 evitar
 lejos
-bebé
-atrás
+bebe
+atras
 malo
 bolsa
 pelota
@@ -78,20 +78,20 @@ baño
 ser
 golpear
 hermoso
-se volvió
+se volvio
 porque
 convertirse
 cama
 dormitorio
 sido
 antes
-comenzó
+comenzo
 comenzar
-detrás
+detras
 creer
 campana
 al lado
-además
+ademas
 mejor
 mejor
 entre
@@ -122,16 +122,16 @@ aliento
 respirar
 brillante
 traer
-rompió
+rompio
 roto
 hermano
 trajo
-café
+cafe
 cepillo
 construir
 quemar
 estallar
-autobús
+autobus
 negocio
 ocupado
 pero
@@ -151,7 +151,7 @@ cargar
 caso
 gato
 atrapar
-atrapó
+atrapo
 causa
 celda
 silla
@@ -163,7 +163,7 @@ mejilla
 pecho
 niño
 niños
-reír
+reir
 ciudad
 clase
 limpiar
@@ -171,8 +171,8 @@ claro
 subir
 cerrar
 ropa
-café
-frío
+cafe
+frio
 universidad
 color
 venir
@@ -180,18 +180,18 @@ comentario
 completo
 completamente
 computadora
-preocupación
+preocupacion
 confundir
 considerar
 continuar
 control
-conversación
+conversacion
 genial
 esquina
-sofá
-podría
-no podría
-no podría
+sofa
+podria
+no podria
+no podria
 mostrador
 pareja
 curso
@@ -204,13 +204,13 @@ llorar
 taza
 cortar
 lindo
-papá
+papa
 maldito
 bailar
 oscuro
 cita
 hija
-día
+dia
 muerto
 trato
 querido
@@ -225,7 +225,7 @@ no hizo
 morir
 diferente
 cena
-dirección
+direccion
 desaparecer
 hacer
 doctor
@@ -252,13 +252,13 @@ durante
 cada
 oreja
 temprano
-fácilmente
-fácil
+facilmente
+facil
 comer
 borde
 cualquiera
-más
-vacío
+mas
+vacio
 fin
 disfrutar
 suficiente
@@ -280,7 +280,7 @@ exclamar
 disculpa
 esperar
 explicar
-expresión
+expresion
 ojo
 ceja
 cara
@@ -288,15 +288,15 @@ hecho
 caer
 familia
 lejos
-rápido
+rapido
 padre
 culpa
 favorito
 miedo
 sentir
 pies
-cayó
-sintió
+cayo
+sintio
 pocos
 campo
 pelear
@@ -325,7 +325,7 @@ fuerza
 olvidar
 forma
 adelante
-encontró
+encontro
 cuatro
 libre
 amigo
@@ -334,16 +334,16 @@ frente
 fruncir
 joder
 lleno
-diversión
+diversion
 gracioso
-más lejos
+mas lejos
 juego
 jadear
 dio
 mirada
 suavemente
 obtener
-reír
+reir
 chica
 novia
 dar
@@ -374,9 +374,9 @@ guardia
 adivinar
 arma
 tipo
-tenía
-no tenía
-no tenía
+tenia
+no tenia
+no tenia
 cabello
 mitad
 pasillo
@@ -392,29 +392,29 @@ odiar
 tener
 no tener
 no tener
-él
-él habría
-él es
+el
+el habria
+el es
 cabeza
-oír
-oyó
-corazón
+oir
+oyo
+corazon
 pesado
-él habría
+el habria
 sostuvo
 infierno
 hola
 ayuda
 ella
-aquí
+aqui
 ella misma
-él es
+el es
 oye
 hola
 esconder
 alto
-él
-él mismo
+el
+el mismo
 su
 golpear
 sostener
@@ -425,7 +425,7 @@ hospital
 caliente
 hora
 casa
-cómo
+como
 sin embargo
 abrazar
 enorme
@@ -436,12 +436,12 @@ colgado
 apresurarse
 herir
 yo
-yo habría
-yo haré
+yo habria
+yo hare
 yo soy
 yo he
 hielo
-identificación
+identificacion
 idea
 si
 ignorar
@@ -453,7 +453,7 @@ importante
 en
 dentro
 en cambio
-interés
+interes
 interrumpir
 dentro de
 es
@@ -466,7 +466,7 @@ su
 he
 chaqueta
 pantalones
-imbécil
+imbecil
 trabajo
 unirse
 broma
@@ -482,23 +482,23 @@ tipo
 besar
 cocina
 rodilla
-sabía
+sabia
 tocar
 saber
 conocido
 dama
 tierra
 grande
-último
+ultimo
 tarde
-reír
+reir
 acostar
 liderar
 inclinarse
 aprender
 menos
 dejar
-lideró
+lidero
 izquierda
 pierna
 menos
@@ -509,7 +509,7 @@ vida
 levantar
 luz
 gustar
-línea
+linea
 labio
 escuchar
 pequeño
@@ -536,40 +536,40 @@ casarse
 coincidir
 asunto
 puede
-quizá
+quiza
 me
 significar
-significó
+significo
 conocer
 memoria
 hombres
 mencionar
-conoció
+conocio
 medio
-podría
+podria
 mente
-mío
+mio
 minuto
 espejo
 extrañar
-mamá
+mama
 momento
 dinero
 mes
-ánimo
-más
+animo
+mas
 mañana
-mayoría
+mayoria
 madre
 boca
 mover
-película
+pelicula
 señor
 señora
 mucho
-mamá
+mama
 murmurar
-música
+musica
 deber
 murmurar
 mi
@@ -596,7 +596,7 @@ nota
 nada
 notar
 ahora
-número
+numero
 obviamente
 de
 fuera
@@ -636,9 +636,9 @@ pausa
 pagar
 gente
 perfecto
-quizá
+quiza
 persona
-teléfono
+telefono
 elegir
 imagen
 pieza
@@ -650,12 +650,12 @@ jugar
 por favor
 bolsillo
 punto
-policía
+policia
 estallar
-posición
+posicion
 posible
 poder
-prácticamente
+practicamente
 presente
 presionar
 fingir
@@ -668,27 +668,27 @@ golpear
 empujar
 poner
 pregunta
-rápido
-rápidamente
+rapido
+rapidamente
 silencioso
 silenciosamente
 bastante
 carrera
 lluvia
 levantar
-corrió
-sonó
-más bien
+corrio
+sono
+mas bien
 alcanzar
 leer
 listo
 real
 darse cuenta
 realmente
-razón
+razon
 reconocer
 rojo
-relación
+relacion
 relajarse
 permanecer
 recordar
@@ -704,7 +704,7 @@ anillo
 camino
 roca
 rodar
-habitación
+habitacion
 rosa
 redondo
 frotar
@@ -730,7 +730,7 @@ visto
 mismo
 enviar
 sentido
-envió
+envio
 serio
 seriamente
 establecer
@@ -741,7 +741,7 @@ sombra
 sacudir
 compartir
 ella
-ella habría
+ella habria
 ella es
 derramar
 ella es
@@ -750,14 +750,14 @@ camisa
 mierda
 impacto
 zapato
-sacudió
+sacudio
 tienda
 corto
 disparo
-debería
+deberia
 hombro
-no debería
-no debería
+no deberia
+no deberia
 gritar
 empujar
 mostrar
@@ -777,7 +777,7 @@ soltero
 señor
 hermana
 sentarse
-situación
+situacion
 seis
 piel
 cielo
@@ -789,11 +789,11 @@ lento
 lentamente
 pequeño
 olor
-sonreír
-sonreír con suficiencia
+sonreir
+sonreir con suficiencia
 humo
 chasquido
-así
+asi
 suave
 suavemente
 algo
@@ -801,9 +801,9 @@ de alguna manera
 alguien
 algo
 a veces
-en algún lugar
+en algun lugar
 hijo
-canción
+cancion
 pronto
 lo siento
 tipo
@@ -812,7 +812,7 @@ espacio
 hablar
 gastar
 gastado
-habló
+hablo
 lugar
 escalera
 estar de pie
@@ -823,9 +823,9 @@ estado
 quedarse
 paso
 palo
-todavía
-estómago
-se quedó
+todavia
+estomago
+se quedo
 detener
 tienda
 historia
@@ -838,7 +838,7 @@ atascado
 estudiante
 estudiar
 cosas
-estúpido
+estupido
 tal
 chupar
 repentino
@@ -858,7 +858,7 @@ hablar
 alto
 maestro
 equipo
-lágrima
+lagrima
 dientes
 decir
 diez
@@ -872,14 +872,14 @@ su
 ellos
 ellos mismos
 entonces
-allí
+alli
 hay
 hay
 estos
 ellos
-ellos habrían
+ellos habrian
 ellos son
-ellos habrían
+ellos habrian
 ellos son
 grueso
 cosa
@@ -890,9 +890,9 @@ esos
 aunque
 pensamiento
 tres
-lanzó
+lanzo
 garganta
-a través
+a traves
 lanzar
 atar
 apretado
@@ -907,8 +907,8 @@ mañana
 tono
 lengua
 esta noche
-también
-tomó
+tambien
+tomo
 arriba
 totalmente
 tocar
@@ -917,7 +917,7 @@ pueblo
 pista
 sendero
 tren
-árbol
+arbol
 viaje
 problema
 VERDADERO
@@ -929,7 +929,7 @@ TV
 veinte
 dos
 tipo
-tío
+tio
 debajo
 entender
 hasta
@@ -947,7 +947,7 @@ despertar
 caminar
 pared
 querer
-cálido
+calido
 advertir
 era
 no era
@@ -972,23 +972,23 @@ no eran
 no eran
 mojado
 hemos
-qué
-qué es
+que
+que es
 lo que sea
-qué es
-cuándo
-dónde
+que es
+cuando
+donde
 si
-cuál
+cual
 mientras
 susurrar
 blanco
-quién
+quien
 entero
-por qué
+por que
 ancho
 esposa
-hará
+hara
 viento
 ventana
 limpiar
@@ -996,40 +996,40 @@ desear
 con
 dentro
 sin
-despertó
+desperto
 mujer
 mujeres
-no hará
+no hara
 preguntarse
-no hará
+no hara
 madera
 palabra
-llevó puesto
+llevo puesto
 trabajo
 mundo
 preocuparse
 peor
-haría
-no haría
-no haría
+haria
+no haria
+no haria
 guau
 envolver
 escribir
 equivocado
-sí
+si
 año
 gritar
-sí
-todavía
-tú
-tú habrías
-tú harás
-tú eres
-tú has
-tú habrías
-tú harás
+si
+todavia
+tu
+tu habrias
+tu haras
+tu eres
+tu has
+tu habrias
+tu haras
 joven
 tu
-tú eres
-tú mismo
-tú has
+tu eres
+tu mismo
+tu has

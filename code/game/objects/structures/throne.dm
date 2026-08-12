@@ -1,6 +1,6 @@
 /obj/structure/throne
-	name = "throne"
-	desc = "A big throne, to hold the Lord's giant personality. Say 'help' with the crown on your head if you are confused."
+	name = "trono"
+	desc = "Un gran trono, para sostener la personalidad gigante del Señor."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "throne"
 	density = FALSE
@@ -27,7 +27,7 @@
 
 /obj/structure/throne/vthrone
 	name = "El trono de sangre"
-	desc = "A big ominous throne."
+	desc = "Un gran trono siniestro."
 	icon = 'icons/roguetown/misc/vthrone.dmi'
 
 /obj/structure/throne/examine(mob/user)

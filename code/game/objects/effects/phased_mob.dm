@@ -1,5 +1,5 @@
 /obj/effect/dummy/phased_mob
-	name = "water"
+	name = "agua"
 	anchored = TRUE
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -63,7 +63,7 @@
 		// to try to land in a NO_TELEPORT zone after it is created, AKA trying to exploit.
 		if(isliving(jaunter))
 			var/mob/living/living_cheaterson = jaunter
-			to_chat(living_cheaterson, span_userdanger("This area has a heavy universal force occupying it, and you are scattered to the cosmos!"))
+			to_chat(living_cheaterson, span_userdanger("¡Este area esta ocupada por una fuerza universal poderosa y tu estas disperso por el cosmos!"))
 			if(ishuman(living_cheaterson))
 				shake_camera(living_cheaterson, 20, 1)
 				addtimer(CALLBACK(living_cheaterson, TYPE_PROC_REF(/mob/living/carbon, vomit)), 2 SECONDS)
@@ -107,10 +107,10 @@
 	var/area/destination_area = newloc.loc
 	movedelay = world.time + movespeed
 	if(newloc.turf_flags & NO_JAUNT)
-		to_chat(user, span_warning("Some strange aura is blocking the way."))
+		to_chat(user, span_warning("Hay una extraña aura bloqueando el camino."))
 		return
 	if(destination_area.area_flags & NO_TELEPORT || SSmapping.level_trait(newloc.z, ZTRAIT_NOPHASE))
-		to_chat(user, span_danger("Some dull, universal force is blocking the way. It's overwhelmingly oppressive force feels dangerous."))
+		to_chat(user, span_danger("Una fuerza universal y opaca esta bloqueando el camino. Su fuerza abrumadoramente opresiva se siente peligrosa."))
 		return
 	return newloc
 

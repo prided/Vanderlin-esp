@@ -21,7 +21,7 @@
 	return ..()
 
 /obj/item/trash/candle
-	name = "candle"
+	name = "vela"
 	icon = 'icons/obj/candle.dmi'
 	icon_state = "candle4"
 	item_weight = 23 GRAMS

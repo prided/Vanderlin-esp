@@ -1,7 +1,7 @@
 
 /obj/structure/redstone/piston
-	name = "redstone piston"
-	desc = "A mechanical device that can push blocks when powered."
+	name = "piston de piedra roja"
+	desc = "Un dispositivo mecanico que puede empujar bloques cuando esta encendido."
 	icon_state = "piston"
 	redstone_role = REDSTONE_ROLE_OUTPUT
 	var/extended = FALSE
@@ -89,7 +89,7 @@
 			O.forceMove(push_target)
 	for(var/mob/M in target_turf)
 		M.forceMove(push_target)
-		to_chat(M, "<span class='warning'>You are pushed by the piston!</span>")
+		to_chat(M, "<span class='warning'>¡El piston te empuja!</span>")
 
 /obj/structure/redstone/piston/proc/pull_objects()
 	if(!head)
@@ -103,7 +103,7 @@
 			O.forceMove(pull_target)
 	for(var/mob/M in pull_source)
 		M.forceMove(pull_target)
-		to_chat(M, "<span class='warning'>You are pulled by the sticky piston!</span>")
+		to_chat(M, "<span class='warning'>¡Te esta jalando el piston pegajoso!</span>")
 
 /obj/structure/redstone/piston/update_icon_state()
 	. = ..()
@@ -119,7 +119,7 @@
 	if(head)
 		head.set_direction(dir)
 	update_appearance(UPDATE_ICON_STATE)
-	to_chat(user, "<span class='notice'>You rotate the [name].</span>")
+	to_chat(user, "<span class='notice'>Usted hace girar el [name].</span>")
 
 /obj/structure/redstone/piston/sticky
 	name = "piston de piedra roja pegajoso"

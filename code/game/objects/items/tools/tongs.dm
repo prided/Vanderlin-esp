@@ -1,5 +1,5 @@
 /obj/item/weapon/tongs
-	name = "tongs"
+	name = "pinzas"
 	desc = ""
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	icon_state = "tongs"
@@ -22,7 +22,7 @@
 /obj/item/weapon/tongs/examine(mob/user)
 	. = ..()
 	if(held_item)
-		. += span_info("[src] is holding \a [held_item.name].")
+		. += span_info("[src] esta sosteniendo \a [held_item.name].")
 		if(HAS_TRAIT(held_item, TRAIT_NEEDS_QUENCH))
 			. += span_warning("La punta esta caliente al tacto.")
 

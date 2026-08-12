@@ -1,9 +1,9 @@
 
 
 /obj/item/natural/hide
-	name = "hide"
+	name = "piel"
 	icon_state = "hide"
-	desc = "Hide from one of Dendor's creachers."
+	desc = "Escondete de uno de los creadores de Dendor."
 	dropshrink = 0.90
 	force = 0
 	throwforce = 0
@@ -18,7 +18,7 @@
 		return ..()
 
 	if(!isturf(loc) || !locate(/obj/structure/table) in loc)
-		to_chat(user, "<span class='warning'>You need to put the [src] on a table to work on it.</span>")
+		to_chat(user, "<span class='warning'>Necesitas poner el [src] sobre una mesa para trabajar en el.</span>")
 		return ITEM_INTERACT_BLOCKING
 
 	var/crafttime = max(0, 100 - GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/magic/arcane) * 5)
@@ -26,7 +26,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	playsound(src, 'sound/items/book_close.ogg', 100, TRUE)
-	to_chat(user, span_notice("I add the first few pages to the leather cover..."))
+	to_chat(user, span_notice("Añado las primeras paginas a la cubierta de cuero..."))
 	new /obj/item/spellbook_unfinished(loc)
 	qdel(tool)
 	qdel(src)
@@ -35,13 +35,13 @@
 /obj/item/natural/hide/cured
 	name = "cuero curado"
 	icon_state = "leather"
-	desc = "A hide piece that has been cured and may now be worked."
+	desc = "Pieza de piel que ha sido curada y que ahora se puede trabajar."
 	sellprice = 7
 	bundletype = /obj/item/natural/bundle/curred_hide
 
 /obj/item/natural/bundle/curred_hide
-	name = "bundle of cured leather"
-	desc = "A bunch of cured leather pieces bundled together."
+	name = "paquete de cuero curado"
+	desc = "Un monton de piezas de cuero curado agrupadas."
 	icon_state = "leatherroll1"
 	maxamount = 10
 	spitoutmouth = FALSE
@@ -53,18 +53,18 @@
 	icon2step = 10
 
 /obj/item/natural/cured/essence
-	name = "essence of wilderness"
+	name = "esencia del desierto"
 	icon_state = "wessence"
-	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
+	desc = "Una esencia mistica imbuida del poder de Dendor. Simplemente sostenerlo transporta la mente a tiempos antiguos."
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
 	item_weight = 100 GRAMS
 
 /obj/item/natural/fur // a piece of skin with animal hair on it. Could be called a fur but its untanned and also encompasses rat skins and goat skins so pelt is more suitable at least to my ears.
-	name = "fur"
+	name = "piel"
 	icon_state = "wool1"
-	desc = "Pelt from one of Dendor's creachers."
+	desc = "Piel de uno de los creachers de Dendor."
 	dropshrink = 0.90
 	force = 0
 	throwforce = 0
@@ -75,52 +75,52 @@
 	item_weight = 300 GRAMS
 
 /obj/item/natural/fur/gote
-	name = "gote fur"
+	name = "gote de pelo"
 	desc = "Piel de gote."
 	icon_state = "pelt_gote"
 
 /obj/item/natural/fur/volf
-	name = "volf fur"
-	desc = "Pelt from a volf."
+	name = "lana de lobo"
+	desc = "Piel de un volf."
 	icon_state = "pelt_volf"
 
 /obj/item/natural/fur/mole
-	name = "mole fur"
+	name = "Piel de topo"
 	desc = "Piel de topo."
 	icon_state = "pelt_mole"
 
 /obj/item/natural/fur/rous
-	name = "rous fur"
-	desc = "Pelt from a rous."
+	name = "piel de Rous"
+	desc = "Piel de un rous."
 	icon_state = "pelt_rous"
 
 /obj/item/natural/fur/cabbit
-	name = "cabbit fur"
-	desc = "Pelt from a cabbit."
+	name = "lana de cabito"
+	desc = "Piel de un taxi."
 	icon_state = "wool2"
 
 /obj/item/natural/fur/direbear
-	name = "direbear fur"
-	desc = "fur from one of Dendor's mightiest creachers."
+	name = "pelaje de oso gigante"
+	desc = "piel de uno de los creachers mas poderosos de Dendor."
 	icon_state = "pelt_direbear"
 	color = "#33302b"
 	sellprice = 28
 
 /obj/item/natural/fur/fox
-	name = "venard fur"
-	desc = "Fur from a venard."
+	name = "pelaje de zorro"
+	desc = "Piel de venard."
 	icon_state = "pelt_fox"
 	color = null
 
 /obj/item/natural/fur/raccoon
-	name = "raccoon fur"
+	name = "piel de mapache"
 	desc = "Piel de mapache."
 	icon_state = "pelt_raccoon"
 	color = null
 	sellprice = 12
 
 /obj/item/natural/fur/bobcat
-	name = "bobcat fur"
+	name = "piel de yaguaroundo"
 	desc = "Piel de lince."
 	icon_state = "pelt_bobcat"
 	color = null
@@ -166,7 +166,7 @@
 			var/butchering_skill = GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/labor/butchering)
 			var/used_time = 8
 			used_time = (used_time - 0.5 * butchering_skill) SECONDS
-			visible_message("[user] begins to butcher \the [src].")
+			visible_message("[user] comienza a despiezar a \the [src].")
 			playsound(src, 'sound/foley/gross.ogg', 100, FALSE)
 			var/amt2raise = GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)/4
 			if(do_after(user, used_time, src))
@@ -189,8 +189,8 @@
 	item_weight = 1.2 KILOGRAMS
 
 /obj/item/natural/head/saiga
-	name = "saiga head"
-	desc = "The severed head of a proud saiga."
+	name = "cabeza de saiga"
+	desc = "La cabeza cortada de un orgulloso saiga."
 	icon_state = "saigahead"
 	sellprice = 3
 	blood_value = BLOOD_VOLUME_BAD
@@ -212,12 +212,12 @@
 
 /obj/item/natural/head/troll/axe
 	name = "cabeza de troll"
-	desc = "The severed head of a once mighty warrior troll."
+	desc = "La cabeza cortada de un troll guerrero que alguna vez fue poderoso."
 	icon_state = "trollhead_axe"
 	sellprice = 30
 
 /obj/item/natural/head/troll/cave
-	name = "cave troll head"
+	name = "cabeza de troll de las cavernas"
 	icon_state = "cavetrollhead"
 	sellprice = 45
 
@@ -230,8 +230,8 @@
 	item_weight = 500 GRAMS
 
 /obj/item/natural/head/direbear
-	name = "direbear head"
-	desc = "The head of a terrifying direbear."
+	name = "cabeza de oso horrendo"
+	desc = "La cabeza de un aterrador oso terrible."
 	icon_state = "direbearhead"
 	layer = 3.1
 	sellprice = 20
@@ -239,7 +239,7 @@
 	item_weight = 1.6 KILOGRAMS
 
 /obj/item/natural/head/fox
-	name = "venard head"
+	name = "cabeza venard"
 	desc = "La cabeza de un majestuoso venardo."
 	icon_state = "foxhead"
 	layer = 3.1
@@ -249,16 +249,16 @@
 	item_weight = 400 GRAMS
 
 /obj/item/natural/head/spider
-	name = "beespider head"
-	desc = "The severed head of a venomous beespider."
+	name = "cabeza de abeja"
+	desc = "La cabeza cortada de una araña abeja venenosa."
 	icon_state = "spiderhead"
 	sellprice = 6
 	meat_to_give = /obj/item/reagent_containers/food/snacks/meat/strange
 	item_weight = 200 GRAMS
 
 /obj/item/natural/head/bug
-	name = "bogbug head"
-	desc = "The severed head of a gross bogbug."
+	name = "cabeza de chinche"
+	desc = "La cabeza cortada de un chinche asqueroso."
 	icon_state = "boghead"
 	sellprice = 10
 	meat_to_give = /obj/item/reagent_containers/food/snacks/meat/strange
@@ -278,8 +278,8 @@
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
 
 /obj/item/natural/head/gote
-	name = "gote head"
-	desc = "The severed head of a fiery gote."
+	name = "cabeza goteada"
+	desc = "La cabeza cortada de un goto de fuego."
 	icon_state = "gotehead"
 	sellprice = 3
 	blood_value = BLOOD_VOLUME_SURVIVE / 2
@@ -287,8 +287,8 @@
 
 //RTD make this a storage item and make clickign on animals with things put it in storage
 /obj/item/natural/saddle
-	name = "saddle"
-	desc = "A culmination of leather, fur and hide. Strapped onto the backs of beasts for ease of riding."
+	name = "montura"
+	desc = "Una culminacion de cuero, pieles y pieles. Atado a la espalda de las bestias para facilitar su conduccion."
 	icon_state = "saddle"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK_L
@@ -314,7 +314,7 @@
 	if(simple.has_buckled_mobs())
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_warning("[user] tries to saddle [simple]..."))
+	user.visible_message(span_warning("[user] intenta montar [simple]..."))
 
 	if(!do_after(user, 4 SECONDS, simple))
 		return ITEM_INTERACT_BLOCKING
@@ -343,14 +343,14 @@
 			to_chat(user, span_notice("¡Mi poder esta debilitado, no puedo sanar!"))
 			return TRUE
 		if(is_species(user, /datum/species/werewolf))
-			visible_message(span_danger("[user] ravenously consumes [src]!"), span_warning("Me alimento de carne suculenta. Me siento revitalizado."))
+			visible_message(span_danger("¡[user] consume vorazmente [src]!"), span_warning("Me alimento de carne suculenta. Me siento revitalizado."))
 			H.rage_datum?.update_rage(WW_RAGE_HIGH)
 			gib()
 		return TRUE
 	if(!src.apply_damage(damage, BRUTE))
 		return TRUE
 	if(is_species(user, /datum/species/werewolf))
-		visible_message(span_danger("[user] bites into [src] and thrashes!"))
+		visible_message(span_danger("[user] muerde a [src] y ¡se revuelve!"))
 	else
 		visible_message(span_danger("¡[user] muerde a [src]!"))
 	if(HAS_TRAIT(user, TRAIT_POISONBITE) && src.reagents)

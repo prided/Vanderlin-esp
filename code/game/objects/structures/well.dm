@@ -1,8 +1,8 @@
 //Fluff structures serve no purpose and exist only for enriching the environment. They can be destroyed with a wrench.
 
 /obj/structure/well
-	name = "well"
-	desc = "A well of stone. Has a hook which a bucket can be attached to, to draw water from beneath."
+	name = "pozo"
+	desc = "Un pozo de piedra. Tiene un gancho al que se le puede acoplar un cubo para sacar agua de debajo."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "welly"
 	anchored = TRUE
@@ -15,12 +15,12 @@
 	var/well_climb = FALSE
 
 /obj/structure/well/climb_down
-	desc = "A well of stone. Has a hook which a bucket can be attached to, to draw water from beneath. It seems you can climb down this one"
+	desc = "Un pozo de piedra. Tiene un gancho al que se le puede acoplar un cubo para sacar agua de debajo. Parece que puedes bajar por este."
 	well_climb = "DOWN"
 
 /obj/structure/well/climb_up
 	name = "cuerda de cubo"
-	desc = "A rope at the bottom of a well, you can climb up it if you want."
+	desc = "Una cuerda en el fondo de un pozo, puedes trepar por ella si quieres."
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "rope"
 	well_climb = "UP"
@@ -29,7 +29,7 @@
 
 /obj/structure/well/fountain
 	name = "fuente de agua"
-	desc = "An elegant fountain fit for royalty. Not suitable for drinking from."
+	desc = "Una fuente elegante digna de la realeza. No apto para beber."
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "fountain"
 	layer = BELOW_MOB_LAYER
@@ -60,7 +60,7 @@
 		if(do_after(user, 6 SECONDS, src))
 			var/list/waterl = list(/datum/reagent/water = 100)
 			W.reagents.add_reagent_list(waterl)
-			to_chat(user, "<span class='notice'>I fill [W] from [src].</span>")
+			to_chat(user, "<span class='notice'>Relleno [W] desde [src].</span>")
 			playsound(user, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 80, FALSE)
 			return
 	else ..()
@@ -75,7 +75,7 @@
 	playsound(src, 'sound/foley/ladder.ogg', 100, FALSE)
 	if(!do_after(user, 3 SECONDS, src))
 		return
-	user.visible_message("<span class='notice'>[user] climbs down [src].</span>", "<span class='notice'>I climb down [src].</span>")
+	user.visible_message("<span class='notice'>[user] desciende por [src].</span>", "<span class='notice'>Me bajo de [src].</span>")
 	src.add_fingerprint(user)
 	var/turf/well = get_turf(src)
 	var/turf/destination = locate(well.x, well.y, well.z)

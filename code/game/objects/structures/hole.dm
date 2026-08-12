@@ -128,7 +128,7 @@
 	if(!grave_decorations)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	else if(length(grave_decorations) != 1)
-		item_to_remove = tgui_input_list(user, "¿Que decoracion quieres quitar?", "Grave Decor Removal", grave_decorations)
+		item_to_remove = tgui_input_list(user, "¿Que decoracion quieres quitar?", "Eliminacion de decoracion de tumbas", grave_decorations)
 	else
 		item_to_remove = grave_decorations[1] // only one item
 
@@ -136,13 +136,13 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	// Time to actually remove the item
-	user.visible_message(span_info("[user] starts to remove \the <span class='bold'>[item_to_remove]</span> from \the [src]"), span_notice("You attempt to remove \the <span class='bold'>[item_to_remove]</span> from \the [src]"))
+	user.visible_message(span_info("[user] comienza a quitar \the <span class='bold'>[item_to_remove]</span> de \the [src]"), span_notice("Intenta quitar \the <span class='bold'>[item_to_remove]</span> de \the [src]"))
 	playsound(src, 'sound/items/dig_shovel.ogg', 100, FALSE)
 	if(!do_after(user, 5 SECONDS, src, progress = TRUE))
-		to_chat(user, span_warning("You fail to remove \the [item_to_remove]!"))
+		to_chat(user, span_warning("¡No logras quitar \the [item_to_remove]!"))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
-	user.visible_message(span_info("[user] removes \the <span class='bold'>[item_to_remove]</span> from \the [src]"), span_notice("You remove \the <span class='bold'>[item_to_remove]</span> from \the [src]"))
+	user.visible_message(span_info("[user] quita \the <span class='bold'>[item_to_remove]</span> de \the [src]"), span_notice("Quitas \the <span class='bold'>[item_to_remove]</span> de \the [src]"))
 	// Remove either headstone or gravestone
 	if(istype(item_to_remove, /obj/item/gravedecor/headstone))
 		if(item_to_remove.sourceitem)
@@ -185,7 +185,7 @@
 			to_chat(user, "<span class='warning'>Esta tumba ya tiene una lapida.</span>")
 			return ITEM_INTERACT_BLOCKING
 		if(stage != DIRTHOLE_GRAVE)
-			to_chat(user, "<span class='warning'>I can't tie a grave marker on an open grave.</span>")
+			to_chat(user, "<span class='warning'>No puedo poner un marcador de tumba en una tumba abierta.</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		playsound(src, 'sound/foley/bandage.ogg', 100, FALSE)
@@ -197,7 +197,7 @@
 			headstone = new /obj/item/gravedecor/headstone/crude(null, tool.type)
 
 		if(pacify_coffin(src, user))
-			user.visible_message(span_rose("[user] consagra [src]."), span_rose("I consecrate [src]."))
+			user.visible_message(span_rose("[user] consagra [src]."), span_rose("Yo consagro [src]."))
 			if(!is_consecrated)
 				SEND_SIGNAL(user, COMSIG_GRAVE_CONSECRATED, src)
 				record_round_statistic(STATS_GRAVES_CONSECRATED)
@@ -215,7 +215,7 @@
 		return attemptwatermake(tool, user)
 	else if(!user.cmode && !is_consecrated && headstone && tool.wlength == WLENGTH_SHORT)
 		if(!(tool.get_sharpness()))
-			to_chat(user, span_warning("\The [tool] is not sharp enough to engrave \the [headstone] on \the [src]!"))
+			to_chat(user, span_warning("\The [tool] no es lo suficientemente afilado como para grabar \the [headstone] en \the [src] ¡Vaya!"))
 			return ITEM_INTERACT_BLOCKING
 		return inscribe(tool, user)
 
@@ -251,12 +251,12 @@
 	if(!new_message || new_message == headstone.custom_message)
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_info("[user] comienza a grabar un mensaje en \the [headstone] con \a [sharp]."), span_info("You begin to engrave a message into \the [headstone]."), span_info("You hear someone cutting into stone."))
+	user.visible_message(span_info("[user] comienza a grabar un mensaje en \the [headstone] con \a [sharp]."), span_info("Comienzas a grabar un mensaje en \the [headstone]."), span_info("Escuchas a alguien tallando piedra."))
 	playsound(src, pick('sound/combat/hits/onrock/onrock (1).ogg', 'sound/combat/hits/onrock/onrock (2).ogg', 'sound/combat/hits/onrock/onrock (3).ogg', 'sound/combat/hits/onrock/onrock (4).ogg'), 100)
 	if(!do_after(user, 5 SECONDS, src, progress=TRUE, display_over_user=TRUE))
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_info("[user] finishes working on \the [headstone]."), span_info("Terminas de grabar \the [headstone] con tu mensaje."))
+	user.visible_message(span_info("[user] termina de trabajar en \the [headstone]."), span_info("Terminas de grabar \the [headstone] con tu mensaje."))
 	headstone.custom_message = new_message
 	return ITEM_INTERACT_SUCCESS
 
@@ -267,7 +267,7 @@
 			to_chat(user, "<span class='warning'>Esta tumba ya tiene una lapida.</span>")
 			return ITEM_INTERACT_BLOCKING
 		if(stage != DIRTHOLE_GRAVE)
-			to_chat(user, "<span class='warning'>I can't put a headstone on an open grave.</span>")
+			to_chat(user, "<span class='warning'>No puedo poner una lapida en una tumba abierta.</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		playsound(src, 'sound/foley/bandage.ogg', 100, FALSE)
@@ -276,7 +276,7 @@
 
 		headstone = tool
 		if(pacify_coffin(src, user))
-			user.visible_message(span_rose("[user] consagra [src]."), span_rose("I consecrate [src]."))
+			user.visible_message(span_rose("[user] consagra [src]."), span_rose("Yo consagro [src]."))
 			if(!is_consecrated)
 				SEND_SIGNAL(user, COMSIG_GRAVE_CONSECRATED, src)
 				record_round_statistic(STATS_GRAVES_CONSECRATED)
@@ -291,7 +291,7 @@
 			to_chat(user, "<span class='warning'>Esta tumba ya tiene una valla.</span>")
 			return ITEM_INTERACT_BLOCKING
 		if(stage != DIRTHOLE_GRAVE)
-			to_chat(user, "<span class='warning'>I can't put a gravefence on an open grave.</span>")
+			to_chat(user, "<span class='warning'>No puedo poner una valla de cementerio en una tumba abierta.</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		playsound(src, 'sound/foley/bandage.ogg', 100, FALSE)
@@ -342,7 +342,7 @@
 		var/turf/under_turf = GET_TURF_BELOW(our_turf)
 		if(under_turf && our_turf && isopenturf(under_turf))
 			playsound(src,'sound/items/dig_shovel.ogg', 100, TRUE)
-			user.visible_message("[user] comienza a excavar la parte inferior de [src]", "I start digging out the bottom of [src].")
+			user.visible_message("[user] comienza a excavar la parte inferior de [src]", "Comienzo a excavar el fondo de [src].")
 			if(!do_after(user, 10 SECONDS * attacking_shovel.toolspeed, src))
 				return ITEM_INTERACT_BLOCKING
 			attacking_shovel.heldclod = new(attacking_shovel)
@@ -351,7 +351,7 @@
 			our_turf.ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 			qdel(src)
 			return ITEM_INTERACT_BLOCKING
-		to_chat(user, "<span class='warning'>I think that's deep enough.</span>")
+		to_chat(user, "<span class='warning'>Creo que es lo suficientemente profundo.</span>")
 		return ITEM_INTERACT_SUCCESS
 
 	playsound(src,'sound/items/dig_shovel.ogg', 100, TRUE)
@@ -365,7 +365,7 @@
 
 	if(stage == DIRTHOLE_GRAVE)
 		if(gravequality >= 10 && !HAS_TRAIT(user, TRAIT_GRAVEROBBER)) // Are you sure you want to do this?
-			to_chat(user, span_boldwarning("You feel a chill as you begin to dig at the grave, as if something <span class='god_necra'>ancient</span> is watching you... are you prepared to face the consequences if you continue?"))
+			to_chat(user, span_boldwarning("Sientes un escalofrio al empezar a cavar la tumba, como si algo <span class='god_necra'>antiguo</span> te estuviera observando... ¿Estas preparado para enfrentar las consecuencias si continuas?"))
 		if(!do_after(user, 5 SECONDS * attacking_shovel.toolspeed, src)) // WE CANT HAVE NICE THINGS CAN WE
 			return ITEM_INTERACT_BLOCKING
 		stage = DIRTHOLE_PIT
@@ -407,17 +407,17 @@
 	var/mob/living/carbon/human/L = user
 	if(HAS_TRAIT(L, TRAIT_GRAVEROBBER))
 		var/robbing = TRUE
-		var/message = "I perform the secret rite of concealment, the Undermaiden won't know of my transgression here."
+		var/message = "Realizo el rito secreto de ocultamiento, la Doncella no sabra de mi transgresion aqui."
 		switch(L.patron?.type)
 			if(/datum/patron/divine/necra)
 				robbing = FALSE
-				message = "I perform the secret rite of exhumation, and so the Undermaiden overlooks my transgression."
+				message = "Realizo el rito secreto de la exhumacion, por lo que la Doncella pasa por alto mi transgresion."
 			if(/datum/patron/divine/pestra) //Special notices if you're of a particular faith.
-				message = "I perform the secret rite of concealment, Pestra shields me from divine gaze as I exhume this corpse for study."
+				message = "Realizo el rito secreto de ocultamiento, Pestra me protege de la mirada divina mientras exhumo este cadaver para estudiarlo."
 			if(/datum/patron/inhumen/matthios)
-				message = "I perform the secret rite of liberation, the Undermaiden is none the wiser as the occupant of this grave is freed."
+				message = "Realizo el rito secreto de la liberacion, la Doncella no se da cuenta cuando el ocupante de esta tumba es liberado."
 			if(/datum/patron/inhumen/zizo)
-				message = "I perform the secret rite of defilement, the Undermaiden can do nothing but watch as I undo the rites on this grave."
+				message = "Realizo el rito secreto de la contaminacion, la Doncella no puede hacer nada mas que observar mientras deshago los ritos en esta tumba."
 		to_chat(user, span_info(message))
 		if(robbing)
 			record_featured_stat(FEATURED_STATS_CRIMINALS, user) //You aren't a Necran, even though you didn't get any consequences you're still a criminal.
@@ -429,22 +429,22 @@
 
 	switch(gravequality)
 		if(0 to 3)
-			L.visible_message("<span class='warning'>As [L] opens the grave, the stasis held on it breaks, releasing all the stored time!</span>", \
-			"<span class='warning'>As soon as I dig up the grave, all the stored time within is released! I can feel myself age a little...</span>", \
-			"<span class='hear'>I hear a loud whoosh!</span>")
+			L.visible_message("<span class='warning'>A Cuando [L] abre la tumba, la estasis que se mantiene sobre ella se rompe, ¡liberando todo el tiempo almacenado!</span>", \
+			"<span class='warning'>ATan pronto como excavo la tumba, ¡todo el tiempo almacenado en ella se libera! Puedo sentir que envejezco un poco...</span>", \
+			"<span class='hear'> ¡Escucho un fuerte silbido! </span>")
 			if(!L.has_status_effect(/datum/status_effect/debuff/cursed_t4) && !L.has_status_effect(/datum/status_effect/debuff/cursed_t3) && !L.has_status_effect(/datum/status_effect/debuff/cursed_t2))
 				L.apply_status_effect(/datum/status_effect/debuff/cursed_t1)
 		if(4 to 6)
-			L.visible_message("<span class='warning'>As [L] opens the grave, the stasis held on it breaks, releasing all the stored time!</span>", \
-			"<span class='warning'>As soon as I dig up the grave, all the stored time within is released! I feel myself age a few years...</span>", \
-			"<span class='hear'>I hear a loud whoosh!</span>")
+			L.visible_message("<span class='warning'>A Cuando [L] abre la tumba, la estasis que se mantiene sobre ella se rompe, ¡liberando todo el tiempo almacenado!</span>", \
+			"<span class='warning'>ATan pronto como excavo la tumba, ¡todo el tiempo almacenado en ella se libera! Me siento envejecer unos años...</span>", \
+			"<span class='hear'> ¡Escucho un fuerte silbido! </span>")
 			L.remove_status_effect(/datum/status_effect/debuff/cursed_t1)
 			if(!L.has_status_effect(/datum/status_effect/debuff/cursed_t4) && !L.has_status_effect(/datum/status_effect/debuff/cursed_t3))
 				L.apply_status_effect(/datum/status_effect/debuff/cursed_t2)
 		if(7 to 9)
-			L.visible_message("<span class='warning'>As [L] opens the grave, the stasis held on it breaks, releasing all the stored time! \n\ [L] freezes in place, as whispers of alarm flutter out in every direction.</span>", \
-			"<span class='warning'>As soon as I dig up the grave, all the stored time within is released! \n\ While it freezes me in place, I can hear whispers of alarm go out in every direction!</span>", \
-			"<span class='hear'>I hear a loud whoosh, then a cacophony of whispers!</span>")
+			L.visible_message("<span class='warning'>As [L] abre la tumba, la estasis que se mantiene sobre ella se rompe, ¡liberando todo el tiempo almacenado! \n\ [L] se congela en su lugar, mientras susurros de alarma revolotean en todas direcciones.</span>", \
+			"<span class='warning'>¡Tan pronto como desentierro la tumba, todo el tiempo almacenado en su interior se libera! \n Aunque me congela en el lugar, puedo escuchar los susurros de alarma que se emiten en todas direcciones. </span>", \
+			"<span class='hear'> ¡Escucho un fuerte silbido y luego una cacofonia de susurros! </span>")
 			var/turf/T = get_turf(src)
 			new /obj/effect/timestop(T, 2, 5 SECONDS, null, MAGIC_RESISTANCE_HOLY)
 			L.remove_status_effect(/datum/status_effect/debuff/cursed_t1)
@@ -456,13 +456,13 @@
 			var/obj/item/bodypart/left_arm = L.get_bodypart(BODY_ZONE_L_ARM)
 			var/obj/item/bodypart/right_arm = L.get_bodypart(BODY_ZONE_R_ARM)
 			if(((!left_arm || left_arm.skeletonized) && (!right_arm || right_arm.skeletonized)))
-				L.visible_message("<span class='warning'>As [L] opens the grave, the stasis held on it breaks, releasing all the stored time! \n\ [L] freezes in place and whispers of alarm flutter out in every direction.</span>", \
-				"<span class='warning'>As soon as I dig up the grave, all the stored time within is released! \n\ While it freezes me in place, I can feel my arms age as whispers of alarm go out in every direction!</span>", \
-				"<span class='hear'>I hear a loud whoosh, then a cacophony of whispers!</span>")
+				L.visible_message("<span class='warning'>As [L] abre la tumba, la estasis que se mantiene sobre ella se rompe, ¡liberando todo el tiempo almacenado! \n\ [L] se congela en su lugar y susurros de alarma revolotean en todas direcciones.</span>", \
+				"<span class='warning'>¡Tan pronto como exhumo la tumba, todo el tiempo almacenado en su interior se libera! \n Aunque me congela en el lugar, puedo sentir como mis brazos envejecen mientras susurros de alarma se propagan en todas direcciones. </span>", \
+				"<span class='hear'> ¡Escucho un fuerte silbido y luego una cacofonia de susurros! </span>")
 			else
-				L.visible_message("<span class='warning'>As [L] opens the grave, the stasis held on it breaks, releasing all the stored time! \n\ [L] freezes in place, as their arms wither to bone, and whispers of alarm flutter out in every direction.</span>", \
-				"<span class='warning'>As soon as I dig up the grave, all the stored time within is released! </span>\n\ <span class='warning big'>While it freezes me in place, I can feel my arms wither to bone as whispers of alarm go out in every direction!</span>", \
-				"<span class='hear'>I hear a loud whoosh, then a cacophony of whispers!</span>")
+				L.visible_message("<span class='warning'>As [L] abre la tumba, la estasis que se mantiene sobre ella se rompe, ¡liberando todo el tiempo almacenado! \n\ [L] se congela en su lugar, mientras sus brazos se marchitan hasta los huesos, y susurros de alarma revolotean en todas direcciones.</span>", \
+				"<span class='warning'>ATan pronto como excavo la tumba, ¡todo el tiempo almacenado en ella se libera! </span>\n\ <span class='warning big'>Mientras me congela en el lugar, puedo sentir mis brazos marchitarse hasta los huesos mientras susurros de alarma salen en todas direcciones.</span>", \
+				"<span class='hear'> ¡Escucho un fuerte silbido y luego una cacofonia de susurros! </span>")
 				if(left_arm)
 					var/obj/item/bodypart/part_to_bonify = L.get_bodypart(BODY_ZONE_L_ARM)
 					part_to_bonify.skeletonize(FALSE)
@@ -486,13 +486,13 @@
 /obj/structure/closet/dirthole/proc/robbery_alert(mob/robber, delay = FALSE)
 	var/robbery_location = capitalize(get_area_name(get_turf(src)))
 	if(robber) // Graverobbers get a delay before the alert, to give them time to leave
-		to_chat(robber, span_warning("The rites I performed on \the [src] have bought me time, but the whispers of the disturbed dead were eventually able to break through..."))
+		to_chat(robber, span_warning("Los ritos que realice en \the [src] me han dado tiempo, pero los susurros de los muertos perturbados finalmente lograron romper el silencio..."))
 
 	for (var/mob/living/player in GLOB.player_list)
 		if (player.stat == DEAD || isbrain(player))
 			continue
 		if (is_priest_job(player.mind.assigned_role) || (is_monk_job(player.mind.assigned_role) && player.patron?.type == /datum/patron/divine/necra) || istype(player.mind.assigned_role, /datum/job/templar) || istype(player.mind.assigned_role, /datum/job/gmtemplar) || istype(player.mind.assigned_role, /datum/job/undertaker))
-			to_chat(player, span_crit("Veiled whispers hiss of great blasphemy, a highly blessed grave is being robbed in [robbery_location], this cannot go unpunished!"))
+			to_chat(player, span_crit("Los susurros velados susurran una gran blasfemia, una tumba muy bendecida esta siendo robada en [robbery_location], esto no puede quedar impune."))
 
 /// All bodies buried as 'frozen' in time, Necra's gift to ensure their bodies cease to decay
 /obj/structure/closet/dirthole/proc/stasis()
@@ -684,9 +684,9 @@
 		if(DIRTHOLE_SHALLOW, DIRTHOLE_DEEP)
 			name = "agujero"
 		if(DIRTHOLE_PIT)
-			name = "pit"
+			name = "fosa"
 		if(DIRTHOLE_GRAVE)
-			name = "grave"
+			name = "tumba"
 
 /obj/structure/closet/dirthole/relaymove(mob/user)
 	if(user.stat || !isturf(loc) || !isliving(user))
@@ -694,7 +694,7 @@
 	if(!IS_DEADITE(user))
 		if(message_cooldown <= world.time)
 			message_cooldown = world.time + 50
-			to_chat(user, "<span class='warning'>I'm trapped!</span>")
+			to_chat(user, "<span class='warning'> ¡Estoy atrapado! </span>")
 		return
 	container_resist(user)
 

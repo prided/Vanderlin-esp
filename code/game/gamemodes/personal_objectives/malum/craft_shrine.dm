@@ -1,8 +1,8 @@
 /datum/objective/personal/craft_shrine
 	name = "construir santuarios"
-	category = "Malum's Chosen"
+	category = "Elegido de Malum"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Malum grows stronger", "Crafting knowledge")
+	rewards = list("2 Triunfos", "Malum se fortalece", "Conocimientos de artesania")
 	var/target_type = /obj/structure/fluff/psycross/crafted
 	var/target_count = 2
 	var/current_count = 0
@@ -32,14 +32,14 @@
 
 	current_count++
 	if(current_count < target_count)
-		to_chat(owner.current, span_notice("You have built [current_count] out of [target_count] sacred crosses."))
+		to_chat(owner.current, span_notice("Has construido [current_count] de [target_count] cruces sagradas."))
 		return
 	else
 		complete_objective()
 
 /datum/objective/personal/craft_shrine/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have built all the required sacred crosses, completing Malum's objective!"))
+	to_chat(owner.current, span_greentext("¡Has construido todas las cruces sagradas necesarias y completado el objetivo de Malum!"))
 	adjust_storyteller_influence(MALUM, 20)
 	UnregisterSignal(owner.current, COMSIG_ITEM_CRAFTED)
 
@@ -48,4 +48,4 @@
 	owner.current.adjust_skill_level(/datum/attribute/skill/craft/crafting, 10)
 
 /datum/objective/personal/craft_shrine/update_explanation_text()
-	explanation_text = "Build [target_count] wooden pantheon cross[target_count > 1 ? "es" : ""] to demonstrate your devotion to Malum."
+	explanation_text = "Construye [target_count] altar[target_count > 1 ? "es" : ""] de madera con la cruz del panteon para demostrar tu devocion a Malum."

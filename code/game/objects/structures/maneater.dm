@@ -53,7 +53,7 @@
 		if(L.status_flags & GODMODE)
 			continue
 		L.flash_fullscreen("redflash3")
-		visible_message(span_danger("[src] starts to rip apart [L]!"))
+		visible_message(span_danger("¡[src] empieza a destrozar a [L]!"))
 		playsound(src, pick(attack_sounds), 100, FALSE, -1)
 		addtimer(CALLBACK(src, PROC_REF(munch), L), sleep_time - munch_time)
 		COOLDOWN_START(src, activity_cooldown, sleep_time)
@@ -98,7 +98,7 @@
 	if(obj_broken || !COOLDOWN_FINISHED(src, activity_cooldown))
 		name = "MANEATER"
 	else
-		name = "grass"
+		name = "pasto"
 
 /obj/structure/flora/grass/maneater/real/user_unbuckle_mob(mob/living/M, mob/user)
 	if(obj_broken)
@@ -114,7 +114,7 @@
 		playsound(M, 'sound/combat/grabbreak.ogg', 100)
 		return ..()
 	if(user != M)
-		user.visible_message(span_danger("¡[user] intenta liberar a [M] de [src]!"), span_danger("I try to pull [M] free of [src]!"))
+		user.visible_message(span_danger("¡[user] intenta liberar a [M] de [src]!"), span_danger("Intento liberar a [M] de [src]"))
 	else
 		user.visible_message(span_danger("¡[user] intenta liberarse de [src]!"), span_danger("¡Intento liberarme de [src]!"))
 	if(prob(10))
@@ -148,7 +148,7 @@
 		START_PROCESSING(SSobj, src)
 		if(L.can_feel_pain())
 			L.emote("painscream", forced = TRUE)
-		visible_message(span_danger("[src] snatches [L]!"))
+		visible_message(span_danger("¡[src] se lleva a [L]!"))
 		playsound(src, pick(attack_sounds), 100, FALSE, -1)
 		COOLDOWN_START(src, activity_cooldown, sleep_time)
 		update_appearance(UPDATE_ICON_STATE | UPDATE_NAME)

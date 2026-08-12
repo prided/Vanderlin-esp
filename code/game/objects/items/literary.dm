@@ -1,7 +1,7 @@
 
 /obj/item/textbook
 	name = "libro de texto en blanco"
-	desc = "A blank textbook, ready for the knowledge it will share to be prescribed into it."
+	desc = "Un libro de texto en blanco, listo para que el conocimiento que compartira se registre en el."
 	icon = 'icons/roguetown/items/books.dmi'
 	icon_state = "book_blank"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -14,7 +14,7 @@
 	throw_range = 5
 	dropshrink = 0.6
 	drop_sound = 'sound/foley/dropsound/book_drop.ogg'
-	attack_verb = list("bashed", "whacked", "educado")
+	attack_verb = list("golpeado", "aporreado", "educado")
 	drop_sound = 'sound/blank.ogg'
 	pickup_sound =  'sound/blank.ogg'
 	firefuel = 2 MINUTES
@@ -42,33 +42,33 @@
 
 /obj/item/textbook/update_name()
 	. = ..()
-	var/title = "nothing"
+	var/title = "nada"
 	switch(skilltoteach)
 		if(/datum/attribute/skill/misc/reading)
 			title = "literatura"
 		if(/datum/attribute/skill/labor/mathematics)
 			title = "matematicas"
 		if(/datum/attribute/skill/craft/engineering)
-			title = "engineering"
+			title = "ingenieria"
 		if(/datum/attribute/skill/craft/alchemy)
-			title = "alchemy"
+			title = "alquimia"
 		if(/datum/attribute/skill/misc/medicine)
-			title = "medicine"
+			title = "medicamento"
 	name = "Guia de [skill_name] para [title]"
 
 /obj/item/textbook/update_desc()
 	. = ..()
 	switch(skilltoteach)
 		if(/datum/attribute/skill/misc/reading)
-			desc = "A textbook that teaches the alphabet, sentences of varying complexity, and common symbols, allowing readers to train their reading skills."
+			desc = "Un libro de texto que enseña el alfabeto, oraciones de diversa complejidad y simbolos comunes, permitiendo a los lectores entrenar sus habilidades lectoras."
 		if(/datum/attribute/skill/labor/mathematics)
-			desc = "A textbook focused on teaching mathematic notation and the applications for arithmetic, calculus, and other areas of math."
+			desc = "Un libro de texto centrado en la enseñanza de la notacion matematica y las aplicaciones de la aritmetica, el calculo y otras areas de las matematicas."
 		if(/datum/attribute/skill/craft/engineering)
-			desc = "A textbook focused on teaching about engineering, the physical laws that govern our mortal world, and their application."
+			desc = "Un libro de texto centrado en la enseñanza de la ingenieria, las leyes fisicas que gobiernan nuestro mundo mortal y su aplicacion."
 		if(/datum/attribute/skill/craft/alchemy)
-			desc = "A textbook that teaches all about alchemy. Ranging from simple differences between mentha and paris, to complex potion brewing."
+			desc = "Un libro de texto que enseña todo sobre la alquimia. Desde simples diferencias entre mentha y paris hasta la elaboracion de pociones complejas."
 		if(/datum/attribute/skill/misc/medicine)
-			desc = "A textbook that teaches medicine. The book is rich in illustrations and notes on how the body functions and how to treat various illnesses and wounds."
+			desc = "Un libro de texto que enseña medicina. El libro es rico en ilustraciones y notas sobre como funciona el cuerpo y como tratar diversas enfermedades y heridas."
 	desc += " The higher the complexity, the more skilled the reader must be to study it."
 
 /obj/item/textbook/attacked_by(obj/item/I, mob/living/user)
@@ -80,7 +80,7 @@
 			return
 		var/userskill = GET_MOB_SKILL_VALUE_OLD(user, teachable_skills[skill])
 		if(userskill <= 1)
-			to_chat(user, span_warning("You aren't skilled enough to write a textbook about [LOWER_TEXT(skill)]!"))
+			to_chat(user, span_warning("¡No eres lo suficientemente habil para escribir un libro de texto sobre [LOWER_TEXT(skill)]!"))
 			return
 		var/list/possible_skill_levels = list()
 		var/list/skill_names = list("Novice", "Apprentice", "Journeyman", "Expert", "Master", "Legend")
@@ -88,7 +88,7 @@
 			if(level > userskill - 1)
 				break
 			possible_skill_levels[skill_names[level]] = level
-		var/level_name = input(user, "What level of difficulty should the textbook be?", "NOC") as null|anything in possible_skill_levels
+		var/level_name = input(user, "¿Que nivel de dificultad debe tener el libro de texto?", "NOC") as null|anything in possible_skill_levels
 		if(!level_name)
 			return
 		if(skilltoteach)
@@ -97,7 +97,7 @@
 			return
 		if(!user.CanReach(src))
 			return
-		to_chat(user, span_notice("You begin writing in [src] concepts about [LOWER_TEXT(skill)] of [LOWER_TEXT(level_name)] difficulty."))
+		to_chat(user, span_notice("Comienzas a escribir en [src] conceptos sobre [LOWER_TEXT(skill)] de [LOWER_TEXT(level_name)] dificultad."))
 		playsound(src, 'sound/items/write.ogg', 50, FALSE, ignore_walls = FALSE)
 		skilltoteach = teachable_skills[skill]
 		if(do_after(user, 10 SECONDS, src))
@@ -126,7 +126,7 @@
 		var/intbonus = GET_MOB_ATTRIBUTE_VALUE(H, STAT_INTELLIGENCE) / 2
 		var/true_experience = exppercycle + intbonus
 		if(true_experience <= INTneeded)
-			to_chat(user, span_warning("I can't understand anything from this theory! Practice should do me better."))
+			to_chat(user, span_warning("¡No puedo entender nada de esta teoria! La practica deberia ayudarme mejor."))
 			return
 		if(userskill < minskill)
 			to_chat(user, span_warning("¡Este libro de texto es demasiado avanzado para que yo lo estudie!"))
@@ -137,7 +137,7 @@
 				user.adjust_experience(skilltoteach, true_experience)
 				attemptlearn(user)
 		else
-			to_chat(user, span_warning("This textbook is too simple for me to learn any more from!"))
+			to_chat(user, span_warning("¡Este libro de texto es demasiado simple para que pueda aprender algo mas de el!"))
 			return
 	else
 		return

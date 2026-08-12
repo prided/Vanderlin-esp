@@ -13,9 +13,9 @@
 		// if(GERM_LEVEL_DIRTY to GERM_LEVEL_FILTHY)
 		// 	. += "[p_They] [p_are] a bit dirty."
 		if(GERM_LEVEL_FILTHY to GERM_LEVEL_SMASHPLAYER)
-			. += span_warning("[p_They] [p_are] filthy.")
+			. += span_warning("[p_They] [p_are] muy sucio.")
 		if(GERM_LEVEL_SMASHPLAYER to INFINITY)
-			. += span_warning("[p_They] [p_are] <b>foul</b>.")
+			. += span_warning("[p_They] [p_are] <b>desagradable</b>.")
 
 	var/price_text = get_displayed_price(user)
 	if(uses_integrity)
@@ -25,9 +25,9 @@
 				if(0 to 1)
 					. += span_warning("Esta roto.")
 				if(1 to 10)
-					. += span_warning("It's nearly broken.")
+					. += span_warning("Casi se rompe.")
 				if(10 to 30)
-					. += span_warning("It's severely damaged.")
+					. += span_warning("Esta muy dañado.")
 				if(30 to 80)
 					. += span_warning("Esta dañado.")
 				if(80 to 99)
@@ -36,11 +36,11 @@
 		if(max_integrity < initial(max_integrity))
 			var/lost_percent = round((1 - (max_integrity / initial(max_integrity))) * 100, 1)
 			if(lost_percent >= 50)
-				. += span_warning("Long-term damage has rendered this a shadow of what it once was.")
+				. += span_warning("El daño a largo plazo ha convertido esto en una sombra de lo que alguna vez fue.")
 			else if(lost_percent >= 25)
 				. += span_warning("Su estructura esta comprometida por daños antiguos.")
 			else
-				. += span_warning("The material has lost some of its original strength.")
+				. += span_warning("El material ha perdido algo de su fuerza original.")
 
 		// if(integrity_restores > 0)
 		// 	if(integrity_restores >= 3)
@@ -67,7 +67,7 @@
 				baitquality = "good"
 			if(10)
 				baitquality = "passable"
-		. += span_info("It is \a [baitquality] bait for fish.")
+		. += span_info("Es \a [baitquality] cebo para peces.")
 
 	for(var/datum/examine_effect/E in examine_effects)
 		E.trigger(user)

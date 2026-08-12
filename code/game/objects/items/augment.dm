@@ -1,6 +1,6 @@
 /obj/item/augment_kit
-	name = "augmentation kit"
-	desc = "A kit containing components for automaton augmentation. Examine to see details."
+	name = "kit de mejoras"
+	desc = "Un kit que contiene componentes para el aumento de automatas. Examinar para ver detalles."
 	icon = 'icons/roguetown/items/new_gears.dmi'
 	icon_state = "steel_gear"
 	w_class = WEIGHT_CLASS_SMALL
@@ -20,15 +20,15 @@
 	. = ..()
 	if(contained_augment)
 		. += span_info("Este kit contiene: [contained_augment.name]")
-		. += span_info("Installation requires Engineering skill level [contained_augment.engineering_difficulty]")
+		. += span_info("La instalacion requiere el nivel de habilidad de Ingenieria [contained_augment.engineering_difficulty]")
 		. += contained_augment.get_examine_info()
 	else
-		. += span_info("It's empty. Right click on someone to collect an augment from them.")
+		. += span_info("Esta vacio. Haz clic derecho en alguien para recoger un refuerzo de el.")
 
 /obj/item/augment_kit/proc/update_augment()
 	if(contained_augment)
 		color = contained_augment.color
-		name = "[contained_augment.name] kit"
+		name = "Kit [contained_augment.name]"
 		desc = "[contained_augment.desc]\n\nStability Costo: [contained_augment.stability_cost]\nRequired Habilidad: Ingenieria [contained_augment.engineering_difficulty]"
 	else
 		color = initial(color)
@@ -47,16 +47,16 @@
 	var/mob/living/augmented = interacting_with
 
 	if(!SEND_SIGNAL(augmented, COMSIG_AUGMENT_GET_STABILITY))
-		to_chat(user, span_warning("[augmented] cannot be augmented!"))
+		to_chat(user, span_warning("¡[augmented] no puede ser aumentado!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!istype(augmented.buckled, /obj/machinery/artificer_table))
-		to_chat(user, span_warning("[augmented] must be on an artificer's table!"))
+		to_chat(user, span_warning("¡[augmented] debe estar en la mesa del artifex!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/skill = GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering)
 	if(skill < contained_augment.engineering_difficulty)
-		to_chat(user, span_warning("You lack the engineering skill to install this augment!"))
+		to_chat(user, span_warning("¡Le falta la habilidad de ingenieria para instalar este aumento!"))
 		return ITEM_INTERACT_BLOCKING
 
 	to_chat(user, span_notice("Comienzas a instalar [contained_augment.name]..."))
@@ -77,21 +77,21 @@
 	var/mob/living/augmented = interacting_with
 
 	if(!SEND_SIGNAL(augmented, COMSIG_AUGMENT_GET_STABILITY))
-		to_chat(user, span_warning("[augmented] cannot be augmented!"))
+		to_chat(user, span_warning("¡[augmented] no puede ser aumentado!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!istype(augmented.buckled, /obj/machinery/artificer_table))
-		to_chat(user, span_warning("[augmented] must be on an artificer's table!"))
+		to_chat(user, span_warning("¡[augmented] debe estar en la mesa del artifex!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(contained_augment)
-		to_chat(user, span_warning("[src] has an augment in it!"))
+		to_chat(user, span_warning("¡[src] tiene un refuerzo en su interior!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/list/augments = list()
 	SEND_SIGNAL(augmented, COMSIG_AUGMENT_GET_INSTALLED, augments)
 	if(!length(augments))
-		to_chat(user, span_warning("[augmented] has no augments."))
+		to_chat(user, span_warning("[augmented] no tiene ningun refuerzo."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/list/names = list()
@@ -100,7 +100,7 @@
 		i++
 		names["[i]. [A.name]"] = A
 
-	var/chosen = tgui_input_list(user, "Collect which augment?", "Artificer", names, timeout = 20 SECONDS)
+	var/chosen = tgui_input_list(user, "¿Recoger que aumento?", "Artificio", names, timeout = 20 SECONDS)
 	var/datum/augment/to_remove = names[chosen]
 	if(!chosen || QDELETED(to_remove) || QDELETED(augmented))
 		return ITEM_INTERACT_BLOCKING

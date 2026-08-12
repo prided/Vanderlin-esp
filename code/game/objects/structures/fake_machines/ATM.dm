@@ -1,6 +1,6 @@
 /obj/structure/fake_machine/atm
 	name = "MEISTER"
-	desc = "Stores and withdraws currency for accounts managed by the Kingdom."
+	desc = "Almacena y retira moneda para cuentas administradas por el Reino."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "atm"
 	density = FALSE
@@ -13,21 +13,21 @@
 	var/mob/living/carbon/human/user_mob = user
 
 	if(HAS_TRAIT(user, TRAIT_MATTHIOS_CURSE) && prob(33))
-		to_chat(user_mob, "<span class='warning'>The idea repulses me!</span>")
+		to_chat(user_mob, "<span class='warning'>¡La idea me repugna!</span>")
 		user_mob.cursed_freak_out()
 		return
 
 	if(user_mob.real_name in GLOB.outlawed_players)
-		say("OUTLAW DETECTED! REFUSING SERVICE!")
+		say("¡DETECTADO UN FORAGIDO! ¡NEGAR SERVICIO!")
 		return
 
 	if(user_mob in SStreasury.bank_accounts)
 		var/amt = SStreasury.bank_accounts[user_mob]
 		if(!amt)
-			say("Your balance is nothing.")
+			say("Tu saldo es cero.")
 			return
 		if(amt < 0)
-			say("Your balance is NEGATIVE.")
+			say("Su saldo es NEGATIVO.")
 			return
 		var/list/choicez = list()
 		if(amt >= 10)
@@ -35,7 +35,7 @@
 		if(amt >= 5)
 			choicez += "SILVER"
 		if(amt > 1) choicez += "BRONZE"
-		var/selection = input(user_mob, "Make a Selection", src) as null|anything in choicez
+		var/selection = input(user_mob, "Haz una seleccion", src) as null|anything in choicez
 		if(!selection)
 			return
 		amt = SStreasury.bank_accounts[user_mob]
@@ -45,7 +45,7 @@
 		if(selection == "SILVER")
 			mod = 5
 		if(selection == "BRONZE") mod = 1
-		var/coin_amt = input(user_mob, "There is [SStreasury.treasury_value] mammon in the treasury. You may withdraw [amt/mod] [selection] COINS from your account.", src) as null|num
+		var/coin_amt = input(user_mob, "Hay [SStreasury.treasury_value] mammon en el tesoro. Puedes retirar [amt/mod] [selection] MONEDAS de tu cuenta.", src) as null|num
 		coin_amt = round(coin_amt)
 		if(coin_amt < 1)
 			return
@@ -86,23 +86,23 @@
 
 	var/mob/living/carbon/human/H = user
 	if(HAS_TRAIT(user, TRAIT_MATTHIOS_CURSE) && prob(33))
-		to_chat(H, "<span class='warning'>The idea repulses me!</span>")
+		to_chat(H, "<span class='warning'>¡La idea me repugna!</span>")
 		H.cursed_freak_out()
 		return ITEM_INTERACT_SUCCESS
 
 	if(user.real_name in GLOB.outlawed_players)
-		say("OUTLAW DETECTED! REFUSING SERVICE!")
+		say("¡DETECTADO UN FORAGIDO! ¡NEGAR SERVICIO!")
 		return ITEM_INTERACT_SUCCESS
 
 	if(!(H in SStreasury.bank_accounts))
-		say("No account found. Submit your fingers for inspection.")
+		say("No se encontro ninguna cuenta. Envia tus dedos para su inspeccion.")
 		return ITEM_INTERACT_SUCCESS
 
 	var/list/deposit_results = SStreasury.generate_money_account(tool.get_real_price(), H)
 	if(islist(deposit_results))
 		record_round_statistic(STATS_MAMMONS_DEPOSITED, deposit_results[1] - deposit_results[2])
 		if(deposit_results[2] != 0)
-			say("Your deposit was taxed [deposit_results[2]] mammon.")
+			say("Tu deposito fue gravado [deposit_results[2]] mammon.")
 			record_featured_stat(FEATURED_STATS_TAX_PAYERS, H, deposit_results[2])
 			record_round_statistic(STATS_TAXES_COLLECTED, deposit_results[2])
 			add_abstract_elastic_data(ELASCAT_ECONOMY, ELASDATA_TAXES_COLLECTED, deposit_results[2])
@@ -113,4 +113,4 @@
 
 /obj/structure/fake_machine/atm/examine(mob/user)
 	. += ..()
-	. += span_info("The current tax rate on deposits is [SStreasury.tax_value * 100] percent. Kingdom nobles exempt.")
+	. += span_info("La tasa impositiva actual sobre los depositos es del [SStreasury.tax_value * 100] por ciento. Los nobles del reino estan exentos.")

@@ -1,6 +1,6 @@
 /obj/item/undies
-	name = "smallclothes"
-	desc = "An Eoran designed undergarment to cover the loins."
+	name = "ropa pequeña"
+	desc = "Una prenda interior diseñada por Eoran para cubrir la zona lumbar."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "undies"
 	resistance_flags = FLAMMABLE
@@ -16,8 +16,8 @@
 	var/cached_undies
 
 /obj/item/undies/f
-	name = "women's smallclothes"
-	desc = "An Eoran designed undergarment to cover the privates and chest."
+	name = "ropa interior de mujer"
+	desc = "Una prenda interior diseñada por Eoran para cubrir las partes privadas y el pecho."
 	icon_state = "girlundies"
 	gendered = FEMALE
 

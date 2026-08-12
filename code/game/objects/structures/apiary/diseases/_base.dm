@@ -19,4 +19,4 @@
 	else if(severity < 70)
 		return span_warning("La infeccion es moderadamente grave.")
 	else
-		return span_danger("The infection is very severe! The colony may collapse soon!")
+		return span_danger("¡La infeccion es muy grave! ¡La colonia puede colapsar pronto!")

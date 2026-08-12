@@ -9,8 +9,8 @@ Reel teleports the attached atom to the grabbed turf.
 #define GRAPPLER_NOZ 3
 
 /obj/item/grapplinghook
-	name = "bronze grappler"
-	desc = "The finest innovation in industrial dwarven Engineering. Used to haul crates and kegs in shafts too steep for railcarts. Can be used on people who aren't too large.\nHas a range of VI tiles on the same plane, and a range of III tiles across planes.\nGrappling in the same plane will be blocked by any dense objects."
+	name = "luchador de bronce"
+	desc = "La mejor innovacion en ingenieria industrial enana. Se utiliza para transportar cajas y barriles en pozos demasiado empinados para los vagones. Se puede usar en personas que no son demasiado grandes.\nHas un rango de mosaicos VI en el mismo plano y un rango de mosaicos III en todos los planos.\nGrappling en el mismo plano sera bloqueado por cualquier objeto denso."
 	icon = 'icons/roguetown/misc/gadgets.dmi'
 	icon_state = "grappler_used"
 	item_state = "grappler"
@@ -57,34 +57,34 @@ Reel teleports the attached atom to the grabbed turf.
 
 //Grappler intents. Not meant to be functional outside of the tool.
 /datum/intent/grapple
-	name = "grapple"
+	name = "luchar"
 	icon_state = "ingrab"
-	desc = "Used to grapple onto an open, unobstructed tile."
+	desc = "Se utiliza para agarrarse a una losa abierta y sin obstaculos."
 	no_attack = TRUE
 
 /datum/intent/attach
 	name = "adjuntar"
 	icon_state = "inattach"
-	desc = "Used to attach an entity to the hook for reeling. Must not be heavy, large, or anchored."
+	desc = "Se utiliza para unir una entidad al anzuelo para enrollarlo. No debe ser pesado, grande ni anclado."
 	no_attack = TRUE
 
 /datum/intent/reel
-	name = "reel"
+	name = "bobina"
 	icon_state = "inreel"
-	desc = "Used to reel the attached entity to the grappled tile."
+	desc = "Se utiliza para enrollar la entidad adjunta a la ficha agarrada."
 	no_attack = TRUE
 
 /obj/item/grapplinghook/examine()
 	. = ..()
 	if(is_loaded && !in_use)
-		. += span_warning("It's ready to use. <b>GRAB</b> onto a turf above you.")
+		. += span_warning("Esta listo para usar. <b>GRAB</b> una parcela por encima de ti.")
 	else if(!is_loaded && !in_use)
-		. += span_warning("It's expended. It must be reloaded.")
+		. += span_warning("Se ha agotado. Debe recargarse.")
 	else if(!is_loaded && grappled_turf && in_use)
-		. += span_warning("It's deployed. You can <b>ATTACH</b> a hook to an entity.")
+		. += span_warning("Esta desplegado. Puedes <b>UNIR</b> un gancho a una entidad.")
 		. += span_info("Puedo activar esto en mi mano para restablecerlo.")
 	if(attached && grappled_turf && in_use && !is_loaded)
-		. += span_warning("It's ready to use. You may <b>REEL</b> in \the [attached].")
+		. += span_warning("Ya esta listo para usar. Puedes <b>REEL</b> en \the [attached].")
 
 
 /obj/item/grapplinghook/attack_self(mob/living/user)
@@ -100,7 +100,7 @@ Reel teleports the attached atom to the grabbed turf.
 		stat += (GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering)) * 5	//And finally their Engineering level.
 		stat = clamp(stat, 10, 70)	//Clamp to a very loud second just in case you're a superhuman engineer
 		if(!isloading)
-			user.visible_message(span_info("[user] begins cranking the [src]..."))
+			user.visible_message(span_info("[user] comienza a girar el [src]..."))
 			isloading = TRUE
 			playsound(user, 'sound/misc/grapple_crank.ogg', 100, FALSE, 3)
 			if(do_after(user, 70 - stat, user, timed_action_flags = (IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE|IGNORE_HELD_ITEM|IGNORE_USER_DIR_CHANGE)))
@@ -111,17 +111,17 @@ Reel teleports the attached atom to the grabbed turf.
 				update_appearance(UPDATE_ICON_STATE)
 			else
 				isloading = FALSE
-				user.visible_message(span_info("[user] gets interrupted!"))
+				user.visible_message(span_info("¡[user] se ve interrumpido!"))
 	else if(istype(user.used_intent, /datum/intent/reel))	//Alternative to clicking on an empty tile. You can self-use it to reel instead.
 		if(attached && in_use)
 			if(get_dist(attached, grappled_turf) <= (user.z != grappled_turf.z ? max_range_z : max_range_noz))
-				user.visible_message("[user] reels in the [src]!")
+				user.visible_message("[user] bobinas en el [src]!")
 				if(do_after(user, 10))
 					reel()
 			else
 				to_chat(user, span_info("¡[attached] esta demasiado lejos!"))
 	else if(!is_loaded && in_use && grappled_turf && tile_effect)	//Reset option.
-		user.visible_message("[user] unhooks from the tile.")
+		user.visible_message("[user] se desengancha del azulejo.")
 		reset_tile()
 		reset_target()
 
@@ -242,7 +242,7 @@ Reel teleports the attached atom to the grabbed turf.
 					var/reason
 					if(max_range_z >= get_dist(user, T) && !T.density)
 						if(check_path(get_turf(user), T, T.z > user.z ? GRAPPLER_ZUP : GRAPPLER_ZDOWN))	//We check for opaque turfs or non-climbable windows in the way via a simple pathfind.
-							to_chat(user, span_info("The grapple lands on the tile!"))
+							to_chat(user, span_info("¡El gancho aterriza en el suelo!"))
 							grapple_to(T)
 							attached = user
 							return
@@ -253,13 +253,13 @@ Reel teleports the attached atom to the grabbed turf.
 						reason = "It's too far."
 					else if (T.density)
 						reason = "It's a wall!"
-					to_chat(user, span_info("The hook fails! "+"[reason]"))
+					to_chat(user, span_info("¡El gancho falla! "+"[reason]"))
 					playsound(user, 'sound/foley/trap.ogg', 100, FALSE , 5)
 					unload(failure = TRUE)
 				else if(T.z == user.z)
 					if(max_range_noz >= get_dist(user, T) && !T.density)
 						if(check_path(get_turf(user), T, GRAPPLER_NOZ))	//We check for opaque turfs and ANY dense objects in the way
-							to_chat(user, span_info("The grapple lands on the tile!"))
+							to_chat(user, span_info("¡El gancho aterriza en el suelo!"))
 							grapple_to(T)
 							attached = user
 							return
@@ -267,9 +267,9 @@ Reel teleports the attached atom to the grabbed turf.
 							to_chat(user, span_info("¡El camino esta bloqueado!"))
 							return
 			else
-				to_chat(user, span_info("Incorrect target! It needs a clear floor tile to grapple onto."))
+				to_chat(user, span_info("¡Objetivo incorrecto! Necesita un azulejo de suelo despejado para agarrarse."))
 		else if(!is_loaded)
-			to_chat(user, span_info("It's been used already."))
+			to_chat(user, span_info("Ya se ha utilizado."))
 	if(istype(user.used_intent, /datum/intent/attach))	//Second step. Once we have a turf we've grappled onto, we can use this to attach to an entity.
 		if(in_use && !istype(target, /turf/))	//Can't use the feature unless it's grappled already
 			var/safe_to_teleport = TRUE
@@ -279,21 +279,21 @@ Reel teleports the attached atom to the grabbed turf.
 					if(O.density || istype(target, /obj/structure) || O.anchored || istype(target, /obj/machinery)) //This should cover most (fingers crossed) objects that shouldn't be moved around like this.
 						safe_to_teleport = FALSE
 			if(safe_to_teleport)
-				to_chat(user, span_info("I begin to attach the hook..."))
+				to_chat(user, span_info("Comienzo a sujetar el gancho..."))
 				if(do_after(user, 30))
 					if(target != user)
-						user.visible_message(span_warning("[user] attaches the hook to [target]."))
+						user.visible_message(span_warning("[user] sujeta el gancho a [target]."))
 					if(target == user)
-						user.visible_message(span_warning("[user] attaches the hook to themselves!"))
+						user.visible_message(span_warning("¡[user] se ata el gancho a si mismo!"))
 					attach(target)
 			else
-				to_chat(user, span_warning("[target] is too large or unwieldy to attach!"))
+				to_chat(user, span_warning("¡[target] es demasiado grande o voluminoso para adjuntarlo!"))
 		else
-			to_chat(user, span_info("I need to have it hooked onto a tile first."))
+			to_chat(user, span_info("Primero necesito que este enganchado a un azulejo."))
 	if(istype(user.used_intent, /datum/intent/reel))	//Last step, we reel in the attached entity to the grappled turf.
 		if(attached && in_use)
 			if(get_dist(attached, grappled_turf) <= (user.z != grappled_turf.z ? max_range_z : max_range_noz))
-				user.visible_message("[user] reels in \the [src]!")
+				user.visible_message("[user] enrolla \the [src]!")
 				if(do_after(user, 10))
 					reel()
 			else

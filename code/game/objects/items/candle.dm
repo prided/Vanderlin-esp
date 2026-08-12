@@ -1,6 +1,6 @@
 #define CANDLE_LUMINOSITY	3
 /obj/item/candle
-	name = "candle"
+	name = "vela"
 	desc = ""
 	icon = 'icons/obj/candle.dmi'
 	icon_state = "candle1"
@@ -97,7 +97,7 @@
 
 /obj/item/candle/attack_self(mob/user, list/modifiers)
 	if(put_out_candle())
-		user.visible_message("<span class='notice'>[user] snuffs [src].</span>")
+		user.visible_message("<span class='notice'>[user] sopla [src].</span>")
 
 /obj/item/candle/yellow
 	icon = 'icons/roguetown/items/lighting.dmi'
@@ -133,7 +133,7 @@
 
 /obj/item/candle/eora
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "eora's candle"
+	name = "La vela de eora"
 	desc = ""
 	color = "#f858b5ff"
 	light_color = "#ff13d8ff"
@@ -239,7 +239,7 @@
 
 /obj/item/candle/floorcandle0
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "candles"
+	name = "velas"
 	desc = ""
 	infinite = TRUE
 	icon_state = "floorcandle0"
@@ -251,7 +251,7 @@
 
 /obj/item/candle/floorcandle1
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "candles"
+	name = "velas"
 	desc = ""
 	infinite = TRUE
 	icon_state = "floorcandle1"

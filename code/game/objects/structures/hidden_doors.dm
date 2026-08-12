@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 
 
 /obj/structure/door/secret
-	name = "wall"
+	name = "pared"
 	icon = 'icons/turf/smooth/walls/stone_brick.dmi'
 	icon_state = MAP_SWITCH("stone_brick", "stone_brick-0")
 	hover_color = "#607d65"
@@ -193,7 +193,7 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 
 /obj/structure/door/secret/attack_hand(mob/user)
 	user.changeNext_move(CLICK_CD_MELEE)
-	to_chat(user, span_notice("I start feeling around [src]"))
+	to_chat(user, span_notice("Empiezo a explorar [src]"))
 	if(!do_after(user, 1.5 SECONDS, src))
 		return
 
@@ -215,7 +215,7 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 		else
 			var/bonuses = (HAS_TRAIT(user, TRAIT_THIEVESGUILD) || HAS_TRAIT(user, TRAIT_ASSASSIN)) ? 2 : 0
 			if(GET_MOB_ATTRIBUTE_VALUE(L, STAT_PERCEPTION) + bonuses >= hidden_dc)
-				. += span_purple("Something isn't right about this wall...")
+				. += span_purple("Algo no esta bien en esta pared...")
 
 /obj/structure/door/secret/Open(silent = FALSE)
 	switching_states = TRUE

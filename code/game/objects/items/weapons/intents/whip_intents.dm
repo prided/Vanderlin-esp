@@ -1,8 +1,8 @@
 // WHIP LASH INTENTS //
 /datum/intent/whip/lash
-	name = "lash"
+	name = "latigo"
 	blade_class = BCLASS_LASHING
-	attack_verb = list("lashes", "whips")
+	attack_verb = list("azota", "azota")
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	swingdelay = 2
 	clickcd = 14
@@ -20,7 +20,7 @@
 	penfactor = 15
 
 /datum/intent/whip/lash/cane
-	attack_verb = list("lashes", "canes")
+	attack_verb = list("azota", "azota")
 	chargetime = 20
 	no_early_release = TRUE
 	penfactor = 0
@@ -32,9 +32,9 @@
 
 // WHIP CUT INTENTS //
 /datum/intent/whip/cut
-	name = "cut"
+	name = "cortar"
 	blade_class = BCLASS_CUT
-	attack_verb = list("slashes", "lacerates")
+	attack_verb = list("corta", "lacera")
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
 	clickcd = 18
 	swingdelay = 1
@@ -47,9 +47,9 @@
 
 // WHIP CRACK INTENTS //
 /datum/intent/whip/crack
-	name = "crack"
+	name = "grieta"
 	blade_class = BCLASS_BLUNT
-	attack_verb = list("cracks", "huelgas") //something something dwarf fotresss
+	attack_verb = list("azota", "huelgas") //something something dwarf fotresss
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	penfactor = 10
 	icon_state = "incrack"

@@ -1,6 +1,6 @@
 /obj/machinery/artificer_table
-	name = "artificer table"
-	desc = "An artificers wood work station, nice and sturdy for working."
+	name = "mesa de artifice"
+	desc = "Una mesa de trabajo de madera para artifices, solida y resistente."
 	icon_state = "art_table"
 	icon = 'icons/roguetown/misc/tables.dmi'
 	var/obj/item/material
@@ -18,7 +18,7 @@
 
 	var/mob/living/buckled = locate() in buckled_mobs
 	if(buckled)
-		. += span_notice("[buckled] is secured to the table.")
+		. += span_notice("[buckled] queda sujeto a la mesa.")
 		var/stability = SEND_SIGNAL(buckled, COMSIG_AUGMENT_GET_STABILITY)
 		if(stability)
 			. += span_info("Estabilidad del nucleo: [stability]%")
@@ -30,7 +30,7 @@
 		return
 
 	if(!SEND_SIGNAL(M, COMSIG_AUGMENT_GET_STABILITY) && !istype(M, /mob/living/carbon/human))
-		to_chat(user, span_warning("[M] cannot be secured to the table!"))
+		to_chat(user, span_warning("¡[M] no puede quedar sujeto a la mesa!"))
 		return
 
 	M.forceMove(get_turf(src))
@@ -78,7 +78,7 @@
 			return ITEM_INTERACT_SUCCESS
 		if(skill < material.artrecipe.craftdiff)
 			if(prob(max(0, 25 - user.goodluck(2) - (skill * 2))))
-				to_chat(user, span_warning("Ah yes, my incompetence bears fruit."))
+				to_chat(user, span_warning("Ah, si, mi incompetencia da frutos."))
 				playsound(src,'sound/combat/hits/onwood/destroyfurniture.ogg', 100, FALSE)
 				user.mind.add_sleep_experience(material.artrecipe.appro_skill, (GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) * material.artrecipe.craftdiff * 0.25))
 				qdel(material)
@@ -113,7 +113,7 @@
 	if(!valid_types.len)
 		return
 
-	var/i_type_choice = tgui_input_list(user, "Choose a type", "Artificer", valid_types)
+	var/i_type_choice = tgui_input_list(user, "Elige un tipo", "Artifice", valid_types)
 	if(!i_type_choice)
 		return
 
@@ -129,7 +129,7 @@
 			appro_recipe -= R
 
 	if(appro_recipe.len)
-		var/datum/chosen_recipe = tgui_input_list(user, "Elige una creacion", "Artificer", sortNames(appro_recipe.Copy()))
+		var/datum/chosen_recipe = tgui_input_list(user, "Elige una creacion", "Artifice", sortNames(appro_recipe.Copy()))
 		if(!material.artrecipe && chosen_recipe)
 			material.artrecipe = new chosen_recipe.type(material)
 			return TRUE

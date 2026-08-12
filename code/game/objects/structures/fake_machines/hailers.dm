@@ -1,8 +1,8 @@
 //this is mostly a noticeboard clone, but it works!
 
 /obj/structure/fake_machine/hailer
-	name = "\improper HAILER"
-	desc = "A machine that shares the parchment fed to it to all existing HAILERBOARDs for viewing."
+	name = "\improper ALARMADOR"
+	desc = "Una maquina que comparte el pergamino que se le envia a todos los HAILERBOARD existentes para su visualizacion."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "hailer"
 	density = FALSE
@@ -44,7 +44,7 @@
 /obj/structure/fake_machine/hailer/interact(mob/user)
 	. = ..()
 	if(locked())
-		to_chat(user, span_warning("It's locked. Of course."))
+		to_chat(user, span_warning("Esta bloqueado. Por supuesto."))
 		return
 	var/auth = TRUE
 	var/dat = "<B>[name]</B><BR>"
@@ -76,7 +76,7 @@
 		if(istype(P) && P.loc == src)
 			var/obj/item/I = usr.is_holding_item_of_type(/obj/item/natural/feather) || usr.is_holding_item_of_type(/obj/item/natural/thorn)
 			if(!I)
-				to_chat(usr, span_warning("You need something to write with!"))
+				to_chat(usr, span_warning("¡Necesitas algo con lo que escribir!"))
 				return
 			add_fingerprint(usr)
 			P.attackby(I, usr)
@@ -96,11 +96,11 @@
 				var/n_name = stripped_input(usr, "give your notice a header!", "Paper Labelling", null, MAX_NAME_LEN)
 				I.name = "[(n_name ? "- '[n_name]'" : null)]"
 				return
-		to_chat(usr, "<span class='warning'>You'll need something to write with!</span>")
+		to_chat(usr, "<span class='warning'>¡Necesitaras algo con que escribir!</span>")
 
 /obj/structure/fake_machine/hailerboard
-	name = "HAILER BOARD"
-	desc = "A notice board that shows all the notices the Adventurer's Guild has put up."
+	name = "TABLERO DE LUDICA"
+	desc = "Un tablon de anuncios que muestra todos los avisos que ha colocado el Gremio de Aventureros."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "hailerboard"
 	density = FALSE

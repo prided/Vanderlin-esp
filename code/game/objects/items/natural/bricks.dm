@@ -19,7 +19,7 @@
 
 /obj/item/natural/bundle/brick
 	name = "pila de ladrillos"
-	desc = "A stack of bricks."
+	desc = "Una pila de ladrillos."
 	icon_state = "brickbundle1"
 	icon = 'icons/roguetown/items/cooking.dmi'	//It's because these are cooked via clay. Don't ask questions.
 	experimental_inhand = FALSE
@@ -42,7 +42,7 @@
 	icon2step = 4
 
 /obj/item/natural/raw_brick
-	name = "uncooked clay brick"
-	desc = "An uncooked clay brick. Still needs to be cooked in an oven."
+	name = "ladrillo de arcilla cruda"
+	desc = "Un ladrillo de arcilla crudo. Aun falta cocinarlo en el horno."
 	icon = 'icons/roguetown/items/cooking.dmi'	//It's because these are cooked via clay. Don't ask questions.
 	icon_state = "claybrickraw"

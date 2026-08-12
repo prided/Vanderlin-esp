@@ -27,7 +27,7 @@
 		new /obj/effect/particle_effect/expl_particles(location)
 
 /obj/effect/explosion
-	name = "fire"
+	name = "fuego"
 	icon = 'icons/effects/96x96.dmi'
 	icon_state = "explosion"
 	opacity = TRUE

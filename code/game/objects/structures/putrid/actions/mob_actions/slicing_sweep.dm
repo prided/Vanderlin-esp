@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/slicing_sweep
-	name = "Slicing Sweep"
-	desc = "Sweep your sharpened appendages in a wide arc, slicing through enemies."
+	name = "Barrido cortante"
+	desc = "Barra sus apendices afilados en un amplio arco, cortando a los enemigos."
 	button_icon_state = "slice_tail"
 	cooldown_time = 60 SECONDS
 	personal_resource_cost = 25
@@ -46,7 +46,7 @@
 	victim.apply_damage(sweep_damage, BRUTE, BODY_ZONE_CHEST, damage_type = BCLASS_CHOP)
 	shake_camera(victim, 4, 3)
 	playsound(victim, impact_sound, 100, TRUE, 8, 0.9)
-	to_chat(victim, span_userdanger("[caster]'s sharpened appendages slice through you!"))
+	to_chat(victim, span_userdanger("¡Los apendices afilados de [caster] te cortan!"))
 	victim.safe_throw_at(throwtarget, ((clamp((max_throw - (clamp(dist_from_caster - 2, 0, dist_from_caster))), 3, max_throw))), 1, caster, force = MOVE_FORCE_EXTREMELY_STRONG)
 
 /datum/action/cooldown/meatvine/personal/slicing_sweep/evaluate_ai_score(datum/ai_controller/controller)

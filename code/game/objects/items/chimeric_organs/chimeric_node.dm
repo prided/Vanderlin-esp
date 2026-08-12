@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 
 /obj/item/chimeric_node
 	name = "humores"
-	desc = "A preserved piece of flesh containing a humor. It pulses with unnatural life."
+	desc = "Un trozo de carne conservado que contiene un humor. Pulsa con vida antinatural."
 	icon = 'icons/obj/chimeric_nodes.dmi'
 	icon_state = "capillary"
 	item_weight = 125 GRAMS
@@ -26,21 +26,21 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	. = ..()
 	if(stored_node)
 		if(length(stored_node.allowed_organ_slots))
-			. += span_notice("This node can only be installed in: [english_list(stored_node.allowed_organ_slots)]")
+			. += span_notice("Este nodo solo puede ser instalado en: [english_list(stored_node.allowed_organ_slots)]")
 		if(length(stored_node.forbidden_organ_slots))
 			. += span_warning("Este nodo no se puede instalar en: [english_list(stored_node.forbidden_organ_slots)]")
 		if(!length(stored_node.allowed_organ_slots) && !length(stored_node.forbidden_organ_slots))
 			. += span_blue("Este nodo es compatible con cualquier organo.")
 		if(length(stored_node.compatible_blood_types) || length(stored_node.preferred_blood_types))
-			. += span_notice("This node can use these blood types:")
+			. += span_notice("Este nodo puede usar estos tipos de sangre:")
 			for(var/datum/blood_type/blood_type as anything in stored_node.preferred_blood_types)
-				. += span_notice("   -[initial(blood_type.name)] Blood (Preferred)")
+				. += span_notice("   - [initial(blood_type.name)] Sangre (preferida)")
 			for(var/datum/blood_type/blood_type as anything in stored_node.compatible_blood_types)
 				if(blood_type in stored_node.preferred_blood_types)
 					continue
 				. += span_notice("   -[initial(blood_type.name)] Sangre")
 		if(length(stored_node.incompatible_blood_types))
-			. += span_warning("This node isn't able to use these blood types:")
+			. += span_warning("Este nodo no puede usar estos tipos de sangre:")
 			for(var/datum/blood_type/blood_type as anything in stored_node.incompatible_blood_types)
 				. += span_warning("   -[initial(blood_type.name)] Sangre")
 
@@ -70,7 +70,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	. = ..()
 	if(!stored_node)
 		return
-	name = "[LOWER_TEXT(stored_node.name)] humor"
+	name = "humor [LOWER_TEXT(stored_node.name)]"
 
 /mob/living/proc/generate_random_chimeric_organs(amount = 3)
 	for(var/i=1 to amount)
@@ -109,15 +109,15 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 
 /obj/item/chimeric_node/proc/start_node_surgery(mob/user)
 	if(!stored_node)
-		to_chat(user, span_warning("There's no node to modify!"))
+		to_chat(user, span_warning("¡No hay ningun nodo para modificar!"))
 		return
 
-	to_chat(user, span_notice("You begin to carefully open the preserved flesh..."))
+	to_chat(user, span_notice("Comienzas a abrir cuidadosamente la carne preservada..."))
 	if(!do_after(user, 3 SECONDS, src))
 		return
 
 	playsound(src, 'sound/surgery/scalpel1.ogg', 50, TRUE)
-	to_chat(user, span_notice("The humor is exposed. You can now modify its essence with the proper tools."))
+	to_chat(user, span_notice("El humor esta expuesto. Ahora puedes modificar su esencia con las herramientas adecuadas."))
 
 	var/datum/chimeric_surgery_state/surgery = new()
 	surgery.target_node = src
@@ -136,13 +136,13 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	if(!surgery || surgery.extracted)
 		return FALSE
 
-	to_chat(user, span_notice("You carefully extract the node essence from the preserved tissue..."))
+	to_chat(user, span_notice("Usted extrae cuidadosamente la esencia del nodo del tejido preservado..."))
 	if(!do_after(user, 4 SECONDS, src))
 		return FALSE
 
 	playsound(src, 'sound/surgery/hemostat1.ogg', 50, TRUE)
 	surgery.extracted = TRUE
-	to_chat(user, span_notice("The essence has been extracted. Use a <b>retractor</b> to select a new node type."))
+	to_chat(user, span_notice("La esencia ha sido extraida. Usa un <b>retractor</b> para seleccionar un nuevo tipo de nodo."))
 	return TRUE
 
 /obj/item/chimeric_node/proc/surgery_step_select_node(mob/user)
@@ -161,7 +161,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	for(var/datum/chimeric_node/node_type as anything in available_nodes)
 		var/node_name = initial(node_type.name)
 		var/node_tier = initial(node_type.tier)
-		var/display_name = "[node_name] (Tier [node_tier]) ([ispath(node_type, /datum/chimeric_node/input ? "Input Node" : "Trigger Node")])"
+		var/display_name = "[node_name] (Nivel [node_tier]) ([ispath(node_type, /datum/chimeric_node/input ? "Input Node" : "Trigger Node")])"
 		node_names += display_name
 		node_lookup[display_name] = node_type
 
@@ -171,7 +171,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 
 	surgery.selected_node = node_lookup[choice]
 	playsound(src, 'sound/surgery/retractor1.ogg', 50, TRUE)
-	to_chat(user, span_notice("You prepare the [initial(surgery.selected_node.name)] essence. Use a <b>cautery</b> to seal the new node."))
+	to_chat(user, span_notice("Preparas la esencia [initial(surgery.selected_node.name)]. Utilice un cauterio <b></b> para sellar el nuevo nodo."))
 	return TRUE
 
 /obj/item/chimeric_node/proc/surgery_step_seal(mob/user)
@@ -179,7 +179,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	if(!surgery || !surgery.selected_node)
 		return FALSE
 
-	to_chat(user, span_notice("You begin to seal the modified humor..."))
+	to_chat(user, span_notice("Comienza a sellar el humor modificado..."))
 	if(!do_after(user, 5 SECONDS, src))
 		return FALSE
 
@@ -211,7 +211,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 
 	user.visible_message(
 		span_notice("[user] completa la modificacion de \the [src]."),
-		span_notice("You successfully transform the [old_name] into a [stored_node.name], preserving its essence!")
+		span_notice("¡Has transformado con exito el [old_name] en un [stored_node.name], preservando su esencia!")
 	)
 
 	return TRUE

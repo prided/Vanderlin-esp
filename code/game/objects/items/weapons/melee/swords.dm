@@ -3,8 +3,8 @@
 
 // Sword base
 /obj/item/weapon/sword
-	name = "sword"
-	desc = "A trustworthy blade design, the first dedicated tool of war since before the age of history."
+	name = "espada"
+	desc = "Un diseño de hoja confiable, la primera herramienta de guerra dedicada desde antes de la era de la historia."
 	icon = 'icons/roguetown/weapons/32/swords.dmi'
 	icon_state = "sword1"
 	parrysound = "sword"
@@ -55,7 +55,7 @@
 
 /obj/item/weapon/sword/short
 	name = "espada corta"
-	desc = "A steel sword of shortened design and a reduced grip for single hand use."
+	desc = "Una espada de acero de diseño acortado y empuñadura reducida para uso con una sola mano."
 	icon_state = "swordshort"
 	force = DAMAGE_SHORTSWORD
 	force_wielded = 0
@@ -71,7 +71,7 @@
 	weapon_special = /datum/special_intent/triple_stab
 
 /obj/item/weapon/sword/short/iron
-	desc = "An iron sword of shortened design and a reduced grip for single hand use."
+	desc = "Una espada de hierro de diseño acortado y empuñadura reducida para uso con una sola mano."
 	icon_state = "iswordshort"
 	wdefense = GOOD_PARRY
 	max_blade_int = 200
@@ -82,7 +82,7 @@
 
 /obj/item/weapon/sword/short/bronze
 	name = "espada corta de bronce"
-	desc = "A bronze sword of shortened design and a reduced grip for single hand use."
+	desc = "Una espada de bronce de diseño acortado y empuñadura reducida para uso con una sola mano."
 	icon_state = "shortsword_bronze"
 	wdefense = GOOD_PARRY
 	max_blade_int = 150
@@ -109,8 +109,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/sword/short/psy
-	name = "psydonian shortsword"
-	desc = "Grenzelhoftian smiths worked with artificers, and an esoteric blade was born: a blade with an unique design, dismissing a crossguard in favor of a hollow beak to hook and draw harm away from its user. Short in length, yet lethally light in weight."
+	name = "Espada corta psydonian"
+	desc = "Los herreros Grenzelhoftian trabajaron con los artifices y nacio una espada esoterica: una espada con un diseño unico, que descartaba una cruceta en favor de un pico hueco para enganchar y alejar el daño de su usuario. De longitud corta pero letalmente ligera."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psyswordshort"
 	force = DAMAGE_SHORTSWORD + 3
@@ -125,7 +125,7 @@
 
 /obj/item/weapon/sword/short/ida //Worse thrust but more damage for cutting.
 	name = "ida de acero"
-	desc = "A steel short sword with a leaf-shaped blade. Used to be a popular weapon in the east."
+	desc = "Una espada corta de acero con hoja en forma de hoja. Solia ​​ser un arma popular en el este."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "ida_steel"
 	force = DAMAGE_SHORTSWORD + 4
@@ -134,7 +134,7 @@
 
 /obj/item/weapon/sword/short/iron/ida
 	name = "ida de hierro"
-	desc = "A short sword with a leaf-shaped blade. Used to be a popular weapon in the east."
+	desc = "Una espada corta con hoja en forma de hoja. Solia ​​ser un arma popular en el este."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "ida_iron"
 	force = DAMAGE_SHORTSWORD + 2
@@ -144,8 +144,8 @@
 
 //................ Arming Sword ............... //
 /obj/item/weapon/sword/arming
-	name = "arming sword"
-	desc = "A trustworthy blade design, the first dedicated tool of war since before the age of history."
+	name = "espada de armar"
+	desc = "Un diseño de hoja confiable, la primera herramienta de guerra dedicada desde antes de la era de la historia."
 	icon_state = "sword1"
 	sellprice = 30
 	smeltresult = /obj/item/ingot/steel_slag
@@ -170,7 +170,7 @@
 
 /obj/item/weapon/sword/silver
 	name = "espada de plata"
-	desc = "A simple silver sword with an edge that gleams in moonlight."
+	desc = "Una sencilla espada plateada con un filo que brilla a la luz de la luna."
 	icon_state = "silversword"
 	max_blade_int = 240
 	max_integrity = INTEGRITY_STRONGEST * 0.8
@@ -194,7 +194,7 @@
 
 /obj/item/weapon/sword/bronze
 	name = "espada de bronce"
-	desc = "A simple and reliable bronze sword."
+	desc = "Una espada de bronce sencilla y fiable."
 	icon_state = "sword_bronze"
 	wdefense = GOOD_PARRY
 	max_blade_int = 150
@@ -204,7 +204,7 @@
 
 /obj/item/weapon/sword/kaskara
 	name = "kaskara de acero"
-	desc = "A steel sword with a small crossguard."
+	desc = "Una espada de acero con una pequeña cruz."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "kaskara_steel"
 	possible_item_intents = list(SWORD_CUT, SWORD_THRUST, SWORD_CHOP)
@@ -215,7 +215,7 @@
 
 /obj/item/weapon/sword/kaskara/iron
 	name = "kaskara de hierro"
-	desc = "A sword of with a small crossguard."
+	desc = "Una espada con una pequeña cruz."
 	icon_state = "kaskara_iron"
 	wdefense = GOOD_PARRY
 	max_blade_int = 200
@@ -239,8 +239,8 @@
 | Sabres |	Onehanded, slightly weaker thrust, better for parries. Think rapier but cutting focus.
 \-------*/
 /obj/item/weapon/sword/sabre
-	name = "sabre"
-	desc = "A swift sabre, favored by duelists and cut-throats alike."
+	name = "sable"
+	desc = "Un sable veloz, preferido tanto por duelistas como por asesinos."
 	icon_state = "saber"
 	force_wielded = 0
 	wdefense = ULTMATE_PARRY
@@ -253,32 +253,32 @@
 	item_weight = 900 GRAMS
 
 /obj/item/weapon/sword/sabre/dec
-	name = "decorated sabre"
-	desc = "A sabre decorated with fashionable gold accents without sacrificing its lethal practicality."
+	name = "sable decorado"
+	desc = "Un sable decorado con modernos detalles dorados sin sacrificar su letal practicidad."
 	icon_state = "decsaber"
 	sellprice = 140
 	item_weight = 900 GRAMS
 
 /obj/item/weapon/sword/sabre/captain
-	name = "\proper law"
-	desc = "A sabre decorated with gold forged specifically for the Captain alongside their armor. To bring Law to the lands, they shall use this blade."
+	name = "\proper Ley"
+	desc = "Un sable decorado con oro forjado especificamente para el Capitan junto a su armadura. Para llevar la Ley a las tierras, utilizaran esta espada."
 	icon_state = "capsaber"
 	sellprice = 140
 	item_weight = 900 GRAMS
 
 /obj/item/weapon/sword/sabre/stalker
-	name = "stalker sabre"
-	desc = "A once elegant blade of mythril, diminishing under the suns gaze."
+	name = "sable acosador"
+	desc = "Una vez elegante hoja de mitril, que disminuye bajo la mirada del sol."
 	icon = 'icons/roguetown/weapons/32/elven.dmi'
 	icon_state = "spidersaber"
 	possible_item_intents = list(SWORD_CUT, SHORT_THRUST)
 	item_weight = 850 GRAMS
 
 /obj/item/weapon/sword/sabre/noc
-	name = "moonlight khopesh"
+	name = "khopesh luz de la luna"
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "nockhopesh"
-	desc = "Glittering moonlight upon blued steel."
+	desc = "La brillante luz de la luna sobre el acero azulado."
 	possible_item_intents = list(SWORD_CUT, CURVED_THRUST, SWORD_CHOP)
 	max_integrity = INTEGRITY_STRONGEST * 0.8
 	item_weight = 950 GRAMS
@@ -290,8 +290,8 @@
 
 //................ Cutlass ............... //
 /obj/item/weapon/sword/sabre/cutlass
-	name = "cutlass"
-	desc = "Both tool and weapon of war, favored by Abyssor cultists and sailors for seafaring battle."
+	name = "sable de abordaje"
+	desc = "Tanto herramienta como arma de guerra, preferida por los cultistas y marineros de Abyssor para las batallas maritimas."
 	icon_state = "cutlass"
 	force = DAMAGE_SWORD + 2
 	wdefense = GREAT_PARRY
@@ -301,7 +301,7 @@
 /obj/item/weapon/sword/sabre/dadao
 	name = "dadao de acero"
 	icon_state = "dadao_steel"
-	desc = "Sometimes also referred to as \"Saiga Choppers\". Dadaos are heavy eastern blades infamous for their ability to slice men in half."
+	desc = "A veces tambien se denominan picadoras \"Saiga\". Los dadaos son espadas orientales pesadas, famosas por su capacidad de cortar a los hombres por la mitad."
 	force = DAMAGE_SWORD + 1
 	force_wielded = DAMAGE_SWORD_WIELD + 1
 	wdefense = AVERAGE_PARRY
@@ -310,7 +310,7 @@
 	item_weight = 1.2 KILOGRAMS
 
 /obj/item/weapon/sword/sabre/dadao/iron
-	name = "iron dadao"
+	name = "dadao de hierro"
 	icon_state = "dadao_iron"
 	max_blade_int = 200
 	max_integrity = INTEGRITY_STRONG
@@ -327,8 +327,8 @@
 
 //................ Shalal Sabre ............... //
 /obj/item/weapon/sword/sabre/shalal
-	name = "zaladin riding sabre"
-	desc = "A fine weapon of Zaladin origin, used by those with mastery of mounted swordsmanship."
+	name = "zaladin sable de montar"
+	desc = "Un arma excelente de origen Zaladin, utilizada por aquellos que dominan el manejo de la espada a caballo."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "marlin"
 	lefthand_file = 'icons/mob/inhands/weapons/roguebig_lefthand.dmi'
@@ -363,8 +363,8 @@
 				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/sword/sabre/scythe
-	name = "scythe sword"
-	desc = "A farming tool blade has been fastened to a shorter wooden handle to create an improvised weapon."
+	name = "espada guadaña"
+	desc = "Se ha fijado la hoja de una herramienta agricola a un mango de madera mas corto para crear un arma improvisada."
 	icon_state = "scytheblade"
 	force = DAMAGE_SWORD - 2
 	wdefense = AVERAGE_PARRY
@@ -374,8 +374,8 @@
 | Scimitars |	Normal swords with a strong cutting emphasis.
 \----------*/
 /obj/item/weapon/sword/scimitar
-	name = "scimitar"
-	desc = "A Zaladin design for swords, these curved blades are a common sight in the lands of the Ziggurat."
+	name = "cimitarra"
+	desc = "Un diseño Zaladin para espadas, estas hojas curvas son una vista comun en las tierras del Zigurat."
 	icon_state = "scimitar"
 	wdefense = GOOD_PARRY
 	possible_item_intents = list(SWORD_CUT, SWORD_CHOP)
@@ -385,7 +385,7 @@
 
 /obj/item/weapon/sword/scimitar/falchion
 	name = "falchion"
-	desc = "Broad blade, excellent steel, a design inspired by Malum the dwarves claim."
+	desc = "Hoja ancha, acero excelente, un diseño inspirado en Malum, afirman los enanos."
 	icon_state = "falchion"
 	wbalance = EASY_TO_DODGE
 	possible_item_intents = list(SWORD_CUT, AXE_CHOP)
@@ -395,7 +395,7 @@
 
 /obj/item/weapon/sword/scimitar/messer
 	name = "messer"
-	desc = "Straight iron blade, simple cutting edge, no nonsense and a popular northern blade."
+	desc = "Hoja de hierro recta, filo simple, sensato y una hoja popular del norte."
 	icon_state = "imesser"
 	wbalance = EASY_TO_DODGE
 	possible_item_intents = list(SWORD_CUT, AXE_CHOP)
@@ -407,8 +407,8 @@
 	item_weight = 1.4 KILOGRAMS
 
 /obj/item/weapon/sword/scimitar/lakkarikhopesh/iron
-	name = "iron khopesh"
-	desc = "A crescent curved sword. It's popular among traveling Noccian scholars."
+	name = "khopesh de hierro"
+	desc = "Una espada curva en forma de media luna. Es popular entre los eruditos noccianos viajeros."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "khopesh_iron"
 	max_blade_int = 200
@@ -419,7 +419,7 @@
 
 /obj/item/weapon/sword/scimitar/lakkarikhopesh
 	name = "khopesh de acero"
-	desc = "A crescent curved sword. It's popular among traveling Noccian scholars."
+	desc = "Una espada curva en forma de media luna. Es popular entre los eruditos noccianos viajeros."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "khopesh_steel"
 	wbalance = EASY_TO_DODGE
@@ -429,7 +429,7 @@
 	item_weight = 1.2 KILOGRAMS
 
 /obj/item/weapon/sword/scimitar/sengese/iron
-	name = "iron sengese"
+	name = "sengese de hierro"
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "sengese_iron"
 	max_blade_int = 200
@@ -439,8 +439,8 @@
 	item_weight = 1.1 KILOGRAMS
 
 /obj/item/weapon/sword/scimitar/sengese
-	name = "steel sengese"
-	desc = "A curved sword made for deflecting blows. Many inexperienced swordsmen struggle to use it well due to its shape, but it's a force to be reckoned with in the hands of a master."
+	name = "sengese de acero"
+	desc = "Una espada curva hecha para desviar golpes. Muchos espadachines inexpertos tienen dificultades para utilizarlo bien debido a su forma, pero es una fuerza a tener en cuenta en manos de un maestro."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "sengese_steel"
 	wdefense = GREAT_PARRY
@@ -451,7 +451,7 @@
 	item_weight = 1.1 KILOGRAMS
 
 /obj/item/weapon/sword/scimitar/sengese/bronze
-	name = "bronze sengese"
+	name = "sengese de bronce"
 	icon = 'icons/roguetown/weapons/32/swords.dmi'
 	icon_state = "sengese_bronze"
 	max_blade_int = 150
@@ -476,7 +476,7 @@
 
 /obj/item/weapon/sword/scimitar/wodao
 	name = "acero wo dao"
-	desc = "A slightly curved blade of eastern origin. While less durable compared to other swords, it's swift balance and unique design makes it great for unleashing precise strikes."
+	desc = "Hoja ligeramente curvada de origen oriental. Si bien es menos duradera en comparacion con otras espadas, su equilibrio rapido y su diseño unico la hacen ideal para dar golpes precisos."
 	icon_state = "wodao_steel"
 	wbalance = VERY_HARD_TO_DODGE
 	possible_item_intents = list(RAPIER_THRUST,RAPIER_CUT)
@@ -499,9 +499,9 @@
 | Rapiers |		Onehanded, slightly weaker cut, more AP thrust, harder to dodge.
 \--------*/
 /obj/item/weapon/sword/rapier
-	name = "rapier"
-	desc = "A duelist's weapon derived from western battlefield instruments, it features a tapered \
-	blade with a specialized stabbing tip."
+	name = "estoque"
+	desc = "Un arma de duelista derivada de instrumentos de batalla occidentales; posee una hoja \
+	afilada con una punta especializada para estocadas."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "rapier"
 	force_wielded = 0
@@ -594,8 +594,8 @@
 				)
 
 /obj/item/weapon/sword/rapier/psy
-	name = "psydonian rapier"
-	desc = "A highly ornate silver rapier, used more as a show of status for members of the inquisition."
+	name = "Estoque psydonian"
+	desc = "Un estoque de plata muy ornamentado, utilizado mas como muestra de estatus para los miembros de la Inquisicion."
 	icon = 'icons/roguetown/weapons/64/psydonite.dmi'
 	icon_state = "psyrapier"
 	max_integrity = INTEGRITY_STRONG
@@ -609,28 +609,28 @@
 	AddComponent(/datum/component/psyblessed, TRUE, 5, 100, 100, 2, TRUE)
 
 /obj/item/weapon/sword/rapier/psy/relic
-	name = "retribution"
-	desc = "A rapier as swift as the inquisitors of the Ordo Venatari. Strike evil at its heart. Purge the unholy through the slightest window it offers, in Psydon’s name."
+	name = "venganza"
+	desc = "Un estoque tan veloz como los inquisidores del Ordo Venatari. Golpea el mal en su corazon. Purga lo impio a traves de la mas minima ventana que ofrece, en nombre de Psydon."
 	item_weight = 700 GRAMS
 
 /obj/item/weapon/sword/rapier/dec
-	name = "decorated rapier"
-	desc = "A rapier decorated with gold inlaid on its hilt. A regal weapon fit for nobility."
+	name = "estoque decorado"
+	desc = "Estoque decorado con incrustaciones de oro en la empuñadura. Un arma real digna de la nobleza."
 	icon_state = "decrapier"
 	sellprice = 140
 	item_weight = 700 GRAMS
 
 /obj/item/weapon/sword/rapier/nimcha
 	name = "nimcha"
-	desc = "An embellished swift sword from the east."
+	desc = "Una espada veloz adornada del este."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "nimcha"
 	sellprice = 140 // its made with gold and steel, thats pretty valuable
 	item_weight = 750 GRAMS
 
 /obj/item/weapon/sword/rapier/caneblade
-	name = "cane blade"
-	desc = "A steel blade with a gold handle, intended to be concealed inside of a cane. Has a focus on stabbing."
+	name = "hoja de caña"
+	desc = "Una hoja de acero con mango de oro, destinada a ocultarse dentro de un baston. Se centra en apuñalar."
 	icon = 'icons/roguetown/weapons/32/swords.dmi'
 	icon_state = "caneblade"
 	sellprice = 100 //Gold handle
@@ -639,20 +639,20 @@
 	item_weight = 500 GRAMS
 
 /obj/item/weapon/sword/rapier/caneblade/courtphysician
-	name = "cane blade"
-	desc = "A steel blade with a gold handle, intended to be concealed inside of a cane. This one bears the visage of a vulture on its pommel."
+	name = "hoja de caña"
+	desc = "Una hoja de acero con mango de oro, destinada a ocultarse dentro de un baston. Este lleva en su pomo el rostro de un buitre."
 	icon = 'icons/roguetown/weapons/32/swords.dmi'
 	icon_state = "doccaneblade"
 
 /obj/item/weapon/sword/rapier/caneblade/hand
-	name = "cane blade"
-	desc = "A steel blade with a silver handle, intended to be concealed inside of a cane. This one bears a rontz on its pommel."
+	name = "hoja de caña"
+	desc = "Una hoja de acero con mango plateado, destinada a ocultarse dentro de un baston. Este lleva un rontz en su pomo."
 	icon_state = "staffblade"
 
 //................ Lord's Rapier ............... //
 /obj/item/weapon/sword/rapier/dec/lord
-	name = "\proper lord's rapier"
-	desc = "Passed down through the ages, a weapon that once carved a kingdom out now relegated to a decorative piece."
+	name = "\proper estoque del señor"
+	desc = "Transmitida a traves de los siglos, un arma que alguna vez creo un reino ahora relegada a una pieza decorativa."
 	icon_state = "lord_rapier"
 	force = DAMAGE_SWORD_WIELD
 	sellprice = 200
@@ -660,8 +660,8 @@
 	item_weight = 750 GRAMS
 
 /obj/item/weapon/sword/rapier/silver
-	name = "silver rapier"
-	desc = "An elegant silver rapier. Popular with lords and ladies in Valoria."
+	name = "estoque de plata"
+	desc = "Un elegante estoque plateado. Popular entre señores y damas en Valoria."
 	icon_state = "rapier_s"
 	force = DAMAGE_SWORD - 2
 	melt_amount = 100
@@ -677,8 +677,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/sword/rapier/eora
-	name = "\proper heartstring"
-	desc = "For when soft words cannot be spoken more, and hearts are to be pierced."
+	name = "\proper corazon"
+	desc = "Para cuando ya no se puedan decir palabras suaves y los corazones deban ser traspasados."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "eorarapier"
 	item_weight = 650 GRAMS
@@ -687,8 +687,8 @@
 
 // Hoplite Kophesh
 /obj/item/weapon/sword/khopesh
-	name = "ancient khopesh"
-	desc = "A bronze weapon of war from the age of Psydon's reign. This blade is older than a few elven generations, but has been very well-maintained and still keeps a good edge."
+	name = "khopesh antiguo"
+	desc = "Un arma de guerra de bronce de la epoca del reinado de Psydon. Esta espada es mas antigua que algunas generaciones de elfos, pero ha sido muy bien mantenida y aun conserva un buen filo."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "khopesh"
 	item_state = "khopesh"
@@ -717,8 +717,8 @@
 
 //................ Long Sword ............... //
 /obj/item/weapon/sword/long
-	name = "longsword"
-	desc = "A long hand-and-a-half blade, wielded by the virtuous and vile alike."
+	name = "espada larga"
+	desc = "Una espada larga de mano y media, empuñada tanto por los virtuosos como por los viles."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "longsword"
 	lefthand_file = 'icons/mob/inhands/weapons/roguebig_lefthand.dmi'
@@ -745,10 +745,10 @@
 	item_weight = 1.5 KILOGRAMS
 
 /obj/item/weapon/sword/long/shotel
-	name = "steel shotel"
+	name = "escopeta de acero"
 	icon_state = "shotel_steel"
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
-	desc = "A long, crescent curved blade."
+	desc = "Una hoja larga y curva en forma de media luna."
 	possible_item_intents = list(SWORD_CUT, SWORD_CHOP)
 	gripped_intents = list(SWDLONG_CUT, SHOTEL_CHOP)
 	alt_intents = null
@@ -774,7 +774,7 @@
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/sword/long/shotel/iron //Balance-patch
-	name = "iron shotel"
+	name = "shotel de hierro"
 	icon_state = "shotel_iron"
 	max_integrity = INTEGRITY_STANDARD - 50
 	smeltresult = /obj/item/ingot/iron
@@ -802,7 +802,7 @@
 /obj/item/weapon/sword/long/aruval
 	name = "aruval de acero"
 	icon_state = "aruval_steel"
-	desc = "A long billhook machete of Savannah Elf origin. It was originally designed to cut large branches, but has since evolved into a formidable weapon."
+	desc = "Un machete de garfio largo de origen elfo de Savannah. Originalmente fue diseñado para cortar ramas grandes, pero desde entonces se ha convertido en un arma formidable."
 	possible_item_intents = list(SWORD_CUT, SWORD_CHOP)
 	gripped_intents = list(SWDLONG_CUT, SWDLONG_CHOP, SWORD_DISARM)
 	alt_intents = null
@@ -872,7 +872,7 @@
 /obj/item/weapon/sword/long/kriegmesser
 	name = "kriegmesser"
 	icon_state = "kriegmesser"
-	desc = "A long, single-edged sword with a crossguard and a long grip. It was designed to chop over stab, like a heavy cleaver."
+	desc = "Una espada larga de un solo filo con una guarda cruzada y una empuñadura larga. Fue diseñado para cortar puñaladas, como un cuchillo pesado."
 	force = DAMAGE_SWORD + 2
 	force_wielded = DAMAGE_LONGSWORD_WIELD + 3
 	possible_item_intents = list(SWORD_CUT, SWORD_CHOP)
@@ -884,8 +884,8 @@
 //................ Heirloom Sword ............... //
 /obj/item/weapon/sword/long/heirloom
 	icon_state = "heirloom"
-	name = "old sword"
-	desc = "An old steel sword with a heraldic green leather grip, mouldered by years of neglect."
+	name = "espada vieja"
+	desc = "Una vieja espada de acero con empuñadura de cuero verde heraldico, destrozada por años de abandono."
 	force = DAMAGE_SWORD - 2
 	force_wielded = DAMAGE_SWORD_WIELD - 2
 	max_blade_int = 180 // Neglected, unused
@@ -896,9 +896,9 @@
 
 // Repurposing this unused sword for the Paladin job as a heavy counter against vampires.
 /obj/item/weapon/sword/long/judgement// this sprite is a one handed sword, not a longsword.
-	name = "judgement"
+	name = "juicio"
 	icon_state = "judgement"
-	desc = "A sword with a silvered grip, a jeweled hilt and a honed blade; a design fit for nobility."
+	desc = "Una espada con empuñadura plateada, empuñadura enjoyada y hoja afilada; Un diseño digno de la nobleza."
 	force = DAMAGE_SWORD - 2
 	max_blade_int = 240
 	max_integrity = INTEGRITY_STRONGEST * 0.8
@@ -928,15 +928,15 @@
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/sword/long/judgement/evil
-	name = "decimator"
-	desc = "A horrid sword with a silvered grip, a jeweled hilt and a honed blade; a design unfit for a true paladin."
+	name = "diezmador"
+	desc = "Una espada horrible con empuñadura plateada, empuñadura enjoyada y hoja afilada; un diseño inadecuado para un verdadero paladin."
 	color = CLOTHING_SOOT_BLACK
 	item_weight = 1.4 KILOGRAMS
 
 /obj/item/weapon/sword/long/vlord // this sprite is a one handed sword, not a longsword.
 	icon_state = "vlord"
-	name = "\proper jaded fang"
-	desc = "An ancestral long blade with an ominous glow, serrated with barbs along its edges. Stained with a strange green tint."
+	name = "\proper colmillo hastiado"
+	desc = "Una espada larga ancestral con un brillo siniestro, dentada con puas a lo largo de sus bordes. Manchado con un extraño tinte verde."
 	force_wielded = DAMAGE_GREATSWORD_WIELD
 	sellprice = 0
 	static_price = TRUE
@@ -964,16 +964,16 @@
 
 /obj/item/weapon/sword/long/rider
 	icon_state = "tabi"
-	name = "kilij scimitar"
-	desc = "A curved blade of Zaladin origin meaning 'curved one'. The standard sword that saw the conquest of the Zalad continent and peoples."
+	name = "cimitarra kilij"
+	desc = "Una hoja curva de origen Zaladin que significa 'curvada'. La espada estandar que vio la conquista del continente Zalad y de los pueblos."
 	possible_item_intents = list(SWORD_CUT, SWORD_STRIKE)
 	gripped_intents = list(SWORD_CUT, SWORD_STRIKE, SWDLONG_CHOP)
 	sellprice = 80
 	item_weight = 1.3 KILOGRAMS
 
 /obj/item/weapon/sword/long/rider/steppe
-	name = "steppe sabre"
-	desc = "A curved blade of nomadic origin, it is used by cavalrymen all across the far steppes."
+	name = "sable de estepa"
+	desc = "Una hoja curva de origen nomada, utilizada por soldados de caballeria en todas las estepas lejanas."
 	icon_state = "steppe"
 	force_wielded = 0
 	wdefense = ULTMATE_PARRY
@@ -995,8 +995,8 @@
 				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/sword/long/forgotten
-	name = "forgotten blade"
-	desc = "A large silver-alloy sword made in a revisionist style, honoring Psydon. Best known as the preferred weapon of Inquisitorial Lodges."
+	name = "espada olvidada"
+	desc = "Una gran espada de aleacion de plata realizada en estilo revisionista, en honor a Psydon. Mejor conocida como el arma preferida de las Logias Inquisitoriales."
 	icon = 'icons/roguetown/weapons/64/psydonite.dmi'
 	icon_state = "oldpsybroadsword"
 	force = DAMAGE_SWORD * 0.9 // Damage is .9 of a steel sword
@@ -1022,8 +1022,8 @@
 	item_weight = 1.5 KILOGRAMS
 
 /obj/item/weapon/sword/long/psydon
-	name = "psydonian longsword"
-	desc = "A large silver longsword forged in the shape of a psycross."
+	name = "Espada larga psydonian"
+	desc = "Una gran espada larga plateada forjada con la forma de psycross."
 	icon = 'icons/roguetown/weapons/64/psydonite.dmi'
 	icon_state = "psysword"
 	last_used = 0
@@ -1036,8 +1036,8 @@
 	AddComponent(/datum/component/psyblessed, FALSE, 3, FALSE, 50, 1, TRUE)
 
 /obj/item/weapon/sword/long/psydon/relic
-	name = "\proper rememberance"
-	desc = "A balanced silver blade, favoured by both the Ordo Benetarus and the Ordo Venetari. May it carve a path through the Unholy, in honour and rememberance of Psydon's sacrifice."
+	name = "\proper Recuerdo"
+	desc = "Una hoja plateada equilibrada, preferida tanto por el Ordo Benetarus como por el Ordo Venetari. Que abra un camino a traves de lo Impio, en honor y recuerdo del sacrificio de Psydon."
 	item_weight = 1.5 KILOGRAMS
 
 /obj/item/weapon/sword/long/psydon/relic/Initialize(mapload)
@@ -1046,8 +1046,8 @@
 	AddComponent(/datum/component/psyblessed, TRUE, 5, 100, 100, 1, TRUE)
 
 /obj/item/weapon/sword/long/silver/decorated
-	name = "decorated silver longsword"
-	desc = "A finely crafted silver longsword with a decorated golden hilt."
+	name = "espada larga de plata decorada"
+	desc = "Una espada larga plateada finamente elaborada con una empuñadura dorada decorada."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "declongsword"
 	max_blade_int = 240
@@ -1074,15 +1074,15 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/sword/long/oldpsysword //Not attainable
-	name = "old psydonian longsword"
-	desc = "A finely made longsword, plated in a worn-down veneer of grubby silver. It's long seen better daes."
+	name = "antigua espada larga psydonian"
+	desc = "Una espada larga finamente elaborada, revestida con un desgastado revestimiento de plata sucia. Hace tiempo que se ven mejores cosas."
 	icon = 'icons/roguetown/weapons/64/psydonite.dmi'
 	icon_state = "opsysword"
 
 //................ Greatsword ............... //
 /obj/item/weapon/sword/long/greatsword
 	name = "gran espada"
-	desc = "An oversized hunk of metal designed for putting fear into men and killing beasts."
+	desc = "Un trozo de metal de gran tamaño diseñado para infundir miedo a los hombres y matar bestias."
 	icon_state = "gsw"
 	force_wielded = DAMAGE_GREATSWORD_WIELD
 	wbalance = EASY_TO_DODGE
@@ -1111,8 +1111,8 @@
 
 //................ Psydonian Greatsword ............... //
 /obj/item/weapon/sword/long/greatsword/psydon
-	name = "psydonian greatsword"
-	desc = "A mighty silver greatsword made to strike fear into the heart of even Archdevils."
+	name = "psydonian gran espada"
+	desc = "Una poderosa gran espada plateada diseñada para infundir miedo en el corazon incluso de los Archidemonios."
 	icon = 'icons/roguetown/weapons/64/psydonite.dmi'
 	icon_state = "psygsword"
 	force_wielded = DAMAGE_LONGSWORD_WIELD
@@ -1140,8 +1140,8 @@
 				return list("shrink" = 0.6,"sx" = -1,"sy" = 3,"nx" = -1,"ny" = 2,"wx" = 3,"wy" = 4,"ex" = -1,"ey" = 5,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 20,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/weapon/sword/long/greatsword/psydon/relic
-	name = "\proper crusade"
-	desc = "The grandest blade of the Ordo Benetarus. Its unparalleled strength commands even the greatest of foes to fall. Wade through the unholy in Psydon’s name. Let none survive."
+	name = "\proper Cruzada"
+	desc = "La hoja mas grandiosa del Ordo Benetarus. Su fuerza incomparable hace caer incluso al mayor de los enemigos. Atraviesa lo impio en nombre de Psydon. Que ninguno sobreviva."
 	icon_state = "psygsword"
 	force = DAMAGE_SWORD_WIELD
 	possible_item_intents = list(SWORD_CUT, SWORD_THRUST, SWORD_STRIKE)
@@ -1153,8 +1153,8 @@
 	AddComponent(/datum/component/psyblessed, TRUE, 5, 100, 100, 1, TRUE)
 
 /obj/item/weapon/sword/long/broadsword/psy
-	name = "old psydonian broadsword"
-	desc = "Even the most ignorant of zealots know that the holy silver loses its properties when not blessed by Priests for an extended period of time. Its edge remains as lethal as ever, however."
+	name = "viejo sable psydonian"
+	desc = "Incluso los fanaticos mas ignorantes saben que la plata sagrada pierde sus propiedades cuando no es bendecida por los sacerdotes durante un periodo prolongado de tiempo. Sin embargo, su ventaja sigue siendo tan letal como siempre."
 	icon = 'icons/roguetown/weapons/64/psydonite.dmi'
 	icon_state = "psybroadsword"
 	smeltresult = /obj/item/ingot/silver
@@ -1162,8 +1162,8 @@
 	item_weight = 2.5 KILOGRAMS
 
 /obj/item/weapon/sword/long/broadsword/psy/relic
-	name = "\proper creed"
-	desc = "Bathed in Psydonian prayers, this large and heavy blade exists to slay the inhumen and evil. The crossguard’s psycross is engraved with prayers of the Ordo Benetarus. You’re the light - show them the way."
+	name = "\proper Credo"
+	desc = "Bañada en oraciones Psydonian, esta espada grande y pesada existe para matar al inhumen y al mal. El psycross de la cruceta esta grabado con oraciones del Ordo Benetarus. Tu eres la luz: muestrales el camino."
 	item_weight = 2.5 KILOGRAMS
 	smeltresult = /obj/item/ingot/silverblessed
 
@@ -1182,7 +1182,7 @@
 
 /obj/item/weapon/sword/long/greatsword/psydon/unforgotten
 	name = "espada inolvidable"
-	desc = "High Inquisitor Archibald once recorded an expedition of seven brave order members into eastern snow-felled wastes to root out evil. Its leader, Holy Ordinator Guillemin, was said to have held on for seven daes and seven nights against darksteel-clad heretics before Psydon acknowledged his endurance. Nothing but his blade remained - his psycross wrapped around its hilt in remembrance."
+	desc = "El Alto Inquisidor Archibald registro una vez una expedicion de siete valientes miembros de la orden a los paramos nevados del este para erradicar el mal. Se dice que su lider, el Santo computadora Guillemin, resistio durante siete dias y siete noches contra herejes vestidos de acero oscuro antes de que Psydon reconociera su resistencia. No quedo nada mas que su espada: su psycross envuelto alrededor de su empuñadura en recuerdo."
 	icon_state = "forgottenblade"
 	item_weight = 2.5 KILOGRAMS
 
@@ -1193,7 +1193,7 @@
 //................ Flamberge ............... //
 /obj/item/weapon/sword/long/greatsword/flamberge
 	name = "flamberge"
-	desc = "Commonly known as a flame-bladed sword, this weapon has an undulating blade. Its wave-like form distributes force better, and is less likely to break on impact."
+	desc = "Comunmente conocida como espada de hoja de fuego, esta arma tiene una hoja ondulante. Su forma ondulada distribuye mejor la fuerza y ​​es menos probable que se rompa con el impacto."
 	icon_state = "flamberge"
 	gripped_intents = list(SWORD_CUT, SWDLONG_THRUST, SWORD_STRIKE, SWDLONG_CHOP)
 	wbalance = DODGE_CHANCE_NORMAL
@@ -1203,7 +1203,7 @@
 
 /obj/item/weapon/sword/long/greatsword/zwei
 	name = "zweihander"
-	desc = "Sometimes known as a doppelhander or beidhander, this weapon's size is so impressive that its handling properties are more akin to that of a polearm than a sword."
+	desc = "A veces conocida como doppelhander o beidhander, el tamaño de esta arma es tan impresionante que sus propiedades de manejo se parecen mas a las de un arma de asta que a las de una espada."
 	icon_state = "steelzwei_sk"
 	force_wielded = DAMAGE_LONGSWORD_WIELD
 	possible_item_intents = list(ZWEI_CUT, ZWEI_THRUST, SWORD_STRIKE)
@@ -1229,8 +1229,8 @@
 				return list("shrink" = 0.6,"sx" = -1,"sy" = 3,"nx" = -1,"ny" = 2,"wx" = 3,"wy" = 4,"ex" = -1,"ey" = 5,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 20,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/weapon/sword/long/greatsword/zwei/steel
-	name = "steel zweihander"
-	desc = "A zweihander forged from steel, the pride and joy of any mercenary who wields it. It looks like it could cleave a man in half with a single swing."
+	name = "zweihander de acero"
+	desc = "Un zweihander forjado en acero, el orgullo y la alegria de cualquier mercenario que lo empuñe. Parece que podria partir a un hombre por la mitad con un solo golpe."
 	icon_state = "steelzwei"
 	force_wielded = DAMAGE_LONGSWORD_WIELD + 2
 	max_blade_int = 300
@@ -1240,8 +1240,8 @@
 
 //................ Kriegsmesser ............... //
 /obj/item/weapon/sword/long/greatsword/elfgsword
-	name = "elven kriegsmesser"
-	desc = "A huge, curved elven blade. It's metal is of a high quality, yet still light, crafted by the greatest elven bladesmiths."
+	name = "kriegsmesser elfo"
+	desc = "Una enorme espada elfica curva. Su metal es de alta calidad, pero aun asi liviano, elaborado por los mejores herreros elficos."
 	icon_state = "kriegsmesser"
 	sellprice = 120
 	item_weight = 2.3 KILOGRAMS
@@ -1261,8 +1261,8 @@
 
 //................ Zizo Sword ............... //
 /obj/item/weapon/sword/long/greatsword/zizo
-	name = "darksteel kriegsmesser"
-	desc = "A dark red curved blade. Called forth from Her will, if you wield this blade you are to be feared, if you do not, you are dead."
+	name = "kriegsmesser de acero oscuro"
+	desc = "Una hoja curva de color rojo oscuro. Invocado por Su voluntad, si empuñas esta espada debes ser temido, si no lo haces, estas muerto."
 	icon_state = "zizosword"
 	wdefense = ULTMATE_PARRY
 	sellprice = 0 // Super evil Zizo sword, nobody wants this
@@ -1310,7 +1310,7 @@
 
 /obj/item/weapon/sword/long/greatsword/claymore
 	name = "Claymore de acero"
-	desc = "A steel variant of the standard claymore."
+	desc = "Una variante de acero del Claymore estandar."
 	icon_state = "steelclaymore"
 	gripped_intents = list(SWORD_CUT, SWORD_THRUST, SWORD_STRIKE, SWDLONG_CHOP)
 	sellprice = 110
@@ -1330,8 +1330,8 @@
 				return list("shrink" = 0.67,"sx" = 3,"sy" = 4,"nx" = -1,"ny" = 4,"wx" = -8,"wy" = 3,"ex" = 7,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 15,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 
 /obj/item/weapon/sword/long/greatsword/claymore/silver
-	name = "silver broadsword"
-	desc = " A silver broadsword, wide and heavy, for dicing up the hordes of the undead."
+	name = "espada de plata"
+	desc = " Una espada ancha plateada, ancha y pesada, para cortar en cubitos las hordas de muertos vivientes."
 	icon_state = "silverbroadsword"
 	max_integrity = INTEGRITY_STRONGEST * 0.8
 	alt_intents = null
@@ -1353,7 +1353,7 @@
 			if("onback") return list("shrink" = 0.5, "sx" = -1, "sy" = 2, "nx" = 0, "ny" = 2, "wx" = 2, "wy" = 1, "ex" = 0, "ey" = 1, "nturn" = 0, "sturn" = 0, "wturn" = 70, "eturn" = 15, "nflip" = 1, "sflip" = 1, "wflip" = 1, "eflip" = 1, "northabove" = 1, "southabove" = 0, "eastabove" = 0, "westabove" = 0)
 
 /obj/item/weapon/sword/long/greatsword/claymore/gold //Uncraftable
-	name = "ravoxian claymore"
+	name = "Claymore ravoxiano"
 	desc = "Una enorme espada construida con acero y oro, empuñada por ciertos Templarios de la Orden Ravoxiana."
 	icon_state = "gsclaymore"
 	max_blade_int = INTEGRITY_STRONG + 50
@@ -1375,8 +1375,8 @@
 
 
 /obj/item/weapon/sword/long/greatsword/gutsclaymore
-	name = "berserker sword"
-	desc = "A huge sword constructed out of a slab of Iron."
+	name = "espada frenetica"
+	desc = "Una espada enorme construida con una losa de hierro."
 	icon_state = "gutsclaymore"
 	bigboy = TRUE
 	force_wielded = DAMAGE_GREATSWORD_WIELD + 2
@@ -1405,8 +1405,8 @@
 
 /obj/item/weapon/sword/long/greatsword/gutsclaymore/silverslab
 
-	name = "\proper volfslayer"
-	desc = "A great slab of a silver sword, its previous wielder was said to have slain a wolfman in a single blow, bisecting the beast."
+	name = "\proper cazador de volfs"
+	desc = "Se decia que su anterior portador habia matado a un hombre lobo de un solo golpe, dividiendo a la bestia en dos."
 	icon_state = "machaslayer"
 	force_wielded = DAMAGE_GREATSWORD_WIELD + 2
 	max_blade_int = INTEGRITY_STRONG + 50
@@ -1436,7 +1436,7 @@
 /obj/item/weapon/sword/long/exe
 	name = "espada del verdugo"
 	icon_state = "exe"
-	desc = "An ancient blade of ginormous stature, with a round ended tip. The pride and joy of Vanderlin's greatest pastime, executions."
+	desc = "Una espada antigua de enorme estatura, con una punta redondeada. El orgullo y la alegria del mayor pasatiempo de Vanderlin, las ejecuciones."
 	force_wielded = DAMAGE_GREATSWORD_WIELD + 4
 	possible_item_intents = list(SWORD_STRIKE, SWORD_CUT)
 	gripped_intents = list(SWORD_CUT, SWDLONG_CHOP, SWORD_STRIKE, SWORD_CLEAVE)
@@ -1458,14 +1458,14 @@
 
 /obj/item/weapon/sword/long/exe/astrata
 	name = "juez solar"
-	desc = "This wicked executioner's blade calls for order."
+	desc = "La espada de este malvado verdugo exige orden."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "astratasword"
 	item_weight = 3.5 KILOGRAMS
 
 /obj/item/weapon/sword/long/exe/silver
-	name = "silver executioner's sword"
-	desc = "An executioner's sword made of silver, best used against beasts of the nite, to put them to rest."
+	name = "espada de verdugo de plata"
+	desc = "Una espada de verdugo hecha de plata, que se usa mejor contra las bestias de la noche, para hacerlas descansar."
 	icon_state = "silverexealt"
 	item_weight = 3.5 KILOGRAMS
 
@@ -1486,14 +1486,14 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	playsound(user, "clothwipe", 100, TRUE)
 	SEND_SIGNAL(src, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_SCRUB)
-	user.visible_message("<span class='warning'>[user] limpia [src] con su paño.</span>", "<span class='notice'>I wipe [src] down with its cloth.</span>")
+	user.visible_message("<span class='warning'>[user] limpia [src] con su paño.</span>", "<span class='notice'>Yo limpio [src] con su tela.</span>")
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 // Copper Messer
 
 /obj/item/weapon/sword/coppermesser
-	name = "copper messer"
-	desc = "A weapon of war from simpler times, its copper material is unideal but still efficient for the price."
+	name = "cupro messer"
+	desc = "Un arma de guerra de tiempos mas simples, su material de cobre no es ideal pero sigue siendo eficiente por el precio."
 	icon_state = "cmesser"
 	item_state = "cmesser"
 	force = DAMAGE_SWORD - 5 // Messers are heavy weapons, crude and STR based.
@@ -1533,7 +1533,7 @@
 				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/sword/long/rider/copper
-	name = "copper falx"
+	name = "hoz de cobre"
 	desc = "Una \"espada\" especial de cobre, el material no es el mejor pero es lo suficientemente bueno para cortar y matar."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "copperfalx"
@@ -1554,8 +1554,8 @@
 
 /obj/item/weapon/sword/rapier/ironestoc
 	name = "estoc"
-	desc = "A sword possessed of a quite long and tapered blade that is intended to be thrust between the \
-	gaps in an opponent's armor. The hilt is wrapped tight in black leather."
+	desc = "Una espada de hoja bastante larga y afilada, diseñada para penetrar entre los \
+	huecos de la armadura de un oponente. La empuñadura esta ceñida con cuero negro."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "estoc"
 	force = DAMAGE_SWORD - 8
@@ -1630,7 +1630,7 @@
 
 /obj/item/weapon/sword/gladius
 	name = "gladius"
-	desc = "A bronze short sword with a slightly wider end, and no guard. Compliments a shield."
+	desc = "Una espada corta de bronce con un extremo ligeramente mas ancho y sin guarda. Complementa un escudo."
 	icon_state = "gladius"
 	force = DAMAGE_SWORD + 2
 	force_wielded = 0
@@ -1661,13 +1661,13 @@
 	item_weight = 1.1 KILOGRAMS
 
 /obj/item/weapon/sword/katana/mulyeog
-	name = "foreign straight blade"
-	desc = "A foreign sword used by cut-throats & thugs. There's a red tassel on the hilt."
+	name = "hoja recta extranjera"
+	desc = "Una espada extranjera utilizada por asesinos y matones. Hay una borla roja en la empuñadura."
 	icon_state = "eastsword1"
 
 /obj/item/weapon/sword/katana/mulyeog/rumahench
-	name = "hwang blade"
-	desc = "A foreign steel sword with cloud patterns on the groove."
+	name = "espada hwang"
+	desc = "Una espada de acero extranjera con patrones de nubes en la ranura."
 	icon_state = "eastsword2"
 
 /obj/item/weapon/sword/katana/mulyeog/rumacaptain
@@ -1679,7 +1679,7 @@
 
 /obj/item/weapon/sword/sabre/hook
 	name = "espada de gancho"
-	desc = "A steel sword with a hooked design at the tip of it; perfect for disarming enemies. Its back edge is sharpened and the hilt appears to have a sharpened tip."
+	desc = "Una espada de acero con un diseño de gancho en la punta; perfecto para desarmar enemigos. Su borde posterior esta afilado y la empuñadura parece tener una punta afilada."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "hook_sword"
 	possible_item_intents = list(SWORD_CUT, CURVED_THRUST, SWORD_STRIKE, SWORD_DISARM)
@@ -1763,7 +1763,7 @@
 
 //Snowflake version of hand-targeting disarm intent.
 /datum/intent/sword/disarm
-	name = "disarm"
+	name = "desarme"
 	icon_state = "intake"
 	animname = "strike"
 	blade_class = null	//We don't use a blade class because it has on damage.
@@ -1805,7 +1805,7 @@
 				user.stop_pulling()
 				user.put_in_inactive_hand(I)
 				M.visible_message(span_danger("¡[user] toma [I] de la mano de [M]!"), \
-				span_userdanger("[user] takes [I] from my hand!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE)
+				span_userdanger("¡[user] se lleva [I] de mi mano!"), span_hear("¡Escucho un sonido desagradable de puñetazo!"), COMBAT_MESSAGE_RANGE)
 				user.changeNext_move(12)//avoids instantly attacking with the new weapon
 				playsound(src, 'sound/combat/weaponr1.ogg', 100, FALSE, -1) //sound queue to let them know that they got disarmed
 				if(!M.mind)	//If you hit an NPC - they pick up weapons instantly. So, we do more stuff.
@@ -1814,8 +1814,8 @@
 				probby += 20
 				if(prob(probby))
 					M.dropItemToGround(I, force = FALSE, silent = FALSE)
-					M.visible_message(span_danger("[user] disarms [M] of [I]!"), \
-					span_userdanger("[user] disarms me of [I]!"), span_hear("I hear a sickening sound of pugilism!"), COMBAT_MESSAGE_RANGE)
+					M.visible_message(span_danger("¡[user] desarma [M] de [I]!"), \
+					span_userdanger("[user] me desarme de [I] ¡!"), span_hear("¡Escucho un sonido desagradable de puñetazo!"), COMBAT_MESSAGE_RANGE)
 					if(!M.mind)
 						M.Stun(20)	//high delay to pick up weapon
 					else
@@ -1835,7 +1835,7 @@
 
 /obj/item/weapon/sword/long/martyr
 	name = "espada martir"
-	desc = "A relic passed down through generations of worshippers. It simmers with godly energies, and will only yield to the hands of those who have taken the Oath."
+	desc = "Una reliquia transmitida de generacion en generacion de fieles. Rebosa energias divinas y solo cedera en manos de aquellos que han hecho el juramento."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "martyrsword"
 	item_state = "martyrsword"

@@ -111,14 +111,14 @@
 		if(user.dropItemToGround(I))
 			I.forceMove(loc)
 			buckle_mob(I, TRUE)
-			to_chat(user, span_notice("You attach [I] to yourself."))
+			to_chat(user, span_notice("Te ata [I] a ti mismo."))
 		return
 
 	if(isliving(dropping))
 		var/mob/living/L = dropping
 		if(L.body_position == LYING_DOWN || L.stat != CONSCIOUS)
 			buckle_mob(L, TRUE)
-			to_chat(user, span_notice("You grab onto [L]."))
+			to_chat(user, span_notice("Te aferras a [L]."))
 		return
 
 /mob/living/simple_animal/hostile/retaliate/meatvine/UnarmedAttack(atom/A, proximity_flag, list/modifiers, atom/source)
@@ -169,10 +169,10 @@
 
 	unbuckle_mob(food, TRUE)
 
-	to_chat(user, span_notice("You begin feeding [food] to the papa meat..."))
+	to_chat(user, span_notice("Comienzas a alimentar [food] a la carne de papa..."))
 
 	if(!do_after(user, 3 SECONDS, nearest_papa))
-		to_chat(user, span_warning("You stop feeding [food]."))
+		to_chat(user, span_warning("Dejas de alimentar a [food]."))
 		return FALSE
 
 	visible_message(span_danger("¡[src] alimenta [food] a [nearest_papa]!"))
@@ -207,7 +207,7 @@
 	evolution_progress = min(evolution_progress + amount, evolution_max)
 	SEND_SIGNAL(src, COMSIG_MEATVINE_PERSONAL_EVOLUTION_CHANGE, evolution_progress)
 	if(evolution_progress >= evolution_max)
-		to_chat(src, span_nicegreen("You are ready to evolve! Find a hive and click on it to begin evolution."))
+		to_chat(src, span_nicegreen("¡Estas listo para evolucionar! Encuentra un panal y haz clic en el para comenzar la evolucion."))
 		var/datum/component/team_monitor/monitor = return_tracker()
 		if(!monitor)
 			monitor = create_tracker()
@@ -236,14 +236,14 @@
 
 /mob/living/simple_animal/hostile/retaliate/meatvine/proc/start_draining_well(obj/structure/meatvine/healing_well/well)
 	if(is_draining_well)
-		to_chat(src, span_warning("Already draining a well!"))
+		to_chat(src, span_warning("¡Ya estas agotando un pozo!"))
 		return FALSE
 	if(world.time < last_drain_time + HEALING_WELL_DRAIN_COOLDOWN)
 		var/time_left = round((last_drain_time + HEALING_WELL_DRAIN_COOLDOWN - world.time) / 10)
-		to_chat(src, span_warning("Must wait [time_left] seconds before draining again!"))
+		to_chat(src, span_warning("¡Debe esperar [time_left] segundos antes de volver a drenar!"))
 		return FALSE
 	if(well.is_being_drained)
-		to_chat(src, span_warning("This well is already being drained!"))
+		to_chat(src, span_warning("¡Este pozo ya esta siendo vaciado!"))
 		return FALSE
 	if(get_dist(src, well) > 1)
 		to_chat(src, span_warning("¡Debe estar adyacente al pozo de curacion!"))
@@ -251,20 +251,20 @@
 	is_draining_well = TRUE
 	draining_target = well
 	well.start_drain(src)
-	to_chat(src, span_notice("You begin draining the healing well..."))
+	to_chat(src, span_notice("Comienzas a vaciar el pozo curativo..."))
 	if(!do_after(src, HEALING_WELL_DRAIN_TIME, well))
 		well.restore_healing()
 		return FALSE
 	if(QDELETED(well))
 		cancel_well_drain()
-		to_chat(src, span_warning("The drain was interrupted!"))
+		to_chat(src, span_warning("¡El drenaje se interrumpio!"))
 		return
 	adjust_personal_resources(HEALING_WELL_DRAIN_AMOUNT)
 	is_draining_well = FALSE
 	draining_target = null
 	last_drain_time = world.time
 	well.finish_drain()
-	to_chat(src, span_boldnotice("Drained [HEALING_WELL_DRAIN_AMOUNT] personal resources from the healing well!"))
+	to_chat(src, span_boldnotice("¡Agoto los recursos personales [HEALING_WELL_DRAIN_AMOUNT] del pozo curativo!"))
 	to_chat(src, span_info("Recursos personales: [personal_resource_pool]/[personal_resource_max]"))
 
 /mob/living/simple_animal/hostile/retaliate/meatvine/proc/cancel_well_drain()

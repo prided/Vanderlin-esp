@@ -1,8 +1,8 @@
 /datum/objective/personal/literacy
-	name = "Get Literate"
-	category = "Noc's Chosen"
+	name = "Aprender a leer"
+	category = "Elegido de Noc"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Noc grows stronger", "Mathematics knowledge")
+	rewards = list("2 Triunfos", "Noc se fortalece", "Conocimientos de matematicas")
 
 /datum/objective/personal/literacy/on_creation()
 	. = ..()
@@ -33,4 +33,4 @@
 	owner.current.adjust_skill_level(/datum/attribute/skill/labor/mathematics, 10)
 
 /datum/objective/personal/literacy/update_explanation_text()
-	explanation_text = "Get rid of your ignorance! Learn to read to please Noc!"
+	explanation_text = "¡Deja atras tu ignorancia! ¡Aprende a leer para complacer a Noc!"

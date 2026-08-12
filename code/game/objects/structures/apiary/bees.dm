@@ -31,7 +31,7 @@
 
 /obj/effect/bee_swarm
 	name = "enjambre de abejas"
-	desc = "A buzzing swarm of bees looking for a place to build a new hive."
+	desc = "Un enjambre de abejas zumbando buscando un lugar para construir una nueva colmena."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "bee"
 	density = FALSE
@@ -299,8 +299,8 @@
 /obj/effect/bees/proc/attack_mob(mob/living/carbon/human/H)
 	var/obj/item/bodypart/affecting = H.get_bodypart(pick(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_HEAD))
 
-	H.visible_message("<span class='danger'>[src] stings [H] in the [affecting.name]!</span>", \
-					  "<span class='userdanger'>You feel a sharp stinging pain in your [affecting.name]!</span>")
+	H.visible_message("<span class='danger'>[src] pica a [H] en el [affecting.name]!</span>", \
+					  "<span class='userdanger'>¡Sientes un dolor punzante y agudo en tu [affecting.name]!</span>")
 
 	H.adjustToxLoss(1)
 	H.reagents.add_reagent(/datum/reagent/toxin/venom, 2)

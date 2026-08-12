@@ -23,10 +23,10 @@
 
 /datum/spellcraft_session/proc/try_insert_meld(obj/item/item, mob/living/user)
 	if(meld)
-		to_chat(user, span_warning("The center is already occupied."))
+		to_chat(user, span_warning("El centro ya esta ocupado."))
 		return FALSE
 	if(!item.get_spellcraft_meld_data())
-		to_chat(user, span_warning("[item] doesn't feel arcyne enough to be a catalyst."))
+		to_chat(user, span_warning("[item] no se siente arcyne lo suficientemente catalizador."))
 		return FALSE
 	meld = item
 	user.temporarilyRemoveItemFromInventory(item)
@@ -37,7 +37,7 @@
 		return FALSE
 	var/contribution = item.get_spellcraft_contribution()
 	if(!contribution)
-		to_chat(user, span_warning("[item] has no arcyne properties."))
+		to_chat(user, span_warning("[item] no tiene propiedades arcyne."))
 		return FALSE
 	materials[index] = item
 	user.temporarilyRemoveItemFromInventory(item)
@@ -88,16 +88,16 @@
 	if(!skilled)
 		switch(meld_data["unskilled_behavior"])
 			if("cosmetic")
-				to_chat(user, span_notice("I press [meld] into the cover of the book. What a pretty design this would make!"))
+				to_chat(user, span_notice("Presiono [meld] en la portada del libro. ¡Que bonito diseño seria este!"))
 				return FALSE
 
 			if("fumble_chance")
 				if(prob(meld_data["unskilled_prob"] || 0))
 					user.visible_message(
-						span_warning("[user] carefully sets down [meld] upon [book_base]. Nothing happens for a moment or three, then the glow surrounding it becomes as liquid, seeping down into the tome!"),
-						span_notice("I knew this stone was special! Its colourful magick has soaked into my tome and given me gift of mystery!")
+						span_warning("[user] coloca cuidadosamente [meld] sobre [book_base]. No pasa nada por un momento o tres, luego el resplandor que lo rodea se vuelve liquido y se filtra en el tomo."),
+						span_notice("¡Sabia que esta piedra era especial! ¡Su magia colorida se ha impregnado en mi tomo y me ha dado el regalo del misterio!")
 					)
-					to_chat(user, span_notice("...what in the world does any of this scribbling possibly mean?"))
+					to_chat(user, span_notice("¿Que diablos significa esta garabateria?"))
 					var/obj/item/spellbook/newbook = book_base.finish_book(user, meld, book_type, born_of_rock, meld_data["extra_desc"])
 					apply_crafting_bonuses(newbook, meld_data, form_points, technique_points, \
 						form_cost_multipliers, form_cast_speed_multipliers, form_magnitude_modifications, \
@@ -105,8 +105,8 @@
 					clear_materials()
 					return TRUE
 				user.visible_message(
-					span_warning("[user] sets down [meld] upon the surface of [book_base] and watches expectantly. Without warning, it violently pops like a squashed gourd!"),
-					span_notice("No! My precious [meld]! It mustn't have wanted to share its mysteries with me...")
+					span_warning("[user] coloca [meld] sobre la superficie de [book_base] y observa con expectacion. Sin previo aviso, ¡se abre violentamente como una calabaza aplastada!"),
+					span_notice("¡No! ¡Mi precioso [meld]! No quiso compartir sus misterios conmigo...")
 				)
 				user.electrocute_act(meld_data["shock_damage"] || 5, book_base)
 				qdel(meld)
@@ -116,8 +116,8 @@
 
 			else
 				user.visible_message(
-					span_warning("[user] sets down [meld] upon the surface of [book_base] and watches expectantly. Without warning, [meld] violently explodes!"),
-					span_notice("I should have known messing with the arcyne was dangerous!")
+					span_warning("[user] coloca [meld] sobre la superficie de [book_base] y observa expectante. Sin previo aviso, ¡[meld] explota violentamente!"),
+					span_notice("¡Deberia haber sabido que meterme con el arcyne era peligroso!")
 				)
 				user.electrocute_act(meld_data["shock_damage"] || 5, book_base)
 				qdel(meld)
@@ -126,8 +126,8 @@
 				return TRUE
 
 	user.visible_message(
-		span_warning("[user] imbues [user.p_their()] [meld]! It fuses into [book_base]."),
-		span_notice("I join my arcyne energy with that of the [meld] in my hands, which shudders briefly before dissolving into motes of energy...")
+		span_warning("[user] imbuye [user.p_their()] [meld] ¡Se fusiona en [book_base]."),
+		span_notice("Unire mi energia arcyne con la del [meld] en mis manos, que tiembla brevemente antes de disolverse en motas de energia...")
 	)
 	var/obj/item/spellbook/newbook = book_base.finish_book(user, meld, book_type, born_of_rock, meld_data["extra_desc"])
 	apply_crafting_bonuses(newbook, meld_data, form_points, technique_points, \

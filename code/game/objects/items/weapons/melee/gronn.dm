@@ -1,7 +1,7 @@
 // Weapons
 /obj/item/weapon/sword/short/gronn
-	name = "osslandic hinterblade"
-	desc = "Due to the shortage of forged steel in Ossland, their iron blades have become hardier and thicker than what one may see elsewhere. The favoured weapon of choice for any able-bodied hunter of Ossland, the hinterblade is the heftier, unwieldy cousin of the arming sword."
+	name = "filo oslandico"
+	desc = "Debido a la escasez de acero forjado en Ossland, sus hojas de hierro se han vuelto mas resistentes y gruesas que las que se pueden ver en otros lugares. El arma favorita de cualquier cazador sano de Ossland, la hoja interior es la prima mas pesada y dificil de manejar de la espada armada."
 	icon_state = "gronnsword"
 	force = DAMAGE_SWORD
 	wdefense = GOOD_PARRY
@@ -21,9 +21,9 @@
 	penfactor = 10
 
 /obj/item/weapon/handclaw
-	name = "iron hound claws"
-	desc = "A pair of heavily curved claws, styled after beasts of the wilds for rending bare flesh, \
-			a show of the continual worship and veneration of the Great Hunt in Ossland."
+	name = "garras de perro de hierro"
+	desc = "Un par de garras muy curvas, inspiradas en las bestias salvajes para desgarrar carne, \
+			una muestra del culto y la veneracion constantes hacia la Gran Caza en Ossland."
 	icon = 'icons/roguetown/weapons/32/fists_claws.dmi'
 	icon_state = "ironclaws"
 	parrysound = list('sound/combat/parry/bladed/bladedthin (1).ogg', 'sound/combat/parry/bladed/bladedthin (2).ogg', 'sound/combat/parry/bladed/bladedthin (3).ogg')
@@ -49,8 +49,8 @@
 
 /obj/item/weapon/handclaw/steel
 	name = "garras de mantis de acero"
-	desc = "A pair of steel claws, an uncommon sight in Ossland as they do not forge their own steel, \
-			Their longer blades offer a superior defence option but their added weight slows them down."
+	desc = "Un par de garras de acero, poco comunes en Ossland porque no forjan su propio acero, \
+			sus hojas mas largas ofrecen una defensa superior, pero el peso adicional las vuelve mas lentas."
 	icon_state = "steelclaws"
 	force = DAMAGE_KATAR + 7
 	wdefense = GOOD_PARRY
@@ -62,10 +62,10 @@
 	item_weight = 900 GRAMS
 
 /obj/item/weapon/handclaw/gronn
-	name = "ossland beast claws"
-	desc = "A pair of uniquely reinforced iron claws forged with the addition of bone by the cleric-priests of Ossland. \
-			Their unique design aids them in slipping between the plates in armor and their light weight supports rapid aggressive slashes. \
-			'The cycle of predator and prey continues. To hunt is to be hunted is to hunt in return.'"
+	name = "garras de bestia ossland"
+	desc = "Un par de garras de hierro reforzadas de forma unica con hueso por los clerigos-sacerdotes de Ossland. \
+			Su diseño ayuda a deslizarlas entre las placas de la armadura y su poco peso permite tajos rapidos y agresivos. \
+			'El ciclo entre depredador y presa continua. Cazar es ser cazado, y ser cazado es volver a cazar.'"
 	icon_state = "gronnclaws"
 	wdefense = GOOD_PARRY
 	possible_item_intents = list(/datum/intent/claw/cut, /datum/intent/claw/lunge/gronn, /datum/intent/claw/rend)
@@ -83,9 +83,9 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /datum/intent/claw/lunge
-	name = "lunge"
+	name = "ataque con la espada"
 	icon_state = "inimpale"
-	attack_verb = list("lunges")
+	attack_verb = list("se abalanza sobre")
 	animname = "stab"
 	blade_class = BCLASS_STAB
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
@@ -100,9 +100,9 @@
 	clickcd = 10
 
 /datum/intent/claw/cut
-	name = "cut"
+	name = "cortar"
 	icon_state = "incut"
-	attack_verb = list("cuts", "slashes")
+	attack_verb = list("corta", "corta")
 	animname = "cut"
 	blade_class = BCLASS_CUT
 	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
@@ -115,7 +115,7 @@
 	damfactor = 1.1
 
 /datum/intent/claw/rend
-	name = "rend"
+	name = "desgarrar"
 	icon_state = "inrend"
 	attack_verb = list("desgarra")
 	animname = "cut"
@@ -136,8 +136,8 @@
 //Mauls. Woe. Most characters will not be able to engage with this, beyond hobbling.
 //Why? The unique strength lockout. The minimum strength is not a suggestion.
 /obj/item/weapon/mace/goden/maul
-	name = "maul"
-	desc = "Who would need something this large? It looks like it was made for tearing down walls, rather than men."
+	name = "mazo"
+	desc = "¿Quien necesitaria algo tan grande? Parece que fue hecho para derribar muros, mas que para hombres."
 	icon_state = "sledge"
 	force_wielded = DAMAGE_HEAVYCLUB_WIELD - 3 //-3 compared to grand mace(steel goden). Better intents.
 	wdefense = GOOD_PARRY
@@ -154,10 +154,10 @@
 
 //Intents for the mauls.
 /datum/intent/effect/hobble
-	name = "hobbling strike"
+	name = "huelga de cojera"
 	desc = "Un fuerte golpe dirigido a las piernas para paralizar el movimiento."
 	icon_state = "incrack"//Temp. Just so it's easy to differentiate.
-	attack_verb = list("hobbles")
+	attack_verb = list("mutila")
 	animname = "strike"
 	hitsound = list('sound/combat/hits/blunt/shovel_hit3.ogg')
 	swingdelay = 6

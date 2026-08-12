@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/evade
-	name = "Evade"
-	desc = "Allows you to evade any projectile or swing that would hit you for a few seconds."
+	name = "Evadir"
+	desc = "Te permite evadir durante unos segundos cualquier proyectil o golpe que pueda golpearte."
 	button_icon_state = "evade"
 	personal_resource_cost = 50
 	cooldown_time = 60 SECONDS
@@ -12,7 +12,7 @@
 /datum/action/cooldown/meatvine/personal/evade/Activate(atom/target)
 	. = ..()
 	if(evade_active) //Can't evade while we're already evading.
-		owner.balloon_alert(owner, "already evading")
+		owner.balloon_alert(owner, "ya esta evadiendo")
 		return FALSE
 
 	owner.balloon_alert(owner, "comenzaron los movimientos evasivos")
@@ -34,7 +34,7 @@
 	if(owner.incapacitated(IGNORE_GRAB) || !isturf(owner.loc) || !evade_active)
 		return BULLET_ACT_HIT
 
-	owner.visible_message(span_danger("[owner] effortlessly dodges the projectile!"), span_userdanger("You dodge the projectile!"))
+	owner.visible_message(span_danger("[owner] esquiva sin esfuerzo el proyectil."), span_userdanger("¡Esquivaste el proyectil!"))
 	owner.add_filter("evade", 2, gauss_blur_filter(5))
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/datum, remove_filter), "evade"), 0.5 SECONDS)
 	return BULLET_ACT_FORCE_PIERCE

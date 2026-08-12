@@ -52,12 +52,12 @@
 	if (user)
 		var/muted = FALSE
 		if (user.anchored)
-			to_chat(user, span_warning("The blood jaunt fails to grasp you as you are currently anchored.") )
+			to_chat(user, span_warning("La excursion de sangre no logra atraparte mientras estas anclado.") )
 		if (iscarbon(user))
 			var/mob/living/carbon/C = user
 			if (C.occult_muted())
 				muted = TRUE
-				to_chat(C, span_warning("The holy energies upon your body repel the blood jaunt.") )
+				to_chat(C, span_warning("Las energias sagradas en tu cuerpo repelen la Jaunt de Sangre.") )
 		if (!muted && !user.anchored)
 			user.forceMove(src)
 			rider = user
@@ -73,14 +73,14 @@
 			if (AM.anchored)
 				if (ismob(AM))
 					var/mob/M = AM
-					to_chat(M, span_warning("The blood jaunt fails to grasp you as you are currently anchored.") )
+					to_chat(M, span_warning("La excursion de sangre no logra atraparte mientras estas anclado.") )
 				continue
 			var/muted = FALSE
 			if (iscarbon(AM))
 				var/mob/living/carbon/C = AM
 				if (C.occult_muted())
 					muted = TRUE
-					to_chat(C, span_warning("The holy energies upon your body repel the blood jaunt.") )
+					to_chat(C, span_warning("Las energias sagradas en tu cuerpo repelen la Jaunt de Sangre.") )
 				if(!C.clan)
 					noncult_victims += C
 			if (!AM.anchored && !muted)

@@ -1,6 +1,6 @@
 /turf/closed/wall/mineral/stone
-	name = "stone wall"
-	desc = "A wall of smooth, unyielding stone."
+	name = "muro de piedra"
+	desc = "Un muro de piedra lisa e inquebrantable."
 	icon = 'icons/turf/smooth/walls/stone.dmi'
 	icon_state = MAP_SWITCH("stone", "stone-0")
 	blade_dulling = DULLING_BASH
@@ -20,7 +20,7 @@
 
 /turf/closed/wall/mineral/stone/window
 	name = "agujero de asesinato de piedra"
-	desc = "A wall of stone with convenient small indents on it, perfect to let loose arrows against invaders."
+	desc = "Un muro de piedra con pequeñas aberturas, perfecto para disparar flechas contra los invasores."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/stone.dmi', 'icons/turf/window.dmi')
 	icon_state = "stone"
 	opacity = FALSE
@@ -57,7 +57,7 @@
 	icon_state = MAP_SWITCH("stone", "stone_moss_red")
 
 /turf/closed/wall/mineral/decorstone
-	name = "decorated stone wall"
+	name = "muro de piedra decorada"
 	desc = "El albañil hizo un excelente trabajo grabando detalles en esta pared."
 	icon = 'icons/turf/smooth/walls/stone_deco.dmi'
 	icon_state = MAP_SWITCH("stone_deco", "stone_deco-0")
@@ -78,7 +78,7 @@
 
 /turf/closed/wall/mineral/decorstone/window
 	name = "agujero de asesinato de piedra"
-	desc = "A wall of decorated stone with convenient small indents on it, perfect to let loose arrows against invaders."
+	desc = "Un muro de piedra decorada con pequeñas aberturas, perfecto para disparar flechas contra los invasores."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/stone_deco.dmi', 'icons/turf/window.dmi')
 	icon_state = "stone_deco"
 	opacity = FALSE
@@ -101,8 +101,8 @@
 	icon = 'icons/turf/smooth/walls/stone_d_moss_r.dmi'
 
 /turf/closed/wall/mineral/craftstone
-	name = "craftstone wall"
-	desc = "A durable wall made from specially crafted stone."
+	name = "muro de piedra labrada"
+	desc = "Un muro resistente hecho de piedra especialmente labrada."
 	icon = 'icons/turf/smooth/walls/stone_fancy.dmi'
 	icon_state = MAP_SWITCH("craftstone", "craftstone-0")
 	blade_dulling = DULLING_BASH
@@ -121,7 +121,7 @@
 
 /turf/closed/wall/mineral/stonebrick
 	name = "pared de ladrillo"
-	desc = "Several rows of bricks form this wall."
+	desc = "Varias hileras de ladrillos forman este muro."
 	icon = 'icons/turf/smooth/walls/stone_brick.dmi'
 	icon_state = MAP_SWITCH("stone_brick", "stone_brick-0")
 
@@ -155,7 +155,7 @@
 
 /turf/closed/wall/mineral/wood
 	name = "pared de madera"
-	desc = "A rough-hewn wall of wood."
+	desc = "Un muro de madera toscamente labrada."
 	icon = 'icons/turf/smooth/walls/wood.dmi'
 	icon_state = MAP_SWITCH("wood", "wood-0")
 	blade_dulling = DULLING_BASHCHOP
@@ -177,7 +177,7 @@
 
 /turf/closed/wall/mineral/wood/window
 	name = "ventana de madera"
-	desc = "A window with a rough-hewn wooden frame."
+	desc = "Una ventana con un marco de madera toscamente labrada."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/wood.dmi', 'icons/turf/window.dmi')
 	icon_state = "wood"
 	opacity = FALSE
@@ -190,8 +190,8 @@
 	add_overlay(M)
 
 /turf/closed/wall/mineral/tent
-	name = "tent"
-	desc = "Made from durable fabric and wooden branches."
+	name = "tienda de campaña"
+	desc = "Hecha de tela resistente y ramas de madera."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "tent"
 	blade_dulling = DULLING_BASHCHOP
@@ -215,7 +215,7 @@
 
 /turf/closed/wall/mineral/wooddark
 	name = "pared de madera oscura"
-	desc = "Made from durable, somewhat darker wood."
+	desc = "Hecho de madera resistente y algo mas oscura."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "corner"
 	blade_dulling = DULLING_BASHCHOP
@@ -266,7 +266,7 @@
 	return
 
 /turf/closed/wall/mineral/roofwall
-	name = "wall"
+	name = "pared"
 	icon = 'icons/turf/walls.dmi'
 	icon_state = ""
 	blade_dulling = DULLING_BASHCHOP
@@ -296,8 +296,8 @@
 	icon_state = "roofTurf_IC"
 
 /turf/closed/wall/mineral/decowood
-	name = "daub wall"
-	desc = "A wattle and daub wall."
+	name = "muro de entramado y barro"
+	desc = "Un muro de entramado y barro."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "decowood"
 	blade_dulling = DULLING_BASHCHOP
@@ -323,7 +323,7 @@
 	icon_state = "decowood-vert"
 
 /turf/closed/wall/mineral/decostone
-	name = "decorated stone wall"
+	name = "muro de piedra decorada"
 	desc = "El albañil hizo un excelente trabajo grabando detalles en esta pared."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "decostone-b"
@@ -343,7 +343,7 @@
 	icon_state = "decostone-l"
 
 /obj/structure/thronething
-	name = "stone wall"
+	name = "muro de piedra"
 	icon = 'icons/turf/walls.dmi'
 	resistance_flags = INDESTRUCTIBLE
 	opacity = FALSE
@@ -401,12 +401,12 @@
 	icon_state = "decostone-cand-red"
 
 /turf/closed/dungeon_void
-	name = "thick dungeon shroud"
+	name = "velo espeso de mazmorra"
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "shroud1"
 
 /turf/closed/sea_fog
-	name = "thick sea fog"
+	name = "niebla marina espesa"
 	icon = 'icons/effects/effects.dmi'
 	density = TRUE
 	opacity = TRUE
@@ -414,7 +414,7 @@
 	plane = FLOOR_PLANE
 
 /turf/closed/wall/mineral/pipe
-	name = "metal wall"
+	name = "muro metalico"
 	icon = 'icons/turf/smooth/walls/pipe_used.dmi'
 	icon_state = MAP_SWITCH("pipe", "pipe-0")
 	blade_dulling = DULLING_BASH
@@ -432,8 +432,8 @@
 	hardness = 10
 
 /turf/closed/wall/mineral/underbrick
-	name = "erebus stone wall"
-	desc = "The toils of hard-working shades."
+	name = "muro de piedra de Erebus"
+	desc = "El fruto del arduo trabajo de las sombras."
 	icon = 'icons/turf/smooth/walls/brick_under.dmi'
 	icon_state = MAP_SWITCH("underbrick", "underbrick-0")
 	wallclimb = FALSE
@@ -462,7 +462,7 @@
 	return src
 
 /turf/closed/wall/mineral/abyssal
-	name = "abyssal wall"
+	name = "muro abisal"
 	icon = 'icons/delver/abyss_walls.dmi'
 	icon_state = MAP_SWITCH("wallformed", "wallformed")
 	blade_dulling = DULLING_BASH
@@ -477,7 +477,7 @@
 	hardness = 10
 
 /turf/closed/wall/mineral/desert_sandstone
-	name = "sandstone wall"
+	name = "muro de arenisca"
 	icon = 'icons/delver/desert_sandstone.dmi'
 	icon_state = MAP_SWITCH("wallformed", "wallformed")
 	blade_dulling = DULLING_BASH
@@ -492,7 +492,7 @@
 	hardness = 10
 
 /turf/closed/wall/mineral/desert_sandstone/window
-	name = "sandstone window"
+	name = "ventana de arenisca"
 	opacity = FALSE
 	var/state = "window_open"
 
@@ -504,7 +504,7 @@
 	state = "window_brass"
 
 /turf/closed/wall/mineral/desert_soapstone
-	name = "soapstone wall"
+	name = "muro de esteatita"
 	icon = 'icons/delver/desert_slopstone.dmi'
 	icon_state = MAP_SWITCH("wallformed", "wallformed")
 	blade_dulling = DULLING_BASH
@@ -519,8 +519,8 @@
 	hardness = 10
 
 /turf/closed/wall/mineral/baddaub
-	name = "daub wall"
-	desc = "An old wattle and daub wall. It's not in the best shape."
+	name = "muro de entramado y barro"
+	desc = "Un viejo muro de entramado y barro. No esta en las mejores condiciones."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "badplaster"
 	blade_dulling = DULLING_BASHCHOP

@@ -1,20 +1,20 @@
 
 /obj/structure/closet/crate/chest/inqreliquary
-	name = "oratorium reliquary"
-	desc = "A foreboding red chest with an intricate lock design. It seems to only fit a very specific key. Choose wisely."
+	name = "relicario oratorium"
+	desc = "Un cofre rojo premonitorio con un intrincado diseño de cerradura. Parece que solo encaja en una clave muy especifica. Elige sabiamente."
 	icon_state = "chestweird1"
 	base_icon_state = "chestweird1"
 
 /obj/structure/closet/crate/chest/inqcrate
-	name = "oratorium chest"
-	desc = "A foreboding red chest with black dye-washed silver embellishments."
+	name = "Cofre oratorium"
+	desc = "Un cofre rojo premonitorio con adornos plateados lavados con tinte negro."
 	icon_state = "chestweird2"
 	base_icon_state = "chestweird2"
 
 // Reliquary Box and key - The Box Which contains these
 /obj/structure/reliquarybox
-	name = "oratorium reliquary"
-	desc = "A foreboding red chest with an intricate lock design. It seems to only fit a very specific key. Choose wisely."
+	name = "relicario oratorium"
+	desc = "Un cofre rojo premonitorio con un intrincado diseño de cerradura. Parece que solo encaja en una clave muy especifica. Elige sabiamente."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "chestweird1"
 	anchored = TRUE
@@ -23,8 +23,8 @@
 
 /obj/item/key/psydonkey
 	icon_state = "birdkey"
-	name = "Reliquary Key"
-	desc = "The single use key with which to unleash woe. Choose wisely."
+	name = "Llave del relicario"
+	desc = "La llave de un solo uso con la que desatar el dolor. Elige sabiamente."
 
 /obj/structure/reliquarybox/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(!istype(tool, /obj/item/key/psydonkey))
@@ -35,7 +35,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	qdel(tool)
-	to_chat(user, span_info("The reliquary lock takes my key as it opens, I take a moment to ponder what power was delivered to us..."))
+	to_chat(user, span_info("La cerradura del relicario toma mi llave al abrirse, me tomo un momento para reflexionar sobre que poder nos fue entregado..."))
 	playsound(src, 'sound/foley/doors/woodlock.ogg', 60)
 	to_chat(user,)
 	var/relics = list("Melancholic Crankbox - Antimagic", "Daybreak - Silver Whip", "Sanctum - Silver Halberd", "Crusade - Silver Greatsword", "Censer of Penitence")
@@ -63,7 +63,7 @@
 
 // Soul Churner - Music box which applies magic resistance to Inquisition members, greatly mood debuffs everyone not a Psydon worshipper.
 /obj/item/psydonmusicbox
-	name = "melancholic crankbox"
+	name = "manivela melancolica"
 	desc = ""
 	icon_state = "psydonmusicbox"
 	icon = 'icons/roguetown/items/misc.dmi'
@@ -82,15 +82,15 @@
 /obj/item/psydonmusicbox/examine(mob/user)
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))
-		desc = "A relic from the bowels of the Oratorium's thaumaturgical workshops. Fourteen souls of heretics, all bound together, they will scream and protect us from magicks. It would be wise to not teach the heretics of its true nature, to only bring it to bear in dire circumstances."
+		desc = "Una reliquia de las entrañas de los talleres taumaturgicos del Oratorium. Catorce almas de herejes, todas unidas, gritaran y nos protegeran de la magia. Seria prudente no enseñar a los herejes su verdadera naturaleza, y solo utilizarla en circunstancias extremas."
 	else
-		desc = "A cranked music box, it has the seal of the Oratorium Throni Vacui on the side. It carries a somber feeling to it..."
+		desc = "Una caja de musica con manivela, tiene el sello del Oratorium Throni Vacui en el lateral. Lleva una sensacion sombria..."
 
 /obj/item/psydonmusicbox/attack_self(mob/living/user)
 	. = ..()
 	if(!HAS_TRAIT(user, TRAIT_INQUISITION))
 		user.add_stress(/datum/stress_event/soulchurnerhorror)
-		to_chat(user, (span_cultsmall("I FEEL SUFFERING WITH EVERY CRANK, WHAT AM I DOING?!")))
+		to_chat(user, (span_cultsmall("SIENTO SUFRIR CON CADA GIRAR, ¿QUE ESTA PASANDO CONMIGO?!")))
 	cranking = !cranking
 	update_appearance(UPDATE_ICON_STATE)
 	if(cranking)
@@ -98,7 +98,7 @@
 		soundloop.start()
 		var/songhearers = view(7, user)
 		for(var/mob/living/carbon/human/fixation in songhearers)
-			to_chat(fixation,span_cultsmall("[user] begins cranking the soul churner..."))
+			to_chat(fixation,span_cultsmall("[user] comienza a hacer girar el molino de almas..."))
 	if(!cranking)
 		soundloop.stop()
 		user.remove_status_effect(/datum/status_effect/buff/cranking_soulchurner)
@@ -141,24 +141,24 @@
 		SPAN_GOD_ASTRATA("Calor por fin..."),
 		SPAN_GOD_NOC("Puedo verlas... las estrellas..."),
 		SPAN_GOD_NECRA("Finalmente... paz..."),
-		SPAN_GOD_NECRA("You have done a noble service kin..."),
-		SPAN_GOD_NECRA("I will make sure to inform the Undermaiden of your service..."),
+		SPAN_GOD_NECRA("Has hecho un noble servicio, pariente..."),
+		SPAN_GOD_NECRA("Me asegurare de informar a la Submaja de su servicio..."),
 		SPAN_GOD_ABYSSOR("Que el mar te trate bien..."),
-		SPAN_GOD_RAVOX("Freedom at last! May justice be done for what I have suffered..."),
+		SPAN_GOD_RAVOX("¡Libertad por fin! Que se haga justicia por lo que he sufrido..."),
 		SPAN_GOD_PESTRA("El sufrimiento ha terminado..."),
-		SPAN_GOD_EORA("Peace at last! May you find love stranger..."),
-		SPAN_GOD_DENDOR("THOSE GRENZEL SCUM SHALL PAY FOR WHAT THEY HAVE DONE!"),
-		SPAN_GOD_XYLIX("Finally! That audience was getting boring anyways..."),
+		SPAN_GOD_EORA("¡Paz por fin! Que encuentres amor, extraño..."),
+		SPAN_GOD_DENDOR("¡ESOS GRENZEL ESCIENTES PAGARAN POR LO QUE HICIERON!"),
+		SPAN_GOD_XYLIX("¡Finalmente! A esa audiencia le estaba saliendo el aburrimiento de todas maneras..."),
 		SPAN_GOD_MALUM("¡He sido liberado! Debo encontrar a mi aprendiz..."),
-		SPAN_GOD_MALUM("May Malum curse the creator of that cursed craft... thank you..."),
+		SPAN_GOD_MALUM("Que Malum maldiga al creador de esa artesania maldita... gracias..."),
 		SPAN_GOD_MATTHIOS("Gracias amigo, te debo una..."),
 		SPAN_GOD_ZIZO("Gracias IDIOTA! Es hora de causar algo de caos ~"),
-		SPAN_GOD_GRAGGAR("I WILL TEAR THOSE GRENZELS LIMB FROM LIMB!"),
-		SPAN_GOD_BAOTHA("What a horrid experience... I need a drink..."),
-		SPAN_GOD_PSYDON("Don't expect thanks from me, servant of the betrayer...")
+		SPAN_GOD_GRAGGAR("¡Voy a desgarrar a esos Grenzels miembro por miembro!"),
+		SPAN_GOD_BAOTHA("¡Que experiencia tan horrible... Necesito una bebida..."),
+		SPAN_GOD_PSYDON("No esperes agradecimiento de mi, sirviente del traidor...")
 	)
 
-	savior.visible_message(span_info("As \the [src] crumbles to dust, you can see a few faint lights float away and fade out."), span_info("As \the [src] crumbles, you can faintly see fourteen souls slowly drift out and fade into the air. One of them utters a few words before joining the rest..."), vision_distance = COMBAT_MESSAGE_RANGE)
+	savior.visible_message(span_info("A medida que \the [src] se desmorona en polvo, puedes ver unas cuantas luces tenues flotando y desvaneciendose."), span_info("Mientras \the [src] se desmorona, puedes ver vagamente catorce almas que se alejan lentamente y se desvanecen en el aire. Una de ellas pronuncia algunas palabras antes de unirse al resto..."), vision_distance = COMBAT_MESSAGE_RANGE)
 
 	sleep(1 SECONDS)
 	to_chat(savior, pick(soul_lines))
@@ -168,8 +168,8 @@
 
 
 /atom/movable/screen/alert/status_effect/buff/cranking_soulchurner
-	name = "Cranking Soulchurner"
-	desc = "I am bringing the twisted device to life..."
+	name = "Agitador de almas en marcha"
+	desc = "Le estoy dando vida al dispositivo retorcido..."
 	icon_state = "buff"
 
 /datum/status_effect/buff/cranking_soulchurner
@@ -229,8 +229,8 @@
 					to_chat(H, (span_cultsmall(pick(lines))))
 
 /atom/movable/screen/alert/status_effect/buff/censerbuff
-	name = "Inspired by Psydon."
-	desc = "The lingering blessing of Psydon tells me to ENDURE."
+	name = "Inspirado en Psydon."
+	desc = "La bendicion persistente de Psydon me dice que AGUARE."
 	icon_state = "censerbuff"
 
 /datum/status_effect/buff/censerbuff
@@ -241,7 +241,7 @@
 
 /datum/stress_event/syoncalamity
 	stress_change = 15
-	desc = span_boldred("Yet another part of Psydon lost!")
+	desc = span_boldred("¡Otra parte mas de Psydon perdida!")
 	timer = 15 MINUTES
 
 /datum/intent/flail/strike/smash/golgotha
@@ -270,8 +270,8 @@
 	hitsound = list('sound/items/beartrap2.ogg')
 
 /obj/item/flashlight/flare/torch/lantern/psycenser
-	name = "Censer of Penitence"
-	desc = "A device filled with bubbling silver. Its unstable state is dangerous to those who do not know its true nature, but to wield it is great honour for Psydon."
+	name = "Cencerro de Penitencia"
+	desc = "Un dispositivo lleno de plata burbujeante. Su estado inestable es peligroso para quienes no conocen su verdadera naturaleza, pero manejarlo es un gran honor para Psydon."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psycenser"
 	item_state = "psycenser"
@@ -287,8 +287,8 @@
 /obj/item/flashlight/flare/torch/lantern/psycenser/examine(mob/user)
 	. = ..()
 	if(fuel > 0)
-		. += span_info("If opened, it may bless Psydon weapons and those of Psydon faith.")
-		. += span_warning("Smashing a creature with it open will create a devastating explosion and render it useless.")
+		. += span_info("Si se abre, puede bendecir las Psydon armas y las de Psydon fe.")
+		. += span_warning("Si lo usas para aplastar a una criatura, crearas una explosion devastadora y la volveras inutilizable.")
 	if(fuel <= 0)
 		. += span_info("Se ha ido.")
 
@@ -359,7 +359,7 @@
 		if(CP)
 			if(!CP.is_blessed)
 				playsound(user, 'sound/magic/censercharging.ogg', 100)
-				user.visible_message(span_info("[user] holds \the [src] over \the [A]..."))
+				user.visible_message(span_info("[user] tiene \the [src] sobre \the [A]..."))
 				if(do_after(user, 50, A))
 					CP.try_bless()
 					new /obj/effect/temp_visual/censer_dust(get_turf(A))
@@ -370,10 +370,10 @@
 		if(istype(H.patron, /datum/patron/psydon))
 			if(!H.has_status_effect(/datum/status_effect/buff/censerbuff))
 				playsound(user, 'sound/magic/censercharging.ogg', 100)
-				user.visible_message(span_info("[user] holds \the [src] over \the [A]..."))
+				user.visible_message(span_info("[user] tiene \the [src] sobre \the [A]..."))
 				if(do_after(user, 50, A))
 					H.apply_status_effect(/datum/status_effect/buff/censerbuff)
-					to_chat(H, span_notice("The comet dust invigorates you."))
+					to_chat(H, span_notice("El polvo del cometa te revitaliza."))
 					playsound(H, 'sound/magic/holyshield.ogg', 100)
 					new /obj/effect/temp_visual/censer_dust(get_turf(H))
 			else
@@ -405,11 +405,11 @@
 
 /datum/component/psyblessed/proc/on_examine(datum/source, mob/user, list/examine_list)
 	if(!is_blessed)
-		examine_list += span_info("<font color = '#cfa446'>This object may be blessed by the lingering fragment of Psydon. Until then, its impure alloying of silver-and-steel cannot blight inhumen foes on its own.</font>")
+		examine_list += span_info("<font color = '#cfa446'>Este objeto puede estar bendecido por el fragmento persistente de Psydon. Hasta entonces, su aleacion impura de plata y acero no puede arruinar a los enemigos de inhumen por si sola.</font>")
 	if(is_blessed)
 		examine_list += span_info("<font color = '#46bacf'>Este objeto ha sido bendecido por el fragmento de Psydon.</font>")
 		if(silver)
-			examine_list += span_info("It has been imbued with <b>silver</b>.")
+			examine_list += span_info("Ha sido imbuido con <b>plata</b>.")
 
 /datum/component/psyblessed/proc/try_bless()
 	if(!is_blessed)
@@ -423,7 +423,7 @@
 	if(isitem(parent))
 		var/obj/item/I = parent
 		playsound(I, 'sound/magic/holyshield.ogg', 100)
-		I.visible_message(span_notice("[I] glistens with power!"))
+		I.visible_message(span_notice("¡[I] brilla con poder!"))
 
 /datum/component/psyblessed/proc/apply_bless()
 	if(isitem(parent))
@@ -450,7 +450,7 @@
 
 /obj/item/inqarticles/indexer
 	name = "\improper INDEXER"
-	desc = "A blessed ampoule with a retractable bladetip, intended to further information gathering through hematology. Siphon blood from an individual until the INDEXER clicks shut, then mail it back to the Oratorium for cataloguing."
+	desc = "Una ampolla bendecida con una punta de cuchilla retractil, diseñada para recopilar mas informacion a traves de la hematologia. Sifon sangre de un individuo hasta que el INDEXER haga clic y se cierre, luego enviela por correo a Oratorium para catalogacion."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "indexer"
 	item_state = "indexer"
@@ -524,7 +524,7 @@
 		return
 
 	if(full)
-		to_chat(user, span_notice("It's ready to be sent back to the Oratorium."))
+		to_chat(user, span_notice("Esta listo para ser enviado de vuelta al Oratorium."))
 		return
 
 	possible_item_intents = list(/datum/intent/use, /datum/intent/dagger/cut)
@@ -575,7 +575,7 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(!full)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	if(tgui_alert(user, "EMPTY THE INDEXER?", "INDEXING...", list("YES", "NO")) != "NO")
+	if(tgui_alert(user, "¿VACIAR EL INDEXER?", "INDEXING...", list("SI", "NO")) != "NO")
 		playsound(src, 'sound/items/indexer_empty.ogg', 75, FALSE, 3)
 		visible_message(span_warning("¡[src] hierve su contenido!"))
 		fullreset(user)
@@ -586,7 +586,7 @@
 		playsound(src, 'sound/items/indexer_finished.ogg', 75, FALSE, 3)
 		working = FALSE
 		full = TRUE
-		visible_message(span_warning("[src] finishes drawing blood!"))
+		visible_message(span_warning("¡[src] termina sacando sangre!"))
 		active = FALSE
 		desc += span_notice(" ¡Esta lleno!")
 		if(cursedblood)
@@ -613,7 +613,7 @@
 			desc = initial(desc)
 			subject = WEAKREF(M)
 			desc += span_notice(" ¡Contiene la sangre de [M.real_name]!")
-			visible_message(span_warning("[src] draws from [M]!"))
+			visible_message(span_warning("¡[src] obtiene energia de [M]!"))
 			playsound(M, 'sound/combat/hits/bladed/genstab (1).ogg', 30, FALSE, -1)
 			timestaken++
 			M.adjust_blood_volume(-30)
@@ -654,7 +654,7 @@
 	var/mob/living/L = interacting_with
 
 	if(!CAN_HAVE_BLOOD(L) || !L.get_blood_volume())
-		to_chat(user, span_warning("[L] has no blood to sample."))
+		to_chat(user, span_warning("[L] no tiene sangre para tomar una muestra."))
 		return ITEM_INTERACT_BLOCKING
 
 	visible_message(span_warning("¡[user] va a golpear a [L] con [src]!"))
@@ -667,8 +667,8 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/inqarticles/tallowpot
-	name = "tallowpot"
-	desc = "A small metal pot meant for holding waxes or melted redtallow. Convenient for coating signet rings and making an imprint. The warmth of a torch or lamptern should be enough to melt the redtallow for stamping writs."
+	name = "caldero de sebo"
+	desc = "Un pequeño recipiente de metal destinado a contener ceras o sebo rojo derretido. Conveniente para recubrir anillos de sello y hacer una impresion. El calor de una antorcha o lampara deberia ser suficiente para derretir el sebo rojo para sellar escrituras."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "tallowpot"
 	item_state = "tallowpot"
@@ -706,7 +706,7 @@
 	else
 		if(tallow)
 			if(!messageshown)
-				visible_message(span_info("The redtallow in [src] hardens again."))
+				visible_message(span_info("La grasa roja en [src] se endurece de nuevo."))
 				messageshown = 1
 			update_appearance(UPDATE_ICON_STATE)
 	if(remaining == 0)
@@ -718,7 +718,7 @@
 	. = ..()
 	if(istype(I, /obj/item/reagent_containers/food/snacks/tallow))
 		if(!istype(I,/obj/item/reagent_containers/food/snacks/tallow/red)) // Tells players to make redtallow.
-			to_chat(user,span_warning("Normal tallow lacks the properties to act as wax. Add viscera to it first."))
+			to_chat(user,span_warning("La grasa normal carece de las propiedades para actuar como cera. Añadele visceras primero."))
 			return
 		if(!tallow)
 			var/obj/item/reagent_containers/food/snacks/tallow/red/Q = I
@@ -727,12 +727,12 @@
 			remaining = 300
 			update_appearance(UPDATE_ICON_STATE)
 		else
-			to_chat(user, span_info("[src] already has redtallow in it."))
+			to_chat(user, span_info("[src] ya tiene grasa roja en el."))
 
 
 	if(istype(I, /obj/item/flashlight/flare/torch))
 		heatedup = 28
-		visible_message(span_info("[user] warms [src] with [I]."))
+		visible_message(span_info("[user] calienta a [src] con [I]."))
 		update_appearance(UPDATE_ICON_STATE)
 
 	if(istype(I, /obj/item/clothing/ring/signet))
@@ -764,8 +764,8 @@
 		icon_state = "[initial(icon_state)]"
 
 /obj/item/rope/inqarticles/inquirycord
-	name = "inquiry cordage"
-	desc = "A length of thick leather inquiry cordage that has been dipped in both holy water and dye before being consecrated and spell-laced. Intended for apprehending foes and rethreading tools at the worst of times."
+	name = "cordaje de consulta"
+	desc = "Un trozo de cordel de cuero grueso que se ha sumergido en agua bendita y tinte antes de ser consagrado y adornado con hechizos. Diseñado para capturar enemigos y reenhebrar herramientas en el peor de los casos."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "inqcordage"
 	item_state = "inqcordage"
@@ -798,8 +798,8 @@
 
 
 /obj/item/inqarticles/garrote // Do not give this item out freely to other classes. Do not subtype this item for other classes. This is intended purely as the Confessor's identifying sidegrade, and as a bonus for the Inspector INQ. I will be very sad if you disregard this comment. Thank you. - Yische.
-	name = "\proper seizing garrote" // It's nonlethal. It's so silly and fun.
-	desc = "A macabre instrument favored by the more clandestine of the Psydonian Silver Order; A length of thick leather inquiry cordage that has been dipped in both holy water and dye before being consecrated and spell-laced, held and threaded between two iron links. Perfect for apprehension."
+	name = "\proper agarrando garrote" // It's nonlethal. It's so silly and fun.
+	desc = "Un instrumento macabro favorecido por los mas clandestinos de la Orden de Plata Psydonian; Un trozo de cordel de cuero grueso que ha sido sumergido en agua bendita y tinte antes de ser consagrado y hechizado, sostenido y enhebrado entre dos eslabones de hierro. Perfecto para la aprehension."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "garrote"
 	throw_speed = 3
@@ -841,15 +841,15 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /datum/intent/garrote/choke
-	name = "choke"
+	name = "ahogar"
 	icon_state = "inchoke"
-	desc = "Used to begin choking the target out."
+	desc = "Se utiliza para empezar a asfixiar al objetivo."
 	no_attack = TRUE
 
 /datum/intent/garrote/grab
-	name = "grab"
+	name = "agarra."
 	icon_state = "ingrab"
-	desc = "Used to wrap around the target."
+	desc = "Se utiliza para envolver al objetivo."
 	no_attack = TRUE
 
 /obj/item/inqarticles/garrote/Destroy()
@@ -865,7 +865,7 @@
 		if(ismob(loc))
 			var/mob/M = loc
 			twohanded.unwield(M)
-			to_chat(M, span_warning("The [src] SNAPS and breaks!"))
+			to_chat(M, span_warning("¡El [src] SE ROMPE y se rompe en pedazos!"))
 	update_appearance()
 
 /obj/item/inqarticles/garrote/atom_fix()
@@ -875,7 +875,7 @@
 /obj/item/inqarticles/garrote/update_name(updates)
 	. = ..()
 	if(obj_broken)
-		name = "\proper snapped seizing garrote"
+		name = "\proper rompio el garrote de incautacion"
 	else
 		name = initial(name)
 
@@ -921,19 +921,19 @@
 
 /obj/item/inqarticles/garrote/attack_self(mob/user)
 	if(obj_broken)
-		to_chat(user, span_warning("It's useless right now, but I can rethread it with cordage."))
+		to_chat(user, span_warning("No sirve de nada ahora mismo, pero puedo volver a enhebrarlo con cuerda."))
 		return TRUE
 	return ..()
 
 /obj/item/inqarticles/garrote/attacked_by(obj/item/I, mob/living/user)
 	. = ..()
 	if(istype(I, /obj/item/rope/inqarticles/inquirycord))
-		user.visible_message(span_notice("[user] starts to rethread the [src] using \the [I]."))
+		user.visible_message(span_notice("[user] comienza a reensamblar el [src] usando \the [I]."))
 		if(do_after(user, 12 SECONDS, user))
 			qdel(I)
 			update_integrity(max_integrity)
 		else
-			user.visible_message(span_warning("[user] stops rethreading the [src]."))
+			user.visible_message(span_warning("[user] deja de reensartar el [src]."))
 		return TRUE
 
 /obj/item/inqarticles/garrote/afterattack(mob/living/target, mob/living/user, proximity_flag, list/modifiers)
@@ -981,7 +981,7 @@
 		if(!proximity_flag)
 			return
 		if(user.zone_selected != "neck")
-			to_chat(user, span_warning("I need to constrict the throat."))
+			to_chat(user, span_warning("Necesito constreñir la garganta."))
 			return
 		user.adjust_stamina(rand(4, 8))
 		var/mob/living/carbon/C = garrote_victim
@@ -991,8 +991,8 @@
 			C.emote("choke")
 		C.adjustOxyLoss(choke_damage)
 		C.visible_message(span_danger("[user] [pick("garrotes", "asphyxiates")] [C]!"), \
-		span_userdanger("[user] [pick("garrotes", "asphyxiates")] me!"), span_hear("I hear the sickening sound of cordage!"), COMBAT_MESSAGE_RANGE, user)
-		to_chat(user, span_danger("I [pick("garrote", "asphyxiate")] [C]!"))
+		span_userdanger("¡[user] ¡[pick("garrotes", "asphyxiates")] ¡Mirame!"), span_hear("¡Escucho el sonido desagradable de las cuerdas!"), COMBAT_MESSAGE_RANGE, user)
+		to_chat(user, span_danger("¡Yo [pick("garrote", "asphyxiate")] [C]!"))
 		user.changeNext_move(CLICK_CD_RESIST)	//Stops spam for choking.
 
 /obj/item/inqarticles/garrote/proc/begin_garrote(mob/living/target, mob/living/user)
@@ -1022,8 +1022,8 @@
 	return BREATHE_SKIP_BREATH
 
 /obj/item/inqarticles/garrote/razor // To yische, who said not to give this out constantly, I respectfully disagree when it comes to assassin
-	name = "profane razor" // It's very not non lethal now.  Strangle your prey with glee
-	desc = "A thin strand of phantom black wire strung between steel grasps. Cold to the touch even through gloves. The strand of wire, while appearing fragile, is seemingly unbreakable."
+	name = "navaja profana" // It's very not non lethal now.  Strangle your prey with glee
+	desc = "Un fino hilo de alambre negro fantasma colgado entre agarres de acero. Frio al tacto incluso con guantes. El hilo de alambre, aunque parece fragil, es aparentemente irrompible."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "garrote"
 	item_state = "garrote"
@@ -1033,8 +1033,8 @@
 	item_weight = 100 GRAMS
 
 /obj/item/clothing/head/inqarticles/blackbag
-	name = "black bag"
-	desc = "A heavily spell-weaved padded sack intended to muffle the cries made within it. Due to the heaviness of the materials involved, application and removal of these is usually difficult for the untrained."
+	name = "bolso negro"
+	desc = "Un saco acolchado fuertemente tejido con hechizos destinado a amortiguar los gritos que se producen en su interior. Debido al peso de los materiales involucrados, su aplicacion y eliminacion suele ser dificil para personas no capacitadas."
 	icon_state = "blackbag"
 	item_state = "blackbag"
 	icon = 'icons/roguetown/clothing/head.dmi'
@@ -1089,7 +1089,7 @@
 		trained = TRUE
 		timetobag = 4 SECONDS
 
-	user.visible_message(span_danger("[user] goes to [trained ? "expertly" : "clumsily"] black bag [M]!"))
+	user.visible_message(span_danger("[user] va a [trained ? "expertly" : "clumsily"] bolsa negra [M] ¡!"))
 
 	if(M.stat)
 		timetobag /= 2
@@ -1202,7 +1202,7 @@
 /obj/item/inqarticles/bmirror/examine(mob/user)
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))
-		desc = "A mass-produced relic of the Oratorium Throni Vacui. The exact method of the Black Mirror's operation remains a well-kept secret. One worth dying over, supposedly."
+		desc = "Una reliquia producida en masa del Oratorium Throni Vacui. El metodo exacto de operacion del Black Mirror sigue siendo un secreto bien guardado. Uno por el que supuestamente vale la pena morir."
 	else
 		desc = ""
 
@@ -1220,7 +1220,7 @@
 	fixation = null
 	usesleft--
 	soundloop.stop()
-	visible_message(span_info("[src] clouds itself with a chilling fog."))
+	visible_message(span_info("[src] se nubla con una niebla escalofriante."))
 	playsound(src, 'sound/items/blackmirror_no.ogg', 100, FALSE)
 	update_appearance(UPDATE_ICON_STATE)
 	if(usesleft == 0)
@@ -1231,7 +1231,7 @@
 		return
 	broken = TRUE
 	playsound(src, 'sound/items/blackmirror_break.ogg', 100, FALSE)
-	visible_message(span_info("[src] shatters, fog spilling from the splintering shards into the dead air."))
+	visible_message(span_info("[src] se rompe, niebla saliendo de los fragmentos desmenuzados hacia el aire muerto."))
 	openstate = "broken"
 	update_appearance(UPDATE_ICON_STATE)
 
@@ -1245,19 +1245,19 @@
 		return
 
 	if(broken && bloody)
-		to_chat(user, span_warning("The mirror has shattered, rendering it unusable."))
+		to_chat(user, span_warning("El espejo se ha roto, dejandolo inservible."))
 		if(HAS_TRAIT(user, TRAIT_INQUISITION))
-			to_chat(user, span_notice("If I clean it, I can send it back to the Inquisition for repairs."))
+			to_chat(user, span_notice("Si lo limpio, puedo enviarlo de vuelta a la Inquisicion para repararlo."))
 		return
 
 	if(broken && !bloody)
-		to_chat(user, span_warning("The mirror has shattered, rendering it unusable. It's clean, at the very least."))
+		to_chat(user, span_warning("El espejo se ha roto, lo que lo hace inutilizable. Al menos esta limpio."))
 		if(HAS_TRAIT(user, TRAIT_INQUISITION))
 			to_chat(user, span_notice("Ahora se puede devolver a traves de HERMES. Deberia recuperar dos Marques."))
 		return
 
 	if(bloody)
-		to_chat(user, span_warning("The mirror is fogged over. I need to clean the blood from it with cloth before reuse."))
+		to_chat(user, span_warning("El espejo esta empañado. Necesito limpiarle la sangre con un paño antes de volver a usarlo."))
 		return
 
 	if(!fedblood)
@@ -1270,11 +1270,11 @@
 		if(!target)
 			input = "FIXATION" //skips through the tgui alert if target isn't set
 		else
-			input = tgui_alert(user, "THE MIRROR IS FIXATED ON [uppertext(target.real_name)]. WILL YOU REVEAL YOUR GAZE?", "THE PRICE IS PAID", list("STALK BLOOD", "FIXATION"))
+			input = tgui_alert(user, "EL ESPEJO ESTA FIJADO EN [uppertext(target.real_name)]. ¿REVELARAS TU MIRADA?", "EL PRECIO ESTA PAGADO", list("SANGRE DEL TALLO", "FIJACION"))
 		if(!input || QDELETED(user) || QDELETED(src))
 			return
 		if(input == "FIXATION")
-			var/name = html_decode(browser_input_text(user, "¿A QUIEN BUSCAS?", "THE PRICE IS PAID"))
+			var/name = html_decode(browser_input_text(user, "¿A QUIEN BUSCAS?", "EL PRECIO ESTA PAGADO"))
 			if(!name)
 				return
 			for(var/mob/living/carbon/human/HL as anything in GLOB.player_list)
@@ -1282,9 +1282,9 @@
 					fixation = WEAKREF(HL)
 					target = HL
 					playsound(src, 'sound/items/blackmirror_no.ogg', 100, FALSE)
-					to_chat(user, span_warning("[src] makes a grating sound."))
+					to_chat(user, span_warning("[src] hace un sonido chirriante."))
 					return
-			to_chat(user, span_warning("The mirror makes no sound... It could not locate a person of such name."))
+			to_chat(user, span_warning("El espejo no hace ningun sonido... No pudo localizar a una persona de ese nombre."))
 			return
 		active = TRUE
 		openstate = "active"
@@ -1306,13 +1306,13 @@
 	var/datum/weakref/lookat = fixation ? fixation : feeder
 	var/mob/living/target = lookat?.resolve()
 	if(!target)
-		to_chat(user, span_notice("The mirror remains clear..."))
+		to_chat(user, span_notice("El espejo sigue intacto..."))
 		return
 
 	playsound(src, 'sound/items/blackmirror_use.ogg', 100, FALSE)
 
 	if(target.real_name == user.real_name) //prevents bugging the timer through looking at yourself
-		to_chat(user, span_danger("I see my reflection in the mirror... It is quite distorted, but what am I trying to achieve?"))
+		to_chat(user, span_danger("Veo mi reflejo en el espejo... Esta bastante distorsionado, pero ¿que estoy intentando lograr?"))
 		return
 
 	ADD_TRAIT(user, TRAIT_NOSSDINDICATOR, "blackmirror")
@@ -1322,7 +1322,7 @@
 		return
 	S.ManualFollow(target)
 	S.add_client_colour(/datum/client_colour/nocshaded)
-	user.visible_message(span_warning("[user] stares into [src], their eyes glazing over..."))
+	user.visible_message(span_warning("[user] se fija en [src], sus ojos se empapan..."))
 
 	addtimer(CALLBACK(S, TYPE_PROC_REF(/mob/dead/observer, reenter_corpse)), 4 SECONDS)
 	addtimer(CALLBACK(user, GLOBAL_PROC_REF(playsound), user, 'sound/items/blackeye.ogg', 100, FALSE), 4 SECONDS)
@@ -1339,7 +1339,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(feeder)
-		to_chat(user, span_warning("It's already been fed."))
+		to_chat(user, span_warning("Ya se le ha dado de comer."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(broken)
@@ -1355,7 +1355,7 @@
 	if(attacked == user)
 		user.visible_message(span_notice("[user] presiona sobre la aguja de [src]."))
 	else
-		user.visible_message(span_notice("[user] goes to press [attacked] with [src]'s needle."))
+		user.visible_message(span_notice("[user] va a imprimir [attacked] con la aguja de [src]."))
 		time_taken *= 2
 
 	if(!do_after(user, time_taken, attacked))
@@ -1393,7 +1393,7 @@
 	openorshut(user)
 /obj/item/inqarticles/bmirror/proc/openorshut(mob/user)
 	if(active)
-		to_chat(user, span_warning("I cannot close the mirror while it's active."))
+		to_chat(user, span_warning("No puedo cerrar el espejo mientras este activo."))
 		return
 
 	var/mob/living/fixated = fixation?.resolve()
@@ -1427,7 +1427,7 @@
 		icon_state = "[initial(icon_state)]"
 
 /atom/movable/screen/alert/blackmirror
-	name = "BLACK EYE"
+	name = "OJO MORADO"
 	desc = "MIRAME. TE VEO."
 	icon_state = "blackeye"
 	var/obj/item/inqarticles/bmirror/source
@@ -1441,7 +1441,7 @@
 	if(!istype(L))
 		return
 	var/mob/living/target = null
-	var/input = tgui_alert(L, "YOU FEEL UNFAMILIAR GAZE. WILL YOU STARE BACK AT ABYSS?", "PRESENCE WATCHING OVER", list("TRACE BLOOD", "LOOK BACK"))
+	var/input = tgui_alert(L, "SIENTES UNA MIRADA DESCONOCIDA. ¿MIRARAS DETRAS A ABYSS?", "PRESENCIA VIGILANDO", list("TRAZA SANGRE", "MIENTITATE."))
 	if(input == "TRACE BLOOD")
 		target = source.feeder?.resolve()
 	else if(input == "LOOK BACK")
@@ -1455,7 +1455,7 @@
 		return
 	S.ManualFollow(target)
 	S.add_client_colour(/datum/client_colour/nocshaded)
-	L.visible_message(span_warning("[L] looks inward as their eyes glaze over..."))
+	L.visible_message(span_warning("[L] mira hacia adentro mientras sus ojos se empañan..."))
 
 	addtimer(CALLBACK(S, TYPE_PROC_REF(/mob/dead/observer, reenter_corpse)), 4 SECONDS)
 	addtimer(CALLBACK(L, GLOBAL_PROC_REF(playsound), L, 'sound/items/blackeye.ogg', 100, FALSE), 4 SECONDS)
@@ -1463,7 +1463,7 @@
 
 // FINISH THIS AT YOUR LEISURE. I'M JUST LEAVING IT HERE UNIMPLEMENTED. IT'S INTENDED TO WORK AS A COMBINATION OF THE NOC FAR-SIGHT AND THE NOCSHADES. HAVE FUN! - YISCHE
 /obj/item/inqarticles/spyglass
-	name = "otavan nocshade eyepiece"
+	name = "ocular otavan nocshade"
 	desc = ""
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "spyglass"

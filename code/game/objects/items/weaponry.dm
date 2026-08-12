@@ -1,6 +1,6 @@
 /obj/item/banhammer
 	desc = ""
-	name = "banhammer"
+	name = "martillo de baneo"
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "toyhammer"
 	slot_flags = ITEM_SLOT_HIP
@@ -9,13 +9,13 @@
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 1
 	throw_range = 7
-	attack_verb = list("banned")
+	attack_verb = list("baneo")
 	max_integrity = 200
 	armor_type = /datum/armor/immune
 	resistance_flags = FIRE_PROOF
 
 /obj/item/banhammer/suicide_act(mob/user)
-		user.visible_message("<span class='suicide'>[user] is hitting [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to ban [user.p_them()]self from life.</span>")
+		user.visible_message("¡<span class='suicide'>[user] se esta golpeando a [user.p_them()]self con [src]! Parece que [user.p_theyre()] intenta prohibir a [user.p_them()]self de la vida.</span>")
 		return (BRUTELOSS|FIRELOSS|TOXLOSS|OXYLOSS)
 /*
 oranges says: This is a meme relating to the english translation of the ss13 russian wiki page on lurkmore.
@@ -24,9 +24,9 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 */
 /obj/item/banhammer/attack(mob/M, mob/user, list/modifiers)
 	if(user.zone_selected == BODY_ZONE_HEAD)
-		M.visible_message("<span class='danger'>[user] is stroking the head of [M] with a banhammer.</span>", "<span class='danger'>[user] is stroking my head with a banhammer.</span>", "<span class='hear'>I hear a banhammer stroking a head.</span>")
+		M.visible_message("<span class='danger'>[user] esta acariciando la cabeza de [M] con un martillo de banear.</span>", "<span class='danger'>[user] me esta acariciando la cabeza con un martillo de prohibicion.</span>", "<span class='hear'>Escucho un banhammer acariciando una cabeza.</span>")
 	else
-		M.visible_message("<span class='danger'>[M] has been banned FOR NO REISIN by [user]!</span>", "<span class='danger'>I have been banned FOR NO REISIN by [user]!</span>", "<span class='hear'>I hear a banhammer banning someone.</span>")
+		M.visible_message("<span class='danger'>[M] ha sido baneado POR NO REISIN por [user]!</span>", "<span class='danger'>¡Me han expulsado por NO REISIN por [user]¡</span>", "<span class='hear'>Escucho un banhammer prohibiendo a alguien.</span>")
 	playsound(src, 'sound/blank.ogg', 15) //keep it at 15% volume so people don't jump out of their skin too much
 	if(user.used_intent.type != INTENT_HELP)
 		return ..(M, user)
@@ -50,12 +50,12 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	grid_width = 32
 
 /obj/item/throwing_star/ninja
-	name = "ninja throwing star"
+	name = "estrella arrojadiza ninja"
 	throwforce = 30
 	embedding = list("embedded_pain_multiplier" = 6, "embed_chance" = 100, "embedded_fall_chance" = 0)
 
 /obj/item/staff
-	name = "wizard staff"
+	name = "baston de mago"
 	desc = ""
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "staff"
@@ -65,11 +65,11 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
 	armor_penetration = 100
-	attack_verb = list("bludgeoned", "whacked", "disciplinado")
+	attack_verb = list("apaleado", "aporreado", "disciplinado")
 	resistance_flags = FLAMMABLE
 
 /obj/item/staff/stick
-	name = "stick"
+	name = "palo"
 	desc = ""
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "cane"

@@ -139,7 +139,7 @@
 		var/money = I.get_real_price()
 		budget += money
 		qdel(I)
-		to_chat(user, span_info("I put [money] mammon in [src]."))
+		to_chat(user, span_info("Coloque [money] mammon en [src]."))
 		playsound(src, 'sound/misc/machinevomit.ogg', 100, TRUE, -1)
 		return attack_hand(user)
 
@@ -217,7 +217,7 @@
 	if(!ishuman(user))
 		return
 	if(locked())
-		to_chat(user, "<span class='warning'>It's locked. Of course.</span>")
+		to_chat(user, "<span class='warning'>Esta bloqueado. Claro.</span>")
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	playsound(src, 'sound/misc/beep.ogg', 100, FALSE, -1)

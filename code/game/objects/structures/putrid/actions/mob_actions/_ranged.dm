@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/ranged
 	name = "Escupir neurotoxina"
-	desc = "Spits neurotoxin at someone, exhausting them."
+	desc = "Escupe neurotoxina a alguien, agotandolo."
 	personal_resource_cost = 40
 	/// A singular projectile? Use this one and leave acid_casing null
 	var/acid_projectile = /obj/projectile/neurotoxin
@@ -23,7 +23,7 @@
 	if(!.)
 		return
 
-	to_chat(on_who, span_notice("You prepare your [projectile_name] gland. <B>Left-click to fire at a target!</B>"))
+	to_chat(on_who, span_notice("Preparas tu glandula [projectile_name]. <B> ¡Haz clic izquierdo para disparar a un objetivo! </B>"))
 
 	button_icon_state = "[button_base_icon]_1"
 	build_all_button_icons()
@@ -52,7 +52,7 @@
 		return FALSE
 
 	user.visible_message(
-		span_danger("[user] spits [projectile_name]!"),
+		span_danger("[user] escupiendo [projectile_name]!"),
 		span_alertalien("Escupes [projectile_name]."),
 	)
 

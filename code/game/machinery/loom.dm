@@ -1,6 +1,6 @@
 /obj/machinery/loom
 	icon = 'icons/roguetown/misc/structure.dmi'
-	name = "loom"
+	name = "telar"
 	desc = "Un marco de madera con hilos tensos listo para tejer tela."
 	icon_state = "loom"
 	max_integrity = 200
@@ -14,14 +14,14 @@
 		var/obj/item/natural/bundle/fibers/W = tool
 		if(storedfiber + W.amount > maxfiber)
 			W.amount = (W.amount - (maxfiber - storedfiber))
-			to_chat(user, "You string some fiber onto [src].")
+			to_chat(user, "Colocas un poco de fibra en [src].")
 			storedfiber = maxfiber
 			if(W.amount == 1)
 				new /obj/item/natural/fibers(get_turf(user))
 				qdel(W)
 		else
 			storedfiber = storedfiber + W.amount
-			to_chat(user, "You string some fiber onto [src].")
+			to_chat(user, "Colocas un poco de fibra en [src].")
 			qdel(W)
 
 		return ITEM_INTERACT_SUCCESS
@@ -30,7 +30,7 @@
 		var/obj/item/natural/fibers/W = tool
 		if(storedfiber < maxfiber)
 			storedfiber++
-			to_chat(user, "You string a fiber onto [src].")
+			to_chat(user, "Colocas una fibra en [src].")
 			qdel(W)
 		else
 			to_chat(user, "No puedes agregar mas fibra.")
@@ -44,12 +44,12 @@
 	var/mob/living/L = user
 	if(isliving(user) && L.stat == CONSCIOUS && !user.get_active_held_item())
 		if(storedfiber > 0)
-			to_chat(user, "You remove a strand from [src].")
+			to_chat(user, "Retiras una hebra de [src].")
 			storedfiber--
 			var/obj/item/natural/fibers/F = new (loc)
 			L.put_in_hands(F)
 		else
-			to_chat(user, "There's nothing to take from [src].")
+			to_chat(user, "No hay nada que retirar de [src].")
 
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
@@ -62,7 +62,7 @@
 		if(storedfiber < 2)
 			to_chat(user, "No tienes suficiente fibra para hacer esto.")
 		else
-			to_chat(user, "You start weaving some cloth...")
+			to_chat(user, "Comienzas a tejer un poco de tela...")
 			while(storedfiber > 1)
 				if(!do_after(weaver, (weavetime - (skilltimemod*skill)), src) || storedfiber < 2)
 					break
@@ -71,5 +71,5 @@
 				weaver.mind.add_sleep_experience(/datum/attribute/skill/misc/sewing, (GET_MOB_ATTRIBUTE_VALUE(weaver, STAT_INTELLIGENCE)*0.5))//you get less exp from using the loom
 
 /obj/machinery/loom/examine(mob/user)
-	to_chat(user, span_notice("There are [storedfiber] strands of fiber strung on [src]."))
+	to_chat(user, span_notice("Hay [storedfiber] hebras de fibra colocadas en [src]."))
 	. = ..()

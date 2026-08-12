@@ -1,5 +1,5 @@
 /obj/structure/meatvine
-	name = "meat clump"
+	name = "trozo de carne"
 	desc = "¡¿Que es eso?!"
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "tile_1"
@@ -163,7 +163,7 @@
 		return
 
 	if(.)
-		to_chat(M, "<span class='danger'>The vines [pick("wind", "tangle", "tighten")] around you!</span>")
+		to_chat(M, "<span class='danger'>Las enredaderas [pick("wind", "tangle", "tighten")] alrededor de ti </span>")
 
 	if(prob(5))
 		M.try_wrap_up("meat", "meatthings")
@@ -437,5 +437,5 @@
 		Vine.transfer_feromones(amount - 1)
 
 /obj/effect/ebeam/meat
-	name = "meat"
+	name = "carne"
 	icon_state = "meat"

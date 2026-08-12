@@ -37,8 +37,8 @@
 */
 
 /obj/structure/mannequin
-	name = "display stand"
-	desc = "It looks like a decorative training dummy."
+	name = "soporte de exhibicion"
+	desc = "Parece un muñeco de entrenamiento decorativo."
 	icon = 'icons/obj/mannequin.dmi'
 	icon_state = "coat_hanger"
 	density = TRUE
@@ -153,7 +153,7 @@
 					MannequinUnequip(null,targ_to_slot)
 					user.put_in_hand(I)
 					add_fingerprint(user)
-					to_chat(user, "You pick up \the [I] from \the [src].")
+					to_chat(user, "Tomas \the [I] de \the [src].")
 			else
 				FinalEquipCheck(user, item_in_hand, item_slot)
 
@@ -223,7 +223,7 @@
 		if(cloth_to_examine)
 			switch(slot_cloth)
 				if(SLOT_MANNEQUIN_HEAD)
-					slot_examine = " on its head."
+					slot_examine = " sobre su cabeza."
 				if(SLOT_MANNEQUIN_NECK)
 					slot_examine = " en su cuello."
 				if(SLOT_MANNEQUIN_GLOVES)
@@ -268,7 +268,7 @@
 			var/obj/item/I = clothing[item_slot]
 			MannequinUnequip(I, MannequinEquipHelper(item_slot))
 			add_fingerprint(user)
-			to_chat(user, "<span class='info'>You pick up \the [I] from \the [src].</span>")
+			to_chat(user, "<span class='info'>Tomas \the [I] de \the [src].</span>")
 	else
 		FinalEquipCheck(user, item_in_hand, item_slot)
 
@@ -282,16 +282,16 @@
 	if(canEquip(user ,item_thing, EquipHelper(slot_placement)))
 		if(user.dropItemToGround(item_thing))
 			if(clothing[slot_placement])
-				to_chat(user, "<span class='info'>You switch \the [item_thing] and \the [clothing[slot_placement]] on the [src].</span>")
+				to_chat(user, "<span class='info'>Cambia \the [item_thing] y \the [clothing[slot_placement]] en el [src].</span>")
 				MannequinEquip(item_thing, MannequinEquipHelper(slot_placement))
 				add_fingerprint(user)
 			else
 				MannequinEquip(item_thing, MannequinEquipHelper(slot_placement))
 				add_fingerprint(user)
-				to_chat(user, "<span class='info'>You place \the [item_thing] on \the [src].</span>")
+				to_chat(user, "<span class='info'>Usted coloca \the [item_thing] en \the [src].</span>")
 		//If drop to ground proc fails
 		else
-			to_chat(user, "<span class='warning'>You can't drop that!</span>")
+			to_chat(user, "<span class='warning'>¡No puedes dejar eso!</span>")
 
 /*
 * Checks if the item can be equipped by the manniquin.
@@ -305,14 +305,14 @@
 		var/obj/item/clothing/C = item_to_check
 		//Thank you DM Refrence website for telling me how to find out negative if in arguments.
 		if(!(gender in C.allowed_sex) || !(SPEC_ID_HUMEN in C.allowed_race))
-			to_chat(user, "<span class='warning'>This clothing won't fit this mannequin's frame.</span>")
+			to_chat(user, "<span class='warning'>Esta ropa no le va a quedar bien al maniqui.</span>")
 			return FALSE
 
 	if(item_to_check.slot_flags & selected_area)
 		return TRUE
 
 	if(user)
-		to_chat(user, "<span class='warning'>\The [item_to_check] doesn't fit on the mannequin's [PlacementDescriber(selected_area)].</span>")
+		to_chat(user, "<span class='warning'>\The [item_to_check] no cabe en el [PlacementDescriber(selected_area)] del maniqui.</span>")
 	return FALSE
 
 /*
@@ -545,7 +545,7 @@
 	tipped_over = FALSE
 	var/matrix/mat = transform
 	transform = mat.Turn(-90)
-	to_chat(L, "You pull [src] off the ground.")
+	to_chat(L, "Saca [src] del suelo.")
 
 /*
 * Procs at creation or mapload. If no items_to_wear then it will equip
@@ -720,8 +720,8 @@
 
 ////Subtypes/////
 /obj/structure/mannequin/male
-	name = "mannequin"
-	desc = "It's unsettlingly still."
+	name = "maniqui"
+	desc = "Esta inquietantemente tranquilo."
 	icon_state = "man"
 
 /*
@@ -730,11 +730,11 @@
 */
 /obj/structure/mannequin/male/decorative
 	name = "exhibicion decorativa"
-	desc = "Due to magic or fragile material the clothing on this one cannot be taken off."
+	desc = "Debido a la magia o al material fragil, la ropa de este no se puede quitar."
 	unchangeable = TRUE
 
 /obj/structure/mannequin/male/female
-	name = "mannequin"
+	name = "maniqui"
 	icon_state = "woman"
 	gender = FEMALE
 

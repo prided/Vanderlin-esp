@@ -3,13 +3,13 @@
         "Estrella",
         "Oort",
         "Cometa",
-        "Púlsar",
+        "Pulsar",
         "Plasma",
-        "Vacío",
+        "Vacio",
         "Espacio",
         "Solar",
-        "Láser",
-        "Ión"
+        "Laser",
+        "Ion"
     ],
     "endings":[
         "quilla",
@@ -22,7 +22,7 @@
         "sal",
         "nudo",
         "pez",
-        "timón"
+        "timon"
     ],
     "ship_names":[
         "Space Queen's Revenge",

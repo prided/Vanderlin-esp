@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/transfer_resources
 	name = "Transferir recursos"
-	desc = "Transfer 20 personal resources to another meatvine. Must be adjacent. Cost: 20 resources."
+	desc = "Transfiere 20 recursos personales a otra Meatvine. Debe estar adyacente. Costo: 20 recursos."
 	button_icon_state = "transfer"
 	cooldown_time = 15 SECONDS
 	personal_resource_cost = 20
@@ -13,19 +13,19 @@
 
 	// Check if target is another meatvine
 	if(!istype(target, /mob/living/simple_animal/hostile/retaliate/meatvine))
-		to_chat(giver, span_warning("You can only transfer resources to other meatvines!"))
+		to_chat(giver, span_warning("¡Solo puedes transferir recursos a otras matas de carne!"))
 		return FALSE
 
 	var/mob/living/simple_animal/hostile/retaliate/meatvine/receiver = target
 
 	// Check if same master
 	if(giver.master != receiver.master)
-		to_chat(giver, span_warning("You can only transfer resources to meatvines from your hive!"))
+		to_chat(giver, span_warning("¡Solo puedes transferir recursos a las matas de carne desde tu colmena!"))
 		return FALSE
 
 	// Check if adjacent
 	if(!giver.Adjacent(receiver))
-		to_chat(giver, span_warning("You must be adjacent to transfer resources!"))
+		to_chat(giver, span_warning("¡Debes estar al lado para transferir recursos!"))
 		return FALSE
 
 	// Check if receiver can accept resources
@@ -40,10 +40,10 @@
 	// Perform the transfer
 	giver.visible_message(
 		span_notice("[giver] transfiere recursos a [receiver]."),
-		span_boldnotice("You transfer [transfer_amount] resources to [receiver].")
+		span_boldnotice("Transferiras [transfer_amount] recursos a [receiver].")
 	)
 
-	to_chat(receiver, span_nicegreen("You receive [transfer_amount] resources from [giver]!"))
+	to_chat(receiver, span_nicegreen("¡Recibes [transfer_amount] recursos de [giver]!"))
 
 	receiver.adjust_personal_resources(transfer_amount)
 
@@ -108,6 +108,6 @@
 	return null
 
 /datum/action/cooldown/meatvine/personal/transfer_resources/improved
-	name = "ImprovedTransfer Resources"
-	desc = "Transfer 40 personal resources to another meatvine. Must be adjacent. Cost: 20 resources."
+	name = "Recursos de transferencia mejorados"
+	desc = "Transfiere 40 recursos personales a otra Meatvine. Debe estar adyacente. Costo: 20 recursos."
 	transfer_amount = 40

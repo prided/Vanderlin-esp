@@ -4,9 +4,9 @@
 	clickcd = 8
 
 /datum/intent/dagger/cut
-	name = "cut"
+	name = "cortar"
 	icon_state = "incut"
-	attack_verb = list("cuts", "slashes")
+	attack_verb = list("corta", "corta")
 	animname = "cut"
 	blade_class = BCLASS_CUT
 	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
@@ -20,9 +20,9 @@
 	penfactor = 5
 
 /datum/intent/dagger/thrust
-	name = "stab"
+	name = "apuntar con la espada"
 	icon_state = "instab"
-	attack_verb = list("stabs")
+	attack_verb = list("apuñala")
 	animname = "stab"
 	blade_class = BCLASS_STAB
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
@@ -35,15 +35,15 @@
 	penfactor = 35
 
 /datum/intent/peculate
-	name = "peculate"
+	name = "robar"
 	hitsound = null
 	desc = "Robar la apariencia de otro."
 	icon_state = "peculate"
 
 /datum/intent/dagger/chop
-	name = "chop"
+	name = "cortar"
 	icon_state = "inchop"
-	attack_verb = list("chops")
+	attack_verb = list("taja")
 	animname = "chop"
 	blade_class = BCLASS_CHOP
 	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
@@ -58,7 +58,7 @@
 	damfactor = 2
 
 /datum/intent/snip // The salvaging intent! Used only for the scissors for now!
-	name = "snip"
+	name = "recorte"
 	icon_state = "insnip"
 	chargetime = 0
 	noaa = TRUE

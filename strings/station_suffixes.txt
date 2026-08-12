@@ -1,4 +1,4 @@
-Estación
+Estacion
 Frontera
 Sufijo
 Trampa-Mortal
@@ -7,7 +7,7 @@ Laboratorio
 Peligro
 Academia
 Chatarra Spess
-Pesquería
+Pesqueria
 No-Luna
 Tumba
 Cripta
@@ -19,47 +19,47 @@ Fortaleza
 Aldea
 Pueblo
 Ciudad
-Edición
+Edicion
 Colmena
 Complejo
 Base
-Instalación
-Depósito
+Instalacion
+Deposito
 Puesto Avanzado
-Instalación
+Instalacion
 Dique Seco
 Observatorio
 Matriz
 Repetidor
 Monitor
 Plataforma
-Construcción
+Construccion
 Hangar
-Prisión
+Prision
 Centro
 Puerto
-Estación de Paso
-Fábrica
+Estacion de Paso
+Fabrica
 Punto de Ruta
 Escala
 Centro
 Cuartel General
 Oficina
 Objeto
-Fortificación
+Fortificacion
 Colonia
 Rompeplanetas
 Nido
 Campamento de Gordos
 Pista de Aterrizaje
 Puerto
-Jardín
+Jardin
 Continente
 Entorno
 Curso
-País
+Pais
 Provincia
 Espacio de Trabajo
 Metro
-Almacén
+Almacen
 Chatarra Espacial

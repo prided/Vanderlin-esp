@@ -1,5 +1,5 @@
 /obj/item/speaker //base class for speaker
-	name = "base whisperer"
+	name = "base susurrador"
 	sellprice = 20
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "scomite"
@@ -73,7 +73,7 @@
 	mob_overlay_icon = null
 
 /obj/item/listeningdevice //base class for listener
-	name = "base listener"
+	name = "oyente base"
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "listenstone"
 	dropshrink = 0.6
@@ -104,7 +104,7 @@
 /obj/item/listeningdevice/attack_hand_secondary(mob/user, list/modifiers)
 	if(!hidden)
 		alpha = 30
-		name = "thing"
+		name = "cosa"
 		desc = "¿Que es esa cosa?..."
 		hidden = TRUE
 		return TRUE
@@ -153,13 +153,13 @@
 
 /obj/item/speaker/inq
 	name = "susurrador secreto"
-	desc = "Sweet secrets whispered so freely."
+	desc = "Dulces secretos susurrados tan libremente."
 	icon_state = "scomite"
 	slot_flags = ITEM_SLOT_MOUTH|ITEM_SLOT_HIP|ITEM_SLOT_RING
 
 /obj/item/speaker/inq/attack_self(mob/user, list/modifiers)
 	. = ..()
-	to_chat(user, span_info("I [speaking ? "unsilence" : "silence"] the whisperer"))
+	to_chat(user, span_info("Yo [speaking ? "unsilence" : "silence"] el susurrador"))
 
 /obj/item/speaker/inq/equipped(mob/user, slot)
 	. = ..()
@@ -170,7 +170,7 @@
 	return TRUE
 
 /obj/item/listeningdevice/inq
-	name = "listener"
+	name = "oyente"
 	desc = "Un oido siempre atento..."
 	icon_state = "listenstone"
 
@@ -187,7 +187,7 @@
 
 /obj/item/listeningdevice/inq/attack_self(mob/living/user)
 	. = ..()
-	var/input = input(user, "SEIS LETRAS", "BEND AN EAR")
+	var/input = input(user, "SEIS LETRAS", "DOBLAR UNA OREJA")
 	if(!input)
 		label = null
 		fulldesc = "An ever-attentive ear... [span_notice("This ear hasn't been bent. It's unlabelled.")]"
@@ -198,7 +198,7 @@
 
 /obj/item/listeningdevice/inq/MiddleClick(mob/user)
 	. = ..()
-	to_chat(user, span_info("I [active ? "undeafen" : "deafen"] the Listener"))
+	to_chat(user, span_info("Yo [active ? "undeafen" : "deafen"] el Escuchador"))
 
 /obj/item/listeningdevice/inq/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, message_mode, original_message)
 	. = ..()
@@ -215,7 +215,7 @@
 	if(length(raw_message) > 100)
 		raw_message = "<small>[raw_message]</small>"
 	for(var/obj/item/speaker/inq/S in SSroguemachine.scomm_machines)
-		S.name = label ? "#[label]" : "#NOTSET"
+		S.name = label ? "#[label]" : "#NOESTABLECIDO"
 		S.repeat_message(raw_message, src, usedcolor, message_language)
 		S.name = (S.fakename)
 
@@ -224,14 +224,14 @@
 */
 
 /obj/item/speaker/agent
-	name = "whispering clam"
+	name = "almeja susurrante"
 	desc = "Siempre susurrando secretos en tus oidos..."
 	icon_state = "cosmic_clam"
 	slot_flags = ITEM_SLOT_HIP
 
 /obj/item/speaker/agent/attack_self(mob/user, list/modifiers)
 	. = ..()
-	to_chat(user, span_info("I [speaking ? "unsilence" : "silence"] the whispering clam"))
+	to_chat(user, span_info("Yo [speaking ? "unsilence" : "silence"] la almeja susurrante"))
 
 /obj/item/speaker/agent/equipped(mob/user, slot)
 	. = ..()
@@ -245,7 +245,7 @@
 	return TRUE
 
 /obj/item/listeningdevice/agent
-	name = "listening pearl"
+	name = "perla de escucha"
 	desc = "Una perla negra..."
 	icon_state = "midnight_pearl"
 
@@ -262,7 +262,7 @@
 
 /obj/item/listeningdevice/agent/attack_self(mob/living/user)
 	. = ..()
-	var/input = input(user, "SEIS LETRAS", "HEAR ALL SECRETS")
+	var/input = input(user, "SEIS LETRAS", "ESCUCHA TODOS LOS SECRETOS")
 	if(!input)
 		label = null
 		fulldesc = "A black pearl... [span_notice("This pearl hasn't been activated. It's unlabelled.")]"
@@ -273,7 +273,7 @@
 
 /obj/item/listeningdevice/agent/MiddleClick(mob/user)
 	. = ..()
-	to_chat(user, span_info("I [active ? "undeafen" : "deafen"] the Pearl"))
+	to_chat(user, span_info("Yo [active ? "undeafen" : "deafen"] la Perla"))
 
 /obj/item/listeningdevice/agent/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, message_mode, original_message)
 	if(!active)
@@ -289,6 +289,6 @@
 	if(length(raw_message) > 100)
 		raw_message = "<small>[raw_message]</small>"
 	for(var/obj/item/speaker/agent/S in SSroguemachine.scomm_machines)
-		S.name = label ? "#[label]" : "#NOTSET"
+		S.name = label ? "#[label]" : "#NOESTABLECIDO"
 		S.repeat_message(raw_message, src, usedcolor, message_language)
 		S.name = (S.fakename)

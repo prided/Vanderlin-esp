@@ -348,7 +348,7 @@
 	C.client.mob = consumed
 	consumed.ckey = C.ckey
 
-	to_chat(consumed, "<span class='userdanger'>You have been consumed by the meatvine! You can now spread it using your abilities.</span>")
+	to_chat(consumed, "<span class='userdanger'>¡Meatvine te ha consumido! Ahora puedes propagarla con tus habilidades.</span>")
 	return TRUE
 
 /obj/effect/meatvine_controller/proc/try_spend_resources(amount)

@@ -1,9 +1,9 @@
 /datum/objective/personal/eat_rival_heart
-	name = "Eat Rival's Heart"
+	name = "Comer el corazon del rival"
 	category = "Concursante de Graggar"
 	triumph_count = 4
-	immediate_effects = list("You will feel stressed until the culling ends (+1 Stress)", "Gained an ability to rip hearts out of corpses", "Gained an ability to locate your rival's heart")
-	rewards = list("4 Triumphs", "Graggar grows stronger", "Overwhelming Power (+3 to all stats)", "Pride of Victory (-2 Stress)")
+	immediate_effects = list("Sentiras estres hasta que termine la matanza (+1 Estres)", "Obtuviste una habilidad para arrancar corazones de cadaveres", "Obtuviste una habilidad para localizar el corazon de tu rival")
+	rewards = list("4 Triunfos", "Graggar se fortalece", "Poder abrumador (+3 a todas las estadisticas)", "Orgullo de la victoria (-2 Estres)")
 	var/rival_name
 	var/rival_job
 
@@ -46,7 +46,7 @@
 
 /datum/objective/personal/eat_rival_heart/complete_objective(escalatation_type = ESCALATION_INTERVENTION_ONLY)
 	. = ..()
-	to_chat(owner.current, span_greentext("You have proven your strength to Graggar by consuming your rival's heart! Your rival's power is now YOURS!"))
+	to_chat(owner.current, span_greentext("¡Has demostrado tu fuerza ante Graggar al consumir el corazon de tu rival! ¡El poder de tu rival ahora es TUYO!"))
 	adjust_storyteller_influence(GRAGGAR, 40)
 	UnregisterSignal(owner.current, COMSIG_ORGAN_CONSUMED)
 
@@ -64,4 +64,4 @@
 	owner.current.playsound_local(owner.current, 'sound/misc/gods/graggar_omen.ogg', 100)
 
 /datum/objective/personal/eat_rival_heart/update_explanation_text()
-	explanation_text = "Prove that you are not weak to Graggar by eating the heart of [rival_name], the [rival_job]! Eat them before they eat YOU!"
+	explanation_text = "¡Demuestra a Graggar que no eres debil comiendo el corazon de [rival_name], [rival_job]! ¡Comelo antes de que te coma a TI!"

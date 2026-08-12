@@ -1,45 +1,45 @@
 {
 	"default_mockery": [
-        "Tú eres... algo, ¿no?",
-        "¡No desperdiciaré mi aliento diciendo nada sobre ti!",
-        "¡Un espécimen verdaderamente insignificante!"
+        "Tu eres... algo, ¿no?",
+        "¡No desperdiciare mi aliento diciendo nada sobre ti!",
+        "¡Un especimen verdaderamente insignificante!"
 	],
 	"human_mockery": [
-        "¡Tu madre era una Rous y tu padre olía a jacksberries!",
-        "¿Qué vas a hacer para conseguirte otra cara cuando el troll quiera que le devuelvas el trasero?!",
-        "¡Me tiro pedos en tu dirección general!",
-        "¡Esa es una cara que ni siquiera Eora podría amar!",
-        "¡Jamás desistiré de ti, ni habré de decepcionarte demasiado jamás~!",
-        "¡Tu cerebro es como un hardtack después de un largo viaje!",
-        "¡Miren, miren qué terrible es!"
+        "¡Tu madre era una Rous y tu padre olia a jacksberries!",
+        "¿Que vas a hacer para conseguirte otra cara cuando el troll quiera que le devuelvas el trasero?!",
+        "¡Me tiro pedos en tu direccion general!",
+        "¡Esa es una cara que ni siquiera Eora podria amar!",
+        "¡Jamas desistire de ti, ni habre de decepcionarte demasiado jamas~!",
+        "¡Tu cerebro es como un hardtack despues de un largo viaje!",
+        "¡Miren, miren que terrible es!"
 	],
     "elf_mockery": [
         "¡Tan elegante como un topo borracho, por lo que veo!",
-        "¡He luchado contra zads más feroces que tú!",
-        "Lo estás haciendo tan fácil que estoy perdiendo la confianza en mí... ¡apenas!",
+        "¡He luchado contra zads mas feroces que tu!",
+        "Lo estas haciendo tan facil que estoy perdiendo la confianza en mi... ¡apenas!",
         "¡OHH-HOH-HOH-HOH-HOH!",
-        "¡Patán sin cultura, apenas digno de mis palabras!"
+        "¡Patan sin cultura, apenas digno de mis palabras!"
 	],
     "dwarf_mockery": [
-        "¡Si tu mente fuera tan afilada como tus orejas, no estaríamos en este lío!",
-        "¡Pateas más suave que una saiga recién nacida!",
-        "¡Hazlo rápido, zoquete! ¡Es hora feliz en la taberna!",
+        "¡Si tu mente fuera tan afilada como tus orejas, no estariamos en este lio!",
+        "¡Pateas mas suave que una saiga recien nacida!",
+        "¡Hazlo rapido, zoquete! ¡Es hora feliz en la taberna!",
         "Ohh, ¿el bebedor de leche va a llorar?",
-        "¡No podrías abollar ni un grano de arena con un pico de Malum!"
+        "¡No podrias abollar ni un grano de arena con un pico de Malum!"
 	],
     "tiefling_mockery": [
         "¡Vaya, todos miren a este idiota con dos pies izquierdos!",
         "¡No vales ni un grano de trigo de lo que yo soy capaz!",
         "Buen trabajo, Slowpoke Rodriguez, ¡casi me atrapas! ¡Casi!",
-        "Vamos, ¡entretenme un poco más!",
+        "Vamos, ¡entretenme un poco mas!",
         "¡Baila con el diablo y gana un premio!"
 	],
     "aasimar_mockery": [
-        "Tu cuerpo imperfecto jamás podría igualar los fuegos en los que fui forjado.",
+        "Tu cuerpo imperfecto jamas podria igualar los fuegos en los que fui forjado.",
         "Te espera un mundo de dolor, insolente.",
-        "Tu nombre será borrado de los anales de la historia.",
-        "¡No podría cantar tus alabanzas ni aunque hubiese sido forjado para hacerlo!",
-        "¿Qué clase de criatura balbuceante eres tú?",
+        "Tu nombre sera borrado de los anales de la historia.",
+        "¡No podria cantar tus alabanzas ni aunque hubiese sido forjado para hacerlo!",
+        "¿Que clase de criatura balbuceante eres tu?",
         "¿Acaso siquiera levantas?"
 	],
     "drow_mockery": [
@@ -47,26 +47,26 @@
         "Eres tan amenazante como una vela en la oscuridad.",
         "Sigue blandiendo eso, ¡casi resulta adorable!",
         "Vaya, no eres un completo idiota; ¡es evidente que te faltan algunas partes!",
-        "Hasta un hongo del Underdark tiene más gracia que tú.",
+        "Hasta un hongo del Underdark tiene mas gracia que tu.",
         "¿Acaso sabes pelear o solo agitas los brazos esperando acertar?"
 	],
     "halforc_mockery": [
         "Agudo como un barril, ese ingenio tuyo.",
-        "Acércate y te voy a dar una bofetada de mierda.",
+        "Acercate y te voy a dar una bofetada de mierda.",
         "¡Ah, vete a la mierda, saco de mierda!",
         "¡Blandes bien, pero fallas terriblemente!",
-        "¡Te morderé las piernas hasta arrancártelas!"
+        "¡Te mordere las piernas hasta arrancartelas!"
 	],
     "rakshari_mockery": [
-        "¡Eres terrible! ¡Miren, miren qué terrible es!",
+        "¡Eres terrible! ¡Miren, miren que terrible es!",
         "Un regalo para un vecino repugnante.",
         "¡Deseo que nos convirtamos en mejores desconocidos!",
         "Contemplen al tonto de los tontos.",
-        "¡Contemplen a un cornudo de lo más ruidoso!"
+        "¡Contemplen a un cornudo de lo mas ruidoso!"
 	],
      "kobold_mockery": [
      "¡Los idiotas siempre hablan demasiado!",
-     "¡Una lágrima en tu ojo, ja!",
+     "¡Una lagrima en tu ojo, ja!",
      "¡Apestas, whitesoil!",
      "¡Cada palabra, un escupitajo!"
  ]

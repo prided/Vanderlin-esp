@@ -1,6 +1,6 @@
 /obj/item/reagent_containers/glass/bottle/waterskin
-	name = "waterskin"
-	desc = "A leather waterskin."
+	name = "cantimplora"
+	desc = "Un odre de cuero."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "waterskin"
 	fill_icon_state = ""
@@ -43,8 +43,8 @@
 	list_reagents = list(/datum/reagent/consumable/milk = 64)
 
 /obj/item/reagent_containers/glass/bottle/waterskin/purifier
-	name = "purifying waterskin"
-	desc = "Bronze tubes spiral about from the mouth of this waterskin in complex, dizzying patterns."
+	name = "odre purificador"
+	desc = "Tubos de bronce giran en espiral desde la boca de este odre de agua en patrones complejos y vertiginosos."
 	icon_state = "water-purifier"
 	item_weight = 1.34 KILOGRAMS
 	var/filtered_reagents = list(/datum/reagent/water/gross) // List of liquids it turns into drinkable water
@@ -70,8 +70,8 @@
 	if(!cleaned)
 		return
 	playsound(src, 'sound/items/waterfilter.ogg', 40, TRUE)
-	audible_message(span_hear("I hear whizzing clockwork and gurgling water within [src]."), hearing_distance = COMBAT_MESSAGE_RANGE)
+	audible_message(span_hear("Escucho el sonido de un reloj mecanico zumbando y agua burbujeante dentro de [src]."), hearing_distance = COMBAT_MESSAGE_RANGE)
 	if (prob(25))
 		var/obj/smoke = new /obj/effect/temp_visual/small_smoke(get_turf(src))
 		smoke.layer = ABOVE_MOB_LAYER
-		visible_message(span_notice("[src] sputters and spews a cloud of steam!"))
+		visible_message(span_notice("¡[src] escupe y lanza una nube de vapor!"))

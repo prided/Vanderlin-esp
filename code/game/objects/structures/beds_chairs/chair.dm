@@ -1,5 +1,5 @@
 /obj/structure/chair
-	name = "chair"
+	name = "silla"
 	desc = ""
 	icon = 'icons/obj/chairs.dmi'
 	icon_state = "chair"
@@ -61,7 +61,7 @@
 
 /obj/structure/chair/wood
 	icon_state = "chair1"
-	name = "chair"
+	name = "silla"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 	resistance_flags = FLAMMABLE
@@ -73,7 +73,7 @@
 
 //Stool
 /obj/structure/chair/stool
-	name = "stool"
+	name = "taburete"
 	desc = ""
 	icon_state = "stool"
 	icon = 'icons/roguetown/misc/structure.dmi'
@@ -94,7 +94,7 @@
 			return
 		if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH))
 			return
-		usr.visible_message("<span class='notice'>[usr] grabs \the [src.name].</span>", "<span class='notice'>I grab \the [src.name].</span>")
+		usr.visible_message("<span class='notice'>[usr] agarra \the [src.name].</span>", "<span class='notice'>Sujeto \the [src.name].</span>")
 		var/obj/item/C = new item_chair(loc)
 		item_chair = null
 		TransferComponents(C)
@@ -102,14 +102,14 @@
 		qdel(src)
 
 /obj/structure/chair/stool/bar
-	name = "barstool"
+	name = "taburete de bar"
 	desc = ""
 	icon_state = "barstool"
 	item_chair = /obj/item/chair/stool/bar
 	sleepy = 0.2
 
 /obj/item/chair
-	name = "chair"
+	name = "silla"
 	desc = ""
 	icon = 'icons/roguetown/items/chairs.dmi'
 	icon_state = "chair2"
@@ -149,7 +149,7 @@
 
 
 /obj/item/chair/suicide_act(mob/living/carbon/user)
-	user.visible_message("<span class='suicide'>[user] begins hitting [user.p_them()]self with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] comienza a golpear a [user.p_them()]si mismo con \the [src] ¡Parece que [user.p_theyre()] esta intentando suicidarse!</span>")
 	playsound(src,hitsound,50,TRUE)
 	return BRUTELOSS
 
@@ -159,17 +159,17 @@
 /obj/item/chair/proc/plant(mob/user)
 	var/turf/T = get_turf(loc)
 	if(!isfloorturf(T))
-		to_chat(user, "<span class='warning'>I need ground to plant this on!</span>")
+		to_chat(user, "<span class='warning'>¡Necesito tierra para plantar esto!</span>")
 		return
 	for(var/obj/A in T)
 		if(istype(A, /obj/structure/chair))
 			to_chat(user, "<span class='warning'>¡Ya hay una silla aqui!</span>")
 			return
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
-			to_chat(user, "<span class='warning'>There is already something here!</span>")
+			to_chat(user, "<span class='warning'>¡Aqui ya hay algo!</span>")
 			return
 
-	user.visible_message("<span class='notice'>[user] derechos \the [src.name].</span>", "<span class='notice'>I right \the [name].</span>")
+	user.visible_message("<span class='notice'>[user] derechos \the [src.name].</span>", "<span class='notice'>Yo tengo derechos sobre \the [name].</span>")
 	var/obj/structure/chair/C = new origin_type(get_turf(loc))
 	TransferComponents(C)
 	C.setDir(user.dir)
@@ -184,7 +184,7 @@
 		return
 
 	if(prob(break_chance))
-		user.visible_message("<span class='warning'>[src] is smashed to pieces!</span>")
+		user.visible_message("<span class='warning'>[src] esta destrozada en pedazos!</span>")
 		if(iscarbon(target))
 			var/mob/living/carbon/C = target
 			if(C.health < C.maxHealth*0.5)
@@ -192,14 +192,14 @@
 		smash(user)
 
 /obj/item/chair/stool
-	name = "stool"
+	name = "taburete"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "stoolover"
 	item_state = "stool"
 	origin_type = /obj/structure/chair/stool
 
 /obj/item/chair/stool/bar
-	name = "barstool"
+	name = "taburete de bar"
 	icon_state = "barstoolover"
 	item_state = "barstool"
 	origin_type = /obj/structure/chair/stool/bar

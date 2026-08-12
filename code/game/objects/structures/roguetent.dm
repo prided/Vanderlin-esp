@@ -1,7 +1,7 @@
 
 /obj/structure/roguetent
 	name = "puerta de la tienda"
-	desc = "A door made of sturdy fabric and wooden frames."
+	desc = "Una puerta fabricada con tela resistente y marcos de madera."
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "tent_door1"
 	layer = TABLE_LAYER

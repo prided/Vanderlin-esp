@@ -2,7 +2,7 @@
 ==========================================================*/
 
 /obj/item/weapon/knife
-	name = "knife"
+	name = "cuchillo"
 	icon = 'icons/roguetown/weapons/32/knives.dmi'
 	icon_state = "huntingknife"
 	force = DAMAGE_KNIFE
@@ -51,7 +51,7 @@
 //................ Hunting Knife ............... //
 /obj/item/weapon/knife/hunting
 	name = "cuchillo de caza"
-	desc = "Loyal companion to hunters and poachers, from humble bone to truest steel, disembowel your prey with glee."
+	desc = "Compañero leal de cazadores y cazadores furtivos, desde el hueso humilde hasta el acero mas puro, destripa a tu presa con alegria."
 	icon_state = "huntingknife"
 	force = DAMAGE_DAGGER
 	melting_material = /datum/material/steel
@@ -62,7 +62,7 @@
 
 /obj/item/weapon/knife/dagger/navaja
 	name = "navaja"
-	desc = "A folding knife used by the Mercator's guild. It possesses a long hilt, allowing for a sizable blade with good reach."
+	desc = "Una navaja plegable utilizada por el gremio de Mercator. Posee una empuñadura larga, lo que permite una hoja de tamaño considerable con buen alcance."
 	icon_state = "navaja_c"
 	item_state = "elfdag"
 	force = DAMAGE_KNIFE / 2
@@ -81,7 +81,7 @@
 		w_class = WEIGHT_CLASS_NORMAL
 		throwforce = 23
 		icon_state = "navaja_o"
-		attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+		attack_verb = list("cortado", "apuñalado", "rebanado", "desgarrado", "desgarrado", "picado", "corta")
 		sharpness = IS_SHARP
 		playsound (user, 'sound/items/knife_open.ogg', 100, TRUE)
 	else
@@ -89,13 +89,13 @@
 		w_class = WEIGHT_CLASS_SMALL
 		throwforce = DAMAGE_KNIFE / 2
 		icon_state = "navaja_c"
-		attack_verb = list("stubbed", "poked")
+		attack_verb = list("golpeado", "pinchado")
 		sharpness = IS_BLUNT
 		wdefense = TERRIBLE_PARRY
 
 /obj/item/weapon/knife/scissors
 	name = "tijeras de hierro"
-	desc = "Scissors made of iron that may be used to salvage usable materials from clothing."
+	desc = "Tijeras hechas de hierro que pueden usarse para recuperar materiales utilizables de la ropa."
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	icon_state = "iscissors"
 	possible_item_intents = list(DAGGER_THRUST, DAGGER_CUT, SCISSOR_SNIP)
@@ -104,7 +104,7 @@
 	item_weight = 250 GRAMS
 
 /datum/intent/snip // The salvaging intent! Used only for the scissors for now!
-	name = "snip"
+	name = "recorte"
 	icon_state = "insnip"
 	chargetime = 0
 	noaa = TRUE
@@ -159,7 +159,7 @@
 		var/obj/item/Sr = new item.salvage_result(get_turf(item))
 		Sr.color = item.color
 
-	user.visible_message(span_notice("[user] salvages [item] into usable materials."))
+	user.visible_message(span_notice("[user] recupera [item] en materiales utilizables."))
 	playsound(item, 'sound/items/flint.ogg', 100, TRUE) //In my mind this sound was more fitting for a scissor
 	qdel(item)
 	user.mind.add_sleep_experience(item.sewrepair, GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE))
@@ -168,7 +168,7 @@
 
 /obj/item/weapon/knife/scissors/steel
 	name = "tijeras de acero"
-	desc = "Scissors made of solid steel that may be used to salvage usable materials from clothing, more durable and a tad more deadly than their iron counterpart."
+	desc = "Tijeras hechas de acero solido que pueden usarse para recuperar materiales utilizables de la ropa, mas duraderas y un poco mas mortales que su contraparte de hierro."
 	icon_state = "sscissors"
 	force = DAMAGE_DAGGER
 	max_integrity = INTEGRITY_STANDARD
@@ -177,8 +177,8 @@
 
 //................ Cleaver ............... //
 /obj/item/weapon/knife/cleaver
-	name = "cleaver"
-	desc = "A chef's tool turned armament, cleave off cumbersome flesh with rudimentary ease."
+	name = "cuchilla de carnicero"
+	desc = "La herramienta de un chef convertida en armamento corta la carne engorrosa con una facilidad rudimentaria."
 	icon_state = "cleav"
 	possible_item_intents = list(DAGGER_CUT, CLEAVER_CHOP)
 	force = DAMAGE_KNIFE + 1
@@ -195,8 +195,8 @@
 
 //................ Hack-Knife ............... //
 /obj/item/weapon/knife/cleaver/combat
-	name = "hack-knife"
-	desc = "A short blade that even the weakest of hands can aspire to do harm with."
+	name = "cuchillo para cortar"
+	desc = "Una espada corta con la que incluso las manos mas debiles pueden aspirar a hacer daño."
 	icon_state = "combatknife"
 	force = DAMAGE_KNIFE + 3
 	throwforce = DAMAGE_KNIFE + 5
@@ -209,7 +209,7 @@
 
 //................ Bronze Dagger ............... //s
 /obj/item/weapon/knife/dagger/bronze
-	name = "bronze dagger"
+	name = "daga de bronce"
 	desc = "Una daga hecha de bronce."
 	icon_state = "dagger_bronze"
 	max_integrity = INTEGRITY_POOR
@@ -220,7 +220,7 @@
 //................ Iron Dagger ............... //
 /obj/item/weapon/knife/dagger
 	name = "daga de hierro"
-	desc = "Thin, sharp, pointed death."
+	desc = "Muerte fina, aguda y puntiaguda."
 	icon_state = "idagger"
 	force = DAMAGE_DAGGER
 	possible_item_intents = list(DAGGER_CUT, DAGGER_THRUST)
@@ -239,7 +239,7 @@
 /obj/item/weapon/knife/hunting/kukri/iron
 	name = "kukri de hierro"
 	icon_state = "kukri_iron"
-	desc = "A hefty knife that originated in the Southeastern reaches of Faience. Its design makes it great for chopping through vegetation and other obstacles."
+	desc = "Un cuchillo pesado que se origino en los confines sureste de Faience. Su diseño lo hace ideal para cortar vegetacion y otros obstaculos."
 	force = DAMAGE_DAGGER
 	possible_item_intents = list(DAGGER_CUT, DAGGER_CHOP, DAGGER_THRUST)
 	max_integrity = INTEGRITY_STANDARD
@@ -248,7 +248,7 @@
 
 /obj/item/weapon/knife/dagger/njora
 	name = "seme de hierro"
-	desc = "A broad iron dagger from the fallen east. Popular amongst the elves."
+	desc = "Una ancha daga de hierro del este caido. Popular entre los elfos."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "njora_iron"
 	possible_item_intents = list(DAGGER_CUT, DAGGER_CHOP, DAGGER_THRUST)
@@ -257,8 +257,8 @@
 
 //................ Steel Dagger ............... //
 /obj/item/weapon/knife/dagger/steel
-	name = "steel dagger"
-	desc = "A dagger made of refined steel."
+	name = "daga de acero"
+	desc = "Una daga hecha de acero refinado."
 	icon_state = "sdagger"
 	wdefense = AVERAGE_PARRY
 	wbalance = VERY_HARD_TO_DODGE
@@ -268,15 +268,15 @@
 	item_weight = 220 GRAMS
 
 /obj/item/weapon/knife/dagger/steel/jile
-	name = "steel jile"
-	desc = "A curved steel dagger from the fallen east."
+	name = "jile de acero"
+	desc = "Una daga de acero curvada del este caido."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "jile_steel"
 	sellprice = 20
 	item_weight = 220 GRAMS
 
 /obj/item/weapon/knife/dagger/steel/njora
-	name = "steel seme"
+	name = "semeja de acero"
 	desc = "Una amplia daga de acero del este caido. Popular entre los elfos."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "njora_steel"
@@ -287,16 +287,16 @@
 
 /obj/item/weapon/knife/dagger/steel/special
 	icon_state = "sdaggeralt"
-	desc = "A dagger of refined steel, and even more refined appearance."
+	desc = "Una daga de acero refinado y de apariencia aun mas refinada."
 
 /obj/item/weapon/knife/dagger/steel/royal
-	name = "decorated dagger"
+	name = "daga decorada"
 	icon_state = "gsdagger"
-	desc = "A dagger of refined steel with lavish gold decoration, even in the hands of most nobles it is considered overly decadent."
+	desc = "Una daga de acero refinado con suntuosa decoracion dorada, que incluso en manos de la mayoria de los nobles se considera demasiado decadente."
 	item_weight = 230 GRAMS
 
 /obj/item/weapon/knife/dagger/steel/stiletto
-	name = "stiletto"
+	name = "estilete"
 	desc = "Una daga fina como una aguja hecha de acero refinado, el arma favorita de asesinos y nobles enojados."
 	icon_state = "stiletto"
 	possible_item_intents = list(STILETTO_THRUST, STILETTO_CUT)
@@ -306,45 +306,45 @@
 /obj/item/weapon/knife/hunting/kukri
 	name = "kukri de acero"
 	icon_state = "kukri_steel"
-	desc = "A hefty knife that originated in the Southeastern reaches of Faience. Its design makes it great for chopping through vegetation and other obstacles."
+	desc = "Un cuchillo pesado que se origino en los confines sureste de Faience. Su diseño lo hace ideal para cortar vegetacion y otros obstaculos."
 	force = DAMAGE_DAGGER + 1
 	wdefense = AVERAGE_PARRY
 	melt_amount = 75
 	item_weight = 270 GRAMS
 
 /obj/item/weapon/knife/dagger/steel/pestrasickle
-	name = "plaguebringer sickle"
-	desc = "A wicked edge brings feculent delights."
+	name = "hoz portadora de peste"
+	desc = "Un borde perverso trae delicias feculentas."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "pestrasickle"
 	wdefense = GOOD_PARRY //They use a dagger, but it should be fine for them to also parry with it.
 	item_weight = 200 GRAMS
 
 /obj/item/weapon/knife/dagger/steel/hand
-	name = "\proper fervor"
-	desc = "A greatly forged length of steel. Strike with Fervor into the heart of those who dont even know where you lurk."
+	name = "\proper Fervor"
+	desc = "Un trozo de acero muy forjado. Golpea con fervor el corazon de aquellos que ni siquiera saben donde acechas."
 	icon_state = "sdaggerhand"
 	sellprice = 200
 	item_weight = 220 GRAMS
 
 /obj/item/weapon/knife/dagger/steel/hand/parry
 	name = "\proper apatia"
-	desc = "A greatly forged length of steel made to be able to parry. Defend with Apathy for any strike that approaches you, for you know they will not make contact."
+	desc = "Un trozo de acero muy forjado hecho para poder parar. Defiendete con Apatia de cualquier ataque que se acerque a ti, porque sabes que no haran contacto."
 	wdefense = GOOD_PARRY
 	icon_state = "spdaggerhand"
 	item_weight = 220 GRAMS
 
 //................ Fanged dagger ............... //
 /obj/item/weapon/knife/dagger/steel/dirk
-	name = "fanged dagger"
-	desc = "A dagger modeled after the fang of an anthrax spider."
+	name = "daga con colmillos"
+	desc = "Una daga modelada a partir del colmillo de una araña con antrax."
 	icon = 'icons/roguetown/weapons/32/elven.dmi'
 	icon_state = "spiderdagger"
 	item_weight = 200 GRAMS
 
 /obj/item/weapon/knife/dagger/steel/dirk/baotha //this is a placeholder weapon until they actually receive a proper baothan weapon
-	name = "laced dagger"
-	desc = "Whispers of bliss seep deeper than the blade."
+	name = "daga entrelazada"
+	desc = "Los susurros de felicidad se filtran mas profundamente que la espada."
 	color = "#f78ccc"
 	wdefense = GOOD_PARRY //They use a dagger, but it should be fine for them to also parry with it.
 	item_weight = 200 GRAMS
@@ -357,7 +357,7 @@
 //................ Silver Dagger ............... //
 /obj/item/weapon/knife/dagger/silver
 	name = "daga de plata"
-	desc = "A dagger made of fine silver, the bane of the undead."
+	desc = "Una daga hecha de plata fina, la pesadilla de los no-muertos."
 	icon_state = "sildagger"
 	max_blade_int = 160
 	max_integrity = INTEGRITY_STRONG * 0.8
@@ -372,8 +372,8 @@
 
 //................ Psydonian Dagger ............... //
 /obj/item/weapon/knife/dagger/silver/psydon
-	name = "psydonian dagger"
-	desc = "A silver dagger favored by close range fighters of the inquisition."
+	name = "Daga psydonian"
+	desc = "Una daga de plata preferida por los luchadores de la Inquisicion a corta distancia."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psydagger"
 	sellprice = 60
@@ -410,7 +410,7 @@
 		var/mob/living/carbon/human/H = M
 		if (!HAS_TRAIT(H, TRAIT_ASSASSIN)) // Non-assassins don't like holding the profane dagger.
 			H.add_stress(/datum/stress_event/profane)
-			to_chat(M, "<span class='danger'>Your breath chills as you pick up the dagger. You feel a sense of morbid wrongness!</span>")
+			to_chat(M, "<span class='danger'>Tu aliento se congela cuando recoges la daga. ¡Sientes una sensacion de maldad morbosa!</span>")
 			var/message = pick(
 				"<span class='danger'>Help me...</span>",
 				"<span class='danger'>Save me...</span>",
@@ -418,7 +418,7 @@
 				"<span class='danger'>Free us...please...</span>",
 				"<span class='danger'>Necra...deliver...us...</span>")
 //			H.visible_message("profane dagger whispers, \"[message]\"")
-			to_chat(M, "profane dagger whispers, \"[message]\"")
+			to_chat(M, "cuchillo profano susurros, \"[message]\"")
 		else
 			var/message = pick(
 				"<span class='danger'>Why...</span>",
@@ -433,7 +433,7 @@
 				"<span class='danger'>I thought you were...my friend...</span>",
 				"<span class='danger'>How long have I been in here...</span>")
 //			H.visible_message("profane dagger whispers, \"[message]\"")
-			to_chat(M, "profane dagger whispers, \"[message]\"")
+			to_chat(M, "cuchillo profano susurros, \"[message]\"")
 
 /obj/item/weapon/knife/dagger/steel/profane/pre_attack(mob/living/carbon/human/target, mob/living/user, list/modifiers)
 	if(!istype(target))
@@ -467,7 +467,7 @@
 				get_sfx("changeling_absorb"), //todo: turn sound keys into defines.
 				100,
 			)
-			to_chat(user, span_danger("I start absorbing [target]'s identity."))
+			to_chat(user, span_danger("Comienzo a absorber la identidad de [target]."))
 			if(!do_after(user, 3 SECONDS, target = target))
 				qdel(transfer_beam)
 				return
@@ -503,13 +503,13 @@
 				record_featured_stat(FEATURED_STATS_CRIMINALS, user)
 				record_round_statistic(STATS_ASSASSINATIONS)
 				user.adjust_triumphs(1)
-				target.visible_message("¡El alma de <span class='danger'>[target] es arrancada de su cuerpo y succionada por la daga profana!</span>", "<span class='danger'>My soul is trapped within the profane dagger. Damnation!</span>")
+				target.visible_message("¡El alma de <span class='danger'>[target] es arrancada de su cuerpo y succionada por la daga profana!</span>", "<span class='danger'>¡Mi alma esta atrapada dentro de la daga profana! ¡Maldita sea!</span>")
 				playsound(src, 'sound/magic/soulsteal.ogg', 100, extrarange = 5)
 				blade_int = max_blade_int // Stealing a soul successfully sharpens the blade.
 				repair_damage(max_integrity) // And fixes the dagger. No blacksmith required!
 				ADD_TRAIT(target, TRAIT_HARDCORE_PROFANE, "[type]")
 			else if(target.client == null) //See if the target's soul has left their body
-				to_chat(user, "<span class='danger'>Your target's soul has already escaped its corpse...you try to call it back!</span>")
+				to_chat(user, "<span class='danger'>El alma de tu objetivo ya ha escapado de su cadaver... ¡intentas devolverle la llamada!</span>")
 				get_profane_ghost(target,user) //Proc to capture a soul that has left the body.
 			else
 				user.adjust_triumphs(1)
@@ -521,7 +521,7 @@
 
 	var/mob/living/simple_animal/shade/soulstone_spirit = new /mob/living/simple_animal/shade(src)
 	soulstone_spirit.AddComponent(/datum/component/soulstoned, src)
-	soulstone_spirit.name = "soul of [victim.real_name]"
+	soulstone_spirit.name = "alma de [victim.real_name]"
 	soulstone_spirit.real_name = "soul of [victim.real_name]"
 	soulstone_spirit.PossessByPlayer(victim.key)
 	victim.language_holder?.copy(soulstone_spirit)
@@ -531,7 +531,7 @@
 
 	soulstone_spirit.cancel_camera()
 
-	victim.visible_message(span_danger("[victim]'s soul is pulled from their body and sucked into the profane dagger!"), span_danger("My soul is trapped within the profane dagger. Damnation!"))
+	victim.visible_message(span_danger("¡El alma de [victim] es arrancada de su cuerpo y absorbida por la daga profana!"), span_danger("Mi alma esta atrapada dentro de la daga profana. ¡Maldita sea!"))
 	playsound(src, 'sound/magic/soulsteal.ogg', 100, extrarange = 5)
 	blade_int = max_blade_int // Stealing a soul successfully sharpens the blade.
 	repair_damage(max_integrity) // And fixes the dagger. No blacksmith required!
@@ -554,19 +554,19 @@
 /obj/item/weapon/knife/dagger/steel/profane/proc/release_profane_souls() // For ways to release the souls trapped within a profane dagger, such as a Necrite burial rite. Returns the number of freed souls.
 	var/freed_souls = 0
 	for(var/mob/living/simple_animal/shade/shade in contents) // for every trapped soul in the dagger, whether they have left the game or not
-		to_chat(shade, "<b>I have been freed from my vile prison, I await Necra's cold grasp. Salvation!</b>")
+		to_chat(shade, "<b>He sido liberado de mi vil prision, espero la fria garra de Necra. ¡Salvacion!</b>")
 		freed_souls += 1
 		shade.returntolobby()
 		qdel(shade)
-		visible_message(span_warning("The [shade.name] flows out from the profane dagger, finally free of its grasp."))
-	visible_message(span_warning("The profane dagger shatters into putrid smoke!"))
+		visible_message(span_warning("El [shade.name] fluye fuera de la daga profana, finalmente libre de su agarre."))
+	visible_message(span_warning("¡El puñal profano se desintegra en humo putrido!"))
 	qdel(src) // Delete the dagger. Forevermore.
 	return freed_souls
 
 //................ Stone Knife ............... //
 /obj/item/weapon/knife/stone
 	name = "cuchillo de piedra"
-	desc = "A tool favored by the wood-elves, easy to make, useful for skinning the flesh of beast and man alike."
+	desc = "Una herramienta preferida por los elfos del bosque, facil de fabricar y util para desollar la carne de bestias y hombres por igual."
 	icon_state = "stone_knife"
 	wdefense = TERRIBLE_PARRY
 	possible_item_intents = list(DAGGER_CUT, DAGGER_CHOP)
@@ -581,7 +581,7 @@
 
 /obj/item/weapon/knife/stone/kukri
 	name = "joapstone kukri"
-	desc = "A kukri made out of joapstone. It's more of a ceremonial piece than it is an implement of war, it's somewhat fragile. Be gentle with it."
+	desc = "Un kukri hecho de joapstone. Es mas una pieza ceremonial que un instrumento de guerra, es algo fragil. Sea amable con eso."
 	icon = 'icons/roguetown/gems/gem_jade.dmi'
 	icon_state = "kukri_jade"
 	wdefense = AVERAGE_PARRY
@@ -592,8 +592,8 @@
 	item_weight = 220 GRAMS
 
 /obj/item/weapon/knife/stone/opal
-	name = "opaloise knife"
-	desc = "A beautiful knife carved out of opaloise. It's not intended for combat. Its presence is vital in some Crimson Elven ceremonies."
+	name = "cuchillo opaloise"
+	desc = "Un hermoso cuchillo tallado en opaloise. No esta destinado al combate. Su presencia es vital en algunas ceremonias de Crimson Elven."
 	icon = 'icons/roguetown/gems/gem_opal.dmi'
 	icon_state = "knife_opal"
 	wdefense = AVERAGE_PARRY
@@ -605,15 +605,15 @@
 
 //................ Villager Knife ............... //
 /obj/item/weapon/knife/villager
-	name = "villager knife"
-	desc = "The loyal companion of simple peasants, able to cut hard bread and carve wood. A versatile kitchen utensil and tool."
+	name = "cuchillo aldeano"
+	desc = "El fiel compañero de los sencillos campesinos, capaz de cortar pan duro y tallar madera. Un utensilio y herramienta de cocina versatil."
 	icon_state = "villagernife"
 	melt_amount = 25
 	item_weight = 120 GRAMS
 
 /obj/item/weapon/knife/copper
 	name = "cuchillo de cobre"
-	desc = "A knife of an older design, the copper serves decent enough."
+	desc = "Un cuchillo de diseño antiguo, el cobre sirve bastante decente."
 	icon_state = "cdagger"
 	possible_item_intents = list(DAGGER_CUT, DAGGER_THRUST)
 	max_blade_int = 100
@@ -623,7 +623,7 @@
 	item_weight = 180 GRAMS
 
 /obj/item/weapon/knife/throwingknife
-	name = "iron tossblade"
+	name = "tossblade de hierro"
 	desc = ""
 	item_state = "bone_dagger"
 	force = DAMAGE_DAGGER
@@ -639,8 +639,8 @@
 	item_weight = 80 GRAMS
 
 /obj/item/weapon/knife/throwingknife/bronze
-	name = "bronze tossblade"
-	desc = "A tossblade forged from bronze. It's not as reliable compared to other tossblades, but it's much cheaper to make."
+	name = "tossblade de bronce"
+	desc = "Una tossblade forjada en bronce. No es tan confiable como otras tossblades, pero es mucho mas barata de fabricar."
 	item_state = "bone_dagger"
 	throwforce = DAMAGE_DAGGER + 10
 	throw_speed = 4
@@ -652,7 +652,7 @@
 	item_weight = 75 GRAMS
 
 /obj/item/weapon/knife/throwingknife/steel
-	name = "steel tossblade"
+	name = "tossblade de acero"
 	desc = ""
 	icon_state = "throw_knifes"
 	item_state = "bone_dagger"
@@ -664,8 +664,8 @@
 	item_weight = 85 GRAMS
 
 /obj/item/weapon/knife/throwingknife/psydon
-	name = "psydonian tossblade"
-	desc = "An unconventional method of delivering silver to a heretic; but one PSYDON smiles at, all the same. Doubles as an 'actual' knife in a pinch."
+	name = "tossblade psydonian"
+	desc = "Un metodo poco convencional de entregar plata a un hereje; pero uno PSYDON sonrie ante ello, en fin. Se puede usar como un cuchillo 'real' en caso de necesidad."
 	icon_state = "throw_knifes"
 	item_state = "bone_dagger"
 	wdefense = GOOD_PARRY
@@ -681,8 +681,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/knife/throwingknife/rous //Rousman exclusive item, can stay a bit better
-	name = "rous kunai"
-	desc = "A typical knife used by rous assassins. Quite effective when thrown."
+	name = "kunai rous"
+	desc = "Un cuchillo tipico usado por los asesinos rous. Muy efectivo cuando se lanza."
 	icon_state = "rouskunai"
 	wdefense = GOOD_PARRY
 	throw_speed = 4
@@ -692,8 +692,8 @@
 	item_weight = 80 GRAMS
 
 /obj/item/weapon/knife/throwingknife/throwcard
-	name = "\proper calling card"
-	desc = "A thin sheet of pig-iron stamped into a calling card, too thin and useless to be smelted. You've been had. From Heartfelt with love."
+	name = "\proper tarjeta de visita"
+	desc = "Una fina lamina de hierro forjado en una tarjeta de presentacion, demasiado delgada e inutil para ser fundida. Te han timado. De Heartfelt con amor."
 	icon_state = "throwcard"
 	throw_speed = 5
 	max_integrity = INTEGRITY_WORST - 50 // It's not about how effective it is, it's about sending a message.

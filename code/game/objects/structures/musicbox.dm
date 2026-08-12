@@ -73,7 +73,7 @@
 
 /obj/structure/fake_machine/musicbox
 	name = "dispositivo de musica de cera"
-	desc = "A marvelous device created by Heartfelts artificers before its fall, it plays a variety of songs from across Faience, as if their performers were within the same room."
+	desc = "Un maravilloso dispositivo creado por los artifices de Heartfelts antes de su caida, reproduce una variedad de canciones de toda Faience, como si sus interpretes estuvieran en la misma habitacion."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "music0"
 	density = TRUE
@@ -108,8 +108,8 @@
 	. = ..()
 	. += "Volume: [curvol]/100"
 	if(lock_check(TRUE))
-		. += span_info("It's [locked() ? "locked" : "unlocked"].")
-		. += span_info("Its keyhole has [access2string()] etched next to it.")
+		. += span_info("Es [locked() ? "locked" : "unlocked"].")
+		. += span_info("Su orificio de la llave tiene [access2string()] grabado al lado.")
 
 /obj/structure/fake_machine/musicbox/proc/toggle_music()
 	if(!playing)
@@ -142,11 +142,11 @@
 		to_chat(user, span_info("\The [src] esta bloqueado..."))
 		return
 
-	var/button_selection = input(user, "¿Que boton presiono?", "\The [src]") as null | anything in list("Stop/Start","Change Song","Change Volume")
+	var/button_selection = input(user, "¿Que boton presiono?", "\The [src]") as null | anything in list("Detener/Iniciar","Cambiar cancion","Cambiar volumen")
 	if(!Adjacent(user))
 		return
 	if(!button_selection)
-		to_chat(user, span_info("I change my mind..."))
+		to_chat(user, span_info("Cambie de opinion..."))
 		return
 	user.visible_message(span_info("[user] presiona un boton en \the [src]."),span_info("Presiono un boton en \the [src]."))
 	playsound(src, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
@@ -155,7 +155,7 @@
 		toggle_music()
 
 	if(button_selection=="Change Song")
-		var/songlists_selection = input(user, "¿Que lista de canciones?", "\The [src]") as null | anything in list("CHILL"=MUSIC_TAVCAT_CHILL, "FUCK"=MUSIC_TAVCAT_FUCK, "PARTY"=MUSIC_TAVCAT_PARTY, "SCUM"=MUSIC_TAVCAT_SCUM, "DAMN"=MUSIC_TAVCAT_DAMN, "MISC"=MUSIC_TAVCAT_MISC)
+		var/songlists_selection = input(user, "¿Que lista de canciones?", "\The [src]") as null | anything in list("CALMA"=MUSIC_TAVCAT_CHILL, "mierda"=MUSIC_TAVCAT_FUCK, "¡Fiesta"=MUSIC_TAVCAT_PARTY, "SCUM"=MUSIC_TAVCAT_SCUM, "DAMN"=MUSIC_TAVCAT_DAMN, "MISC"=MUSIC_TAVCAT_MISC)
 		playsound(src, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
 		user.visible_message(span_info("[user] presiona un boton en \the [src]."),span_info("Presiono un boton en \the [src]."))
 		var/chosen_songlists_selection = null
@@ -171,11 +171,11 @@
 			chosen_songlists_selection = MUSIC_TAVCAT_DAMN
 		if(songlists_selection=="MISC")
 			chosen_songlists_selection = MUSIC_TAVCAT_MISC
-		var/song_selection = input(user, "Which song do I play?", "\The [src]") as null | anything in chosen_songlists_selection
+		var/song_selection = input(user, "¿Que cancion toco?", "\The [src]") as null | anything in chosen_songlists_selection
 		if(!Adjacent(user))
 			return
 		if(!song_selection)
-			to_chat(user, span_info("I change my mind..."))
+			to_chat(user, span_info("Cambie de opinion..."))
 			return
 		playsound(src, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
 		user.visible_message(span_info("[user] presiona un boton en \the [src]."),span_info("Presiono un boton en \the [src]."))
@@ -184,19 +184,19 @@
 		start_playing()
 
 	if(button_selection=="Change Volume")
-		var/volume_selection = input(user, "How loud do you wish me to be?", "\The [src] (Volumen actual: [curvol]/[100])") as num|null
+		var/volume_selection = input(user, "¿Que tan ruidoso quieres que sea?", "\The [src] (Volumen actual: [curvol]/[100])") as num|null
 		if(!Adjacent(user))
 			return
 		if(!volume_selection)
-			to_chat(user, span_info("I change my mind..."))
+			to_chat(user, span_info("Cambie de opinion..."))
 			return
 		playsound(src, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
 		user.visible_message(span_info("[user] presiona un boton en \the [src]."),span_info("Presiono un boton en \the [src]."))
 		volume_selection = clamp(volume_selection, 1, 100)
 		if(curvol<volume_selection)
-			to_chat(user, span_info("I make \the [src] louder."))
+			to_chat(user, span_info("Yo hago que \the [src] suene mas fuerte."))
 		else
-			to_chat(user, span_info("I make \the [src] quieter."))
+			to_chat(user, span_info("Yo hago \the [src] mas silencioso."))
 		curvol = volume_selection
 		playsound(src, 'sound/misc/beep.ogg', 100, FALSE, -1)
 		stop_playing()

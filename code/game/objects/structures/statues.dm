@@ -1,5 +1,5 @@
 /obj/structure/statue
-	name = "statue"
+	name = "estatua"
 	desc = ""
 	icon = 'icons/obj/statue.dmi'
 	icon_state = ""

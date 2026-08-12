@@ -35,12 +35,12 @@
 	if(!user.mind)
 		return
 	if(user.mind in linked_minds)
-		user.visible_message("<span class='notice'>[user] reaches out and pinches the flame of [src].</span>", "<span class='warning'>I sever the connection between myself and [src].</span>")
+		user.visible_message("<span class='notice'>[user] extiende su mano y pellizca la llama de [src].</span>", "<span class='warning'>Rompo la conexion entre yo y [src]</span>.")
 		linked_minds -= user.mind
 		if(!LAZYLEN(linked_minds))
 			REMOVE_TRAIT(src, TRAIT_MOVE_FLOATING, LIFECANDLE_TRAIT)
 	else
-		user.visible_message("<span class='notice'>[user] touches [src]. It seems to respond to [user.p_their()] presence!</span>", "<span class='warning'>I create a connection between you and [src].</span>")
+		user.visible_message("<span class='notice'>[user] toca a [src]. Parece responder a la presencia de [user.p_their()] ¡</span>", "<span class='warning'>Creo una conexion entre usted y [src]</span>.")
 		linked_minds |= user.mind
 		if(!LAZYLEN(linked_minds))
 			ADD_TRAIT(src, TRAIT_MOVE_FLOATING, LIFECANDLE_TRAIT)

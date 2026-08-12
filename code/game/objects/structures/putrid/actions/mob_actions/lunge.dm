@@ -1,7 +1,7 @@
 
 /datum/action/cooldown/meatvine/personal/lunge
-	name = "Lunge"
-	desc = "Wind up for 1 second, then launch a devastating two-tile attack dealing 1.2x damage to a targeted limb. Requires direct sprite click. Cost: 10 resources."
+	name = "Estocada"
+	desc = "Preparate durante 1 segundo y luego lanza un devastador ataque de dos fichas que inflige 1,2 veces mas daño a la extremidad objetivo. Requiere clic directo del sprite. Costo: 10 recursos."
 	button_icon_state = "lunge"
 	cooldown_time = 10 SECONDS
 	personal_resource_cost = 10
@@ -23,22 +23,22 @@
 
 	// Check if target is valid and in range (2 tiles)
 	if(!isliving(target))
-		to_chat(user, span_warning("You must target a living creature!"))
+		to_chat(user, span_warning("¡Debes dirigirte a una criatura viva!"))
 		return FALSE
 
 	var/distance = get_dist(user, target)
 	if(distance > 2 || distance < 1)
-		to_chat(user, span_warning("Target must be within 2 tiles!"))
+		to_chat(user, span_warning("¡El objetivo debe estar a 2 casillas de distancia!"))
 		return FALSE
 
 	// Begin windup
 	is_winding_up = TRUE
-	to_chat(user, span_boldnotice("You prepare to lunge at [target]!"))
-	user.visible_message(span_danger("[user] coils back, preparing to strike!"))
+	to_chat(user, span_boldnotice("¡Te preparas para asestar un golpe a [target]!"))
+	user.visible_message(span_danger("¡[user] se enrosca, preparandose para atacar!"))
 
 	if(!do_after(user, windup_time, target))
 		is_winding_up = FALSE
-		to_chat(user, span_warning("Your lunge was interrupted!"))
+		to_chat(user, span_warning("¡Tu ataque fue interrumpido!"))
 		return FALSE
 
 	is_winding_up = FALSE
@@ -65,8 +65,8 @@
 
 	// Visual and audio feedback
 	user.visible_message(
-		span_danger("[user] lunges forward and strikes [victim][targeted_limb ? " in the [targeted_limb.name]" : ""]!"),
-		span_boldnotice("You lunge forward and strike [victim][targeted_limb ? " in the [targeted_limb]" : ""]!")
+		span_danger("[user] da un salto hacia adelante y golpea a [victim][targeted_limb ? " in the [targeted_limb.name]" : ""]"),
+		span_boldnotice("Das un salto hacia adelante y golpeas a [victim][targeted_limb ? " in the [targeted_limb]" : ""]")
 	)
 
 	playsound(user, pick('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg'), 50, TRUE)

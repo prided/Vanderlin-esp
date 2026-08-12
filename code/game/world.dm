@@ -357,9 +357,9 @@ GLOBAL_VAR(restart_counter)
 		if (usr)
 			log_admin("[key_name(usr)] Has requested an immediate world restart via client side debugging tools")
 			message_admins("[key_name_admin(usr)] Has requested an immediate world restart via client side debugging tools")
-		to_chat(world, span_boldannounce("Rebooting World immediately due to host request."))
+		to_chat(world, span_boldannounce("Reiniciando el mundo de inmediato por solicitud del host."))
 	else
-		to_chat(world, "Please be patient as the server restarts. You will be automatically reconnected in about 60 seconds.")
+		to_chat(world, "Espera mientras el servidor se reinicia. Te reconectaras automaticamente en unos 60 segundos.")
 		Master.Shutdown() //run SS shutdowns
 
 #ifdef UNIT_TESTS

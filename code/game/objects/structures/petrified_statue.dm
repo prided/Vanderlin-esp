@@ -1,7 +1,7 @@
 
 /obj/structure/statue/petrified
-	name = "statue"
-	desc = "An incredibly lifelike marble carving."
+	name = "estatua"
+	desc = "Una talla de marmol increiblemente realista."
 	icon_state = "human_male"
 	density = TRUE
 	anchored = TRUE
@@ -17,7 +17,7 @@
 		petrified_mob = L
 		if(L.buckled)
 			L.buckled.unbuckle_mob(L,force=1)
-		L.visible_message(span_warning("[L]'s skin rapidly turns to marble!"), span_userdanger("Your body freezes up! Can't... move... can't... think..."))
+		L.visible_message(span_warning("¡La piel de [L] se convierte rapidamente en marmol!"), span_userdanger("¡Tu cuerpo se congela! No puedes... moverte... no puedes... pensar..."))
 		L.forceMove(src)
 		L.add_traits(list(TRAIT_MUTE), STATUE_MUTE)
 		atom_integrity = L.health + 100 //stoning damaged mobs will result in easier to shatter statues
@@ -52,7 +52,7 @@
 	return ..()
 
 /obj/structure/statue/petrified/atom_deconstruct(disassembled = TRUE)
-	var/destruction_message = "[src] shatters!"
+	var/destruction_message = "¡[src] se hace añicos!"
 	if(!disassembled)
 		if(petrified_mob)
 			petrified_mob.investigate_log("has been dusted by statue deconstruction.", INVESTIGATE_DEATHS)
@@ -61,10 +61,10 @@
 				var/obj/item/organ/brain/carbon_brain = petrified_carbon.getorganslot(ORGAN_SLOT_BRAIN)
 				carbon_brain.Remove(petrified_carbon)
 				carbon_brain.forceMove(get_turf(src))
-				carbon_brain.name = "petrified [carbon_brain.name]"
-				carbon_brain.desc = "[carbon_brain.desc] This one seems a bit more... smooth than a normal brain. Probably'd still work."
+				carbon_brain.name = "petrificado [carbon_brain.name]"
+				carbon_brain.desc = "[carbon_brain.desc] Este parece un poco mas... fluido que un cerebro normal. Probablemente todavia funcionaria."
 				carbon_brain.add_atom_colour(list(rgb(77,77,77), rgb(150,150,150), rgb(28,28,28), rgb(0,0,0)), FIXED_COLOUR_PRIORITY)
-				destruction_message = "[src] shatters, a solid brain tumbling out!"
+				destruction_message = "¡[src] se hace añicos, un cerebro solido cayendo!"
 			petrified_mob.dust()
 	visible_message(span_danger(destruction_message))
 

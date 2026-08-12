@@ -1,6 +1,6 @@
 /obj/item/plate
-	name = "platter"
-	desc = "A wood plate that holds food. A powerful tool for morale when you're not eating your meal off a table."
+	name = "plato"
+	desc = "Un plato de madera que contiene comida. Una poderosa herramienta para levantar la moral cuando no estas comiendo en la mesa."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "platter"
 	drop_sound = 'sound/foley/dropsound/gen_drop.ogg'
@@ -49,13 +49,13 @@
 		if(dirty)
 			var/obj/item/natural/cloth/cloth_check = I
 			if(cloth_check.reagents.total_volume < 0.1)
-				to_chat(user, span_warning("[cloth_check] is too dry to clean with!"))
+				to_chat(user, span_warning("¡[cloth_check] es demasiado seco para limpiarlo!"))
 				return
 			var/dirtyWater = cloth_check.reagents.get_reagent_amount(/datum/reagent/water/gross)
 			if(dirtyWater)
-				to_chat(user, span_warning("[cloth_check] water is too dirty to clean anything with it!"))
+				to_chat(user, span_warning("[cloth_check] ¡El agua esta demasiado sucia para limpiar cualquier cosa con ella!"))
 				return
-			to_chat(user, ("You start cleaning the [src] with the [cloth_check]"))
+			to_chat(user, ("Empiezas a limpiar el [src] con el [cloth_check]"))
 			if(do_after(user, 2 SECONDS, src))
 				cloth_check.reagents.remove_all(1)
 				dirty = FALSE
@@ -64,22 +64,22 @@
 				user.nobles_seen_servant_work()
 				fork_usages = 0
 				cleaned = TRUE
-				to_chat(user, ("You cleaned the [src]"))
+				to_chat(user, ("Limpiaste el [src]"))
 				return
 		else
 			to_chat(user, span_notice("Este plato ya esta limpio."))
 			return
 	if(length(contents) && istype(I, /obj/item/natural/cloth) && user?.used_intent?.type == INTENT_USE)
-		to_chat(user, span_warning("You can't clean the [src] while it has food on it!."))
+		to_chat(user, span_warning("¡No puedes limpiar el [src] mientras tenga comida en el!"))
 		return
 	if(item_flags & IN_STORAGE)
-		to_chat(user, span_warning("I cannot reach [src]."))
+		to_chat(user, span_warning("No puedo alcanzar [src]."))
 		return
 	if(!is_type_in_list(I, permitted_items))
-		to_chat(user, span_notice("[src] isn't made to carry that!"))
+		to_chat(user, span_notice("¡[src] no esta hecho para cargar eso!"))
 		return
 	if(contents.len >= max_items)
-		to_chat(user, span_notice("[src] can't fit more items!"))
+		to_chat(user, span_notice("¡[src] no caben mas articulos!"))
 		return
 
 	//Center the icon where the user clicked.
@@ -163,15 +163,15 @@
 /obj/item/plate/examine(mob/user)
 	. = ..()
 	if(dirty)
-		. += span_boldwarning("This platter is filthy... absolutely disgusting.")
+		. += span_boldwarning("Este plato esta sucio... absolutamente repugnante.")
 	else if(cleaned)
 		. += span_info("¡Este plato fue limpiado recientemente!")
 	else
-		. += span_info("This platter looks clean enough.")
+		. += span_info("Este plato parece lo suficientemente limpio.")
 
 /obj/item/plate/clay
-	name = "clay platter"
-	desc = "A fragile platter made from fired clay. Probably shouldn't throw it."
+	name = "plato de barro"
+	desc = "Un plato fragil hecho de arcilla cocida. Probablemente no deberia tirarlo."
 	icon_state = "platter_clay"
 	drop_sound = 'sound/foley/dropsound/brick_drop.ogg'
 	resistance_flags = FIRE_PROOF
@@ -179,7 +179,7 @@
 
 /obj/item/plate/clay/set_material_information()
 	. = ..()
-	name = "[LOWER_TEXT(initial(main_material.name))] clay platter"
+	name = "Plato de barro [LOWER_TEXT(initial(main_material.name))]"
 
 /obj/item/plate/clay/throw_impact(atom/hit_atom, datum/thrownthing/thrownthing)
 	. = ..()
@@ -190,7 +190,7 @@
 
 /obj/item/plate/copper
 	name = "plato de cobre"
-	desc = "A platter made from a sheet of copper. Known to impart a metallic taste when eating certain foods."
+	desc = "Un plato hecho de una lamina de cobre. Conocido por impartir un sabor metalico al comer ciertos alimentos."
 	icon_state = "platter_copper"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -198,8 +198,8 @@
 	item_weight = 600 GRAMS
 
 /obj/item/plate/pewter
-	name = "pewter platter"
-	desc = "A tin plate that contains just a tinge of lead."
+	name = "plato de peltre"
+	desc = "Una hojalata que contiene solo un matiz de plomo."
 	icon_state = "platter_tin"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -207,8 +207,8 @@
 	item_weight = 500 GRAMS
 
 /obj/item/plate/silver
-	name = "silver platter"
-	desc = "A fancy silver plate often used by the nobility as a symbol of class."
+	name = "bandeja de plata"
+	desc = "Un elegante plato de plata utilizado a menudo por la nobleza como simbolo de clase."
 	icon_state = "platter_silver"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -222,8 +222,8 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/plate/gold
-	name = "gold platter"
-	desc = "A fancy gold plate often used by the nobility as a symbol of class."
+	name = "bandeja de oro"
+	desc = "Una elegante placa de oro utilizada a menudo por la nobleza como simbolo de clase."
 	icon_state = "platter_gold"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -233,8 +233,8 @@
 	item_weight = 900 GRAMS
 
 /obj/item/plate/jade
-	name = "joapstone platter"
-	desc = "A fancy platter carved out of joapstone."
+	name = "plato de joapstone"
+	desc = "Un plato elegante tallado de joapstone."
 	icon_state = "platter_jade"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -243,8 +243,8 @@
 	item_weight = 800 GRAMS
 
 /obj/item/plate/onyxa
-	name = "onyxa platter"
-	desc = "A fancy platter carved out of onyxa."
+	name = "plato de onyxa"
+	desc = "Un plato elegante tallado en onyxa."
 	icon_state = "platter_onyxa"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -253,7 +253,7 @@
 	item_weight = 600 GRAMS
 
 /obj/item/plate/shell
-	name = "shell platter"
+	name = "plato de conchas"
 	desc = "Un plato elegante tallado en concha."
 	icon_state = "platter_shell"
 	resistance_flags = FIRE_PROOF
@@ -263,8 +263,8 @@
 	item_weight = 400 GRAMS
 
 /obj/item/plate/rose
-	name = "rosellusk platter"
-	desc = "A fancy platter carved out of rosellusk."
+	name = "plato de rosellusk"
+	desc = "Un plato elegante tallado en rosellusk."
 	icon_state = "platter_rose"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -273,8 +273,8 @@
 	item_weight = 450 GRAMS
 
 /obj/item/plate/amber
-	name = "petriamber platter"
-	desc = "A fancy platter carved out of petriamber."
+	name = "plato de ambar petriamber"
+	desc = "Un plato elegante tallado en petriamber."
 	icon_state = "platter_amber"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -283,7 +283,7 @@
 	item_weight = 350 GRAMS
 
 /obj/item/plate/opal
-	name = "opaloise platter"
+	name = "plato opaloise"
 	desc = "Un plato elegante tallado en opaloise."
 	icon_state = "platter_opal"
 	resistance_flags = FIRE_PROOF
@@ -293,7 +293,7 @@
 	item_weight = 700 GRAMS
 
 /obj/item/plate/coral
-	name = "aoetal platter"
+	name = "bandeja de aoetal"
 	desc = "Un plato elegante tallado en aoetal."
 	icon_state = "platter_coral"
 	resistance_flags = FIRE_PROOF
@@ -303,8 +303,8 @@
 	item_weight = 750 GRAMS
 
 /obj/item/plate/turq
-	name = "ceruleabaster platter"
-	desc = "A fancy platter carved out of ceruleabaster."
+	name = "bandeja de ceruleabaster"
+	desc = "Un plato elegante tallado de ceruleabaster."
 	icon_state = "platter_turq"
 	resistance_flags = FIRE_PROOF
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -313,8 +313,8 @@
 	item_weight = 850 GRAMS
 
 /obj/item/tray
-	name = "tray"
-	desc = "Best used when hosting for banquets or drunken taverns."
+	name = "bandeja"
+	desc = "Se utiliza mejor cuando se organizan banquetes o tabernas de borrachos."
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "tray"
 	force = 5
@@ -325,7 +325,7 @@
 	item_weight = 500 GRAMS
 
 /obj/item/tray/psy
-	name = "tray"
+	name = "bandeja"
 	icon_state = "tray_psy"
 
 /obj/item/tray/Initialize(mapload, ...)

@@ -122,7 +122,7 @@
 			qdel(src)
 			return TRUE
 
-		user.visible_message("[user] comienza a llenar [src].", "You start filling [src].")
+		user.visible_message("[user] comienza a llenar [src].", "Comienza a llenar [src].")
 		if(!do_after(user, 4 SECONDS * shovel.toolspeed, src))
 			return
 		QDEL_NULL(shovel.heldclod)

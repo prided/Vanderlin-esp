@@ -12,7 +12,7 @@
 	name = "[LOWER_TEXT(initial(main_material.name))] terron de arcilla"
 
 /obj/structure/pottery_lathe
-	name = "potter's lathe"
+	name = "torno de alfarero"
 	icon = 'icons/obj/pottery_wheel.dmi'
 	icon_state = "wheel"
 
@@ -30,7 +30,7 @@
 
 /obj/structure/pottery_lathe/examine(mob/user)
 	. = ..()
-	. += span_info("The speed of [src] is set to [true_rotations] RPM.")
+	. += span_info("La velocidad de [src] esta ajustada a [true_rotations] RPM.")
 
 /obj/structure/pottery_lathe/update_overlays()
 	. = ..()
@@ -64,11 +64,11 @@
 	. = ..()
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
-	var/choice = input(user, "Set the speed of the lathe.", src) as null|num
+	var/choice = input(user, "Establecer la velocidad del torno.", src) as null|num
 	if(!choice)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	true_rotations = min(abs(choice), max(1, rotations_per_minute))
-	to_chat(user, span_info("You set the speed of [src] to [true_rotations] RPM."))
+	to_chat(user, span_info("Has fijado la velocidad de [src] a [true_rotations] RPM."))
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/structure/pottery_lathe/proc/start_spinning_pottery(mob/user)
@@ -76,7 +76,7 @@
 	if(!stored_clay)
 		return
 
-	visible_message("[user] starts shaping some clay.", "You start shaping some clay.")
+	visible_message("[user] comienza a dar forma a algo de arcilla.", "Comienzas a dar forma a algo de arcilla.")
 	if(!do_after(user, in_progress.get_delay(user, true_rotations), src))
 		return
 

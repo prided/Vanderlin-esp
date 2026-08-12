@@ -1,9 +1,9 @@
 /datum/objective/personal/embrace_death
-	name = "Embrace Death"
+	name = "Abrazar la muerte"
 	category = "Marcado por Necra"
 	triumph_count = 3
-	immediate_effects = list("Gained an ability to pass on peacefully")
-	rewards = list("3 Triumphs", "Necra grows stronger", "Eternal Rest")
+	immediate_effects = list("Obtuviste una habilidad para morir en paz")
+	rewards = list("3 Triunfos", "Necra se fortalece", "Descanso eterno")
 
 /datum/objective/personal/embrace_death/on_creation()
 	. = ..()
@@ -17,4 +17,4 @@
 	adjust_storyteller_influence(NECRA, 20)
 
 /datum/objective/personal/embrace_death/update_explanation_text()
-	explanation_text = "Your time has come. Embrace death through Necra's gift to achieve final rest and secure your soul."
+	explanation_text = "Ha llegado tu hora. Abraza la muerte mediante el don de Necra para alcanzar el descanso final y asegurar tu alma."

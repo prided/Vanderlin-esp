@@ -1,7 +1,7 @@
 
 /obj/item/statue
 	icon = 'icons/roguetown/items/valuable.dmi'
-	name = "statue"
+	name = "estatua"
 	icon_state = ""
 	w_class = WEIGHT_CLASS_NORMAL
 	smeltresult = null
@@ -46,7 +46,7 @@
 /*	..................   Misc   ................... */
 /obj/item/statue/silver/gnome
 	name = "gnomo petrificado"
-	desc = "A literal gnome, turned to stone mid-step and put on a matching stone platform. Rather unsettling."
+	desc = "Un gnomo literal, convertido en piedra a medio paso y colocado sobre una plataforma de piedra a juego. Bastante inquietante."
 	smeltresult = null
 	sellprice = 120
 	item_weight = 2 KILOGRAMS
@@ -83,8 +83,8 @@
 
 /*	..................   Silver  ................... */
 /obj/item/statue/silver/volf
-	name = "silver volf bust"
-	desc = "A silver bust resembling a volf's head."
+	name = "busto de volf plateado"
+	desc = "Un busto plateado que se asemeja a la cabeza de un volf."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "volf_silv"
 	dropshrink = 0.7
@@ -97,7 +97,7 @@
 
 /obj/item/statue/silver/finger
 	name = "mano de plata"
-	desc = "A silver statue of a humen hand flashing a common Xylixian slight. This offensive item has no value."
+	desc = "Una estatua plateada de una mano humen que muestra un desaire xylixiano comun. Este objeto ofensivo no tiene valor."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "finger_silv"
 	smeltresult = /obj/item/ingot/silver
@@ -109,7 +109,7 @@
 
 /obj/item/statue/silver/urn
 	name = "urna de plata"
-	desc = "A large decorative silver urn."
+	desc = "Una gran urna decorativa plateada."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "urn_silv"
 	smeltresult = /obj/item/ingot/silver
@@ -120,8 +120,8 @@
 	icon_state = "urn_silv"
 
 /obj/item/statue/silver/vase
-	name = "silver vase"
-	desc = "A large decorative silver vase."
+	name = "florero de plata"
+	desc = "Un gran jarron decorativo plateado."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "vase_silv"
 	smeltresult = /obj/item/ingot/silver
@@ -132,8 +132,8 @@
 	icon_state = "vase_silv"
 
 /obj/item/statue/silver/vasefancy
-	name = "fancy silver vase"
-	desc = "A large decorative silver vase. It's quite fancy!"
+	name = "florero de plata de lujo"
+	desc = "Un gran jarron decorativo de plata. ¡Es bastante elegante!"
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "fancyvase_silv"
 	smeltresult = /obj/item/ingot/silver
@@ -144,8 +144,8 @@
 	icon_state = "fancyvase_silv"
 
 /obj/item/statue/silver/bust
-	name = "silver bust"
-	desc = "A bust made out of silver."
+	name = "busto de plata"
+	desc = "Un busto realizado en plata."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "bust_silv"
 	smeltresult = /obj/item/ingot/silver
@@ -156,8 +156,8 @@
 	icon_state = "bust_silv"
 
 /obj/item/statue/silver/figurine
-	name = "silver figurine"
-	desc = "A figurine made out of silver. Popular among adults as a decoration, popular among children as a toy."
+	name = "estatuilla de plata"
+	desc = "Una figura hecha de plata. Popular entre los adultos como decoracion, popular entre los niños como juguete."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "figurine_silv"
 	sellprice = 15
@@ -168,7 +168,7 @@
 
 /obj/item/statue/silver/obelisk
 	name = "obelisco de plata"
-	desc = "An obelisk made of silver."
+	desc = "Un obelisco elaborado en plata."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "obelisk_silv"
 	smeltresult = /obj/item/ingot/silver
@@ -179,8 +179,8 @@
 	icon_state = "obelisk_silv"
 
 /obj/item/statue/silver/fish
-	name = "silver fish figurine"
-	desc = "A fish figurine made out of silver."
+	name = "estatuilla de pez plateado"
+	desc = "Figura de pez realizada en plata."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "fish_silv"
 	sellprice = 15
@@ -191,7 +191,7 @@
 
 /obj/item/statue/silver/tablet
 	name = "tableta de plata"
-	desc = "A tablet made out of silver."
+	desc = "Una tablilla hecha de plata."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "tablet_silv"
 	smeltresult = /obj/item/ingot/silver
@@ -202,8 +202,8 @@
 	icon_state = "tablet_silv"
 
 /obj/item/statue/silver/cameo
-	name = "silver cameo"
-	desc = "A cameo made out of silver depicting...someone? Use your imagination for who it could be."
+	name = "camafeo de plata"
+	desc = "Un camafeo hecho de plata que representa... ¿alguien? Usa tu imaginacion para saber quien podria ser."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "cameo_silv"
 	sellprice = 15
@@ -214,7 +214,7 @@
 
 /obj/item/statue/silver/comb
 	name = "peine de plata"
-	desc = "A silver comb, great for combing your hair or lack thereof."
+	desc = "Un peine plateado, ideal para peinar tu cabello o falta de el."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "combs_silv"
 	sellprice = 10
@@ -224,8 +224,8 @@
 	icon_state = "comb_silv"
 
 /obj/item/statue/silver/totem
-	name = "silver totem"
-	desc = "An elven totem made out of silver."
+	name = "totem de plata"
+	desc = "Un totem elfico hecho de plata."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "elven_silv"
 	smeltresult = /obj/item/ingot/silver
@@ -237,7 +237,7 @@
 
 /*	..................   Gold   ................... */
 /obj/item/statue/gold/volf
-	name = "golden volf bust"
+	name = "busto de volf dorado"
 	desc = "Un busto dorado que se asemeja a la cabeza de un volf."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "volf_gold"
@@ -251,7 +251,7 @@
 
 /obj/item/statue/gold/finger
 	name = "mano dorada"
-	desc = "A golden statue of a humen hand flashing a common Xylixian slight. This offensive item has a measly value."
+	desc = "Una estatua dorada de una mano humen que muestra un desaire xylixiano comun. Este objeto ofensivo tiene un valor miserable."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "finger_gold"
 	smeltresult = /obj/item/ingot/gold
@@ -263,7 +263,7 @@
 
 /obj/item/statue/gold/urn
 	name = "urna de oro"
-	desc = "A large decorative gold urn."
+	desc = "Una gran urna decorativa de oro."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "urn_gold"
 	smeltresult = /obj/item/ingot/gold
@@ -274,8 +274,8 @@
 	icon_state = "urn_gold"
 
 /obj/item/statue/gold/vase
-	name = "gold vase"
-	desc = "A large decorative golden vase."
+	name = "florero de oro"
+	desc = "Un gran jarron decorativo dorado."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "vase_gold"
 	smeltresult = /obj/item/ingot/gold
@@ -286,8 +286,8 @@
 	icon_state = "vase_gold"
 
 /obj/item/statue/gold/vasefancy
-	name = "fancy gold vase"
-	desc = "A large decorative golden vase. It's quite fancy!"
+	name = "florero de oro de lujo"
+	desc = "Un gran jarron decorativo de oro. ¡Es bastante elegante!"
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "fancyvase_gold"
 	smeltresult = /obj/item/ingot/gold
@@ -310,8 +310,8 @@
 	icon_state = "bust_gold"
 
 /obj/item/statue/gold/figurine
-	name = "golden figurine"
-	desc = "A figurine made out of gold. Popular among adults as a decoration, popular among children as a toy."
+	name = "estatuilla dorada"
+	desc = "Una figura hecha de oro. Popular entre los adultos como decoracion, popular entre los niños como juguete."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "figurine_gold"
 	sellprice = 30
@@ -321,8 +321,8 @@
 	icon_state = "figurine_gold"
 
 /obj/item/statue/gold/cameo
-	name = "golden cameo"
-	desc =  "A cameo made out of gold depicting...someone? Use your imagination for who it could be."
+	name = "camafeo dorado"
+	desc =  "Un camafeo hecho de oro que representa... ¿alguien? Usa tu imaginacion para saber quien podria ser."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "cameo_gold"
 	sellprice = 30
@@ -345,7 +345,7 @@
 
 /obj/item/statue/gold/tablet
 	name = "tableta de oro"
-	desc =  "A tablet made out of gold."
+	desc =  "Una tablilla hecha de oro."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "tablet_gold"
 	smeltresult = /obj/item/ingot/gold
@@ -356,8 +356,8 @@
 	icon_state = "tablet_gold"
 
 /obj/item/statue/gold/fish
-	name = "golden fish figurine"
-	desc =  "A fish figurine made out of gold."
+	name = "estatuilla de pez dorado"
+	desc =  "Figura de pez hecha de oro."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "fish_gold"
 	sellprice = 30
@@ -367,8 +367,8 @@
 	icon_state = "fish_gold"
 
 /obj/item/statue/gold/totem
-	name = "gold totem"
-	desc =  "An elven totem made out of gold."
+	name = "totem de oro"
+	desc =  "Un totem elfico hecho de oro."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "elven_gold"
 	smeltresult = /obj/item/ingot/gold
@@ -380,7 +380,7 @@
 
 /obj/item/statue/gold/comb
 	name = "peine dorado "
-	desc =  "A golden comb, great for combing your hair or lack thereof."
+	desc =  "Un peine dorado, ideal para peinar tu cabello o falta de el."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "comb_gold"
 	sellprice = 30
@@ -399,7 +399,7 @@
 	item_weight = 2.2 KILOGRAMS
 
 /obj/item/statue/bronze/volf
-	name = "bronze volf bust"
+	name = "busto de volf de bronce"
 	desc = "Un busto de bronce que se asemeja a la cabeza de un volf."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "volf_bronze"
@@ -408,77 +408,77 @@
 
 /obj/item/statue/bronze/urn
 	name = "urna de bronce"
-	desc = "A large decorative bronze urn."
+	desc = "Una gran urna decorativa de bronce."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "urn_bronze"
 	sellprice = 60 // because its two bronze bars
 
 /obj/item/statue/bronze/vase
-	name = "bronze vase"
-	desc = "A large decorative bronze vase."
+	name = "florero de bronce"
+	desc = "Un gran jarron decorativo de bronce."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "vase_bronze"
 	sellprice = 30
 
 /obj/item/statue/bronze/vasefancy
-	name = "fancy bronze vase"
-	desc = "A large decorative bronze vase. It's quite fancy!"
+	name = "elegante jarron de bronce"
+	desc = "Un gran jarron decorativo de bronce. ¡Es bastante elegante!"
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "fancyvase_bronze"
 	sellprice = 60
 
 /obj/item/statue/bronze/bust
 	name = "busto de bronce"
-	desc = "A bust made out of bronze."
+	desc = "Un busto realizado en bronce."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "bust_bronze"
 	sellprice = 30
 
 /obj/item/statue/bronze/figurine
-	name = "bronze figurine"
-	desc = "A figurine made out of bronze. Popular among adults as a decoration, popular among children as a toy."
+	name = "estatuilla de bronce"
+	desc = "Una figura realizada en bronce. Popular entre los adultos como decoracion, popular entre los niños como juguete."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "figurine_bronze"
 	sellprice = 15
 
 /obj/item/statue/bronze/cameo
-	name = "bronze cameo"
-	desc =  "A cameo made out of bronze depicting...someone? Use your imagination for who it could be."
+	name = "camafeo de bronce"
+	desc =  "Un camafeo hecho en bronce que representa... ¿alguien? Usa tu imaginacion para saber quien podria ser."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "cameo_bronze"
 	sellprice = 15
 
 /obj/item/statue/bronze/obelisk
 	name = "obelisco de bronce"
-	desc =  "An obelisk made out of bronze."
+	desc =  "Un obelisco realizado en bronce."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "obelisk_bronze"
 	sellprice = 30
 
 /obj/item/statue/bronze/tablet
 	name = "tableta de bronce"
-	desc =  "A tablet made out of bronze."
+	desc =  "Una tablilla hecha de bronce."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "tablet_bronze"
 	sellprice = 30
 
 /obj/item/statue/bronze/fish
-	name = "bronze fish figurine"
-	desc =  "A fish figurine made out of bronze."
+	name = "estatuilla de pez de bronce"
+	desc =  "Figura de pez realizada en bronce."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "fish_bronze"
 	sellprice = 15
 
 /obj/item/statue/bronze/totem
-	name = "bronze totem"
-	desc =  "An elven totem made out of bronze."
+	name = "totem de bronce"
+	desc =  "Un totem elfico hecho de bronce."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "elven_bronze"
 	sellprice = 30
 
 /obj/item/statue/bronze/comb
 	name = "peine de bronce"
-	desc =  "A bronze comb, great for combing your hair or lack thereof."
+	desc =  "Un peine de bronce, ideal para peinar tu cabello o falta de el."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "comb_bronze"
 	sellprice = 15
@@ -491,8 +491,8 @@
 	item_weight = 1.5 KILOGRAMS
 
 /obj/item/statue/stone/vase
-	name = "stone vase"
-	desc = "A large decorative stone vase."
+	name = "florero de piedra"
+	desc = "Un gran jarron decorativo de piedra."
 	icon = 'icons/roguetown/items/precious_objects.dmi'
 	icon_state = "svase1"
 	sellprice = 15

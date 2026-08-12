@@ -827,7 +827,7 @@
 
 /obj/item/reagent_containers/food/snacks/produce/mushroom/borowiki
 	name = "borowiki"
-	desc = "Also known as Cépes to the Drow, this fungus was cultivated over generations into this hearty crop by the Dwarves of the mountain passes. It is not known which of them were the first to discover it, though their use by the surface dwelling species of Psydonia has grown significantly in the last few centuries."
+	desc = "Also known as Cepes to the Drow, this fungus was cultivated over generations into this hearty crop by the Dwarves of the mountain passes. It is not known which of them were the first to discover it, though their use by the surface dwelling species of Psydonia has grown significantly in the last few centuries."
 	icon_state = "borowiki"
 	seed = /obj/item/neuFarm/seed/spore/borowiki
 	throwforce = 0

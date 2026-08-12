@@ -1,6 +1,6 @@
 /obj/item/servant_bell
-	name = "servant bell"
-	desc = "An enchanted bell whose chime resonates in the minds of those bound to it."
+	name = "campana de servicio"
+	desc = "Una campana encantada cuyo repique resuena en la mente de quienes estan atados a ella."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "servantbell"
 	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_MOUTH
@@ -49,9 +49,9 @@
 	. = ..()
 	if((is_bell_proficient(user) && get_dist(src, user) <= 1) || isdead(user))
 		var/len = length(bound_servants)
-		. += span_info("It has [len] servant[len == 1 ? "" : "s"] bound to it.")
-		. += span_notice("Use on a commoner to bind their mind to the bell.")
-		. += span_notice("Right click with an open hand to relinquish servants.")
+		. += span_info("Tiene [len] un sirviente [len == 1 ? "" : "s"] unido a el.")
+		. += span_notice("Usalo en un plebeyo para unir su mente con la campana.")
+		. += span_notice("Haz clic derecho con la mano abierta para desvincular a los sirvientes.")
 
 /obj/item/servant_bell/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!is_bell_proficient(user))
@@ -68,12 +68,12 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(length(bound_servants) >= max_servants)
-		to_chat(user, span_warning("It can hold no more minds without relinquishing another."))
+		to_chat(user, span_warning("No puede contener mas mentes sin renunciar a otra."))
 		return ITEM_INTERACT_BLOCKING
 
 	playsound(src, 'sound/items/servant_bell.ogg', 80, TRUE)
 
-	user.visible_message(span_smallnotice("[user] rings [src] in front of [user == H ? "[user.p_them()]self" : H] like a pendulum..."))
+	user.visible_message(span_smallnotice("[user] suena [src] frente a [user == H ? "[user.p_them()]self" : H] como un pendulo..."))
 
 	if(!do_after(user, 6 SECONDS, H))
 		return ITEM_INTERACT_BLOCKING
@@ -81,14 +81,14 @@
 	if((H.real_name in bound_servants) && H.name == H.real_name)
 		to_chat(user, span_warning("[src] ya esta vinculado a esta campana."))
 	else if(H.is_dead())
-		to_chat(user, span_warning("What good is a dead servant?"))
+		to_chat(user, span_warning("¿Que utilidad tiene un sirviente muerto?"))
 	else if(IS_DEADITE(H))
-		to_chat(user, span_warning("The deadite curse resists the bell's charm."))
+		to_chat(user, span_warning("La maldicion de deadite resiste el encanto de la campana."))
 	else if(HAS_TRAIT(H, TRAIT_NOBLE_BLOOD) || H.can_block_magic(MAGIC_RESISTANCE_MIND, 0) || H.job == "Faceless One") // this'll screw over a noble blood butler, thems the breaks
-		to_chat(user, span_warning("The enchantment seems to fail."))
+		to_chat(user, span_warning("El hechizo parece fallar."))
 	else
 		add_servant(H)
-		to_chat(user, span_smallnotice("I bind [H] to [src]."))
+		to_chat(user, span_smallnotice("Asocian [H] a [src]."))
 
 	COOLDOWN_START(src, nearby_ring_bell, nearby_cooldown)
 
@@ -102,17 +102,17 @@
 		return
 	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(!is_bell_proficient(user))
-		to_chat(user, span_warning("I lack the noble blood to modify [src]."))
+		to_chat(user, span_warning("No tengo la sangre noble para modificar [src]."))
 		return
 	if(!length(bound_servants))
-		to_chat(user, span_warning("There are no servants bound to [src]."))
+		to_chat(user, span_warning("No hay sirvientes vinculados a [src]."))
 		return
 	var/list/servants = get_servants()
 	var/list/all_servants = length(servants) > 1 ? list("Relinquish all" = null) + servants : servants
 	var/remove = browser_input_list(user, "Who will be relinquished of service?","Service Bell", all_servants)
 	if(remove)
 		if(remove == "Relinquish all")
-			var/choice = tgui_alert(user, "Are you sure you want to clear the servant list?", "Service Bell", list("Yes", "No"))
+			var/choice = tgui_alert(user, "¿Esta seguro de que desea borrar la lista de servidores?", "Campana de servicio", list("Si", "No"))
 			if(choice != "Yes")
 				return
 			for(var/s_name in servants)
@@ -136,7 +136,7 @@
 			playsound(src, 'sound/items/servant_bell.ogg', 80, TRUE)
 
 /obj/item/servant_bell/proc/ring_bell(mob/living/user)
-	user.visible_message("[user] rings [src].")
+	user.visible_message("[user] suena [src].")
 	playsound(src, 'sound/items/servant_bell.ogg', 100, TRUE)
 	var/turf/origin_turf = get_turf(src)
 	for(var/servant in get_servants())
@@ -173,7 +173,7 @@
 				else
 					dirText += " far"
 			dirText += z_dist > 0 ? " above me" : " below me"
-		to_chat(player, span_warning("I hear a service bell being rung[dirText]."))
+		to_chat(player, span_warning("Escucho sonar una campana de servicio[dirText]."))
 		if(distance <= 7)
 			continue
 		//sound played for other players, by fem_tanyl !!!1!!
@@ -241,5 +241,5 @@
 
 /atom/movable/screen/alert/status_effect/servant_bell
 	name = "Campana de sirviente"
-	desc = "I've been summoned by the bell."
+	desc = "Me han llamado por el timbre."
 	icon_state = "servant_bell"

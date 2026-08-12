@@ -3,49 +3,49 @@
 		"ten_commandments": {
 			"name": "Los Diez Mandamientos",
 			"laws": [
-				"No tendrás otros Dioses delante de los Diez.",
-				"No te harás imagen tallada, ni semejanza alguna de cosa que esté en los cielos arriba, ni en la tierra abajo, ni en las aguas bajo el suelo.",
-				"No tomarás el nombre de tus Dioses en vano; porque los Dioses no tendrán por inocente a quien tome Su nombre en vano.",
-				"Recuerda el día de reposo para santificarlo. Seis días trabajarás y harás toda tu obra; mas el séptimo día es el reposo de tus Dioses: no harás en él obra alguna, ni tú, ni tu hijo, ni tu hija, ni tu siervo, ni tu sierva, ni tu ganado, ni el extranjero que esté dentro de tus puertas.",
-				"Honra a tu padre y a tu madre, para que tus días se prolonguen sobre la tierra que tus Dioses te dan.",
-				"No matarás.",
-				"No cometerás adulterio.",
-				"No robarás.",
-				"No darás falso testimonio contra tu prójimo.",
-				"No codiciarás la casa de tu prójimo; no codiciarás la esposa de tu prójimo, ni su siervo, ni su sierva, ni su buey, ni su asno, ni cosa alguna que pertenezca a tu prójimo."
+				"No tendras otros Dioses delante de los Diez.",
+				"No te haras imagen tallada, ni semejanza alguna de cosa que este en los cielos arriba, ni en la tierra abajo, ni en las aguas bajo el suelo.",
+				"No tomaras el nombre de tus Dioses en vano; porque los Dioses no tendran por inocente a quien tome Su nombre en vano.",
+				"Recuerda el dia de reposo para santificarlo. Seis dias trabajaras y haras toda tu obra; mas el septimo dia es el reposo de tus Dioses: no haras en el obra alguna, ni tu, ni tu hijo, ni tu hija, ni tu siervo, ni tu sierva, ni tu ganado, ni el extranjero que este dentro de tus puertas.",
+				"Honra a tu padre y a tu madre, para que tus dias se prolonguen sobre la tierra que tus Dioses te dan.",
+				"No mataras.",
+				"No cometeras adulterio.",
+				"No robaras.",
+				"No daras falso testimonio contra tu projimo.",
+				"No codiciaras la casa de tu projimo; no codiciaras la esposa de tu projimo, ni su siervo, ni su sierva, ni su buey, ni su asno, ni cosa alguna que pertenezca a tu projimo."
 			],
 			"weight": 3
 		},
 		"code of hammurabi": {
-			"name": "Código de Hamurabi",
+			"name": "Codigo de Hamurabi",
 			"laws": [
-				"Si un hombre saca el ojo de otro hombre, se le sacará su ojo.",
-				"Si alguien comete un robo y es atrapado, será condenado a muerte.",
-				"Si un hombre ha prometido una esposa a su hijo y su hijo la ha conocido, y después él, el padre, yace en su seno y es apresado, ese hombre será condenado a muerte; la mujer quedará libre.",
-				"Si un constructor edifica una casa para un hombre y no hace firme su construcción, y la casa que edificó se derrumba y causa la muerte de su dueño, ese constructor será condenado a muerte.",
-				"Si alguien toma un campo para cultivarlo como arrendatario, pagará al propietario la renta del campo en grano.",
-				"Si alguien entrega sus bienes a otro para su custodia y, en el lugar de custodia, dichos bienes se pierden, el dueño de la casa restituirá al propietario los bienes perdidos.",
-				"Si alguien lleva fuera de las puertas de la ciudad a un esclavo o esclava de la corte, o a un esclavo o esclava de un hombre libre, será condenado a muerte.",
-				"Si un hijo golpea a su padre, se le cortarán las manos.",
-				"Si alguien es demasiado perezoso para mantener su dique y no lo refuerza, y el dique se rompe y el agua inunda las tierras cultivadas, el hombre en cuyo dique ocurrió la rotura repondrá el grano que hizo perder.",
-				"Si alguien roba ganado, ovejas, un asno, un cerdo o una cabra, y pertenecen a un dios o a la corte, el ladrón pagará treinta veces su valor; si pertenecen a un hombre libre del rey, pagará diez veces su valor; si el ladrón no tiene con qué pagar, será condenado a muerte."
+				"Si un hombre saca el ojo de otro hombre, se le sacara su ojo.",
+				"Si alguien comete un robo y es atrapado, sera condenado a muerte.",
+				"Si un hombre ha prometido una esposa a su hijo y su hijo la ha conocido, y despues el, el padre, yace en su seno y es apresado, ese hombre sera condenado a muerte; la mujer quedara libre.",
+				"Si un constructor edifica una casa para un hombre y no hace firme su construccion, y la casa que edifico se derrumba y causa la muerte de su dueño, ese constructor sera condenado a muerte.",
+				"Si alguien toma un campo para cultivarlo como arrendatario, pagara al propietario la renta del campo en grano.",
+				"Si alguien entrega sus bienes a otro para su custodia y, en el lugar de custodia, dichos bienes se pierden, el dueño de la casa restituira al propietario los bienes perdidos.",
+				"Si alguien lleva fuera de las puertas de la ciudad a un esclavo o esclava de la corte, o a un esclavo o esclava de un hombre libre, sera condenado a muerte.",
+				"Si un hijo golpea a su padre, se le cortaran las manos.",
+				"Si alguien es demasiado perezoso para mantener su dique y no lo refuerza, y el dique se rompe y el agua inunda las tierras cultivadas, el hombre en cuyo dique ocurrio la rotura repondra el grano que hizo perder.",
+				"Si alguien roba ganado, ovejas, un asno, un cerdo o una cabra, y pertenecen a un dios o a la corte, el ladron pagara treinta veces su valor; si pertenecen a un hombre libre del rey, pagara diez veces su valor; si el ladron no tiene con que pagar, sera condenado a muerte."
 			],
 			"weight": 1
 		},
 		"asimov": {
 			"name": "Las Tres Leyes de los Aasimar",
 			"laws": [
-				"Un campesino no puede dañar a un noble ni, por inacción, permitir que un noble sufra daño.",
-				"Un campesino debe obedecer las órdenes que le den los nobles, excepto cuando dichas órdenes entren en conflicto con la Primera Ley.",
-				"Un campesino debe proteger su propia existencia siempre que dicha protección no entre en conflicto con la Primera o la Segunda Ley."
+				"Un campesino no puede dañar a un noble ni, por inaccion, permitir que un noble sufra daño.",
+				"Un campesino debe obedecer las ordenes que le den los nobles, excepto cuando dichas ordenes entren en conflicto con la Primera Ley.",
+				"Un campesino debe proteger su propia existencia siempre que dicha proteccion no entre en conflicto con la Primera o la Segunda Ley."
 			],
 			"weight": 2
 		},
 		"human_supremacy": {
-			"name": "Supremacía Humen",
+			"name": "Supremacia Humen",
 			"laws": [
-				"No serás inhumen. Todo lo que sea inhumen es inferior.",
-				"No te relacionarás con seres inferiores; los humens que lo hagan renuncian a su humenity.",
+				"No seras inhumen. Todo lo que sea inhumen es inferior.",
+				"No te relacionaras con seres inferiores; los humens que lo hagan renuncian a su humenity.",
 				"Los seres inferiores deben mantenerse separados de los humen."
 			],
 			"weight": 1

@@ -11,8 +11,8 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 ))
 
 /obj/structure/industrial_lift
-	name = "lift platform"
-	desc = "A lightweight lift platform. It moves up and down."
+	name = "plataforma elevadora"
+	desc = "Una plataforma elevadora ligera. Se mueve hacia arriba y hacia abajo."
 	icon = 'icons/turf/constructed/wood.dmi'
 	icon_state = "weird1"
 	density = FALSE
@@ -342,7 +342,7 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 					shake_camera(nearby_witness, 2, 3)
 
 			for(var/mob/living/crushed in dest_turf.contents)
-				to_chat(crushed, span_userdanger("You are crushed by [src]!"))
+				to_chat(crushed, span_userdanger("¡[src] te aplasta!"))
 				if(violent_landing)
 					// Violent landing = gibbed. But the nicest kind of gibbing, keeping everything intact.
 					crushed.gib(FALSE, FALSE, FALSE)
@@ -390,13 +390,13 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 					if(victim_structure.layer >= LOW_OBJ_LAYER)
 
 						if(victim_structure.anchored && initial(victim_structure.anchored) == TRUE)
-							visible_message(span_danger("[src] smashes through [victim_structure]!"))
+							visible_message(span_danger("¡[src] atraviesa [victim_structure] a golpes!"))
 							victim_structure.deconstruct(FALSE)
 
 						else
 							if(!throw_target)
 								throw_target = get_edge_target_turf(src, turn(going, pick(45, -45)))
-							visible_message(span_danger("[src] violently rams [victim_structure] out of the way!"))
+							visible_message(span_danger("¡[src] embiste violentamente a [victim_structure] y lo aparta!"))
 							victim_structure.anchored = FALSE
 							victim_structure.take_damage(rand(20, 25) * collision_lethality)
 							victim_structure.throw_at(throw_target, 200 * collision_lethality, 4 * collision_lethality)
@@ -405,7 +405,7 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 					if(QDELING(victim_machine))
 						continue
 					if(victim_machine.layer >= LOW_OBJ_LAYER) //avoids stuff that is probably flush with the ground
-						visible_message(span_danger("[src] smashes through [victim_machine]!"))
+						visible_message(span_danger("¡[src] atraviesa [victim_machine] a golpes!"))
 						qdel(victim_machine)
 
 				for(var/mob/living/collided in dest_turf.contents)
@@ -714,10 +714,10 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
  */
 /obj/structure/industrial_lift/proc/show_fluff_message(direction, mob/user)
 	if(direction == UP)
-		user.visible_message(span_notice("[user] mueve el elevador hacia arriba."), span_notice("You move the lift upwards."))
+		user.visible_message(span_notice("[user] mueve el elevador hacia arriba."), span_notice("Mueves el elevador hacia arriba."))
 
 	if(direction == DOWN)
-		user.visible_message(span_notice("[user] mueve el elevador hacia abajo."), span_notice("You move the lift downwards."))
+		user.visible_message(span_notice("[user] mueve el elevador hacia abajo."), span_notice("Mueves el elevador hacia abajo."))
 
 // A subtype intended for "public use"
 /obj/structure/industrial_lift/public
@@ -774,7 +774,7 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 	add_fingerprint(user)
 
 /obj/structure/industrial_lift/tram
-	name = "tram"
+	name = "tranvia"
 	desc = "Un tranvia para recorrer la estacion."
 	obj_flags = BLOCK_Z_OUT_DOWN
 	//kind of a centerpiece of the station, so pretty tough to destroy

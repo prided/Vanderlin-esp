@@ -1,5 +1,5 @@
 /obj/machinery/light/fueled/firebowl
-	name = "brazier"
+	name = "brasero"
 	icon = 'icons/roguetown/misc/lighting.dmi'
 	icon_state = "stonefire1"
 	density = TRUE
@@ -20,7 +20,7 @@
 		var/mob/living/carbon/human/H = user
 
 		if(istype(H))
-			H.visible_message("<span class='info'>[H] warms \his hand over the fire.</span>")
+			H.visible_message("<span class='info'>[H] calienta \his la mano sobre el fuego.</span>")
 
 			if(do_after(H, 1.5 SECONDS, src))
 				// var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
@@ -32,8 +32,8 @@
 
 	else
 		if(icon_state == "[base_state]over")
-			user.visible_message("<span class='notice'>[user] starts to pick up [src]...</span>", \
-				"<span class='notice'>I start to pick up [src]...</span>")
+			user.visible_message("<span class='notice'>[user] comienza a recoger [src]...</span>", \
+				"<span class='notice'>Empiezo a recoger [src]...</span>")
 			if(do_after(user, 3 SECONDS, src))
 				icon_state = "[base_state]0"
 			return
@@ -74,7 +74,7 @@
 	max_integrity = 30
 
 /obj/machinery/light/fueled/firebowl/church/unholyfire
-	desc = "This fire burns yet it is cold..."
+	desc = "Este fuego arde pero hace frio..."
 	icon_state = "unholyfire1"
 	base_state = "unholyfire"
 	bulb_colour = "#8468ff"
@@ -105,22 +105,22 @@
 		var/mob/living/L = user
 		if(icon_state == "[base_state]over")
 			playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
-			user.visible_message("<span class='warning'>[user] kicks [src]!</span>", \
-				"<span class='warning'>I kick [src]!</span>")
+			user.visible_message("<span class='warning'>[user] le da un puntapie a [src]¡</span>", \
+				"<span class='warning'>Pieso [src]¡</span>")
 			return
 		if(prob(GET_MOB_ATTRIBUTE_VALUE(L, STAT_STRENGTH) * 8))
 			playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
 			user.visible_message("<span class='warning'>[user] patea sobre [src]!</span>", \
-				"<span class='warning'>I kick over [src]!</span>")
+				"<span class='warning'>Pieso [src]¡</span>")
 			burn_out()
 			knock_over()
 		else
 			playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
-			user.visible_message("<span class='warning'>[user] kicks [src]!</span>", \
-				"<span class='warning'>I kick [src]!</span>")
+			user.visible_message("<span class='warning'>[user] le da un puntapie a [src]¡</span>", \
+				"<span class='warning'>Pieso [src]¡</span>")
 
 /obj/machinery/light/fueled/wallfire
-	name = "fireplace"
+	name = "chimenea"
 	icon_state = "wallfire1"
 	base_state = "wallfire"
 	density = FALSE
@@ -130,7 +130,7 @@
 	temperature_change = 30
 
 /obj/machinery/light/fueled/wallfire/candle
-	name = "candles"
+	name = "velas"
 	icon_state = "wallcandle1"
 	base_state = "wallcandle"
 	bulb_colour = "#ffa35c"
@@ -156,7 +156,7 @@
 
 /obj/machinery/light/fueled/wallfire/candle/attack_hand(mob/user)
 	if(isliving(user) && on)
-		user.visible_message("<span class='warning'>[user] snuffs [src].</span>")
+		user.visible_message("<span class='warning'>[user] rape [src].</span>")
 		burn_out()
 		return TRUE //fires that are on always have this interaction with lmb unless its a torch
 	. = ..()
@@ -224,7 +224,7 @@
 	light_outer_range =  6
 
 /obj/machinery/light/fueled/torchholder
-	name = "sconce"
+	name = "candelabro de pared"
 	icon_state = "torchwall1"
 	base_state = "torchwall"
 	brightness = 5
@@ -326,11 +326,11 @@
 		if(torchy)
 			if(LR.on && !on)
 				if(torchy.fuel <= 0)
-					to_chat(user, "<span class='warning'>The mounted torch is burned out.</span>")
+					to_chat(user, "<span class='warning'>La antorcha montada se ha consumido.</span>")
 					return
 				else
 					torchy.spark_act()
-					user.visible_message("<span class='info'>[user] lights [src].</span>")
+					user.visible_message("<span class='info'>[user] ilumina [src].</span>")
 					playsound(src, 'sound/items/firelight.ogg', 100)
 					on = TRUE
 					update()
@@ -339,7 +339,7 @@
 			if(!LR.on && on)
 				if(LR.fuel > 0)
 					LR.spark_act()
-					user.visible_message("<span class='info'>[user] lights [LR] in [src].</span>")
+					user.visible_message("<span class='info'>[user] ilumina [LR] en [src].</span>")
 					user.update_inv_hands()
 		else
 			if(LR.on)
@@ -371,7 +371,7 @@
 	dir = NORTH
 
 /obj/machinery/light/fueled/chand
-	name = "chandelier"
+	name = "candelabro"
 	icon_state = "chand1"
 	base_state = "chand"
 	icon = 'icons/roguetown/misc/tallwide.dmi'
@@ -391,14 +391,14 @@
 
 /obj/machinery/light/fueled/chand/attack_hand(mob/user)
 	if(isliving(user) && on)
-		user.visible_message("<span class='warning'>[user] snuffs [src].</span>")
+		user.visible_message("<span class='warning'>[user] rape [src].</span>")
 		burn_out()
 		return TRUE //fires that are on always have this interaction with lmb unless its a torch
 	. = ..()
 
 
 /obj/machinery/light/fueled/hearth
-	name = "hearth"
+	name = "hogar"
 	icon_state = "hearth1"
 	base_state = "hearth"
 	density = TRUE
@@ -477,7 +477,7 @@
 		if(on)
 			var/mob/living/carbon/human/H = user
 			if(istype(H))
-				H.visible_message("<span class='info'>[H] warms \his hand over the embers.</span>")
+				H.visible_message("<span class='info'>[H] calienta \his la mano sobre las brasas.</span>")
 				if(do_after(H, 5 SECONDS, src))
 					H.adjust_bodytemperature(10)
 			return TRUE
@@ -500,11 +500,11 @@
 
 /obj/machinery/light/fueled/hearth/onkick(mob/user)
 	if(isliving(user) && on)
-		user.visible_message("<span class='warning'>[user] snuffs [src].</span>")
+		user.visible_message("<span class='warning'>[user] rape [src].</span>")
 		burn_out()
 
 /obj/machinery/light/fueled/campfire
-	name = "campfire"
+	name = "hoguera"
 	icon_state = "badfire1"
 	base_state = "badfire"
 	density = FALSE
@@ -529,7 +529,7 @@
 /obj/machinery/light/fueled/campfire/onkick(mob/user)
 	if(isliving(user) && on)
 		var/mob/living/L = user
-		L.visible_message("<span class='info'>[L] snuffs [src].</span>")
+		L.visible_message("<span class='info'>[L] olfatea [src].</span>")
 		burn_out()
 
 /obj/machinery/light/fueled/campfire/attack_hand(mob/user)
@@ -541,7 +541,7 @@
 		var/mob/living/carbon/human/H = user
 
 		if(istype(H))
-			H.visible_message("<span class='info'>[H] warms \his hand near the fire.</span>")
+			H.visible_message("<span class='info'>[H] calienta \his la mano cerca del fuego.</span>")
 
 			if(do_after(H, 10 SECONDS, src))
 				// var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
@@ -565,7 +565,7 @@
 	max_integrity = 60
 
 /obj/machinery/light/fueled/campfire/pyre
-	name = "pyre"
+	name = "piras"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "pyre1"
 	base_state = "pyre"

@@ -18,7 +18,7 @@
 
 /obj/item/dmusicbox
 	name = "caja de musica enana"
-	desc = "A personal device heralding the new era of machine and steam. Dwarven artificers both prize and fear this device for its broad musical range, which notably have made it an object of great value to Baothans' newfound 'Star-Song' rituals."
+	desc = "Un dispositivo personal que presagia la nueva era de las maquinas y el vapor. Los artifices enanos aprecian y temen este dispositivo por su amplia gama musical, que en particular lo ha convertido en un objeto de gran valor para los nuevos rituales de la 'Cancion de las Estrellas' de los Baothans."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "mbox0"
 	w_class = WEIGHT_CLASS_HUGE
@@ -40,7 +40,7 @@
 
 /obj/item/dmusicbox/examine(mob/user)
 	. = ..()
-	. += span_notice("Right click [src] to select a .ogg file. Interact with self to toggle music.")
+	. += span_notice("Haz clic derecho en [src] para seleccionar un archivo .ogg. Interactua contigo mismo para activar o desactivar la musica.")
 
 /obj/item/dmusicbox/Destroy()
 	if(soundloop)
@@ -88,10 +88,10 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	if(lastfilechange)
 		if(world.time < lastfilechange + 3 MINUTES)
-			say("NOT YET!")
+			say("¡TODAVIA NO!")
 			return
 	if(!loaded)
-		say("A GOLD COIN FOR A CAROL!")
+		say("¡UNA MONEDA DE ORO POR UN VILLANCICO!")
 		return
 	playsound(src, 'sound/misc/beep.ogg', 100, FALSE, -1)
 	var/infile = input(user, "CHOOSE A NEW SONG", src) as null|file
@@ -107,10 +107,10 @@
 	var/file_size = length(infile)
 
 	if(file_ext != ".ogg")
-		to_chat(user, "<span class='warning'>SONG MUST BE AN OGG.</span>")
+		to_chat(user, "<span class='warning'>LA CANCION DEBE SER UN OGG.</span>")
 		return
 	if(file_size > 6485760)
-		to_chat(user, "<span class='warning'>TOO BIG. 6 MEGS OR LESS.</span>")
+		to_chat(user, "<span class='warning'>DEMASIADO GRANDE. 6 MEGAS O MENOS.</span>")
 		return
 	lastfilechange = world.time
 	fcopy(infile,"data/jukeboxuploads/[user.ckey]/[filename]")

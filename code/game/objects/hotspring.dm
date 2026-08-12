@@ -16,8 +16,8 @@
 	grow = 0.037
 
 /turf/open/water/hotspring
-	name = "hot spring"
-	desc = "Relaxing, hot water. What could be better?"
+	name = "fuente termal"
+	desc = "Agua caliente y relajante. ¿Que podria ser mejor?"
 	icon = 'icons/obj/structures/hotspring.dmi'
 	icon_state = "hotspring"
 	gender = NEUTER
@@ -64,7 +64,7 @@
 		return NONE
 
 	if(tool.reagents.holder_full())
-		balloon_alert(user, "full!")
+		balloon_alert(user, "¡completo!")
 		return ITEM_INTERACT_BLOCKING
 
 	if(!do_after(user, 8 DECISECONDS, src))
@@ -151,14 +151,14 @@
 	icon_state = "stones_5"
 
 /obj/machinery/light/fueled/torchholder/hotspring
-	name = "stone lantern"
+	name = "linterna de piedra"
 	icon = 'icons/obj/structures/hotspring.dmi'
 	icon_state = "stonelantern1"
 	base_state = "stonelantern"
 	shows_empty = FALSE
 
 /obj/machinery/light/fueled/torchholder/hotspring/standing
-	name = "standing stone lantern"
+	name = "linterna de piedra"
 	icon_state = "stonelantern_standing1"
 	base_state = "stonelantern_standing"
 
@@ -174,7 +174,7 @@
 	icon_state = "lilypetals3"
 
 /obj/structure/chair/hotspring_bench
-	name = "park bench"
+	name = "banco del parque"
 	icon_state = "parkbench_sofamiddle"
 	icon = 'icons/obj/structures/hotspring.dmi'
 	buildstackamount = 1

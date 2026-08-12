@@ -1,6 +1,6 @@
 /obj/item/spell_focus
-	name = "arcyne focus"
-	desc = "A faceted crystal blank threaded with arcyne filaments. It waits to be etched with a spell."
+	name = "enfoque arcyne"
+	desc = "Un cristal facetado en bruto enhebrado con filamentos arcyne. Espera ser grabado con un hechizo."
 	icon = 'icons/roguetown/items/gems.dmi'
 	icon_state = "e_cut"
 	w_class = WEIGHT_CLASS_TINY
@@ -17,9 +17,9 @@
 	. = ..()
 	if(stored_spell_type)
 		. += span_notice("Pulsa con memoria almacenada, [stored_spell_name], nivel [spell_tier].")
-		. += span_notice("It will grant [grant_charges] charge\s when imbued.")
+		. += span_notice("Concedera [grant_charges] carga\s cuando se imbuya.")
 	else
-		. += span_warning("It is blank, waiting to be etched.")
+		. += span_warning("Esta en blanco, esperando ser grabado.")
 
 /obj/item/spell_focus/update_overlays()
 	. = ..()
@@ -36,6 +36,6 @@
 		while(IS_ABSTRACT(stored_spell_type))
 			stored_spell_type = pick(subtypesof(/datum/action/cooldown/spell))
 	stored_spell_name = initial(stored_spell_type.name)
-	name = "[initial(stored_spell_type.name)] focus"
-	desc = "A focus etched with [initial(stored_spell_type.name)]. It can be consumed by an imbuing seal."
+	name = "enfoque [initial(stored_spell_type.name)]"
+	desc = "Un foco grabado con [initial(stored_spell_type.name)]. Puede ser consumido por una foca imbuyente."
 	update_appearance(UPDATE_OVERLAYS)

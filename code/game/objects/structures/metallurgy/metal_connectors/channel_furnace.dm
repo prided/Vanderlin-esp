@@ -1,6 +1,6 @@
 /obj/structure/channel_connector/furnace
 	name = "horno de canal"
-	desc = "A large furnace that connects to metal channels, acting like a crucible to melt items and output molten metal. The storage can be opened and closed with RMB."
+	desc = "Un gran horno que se conecta a canales metalicos y actua como un crisol para fundir elementos y producir metal fundido. El almacenamiento se puede abrir y cerrar con RMB."
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
 	icon_state = "furnace"
@@ -53,7 +53,7 @@
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
 	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	user.visible_message(span_danger("[user] starts to [opened ? "close" : "open"] [src]."), span_danger("You start to [opened ? "close" : "open"] [src]."))
+	user.visible_message(span_danger("[user] comienza a [opened ? "close" : "open"] [src]."), span_danger("Usted comienza a [opened ? "close" : "open"] [src]."))
 	if(!do_after(user, 2.5 SECONDS, src))
 		return
 	opened = !opened
@@ -88,7 +88,7 @@
 	// Fuel the furnace
 	if(I.firefuel > 0)
 		if(fuel_left >= max_fuel)
-			to_chat(user, "<span class='warning'>[src] is already fully fueled.</span>")
+			to_chat(user, "<span class='warning'>[src] ya esta completamente alimentada.</span>")
 			return
 
 		var/fuel_to_add = min(I.firefuel, max_fuel - fuel_left)
@@ -96,21 +96,21 @@
 
 		qdel(I)
 
-		user.visible_message("[user] fuels [src].", "You fuel [src].")
+		user.visible_message("[user] alimenta [src].", "Alimentas [src] con combustible.")
 		return
 
 	// Light the furnace
 	if(istype(I, /obj/item/flint) || istype(I, /obj/item/flashlight/flare/torch))
 		if(!fuel_left)
-			to_chat(user, "<span class='warning'>[src] needs fuel before it can be lit.</span>")
+			to_chat(user, "<span class='warning'>[src] necesita combustible antes de que pueda encenderse.</span>")
 			return
 
 		if(on)
-			to_chat(user, "<span class='warning'>[src] is already running.</span>")
+			to_chat(user, "<span class='warning'>[src] ya esta en funcionamiento.</span>")
 			return
 
 		on = TRUE
-		user.visible_message("[user] lights [src].", "Enciendes [src].")
+		user.visible_message("[user] ilumina [src].", "Enciendes [src].")
 		update_appearance(UPDATE_OVERLAYS)
 		return
 

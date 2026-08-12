@@ -1,6 +1,6 @@
 
 /obj/structure/portal
-	name = "gate"
+	name = "puerta"
 	desc = "La oscuridad envolvente de esta puerta es tan opresiva que realmente no puedes atravesarla."
 	icon = 'icons/roguetown/misc/portal.dmi'
 	icon_state = "portal"

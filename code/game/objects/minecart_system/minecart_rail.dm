@@ -1,7 +1,7 @@
 
 /obj/structure/minecart_rail
-	name = "cart rail"
-	desc = "Carries carts along the track."
+	name = "carril del carro"
+	desc = "Lleva carros por la pista."
 	icon = 'icons/obj/track.dmi'
 	icon_state = "track"
 	//layer = TRAM_RAIL_LAYER
@@ -173,10 +173,10 @@
 	. = ..()
 	. += rail_examine()
 	if(secondary_direction)
-		. += span_smallnotice("When activated, this rail will switch to [dir2text(secondary_direction)].")
+		. += span_smallnotice("Cuando se active, este riel cambiara a [dir2text(secondary_direction)].")
 
 /obj/structure/minecart_rail/proc/rail_examine()
-	return span_notice("Connect this rail to shafts to give momentum to carts that pass over.")
+	return span_notice("Conecta este riel a los pozos para dar impulso a los carros que pasan por encima.")
 
 /obj/structure/minecart_rail/set_connection_dir()
 	if(ISDIAGONALDIR(dir))
@@ -185,8 +185,8 @@
 	. = ..()
 
 /obj/structure/minecart_rail/railbreak
-	name = "cart rail brake"
-	desc = "Stops carts in their tracks. On the tracks. Requires rotational power to function."
+	name = "freno de carril del carro"
+	desc = "Detiene los carros en seco. En las vias. Requiere potencia de rotacion para funcionar."
 	icon_state = "track_break"
 	can_buckle = TRUE
 	buckle_requires_restraints = TRUE
@@ -194,7 +194,7 @@
 	//buckle_lying = NO_BUCKLE_LYING
 
 /obj/structure/minecart_rail/railbreak/rail_examine()
-	return span_notice("Connect this rail to shafts to stop carts that pass over it. Currently [force_disabled ? "disabled" : (rotations_per_minute ? "powered" : "unpowered")].")
+	return span_notice("Conecte este riel a los ejes para detener los carros que pasen sobre el. Actualmente [force_disabled ? "disabled" : (rotations_per_minute ? "powered" : "unpowered")].")
 
 /obj/structure/minecart_rail/railbreak/redstone_triggered(mob/user)
 	force_disabled = !force_disabled

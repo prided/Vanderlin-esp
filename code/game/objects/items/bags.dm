@@ -1,6 +1,6 @@
 /obj/item/storage/sack
-	name = "sack"
-	desc = "A simple canvas sack."
+	name = "bolsa"
+	desc = "Un simple saco de lona."
 	icon_state = "cbag"
 	item_state = "bag"
 	icon = 'icons/roguetown/items/misc.dmi'
@@ -21,14 +21,14 @@
 /obj/item/storage/sack/examine(mob/user)
 	. = ..()
 	if(length(contents))
-		. += span_notice("[length(contents)] thing[length(contents) > 1 ? "s" : ""] in [src].")
+		. += span_notice("[length(contents)] cosa [length(contents) > 1 ? "s" : ""] en [src].")
 
 /obj/item/storage/sack/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 	if(slot & ITEM_SLOT_HEAD)
 		user.become_blind("blindfold_[REF(src)]")
 	if(HAS_TRAIT(user, TRAIT_ROTMAN))
-		to_chat(user, span_info("The [src] slips through dead fingers..."))
+		to_chat(user, span_info("El [src] se desliza entre dedos muertos..."))
 		user.dropItemToGround(src, TRUE)
 
 /obj/item/storage/sack/dropped(mob/living/carbon/human/user)
@@ -99,8 +99,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/storage/meatbag
-	name = "game satchel"
-	desc = "A cloth and leather satchel for storing the fruit of one's hunt."
+	name = "bolsa de juego"
+	desc = "Cartera de tela y cuero para guardar el fruto de la caza."
 	icon_state = "gamesatchel"
 	icon = 'icons/roguetown/clothing/storage.dmi'
 	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_BACK_R|ITEM_SLOT_HIP
@@ -150,8 +150,8 @@
 "eflip" = 8)
 
 /obj/item/storage/handbasket
-	name = "handbasket"
-	desc = "Fibers interwoven to make a cheap, handheld storage item."
+	name = "cesta pequeña"
+	desc = "Fibras entrelazadas para hacer un articulo de almacenamiento portatil y economico."
 	icon_state = "handbasket"
 	icon = 'icons/roguetown/items/misc.dmi'
 	slot_flags = ITEM_SLOT_HIP

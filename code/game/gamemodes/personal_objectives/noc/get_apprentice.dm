@@ -1,8 +1,8 @@
 /datum/objective/personal/get_apprentice
-	name = "Get Apprentice"
-	category = "Noc's Chosen"
+	name = "Conseguir un aprendiz"
+	category = "Elegido de Noc"
 	triumph_count = 3
-	rewards = list("3 Triumphs", "Noc grows stronger", "Noc blesses you (+1 Intelligence)")
+	rewards = list("3 Triunfos", "Noc se fortalece", "Noc te bendice (+1 Inteligencia)")
 
 /datum/objective/personal/get_apprentice/on_creation()
 	. = ..()
@@ -33,4 +33,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_NOC_BLESSING, list(STAT_INTELLIGENCE = 1))
 
 /datum/objective/personal/get_apprentice/update_explanation_text()
-	explanation_text = "Obtain a new apprentice to pass your knowledge on! Noc will be watching."
+	explanation_text = "¡Consigue un nuevo aprendiz a quien transmitir tus conocimientos! Noc estara observando."

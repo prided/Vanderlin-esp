@@ -1,9 +1,9 @@
 /datum/objective/personal/ultimate_sacrifice
 	name = "Sacrificio definitivo"
-	category = "Ravox's Chosen"
+	category = "Elegido de Ravox"
 	triumph_count = 3
-	immediate_effects = list("Gained an ability to give up your life to save another")
-	rewards = list("3 Triumphs", "Ravox grows stronger", "Honorable Death")
+	immediate_effects = list("Obtuviste una habilidad para entregar tu vida y salvar a otra persona")
+	rewards = list("3 Triunfos", "Ravox se fortalece", "Muerte honorable")
 
 /datum/objective/personal/ultimate_sacrifice/on_creation()
 	. = ..()
@@ -16,4 +16,4 @@
 	adjust_storyteller_influence(RAVOX, 20)
 
 /datum/objective/personal/ultimate_sacrifice/update_explanation_text()
-	explanation_text = "Make the highest sacrifice by giving your own life to save truly innocent and worthy soul in the name of Ravox."
+	explanation_text = "Haz el mayor sacrificio: entrega tu vida para salvar un alma verdaderamente inocente y digna en nombre de Ravox."

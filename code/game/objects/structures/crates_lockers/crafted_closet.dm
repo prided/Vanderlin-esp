@@ -1,5 +1,5 @@
 /obj/structure/closet/crate/crafted_closet
-	name = "closet"
+	name = "armario"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 	base_icon_state = "closet"

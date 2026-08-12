@@ -1,6 +1,6 @@
 /obj/item/soap
-	name = "soap"
-	desc = "A combination of ash and animal fats used for cleaning. Typically dissolved in water."
+	name = "jabon"
+	desc = "Combinacion de cenizas y grasas animales utilizadas para la limpieza. Normalmente disuelto en agua."
 	gender = PLURAL
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "soap"
@@ -43,26 +43,26 @@
 		decreaseUses(user, 5)
 
 /obj/item/soap/proc/on_clean_ineffective(atom/target, mob/living/user)
-	to_chat(user, span_warning("This isn't working very well. I should use it with a bucket and a rag."))
+	to_chat(user, span_warning("Esto no esta funcionando muy bien. Deberia usarlo con un cubo y un trapo."))
 
 
 /obj/item/soap/examine(mob/user)
 	. = ..()
 	var/max_uses = initial(uses)
-	var/msg = "It looks like it was just made."
+	var/msg = "Parece recien hecho."
 	if(uses != max_uses)
 		var/percentage_left = uses / max_uses
 		switch(percentage_left)
 			if(0 to 0.15)
-				msg = "There's just a tiny bit left of what it used to be, you're not sure it'll last much longer."
+				msg = "Solo queda un poquito de lo que era, no estas seguro de que dure mucho mas."
 			if(0.15 to 0.30)
 				msg = "Se ha disuelto bastante, pero todavia tiene algo de vida."
 			if(0.30 to 0.50)
-				msg = "It's past its prime, but it's definitely still good."
+				msg = "Ya paso su mejor momento, pero definitivamente sigue siendo bueno."
 			if(0.50 to 0.75)
-				msg = "It's started to get a little smaller than it used to be, but it'll definitely still last for a while."
+				msg = "Ha empezado a ser un poco mas pequeño de lo que solia ser, pero definitivamente durara un tiempo."
 			else
-				msg = "It's seen some light use, but it's still pretty fresh."
+				msg = "Ha tenido un uso ligero, pero todavia esta bastante fresco."
 	. += span_notice("[msg]")
 
 /**
@@ -78,7 +78,7 @@
 		noUses(user)
 
 /obj/item/soap/proc/noUses(mob/user)
-	to_chat(user, span_warning("\The [src] crumbles into tiny bits!"))
+	to_chat(user, span_warning("\The [src] se desmorona en pequeños trozos."))
 	qdel(src)
 
 
@@ -95,7 +95,7 @@
 
 	if(user.zone_selected == BODY_ZONE_PRECISE_MOUTH)
 		if(target.is_mouth_covered())
-			to_chat(user, span_warning("[target.p_their(TRUE)] mouth is blocked!"))
+			to_chat(user, span_warning("[target.p_their(TRUE)] ¡La boca esta bloqueada!"))
 			return ITEM_INTERACT_BLOCKING
 
 		if(user != target)
@@ -105,15 +105,15 @@
 				return ITEM_INTERACT_BLOCKING
 
 		user.visible_message(
-			span_warning("<[user] starts to wash \the [target]'s mouth out with [src]..."),
-			span_notice("I start to wash \the [target]'s mouth out with [src]...")
+			span_warning("<[user] comienza a lavarse la boca de \the [target] con [src]..."),
+			span_notice("Comienzo a lavar la boca de \the [target] con [src]...")
 		) //washes mouth out with soap sounds better than 'the soap' here
 		// how this looks vvv https://www.desmos.com/calculator/55fpadxol5
 		if(do_after(user, (20 / GET_MOB_ATTRIBUTE_VALUE(user, STAT_SPEED) + 2) SECONDS, target))
 			return ITEM_INTERACT_BLOCKING
 		user.visible_message(
-			span_warning("[user] washes \the [target]'s mouth out with [src]!"),
-			span_notice("I wash \the [target]'s mouth out with [src]!")
+			span_warning("¡[user] lava la boca de \the [target] con [src]!"),
+			span_notice("¡Le lavo la boca a \the [target] con [src]!")
 		) //washes mouth out with soap sounds better than 'the soap' here
 		target.emote("drown")
 		target.adjustOxyLoss(20)
@@ -141,22 +141,22 @@
 			return ITEM_INTERACT_BLOCKING
 
 	if(istype(target.head, /obj/item/clothing) || istype(target.wear_armor, /obj/item/clothing) || istype(target.wear_shirt, /obj/item/clothing) || istype(target.cloak, /obj/item/clothing))
-		to_chat(user, span_warning("Can't get a proper bath with clothing on."))
+		to_chat(user, span_warning("No puedes bañarte bien con ropa puesta."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(istype(target.gloves, /obj/item/clothing))
-		to_chat(user, span_warning("Can't get a proper bath with gloves on."))
+		to_chat(user, span_warning("No puedes bañarte bien con los guantes puestos."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(istype(target.wear_pants, /obj/item/clothing) && !istype(target.wear_pants, /obj/item/clothing/pants/loincloth)) // you can bathe in a loincloth
-		to_chat(user, span_warning("Can't get a proper bath with pants on."))
+		to_chat(user, span_warning("No puedes bañarte bien con los pantalones puestos."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(istype(target.shoes, /obj/item/clothing))
-		to_chat(user, span_warning("Can't get a proper bath with shoes on."))
+		to_chat(user, span_warning("No puedes bañarte bien con los zapatos puestos."))
 		return ITEM_INTERACT_BLOCKING
 
-	user.visible_message(span_info("\The [user] begins scrubbing \the [target] with [src]."))
+	user.visible_message(span_info("\The [user] comienza a frotar \the [target] con [src]."))
 	playsound(T, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 100, FALSE)
 
 	if(!do_after(user, 5 SECONDS, target))
@@ -189,14 +189,14 @@
 
 	reagents.add_reagent(/datum/reagent/soap, amt2Add)
 
-	to_chat(user, span_info("I dissolve some of \the [name] in the water."))
+	to_chat(user, span_info("Disuelvo algo de \the [name] en el agua."))
 	decreaseUses(5)
 
 	return TRUE
 
 /obj/item/soap/proc/scrub_scrub(mob/living/carbon/human/target, mob/living/carbon/user)
 	target.wash(clean_strength)
-	user.visible_message(span_info("[user] scrubs [target] with [src]."), span_info("I scrub [target] with [src]."))
+	user.visible_message(span_info("[user] frota a [target] con [src]."), span_info("Frote [target] con [src]."))
 	decreaseUses(5)
 	target.add_stress(/datum/stress_event/clean)
 	target.adjust_hygiene(50)
@@ -206,7 +206,7 @@
 /obj/item/soap/bath
 	name = "jabon de hierbas"
 	icon_state = "soapherbal"
-	desc = "A combination of ash and animal fats used for cleaning. Typically dissolved in water. This one smells pretty nice."
+	desc = "Combinacion de cenizas y grasas animales utilizadas para la limpieza. Normalmente disuelto en agua. Este huele muy bien."
 	uses = 40
 
 //Only get the buff if you use the good stuff

@@ -1,6 +1,6 @@
 /obj/structure/flora/grass/herb
-	name = "herbbush"
-	desc = "A bush, for an herb. This shouldn't show up."
+	name = "arbusto de hierba"
+	desc = "Un arbusto, por una hierba. Esto no deberia aparecer."
 	icon = 'icons/roguetown/misc/herbfoliage.dmi'
 	icon_state = "spritemeplz"
 	num_random_icons = 0
@@ -17,7 +17,7 @@
 
 /obj/structure/flora/grass/herb/Initialize()
 	. = ..()
-	desc = "A herb. This one looks like [name]."
+	desc = "Una hierba. Este se parece a [name]."
 	alchemy_effect = new(get_turf(src), src)
 	GLOB.herb_locations |= src
 	loot_replenish(TRUE)
@@ -31,7 +31,7 @@
 /obj/structure/flora/grass/herb/interact(mob/user)
 	. = ..()
 	if(harvested)
-		to_chat(user, span_warning("Picked clean; but looks healthy. I should try again later."))
+		to_chat(user, span_warning("Recolectado limpio; pero parece saludable. Deberia volver a intentarlo mas tarde."))
 	if(isliving(user))
 		var/mob/living/L = user
 		user.changeNext_move(CLICK_CD_MELEE)
@@ -65,7 +65,7 @@
 		deltimer(timerid)
 
 /obj/structure/flora/grass/herb/random
-	name = "random herb"
+	name = "hierba al azar"
 	desc = "Jaja, estoy en peligro."
 	icon_state = "herb_random"
 
@@ -95,7 +95,7 @@
 	honey_type = /obj/item/reagent_containers/food/snacks/spiderhoney/honey/toxic
 
 /obj/structure/flora/grass/herb/matricaria
-	name = "matricaria"
+	name = "manzanilla"
 	icon_state = "matricaria2"
 
 	herbtype = /obj/item/alch/herb/matricaria
@@ -107,13 +107,13 @@
 	herbtype = /obj/item/alch/herb/symphitum
 
 /obj/structure/flora/grass/herb/taraxacum
-	name = "taraxacum"
+	name = "diente de leon"
 	icon_state = "taraxacum2"
 
 	herbtype = /obj/item/alch/herb/taraxacum
 
 /obj/structure/flora/grass/herb/euphrasia
-	name = "euphrasia"
+	name = "Eufrasia"
 	icon_state = "euphrasia2"
 
 	herbtype = /obj/item/alch/herb/euphrasia
@@ -132,13 +132,13 @@
 	herbtype = /obj/item/alch/herb/calendula
 
 /obj/structure/flora/grass/herb/mentha
-	name = "mentha"
+	name = "menta"
 	icon_state = "mentha2"
 
 	herbtype = /obj/item/alch/herb/mentha
 
 /obj/structure/flora/grass/herb/urtica
-	name = "urtica"
+	name = "ortiga"
 	icon_state = "urtica2"
 
 	herbtype = /obj/item/alch/herb/urtica
@@ -150,7 +150,7 @@
 	herbtype = /obj/item/alch/herb/salvia
 
 /obj/structure/flora/grass/herb/hypericum
-	name = "hypericum"
+	name = "Hiperico"
 	icon_state = "hypericum2"
 
 	herbtype = /obj/item/alch/herb/hypericum
@@ -193,7 +193,7 @@
 	herbtype = /obj/item/alch/herb/necralily
 
 /obj/structure/flora/grass/herb/cursedrosa
-	name = "black briar rosa"
+	name = "rosa de zarza negra"
 	icon_state = "cursedrosa2"
 	herbtype = /obj/item/ore/cursedrosa
 	can_replenish = FALSE

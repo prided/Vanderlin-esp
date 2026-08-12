@@ -1,5 +1,5 @@
 /obj/structure/fake_machine/camera
-	name = "face"
+	name = "cara"
 	desc = ""
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "camera-mid"

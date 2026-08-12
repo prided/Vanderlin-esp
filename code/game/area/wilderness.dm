@@ -37,15 +37,15 @@
 	threat_region = THREAT_REGION_NORTHERN_GROVE
 
 /area/outdoors/wilderness/outpost/vanderlin
-	name = "thatchwood outpost"
-	first_time_text = "Thatchwood Outpost"
+	name = "puesto de avanzada de Thatchwood"
+	first_time_text = "Puesto de Avanzada de Thatchwood"
 	threat_region = THREAT_REGION_NORTHERN_GROVE
 
 /area/outdoors/wilderness/beside_thatchwood
 
 /area/outdoors/wilderness/outpost/salem
-	name = "salem outpost"
-	first_time_text = "Salem Outpost"
+	name = "puesto de avanzada de Salem"
+	first_time_text = "Puesto de Avanzada de Salem"
 
 /area/indoors/wilderness
 	name = "interior - desierto"
@@ -55,16 +55,16 @@
 	droning_index_night = DRONING_INDOORS
 
 /area/indoors/wilderness/tavern
-	name = "fermented cackleberry"
+	name = "Cackleberry fermentada"
 	icon_state = "tavern"
-	first_time_text = "The Fermented Cackleberry"
+	first_time_text = "La Cackleberry Fermentada"
 	background_track = "sound/blank.ogg"
 	background_track_dusk = "sound/blank.ogg"
 	background_track_night = "sound/blank.ogg"
 	converted_type = /area/outdoors/exposed/tavern
 
 /area/indoors/wilderness/garrison
-	name = "garrison"
+	name = "guarnicion"
 	icon_state = "garrison"
 	background_track = 'sound/music/area/manorgarri.ogg'
 	background_track_dusk = null
@@ -74,7 +74,7 @@
 	converted_type = /area/outdoors/exposed/manorgarri
 
 /area/indoors/wilderness/shop
-	name = "shop"
+	name = "tienda"
 	icon_state = "shop"
 	background_track = 'sound/music/area/shop.ogg'
 	background_track_dusk = null
@@ -82,7 +82,7 @@
 	converted_type = /area/outdoors/exposed/shop
 
 /area/indoors/wilderness/magic
-	name = "Wizard's Tower"
+	name = "torre del mago"
 	icon = 'icons/turf/areas/manor.dmi'
 	icon_state = "magiciantower"
 	ambient_index = AMBIENCE_MYSTICAL
@@ -92,46 +92,46 @@
 	converted_type = /area/outdoors/exposed/magiciantower
 
 /area/indoors/wilderness/saint_crypt
-	name = "Saint's Rest"
+	name = "Descanso del Santo"
 	icon_state = "saint_crypt"
 	ambient_index = AMBIENCE_DUNGEON
 	ambient_index_night = AMBIENCE_DUNGEON
 	background_track = 'sound/music/area/churchnight.ogg'
-	first_time_text = "SAINT'S REST"
+	first_time_text = "DESCANSO DEL SANTO"
 
 /area/outdoors/wilderness/safe
 	ambush_mobs = null
 	icon_state = "woods_safe"
 
 /area/outdoors/wilderness/safe/gallowband_fort
-	name = "gallowband fort"
+	name = "fortaleza de Gallowband"
 	icon_state = "gallowband_outdoors"
-	first_time_text = "Gallowband Fort"
+	first_time_text = "Fortaleza de Gallowband"
 
 /area/indoors/wilderness/gallowband
-	name = "gallowband camp"
+	name = "campamento de Gallowband"
 	icon_state = "gallowband_indoors"
 
 /area/indoors/wilderness/gallowband/garrison
-	name = "gallowband fort"
+	name = "fortaleza de Gallowband"
 	icon_state = "gallowband_garrison"
 	background_track = 'sound/music/area/manorgarri.ogg'
 	converted_type = /area/outdoors/exposed/manorgarri
 
 /area/indoors/wilderness/gallowband/garrison/gatehouse
-	name = "gallowband gatehouse"
+	name = "garita de Gallowband"
 
 /area/indoors/wilderness/gallowband/garrison/watchtower
-	name = "gallowband watchtower"
-	first_time_text = "Gallowband Watchtower"
+	name = "torre de vigilancia de Gallowband"
+	first_time_text = "Torre de Vigilancia de Gallowband"
 
 /area/indoors/wilderness/gallowband/ship
-	name = "gallowband ship"
+	name = "barco de Gallowband"
 	icon_state = "gallowband_ship"
-	first_time_text = "Gallowband Ship"
+	first_time_text = "Barco de Gallowband"
 
 /area/indoors/wilderness/gallowband/cell
-	name = "gallowband cell"
+	name = "celda de Gallowband"
 	icon_state = "cell"
 	ambient_index = AMBIENCE_DUNGEON
 	ambient_index_night = AMBIENCE_DUNGEON

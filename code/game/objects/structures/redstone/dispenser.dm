@@ -1,7 +1,7 @@
 
 /obj/structure/redstone/dispenser
-	name = "redstone dispenser"
-	desc = "Dispenses items when powered."
+	name = "dispensador de piedra roja"
+	desc = "Dispensa articulos cuando esta encendido."
 	icon_state = "dispenser"
 	redstone_role = REDSTONE_ROLE_OUTPUT
 	var/dispensing = FALSE
@@ -61,4 +61,4 @@
 	if(!Adjacent(user))
 		return
 	dir = turn(dir, 90)
-	to_chat(user, "<span class='notice'>You rotate the [name].</span>")
+	to_chat(user, "<span class='notice'>Usted hace girar el [name].</span>")

@@ -1,7 +1,7 @@
 
 /obj/item/signal_horn
-	name = "signal horn"
-	desc = "Used to sound the alarm."
+	name = "bocina de señal"
+	desc = "Se utiliza para hacer sonar la alarma."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "signal_horn"
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_NECK
@@ -24,7 +24,7 @@
 		COOLDOWN_START(src, sound_horn, 1 MINUTES)
 
 /obj/item/signal_horn/proc/sound_horn(mob/living/user)
-	user.visible_message(span_warning("[user] sounds the alarm!"))
+	user.visible_message(span_warning("¡[user] suena la alarma!"))
 	// New sound made by fem_tanyl
 	playsound(src, 'sound/items/signalhorn.ogg', 100, TRUE)
 	var/turf/origin_turf = get_turf(src)
@@ -67,7 +67,7 @@
 			if(0 to 20)
 				disttext = " muy cerca"
 			if(20 to 40)
-				disttext = " close"
+				disttext = " cerrar"
 			if(40 to 80)
 				disttext = ""
 			if(80 to 160)
@@ -77,34 +77,34 @@
 
 		//sound played for other players, by fem_tanyl !!!1!!
 		player.playsound_local(get_turf(player), 'sound/items/signalhorn.ogg', 35, FALSE, pressure_affected = FALSE)
-		to_chat(player, span_warning("I hear the horn alarm somewhere[disttext][dirtext]!"))
+		to_chat(player, span_warning("Escucho la alarma del cuerno en algun lugar[disttext][dirtext]¡!"))
 
 #define WARDEN_AMBUSH_MIN 2
 #define WARDEN_AMBUSH_MAX 9
 
 /obj/item/signal_horn/ambush
-	name = "ambush horn"
-	desc = "Used to trigger ambushes from unsavory folks in the wilds."
+	name = "cuerno de emboscada"
+	desc = "Se utiliza para desencadenar emboscadas de gente desagradable en la naturaleza."
 
 /obj/item/signal_horn/ambush/examine()
 	. = ..()
-	. += span_notice("Using the horn will make you stand still and induce several ambushes to happen at once, enabling you to clear out an area. It cannot be used in rapid succession.")
-	. += span_notice("Using it will leave you exhausted for a moment. Bring friends!")
+	. += span_notice("Al usar el cuerno, te mantendra inmovil e inducira varios emboscadas a ocurrir al mismo tiempo, lo que te permitira despejar un area. No se puede usar en rapida sucesion.")
+	. += span_notice("Usarlo te dejara exhausto por un momento. ¡Lleva amigos!")
 
 /obj/item/signal_horn/ambush/attempt_sound_horn(mob/living/user)
 	var/area/AR = get_area(user)
 	var/datum/threat_region/TR = SSregionthreat.get_region(AR.threat_region)
 	if(!TR || !TR.latent_ambush || TR.fixed_ambush)
-		to_chat(user, span_warning("There's no point in sounding the horn here."))
+		to_chat(user, span_warning("No tiene sentido tocar la corneta aqui."))
 		return
 	if(user.get_will_block_ambush())
-		to_chat(user, span_warning("This place is too well-lit for enemies to come."))
+		to_chat(user, span_warning("Este lugar esta demasiado iluminado para que los enemigos puedan venir."))
 		return
 	if(!user.get_possible_ambush_spawn(min_dist = WARDEN_AMBUSH_MIN, max_dist = WARDEN_AMBUSH_MAX))
-		to_chat(user, span_warning("This place is too lightly vegetated for enemies to hide."))
+		to_chat(user, span_warning("Este lugar tiene demasiada poca vegetacion para que los enemigos se escondan."))
 		return
 	if(TR && TR.last_induced_ambush_time && (world.time < TR.last_induced_ambush_time + 5 MINUTES))
-		to_chat(user, span_warning("Foes have been cleared out here recently, perhaps you should wait a moment before sounding the horn again."))
+		to_chat(user, span_warning("Los enemigos han sido eliminados aqui recientemente, quizas deberias esperar un momento antes de sonar la señal de alarma."))
 		return
 	user.visible_message(span_userdanger("¡[user] esta a punto de sonar [src]!"))
 	user.apply_status_effect(/datum/status_effect/debuff/clickcd, 5 SECONDS) // We don't want them to spam the message.

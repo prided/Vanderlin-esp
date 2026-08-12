@@ -1,19 +1,19 @@
 Imperio
-Herético
+Heretico
 Cubano
-Psíquico
+Psiquico
 Elegante
-Común
-Poco Común
+Comun
+Poco Comun
 Raro
-Único
+Unico
 Con Reglas Caseras
 Religioso
 Ateo
 Tradicional
 Con Reglas Caseras
 Loco
-Súper
+Super
 Ultra
 Secreto
 Alto Secreto
@@ -36,6 +36,6 @@ Szechuan
 Blanco
 Negro
 Gris
-Sombrío
-Eléctrico
+Sombrio
+Electrico
 Ardiente

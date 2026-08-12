@@ -37,10 +37,10 @@
 		return ITEM_INTERACT_BLOCKING
 
 	user.visible_message("<span class='warning'>[user] corta [src].</span>",
-		"<span class='notice'>I start to cut apart [src].</span>", "<span class='hear'>I hear cutting.</span>")
+		"<span class='notice'>Empiezo a cortar [src].</span>", "<span class='hear'>Oigo cortar.</span>")
 
 	if(I.use_tool(src, user, 50, volume=100) && !anchored)
-		to_chat(user, "<span class='notice'>I cut apart [src].</span>")
+		to_chat(user, "<span class='notice'>Corte [src].</span>")
 		deconstruct()
 		return ITEM_INTERACT_SUCCESS
 

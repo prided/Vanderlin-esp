@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/literally_too_angry_to_die
-	name = "Endure"
-	desc = "Imbue your body with unimaginable amounts of rage (and plasma) to allow yourself to ignore all pain for a short time."
+	name = "Perdurar"
+	desc = "Imbuye tu cuerpo con cantidades inimaginables de rabia (y plasma) para permitirte ignorar todo dolor por un corto tiempo."
 	button_icon_state = "literally_too_angry"
 	personal_resource_cost = 100
 	var/endure_active = FALSE
@@ -12,9 +12,9 @@
 	if(endure_active)
 		owner.balloon_alert(owner, "ya soportando")
 		return FALSE
-	owner.balloon_alert(owner, "endure began")
+	owner.balloon_alert(owner, "endure comenzo")
 	playsound(owner, 'sound/alien/alien_roar1.ogg', 100, TRUE, 8, 0.9)
-	to_chat(owner, span_danger("We numb our ability to feel pain, allowing us to fight until the very last for the next [endure_duration/10] seconds."))
+	to_chat(owner, span_danger("Entumecemos nuestra capacidad de sentir dolor, lo que nos permite luchar hasta el ultimo segundo por los siguientes [endure_duration/10] segundos."))
 	addtimer(CALLBACK(src, PROC_REF(endure_deactivate)), endure_duration)
 	owner.add_filter("ravager", 4, outline_filter(1, COLOR_RED_LIGHT))
 	ADD_TRAIT(owner, TRAIT_STUNIMMUNE, "endure")
@@ -28,7 +28,7 @@
 
 /datum/action/cooldown/meatvine/personal/literally_too_angry_to_die/proc/endure_deactivate()
 	endure_active = FALSE
-	owner.balloon_alert(owner, "endure ended")
+	owner.balloon_alert(owner, "endure termino")
 	owner.remove_filter("ravager")
 	var/mob/living/mob = owner
 	REMOVE_TRAIT(owner, TRAIT_STUNIMMUNE, "endure")

@@ -1,8 +1,8 @@
 /datum/objective/personal/mock
-	name = "Mock"
-	category = "Xylix's Chosen"
+	name = "Burlarse"
+	category = "Elegido de Xylix"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Xylix grows stronger")
+	rewards = list("2 Triunfos", "Xylix se fortalece")
 
 /datum/objective/personal/mock/on_creation()
 	. = ..()
@@ -21,8 +21,8 @@
 
 /// Monarch variant
 /datum/objective/personal/mock/monarch
-	name = "Mock Monarch"
-	immediate_effects = list("Gained an ability to viciously mock others")
+	name = "Burlarse del monarca"
+	immediate_effects = list("Obtuviste una habilidad para burlarte cruelmente de otros")
 
 /datum/objective/personal/mock/monarch/on_mock_used(datum/source, mob/living/victim)
 	. = ..()
@@ -31,18 +31,18 @@
 
 /datum/objective/personal/mock/monarch/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have mocked the monarch and completed the objective!"))
+	to_chat(owner.current, span_greentext("¡Te has burlado del monarca y completado el objetivo!"))
 	adjust_storyteller_influence(XYLIX, 20)
 	UnregisterSignal(owner.current, COMSIG_VICIOUSLY_MOCKED)
 
 /datum/objective/personal/mock/monarch/update_explanation_text()
 	. = ..()
-	explanation_text = "Viciously mock the monarch for Xylix!"
+	explanation_text = "¡Burlate cruelmente del monarca por Xylix!"
 
 /// Noble variant
 /datum/objective/personal/mock/noble
-	name = "Mock Nobles"
-	rewards = list("2 Triumphs", "Xylix grows stronger", "Xylix blesses you (+1 Fortune)")
+	name = "Burlarse de los nobles"
+	rewards = list("2 Triunfos", "Xylix se fortalece", "Xylix te bendice (+1 Fortuna)")
 	var/mocked_targets = 0
 	var/required_count = 2
 
@@ -57,11 +57,11 @@
 		if(mocked_targets >= required_count)
 			complete_objective()
 		else
-			to_chat(owner.current, span_notice("Noble mocked! Viciously mock [required_count - mocked_targets] more noble to complete the objective!"))
+			to_chat(owner.current, span_notice("¡Noble ridiculizado! ¡Burlate cruelmente de [required_count - mocked_targets] noble mas para completar el objetivo!"))
 
 /datum/objective/personal/mock/noble/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have mocked enough nobles and completed the objective!"))
+	to_chat(owner.current, span_greentext("¡Te has burlado de suficientes nobles y completado el objetivo!"))
 	adjust_storyteller_influence(XYLIX, 20)
 	UnregisterSignal(owner.current, COMSIG_VICIOUSLY_MOCKED)
 
@@ -71,4 +71,4 @@
 
 /datum/objective/personal/mock/noble/update_explanation_text()
 	. = ..()
-	explanation_text = "Viciously mock [required_count] nobles for Xylix!"
+	explanation_text = "¡Burlate cruelmente de [required_count] nobles por Xylix!"

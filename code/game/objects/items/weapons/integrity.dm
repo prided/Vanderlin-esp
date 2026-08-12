@@ -26,11 +26,11 @@
 		var/newratio = (blade_int - amt) / max_blade_int
 		if(ratio > SHARPNESS_TIER1_THRESHOLD && newratio <= SHARPNESS_TIER1_THRESHOLD)
 			if(GET_MOB_ATTRIBUTE_VALUE(L, STAT_INTELLIGENCE) > 9)
-				to_chat(L, span_info("<i><font color = '#ececec'>The edge chips! \The [src]'s damage will start to slowly wane, now.</font></i>"))
+				to_chat(L, span_info("<i><font color = '#ececec'>¡Los chips de borde! El daño de \The [src] comenzara a disminuir lentamente ahora.</font></i>"))
 			playsound(L, 'sound/combat/sharpness_loss1.ogg', 75, TRUE)
 		if(ratio > SHARPNESS_TIER2_THRESHOLD && newratio <= SHARPNESS_TIER2_THRESHOLD)
 			if(GET_MOB_ATTRIBUTE_VALUE(L, STAT_INTELLIGENCE) > 9)
-				to_chat (L, span_userdanger("A chunk snapped off! \The [src]'s damage will decay much quicker now."))
+				to_chat (L, span_userdanger("¡Se rompio un trozo! \The ¡El daño de [src] se desgastara mucho mas rapido ahora!"))
 			playsound(L, 'sound/combat/sharpness_loss2.ogg', 100, TRUE)
 
 	blade_int = blade_int - amt
@@ -56,9 +56,9 @@
 	else
 		var/ratio = blade_int / max_blade_int
 		if(ratio < SHARPNESS_TIER2_THRESHOLD && ((blade_int + amt) / max_blade_int) > SHARPNESS_TIER2_THRESHOLD)
-			to_chat(user, span_info("The <b>chunks</b> smooth out. The edge regains some smoothness."))
+			to_chat(user, span_info("Los <b>fragmentos</b> se suavizan. El borde recupera algo de suavidad."))
 		if(ratio < SHARPNESS_TIER1_THRESHOLD && ((blade_int + amt) / max_blade_int) > SHARPNESS_TIER1_THRESHOLD)
-			to_chat(user, span_info("The <b>chips</b> disappear. The edge is now as sharp as ever."))
+			to_chat(user, span_info("Los <b>chips</b> desaparecen. El borde ahora es tan afilado como siempre."))
 		blade_int = blade_int + amt
 		if(blade_int >= max_blade_int)
 			blade_int = max_blade_int

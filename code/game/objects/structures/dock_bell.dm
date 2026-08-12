@@ -1,6 +1,6 @@
 /obj/structure/dock_bell
-	name = "dock bell"
-	desc = "A loud bell that carries its sound to the nearby ports. Signals to merchants that the dock has wares to sell."
+	name = "campana de muelle"
+	desc = "Una campana sonora que lleva su sonido a los puertos cercanos. Indica a los comerciantes que el muelle tiene productos para vender."
 
 
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
@@ -14,8 +14,8 @@
 
 /obj/structure/dock_bell/examine(mob/user)
 	. = ..()
-	. += span_info("The dock bell can be rung by sanctioned workers after [COOLDOWN_TIMELEFT(src, ring_bell)/10] seconds.")
-	. += span_info("The dock bell can be rung by outsiders after [COOLDOWN_TIMELEFT(src, outsider_ring_bell)/10] seconds.")
+	. += span_info("La campana del muelle puede ser tocada por los trabajadores autorizados despues de [COOLDOWN_TIMELEFT(src, ring_bell)/10] segundos.")
+	. += span_info("La campana del muelle puede ser tocada por personas ajenas despues de [COOLDOWN_TIMELEFT(src, outsider_ring_bell)/10] segundos.")
 
 /obj/structure/dock_bell/attack_hand(mob/user)
 	. = ..()
@@ -42,7 +42,7 @@
 	if(!COOLDOWN_FINISHED(src, ring_bell))
 		return
 
-	visible_message(span_notice("[user] starts ringing the dock bell."))
+	visible_message(span_notice("[user] comienza a hacer sonar la campana del muelle."))
 	playsound(src, 'sound/misc/handbell.ogg', 50, 1)
 
 	// Handle trader return

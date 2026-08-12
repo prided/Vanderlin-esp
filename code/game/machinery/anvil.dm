@@ -1,6 +1,6 @@
 /obj/machinery/anvil
 	icon = 'icons/roguetown/misc/forge.dmi'
-	name = "anvil"
+	name = "yunque"
 	icon_state = "anvil"
 	max_integrity = 2000
 	density = TRUE
@@ -21,9 +21,9 @@
 /obj/machinery/anvil/examine(mob/user)
 	. = ..()
 	if(working_material)
-		. += span_info("[src] has \a [working_material.name] on it.")
+		. += span_info("[src] tiene \a [working_material.name] encima.")
 		if(working_material.currecipe)
-			. += span_warning("It is currently being worked on to become \a [working_material.currecipe.name].")
+			. += span_warning("Se esta trabajando para convertirlo en \a [working_material.currecipe.name].")
 		if(HAS_TRAIT(working_material, TRAIT_NEEDS_QUENCH))
 			. += span_warning("[working_material] esta demasiado caliente para tocarlo.")
 
@@ -60,7 +60,7 @@
 			user.changeNext_move(CLICK_CD_MELEE)
 			if(!HAS_TRAIT(working_material, TRAIT_NEEDS_QUENCH))
 				if(working_material.currecipe)
-					to_chat(user, span_warning("[working_material] has gone too cold to continue working on it."))
+					to_chat(user, span_warning("[working_material] se ha enfriado demasiado para seguir trabajandolo."))
 					return ITEM_INTERACT_BLOCKING
 				return tool.interact_with_atom(working_material, user, modifiers)
 
@@ -98,7 +98,7 @@
 		return FALSE
 
 	if(working_material.max_integrity >= initial(working_material.max_integrity))
-		to_chat(user, span_warning("[working_material] does not need to be restored."))
+		to_chat(user, span_warning("[working_material] no necesita restauracion."))
 		return FALSE
 
 	var/skill_value = GET_MOB_SKILL_VALUE(user, working_material.anvilrepair)
@@ -120,10 +120,10 @@
 		return FALSE
 
 	if(!HAS_TRAIT(working_material, TRAIT_NEEDS_QUENCH))
-		to_chat(item, span_warning("[working_material] needs to be heated first to be mended!"))
+		to_chat(item, span_warning("¡[working_material] debe calentarse antes de repararlo!"))
 		return FALSE
 	if(!HAS_TRAIT(item, TRAIT_NEEDS_QUENCH))
-		to_chat(item, span_warning("[item] needs to be heated first to be used as mending material!"))
+		to_chat(item, span_warning("¡[item] debe calentarse antes de usarlo como material de reparacion!"))
 		return FALSE
 
 	var/restores_done = working_material.integrity_restores
@@ -132,7 +132,7 @@
 	var/restore_amount = round(working_material.max_integrity * base_restore * diminish_factor)
 
 	if(restore_amount <= 0)
-		to_chat(user, span_warning("[working_material] has been restored too many times. It no longer accepts new material."))
+		to_chat(user, span_warning("[working_material] ha sido restaurado demasiadas veces. Ya no acepta nuevo material."))
 		return FALSE
 
 	var/new_max_integrity = min(working_material.max_integrity + restore_amount, initial(working_material.max_integrity))
@@ -147,7 +147,7 @@
 	smith_mind.add_sleep_experience(working_material.anvilrepair, amt2raise)
 
 	playsound(src, 'sound/items/bsmith3.ogg', 100, FALSE)
-	user.visible_message(span_info("[user] works new material into [working_material], restoring its maximum integrity."))
+	user.visible_message(span_info("[user] integra material nuevo en [working_material] y restaura su integridad maxima."))
 
 	return TRUE
 
@@ -196,9 +196,9 @@
 	if(quality_score >= 80)
 		user.visible_message(span_greentext("¡[user] golpea habilmente la barra!"))
 	else if(quality_score >= 40)
-		user.visible_message(span_info("[user] strikes the bar!"))
+		user.visible_message(span_info("¡[user] golpea la barra!"))
 	else
-		user.visible_message(span_warning("[user] fumbles the bar!"))
+		user.visible_message(span_warning("¡[user] manipula torpemente la barra!"))
 
 	var/datum/effect_system/spark_spread/sparks = new()
 	var/turf/front = get_turf(src)

@@ -4,7 +4,7 @@ GLOBAL_LIST_EMPTY(tram_doors)
 
 /obj/machinery/tram_controls
 	name = "controles de tranvia"
-	desc = "An interface for the tram that lets you tell the tram where to go and hopefully it makes it there. I'm here to describe the controls to you, not to inspire confidence."
+	desc = "Una interfaz del tranvia que te permite indicarle adonde ir y, con suerte, lograr que llegue. Estoy aqui para explicarte los controles, no para inspirarte confianza."
 	icon_state = "tram_controls"
 	layer = SIGN_LAYER
 	density = FALSE

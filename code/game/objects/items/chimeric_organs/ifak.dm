@@ -1,7 +1,7 @@
 
 /obj/item/storage/fancy/ifak
 	name = "kit de parches personales"
-	desc = "Personal treatment pouch; has all you need to stop you or someone else from meeting Necra."
+	desc = "Bolsa de tratamiento personal; tiene todo lo que necesita para evitar que usted o otra persona conozcan Necra."
 	icon = 'icons/obj/medical.dmi'
 	icon_state = "ifak"
 	w_class = WEIGHT_CLASS_NORMAL // So you can put stuff like bottles and Vials into it
@@ -33,4 +33,4 @@
 
 /obj/item/storage/fancy/ifak/attack_self(mob/user, list/modifiers)
 	. = ..()
-	to_chat(user, span_notice("[src] is now [is_open ? "open" : "closed"]."))
+	to_chat(user, span_notice("Estado de [src]: [is_open ? "open" : "closed"]."))

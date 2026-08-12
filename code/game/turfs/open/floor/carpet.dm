@@ -1,5 +1,5 @@
 /turf/open/floor/carpet
-	name = "carpet"
+	name = "alfombra"
 	icon = 'icons/turf/constructed/carpet.dmi'
 	icon_state = "carpet"
 	flags_1 = NONE

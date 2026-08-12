@@ -30,7 +30,7 @@
 /obj/structure/trap/Initialize(mapload)
 	. = ..()
 	if(isnull(flare_message))
-		flare_message = span_warning("\The [src] fizzles!")
+		flare_message = span_warning("¡\The [src] fracasa!")
 	if(isnull(found_message))
 		found_message = span_warning("¡\The [src] se revela!")
 	spark_system = new
@@ -57,7 +57,7 @@
 	if(user.mind && (user.mind in immune_minds))
 		return
 	if(get_dist(user, src) <= FLOOR((GET_MOB_ATTRIBUTE_VALUE(luser, STAT_PERCEPTION)-4)/4,1))
-		to_chat(user,span_notice("I reveal and temporarily disarm \the [src]"))
+		to_chat(user,span_notice("Revelare y desactivare temporalmente \the [src]"))
 		flare()
 
 /obj/structure/trap/proc/on_active_perception(datum/controller/subsystem/processing/dcs/unused,mob/living/percepter)
@@ -148,7 +148,7 @@
 	return
 
 /obj/structure/trap/shock
-	name = "lightning plate trap"
+	name = "trampa de placa de rayos"
 	var/stun_time = 5 SECONDS
 
 /obj/structure/trap/shock/trigger_step_on(mob/living/victim)
@@ -162,25 +162,25 @@
 
 /obj/structure/trap/fire/trigger_step_on(mob/living/victim)
 	..()
-	to_chat(victim,span_danger("The ground suddenly erupts in flame!"))
+	to_chat(victim,span_danger("¡El suelo estalla de repente en llamas!"))
 	new /obj/effect/hotspot(get_turf(src))
 	post_triggered()
 
 /obj/structure/trap/chill
-	name = "frost plate trap"
+	name = "trampa de placa de escarcha"
 
 /obj/structure/trap/chill/trigger_step_on(mob/living/victim)
 	..()
-	to_chat(victim, span_danger("I am suddenly frozen solid!"))
+	to_chat(victim, span_danger("¡De repente estoy completamente congelado!"))
 	victim.apply_status_effect(/datum/status_effect/frost_trap)
 	post_triggered()
 
 /obj/structure/trap/spike
-	name = "spike plate trap"
+	name = "trampa de placa de puas"
 
 /obj/structure/trap/spike/trigger_step_on(mob/living/victim)
 	..()
-	to_chat(victim, span_danger("Spikes erupt from the ground, skewering me momentarily!"))
+	to_chat(victim, span_danger("¡Las puas brotan del suelo y me clavan durante un momento!"))
 	victim.Paralyze(5 SECONDS)
 	var/obj/item/bodypart/part = victim.get_bodypart(prob(50) ? BODY_ZONE_L_LEG : BODY_ZONE_R_LEG)
 	if(isnull(part))
@@ -190,11 +190,11 @@
 	post_triggered()
 
 /obj/structure/trap/poison
-	name = "poisonous plate trap"
+	name = "trampa de placa venenosa"
 
 /obj/structure/trap/poison/trigger_step_on(mob/living/victim)
 	..()
-	to_chat(victim,span_danger("I feel a slight prick from beneath me!"))
+	to_chat(victim,span_danger("¡Siento un ligero pinchazo desde abajo!"))
 	victim.reagents?.add_reagent(/datum/reagent/berrypoison,2.5)
 	post_triggered()
 
@@ -219,7 +219,7 @@
 	post_triggered()
 
 /obj/structure/trap/saw_blades
-	name = "saw plate trap"
+	name = "trampa de placa de sierra"
 	icon_state = "saw_trap_plate"
 	charges = 1
 
@@ -227,7 +227,7 @@
 	..()
 	var/obj/structure/sawblade_trap/saw = new(get_turf(src))
 	saw.dir = dir
-	visible_message(span_danger("\The [saw] suddenly erupts from underneath [src]!"))
+	visible_message(span_danger("\The [saw] ¡de repente emerge desde debajo de [src]!"))
 	post_triggered()
 
 /obj/structure/sawblade_trap
@@ -242,7 +242,7 @@
 /obj/structure/sawblade_trap/Crossed(atom/movable/AM)
 	if(isliving(AM))
 		var/mob/living/victim = AM
-		to_chat(victim,span_danger("\The [src] tears into me!"))
+		to_chat(victim,span_danger("¡\The [src] se desgarra en mi!"))
 		var/obj/item/bodypart/part = victim.get_bodypart(prob(50) ? BODY_ZONE_L_LEG : BODY_ZONE_R_LEG)
 		if(isnull(part))
 			part = victim.get_bodypart(BODY_ZONE_CHEST)
@@ -280,7 +280,7 @@
 	var/obj/projectile/suprise = new fired(get_step_towards2(home_wall,src))
 	suprise.preparePixelProjectile(victim,home_wall)
 	suprise.fire()
-	to_chat(victim, span_danger("\The [suprise] erupts from a hidden slit in \the [home_wall]!"))
+	to_chat(victim, span_danger("\The [suprise] estalla desde una rendija oculta en \the [home_wall] ¡Cuidado!"))
 	post_triggered()
 
 /obj/structure/trap/wall_projectile/Destroy()

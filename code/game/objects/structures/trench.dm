@@ -1,5 +1,5 @@
 /obj/structure/trench
-	name = "trench"
+	name = "zanja"
 	icon = 'icons/effects/snow.dmi'
 	icon_state = "trench_base"
 

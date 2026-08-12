@@ -3,9 +3,9 @@
 	unarmed = TRUE
 
 /datum/intent/unarmed/punch
-	name = "punch"
+	name = "golpe de puño"
 	icon_state = "inpunch"
-	attack_verb = list("punches", "jabs", "relojes")
+	attack_verb = list("golpea", "pincha", "relojes")
 	chargetime = 0
 	animname = "punch"
 	hitsound = list('sound/combat/hits/punch/punch (1).ogg', 'sound/combat/hits/punch/punch (2).ogg', 'sound/combat/hits/punch/punch (3).ogg')
@@ -16,7 +16,7 @@
 	candodge = TRUE
 	canparry = TRUE
 	blade_class = BCLASS_PUNCH
-	miss_text = "swings a fist at the air!"
+	miss_text = "¡mueve un puño al aire!"
 	miss_sound = "punchwoosh"
 	item_damage_type = "blunt"
 
@@ -24,20 +24,20 @@
 	if(ismob(target))
 		var/mob/M = target
 		var/list/targetl = list(target)
-		user.visible_message(span_red("¡[user] se burla de [M]!"), span_red("I taunt [M]!"), ignored_mobs = targetl)
+		user.visible_message(span_red("¡[user] se burla de [M]!"), span_red("¡Me muevo de [M]!"), ignored_mobs = targetl)
 		user.emote("taunt")
 		if(M.client)
 			M.taunted(user)
 			if(M.can_see_cone(user))
-				to_chat(M, "<span class='red'>[user] taunts me!</span>")
+				to_chat(M, "<span class='red'>[user] me insulta </span>")
 		else
 			M.taunted(user)
 	return
 
 /datum/intent/unarmed/shove
-	name = "shove"
+	name = "empujar"
 	icon_state = "inshove"
-	attack_verb = list("shoves")
+	attack_verb = list("empuja")
 	chargetime = 0
 	noaa = TRUE
 	rmb_ranged = TRUE
@@ -49,16 +49,16 @@
 	if(ismob(target))
 		var/mob/M = target
 		var/list/targetl = list(target)
-		user.visible_message("<span class='blue'>[user] shoos [M] away.</span>", "<span class='blue'>I shoo [M] away.</span>", ignored_mobs = targetl)
+		user.visible_message("<span class='blue'>[user] aleja a [M] con una patada.</span>", "<span class='blue'>Ahuyento a [M].</span>", ignored_mobs = targetl)
 		if(M.client)
 			if(M.can_see_cone(user))
-				to_chat(M, "<span class='blue'>[user] shoos me away.</span>")
+				to_chat(M, "<span class='blue'>[user] me aleja.</span>")
 		else
 			M.shood(user)
 	return
 
 /datum/intent/unarmed/grab
-	name = "grab"
+	name = "agarra."
 	icon_state = "ingrab"
 	attack_verb = list("agarra")
 	chargetime = 0
@@ -74,7 +74,7 @@
 	if(ismob(target))
 		var/mob/M = target
 		var/list/targetl = list(target)
-		user.visible_message("<span class='green'>[user] beckons [M] to come closer.</span>", "<span class='green'>I beckon [M] to come closer.</span>", ignored_mobs = targetl)
+		user.visible_message("<span class='green'>[user] hace señas [M] para que se acerque.</span>", "<span class='green'>Señalo con la mano a [M] para que se acerque.</span>", ignored_mobs = targetl)
 		if(M.client)
 			if(M.can_see_cone(user))
 				to_chat(M, "<span class='green'>[user] me hace señas para que me acerque.</span>")
@@ -83,7 +83,7 @@
 	return
 
 /datum/intent/unarmed/help
-	name = "touch"
+	name = "tocar"
 	icon_state = "intouch"
 	chargetime = 0
 	noaa = TRUE
@@ -96,8 +96,8 @@
 	if(ismob(target))
 		var/mob/M = target
 		var/list/targetl = list(target)
-		user.visible_message("<span class='green'>[user] waves friendly at [M].</span>", "<span class='green'>I wave friendly at [M].</span>", ignored_mobs = targetl)
+		user.visible_message("<span class='green'>[user] hace una señal de saludo a [M].</span>", "<span class='green'>Muevo la mano de forma amigable hacia [M].</span>", ignored_mobs = targetl)
 		if(M.client)
 			if(M.can_see_cone(user))
-				to_chat(M, "<span class='green'>[user] gives me a friendly wave.</span>")
+				to_chat(M, "<span class='green'>[user] me da una amable ola.</span>")
 	return

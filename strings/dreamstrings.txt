@@ -1,35 +1,35 @@
 %A% %ADJECTIVE% rostro familiar
-%A% %ADJECTIVE% miembro de la tripulación
+%A% %ADJECTIVE% miembro de la tripulacion
 %A% %ADJECTIVE% oficial de seguridad
 %A% %ADJECTIVE% doctor
 %A% %ADJECTIVE% ingeniero
 %A% %ADJECTIVE% minero
 %A% %ADJECTIVE% slime
-%A% %ADJECTIVE% alienígena
+%A% %ADJECTIVE% alienigena
 %A% %ADJECTIVE% traidor
 %A% %ADJECTIVE% aliado
-%A% %ADJECTIVE% científico
+%A% %ADJECTIVE% cientifico
 %A% %ADJECTIVE% mono
 %A% %ADJECTIVE% ser querido
 %A% %ADJECTIVE% monstruo
-el capitán %ADJECTIVE%
+el capitan %ADJECTIVE%
 %A% %ADJECTIVE% sombrero
-%A% %ADJECTIVE% tarjeta de identificación
+%A% %ADJECTIVE% tarjeta de identificacion
 %A% %ADJECTIVE% botella
 %A% %ADJECTIVE% caja de herramientas
 %A% %ADJECTIVE% arma
 el sol
 el motor
-la estación
+la estacion
 %A% %ADJECTIVE% planeta
-la enfermería
+la enfermeria
 el puente %ADJECTIVE%
 el calabozo %ADJECTIVE%
 %A% %ADJECTIVE% transbordador
 %A% %ADJECTIVE% laboratorio
 Nanotrasen
 el Sindicato
-la Federación de Magos
+la Federacion de Magos
 sangre %ADJECTIVE%
 plasma %ADJECTIVE%
 viento %ADJECTIVE%

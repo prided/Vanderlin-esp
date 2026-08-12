@@ -32,7 +32,7 @@
 			to_chat(user, "<span class='warning'>[interacting_with] esta lleno.</span>")
 			return ITEM_INTERACT_BLOCKING
 
-		user.visible_message("<span class='warning'>[user] slips something into [interacting_with]!</span>", "<span class='notice'>I dissolve [src] in [interacting_with].</span>", null, 2)
+		user.visible_message("<span class='warning'>[user] le mete algo a [interacting_with]!</span>", "<span class='notice'>Disuelvo [src] en [interacting_with].</span>", null, 2)
 
 		reagents.trans_to(interacting_with, reagents.total_volume, transfered_by = user)
 		qdel(src)
@@ -49,7 +49,7 @@
 		if(self_delay)
 			if(!do_after(user, self_delay, M))
 				return ITEM_INTERACT_BLOCKING
-		to_chat(M, "<span class='notice'>I [apply_method] [src].</span>")
+		to_chat(M, "<span class='notice'>Yo [apply_method] [src].</span>")
 		playsound(src, "sound/misc/pillpop.ogg", 100, TRUE)
 
 	else
@@ -57,8 +57,8 @@
 							"<span class='danger'>[user] intenta forzarte a [apply_method] [src].</span>")
 		if(!do_after(user, 3 SECONDS, M))
 			return ITEM_INTERACT_BLOCKING
-		M.visible_message("<span class='danger'>[user] forces [M] to [apply_method] [src].</span>", \
-							"<span class='danger'>[user] forces you to [apply_method] [src].</span>")
+		M.visible_message("<span class='danger'>[user] fuerzas [M] a [apply_method] [src].</span>", \
+							"<span class='danger'>[user] te obliga a [apply_method] [src].</span>")
 		playsound(src, "sound/misc/pillpop.ogg", 100, TRUE)
 
 	if(icon_state == "pill4" && prob(5)) //you take the red pill - you stay in Wonderland, and I show you how deep the rabbit hole goes
@@ -73,15 +73,15 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/reagent_containers/pill/sate
-	name = "SATE pill"
-	desc = "Prevents the loss of thaumiel blood."
+	name = "Pastilla SATE"
+	desc = "Previene la perdida de sangre de taumiel."
 	icon_state = "pinkb"
 
 	list_reagents = list(/datum/reagent/sate = 50)
 
 /obj/item/reagent_containers/pill/devour
-	name = "DEVOUR pill"
-	desc = "Devours thaumiel blood to forcibly induce the triggering of chimeric organs."
+	name = "Pildora DEVORAR"
+	desc = "Devora sangre de taumiel para inducir a la fuerza la activacion de organos quimericos."
 
 	icon_state = "pillg"
 	list_reagents = list(/datum/reagent/devour = 10)

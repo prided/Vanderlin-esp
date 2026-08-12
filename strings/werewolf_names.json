@@ -5,7 +5,7 @@
         "Blanco",
         "Plateado",
         "Gris",
-        "Marrón",
+        "Marron",
         "Oscuro",
         "Luna",
         "Sangriento",
@@ -17,7 +17,7 @@
         "Salvaje",
         "Malvado",
         "Silvestre",
-        "Mordelón"
+        "Mordelon"
     ],
     "wolf_suffixes": [
         "Luna",
@@ -37,6 +37,6 @@
         "Bestia",
         "Devorador",
         "Amarok",
-        "Rubí"
+        "Rubi"
     ]
 }

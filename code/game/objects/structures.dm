@@ -58,7 +58,7 @@
 		H.Immobilize(20)
 		//hurts you a little bit but doesn't immediately chestfrac  you lmao
 		H.apply_damage(20, BRUTE, BODY_ZONE_CHEST, H.run_armor_check("chest", "blunt", damage = 20), damage_type = BCLASS_BLUNT)
-		audible_message(span_warning("\The [src] shakes under the force of a great impact!"))
+		audible_message(span_warning("¡\The [src] tiembla bajo la fuerza de un gran impacto!"))
 		playsound(src, "meteor", 100, TRUE)
 		addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, Knockdown), 10), 10)
 	else
@@ -66,7 +66,7 @@
 		H.apply_damage(15, BRUTE, BODY_ZONE_CHEST, H.run_armor_check("chest", "blunt", damage = 15), damage_type = BCLASS_BLUNT)
 		H.toggle_rogmove_intent(MOVE_INTENT_WALK, TRUE)
 		playsound(src, "genblunt", 100, TRUE)
-		H.visible_message("<span class='warning'>[H] runs into [src]!</span>", "<span class='warning'>I run into [src]!</span>")
+		H.visible_message("<span class='warning'>[H] se encuentra con [src] ¡</span>", "<span class='warning'>Me encuentro con [src]¡</span>")
 		addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/carbon/human, Knockdown), 10), 10)
 
 /obj/structure/Destroy()
@@ -152,8 +152,8 @@
 	if(do_after(user, adjusted_climb_time))
 		if(src.loc) //Checking if structure has been destroyed
 			if(do_climb(user))
-				user.visible_message("<span class='warning'>[user] climbs onto [src].</span>", \
-									"<span class='notice'>I climb onto [src].</span>")
+				user.visible_message("<span class='warning'>[user] escala [src].</span>", \
+									"<span class='notice'>Me subo a [src].</span>")
 				log_combat(user, src, "climbed onto")
 				if(climb_stun)
 					user.Stun(climb_stun)
@@ -161,7 +161,7 @@
 					playsound(src, climb_sound, 100)
 				. = 1
 			else
-				to_chat(user, "<span class='warning'>I fail to climb onto [src].</span>")
+				to_chat(user, "<span class='warning'>No puedo subirme a [src].</span>")
 	structureclimber = null
 
 /obj/structure/examine(mob/user)

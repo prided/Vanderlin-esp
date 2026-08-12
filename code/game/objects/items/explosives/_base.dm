@@ -12,7 +12,7 @@
 
 /obj/item/explosive
 	name = "bomba de tubo"
-	desc = "A bottle filled with an explosive concoction."
+	desc = "Una botella llena de un brebaje explosivo."
 	icon_state = "bottle"
 	icon = 'icons/obj/bombs.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -83,14 +83,14 @@
 		return TRUE
 
 	if(sticky && prob(50)) // to add risk to sticky tape grenade cheese, no return cause we still prime as normal after.
-		to_chat(user, span_warning("What the... [src] is stuck to your hand!"))
+		to_chat(user, span_warning("¡Que... [src] esta pegado a tu mano."))
 		ADD_TRAIT(src, TRAIT_NODROP, "sticky")
 
 /obj/item/explosive/attack_self(mob/user)
 	if(HAS_TRAIT(src, TRAIT_NODROP))
-		to_chat(user, span_notice("You try prying [src] off your hand..."))
+		to_chat(user, span_notice("Intenta quitar [src] de tu mano..."))
 		if(do_after(user, 7 SECONDS, target = src))
-			to_chat(user, span_notice("You manage to remove [src] from your hand."))
+			to_chat(user, span_notice("Lograste quitar [src] de tu mano."))
 			REMOVE_TRAIT(src, TRAIT_NODROP, "sticky")
 		return
 
@@ -140,7 +140,7 @@
 	if(user)
 		add_fingerprint(user)
 		if(msg)
-			to_chat(user, span_warning("You prime [src]! [capitalize(DisplayTimeText(rand_time))]!"))
+			to_chat(user, span_warning("¡Preparas [src]! ¡[capitalize(DisplayTimeText(rand_time))]!"))
 	if(shrapnel_type && shrapnel_radius)
 		shrapnel_initialized = TRUE
 		AddComponent(/datum/component/pellet_cloud, projectile_type = shrapnel_type, magnitude = shrapnel_radius)
@@ -160,7 +160,7 @@
 	if(lanced_by)
 		if(botch_check(lanced_by)) // if they botch the prime, it'll be handled in botch_check
 			extinguish()
-			visible_message(span_warning("The [src] fizzles out!"))
+			visible_message(span_warning("¡El [src] se desvanece."))
 			return FALSE
 	if (dud_flags)
 		active = FALSE

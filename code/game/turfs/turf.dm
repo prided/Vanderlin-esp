@@ -307,7 +307,7 @@
 
 	if(prev_turf && !(flags & FALL_NO_MESSAGE))
 		for(var/mov_name in falling_mov_names)
-			prev_turf.visible_message(span_danger("\The [mov_name] falls through [prev_turf]!"))
+			prev_turf.visible_message(span_danger("¡\The [mov_name] cae a traves de [prev_turf]!"))
 
 	if(!(flags & FALL_INTERCEPTED) && zFall(falling, levels + 1))
 		return FALSE

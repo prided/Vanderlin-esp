@@ -5,7 +5,7 @@ LINEN BINS
 */
 
 /obj/item/bedsheet
-	name = "bedsheet"
+	name = "sabanas"
 	desc = ""
 	icon = 'icons/obj/bedsheets.dmi'
 	lefthand_file = 'icons/mob/inhands/misc/bedsheet_lefthand.dmi'
@@ -23,7 +23,7 @@ LINEN BINS
 	dying_key = DYE_REGISTRY_BEDSHEET
 	item_weight = 540 GRAMS //not weighted blankets but higher end heavy since cold
 
-	var/list/dream_messages = list("white")
+	var/list/dream_messages = list("blanco")
 	var/datum/weakref/signal_sleeper //this is our goldylocks
 	var/bed_tucked = FALSE
 
@@ -84,7 +84,7 @@ LINEN BINS
 	UnregisterSignal(sleeper, COMSIG_MOVABLE_MOVED)
 	UnregisterSignal(sleeper, COMSIG_LIVING_SET_RESTING)
 	UnregisterSignal(sleeper, COMSIG_QDELETING)
-	balloon_alert(sleeper, "smoothed sheets")
+	balloon_alert(sleeper, "sabanas suaves")
 	layer = initial(layer)
 	plane = initial(plane)
 	pixel_z = 0
@@ -109,7 +109,7 @@ LINEN BINS
 	if(do_after(user, 2 SECONDS, src))
 		var/obj/structure/bed/bed = locate() in loc
 		if(bed)
-			to_chat(user, span_notice("You remove \the [src] from \the [bed]."))
+			to_chat(user, span_notice("Quita \the [src] de \the [bed]."))
 			bed.sheet_tucked = FALSE
 			bed_tucked = FALSE
 		return ..()
@@ -152,5 +152,5 @@ LINEN BINS
 
 /obj/item/bedsheet/random
 	icon_state = "random_bedsheet"
-	name = "random bedsheet"
+	name = "sabana al azar"
 	desc = ""

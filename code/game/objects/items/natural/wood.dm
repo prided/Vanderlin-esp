@@ -1,7 +1,7 @@
 /obj/item/grown/log/tree
 	icon = 'icons/roguetown/items/natural.dmi'
 	seed = null
-	name = "log"
+	name = "tronco"
 	desc = "Madera refinada, lista para su uso o procesamiento."
 	icon_state = "log"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
@@ -43,14 +43,14 @@
 				new /obj/item/grown/log/tree/essence(get_turf(src))
 				if(!essence_sound_played)
 					essence_sound_played = TRUE
-					to_chat(user, span_warning("Dendor watches over us..."))
+					to_chat(user, span_warning("Dendor nos protege..."))
 					playsound(src,pick('sound/items/gem.ogg'), 100, FALSE)
 			else
 				new lumber(get_turf(src))
 		if(prob(10))
 			new /obj/effect/decal/cleanable/debris/wood(get_turf(src))
 		if(!skill_level)
-			to_chat(user, span_info("My poor skill has me ruin some of the timber..."))
+			to_chat(user, span_info("Mi pobre habilidad me hace arruinar algo de la madera..."))
 		user.mind.add_sleep_experience(/datum/attribute/skill/labor/lumberjacking, (GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)*0.5))
 		playsound(src, destroy_sound, 100, TRUE)
 		qdel(src)
@@ -78,12 +78,12 @@
 				new /obj/item/grown/log/tree/essence(get_turf(src))
 				if(!essence_sound_played)
 					essence_sound_played = TRUE
-					to_chat(user, span_warning("Dendor watches over us..."))
+					to_chat(user, span_warning("Dendor nos protege..."))
 					playsound(src,pick('sound/items/gem.ogg'), 100, FALSE)
 			else
 				new lumber_alt(get_turf(src))
 		if(!skill_level)
-			to_chat(user, span_info("My poor skill has me ruin some of the timber..."))
+			to_chat(user, span_info("Mi pobre habilidad me hace arruinar algo de la madera..."))
 		user.mind.add_sleep_experience(/datum/attribute/skill/labor/lumberjacking, (GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)*0.5))
 		playsound(src, destroy_sound, 100, TRUE)
 		qdel(src)
@@ -97,7 +97,7 @@
 
 /obj/item/grown/log/tree/small
 	name = "pequeño tronco"
-	desc = "A smaller log that came from a larger log. Suitable for building."
+	desc = "Un tronco mas pequeño que surgio de un tronco mas grande. Apto para edificacion."
 	icon_state = "logsmall"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
@@ -123,8 +123,8 @@
 
 /obj/item/grown/log/tree/stick
 	seed = null
-	name = "stick"
-	desc = "A wooden stick, a mighty weapon to the imaginative."
+	name = "palo"
+	desc = "Un palo de madera, un arma poderosa para la imaginacion."
 	icon_state = "stick1"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
@@ -165,7 +165,7 @@
 			L.consider_ambush()
 
 /obj/item/grown/log/tree/stick/attack_self(mob/living/user, list/modifiers)
-	user.visible_message("<span class='warning'>[user] snaps [src].</span>")
+	user.visible_message("<span class='warning'>[user] hace *clic* [src].</span>")
 	playsound(user,'sound/items/seedextract.ogg', 100, FALSE)
 	qdel(src)
 
@@ -178,7 +178,7 @@
 
 	var/obj/item/natural/bundle/stick/B = tool
 	if(B.amount < B.maxamount)
-		user.balloon_alert(user, "[name] added.")
+		user.balloon_alert(user, "[name] añadido.")
 		B.amount += 1
 		B.update_bundle()
 		qdel(src)
@@ -196,12 +196,12 @@
 	qdel(tool)
 	qdel(src)
 	user.put_in_hands(F)
-	user.balloon_alert(user, "[F.stackname] bundled.")
+	user.balloon_alert(user, "[F.stackname] en paquete.")
 
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/grown/log/tree/stake
-	name = "stake"
+	name = "estaca"
 	desc = "Un trozo de madera afilado, fantastico para perforar."
 	icon_state = "stake"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
@@ -228,8 +228,8 @@
 	return
 
 /obj/item/natural/wood/plank
-	name = "wood plank"
-	desc = "A wooden plank ready to be worked."
+	name = "tablon de madera"
+	desc = "Un tablon de madera listo para ser trabajado."
 	icon_state = "wplank"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
@@ -242,14 +242,14 @@
 	item_weight = 850 GRAMS
 
 /obj/item/natural/bundle/plank
-	name = "wooden planks"
+	name = "tablillas de madera"
 	icon_state = "planks1"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
 	item_state = "plankbundle"
 	experimental_inhand = FALSE
 	possible_item_intents = list(INTENT_USE)
-	desc = "Wooden planks bundled together for easy handling."
+	desc = "Tablones de madera agrupados para facilitar su manejo."
 	force = 0
 	throwforce = 0
 	maxamount = 10
@@ -258,7 +258,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	spitoutmouth = FALSE
 	stacktype = /obj/item/natural/wood/plank
-	stackname = "plank"
+	stackname = "tabla"
 	icon1 = "planks1"
 	icon1step = 5
 	icon2 = "planks2"
@@ -267,7 +267,7 @@
 
 /obj/item/grown/log/tree/essence
 	name = "esencia de madera"
-	desc = "A mystical essence imbued with the power of Dendor. Very good source of fuel."
+	desc = "Una esencia mistica imbuida del poder de Dendor. Muy buena fuente de combustible."
 	icon_state = "lessence"
 	attacked_sound = 'sound/misc/woodhit.ogg'
 	static_debris = null

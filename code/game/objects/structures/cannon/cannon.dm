@@ -1,7 +1,7 @@
 #define SOUND_EXTRA_RANGE_CANNON 30
 
 /obj/structure/cannon
-	name = "cannon"
+	name = "cañon"
 	icon = 'icons/roguetown/misc/cannon.dmi'
 	icon_state = "cannon"
 
@@ -44,7 +44,7 @@
 	var/blastpowder_amount = reagents.get_reagent_amount(/datum/reagent/blastpowder)
 	reagents.clear_reagents()
 	if(!blastpowder_amount)
-		balloon_alert_to_viewers("Sizzles out!")
+		balloon_alert_to_viewers("¡Se apaga!")
 		return FALSE
 
 	var/blast_range = round(blastpowder_amount / 1.5)
@@ -100,18 +100,18 @@
 	if(isreagentcontainer(tool))
 		if(do_after(user, 1 SECONDS, src))
 			if(tool.reagents.trans_to(reagents, 10, transfered_by = user))
-				user.visible_message(span_notice("[user] llena \the [name] con \the [tool.name]"), span_notice("I fill \the [name] with \the [tool.name]"))
+				user.visible_message(span_notice("[user] llena \the [name] con \the [tool.name]"), span_notice("Relleno \the [name] con \the [tool.name]"))
 				playsound(src, 'sound/foley/gunpowder_fill.ogg', 100, FALSE)
-				balloon_alert(user, "added!")
+				balloon_alert(user, "¡añadido!")
 			else
-				balloon_alert(user, "none Left!")
+				balloon_alert(user, "¡Izquierda ninguno!")
 		return ITEM_INTERACT_SUCCESS
 
 	if(isfuse(tool))
 		var/obj/item/fuse/fuse = tool
 		if(fuse.add_to_cannon(src, user))
 			user.visible_message(span_notice("[user] agrega \the [fuse] a \the [src]"), span_notice("Agrego \the [fuse] a \the [src]"))
-			balloon_alert_to_viewers("Attached!")
+			balloon_alert_to_viewers("¡Atado!")
 		return ITEM_INTERACT_SUCCESS
 
 /obj/effect/fuse
@@ -158,7 +158,7 @@
 /obj/effect/fuse/attackby(obj/item/I, mob/living/user, list/modifiers)
 	. = ..()
 	if(I.sharpness == IS_SHARP)
-		balloon_alert_to_viewers("Cut!")
+		balloon_alert_to_viewers("¡Corte!")
 		be_cut()
 
 /obj/effect/fuse/fire_act(added, maxstacks)
@@ -243,14 +243,14 @@
 	if(lit)
 		return
 	if(prob(failure_chance))
-		cannon.visible_message(span_danger("The fuse fails to light!"))
+		cannon.visible_message(span_danger("¡El fusible no se enciende!"))
 		return
 	lit()
 
 /obj/item/fuse/proc/lit()
 	icon_state = icon_state + "_lit"
 	lit = TRUE
-	cannon?.balloon_alert_to_viewers("Lit!")
+	cannon?.balloon_alert_to_viewers("¡Listo!")
 	addtimer(CALLBACK(src, PROC_REF(reached_end)), 5 SECONDS)
 	playsound(cannon, 'sound/items/fuse.ogg', 100)
 	SEND_SIGNAL(src, COMSIG_FUSE_LIT)
@@ -279,7 +279,7 @@
 	failure_chance = 10
 
 /atom/proc/debug_turn()
-	var/enter = input(usr, "Cuanto", "Meow", 180)
+	var/enter = input(usr, "Cuanto", "Maullido", 180)
 	transform = transform.Turn(enter)
 
 #undef SOUND_EXTRA_RANGE_CANNON

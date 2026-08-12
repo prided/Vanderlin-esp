@@ -1,6 +1,6 @@
 /obj/item/broom
-	name = "broom"
-	desc = "A broom, made from a bundle of twigs."
+	name = "escoba"
+	desc = "Una escoba hecha con un manojo de ramitas."
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	icon_state = "broom"
 	possible_item_intents = list(/datum/intent/use)
@@ -37,7 +37,7 @@
  */
 /obj/item/broom/on_wield(obj/item/source, mob/user)
 	. = ..()
-	to_chat(user, span_notice("You brace the [src] against the ground in a firm sweeping stance."))
+	to_chat(user, span_notice("Apoyas el [src] contra el suelo en una posicion firme de barrido."))
 	RegisterSignal(user, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(sweep))
 
 /**
@@ -74,7 +74,7 @@
 	var/found_dirt = FALSE
 	for(var/obj/effect/decal/cleanable/dirt/C in current_item_loc)
 		if(show_message)
-			user.visible_message(span_notice("[user] sweeps \the [C] away."), span_notice("I sweep \the [C] away."))
+			user.visible_message(span_notice("[user] barre \the [C] lejos."), span_notice("Barrido \the [C] fuera."))
 		qdel(C)
 		found_dirt = TRUE
 

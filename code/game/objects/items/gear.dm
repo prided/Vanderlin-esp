@@ -1,6 +1,6 @@
 /obj/item/gear
 	icon = 'icons/roguetown/items/misc.dmi'
-	name = "gear"
+	name = "equipo"
 	desc = ""
 	icon_state = ""
 	w_class = WEIGHT_CLASS_SMALL
@@ -10,7 +10,7 @@
 	item_weight = 200 GRAMS
 
 /obj/item/gear/metal
-	desc = "A gear with teeth meticulously crafted for tight interlocking."
+	desc = "Un engranaje con dientes meticulosamente elaborados para un entrelazado apretado."
 	icon_state = "gear"
 	melt_amount = 25
 	item_weight = 250 GRAMS
@@ -41,8 +41,8 @@
 	item_weight = 100 GRAMS
 
 /obj/item/gear/wood/basic
-	name = "wooden gear"
-	desc = "A very simple wooden gear. Used in carts and machinery."
+	name = "engranaje de madera"
+	desc = "Un engranaje de madera muy sencillo. Utilizado en carros y maquinaria."
 	icon_state = "upgrade"
 	metalizer_result = /obj/item/gear/metal
 	smeltresult = /obj/item/fertilizer/ash
@@ -50,8 +50,8 @@
 	misfire_modification = -5
 
 /obj/item/gear/wood/reliable
-	name = "reliable wooden gear"
-	desc = "A gear imbued with a special essence, making it very reliable. Used in carts and machinery."
+	name = "equipo de madera confiable"
+	desc = "Un equipo imbuido de una esencia especial que lo hace muy fiable. Utilizado en carros y maquinaria."
 	icon_state = "upgrade2"
 	cart_capacity = 420 KILOGRAMS
 	misfire_modification = -50
@@ -63,8 +63,8 @@
 	filters = filter(type="drop_shadow", x=0, y=0, size=0.5, offset=1, color=rgb(32, 196, 218, 200))
 
 /obj/item/gear/wood/unstable
-	name = "unstable wooden gear"
-	desc = "A gear imbued with a special essence, making it prone to breaking at any time. Used in carts and machinery."
+	name = "engranaje de madera inestable"
+	desc = "Un engranaje imbuido de una esencia especial, que lo hace propenso a romperse en cualquier momento. Utilizado en carros y maquinaria."
 	icon_state = "upgrade2"
 	cart_capacity = 440 KILOGRAMS
 	misfire_modification = 50

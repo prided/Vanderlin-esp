@@ -67,7 +67,7 @@
 
 /obj/item/storage/fancy/egg_box
 	name = "caja de huevos"
-	desc = "A carton for holding eggs."
+	desc = "Un carton para guardar huevos."
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "eggbox"
 	base_icon_state = "eggbox"
@@ -110,7 +110,7 @@
 //CIG PACK//
 ////////////
 /obj/item/storage/fancy/cigarettes
-	name = "\improper Space Cigarettes packet"
+	name = "\improper Paquete de cigarrillos espaciales"
 	desc = ""
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cig"
@@ -142,7 +142,7 @@
 	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_TAKE, cig, user)
 	user.put_in_hands(cig)
 	contents -= cig
-	to_chat(user, "<span class='notice'>You take \a [cig] out of the pack.</span>")
+	to_chat(user, "<span class='notice'>Saca \a [cig] del paquete.</span>")
 
 /obj/item/storage/fancy/cigarettes/update_icon_state()
 	. = ..()
@@ -187,7 +187,7 @@
 	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_TAKE, cig, target)
 	target.equip_to_slot_if_possible(cig, ITEM_SLOT_MOUTH)
 	contents -= cig
-	to_chat(user, "<span class='notice'>You take \a [cig] out of the pack.</span>")
+	to_chat(user, "<span class='notice'>Saca \a [cig] del paquete.</span>")
 
 	return ITEM_INTERACT_SUCCESS
 

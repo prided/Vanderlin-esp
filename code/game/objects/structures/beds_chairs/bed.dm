@@ -8,8 +8,8 @@
  * Beds
  */
 /obj/structure/bed
-	name = "bed"
-	desc = "A very nice bed. Perfect for sleeping, or lazying around."
+	name = "cama"
+	desc = "Una cama muy bonita. Perfecto para dormir o descansar."
 	icon_state = "bed"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	anchored = TRUE
@@ -38,7 +38,7 @@
 /obj/structure/bed/examine(mob/user)
 	. = ..()
 	if(sheet_tucked)
-		. += span_info("A sheet is neatly tucked in, and [src] looks ready for a good rest.")
+		. += span_info("Una sabana esta cuidadosamente recogida y [src] parece estar listo para un buen descanso.")
 
 /obj/structure/bed/buckle_feedback(mob/living/being_buckled, mob/buckler)
 	if(HAS_TRAIT(being_buckled, TRAIT_RESTRAINED))
@@ -46,14 +46,14 @@
 
 	if(being_buckled == buckler)
 		being_buckled.visible_message(
-			span_notice("[buckler] lays down on [src]."),
+			span_notice("[buckler] se acuesta en [src]."),
 			span_notice("Te acuestas en [src]."),
 			// visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 		)
 	else
 		being_buckled.visible_message(
-			span_notice("[buckler] lays [being_buckled] down on [src]."),
-			span_notice("[buckler] lays you down on [src]."),
+			span_notice("[buckler] coloca [being_buckled] sobre [src]."),
+			span_notice("[buckler] te acuesta en [src]."),
 			// visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 		)
 
@@ -70,7 +70,7 @@
 	else
 		being_unbuckled.visible_message(
 			span_notice("[unbuckler] levanta [being_unbuckled] de [src]."),
-			span_notice("[unbuckler] pulls you up from [src]."),
+			span_notice("[unbuckler] te levanta de [src]."),
 			// visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 		)
 

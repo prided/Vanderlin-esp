@@ -1,8 +1,8 @@
 
 
 /obj/structure/noose
-	name = "noose"
-	desc = "Abandon all hope."
+	name = "garrote"
+	desc = "Dejar todas las esperanzas."
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	SET_BASE_PIXEL(0, 10)
 	icon_state = "noose"
@@ -36,14 +36,14 @@
 
 	if(do_after(user, 1 SECONDS, src))
 		playsound(src, 'sound/foley/dropsound/cloth_drop.ogg', 50, TRUE)
-		user.visible_message(span_notice("[user] corta la soga."), span_notice("I cut down the noose."), span_hear("I hear something snap."))
+		user.visible_message(span_notice("[user] corta la soga."), span_notice("Descuelgo la soga."), span_hear("Escucho algo que se rompe."))
 		deconstruct(TRUE)
 		return TRUE
 
 /obj/structure/noose/bullet_act(obj/projectile/P, def_zone, piercing_hit = FALSE)
 	. = ..()
 	playsound(src, 'sound/foley/dropsound/cloth_drop.ogg', 50, TRUE)
-	visible_message(span_danger("The noose is shot down by [P]!"))
+	visible_message(span_danger("¡La soga se ha caido por culpa de [P]!"))
 	deconstruct()
 
 /obj/structure/noose/is_buckle_possible(mob/living/target, force, check_loc)
@@ -99,9 +99,9 @@
 
 		if(buckled_mob.stat < UNCONSCIOUS && prob(25))
 			buckled_mob.visible_message(pick(list(\
-										span_danger("[buckled_mob]'s legs flail for anything to stand on."),\
-										span_danger("[buckled_mob]'s hands are desperately clutching the noose."),\
-										span_danger("[buckled_mob]'s limbs sway back and forth with diminishing strength."))))
+										span_danger("Las piernas de [buckled_mob] se mueven desesperadamente en busca de algo en que sostenerse."),\
+										span_danger("Las manos de [buckled_mob] estan aferrandose desesperadamente al lazo."),\
+										span_danger("Las extremidades de [buckled_mob] se mecen de un lado a otro con una fuerza cada vez menor."))))
 			playsound(buckled_mob, 'sound/foley/noose_idle.ogg', 30, 1, -3)
 
 /obj/structure/noose/unbuckle_mob(mob/living/buckled_mob, force, can_fall)
@@ -114,8 +114,8 @@
 	buckled_mob.Knockdown(6 SECONDS)
 
 /obj/structure/noose/gallows
-	name = "gallows"
-	desc = "Read through six lines written by the most honest man in the world, and one will find enough in them to hang him."
+	name = "horca"
+	desc = "Lea seis lineas escritas por el hombre mas honesto del mundo y encontrara en ellas suficiente para colgarlo."
 	icon_state = "gallows"
 	SET_BASE_PIXEL(0, 0)
 	max_integrity = 100

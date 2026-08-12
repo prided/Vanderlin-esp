@@ -12,8 +12,8 @@
 	return
 
 /obj/structure/fluff/walldeco/wantedposter
-	name = "wanted poster"
-	desc = "A list of the worst scoundrels this realm has to offer along with their face sketches."
+	name = "cartel de busqueda"
+	desc = "Una lista de los peores sinvergüenzas que este reino tiene para ofrecer junto con sus bocetos faciales."
 	icon_state = "wanted1"
 	layer = BELOW_MOB_LAYER
 	SET_BASE_PIXEL(0, 32)
@@ -36,7 +36,7 @@
 			var/mob/living/carbon/human/human_user = user
 			show_outlaw_headshot(human_user)
 		else
-			to_chat(user, span_warning("I need to get closer to see the scoundrels' faces!"))
+			to_chat(user, span_warning("¡Necesito acercarme para ver las caras de los canallas!"))
 
 /obj/structure/fluff/walldeco/wantedposter/proc/show_outlaw_headshot(mob/living/carbon/human/user)
 	var/list/outlaws = list()
@@ -51,7 +51,7 @@
 				))
 
 	if(!length(outlaws))
-		to_chat(user, span_warning("There are no wanted criminals at the moment..."))
+		to_chat(user, span_warning("No hay criminales buscados en este momento..."))
 		return
 
 	if(user.real_name in GLOB.outlawed_players)
@@ -64,7 +64,7 @@
 	else if(!HAS_MIND_TRAIT(user, TRAIT_KNOWBANDITS))
 		ADD_TRAIT(user.mind, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
 		user.playsound_local(user, 'sound/misc/notice (2).ogg', 100, FALSE)
-		to_chat(user, span_notice("I can recognize these faces as wanted criminals now."))
+		to_chat(user, span_notice("Puedo reconocer estas caras como criminales buscados ahora."))
 
 	var/dat = {"
 	<style>
@@ -172,38 +172,38 @@
 	popup.open()
 
 /obj/structure/fluff/walldeco/innsign
-	name = "sign"
+	name = "señal"
 	desc = ""
 	icon_state = "bar"
 	layer = ABOVE_MOB_LAYER
 
 /obj/structure/fluff/walldeco/steward
-	name = "sign"
+	name = "señal"
 	desc = ""
 	icon_state = "steward"
 	layer = ABOVE_MOB_LAYER
 
 /obj/structure/fluff/walldeco/bsmith
-	name = "sign"
+	name = "señal"
 	desc = ""
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "bsmith"
 	layer = ABOVE_MOB_LAYER
 
 /obj/structure/fluff/walldeco/goblet
-	name = "sign"
+	name = "señal"
 	desc = ""
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "goblet"
 	layer = ABOVE_MOB_LAYER
 
 /obj/structure/fluff/walldeco/sparrowflag
-	name = "sparrow flag"
+	name = "bandera de gorrion"
 	desc = ""
 	icon_state = "sparrow"
 
 /obj/structure/fluff/walldeco/xavo
-	name = "xavo flag"
+	name = "bandera de xavo"
 	desc = ""
 	icon_state = "xavo"
 
@@ -213,12 +213,12 @@
 	icon_state = "serpent"
 
 /obj/structure/fluff/walldeco/masonflag
-	name = "Maker's Guild flag"
-	desc = "A flag bearing the logo of the Maker's Guild."
+	name = "Bandera del gremio de creadores"
+	desc = "Una bandera con el logo del Maker's Guild."
 	icon_state = "mason"
 
 /obj/structure/fluff/walldeco/maidendrape
-	name = "black drape"
+	name = "cortina negra"
 	desc = "Una cortina de tela."
 	icon_state = "black_drape"
 	dir = SOUTH
@@ -230,7 +230,7 @@
 	icon_state = "wallshield"
 
 /obj/structure/fluff/walldeco/psybanner
-	name = "banner"
+	name = "bandera"
 	icon_state = "Psybanner-PURPLE"
 
 /obj/structure/fluff/walldeco/psybanner/red
@@ -254,7 +254,7 @@
 	icon_state = "walldec[rand(1,6)]"
 
 /obj/structure/fluff/walldeco/maidensigil
-	name = "stone sigil"
+	name = "sigilo de piedra"
 	desc = ""
 	icon_state = "maidensigil"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
@@ -266,7 +266,7 @@
 	SET_BASE_PIXEL(16, 0)
 
 /obj/structure/fluff/walldeco/bigpainting
-	name = "painting"
+	name = "pintura"
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "sherwoods"
 	SET_BASE_PIXEL(-16, 32)
@@ -275,7 +275,7 @@
 	icon_state = "lake"
 
 /obj/structure/fluff/walldeco/mona
-	name = "painting"
+	name = "pintura"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "mona"
 	SET_BASE_PIXEL(0, 32)
@@ -296,13 +296,13 @@
 	icon_state = "chains[rand(1,8)]"
 
 /obj/structure/fluff/walldeco/customflag
-	name = "vanderlin flag"
+	name = "Bandera vanderlin"
 	desc = ""
 	icon_state = "wallflag"
 	uses_lord_coloring = LORD_PRIMARY | LORD_SECONDARY
 
 /obj/structure/fluff/walldeco/moon
-	name = "banner"
+	name = "bandera"
 	icon_state = "moon"
 
 /obj/structure/fluff/walldeco/med
@@ -345,7 +345,7 @@
 	icon_state = "shopsign_inn_saiga_left"
 
 /obj/structure/fluff/walldeco/sign/trophy
-	name = "saiga trophy"
+	name = "Trofeo saiga"
 	icon_state = "saiga_trophy"
 	SET_BASE_PIXEL(0, 32)
 
@@ -357,7 +357,7 @@
 
 /*	..................   Weaponsmith Sign   ................... */
 /obj/structure/fluff/walldeco/sign/weaponsmithsign
-	name = "weaponsmith shop sign"
+	name = "letrero de tienda de armeria"
 	icon_state = "shopsign_weaponsmith_right"
 	SET_BASE_PIXEL(0, 16)
 
@@ -366,7 +366,7 @@
 
 /*	..................   Armorsmith Sign   ................... */
 /obj/structure/fluff/walldeco/sign/armorsmithsign
-	name = "armorsmith shop sign"
+	name = "letrero de la tienda de armeria"
 	icon_state = "shopsign_armorsmith_right"
 	SET_BASE_PIXEL(0, 16)
 
@@ -375,7 +375,7 @@
 
 /*	..................   Merchant Sign   ................... */
 /obj/structure/fluff/walldeco/sign/merchantsign
-	name = "merchant shop sign"
+	name = "letrero de tienda mercantil"
 	icon_state = "shopsign_merchant_right"
 	SET_BASE_PIXEL(0, 16)
 
@@ -384,7 +384,7 @@
 
 /*	..................   Apothecary Sign   ................... */
 /obj/structure/fluff/walldeco/sign/apothecarysign
-	name = "apothecary sign"
+	name = "letrero de boticario"
 	icon_state = "shopsign_apothecary_right"
 	SET_BASE_PIXEL(0, 16)
 
@@ -392,7 +392,7 @@
 	icon_state = "shopsign_apothecary_left"
 /*	..................   Tailor Sign   ................... */
 /obj/structure/fluff/walldeco/sign/tailorsign
-	name = "tailor sign"
+	name = "letrero de sastre"
 	icon_state = "shopsign_tailor_right"
 	SET_BASE_PIXEL(0, 16)
 
@@ -481,7 +481,7 @@
 		icon_state = "bath[rand(1,8)]"
 
 /obj/structure/fluff/walldeco/vinez
-	name = "vines"
+	name = "vides"
 	icon_state = "vinez"
 
 /obj/structure/fluff/walldeco/vinez/l

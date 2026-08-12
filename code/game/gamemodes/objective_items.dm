@@ -1,7 +1,7 @@
 //Contains the target item datums for Steal objectives.
 
 /datum/objective_item
-	var/name = "A silly bike horn! Honk!"
+	var/name = "¡Una bocina de bicicleta ridicula! ¡Tuut!"
 	var/targetitem = /obj/item/paper	//typepath of the objective item
 	var/difficulty = 9001							//vaguely how hard it is to do this objective
 	var/list/excludefromjob = list()				//If you don't want a job to get a certain objective (no captain stealing his own medal, etcetc)
@@ -26,7 +26,7 @@
 	return ..()
 
 /datum/objective_item/steal/rogue/ledger
-	name = "the merchant's catatoma."
+	name = "el catatoma del mercader."
 	targetitem = /obj/item/book/secret/ledger
 	difficulty = 2
 	excludefromjob = list(JOB_MERCHANT)

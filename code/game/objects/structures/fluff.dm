@@ -1,7 +1,7 @@
 //Fluff structures serve no purpose and exist only for enriching the environment. They can be destroyed with a wrench.
 
 /obj/structure/fluff
-	name = "fluff structure"
+	name = "estructura de pelusa"
 	desc = ""
 	icon_state = "minibar"
 	anchored = TRUE
@@ -22,7 +22,7 @@
 	deconstructible = FALSE
 
 /obj/structure/fluff/railing
-	name = "railing"
+	name = "barandilla"
 	icon = 'icons/roguetown/misc/railing.dmi'
 	icon_state = "railing"
 	density = TRUE
@@ -143,14 +143,14 @@
 	blade_dulling = DULLING_BASHCHOP
 
 /obj/structure/fluff/railing/border
-	name = "border"
+	name = "borde"
 	desc = ""
 	icon_state = "border"
 	pass_crawl = FALSE
 
 /obj/structure/fluff/railing/tall
-	name = "wooden fence"
-	desc = "A sturdy fence of wooden planks."
+	name = "valla de madera"
+	desc = "Una valla resistente de tablones de madera."
 	icon = 'icons/roguetown/misc/tallrailing.dmi'
 	icon_state = "tallwoodenrailing"
 	max_integrity = 500
@@ -159,8 +159,8 @@
 	pass_projectile = TRUE
 
 /obj/structure/fluff/railing/tall/palisade
-	name = "palisade"
-	desc = "A sturdy fence of wooden stakes."
+	name = "empalizada"
+	desc = "Una valla resistente de estacas de madera."
 	icon = 'icons/roguetown/misc/railing.dmi'
 	icon_state = "fence"
 	opacity = TRUE
@@ -169,11 +169,11 @@
 
 /obj/structure/fluff/railing/tall/stone
 	name = "barandilla de piedra"
-	desc = "A sturdy railing made of stone."
+	desc = "Una barandilla resistente hecha de piedra."
 	icon_state = "tallstonerailing"
 
 /obj/structure/bars
-	name = "bars"
+	name = "barras"
 	desc = "Barras de hierro hechas para mantener las cosas dentro o fuera."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "bars"
@@ -279,7 +279,7 @@
 	opacity = FALSE
 
 /obj/structure/bars/grille
-	name = "grille"
+	name = "reja"
 	desc = ""
 	icon_state = "floorgrille"
 	density = FALSE
@@ -324,12 +324,12 @@
 
 /obj/structure/bars/wooden_arch
 	name = "arco de madera decorativo"
-	desc = "A wooden decorative arch intended to complement a table or worktop while preventing intrusion."
+	desc = "Un arco decorativo de madera destinado a complementar una mesa o encimera evitando intrusiones."
 	icon_state = "wooden_barrier"
 	attacked_sound = list("sound/combat/hits/onwood/woodimpact (1).ogg", "sound/combat/hits/onwood/woodimpact (2).ogg")
 
 /obj/structure/plank
-	name = "plank"
+	name = "tabla"
 	desc = ""
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "plank2"
@@ -373,8 +373,8 @@
 //===========================
 
 /obj/structure/fluff/clock
-	name = "clock"
-	desc = "An intricately-carved grandfather clock. On its pendulum is engraved the sigil of clan Kharzarad, a sickle behind an hourglass."
+	name = "reloj"
+	desc = "Un reloj de pie intrincadamente tallado. En su pendulo esta grabado el sello del clan Kharzarad, una hoz detras de un reloj de arena."
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "clock"
 	density = TRUE
@@ -459,7 +459,7 @@
 		return COMPONENT_ATOM_BLOCK_EXIT
 
 /obj/structure/fluff/clock/zizoclock
-	desc = "It tells the time... in morbid fashion!"
+	desc = "Da la hora... ¡de forma morbosa!"
 	icon_state = "zizoclock"
 
 // Version thats dense. Should honestly be standard?
@@ -467,8 +467,8 @@
 	density = TRUE
 
 /obj/structure/fluff/wallclock
-	name = "clock"
-	desc = "A wall clock with the sickle and hourglass sigil of clan Kharzarad on its crown."
+	name = "reloj"
+	desc = "Un reloj de pared con la hoz y el reloj de arena del clan Kharzarad en la corona."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "wallclock"
 	density = FALSE
@@ -538,7 +538,7 @@
 //vampire
 /obj/structure/fluff/wallclock/vampire
 	name = "reloj antiguo"
-	desc = "This appears to be a clock, but a pair of red lights blink in a recess where the face ought to be."
+	desc = "Esto parece ser un reloj, pero un par de luces rojas parpadean en un hueco donde deberia estar la esfera."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "wallclockvampire"
 	density = FALSE
@@ -556,7 +556,7 @@
 	SET_BASE_PIXEL(32, 0)
 
 /obj/structure/fluff/signage
-	name = "sign"
+	name = "señal"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "shitsign"
@@ -579,7 +579,7 @@
 
 /obj/structure/fluff/buysign
 	icon_state = "signwrote"
-	name = "sign"
+	name = "señal"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 /obj/structure/fluff/buysign/examine(mob/user)
@@ -592,7 +592,7 @@
 
 /obj/structure/fluff/sellsign
 	icon_state = "signwrote"
-	name = "sign"
+	name = "señal"
 	desc = ""
 	icon = 'icons/roguetown/misc/structure.dmi'
 /obj/structure/fluff/sellsign/examine(mob/user)
@@ -605,7 +605,7 @@
 
 
 /obj/structure/fluff/customsign
-	name = "sign"
+	name = "señal"
 	desc = ""
 	icon_state = "sign"
 	var/wrotesign
@@ -625,11 +625,11 @@
 /obj/structure/fluff/customsign/attackby(obj/item/W, mob/user, list/modifiers)
 	if(!user.cmode)
 		if(!user.is_literate())
-			to_chat(user, "<span class='warning'>I don't know any verba.</span>")
+			to_chat(user, "<span class='warning'>No conozco ningun verbo.</span>")
 			return
 		if(((user.used_intent.blade_class == BCLASS_STAB) || (user.used_intent.blade_class == BCLASS_CUT)) && (W.wlength == WLENGTH_SHORT))
 			if(wrotesign)
-				to_chat(user, "<span class='warning'>Something is already carved here.</span>")
+				to_chat(user, "<span class='warning'>Aqui ya esta tallado algo.</span>")
 			else
 				var/inputty = stripped_input(user, "What would you like to carve here?", "", null, 200)
 				if(inputty && !wrotesign)
@@ -639,7 +639,7 @@
 	..()
 
 /obj/structure/fluff/statue
-	name = "statue"
+	name = "estatua"
 	desc = ""
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "bstatue"
@@ -705,7 +705,7 @@
 
 /obj/structure/fluff/statue/astrata
 	name = "estatua de Astrata"
-	desc = "Astrata, the Sun Queen, reigns over light, order, and conquest. She is worshipped and feared in equal measure."
+	desc = "Astrata, la Reina del Sol, reina sobre la luz, el orden y la conquista. Es adorada y temida a partes iguales."
 	icon = 'icons/roguetown/misc/tallandwide.dmi'
 	icon_state = "astrata"
 	max_integrity = 100 // You wanted descructible statues, you'll get them.
@@ -751,7 +751,7 @@
 	icon_state = "pillar"
 
 /obj/structure/fluff/statue/topiary
-	name = "topiary"
+	name = "poda artistica"
 	icon = 'icons/roguetown/misc/decoration.dmi'
 	icon_state = "topiary_saiga"
 
@@ -797,7 +797,7 @@
 
 /obj/structure/fluff/statue/zizo
 	name = "estatua de Zizo"
-	desc = "The Dark Lady. Even in stone, you feel unsettled looking at it."
+	desc = "La Dama Oscura. Incluso en piedra, uno se siente inquieto al mirarla."
 	icon = 'icons/roguetown/misc/64x128.dmi'
 	icon_state = "zizo"
 	max_integrity = 100
@@ -816,7 +816,7 @@
 		icon_state = "xylix"
 
 /obj/structure/fluff/telescope
-	name = "telescope"
+	name = "telescopio"
 	desc = "Un misterioso telescopio apuntando hacia las estrellas."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "telescope"
@@ -827,16 +827,16 @@
 	if(!ishuman(user))
 		return
 	var/mob/living/carbon/human/H = user
-	to_chat(H,  span_notice("I look through the telescope, hoping to glimpse something beyond."))
+	to_chat(H,  span_notice("Miro a traves del telescopio, esperando vislumbrar algo mas alla."))
 	if(!do_after(H, 3 SECONDS, target = src))
 		return
 
 	var/random_message = rand(1,5)
 	switch(random_message)
 		if(1)
-			to_chat(H,  span_notice("You can see Noc rotating."))
+			to_chat(H,  span_notice("Puedes ver Noc rotando."))
 			if(do_after(H, 1 SECONDS, target = src))
-				to_chat(H, span_good("Noc's glow seems to help clear your thoughts."))
+				to_chat(H, span_good("El resplandor de Noc parece ayudar a despejar tus pensamientos."))
 				H.apply_status_effect(/datum/status_effect/buff/nocblessing)
 				H.playsound_local(H, 'sound/misc/notice (2).ogg', 100, FALSE)
 		if(2)
@@ -863,7 +863,7 @@
 	anchored = TRUE
 
 /obj/structure/fluff/globe
-	name = "globe"
+	name = "globo"
 	desc = "Un modelo que representa el mundo conocido de Psydonia."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "globe"
@@ -901,12 +901,12 @@
 
 /obj/structure/fluff/statue/scare
 	name = "espantapajaros"
-	desc = "An effigy made to drive away zad and other pesky birds from a farm."
+	desc = "Una efigie hecha para ahuyentar a zad y otros pajaros molestos de una granja."
 	icon_state = "td"
 
 /obj/structure/fluff/statue/tdummy
-	name = "practice dummy"
-	desc = "A wood and cloth dummy, made for squires to train with their armaments."
+	name = "muñeco de practica"
+	desc = "Un muñeco de madera y tela, hecho para que los escuderos entrenaran con su armamento."
 	icon_state = "p_dummy"
 	icon = 'icons/roguetown/misc/structure.dmi'
 
@@ -937,28 +937,28 @@
 						var/amt2raise = GET_MOB_ATTRIBUTE_VALUE(L, STAT_INTELLIGENCE)/2
 						if(GET_MOB_SKILL_VALUE_RAW(user, W.associated_skill) >= 15)
 							if(!HAS_TRAIT(user, TRAIT_INTRAINING))
-								to_chat(user, "<span class='warning'>I've learned all I can from doing this, it's time for the real thing.</span>")
+								to_chat(user, "<span class='warning'>He aprendido todo lo que puedo haciendo esto, es hora de la cosa real.</span>")
 								amt2raise = 0
 							else
 								if(GET_MOB_SKILL_VALUE_RAW(user, W.associated_skill) >= 20)
-									to_chat(user, "<span class='warning'>I've learned all I can from doing this, it's time for the real thing.</span>")
+									to_chat(user, "<span class='warning'>He aprendido todo lo que puedo haciendo esto, es hora de la cosa real.</span>")
 									amt2raise = 0
 						if(amt2raise > 0)
 							user.adjust_experience(W.associated_skill, amt2raise * boon, FALSE)
 						playsound(src,pick('sound/combat/hits/onwood/education1.ogg','sound/combat/hits/onwood/education2.ogg','sound/combat/hits/onwood/education3.ogg'), rand(50,100), FALSE)
 					else
-						user.visible_message("<span class='danger'>[user] trains on [src], but [src] ripostes!</span>")
+						user.visible_message("<span class='danger'>[user] entrena en [src], pero [src] riposta!</span>")
 						L.AdjustKnockdown(1)
 						L.throw_at(get_step(L, get_dir(src,L)), 2, 2, L, spin = FALSE)
 						playsound(src, 'sound/combat/hits/kick/stomp.ogg', 100, TRUE, -1)
 					flick(pick("p_dummy_smashed","p_dummy_smashedalt"),src)
 					return
 			else //sanity
-				to_chat(user, "<span class='warning'>This thing doesn't have a skill associated with it.</span>")
+				to_chat(user, "<span class='warning'>Este objeto no tiene ninguna habilidad asociada.</span>")
 				return
 		else // u dun goofed
 			var/mob/living/goof = user
-			user.visible_message("<span class='danger'>[user] awkwardly tries to hit \the [src] with \the [W], but \the [src] ripostes!</span>")
+			user.visible_message("<span class='danger'>[user] intenta torpemente golpear a \the [src] con \the [W], pero \the [src] riposta </span>")
 			goof.AdjustKnockdown(1)
 			goof.throw_at(get_step(goof, get_dir(src,goof)), 2, 2, goof, spin = FALSE)
 			playsound(src, 'sound/combat/hits/kick/stomp.ogg', 100, TRUE, -1)
@@ -973,7 +973,7 @@
 
 /obj/structure/fluff/statue/spider
 	name = "idolo aracnido"
-	desc = "A stone idol of a spider with the head of a smirking elven woman. Her eyes seem to follow you."
+	desc = "Un idolo de piedra de una araña con la cabeza de una mujer elfa sonriente. Sus ojos parecen seguirte."
 	icon_state = "spidercore"
 	var/goal = 5
 	var/current = 0
@@ -982,7 +982,7 @@
 /obj/structure/fluff/statue/spider/examine(mob/user)
 	. = ..()
 	if(isdarkelf(user))
-		say("BRING ME [goal - current] EARS. I HUNGER.",language = /datum/language/elvish)
+		say("BRING ME [goal - current] ORES. Tengo hambre.",language = /datum/language/elvish)
 
 /obj/structure/fluff/statue/spider/attackby(obj/item/W, mob/user, list/modifiers)
 	if(istype(W, objective))
@@ -992,20 +992,20 @@
 				current += 1
 				SSmapping.retainer.delf_ears += 1
 				if(current >= goal)
-					say("YOU HAVE DONE WELL, MY CHILD.",language = /datum/language/elvish)
+					say("HAS HECHO BIEN, MI NIÑO.",language = /datum/language/elvish)
 					user.adjust_triumphs(1, reason = "Pleased the dark lady")
 
 					qdel(src)
 					// TODO : add crumbling message and sound
 				else
-					say("BRING ME [current - goal] MORE EARS. I HUNGER.",language = /datum/language/elvish)
+					say("TRAEME [current - goal] MAS OIDOS. TENGO HAMBRE.",language = /datum/language/elvish)
 				qdel(W)
 				return TRUE
 	..()
 
 /obj/structure/fluff/statue/evil
 	name = "Matthios Idolo"
-	desc = "A statue built to the robber-god, Matthios. The visage resembles nobody in particular. It is said that he grants the wishes of those pagan bandits (free folk) who feed him money."
+	desc = "Una estatua construida para el dios ladron, Matthios. El rostro no se parece a nadie en particular. Se dice que concede los deseos de aquellos bandidos paganos (gente libre) que le dan dinero."
 	icon_state = "evilidol"
 	icon = 'icons/roguetown/misc/structure.dmi'
 
@@ -1014,7 +1014,7 @@
 		var/datum/antagonist/bandit/B = user.mind.has_antag_datum(/datum/antagonist/bandit)
 		if(B)
 			if(B.tri_amt >= 8)
-				to_chat(user, span_warning("The idol had collected enough tribute from you."))
+				to_chat(user, span_warning("El idolo habia recogido suficiente tributo de ti."))
 				return
 			if(istype(W, /obj/item/reagent_containers/lux))
 				B.contrib += 120
@@ -1076,7 +1076,7 @@
 
 /obj/structure/fluff/statue/graggar
 	name = "Graggar Idolo"
-	desc = "An ugly and crude stone statue in imitation of Graggar, bestial God of murder and cannibalism. The empty eye sockets seem to follow you."
+	desc = "Una fea y tosca estatua de piedra a imitacion de Graggar, dios bestial del asesinato y el canibalismo. Las cuencas de los ojos vacias parecen seguirte."
 	icon_state = "graggaraltar"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 
@@ -1146,27 +1146,27 @@
 	attacked_sound = list("sound/combat/hits/onmetal/metalimpact (1).ogg", "sound/combat/hits/onmetal/metalimpact (2).ogg")
 
 /obj/structure/fluff/psycross/astrata
-	name = "astratan cross"
+	name = "Cruz astratan"
 	icon_state = "astratancross"
-	desc = "A towering monument to Astrata. Those who stand beneath it feel the warmth of her light."
+	desc = "Un imponente monumento a Astrata. Quienes se encuentran debajo sienten el calor de su luz."
 	break_sound = null
 	attacked_sound = list("sound/combat/hits/onmetal/metalimpact (1).ogg", "sound/combat/hits/onmetal/metalimpact (2).ogg")
 
 /obj/structure/fluff/psycross/astrata/gold
-	name = "astratan cross"
+	name = "Cruz astratan"
 	icon_state = "astratancross_g"
 	break_sound = null
 	attacked_sound = list("sound/combat/hits/onmetal/metalimpact (1).ogg", "sound/combat/hits/onmetal/metalimpact (2).ogg")
 
 /obj/structure/fluff/psycross/zizocross
 	name = "cruz invertida"
-	desc = "An unholy symbol. Blasphemy for most, reverence for few."
+	desc = "Un simbolo impio. Blasfemia para la mayoria, reverencia para unos pocos."
 	icon_state = "zizoinvertedcross"
 	attacked_sound = list("sound/combat/hits/onmetal/metalimpact (1).ogg", "sound/combat/hits/onmetal/metalimpact (2).ogg")
 	divine = FALSE
 
 /obj/structure/fluff/psycross/crafted
-	name = "wooden pantheon cross"
+	name = "cruz del panteon de madera"
 	icon_state = "psycrosscrafted"
 
 /obj/structure/fluff/psycross/crafted/shrine
@@ -1177,41 +1177,41 @@
 	dir = SOUTH
 
 /obj/structure/fluff/psycross/crafted/shrine/dendor_volf
-	name = "devouring shrine to Dendor"
-	desc = "The life force of a Volf has consecrated this holy place. \n First present two blood baits to craft a red sacrifice. \n Then offer an egg and two feathers to craft a crimson sacrifice."
+	name = "santuario devorador de Dendor"
+	desc = "La fuerza vital de un Volf ha consagrado este lugar sagrado. \n Primero presente dos cebos de sangre para crear un sacrificio rojo. \n Luego ofrece un huevo y dos plumas para crear un sacrificio carmesi."
 	icon_state = "shrine_dendor_volf"
 
 /obj/structure/fluff/psycross/crafted/shrine/dendor_saiga
-	name = "stinging shrine to Dendor"
-	desc = "The life force of a Saiga has consecrated this holy place. \n First present a jacksberry, westleach leaf, and eel to craft a yellow sacrifice. \n Then offer a jacksberry, calendula flower, and fiber to craft a citrine sacrifice."
+	name = "santuario punzante a Dendor"
+	desc = "La fuerza vital de un Saiga ha consagrado este lugar sagrado. \n Primero presenta una jacksberry, una hoja de westleach y una anguila para crear un sacrificio amarillo. \n Luego, ofrezca una jacksberry, una flor de calendula y fibra para elaborar un sacrificio de citrino."
 	icon_state = "shrine_dendor_saiga"
 
 /obj/structure/fluff/psycross/crafted/shrine/dendor_gote
-	name = "growing shrine to Dendor"
-	desc = "The life force of a Gote has consecrated this holy place. \n First present a poppy flower, swampweed leaf, and silk grub to craft a green sacrifice. \n Then offer a euphorbia flower, swampweed leaf, and two thorns to craft a viridian sacrifice."
+	name = "santuario en crecimiento para Dendor"
+	desc = "La fuerza vital de un Gote ha consagrado este lugar sagrado. \n Primero, presente una flor de amapola, una hoja de algas y una larva de seda para crear un sacrificio verde. \n Luego ofrece una flor de euforbio, una hoja de hierba pantanosa y dos espinas para elaborar un sacrificio viridiano."
 	icon_state = "shrine_dendor_gote"
 
 /obj/structure/fluff/psycross/crafted/shrine/dendor_troll
-	name = "lording shrine to Dendor"
-	desc = "The life force of a Troll has consecrated this holy place. \n First present two troll horns to craft a purple sacrifice. \n Then offer a piece of strange meat and two sinews to craft an indigo sacrifice."
+	name = "santuario señorial a Dendor"
+	desc = "La fuerza vital de un Troll ha consagrado este lugar sagrado. \n Primero presenta dos cuernos de troll para crear un sacrificio purpura. \n Luego ofrece un trozo de carne extraña y dos tendones para elaborar un sacrificio de indigo."
 	icon_state = "shrine_dendor_troll"
 
 /obj/structure/fluff/psycross/psycrucifix
 	name = "crucifijo de madera psydonic"
-	desc = "A rarely seen symbol of absolute and devoted certainty, more common in Grenzelhoft: HE yet lives. HE yet breathes."
+	desc = "Un simbolo rara vez visto de certeza absoluta y devota, mas comun en Grenzelhoft: EL aun vive. EL todavia respira."
 	icon_state = "psycruci"
 	max_integrity = 80
 
 /obj/structure/fluff/psycross/psycrucifix/stone
 	name = "crucifijo de piedra psydonic"
-	desc = "Formed of stone, this great Psycross symbolises that HE is forever ENDURING. Considered a rare sight upon the Peaks."
+	desc = "Formado de piedra, este gran Psycross simboliza que EL es para siempre DURADERO. Se considera una vista poco comun en los Picos."
 	icon_state = "psycruci_r"
 	max_integrity = 120
 
 /obj/structure/fluff/psycross/psycrucifix/silver
-	name = "silver psydonic crucifix"
+	name = "crucifijo plateado psydonic"
 	icon_state = "psycruci_s"
-	desc = "Constructed of Blessed Silver, this crucifix symbolises absolute faith in the ONE - For PSYDON WEEPS, for all mortal ilk. PSYDON WEEPS, for all who walk upon the soil. PSYDON WEEPS..."
+	desc = "Construido con Plata Bendita, este crucifijo simboliza la fe absoluta en el UNO: Para PSYDON LLORA, para todos los mortales. PSYDON LLORA, por todos los que caminan sobre la tierra. PSYDON LLORA..."
 	attacked_sound = list("sound/combat/hits/onmetal/metalimpact (1).ogg", "sound/combat/hits/onmetal/metalimpact (2).ogg")
 	max_integrity = 450
 
@@ -1230,11 +1230,11 @@
 		return
 
 	var/datum/patron/old_patron = user.patron
-	var/pick_one = tgui_alert(user, "Do you wish to devote yourself to a Patron?", "Pick a Patron", list("Yes","No"))
+	var/pick_one = tgui_alert(user, "¿Quieres dedicarte a un Patron?", "Elige un patron", list("Si","No"))
 	if(pick_one != "Yes")
 		return
 
-	var/patron_name = tgui_input_list(user, "Choose your new Patron.", "Pick a Patron", TEMPLE_PATRON_NAMES)
+	var/patron_name = tgui_input_list(user, "Elige tu nuevo patron.", "Elige un patron", TEMPLE_PATRON_NAMES)
 	if(!patron_name || QDELETED(src) || QDELETED(user))
 		return
 
@@ -1244,7 +1244,7 @@
 	if(!real_patron)
 		return
 
-	var/confirm = tgui_alert(user, "Your new Patron is [real_patron]. Is this correct?", "Confirmar eleccion", list("Yes", "No"))
+	var/confirm = tgui_alert(user, "Su nuevo patron es [real_patron]. ¿Es esto correcto?", "Confirmar eleccion", list("Si", "No"))
 	if(confirm != "Yes")
 		return
 
@@ -1252,7 +1252,7 @@
 	user.set_patron(real_patron)
 	to_chat(user, "<span class='god_[LOWER_TEXT(real_patron.name)]'>¡Te has dedicado a [real_patron]!</span>")
 	log_game("PATRON: [key_name(user)] changed their patron from [old_patron.name] to [real_patron]")
-	visible_message("A bright light flashes out from [src] as it channels divine focus.")
+	visible_message("Una luz brillante sale de [src] mientras canaliza el enfoque divino.")
 	AOE_flash(user, range = 5)
 	playsound(src, 'sound/magic/bless.ogg', 50, TRUE)
 
@@ -1270,14 +1270,14 @@
 
 	var/obj/item/reagent_containers/food/snacks/produce/fruit/apple/apple = W
 	if(length(apple.bitten_names) != 2)
-		to_chat(user, span_warning("Apple must be bitten once by two different people to conduct a wedding ceremony!"))
+		to_chat(user, span_warning("¡La manzana debe ser mordida una vez por dos personas diferentes para realizar una ceremonia de boda!"))
 		return FALSE
 
 	var/in_church = istype(get_area(user), /area/indoors/town/church/chapel)
 	var/secret_marriage = !in_church && HAS_TRAIT(user, TRAIT_SECRET_OFFICIANT)
 
 	if(!in_church && !secret_marriage)
-		to_chat(user, span_warning("I can conduct wedding ceremony only inside the chapel!"))
+		to_chat(user, span_warning("¡Puedo realizar la ceremonia de boda solo dentro de la capilla!"))
 		return FALSE
 
 	var/mob/living/carbon/human/groom
@@ -1300,7 +1300,7 @@
 			name_position++
 
 	if(!groom || !bride)
-		to_chat(user, span_warning("Either one or both soon to be wed are outside of the holy shrine's gaze!"))
+		to_chat(user, span_warning("¡Uno o ambos que pronto se uniran en matrimonio estan fuera de la mirada del santuario sagrado!"))
 		return FALSE
 	if(user == groom || user == bride)
 		to_chat(user, span_warning("¡No puedes realizar tu propia ceremonia de matrimonio!"))
@@ -1311,10 +1311,10 @@
 		to_chat(user, span_warning("¡[groom.real_name] es un niño!"))
 		return FALSE
 	if(groom.stat == DEAD)
-		to_chat(user, span_warning("[groom.real_name] is dead!"))
+		to_chat(user, span_warning("¡[groom.real_name] esta muerto!"))
 		return FALSE
 	if(!groom.client)
-		to_chat(user, span_warning("[groom.real_name] absent in spirit!"))
+		to_chat(user, span_warning("[groom.real_name] ausente en espiritu."))
 		return FALSE
 	if(groom.IsWedded())
 		to_chat(user, span_warning("¡[groom.real_name] ya esta casado!"))
@@ -1325,13 +1325,13 @@
 		to_chat(user, span_warning("¡[bride.real_name] es un niño!"))
 		return FALSE
 	if(bride.stat == DEAD)
-		to_chat(user, span_warning("[bride.real_name] is dead!"))
+		to_chat(user, span_warning("¡[bride.real_name] esta muerta!"))
 		return FALSE
 	if(!bride.client)
-		to_chat(user, span_warning("[bride.real_name] absent in spirit!"))
+		to_chat(user, span_warning("[bride.real_name] ¡Ausente en espiritu!"))
 		return FALSE
 	if(bride.IsWedded())
-		to_chat(user, span_warning("[bride.real_name] is already married!"))
+		to_chat(user, span_warning("¡[bride.real_name] ya esta casada!"))
 		return FALSE
 
 	groom.original_name = groom.real_name
@@ -1431,20 +1431,20 @@
 		M.set_confusion_if_lower(power SECONDS)
 
 /obj/structure/fluff/psycross/psydon
-	name = "psydonian cross"
-	desc = "A wooden monument to Psydon. Let His name be naught but forgot'n."
+	name = "Cruz psydonian"
+	desc = "Un monumento de madera a Psydon. Que su nombre quede en el olvido."
 	icon_state = "psydon_wooden_cross"
 	icon = 'icons/roguetown/misc/psydon_cross.dmi'
 	divine = FALSE //this variable to my understanding is only used to prevent zizo prayers. He's dead, so he can't do anything.
 
 /obj/structure/fluff/psycross/psydon/metal
-	desc = "A metal monument to Psydon. Let His name be naught but forgot'n."
+	desc = "Un monumento de metal a Psydon. Que su nombre quede en el olvido."
 	icon_state = "psydon_metal_cross"
 
 //this one is meant to be uncraftable
 /obj/structure/fluff/psycross/psydon/abandoned
-	name = "overgrown psydonian cross"
-	desc = "A decrepit monument to a dead god. Looking at it fills you with profound sadness."
+	name = "cruz psydonian cubierta de maleza"
+	desc = "Un monumento decrepito a un dios muerto. Mirarlo te llena de profunda tristeza."
 	icon_state = "psydon_abandoned_cross"
 
 /obj/structure/fluff/psycross/psydon/abandoned/examine(mob/user)
@@ -1457,7 +1457,7 @@
 		. += " Never forget those we have lost."
 
 /obj/structure/fluff/statue/gaffer
-	name = "Subdued Statue"
+	name = "Estatua tenue"
 	desc = "Duerme eternamente."
 	icon_state = "subduedstatue"
 
@@ -1480,7 +1480,7 @@
 	return ..()
 
 /obj/structure/fluff/carving_block
-	name = "carving block"
+	name = "bloque de talla"
 	desc = "Listo para esculpir."
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "block"
@@ -1499,7 +1499,7 @@
 
 /obj/structure/fluff/steamvent
 	name = "salida de vapor"
-	desc = "An underground heating pipe outlet."
+	desc = "Una salida subterranea de tuberia de calefaccion."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "steam_vent"
 	density = FALSE

@@ -1,7 +1,7 @@
 
 /obj/structure/window
-	name = "window"
-	desc = "A window of simple paned glass."
+	name = "ventana"
+	desc = "Una ventana de vidrio simple."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "window-solid"
 	layer = TABLE_LAYER
@@ -52,7 +52,7 @@
 	density = TRUE
 
 /obj/structure/window/solid
-	desc = "A window of simple paned glass."
+	desc = "Una ventana de vidrio simple."
 	icon_state = "window-solid"
 	integrity_failure = 0.5
 
@@ -64,7 +64,7 @@
 	broken_repair = /obj/item/natural/stone
 
 /obj/structure/window/stained/silver
-	desc = "A stained-glass window filigreed in silver."
+	desc = "Una vidriera con filigranas en plata."
 	icon_state = "stained-silver"
 	max_integrity = 100
 	integrity_failure = 0.75
@@ -73,11 +73,11 @@
 	icon_state = "stained-silver1"
 
 /obj/structure/window/stained/zizo
-	desc = "A stained-glass window filigreed in deep crimson."
+	desc = "Una vidriera con filigranas de color carmesi intenso."
 	icon_state = "stained-zizo"
 
 /obj/structure/window/stained/yellow
-	desc = "A stained-glass window filigreed in gold."
+	desc = "Una vidriera con filigranas en oro."
 	icon_state = "stained-yellow"
 
 /obj/structure/window/openclose
@@ -127,14 +127,14 @@
 		return
 	if(get_dir(src, user) == lockdir)
 		if(obj_broken)
-			to_chat(user, "<span class='warning'>It's broken, that would be foolish.</span>")
+			to_chat(user, "<span class='warning'>Esta roto, eso seria tonto.</span>")
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 		if(climbable)
 			close_up(user)
 		else
 			open_up(user)
 	else
-		to_chat(user, "<span class='warning'>The window doesn't close from this side.</span>")
+		to_chat(user, "<span class='warning'>La ventana no cierra desde este lado.</span>")
 
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
@@ -148,7 +148,7 @@
 		return ..()
 
 /obj/structure/window/openclose/reinforced
-	desc = "A glass window. This one looks reinforced with a metal mesh."
+	desc = "Una ventana de cristal. Este parece reforzado con una malla metalica."
 	icon_state = MAP_SWITCH("reinforcedwindow", "reinforcedwindowdir")
 	max_integrity = 800
 	integrity_failure = 0.1
@@ -196,8 +196,8 @@
 				dude.Knockdown(5 SECONDS)
 				dude.add_stress(/datum/stress_event/hithead)
 				dude.visible_message(
-					span_warning("[dude] hits their head as they fly through the window!"),
-					span_danger("I hit my head on the window frame!"),
+					span_warning("¡[dude] se golpea la cabeza al volar por la ventana!"),
+					span_danger("¡Me golpee la cabeza en el marco de la ventana!"),
 				)
 
 		return TRUE
@@ -224,7 +224,7 @@
 		atom_break()
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
-	src.visible_message("<span class='info'>[user] knocks on [src].</span>")
+	src.visible_message("<span class='info'>[user] llama a la puerta de [src].</span>")
 	add_fingerprint(user)
 	playsound(src, 'sound/misc/glassknock.ogg', 100)
 

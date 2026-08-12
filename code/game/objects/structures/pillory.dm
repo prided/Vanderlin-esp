@@ -1,8 +1,8 @@
 #define PILLORY_HEAD_OFFSET      2 // How much we need to move the player to center their head
 
 /obj/structure/pillory
-	name = "pillory"
-	desc = "To keep the criminals locked!"
+	name = "picota"
+	desc = "¡Para mantener encerrados a los criminales!"
 	icon_state = "pillory_single"
 	icon = 'icons/obj/pillory.dmi'
 	can_buckle = TRUE
@@ -18,7 +18,7 @@
 	var/base_icon = "pillory_single"
 
 /obj/structure/pillory/church
-	desc = "To keep the heretics locked!"
+	desc = "¡Para mantener encerrados a los herejes!"
 	lock = /datum/lock/key/pillory/church
 
 /obj/structure/pillory/double
@@ -43,19 +43,19 @@
 
 /obj/structure/pillory/examine(mob/user)
 	. = ..()
-	. += span_info("It is [latched ? "latched" : "unlatched"].")
+	. += span_info("Es [latched ? "latched" : "unlatched"].")
 	if(lock)
-		. += span_info("It is [locked() ? "locked" : "unlocked"].")
+		. += span_info("Es [locked() ? "locked" : "unlocked"].")
 
 /obj/structure/pillory/attack_hand_secondary(mob/living/user, list/modifiers)
 	. = ..()
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
 	if(!length(buckled_mobs))
-		to_chat(user, span_warning("What's the point of latching it with nobody inside?"))
+		to_chat(user, span_warning("¿Cual es el sentido de cerrarlo si no hay nadie dentro?"))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(user in buckled_mobs)
-		to_chat(user, span_warning("I can't reach the latch!"))
+		to_chat(user, span_warning("¡No puedo alcanzar la cerradura!"))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	togglelatch(user)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
@@ -65,7 +65,7 @@
 		to_chat(user, span_warning("¡No puedo alcanzar la cerradura!"))
 		return FALSE
 	if(!latched)
-		to_chat(user, span_warning("\The [src] is not latched shut!"))
+		to_chat(user, span_warning("¡\The [src] no esta cerrado con pestillo!"))
 		return FALSE
 	return ..()
 
@@ -77,7 +77,7 @@
 	latched = !latched
 	user.visible_message( \
 		span_warning("[user] [latched ? "latches" : "unlatches"] \the [src]."), \
-		span_notice("I [latched ? "latch" : "unlatch"] \the [src]."))
+		span_notice("Yo [latched ? "latch" : "unlatch"] \the [src]."))
 	playsound(src, 'sound/foley/lock.ogg', 100)
 
 /obj/structure/pillory/buckle_mob(mob/living/M, force = FALSE, check_loc = TRUE)
@@ -101,7 +101,7 @@
 		if(G.grab_state >= GRAB_AGGRESSIVE)
 			return ..(M, force, FALSE)
 
-	to_chat(usr, span_warning("I must grab them more forcefully to put them in [src]."))
+	to_chat(usr, span_warning("Tengo que agarrarlos con mas fuerza para ponerlos en [src]."))
 	return FALSE
 
 /obj/structure/pillory/post_buckle_mob(mob/living/M)
@@ -140,12 +140,12 @@
 	if(latched)
 		if(isliving(user) && GET_MOB_ATTRIBUTE_VALUE(user, STAT_STRENGTH) >= 18)
 			if(do_after(user, 2.5 SECONDS))
-				user.visible_message(span_warning("[user] breaks [src] open!"))
+				user.visible_message(span_warning("¡[user] rompe [src] abierto!"))
 				unlock()
 				latched = FALSE
 				return ..()
 		else
-			to_chat(usr, span_warning("Unlatch it first!"))
+			to_chat(usr, span_warning("¡Desconectelo primero!"))
 			return FALSE
 	else
 		density = TRUE

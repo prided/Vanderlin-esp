@@ -7,7 +7,7 @@
 // multiple stair objects can be chained together; the Z level transition will happen on the final stair object in the chain
 
 /obj/structure/stairs
-	name = "stairs"
+	name = "escaleras"
 	icon = 'icons/obj/stairs.dmi'
 	icon_state = "stairs"
 	base_icon_state = "stairs"
@@ -172,7 +172,7 @@
 	for(var/mob/living/guy in falling_movables)
 		if(!can_fall_down_stairs(guy))
 			continue
-		to_chat(guy, span_warning("You trip down [src]!"))
+		to_chat(guy, span_warning("¡Te tropiezas bajando [src]!"))
 		on_fall(guy)
 	. |= FALL_INTERCEPTED | FALL_NO_MESSAGE | FALL_RETAIN_PULL
 
