@@ -100,7 +100,7 @@ function createStatusTab(name) {
     statcontentdiv.focus();
   };
   button.id = name;
-  button.textContent = name;
+  button.textContent = name === "Status" ? "Estado" : name;
   button.className = "button";
   //ORDERING ALPHABETICALLY
   button.style.order = { Status: 1, MC: 2, Tickets: 3 }[name] || name.charCodeAt(0);
