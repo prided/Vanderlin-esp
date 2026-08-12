@@ -66,7 +66,7 @@ export function LootPanel(props) {
             icon={grouping ? 'layer-group' : 'object-ungroup'}
             selected={grouping}
             onClick={() => setGrouping(!grouping)}
-            tooltip="Alternar agrupación"
+            tooltip="Alternar agrupacion"
           />
         </Stack>
       }

@@ -16,7 +16,7 @@
 	return ..()
 
 /datum/reagent/rogueacid
-	name = "Ácido"
+	name = "Acido"
 	description = "."
 	reagent_state = LIQUID
 	color = "#5eff00"

@@ -20,7 +20,7 @@
 	required_bodypart_status = BODYPART_ORGANIC
 
 /datum/wound/bruise/small
-	name = "moretón"
+	name = "moreton"
 	whp = 15
 	woundpain = 8
 	sew_threshold = 25

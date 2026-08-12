@@ -208,13 +208,13 @@
 	else if(istype(attacking_item, /obj/item/natural/poo))
 		// Manure is balanced NPK with high nitrogen
 		if(can_accept_fertilizer())
-			to_chat(user, span_notice("Fertilizo el suelo con estiércol."))
+			to_chat(user, span_notice("Fertilizo el suelo con estiercol."))
 			adjust_nitrogen(60)
 			adjust_phosphorus(40)
 			adjust_potassium(50)
 			fertilize_success = TRUE
 		else
-			to_chat(user, span_warning("¡El suelo ya está bien fertilizado!"))
+			to_chat(user, span_warning("¡El suelo ya esta bien fertilizado!"))
 	if(fertilize_success)
 		qdel(attacking_item)
 		return TRUE
@@ -225,7 +225,7 @@
 
 /obj/structure/soil/proc/apply_fertilizer(obj/item/fertilizer/fert, mob/user)
 	if(!can_accept_fertilizer())
-		to_chat(user, span_warning("¡El suelo ya está bien fertilizado!"))
+		to_chat(user, span_warning("¡El suelo ya esta bien fertilizado!"))
 		return FALSE
 
 	to_chat(user, span_notice("Fertilizo el suelo con [fert.name]."))
@@ -510,49 +510,49 @@
 	. = ..()
 	// Plant description
 	if(plant)
-		. += span_info("\The [plant.name] está creciendo aquí...")
+		. += span_info("\The [plant.name] esta creciendo aqui...")
 		// Plant health feedback
 		if(plant_dead == TRUE)
-			. += span_warning("¡Está muerto!")
+			. += span_warning("¡Esta muerto!")
 		else if(plant_health <=  MAX_PLANT_HEALTH * 0.3)
 			. += span_warning("It's dying!")
 		else if (plant_health <=  MAX_PLANT_HEALTH * 0.6)
-			. += span_warning("Es marrón y poco saludable...")
+			. += span_warning("Es marron y poco saludable...")
 		// Plant maturation and produce feedback
 		if(matured)
 			. += span_info("It's fully grown but perhaps not yet ripe.")
 		else
 			. += span_info("It's far from fully grown.")
 		if(produce_ready)
-			. += span_info("Está listo para la cosecha.")
+			. += span_info("Esta listo para la cosecha.")
 	// Water feedback
 	if(water <= MAX_PLANT_WATER * 0.15)
 		. += span_warning("The soil is thirsty.")
 	else if (water <= MAX_PLANT_WATER * 0.5)
-		. += span_info("El suelo está húmedo.")
+		. += span_info("El suelo esta humedo.")
 	else
 		. += span_info("The soil is wet.")
 	// Nutrition feedback
 	if(nitrogen < MAX_PLANT_NITROGEN * 0.15)
-		. += span_warning("La planta carece de Nitrógeno.")
+		. += span_warning("La planta carece de Nitrogeno.")
 	else if(nitrogen < MAX_PLANT_NITROGEN * 0.3)
-		. += span_info("La planta se está quedando sin nitrógeno.")
+		. += span_info("La planta se esta quedando sin nitrogeno.")
 	if(potassium < MAX_PLANT_POTASSIUM * 0.15)
 		. += span_warning("The plant is lacking Potassium.")
 	else if(potassium < MAX_PLANT_POTASSIUM * 0.3)
-		. += span_info("La planta se está quedando sin potasio.")
+		. += span_info("La planta se esta quedando sin potasio.")
 	if(phosphorus < MAX_PLANT_PHOSPHORUS * 0.15)
 		. += span_warning("The plant is lacking Phosphorus.")
 	else if(phosphorus < MAX_PLANT_PHOSPHORUS * 0.3)
-		. += span_info("La planta se está quedando sin fósforo.")
+		. += span_info("La planta se esta quedando sin fosforo.")
 	// Weeds feedback
 	if(weeds >= MAX_PLANT_WEEDS * 0.6)
 		. += span_warning("It's overtaken by the weeds!")
 	else if (weeds >= MAX_PLANT_WEEDS * 0.3)
-		. += span_warning("Las malas hierbas están creciendo...")
+		. += span_warning("Las malas hierbas estan creciendo...")
 	// Tilled feedback
 	if(tilled_time > 0)
-		. += span_info("El suelo está labrado.")
+		. += span_info("El suelo esta labrado.")
 	// Blessed feedback
 	if(blessed_time > 0)
 		. += span_good("The soil seems blessed.")
@@ -1243,7 +1243,7 @@
 
 /*	..................   Mushroom Mound   ................... */
 /obj/structure/soil/mushmound
-	name = "montículo de hongos"
+	name = "monticulo de hongos"
 	desc = "A mound made of chaff and nitesoil. A suitable place to grow mushrooms and not much else."
 	icon_state = "mushmound"
 	anchored = TRUE

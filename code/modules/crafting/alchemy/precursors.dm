@@ -322,7 +322,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/common_ore
-	name = "mineral común"
+	name = "mineral comun"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/earth = 3,
 		/datum/thaumaturgical_essence/order = 1
@@ -815,7 +815,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 	)
 
 /datum/natural_precursor/coaldust
-	name = "polvo de carbón"
+	name = "polvo de carbon"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/fire = 10,
 		/datum/thaumaturgical_essence/earth = 10
@@ -904,7 +904,7 @@ GLOBAL_LIST_INIT(natural_precursor_registry, list())
 
 //1 standard crystal can be split into two small ones
 /datum/natural_precursor/mana_crystal_small
-	name = "pequeño cristal de maná"
+	name = "pequeño cristal de mana"
 	essence_yields = list(
 		/datum/thaumaturgical_essence/magic = 3,
 		/datum/thaumaturgical_essence/earth = 2

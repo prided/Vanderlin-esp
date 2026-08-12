@@ -36,7 +36,7 @@
 		limb.update_damages()
 		cast_on.visible_message(
 			span_info("\The [limb] attaches itself to [cast_on]!"),
-			span_notice("¡\The [limb] se adhiere a mí!")
+			span_notice("¡\The [limb] se adhiere a mi!")
 		)
 	for(var/obj/item/organ/organ as anything in get_organs(cast_on, owner))
 		if(!organ?.Insert(cast_on))

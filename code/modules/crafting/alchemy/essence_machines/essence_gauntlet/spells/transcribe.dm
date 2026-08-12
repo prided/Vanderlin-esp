@@ -15,7 +15,7 @@
 	return string
 
 /datum/action/cooldown/spell/essence/transcribe
-	name = "Transcripción ordenada"
+	name = "Transcripcion ordenada"
 	desc = "A magic piece of paper transcribes whats happening around."
 	button_icon_state = "transcribe"
 	cast_range = 1
@@ -27,7 +27,7 @@
 	. = ..()
 	if(owner.dropItemToGround(owner.get_active_held_item()))
 		owner.put_in_hands(make_item(), TRUE)
-		owner.visible_message(span_info("¡Un pergamino y una pluma mágica azul aparecen en la mano de [owner]!"), span_info("You summon a parchment and magical quill!"))
+		owner.visible_message(span_info("¡Un pergamino y una pluma magica azul aparecen en la mano de [owner]!"), span_info("You summon a parchment and magical quill!"))
 
 
 /datum/action/cooldown/spell/essence/transcribe/proc/make_item()
@@ -38,7 +38,7 @@
 
 
 /obj/item/paper/transcript
-	name = "Transcripción"
+	name = "Transcripcion"
 	desc = "A magical piece of paper that has been transcribed upon."
 
 /obj/item/paper/transcript/read(mob/user)
@@ -91,10 +91,10 @@
 
 /obj/item/paper/magictranscription/proc/start_recording(mob/user)
 	if(recording)
-		to_chat(user, span_warning("¡El pergamino ya está grabando!"))
+		to_chat(user, span_warning("¡El pergamino ya esta grabando!"))
 		return
 	if(used_capacity >= max_capacity)
-		to_chat(user, span_warning("¡El pergamino está lleno de energía mágica!"))
+		to_chat(user, span_warning("¡El pergamino esta lleno de energia magica!"))
 		return
 	recording = TRUE
 	become_hearing_sensitive()
@@ -123,7 +123,7 @@
 		print_transcript(user)
 		qdel(src)
 	else
-		to_chat(user, span_warning("El pergamino está en blanco; no se registró nada."))
+		to_chat(user, span_warning("El pergamino esta en blanco; no se registro nada."))
 
 /obj/item/paper/magictranscription/Hear(message, atom/movable/speaker, message_langs, raw_message, list/spans, message_mods)
 	. = ..()
@@ -151,7 +151,7 @@
 	if(!canprint)
 		to_chat(user, span_warning("The parchment needs time to replenish its magic before printing again!")) //failsafe incase it fails or something
 		return
-	var/transcribed_text = "<b>Transcripción mágica:</b><br><br>"
+	var/transcribed_text = "<b>Transcripcion magica:</b><br><br>"
 	var/paper_name = "Magical Transcription"
 	var/list/pages = list()
 	for(var/excerpt in storedinfo)
@@ -169,7 +169,7 @@
 	for(var/page_text in pages)
 		var/obj/item/paper/transcript = new /obj/item/paper/transcript(get_turf(src))
 		if(pages.len > 1)
-			transcript.name = "[paper_name] - Página [page_index]/[pages.len]"
+			transcript.name = "[paper_name] - Pagina [page_index]/[pages.len]"
 		else
 			transcript.name = paper_name
 		transcript.info = page_text
@@ -201,7 +201,7 @@
 		var/secs = time - mins * 60
 		. += span_notice("It contains [storedinfo.len] recorded speech\s ([mins]m [secs]s of magic remaining).")
 	else
-		. += span_notice("Está en blanco y listo para grabar.")
+		. += span_notice("Esta en blanco y listo para grabar.")
 
 /datum/action/cooldown/spell/essence/transcribe/spell
 	name = "Arcane Transcription"

@@ -19,7 +19,7 @@
 /datum/attribute/stat/intelligence
 	name = "Intelligence"
 	shorthand = "INT"
-	desc = "La inteligencia mide tus habilidades para realizar magia y retener información."
+	desc = "La inteligencia mide tus habilidades para realizar magia y retener informacion."
 	icon_state = "intelligence"
 
 /datum/attribute/stat/perception

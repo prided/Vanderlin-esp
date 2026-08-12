@@ -1,7 +1,7 @@
 
 /obj/item/bait
 	name = "bolsa de cebo"
-	desc = "Olor horrible para mí, olor maravilloso para la caza mayor."
+	desc = "Olor horrible para mi, olor maravilloso para la caza mayor."
 	icon_state = "bait"
 	icon = 'icons/roguetown/items/misc.dmi'
 	w_class = WEIGHT_CLASS_SMALL
@@ -103,7 +103,7 @@
 
 /obj/item/bait/sweet
 	name = "bag of sweetbait"
-	desc = "Este cebo no huele tan mal. Incluso podría probar un bocado..."
+	desc = "Este cebo no huele tan mal. Incluso podria probar un bocado..."
 	icon_state = "baitp"
 	attracted_types = list(/mob/living/simple_animal/hostile/retaliate/goat = 33,
 							/mob/living/simple_animal/hostile/retaliate/goatmale = 33,
@@ -145,7 +145,7 @@
 
 /obj/item/bait/forestdelight
 	name = "carne envuelta en hierbas extrañas"
-	desc = "Un trozo de carne podrida y rancia envuelta en varias hierbas. El aroma induce tanto el vómito como un agradable olor a hierbas."
+	desc = "Un trozo de carne podrida y rancia envuelta en varias hierbas. El aroma induce tanto el vomito como un agradable olor a hierbas."
 	icon_state = "baitbriar"
 	attracted_types = list (/mob/living/simple_animal/hostile/retaliate/mole/briars = 50,
 						/mob/living/simple_animal/pet/cat/cabbit = 5) // cause get rabbited

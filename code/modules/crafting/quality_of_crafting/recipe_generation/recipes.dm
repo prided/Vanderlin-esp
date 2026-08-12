@@ -564,7 +564,7 @@
 			sev_text = "Severo"
 			sev_color = "sienna"
 		if(WOUND_SEVERITY_CRITICAL)
-			sev_text = "Crítico"
+			sev_text = "Critico"
 			sev_color = "firebrick"
 		if(WOUND_SEVERITY_BIOHAZARD)
 			sev_text = "BIOHAZARD"

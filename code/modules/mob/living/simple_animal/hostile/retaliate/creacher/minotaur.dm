@@ -209,7 +209,7 @@
 
 /obj/effect/temp_visual/minotaur_fury_zone/strong
 	name = "raging inferno"
-	desc = "¡Una violenta erupción de llamas mágicas!"
+	desc = "¡Una violenta erupcion de llamas magicas!"
 	icon_state = "fire"
 	light_outer_range = 3
 	light_color = "#FF3300"

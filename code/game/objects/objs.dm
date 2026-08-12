@@ -230,7 +230,7 @@
 			if(action_type == "Cancel" || !action_type)
 				return
 
-			if(tgui_alert(usr, "¿Está realmente seguro de que desea eliminar todos los objetos del tipo [type]?", "Mass Delete", list("Yes","No")) != "Yes")
+			if(tgui_alert(usr, "¿Esta realmente seguro de que desea eliminar todos los objetos del tipo [type]?", "Mass Delete", list("Yes","No")) != "Yes")
 				return
 
 			if(tgui_alert(usr, "Second confirmation required. Delete?", "Confirmar", list("Yes","No")) != "Yes")

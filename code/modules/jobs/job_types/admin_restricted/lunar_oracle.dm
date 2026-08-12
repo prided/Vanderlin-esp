@@ -142,7 +142,7 @@
 
 /mob/living/carbon/human/proc/oracleannouncement()
 	set name = "Oracle Announcement"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 	if(stat)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/dreamcave))

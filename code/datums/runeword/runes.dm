@@ -9,13 +9,13 @@
 
 /obj/item/rune/tir
 	name = "runa tir"
-	desc = "Una runa de restauración de maná."
+	desc = "Una runa de restauracion de mana."
 	rune_type = "tir"
 	rune_level = 13
 
 /obj/item/rune/el
 	name = "El rune"
-	desc = "Una runa de luz y precisión."
+	desc = "Una runa de luz y precision."
 	rune_type = "el"
 	rune_level = 11
 
@@ -27,7 +27,7 @@
 
 /obj/item/rune/ort
 	name = "Ort rune"
-	desc = "Una runa de relámpago."
+	desc = "Una runa de relampago."
 	rune_type = "ort"
 	rune_level = 21
 
@@ -87,13 +87,13 @@
 
 /obj/item/rune/thul
 	name = "runa thul"
-	desc = "Una runa de frío."
+	desc = "Una runa de frio."
 	rune_type = "thul"
 	rune_level = 23
 
 /obj/item/rune/mal
 	name = "runa mal"
-	desc = "Una runa que impide la curación."
+	desc = "Una runa que impide la curacion."
 	rune_type = "mal"
 	rune_level = 49
 

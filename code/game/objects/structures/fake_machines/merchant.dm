@@ -203,7 +203,7 @@
 			options += "Enable Paying Taxes"
 		else
 			options += "Stop Paying Taxes"
-		var/select = input(usr, "Por favor seleccione una opción.", "", null) as null|anything in options
+		var/select = input(usr, "Por favor seleccione una opcion.", "", null) as null|anything in options
 		if(!select)
 			return
 		if(!usr.can_perform_action(src, NEED_DEXTERITY|FORBID_TELEKINESIS_REACH) || locked())

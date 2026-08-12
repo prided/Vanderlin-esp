@@ -1,6 +1,6 @@
 /obj/item/organ/artery
 	name = "artery"
-	desc = "¡Una arteria está rota! Literalmente."
+	desc = "¡Una arteria esta rota! Literalmente."
 	icon_state = "artery"
 	base_icon_state = "artery"
 	sellprice = 1

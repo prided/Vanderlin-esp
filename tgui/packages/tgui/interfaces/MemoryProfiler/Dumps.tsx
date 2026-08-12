@@ -22,7 +22,7 @@ export function Dumps() {
       <Stack vertical>
         <Stack.Item>
           <NoticeBox info>
-            Un informe devuelto tiene un límite de 40 filas superiores por sección, por lo que un archivo es la única forma de verlo todo. El servidor permanece congelado durante todo el recorrido y toda la escritura, y un censo completo en un mundo vivo alcanza cientos de megabytes.
+            Un informe devuelto tiene un limite de 40 filas superiores por seccion, por lo que un archivo es la unica forma de verlo todo. El servidor permanece congelado durante todo el recorrido y toda la escritura, y un censo completo en un mundo vivo alcanza cientos de megabytes.
           </NoticeBox>
         </Stack.Item>
         <Stack.Item>

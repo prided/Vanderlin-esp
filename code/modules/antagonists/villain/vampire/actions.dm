@@ -1,6 +1,6 @@
 /mob/living/carbon/human/proc/sire_spawn()
 	set name = "Sire Mortal"
-	set category = "RolÚnico.Vampiro"
+	set category = "RolUnico.Vampiro"
 
 	if(!mind)
 		return
@@ -13,7 +13,7 @@
 
 	var/obj/item/grabbing/bite/bite = get_item_by_slot(ITEM_SLOT_MOUTH)
 	if(!ishuman(bite?.grabbed) || bite.sublimb_grabbed != BODY_ZONE_PRECISE_NECK)
-		to_chat(src, span_warning("Debo tener el cuello de alguien entre mis mandíbulas."))
+		to_chat(src, span_warning("Debo tener el cuello de alguien entre mis mandibulas."))
 		return
 	var/mob/living/carbon/human/victim = bite.grabbed
 	if(!(victim.ckey || ckey(victim.last_mind?.key)))
@@ -46,7 +46,7 @@
 	if(stat == DEAD && (world.time - victim.timeofdeath) > 4 MINUTES)
 		to_chat(src, span_warning("[victim.p_their(TRUE)] body has gone stiff. Too far gone to sire."))
 		return
-	if(tgui_alert(src, "Would you like to sire a new spawn?", "LA MALDICIÓN DE KAIN", list("MAKE IT SO", "I RESCIND")) != "MAKE IT SO")
+	if(tgui_alert(src, "Would you like to sire a new spawn?", "LA MALDICION DE KAIN", list("MAKE IT SO", "I RESCIND")) != "MAKE IT SO")
 		to_chat(src, span_warning("Decido que [victim] no es digno."))
 		return
 	INVOKE_ASYNC(victim, TYPE_PROC_REF(/mob/living/carbon/human, vampire_conversion_prompt), src)
@@ -54,8 +54,8 @@
 /mob/living/carbon/human/proc/vampire_telepathy()
 	var/TELEPATHY_COOLDOWN = 30 SECONDS
 
-	set name = "Telepatía"
-	set category = "RolÚnico.Vampiro"
+	set name = "Telepatia"
+	set category = "RolUnico.Vampiro"
 
 	if(!mind)
 		return
@@ -75,7 +75,7 @@
 	if(src.bloodpool > 25)
 		src.adjust_bloodpool(-25)
 	else
-		to_chat(src, span_danger("¡No tengo suficiente sangre para enviar un mensaje de telepatía!"))
+		to_chat(src, span_danger("¡No tengo suficiente sangre para enviar un mensaje de telepatia!"))
 		return
 
 	// set cooldown
@@ -87,7 +87,7 @@
 
 /mob/living/carbon/human/proc/disguise_button()
 	set name = "Disguise"
-	set category = "RolÚnico.Vampiro"
+	set category = "RolUnico.Vampiro"
 
 	var/datum/component/vampire_disguise/disguise_comp = GetComponent(/datum/component/vampire_disguise)
 	if(!disguise_comp)
@@ -113,13 +113,13 @@
 
 
 /mob/living/carbon/human/proc/blood_strength()
-	set name = "Músculos nocturnos"
-	set category = "RolÚnico.Vampiro"
+	set name = "Musculos nocturnos"
+	set category = "RolUnico.Vampiro"
 
 	if(!clan)
 		return
 	if(SEND_SIGNAL(src, COMSIG_DISGUISE_STATUS))
-		to_chat(src, span_warning("Mi maldición está oculta."))
+		to_chat(src, span_warning("Mi maldicion esta oculta."))
 		return
 	if(bloodpool < 500)
 		to_chat(src, span_warning("No hay suficiente vitae."))
@@ -143,18 +143,18 @@
 	duration = 1 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/bloodstrength
-	name = "Músculos nocturnos"
+	name = "Musculos nocturnos"
 	desc = ""
 	icon_state = "bleed1"
 
 /mob/living/carbon/human/proc/blood_celerity()
 	set name = "Quickening"
-	set category = "RolÚnico.Vampiro"
+	set category = "RolUnico.Vampiro"
 
 	if(!clan)
 		return
 	if(SEND_SIGNAL(src, COMSIG_DISGUISE_STATUS))
-		to_chat(src, "<span class='warning'>Mi maldición está oculta.</span>")
+		to_chat(src, "<span class='warning'>Mi maldicion esta oculta.</span>")
 		return
 	if(bloodpool < 500)
 		to_chat(src, "<span class='warning'>Not enough vitae.</span>")
@@ -173,12 +173,12 @@
 
 /mob/living/carbon/human/proc/blood_fortitude()
 	set name = "Armadura de la oscuridad"
-	set category = "RolÚnico.Vampiro"
+	set category = "RolUnico.Vampiro"
 
 	if(clan)
 		return
 	if(SEND_SIGNAL(src, COMSIG_DISGUISE_STATUS))
-		to_chat(src, "<span class='warning'>Mi maldición está oculta.</span>")
+		to_chat(src, "<span class='warning'>Mi maldicion esta oculta.</span>")
 		return
 	if(bloodpool < 500)
 		to_chat(src, "<span class='warning'>Not enough vitae.</span>")

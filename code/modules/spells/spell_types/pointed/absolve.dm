@@ -39,7 +39,7 @@
 			to_chat(user, span_warning("You attempt to revive [H] by ABSOLVING them!"))
 			// Dramatic effect
 			user.visible_message(span_danger("[user] grabs [H] by the wrists, attempting to ABSOLVE them!"))
-			if(tgui_alert(H, "They want to ABSOLVE you. Will you let them?", "ABSOLUTION", list("lo permitiré", "me niego")) != "lo permitiré")
+			if(tgui_alert(H, "They want to ABSOLVE you. Will you let them?", "ABSOLUTION", list("lo permitire", "me niego")) != "lo permitire")
 				H.visible_message(span_notice("No pasa nada."))
 				return FALSE
 			// Create visual effects
@@ -58,7 +58,7 @@
 			ADD_TRAIT(H, TRAIT_IWASREVIVED, "[type]")
 			H.apply_status_effect(/datum/status_effect/buff/psyvived)
 			user.apply_status_effect(/datum/status_effect/buff/psyvived)
-			H.visible_message(span_notice("[H] is ABSOLVED!"), span_green("Me despierto del vacío."))
+			H.visible_message(span_notice("[H] is ABSOLVED!"), span_green("Me despierto del vacio."))
 			H.mind.remove_antag_datum(/datum/antagonist/zombie)
 			return TRUE
 		else

@@ -245,7 +245,7 @@
 	description = "Known to humens to be the most level-headed of aasimar, these were placed on Psydonia to serve a purpose there, and may vary in whether they have accomplished it at all, or been discarded."
 
 /datum/culture/species/aasimar/seer
-	name = "Gran árbol"
+	name = "Gran arbol"
 	description = "Known by humens to originate from Kingsfield, falling from the crystal leaf buds of the great petrified tree. These aasimar have no memory of what they were doing within the tree, waking within craters from their fall."
 	pre_append = "the "
 

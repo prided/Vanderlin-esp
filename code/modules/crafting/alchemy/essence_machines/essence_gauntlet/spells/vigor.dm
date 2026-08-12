@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/vigor
 	name = "Vigor"
-	desc = "Aumenta la fuerza física y la resistencia temporalmente."
+	desc = "Aumenta la fuerza fisica y la resistencia temporalmente."
 	button_icon_state = "bat_transform"
 	cast_range = 1
 	essences = list(/datum/thaumaturgical_essence/life)
@@ -16,7 +16,7 @@
 
 /atom/movable/screen/alert/status_effect/vigor
 	name = "Vigor"
-	desc = "Te sientes sobrenaturalmente fuerte y enérgico."
+	desc = "Te sientes sobrenaturalmente fuerte y energico."
 	icon_state = "buff"
 
 /datum/status_effect/buff/vigor

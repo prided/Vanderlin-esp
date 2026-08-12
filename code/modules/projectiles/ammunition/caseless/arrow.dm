@@ -51,7 +51,7 @@
 	reagents.add_reagent(/datum/reagent/druqks, 20)
 
 /obj/item/ammo_casing/caseless/arrow/pyro
-	name = "flecha piroclástica"
+	name = "flecha piroclastica"
 	desc = "An arrow with its tip smeared with a flammable tincture."
 	projectile_type = /obj/projectile/bullet/reusable/arrow/pyro
 	icon_state = "arrow_pyroclastic"

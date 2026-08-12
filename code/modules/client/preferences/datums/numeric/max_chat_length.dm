@@ -12,6 +12,6 @@
 	return CHAT_MESSAGE_MAX_LENGTH
 
 /datum/preference/numeric/handle_link(datum/preferences/prefs, mob/user)
-	var/desiredlength = input(user, "Elija la longitud máxima de caracteres de los mensajes de Runechat mostrados. El rango válido es de 1 a [CHAT_MESSAGE_MAX_LENGTH] (predeterminado: [prefs.read_default_preference(/datum/preference/numeric/max_chat_length)]))", "Character Preference", prefs.read_preference(/datum/preference/numeric/max_chat_length))  as null|num
+	var/desiredlength = input(user, "Elija la longitud maxima de caracteres de los mensajes de Runechat mostrados. El rango valido es de 1 a [CHAT_MESSAGE_MAX_LENGTH] (predeterminado: [prefs.read_default_preference(/datum/preference/numeric/max_chat_length)]))", "Character Preference", prefs.read_preference(/datum/preference/numeric/max_chat_length))  as null|num
 	if (!isnull(desiredlength))
 		prefs.write_preference(/datum/preference/numeric/max_chat_length, clamp(desiredlength, 1, CHAT_MESSAGE_MAX_LENGTH))

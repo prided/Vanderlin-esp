@@ -28,7 +28,7 @@
 
 /datum/attribute/skill/misc/reading
 	name = "Reading"
-	desc = "Representa la capacidad de tu personaje para leer y escribir. Sin al menos alguna habilidad en lectura, serás totalmente incapaz de leer o escribir."
+	desc = "Representa la capacidad de tu personaje para leer y escribir. Sin al menos alguna habilidad en lectura, seras totalmente incapaz de leer o escribir."
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(
 		STAT_INTELLIGENCE = -8,
@@ -104,7 +104,7 @@
 	)
 
 /datum/attribute/skill/misc/music
-	name = "Música"
+	name = "Musica"
 	desc = "Represents your character's ability to play musical instruments. The higher your skill in Music, the better you can play. Bards can use higher skills for better effects!"
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(

@@ -12,14 +12,14 @@
 	var/turf/target_turf = get_turf(cast_on)
 	if(!target_turf)
 		return FALSE
-	owner.visible_message(span_notice("[owner] crea un cristal capaz de almacenar energía mágica."))
+	owner.visible_message(span_notice("[owner] crea un cristal capaz de almacenar energia magica."))
 
 	new /obj/item/spell_crystal(target_turf)
 
 
 /obj/item/spell_crystal
 	name = "cristal de almacenamiento de hechizos"
-	desc = "Un cristal capaz de almacenar energía mágica para su uso posterior."
+	desc = "Un cristal capaz de almacenar energia magica para su uso posterior."
 	icon_state = "quartz"
 	icon = 'icons/roguetown/items/gems.dmi'
 	w_class = WEIGHT_CLASS_SMALL
@@ -35,7 +35,7 @@
 	if(stored_spell_type)
 		. += span_notice("It hums with stored energy — [stored_spell_name].")
 	else
-		. += span_warning("Está inactivo, esperando ser llenado.")
+		. += span_warning("Esta inactivo, esperando ser llenado.")
 
 /obj/item/spell_crystal/Destroy()
 	if(granted_spell)

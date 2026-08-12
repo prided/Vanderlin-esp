@@ -55,6 +55,6 @@
 	color_key_defaults = list(KEY_HAIR_COLOR)
 
 /datum/sprite_accessory/wings/large/gargoyle
-	name = "Gárgola"
+	name = "Gargola"
 	icon_state = "gargoyle"
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER, BODY_ADJ_LAYER)

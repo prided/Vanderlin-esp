@@ -11,7 +11,7 @@ export const DetailArtificer = ({ r, lookup, pickerMap, allRecipes, essenceIndex
         <Sprite icon={r.base_icon} icon_state={r.base_state} />
         Colocar{' '}
         <RecipeLink name={r.base_name!} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
-        {' '}en la mesa del artífice
+        {' '}en la mesa del artifice
       </Box>
       <Box className="RecipeBook__step-row RecipeBook__step-note">🔨 Martillo</Box>
       {r.extras?.map((item, i) => (

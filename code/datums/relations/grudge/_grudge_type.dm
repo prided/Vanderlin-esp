@@ -1,11 +1,11 @@
 /datum/grudge_type
 	abstract_type = /datum/grudge_type
 	///the name of our grudge
-	var/grudge_name = "Rencor genérico"
+	var/grudge_name = "Rencor generico"
 	///the agressor's side of the grudge text
-	var/aggressor_text = "Declaración genérica."
+	var/aggressor_text = "Declaracion generica."
 	///the victim's side of the grudge text
-	var/victim_text = "Declaración genérica."
+	var/victim_text = "Declaracion generica."
 	///the bitflags we support for the grudge
 	var/grudge_bitflags = NONE
 	///the agressor's viable job titles

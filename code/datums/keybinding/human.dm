@@ -20,7 +20,7 @@
 /datum/keybinding/human/quick_equipbelt
 	hotkey_keys = list("ShiftB")
 	name = "quick_equipbelt"
-	full_name = "Cinturón de equipamiento rápido"
+	full_name = "Cinturon de equipamiento rapido"
 	description = "Put held thing in belt or take out most recent thing from belt"
 
 /datum/keybinding/human/quick_equipbelt/down(client/user, turf/target, mousepos_x, mousepos_y)

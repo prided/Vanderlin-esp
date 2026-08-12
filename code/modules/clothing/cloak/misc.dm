@@ -40,7 +40,7 @@
 
 /obj/item/clothing/cloak/black_cloak
 	name = "abrigo de piel"
-	desc = "Un abrigo hecho de piel que cubre el pecho, los brazos, la ingle y el pecho. No tiene capacidades de protección."
+	desc = "Un abrigo hecho de piel que cubre el pecho, los brazos, la ingle y el pecho. No tiene capacidades de proteccion."
 	icon_state = "black_cloak"
 	body_parts_covered = CHEST|GROIN|VITALS|ARMS
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -208,7 +208,7 @@
 	detail_tag = null
 
 /obj/item/clothing/neck/blkknight
-	name = "collar de escamas de dragón"
+	name = "collar de escamas de dragon"
 	desc = ""
 	icon_state = "bktrinket"
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
@@ -345,7 +345,7 @@
 	color = CLOTHING_MUSTARD_YELLOW
 
 /obj/item/clothing/cloak/pantheon
-	name = "manto del panteón"
+	name = "manto del panteon"
 	desc = "A divine blue cloak with shimmering gold sewn in, it represents the ten in their whole. Typically worn by High Templars of the Ten"
 	icon_state = "seecloak"
 	item_state = "seecloak"

@@ -326,7 +326,7 @@
 	results = list(/datum/reagent/skill_elixir/scholars_ink = 10)
 
 /datum/chemical_reaction/hallucinogen_from_extract
-	name = "Alucinógeno refinado"
+	name = "Alucinogeno refinado"
 	id = "hallucinogen_from_extract"
 	mix_message = "The extract shimmers violently and resolves into a deeply purple fluid."
 	mix_sound = "pour"

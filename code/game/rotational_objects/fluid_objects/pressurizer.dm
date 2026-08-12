@@ -1,6 +1,6 @@
 /obj/structure/pressurizer
 	name = "pressurizer"
-	desc = "Un presurizador, se conecta a un eje para agregar presión adicional a una red."
+	desc = "Un presurizador, se conecta a un eje para agregar presion adicional a una red."
 	icon = 'icons/roguetown/misc/pipes.dmi'
 	icon_state = "pressurizer"
 	density = FALSE

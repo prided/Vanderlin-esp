@@ -875,7 +875,7 @@
 
 		if(reagents)
 			var/chosen_id
-			switch(tgui_alert(usr, "Elija un método.", "Add Reagents", list("Search", "Choose from a list", "I'm feeling lucky")))
+			switch(tgui_alert(usr, "Elija un metodo.", "Add Reagents", list("Search", "Choose from a list", "I'm feeling lucky")))
 				if("Search")
 					var/valid_id
 					while(!valid_id)

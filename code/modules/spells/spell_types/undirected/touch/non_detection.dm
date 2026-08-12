@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/touch/non_detection
-	name = "No detección"
+	name = "No deteccion"
 	desc = "Consume a handful of ash and shroud a target that you touch from divination magic for two daes."
 	button_icon_state = "prestidigitation"
 	can_cast_on_self = TRUE
@@ -26,7 +26,7 @@
 
 /datum/action/cooldown/spell/undirected/touch/non_detection/cast_on_hand_hit(obj/item/melee/touch_attack/hand, mob/living/victim, mob/living/carbon/caster, list/modifiers)
 	if(victim.has_status_effect(/datum/status_effect/non_detection) || HAS_TRAIT(target, TRAIT_ANTISCRYING))
-		to_chat(caster, span_warning("[victim] ya tiene protección contra la magia de adivinación."))
+		to_chat(caster, span_warning("[victim] ya tiene proteccion contra la magia de adivinacion."))
 		return FALSE
 
 	var/obj/item/sacrifice

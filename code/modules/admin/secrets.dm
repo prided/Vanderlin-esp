@@ -143,7 +143,7 @@
 			if(!check_rights(R_ADMIN))
 				return
 			if(!SSticker.HasRoundStarted())
-				alert("¡El juego aún no ha comenzado!")
+				alert("¡El juego aun no ha comenzado!")
 			else
 				alert("El modo de juego es Narradores.")
 		if("manifest")
@@ -183,7 +183,7 @@
 			if(result)
 				SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Mass Species Change", "[result]"))
 				log_admin("[key_name(usr)] turned all humans into [result]", 1)
-				message_admins("\blue [key_name_admin(usr)] convirtió a todos los humanos en [result]")
+				message_admins("\blue [key_name_admin(usr)] convirtio a todos los humanos en [result]")
 				var/newtype = GLOB.species_list[result]
 				for(var/mob/living/carbon/human/H as anything in GLOB.human_list)
 					H.set_species(newtype)
@@ -192,7 +192,7 @@
 				return
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Bomb Cap"))
 
-			var/newBombCap = input(usr,"What would you like the new bomb cap to be. (entered as the light damage range (the 3rd number in common (1,2,3) notation)) Must be above 4)", "Nuevo límite de explosión", GLOB.MAX_EX_LIGHT_RANGE) as num|null
+			var/newBombCap = input(usr,"What would you like the new bomb cap to be. (entered as the light damage range (the 3rd number in common (1,2,3) notation)) Must be above 4)", "Nuevo limite de explosion", GLOB.MAX_EX_LIGHT_RANGE) as num|null
 			if (!CONFIG_SET(number/bombcap, newBombCap))
 				return
 
@@ -203,7 +203,7 @@
 			if(!check_rights(R_FUN))
 				return
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Break All Lights"))
-			message_admins("[key_name_admin(usr)] rompió todas las luces")
+			message_admins("[key_name_admin(usr)] rompio todas las luces")
 			for(var/obj/machinery/light/L as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/light))
 				L.break_light_tube()
 				CHECK_TICK
@@ -234,7 +234,7 @@
 			if(!check_rights(R_FUN))
 				return
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Fix All Lights"))
-			message_admins("[key_name_admin(usr)] arregló todas las luces.")
+			message_admins("[key_name_admin(usr)] arreglo todas las luces.")
 			for(var/obj/machinery/light/L as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/light))
 				L.fix()
 				CHECK_TICK
@@ -253,7 +253,7 @@
 				return
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Anarcho-capitalist Station"))
 			SSeconomy.full_ancap = !SSeconomy.full_ancap
-			message_admins("[key_name_admin(usr)] cambió el modo anarcocapitalista")
+			message_admins("[key_name_admin(usr)] cambio el modo anarcocapitalista")
 			if(SSeconomy.full_ancap)
 				priority_announce("The NAP is now in full effect.", null, 'sound/blank.ogg')
 			else

@@ -144,7 +144,7 @@ GLOBAL_LIST_EMPTY(rune_appearances_cache)
 			if (istype(active_spell, /datum/rune_spell/portalentrance))
 				var/datum/rune_spell/portalentrance/PE = active_spell
 				if (PE.network)
-					. += span_info("Esta entrada estaba en sintonía con el camino <b>[PE.network]</b>.")
+					. += span_info("Esta entrada estaba en sintonia con el camino <b>[PE.network]</b>.")
 			if (istype(active_spell, /datum/rune_spell/portalexit))
 				var/datum/rune_spell/portalexit/PE = active_spell
 				if (PE.network)

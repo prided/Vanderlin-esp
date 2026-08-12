@@ -226,7 +226,7 @@ const StatsPage = (props: {
     <Stack fill mt={1}>
       <Stack.Item grow>
         <Section
-          title="Técnicas"
+          title="Tecnicas"
           fill
           scrollable
           buttons={
@@ -345,7 +345,7 @@ const LearnPage = (props: {
       <Stack.Item grow style={{ minHeight: 0 }}>
         <Stack fill>
           <Stack.Item grow={3} style={{ minHeight: 0 }}>
-            <Section title="Técnicas" fill>
+            <Section title="Tecnicas" fill>
               <Stack vertical fill>
 
                 <Stack.Item>
@@ -371,7 +371,7 @@ const LearnPage = (props: {
                 <Stack.Item grow style={{ minHeight: 0, overflowY: 'auto' }}>
                   {visibleTechniqueSpells.length === 0 && (
                     <Box color="label" italic>
-                      Aquí todavía no hay hechizos controlados por técnicas.
+                      Aqui todavia no hay hechizos controlados por tecnicas.
                     </Box>
                   )}
                   {visibleTechniqueSpells.map((spell) => (
@@ -393,7 +393,7 @@ const LearnPage = (props: {
             <Section title={`Techniqueless ${activeForm}`} fill scrollable>
               {techniquelessSpells.length === 0 && (
                 <Box color="label" italic>
-                  Sin técnicas {activeForm} hechizos.
+                  Sin tecnicas {activeForm} hechizos.
                 </Box>
               )}
               {techniquelessSpells.map((spell) => (
@@ -429,12 +429,12 @@ export const SpellBook = () => {
   const [page, setPage] = useState<'learn' | 'stats'>('learn');
 
   return (
-    <Window width={780} height={640} title="Hechicería">
+    <Window width={780} height={640} title="Hechiceria">
       <Window.Content scrollable={false}>
         <Stack vertical fill>
           <Stack.Item>
             <Section
-              title="Hechicería"
+              title="Hechiceria"
               buttons={
                 <Stack>
                   <Stack.Item>
@@ -444,7 +444,7 @@ export const SpellBook = () => {
                   </Stack.Item>
                   <Stack.Item>
                     <Box bold color={unspentTechniquePoints > 0 ? 'good' : 'label'}>
-                      Técnica: {unspentTechniquePoints}
+                      Tecnica: {unspentTechniquePoints}
                     </Box>
                   </Stack.Item>
                 </Stack>
@@ -457,7 +457,7 @@ export const SpellBook = () => {
                 </Tabs.Tab>
                 <Tabs.Tab selected={page === 'stats'} onClick={() => setPage('stats')}>
                   <Icon name="chart-simple" mr={1} />
-                  Estadísticas
+                  Estadisticas
                 </Tabs.Tab>
               </Tabs>
             </Section>

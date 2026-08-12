@@ -1,53 +1,53 @@
 /datum/map_template/basic_nine
-	name = "Casa Básica 9x9"
+	name = "Casa Basica 9x9"
 	mappath = "_maps/templates/delver/9x9.dmm"
 	width = 9
 	height = 9
 
 /datum/map_template/vanderlin_apartment
-	name = "Vanderlin Apartamento Básico"
+	name = "Vanderlin Apartamento Basico"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment1.dmm"
 	width = 7
 	height = 7
 
 /datum/map_template/vanderlin_apartment_two
-	name = "Vanderlin Apartamento Básico Dos"
+	name = "Vanderlin Apartamento Basico Dos"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment2.dmm"
 	width = 6
 	height = 10
 
 /datum/map_template/vanderlin_apartment_three
-	name = "Vanderlin Apartamento Básico Tres"
+	name = "Vanderlin Apartamento Basico Tres"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment3.dmm"
 	width = 10
 	height = 5
 
 /datum/map_template/vanderlin_apartment_four
-	name = "Vanderlin Apartamento Básico Cuatro"
+	name = "Vanderlin Apartamento Basico Cuatro"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment4.dmm"
 	width = 9
 	height = 12
 
 /datum/map_template/vanderlin_apartment_five
-	name = "Vanderlin Apartamento Básico Cinco"
+	name = "Vanderlin Apartamento Basico Cinco"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment5.dmm"
 	width = 9
 	height = 6
 
 /datum/map_template/vanderlin_apartment_six
-	name = "Vanderlin Apartamento Básico Seis"
+	name = "Vanderlin Apartamento Basico Seis"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment6.dmm"
 	width = 9
 	height = 9
 
 /datum/map_template/vanderlin_apartment_seven
-	name = "Vanderlin Apartamento Básico Siete"
+	name = "Vanderlin Apartamento Basico Siete"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment7.dmm"
 	width = 6
 	height = 12
 
 /datum/map_template/vanderlin_apartment_eight
-	name = "Vanderlin Apartamento Básico Ocho"
+	name = "Vanderlin Apartamento Basico Ocho"
 	mappath = "_maps/map_files/vanderlin/house_templates/apartment8.dmm"
 	width = 6
 	height = 12

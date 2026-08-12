@@ -1,5 +1,5 @@
 /datum/round_event_control/dendor_taming
-	name = "Desafío de domesticación"
+	name = "Desafio de domesticacion"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/dendor_taming
 	weight = 10

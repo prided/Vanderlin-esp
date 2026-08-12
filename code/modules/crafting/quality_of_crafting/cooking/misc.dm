@@ -19,7 +19,7 @@
 	craft_time = 6 SECONDS
 
 /datum/repeatable_crafting_recipe/cooking/soap/bath
-	name = "jabón de hierbas "
+	name = "jabon de hierbas "
 	tool_usage = list(
 		/obj/item/pestle = list("starts to grind materials in the mortar", "start to grind materials in the mortar", 'sound/foley/mortarpestle.ogg'),
 	)

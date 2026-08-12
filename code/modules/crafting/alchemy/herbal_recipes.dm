@@ -29,7 +29,7 @@
 	name = "Extracto de Taraxacum"
 	description = "Un extracto amargo que limpia toxinas menores."
 	color = "#daa520"
-	taste_description = "diente de león amargo"
+	taste_description = "diente de leon amargo"
 	scent_description = "weeds"
 
 /datum/reagent/medicine/herbal/taraxacum_extract/on_mob_metabolize(mob/living/L)
@@ -48,7 +48,7 @@
 
 /datum/reagent/medicine/herbal/urtica_brew
 	name = "Urtica Brew"
-	description = "Una infusión de ortiga que restaura la sangre y la energía."
+	description = "Una infusion de ortiga que restaura la sangre y la energia."
 	color = "#4d6b3d"
 	taste_description = "stinging greens"
 	scent_description = "ortigas"
@@ -69,7 +69,7 @@
 	..()
 
 /datum/reagent/medicine/herbal/calendula_salve
-	name = "Ungüento de caléndula"
+	name = "Ungüento de calendula"
 	description = "A soothing salve that promotes healing when applied to areas."
 	color = "#ff8c00"
 	taste_description = "flores amargas"
@@ -94,7 +94,7 @@
 // Weak Mana/Stamina Potions (based on hypericum/benedictus/mentha)
 /datum/reagent/medicine/herbal/hypericum_tonic
 	name = "Hypericum Tonic"
-	description = "Un tónico que restaura la energía y la resistencia menores."
+	description = "Un tonico que restaura la energia y la resistencia menores."
 	color = "#ffff99"
 	taste_description = "hierbas amargas"
 	scent_description = "hierba de san juan"
@@ -116,7 +116,7 @@
 	..()
 
 /datum/reagent/medicine/herbal/mentha_tea
-	name = "Té de menta"
+	name = "Te de menta"
 	description = "A refreshing mint tea that clears the mind."
 	color = "#90ee90"
 	taste_description = "cooling mint"
@@ -147,8 +147,8 @@
 	overdose_threshold = 20
 
 /datum/reagent/buff/herbal/salvia_wisdom
-	name = "Té de sabiduría de salvia"
-	description = "Un té que mejora ligeramente la constitución."
+	name = "Te de sabiduria de salvia"
+	description = "Un te que mejora ligeramente la constitucion."
 	color = "#9caf88"
 	taste_description = "sage"
 	scent_description = "hierbas sabias"
@@ -173,7 +173,7 @@
 
 /datum/reagent/buff/herbal/artemisia_luck
 	name = "Artemisia Fortune Tea"
-	description = "Un té que mejora ligeramente la fortuna y la velocidad."
+	description = "Un te que mejora ligeramente la fortuna y la velocidad."
 	color = "#c0c0c0"
 	taste_description = "wormwood"
 	scent_description = "artemisia"
@@ -203,7 +203,7 @@
 	name = "Euphorbia Strength Tea"
 	description = "A bitter tea that infuses the body with strength."
 	color = "#6ca22a"
-	taste_description = "látex"
+	taste_description = "latex"
 	scent_description = "sharp herbs"
 
 /datum/reagent/buff/herbal/euphorbia_strength/on_mob_metabolize(mob/living/L)
@@ -413,7 +413,7 @@
 
 /datum/reagent/medicine/herbal/herbalist_panacea
 	name = "Herbalist's Panacea"
-	description = "Una potente mezcla de múltiples hierbas curativas que proporciona una restauración integral."
+	description = "Una potente mezcla de multiples hierbas curativas que proporciona una restauracion integral."
 	reagent_state = LIQUID
 	color = "#228b22"
 	metabolization_rate = 0.6
@@ -452,7 +452,7 @@
 	color = "#dc143c"
 	metabolization_rate = 0.5
 	overdose_threshold = 45
-	taste_description = "purificación floral"
+	taste_description = "purificacion floral"
 
 /datum/reagent/medicine/herbal/witches_bane/on_mob_life(mob/living/carbon/M, efficiency)
 	M.adjustToxLoss(-2)
@@ -507,7 +507,7 @@
 
 /datum/reagent/medicine/herbal/mentha_oil
 	name = "Aceite refrescante de menta"
-	description = "Un aceite refrescante que proporciona alivio a los músculos y articulaciones doloridos."
+	description = "Un aceite refrescante que proporciona alivio a los musculos y articulaciones doloridos."
 	reagent_state = LIQUID
 	color = "#90ee90"
 	metabolization_rate = 0.3
@@ -578,7 +578,7 @@
 
 /datum/reagent/buff/herbal/moonwater_elixir
 	name = "Moonwater Elixir"
-	description = "Un elixir místico que mejora las habilidades mágicas y la conciencia espiritual."
+	description = "Un elixir mistico que mejora las habilidades magicas y la conciencia espiritual."
 	reagent_state = LIQUID
 	color = "#c0c0c0"
 	metabolization_rate = 0.3
@@ -587,7 +587,7 @@
 
 /datum/reagent/buff/herbal/moonwater_elixir/on_mob_add(mob/living/L)
 	. = ..()
-	to_chat(L, span_notice("¡Tu comprensión de las runas mágicas se profundiza!"))
+	to_chat(L, span_notice("¡Tu comprension de las runas magicas se profundiza!"))
 	ADD_TRAIT(L, TRAIT_MOONWATER_ELIXIR, "[type]")
 
 /datum/reagent/buff/herbal/moonwater_elixir/on_mob_delete(mob/living/L)
@@ -607,7 +607,7 @@
 
 /datum/reagent/buff/herbal/battle_stim
 	name = "Caldo de batalla del guerrero"
-	description = "Un estimulante de combate que mejora la destreza física mientras mantiene la claridad mental."
+	description = "Un estimulante de combate que mejora la destreza fisica mientras mantiene la claridad mental."
 	reagent_state = LIQUID
 	color = "#8b0000"
 	metabolization_rate = 0.5
@@ -649,7 +649,7 @@
 
 /datum/reagent/buff/herbal/alchemist_insight/on_mob_add(mob/living/L)
 	. = ..()
-	to_chat(L, span_notice("¡Tu comprensión de las propiedades de las hierbas se profundiza!"))
+	to_chat(L, span_notice("¡Tu comprension de las propiedades de las hierbas se profundiza!"))
 	ADD_TRAIT(L, TRAIT_LEGENDARY_ALCHEMIST, "[type]")
 
 /datum/reagent/buff/herbal/alchemist_insight/on_mob_delete(mob/living/L)

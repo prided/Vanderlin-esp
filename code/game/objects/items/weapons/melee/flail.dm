@@ -80,7 +80,7 @@
 	item_weight = 1.4 KILOGRAMS
 
 /obj/item/weapon/flail/sflail/necraflail
-	name = "viaje rápido"
+	name = "viaje rapido"
 	desc = "The striking head resembles Necra's original skull, striking true with a sculpted emblem of love and sacrifice. Perhaps one of the few Psydonic-designed emblems of The Ten left."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "necraflail"

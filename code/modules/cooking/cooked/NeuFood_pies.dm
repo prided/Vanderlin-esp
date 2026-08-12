@@ -581,7 +581,7 @@
 
 /obj/item/reagent_containers/food/snacks/tart/cooked/avocado
 	name = "avocado tart"
-	desc = "Una tarta suave y cremosa rellena de puré de aguacate."
+	desc = "Una tarta suave y cremosa rellena de pure de aguacate."
 	icon_state = "avocadotart"
 	tastes = list("aguacate y masa de mantequilla" = 1)
 	slice_path = /obj/item/reagent_containers/food/snacks/tartslice/avocado
@@ -594,10 +594,10 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/tartslice/mango
 
 /obj/item/reagent_containers/food/snacks/tart/cooked/mangosteen
-	name = "tarta de mangostán"
+	name = "tarta de mangostan"
 	desc = "A tart with the sweet tang of mangosteen."
 	icon_state = "mangosteentart"
-	tastes = list("mangostán y masa de mantequilla" = 1)
+	tastes = list("mangostan y masa de mantequilla" = 1)
 	slice_path = /obj/item/reagent_containers/food/snacks/tartslice/mangosteen
 
 /obj/item/reagent_containers/food/snacks/tart/cooked/pineapple
@@ -648,7 +648,7 @@
 /obj/item/reagent_containers/food/snacks/tartslice/mangosteen
 	name = "mangosteen tart slice"
 	icon_state = "mangosteentart_slice"
-	tastes = list("mangostán y masa de mantequilla" = 1)
+	tastes = list("mangostan y masa de mantequilla" = 1)
 
 /obj/item/reagent_containers/food/snacks/tartslice/pineapple
 	name = "ananas tart slice"

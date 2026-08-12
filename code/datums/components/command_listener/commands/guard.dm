@@ -1,5 +1,5 @@
 /datum/follower_command/guard_position
-	command_name = "Posición de guardia"
+	command_name = "Posicion de guardia"
 	var/turf/guard_location
 	var/datum/component/bounded/bound_component
 
@@ -25,7 +25,7 @@
 		FALSE)
 
 	playsound(automaton, 'sound/vo/automaton/executingorders.ogg', 70)
-	automaton.say("EJECUTANDO: Posición de guardia.", forced = TRUE)
+	automaton.say("EJECUTANDO: Posicion de guardia.", forced = TRUE)
 
 /datum/follower_command/guard_position/terminate(mob/living/carbon/human/automaton)
 	if(bound_component)

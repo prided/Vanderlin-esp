@@ -26,7 +26,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/recharge/attack_hand(mob/living/user)
 	if(animating)
-		to_chat(user, span_notice("La runa ya está funcionando..."))
+		to_chat(user, span_notice("La runa ya esta funcionando..."))
 		return
 
 	if(user.get_active_held_item())
@@ -38,7 +38,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/recharge/attack_hand_secondary(mob/living/user, list/modifiers)
 	if(animating)
-		to_chat(user, span_notice("La runa ya está funcionando..."))
+		to_chat(user, span_notice("La runa ya esta funcionando..."))
 		return
 	if(!staged_book)
 		return ..()
@@ -54,7 +54,7 @@
 		return NONE
 
 	if(animating)
-		to_chat(user, span_notice("La runa ya está funcionando..."))
+		to_chat(user, span_notice("La runa ya esta funcionando..."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!istype(tool, /obj/item/spellbook))
@@ -77,17 +77,17 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/recharge/proc/try_invoke(mob/living/user)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("No puedes invocar estos símbolos."))
+		to_chat(user, span_warning("No puedes invocar estos simbolos."))
 		return
 	if(rune_in_use)
-		to_chat(user, span_notice("La runa ya está activa."))
+		to_chat(user, span_notice("La runa ya esta activa."))
 		return
 	rune_in_use = TRUE
 	animating = TRUE
 
 	var/skill_level = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane)
 	if(skill_level < required_skill)
-		to_chat(user, span_hierophant_warning("Mi arcyne no está lo suficientemente refinado para completar este trabajo..."))
+		to_chat(user, span_hierophant_warning("Mi arcyne no esta lo suficientemente refinado para completar este trabajo..."))
 		abort_ritual()
 		return
 	if(user.mana_pool.amount < mana_cost)

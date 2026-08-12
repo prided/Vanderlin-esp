@@ -270,7 +270,7 @@
 
 /atom/movable/screen/alert/status_effect/stasis
 	name = "Stasis"
-	desc = "Tus funciones biológicas se han detenido. Podrías vivir para siempre de esta manera, pero es bastante aburrido."
+	desc = "Tus funciones biologicas se han detenido. Podrias vivir para siempre de esta manera, pero es bastante aburrido."
 	icon_state = "stasis"
 
 //GOLEM GANG

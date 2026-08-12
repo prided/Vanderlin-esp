@@ -58,7 +58,7 @@
 	. = ..()
 
 /obj/effect/abstract/marker/at
-	name = "marcador de césped activo"
+	name = "marcador de cesped activo"
 
 
 /obj/effect/dummy/lighting_obj

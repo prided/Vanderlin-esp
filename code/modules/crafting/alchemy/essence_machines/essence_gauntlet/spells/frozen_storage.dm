@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/frozen_storage
-	name = "fridigitación"
+	name = "fridigitacion"
 	desc = "Prevents rot from ever touching."
 	button_icon_state = "fridigitation"
 	cast_range = 1

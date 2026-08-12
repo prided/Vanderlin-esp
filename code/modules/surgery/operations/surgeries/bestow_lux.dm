@@ -66,7 +66,7 @@
 		display_results(
 			surgeon,
 			patient,
-			span_notice("Logras integrar [tool] en el corazón de [patient]."),
+			span_notice("Logras integrar [tool] en el corazon de [patient]."),
 			span_notice("[surgeon] works the [tool] into [patient]'s heart."),
 			span_notice("[surgeon] introduce algo en las entrañas de [patient]."),
 		)

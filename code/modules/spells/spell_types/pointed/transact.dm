@@ -22,7 +22,7 @@
 	. = ..()
 	var/obj/item/held_item = owner.get_active_held_item()
 	if(!held_item)
-		to_chat(owner, span_info("Necesito algo de valor para hacer una transacción..."))
+		to_chat(owner, span_info("Necesito algo de valor para hacer una transaccion..."))
 		return
 	var/helditemvalue = held_item.get_real_price()
 	if(!helditemvalue)
@@ -48,7 +48,7 @@
 		held_mob.forceMove(T)
 		held_mob.emote("scream", forced = TRUE)
 	owner.visible_message(span_notice("The transaction is made, [cast_on] is bathed in empowerment!"))
-	to_chat(owner, "<font color='yellow'>[held_item] se quema en el aire de repente, mi transacción es aceptada.</font>")
+	to_chat(owner, "<font color='yellow'>[held_item] se quema en el aire de repente, mi transaccion es aceptada.</font>")
 	if(iscarbon(cast_on))
 		var/mob/living/carbon/C = cast_on
 		var/datum/status_effect/buff/healing/matthioshealing/heal_effect = C.apply_status_effect(/datum/status_effect/buff/healing/matthioshealing)

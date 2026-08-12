@@ -7,7 +7,7 @@
 	return base_item
 
 /datum/quality_calculator
-	var/name = "Calidad genérica"
+	var/name = "Calidad generica"
 	var/material_quality = 0
 	var/skill_quality = 0
 	var/num_components = 1

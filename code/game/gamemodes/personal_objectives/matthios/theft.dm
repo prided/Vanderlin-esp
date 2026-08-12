@@ -1,5 +1,5 @@
 /datum/objective/personal/steal_items
-	name = "Robar artículos"
+	name = "Robar articulos"
 	category = "Matthios' Elegido"
 	triumph_count = 2
 	rewards = list("2 Triumphs", "Matthios grows stronger", "Pickpocketing knowledge", "Matthios blesses you (+1 Speed)")

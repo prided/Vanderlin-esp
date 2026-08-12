@@ -238,7 +238,7 @@
 /*	..................   Dirts   ................... */
 /turf/open/floor/dirt
 	name = "dirt"
-	desc = "La tierra está llena de cicatrices de innumerables guerras."
+	desc = "La tierra esta llena de cicatrices de innumerables guerras."
 	icon = 'icons/turf/natural/soils.dmi'
 	icon_state = "dirt"
 	footstep = FOOTSTEP_GRASS

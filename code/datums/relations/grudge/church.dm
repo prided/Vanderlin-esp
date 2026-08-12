@@ -4,5 +4,5 @@
 
 /datum/grudge_type/church/confessional_leak
 	grudge_name = "Confessional Leak"
-	aggressor_text = "Dejaste escapar algo que no deberías haber escuchado en confianza."
-	victim_text = "Algo que confesaste en privado de alguna manera llegó a oídos equivocados."
+	aggressor_text = "Dejaste escapar algo que no deberias haber escuchado en confianza."
+	victim_text = "Algo que confesaste en privado de alguna manera llego a oidos equivocados."

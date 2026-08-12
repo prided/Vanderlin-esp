@@ -332,7 +332,7 @@
 //CHANJELIN WARD
 /datum/coven_power/fae_trickery/chanjelin_ward
 	name = "Chanjelin Ward"
-	desc = "Crea un símbolo que desoriente a tu víctima."
+	desc = "Crea un simbolo que desoriente a tu victima."
 
 	level = 4
 	check_flags = COVEN_CHECK_CONSCIOUS | COVEN_CHECK_CAPABLE | COVEN_CHECK_IMMOBILE

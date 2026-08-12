@@ -44,7 +44,7 @@ GLOBAL_VAR_INIT(nya_catmodder_go, FALSE)
 /datum/stress_event/precious_mob_died
 	timer = INFINITY
 	stress_change = 10
-	desc = span_red("Nunca habrá otra criatura como ellos. Están perdidos y yo también.")
+	desc = span_red("Nunca habra otra criatura como ellos. Estan perdidos y yo tambien.")
 
 /datum/component/precious_creature
 	// Who does this creature belong to?
@@ -200,7 +200,7 @@ GLOBAL_VAR_INIT(nya_catmodder_go, FALSE)
 		user.visible_message(span_notice("Patting [honse] on the haunches, [user] sends them trotting away."), span_notice("With a brief pat on the haunches, I send [honse] away to fend for themselves."))
 		if (should_heal)
 			honse.apply_status_effect(/datum/status_effect/buff/healing/saddleborn)
-			to_chat(user, span_info("En este entorno deberían poder descansar y recuperarse un poco."))
+			to_chat(user, span_info("En este entorno deberian poder descansar y recuperarse un poco."))
 		return TRUE
 	else
 		honse.SetImmobilized(0)
@@ -226,7 +226,7 @@ GLOBAL_VAR_INIT(nya_catmodder_go, FALSE)
 	var/dangerous_summon = FALSE
 
 	if (get_dist(honse.loc, user.loc) <= world.view)
-		to_chat(user, span_warning("¡Tu fiel corcel está cerca!"))
+		to_chat(user, span_warning("¡Tu fiel corcel esta cerca!"))
 		return FALSE
 
 	if (callback_time <= 0)

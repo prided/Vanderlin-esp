@@ -202,7 +202,7 @@
 	duration = 5
 
 /obj/effect/temp_visual/telekinesis
-	name = "fuerza telequinética"
+	name = "fuerza telequinetica"
 	icon_state = "empdisable"
 	duration = 5
 
@@ -258,7 +258,7 @@
 	pixel_y = base_pixel_y + rand(-9, 0)
 
 /obj/effect/temp_visual/kinetic_blast
-	name = "explosión cinética"
+	name = "explosion cinetica"
 	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "kinetic_blast"
 	layer = ABOVE_ALL_MOB_LAYER

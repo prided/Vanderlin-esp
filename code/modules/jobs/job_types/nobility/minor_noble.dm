@@ -210,7 +210,7 @@
 	grant_selected_spellbooks(spawned, selectable_books, 2)
 
 /datum/outfit/minornoble/magickal_graduate
-	name = "Graduado Mágico (noble)"
+	name = "Graduado Magico (noble)"
 	head = /obj/item/clothing/head/wizhat/gen
 	shirt = /obj/item/clothing/shirt/tunic/colored/random
 	armor = /obj/item/clothing/armor/basiceast/crafteast

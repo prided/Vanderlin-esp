@@ -29,10 +29,10 @@ export const DetailRepeatable = ({ r, lookup, pickerMap, allRecipes, essenceInde
     )}
     {!!r.reagents?.length && (
       <>
-        <SectionHead>Líquidos</SectionHead>
+        <SectionHead>Liquidos</SectionHead>
         {r.reagents.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} lígulas de{' '}
+            {rg.amount} ligulas de{' '}
             <RecipeLink name={rg.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
         ))}

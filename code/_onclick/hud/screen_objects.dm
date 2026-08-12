@@ -127,7 +127,7 @@
 			if(M.mind)
 				if(M.mind.language_holder)
 					if(!length(M.mind.language_holder.languages))
-						to_chat(M, "<span class='warning'>No sé ningún idioma.</span>")
+						to_chat(M, "<span class='warning'>No se ningun idioma.</span>")
 					else
 						for(var/X in M.mind.language_holder.languages)
 							var/datum/language/LA = GLOB.language_datum_instances[X]
@@ -151,7 +151,7 @@
 		H.print_skill_levels(H)
 
 /atom/movable/screen/craft
-	name = "menú de elaboración"
+	name = "menu de elaboracion"
 	icon_state = "craft"
 	screen_loc = rogueui_craft
 	var/last_craft
@@ -190,7 +190,7 @@
 	. = ..()
 
 /atom/movable/screen/area_creator
-	name = "crear nueva área"
+	name = "crear nueva area"
 	icon_state = "area_edit"
 	screen_loc = ui_building
 
@@ -374,7 +374,7 @@
 	L.dropItemToGround(L.get_active_held_item(), silent = FALSE)
 
 /atom/movable/screen/act_intent
-	name = "intención"
+	name = "intencion"
 	icon_state = "help"
 	screen_loc = ui_acti
 
@@ -573,7 +573,7 @@
 			icon_state = "take[giving]"
 
 /atom/movable/screen/def_intent
-	name = "intención de defensa"
+	name = "intencion de defensa"
 	icon_state = "def1n"
 	icon = 'icons/mob/roguehud.dmi'
 	screen_loc = rogueui_def
@@ -1706,7 +1706,7 @@
 	. = ..()
 
 /atom/movable/screen/rintent_selection
-	name = "intención de rmb"
+	name = "intencion de rmb"
 	icon = 'icons/mob/roguehud.dmi'
 	icon_state = "rmbaimed"
 	var/stored_intent

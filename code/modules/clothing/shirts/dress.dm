@@ -45,7 +45,7 @@
 /obj/item/clothing/shirt/dress/silkdress
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	name = "chemise"
-	desc = "Cómodo pero elegante, ofrece estilo y comodidad para el uso diario."
+	desc = "Comodo pero elegante, ofrece estilo y comodidad para el uso diario."
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon_state = "silkdress"
 	color = CLOTHING_LINEN
@@ -183,7 +183,7 @@
 
 /obj/item/clothing/shirt/dress/gown
 	name = "vestido de primavera"
-	desc = "Un vestido delicado que captura la esencia de la renovación de la temporada."
+	desc = "Un vestido delicado que captura la esencia de la renovacion de la temporada."
 	icon = 'icons/roguetown/clothing/shirts_gown.dmi'
 	icon_state = "springgown"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts_gown.dmi'

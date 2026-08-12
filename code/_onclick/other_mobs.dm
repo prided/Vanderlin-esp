@@ -348,7 +348,7 @@
 			if(stat != CONSCIOUS)
 				return
 			if(is_mouth_covered())
-				to_chat(src, span_warning("Mi boca está bloqueada."))
+				to_chat(src, span_warning("Mi boca esta bloqueada."))
 				return
 			if(HAS_TRAIT(src, TRAIT_NO_BITE))
 				to_chat(src, span_warning("No puedo morder."))
@@ -474,7 +474,7 @@
 				to_chat(thief, span_warning("I can't pickpocket while my hand is full!"))
 				return
 			if(!(zone_selected in stealablezones))
-				to_chat(thief, span_warning("¿Qué voy a robar de ahí?"))
+				to_chat(thief, span_warning("¿Que voy a robar de ahi?"))
 				return
 			//2.5 seconds for those without skill
 			//better skill shortens time, up to one second with legendary
@@ -516,7 +516,7 @@
 
 					victim.dropItemToGround(picked)
 					put_in_active_hand(picked)
-					to_chat(thief, span_green("¡Robé [picked]!"))
+					to_chat(thief, span_green("¡Robe [picked]!"))
 					log_combat(thief, victim, "stole [picked] from ")
 					exp_to_gain += thief.get_learning_boon(/datum/attribute/skill/misc/stealing) * 5
 					if(victim.client && victim.stat != DEAD)
@@ -535,7 +535,7 @@
 				to_chat(thief, span_warning("I fumbled it!"))
 				log_combat(thief, victim, "tried to steal from ")
 		if(thief_skill_base <= target_skill)
-			to_chat(victim, span_danger("¡Alguien intentó robarme!"))
+			to_chat(victim, span_danger("¡Alguien intento robarme!"))
 			if(thief_skill_base >= 3)
 				to_chat(thief, span_danger("[victim] probably realized I tried pickpocketing them!"))
 		if(stealroll < target_perception)
@@ -556,7 +556,7 @@
 		return
 
 	if(pulledby && pulledby != src)
-		to_chat(src, span_warning("Me están agarrando."))
+		to_chat(src, span_warning("Me estan agarrando."))
 		resist_grab()
 		return
 
@@ -565,7 +565,7 @@
 		return
 
 	if(lying_angle)
-		to_chat(src, span_warning("Debería levantarme primero."))
+		to_chat(src, span_warning("Deberia levantarme primero."))
 		return
 
 	if(!isatom(A))
@@ -573,7 +573,7 @@
 
 	if(A.z != z)
 		if(!HAS_TRAIT(src, TRAIT_ZJUMP))
-			to_chat(src, span_warning("Eso es demasiado alto para mí..."))
+			to_chat(src, span_warning("Eso es demasiado alto para mi..."))
 			return
 
 	if(has_status_effect(/datum/status_effect/debuff/exposed))

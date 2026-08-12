@@ -97,7 +97,7 @@
 		if(!selections.len)
 			to_chat(src, "<span class='boldwarning'>No characters found.</span>")
 			return
-		selection = input("¿Qué personaje?") as null|anything in sortList(selections)
+		selection = input("¿Que personaje?") as null|anything in sortList(selections)
 		if(!selection)
 			return
 		theykey = selections[selection]
@@ -108,12 +108,12 @@
 //				if(C.ckey in GLOB.anonymize)
 //					usedkey = get_fake_key(C.ckey)
 			selections[usedkey] = C.ckey
-		selection = input("¿Qué jugador?") as null|anything in sortList(selections)
+		selection = input("¿Que jugador?") as null|anything in sortList(selections)
 		if(!selection)
 			return
 		theykey = selections[selection]
 	if(selection == "Player Name")
-		selection = input("¿Qué jugador?", "CKEY", "") as text|null
+		selection = input("¿Que jugador?", "CKEY", "") as text|null
 		if(!selection)
 			return
 		theykey = selection
@@ -149,7 +149,7 @@
 	if(!holder)
 		return
 	SSticker.reboot_anyway = null
-	message_admins("[usr] detuvo el reinicio de 15 minutos después de una votación exitosa.")
+	message_admins("[usr] detuvo el reinicio de 15 minutos despues de una votacion exitosa.")
 
 /client/proc/adjust_pq()
 	set category = "GameMaster.Triunfos"
@@ -165,7 +165,7 @@
 		if(!selections.len)
 			to_chat(src, "<span class='boldwarning'>No characters found.</span>")
 			return
-		selection = input("¿Qué personaje?") as null|anything in sortList(selections)
+		selection = input("¿Que personaje?") as null|anything in sortList(selections)
 		if(!selection)
 			return
 		theykey = selections[selection]
@@ -176,12 +176,12 @@
 //				if(C.ckey in GLOB.anonymize)
 //					usedkey = get_fake_key(C.ckey)
 			selections[usedkey] = C.ckey
-		selection = input("¿Qué jugador?") as null|anything in sortList(selections)
+		selection = input("¿Que jugador?") as null|anything in sortList(selections)
 		if(!selection)
 			return
 		theykey = selections[selection]
 	if(selection == "Player Name")
-		selection = input("¿Qué jugador?", "CKEY", "") as text|null
+		selection = input("¿Que jugador?", "CKEY", "") as text|null
 		if(!selection)
 			return
 		theykey = selection

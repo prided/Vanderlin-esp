@@ -6,11 +6,11 @@
 	suffix = "voice"
 
 /datum/mob_descriptor/voice/ordinary
-	name = "Común"
+	name = "Comun"
 	prefix = "an"
 
 /datum/mob_descriptor/voice/monotone
-	name = "Monótono"
+	name = "Monotono"
 
 /datum/mob_descriptor/voice/deep
 	name = "Profundo"
@@ -56,7 +56,7 @@
 	name = "Quejoso"
 
 /datum/mob_descriptor/voice/melodic
-	name = "Melódico"
+	name = "Melodico"
 
 /datum/mob_descriptor/voice/drawling
 	name = "Drawling"

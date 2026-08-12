@@ -61,11 +61,11 @@
 	else
 		. += span_warning("The bowl is empty.")
 	if(liquid_contents.total_volume > 0)
-		. += span_notice("La base contiene [liquid_contents.total_volume]u de líquido.")
+		. += span_notice("La base contiene [liquid_contents.total_volume]u de liquido.")
 	else
-		. += span_warning("La base está seca.")
+		. += span_warning("La base esta seca.")
 	if(current_smoker)
-		. += span_notice("[current_smoker.name] está humeando.")
+		. += span_notice("[current_smoker.name] esta humeando.")
 	else
 		. += span_notice("Click it to smoke.")
 
@@ -115,7 +115,7 @@
 		if(!container.is_open_container())
 			return
 		if(liquid_contents.total_volume >= liquid_max_volume)
-			to_chat(user, span_warning("La base ya está llena."))
+			to_chat(user, span_warning("La base ya esta llena."))
 			return
 		I.reagents.trans_to(liquid_contents, min(I.reagents.total_volume, liquid_max_volume - liquid_contents.total_volume))
 		to_chat(user, span_notice("You pour liquid into the base of the [name]."))
@@ -151,7 +151,7 @@
 
 /obj/structure/fluff/statue/shisha/proc/empty_bowl(mob/living/user)
 	if(!bowl_contents)
-		to_chat(user, span_warning("El cuenco ya está vacío."))
+		to_chat(user, span_warning("El cuenco ya esta vacio."))
 		return
 	bowl_contents.forceMove(get_turf(src))
 	bowl_contents = null

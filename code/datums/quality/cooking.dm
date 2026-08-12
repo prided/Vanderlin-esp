@@ -1,5 +1,5 @@
 /datum/quality_calculator/cooking
-	name = "Calidad de cocción"
+	name = "Calidad de coccion"
 
 	quality_descriptors = alist(
 		-1 = list(
@@ -41,7 +41,7 @@
 				"Esta es una buena cocina.",
 				"Parece llamarte.",
 				"Your mouth waters at the sight.",
-				"Será una buena comida.",
+				"Sera una buena comida.",
 				"It looks like good eating."
 			),
 			"eat_effect" = /datum/status_effect/buff/foodbuff,

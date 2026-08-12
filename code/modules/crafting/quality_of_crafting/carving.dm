@@ -123,7 +123,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/jade/mask
-	name = "máscara de joapstone"
+	name = "mascara de joapstone"
 	output = /obj/item/clothing/face/jademask
 	craftdiff = 4
 
@@ -307,7 +307,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/shell/mask
-	name = "máscara de concha"
+	name = "mascara de concha"
 	output = /obj/item/clothing/face/shellmask
 	craftdiff = 4
 
@@ -936,7 +936,7 @@
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/crafting/coral/jaw
-	name = "estatua de mandíbula de tiburón"
+	name = "estatua de mandibula de tiburon"
 	output = /obj/item/carvedgem/coral/jaw
 	craftdiff = 5
 

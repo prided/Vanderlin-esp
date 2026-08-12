@@ -8,7 +8,7 @@
 
 	required_form = FORM_ARCANE
 
-	invocation = "¡¡¡MISIL MÁGICO!!!"
+	invocation = "¡¡¡MISIL MAGICO!!!"
 	invocation_type = INVOCATION_SHOUT
 
 	charge_time = 1 SECONDS

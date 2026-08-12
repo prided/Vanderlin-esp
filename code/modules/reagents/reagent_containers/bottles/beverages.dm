@@ -35,16 +35,16 @@
 	auto_label_desc = "Allegedly the least bitter thing to be exported from Grenzelhoft."
 
 /obj/item/reagent_containers/glass/bottle/beer/aurorian
-	desc = "Una botella con el sello de corcho de la cervecería auroriana."
+	desc = "Una botella con el sello de corcho de la cerveceria auroriana."
 	list_reagents = list(/datum/reagent/consumable/ethanol/aurorian = 75)
 	auto_label_name = "el auroriano"
 	auto_label_desc = "An Elvish beer brewed from an herbal gruit."
 
 /obj/item/reagent_containers/glass/bottle/beer/fireleaf
-	desc = "Una botella con un sello de corcho de hoja genérico."
+	desc = "Una botella con un sello de corcho de hoja generico."
 	list_reagents = list(/datum/reagent/consumable/ethanol/fireleaf= 75)
 	auto_label_name = "hoja de fuego"
-	auto_label_desc = "Una cerveza élfica formada por la destilación de coles."
+	auto_label_desc = "Una cerveza elfica formada por la destilacion de coles."
 
 /obj/item/reagent_containers/glass/bottle/beer/butterhairs
 	desc = "A bottle with the Dwarven Federation Trade Alliance cork-seal."
@@ -156,7 +156,7 @@
 	auto_label_desc = "A form of alcohol brewed from the milk of a saiga and salt. Common drink of the nomads living in the steppe."
 
 /obj/item/reagent_containers/glass/bottle/kgunlager
-	desc = "Una botella con un sello de corcho de la cervecería Yamaguchi."
+	desc = "Una botella con un sello de corcho de la cerveceria Yamaguchi."
 	list_reagents = list(/datum/reagent/consumable/ethanol/kgunlager = 48)
 	auto_label_name = "tea lager"
 	auto_label_desc = "A pale lager brewed in the far-away lands, refined with green tea for an unique flavour-profile. Even lighter than elven-brew!"
@@ -219,7 +219,7 @@
 /obj/item/reagent_containers/glass/bottle/black/whipwine
 	desc = "A strange bottle with a concerningly brown color."
 	list_reagents = list(/datum/reagent/consumable/ethanol/whipwine = 48)
-	auto_label_name = "vino de látigo"
+	auto_label_name = "vino de latigo"
 	auto_label_desc = "It bears the seal of a snake's head over a leaf. Markings indicate the contents are supposed to be good for health..."
 
 /obj/item/reagent_containers/glass/bottle/black/komuchisake

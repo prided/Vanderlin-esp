@@ -60,7 +60,7 @@
 	color = on ? "#CC55FF" : "#AAAAAA"
 
 /atom/movable/screen/gnome_panel/splitter
-	name = "Alternar división"
+	name = "Alternar division"
 	icon_state = "split"
 
 /atom/movable/screen/gnome_panel/splitter/Click()
@@ -295,6 +295,6 @@
 	var/datum/ai_controller/c = panel?.gnome?.ai_controller
 	var/obj/mach = c ? (c.blackboard[BB_GNOME_TARGET_SPLITTER] || c.blackboard[BB_GNOME_TARGET_EXTRACTOR]) : null
 	var/pending = is_pending(GNOME_WP_SPLITTER_MACH)
-	name = mach ? mach.name : "Establecer máquina"
+	name = mach ? mach.name : "Establecer maquina"
 	color = pending ? "#FFFF00" : (mach ? "#FF55FF" : "#888888")
 	if(pending) alpha = 255

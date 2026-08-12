@@ -157,7 +157,7 @@ GLOBAL_PROTECT(LastAdminCalledProc)
 		to_chat(usr, .)
 
 /client/proc/get_callproc_args()
-	var/argnum = input("Número de argumentos","Número:",0) as num|null
+	var/argnum = input("Numero de argumentos","Numero:",0) as num|null
 	if(isnull(argnum))
 		return
 

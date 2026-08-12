@@ -1,5 +1,5 @@
 /datum/round_event_control/adoption_call
-	name = "Llamada de adopción"
+	name = "Llamada de adopcion"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/adoption_call
 	weight = 7

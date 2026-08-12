@@ -167,7 +167,7 @@
 			var/turf/turf = get_turf(user)
 			target = GET_TURF_ABOVE(turf)
 		if(target.zPassOut(DOWN) || target.is_blocked_turf(exclude_mobs = TRUE, ignore_atoms = list(/obj/structure/fluff/railing), type_list = TRUE))
-			to_chat(user, span_warning("No puedo subir aquí."))
+			to_chat(user, span_warning("No puedo subir aqui."))
 			return
 
 		// if(!target || !istype(target, /turf/open))

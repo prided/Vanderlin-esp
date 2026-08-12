@@ -72,7 +72,7 @@
 	crit_message = "Blood sprays from %VICTIM's throat!"
 
 /datum/wound/artery/heart
-	name = "Disección aórtica"
+	name = "Diseccion aortica"
 	severity = WOUND_SEVERITY_FATAL
 	artery_type_override = ARTERY_HEART
 	artery_type_blacklist = list(ARTERY_CHEST)

@@ -29,7 +29,7 @@
 	icon_state = "axolotl"
 
 /datum/sprite_accessory/ears/bat
-	name = "Murciélago"
+	name = "Murcielago"
 	icon_state = "bat"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
@@ -182,7 +182,7 @@
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/shark
-	name = "Tiburón"
+	name = "Tiburon"
 	icon_state = "shark"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")
@@ -285,7 +285,7 @@
 	color_key_names = list("Ears", "Inner")
 
 /datum/sprite_accessory/ears/mouse
-	name = "Ratón"
+	name = "Raton"
 	icon_state = "mouse"
 	color_keys = 2
 	color_key_names = list("Ears", "Inner")

@@ -26,7 +26,7 @@
 	)
 
 	if(user)
-		message_admins(span_adminnotice("[key_name_admin(user)] ejecutó un perfilador de memoria [kind] ([DisplayTimeText(duration)] del servidor congelado)."))
+		message_admins(span_adminnotice("[key_name_admin(user)] ejecuto un perfilador de memoria [kind] ([DisplayTimeText(duration)] del servidor congelado)."))
 		log_admin("[key_name(user)] ran a memory profiler [kind] ([duration]ds).")
 
 	return result

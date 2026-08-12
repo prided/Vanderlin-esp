@@ -43,7 +43,7 @@
 	var/reaction = rand(1,4)
 	switch(reaction)
 		if(1)
-			to_chat(owner, span_warning("¡Estás asustado!"))
+			to_chat(owner, span_warning("¡Estas asustado!"))
 			owner.emote("jump")
 			owner.Immobilize(0.1 SECONDS * stacks)
 
@@ -66,7 +66,7 @@
 			addtimer(CALLBACK(src, PROC_REF(speed_up)), 1 SECONDS * stacks, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
 		if(4)
-			to_chat(owner, span_warning("¡Te sientes débil de miedo!"))
+			to_chat(owner, span_warning("¡Te sientes debil de miedo!"))
 			owner.set_dizzy(2 * stacks SECONDS)
 			owner.set_eye_blur_if_lower(3 * stacks SECONDS)
 

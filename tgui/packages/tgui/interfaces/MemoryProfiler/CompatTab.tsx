@@ -26,9 +26,9 @@ export function CompatTab() {
   return (
     <Stack fill vertical>
       <Stack.Item>
-        <Section title="Verificación cruzada con BYOND">
+        <Section title="Verificacion cruzada con BYOND">
           <ReportHeader
-            label="Capturar comparación"
+            label="Capturar comparacion"
             busy={busy}
             onCapture={() => act('capture_compat')}
             meta={metaFor(report_meta, 'compat')}
@@ -40,12 +40,12 @@ export function CompatTab() {
           <Stack vertical>
             <Stack.Item>
               <NoticeBox info>
-                Estas filas deben coincidir con la salida GetServerMemUsage de BYOND. Si la herramienta no encuentra una tabla, el resultado parece un análisis limpio; por eso existe esta comparación. Siempre hay cinco filas y una sexta para alists cuando el mundo contiene alguna. BYOND omite esa fila cuando la cantidad es cero, y aquí se hace lo mismo: si falta en ambos lados, es una coincidencia, no una carencia.
+                Estas filas deben coincidir con la salida GetServerMemUsage de BYOND. Si la herramienta no encuentra una tabla, el resultado parece un analisis limpio; por eso existe esta comparacion. Siempre hay cinco filas y una sexta para alists cuando el mundo contiene alguna. BYOND omite esa fila cuando la cantidad es cero, y aqui se hace lo mismo: si falta en ambos lados, es una coincidencia, no una carencia.
               </NoticeBox>
             </Stack.Item>
             {!compat_report ? (
               <Stack.Item>
-                <EmptyState>Nada capturado todavía.</EmptyState>
+                <EmptyState>Nada capturado todavia.</EmptyState>
               </Stack.Item>
             ) : (
               <>
@@ -84,7 +84,7 @@ export function CompatTab() {
                       <Box style={MONOSPACE}>{compat_report.byond_raw}</Box>
                     ) : (
                       <NoticeBox color="yellow">
-                        Los símbolos de informe de BYOND no se resolvieron, como siempre ocurre fuera de Windows. No hay nada con qué comparar, así que una tabla ausente pasaría inadvertida.
+                        Los simbolos de informe de BYOND no se resolvieron, como siempre ocurre fuera de Windows. No hay nada con que comparar, asi que una tabla ausente pasaria inadvertida.
                       </NoticeBox>
                     )}
                   </Section>
@@ -95,13 +95,13 @@ export function CompatTab() {
               <Section title="Cobertura de tablas">
                 {!coverage ? (
                   <EmptyState>
-                    La cobertura se lee una vez al inicio. Si está vacío, la extensión nunca se inicializó.
+                    La cobertura se lee una vez al inicio. Si esta vacio, la extension nunca se inicializo.
                   </EmptyState>
                 ) : (
                   <>
                     {!coverage.complete && (
                       <NoticeBox danger>
-                        Esta construcción no pudo llegar a todas las mesas. Cada total en cada informe está corto por lo que se encuentra en los no disponibles.
+                        Esta construccion no pudo llegar a todas las mesas. Cada total en cada informe esta corto por lo que se encuentra en los no disponibles.
                       </NoticeBox>
                     )}
                     <LabeledList>
@@ -127,7 +127,7 @@ export function CompatTab() {
             </Stack.Item>
             <Stack.Item>
               <Section
-                title="Búfer de depuración de extensión"
+                title="Bufer de depuracion de extension"
                 buttons={
                   <Button
                     icon="download"
@@ -142,7 +142,7 @@ export function CompatTab() {
                   <Box style={MONOSPACE}>{debug_text}</Box>
                 ) : (
                   <Box color="label">
-                    Vacío. El drenaje limpia el tope en el lado de extensión.
+                    Vacio. El drenaje limpia el tope en el lado de extension.
                   </Box>
                 )}
               </Section>

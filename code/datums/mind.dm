@@ -699,7 +699,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 					objective_pos = antag_datum_ref.objectives.Find(old_objective)
 					break
 			if(!old_objective)
-				to_chat(usr,"Objetivo no válido.")
+				to_chat(usr,"Objetivo no valido.")
 				return
 		else
 			if(href_list["target_antag"])
@@ -739,7 +739,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 			new_objective.owner = src
 			new_objective.admin_edit(usr)
 			target_antag.objectives += new_objective
-			message_admins("[key_name_admin(usr)] agregó un nuevo objetivo para [current]: [new_objective.explanation_text]")
+			message_admins("[key_name_admin(usr)] agrego un nuevo objetivo para [current]: [new_objective.explanation_text]")
 			log_admin("[key_name(usr)] added a new objective for [current]: [new_objective.explanation_text]")
 		else
 			if(old_objective.type == selected_type)
@@ -753,7 +753,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 				new_objective.admin_edit(usr)
 				target_antag.objectives -= old_objective
 				target_antag.objectives.Insert(objective_pos, new_objective)
-			message_admins("[key_name_admin(usr)] editó el objetivo de [current] a [new_objective.explanation_text]")
+			message_admins("[key_name_admin(usr)] edito el objetivo de [current] a [new_objective.explanation_text]")
 			log_admin("[key_name(usr)] edited [current]'s objective to [new_objective.explanation_text]")
 
 	else if (href_list["obj_delete"])
@@ -764,10 +764,10 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 				antag_datum_ref.objectives -= objective
 				break
 		if(!objective)
-			to_chat(usr,"Objetivo no válido.")
+			to_chat(usr,"Objetivo no valido.")
 			return
 		//qdel(objective) Needs cleaning objective destroys
-		message_admins("[key_name_admin(usr)] eliminó un objetivo para [current]: [objective.explanation_text]")
+		message_admins("[key_name_admin(usr)] elimino un objetivo para [current]: [objective.explanation_text]")
 		log_admin("[key_name(usr)] removed an objective for [current]: [objective.explanation_text]")
 
 	else if(href_list["obj_completed"])
@@ -778,7 +778,7 @@ GLOBAL_LIST_EMPTY(personal_objective_minds)
 				objective = objective
 				break
 		if(!objective)
-			to_chat(usr,"Objetivo no válido.")
+			to_chat(usr,"Objetivo no valido.")
 			return
 		objective.completed = !objective.completed
 		log_admin("[key_name(usr)] toggled the win state for [current]'s objective: [objective.explanation_text]")

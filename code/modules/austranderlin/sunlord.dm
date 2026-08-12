@@ -98,7 +98,7 @@
 
 /mob/living/carbon/human/proc/sunlordannouncement()
 	set name = "Anuncio del Señor del Sol"
-	set category = "RolÚnico.Señor del Sol"
+	set category = "RolUnico.Señor del Sol"
 	if(stat)
 		return
 

@@ -110,8 +110,8 @@
 	. += devotion
 	devotion = clamp(devotion += amount, 0, max_devotion)
 	. -= devotion
-	holder_mob?.hud_used?.bloodpool?.name = "Devoción: [devotion]"
-	holder_mob?.hud_used?.bloodpool?.desc = "Devoción: [devotion]/[max_devotion]"
+	holder_mob?.hud_used?.bloodpool?.name = "Devocion: [devotion]"
+	holder_mob?.hud_used?.bloodpool?.desc = "Devocion: [devotion]/[max_devotion]"
 	if(devotion <= 0)
 		holder_mob?.hud_used?.bloodpool?.set_value(0, 1 SECONDS)
 	else
@@ -244,18 +244,18 @@
 
 /mob/living/carbon/human/proc/devotionreport()
 	set name = "Check Devotion"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 
 	if(!ishuman(src))
 		return
 	var/datum/devotion/C = src.cleric
-	to_chat(src,"Mi devoción es [C.devotion].")
+	to_chat(src,"Mi devocion es [C.devotion].")
 
 // Generation Procs
 
 /mob/living/carbon/human/proc/clericpray()
 	set name = "Give Prayer"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 
 	if(!ishuman(src))
 		return
@@ -280,7 +280,7 @@
 			C.update_progression(amount)
 			prayersesh += amount
 		else
-			visible_message("[src] concluye su oración.", "Concluyo mi oración.")
+			visible_message("[src] concluye su oracion.", "Concluyo mi oracion.")
 			break
 	to_chat(src, "<font color='purple'>I gained [prayersesh] devotion!</font>")
 

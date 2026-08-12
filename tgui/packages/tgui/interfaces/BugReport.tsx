@@ -89,7 +89,7 @@ export const BugReport = () => {
           <Stack.Item height={'85%'}>
             <Stack fill>
               <Stack.Item width={'25%'}>
-                <Section fill title="Información adicional">
+                <Section fill title="Informacion adicional">
                   <Stack vertical>
                     <Stack.Item>
                       Ckey: {ckey}
@@ -114,7 +114,7 @@ export const BugReport = () => {
                     fluid
                     mb={1}
                     onChange={onTypeTitle}
-                    placeholder="Tu título..."
+                    placeholder="Tu titulo..."
                     value={title}
                   />
                   <TextArea

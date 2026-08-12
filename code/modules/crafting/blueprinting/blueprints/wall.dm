@@ -200,7 +200,7 @@
 
 /datum/blueprint_recipe/wall/solid_window
 	name = "Solid Glass Window"
-	desc = "Una ventana con marco sólido."
+	desc = "Una ventana con marco solido."
 	required_materials = list(
 		/obj/item/natural/wood/plank = 4,
 		/obj/item/natural/glass = 2,
@@ -210,12 +210,12 @@
 	result_type = /turf/closed/wall/window
 
 /datum/blueprint_recipe/wall/solid_window/alt
-	name = "Ventana de vidrio sólido alternativa"
+	name = "Ventana de vidrio solido alternativa"
 	result_type = /turf/closed/wall/window/openclose
 
 /datum/blueprint_recipe/wall/silver_window
 	name = "Solid Silver Stained Glass Window"
-	desc = "Una ventana con marco sólido."
+	desc = "Una ventana con marco solido."
 	required_materials = list(
 		/obj/item/ingot/silver = 2,
 		/obj/item/natural/glass = 2,
@@ -230,7 +230,7 @@
 
 /datum/blueprint_recipe/wall/red_window
 	name = "Solid Red Stained Glass Window"
-	desc = "Una ventana con marco sólido."
+	desc = "Una ventana con marco solido."
 	required_materials = list(
 		/obj/item/ingot/iron = 2,
 		/obj/item/natural/glass = 2,
@@ -241,7 +241,7 @@
 
 /datum/blueprint_recipe/wall/yellow_window
 	name = "Solid Yellow Stained Glass Window"
-	desc = "Una ventana con marco sólido."
+	desc = "Una ventana con marco solido."
 	required_materials = list(
 		/obj/item/ingot/iron = 2,
 		/obj/item/natural/glass = 2,
@@ -253,7 +253,7 @@
 
 /datum/blueprint_recipe/wall/stonewindow
 	name = "Solid Stone Window"
-	desc = "Una ventana con marco sólido."
+	desc = "Una ventana con marco solido."
 	required_materials = list(
 		/obj/item/natural/stoneblock = 2,
 		/obj/item/natural/fibers = 2,
@@ -294,7 +294,7 @@
 	result_type = /turf/closed/wall/mineral/stone/moss/red
 
 /datum/blueprint_recipe/wall/decorstone
-	name = "decoración de la pared de piedra"
+	name = "decoracion de la pared de piedra"
 	desc = "A wall with etched details."
 	required_materials = list(
 		/obj/item/natural/stoneblock = 4,
@@ -478,8 +478,8 @@
 	result_type = /turf/closed/wall/mineral/underbrick
 
 /datum/blueprint_recipe/wall/pipe
-	name = "Pared de tubería"
-	desc = "Una pared con una tubería incrustada en ella."
+	name = "Pared de tuberia"
+	desc = "Una pared con una tuberia incrustada en ella."
 	required_materials = list(
 		/obj/item/natural/brick = 2,
 		/obj/item/ingot/bronze = 1,

@@ -246,7 +246,7 @@
 
 /obj/item/contraption/smelter
 	name = "portable smelter"
-	desc = "Los hornos son cosa del pasado. ¡El futuro está aquí!"
+	desc = "Los hornos son cosa del pasado. ¡El futuro esta aqui!"
 	icon_state = "smelter"
 	on_icon = "smelter_flick"
 	off_icon = "smelter_off"
@@ -324,7 +324,7 @@
 	addtimer(CALLBACK(O, PROC_REF(popcorn_smelt_result), turf), 20)
 
 /obj/item/contraption/shears
-	name = "tijeras de amputación"
+	name = "tijeras de amputacion"
 	desc = "A powered shear used for achieving a clean separation between limb and patient. Keeping the patient still is imperative to aligning the blades."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "shears"
@@ -424,7 +424,7 @@
 		to_chat(user, "You wipe [src] of its stored buffer.")
 		remove_buffer(src)
 	else
-		to_chat(user, span_warning("¡No tengo idea de cómo usar [src]!"))
+		to_chat(user, span_warning("¡No tengo idea de como usar [src]!"))
 
 /obj/item/contraption/linker/proc/set_buffer(datum/buffer)
 	if(src.buffer)
@@ -460,7 +460,7 @@
 	. = ..()
 	var/turf/target_turf = get_step(user,user.dir)
 	if(target_turf.is_blocked_turf(TRUE) || (locate(/mob/living) in target_turf))
-		to_chat(user, span_danger("¡No puedo desplegar la mesa plegable aquí!"))
+		to_chat(user, span_danger("¡No puedo desplegar la mesa plegable aqui!"))
 		return NONE
 	if(isopenspace(target_turf))
 		return NONE
@@ -497,7 +497,7 @@
 	return ..()
 
 /obj/machinery/light/fueled/hearth/mobilestove
-	name = "estufa móvil"
+	name = "estufa movil"
 	desc = "A portable bronze stovetop. The underside is covered in an esoteric pattern of small tubes. Whatever heats the hob is hidden inside the body of the device"
 	icon_state = "hobostove1"
 	base_state = "hobostove"
@@ -536,7 +536,7 @@
 	if(!do_after(H, 4 SECONDS, src))
 		return
 	var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
-	to_chat(H, span_warning("¡CALIENTE! ¡Me quemé!"))
+	to_chat(H, span_warning("¡CALIENTE! ¡Me queme!"))
 	if(affecting && affecting.receive_damage(0, 5))
 		H.update_damage_overlays()
 	new /obj/item/mobilestove(get_turf(src))

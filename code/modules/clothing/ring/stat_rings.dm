@@ -75,7 +75,7 @@
 	)
 
 /obj/item/clothing/ring/statamythortz
-	name = "anillo de sabiduría"
+	name = "anillo de sabiduria"
 	desc = "A saffira ring, crackling with azuric fascination. The closer your hand drifts to it, the clearer your mind becomes."
 	icon_state = "g_newring_sapphire"
 	sellprice = 222
@@ -183,7 +183,7 @@
 	)
 
 /obj/item/clothing/ring/dragon_ring
-	name = "anillo de piedra de dragón"
+	name = "anillo de piedra de dragon"
 	icon_state = "dragonring" //Should be safe for vampyres to wear, as the ring itself isn't made of silver. If they've suffered enough to make this ring, they should be able to wear it.
 	desc = "A gilded blacksteel ring with a drake's head, sculpted from silver. Perched within its sockets is a blortz and saffira - each, crackling with the reflection of a raging fire."
 	melting_material = /datum/material/draconic

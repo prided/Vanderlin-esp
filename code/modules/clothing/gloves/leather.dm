@@ -46,7 +46,7 @@
 
 /obj/item/clothing/gloves/leather/phys
 	name = "physicker's gloves"
-	desc = "Agarre mejorado para empuñar órganos destripados."
+	desc = "Agarre mejorado para empuñar organos destripados."
 	icon_state = "surggloves"
 
 /obj/item/clothing/gloves/leather/apothecary
@@ -103,7 +103,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/courtphys.dmi'
 
 /obj/item/clothing/gloves/leather/courtphysician/female
-	name = "mangas sanguíneas"
+	name = "mangas sanguineas"
 	desc = "Carefully sewn leather gloves with silk sleeves covering them, unrestricting to your ability to wield surgical tools, and stylish!"
 	icon_state = "docsleeves"
 	item_state = "docsleeves"

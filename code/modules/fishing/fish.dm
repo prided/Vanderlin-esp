@@ -287,7 +287,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	balloon_alert(user, "fish released")
 	var/goodbye_text = ""
 	if(status == FISH_DEAD)
-		goodbye_text = "[src] se hunde inmóvil en [interacting_with]..."
+		goodbye_text = "[src] se hunde inmovil en [interacting_with]..."
 	else
 		goodbye_text = "¡[src] se sumerge en [interacting_with]!"
 
@@ -391,7 +391,7 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 		return
 
 	if(status == FISH_DEAD)
-		return span_warning("Está muerto.")
+		return span_warning("Esta muerto.")
 
 	var/list/warnings = list()
 	if(get_starvation_mult())

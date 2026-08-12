@@ -143,7 +143,7 @@
 
 /mob/living/carbon/human/proc/coronate_lord()
 	set name = "Coronate"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 	if(!mind)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
@@ -196,17 +196,17 @@
 
 /mob/living/carbon/human/proc/churchexcommunicate()
 	set name = "Excommunicate"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 	if(stat)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
-		to_chat(src, span_warning("Necesito hacer esto desde la sala de oración."))
+		to_chat(src, span_warning("Necesito hacer esto desde la sala de oracion."))
 		return FALSE
 	var/inputty = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(src, "Excommunicate someone, cutting off their connection to the Ten. (excommunicate them again to remove it)", "Sinner's Name")))
 	if(inputty)
 		if(inputty in GLOB.excommunicated_players)
 			GLOB.excommunicated_players -= inputty
-			priority_announce("[real_name] ha perdonado a [inputty]. ¡Los Diez escuchan sus oraciones una vez más!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
+			priority_announce("[real_name] ha perdonado a [inputty]. ¡Los Diez escuchan sus oraciones una vez mas!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
 			for(var/mob/living/carbon/human/H in GLOB.human_list)
 				if(H.real_name == inputty)
 					H.cleric?.recommunicate()
@@ -227,11 +227,11 @@
 
 /mob/living/carbon/human/proc/churchcurse()
 	set name = "Curse"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 	if(stat)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
-		to_chat(src, "<span class='warning'>Necesito hacer esto desde la sala de oración.</span>")
+		to_chat(src, "<span class='warning'>Necesito hacer esto desde la sala de oracion.</span>")
 		return FALSE
 	var/inputty = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(src, "Curse someone as a heretic. (curse them again to remove it)", "Sinner's Name")))
 	if(inputty)
@@ -257,11 +257,11 @@
 
 /mob/living/carbon/human/proc/churchannouncement()
 	set name = "Anuncio del sacerdote"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 	if(stat)
 		return
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
-		to_chat(src, "<span class='warning'>Necesito hacer esto desde la sala de oración.</span>")
+		to_chat(src, "<span class='warning'>Necesito hacer esto desde la sala de oracion.</span>")
 		return FALSE
 	var/inputty = SANITIZE_HEAR_MESSAGE(html_decode(tgui_input_text(src, "Make an announcement to the faithful", "Anuncio de la Iglesia", multiline = TRUE)))
 	if(inputty)
@@ -298,7 +298,7 @@
 
 	var/mob/living/carbon/human/priest = owner
 
-	var/choice = tgui_input_list(priest, "¿Qué derecho desea invocar?", "Elección", authorized_powers)
+	var/choice = tgui_input_list(priest, "¿Que derecho desea invocar?", "Eleccion", authorized_powers)
 	if(!choice)
 		return
 

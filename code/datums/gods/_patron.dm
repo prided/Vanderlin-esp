@@ -7,7 +7,7 @@ GLOBAL_LIST_EMPTY(prayers)
 	/// Display name of the patron in the prefs menu
 	var/display_name
 	/// Domain of the god, such as earth, fire, water, murder etc
-	var/domain = "Malas prácticas de codificación"
+	var/domain = "Malas practicas de codificacion"
 	/// Description of the god
 	var/desc = "A god that ordains you to report this on GitHub - You shouldn't be seeing this, someone forgot to set the description of this patron."
 	/// String that represents who worships this guy
@@ -17,11 +17,11 @@ GLOBAL_LIST_EMPTY(prayers)
 	///Strong that represents what this god views as sins
 	var/sins = "Codersocks"
 	/// What boons the god may offer
-	var/boons = "Errores de código"
+	var/boons = "Errores de codigo"
 	/// Allows prayer without amulet or cross in church areas
 	var/church_prayer = FALSE
 	/// Message that shows if you can't pray.
-	var/prayer_fail = "Necesito un amuleto de mi patrón, o el ídolo de mi patrón, para que mis oraciones sean escuchadas..." // If a patron has unusual prayable structures we should tell them here.
+	var/prayer_fail = "Necesito un amuleto de mi patron, o el idolo de mi patron, para que mis oraciones sean escuchadas..." // If a patron has unusual prayable structures we should tell them here.
 	/// Faith this god belongs to
 	var/datum/faith/associated_faith = null
 	/// All gods have related confessions
@@ -116,7 +116,7 @@ GLOBAL_LIST_EMPTY(prayers)
 				return FALSE
 
 	if(length(prayer) <= 15)
-		to_chat(follower, span_danger("Mi oración fue un poco corta..."))
+		to_chat(follower, span_danger("Mi oracion fue un poco corta..."))
 		return FALSE
 
 	. = TRUE //the prayer has succeeded by this point forward

@@ -2,7 +2,7 @@
 //Without it, you cannot generate blood without transfusions.
 /obj/item/organ/spleen
 	name = "spleen"
-	desc = "El órgano más subestimado del cuerpo humano."
+	desc = "El organo mas subestimado del cuerpo humano."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "kidney-l" //placeholder
 	zone = BODY_ZONE_CHEST
@@ -31,7 +31,7 @@
 	else if(damage >= high_threshold)
 		examine_list += span_warning("<b>[owner]</b> looks unusually pale and drawn.")
 	else if(damage >= low_threshold)
-		examine_list += span_notice("<b>[owner]</b> parece un poco pálido.")
+		examine_list += span_notice("<b>[owner]</b> parece un poco palido.")
 
 /obj/item/organ/spleen/get_availability(datum/species/S, mob/living/carbon/owner_mob)
 	return !(TRAIT_NOBLOOD in S.inherent_traits)

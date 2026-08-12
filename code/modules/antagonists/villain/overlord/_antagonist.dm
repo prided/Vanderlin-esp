@@ -6,7 +6,7 @@
 	antag_hud_type = ANTAG_HUD_NECROMANCY
 	antag_hud_name = "overlord"
 	confess_lines = list(
-		"¡MI DOMINIO SE EXPANDIRÁ!",
+		"¡MI DOMINIO SE EXPANDIRA!",
 		"THE PHYLACTERIES SUSTAIN ME!",
 		"¡NO PUEDES DETENER MI IMPERIO!",
 	)

@@ -5,7 +5,7 @@
  */
 /datum/action
 	/// The name of the action
-	var/name = "Acción genérica"
+	var/name = "Accion generica"
 	/// The description of what the action does, shown in button tooltips
 	var/desc
 	/// The target the action is attached to. If the target datum is deleted, the action is as well.

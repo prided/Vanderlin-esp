@@ -11,7 +11,7 @@
 	var/turf/target_turf = get_turf(cast_on)
 	if(!target_turf)
 		return FALSE
-	owner.visible_message(span_notice("[owner] da forma a la piedra con fuerza mágica."))
+	owner.visible_message(span_notice("[owner] da forma a la piedra con fuerza magica."))
 
 	if(!isliving(owner))
 		return

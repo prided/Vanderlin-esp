@@ -19,8 +19,8 @@
 
 
 /datum/reagent/consumable/coffee
-	name = "Café"
-	description = "El café es una bebida preparada a partir de semillas tostadas, comúnmente llamadas granos de café, de la planta del café."
+	name = "Cafe"
+	description = "El cafe es una bebida preparada a partir de semillas tostadas, comunmente llamadas granos de cafe, de la planta del cafe."
 	color = "#482000" // rgb: 72, 32, 0
 	nutriment_factor = 0
 	overdose_threshold = 80
@@ -56,7 +56,7 @@
 	..()
 
 /datum/reagent/consumable/golden_calendula_tea
-	name = "Té de caléndula dorada"
+	name = "Te de calendula dorada"
 	description = "A refreshing tea, great to soothe wounds and relieve fatigue."
 	color = "#b38e17"
 
@@ -94,8 +94,8 @@
 	..()
 
 /datum/reagent/consumable/caffeine
-	name = "Cafeína"
-	description = "¿Por qué estás viendo esto?"
+	name = "Cafeina"
+	description = "¿Por que estas viendo esto?"
 	hydration_factor = 5
 	overdose_threshold = 60
 
@@ -111,7 +111,7 @@
 		M.heart_attack()
 
 /datum/reagent/consumable/caffeine/coffee
-	name = "Café"
+	name = "Cafe"
 	description = "Coffee beans brewed into a hot drink. With a hint of bitterness. Rejuvenating."
 	reagent_state = LIQUID
 	color = "#482000"
@@ -121,7 +121,7 @@
 	quality = DRINK_GOOD
 
 /datum/reagent/consumable/caffeine/tea
-	name = "Té exótico"
+	name = "Te exotico"
 	description = "Tea leaves brewed into a hot drink. Slight hint of bitterness. Smooth."
 	reagent_state = LIQUID
 	color = "#508141" // Deeper green to make it look better

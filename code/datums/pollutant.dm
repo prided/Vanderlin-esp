@@ -80,7 +80,7 @@
 	smell_intensity = 2
 	pollutant_flags = POLLUTANT_SMELL
 
-	name = "fragancia de depuración"
+	name = "fragancia de depuracion"
 	scent = "debug scent"
 	color = "#000000"
 
@@ -102,8 +102,8 @@
 	color = "#F33A6A"
 
 /datum/pollutant/fragrance/jasmine
-	name = "jazmín"
-	scent = "jazmín"
+	name = "jazmin"
+	scent = "jazmin"
 	color = "#F8DE7E"
 
 /datum/pollutant/fragrance/mint

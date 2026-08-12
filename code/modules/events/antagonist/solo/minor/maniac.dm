@@ -1,5 +1,5 @@
 /datum/round_event_control/antagonist/solo/maniac
-	name = "maníacos"
+	name = "maniacos"
 	tags = list(
 		TAG_INSANITY,
 		TAG_MEDICAL,

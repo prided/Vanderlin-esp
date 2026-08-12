@@ -103,7 +103,7 @@
 	name = "Contemptous"
 
 /datum/mob_descriptor/face_exp/cold
-	name = "Frío"
+	name = "Frio"
 
 /datum/mob_descriptor/face_exp/dreamy
 	name = "Soñador"
@@ -140,7 +140,7 @@
 	name = "Spiteful"
 
 /datum/mob_descriptor/face_exp/warm
-	name = "Cálido"
+	name = "Calido"
 
 /datum/mob_descriptor/face_exp/frustrated
 	name = "Frustrado"

@@ -25,7 +25,7 @@
 	else
 		active_item = TRUE
 		user.set_oresight(TRUE)
-		to_chat(user, span_notice("Mis piernas se sienten mucho más fuertes."))
+		to_chat(user, span_notice("Mis piernas se sienten mucho mas fuertes."))
 
 /datum/enchantment/malum_sight/proc/on_drop(obj/item/i, mob/living/user)
 	if(enchanted_item.loc == user)
@@ -124,8 +124,8 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "sparks"
 	dir = NORTH
-	name = "mineral útil"
-	desc = "La piedra aquí debe contener algo útil."
+	name = "mineral util"
+	desc = "La piedra aqui debe contener algo util."
 	randomdir = FALSE
 	duration = 1 SECONDS
 	layer = 18
@@ -135,7 +135,7 @@
 	icon_state = "shieldsparkles"
 	dir = NORTH
 	name = "mineral valioso"
-	desc = "¡La piedra aquí debe contener algo caro!"
+	desc = "¡La piedra aqui debe contener algo caro!"
 	randomdir = FALSE
 	duration = 1 SECONDS
 	layer = 18
@@ -155,14 +155,14 @@
 	icon_state = "purplesparkles"
 	dir = NORTH
 	name = "bedrock"
-	desc = "La piedra aquí es demasiado dura para romperla."
+	desc = "La piedra aqui es demasiado dura para romperla."
 	randomdir = FALSE
 	duration = 1 SECONDS
 	layer = 18
 
 /obj/effect/temp_visual/magicore
-	name = "mineral mágico"
-	desc = "Siento algo de energía pulsando desde esa pared..."
+	name = "mineral magico"
+	desc = "Siento algo de energia pulsando desde esa pared..."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "emppulse"
 	dir = NORTH

@@ -65,12 +65,12 @@
 	. = ..()
 	health -= W.force
 	if(health <= 0)
-		to_chat(user, "<span class='notice'>¡La formación de coral se desmorona!</span>")
+		to_chat(user, "<span class='notice'>¡La formacion de coral se desmorona!</span>")
 		qdel(src)
 
 /obj/structure/coral_formation/small
 	name = "pequeño crecimiento de coral"
-	desc = "Una pequeña formación de coral afilado."
+	desc = "Una pequeña formacion de coral afilado."
 	icon_state = "coral_small"  //! TODO Replace with a better icon
 	health = 50
 	max_health = 50

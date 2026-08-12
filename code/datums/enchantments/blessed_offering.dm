@@ -21,7 +21,7 @@
 /datum/enchantment/blessed_offering/proc/on_eat(obj/item/source, mob/living/eater)
 	if(!eater)
 		return
-	to_chat(eater, span_boldwarning("Siento que la vida fluye a través de mí."))
+	to_chat(eater, span_boldwarning("Siento que la vida fluye a traves de mi."))
 	eater.reagents.add_reagent(/datum/reagent/medicine/atropine, 4)
 	eater.reagents.add_reagent(/datum/reagent/soap, 4) //tastes like soap
 	eater.reagents.add_reagent(/datum/reagent/adrenaline, 5)

@@ -1,6 +1,6 @@
 /obj/item/clothing/armor/leather
 	name = "armadura de cuero"
-	desc = "Una armadura ligera típicamente hecha de cuero hervido. Ofrece una ligera protección contra la mayoría de las armas."
+	desc = "Una armadura ligera tipicamente hecha de cuero hervido. Ofrece una ligera proteccion contra la mayoria de las armas."
 	icon_state = "leather"
 	resistance_flags = FLAMMABLE
 	blade_dulling = DULLING_BASHCHOP
@@ -192,7 +192,7 @@
 			STR.remove_from_storage(I, get_turf(src))
 
 /obj/item/clothing/armor/leather/jacket/artijacket
-	name = "chaqueta de artífice"
+	name = "chaqueta de artifice"
 	icon_state = "artijacket"
 	desc = "A thick leather jacket adorned with fur and cog decals. The height of Heartfelt fashion."
 

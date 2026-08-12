@@ -26,7 +26,7 @@
 	icon_state = "kobold"
 
 /datum/sprite_accessory/eyes/humanoid/triton
-	name = "Ojos de Tritón"
+	name = "Ojos de Triton"
 	icon_state = "triton"
 	use_static = TRUE
 

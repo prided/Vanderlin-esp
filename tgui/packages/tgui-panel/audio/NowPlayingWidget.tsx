@@ -54,7 +54,7 @@ export function NowPlayingWidget(props) {
                   </Flex.Item>
                 )}
                 <Flex.Item grow={1} color="label">
-                  Duración: {duration}
+                  Duracion: {duration}
                 </Flex.Item>
                 {artist !== 'Song Artist Hidden' &&
                   artist !== 'Unknown Artist' && (
@@ -64,7 +64,7 @@ export function NowPlayingWidget(props) {
                   )}
                 {album !== 'Song Album Hidden' && album !== 'Unknown Album' && (
                   <Flex.Item grow={1} color="label">
-                    Álbum: {album}
+                    Album: {album}
                   </Flex.Item>
                 )}
                 {upload_date !== 'Song Upload Date Hidden' &&

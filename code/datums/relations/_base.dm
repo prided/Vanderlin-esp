@@ -2,7 +2,7 @@
 	abstract_type = /datum/relation
 
 	/// Display name shown in UI.
-	var/name = "Relación"
+	var/name = "Relacion"
 	/// Flavour description shown to the holder.
 	var/desc = ""
 	/// List of /datum/history attached to this relation.

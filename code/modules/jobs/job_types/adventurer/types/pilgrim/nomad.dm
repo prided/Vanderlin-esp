@@ -39,7 +39,7 @@
 	new /mob/living/simple_animal/hostile/retaliate/saigabuck/tame/saddled(get_turf(spawned))
 
 /datum/outfit/pilgrim/nomad
-	name = "Nómada (Peregrino)"
+	name = "Nomada (Peregrino)"
 	pants = /obj/item/clothing/pants/tights/colored/random
 	shirt =  /obj/item/clothing/armor/gambeson/light/steppe
 	armor = /obj/item/clothing/armor/leather/hide/steppe

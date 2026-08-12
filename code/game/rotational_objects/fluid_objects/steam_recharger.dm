@@ -1,6 +1,6 @@
 /obj/structure/steam_recharger
 	name = "inyector de vapor"
-	desc = "Llena objetos con vapor. También puede recargar autómatas."
+	desc = "Llena objetos con vapor. Tambien puede recargar automatas."
 	icon = 'icons/obj/structures/rotation_devices/steam_recharger.dmi'
 	icon_state = "rechargetable"
 	accepts_water_input = TRUE
@@ -47,7 +47,7 @@
 	if(!ispath(input.carrying_reagent, /datum/reagent/steam))
 		return
 	if(placed_atom.obj_broken)
-		visible_message(span_notice("[placed_atom] está roto."))
+		visible_message(span_notice("[placed_atom] esta roto."))
 		remove_placed()
 		return
 
@@ -56,7 +56,7 @@
 	picked_provider?.taking_from?.use_water_pressure(taking_pressure)
 
 	if(!SEND_SIGNAL(placed_atom, COMSIG_ATOM_STEAM_INCREASE, taking_pressure))
-		visible_message(span_notice("[placed_atom] está completamente cargado."))
+		visible_message(span_notice("[placed_atom] esta completamente cargado."))
 		remove_placed()
 
 /obj/structure/steam_recharger/proc/process_mob_charging()
@@ -85,7 +85,7 @@
 	picked_provider?.taking_from?.use_water_pressure(taking_pressure)
 
 	if(!SEND_SIGNAL(H, COMSIG_ATOM_STEAM_INCREASE, taking_pressure))
-		visible_message(span_notice("[H] está completamente cargado."))
+		visible_message(span_notice("[H] esta completamente cargado."))
 
 /obj/structure/steam_recharger/return_rotation_chat()
 	if(!input || !ispath(input.carrying_reagent, /datum/reagent/steam))
@@ -132,7 +132,7 @@
 
 /obj/structure/steam_recharger/proc/add_placed_mob(mob/user, mob/living/carbon/human/automaton)
 	if(placed_atom || placed_mob)
-		to_chat(user, span_warning("¡[src] ya está ocupado!"))
+		to_chat(user, span_warning("¡[src] ya esta ocupado!"))
 		return FALSE
 
 	if(!automaton.GetComponent(/datum/component/steam_life))
@@ -222,11 +222,11 @@
 		return
 
 	if(!istype(automaton.dna?.species, /datum/species/automaton))
-		to_chat(user, span_warning("¡[automaton] no es un autómata!"))
+		to_chat(user, span_warning("¡[automaton] no es un automata!"))
 		return
 
 	if(placed_atom || placed_mob)
-		to_chat(user, span_warning("¡[src] ya está ocupado!"))
+		to_chat(user, span_warning("¡[src] ya esta ocupado!"))
 		return
 
 	if(!user.Adjacent(src) || !user.Adjacent(automaton))

@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/aoe/on_turf/circle/flower_field
 	name = "campo de flores"
-	desc = "Invoca un campo mágico de flores usando una sola flor."
+	desc = "Invoca un campo magico de flores usando una sola flor."
 	button_icon_state = "flower_field"
 
 	required_form = FORM_EARTH
@@ -176,7 +176,7 @@
 
 // ---------------------- CALENDULA FIELD ----------------------------
 /obj/structure/flora/field/calendula
-	name = "campo de caléndula"
+	name = "campo de calendula"
 	icon_state = "calendula"
 
 /obj/structure/flora/field/calendula/Crossed(atom/movable/AM)
@@ -361,7 +361,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/euphorbia_thorns
 	name = "Terreno espinoso"
-	desc = "Estás pisando espinas."
+	desc = "Estas pisando espinas."
 	icon_state = "entwined"
 
 // ---------------------- CALENDULA SEDATION ----------------------------

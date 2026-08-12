@@ -218,13 +218,13 @@
 
 /datum/backstory/combat/shieldbearer
 	name = "Shield Bearer"
-	desc = "Defendiste a los demás con escudo y determinación."
+	desc = "Defendiste a los demas con escudo y determinacion."
 	granted_skill = /datum/attribute/skill/combat/shields
 	stat_penalty = STAT_SPEED
 
 /datum/backstory/combat/gunner
 	name = "Former Gunner"
-	desc = "Serviste con armas de fuego, una profesión peligrosa y ruidosa."
+	desc = "Serviste con armas de fuego, una profesion peligrosa y ruidosa."
 	granted_skill = /datum/attribute/skill/combat/firearms
 	stat_penalty = STAT_PERCEPTION
 
@@ -300,7 +300,7 @@
 
 /datum/backstory/craft/tanner
 	name = "Ex-Tanner"
-	desc = "Trabajaste con cuero, convirtiendo las pieles en bienes útiles."
+	desc = "Trabajaste con cuero, convirtiendo las pieles en bienes utiles."
 	granted_skill = /datum/attribute/skill/craft/tanning
 	stat_penalty = STAT_INTELLIGENCE
 
@@ -364,7 +364,7 @@
 
 /datum/backstory/labor/tamer
 	name = "Domador de bestias"
-	desc = "Entrenaste animales, desde caballos hasta bestias más exóticas."
+	desc = "Entrenaste animales, desde caballos hasta bestias mas exoticas."
 	granted_skill = /datum/attribute/skill/labor/taming
 	stat_penalty = STAT_STRENGTH
 
@@ -373,13 +373,13 @@
 	desc = "A miscellaneous background."
 
 /datum/backstory/misc/thief
-	name = "Ex ladrón"
+	name = "Ex ladron"
 	desc = "You picked pockets and stole to survive."
 	granted_skill = /datum/attribute/skill/misc/stealing
 	stat_penalty = STAT_STRENGTH
 
 /datum/backstory/misc/spy
-	name = "Ex-espía"
+	name = "Ex-espia"
 	desc = "You moved in shadows, gathering secrets."
 	granted_skill = /datum/attribute/skill/misc/sneaking
 	stat_penalty = STAT_ENDURANCE
@@ -397,7 +397,7 @@
 	stat_penalty = STAT_STRENGTH
 
 /datum/backstory/misc/medic
-	name = "Médico de campo"
+	name = "Medico de campo"
 	desc = "You treated the wounded on battlefields and in clinics."
 	granted_skill = /datum/attribute/skill/misc/medicine
 	stat_penalty = STAT_SPEED
@@ -422,13 +422,13 @@
 
 /datum/backstory/misc/merchant
 	name = "Merchant's Assistant"
-	desc = "Contaste monedas y aprendiste el arte de los números."
+	desc = "Contaste monedas y aprendiste el arte de los numeros."
 	granted_skill = /datum/attribute/skill/labor/mathematics
 	stat_penalty = STAT_CONSTITUTION
 
 /datum/backstory/magic
 	abstract_type = /datum/backstory/magic
-	desc = "Un fondo mágico."
+	desc = "Un fondo magico."
 	stat_reduction = 0
 	clamp = 20
 

@@ -263,7 +263,7 @@ GLOBAL_LIST_EMPTY(essence_nodes)
 		if(holder.stamina)
 			holder.stamina = max(0, holder.stamina - stamina_drain)
 			if(holder.stamina <= 20)
-				to_chat(holder, span_warning("¡Llevar el nodo de esencia te está agotando!"))
+				to_chat(holder, span_warning("¡Llevar el nodo de esencia te esta agotando!"))
 		last_stamina_drain = world.time
 
 /obj/item/essence_node_portable/dropped(mob/user)

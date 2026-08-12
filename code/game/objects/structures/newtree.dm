@@ -90,7 +90,7 @@
 	new /obj/item/grown/log/tree(loc)
 
 /obj/structure/flora/newtree/proc/burn_tree()
-	name = "árbol quemado"
+	name = "arbol quemado"
 	icon_state = "burnt"
 	burnt = TRUE
 

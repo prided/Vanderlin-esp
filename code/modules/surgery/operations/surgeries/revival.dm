@@ -64,7 +64,7 @@
 	display_results(
 		surgeon,
 		patient,
-		span_notice("Empiezo a infundir el corazón de [patient] con [tool]."),
+		span_notice("Empiezo a infundir el corazon de [patient] con [tool]."),
 		span_notice("[surgeon] begins to work [tool] into [patient]'s heart."),
 		span_notice("[surgeon] begins to something into [patient]'s innards..."),
 	)
@@ -111,7 +111,7 @@
 				organs.applyOrganDamage(-organs.medium_threshold)
 
 	patient.grab_ghost(force = TRUE, grab_spirit = TRUE) // even suicides
-	patient.visible_message(span_notice("[patient] is dragged back from Necra's hold!"), span_green("Me despierto del vacío."))
+	patient.visible_message(span_notice("[patient] is dragged back from Necra's hold!"), span_green("Me despierto del vacio."))
 
 	patient.remove_status_effect(/datum/status_effect/debuff/lux_drained)
 	patient.remove_status_effect(/datum/status_effect/debuff/flaw_lux_taken)

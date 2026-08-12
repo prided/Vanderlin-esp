@@ -115,7 +115,7 @@
 			var/pre_processing = new_value
 			var/unique
 			if (varsvars?.len)
-				unique = tgui_alert(src, "Process vars unique to each instance, or same for all?", "Asociación de variables", list("Unique", "Same"))
+				unique = tgui_alert(src, "Process vars unique to each instance, or same for all?", "Asociacion de variables", list("Unique", "Same"))
 				if(unique == "Unique")
 					unique = TRUE
 				else
@@ -142,7 +142,7 @@
 				CHECK_TICK
 
 		if (VV_NEW_TYPE)
-			var/many = tgui_alert(src, "Create only one [value["type"]] and assign each or a new one for each thing", "Cuántos", list("Uno", "Many", "Cancel"))
+			var/many = tgui_alert(src, "Create only one [value["type"]] and assign each or a new one for each thing", "Cuantos", list("Uno", "Many", "Cancel"))
 			if (many == "Cancel")
 				return
 			if (many == "Many")
@@ -188,10 +188,10 @@
 		to_chat(src, "No se encontraron objetos")
 		return
 	if (!accepted)
-		to_chat(src, "Cada objeto rechazó tu edición.")
+		to_chat(src, "Cada objeto rechazo tu edicion.")
 		return
 	if (rejected)
-		to_chat(src, "[rejected] de los objetos [count] rechazó su edición")
+		to_chat(src, "[rejected] de los objetos [count] rechazo su edicion")
 
 	log_world("### MassVarEdit by [src]: [target.type] (A/R [accepted]/[rejected]) [variable]=[html_encode("[target.vars[variable]]")]([list2params(value)])")
 	log_admin("[key_name(src)] mass modified [original_name]'s [variable] to [target.vars[variable]] ([accepted] objects modified)")

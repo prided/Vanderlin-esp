@@ -28,7 +28,7 @@
 			qdel(src)
 
 /obj/structure/fluff/clodpile/sand
-	name = "montículo de arena"
+	name = "monticulo de arena"
 	desc = "A gathering of grains inedible to all but the bravest."
 	icon_state = "sandpile"
 	dirt_type = /obj/item/natural/clod/sand

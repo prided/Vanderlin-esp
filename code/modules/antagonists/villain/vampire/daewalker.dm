@@ -131,7 +131,7 @@
 	if(blade == user)
 		return
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))
-		examine_list += span_boldred("¡TRAIDOR! ¡Su captura ha sido ordenada por la máxima autoridad!")
+		examine_list += span_boldred("¡TRAIDOR! ¡Su captura ha sido ordenada por la maxima autoridad!")
 	else if(user.mind?.has_antag_datum(/datum/antagonist/werewolf))
 		examine_list += span_boldred("The bloodsucker of Astrata...")
 	else if(is_priest_job(user.mind?.assigned_role))

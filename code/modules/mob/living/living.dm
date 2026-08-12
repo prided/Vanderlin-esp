@@ -212,7 +212,7 @@
 			if(ismob(L.pulling) && L.pulling != L)
 				var/mob/P = L.pulling
 				if(!(world.time % 5))
-					to_chat(src, "<span class='warning'>[L] está agarrando a [P], no puedes pasar.</span>")
+					to_chat(src, "<span class='warning'>[L] esta agarrando a [P], no puedes pasar.</span>")
 				return TRUE
 
 	if(moving_diagonally)//no mob swap during diagonal moves.
@@ -692,7 +692,7 @@
 
 /mob/living/verb/stop_pulling1()
 	set name = "Deja de tirar"
-	set category = "IC.Interacción"
+	set category = "IC.Interaccion"
 	set hidden = 1
 	stop_pulling()
 
@@ -711,7 +711,7 @@
 		return
 
 	if (!CAN_SUCCUMB(src))
-		to_chat(src, span_warning("¡No puedes sucumbir a la muerte! Esta vida continúa."), type=MESSAGE_TYPE_INFO)
+		to_chat(src, span_warning("¡No puedes sucumbir a la muerte! Esta vida continua."), type=MESSAGE_TYPE_INFO)
 		return
 
 	log_message("Has [whispered ? "whispered his final words" : "succumbed to death"] while in [InFullCritical() ? "hard":"soft"] critical with [round(health, 0.1)] points of health!", LOG_ATTACK)
@@ -768,7 +768,7 @@
 
 /mob/living/proc/mob_sleep()
 	set name = "Dormir"
-	set category = "IC.Interacción"
+	set category = "IC.Interaccion"
 	set hidden = 1
 	if(IsSleeping())
 		to_chat(src, "<span class='warning'>I am already sleeping!</span>")
@@ -782,7 +782,7 @@
 
 /mob/living/proc/lay_down()
 	set name = "Lay down"
-	set category = "IC.Interacción"
+	set category = "IC.Interaccion"
 	set hidden = 1
 	if(stat)
 		return
@@ -794,7 +794,7 @@
 
 /mob/living/proc/stand_up()
 	set name = "Stand up"
-	set category = "IC.Interacción"
+	set category = "IC.Interaccion"
 	set hidden = 1
 	if(stat)
 		return
@@ -816,7 +816,7 @@
 
 /mob/living/verb/toggle_rest_verb()
 	set name = "Rest"
-	set category = "IC.Interacción"
+	set category = "IC.Interaccion"
 
 	toggle_rest()
 
@@ -856,7 +856,7 @@
 				to_chat(src, span_notice("You will now try to remain standing up."))
 		else if(HAS_TRAIT(src, TRAIT_FLOORED) || (buckled && buckled.buckle_lying != NO_BUCKLE_LYING))
 			if(!silent)
-				to_chat(src, span_notice("Ahora te levantarás tan pronto como puedas."))
+				to_chat(src, span_notice("Ahora te levantaras tan pronto como puedas."))
 		else
 			get_up(instant)
 
@@ -1294,7 +1294,7 @@
 
 /mob/living/verb/resist()
 	set name = "Resistir"
-	set category = "IC.Interacción"
+	set category = "IC.Interaccion"
 	set hidden = 1
 	DEFAULT_QUEUE_OR_CALL_VERB(VERB_CALLBACK(src, PROC_REF(execute_resist)))
 
@@ -1332,14 +1332,14 @@
 			resist_restraints() //trying to remove cuffs.
 
 /mob/living/carbon/human/verb/ic_pray()
-	set name = "Oración"
-	set category = "IC.Interacción"
+	set name = "Oracion"
+	set category = "IC.Interaccion"
 
 	emote("pray", intentional = TRUE)
 
 /mob/living/verb/submit()
 	set name = "Yield"
-	set category = "IC.Interacción"
+	set category = "IC.Interaccion"
 
 	if(surrendering)
 		return
@@ -1894,7 +1894,7 @@
 
 	if(!Adjacent(target) && (target.loc != src))
 		if((action_bitflags & FORBID_TELEKINESIS_REACH))
-			to_chat(src, span_warning("¡Estás demasiado lejos!"))
+			to_chat(src, span_warning("¡Estas demasiado lejos!"))
 			return FALSE
 
 	if((action_bitflags & NEED_DEXTERITY) && !IsAdvancedToolUser()) // !ISADVANCEDTOOLUSER(src)
@@ -1906,7 +1906,7 @@
 		return FALSE
 
 	if((action_bitflags & NEED_LIGHT) && !has_light_nearby() && !has_nightvision())
-		to_chat(src, span_warning("¡Necesitas más luz para hacer esto!"))
+		to_chat(src, span_warning("¡Necesitas mas luz para hacer esto!"))
 		return FALSE
 
 	return TRUE
@@ -2615,9 +2615,9 @@
 			else
 				if(M.m_intent == MOVE_INTENT_SNEAK)
 					if(M.client?.prefs.read_preference(/datum/preference/toggle/showrolls))
-						to_chat(M, "<span class='warning'>[src] no me encontró... [probby]%</span>")
+						to_chat(M, "<span class='warning'>[src] no me encontro... [probby]%</span>")
 					else
-						to_chat(M, "<span class='warning'>[src] no me encontró.</span>")
+						to_chat(M, "<span class='warning'>[src] no me encontro.</span>")
 				else
 					found_ping(get_turf(M), client, "hidden")
 
@@ -2667,7 +2667,7 @@
 	if(!get_step_multiz(center, direction)) //We are at the edge z-level.
 		var/turf/current = get_turf(src)
 		if(direction == DOWN || !current.can_see_sky())
-			to_chat(src, span_warning("No hay nada interesante ahí."))
+			to_chat(src, span_warning("No hay nada interesante ahi."))
 			return
 
 		switch(GLOB.forecast)
@@ -2888,7 +2888,7 @@
 			if(. >= UNCONSCIOUS)
 				REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_KNOCKEDOUT)
 			remove_traits(list(TRAIT_HANDS_BLOCKED, TRAIT_INCAPACITATED, TRAIT_FLOORED, TRAIT_CRITICAL_CONDITION), STAT_TRAIT)
-			log_combat(src, src, "recuperó la conciencia")
+			log_combat(src, src, "recupero la conciencia")
 		if(SOFT_CRIT)
 			if(pulledby)
 				ADD_TRAIT(src, TRAIT_IMMOBILIZED, PULLED_WHILE_SOFTCRIT_TRAIT) //adding trait sources should come before removing to avoid unnecessary updates
@@ -2903,7 +2903,7 @@
 				ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
 			else
 				REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
-			log_combat(src, src, "perdió el conocimiento")
+			log_combat(src, src, "perdio el conocimiento")
 		if(HARD_CRIT)
 			if(. != UNCONSCIOUS)
 				become_blind(UNCONSCIOUS_TRAIT)
@@ -3028,7 +3028,7 @@
 		spell = new spell_type(source)
 
 	if(!silent)
-		to_chat(src, span_nicegreen("¡Aprendí [spell.name]!"))
+		to_chat(src, span_nicegreen("¡Aprendi [spell.name]!"))
 
 	spell.Grant(src)
 	if(mastery_spell && spell.required_form)
@@ -3044,7 +3044,7 @@
 		return
 
 	if(!silent)
-		to_chat(src, span_boldwarning("¡Olvidé [real_spell.name]!"))
+		to_chat(src, span_boldwarning("¡Olvide [real_spell.name]!"))
 
 	var/datum/spell_mastery/mastery = mana_pool?.get_mastery()
 	if(mastery && (real_spell in mastery.granted_actions))
@@ -3074,7 +3074,7 @@
 		remove_spell(spell, return_skill_points, silent_individual)
 
 	if(!silent && !silent_individual)
-		to_chat(src, span_boldwarning("¡Olvidé todos mis hechizos!"))
+		to_chat(src, span_boldwarning("¡Olvide todos mis hechizos!"))
 
 /mob/living/adjust_form_mastery_points(points, used_points = FALSE, specific_form = null)
 	if(QDELETED(src))
@@ -3211,9 +3211,9 @@
 	eyesclosed = closed
 
 	if(eyesclosed)
-		become_blind("párpados")
+		become_blind("parpados")
 	else
-		cure_blind("párpados")
+		cure_blind("parpados")
 
 	if(hud_used)
 		var/atom/movable/screen/eye_intent/eyet = locate() in hud_used.static_inventory

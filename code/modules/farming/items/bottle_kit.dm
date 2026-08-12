@@ -40,7 +40,7 @@
 		fake_glass_name = "Blue"
 		return
 
-	var/choice = tgui_input_list(user, "¿Qué color eliges?", name, options)
+	var/choice = tgui_input_list(user, "¿Que color eliges?", name, options)
 
 	var/printing_choice = options[choice]
 

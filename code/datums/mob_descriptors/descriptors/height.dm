@@ -23,11 +23,11 @@
 	prefix = "a"
 
 /datum/mob_descriptor/height/shortly
-	name = "un poco más corto"
+	name = "un poco mas corto"
 	prefix = "a"
 	
 /datum/mob_descriptor/height/tallish
-	name = "algo más alto"
+	name = "algo mas alto"
 	prefix = "a"
 
 /datum/mob_descriptor/height/average	

@@ -30,7 +30,7 @@
 	//Engineering skill check
 	var/skill_level = GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering)
 	if(skill_level <= 2)
-		to_chat(user, span_warning("¡No sé cómo operar [src]!"))
+		to_chat(user, span_warning("¡No se como operar [src]!"))
 		return
 
 	//Full steam armor check
@@ -47,7 +47,7 @@
 		return
 
 	if(obj_broken)
-		to_chat(user, span_warning("¡El [src] está roto!"))
+		to_chat(user, span_warning("¡El [src] esta roto!"))
 		return
 
 	//Toggle on/off

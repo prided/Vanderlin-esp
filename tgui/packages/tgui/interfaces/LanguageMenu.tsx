@@ -202,7 +202,7 @@ export const LanguageMenu = (props) => {
 
   return (
     <Window
-      title="Menú de idioma"
+      title="Menu de idioma"
       width={admin_mode ? 700 : 500}
       height={Math.min(
         shown_languages.length * 25 + (admin_mode ? 145 : 100),
@@ -238,7 +238,7 @@ export const LanguageMenu = (props) => {
               {!!is_living && (
                 <Table.Cell>
                   <Tooltip
-                    content="Determina qué idioma hablas de forma natural, sin utilizar la 'tecla'."
+                    content="Determina que idioma hablas de forma natural, sin utilizar la 'tecla'."
                   >
                     <Box
                       inline

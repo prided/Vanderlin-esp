@@ -428,7 +428,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 	)
 
 /obj/item/recipe_book/survival
-	name = "La guía del desierto: secretos de supervivencia"
+	name = "La guia del desierto: secretos de supervivencia"
 	desc = "Penned by Kaelen Stormrider, Fourth Generation Trailblazer."
 	icon_state ="book5_0"
 	base_icon_state = "book5"
@@ -468,7 +468,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 /obj/item/recipe_book/carpentry
 	name = "The Woodwright's Codex: Crafting with Timber and Grain"
-	desc = "Escrito por Eadric Hollowell, maestro carpintero, cuarta generación."
+	desc = "Escrito por Eadric Hollowell, maestro carpintero, cuarta generacion."
 	icon_state ="book3_0"
 	base_icon_state = "book3"
 
@@ -493,7 +493,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 /obj/item/recipe_book/masonry
 	name = "The Stonebinder’s Manual: Foundations of Craft and Fortitude"
-	desc = "Escrito por Garrin Ironvein, Maestro Masón, Tercera Generación."
+	desc = "Escrito por Garrin Ironvein, Maestro Mason, Tercera Generacion."
 	icon_state ="book_0"
 	base_icon_state = "book"
 
@@ -521,7 +521,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 /obj/item/recipe_book/blacksmithing
 	name = "El legado del herrero"
-	desc = "Escrito por Aldric Forgeheart, maestro herrero y guardián de la llama ancestral."
+	desc = "Escrito por Aldric Forgeheart, maestro herrero y guardian de la llama ancestral."
 	icon_state ="book3_0"
 	base_icon_state = "book3"
 
@@ -533,7 +533,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 /obj/item/recipe_book/arcyne
 	name = "El Arcano de Arcyne"
-	desc = "Escrito por Elyndor Starforge, Gran Arcanista y Guardián del Crisol Etéreo."
+	desc = "Escrito por Elyndor Starforge, Gran Arcanista y Guardian del Crisol Etereo."
 	icon_state ="book4_0"
 	base_icon_state = "book4"
 
@@ -550,7 +550,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 
 /obj/item/recipe_book/alchemy
-	name = "Códice Virellia"
+	name = "Codice Virellia"
 	desc = "Transcrito por Maerion Duskwind, Avid Hater of Gnomes."
 	icon_state ="book4_0"
 	base_icon_state = "book4"

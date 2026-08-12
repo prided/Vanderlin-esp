@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/hammer_fall
-	name = "caída de martillo"
+	name = "caida de martillo"
 	desc = ""
 	button_icon_state = "craft_buff"
 	sound = 'sound/items/bsmithfail.ogg'

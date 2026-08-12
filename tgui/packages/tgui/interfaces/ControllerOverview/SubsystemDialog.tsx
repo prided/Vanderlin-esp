@@ -42,8 +42,8 @@ export function SubsystemDialog(props: Props) {
       <Box p={1}>
         <LabeledList>
           <LabeledList.Item label="Orden inicial">{init_order}</LabeledList.Item>
-          <LabeledList.Item label="Última ejecución">{last_fire}</LabeledList.Item>
-          <LabeledList.Item label="Próxima ejecución">{next_fire}</LabeledList.Item>
+          <LabeledList.Item label="Ultima ejecucion">{last_fire}</LabeledList.Item>
+          <LabeledList.Item label="Proxima ejecucion">{next_fire}</LabeledList.Item>
           <LabeledList.Item label="Costo">
             {cost_ms.toFixed(2)}ms
           </LabeledList.Item>

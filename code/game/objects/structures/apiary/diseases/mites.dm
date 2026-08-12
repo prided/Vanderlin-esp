@@ -1,6 +1,6 @@
 /datum/bee_disease/varroa_mites
 	name = "Varroa Mites"
-	description = "Ácaros parásitos que debilitan y matan a las abejas."
+	description = "Acaros parasitos que debilitan y matan a las abejas."
 
 /datum/bee_disease/varroa_mites/apply_effects(obj/structure/apiary/hive)
 	if(prob(hive.disease_severity / 10) && hive.bee_count > 0)

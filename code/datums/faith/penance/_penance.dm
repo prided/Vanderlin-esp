@@ -17,7 +17,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 
 /datum/penance
 	var/name = "Penitencia"
-	var/desc = "Una tarea de expiación"
+	var/desc = "Una tarea de expiacion"
 	var/mob/living/carbon/human/penitent
 	var/mob/living/carbon/human/priest
 	var/datum/patron/patron
@@ -124,7 +124,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 
 /mob/living/carbon/human/proc/assign_penance_verb()
 	set name = "Assign Penance"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 
 	var/list/targets = list()
 	for(var/mob/living/carbon/human/H in view(7, src))
@@ -132,7 +132,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 			targets += H
 
 	if(!length(targets))
-		to_chat(src, span_warning("No hay penitentes válidos cerca."))
+		to_chat(src, span_warning("No hay penitentes validos cerca."))
 		return
 
 	var/mob/living/carbon/human/target = tgui_input_list(src, "Who shall receive penance?", "Potential Penitents", targets)
@@ -157,7 +157,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 
 /mob/living/carbon/human/proc/absolve_penance_verb()
 	set name = "Absolve Penance"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 
 	var/list/penitents = list()
 	for(var/mob/living/carbon/human/H in view(7, src))
@@ -168,7 +168,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 		to_chat(src, span_warning("No hay penitentes cerca."))
 		return
 
-	var/mob/living/carbon/human/target = tgui_input_list(src, "¿Quién será absuelto?", "Penitents", penitents)
+	var/mob/living/carbon/human/target = tgui_input_list(src, "¿Quien sera absuelto?", "Penitents", penitents)
 	if(!target)
 		return
 
@@ -181,7 +181,7 @@ GLOBAL_LIST_EMPTY(active_penances) // List of all active penances
 
 /mob/living/carbon/human/proc/check_penance_verb()
 	set name = "Check Penance"
-	set category = "RolÚnico.Divino"
+	set category = "RolUnico.Divino"
 
 	var/datum/penance/P = get_penance(src)
 	if(!P)

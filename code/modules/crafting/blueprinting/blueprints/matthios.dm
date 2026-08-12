@@ -5,7 +5,7 @@
 	construct_tool = /obj/item/weapon/hammer
 
 /datum/blueprint_recipe/matthios/idol
-	name = "Matthios Ídolo"
+	name = "Matthios Idolo"
 	required_materials = list(
 		/obj/item/natural/stone = 8,
 		/obj/item/grown/log/tree/small = 3

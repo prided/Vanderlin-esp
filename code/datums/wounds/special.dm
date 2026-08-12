@@ -26,7 +26,7 @@
 	check_name = "<span class='danger'>EARS</span>"
 	crit_message = list(
 		"The eardrums are gored!",
-		"¡Los tímpanos están rotos!",
+		"¡Los timpanos estan rotos!",
 	)
 	woundpain = 25
 	bleed_rate = 4
@@ -61,7 +61,7 @@
 	crit_message = list(
 		"The eye is poked!",
 		"The eye is gouged!",
-		"¡El ojo está destruido!",
+		"¡El ojo esta destruido!",
 	)
 	woundpain = 15
 	bleed_rate = 4
@@ -75,12 +75,12 @@
 	affected.adjust_temp_blindness(10 SECONDS)
 
 /datum/wound/facial/eyes/right
-	name = "evisceración del ojo derecho"
+	name = "evisceracion del ojo derecho"
 	check_name = "<span class='danger'>RIGHT EYE</span>"
 	crit_message = list(
-		"¡El ojo derecho está pinchado!",
-		"¡El ojo derecho está arrancado!",
-		"¡El ojo derecho está destruido!",
+		"¡El ojo derecho esta pinchado!",
+		"¡El ojo derecho esta arrancado!",
+		"¡El ojo derecho esta destruido!",
 	)
 	viable_zones = list(BODY_ZONE_PRECISE_R_EYE)
 
@@ -123,12 +123,12 @@
 	can_roll = FALSE
 
 /datum/wound/facial/eyes/left
-	name = "evisceración del ojo izquierdo"
+	name = "evisceracion del ojo izquierdo"
 	check_name = "<span class='danger'>LEFT EYE</span>"
 	crit_message = list(
 		"The left eye is poked!",
 		"The left eye is gouged!",
-		"¡El ojo izquierdo está destruido!",
+		"¡El ojo izquierdo esta destruido!",
 	)
 	viable_zones = list(BODY_ZONE_PRECISE_L_EYE)
 
@@ -174,8 +174,8 @@
 	name = "glossectomy"
 	check_name = "<span class='danger'>TONGUE</span>"
 	crit_message = list(
-		"¡La lengua está cortada!",
-		"¡La lengua está cortada!",
+		"¡La lengua esta cortada!",
+		"¡La lengua esta cortada!",
 		"The tongue flies off in an arc!"
 	)
 	woundpain = 8
@@ -213,7 +213,7 @@
 	can_roll = FALSE
 
 /datum/wound/facial/disfigurement
-	name = "desfiguración"
+	name = "desfiguracion"
 	check_name = "<span class='warning'>FACE</span>"
 	severity = 0
 	crit_message = "The face is mangled beyond recognition!"
@@ -234,7 +234,7 @@
 	REMOVE_TRAIT(affected, TRAIT_DISFIGURED, "[type]")
 
 /datum/wound/facial/disfigurement/nose
-	name = "rinotomía"
+	name = "rinotomia"
 	check_name = "<span class='warning'>NOSE</span>"
 	crit_message = list(
 		"The nose is mangled beyond recognition!",
@@ -252,11 +252,11 @@
 	REMOVE_TRAIT(affected, TRAIT_MISSING_NOSE, "[type]")
 
 /datum/wound/cbt
-	name = "torsión testicular"
+	name = "torsion testicular"
 	check_name = "<span class='userdanger'><B>NUTCRACK</B></span>"
 	crit_message = list(
-		"¡Los testículos están torcidos!",
-		"¡Los testículos están torcidos!",
+		"¡Los testiculos estan torcidos!",
+		"¡Los testiculos estan torcidos!",
 	)
 	whp = 50
 	woundpain = 50
@@ -299,18 +299,18 @@
 	affected.Stun(20)
 	to_chat(affected, "<span class='userdanger'>Something twists inside my groin!</span>")
 	if(affected.gender != MALE)
-		name = "torsión ovárica"
+		name = "torsion ovarica"
 		check_name = "<span class='userdanger'><B>EGGCRACK</B></span>"
 		crit_message = list(
-			"¡Los ovarios están torcidos!",
-			"¡Los ovarios están torcidos!",
+			"¡Los ovarios estan torcidos!",
+			"¡Los ovarios estan torcidos!",
 		)
 	else
-		name = "torsión testicular"
+		name = "torsion testicular"
 		check_name = "<span class='userdanger'><B>NUTCRACK</B></span>"
 		crit_message = list(
-			"¡Los testículos están torcidos!",
-			"¡Los testículos están torcidos!",
+			"¡Los testiculos estan torcidos!",
+			"¡Los testiculos estan torcidos!",
 		)
 
 /datum/wound/cbt/on_life()
@@ -322,9 +322,9 @@
 		carbon_owner.vomit(1, stun = TRUE)
 
 /datum/wound/cbt/permanent
-	name = "evisceración testicular"
+	name = "evisceracion testicular"
 	crit_message = list(
-		"¡Los testículos están destruidos!",
+		"¡Los testiculos estan destruidos!",
 		"The testicles are eviscerated!",
 	)
 	whp = null
@@ -333,17 +333,17 @@
 /datum/wound/cbt/permanent/on_mob_gain(mob/living/affected)
 	. = ..()
 	if(affected.gender != MALE)
-		name = "evisceración ovárica"
+		name = "evisceracion ovarica"
 		check_name = "<span class='userdanger'><B>EGGCRACK</B></span>"
 		crit_message = list(
-			"¡Los ovarios están destruidos!",
+			"¡Los ovarios estan destruidos!",
 			"The ovaries are eviscerated!",
 		)
 	else
-		name = "evisceración testicular"
+		name = "evisceracion testicular"
 		check_name = "<span class='userdanger'><B>NUTCRACK</B></span>"
 		crit_message = list(
-			"¡Los testículos están destruidos!",
+			"¡Los testiculos estan destruidos!",
 			"The testicles are eviscerated!",
 		)
 

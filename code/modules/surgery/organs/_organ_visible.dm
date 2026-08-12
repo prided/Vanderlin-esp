@@ -2,7 +2,7 @@
 	/// Whether the organ is fully internal and should not be seen by bare eyes.
 	var/visible_organ = FALSE
 	/// Description when the organ is visible and examined while it's attached to a bodypart.
-	var/bodypart_desc = "Este es un órgano."
+	var/bodypart_desc = "Este es un organo."
 	/// Icon of the organ when it's on a bodypart.
 	var/bodypart_icon
 	/// Icon state of the organ when it's on a bodypart.

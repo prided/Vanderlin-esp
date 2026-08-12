@@ -16,9 +16,9 @@
 
 /obj/item/signal_horn/proc/attempt_sound_horn(mob/living/user)
 	if(!COOLDOWN_FINISHED(src, sound_horn))
-		to_chat(user, span_warning("¡[src] aún no está listo para usarse!"))
+		to_chat(user, span_warning("¡[src] aun no esta listo para usarse!"))
 		return
-	user.visible_message(span_warning("¡[user] está a punto de sonar [src]!"))
+	user.visible_message(span_warning("¡[user] esta a punto de sonar [src]!"))
 	if(do_after(user, 1.5 SECONDS))
 		sound_horn(user)
 		COOLDOWN_START(src, sound_horn, 1 MINUTES)
@@ -106,7 +106,7 @@
 	if(TR && TR.last_induced_ambush_time && (world.time < TR.last_induced_ambush_time + 5 MINUTES))
 		to_chat(user, span_warning("Foes have been cleared out here recently, perhaps you should wait a moment before sounding the horn again."))
 		return
-	user.visible_message(span_userdanger("¡[user] está a punto de sonar [src]!"))
+	user.visible_message(span_userdanger("¡[user] esta a punto de sonar [src]!"))
 	user.apply_status_effect(/datum/status_effect/debuff/clickcd, 5 SECONDS) // We don't want them to spam the message.
 	if(do_after(user, 30 SECONDS)) // Enough time for any antag to kick or interrupt third party, me think
 		TR.last_induced_ambush_time = world.time

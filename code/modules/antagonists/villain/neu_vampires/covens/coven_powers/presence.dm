@@ -1,12 +1,12 @@
 /datum/coven/presence
 	name = "Presencia"
-	desc = "Hace que los objetivos en el radio sean más vulnerables a los daños."
+	desc = "Hace que los objetivos en el radio sean mas vulnerables a los daños."
 	icon_state = "presence"
 	power_type = /datum/coven_power/presence
 
 /datum/coven_power/presence
 	name = "Nombre del poder de presencia"
-	desc = "Descripción del poder de presencia."
+	desc = "Descripcion del poder de presencia."
 
 //AWE
 /datum/coven_power/presence/awe
@@ -44,10 +44,10 @@
 
 	if(!owner.cmode)
 		to_chat(target, "<span class='userlove'><b>Follow me~</b></span>")
-		owner.say("Sígueme ~")
+		owner.say("Sigueme ~")
 	else
 		to_chat(target, "<span class='userlove'><b>COME HERE</b></span>")
-		owner.say("¡¡VEN AQUÍ!!")
+		owner.say("¡¡VEN AQUI!!")
 
 
 /datum/coven_power/presence/awe/deactivate(mob/living/carbon/human/target)
@@ -181,7 +181,7 @@
 	target.apply_overlay(MUTATIONS_LAYER)
 
 	to_chat(target, "<span class='userlove'><b>TO ME</b></span>")
-	owner.say("¡¡A MÍ!!")
+	owner.say("¡¡A MI!!")
 	target.Immobilize(1.5 SECONDS)
 	new /obj/effect/temp_visual/vamp_summon (get_turf(target))
 	new /obj/effect/temp_visual/vamp_summon/end (get_turf(owner))
@@ -398,5 +398,5 @@
 	icon_state = "debuff"
 
 /datum/stress_event/majesty_compelled
-	desc = "Hay alguien aquí con una presencia tan abrumadora que apenas puedo pensar con claridad a su alrededor."
+	desc = "Hay alguien aqui con una presencia tan abrumadora que apenas puedo pensar con claridad a su alrededor."
 	stress_change = -3

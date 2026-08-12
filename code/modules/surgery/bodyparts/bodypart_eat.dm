@@ -7,7 +7,7 @@
 		return TRUE
 	if(IS_DEADITE(user) || is_species(/datum/species/werewolf))
 		if(user.has_status_effect(/datum/status_effect/debuff/silver_bane))
-			to_chat(user, span_notice("¡Mi poder está debilitado, no puedo sanar!"))
+			to_chat(user, span_notice("¡Mi poder esta debilitado, no puedo sanar!"))
 			return TRUE
 		if(!do_after(user, 5 SECONDS, src))
 			return TRUE

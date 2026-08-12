@@ -73,7 +73,7 @@
 
 /mob/proc/can_enter_underworld()
 	if(stat < DEAD && !IS_DEADITE(src))
-		to_chat(src, span_danger("¡No estás muerto!"))
+		to_chat(src, span_danger("¡No estas muerto!"))
 		return FALSE
 
 	if(!length(GLOB.underworldspiritspawns)) //That cant be good.

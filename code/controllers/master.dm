@@ -110,7 +110,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 	return QDEL_HINT_HARDDEL_NOW
 
 /client/proc/cmd_controller_view_ui()
-	set name = "Descripción general del controlador"
+	set name = "Descripcion general del controlador"
 	set desc = "View the current states of the Subsystem Controllers."
 	set category = "Debug"
 

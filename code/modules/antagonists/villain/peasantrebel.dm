@@ -4,7 +4,7 @@
 /datum/antagonist/prebel
 	name = "Peasant Rebel"
 	roundend_category = "Rebeldes campesinos"
-	antagpanel_category = "Rebelión campesina"
+	antagpanel_category = "Rebelion campesina"
 	job_rank = ROLE_PREBEL
 	antag_hud_type = ANTAG_HUD_REV
 	antag_hud_name = "rev"
@@ -13,7 +13,7 @@
 	confess_lines = list(
 		"VIVA!",
 		"DEATH TO THE NOBLES!",
-		"¡PLÁNTALE CARA AL PODER!",
+		"¡PLANTALE CARA AL PODER!",
 		"NO GODS, NO MASTERS!",
 	)
 	increase_votepwr = FALSE
@@ -128,7 +128,7 @@
 		return
 	var/inputty = browser_input_text(cast_on, "Make a speech", "REVOLUTON!")
 	if(inputty)
-		owner.say(inputty, forced = "Revolución ([name])")
+		owner.say(inputty, forced = "Revolucion ([name])")
 		var/datum/antagonist/prebel/PR = owner.mind.has_antag_datum(/datum/antagonist/prebel)
 		for(var/mob/living/carbon/human/rebel in get_hearers_in_view(6, owner))
 			addtimer(CALLBACK(rebel, TYPE_PROC_REF(/mob/living/carbon/human, rev_ask), owner, PR, inputty), 1)
@@ -149,7 +149,7 @@
 	var/datum/team/prebels/RT = mind_datum.rev_team
 	var/shittime = world.time
 	playsound_local(src, 'sound/misc/rebel.ogg', 100, FALSE)
-	var/garbaggio = tgui_alert(src, "[offer]","Rebelión", list("Yes", "No"))
+	var/garbaggio = tgui_alert(src, "[offer]","Rebelion", list("Yes", "No"))
 	if(world.time > shittime + 35 SECONDS)
 		to_chat(src,"<span class='danger'>Too late.</span>")
 		return
@@ -172,12 +172,12 @@
 	return TRUE
 
 /datum/team/prebels
-	name = "\improper Rebelión Campesina"
+	name = "\improper Rebelion Campesina"
 	member_name = "rebel"
 	var/list/offers2join = list()
 
 /datum/objective/prebel
-	name = "Rebelión"
+	name = "Rebelion"
 	explanation_text = "Pon a un rebelde en el trono con la corona y haz un nuevo decreto."
 	team_explanation_text = "Pon a un rebelde en el trono con la corona y haz un nuevo decreto."
 

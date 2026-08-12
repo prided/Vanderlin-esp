@@ -165,7 +165,7 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/driedtea
-	name = "té seco"
+	name = "te seco"
 	output = /obj/item/reagent_containers/food/snacks/produce/tealeaves_dry
 	starting_atom = /obj/item/reagent_containers/food/snacks/produce/tea
 	requirements = list(

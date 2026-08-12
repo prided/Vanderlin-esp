@@ -33,7 +33,7 @@
 
 /datum/storyteller/noc
 	name = NOC
-	desc = "Noc intentará enviar más eventos mágicos."
+	desc = "Noc intentara enviar mas eventos magicos."
 	welcome_text = "El velo entre reinos brilla en tu presencia."
 	weight = 4
 	always_votable = TRUE
@@ -545,7 +545,7 @@
 
 /datum/storyteller/matthios
 	name = MATTHIOS
-	desc = "Matthios manipula la riqueza y la corrupción, recompensando a quienes hacen tratos."
+	desc = "Matthios manipula la riqueza y la corrupcion, recompensando a quienes hacen tratos."
 	welcome_text = "La fortuna favorece a los astutos."
 	weight = 4
 	always_votable = TRUE

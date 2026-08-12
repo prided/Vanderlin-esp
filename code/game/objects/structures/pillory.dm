@@ -72,7 +72,7 @@
 /obj/structure/pillory/proc/togglelatch(mob/living/user, silent)
 	user.changeNext_move(CLICK_CD_MELEE)
 	if(locked())
-		to_chat(user, span_info("\The [src] está bloqueado."))
+		to_chat(user, span_info("\The [src] esta bloqueado."))
 		return
 	latched = !latched
 	user.visible_message( \
@@ -85,7 +85,7 @@
 		return FALSE
 
 	if(locked())
-		to_chat(usr, span_warning("¡Desbloquéalo primero!"))
+		to_chat(usr, span_warning("¡Desbloquealo primero!"))
 		return FALSE
 
 	if (!istype(M, /mob/living/carbon/human))

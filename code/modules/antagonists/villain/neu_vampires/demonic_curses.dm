@@ -8,25 +8,25 @@
 	blessing = FALSE
 
 /datum/family_curse/demonic/torment
-	name = "Maldición del tormento"
+	name = "Maldicion del tormento"
 	description = "The family bloodline burns with infernal agony. Every moment is suffering."
 	severity = 2
 	curse_effects = list(/datum/status_effect/demonic_torment)
 
 /datum/family_curse/demonic/despair
-	name = "Maldición de la desesperación"
+	name = "Maldicion de la desesperacion"
 	description = "All hope has left this bloodline. They see only darkness and futility in everything."
 	severity = 2
 	curse_effects = list(/datum/status_effect/demonic_despair)
 
 /datum/family_curse/demonic/wrath
-	name = "Maldición de ira"
+	name = "Maldicion de ira"
 	description = "Uncontrollable fury consumes this family. They lash out at friend and foe alike."
 	severity = 3
 	curse_effects = list(/datum/status_effect/demonic_wrath)
 
 /datum/family_curse/demonic/paranoia
-	name = "La maldición de la paranoia"
+	name = "La maldicion de la paranoia"
 	description = "This family sees enemies everywhere. They believe all plot against them in shadows and whispers."
 	severity = 2
 	curse_effects = list(/datum/status_effect/demonic_paranoia)
@@ -38,31 +38,31 @@
 	curse_effects = list(/datum/status_effect/demonic_damnation)
 
 /datum/family_curse/demonic/gluttony
-	name = "La maldición de la gula"
+	name = "La maldicion de la gula"
 	description = "Un hambre insaciable corroe a esta familia. Deben consumir todo lo que puedan conseguir."
 	severity = 1
 	curse_effects = list(/datum/status_effect/demonic_gluttony)
 
 /datum/family_curse/demonic/pride
-	name = "Maldición del orgullo"
+	name = "Maldicion del orgullo"
 	description = "This family believes they are superior to all others. They cannot bring themselves to accept help or admit weakness."
 	severity = 2
 	curse_effects = list(/datum/status_effect/demonic_pride)
 
 /datum/family_curse/demonic/isolation
-	name = "La maldición del aislamiento"
+	name = "La maldicion del aislamiento"
 	description = "This bloodline is utterly alone. Others flee from their presence as if they carry plague."
 	severity = 3
 	curse_effects = list(/datum/status_effect/demonic_isolation)
 
 /datum/family_curse/demonic/madness
-	name = "Maldición de la locura"
+	name = "Maldicion de la locura"
 	description = "Insanity runs through this family's blood. Reality becomes twisted and uncertain for them."
 	severity = 3
 	curse_effects = list(/datum/status_effect/demonic_madness)
 
 /datum/family_curse/demonic/decay
-	name = "Maldición de la decadencia"
+	name = "Maldicion de la decadencia"
 	description = "This family rots from within. Their flesh slowly corrupts and their health deteriorates."
 	severity = 2
 	curse_effects = list(/datum/status_effect/demonic_decay)
@@ -96,10 +96,10 @@
 				owner.add_stress(/datum/stress_event/infernal_pain)
 			if(2)
 				owner.emote("scream", forced = TRUE)
-				to_chat(owner, span_userdanger("¡La maldición familiar te atormenta!"))
+				to_chat(owner, span_userdanger("¡La maldicion familiar te atormenta!"))
 			if(3)
 				owner.Knockdown(10)
-				to_chat(owner, span_userdanger("¡La agonía de tu linaje te abruma!"))
+				to_chat(owner, span_userdanger("¡La agonia de tu linaje te abruma!"))
 
 /datum/status_effect/demonic_despair
 	id = "demonic_despair"
@@ -112,14 +112,14 @@
 	if(COOLDOWN_FINISHED(src, next_despair) && prob(3))
 		COOLDOWN_START(src, next_despair, rand(20 SECONDS, 1 MINUTES))
 		var/list/despair_messages = list(
-			"La maldición familiar pesa mucho sobre mí...",
+			"La maldicion familiar pesa mucho sobre mi...",
 			"Why was I born into this cursed bloodline?",
 			"There's no escape from our family's fate.",
 			"Todos estamos condenados por los pecados de nuestros antepasados.",
 			"Nothing can lift this hereditary burden.",
 			"Death would be a mercy from this curse."
 		)
-		owner.say(pick(despair_messages), forced = "maldición familiar")
+		owner.say(pick(despair_messages), forced = "maldicion familiar")
 		owner.add_stress(/datum/stress_event/cursed_despair)
 
 /datum/status_effect/demonic_wrath
@@ -168,7 +168,7 @@
 			"No puedo confiar en nadie fuera de la familia.",
 			"They plot against our cursed kind."
 		)
-		owner.say(pick(paranoid_messages), forced = "maldición familiar")
+		owner.say(pick(paranoid_messages), forced = "maldicion familiar")
 		owner.add_stress(/datum/stress_event/cursed_paranoia)
 
 /datum/status_effect/demonic_damnation
@@ -179,7 +179,7 @@
 
 /datum/status_effect/demonic_damnation/tick()
 	if(prob(2))
-		to_chat(owner, span_userdanger("¡Sientes el peso de la condenación de tu familia!"))
+		to_chat(owner, span_userdanger("¡Sientes el peso de la condenacion de tu familia!"))
 		owner.add_stress(/datum/stress_event/cursed_damnation)
 
 /datum/status_effect/demonic_gluttony
@@ -201,7 +201,7 @@
 		if(nearby_food.len)
 			var/obj/item/target_food = pick(nearby_food)
 			if(owner.put_in_active_hand(target_food))
-				to_chat(owner, span_userdanger("¡La maldición familiar me obliga a consumir esto!"))
+				to_chat(owner, span_userdanger("¡La maldicion familiar me obliga a consumir esto!"))
 				target_food.attack(owner, owner)
 		else
 			if(!owner.has_stress_type(/datum/stress_event/cursed_hunger))
@@ -221,12 +221,12 @@
 		var/list/pride_messages = list(
 			"Our bloodline is superior, curse and all.",
 			"No necesitamos ayuda de familias menores.",
-			"Esta maldición nos hace más fuertes que ellos.",
-			"Nuestra herencia nos sitúa por encima de la gente común.",
-			"No mostraré debilidad, a pesar de la maldición.",
+			"Esta maldicion nos hace mas fuertes que ellos.",
+			"Nuestra herencia nos situa por encima de la gente comun.",
+			"No mostrare debilidad, a pesar de la maldicion.",
 			"Llevamos esta carga porque somos elegidos."
 		)
-		owner.say(pick(pride_messages), forced = "maldición familiar")
+		owner.say(pick(pride_messages), forced = "maldicion familiar")
 
 /datum/status_effect/demonic_isolation
 	id = "demonic_isolation"
@@ -255,7 +255,7 @@
 				"Estamos destinados a estar solos por lo que somos.",
 				"No one can stand to be near our cursed kind."
 			)
-			owner.say(pick(lonely_messages), forced = "maldición familiar")
+			owner.say(pick(lonely_messages), forced = "maldicion familiar")
 			if(!found_people)
 				owner.add_stress(/datum/stress_event/cursed_isolation)
 
@@ -273,11 +273,11 @@
 			"Las voces en nuestra sangre me hablan...",
 			"I see the demons that cursed our ancestors!",
 			"Reality bends around our tainted heritage.",
-			"¡La maldición me muestra cosas que otros no pueden ver!",
+			"¡La maldicion me muestra cosas que otros no pueden ver!",
 			"¡Nuestro linaje lleva susurros del infierno!",
-			"¡La maldición familiar revela verdades ocultas!"
+			"¡La maldicion familiar revela verdades ocultas!"
 		)
-		owner.say(pick(mad_messages), forced = "maldición familiar")
+		owner.say(pick(mad_messages), forced = "maldicion familiar")
 
 /datum/status_effect/demonic_decay
 	id = "demonic_decay"
@@ -295,13 +295,13 @@
 				if(iscarbon(owner))
 					var/mob/living/carbon/C = owner
 					C.vomit()
-				to_chat(owner, span_userdanger("¡La maldición familiar enferma tu cuerpo!"))
+				to_chat(owner, span_userdanger("¡La maldicion familiar enferma tu cuerpo!"))
 			if(2)
 				owner.Unconscious(15)
 				to_chat(owner, span_userdanger("¡Tu herencia maldita te debilita!"))
 			if(3)
 				owner.set_eye_blur_if_lower(16 SECONDS)
-				to_chat(owner, span_userdanger("¡La maldición nubla tu visión!"))
+				to_chat(owner, span_userdanger("¡La maldicion nubla tu vision!"))
 			if(4)
 				if(ishuman(owner))
 					var/mob/living/carbon/human/H = owner
@@ -317,53 +317,53 @@
 //////////////////////
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_torment
-	name = "Maldición del tormento"
+	name = "Maldicion del tormento"
 	desc = "Infernal flames burn within your cursed bloodline."
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_despair
-	name = "Maldición de la desesperación"
+	name = "Maldicion de la desesperacion"
 	desc = "All hope has abandoned your family line."
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_wrath
-	name = "Maldición de ira"
+	name = "Maldicion de ira"
 	desc = "Uncontrollable rage flows through your veins."
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_paranoia
-	name = "La maldición de la paranoia"
+	name = "La maldicion de la paranoia"
 	desc = "Todos conspiran contra tu herencia maldita."
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_damnation
 	name = "Curse of Damnation"
-	desc = "Las almas de tu familia están marcadas para el infierno."
+	desc = "Las almas de tu familia estan marcadas para el infierno."
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_gluttony
-	name = "La maldición de la gula"
+	name = "La maldicion de la gula"
 	desc = "Insatiable hunger gnaws at your cursed bloodline."
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_pride
-	name = "Maldición del orgullo"
-	desc = "Tu familia se cree superior a todos los demás."
+	name = "Maldicion del orgullo"
+	desc = "Tu familia se cree superior a todos los demas."
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_isolation
-	name = "La maldición del aislamiento"
+	name = "La maldicion del aislamiento"
 	desc = "Otros huyen de tu maldita presencia."
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_madness
-	name = "Maldición de la locura"
+	name = "Maldicion de la locura"
 	desc = "La locura corre por la sangre de tu familia."
 	icon_state = "debuff"
 
 /atom/movable/screen/alert/status_effect/family_curse/demonic_decay
-	name = "Maldición de la decadencia"
-	desc = "Tu carne se pudre desde dentro debido a la maldición familiar."
+	name = "Maldicion de la decadencia"
+	desc = "Tu carne se pudre desde dentro debido a la maldicion familiar."
 	icon_state = "debuff"
 
 //////////////////////
@@ -378,7 +378,7 @@
 /datum/stress_event/cursed_despair
 	timer = 60 SECONDS
 	stress_change = 4
-	desc = "La maldición familiar me llena de desesperanza."
+	desc = "La maldicion familiar me llena de desesperanza."
 
 /datum/stress_event/cursed_wrath
 	timer = 45 SECONDS
@@ -393,12 +393,12 @@
 /datum/stress_event/cursed_damnation
 	timer = 120 SECONDS
 	stress_change = 5
-	desc = "Siento el peso de la condenación de mi familia."
+	desc = "Siento el peso de la condenacion de mi familia."
 
 /datum/stress_event/cursed_hunger
 	timer = 60 SECONDS
 	stress_change = 2
-	desc = "¡La maldición me obliga a consumir, pero no puedo!"
+	desc = "¡La maldicion me obliga a consumir, pero no puedo!"
 
 /datum/stress_event/cursed_isolation
 	timer = 90 SECONDS

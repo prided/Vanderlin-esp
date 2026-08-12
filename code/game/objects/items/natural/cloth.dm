@@ -62,7 +62,7 @@
 		to_chat(cleaner, span_warning("I need to take \the [atom_to_clean] off before cleaning it!"))
 		return DO_NOT_CLEAN
 	if(reagents.total_volume < 0.1)
-		to_chat(cleaner, span_warning("¡[src] está demasiado seco para limpiarlo!"))
+		to_chat(cleaner, span_warning("¡[src] esta demasiado seco para limpiarlo!"))
 		return DO_NOT_CLEAN
 
 	// overly complicated effectiveness calculations
@@ -136,7 +136,7 @@
 
 /obj/item/natural/cloth/proc/soak_cloth(atom/target, mob/living/user)
 	if(reagents.total_volume == reagents.maximum_volume)
-		to_chat(user, span_warning("\The [src] ya está empapado."))
+		to_chat(user, span_warning("\The [src] ya esta empapado."))
 		return FALSE
 	if(isobj(target))
 		var/obj/O = target
@@ -181,7 +181,7 @@
 		if(!O.reagents || !O.is_open_container())
 			return FALSE
 		if(O.reagents.total_volume == O.reagents.maximum_volume)
-			to_chat(user, span_warning("Está lleno."))
+			to_chat(user, span_warning("Esta lleno."))
 			return FALSE
 		if(do_after(user, clean_speed * 2.5, O))
 			reagents.trans_to(O, reagents.total_volume, 1, transfered_by = user)

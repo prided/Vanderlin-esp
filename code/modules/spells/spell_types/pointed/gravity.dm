@@ -29,7 +29,7 @@
 	if(GET_MOB_ATTRIBUTE_VALUE(cast_on, STAT_STRENGTH) >= strength_level)
 		cast_on.OffBalance(3 SECONDS)
 		cast_on.adjustBruteLoss(15, damage_type = BCLASS_BLUNT)
-		to_chat(cast_on, span_userdanger("¡Estás mágicamente agobiado, pero tu fuerza resiste!"))
+		to_chat(cast_on, span_userdanger("¡Estas magicamente agobiado, pero tu fuerza resiste!"))
 	else
 		cast_on.Knockdown(3 SECONDS)
 		cast_on.Immobilize(3 SECONDS)

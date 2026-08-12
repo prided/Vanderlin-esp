@@ -36,7 +36,7 @@
 	Most Aasimar were created to serve The Ten, and few if any Psydonic Aasimar remain to this day- \
 	decrepit husks of what were once great warriors. "
 
-	skin_tone_wording = "Artesanía"
+	skin_tone_wording = "Artesania"
 
 	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_NOHYGIENE)

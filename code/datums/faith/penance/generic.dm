@@ -1,7 +1,7 @@
 
 /datum/penance/prayer
 	name = "Prayers of Atonement"
-	desc = "Debes orar extensamente para mostrar tu devoción."
+	desc = "Debes orar extensamente para mostrar tu devocion."
 	signal_type = COMSIG_PRAYER_COMPLETED
 	required_count = 10
 	devotion_reward = 30
@@ -25,7 +25,7 @@
 
 /datum/penance/combat
 	name = "Trial by Combat"
-	desc = "Debes demostrar tu valía en la batalla."
+	desc = "Debes demostrar tu valia en la batalla."
 	signal_type = COMSIG_LIVING_COMBAT_KILL
 	required_count = 3
 	time_limit = 20 MINUTES

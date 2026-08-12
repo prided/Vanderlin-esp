@@ -118,7 +118,7 @@
 	)
 
 /datum/outfit/hand/handclassic
-	name = "Mano (Clásico)"
+	name = "Mano (Clasico)"
 	shirt = /obj/item/clothing/shirt/undershirt/fancy
 	backr = /obj/item/storage/backpack/satchel/black
 	backpack_contents = list(

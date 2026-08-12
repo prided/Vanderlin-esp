@@ -49,12 +49,12 @@
 	scent = "pastel de borowiki"
 
 /datum/pollutant/food/bread
-	name = "pan recién horneado"
-	scent = "pan recién horneado"
+	name = "pan recien horneado"
+	scent = "pan recien horneado"
 
 /datum/pollutant/food/bun
-	name = "bollos recién horneados"
-	scent = "bollos recién horneados"
+	name = "bollos recien horneados"
+	scent = "bollos recien horneados"
 
 /datum/pollutant/food/pastry
 	name = "fresh baked pastry"
@@ -85,35 +85,35 @@
 	scent = "fresh baked cheese buns"
 
 /datum/pollutant/food/biscuit
-	name = "galletas recién horneadas"
-	scent = "galletas recién horneadas"
+	name = "galletas recien horneadas"
+	scent = "galletas recien horneadas"
 
 /datum/pollutant/food/prezzel
-	name = "prezzel recién horneado"
-	scent = "prezzel recién horneado"
+	name = "prezzel recien horneado"
+	scent = "prezzel recien horneado"
 
 /datum/pollutant/food/fritter
 	name = "fresh baked apple fritter"
 	scent = "fresh baked apple fritter"
 
 /datum/pollutant/food/honey_cake
-	name = "pastel de miel recién horneado"
-	scent = "pastel de miel recién horneado"
+	name = "pastel de miel recien horneado"
+	scent = "pastel de miel recien horneado"
 
 /datum/pollutant/food/cheese_cake
-	name = "pastel de queso recién horneado"
-	scent = "pastel de queso recién horneado"
+	name = "pastel de queso recien horneado"
+	scent = "pastel de queso recien horneado"
 
 /datum/pollutant/food/strawberry_cake
-	name = "pastel de fresa recién horneado"
-	scent = "pastel de fresa recién horneado"
+	name = "pastel de fresa recien horneado"
+	scent = "pastel de fresa recien horneado"
 
 /datum/pollutant/food/crimson_cake
-	name = "pastel de pino carmesí recién horneado"
-	scent = "pastel de pino carmesí recién horneado"
+	name = "pastel de pino carmesi recien horneado"
+	scent = "pastel de pino carmesi recien horneado"
 
 /datum/pollutant/food/tamto_cake
-	name = "pastel de seda tamto recién horneado"
+	name = "pastel de seda tamto recien horneado"
 	scent = "fresh baked tamto silk caake"
 
 /datum/pollutant/food/scone

@@ -466,7 +466,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		if(buckled?.sleepy)
 			if(eyesclosed && !cant_fall_asleep || (eyesclosed && !(fallingas >= 10 && cant_fall_asleep)))
 				if(!fallingas)
-					to_chat(src, span_warning("Me quedaré dormido pronto..."))
+					to_chat(src, span_warning("Me quedare dormido pronto..."))
 				fallingas++
 				if(istype(buckled, /obj/structure/bed))
 					var/obj/structure/bed/bed_check = buckled

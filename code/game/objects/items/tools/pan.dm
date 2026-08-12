@@ -1,5 +1,5 @@
 /obj/item/cooking/pan
-	name = "sartén"
+	name = "sarten"
 	icon_state = "pan"
 	force = DAMAGE_MACE
 	throwforce = DAMAGE_MACE - 5

@@ -1,5 +1,5 @@
 /datum/objective/personal/nobility
-	name = "Conviértete en noble"
+	name = "Conviertete en noble"
 	category = "Astrata's Chosen"
 	triumph_count = 3
 	rewards = list("3 Triumphs", "Astrata grows stronger", "Astrata blesses you (+1 Fortune)")
@@ -36,4 +36,4 @@
 	owner.current.adjust_stat_modifier(STATMOD_ASTRATA_BLESSING, list(STAT_FORTUNE = 1))
 
 /datum/objective/personal/nobility/update_explanation_text()
-	explanation_text = "¡Conviértete en parte de la nobleza por cualquier medio para obtener la aprobación de Astrata!"
+	explanation_text = "¡Conviertete en parte de la nobleza por cualquier medio para obtener la aprobacion de Astrata!"

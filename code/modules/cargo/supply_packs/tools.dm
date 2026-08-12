@@ -67,7 +67,7 @@
 	/obj/item/candle/yellow)
 
 /datum/supply_pack/tools/lamptern
-	name = "Lámpara de hierro"
+	name = "Lampara de hierro"
 	cost = 20
 	contains = /obj/item/flashlight/flare/torch/lantern
 
@@ -122,7 +122,7 @@
 	contains = /obj/item/reagent_containers/glass/bucket/wooden
 
 /datum/supply_pack/tools/fryingpan
-	name = "Sartén"
+	name = "Sarten"
 	cost = 15
 	contains = /obj/item/cooking/pan
 
@@ -177,17 +177,17 @@
 	abstract_type = /datum/supply_pack/tools/medical
 
 /datum/supply_pack/tools/medical/health
-	name = "Poción curativa"
+	name = "Pocion curativa"
 	cost = 75
 	contains = /obj/item/reagent_containers/glass/bottle/healthpot
 
 /datum/supply_pack/tools/medical/mana
-	name = "Poción de maná"
+	name = "Pocion de mana"
 	cost = 75
 	contains = /obj/item/reagent_containers/glass/bottle/manapot
 
 /datum/supply_pack/tools/medical/surgerybag
-	name = "Conjunto de herramientas quirúrgicas"
+	name = "Conjunto de herramientas quirurgicas"
 	cost = 60
 	contains = /obj/item/storage/backpack/satchel/surgbag
 

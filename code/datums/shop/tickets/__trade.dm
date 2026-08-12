@@ -113,7 +113,7 @@ GLOBAL_DATUM_INIT(ticket_trade_manager, /datum/ticket_trade_manager, new)
 			to_chat(from_client, span_warning("You no longer have ticket [id]."))
 			return FALSE
 		if(id in locked_ids)
-			to_chat(from_client, span_warning("El ticket '[t.name]' ya está en una transacción pendiente."))
+			to_chat(from_client, span_warning("El ticket '[t.name]' ya esta en una transaccion pendiente."))
 			return FALSE
 		offered_datums += t
 
@@ -180,7 +180,7 @@ GLOBAL_DATUM_INIT(ticket_trade_manager, /datum/ticket_trade_manager, new)
 		to_chat(accepting_client, span_warning("Ese comercio ya no existe."))
 		return FALSE
 	if(trade.to_ckey != accepting_client.ckey)
-		to_chat(accepting_client, span_warning("Ese intercambio no está dirigido a usted."))
+		to_chat(accepting_client, span_warning("Ese intercambio no esta dirigido a usted."))
 		return FALSE
 	if(trade.cancel_requested_at && (world.time - trade.cancel_requested_at) < (TICKET_TRADE_CANCEL_LOCK * 10))
 		to_chat(accepting_client, span_warning("The sender is cancelling this trade, please wait a moment."))

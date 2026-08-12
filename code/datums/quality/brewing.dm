@@ -19,24 +19,24 @@
 			"price_modifier" = 0.8
 		),
 		1 = list(
-			"brew_prefix" = list("débil", "acuoso", "poor", "substandard"),
+			"brew_prefix" = list("debil", "acuoso", "poor", "substandard"),
 			"description" = list(
 				"This brew appears poorly made with an unpleasant aroma.",
-				"El color está apagado y huele extraño.",
+				"El color esta apagado y huele extraño.",
 				"This tastes like it was made by someone who doesn't know what they're doing."
 			),
 			"price_modifier" = 0.6
 		),
 		2 = list(
 			"brew_prefix" = "",
-			"description" = "Parece ser una cerveza de calidad estándar.",
+			"description" = "Parece ser una cerveza de calidad estandar.",
 			"price_modifier" = 1.0
 		),
 		3 = list(
 			"brew_prefix" = list("fine", "quality", "bien elaborado", "premium"),
 			"description" = list(
 				"This brew has an excellent aroma and rich color.",
-				"La artesanía es evidente en cada sorbo.",
+				"La artesania es evidente en cada sorbo.",
 				"Esto demuestra la habilidad de un cervecero experimentado."
 			),
 			"price_modifier" = 1.4
@@ -45,7 +45,7 @@
 			"brew_prefix" = list("maestro", "exquisito", "artesano", "legendary", "perfecto"),
 			"description" = list(
 				"This is a masterfully crafted brew with perfect clarity and an intoxicating bouquet.",
-				"Esto representa el pináculo del arte cervecero.",
+				"Esto representa el pinaculo del arte cervecero.",
 				"This brew is so perfect it belongs in a museum.",
 				"The gods themselves would be jealous of this brew."
 			),

@@ -14,8 +14,8 @@
 
 //newtree
 /obj/structure/flora/tree
-	name = "árbol viejo"
-	desc = "Un árbol viejo y malvado que ni siquiera los elfos podrían amar."
+	name = "arbol viejo"
+	desc = "Un arbol viejo y malvado que ni siquiera los elfos podrian amar."
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
 	icon_state = "t1"
 	base_icon_state = "t"
@@ -82,7 +82,7 @@
 	return ..()
 
 /obj/structure/flora/tree/wise
-	name = "árbol sabio"
+	name = "arbol sabio"
 	desc = "Dendor's favored. It seems to watch you with ancient awareness."
 	icon_state = "mystical"
 	var/activated = FALSE
@@ -94,7 +94,7 @@
 		"BEGONE, INTERLOPER!",
 		"BEGONE, DESTROYER!",
 		"NATURE SHALL PREVAIL!",
-		"¡LA NATURALEZA RECLAMARÁ LA TIERRA!",
+		"¡LA NATURALEZA RECLAMARA LA TIERRA!",
 		"LEAVE US BE!",
 		"YOU HAVE DESTROYED ENOUGH!",
 		"DENDOR SMITES THE INTERLOPERS!",
@@ -157,8 +157,8 @@
 		retaliate(user)
 
 /obj/structure/flora/tree/burnt
-	name = "árbol quemado"
-	desc = "Un pilar chamuscado de un árbol que alguna vez estuvo vivo."
+	name = "arbol quemado"
+	desc = "Un pilar chamuscado de un arbol que alguna vez estuvo vivo."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "t1"
 	num_random_icons = 4
@@ -176,7 +176,7 @@
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/structure/flora/tree/stump/pine
-	name = "tocón de pino"
+	name = "tocon de pino"
 	icon_state = "dead4"
 	icon = 'icons/obj/flora/pines.dmi'
 	static_debris = list(/obj/item/ore/coal/charcoal = 1)
@@ -511,7 +511,7 @@
 
 /obj/structure/flora/grass/bush/wall
 	name = "gran arbusto"
-	desc = "Un arbusto, las raíces de este son demasiado gruesas y bloquean el camino."
+	desc = "Un arbusto, las raices de este son demasiado gruesas y bloquean el camino."
 	icon_state = "bushwall1"
 	base_icon_state = "bushwall"
 	num_random_icons = 2
@@ -572,7 +572,7 @@
 // swarmpweed bush
 /obj/structure/flora/grass/swampweed
 	name = "bunch of swampweed"
-	desc = "Una raíz verde, buena para fumar."
+	desc = "Una raiz verde, buena para fumar."
 	icon_state = "swampweed1"
 	base_icon_state = "swampweed"
 	num_random_icons = 3
@@ -881,7 +881,7 @@
 					return
 
 		else
-			to_chat(user, span_smallnotice("No encontré nada."))
+			to_chat(user, span_smallnotice("No encontre nada."))
 	prob2findstuff = 18
 	prob2findgoodie = 15
 	luckydouble	= 3

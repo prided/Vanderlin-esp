@@ -28,7 +28,7 @@
 	. = ..()
 	if(. & SPELL_CANCEL_CAST)
 		return
-	message = browser_input_text(owner, "¿Qué deberían decir?", "XYLIX")
+	message = browser_input_text(owner, "¿Que deberian decir?", "XYLIX")
 	if(QDELETED(src) || QDELETED(owner) || QDELETED(cast_on) || !can_cast_spell())
 		return . | SPELL_CANCEL_CAST
 

@@ -92,7 +92,7 @@
 	item_state = "atergvi_shaman_gloves"
 
 /obj/item/clothing/head/helmet/bascinet/owl
-	name = "casco de búho"
+	name = "casco de buho"
 	desc = "A carefully forged steel helmet in the shape of an owl's face, with added chain to cover the face and neck against many blows."
 	icon_state = "atgervi_raider"
 	item_state = "atgervi_raider"

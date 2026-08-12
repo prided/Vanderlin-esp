@@ -95,7 +95,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 
 	L += list(var_value) //var_value could be a list
 
-	switch(tgui_alert(usr,"¿Le gustaría asociar un valor con la entrada de la lista?",,list("Yes","No")))
+	switch(tgui_alert(usr,"¿Le gustaria asociar un valor con la entrada de la lista?",,list("Yes","No")))
 		if("Yes")
 			L[var_value] = mod_list_add_ass(O) //hehe
 	if (O)

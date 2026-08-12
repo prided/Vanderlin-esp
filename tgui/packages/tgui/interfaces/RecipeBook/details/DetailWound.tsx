@@ -8,17 +8,17 @@ export const DetailWound = ({ r }: { r: Recipe }) => (
     <Box className="RecipeBook__severity-badge" style={{ color: r.severity_color }}>
       Gravedad: <strong>{r.severity_text}</strong>
     </Box>
-    {!!r.critical && <WarnFlag color="#cc0000">HERIDA CRÍTICA</WarnFlag>}
+    {!!r.critical && <WarnFlag color="#cc0000">HERIDA CRITICA</WarnFlag>}
     {!!r.mortal && <WarnFlag color="#880000">HERIDA MORTAL</WarnFlag>}
     {!!r.disabling && <WarnFlag color="#cc6600">HERIDA INHABILITANTE</WarnFlag>}
-    <SectionHead>Estadísticas de heridas</SectionHead>
+    <SectionHead>Estadisticas de heridas</SectionHead>
     <Box className="RecipeBook__step-block">
       <Box className="RecipeBook__step-row">WHP: {r.whp}</Box>
       {r.passive_healing !== undefined && (
-        <Box className="RecipeBook__step-row">Curación pasiva: {r.passive_healing}/latido</Box>
+        <Box className="RecipeBook__step-row">Curacion pasiva: {r.passive_healing}/latido</Box>
       )}
       {r.sleep_healing !== undefined && (
-        <Box className="RecipeBook__step-row">Curación del sueño: {r.sleep_healing}/latido</Box>
+        <Box className="RecipeBook__step-row">Curacion del sueño: {r.sleep_healing}/latido</Box>
       )}
     </Box>
     {(!!r.can_sew || !!r.can_cauterize) && (
@@ -44,7 +44,7 @@ export const DetailWound = ({ r }: { r: Recipe }) => (
           )}
           {r.clotting_rate && (
             <Box className="RecipeBook__step-row">
-              Coagulación: {r.clotting_rate}/latido{r.clotting_threshold !== undefined ? ` → ${r.clotting_threshold}` : ''}
+              Coagulacion: {r.clotting_rate}/latido{r.clotting_threshold !== undefined ? ` → ${r.clotting_threshold}` : ''}
             </Box>
           )}
         </Box>
@@ -72,7 +72,7 @@ export const DetailWound = ({ r }: { r: Recipe }) => (
     )}
     {r.check_name && (
       <>
-        <SectionHead>Diagnóstico</SectionHead>
+        <SectionHead>Diagnostico</SectionHead>
         <Box className="RecipeBook__step-block">
           <Box className="RecipeBook__step-row" dangerouslySetInnerHTML={{ __html: r.check_name! }} />
         </Box>

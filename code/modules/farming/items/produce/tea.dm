@@ -8,7 +8,7 @@
 	rotprocess = null
 
 /obj/item/reagent_containers/food/snacks/produce/tealeaves_dry
-	name = "hojas de té secas"
+	name = "hojas de te secas"
 	desc = "Dried tea leaves. Edible. Seeds can be extracted from them. Needs to be processed in a millstone."
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "teadry"
@@ -20,7 +20,7 @@
 	mill_result = /obj/item/reagent_containers/food/snacks/produce/tealeaves_ground
 
 /obj/item/reagent_containers/food/snacks/produce/tealeaves_ground
-	name = "hojas de té molidas"
+	name = "hojas de te molidas"
 	desc = "Ground tea leaves that can be used to brew tea"
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "teaground"

@@ -103,11 +103,11 @@
 	var/obj/item/essence_vial/vial = I
 
 	if(!vial.contained_essence || vial.essence_amount <= 0)
-		to_chat(user, span_warning("¡[vial] está vacío!"))
+		to_chat(user, span_warning("¡[vial] esta vacio!"))
 		return
 
 	if(length(stored_vials) >= max_vials)
-		to_chat(user, span_warning("¡[src] está lleno!"))
+		to_chat(user, span_warning("¡[src] esta lleno!"))
 		return
 
 	if(!user.transferItemToLoc(vial, src))
@@ -216,6 +216,6 @@
 		if(vial.contained_essence && vial.essence_amount > 0)
 			. += span_notice("- [vial.essence_amount] ligulae of [HAS_TRAIT(user, TRAIT_LEGENDARY_ALCHEMIST) ? "[vial.contained_essence.name]" : "essence smelling of [vial.contained_essence.smells_like]l"].")
 		else
-			. += span_notice("- Vacío")
+			. += span_notice("- Vacio")
 
 	. += span_notice("Right-click to remove a vial.")

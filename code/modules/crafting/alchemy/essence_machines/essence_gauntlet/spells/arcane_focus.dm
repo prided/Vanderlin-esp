@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/arcane_focus
 	name = "Enfoque arcano"
-	desc = "Crea un foco de cristal que mejora las habilidades mágicas."
+	desc = "Crea un foco de cristal que mejora las habilidades magicas."
 	button_icon_state = "rune2"
 	cast_range = 0
 	essences = list(/datum/thaumaturgical_essence/magic, /datum/thaumaturgical_essence/crystal)
@@ -27,7 +27,7 @@
 		var/mob/living/L = owner
 		for(var/datum/action/cooldown/spell/spell in L.actions)
 			spell.charge_required = FALSE
-		to_chat(owner, span_notice("¡Tu enfoque mágico se intensifica!"))
+		to_chat(owner, span_notice("¡Tu enfoque magico se intensifica!"))
 
 /datum/status_effect/buff/arcane_focus/on_remove()
 	. = ..()
@@ -35,4 +35,4 @@
 		var/mob/living/L = owner
 		for(var/datum/action/cooldown/spell/spell in L.actions)
 			spell.charge_required = initial(spell.charge_required)
-		to_chat(owner, span_notice("¡Tu enfoque mágico vuelve a la normalidad!"))
+		to_chat(owner, span_notice("¡Tu enfoque magico vuelve a la normalidad!"))

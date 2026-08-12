@@ -112,7 +112,7 @@
 /datum/rune_spell/proc/pay_blood()
 	var/data = use_available_blood(activator, cost_invoke)
 	if(data[BLOODCOST_RESULT] == BLOODCOST_FAILURE)
-		to_chat(activator, span_warning("Este ritual requiere más sangre de la que puedes ofrecer.") )
+		to_chat(activator, span_warning("Este ritual requiere mas sangre de la que puedes ofrecer.") )
 		return FALSE
 	else
 		return TRUE
@@ -135,7 +135,7 @@
 	switch(cause)
 		if (RITUALABORT_ERASED)
 			if (istype (spell_holder, /obj/effect/blood_rune))
-				spell_holder.visible_message(span_warning("La destrucción de la runa puso fin al ritual.") )
+				spell_holder.visible_message(span_warning("La destruccion de la runa puso fin al ritual.") )
 		if (RITUALABORT_STAND)
 			if (activator)
 				to_chat(activator, span_warning("The [name] ritual requires you to stand on top of the rune.") )
@@ -151,7 +151,7 @@
 			if (activator)
 				to_chat(activator, span_warning("The necessary tools have been misplaced.") )
 		if (RITUALABORT_TOOLS)
-			spell_holder.visible_message(span_warning("El ritual termina cuando la víctima se aleja de la runa.") )
+			spell_holder.visible_message(span_warning("El ritual termina cuando la victima se aleja de la runa.") )
 		if (RITUALABORT_CONVERT)
 			if (activator)
 				to_chat(activator, span_notice("The conversion ritual successfully brought a new member to the cult. Inform them of the current situation so they can take action."))

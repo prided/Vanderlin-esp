@@ -35,7 +35,7 @@
 	zone = BODY_ZONE_CHEST
 
 /obj/item/organ/artery/heart
-	name = "aorta torácica"
+	name = "aorta toracica"
 	desc = "Shot through the heart, and you're to blame - Darlin', you give love a bad name."
 	zone = BODY_ZONE_CHEST
 	blood_flow = ARTERIAL_BLOOD_FLOW * 2.5
@@ -66,7 +66,7 @@
 	to_chat(owner, span_userdanger("[pick(heartaches)]"))
 
 /obj/item/organ/artery/neck
-	name = "arteria carótida"
+	name = "arteria carotida"
 	zone = BODY_ZONE_PRECISE_NECK
 	blood_flow = ARTERIAL_BLOOD_FLOW * 2
 	crit_weakness_lethal = TRUE

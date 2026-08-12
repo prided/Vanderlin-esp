@@ -844,7 +844,7 @@ SUBSYSTEM_DEF(gamemode)
 			to_chat(world, span_boldannounce("The peasant rebels took control of the throne, hail the new community!"))
 			if(ttime >= INITIAL_ROUND_TIMER)
 				reb_end_time = ttime + 15 MINUTES
-				to_chat(world, span_boldwarning("La ronda terminará en 15 minutos."))
+				to_chat(world, span_boldwarning("La ronda terminara en 15 minutos."))
 			else
 				reb_end_time = INITIAL_ROUND_TIMER
 				to_chat(world, span_boldwarning("The round will end at the 2:30 hour mark."))
@@ -1211,7 +1211,7 @@ SUBSYSTEM_DEF(gamemode)
 		if("main")
 			switch(href_list["action"])
 				if("set_storyteller")
-					message_admins("[key_name_admin(usr)] está eligiendo un nuevo Narrador.")
+					message_admins("[key_name_admin(usr)] esta eligiendo un nuevo Narrador.")
 					var/list/name_list = list()
 					for(var/storyteller_type in storytellers)
 						var/datum/storyteller/storyboy = storytellers[storyteller_type]
@@ -1280,7 +1280,7 @@ SUBSYSTEM_DEF(gamemode)
 							message_admins("[key_name_admin(usr)] set points of [track] track to [set_pts].")
 							log_admin_private("[key_name(usr)] set points of [track] track to [set_pts].")
 						if("next_event")
-							message_admins("[key_name_admin(usr)] invocó el siguiente evento para la pista [track].")
+							message_admins("[key_name_admin(usr)] invoco el siguiente evento para la pista [track].")
 							log_admin_private("[key_name(usr)] invoked next event for [track] track.")
 							event_track_points[track] = point_thresholds[track]
 							if(current_storyteller)

@@ -11,8 +11,8 @@
 	antag_flags = FLAG_ANTAG_CAP_IGNORE
 	confess_lines = list(
 		"¡¡¡LIBERTAD!!!",
-		"¡NO VIVIRÉ EN TUS MUROS!",
-		"¡NO SEGUIRÉ TUS REGLAS!",
+		"¡NO VIVIRE EN TUS MUROS!",
+		"¡NO SEGUIRE TUS REGLAS!",
 	)
 
 	innate_traits = list(

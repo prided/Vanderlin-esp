@@ -57,7 +57,7 @@
 
 /obj/structure/ship_wheel/attack_hand(mob/user)
 	if(!controlled_ship)
-		to_chat(user, span_warning("¡Esta rueda no está conectada a un barco!"))
+		to_chat(user, span_warning("¡Esta rueda no esta conectada a un barco!"))
 		return
 
 	interact(user)

@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/churn_wealthy
 	name = "Churn Wealthy"
-	desc = "Empoderar a los débiles a menudo implica destruir a los fuertes."
+	desc = "Empoderar a los debiles a menudo implica destruir a los fuertes."
 	button_icon_state = "churnwealthy"
 	sound = 'sound/magic/heal.ogg'
 	charge_sound = 'sound/magic/holycharging.ogg'
@@ -73,7 +73,7 @@
 		return
 	if(totalvalue >= 501)
 		cast_on.visible_message(span_danger("[cast_on] is smited with holy light!"), span_userdanger("I feel the weight of my wealth rend my soul apart!"))
-		owner.say("¡Tu transacción final! ¡¡El Dios-Libre reprende!!")
+		owner.say("¡Tu transaccion final! ¡¡El Dios-Libre reprende!!")
 		cast_on.Stun(60)
 		cast_on.adjustFireLoss(120)
 		cast_on.adjust_divine_fire_stacks(9)

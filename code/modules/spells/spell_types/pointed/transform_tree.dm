@@ -44,15 +44,15 @@
 
 	var/turf/below = GET_TURF_BELOW(get_turf(target))
 	if(below && istype(below, /turf/open/openspace))
-		to_chat(H, span_warning("¡Debes apuntar a la base del árbol!"))
+		to_chat(H, span_warning("¡Debes apuntar a la base del arbol!"))
 		return
 
 	if(uses <= 0)
-		to_chat(H, span_warning("¡Tu bendición se ha agotado!"))
+		to_chat(H, span_warning("¡Tu bendicion se ha agotado!"))
 		H.remove_spell(src)
 		return
 
-	H.visible_message(span_notice("[H] comienza a cantar para transformar el árbol."), \
+	H.visible_message(span_notice("[H] comienza a cantar para transformar el arbol."), \
 					span_notice("You begin the transformation ritual..."))
 
 	if(!do_after(H, 10 SECONDS, target = target))
@@ -75,9 +75,9 @@
 	if(uses > 0)
 		to_chat(H, span_notice("You transform the tree into a wise tree. [uses] use\s remaining."))
 	else
-		to_chat(H, span_notice("Transformas el árbol en un árbol sabio."))
+		to_chat(H, span_notice("Transformas el arbol en un arbol sabio."))
 	playsound(T, 'sound/ambience/noises/mystical (4).ogg', 50, TRUE)
 
 	if(uses <= 0)
-		to_chat(H, span_warning("La bendición de Dendor se desvanece de ti."))
+		to_chat(H, span_warning("La bendicion de Dendor se desvanece de ti."))
 		H.remove_spell(src)

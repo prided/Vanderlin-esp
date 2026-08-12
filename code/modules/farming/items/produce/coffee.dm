@@ -9,7 +9,7 @@
 	rotprocess = null
 
 /obj/item/reagent_containers/food/snacks/produce/coffeebeans
-	name = "granos de café"
+	name = "granos de cafe"
 	desc = "Freshly extracted coffee beans, with a hard texture. Should be roasted first."
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "coffeebeans"

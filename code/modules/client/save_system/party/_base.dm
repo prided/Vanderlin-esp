@@ -50,7 +50,7 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 				to_chat(inviter, "<span class='warning'>¡No se pudo agregar [invitee.real_name] al grupo!</span>")
 		else
 			to_chat(invitee, "<span class='warning'>The party invitation is no longer valid!</span>")
-			to_chat(inviter, "<span class='warning'>No se puede agregar [invitee.real_name]: ¡la invitación expiró o el grupo cambió!</span>")
+			to_chat(inviter, "<span class='warning'>No se puede agregar [invitee.real_name]: ¡la invitacion expiro o el grupo cambio!</span>")
 	else
 		to_chat(inviter, "<span class='notice'>[invitee.real_name] declined your party invitation.</span>")
 		to_chat(invitee, "<span class='notice'>You declined the party invitation from [inviter.real_name].</span>")
@@ -62,7 +62,7 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 		return null
 
 	if(leader.current_party)
-		to_chat(leader, "<span class='warning'>¡Ya estás en un grupo!</span>")
+		to_chat(leader, "<span class='warning'>¡Ya estas en un grupo!</span>")
 		return null
 
 	var/datum/party/new_party = new /datum/party(leader.ckey, party_name)
@@ -77,7 +77,7 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 		return FALSE
 
 	if(joiner.current_party)
-		to_chat(joiner, "<span class='warning'>¡Ya estás en un grupo!</span>")
+		to_chat(joiner, "<span class='warning'>¡Ya estas en un grupo!</span>")
 		return FALSE
 
 	return target_party.add_member(joiner)
@@ -99,7 +99,7 @@ GLOBAL_LIST_EMPTY(pending_party_invites) // Format: invitee_ckey = list(party, i
 		return
 
 	if(src.current_party)
-		to_chat(src, "<span class='warning'>¡Ya estás en un grupo!</span>")
+		to_chat(src, "<span class='warning'>¡Ya estas en un grupo!</span>")
 		return
 
 	var/party_name = browser_input_text(src, "Enter party name", "Create Party", max_length = MAX_CHARTER_LEN)

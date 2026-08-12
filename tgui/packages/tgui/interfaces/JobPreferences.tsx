@@ -108,7 +108,7 @@ export const JobPreferences = (props) => {
 
   if (race_banned) {
     return (
-      <Window width={500} height={200} title="Selección de clase">
+      <Window width={500} height={200} title="Seleccion de clase">
         <Window.Content>
           <Section>
             <Box color="bad" bold>
@@ -121,12 +121,12 @@ export const JobPreferences = (props) => {
   }
 
   return (
-    <Window width={950} height={700} title="Selección de clase">
+    <Window width={950} height={700} title="Seleccion de clase">
       <Window.Content scrollable>
         <Section>
           <Button content={`If Role Unavailable: ${jobless_role}`} onClick={() => act('toggle_jobless')} />
           <Button content="Reiniciar" onClick={() => act('reset')} ml={1} />
-          <Button content="Abrir configuración de roles" onClick={() => act('open_role_settings')} ml={1} />
+          <Button content="Abrir configuracion de roles" onClick={() => act('open_role_settings')} ml={1} />
           {last_class && (
             <Button content={`Play as ${last_class} again`} onClick={() => act('play_last_class')} ml={1} />
           )}
@@ -177,7 +177,7 @@ export const JobPreferences = (props) => {
             <Table>
               <Table.Row header>
                 <Table.Cell width="45%">Trabajo</Table.Cell>
-                <Table.Cell width="30%">Información</Table.Cell>
+                <Table.Cell width="30%">Informacion</Table.Cell>
                 <Table.Cell width="25%">Prioridad</Table.Cell>
               </Table.Row>
 
@@ -185,7 +185,7 @@ export const JobPreferences = (props) => {
                 <Table.Row>
                   <Table.Cell colSpan={3}>
                     <Box color="label" italic>
-                      Ningún trabajo coincide \"{searchText}"
+                      Ningun trabajo coincide \"{searchText}"
                     </Box>
                   </Table.Cell>
                 </Table.Row>
@@ -277,7 +277,7 @@ export const JobPreferences = (props) => {
                               <Button
                                 compact
                                 selected={activeExtraTab === 'titles'}
-                                content="Títulos alternativos"
+                                content="Titulos alternativos"
                                 onClick={() => setActiveExtraTab('titles')}
                               />
                             )}

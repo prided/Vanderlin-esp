@@ -540,7 +540,7 @@
 		return
 
 	if(damage >= high_threshold)
-		. += span_danger("[src] está gravemente dañado, descolorido y visiblemente luchando.")
+		. += span_danger("[src] esta gravemente dañado, descolorido y visiblemente luchando.")
 	else if(damage >= medium_threshold)
 		. += span_warning("[src] shows significant trauma, deep bruising and structural damage are visible.")
 	else if(damage >= low_threshold)

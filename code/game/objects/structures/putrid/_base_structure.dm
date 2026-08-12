@@ -1,6 +1,6 @@
 /obj/structure/meatvine
 	name = "meat clump"
-	desc = "¡¿Qué es eso?!"
+	desc = "¡¿Que es eso?!"
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "tile_1"
 	anchored = TRUE

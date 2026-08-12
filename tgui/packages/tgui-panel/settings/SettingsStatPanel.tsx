@@ -13,7 +13,7 @@ import { useSettings } from './use-settings';
 const tabViews = ['default', 'classic', 'scrollable'];
 
 function LinkedToChat() {
-  return <NoticeBox color="bad">¡Desvincular el panel de estadísticas del chat!</NoticeBox>;
+  return <NoticeBox color="bad">¡Desvincular el panel de estadisticas del chat!</NoticeBox>;
 }
 
 export function SettingsStatPanel(props) {

@@ -3,7 +3,7 @@
 	icon_state = "rogue"
 
 /area/oob
-	name = "Fuera de límites"
+	name = "Fuera de limites"
 
 /area/indoors
 	name = "indoors rt"
@@ -329,7 +329,7 @@
 	background_track_night = null
 
 /area/under/lake
-	name = "lago subterráneo"
+	name = "lago subterraneo"
 	icon_state = "lake"
 	droning_index = DRONING_LAKE
 	ambient_index = AMBIENCE_CAVE
@@ -410,7 +410,7 @@
 			return
 
 	if(length(prayer) <= 15)
-		to_chat(damned, span_danger("Mi oración fue un poco corta..."))
+		to_chat(damned, span_danger("Mi oracion fue un poco corta..."))
 		return
 
 	if(findtext(prayer, damned.patron.name))

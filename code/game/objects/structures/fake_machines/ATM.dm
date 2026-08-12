@@ -61,7 +61,7 @@
 		record_round_statistic(STATS_MAMMONS_WITHDRAWN, coin_amt * mod)
 		budget2change(coin_amt*mod, user_mob, selection)
 	else
-		to_chat(user_mob, "<span class='warning'>La máquina me muerde el dedo.</span>")
+		to_chat(user_mob, "<span class='warning'>La maquina me muerde el dedo.</span>")
 		icon_state = "atm-b"
 		user_mob.flash_fullscreen("redflash3")
 		playsound(user_mob, 'sound/combat/hits/bladed/genstab (1).ogg', 100, FALSE, -1)

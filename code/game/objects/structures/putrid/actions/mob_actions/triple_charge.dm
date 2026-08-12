@@ -1,6 +1,6 @@
 /datum/action/cooldown/meatvine/personal/triple_charge
 	name = "Triple Charge Attack"
-	desc = "Carga tres veces en rápida sucesión en un lugar, abrumando a tu presa."
+	desc = "Carga tres veces en rapida sucesion en un lugar, abrumando a tu presa."
 	button_icon_state = "ravager_charge"
 	cooldown_time = 30 SECONDS
 	personal_resource_cost = 35

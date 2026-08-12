@@ -199,7 +199,7 @@ GLOBAL_LIST_EMPTY(voice_names)
 	if(!schizo_mob)
 		return
 	if(schizo_mob == mob)
-		to_chat(src, span_warning("¡No puedo responder a mi propia meditación!"))
+		to_chat(src, span_warning("¡No puedo responder a mi propia meditacion!"))
 		return
 	if(schizo.answers[key] && !ask_again)
 		to_chat(src, span_warning("I have already answered this meditation!"))

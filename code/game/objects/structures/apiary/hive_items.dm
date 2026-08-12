@@ -31,7 +31,7 @@
 		A.disease = null
 		A.disease_severity = 0
 		A.treatment_progress = 0
-		to_chat(user, span_notice("¡Las abejas parecen estar recuperándose!"))
+		to_chat(user, span_notice("¡Las abejas parecen estar recuperandose!"))
 	else
 		to_chat(user, span_notice("The treatment seems to be having some effect."))
 
@@ -49,7 +49,7 @@
 
 /obj/item/bee_treatment/miticide
 	name = "bee miticide"
-	desc = "Un tratamiento para los ácaros varroa que infestan las colonias de abejas."
+	desc = "Un tratamiento para los acaros varroa que infestan las colonias de abejas."
 	treatment_type = "Varroa Mites"
 	treatment_strength = 40
 
@@ -146,12 +146,12 @@
 		to_chat(user, span_notice("Las abejas parecen estar sanas."))
 
 	if(A.bee_count + A.outside_bees == 0)
-		to_chat(user, span_warning("¡La colmena está vacía!"))
+		to_chat(user, span_warning("¡La colmena esta vacia!"))
 	else if(A.bee_count + A.outside_bees < 5)
 		to_chat(user, span_warning("La colonia es muy pequeña."))
 	else if(A.bee_count + A.outside_bees < 15)
 		to_chat(user, span_notice("La colonia es de tamaño moderado."))
 	else
-		to_chat(user, span_notice("¡La colonia está prosperando con muchas abejas!"))
+		to_chat(user, span_notice("¡La colonia esta prosperando con muchas abejas!"))
 
 	return ITEM_INTERACT_SUCCESS

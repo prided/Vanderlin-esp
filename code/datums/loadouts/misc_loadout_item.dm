@@ -41,7 +41,7 @@
 	triumph_cost_permanent = 0
 
 /datum/loadout_item/soap
-	name = "Barra de Jabón"
+	name = "Barra de Jabon"
 	item_path = /obj/item/soap
 	ui_category = "Miscellaneous"
 

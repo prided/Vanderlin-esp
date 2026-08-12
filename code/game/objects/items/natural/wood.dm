@@ -202,7 +202,7 @@
 
 /obj/item/grown/log/tree/stake
 	name = "stake"
-	desc = "Un trozo de madera afilado, fantástico para perforar."
+	desc = "Un trozo de madera afilado, fantastico para perforar."
 	icon_state = "stake"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'

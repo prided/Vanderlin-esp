@@ -14,7 +14,7 @@
 	return ..()
 
 /obj/item/mana_battery
-	name = "batería de maná genérica"
+	name = "bateria de mana generica"
 	has_initial_mana_pool = TRUE
 	var/max_allowed_transfer_distance = MANA_BATTERY_MAX_TRANSFER_DISTANCE
 
@@ -58,7 +58,7 @@
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	if(!user.is_holding(src))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-	var/mana_to_send = input(user, "How much mana do you want to send to the battery? Max Capacity: [mana_pool.maximum_mana_capacity]", "Enviar maná") as num
+	var/mana_to_send = input(user, "How much mana do you want to send to the battery? Max Capacity: [mana_pool.maximum_mana_capacity]", "Enviar mana") as num
 	mana_to_send = CLAMP(mana_to_send, mana_pool.maximum_mana_capacity, 0)
 	if(!mana_to_send || QDELETED(user) || QDELETED(src) || !user.is_holding(src))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
@@ -105,7 +105,7 @@
 
 	new /obj/item/mana_battery/mana_crystal/small (get_turf(src))
 	new /obj/item/mana_battery/mana_crystal/small (get_turf(src))
-	visible_message(span_notice("¡El maná fluye libremente hacia los cristales recién creados!"))
+	visible_message(span_notice("¡El mana fluye libremente hacia los cristales recien creados!"))
 	qdel(src)
 	return ITEM_INTERACT_SUCCESS
 

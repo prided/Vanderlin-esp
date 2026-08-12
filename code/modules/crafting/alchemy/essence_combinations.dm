@@ -46,7 +46,7 @@
 	output_amount = 3
 
 /datum/essence_combination/energia
-	name = "Esencia de energía"
+	name = "Esencia de energia"
 	inputs = list(
 		/datum/thaumaturgical_essence/fire = 2,
 		/datum/thaumaturgical_essence/chaos = 2,
@@ -55,7 +55,7 @@
 	output_amount = 3
 
 /datum/essence_combination/void
-	name = "Esencia del Vacío"
+	name = "Esencia del Vacio"
 	inputs = list(
 		/datum/thaumaturgical_essence/chaos = 2,
 		/datum/thaumaturgical_essence/earth = 2,
@@ -92,7 +92,7 @@
 
 // Tier 2 combinations (First Compound -> Second Compound)
 /datum/essence_combination/magic
-	name = "Esencia mágica"
+	name = "Esencia magica"
 	inputs = list(
 		/datum/thaumaturgical_essence/energia = 2,
 		/datum/thaumaturgical_essence/void = 2,

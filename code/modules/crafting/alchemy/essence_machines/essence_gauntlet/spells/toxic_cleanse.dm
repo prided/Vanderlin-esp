@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/toxic_cleanse
-	name = "Limpieza tóxica"
+	name = "Limpieza toxica"
 	desc = "Completely purges an area of all toxic substances and poisons."
 	button_icon_state = "detect_poison"
 	cast_range = 3
@@ -20,7 +20,7 @@
 
 /atom/movable/screen/alert/status_effect/toxin_immunity
 	name = "Toxin Immunity"
-	desc = "Estás protegido de todas las toxinas y venenos."
+	desc = "Estas protegido de todas las toxinas y venenos."
 	icon_state = "buff"
 
 /datum/status_effect/buff/toxin_immunity

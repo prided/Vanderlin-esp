@@ -25,7 +25,7 @@
 /datum/status_effect/debuff/addiction/greedy
 
 /atom/movable/screen/alert/status_effect/debuff/addiction
-	name = "Adicción"
+	name = "Adiccion"
 	desc = ""
 	icon_state = "debuff"
 
@@ -73,7 +73,7 @@
 		if(current_mammons >= required_mammons)
 			to_chat(H, span_blue("Estoy bastante contento con la cantidad de mamones que tengo..."))
 		else
-			to_chat(H, span_boldwarning("Necesito más mamones, lo que tengo no es suficiente..."))
+			to_chat(H, span_boldwarning("Necesito mas mamones, lo que tengo no es suficiente..."))
 		last_checked_mammons = current_mammons
 
 	var/new_mammon_amount = get_mammons_in_atom(H)
@@ -326,7 +326,7 @@
 				to_chat(H, span_warning("The pain is gone..."))
 			if(MASO_THRESHOLD_TWO)
 				if(ascending)
-					to_chat(H, span_blue("¡Sí, más dolor!"))
+					to_chat(H, span_blue("¡Si, mas dolor!"))
 				else
 					to_chat(H, span_warning("¡No, mi dolor!"))
 			if(MASO_THRESHOLD_THREE)
@@ -352,7 +352,7 @@
 
 // Chronic Pain Vices
 /datum/quirk/vice/chronic_arthritis
-	name = "Artritis crónica"
+	name = "Artritis cronica"
 	desc = "Your joints ache constantly, causing periodic pain flares and reduced mobility."
 	point_value = 3
 
@@ -376,7 +376,7 @@
 	return ..()
 
 /datum/quirk/vice/chronic_back_pain
-	name = "Dolor de espalda crónico"
+	name = "Dolor de espalda cronico"
 	desc = "Years of wear and tear have left you with persistent lower back pain that affects your mobility."
 	point_value = 3
 

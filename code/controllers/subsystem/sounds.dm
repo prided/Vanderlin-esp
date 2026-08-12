@@ -41,7 +41,7 @@ SUBSYSTEM_DEF(sounds)
 	find_all_available_sounds()
 
 	if(!(RUST_G))
-		to_chat(world, span_boldnotice("Subsistema de sonidos: No se detectó Rust_g."))
+		to_chat(world, span_boldnotice("Subsistema de sonidos: No se detecto Rust_g."))
 		return ..()
 
 	// Precache ambience sounds

@@ -140,7 +140,7 @@
 	return ..()
 
 /datum/coven_power/quietus/scorpions_touch
-	name = "El toque del escorpión"
+	name = "El toque del escorpion"
 	desc = "Create a powerful venom to apply to your enemies."
 
 	level = 2
@@ -231,7 +231,7 @@
 		lastattacker.adjust_stamina(-80)
 		lastattacker.adjust_fire_stacks(6)
 		lastattacker.adjustFireLoss(10)
-		to_chat(owner, "Envías tu maldición sobre [lastattacker], la última criatura que atacaste.")
+		to_chat(owner, "Envias tu maldicion sobre [lastattacker], la ultima criatura que atacaste.")
 	else
 		to_chat(owner, "You don't seem to have last attacked soul earlier...")
 		return

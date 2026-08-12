@@ -33,7 +33,7 @@
 	if(!user.client)
 		return
 	var/datum/mana_pool/mana_pylon/pool = mana_pool
-	var/new_threshold = input(user, "Establece la reserva mínima de maná para este pilón (actual: [pool.transfer_threshold]):", "Pylon Threshold", pool.transfer_threshold) as num|null
+	var/new_threshold = input(user, "Establece la reserva minima de mana para este pilon (actual: [pool.transfer_threshold]):", "Pylon Threshold", pool.transfer_threshold) as num|null
 	if(isnull(new_threshold))
 		return
 	pool.transfer_threshold = max(0, new_threshold)
@@ -139,7 +139,7 @@
 	if(!HAS_TRAIT(user, TRAIT_PYLON_RIDER))
 		return
 	if(get_dist(user, src) > 1)
-		to_chat(user, span_warning("Estás demasiado lejos del pilón."))
+		to_chat(user, span_warning("Estas demasiado lejos del pilon."))
 		return
 	if(mana_pool.amount < 10)
 		to_chat(user, span_warning("The pylon doesn't have enough mana to carry you."))

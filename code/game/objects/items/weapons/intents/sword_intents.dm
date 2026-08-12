@@ -205,9 +205,9 @@
 	misscost = 14
 
 /datum/intent/katana/precision_cut
-	name = "corte de precisión"
+	name = "corte de precision"
 	icon_state = "incut"
-	attack_verb = list("cortes de precisión", "clean-slashes")
+	attack_verb = list("cortes de precision", "clean-slashes")
 	animname = "cut"
 	blade_class = BCLASS_CUT
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')

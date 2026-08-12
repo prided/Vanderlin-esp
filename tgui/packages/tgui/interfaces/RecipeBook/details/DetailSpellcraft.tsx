@@ -44,7 +44,7 @@ const ContributionTable = ({
             />
             {c.holder && (
               <span style={{ display: 'block', fontSize: '10px', fontWeight: 'normal', fontStyle: 'italic', opacity: 0.7 }}>
-                Estadísticas del objeto
+                Estadisticas del objeto
               </span>
             )}
           </td>
@@ -77,7 +77,7 @@ export const DetailSpellcraft = ({ r, lookup, pickerMap, allRecipes, essenceInde
 
     {!!r.techniques?.length && (
       <>
-        <SectionHead>Técnicas</SectionHead>
+        <SectionHead>Tecnicas</SectionHead>
         <ContributionTable
           rows={r.techniques!}
           r={r}

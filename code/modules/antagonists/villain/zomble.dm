@@ -265,7 +265,7 @@
 
 /mob/living/carbon/human/proc/zombie_seek()
 	set name = "Seek Brains"
-	set category = "RolÚnico.Zizo"
+	set category = "RolUnico.Zizo"
 
 	if(!IS_DEADITE(src))
 		return FALSE
@@ -303,7 +303,7 @@
 		return
 	if(stat >= DEAD) //do shit the natural way i guess
 		return
-	to_chat(src, "<span class='danger'>Me siento horrible... REALMENTE horrible después de eso...</span>")
+	to_chat(src, "<span class='danger'>Me siento horrible... REALMENTE horrible despues de eso...</span>")
 	if(get_blood_volume())
 		MOBTIMER_SET(src, MT_PUKE)
 		vomit(1, blood = TRUE, stun = FALSE)

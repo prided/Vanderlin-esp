@@ -25,7 +25,7 @@
 /// Handles deactivation of the xeno evasion ability, mainly unregistering the signal and giving a balloon alert
 /datum/action/cooldown/meatvine/personal/evade/proc/evasion_deactivate()
 	evade_active = FALSE
-	owner.balloon_alert(owner, "la evasión terminó")
+	owner.balloon_alert(owner, "la evasion termino")
 	UnregisterSignal(owner, COMSIG_PROJECTILE_ON_HIT)
 	REMOVE_TRAIT(owner, TRAIT_EVASIVE, INNATE_TRAIT)
 

@@ -63,7 +63,7 @@
 	node_purity_max = 80
 
 /datum/chimeric_table/lycan
-	name = "licántropo"
+	name = "licantropo"
 	compatible_blood_types = list(
 		/datum/blood_type/lycan,
 	)

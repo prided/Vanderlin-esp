@@ -1,7 +1,7 @@
 /client/proc/manipulate_organs(mob/living/carbon/C as anything in GLOB.carbon_list)
-	set name = "Manipular órganos"
+	set name = "Manipular organos"
 	set category = "Debug"
-	var/operation = input("Select organ operation.", "Manipulación de órganos", "cancel") as null|anything in list("add organ", "drop organ", "remove organ", "cancel")
+	var/operation = input("Select organ operation.", "Manipulacion de organos", "cancel") as null|anything in list("add organ", "drop organ", "remove organ", "cancel")
 	if (!operation)
 		return
 
@@ -12,7 +12,7 @@
 				var/dat = replacetext("[path]", "/obj/item/organ/", ":")
 				organs[dat] = path
 
-			var/obj/item/organ/organ = input("Select organ type:", "Manipulación de órganos", null) as null|anything in organs
+			var/obj/item/organ/organ = input("Select organ type:", "Manipulacion de organos", null) as null|anything in organs
 			if(!organ)
 				return
 			organ = organs[organ]
@@ -25,7 +25,7 @@
 			for(var/obj/item/organ/I as anything in C.internal_organs)
 				organs["[I.name] ([I.type])"] = I
 
-			var/obj/item/organ = input("Seleccione órgano/implante:", "Manipulación de órganos", null) as null|anything in organs
+			var/obj/item/organ = input("Seleccione organo/implante:", "Manipulacion de organos", null) as null|anything in organs
 			if(!organ)
 				return
 			organ = organs[organ]

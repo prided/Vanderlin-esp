@@ -439,11 +439,11 @@
 					found_name = nm
 					break
 			if(!found_name)
-				say("No se encontraron artículos en su inventario para crear stock.")
+				say("No se encontraron articulos en su inventario para crear stock.")
 				return
 			for(var/datum/stock/existing in SStreasury.stockpile_datums)
 				if(existing.item_type == item_path)
-					say("Ya existe stock para este tipo de artículo.")
+					say("Ya existe stock para este tipo de articulo.")
 					return
 			var/datum/stock/stockpile/custom/new_stock = new /datum/stock/stockpile/custom(item_path, usr.real_name)
 			SStreasury.stockpile_datums += new_stock

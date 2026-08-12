@@ -1,6 +1,6 @@
 /datum/enchantment/divine_link
 	enchantment_name = "Enlace Divino"
-	examine_text = "Puedes sentir a los Diez más cerca que nunca."
+	examine_text = "Puedes sentir a los Diez mas cerca que nunca."
 	enchantment_color = "#b6b6b6"
 	essence_recipe = list(
 		/datum/thaumaturgical_essence/life = 50,

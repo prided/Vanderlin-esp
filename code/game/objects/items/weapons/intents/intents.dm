@@ -1,5 +1,5 @@
 /datum/intent
-	var/name = "intención"
+	var/name = "intencion"
 	var/desc = ""
 //	icon = 'icons/mob/roguehud.dmi'		so you can find the icons
 	var/icon_state = "instrike"

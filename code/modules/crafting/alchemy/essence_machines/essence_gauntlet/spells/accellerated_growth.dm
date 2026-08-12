@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/growth_acceleration
-	name = "Aceleración del crecimiento"
+	name = "Aceleracion del crecimiento"
 	desc = "Dramatically speeds up natural growth processes."
 	button_icon_state = "great_shelter"
 	cast_range = 2

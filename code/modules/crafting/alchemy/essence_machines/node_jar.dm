@@ -68,7 +68,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(locate(/obj/structure/essence_node) in deploy_turf)
-		to_chat(user, span_warning("Ya hay un nodo de esencia aquí."))
+		to_chat(user, span_warning("Ya hay un nodo de esencia aqui."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!do_after(user, 3 SECONDS, deploy_turf))

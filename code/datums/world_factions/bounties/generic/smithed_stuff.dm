@@ -9,7 +9,7 @@
 	required_reputation_tier = 1
 
 /datum/bounty/generic/fine_ring
-	name = "Comisión Noble"
+	name = "Comision Noble"
 	desc = "A noble house wants a fine ring for an upcoming wedding."
 	required_path = /obj/item/clothing/ring/band/gold
 	required_count = 2

@@ -132,7 +132,7 @@
 				to_chat(commander(), span_warning("That's not an item!"))
 				return TRUE
 			gnome.item_filters += object.type
-			gnome.visible_message(span_notice("[gnome] ahora priorizará los elementos [object.name]."))
+			gnome.visible_message(span_notice("[gnome] ahora priorizara los elementos [object.name]."))
 
 		if(GNOME_WP_CAULDRON)
 			if(!istype(object, /obj/machinery/light/fueled/cauldron))
@@ -203,7 +203,7 @@
 
 /datum/gnome_command_panel/proc/cmd_clear_filter()
 	gnome.item_filters = list()
-	gnome.visible_message(span_notice("[gnome] ahora moverá cualquier elemento."))
+	gnome.visible_message(span_notice("[gnome] ahora movera cualquier elemento."))
 	refresh()
 
 /datum/gnome_command_panel/proc/cmd_toggle_farming()
@@ -265,9 +265,9 @@
 			to_chat(commander(), span_warning("Set a source location first!"))
 			return
 		if(!c.blackboard[BB_GNOME_TARGET_SPLITTER] && !c.blackboard[BB_GNOME_TARGET_EXTRACTOR])
-			to_chat(commander(), span_warning("¡Configure una máquina primero!"))
+			to_chat(commander(), span_warning("¡Configure una maquina primero!"))
 			return
-		gnome.visible_message(span_notice("[gnome] comienza a alimentar la máquina."))
+		gnome.visible_message(span_notice("[gnome] comienza a alimentar la maquina."))
 	refresh()
 
 /datum/gnome_command_panel/proc/cmd_set_priority()

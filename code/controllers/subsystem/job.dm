@@ -34,7 +34,7 @@ SUBSYSTEM_DEF(job)
 	var/list/all_jobs = sortList(subtypesof(/datum/job), GLOBAL_PROC_REF(cmp_typepaths_asc))
 	if(!length(all_jobs))
 		to_chat(world, span_boldannounce("Error setting up jobs, no job datums found."))
-		to_chat(world, span_boldannounce("Deberías empezar a entrar en pánico."))
+		to_chat(world, span_boldannounce("Deberias empezar a entrar en panico."))
 		return FALSE
 
 	for(var/job_type in all_jobs)

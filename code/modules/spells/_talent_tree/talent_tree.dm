@@ -1,6 +1,6 @@
 /datum/talent_tree
-	var/name = "Árbol de talentos"
-	var/desc = "Un árbol de talentos"
+	var/name = "Arbol de talentos"
+	var/desc = "Un arbol de talentos"
 	var/list/tree_nodes = list() // List of talent node types that belong to this tree
 	var/list/unlocked_talents = list()
 	var/talent_points_available = 0

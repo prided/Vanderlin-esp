@@ -1,6 +1,6 @@
 //Potions
 /datum/reagent/medicine/healthpot
-	name = "Poción de salud"
+	name = "Pocion de salud"
 	description = "Regenera gradualmente todo tipo de daño."
 	reagent_state = LIQUID
 	color = "#ff0000"
@@ -39,8 +39,8 @@
 	. = ..()
 
 /datum/reagent/medicine/stronghealth
-	name = "Poción de salud fuerte"
-	description = "Regenera rápidamente todo tipo de daño."
+	name = "Pocion de salud fuerte"
+	description = "Regenera rapidamente todo tipo de daño."
 	color = "#820000be"
 	taste_description = "rich lifeblood"
 	scent_description = "metal"
@@ -103,7 +103,7 @@
 				M.update_damage_overlays()
 
 /datum/reagent/medicine/gender_potion
-	name = "Poción de género"
+	name = "Pocion de genero"
 	description = "Change the user's gender."
 	reagent_state = LIQUID
 	color = "#FF33FF"
@@ -123,22 +123,22 @@
 	if(M.gender == MALE)
 		old_gender = MALE
 		M.gender = FEMALE
-		M.visible_message(span_boldnotice("[M] suddenly looks more feminine!"), span_boldwarning("¡De repente te sientes más femenina!"))
+		M.visible_message(span_boldnotice("[M] suddenly looks more feminine!"), span_boldwarning("¡De repente te sientes mas femenina!"))
 	else
 		old_gender = FEMALE
 		M.gender = MALE
-		M.visible_message(span_boldnotice("¡[M] de repente parece más masculino!"), span_boldwarning("¡De repente te sientes más masculino!"))
+		M.visible_message(span_boldnotice("¡[M] de repente parece mas masculino!"), span_boldwarning("¡De repente te sientes mas masculino!"))
 	M.dna?.species?.on_gender_update(M, old_gender)
 	M.regenerate_icons()
 	..()
 
 //Someone please remember to change this to actually do mana at some point?
 /datum/reagent/medicine/manapot
-	name = "Poción de maná"
-	description = "Regenera energía gradualmente."
+	name = "Pocion de mana"
+	description = "Regenera energia gradualmente."
 	reagent_state = LIQUID
 	color = "#000042"
-	taste_description = "dulce maná"
+	taste_description = "dulce mana"
 	scent_description = "aire seco"
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
@@ -157,7 +157,7 @@
 
 /datum/reagent/medicine/strongmana
 	name = "Strong Mana Potion"
-	description = "Regenera rápidamente la energía."
+	description = "Regenera rapidamente la energia."
 	color = "#0000ff"
 	taste_description = "raw power"
 	scent_description = "aire seco"
@@ -170,11 +170,11 @@
 
 
 /datum/reagent/medicine/stampot
-	name = "Poción de resistencia"
+	name = "Pocion de resistencia"
 	description = "Regenera gradualmente la resistencia."
 	reagent_state = LIQUID
 	color = "#129c00"
-	taste_description = "té dulce"
+	taste_description = "te dulce"
 	scent_description = "grass"
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
@@ -186,7 +186,7 @@
 	..()
 
 /datum/reagent/medicine/strongstam
-	name = "Poción de resistencia fuerte"
+	name = "Pocion de resistencia fuerte"
 	description = "Rapidly regenerates stamina."
 	color = "#13df00"
 	taste_description = "sparkly static"
@@ -296,7 +296,7 @@
 /datum/reagent/buff/constitution
 	name = "Constitution"
 	color = "#130604"
-	taste_description = "bilis ácida"
+	taste_description = "bilis acida"
 	scent_description = "petrichor"
 
 /datum/reagent/buff/constitution/on_mob_life(mob/living/carbon/M, efficiency)
@@ -408,7 +408,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	return ..()
 
 /datum/reagent/organpoison
-	name = "Veneno para órganos"
+	name = "Veneno para organos"
 	description = ""
 	reagent_state = LIQUID
 	color = "#2c1818"
@@ -438,7 +438,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 					to_chat(graggar_lover, span_bloody("Carne...hueso..."))
 				if(50 to 59)
 					if(prob(30))
-						to_chat(graggar_lover, span_bloody("Más... Más..."))
+						to_chat(graggar_lover, span_bloody("Mas... Mas..."))
 					var/obj/item/bodypart/bp = graggar_lover.get_bodypart()
 					bp?.add_pain(SHOCK_STAGE_1 * efficiency)
 					bp?.bodypart_attacked_by(BCLASS_BLUNT, 12 * efficiency, null, BODY_ZONE_CHEST, crit_message = FALSE, modifiers = list(CRIT_MOD_CHANCE = -10))
@@ -475,14 +475,14 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 		return
 
 	if(answer != CHOICE_YES)
-		to_chat(src, span_bloody("Rechazas la oferta de poder de Graggar. La Bestia retrocede, tu estómago gruñe..."))
+		to_chat(src, span_bloody("Rechazas la oferta de poder de Graggar. La Bestia retrocede, tu estomago gruñe..."))
 		return
 
 	set_patron(/datum/patron/inhumen/graggar)
 	to_chat(src, SPAN_GOD_GRAGGAR("The Beast's teeth close around your heart! Devour! Conquer! Graggar!"))
 
 /datum/reagent/organpoison/human
-	name = "Humen Veneno para órganos"
+	name = "Humen Veneno para organos"
 	cannibalism_pool = SPECIES_CANNIBAL_MEN
 
 /datum/reagent/organpoison/kobold
@@ -560,7 +560,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	description = ""
 	reagent_state = LIQUID
 	color = "#c8c9e9"
-	taste_description = "agujas frías"
+	taste_description = "agujas frias"
 	scent_description = "polvo helado"
 	metabolization_rate = REAGENTS_SLOW_METABOLISM
 
@@ -588,13 +588,13 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 			if(volume >= 25)
 				M.remove_reagent(/datum/reagent/drowsbane, 5 * efficiency) //Incase you eat like, five drowsbane clusters to get infinite healing.
 			if(prob(10))
-				to_chat(M, span_notice("Algo dentro de mí arde, ¡es rejuvenecedor!"))
+				to_chat(M, span_notice("Algo dentro de mi arde, ¡es rejuvenecedor!"))
 		if(isdarkelf(M) || ishalfdrow(M))
 			M.adjustToxLoss(tox * efficiency)
 			M.adjustOxyLoss(oxy * efficiency) //For dark elves this should be lethal if you take 5u or more. Don't eat spicy food. Relatively harmless in lower amounts because it heals itself.
 			if(prob(10))
 				M.adjust_eye_blur(4 SECONDS * efficiency)
-				to_chat(M, span_warning("Mis ojos se llenan de lágrimas..."))
+				to_chat(M, span_warning("Mis ojos se llenan de lagrimas..."))
 				M.emote("cough")
 			if(prob(10))
 				M.emote("gasp")
@@ -606,7 +606,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 			if(volume > 5)
 				if(prob(10))
 					M.adjust_eye_blur(4 SECONDS * efficiency)
-					to_chat(M, span_warning("Mis ojos se llenan de lágrimas..."))
+					to_chat(M, span_warning("Mis ojos se llenan de lagrimas..."))
 					M.emote("cough")
 				if(prob(10))
 					M.emote("gasp")

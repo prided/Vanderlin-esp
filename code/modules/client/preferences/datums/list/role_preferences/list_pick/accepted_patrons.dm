@@ -34,9 +34,9 @@
 	var/chosen = faith_options[result]
 	if(chosen in current)
 		current -= chosen
-		to_chat(user, span_notice("Se eliminó [result] de las religiones aceptadas."))
+		to_chat(user, span_notice("Se elimino [result] de las religiones aceptadas."))
 	else
 		current += chosen
-		to_chat(user, span_notice("Se agregó [result] a las religiones aceptadas."))
+		to_chat(user, span_notice("Se agrego [result] a las religiones aceptadas."))
 
 	prefs.write_preference(/datum/preference/list_type/role_setting/picker/accepted_patrons, current)

@@ -42,7 +42,7 @@
 
 /obj/item/reagent_containers/food/snacks/spiderhoney/honey/poppy
 	name = "miel roja"
-	desc = "Una rica miel roja, todavía utilizada en la medicina tradicional y apreciada por los fieles de Pestra."
+	desc = "Una rica miel roja, todavia utilizada en la medicina tradicional y apreciada por los fieles de Pestra."
 	icon_state = "honey_red"
 	volume = 20
 	tastes = list("dulzura entumecedora" = 1, "un destello de blanco" = 1)

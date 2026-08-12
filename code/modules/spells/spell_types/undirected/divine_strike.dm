@@ -76,7 +76,7 @@
 	if(!istype(M.used_intent, INTENT_HARM))
 		return
 	H.apply_status_effect(/datum/status_effect/debuff/ravox_burden)
-	H.visible_message(span_warning("¡El golpe del puño de [M] hace que [H] se ponga rígido!"), vision_distance = COMBAT_MESSAGE_RANGE)
+	H.visible_message(span_warning("¡El golpe del puño de [M] hace que [H] se ponga rigido!"), vision_distance = COMBAT_MESSAGE_RANGE)
 	qdel(src)
 
 /datum/status_effect/debuff/ravox_burden

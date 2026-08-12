@@ -34,7 +34,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 
 /obj/structure/door/arcyne/bolt/caster/attack_hand_secondary(mob/user, list/modifiers)
 	if(user != caster)
-		to_chat(user, span_warning("¡Una fuerza mágica me impide interactuar con [src]!"))
+		to_chat(user, span_warning("¡Una fuerza magica me impide interactuar con [src]!"))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	return ..()
 
@@ -114,7 +114,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 
 /obj/structure/well/fountain/mana/onbite(mob/living/user)
 	if(mana_pool.amount < 50)
-		to_chat(user, span_warning("[src] está seco."))
+		to_chat(user, span_warning("[src] esta seco."))
 		return TRUE
 	. = ..()
 
@@ -130,11 +130,11 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 	if(istype(I, /obj/item/reagent_containers/glass))
 		var/obj/item/reagent_containers/glass/W = I
 		if(W.reagents.holder_full())
-			to_chat(user, span_warning("[W] está lleno."))
+			to_chat(user, span_warning("[W] esta lleno."))
 			return
 		var/mana_amount = min(round(mana_pool.amount / 25, 1), 40)
 		if(!mana_amount)
-			to_chat(user, span_warning("[src] está seco."))
+			to_chat(user, span_warning("[src] esta seco."))
 			return
 		if(do_after(user, 60, target = src))
 			mana_pool.adjust_mana(-mana_amount * 25)
@@ -145,7 +145,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 			return
 	if(istype(I, /obj/item/grabbing))
 		if(mana_pool.amount < 500)
-			to_chat(user, "No hay suficiente maná líquido para realizar un bautismo.")
+			to_chat(user, "No hay suficiente mana liquido para realizar un bautismo.")
 			return
 		var/atom/movable/grabbed = I:grabbed
 		if(!grabbed.mana_pool)
@@ -182,7 +182,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 
 /obj/structure/leyline
 	name = "inactive leyline"
-	desc = "Una curiosa disposición de piedras."
+	desc = "Una curiosa disposicion de piedras."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "inactiveleyline"
 	var/active = FALSE
@@ -221,7 +221,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 					active = FALSE
 					icon_state = "inactiveleyline"
 					name = "inactive leyline"
-					desc = "Una curiosa disposición de piedras."
+					desc = "Una curiosa disposicion de piedras."
 					last_process = world.time
 
 	else
@@ -251,7 +251,7 @@ GLOBAL_LIST_EMPTY(mana_fountains)
 					active = FALSE
 					icon_state = "inactiveleyline"
 					name = "inactive leyline"
-					desc = "Una curiosa disposición de piedras."
+					desc = "Una curiosa disposicion de piedras."
 					last_process = world.time
 
 /obj/structure/voidstoneobelisk

@@ -20,8 +20,8 @@
 	hydration_req = 0.15
 
 	low_threshold_passed = span_info("My ears begin to resonate with an internal ring sometimes.")
-	now_failing = span_warning("¡No puedo oír nada!")
-	now_fixed = span_info("El ruido lentamente comienza a llenar mis oídos una vez más.")
+	now_failing = span_warning("¡No puedo oir nada!")
+	now_fixed = span_info("El ruido lentamente comienza a llenar mis oidos una vez mas.")
 	low_threshold_cleared = span_info("The ringing in my ears has died down.")
 
 	/// temporary deafness, measured in seconds. While > 0, the person is unable to hear anything.

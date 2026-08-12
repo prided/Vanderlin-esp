@@ -22,7 +22,7 @@
 	else
 		active_item = TRUE
 		ADD_TRAIT(user, TRAIT_ZJUMP, "[REF(i)]")
-		to_chat(user, span_notice("Mis piernas se sienten mucho más fuertes."))
+		to_chat(user, span_notice("Mis piernas se sienten mucho mas fuertes."))
 
 /datum/enchantment/leaping/proc/on_drop(obj/item/i, mob/living/user)
 	if(enchanted_item.loc == user)
@@ -30,4 +30,4 @@
 	if(active_item)
 		active_item = FALSE
 		REMOVE_TRAIT(user, TRAIT_ZJUMP, "[REF(i)]")
-		to_chat(user, span_notice("Me siento mundano una vez más."))
+		to_chat(user, span_notice("Me siento mundano una vez mas."))

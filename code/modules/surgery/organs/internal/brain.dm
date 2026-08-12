@@ -584,7 +584,7 @@
 		qdel(X)
 
 /obj/item/organ/brain/alien
-	name = "cerebro alienígena"
+	name = "cerebro alienigena"
 	desc = ""
 	icon_state = "brain-x"
 

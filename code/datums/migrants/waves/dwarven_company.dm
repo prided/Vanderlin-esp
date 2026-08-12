@@ -1,5 +1,5 @@
 /datum/migrant_role/dwarven_company/captain
-	name = "Capitán enano"
+	name = "Capitan enano"
 	greet_text = "You are the captain of a dwarven's expedition, following the tracks of Matthios's influence you shall lead your party in Malum's name."
 	migrant_job = /datum/job/migrant/dwarven_company/captain
 
@@ -34,7 +34,7 @@
 	)
 
 /datum/job/migrant/dwarven_company/captain
-	title = "Capitán enano"
+	title = "Capitan enano"
 	tutorial = "You are the captain of a dwarven's expedition, following the tracks of Matthios's influence you shall lead your party in Malum's name."
 	outfit = /datum/outfit/dwarven_company/captain
 	exp_types_granted  = list(EXP_TYPE_COMBAT)
@@ -235,7 +235,7 @@
 		backl =	/obj/item/weapon/hammer/sledgehammer
 
 /datum/migrant_wave/dwarven_company
-	name = "Expedición enana"
+	name = "Expedicion enana"
 	max_spawns = 4
 	shared_wave_type = /datum/migrant_wave/dwarven_company
 	downgrade_wave = /datum/migrant_wave/dwarven_company_down
@@ -248,7 +248,7 @@
 	greet_text = "The way to Matthios's tomb is opened. Malum has called for all dwarves bold enough to go in, and we shall answer."
 
 /datum/migrant_wave/dwarven_company_down
-	name = "Expedición enana"
+	name = "Expedicion enana"
 	max_spawns = 4
 	shared_wave_type = /datum/migrant_wave/dwarven_company
 	downgrade_wave = /datum/migrant_wave/dwarven_company_down_one
@@ -261,7 +261,7 @@
 	greet_text = "The way to Matthios's tomb is opened. Malum has called for all dwarves bold enough to go in, and we shall answer."
 
 /datum/migrant_wave/dwarven_company_down_one
-	name = "Expedición enana"
+	name = "Expedicion enana"
 	max_spawns = 4
 	shared_wave_type = /datum/migrant_wave/dwarven_company
 	can_roll = FALSE

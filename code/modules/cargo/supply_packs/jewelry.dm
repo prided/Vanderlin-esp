@@ -35,7 +35,7 @@
 	contains = /obj/item/clothing/face/spectacles/sglasses
 
 /datum/supply_pack/jewelry/gmask
-	name = "Media máscara dorada"
+	name = "Media mascara dorada"
 	cost = 100
 	contains = /obj/item/clothing/face/lordmask
 

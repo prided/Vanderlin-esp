@@ -42,7 +42,7 @@
 
 /obj/item/gun/ballistic/bow/short
 	name = "arco corto"
-	desc = "Como el águila fue asesinada por la flecha alada con su propia pluma, así la mano del mundo es herida por su propia habilidad."
+	desc = "Como el aguila fue asesinada por la flecha alada con su propia pluma, asi la mano del mundo es herida por su propia habilidad."
 	icon_state = "recurve"
 	base_icon_state = "recurve"
 	possible_item_intents = list(/datum/intent/shoot/bow/short, /datum/intent/arc/bow/short, INTENT_GENERIC)

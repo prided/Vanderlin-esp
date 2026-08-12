@@ -23,7 +23,7 @@ export const DetailOrgan = ({
 
     {!!r.healing_items?.length && (
       <>
-        <SectionHead>Artículos curativos</SectionHead>
+        <SectionHead>Articulos curativos</SectionHead>
         {r.healing_items.map((item, i) => (
           <ItemRow key={i} item={item} {...{ allRecipes, essenceIndex, lookup, pickerMap, onNavigate: nav }} />
         ))}

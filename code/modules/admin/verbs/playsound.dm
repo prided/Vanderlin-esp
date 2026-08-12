@@ -20,7 +20,7 @@
 	admin_sound.status = SOUND_STREAM
 	admin_sound.volume = vol
 
-	var/res = tgui_alert(usr, "¿Mostrar el título de esta canción a los jugadores?","Mostrar nombre", list("Yes","No", "Cancel"))
+	var/res = tgui_alert(usr, "¿Mostrar el titulo de esta cancion a los jugadores?","Mostrar nombre", list("Yes","No", "Cancel"))
 	switch(res)
 		if("Yes")
 			to_chat(world, "<span class='boldannounce'>An admin played: [S]</span>")
@@ -152,7 +152,7 @@
 					music_extra_data["start"] = data["start_time"]
 					music_extra_data["end"] = data["end_time"]
 
-					var/res = tgui_alert(usr, "Show the title of and link to this song to the players?\n[title]", "Mostrar título", list("No", "Yes", "Cancel"))
+					var/res = tgui_alert(usr, "Show the title of and link to this song to the players?\n[title]", "Mostrar titulo", list("No", "Yes", "Cancel"))
 					switch(res)
 						if("Yes")
 							to_chat(world, "<span class='boldannounce'>An admin played: [webpage_url]</span>")
@@ -174,7 +174,7 @@
 
 		if(web_sound_url && !findtext(web_sound_url, GLOB.is_http_protocol))
 			to_chat(src, "<span class='boldwarning'>BLOCKED: Content URL not using http(s) protocol</span>")
-			to_chat(src, "<span class='warning'>El proveedor de medios devolvió una URL de contenido que no utiliza el protocolo HTTP o HTTPS</span>")
+			to_chat(src, "<span class='warning'>El proveedor de medios devolvio una URL de contenido que no utiliza el protocolo HTTP o HTTPS</span>")
 			return
 		if(web_sound_url || stop_web_sounds)
 			for(var/mob/M as anything in GLOB.player_list)

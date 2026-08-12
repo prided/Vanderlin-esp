@@ -113,7 +113,7 @@
 	var/friendship_check = SEND_SIGNAL(src, COMSIG_FRIENDSHIP_CHECK_LEVEL, attacker, "friend")
 	if(friendship_check)
 		SEND_SIGNAL(src, COMSIG_EMOTION_STORE, attacker, EMOTION_SAD, "hurt me!", -10)
-		say(pick("Why hurt friend?!", "*llora*", "Amigo... ¿por qué?"))
+		say(pick("Why hurt friend?!", "*llora*", "Amigo... ¿por que?"))
 	else
 		SEND_SIGNAL(src, COMSIG_EMOTION_STORE, attacker, EMOTION_ANGER, "attacked me with [weapon]!", -3)
 		say(pick("*growls angrily*", "Ow! Mean!", "*hisses*"))

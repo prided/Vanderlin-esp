@@ -354,7 +354,7 @@ GLOBAL_LIST_INIT(island_ascents, list())
 		return TRUE
 
 	if(requirements_met < length(ascent_requirements))
-		to_chat(user, span_warning("No puedes ascender todavía."))
+		to_chat(user, span_warning("No puedes ascender todavia."))
 		return FALSE
 
 	return TRUE

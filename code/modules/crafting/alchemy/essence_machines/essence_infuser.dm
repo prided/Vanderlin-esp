@@ -1,6 +1,6 @@
 /obj/machinery/essence/infuser
 	name = "infusor de esencia"
-	desc = "Satura un objeto colocado con esencias alquímicas para transformarlo."
+	desc = "Satura un objeto colocado con esencias alquimicas para transformarlo."
 	icon = 'icons/roguetown/misc/splitter.dmi'
 	icon_state = "splitter"
 	network_priority = 4
@@ -68,7 +68,7 @@
 	var/speed = GLOB.thaumic_research.get_research_bonus(/datum/thaumic_research_node/transmutation)
 	var/adjusted_time = completion_time / speed
 
-	user.visible_message(span_info("[user] comienza la infusión en [infusion_target]."))
+	user.visible_message(span_info("[user] comienza la infusion en [infusion_target]."))
 	update_appearance(UPDATE_OVERLAYS)
 
 	// Spark effect timer loop
@@ -133,7 +133,7 @@
 		opts[r.name] = rpath
 		mapping[rpath] = r
 	if(!opts.len)
-		to_chat(user, span_warning("No hay recetas de infusión disponibles."))
+		to_chat(user, span_warning("No hay recetas de infusion disponibles."))
 		for(var/rpath in mapping)
 			qdel(mapping[rpath])
 		return

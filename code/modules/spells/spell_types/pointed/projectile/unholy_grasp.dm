@@ -96,7 +96,7 @@
 //------------------------
 
 /obj/projectile/magic/cannibalistic_vomit
-	name = "vómito caníbal"
+	name = "vomito canibal"
 	icon_state = "tentacle_end"
 	nodamage = TRUE
 	range = 4 //medium range
@@ -108,7 +108,7 @@
 	if(!isliving(hit_atom))	//if it gets caught or the target can't be cuffed.
 		return
 	var/mob/living/target = hit_atom
-	to_chat(target, span_danger("¡Me duele mucho el estómago!"))
+	to_chat(target, span_danger("¡Me duele mucho el estomago!"))
 	target.emote("gag")
 	target.reagents?.add_reagent(/datum/reagent/organpoison, 2)
 	playsound(target, 'sound/magic/marked.ogg', 50, TRUE)

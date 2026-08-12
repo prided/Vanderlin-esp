@@ -15,7 +15,7 @@
 	..()
 
 	if(usr.client != src.owner || !check_rights(0))
-		message_admins("¡[usr.key] ha intentado anular el panel de administración!")
+		message_admins("¡[usr.key] ha intentado anular el panel de administracion!")
 		log_admin("[key_name_admin(usr)] tried to use the admin panel without authorization.")
 		return
 
@@ -41,7 +41,7 @@
 			return
 
 		if(!SSticker.HasRoundStarted())
-			tgui_alert(usr,"¡El juego aún no ha comenzado!")
+			tgui_alert(usr,"¡El juego aun no ha comenzado!")
 			return
 
 		var/target = locate(href_list["attributes"])
@@ -152,8 +152,8 @@
 			return
 
 		message_admins("<span class='adminnotice'>[key_name_admin(usr)] is considering ending the round.</span>")
-		if(tgui_alert(usr, "This will end the round, are you SURE you want to do this?", "Confirmación", list("Yes", "No")) == "Yes")
-			if(tgui_alert(usr, "Final Confirmation: End the round NOW?", "Confirmación", list("Yes", "No")) == "Yes")
+		if(tgui_alert(usr, "This will end the round, are you SURE you want to do this?", "Confirmacion", list("Yes", "No")) == "Yes")
+			if(tgui_alert(usr, "Final Confirmation: End the round NOW?", "Confirmacion", list("Yes", "No")) == "Yes")
 				message_admins("<span class='adminnotice'>[key_name_admin(usr)] has ended the round.</span>")
 				SSticker.force_ending = 1 //Yeah there we go APC destroyed mission accomplished
 				return
@@ -421,13 +421,13 @@
 		if(!ismob(M))
 			to_chat(usr, "this can only be used on instances of type /mob.")
 
-		var/speech = input("¿Qué dirá [key_name(M)]?", "Force speech", "")// Don't need to sanitize, since it does that in say(), we also trust our admins.
+		var/speech = input("¿Que dira [key_name(M)]?", "Force speech", "")// Don't need to sanitize, since it does that in say(), we also trust our admins.
 		if(!speech)
 			return
 		M.say(speech, forced = "admin speech")
 		speech = sanitize(speech) // Nah, we don't trust them
 		log_admin("[key_name_admin(usr)] forced [key_name(M)] to say: [speech]")
-		message_admins("<span class='adminnotice'>[key_name_admin(usr)] obligó a [key_name_admin(M)] a decir: [speech]</span>")
+		message_admins("<span class='adminnotice'>[key_name_admin(usr)] obligo a [key_name_admin(M)] a decir: [speech]</span>")
 
 	else if(href_list["sendtoprison"])
 		if(!check_rights(R_ADMIN))
@@ -616,10 +616,10 @@
 			else
 				gender_description = "<font color='red'><b>[M.gender]</b></font>"
 
-		to_chat(src.owner, "<b>Información sobre [M.name]:</b> ")
+		to_chat(src.owner, "<b>Informacion sobre [M.name]:</b> ")
 		to_chat(src.owner, "Mob type = [M.type]; Gender = [gender_description] Damage = [health_description]")
 		to_chat(src.owner, "Name = <b>[M.name]</b>; Real_name = [M.real_name]; Mind_name = [M.mind?"[M.mind.name]":""]; Key = <b>[M.key]</b>;")
-		to_chat(src.owner, "Ubicación = [location_description];")
+		to_chat(src.owner, "Ubicacion = [location_description];")
 		to_chat(src.owner, "[special_role_description]")
 		to_chat(src.owner, ADMIN_FULLMONTY_NONAME(M))
 
@@ -634,7 +634,7 @@
 
 		var/quirk_type = text2path(href_list["quirk"])
 		if(!ispath(quirk_type, /datum/quirk))
-			to_chat(usr, "<span class='warning'>Tipo de peculiaridad no válido.</span>")
+			to_chat(usr, "<span class='warning'>Tipo de peculiaridad no valido.</span>")
 			return
 
 		// Check if they already have this quirk
@@ -650,7 +650,7 @@
 		if(length(singleton.customization_options))
 			var/list/options = singleton.return_customization(H.client?.prefs)
 			if(length(options))
-				var/selected = input(usr, "Seleccione [singleton.customization_label]:", "Personalización de peculiaridades") as null|anything in options
+				var/selected = input(usr, "Seleccione [singleton.customization_label]:", "Personalizacion de peculiaridades") as null|anything in options
 				if(selected)
 					custom_value = selected
 				else
@@ -683,7 +683,7 @@
 
 		var/quirk_type = text2path(href_list["quirk"])
 		if(!ispath(quirk_type, /datum/quirk))
-			to_chat(usr, "<span class='warning'>Tipo de peculiaridad no válido.</span>")
+			to_chat(usr, "<span class='warning'>Tipo de peculiaridad no valido.</span>")
 			return
 
 		var/datum/quirk/Q = H.get_quirk(quirk_type)
@@ -696,7 +696,7 @@
 		if(H.remove_quirk(quirk_type))
 			log_admin("[key_name_admin(usr)] removed quirk [quirk_name] from [key_name_admin(H)].")
 			message_admins("[key_name_admin(usr)] removed quirk [quirk_name] from [key_name_admin(H)].")
-			to_chat(usr, "<span class='notice'>Se eliminó la peculiaridad [quirk_name] de [H].</span>.")
+			to_chat(usr, "<span class='notice'>Se elimino la peculiaridad [quirk_name] de [H].</span>.")
 		else
 			to_chat(usr, "<span class='warning'>No se pudo eliminar la peculiaridad de [H].</span>")
 
@@ -726,7 +726,7 @@
 		for(var/datum/job/job in SSjob.joinable_occupations)
 			if(job.title == Add)
 				var/new_slot_count = null
-				new_slot_count = input(usr, "¿Cuántos jebs quieres?", "Add wanted posters", "[new_slot_count]") as num|null
+				new_slot_count = input(usr, "¿Cuantos jebs quieres?", "Add wanted posters", "[new_slot_count]") as num|null
 				if(!new_slot_count)
 					break
 				job.total_positions = new_slot_count
@@ -864,7 +864,7 @@
 	else if(href_list["bulk_change"])
 		var/mob/living/M = locate(href_list["bulk_change"])
 		var/statkey = href_list["stat"]
-		var/change_stat = input(usr, "Aumenta o disminuye esta estadística.", "Bulk Stat Change", 1) as num
+		var/change_stat = input(usr, "Aumenta o disminuye esta estadistica.", "Bulk Stat Change", 1) as num
 		if(!change_stat)
 			return
 		M.change_stat(statkey, change_stat)
@@ -921,7 +921,7 @@
 			return
 
 		if(!SSticker.HasRoundStarted())
-			alert("¡El juego aún no ha comenzado!")
+			alert("¡El juego aun no ha comenzado!")
 			return
 
 		var/mob/M = locate(href_list["traitor"])
@@ -995,7 +995,7 @@
 			alert("The path list you sent is empty.")
 			return
 		if(length(paths) > 5)
-			alert("Seleccione menos tipos de objetos (máximo 5).")
+			alert("Seleccione menos tipos de objetos (maximo 5).")
 			return
 
 		var/list/offset = splittext(href_list["offset"],",")
@@ -1079,7 +1079,7 @@
 			log_admin("[key_name(usr)] created a [english_list(paths)]")
 			for(var/path in paths)
 				if(ispath(path, /mob))
-					message_admins("[key_name_admin(usr)] creó un [english_list(paths)]")
+					message_admins("[key_name_admin(usr)] creo un [english_list(paths)]")
 					break
 		else
 			log_admin("[key_name(usr)] created [number]ea [english_list(paths)]")
@@ -1117,7 +1117,7 @@
 	else if(href_list["viewruntime"])
 		var/datum/error_viewer/error_viewer = locate(href_list["viewruntime"])
 		if(!istype(error_viewer))
-			to_chat(usr, "<span class='warning'>Ese visor de tiempo de ejecución ya no existe.</span>")
+			to_chat(usr, "<span class='warning'>Ese visor de tiempo de ejecucion ya no existe.</span>")
 			return
 
 		if(href_list["viewruntime_backto"])
@@ -1337,7 +1337,7 @@
 		if(answer == "yes")
 			log_query_debug("[usr.key] | Reported a server hang")
 			if(tgui_alert(usr, "Had you just press any admin buttons?", "Query server hang report", list("Yes", "No")) == "Yes")
-				var/response = input(usr,"¿Qué estabas haciendo?","Query server hang report") as null|text
+				var/response = input(usr,"¿Que estabas haciendo?","Query server hang report") as null|text
 				if(response)
 					log_query_debug("[usr.key] | [response]")
 		else if(answer == "no")
@@ -1346,7 +1346,7 @@
 	else if(href_list["rebootworld"])
 		if(!check_rights(R_ADMIN))
 			return
-		var/confirm = tgui_alert(usr, "¿Está seguro de que desea reiniciar el servidor?", "Confirmar reinicio", list("Yes", "No"))
+		var/confirm = tgui_alert(usr, "¿Esta seguro de que desea reiniciar el servidor?", "Confirmar reinicio", list("Yes", "No"))
 		if(confirm == "No")
 			return
 		if(confirm == "Yes")

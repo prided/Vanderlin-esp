@@ -295,7 +295,7 @@
 	contains = /obj/item/gun/ballistic/powder/musket
 
 /datum/supply_pack/weapons/ranged/cannon
-	name = "Cañón"
+	name = "Cañon"
 	cost = 800
 	contains = /obj/structure/cannon
 
@@ -390,7 +390,7 @@
 	contains = /obj/item/storage/belt/pouch/bullets
 
 /datum/supply_pack/weapons/ammo/aflask
-	name = "Frasco de pólvora"
+	name = "Frasco de polvora"
 	cost = 150
 	contains = /obj/item/reagent_containers/glass/bottle/aflask
 

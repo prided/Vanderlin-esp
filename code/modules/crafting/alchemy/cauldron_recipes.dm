@@ -46,7 +46,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/stam_poison
 	recipe_name = "Veneno de resistencia"
-	smells_like = "levantó polvo"
+	smells_like = "levanto polvo"
 	output_reagents = list(/datum/reagent/stampoison = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/air = 9,
@@ -54,7 +54,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/health_potion
-	recipe_name = "Poción de sangre vital"
+	recipe_name = "Pocion de sangre vital"
 	smells_like = "metal"
 	output_reagents = list(/datum/reagent/medicine/healthpot = 25)
 	required_essences = list(
@@ -72,7 +72,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/stamina_potion
-	recipe_name = "Poción de resistencia"
+	recipe_name = "Pocion de resistencia"
 	smells_like = "hierba mojada"
 	output_reagents = list(/datum/reagent/medicine/stampot = 25)
 	required_essences = list(
@@ -130,7 +130,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/big_health_potion
-	recipe_name = "Poción de sangre fuerte"
+	recipe_name = "Pocion de sangre fuerte"
 	smells_like = "metal rico"
 	output_reagents = list(/datum/reagent/medicine/stronghealth = 25)
 	required_essences = list(
@@ -140,8 +140,8 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/big_stamina_potion
-	recipe_name = "Poción de resistencia fuerte"
-	smells_like = "hierba recién cortada"
+	recipe_name = "Pocion de resistencia fuerte"
+	smells_like = "hierba recien cortada"
 	output_reagents = list(/datum/reagent/medicine/strongstam = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/air = 9,
@@ -174,7 +174,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/per_potion
-	recipe_name = "Percepción de los ojos de gato"
+	recipe_name = "Percepcion de los ojos de gato"
 	smells_like = "orina de gato"
 	output_reagents = list(/datum/reagent/buff/perception = 25)
 	required_essences = list(
@@ -196,7 +196,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/con_potion
-	recipe_name = "Constitución de carne de piedra"
+	recipe_name = "Constitucion de carne de piedra"
 	smells_like = "petrichor"
 	output_reagents = list(/datum/reagent/buff/constitution = 25)
 	required_essences = list(
@@ -217,7 +217,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/spd_potion
-	recipe_name = "Velocidad de los espíritus fugaces"
+	recipe_name = "Velocidad de los espiritus fugaces"
 	smells_like = "sal marina"
 	output_reagents = list(/datum/reagent/buff/speed = 25)
 	required_essences = list(
@@ -240,7 +240,7 @@ Keep them reasonable to make
 //Misc
 
 /datum/alch_cauldron_recipe/gender_potion
-	recipe_name = "Poción de género"
+	recipe_name = "Pocion de genero"
 	smells_like = "flowery nectars"
 	output_reagents = list(/datum/reagent/medicine/gender_potion = 25)
 	required_essences = list(
@@ -265,7 +265,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/blistergall_potion
 	recipe_name = "Blistergall"
-	smells_like = "podredumbre ácida"
+	smells_like = "podredumbre acida"
 	output_reagents = list(/datum/reagent/poison/blistergall = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/fire = 9,
@@ -275,7 +275,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/gloomvenom_potion
 	recipe_name = "Gloomvenom"
-	smells_like = "cuevas húmedas"
+	smells_like = "cuevas humedas"
 	output_reagents = list(/datum/reagent/poison/gloomvenom = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/void = 12,
@@ -409,7 +409,7 @@ Keep them reasonable to make
 
 /datum/alch_cauldron_recipe/nervebind_extract_potion
 	recipe_name = "Nervebind Extract"
-	smells_like = "hongo húmedo"
+	smells_like = "hongo humedo"
 	output_reagents = list(/datum/reagent/medicine/nervebind_extract = 25)
 	required_essences = list(
 		/datum/thaumaturgical_essence/void = 9,
@@ -554,7 +554,7 @@ Keep them reasonable to make
 	)
 
 /datum/alch_cauldron_recipe/cryzaline_suspension
-	recipe_name = "Suspensión crizalina"
+	recipe_name = "Suspension crizalina"
 	smells_like = "biting frost"
 	output_reagents = list(/datum/reagent/cryzaline_suspension = 25)
 	required_essences = list(

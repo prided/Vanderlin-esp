@@ -71,7 +71,7 @@
 	color_hex = "#1a6b3a"
 
 /datum/loadout_item/dye_color/noble/midnight_purple
-	name = "Púrpura medianoche"
+	name = "Purpura medianoche"
 	color_hex = "#3a1a6b"
 
 /datum/loadout_item/dye_color/noble/burnt_sienna
@@ -96,7 +96,7 @@
 	palette = "royal"
 
 /datum/loadout_item/dye_color/royal/tyrian_purple
-	name = "Púrpura de Tiro"
+	name = "Purpura de Tiro"
 	color_hex = "#66023c"
 
 /datum/loadout_item/dye_color/royal/imperial_gold
@@ -108,7 +108,7 @@
 	color_hex = "#cc2200"
 
 /datum/loadout_item/dye_color/royal/azure_cerulean
-	name = "Azul cerúleo"
+	name = "Azul ceruleo"
 	color_hex = "#007fff"
 
 /datum/loadout_item/dye_color/royal/ivory_silk

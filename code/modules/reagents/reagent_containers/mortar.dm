@@ -77,7 +77,7 @@
 		if(!user.transferItemToLoc(tool, src))
 			balloon_alert(user, "stuck!")
 			return ITEM_INTERACT_BLOCKING
-		balloon_alert(user, "agregó [tool].")
+		balloon_alert(user, "agrego [tool].")
 		to_grind += tool
 		return ITEM_INTERACT_SUCCESS
 

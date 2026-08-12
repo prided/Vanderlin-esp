@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/eoran_bloom
-	name = "Eoran Floración"
+	name = "Eoran Floracion"
 	desc = "Grows an Eoran bud on the target."
 	button_icon_state = "pflower"
 	sound = 'sound/magic/magnet.ogg'
@@ -9,7 +9,7 @@
 	associated_skill = /datum/attribute/skill/magic/holy
 	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/eora)
 
-	invocation = "Esté en paz con Eora."
+	invocation = "Este en paz con Eora."
 	invocation_type = INVOCATION_SHOUT
 
 	cast_range = 3
@@ -37,7 +37,7 @@
 		return
 
 	if(to_pacify.get_item_by_slot(ITEM_SLOT_HEAD))
-		to_chat(owner, span_warning("La cabeza del objetivo está cubierta. Las flores de Eora necesitan un espacio abierto para florecer."))
+		to_chat(owner, span_warning("La cabeza del objetivo esta cubierta. Las flores de Eora necesitan un espacio abierto para florecer."))
 		return
 
 	var/obj/item/clothing/head/peaceflower/F = new(get_turf(to_pacify))

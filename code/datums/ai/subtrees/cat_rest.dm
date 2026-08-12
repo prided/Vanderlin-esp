@@ -47,7 +47,7 @@
 /datum/ai_behavior/cat_get_up/perform(delta_time, datum/ai_controller/controller)
 	. = ..()
 	var/mob/living/simple_animal/pet/cat/cat_pawn = controller.pawn
-	cat_pawn.emote("me", 1, pick("se levanta y maúlla.", "walks around.", "deja de descansar."))
+	cat_pawn.emote("me", 1, pick("se levanta y maulla.", "walks around.", "deja de descansar."))
 	cat_pawn.icon_state = "[cat_pawn.icon_living]"
 	cat_pawn.set_resting(FALSE, instant = TRUE)
 	finish_action(controller, TRUE)

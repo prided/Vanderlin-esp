@@ -105,7 +105,7 @@
  * @param {client} c - The client changing settings
  */
 /datum/buildmode_mode/proc/change_settings(client/c)
-	to_chat(c, "<span class='warning'>No hay ninguna configuración disponible para este modo</span>")
+	to_chat(c, "<span class='warning'>No hay ninguna configuracion disponible para este modo</span>")
 	return
 
 /**
@@ -146,7 +146,7 @@
  */
 /datum/buildmode_mode/advanced/enter_mode(datum/buildmode/bm)
 	to_chat(BM.holder.mob, "<span class='notice'>Advanced Build Mode</span>")
-	to_chat(BM.holder.mob, "<span class='notice'>Botón izquierdo del mouse = Crear/Eliminar/Modificar objetos</span>")
+	to_chat(BM.holder.mob, "<span class='notice'>Boton izquierdo del mouse = Crear/Eliminar/Modificar objetos</span>")
 	to_chat(BM.holder.mob, "<span class='notice'>Right Mouse Button = Copy object type</span>")
 	to_chat(BM.holder.mob, "<span class='notice'>Middle Mouse Button = Select object to modify</span>")
 

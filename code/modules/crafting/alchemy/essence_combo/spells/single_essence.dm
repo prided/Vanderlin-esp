@@ -75,7 +75,7 @@
 	granted_spells = list(/datum/action/cooldown/spell/essence/arcane_mark)
 
 /datum/essence_combo/spell/single/energia
-	name = "Dominio de la energía"
+	name = "Dominio de la energia"
 	required_essences = list(/datum/thaumaturgical_essence/energia)
 	granted_spells = list(/datum/action/cooldown/spell/essence/energize)
 

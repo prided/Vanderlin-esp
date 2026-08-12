@@ -2,7 +2,7 @@
 
 /turf/closed/mineral //wall piece
 	name = "rock"
-	desc = "Parece estéril."
+	desc = "Parece esteril."
 	icon = 'icons/turf/smooth/walls/mineral.dmi'
 	icon_state = MAP_SWITCH("mineral", "mineral-0")
 	smoothing_flags = SMOOTH_BITMASK
@@ -211,7 +211,7 @@
 
 /turf/closed/mineral/random
 	name = "rock"
-	desc = "Parece estéril."
+	desc = "Parece esteril."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/mineral.dmi', 'icons/turf/mining/mining.dmi')
 	icon_state = MAP_SWITCH("mineral", "rand_low")
 	smoothing_flags = SMOOTH_BITMASK
@@ -416,7 +416,7 @@
 
 /turf/closed/mineral/bedrock
 	name = "rock"
-	desc = "Parece estéril y casi indestructible."
+	desc = "Parece esteril y casi indestructible."
 	icon = MAP_SWITCH('icons/turf/smooth/walls/mineral.dmi', 'icons/turf/mining/mining.dmi')
 	icon_state = MAP_SWITCH("mineral", "bedrock")
 	max_integrity = 10000000

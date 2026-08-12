@@ -63,7 +63,7 @@ export function ChatPageSettings(props) {
           <Button.Checkbox
             checked={page.hideUnreadCount}
             icon={page.hideUnreadCount ? 'bell-slash' : 'bell'}
-            tooltip="Desactiva el contador no leído"
+            tooltip="Desactiva el contador no leido"
             onClick={() =>
               updateChatPage({
                 hideUnreadCount: !page.hideUnreadCount,

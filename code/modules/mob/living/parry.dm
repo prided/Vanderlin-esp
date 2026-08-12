@@ -319,7 +319,7 @@
 			// Check shield integrity
 			var/shieldur = round(((W.get_integrity() / W.max_integrity) * 100), 1)
 			if(shieldur <= 30)
-				src.visible_message("<span class='boldwarning'><b>\The [W] está a punto de romperse!</b></span>")
+				src.visible_message("<span class='boldwarning'><b>\The [W] esta a punto de romperse!</b></span>")
 
 	else
 		// Non-human parry (simpler)

@@ -272,7 +272,7 @@
 	if(origin_mob)
 		var/turf/origin_turf = get_turf(origin_mob)
 		if(get_dist(origin_turf, new_turf) > range_limit)
-			to_chat(src, span_warning("¡No puedes alejarte más de tu cuerpo!"))
+			to_chat(src, span_warning("¡No puedes alejarte mas de tu cuerpo!"))
 			return
 
 	forceMove(new_turf)
@@ -331,7 +331,7 @@
 	animate(src, pixel_z = 0, time = duration)
 
 /obj/effect/temp_visual/bombard_incoming/acid
-	name = "ácido entrante"
+	name = "acido entrante"
 	color = "#00ff00"
 	light_color = "#00ff00"
 	light_outer_range = 3
@@ -390,7 +390,7 @@
 
 /obj/effect/bombard_zone/acid
 	name = "acid pool"
-	desc = "Un charco de ácido altamente corrosivo."
+	desc = "Un charco de acido altamente corrosivo."
 	icon_state = "acid_weak"
 	color = "#00ff00"
 	light_color = "#00ff00"

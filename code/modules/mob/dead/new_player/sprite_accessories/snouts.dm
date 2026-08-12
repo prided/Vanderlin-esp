@@ -38,7 +38,7 @@
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/shark
-	name = "Tiburón"
+	name = "Tiburon"
 	icon_state = "shark"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
@@ -78,7 +78,7 @@
 	icon_state = "rodent"
 
 /datum/sprite_accessory/snout/lcanid
-	name = "Mamífero, largo"
+	name = "Mamifero, largo"
 	icon_state = "lcanid"
 
 /datum/sprite_accessory/snout/lcanidalt
@@ -86,19 +86,19 @@
 	icon_state = "lcanidalt"
 
 /datum/sprite_accessory/snout/lcanidstriped
-	name = "Mamífero, Largo, Rayado"
+	name = "Mamifero, Largo, Rayado"
 	icon_state = "lcanidstripe"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/lcanidstripedalt
-	name = "Mamífero, largo, rayado ALT"
+	name = "Mamifero, largo, rayado ALT"
 	icon_state = "lcanidstripealt"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/scanid
-	name = "Mamífero, corto"
+	name = "Mamifero, corto"
 	icon_state = "scanid"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
@@ -110,11 +110,11 @@
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/scanidalt2
-	name = "Mamífero, corto ALT 2"
+	name = "Mamifero, corto ALT 2"
 	icon_state = "scanidalt2"
 
 /datum/sprite_accessory/snout/scanidalt3
-	name = "Mamífero, corto ALT 3"
+	name = "Mamifero, corto ALT 3"
 	icon_state = "scanidalt3"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
@@ -124,13 +124,13 @@
 	icon_state = "ntajaran"
 
 /datum/sprite_accessory/snout/wolf
-	name = "Mamífero, Grueso"
+	name = "Mamifero, Grueso"
 	icon_state = "wolf"
 	color_keys = 2
 	color_key_names = list("Snout", "Inner")
 
 /datum/sprite_accessory/snout/wolfalt
-	name = "Mamífero, grueso ALT"
+	name = "Mamifero, grueso ALT"
 	icon_state = "wolfalt"
 
 /datum/sprite_accessory/snout/otie

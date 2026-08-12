@@ -1,7 +1,7 @@
 /datum/bounty
 	abstract_type = /datum/bounty
-	var/name = "Recompensa genérica"
-	var/desc = "Una solicitud de bienes o activos específicos."
+	var/name = "Recompensa generica"
+	var/desc = "Una solicitud de bienes o activos especificos."
 
 	// The type of item or path needed to fulfill thebounty
 	var/required_path

@@ -1,6 +1,6 @@
 /obj/item/fertilizer
-	name = "fertilizante genérico"
-	desc = "Un fertilizante básico."
+	name = "fertilizante generico"
+	desc = "Un fertilizante basico."
 	w_class = WEIGHT_CLASS_SMALL
 	grid_width = 32
 	grid_height = 32
@@ -21,7 +21,7 @@
 
 /obj/item/fertilizer/bone_meal
 	name = "bone meal"
-	desc = "Huesos triturados, perfectos para el jardín."
+	desc = "Huesos triturados, perfectos para el jardin."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "bonemeal"
 	nitrogen_content = 5
@@ -39,7 +39,7 @@
 
 /obj/item/fertilizer/ash
 	name = "ash"
-	desc = "Un puñado de hollín."
+	desc = "Un puñado de hollin."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "ash"
 	w_class = WEIGHT_CLASS_TINY
@@ -74,7 +74,7 @@
 		if(attacking_item.reagents && glass.is_open_container())
 			. = 1 //so the containers don't splash their content on the src while scooping.
 			if(glass.reagents.total_volume >= glass.reagents.maximum_volume)
-				to_chat(user, "¡<span class='notice'>[glass] está lleno!</span>")
+				to_chat(user, "¡<span class='notice'>[glass] esta lleno!</span>")
 				return
 			to_chat(user, "<span class='notice'>I scoop up [src] into [glass]!</span>")
 			reagents.trans_to(glass, reagents.total_volume, transfered_by = user)
@@ -85,7 +85,7 @@
 		return ..()
 
 /obj/item/fertilizer/ash/large
-	name = "gran montón de cenizas"
+	name = "gran monton de cenizas"
 	icon_state = "big_ash"
 	w_class = WEIGHT_CLASS_NORMAL
 	phosphorus_content = 40

@@ -110,7 +110,7 @@
 
 /obj/structure/buried_cache
 	name = "buried cache"
-	desc = "Algo ha sido enterrado aquí."
+	desc = "Algo ha sido enterrado aqui."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "dirt_cache"
 	anchored = TRUE

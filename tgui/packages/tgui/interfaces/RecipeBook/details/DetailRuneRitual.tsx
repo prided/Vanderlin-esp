@@ -7,7 +7,7 @@ export const DetailRuneRitual = ({ r, lookup, pickerMap, allRecipes, essenceInde
     <Badge>Nivel de complejidad {r.tier}</Badge>
     {!!r.items?.length && (
       <>
-        <SectionHead>Artículos requeridos</SectionHead>
+        <SectionHead>Articulos requeridos</SectionHead>
         {r.items!.map((item, i) => (
           <ItemRow key={i} item={item} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
         ))}

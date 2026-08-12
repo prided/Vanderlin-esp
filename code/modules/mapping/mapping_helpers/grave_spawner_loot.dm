@@ -143,5 +143,5 @@
 
 	mob_names = list("Saint Placida", "Saint Alexia", "Saint Paisley", "Saint Remington")
 	mob_to_spawn = /mob/living/carbon/human/species/human/northern
-	grave_messages = list("Sirvió con distinción, murió con honor.", "Que su vida sea un ejemplo para todos.", "Se comprometió a dedicar su vida a la justicia y la cumplió.", "Hero of the Goblin Wars, gave their life in service to these lands.")
+	grave_messages = list("Sirvio con distincion, murio con honor.", "Que su vida sea un ejemplo para todos.", "Se comprometio a dedicar su vida a la justicia y la cumplio.", "Hero of the Goblin Wars, gave their life in service to these lands.")
 	final_words = list(SPAN_GOD_RAVOX("Que pueda servir a la justicia en las vidas venideras..."), SPAN_GOD_RAVOX("I hope only that the virtues of Ravox live strong in the hearts of those who come after..."), SPAN_GOD_RAVOX("To those who gaze upon me now, know this; Justice shall always prevail in the end!"))

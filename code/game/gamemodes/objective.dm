@@ -3,7 +3,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective
 	var/datum/mind/owner				//The primary owner of the objective. !!SOMEWHAT DEPRECATED!! Prefer using 'team' for new code.
 	var/datum/team/team					//An alternative to 'owner': a team. Use this when writing new code.
-	var/name = "objetivo genérico" 		//Name for admin prompts
+	var/name = "objetivo generico" 		//Name for admin prompts
 	var/explanation_text = "Nothing"	//What that person is supposed to do.
 	var/team_explanation_text			//For when there are multiple owners.
 	var/datum/mind/target = null		//If they are focused on a particular person.
@@ -167,7 +167,7 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 		explanation_text = "Assassinate [target.name], who was obliterated"
 
 /datum/objective/mutiny
-	name = "motín"
+	name = "motin"
 	var/target_role_type=FALSE
 	martyr_compatible = 1
 

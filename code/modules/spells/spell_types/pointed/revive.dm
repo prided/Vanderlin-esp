@@ -96,7 +96,7 @@
 	cast_on.emote("breathgasp")
 	cast_on.adjust_jitter(100 SECONDS)
 	cast_on.adjust_blood_volume(BLOOD_VOLUME_OKAY, maximum = BLOOD_VOLUME_OKAY)
-	cast_on.visible_message(span_notice("[cast_on] is revived by holy light!"), span_green("Me despierto del vacío."))
+	cast_on.visible_message(span_notice("[cast_on] is revived by holy light!"), span_green("Me despierto del vacio."))
 	cast_on.apply_status_effect(/datum/status_effect/debuff/revive)
 
 
@@ -213,5 +213,5 @@
 	cast_on.emote("breathgasp")
 	cast_on.adjust_jitter(100 SECONDS)
 	cast_on.adjust_blood_volume(BLOOD_VOLUME_OKAY, maximum = BLOOD_VOLUME_OKAY)
-	cast_on.visible_message(span_notice("[cast_on] is revived by moonlight!"), span_green("Me despierto del vacío."))
+	cast_on.visible_message(span_notice("[cast_on] is revived by moonlight!"), span_green("Me despierto del vacio."))
 	cast_on.apply_status_effect(/datum/status_effect/debuff/revive_noc)

@@ -11,7 +11,7 @@
 	var/turf/target_turf = get_turf(cast_on)
 	if(!target_turf)
 		return FALSE
-	owner.visible_message(span_notice("[owner] deforma la probabilidad en el área local."))
+	owner.visible_message(span_notice("[owner] deforma la probabilidad en el area local."))
 
 	for(var/mob/living/M in range(2, target_turf))
 		M.apply_status_effect(/datum/status_effect/buff/probability_flux, 60 SECONDS)

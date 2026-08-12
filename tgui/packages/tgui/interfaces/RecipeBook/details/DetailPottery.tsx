@@ -8,7 +8,7 @@ export const DetailPottery = ({ r, lookup, pickerMap, allRecipes, essenceIndex, 
   const steps = r.steps as PotteryStep[] | undefined;
   return (
     <>
-      <Box className="RecipeBook__hint">⚙ Punto dulce de rotación: <strong>{r.speed_sweetspot}</strong></Box>
+      <Box className="RecipeBook__hint">⚙ Punto dulce de rotacion: <strong>{r.speed_sweetspot}</strong></Box>
       <SectionHead>Pasos</SectionHead>
       <Box className="RecipeBook__step-block">
         {steps?.map((s, i) => (

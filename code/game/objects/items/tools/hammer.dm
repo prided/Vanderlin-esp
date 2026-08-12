@@ -108,7 +108,7 @@
 				repair_percent = 0
 				if(!was_broken)
 					attacked_item.take_damage(attacked_item.max_integrity * 0.1, BRUTE, "blunt")
-					user.visible_message(span_warning("¡[user] daña aún más a [attacked_item]!"))
+					user.visible_message(span_warning("¡[user] daña aun mas a [attacked_item]!"))
 		else
 			repair_percent *= GET_MOB_SKILL_VALUE_OLD(user, attacked_item.anvilrepair)
 

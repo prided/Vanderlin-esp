@@ -358,7 +358,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	remove_verb(src, verbs)
 
 /client/proc/hide_most_verbs()//Allows you to keep some functionality while hiding some verbs
-	set name = "Adminverbs - Ocultar la mayoría"
+	set name = "Adminverbs - Ocultar la mayoria"
 	set category = "Admin.Admin Preferences"
 
 	remove_verb(src, list(/client/proc/hide_most_verbs) + GLOB.admin_verbs_hideable)
@@ -670,7 +670,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		return
 	GLOB.DYN_EX_SCALE = ex_scale
 	log_admin("[key_name(usr)] has modified Dynamic Explosion Scale: [ex_scale]")
-	message_admins("[key_name_admin(usr)] ha modificado la escala de explosión dinámica: [ex_scale]")
+	message_admins("[key_name_admin(usr)] ha modificado la escala de explosion dinamica: [ex_scale]")
 
 /client/proc/give_spell(mob/spell_recipient in GLOB.mob_list)
 	set category = "GameMaster.Fun"
@@ -735,7 +735,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 
 	qdel(to_remove)
 	log_admin("[key_name(usr)] removed the spell [chosen_spell] from [key_name(removal_target)].")
-	message_admins("[key_name_admin(usr)] eliminó el hechizo [chosen_spell] de [key_name_admin(removal_target)].")
+	message_admins("[key_name_admin(usr)] elimino el hechizo [chosen_spell] de [key_name_admin(removal_target)].")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Remove Spell") //If you are copy-pasting this, ensure the 2nd parameter is unique
 
 /client/proc/object_say(obj/O in world)

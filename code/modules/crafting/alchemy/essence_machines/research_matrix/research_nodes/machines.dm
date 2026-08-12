@@ -4,7 +4,7 @@
 	var/atom/machine_path
 
 /datum/thaumic_research_node/machines/gnomes
-	name = "Síntesis de vida"
+	name = "Sintesis de vida"
 	desc = "Understand the principals behind life."
 	prerequisites = list(/datum/thaumic_research_node/transmutation)
 	required_essences = list(/datum/thaumaturgical_essence/life = 50)

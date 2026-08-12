@@ -7,7 +7,7 @@
 
 /datum/coven_power/potence
 	name = "Potence power name"
-	desc = "Descripción del poder de potencia."
+	desc = "Descripcion del poder de potencia."
 
 	check_flags = COVEN_CHECK_CAPABLE
 	toggled = TRUE
@@ -93,7 +93,7 @@
 //POTENCE 4
 /datum/coven_power/potence/four
 	name = "potencia 4"
-	desc = "Conviértete en una máquina inquebrantable mientras dure tu Vitae."
+	desc = "Conviertete en una maquina inquebrantable mientras dure tu Vitae."
 	level = 4
 
 	vitae_cost = 75
@@ -106,7 +106,7 @@
 //POTENCE 5
 /datum/coven_power/potence/five
 	name = "potencia 5"
-	desc = "La gente podría adorarte como a un dios si les mostraras esto."
+	desc = "La gente podria adorarte como a un dios si les mostraras esto."
 	level = 5
 
 	vitae_cost = 120

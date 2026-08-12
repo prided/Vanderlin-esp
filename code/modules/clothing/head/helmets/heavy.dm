@@ -168,7 +168,7 @@
 	item_weight = 4 KILOGRAMS
 
 /obj/item/clothing/head/helmet/heavy/bucket/keeper
-	name = "máscara de piedra del guardián"
+	name = "mascara de piedra del guardian"
 	desc = "A hooded stone mask worn by Pestran keepers. Their face, oft marred by disease doth not hold value, for it is the pursuit of knowledge of the heartbeast that is the true cause."
 	icon_state = "keeperhelm"
 	item_state = "keeperhelm"

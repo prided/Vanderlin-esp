@@ -4,7 +4,7 @@
 	if(!check_rights(R_ADMIN))
 		return FALSE
 
-	var/choice = tgui_alert(src, "Esto habilitará o deshabilitará las migraciones, la configuración actual es [SSmigrants.get_current_disabled_status()]", "Are you sure?", list("Sí.", "No."))
+	var/choice = tgui_alert(src, "Esto habilitara o deshabilitara las migraciones, la configuracion actual es [SSmigrants.get_current_disabled_status()]", "Are you sure?", list("Si.", "No."))
 	if(choice == "No.")
 		return
 

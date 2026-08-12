@@ -32,7 +32,7 @@
 
 /obj/item/clothing/cloak/raincloak/colored/mortus
 	name = "manto funerario"
-	desc = "Siempre estás envuelto por la muerte."
+	desc = "Siempre estas envuelto por la muerte."
 	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/cloak/raincloak/colored/brown

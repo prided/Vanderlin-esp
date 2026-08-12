@@ -550,7 +550,7 @@
 			return NONE
 
 		if(tool.reagents.holder_full())
-			to_chat(user, "<span class='warning'>[tool] está lleno.</span>")
+			to_chat(user, "<span class='warning'>[tool] esta lleno.</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		if(water_volume < MINIMUM_WATER_VOLUME || volume_status == WATER_VOLUME_DRY)
@@ -576,7 +576,7 @@
 			return NONE
 
 		if(water_volume >= water_volume_maximum)
-			to_chat(user, "<span class='warning'>\The [name] está lleno.</span>")
+			to_chat(user, "<span class='warning'>\The [name] esta lleno.</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		if(!do_after(user, 8 DECISECONDS, src))
@@ -834,7 +834,7 @@
 
 /turf/open/water/clean
 	name = "water"
-	desc = "Agua cristalina, ¡qué bendición!"
+	desc = "Agua cristalina, ¡que bendicion!"
 	icon_state = MAP_SWITCH("water", "rockw2")
 	underlay_icon_state = "rock"
 	water_height = WATER_HEIGHT_SHALLOW
@@ -877,7 +877,7 @@
 
 /turf/open/water/river
 	name = "water"
-	desc = "¡Agua cristalina! Fluyendo rápidamente a lo largo del río."
+	desc = "¡Agua cristalina! Fluyendo rapidamente a lo largo del rio."
 	icon_state = MAP_SWITCH("rivermove", "rivermove-rockc")
 	underlay_icon_state = "rock"
 	water_height = WATER_HEIGHT_DEEP
@@ -958,7 +958,7 @@
 
 /turf/open/water/river/blood
 	name = "blood"
-	desc = "Este río fluye de un rojo viscoso."
+	desc = "Este rio fluye de un rojo viscoso."
 	icon_state = MAP_SWITCH("rivermove", "rivermove-rockb")
 	underlay_icon_state = "rock"
 	water_reagent = /datum/reagent/blood
@@ -973,7 +973,7 @@
 
 /turf/open/water/acid // holy SHIT
 	name = "acid pool"
-	desc = "Bueno... ¿cómo llegó ESTO aquí?"
+	desc = "Bueno... ¿como llego ESTO aqui?"
 	underlay_icon_state = null
 	water_reagent = /datum/reagent/rogueacid
 	cleanliness_factor = -100

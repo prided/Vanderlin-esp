@@ -39,7 +39,7 @@
 
 /obj/item/quest_package/proc/do_open(mob/user)
 	if(!length(contents))
-		to_chat(user, span_warning("El paquete está vacío."))
+		to_chat(user, span_warning("El paquete esta vacio."))
 		return
 	to_chat(user, span_notice("You break the seal on [src] and tip out its contents."))
 	for(var/obj/item/I in contents)
@@ -53,7 +53,7 @@
 	if(pledge_ref && !delivery_target_name)
 		return
 	if(!length(contents))
-		to_chat(user, span_warning("El paquete está vacío."))
+		to_chat(user, span_warning("El paquete esta vacio."))
 		return
 	to_chat(user, span_notice("You unwrap [src] and tip out its contents."))
 	for(var/obj/item/I in contents)

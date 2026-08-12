@@ -15,10 +15,10 @@ export const DetailContainerCraft = ({ r, lookup, pickerMap, allRecipes, essence
     )}
     {!!r.reagents?.length && (
       <>
-        <SectionHead>Líquidos</SectionHead>
+        <SectionHead>Liquidos</SectionHead>
         {r.reagents!.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} lígulas de{' '}
+            {rg.amount} ligulas de{' '}
             <RecipeLink name={rg.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
         ))}
@@ -26,7 +26,7 @@ export const DetailContainerCraft = ({ r, lookup, pickerMap, allRecipes, essence
     )}
     {!!r.wildcards?.length && (
       <>
-        <SectionHead>Artículos alternativos</SectionHead>
+        <SectionHead>Articulos alternativos</SectionHead>
         {r.wildcards!.map((wc, i) => (
           <Box key={i} className="RecipeBook__item-row">
             {wc.count}× cualquiera <strong>{wc.name}</strong>
@@ -36,7 +36,7 @@ export const DetailContainerCraft = ({ r, lookup, pickerMap, allRecipes, essence
     )}
     {r.max_optionals !== undefined && r.max_optionals > 0 && (
       <>
-        <SectionHead>Opcional (máx. {r.max_optionals})</SectionHead>
+        <SectionHead>Opcional (max. {r.max_optionals})</SectionHead>
         {r.opt_items?.map((item, i) => (
           <ItemRow key={i} item={item} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
         ))}

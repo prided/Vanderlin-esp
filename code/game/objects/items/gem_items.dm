@@ -343,7 +343,7 @@
 
 /obj/item/carvedgem/jade/fork
 	name = "joapstone fork"
-	desc = "Un tenedor tallado en piedra de joap, demasiado delicado para comer con él."
+	desc = "Un tenedor tallado en piedra de joap, demasiado delicado para comer con el."
 	icon_state = "fork_jade"
 	grid_height = 64
 	grid_width = 32
@@ -393,7 +393,7 @@
 
 /obj/item/carvedgem/jade/vase
 	name = "joapstone vase"
-	desc = "Un jarrón tallado en joapstone."
+	desc = "Un jarron tallado en joapstone."
 	icon_state = "vase_jade"
 	grid_height = 64
 	grid_width = 32
@@ -747,7 +747,7 @@
 
 /obj/item/carvedgem/turq/ka
 	name = "ceruleabaster bird statue"
-	desc = "Una gran talla de un pájaro."
+	desc = "Una gran talla de un pajaro."
 	icon_state = "ka_turq"
 	grid_height = 64
 	grid_width = 32
@@ -825,7 +825,7 @@
 
 /obj/item/carvedgem/coral/vase
 	name = "aoetal vase"
-	desc = "Un jarrón tallado en aoetal."
+	desc = "Un jarron tallado en aoetal."
 	icon_state = "vase_coral"
 	grid_height = 64
 	grid_width = 32
@@ -849,7 +849,7 @@
 
 /obj/item/carvedgem/coral/fancyvase
 	name = "fancy aoetal vase"
-	desc = "Un elegante jarrón tallado en aoetal."
+	desc = "Un elegante jarron tallado en aoetal."
 	icon_state = "fancyvase_coral"
 	grid_height = 64
 	grid_width = 32
@@ -896,7 +896,7 @@
 	sellprice = 80
 
 /obj/item/carvedgem/coral/jaw
-	name = "estatua de mandíbula de tiburón"
+	name = "estatua de mandibula de tiburon"
 	desc = "A statue of a shark's jaw carved out of aoetal. Its probably best if you don't touch the teeth."
 	icon_state = "jaw_coral"
 	grid_height = 64
@@ -905,7 +905,7 @@
 
 /obj/item/carvedgem/coral/shark
 	name = "aoetal shark statue"
-	desc = "Una estatua de un tiburón tallada en aoetal. Algunos marineros creen que son agentes de Abyssor."
+	desc = "Una estatua de un tiburon tallada en aoetal. Algunos marineros creen que son agentes de Abyssor."
 	icon_state = "shark_coral"
 	grid_height = 64
 	grid_width = 64

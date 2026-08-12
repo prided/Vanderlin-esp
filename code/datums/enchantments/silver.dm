@@ -127,7 +127,7 @@
 	return TRUE
 
 /datum/status_effect/debuff/silver_bane/on_remove()
-	to_chat(owner, span_notice("La abrumadora maldición de la plata se desvanece..."))
+	to_chat(owner, span_notice("La abrumadora maldicion de la plata se desvanece..."))
 	REMOVE_TRAIT(owner, TRAIT_COVEN_BANE, VAMPIRE_TRAIT)
 	. = ..()
 
@@ -155,7 +155,7 @@
 		return
 
 	is_stunned = TRUE
-	to_chat(owner, span_userdanger("¡La maldición de la plata me abruma!"))
+	to_chat(owner, span_userdanger("¡La maldicion de la plata me abruma!"))
 
 	if(affected_type == AFFECTED_VLORD)
 		// Vampire lords get lighter punishment

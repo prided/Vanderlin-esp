@@ -165,7 +165,7 @@
 		last_bump = world.time
 		var/mob/living/L = user
 		if(L.m_intent == MOVE_INTENT_SNEAK)
-			to_chat(user, span_warning("Esta puerta está cerrada."))
+			to_chat(user, span_warning("Esta puerta esta cerrada."))
 			return
 		if(can_knock)
 			if(user.a_intent?.name == "punch")

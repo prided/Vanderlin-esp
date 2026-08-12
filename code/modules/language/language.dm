@@ -289,7 +289,7 @@
 #undef SENTENCE_CACHE_LEN
 
 /obj/item/language_tester
-	name = "Herramienta de calibración de voz"
+	name = "Herramienta de calibracion de voz"
 	desc = "One press of this device will say a message in all known languages."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "multitool"

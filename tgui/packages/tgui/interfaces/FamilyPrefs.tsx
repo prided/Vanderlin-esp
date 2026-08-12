@@ -59,7 +59,7 @@ export const FamilyPrefs = () => {
   const [tab, setTab] = useState<'bonds' | 'filters' | 'relations'>('bonds');
 
   return (
-    <Window title="Familia y vínculos" width={520} height={620}>
+    <Window title="Familia y vinculos" width={520} height={620}>
       <Window.Content scrollable>
         <Tabs fluid>
           <Tabs.Tab
@@ -67,7 +67,7 @@ export const FamilyPrefs = () => {
             icon="link"
             onClick={() => setTab('bonds')}
           >
-            Vínculos
+            Vinculos
           </Tabs.Tab>
           <Tabs.Tab
             selected={tab === 'filters'}
@@ -130,9 +130,9 @@ const BondsTab = () => {
       {/* Compare against the active found data token instead of a hardcoded string */}
       {currentModeConfig && currentModeConfig.label !== 'None' && (
         <Stack.Item>
-          <Section title="Configuración de preferencias conyugales">
+          <Section title="Configuracion de preferencias conyugales">
             <LabeledList mb={1}>
-              <LabeledList.Item label="Género de la pareja">
+              <LabeledList.Item label="Genero de la pareja">
                 <Flex gap={0.5}>
                   {genderPreferences.map((pref) => {
                     const isSelected = data.gender_choice === pref.key;
@@ -150,7 +150,7 @@ const BondsTab = () => {
                   })}
                 </Flex>
               </LabeledList.Item>
-              <LabeledList.Item label="Cónyuge designado">
+              <LabeledList.Item label="Conyuge designado">
                 <Flex align="center" gap={1}>
                   <Box flex={1} italic={!data.setspouse}>
                     {data.setspouse || 'No target name set'}
@@ -245,12 +245,12 @@ const BondsTab = () => {
             </Button>
           </Flex>
           <Box mt={1} color="label" fontSize="0.82em">
-            Estampa una relación divorciada en tu personaje al inicio de la ronda para que tu historia sea visible para los demás.
+            Estampa una relacion divorciada en tu personaje al inicio de la ronda para que tu historia sea visible para los demas.
           </Box>
         </Section>
       </Stack.Item>
       <Stack.Item>
-        <Section title="Preferencia de adopción">
+        <Section title="Preferencia de adopcion">
           <Flex align="center" justify="space-between">
             <Box>
               <Icon
@@ -271,7 +271,7 @@ const BondsTab = () => {
             </Button>
           </Flex>
           <Box mt={1} color="label" fontSize="0.82em">
-            Permite que el sistema de emparejamiento establezca vínculos adoptados (por ejemplo, niño o padre adoptado) al inicio de la ronda.
+            Permite que el sistema de emparejamiento establezca vinculos adoptados (por ejemplo, niño o padre adoptado) al inicio de la ronda.
           </Box>
         </Section>
       </Stack.Item>
@@ -306,7 +306,7 @@ const FiltersTab = () => {
               <Button
                 compact
                 icon="lock"
-                tooltip="El bloqueo de la misma especie está activado, la lista de especies se ignora"
+                tooltip="El bloqueo de la misma especie esta activado, la lista de especies se ignora"
                 tooltipPosition="left"
               />
             ) : null
@@ -327,7 +327,7 @@ const FiltersTab = () => {
           {!data.same_species_family && (
             <>
               <Box color="label" fontSize="0.82em" mb={1}>
-                Cambie las entradas a continuación para aceptar o excluir especies específicas.
+                Cambie las entradas a continuacion para aceptar o excluir especies especificas.
               </Box>
               <SelectionGrid
                 items={data.all_species}
@@ -344,7 +344,7 @@ const FiltersTab = () => {
       <Stack.Item>
         <Section title="Creencias patronales">
           <Box color="label" fontSize="0.82em" mb={1}>
-            Cambie las entradas a continuación para aceptar o excluir religiones específicas.
+            Cambie las entradas a continuacion para aceptar o excluir religiones especificas.
           </Box>
           <SelectionGrid
             items={data.all_faiths}
@@ -359,7 +359,7 @@ const FiltersTab = () => {
       <Stack.Item>
         <Section title="Grupos de trabajo">
           <Box color="label" fontSize="0.82em" mb={1}>
-            Cambie las entradas a continuación para restringir la ubicación a estratos sociales específicos.
+            Cambie las entradas a continuacion para restringir la ubicacion a estratos sociales especificos.
           </Box>
           <SelectionGrid
             items={data.all_job_groups}

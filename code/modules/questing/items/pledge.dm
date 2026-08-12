@@ -52,7 +52,7 @@
 		if(PLEDGE_BLANK)
 			. += span_notice("The parchment is blank. Use it in-hand to fill out a quest commission.")
 		if(PLEDGE_FILLED)
-			. += span_notice("Título: <b>[pledge_title]</b>")
+			. += span_notice("Titulo: <b>[pledge_title]</b>")
 			. += span_notice("Difficulty: [pledge_difficulty] | Reward offered: [pledge_reward] mammons")
 			if(pledge_mode == "item")
 				. += span_notice("Objetivo: Traer [pledge_item_count]x [pledge_item_name].")
@@ -60,7 +60,7 @@
 				. += span_notice("Objetivo: [pledge_objective]")
 			. += span_warning("Not yet sealed. Coins have not been committed.")
 		if(PLEDGE_SEALED)
-			. += span_notice("Título: <b>[pledge_title]</b>")
+			. += span_notice("Titulo: <b>[pledge_title]</b>")
 			. += span_notice("Difficulty: [pledge_difficulty] | Reward escrowed: [escrowed_mammons] mammons")
 			. += span_warning("SEALED. Hand to a steward to post, or activate to unseal and reclaim coins.")
 		if(PLEDGE_POSTED)
@@ -209,7 +209,7 @@
 			break
 
 	if(!quest_path)
-		to_chat(steward, span_warning("Modo de misión no reconocido \"[pledge_mode]\" en este compromiso."))
+		to_chat(steward, span_warning("Modo de mision no reconocido \"[pledge_mode]\" en este compromiso."))
 		return null
 
 	var/datum/quest/custom/CQ = new quest_path()

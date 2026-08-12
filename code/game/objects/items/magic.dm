@@ -24,7 +24,7 @@
 
 /obj/item/scrying/eye
 	name = "ojo maldito"
-	desc = "Está pulsando."
+	desc = "Esta pulsando."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state ="scryeye"
 	cooldown = 5 MINUTES
@@ -55,7 +55,7 @@
 				continue
 			if(HAS_TRAIT(HL, TRAIT_ANTISCRYING))
 				to_chat(user, span_warning("I peer into [src], but an impenetrable fog shrouds [HL.real_name]."))
-				to_chat(HL, span_warning("Mi envoltura mágica reaccionó a algo."))
+				to_chat(HL, span_warning("Mi envoltura magica reacciono a algo."))
 				return
 			log_game("SCRYING: [user.real_name] ([user.ckey]) has used the scrying orb to leer at [HL.real_name] ([HL.ckey])")
 			ADD_TRAIT(user, TRAIT_NOSSDINDICATOR, "scryingorb")
@@ -76,7 +76,7 @@
 					to_chat(HL, span_warning("I can clearly see the face of an unknown [user.gender == FEMALE ? "woman" : "man"] staring at me!"))
 					return
 				if(GET_MOB_ATTRIBUTE_VALUE(HL, STAT_PERCEPTION) >= 11)
-					to_chat(HL, span_warning("Siento un par de ojos desconocidos sobre mí."))
+					to_chat(HL, span_warning("Siento un par de ojos desconocidos sobre mi."))
 			REMOVE_TRAIT(user, TRAIT_NOSSDINDICATOR, "scryingorb")
 			return
 	to_chat(user, span_warning("I peer into [src], but can't find [input]."))

@@ -15,7 +15,7 @@
 	var/blessing_path
 	switch(category)
 		if("Divine")
-			blessing_path = input("Elige la Bendición Divina") as null|anything in list( \
+			blessing_path = input("Elige la Bendicion Divina") as null|anything in list( \
 				/datum/status_effect/buff/noc, \
 				/datum/status_effect/buff/ravox, \
 				/datum/status_effect/buff/beastsense, \
@@ -53,7 +53,7 @@
 	if(!blessing_path)
 		return FALSE
 
-	var/duration_choice = input("Seleccione la duración de la bendición:") as null|anything in list( \
+	var/duration_choice = input("Seleccione la duracion de la bendicion:") as null|anything in list( \
 		"1 Minute", "5 Minutes", "10 Minutes", "20 Minutes", \
 		"30 Minutes", "60 Minutes", "Until Sleep", "Infinite")
 	if(!duration_choice)
@@ -73,7 +73,7 @@
 
 	/// Apply Blessing
 	if(M.apply_status_effect(blessing_path))
-		message_admins(span_notice("¡El administrador [key_name_admin(usr)] bendijo a [key_name_admin(M)] con [blessing_path]! Duración: [duration_choice]."))
+		message_admins(span_notice("¡El administrador [key_name_admin(usr)] bendijo a [key_name_admin(M)] con [blessing_path]! Duracion: [duration_choice]."))
 		log_admin("[key_name(usr)] blessed [key_name(M)] with [blessing_path] for [duration_choice].")
 
 		M.playsound_local(get_turf(M), 'sound/magic/bless.ogg', 100, FALSE)
@@ -96,7 +96,7 @@
 
 	/// Toggle Off: Remove if present
 	else if(M.remove_status_effect(blessing_path))
-		message_admins(span_notice("¡El administrador [key_name_admin(usr)] levantó la bendición [blessing_path] de [key_name_admin(M)]!"))
+		message_admins(span_notice("¡El administrador [key_name_admin(usr)] levanto la bendicion [blessing_path] de [key_name_admin(M)]!"))
 		log_admin("[key_name(usr)] lifted blessing [key_name(M)] from [blessing_path].")
 		return TRUE
 
@@ -108,14 +108,14 @@
 	spawn(duration)
 		if(has_status_effect(blessing_path))
 			remove_status_effect(blessing_path)
-			to_chat(src, span_warning("Tu bendición se desvanece con el tiempo..."))
+			to_chat(src, span_warning("Tu bendicion se desvanece con el tiempo..."))
 
 /// Monitors if the mob falls asleep, removing the blessing if so
 /mob/living/proc/start_blessing_sleep_monitor(blessing_path)
 	spawn while(has_status_effect(blessing_path))
 		if(IsSleeping())
 			remove_status_effect(blessing_path)
-			to_chat(src, span_warning("Tu bendición se desvanece mientras te duermes..."))
+			to_chat(src, span_warning("Tu bendicion se desvanece mientras te duermes..."))
 			return
 		sleep(10)  /// Adjust check frequency as needed
 

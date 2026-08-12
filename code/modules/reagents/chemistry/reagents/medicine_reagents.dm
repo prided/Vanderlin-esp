@@ -64,7 +64,7 @@
 	description = "A foul-smelling dark brew used by those who venture near volcanic vents. It coats the lungs and airways in a protective lattice, specifically reversing fire and chemical burn damage."
 	reagent_state = LIQUID
 	color = "#3D1C02"
-	taste_description = "azufre volcánico y carbón"
+	taste_description = "azufre volcanico y carbon"
 	scent_description = "sulphurous fumes"
 	metabolization_rate = REAGENTS_METABOLISM
 
@@ -202,7 +202,7 @@
 	description = "Brewed from roots that grow only near ley-line confluences. It floods the blood with restorative energy, rapidly closing oxygen deprivation and restoring breath to the suffocating it cannot address wounds or toxins."
 	reagent_state = LIQUID
 	color = "#4CAF50"
-	taste_description = "raíces amargas"
+	taste_description = "raices amargas"
 	scent_description = "tierra profunda y agua mineral"
 	metabolization_rate = REAGENTS_METABOLISM
 	boiling_point = T0C + 130
@@ -272,8 +272,8 @@
 	description = "An oily amber extract from the woundwrack tree's bark. Applied to open wounds, it dramatically accelerates natural clotting and closes lacerations, but does nothing when absorbed internally."
 	reagent_state = LIQUID
 	color = "#C8860A"
-	taste_description = "corteza de árbol y pino"
-	scent_description = "ámbar resinoso"
+	taste_description = "corteza de arbol y pino"
+	scent_description = "ambar resinoso"
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/woundwrack_oil/on_bodypart_absorb(mob/living/carbon/affected_mob, obj/item/bodypart/affected_bodypart, amount_to_transfer)
@@ -381,7 +381,7 @@
 	description = "A sharp-smelling blue tonic derived from aquifer mosses and dissolved crystal powder. It rapidly reverses brain damage and clears narcotic haze, but does nothing for the body."
 	reagent_state = LIQUID
 	color = "#00CED1"
-	taste_description = "menta fría y ozono"
+	taste_description = "menta fria y ozono"
 	scent_description = "crisp water and crystal"
 	metabolization_rate = REAGENTS_METABOLISM * 1.5
 
@@ -495,7 +495,7 @@
 	reagent_state = LIQUID
 	color = "#9370DB"
 	taste_description = "amargura entumecedora"
-	scent_description = "hongo húmedo"
+	scent_description = "hongo humedo"
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/nervebind_extract/on_mob_metabolize(mob/living/L)

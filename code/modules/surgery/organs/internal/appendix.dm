@@ -11,7 +11,7 @@
 	high_threshold = STANDARD_ORGAN_THRESHOLD * 0.4
 	low_threshold =  STANDARD_ORGAN_THRESHOLD * 0.1
 	healing_factor = 0
-	now_failing = span_warning("¡Una explosión de dolor estalla en mi abdomen inferior derecho!")
+	now_failing = span_warning("¡Una explosion de dolor estalla en mi abdomen inferior derecho!")
 	now_fixed = span_info("El dolor en mi abdomen ha disminuido.")
 
 	organ_volume = 0.5

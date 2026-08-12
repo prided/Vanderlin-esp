@@ -52,7 +52,7 @@
 		bodypart.add_wound(fracture_type)
 
 /obj/projectile/bullet/fragment
-	name = "bola de plomo más pequeña"
+	name = "bola de plomo mas pequeña"
 	desc = "Haha. You're not able to see this!"
 	damage = 25
 	damage_type = BRUTE

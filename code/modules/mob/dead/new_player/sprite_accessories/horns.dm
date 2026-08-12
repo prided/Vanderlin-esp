@@ -74,7 +74,7 @@
 	icon_state = "knight"
 
 /datum/sprite_accessory/horns/dragon
-	name = "Dragón"
+	name = "Dragon"
 	icon_state = "dragon"
 
 /datum/sprite_accessory/horns/antlers

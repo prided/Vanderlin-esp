@@ -1,5 +1,5 @@
 /datum/animal_gene/prolific
-	name = "Prolífico"
+	name = "Prolifico"
 	desc = "Grants a chance to birth multiple offspring in a single litter."
 	rarity = 4
 	exclusion_group = GENE_GROUP_PROGENY

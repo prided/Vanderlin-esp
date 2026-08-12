@@ -184,7 +184,7 @@
 	if(QDELETED(tipped_mob))
 		return
 
-	to_chat(untipper, span_notice("Tienes razón [tipped_mob]."))
+	to_chat(untipper, span_notice("Tienes razon [tipped_mob]."))
 	tipped_mob.visible_message(
 		span_notice("[untipper] rights [tipped_mob]."),
 		span_notice("You are righted by [untipper]!"),

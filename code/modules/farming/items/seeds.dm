@@ -87,7 +87,7 @@
 		balloon_alert(user, "¡No hay suficiente habilidad!")
 		return ITEM_INTERACT_BLOCKING
 
-	balloon_alert(user, "haciendo un montículo...")
+	balloon_alert(user, "haciendo un monticulo...")
 	if(!do_after(user, get_farming_do_time(user, 10 SECONDS), target = src))
 		return ITEM_INTERACT_BLOCKING
 

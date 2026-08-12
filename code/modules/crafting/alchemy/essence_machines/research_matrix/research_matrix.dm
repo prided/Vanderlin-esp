@@ -1,6 +1,6 @@
 
 /obj/machinery/essence/research_matrix
-	name = "Motor alquímico"
+	name = "Motor alquimico"
 	desc = "A black iconosphere radiating alchemic heat. It hums expectantly."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "placeholder"
@@ -47,7 +47,7 @@
 			return
 		var/etype = vial.contained_essence.type
 		if(!accepts_essence(etype))
-			to_chat(user, span_warning("Esta esencia no es necesaria para la investigación actual."))
+			to_chat(user, span_warning("Esta esencia no es necesaria para la investigacion actual."))
 			return
 		var/deficit = selected_research.required_essences[etype] - storage.get(etype)
 		var/poured = storage.add(etype, min(vial.essence_amount, deficit))
@@ -117,7 +117,7 @@
 
 /obj/machinery/essence/research_matrix/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_notice("Nodos de investigación desbloqueados: [GLOB.thaumic_research.unlocked_research.len]")
+	. += span_notice("Nodos de investigacion desbloqueados: [GLOB.thaumic_research.unlocked_research.len]")
 	if(selected_research)
 		. += span_notice("Seleccionado: [selected_research.name]")
 		for(var/etype in selected_research.required_essences)

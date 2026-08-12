@@ -35,7 +35,7 @@
 	var/message
 
 	message_admins("[key_name_admin(user)] has started talking into [ADMIN_LOOKUPFLW(target)]'s head.")
-	var/option = tgui_alert(user, "¿Qué tipo de SubtlePM quieres?", "Type", list("Voice", "Specific God"))
+	var/option = tgui_alert(user, "¿Que tipo de SubtlePM quieres?", "Type", list("Voice", "Specific God"))
 	switch(option)
 		if("Voice")
 			message = input("Message:", "Subtle PM to [target.key]") as text|null
@@ -62,7 +62,7 @@
 			if(first_time == "Yes")
 				first_time_message = get_god_atmosphere_message(chosen_god)
 			volume = tgui_alert(user, "How loud (big) should your message be?", "Volumen", list("Normal", "Loud", "Quiet"))
-			message = tgui_input_text(user, "¿Qué dirá [chosen_god]?", "Habla por [chosen_god]")
+			message = tgui_input_text(user, "¿Que dira [chosen_god]?", "Habla por [chosen_god]")
 			if(!message)
 				message_admins("[key_name_admin(user)] decided not to talk into [ADMIN_LOOKUPFLW(target)]'s head")
 				return FALSE
@@ -183,7 +183,7 @@
 		return
 	to_chat(world, "[msg]")
 	log_admin("GlobalNarrate: [key_name(usr)] : [msg]")
-	message_admins("<span class='adminnotice'>[key_name_admin(usr)] Envió una narración global</span>")
+	message_admins("<span class='adminnotice'>[key_name_admin(usr)] Envio una narracion global</span>")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Global Narrate") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/send_to_cryo(mob/M in GLOB.mob_list)
@@ -194,7 +194,7 @@
 		return
 
 	if(!M)
-		M = input("¿Enviar a quién?", "Jugadores activos") as null|anything in GLOB.player_list
+		M = input("¿Enviar a quien?", "Jugadores activos") as null|anything in GLOB.player_list
 
 	if(!M)
 		return
@@ -492,7 +492,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(new_key in job_datum.whitelisted_ckeys)
 		if(tgui_alert(usr, "[new_key] is already in the job whitelist, do you wish to remove them?", "Remove Key?", list("Yes", "No")) == "Yes")
 			job_datum.whitelisted_ckeys -= new_key
-			var/log_message = "[key_name(usr)] eliminó '[new_key]' de la lista blanca de claves para el trabajo '[job_datum.title]'."
+			var/log_message = "[key_name(usr)] elimino '[new_key]' de la lista blanca de claves para el trabajo '[job_datum.title]'."
 			message_admins(log_message)
 			log_admin(log_message)
 			SSblackbox.record_feedback("tally", "admin_verb", 1, "Whitelist Job")
@@ -513,7 +513,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!check_rights(R_ADMIN))
 		return
 
-	var/devastation = input("Rango de devastación total. -1 a ninguno", "Input") as num|null
+	var/devastation = input("Rango de devastacion total. -1 a ninguno", "Input") as num|null
 	if(devastation == null)
 		return
 	var/heavy = input("Range of heavy impact. -1 to none", "Input") as num|null
@@ -534,12 +534,12 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	if ((devastation != -1) || (heavy != -1) || (light != -1) || (flash != -1) || (flames != -1) || (hotspots != -1))
 		if ((devastation > 20) || (heavy > 20) || (light > 20) || (flames > 20) || (hotspots > 20))
-			if(tgui_alert(src, "Are you sure you want to do this? It will laaag.", "Confirmación", list("Yes", "No")) == "No")
+			if(tgui_alert(src, "Are you sure you want to do this? It will laaag.", "Confirmacion", list("Yes", "No")) == "No")
 				return
 
 		explosion(O, devastation, heavy, light, flash, null, null,flames,hotspots)
 		log_admin("[key_name(usr)] created an explosion ([devastation],[heavy],[light],[hotspots],[flames]) at [AREACOORD(O)]")
-		message_admins("[key_name_admin(usr)] creó una explosión ([devastation],[heavy],[light],[hotspots],[flames]) en [AREACOORD(O)]")
+		message_admins("[key_name_admin(usr)] creo una explosion ([devastation],[heavy],[light],[hotspots],[flames]) en [AREACOORD(O)]")
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Explosion") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 		return
 	else
@@ -884,11 +884,11 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	var/obj/item/organ/heart/heart = target.getorganslot(ORGAN_SLOT_HEART)
 	if(!heart)
-		to_chat(usr,span_warning("¡El objetivo no tiene corazón!"))
+		to_chat(usr,span_warning("¡El objetivo no tiene corazon!"))
 		return
 
 	var/custom_message
-	var/check = tgui_alert(usr, "Do you want a custom message for the heart attack?", "Confirmación", DEFAULT_INPUT_CHOICES)
+	var/check = tgui_alert(usr, "Do you want a custom message for the heart attack?", "Confirmacion", DEFAULT_INPUT_CHOICES)
 	if(check == CHOICE_YES)
 		custom_message = browser_input_text(usr, "Escribe el mensaje personalizado", "Mensaje personalizado")
 		if(!custom_message)
@@ -914,7 +914,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			target.set_heartattack(TRUE)
 
 /client/proc/punish_log(whom, punishment)
-	var/msg = "[key_name_admin(usr)] castigó a [key_name_admin(whom)] con [punishment]."
+	var/msg = "[key_name_admin(usr)] castigo a [key_name_admin(whom)] con [punishment]."
 	message_admins(msg)
 	admin_ticket_log(whom, msg)
 	log_admin("[key_name(usr)] punished [key_name(whom)] with [punishment].")
@@ -1009,7 +1009,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 				D.AddElement(/datum/element/movetype_handler)
 			ADD_TRAIT(D, chosen_trait, source)
 		if("Remove")
-			var/specific = tgui_alert(usr, "¿Todos o fuente específica?", "Trait Remove/Add", list("All","Specific"))
+			var/specific = tgui_alert(usr, "¿Todos o fuente especifica?", "Trait Remove/Add", list("All","Specific"))
 			if(!specific)
 				return
 			switch(specific)
@@ -1024,7 +1024,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			REMOVE_TRAIT(D,chosen_trait,source)
 
 /client/proc/send_bird_letter(mob/M in GLOB.player_list)
-	set name = "Enviar carta de pájaro mensajero"
+	set name = "Enviar carta de pajaro mensajero"
 	set category = "GameMaster.Interacciones"
 
 	if(!ismob(M))
@@ -1036,7 +1036,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	var/msg = input("Message:", "Carta a [M.key]") as message|null
 	if(!msg)
-		message_admins("[key_name_admin(src)] decidió no responder a la carta de [ADMIN_LOOKUPFLW(M)].")
+		message_admins("[key_name_admin(src)] decidio no responder a la carta de [ADMIN_LOOKUPFLW(M)].")
 		return
 
 	var/obj/item/paper/letter = new /obj/item/paper()

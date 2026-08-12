@@ -41,7 +41,7 @@
 	if (locate(/obj/effect/blood_ritual/seer) in M)
 		var/obj/item/talisman/T = spell_holder
 		T.uses++
-		to_chat(M, span_warning("Todavía estás bajo los efectos de un talismán Vidente.") )
+		to_chat(M, span_warning("Todavia estas bajo los efectos de un talisman Vidente.") )
 		qdel(src)
 		return
 

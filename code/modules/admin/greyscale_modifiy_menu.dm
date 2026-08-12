@@ -61,7 +61,7 @@
 			var/new_color = input(
 				usr,
 				"Choose color for greyscale color group [group]:",
-				"Menú de modificación de escala de grises",
+				"Menu de modificacion de escala de grises",
 				split_colors[group]
 			) as color|null
 			if(new_color)

@@ -36,7 +36,7 @@
 	contains = /obj/item/reagent_containers/powder/moondust
 
 /datum/supply_pack/narcotics/soap
-	name = "Jabón de hierbas"
+	name = "Jabon de hierbas"
 	cost = 10
 	contains = /obj/item/soap/bath
 

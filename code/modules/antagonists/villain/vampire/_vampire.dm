@@ -58,7 +58,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		examiner.add_stress(/datum/stress_event/its_the_fucking_daewalker)
 		return span_phobia("THE DIABLERIST OF THE SUN QUEEN!!")
 	if(istype(examined_datum, /datum/antagonist/vampire/lord))
-		return span_boldnotice("¡El primogénito de Kaine!")
+		return span_boldnotice("¡El primogenito de Kaine!")
 	if(istype(examined_datum, /datum/antagonist/vampire/lords_spawn))
 		return span_boldnotice("The spawn of the firstborn.")
 	if(istype(examined_datum, /datum/antagonist/vampire))
@@ -104,7 +104,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 
 	clan_options["Create Custom Clan"] = "custom"
 
-	var/choice = input(vampdude, "Elige tu clan de vampiros:", "Selección de clan") as null|anything in clan_options
+	var/choice = input(vampdude, "Elige tu clan de vampiros:", "Seleccion de clan") as null|anything in clan_options
 
 	if(!choice)
 		// Default to nosferatu if no choice made

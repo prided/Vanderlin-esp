@@ -349,7 +349,7 @@
 	client.prefs.migrant.viewer = FALSE
 
 /mob/living/carbon/human/proc/adv_hugboxing_start()
-	to_chat(src, span_warning("Estaré en peligro una vez que empiece a moverme."))
+	to_chat(src, span_warning("Estare en peligro una vez que empiece a moverme."))
 	status_flags |= GODMODE
 	ADD_TRAIT(src, TRAIT_PACIFISM, "hugbox")
 	RegisterSignal(src, COMSIG_MOVABLE_MOVED, PROC_REF(adv_hugboxing_moved), TRUE)
@@ -370,7 +370,7 @@
 		return
 	status_flags &= ~GODMODE
 	REMOVE_TRAIT(src, TRAIT_PACIFISM, "hugbox")
-	to_chat(src, span_danger("¡Mi alegría se ha ido! El peligro me rodea."))
+	to_chat(src, span_danger("¡Mi alegria se ha ido! El peligro me rodea."))
 
 /mob/living/carbon/human/proc/adv_hugboxing_cancel()
 	adv_hugboxing_end()

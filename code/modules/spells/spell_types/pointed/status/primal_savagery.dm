@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/status/primal_savagery
 	name = "Primal Savagery"
-	desc = "Los dientes del objetivo secretarán veneno."
+	desc = "Los dientes del objetivo secretaran veneno."
 	button_icon_state = "wolf_head"
 	sound = 'sound/magic/whiteflame.ogg'
 
@@ -21,7 +21,7 @@
 
 /datum/action/cooldown/spell/status/primal_savagery/cast(mob/living/cast_on)
 	. = ..()
-	cast_on.visible_message(span_warning("[cast_on] looks more primal!"), span_info("Te sientes más primitivo."))
+	cast_on.visible_message(span_warning("[cast_on] looks more primal!"), span_info("Te sientes mas primitivo."))
 
 /datum/status_effect/buff/primal_savagery
 	id = "primal savagery"

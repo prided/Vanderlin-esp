@@ -1,6 +1,6 @@
 
 /datum/loadout_item/robe
-	name = "Túnica"
+	name = "Tunica"
 	item_path = /obj/item/clothing/shirt/robe
 	ui_category = "Shirts"
 
@@ -35,7 +35,7 @@
 	triumph_cost_permanent = 25
 
 /datum/loadout_item/bottomtunic
-	name = "Túnica escotada"
+	name = "Tunica escotada"
 	item_path = /obj/item/clothing/shirt/undershirt/lowcut
 	ui_category = "Shirts"
 
@@ -126,7 +126,7 @@
 	triumph_cost_permanent = 200
 
 /datum/loadout_item/hag
-	name = "Túnica Wyrd"
+	name = "Tunica Wyrd"
 	item_path = /obj/item/clothing/shirt/robe/hag
 	ui_category = "Shirts"
 

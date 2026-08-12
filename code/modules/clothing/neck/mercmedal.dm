@@ -20,7 +20,7 @@
 	icon_state = "gryphon"
 
 /obj/item/clothing/neck/mercmedal/underdweller
-	name = "brújula del subhabitante"
+	name = "brujula del subhabitante"
 	desc = "A non-functional compass carried by seasoned miners as keepsake. Greed will light the way."
 	icon_state = "compass"
 

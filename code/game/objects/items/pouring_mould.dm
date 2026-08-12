@@ -1,6 +1,6 @@
 /obj/item/mould
 	name = "mould"
-	desc = "No deberías estar viendo este."
+	desc = "No deberias estar viendo este."
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
 	item_weight = 500 GRAMS

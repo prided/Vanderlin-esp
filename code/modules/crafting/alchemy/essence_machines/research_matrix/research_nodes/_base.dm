@@ -1,5 +1,5 @@
 /datum/thaumic_research_node
-	var/name = "Investigación desconocida"
+	var/name = "Investigacion desconocida"
 	var/desc = "Un misterioso campo de estudio."
 	var/icon = 'icons/roguetown/misc/alchemy.dmi'
 	var/icon_state = "essence"

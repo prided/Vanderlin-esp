@@ -38,7 +38,7 @@
 
 	var/datum/reagents/reagents = held_item.reagents
 	if(!reagents?.total_volume)
-		to_chat(owner, span_warning("¡Está vacío!"))
+		to_chat(owner, span_warning("¡Esta vacio!"))
 		return . | SPELL_CANCEL_CAST
 
 /datum/action/cooldown/spell/undirected/create_cloud/cast(atom/cast_on)

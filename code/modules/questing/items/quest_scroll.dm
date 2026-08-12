@@ -97,7 +97,7 @@ GLOBAL_LIST_EMPTY(quest_scrolls)
 		. += span_notice("This contract hasn't been claimed yet. Open it to claim it for yourself!")
 	else if(assigned_quest.complete)
 		. += span_notice("\nThis contract is complete! Return it to the Notice Board to claim your reward.")
-		. += span_info("\nPlace en el área marcada al lado del libro.")
+		. += span_info("\nPlace en el area marcada al lado del libro.")
 	else
 		. += span_notice("\nThis contract is still in progress.")
 
@@ -106,7 +106,7 @@ GLOBAL_LIST_EMPTY(quest_scrolls)
 		to_chat(user, span_warning("The enchanted scroll resists your attempts to tear it."))
 		return
 	if(istype(P, /obj/item/paper)) // Prevent merging with other papers/scrolls
-		to_chat(user, span_warning("Las energías mágicas te impiden combinar esto con otros pergaminos."))
+		to_chat(user, span_warning("Las energias magicas te impiden combinar esto con otros pergaminos."))
 		return
 	if(istype(P, /obj/item/natural/thorn) || istype(P, /obj/item/natural/feather))
 		if(!open)
@@ -342,7 +342,7 @@ GLOBAL_LIST_EMPTY(quest_scrolls)
 	// Get precise direction text
 	var/direction_text = get_precise_direction_between(user_turf, compass_target)
 	if(!direction_text)
-		direction_text = "dirección desconocida"
+		direction_text = "direccion desconocida"
 
 	// Determine distance description
 	var/distance_text

@@ -220,7 +220,7 @@
 	contains = /obj/item/clothing/face/facemask/steel
 
 /datum/supply_pack/armor/steel/steppemask
-	name = "Máscara de estepa"
+	name = "Mascara de estepa"
 	cost = 55
 	contains = /obj/item/clothing/face/facemask/steel/steppe
 

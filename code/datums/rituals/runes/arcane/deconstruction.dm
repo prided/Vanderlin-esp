@@ -20,7 +20,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/decrafting/attack_hand(mob/living/user)
 	if(animating)
-		to_chat(user, span_notice("La runa ya está funcionando..."))
+		to_chat(user, span_notice("La runa ya esta funcionando..."))
 		return
 
 	if(!user.get_active_held_item())
@@ -35,7 +35,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/decrafting/attack_hand_secondary(mob/living/user, list/modifiers)
 	if(animating)
-		to_chat(user, span_notice("La runa ya está funcionando..."))
+		to_chat(user, span_notice("La runa ya esta funcionando..."))
 		return
 	if(!staged_item)
 		return ..()
@@ -51,7 +51,7 @@
 		return NONE
 
 	if(animating)
-		to_chat(user, span_notice("La runa ya está funcionando..."))
+		to_chat(user, span_notice("La runa ya esta funcionando..."))
 		return ITEM_INTERACT_BLOCKING
 
 	try_stage_item(user, tool)
@@ -61,7 +61,7 @@
 /// to the ground) so the player can swap without having to erase and re-draw.
 /obj/effect/decal/cleanable/ritual_rune/arcyne/decrafting/proc/try_stage_item(mob/living/user, obj/item/item)
 	if(staged_item == item)
-		to_chat(user, span_notice("Eso ya está colocado en la runa."))
+		to_chat(user, span_notice("Eso ya esta colocado en la runa."))
 		return TRUE // handled, don't fall through
 
 	// Eject whatever was there before
@@ -139,10 +139,10 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/decrafting/proc/try_invoke(mob/living/user)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("No puedes invocar estos símbolos."))
+		to_chat(user, span_warning("No puedes invocar estos simbolos."))
 		return
 	if(rune_in_use)
-		to_chat(user, span_notice("La runa ya está activa."))
+		to_chat(user, span_notice("La runa ya esta activa."))
 		return
 	rune_in_use = TRUE
 	animating = TRUE

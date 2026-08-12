@@ -6,7 +6,7 @@
 	antimagic_flags = NONE
 
 	invocation_type = INVOCATION_SHOUT
-	invocation = "La muerte se reirá al final."
+	invocation = "La muerte se reira al final."
 
 	spell_type = NONE
 	associated_skill = null

@@ -87,7 +87,7 @@
 	if(buckled_mob)
 		var/mob/living/M = buckled_mob
 		if (M != user)
-			M.visible_message(span_notice("¡[user] está intentando liberar a [M] de [src]!"),\
+			M.visible_message(span_notice("¡[user] esta intentando liberar a [M] de [src]!"),\
 				span_notice("[user] is trying to pull me off [src]! It hurts!"),\
 				span_hear("I hear the sound of torn flesh and whimpering..."))
 			if(!do_after(user, 12 SECONDS, src))
@@ -332,7 +332,7 @@
 			if(total_bonus_items > 0)
 				var/happiness_message = butchery_target.get_happiness_butcher_message(happiness_bonus)
 				if(happiness_message)
-					to_chat(user, span_notice("[happiness_message] (+[total_bonus_items] artículos de bonificación)"))
+					to_chat(user, span_notice("[happiness_message] (+[total_bonus_items] articulos de bonificacion)"))
 
 			butchery_target.gib()
 			var/boon = user.get_learning_boon(/datum/attribute/skill/labor/butchering)

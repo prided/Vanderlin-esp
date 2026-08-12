@@ -45,7 +45,7 @@
 	cast_on.Immobilize(4 SECONDS)
 
 /datum/action/cooldown/spell/charm/vampire
-	name = "Encanto vampírico"
+	name = "Encanto vampirico"
 	sound = 'sound/magic/PSY.ogg'
 	charge_sound = 'sound/magic/chargingold.ogg'
 

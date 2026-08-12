@@ -44,14 +44,14 @@
 		),
 		ITEM_SELLING_CANCELED_PHRASE = list(
 			"Perhaps you need more time to consider such a momentous purchase.",
-			"Los artefactos esperarán a un dueño digno.",
+			"Los artefactos esperaran a un dueño digno.",
 		),
 		ITEM_SELLING_ACCEPTED_PHRASE = list(
 			"May this ancient weapon serve you well in battle.",
 			"You have chosen wisely. This artifact has a storied history.",
 		),
 		INTERESTED_PHRASE = list(
-			"¡Ah, ese artículo me llama la atención! Pagaría generosamente por una pieza así.",
+			"¡Ah, ese articulo me llama la atencion! Pagaria generosamente por una pieza asi.",
 			"Now that is something I could add to my collection.",
 		),
 		BUY_PHRASE = list(
@@ -60,7 +60,7 @@
 		),
 		NO_CASH_PHRASE = list(
 			"These are artifacts of legend, not common trinkets. Return when your purse is heavier.",
-			"Seis mil piezas de oro es el precio. Sin crédito, sin excepciones.",
+			"Seis mil piezas de oro es el precio. Sin credito, sin excepciones.",
 		),
 		NO_STOCK_PHRASE = list(
 			"That particular artifact has already found a new owner.",
@@ -75,11 +75,11 @@
 			"Worthless baubles have no place in my shop.",
 		),
 		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
-			"Ya poseo suficientes de estos artículos.",
-			"Mis bóvedas ya están llenas de esas cosas.",
+			"Ya poseo suficientes de estos articulos.",
+			"Mis bovedas ya estan llenas de esas cosas.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"¡Bienvenido, buscador de armas legendarias! Cada artefacto aquí ha probado la sangre en batallas épicas.",
+			"¡Bienvenido, buscador de armas legendarias! Cada artefacto aqui ha probado la sangre en batallas epicas.",
 			"Estas armas llevan las almas de antiguos guerreros. Elige con cuidado.",
 			"I have traveled the world collecting these legendary arms. Each tells a story of glory and conquest.",
 			"Six thousand gold pieces may seem steep, but these are weapons of legend!",
@@ -92,7 +92,7 @@
 		),
 		TRADER_BATTLE_START_PHRASE = list(
 			"You dare steal from a dealer of legendary weapons? Face my wrath!",
-			"¡Tonto! ¡Estos artefactos se defenderán solos!",
+			"¡Tonto! ¡Estos artefactos se defenderan solos!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"The artifacts... have chosen... a new master...",

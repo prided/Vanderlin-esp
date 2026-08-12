@@ -12,7 +12,7 @@
 	/// Even offer them a choice to become this?
 	var/give_choice = TRUE
 	/// Say message when the recruit accepts
-	var/accept_message = "¡Yo serviré!"
+	var/accept_message = "¡Yo servire!"
 	/// Say message when the recruit refuses
 	var/refuse_message = "I refuse."
 

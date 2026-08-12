@@ -1,7 +1,7 @@
 /obj/item/clothing/armor/gambeson
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	name = "gambeson"
-	desc = "Tela gruesa acolchada en capas, buena por sí sola o usada debajo del metal como relleno."
+	desc = "Tela gruesa acolchada en capas, buena por si sola o usada debajo del metal como relleno."
 	icon_state = "gambeson"
 	resistance_flags = FLAMMABLE
 	blocksound = SOFTUNDERHIT
@@ -187,7 +187,7 @@
 
 //................ Striped Tunic ............... // - Light gambesson type
 /obj/item/clothing/armor/gambeson/light/striped
-	name = "túnica a rayas"
+	name = "tunica a rayas"
 	desc = "A common tunic worn by just about anyone. Nothing special, but essential."
 	icon_state = "striped"
 	sleevetype = null

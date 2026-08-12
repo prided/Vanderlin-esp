@@ -108,7 +108,7 @@
 		return
 	var/turf/Turf = get_turf(user)
 	if(locate(/obj/effect/decal/cleanable/ritual_rune) in Turf)
-		to_chat(user, span_cult("Ya hay una runa aquí."))
+		to_chat(user, span_cult("Ya hay una runa aqui."))
 		return
 	var/structures_in_way = check_for_structures_and_closed_turfs(loc, pickrune)
 	if(structures_in_way == TRUE)
@@ -180,7 +180,7 @@
 		return
 	var/turf/Turf = get_turf(user)
 	if(locate(/obj/effect/decal/cleanable/ritual_rune) in Turf)
-		to_chat(user, span_cult("Ya hay una runa aquí."))
+		to_chat(user, span_cult("Ya hay una runa aqui."))
 		return
 	var/structures_in_way = check_for_structures_and_closed_turfs(loc, pickrune)
 	if(structures_in_way == TRUE)
@@ -651,7 +651,7 @@
 /obj/item/natural/melded
 	name = "arcyne meld"
 	icon_state = "wessence"
-	desc = "No deberías estar viendo esto"
+	desc = "No deberias estar viendo esto"
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
 	sellprice = 20
@@ -689,7 +689,7 @@
 	amplifier = 1.5
 
 /obj/item/natural/melded/t4
-	name = "confluencia mágica"
+	name = "confluencia magica"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "wessence"
 	desc = "A melding of abyssal flame, sylvan essence and elemental relic."

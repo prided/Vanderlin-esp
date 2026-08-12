@@ -1,6 +1,6 @@
 /obj/item/gravedecor
 	name = "grave decoration"
-	desc = "Si estás viendo esto, grita a los codificadores."
+	desc = "Si estas viendo esto, grita a los codificadores."
 	icon = 'icons/roguetown/items/graveitems.dmi'
 	icon_state = "headstone_basic"
 	gripped_intents = null
@@ -24,40 +24,40 @@
 	. = ..()
 
 	if(decorationquality == 1)
-		. += span_info("Esta es una decoración tosca.")
+		. += span_info("Esta es una decoracion tosca.")
 	if(decorationquality == 2)
-		. += span_info("Esta es una decoración mediana.")
+		. += span_info("Esta es una decoracion mediana.")
 	if(decorationquality == 3)
-		. += span_info("Esta decoración es de la más alta calidad.")
+		. += span_info("Esta decoracion es de la mas alta calidad.")
 	if(length(patrons))
 		if(/datum/patron/divine/astrata in patrons)
-			. += SPAN_GOD_ASTRATA("Esta decoración venera a Astrata, el Tirano del Sol.")
+			. += SPAN_GOD_ASTRATA("Esta decoracion venera a Astrata, el Tirano del Sol.")
 		if(/datum/patron/divine/noc in patrons)
-			. += SPAN_GOD_NOC("Esta decoración venera a Noc, el Príncipe de la Luna.")
+			. += SPAN_GOD_NOC("Esta decoracion venera a Noc, el Principe de la Luna.")
 		if(/datum/patron/divine/abyssor in patrons)
-			. += SPAN_GOD_ABYSSOR("Esta decoración venera a Abyssor, Señor de las Profundidades.")
+			. += SPAN_GOD_ABYSSOR("Esta decoracion venera a Abyssor, Señor de las Profundidades.")
 		if(/datum/patron/divine/dendor in patrons)
 			. += SPAN_GOD_DENDOR("This decoration venerates Dendor, the Beastfather.")
 		if(/datum/patron/divine/necra in patrons)
 			. += SPAN_GOD_NECRA("This decoration venerates Necra, the Undermaiden.")
 		if(/datum/patron/divine/ravox in patrons)
-			. += SPAN_GOD_RAVOX("Esta decoración venera a Ravox, la Encarnación de la Justicia.")
+			. += SPAN_GOD_RAVOX("Esta decoracion venera a Ravox, la Encarnacion de la Justicia.")
 		if(/datum/patron/divine/xylix in patrons)
 			. += SPAN_GOD_XYLIX("This decoration venerates Xylix, the Silvertongued.")
 		if((/datum/patron/divine/pestra || /datum/patron/alternate/wurm) in patrons)
 			. += SPAN_GOD_PESTRA("This decoration venerates Pestra, the Plaguebearer.")
 		if(/datum/patron/divine/malum in patrons)
-			. += SPAN_GOD_MALUM("Esta decoración venera a Malum, el Gran Artesano.")
+			. += SPAN_GOD_MALUM("Esta decoracion venera a Malum, el Gran Artesano.")
 		if(/datum/patron/divine/eora in patrons)
-			. += SPAN_GOD_EORA("Esta decoración venera a Eora, el Patrón del Amor.")
+			. += SPAN_GOD_EORA("Esta decoracion venera a Eora, el Patron del Amor.")
 		if(/datum/patron/alternate/great_hunt in patrons)
 			. += SPAN_GOD_GREATHUNT("This decoration venerates the Great Hunt.")
 		if(/datum/patron/psydon in patrons)
-			. += SPAN_GOD_PSYDON("Esta decoración venera a Psydon, el Dios Antiguo.")
+			. += SPAN_GOD_PSYDON("Esta decoracion venera a Psydon, el Dios Antiguo.")
 
 /obj/item/gravedecor/headstone
 	name = "peaked headstone"
-	desc = "Una lápida con un pico afilado y mucho espacio para una inscripción."
+	desc = "Una lapida con un pico afilado y mucho espacio para una inscripcion."
 	icon_state = "headstone_basic"
 	decorationquality = 2
 
@@ -87,7 +87,7 @@
 	if(!(tool.get_sharpness()))
 		return NONE
 
-	var/new_message = tgui_input_text(user, "What would you like to be inscribed on \the [src]?", "Inscripción personalizada", custom_message, 150, TRUE)
+	var/new_message = tgui_input_text(user, "What would you like to be inscribed on \the [src]?", "Inscripcion personalizada", custom_message, 150, TRUE)
 	if(!new_message || new_message == custom_message)
 		return ITEM_INTERACT_BLOCKING
 
@@ -109,7 +109,7 @@
 
 /obj/item/gravedecor/headstone/obelisk
 	name = "headstone obelisk"
-	desc = "Una lápida alta con incrustaciones de hierro, para que tus obras nunca sean olvidadas."
+	desc = "Una lapida alta con incrustaciones de hierro, para que tus obras nunca sean olvidadas."
 	icon_state = "headstone_obelisk"
 	dropshrink = 0.8
 	decorationquality = 3

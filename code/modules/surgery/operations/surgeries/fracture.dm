@@ -53,7 +53,7 @@
 	display_results(
 		surgeon,
 		limb.owner,
-		span_warning("¡No logro colocar el hueso en el [parse_zone(limb.body_zone)] de [limb.owner]! ¡Está más fuera de lugar!"),
+		span_warning("¡No logro colocar el hueso en el [parse_zone(limb.body_zone)] de [limb.owner]! ¡Esta mas fuera de lugar!"),
 		span_warning("[surgeon] fails to set the bone in [limb.owner]'s [parse_zone(limb.body_zone)]!"),
 		span_warning("[surgeon] fails to set the bone in [limb.owner]'s [parse_zone(limb.body_zone)]!"),
 	)

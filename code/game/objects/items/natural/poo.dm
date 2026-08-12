@@ -1,6 +1,6 @@
 /obj/item/natural/poo
 	name = "nitesoil"
-	desc = "Esto huele mal. Excremento de algún individuo repugnante."
+	desc = "Esto huele mal. Excremento de algun individuo repugnante."
 	icon_state = "humpoo"
 	dropshrink = 0.75
 	throwforce = 0
@@ -24,15 +24,15 @@
 	. = ..()
 	if(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/labor/farming) >= 3)
 		. += span_info("Restores 60 Nitrogen")
-		. += span_info("Restaura 40 fósforo")
+		. += span_info("Restaura 40 fosforo")
 		. += span_info("Restores 50 Potassium")
 
 /obj/item/natural/poo/cow
 	name = "moo-beast pie"
-	desc = "Un pastel que no podría describirse como delicioso."
+	desc = "Un pastel que no podria describirse como delicioso."
 	icon_state = "cowpoo"
 
 /obj/item/natural/poo/horse
 	name = "excrementos"
-	desc = "Materia fecal de algún animal."
+	desc = "Materia fecal de algun animal."
 	icon_state = "horsepoo"

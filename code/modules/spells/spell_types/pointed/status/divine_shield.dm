@@ -83,7 +83,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/divine_shield
 	name = "Escudo Divino"
-	desc = span_nicegreen("Estoy protegido por energías divinas.")
+	desc = span_nicegreen("Estoy protegido por energias divinas.")
 	icon_state = "buff"
 
 

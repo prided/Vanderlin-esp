@@ -33,7 +33,7 @@
 			to_chat(user, "You string a fiber onto [src].")
 			qdel(W)
 		else
-			to_chat(user, "No puedes agregar más fibra.")
+			to_chat(user, "No puedes agregar mas fibra.")
 
 		return ITEM_INTERACT_SUCCESS
 

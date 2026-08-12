@@ -86,7 +86,7 @@
 
 /obj/item/clothing/head/padded/malumhood
 	name = "sculptor's mask"
-	desc = "Así como Malum esculpe sus grandes obras, también esculpe a sus trabajadores."
+	desc = "Asi como Malum esculpe sus grandes obras, tambien esculpe a sus trabajadores."
 	icon_state = "malumhood"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	item_weight = 250 GRAMS

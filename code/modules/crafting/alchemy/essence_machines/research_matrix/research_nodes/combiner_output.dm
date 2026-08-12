@@ -1,7 +1,7 @@
 
 /datum/thaumic_research_node/combiner_output
 	name = "Rendimiento mejorado"
-	desc = "Técnicas para aumentar la cantidad de esencias combinadas producidas a partir de cada proceso de fusión sin sacrificar el rendimiento."
+	desc = "Tecnicas para aumentar la cantidad de esencias combinadas producidas a partir de cada proceso de fusion sin sacrificar el rendimiento."
 	prerequisites = list(/datum/thaumic_research_node/advanced_combiner_applications)
 	required_essences = list(
 		/datum/thaumaturgical_essence/crystal = 10,
@@ -15,7 +15,7 @@
 	bonus_value = 0.3
 
 /datum/thaumic_research_node/combiner_output/two
-	name = "Producción amplificada"
+	name = "Produccion amplificada"
 	desc = "Advanced methods for maximizing essence combination output through improved channeling efficiency and reduced waste."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/combiner_output)
@@ -30,7 +30,7 @@
 	bonus_value = 0.5
 
 /datum/thaumic_research_node/combiner_output/three
-	name = "Creación de abundancia"
+	name = "Creacion de abundancia"
 	desc = "Master-level techniques for achieving extraordinary yields from essence combination processes while maintaining perfect efficiency."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/combiner_output/two)
@@ -46,7 +46,7 @@
 	bonus_value = 0.8
 
 /datum/thaumic_research_node/combiner_output/four
-	name = "Síntesis infinita"
+	name = "Sintesis infinita"
 	desc = "The pinnacle of combination arts, allowing for theoretically unlimited output from minimal input through perfect efficiency mastery."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/combiner_output/three)

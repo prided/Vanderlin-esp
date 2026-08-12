@@ -37,7 +37,7 @@
 			"Ah, this item has caught my discerning eye! I would trade good coin for such quality.",
 		),
 		BUY_PHRASE = list(
-			"¡Una transacción muy honorable! Que los espíritus te favorezcan.",
+			"¡Una transaccion muy honorable! Que los espiritus te favorezcan.",
 		),
 		NO_CASH_PHRASE = list(
 			"Honorable customer, fine sake requires proper payment. Return when your purse matches your taste!",
@@ -64,11 +64,11 @@
 			"¿Te atreves a robarle a un comerciante del shogun?",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
-			"Esta... no es la muerte honorable que imaginé...",
+			"Esta... no es la muerte honorable que imagine...",
 		),
 		TRADER_LORE_PHRASE = list(
 			"Sacred brews from the temples of distant Zhong!",
-			"¡Cada botella lleva la bendición de los antiguos maestros cerveceros!",
+			"¡Cada botella lleva la bendicion de los antiguos maestros cerveceros!",
 			"¡Vino de arroz envejecido a la sombra de los cerezos en flor!",
 			"Sake fit for samurai and nobles alike!",
 			"¡Recetas antiguas de la Tierra del Sol Naciente!",
@@ -107,7 +107,7 @@
 			"Perhaps the blade was not meant for your hands after all, honored one.",
 		),
 		ITEM_SELLING_ACCEPTED_PHRASE = list(
-			"¡Que esta espada te sirva con honor y traiga una rápida victoria a tus enemigos!",
+			"¡Que esta espada te sirva con honor y traiga una rapida victoria a tus enemigos!",
 		),
 		INTERESTED_PHRASE = list(
 			"Ah! This material speaks to my craftsman's soul. I would pay handsomely for such quality!",
@@ -122,7 +122,7 @@
 			"Alas, that particular blade has already found its destined master.",
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
-			"No necesito esos artículos en mi forja en este momento.",
+			"No necesito esos articulos en mi forja en este momento.",
 		),
 		ITEM_IS_WORTHLESS_PHRASE = list(
 			"This scrap metal brings shame to all who work the forge!",

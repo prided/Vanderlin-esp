@@ -1015,7 +1015,7 @@
 
 /obj/item/weapon/sword/long/ravox
 	name = "duel settler"
-	desc = "Los principios de los duelos ravoxianos están inscritos en la hoja de esta espada."
+	desc = "Los principios de los duelos ravoxianos estan inscritos en la hoja de esta espada."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "ravoxflamberge"
 	force = DAMAGE_SWORD + 2
@@ -1285,7 +1285,7 @@
 
 /obj/item/weapon/sword/long/greatsword/claymore/iron
 	name = "Claymore de hierro"
-	desc = "Una gran espada originaria del norte, comúnmente utilizada por los ravoxianos."
+	desc = "Una gran espada originaria del norte, comunmente utilizada por los ravoxianos."
 	icon_state = "ironclaymore"
 	force_wielded = DAMAGE_LONGSWORD_WIELD
 	max_blade_int = 200
@@ -1672,7 +1672,7 @@
 
 /obj/item/weapon/sword/katana/mulyeog/rumacaptain
 	name = "samjeongdo"
-	desc = "Una hoja teñida de oro, con patrones de nubes en la acanaladura. Única en su clase."
+	desc = "Una hoja teñida de oro, con patrones de nubes en la acanaladura. Unica en su clase."
 	icon_state = "eastsword3"
 	force = DAMAGE_SWORD + 3
 	wdefense = GREAT_PARRY
@@ -1834,7 +1834,7 @@
 
 
 /obj/item/weapon/sword/long/martyr
-	name = "espada mártir"
+	name = "espada martir"
 	desc = "A relic passed down through generations of worshippers. It simmers with godly energies, and will only yield to the hands of those who have taken the Oath."
 	icon = 'icons/roguetown/weapons/64/swords.dmi'
 	icon_state = "martyrsword"

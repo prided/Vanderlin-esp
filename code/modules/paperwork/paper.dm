@@ -443,7 +443,7 @@
 		if(!writable)
 			return
 		if(trapped)
-			to_chat(user, span_warning("[src] ya está atrapado."))
+			to_chat(user, span_warning("[src] ya esta atrapado."))
 		else
 			to_chat(user, span_warning("I draw infernal symbols on this [src], rigging it to explode."))
 			trapped = TRUE
@@ -456,7 +456,7 @@
 			return
 
 		if(length(info) > maxlen)
-			to_chat(user, "<span class='warning'>[src] está lleno de verba.</span>")
+			to_chat(user, "<span class='warning'>[src] esta lleno de verba.</span>")
 			return
 		if(user.can_read(src))
 			format_browse(info_links, user)

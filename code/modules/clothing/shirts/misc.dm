@@ -45,7 +45,7 @@
 
 /obj/item/clothing/shirt/jester
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "túnica de bufón"
+	name = "tunica de bufon"
 	desc = "Just remember that the last laugh is on you."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "jestershirt"

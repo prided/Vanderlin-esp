@@ -471,7 +471,7 @@
 	category = "Ammo"
 
 /datum/anvil_recipe/weapons/steel/quarterstaff
-	name = "Bastón de acero (+ tronco pequeño)"
+	name = "Baston de acero (+ tronco pequeño)"
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
 	additional_items = list(/obj/item/grown/log/tree/small)
 	created_item = /obj/item/weapon/polearm/woodstaff/quarterstaff/steel

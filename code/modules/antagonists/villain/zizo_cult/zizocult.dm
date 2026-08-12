@@ -77,7 +77,7 @@
 
 /datum/antagonist/zizocultist/examine_friendorfoe(datum/antagonist/examined_datum, mob/examiner, mob/examined)
 	if(istype(examined_datum, /datum/antagonist/zizocultist/leader))
-		return span_boldnotice("¡NUESTRO LÍDER!")
+		return span_boldnotice("¡NUESTRO LIDER!")
 	if(istype(examined_datum, /datum/antagonist/zizocultist))
 		return span_boldnotice("Un lacayo para el futuro.")
 	if(istype(examined_datum, /datum/antagonist/assassin))
@@ -149,9 +149,9 @@
 		return TRUE
 
 /datum/objective/zizoserve
-	name = "Sirve a tu líder"
-	explanation_text = "Sirve a tu líder y asegúrate de que ascienda."
-	team_explanation_text = "Sirve a tu líder y asegúrate de que ascienda."
+	name = "Sirve a tu lider"
+	explanation_text = "Sirve a tu lider y asegurate de que ascienda."
+	team_explanation_text = "Sirve a tu lider y asegurate de que ascienda."
 	triumph_count = 3
 
 /datum/objective/zizoserve/check_completion()
@@ -209,7 +209,7 @@
 
 /mob/living/carbon/human/proc/praise()
 	set name = "Praise the Dark Lady!"
-	set category = "RolÚnico.Zizo"
+	set category = "RolUnico.Zizo"
 
 	if(stat >= UNCONSCIOUS || !can_speak_vocal())
 		return
@@ -220,13 +220,13 @@
 
 /mob/living/carbon/human/proc/communicate()
 	set name = "Comunicarse con el culto"
-	set category = "RolÚnico.Zizo"
+	set category = "RolUnico.Zizo"
 
 	if(stat >= UNCONSCIOUS || !can_speak_vocal())
 		return
 
 	var/mob/living/carbon/human/H = src
-	var/speak = input("¿De qué hablas?", "ZIZO") as text|null
+	var/speak = input("¿De que hablas?", "ZIZO") as text|null
 	if(!speak)
 		return
 	whisper("O schlet'a ty'schkotot ty'skvoro...")
@@ -257,7 +257,7 @@
 	if(isliving(user))
 		var/mob/living/living_user = user
 		if(istype(living_user, /datum/patron/inhumen/zizo))
-			to_chat(user, "Es del círculo [sigil_type].")
+			to_chat(user, "Es del circulo [sigil_type].")
 
 /obj/effect/decal/cleanable/sigil/proc/consume_ingredients(datum/ritual/R)
 
@@ -423,7 +423,7 @@
 			to_chat(M, span_warning("There is already a sigil here."))
 			return
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
-			to_chat(M, span_warning("Ya hay algo aquí."))
+			to_chat(M, span_warning("Ya hay algo aqui."))
 			return
 	if(do_after(M, 5 SECONDS))
 		M.bloody_hands--
@@ -450,14 +450,14 @@
 
 /mob/living/carbon/human/proc/draw_sigil()
 	set name = "Draw Sigil"
-	set category = "RolÚnico.Zizo"
+	set category = "RolUnico.Zizo"
 	if(incapacitated(IGNORE_GRAB) || stat >= UNCONSCIOUS)
 		return
 
 	var/list/runes = list("Servantry", "Transmutation", "Fleshcrafting")
 
 	if(!bloody_hands && !get_bleed_rate())
-		to_chat(src, span_danger("Mis manos no están lo suficientemente sangrientas."))
+		to_chat(src, span_danger("Mis manos no estan lo suficientemente sangrientas."))
 		return
 
 	var/input = input("Sigil Type", "ZIZO") as null|anything in runes
@@ -470,7 +470,7 @@
 
 /mob/living/carbon/human/proc/release_minion()
 	set name = "Release Lackey"
-	set category = "RolÚnico.Zizo"
+	set category = "RolUnico.Zizo"
 
 	if(!istype(src) || stat == DEAD)
 		return

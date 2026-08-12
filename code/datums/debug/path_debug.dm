@@ -121,8 +121,8 @@ GLOBAL_DATUM_INIT(pathfind_dude, /obj/pathfind_guy, new())
 
 /datum/action/innate/path_debug/jps/Activate()
 	. = ..()
-	max_distance = input(owner, "How far should we be allowed to try and path", "Distancia máxima") as num
-	min_distance = input(owner, "How close should we try and get to the target before stopping", "Distancia mínima") as num
+	max_distance = input(owner, "How far should we be allowed to try and path", "Distancia maxima") as num
+	min_distance = input(owner, "How close should we try and get to the target before stopping", "Distancia minima") as num
 
 /datum/action/innate/path_debug/jps/Deactivate()
 	source_turf = null

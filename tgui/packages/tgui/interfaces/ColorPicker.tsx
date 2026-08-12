@@ -158,7 +158,7 @@ export const ColorPicker = ({
           ) : (
             <Stack.Item color="label" fontSize="0.8em">
               <Icon name="circle" mr={1} color="label" />
-              No se aplica ningún color, apariencia predeterminada
+              No se aplica ningun color, apariencia predeterminada
             </Stack.Item>
           )}
         </Stack>

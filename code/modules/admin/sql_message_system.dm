@@ -6,7 +6,7 @@
 		return
 	var/target_ckey = ckey(target_key)
 	if(!target_key && (type == "note" || type == "message" || type == "watchlist entry"))
-		var/new_key = input(usr,"¿Para quién te gustaría crear un [type]?","Enter a key or ckey",null) as null|text
+		var/new_key = input(usr,"¿Para quien te gustaria crear un [type]?","Enter a key or ckey",null) as null|text
 		if(!new_key)
 			return
 		var/new_ckey = ckey(new_key)

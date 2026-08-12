@@ -120,7 +120,7 @@
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/physically_deformed
-	name = "físicamente deformado"
+	name = "fisicamente deformado"
 	verbage = "is"
 
 /datum/mob_descriptor/prominent/extensive_scars
@@ -164,7 +164,7 @@
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/cold_gaze
-	name = "mirada fría"
+	name = "mirada fria"
 	verbage = "%HAVE%"
 	prefix = "a"
 
@@ -229,7 +229,7 @@
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/enigmatic_tattoos
-	name = "Tatuajes Enigmáticos"
+	name = "Tatuajes Enigmaticos"
 	verbage = "%HAVE%"
 
 /datum/mob_descriptor/prominent/mean_look
@@ -329,7 +329,7 @@
 	prefix = "a"
 
 /datum/mob_descriptor/prominent/nose_hawk
-	name = "Nariz de halcón"
+	name = "Nariz de halcon"
 	verbage = "%HAVE%"
 	prefix = "a"
 

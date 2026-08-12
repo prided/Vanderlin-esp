@@ -60,7 +60,7 @@
 
 /obj/machinery/light/fueled/cauldron
 	name = "cauldron"
-	desc = "Burbuja, Burbuja, trabajo y problemas. Un gran caldero de hierro para preparar pociones a partir de esencias alquímicas."
+	desc = "Burbuja, Burbuja, trabajo y problemas. Un gran caldero de hierro para preparar pociones a partir de esencias alquimicas."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "cauldron1"
 	base_state = "cauldron"
@@ -133,7 +133,7 @@
 	if(auto_repeat)
 		to_chat(user, span_info("Auto-repeat enabled. [src] will automatically brew [initial(selected_recipe.recipe_name)] when essences are available."))
 	else
-		to_chat(user, span_info("Repetición automática desactivada."))
+		to_chat(user, span_info("Repeticion automatica desactivada."))
 
 /obj/machinery/light/fueled/cauldron/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(user.cmode)
@@ -148,7 +148,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(essence_contents.len >= max_essence_types)
-		to_chat(user, span_warning("El caldero no puede contener más tipos de esencia."))
+		to_chat(user, span_warning("El caldero no puede contener mas tipos de esencia."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/essence_type = vial.contained_essence.type

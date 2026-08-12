@@ -28,9 +28,9 @@
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_RESISTCOLD, TRAIT_STATUS_EFFECT(id))
 	REMOVE_TRAIT(owner, TRAIT_RESISTHEAT, TRAIT_STATUS_EFFECT(id))
-	to_chat(owner, span_notice("Tu conexión con los ciclos naturales se desvanece."))
+	to_chat(owner, span_notice("Tu conexion con los ciclos naturales se desvanece."))
 
 /atom/movable/screen/alert/status_effect/seasonal_attunement
 	name = "Seasonal Attunement"
-	desc = "Estás armonizado con los ciclos naturales."
+	desc = "Estas armonizado con los ciclos naturales."
 	icon_state = "buff"

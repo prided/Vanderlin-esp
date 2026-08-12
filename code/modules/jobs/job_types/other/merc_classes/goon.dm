@@ -44,7 +44,7 @@
 	traits = list(TRAIT_STEELHEARTED, TRAIT_DODGEEXPERT)
 
 /datum/outfit/mercenary/goon
-	name = "Matón (mercenario)"
+	name = "Maton (mercenario)"
 	shoes = /obj/item/clothing/shoes/nobleboot
 	belt = /obj/item/storage/belt/leather/mercenary
 	backl = /obj/item/storage/backpack/satchel

@@ -1,5 +1,5 @@
 /datum/container_craft/cooking/tea
-	category = "Tés"
+	category = "Tes"
 	abstract_type = /datum/container_craft/cooking/tea
 	pollute_amount = 100
 	finished_smell = /datum/pollutant/food/teas
@@ -31,7 +31,7 @@
 
 
 /datum/container_craft/cooking/tea/taraxamint
-	name = "Té de Taraxacum-Mentha"
+	name = "Te de Taraxacum-Mentha"
 	crafting_time = 50 SECONDS
 	created_reagent = /datum/reagent/consumable/tea/taraxamint
 	requirements = list(
@@ -60,7 +60,7 @@
 	finished_smell = /datum/pollutant/food/druqks
 
 /datum/container_craft/cooking/tea/manabloom
-	name = "Té de manabloom"
+	name = "Te de manabloom"
 	crafting_time = 30 SECONDS
 	created_reagent = /datum/reagent/consumable/tea/manabloom
 	requirements = list(/obj/item/reagent_containers/food/snacks/produce/manabloom = 2)
@@ -74,21 +74,21 @@
 	finished_smell = /datum/pollutant/food/druqks
 
 /datum/container_craft/cooking/tea/tiefbloodtea
-	name = "Té de sangre Tiefing"
+	name = "Te de sangre Tiefing"
 	crafting_time = 80 SECONDS
 	created_reagent = /datum/reagent/consumable/tea/tiefbloodtea
 	requirements = list(/obj/item/reagent_containers/food/snacks/tiefsugar = 1)
 	finished_smell = /datum/pollutant/food/sugar
 
 /datum/container_craft/cooking/tea/exotic
-	name = "Té exótico"
+	name = "Te exotico"
 	crafting_time = 30 SECONDS
 	created_reagent = /datum/reagent/consumable/caffeine/tea
 	requirements = list(/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground = 2)
 	finished_smell = /datum/pollutant/food/teas
 
 /datum/container_craft/cooking/tea/coffee
-	name = "Café"
+	name = "Cafe"
 	crafting_time = 30 SECONDS
 	created_reagent = /datum/reagent/consumable/caffeine/coffee
 	requirements = list(/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted = 2)

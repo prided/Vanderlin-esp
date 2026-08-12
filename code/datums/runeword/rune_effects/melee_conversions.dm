@@ -1,5 +1,5 @@
 /datum/rune_effect/melee_orbital
-	name = "Conversión orbital"
+	name = "Conversion orbital"
 	var/list/effect_values = list()
 
 /datum/rune_effect/melee_orbital/apply_effects_from_list(list/effects)

@@ -7,12 +7,12 @@
 	desc = "A Belief of Pestra contorted. You live for the Wurm and you will die for it."
 	domain = "\"Mineralogy\", Flesh Searing, Chimeric Enhancement"
 	flaws = "Fe ciega, autolesiones, crueldad"
-	worshippers = "Los desesperados, los perdidos, los fanáticos"
+	worshippers = "Los desesperados, los perdidos, los fanaticos"
 	sins = "Betrayal of Duty, Hesitance, Trusting Outsiders"
 	boons = "Two \"blessed\" chimeric organs"
 
 	confess_lines = list(
-		"¡EL CICLO CONTINUARÁ!",
+		"¡EL CICLO CONTINUARA!",
 		"THE WURM WILL GUIDE MY PATH!",
 		"¡MIS CICATRICES SON MI PRUEBA!",
 		"THE POOLS WILL ERODE ALL!",

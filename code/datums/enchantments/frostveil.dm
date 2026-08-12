@@ -1,6 +1,6 @@
 /datum/enchantment/frostveil
 	enchantment_name = "Frostveil"
-	examine_text = "Se siente bastante frío."
+	examine_text = "Se siente bastante frio."
 	essence_recipe = list(
 		/datum/thaumaturgical_essence/frost = 40,
 		/datum/thaumaturgical_essence/void = 20

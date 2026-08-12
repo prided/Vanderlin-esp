@@ -13,7 +13,7 @@
 	miss_sound = "bluntwooshlarge"
 
 /mob/living/simple_animal/hostile/retaliate/voiddragon
-	name = "dragón vacío"
+	name = "dragon vacio"
 	desc = "An ancient creature from a bygone age. Now would be a good time to run."
 	icon = 'icons/mob/96x96/ratwood_dragon.dmi'
 	icon_state = "dragon"
@@ -464,7 +464,7 @@
 /mob/living/simple_animal/hostile/retaliate/voiddragon/proc/void_explosion(atom/target)
 	var/turf/T = get_turf(target)
 
-	visible_message(span_colossus("¡[src] comienza a formar una bola pulsante de energía del vacío!"))
+	visible_message(span_colossus("¡[src] comienza a formar una bola pulsante de energia del vacio!"))
 
 	new /obj/effect/temp_visual/dragon_explosion_target(T)
 
@@ -629,7 +629,7 @@
 
 /obj/effect/temp_visual/dragon_swoop
 	name = "certain death"
-	desc = "¡No te quedes ahí parado, muévete!"
+	desc = "¡No te quedes ahi parado, muevete!"
 	icon = 'icons/effects/96x96.dmi'
 	icon_state = "void_blink_in"
 	layer = BELOW_MOB_LAYER
@@ -694,7 +694,7 @@
 	var/next_stage_time = 0
 
 /atom/movable/screen/alert/status_effect/void_corruption
-	name = "Corrupción del vacío"
+	name = "Corrupcion del vacio"
 	desc = "Void energy is eating away at your very being!"
 	icon_state = "poison" // "void_corruption"  // ICON NEEDED
 
@@ -717,7 +717,7 @@
 	if(ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		H.cut_overlay(mutable_appearance('icons/effects/effects.dmi', "void_corruption_overlay"))
-		to_chat(H, span_notice("La corrupción del vacío se desvanece de mi cuerpo."))
+		to_chat(H, span_notice("La corrupcion del vacio se desvanece de mi cuerpo."))
 
 /datum/status_effect/void_corruption/tick()
 	if(world.time >= next_damage_time)
@@ -740,7 +740,7 @@
 	new /obj/effect/temp_visual/void_corruption(get_turf(owner))
 
 	if(prob(50))
-		to_chat(owner, span_warning("¡La corrupción del vacío quema mi carne!"))
+		to_chat(owner, span_warning("¡La corrupcion del vacio quema mi carne!"))
 
 	if(corruption_stage >= 2 && prob(25))
 		owner.adjust_confusion(4 SECONDS)

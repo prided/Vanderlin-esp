@@ -109,7 +109,7 @@
 	mother.frenzy_on()
 
 /datum/action/cooldown/spell/projectile/acid_splash_broodmother
-	name = "Vómito ácido"
+	name = "Vomito acido"
 	desc = "A slow-moving glob of acid that sprays over an area upon impact."
 	button_icon_state = "acidsplash"
 	sound = 'sound/magic/whiteflame.ogg'

@@ -1,6 +1,6 @@
 
 /datum/loadout_item/cane
-	name = "Bastón de madera"
+	name = "Baston de madera"
 	item_path = /obj/item/weapon/mace/cane
 	ui_category = "Held Item"
 

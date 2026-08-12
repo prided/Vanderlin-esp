@@ -3,7 +3,7 @@
 #define RNGCHEM_OUTPUT "output"
 
 /datum/chemical_reaction/randomized
-	name = "reacción semi aleatoria"
+	name = "reaccion semi aleatoria"
 
 	var/persistent = FALSE
 	var/persistence_period = 7 //Will reset every x days

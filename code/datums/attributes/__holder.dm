@@ -462,7 +462,7 @@
 		if(ispath(thing, STAT))
 			var/datum/attribute/attribute = GLOB.all_stats[thing]
 			stats += attribute
-	output += span_notice("<EM>Estadísticas</EM>")
+	output += span_notice("<EM>Estadisticas</EM>")
 	for(var/datum/attribute/stat/stat as anything in stats)
 		var/raw_attribute = nulltozero(raw_attribute_list[stat.type])
 		var/total_attribute = nulltozero(attribute_list[stat.type])

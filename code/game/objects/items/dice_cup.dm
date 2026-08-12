@@ -41,7 +41,7 @@
 		return NONE
 
 	if(length(dice_list) >= max_dice)
-		to_chat(user, span_warning("\The [name] está lleno."))
+		to_chat(user, span_warning("\The [name] esta lleno."))
 		return ITEM_INTERACT_BLOCKING
 
 	to_chat(user, span_notice("Puse [tool] en \the [name]."))

@@ -14,7 +14,7 @@ export const DetailBlueprint = ({ r, lookup, pickerMap, allRecipes, essenceIndex
         ))}
       </>
     )}
-    <SectionHead>Construcción</SectionHead>
+    <SectionHead>Construccion</SectionHead>
     <Box className="RecipeBook__step-block">
       <Box className="RecipeBook__step-row">
         <Sprite icon={r.tool_icon} icon_state={r.tool_state} />
@@ -28,7 +28,7 @@ export const DetailBlueprint = ({ r, lookup, pickerMap, allRecipes, essenceIndex
         </Box>
       )}
       <Box className="RecipeBook__step-row">⏱ {r.build_time}s</Box>
-      {!!r.supports_directions && <Box className="RecipeBook__step-row">↻ Soporta rotación</Box>}
+      {!!r.supports_directions && <Box className="RecipeBook__step-row">↻ Soporta rotacion</Box>}
       {!!r.floor_object && <Box className="RecipeBook__step-row">▣ Baldosa completa</Box>}
     </Box>
     {r.output_name && (

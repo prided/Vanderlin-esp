@@ -122,7 +122,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/frosted2
 	name = "Frosted II"
-	desc = "El frío muerde profundamente. Mis movimientos son lentos."
+	desc = "El frio muerde profundamente. Mis movimientos son lentos."
 	icon_state = "debuff"
 
 /datum/status_effect/debuff/frosted2/on_apply()

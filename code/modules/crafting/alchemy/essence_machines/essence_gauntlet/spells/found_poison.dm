@@ -10,7 +10,7 @@
 	var/turf/target_turf = get_turf(cast_on)
 	if(!target_turf)
 		return FALSE
-	owner.visible_message(span_notice("[owner] busca toxinas en el área."))
+	owner.visible_message(span_notice("[owner] busca toxinas en el area."))
 
 	var/found_poison = FALSE
 	for(var/obj/item/I in range(1, target_turf))

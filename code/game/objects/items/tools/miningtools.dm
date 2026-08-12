@@ -70,7 +70,7 @@
 	item_weight = 1.2 KILOGRAMS
 
 /obj/item/weapon/pick/drill
-	name = "taladro de relojería"
+	name = "taladro de relojeria"
 	desc = "A wonderfully complex work of engineering capable of shredding walls in seconds as opposed to hours."
 	force_wielded = DAMAGE_HEAVYCLUB_WIELD
 	icon_state = "drill"

@@ -148,7 +148,7 @@
 
 	var/probability = max(0, 50 - (skill_level * 10))
 	if(prob(probability))
-		to_chat(user, span_warning("Arruiné algunos de los materiales debido a mi falta de habilidad..."))
+		to_chat(user, span_warning("Arruine algunos de los materiales debido a mi falta de habilidad..."))
 		playsound(item, 'sound/foley/cloth_rip.ogg', 50, TRUE)
 		qdel(item)
 		user.mind.add_sleep_experience(item.sewrepair, GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)) //Getting exp for failing
@@ -231,7 +231,7 @@
 
 /obj/item/weapon/knife/dagger/jile
 	name = "jile de hierro"
-	desc = "Una daga de hierro curvada del este caído."
+	desc = "Una daga de hierro curvada del este caido."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "jile_iron"
 	item_weight = 200 GRAMS
@@ -277,7 +277,7 @@
 
 /obj/item/weapon/knife/dagger/steel/njora
 	name = "steel seme"
-	desc = "Una amplia daga de acero del este caído. Popular entre los elfos."
+	desc = "Una amplia daga de acero del este caido. Popular entre los elfos."
 	icon = 'icons/roguetown/weapons/32/lakkari.dmi'
 	icon_state = "njora_steel"
 	wbalance = HARD_TO_DODGE
@@ -328,7 +328,7 @@
 	item_weight = 220 GRAMS
 
 /obj/item/weapon/knife/dagger/steel/hand/parry
-	name = "\proper apatía"
+	name = "\proper apatia"
 	desc = "A greatly forged length of steel made to be able to parry. Defend with Apathy for any strike that approaches you, for you know they will not make contact."
 	wdefense = GOOD_PARRY
 	icon_state = "spdaggerhand"

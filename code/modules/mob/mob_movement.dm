@@ -335,7 +335,7 @@
 					to_chat(L, "<span class='warning'>Some strange aura is blocking the way.</span>")
 					return
 				if (locate(/obj/effect/blessing, stepTurf))
-					to_chat(L, "<span class='warning'>¡Las energías sagradas bloquean tu camino!</span>")
+					to_chat(L, "<span class='warning'>¡Las energias sagradas bloquean tu camino!</span>")
 					return
 
 				L.forceMove(stepTurf)
@@ -611,7 +611,7 @@
 	prefs.preference_toggle_flag(/datum/preference/bitwise/chat_toggles, CHAT_GHOSTWHISPER)
 	prefs.save_preferences()
 	if(prefs.preference_has_flag(/datum/preference/bitwise/chat_toggles, CHAT_GHOSTWHISPER))
-		to_chat(src, span_info("Escucharé todos los susurros ahora."))
+		to_chat(src, span_info("Escuchare todos los susurros ahora."))
 	else
 		to_chat(src, span_info("I will hear like a mortal."))
 
@@ -625,9 +625,9 @@
 	prefs.preference_toggle_flag(/datum/preference/bitwise/chat_toggles, CHAT_GHOSTSIGHT)
 	prefs.save_preferences()
 	if(prefs.preference_has_flag(/datum/preference/bitwise/chat_toggles, CHAT_GHOSTSIGHT))
-		to_chat(src, span_info("Veré todos los susurros ahora."))
+		to_chat(src, span_info("Vere todos los susurros ahora."))
 	else
-		to_chat(src, span_info("Veré como un mortal."))
+		to_chat(src, span_info("Vere como un mortal."))
 
 
 /client/proc/ghost_up()
@@ -650,7 +650,7 @@
 
 ///Moves a mob upwards in z level
 /mob/verb/up()
-	set name = "Move Upwards"
+	set name = "Subir"
 	set category = "IC"
 
 	if(remote_control)
@@ -682,7 +682,7 @@
 
 ///Moves a mob down a z level
 /mob/verb/down()
-	set name = "Move Downwards"
+	set name = "Bajar"
 	set category = "IC"
 
 	if(remote_control)

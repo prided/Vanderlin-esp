@@ -258,7 +258,7 @@
 
 /datum/container_craft/oven/lemonbookbread
 	category = "Holiday Food"
-	name = "Pan de libro de limón"
+	name = "Pan de libro de limon"
 	requirements = list(/obj/item/reagent_containers/food/snacks/lemonbutterdough = 1)
 	output = /obj/item/reagent_containers/food/snacks/bread/bookbread/lemon
 	cooked_smell = /datum/pollutant/food/pastry
@@ -508,7 +508,7 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/pie/mangosteen
-	name = "Tarta De Mangostán"
+	name = "Tarta De Mangostan"
 	requirements = list(/obj/item/reagent_containers/food/snacks/raw_tart/mangosteen = 1)
 	output = /obj/item/reagent_containers/food/snacks/tart/cooked/mangosteen
 	cooked_smell = /datum/pollutant/food/pastry

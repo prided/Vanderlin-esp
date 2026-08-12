@@ -21,7 +21,7 @@
 		return "gentlewoman"
 
 /datum/mob_descriptor/stature/thug
-	name = "Matón"
+	name = "Maton"
 
 /datum/mob_descriptor/stature/snob
 	name = "Snob"

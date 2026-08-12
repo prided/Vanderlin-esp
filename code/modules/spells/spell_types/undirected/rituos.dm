@@ -87,7 +87,7 @@
 		ADD_TRAIT(cast_on, TRAIT_NOHUNGER, "[type]")
 		ADD_TRAIT(cast_on, TRAIT_NOBREATH, "[type]")
 		if(prob(33))
-			to_chat(cast_on, span_danger("...¿qué he hecho?"))
+			to_chat(cast_on, span_danger("...¿que he hecho?"))
 		qdel(src)
 		return
 

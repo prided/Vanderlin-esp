@@ -57,11 +57,11 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 		return ..()
 
 	if(reagents?.total_volume)
-		balloon_alert(user, "¡está lleno!")
+		balloon_alert(user, "¡esta lleno!")
 		return
 
 	if(closed)
-		balloon_alert(user, "¡está cerrado!")
+		balloon_alert(user, "¡esta cerrado!")
 		return
 
 	playsound(src, 'sound/items/scroll_open.ogg', 100, FALSE)
@@ -155,7 +155,7 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 	list_reagents = list(/datum/reagent/consumable/sugar = 30)
 
 /obj/item/reagent_containers/glass/bottle/sacid
-	name = "botella de ácido sulfúrico"
+	name = "botella de acido sulfurico"
 	list_reagents = list(/datum/reagent/toxin/acid = 30)
 
 /obj/item/reagent_containers/glass/bottle/welding_fuel
@@ -239,7 +239,7 @@ GLOBAL_LIST_INIT(wisdoms, file2list("strings/rt/wisdoms.txt"))
 		reagents.flags = reagent_flags
 		balloon_alert(user, "Quito el corcho.")
 		playsound(user,'sound/items/uncork.ogg', 100, TRUE)
-		desc = "Un vial abierto, fácil de beber rápidamente."
+		desc = "Un vial abierto, facil de beber rapidamente."
 		spillable = TRUE
 	update_appearance(UPDATE_OVERLAYS)
 

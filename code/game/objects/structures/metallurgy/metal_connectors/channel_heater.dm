@@ -1,6 +1,6 @@
 /obj/structure/channel_connector/heater
 	name = "calentador de canal"
-	desc = "Un dispositivo similar a un horno que se conecta a canales metálicos para recalentar el metal fundido a medida que fluye."
+	desc = "Un dispositivo similar a un horno que se conecta a canales metalicos para recalentar el metal fundido a medida que fluye."
 
 	icon = 'icons/roguetown/weapons/crucible.dmi'
 	icon_state = "heater"

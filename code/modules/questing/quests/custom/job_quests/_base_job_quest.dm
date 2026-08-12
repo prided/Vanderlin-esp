@@ -27,7 +27,7 @@
 	return FALSE
 
 /datum/quest/custom/job_quest/on_validate_fail(mob/steward, turf/input_point, atom/movable/talker)
-	talker.say("\"[title]\" aún no está completo. ([progress_current]/[progress_required])")
+	talker.say("\"[title]\" aun no esta completo. ([progress_current]/[progress_required])")
 
 /datum/quest/custom/job_quest/check_completion()
 	return progress_current >= progress_required

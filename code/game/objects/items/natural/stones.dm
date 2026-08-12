@@ -316,7 +316,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	playsound(src, pick('sound/items/stonestone.ogg'), 100)
 
 	if(prob(10))
-		user.visible_message(span_info("[user] golpea las piedras entre sí."))
+		user.visible_message(span_info("[user] golpea las piedras entre si."))
 		var/datum/effect_system/spark_spread/S = new()
 		var/turf/front = get_step(user, user.dir)
 		S.set_up(1, 1, front)
@@ -497,7 +497,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 
 /obj/item/natural/rock/random_ore
 	name = "¿roca?"
-	desc = "Espera, ¿esto no debería estar aquí?"
+	desc = "Espera, ¿esto no deberia estar aqui?"
 	icon_state = "stonerandom"
 
 /obj/item/natural/rock/random/Initialize()
@@ -518,7 +518,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 //................	Stone blocks	............... //
 /obj/item/natural/stoneblock
 	name = "bloque de piedra"
-	desc = "Un bloque de piedra rectangular para la construcción."
+	desc = "Un bloque de piedra rectangular para la construccion."
 	icon = 'icons/roguetown/items/natural.dmi'
 	icon_state = "stoneblock"
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'

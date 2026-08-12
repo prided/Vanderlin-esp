@@ -328,7 +328,7 @@
 
 /obj/item/ingot/steel_slag
 	name = "escoria de acero"
-	desc = "Escoria que contiene acero, resultado de la floración del hierro y el carbón."
+	desc = "Escoria que contiene acero, resultado de la floracion del hierro y el carbon."
 	icon_state = "steel_slag"
 	smeltresult = /obj/item/ingot/steel
 	melting_material = /datum/material/steel
@@ -346,7 +346,7 @@
 	item_weight = 5.5 KILOGRAMS
 
 /obj/item/ingot/purifiedaalloy
-	name = "aleación antigua"
+	name = "aleacion antigua"
 	desc = "An ingot of polished gilbranze, teeming with forbidden knowledge. The reflection on its surface isn't yours; it smiles back at you with eternal malice."
 	icon_state = "ingotancient"
 	smeltresult = /obj/item/ingot/purifiedaalloy
@@ -495,7 +495,7 @@
 
 /obj/item/ingot/component/graggar
 	name = "vicious fragment"
-	desc = "Fragmentos sangrantes de una aleación de otro mundo. </br>El asesinato no es más que justicia sin arbitraje."
+	desc = "Fragmentos sangrantes de una aleacion de otro mundo. </br>El asesinato no es mas que justicia sin arbitraje."
 	icon_state = "component_graggar"
 	dropshrink = 0.7
 

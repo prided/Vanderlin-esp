@@ -141,7 +141,7 @@
 		"Oh, pobre tonto.",\
 		"This is going to hurt for one of us.",\
 		"I laugh, you cry; I weep, you cheer..",\
-		"Seré tu tonto; actuaré para ti...",\
+		"Sere tu tonto; actuare para ti...",\
 		"Let's go gambling!",\
 		"Around and around, folly abounds.",\
 		"Dance with ruin and wealth."\
@@ -197,7 +197,7 @@
 		"Look into my eyes and whisper your woes.",\
 		"Aw, dangit.",\
 		"Fool. Poor fool.",\
-		"Tus ojos se salen de tu cráneo, la baba cae de tus labios.",\
+		"Tus ojos se salen de tu craneo, la baba cae de tus labios.",\
 		"Divina idiotez.",\
 		"You stand just as I did; loser and a freek."\
 	))
@@ -232,7 +232,7 @@
 
 	switch(chatterbox)
 		if(1)
-			say("Todavía recuerdo la lluvia en mi piel.")
+			say("Todavia recuerdo la lluvia en mi piel.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("The wind in my fur...or was it hair? Either way...")
@@ -253,7 +253,7 @@
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 
 		if(4)
-			say("Ella no se dio cuenta de que su máquina la mataría, por supuesto.")
+			say("Ella no se dio cuenta de que su maquina la mataria, por supuesto.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("...though 'tis difficult to argue what happened after that didn't benefit Her.")
@@ -267,7 +267,7 @@
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 
 		if(6)
-			say("Sabes, bufón, esos eclesiales tienen la idea correcta.")
+			say("Sabes, bufon, esos eclesiales tienen la idea correcta.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("Won't someone think of the deadite-loving, tax-hating, drug-using murderers?!")
@@ -305,7 +305,7 @@
 			say("A father and his son are riding a carriage through a forrest. Suddenly, Z's curse! The axle snaps!")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
-			say("El padre muere, pero el hijo... ¡el hijo aún vive! Lo llevan al médico del pueblo cercano.")
+			say("El padre muere, pero el hijo... ¡el hijo aun vive! Lo llevan al medico del pueblo cercano.")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			sleep(30)
 			say("Upon seeing him, the physician ga-...what do you mean, you've heard this one before?")

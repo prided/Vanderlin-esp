@@ -1,5 +1,5 @@
 /datum/material/purified_alloy
-	name = "Aleación purificada"
+	name = "Aleacion purificada"
 	show_as_filling = TRUE
 	color = "#8b521c"
 	hardness = MAT_VALUE_VERY_HARD - 10

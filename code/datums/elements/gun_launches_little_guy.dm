@@ -47,5 +47,5 @@
 	user.Knockdown(1 SECONDS, prevent_drop = TRUE)
 	user.throw_at(throw_target, throwing_range, throwing_force, spin = FALSE)
 
-	user.visible_message(span_warning("¡[weapon] envía a [user] volando hacia atrás mientras dispara!"), \
-		span_warning("¡[weapon] te envía volando hacia atrás mientras dispara!"))
+	user.visible_message(span_warning("¡[weapon] envia a [user] volando hacia atras mientras dispara!"), \
+		span_warning("¡[weapon] te envia volando hacia atras mientras dispara!"))

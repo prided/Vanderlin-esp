@@ -88,7 +88,7 @@
 	if(!HAS_TRAIT_FROM(human, TRAIT_MOVE_FLOATING, SPECIES_FLIGHT_TRAIT))
 		var/attempt_takeoff = can_takeoff && try_takeoff
 		if(attempt_takeoff)
-			to_chat(human, span_info("Intentaré volar hacia arriba si es posible."))
+			to_chat(human, span_info("Intentare volar hacia arriba si es posible."))
 		if(do_after(owner, flight_startup, extra_checks = CALLBACK(src, PROC_REF(can_fly))))
 			start_flying(human, attempt_takeoff)
 	else
@@ -193,7 +193,7 @@
 	SIGNAL_HANDLER
 
 	if(!owner.adjust_stamina(FLIGHT_DRAIN_AMOUNT))
-		to_chat(owner, span_warning("¡Estás demasiado agotado para seguir volando!"))
+		to_chat(owner, span_warning("¡Estas demasiado agotado para seguir volando!"))
 		stop_flying(owner, TRUE)
 		return
 
@@ -233,7 +233,7 @@
 	return ZIMPACT_CANCEL_DAMAGE
 
 /obj/item/organ/wings/flight/harpy
-	name = "alas de arpía"
+	name = "alas de arpia"
 	accessory_type = /datum/sprite_accessory/wings/large/harpyswept
 	flight_for_species = list(SPEC_ID_HARPY)
 

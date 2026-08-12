@@ -177,7 +177,7 @@ GLOBAL_LIST_INIT_TYPED(blood_types, /datum/blood_type, init_subtypes_w_path_keys
 	used_table = /datum/chimeric_table/cursed_elf
 
 /datum/blood_type/human/triton
-	name = "Tritón"
+	name = "Triton"
 	reagent_type = /datum/reagent/blood
 	contains_lux = TRUE
 	used_table = /datum/chimeric_table/triton
@@ -211,7 +211,7 @@ GLOBAL_LIST_INIT_TYPED(blood_types, /datum/blood_type, init_subtypes_w_path_keys
 	used_table = /datum/chimeric_table/fey
 
 /datum/blood_type/lycan
-	name = "licántropo"
+	name = "licantropo"
 	used_table = /datum/chimeric_table/lycan
 
 /datum/blood_type/human/corrupted

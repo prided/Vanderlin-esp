@@ -18,11 +18,11 @@
 	icon_state = "fadedown"
 
 /datum/hair_gradient/vertical_split
-	name = "División vertical"
+	name = "Division vertical"
 	icon_state = "vsplit"
 
 /datum/hair_gradient/_split
-	name = "División horizontal"
+	name = "Division horizontal"
 	icon_state = "bottomflat"
 
 /datum/hair_gradient/reflected

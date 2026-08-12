@@ -29,7 +29,7 @@
 	if(contained_augment)
 		color = contained_augment.color
 		name = "[contained_augment.name] kit"
-		desc = "[contained_augment.desc]\n\nStability Costo: [contained_augment.stability_cost]\nRequired Habilidad: Ingeniería [contained_augment.engineering_difficulty]"
+		desc = "[contained_augment.desc]\n\nStability Costo: [contained_augment.stability_cost]\nRequired Habilidad: Ingenieria [contained_augment.engineering_difficulty]"
 	else
 		color = initial(color)
 		name = initial(name)
@@ -41,7 +41,7 @@
 		return NONE
 
 	if(!contained_augment)
-		to_chat(user, span_warning("¡[src] está vacío!"))
+		to_chat(user, span_warning("¡[src] esta vacio!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/mob/living/augmented = interacting_with
@@ -107,7 +107,7 @@
 
 	var/skill = GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering)
 	if(skill < to_remove.engineering_difficulty)
-		to_chat(user, span_warning("¡Te falta la habilidad de ingeniería para desinstalar este aumento!"))
+		to_chat(user, span_warning("¡Te falta la habilidad de ingenieria para desinstalar este aumento!"))
 		return ITEM_INTERACT_BLOCKING
 
 	to_chat(user, span_notice("Comienzas a desinstalar el [to_remove.name]..."))

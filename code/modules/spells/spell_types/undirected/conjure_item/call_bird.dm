@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/call_bird
 	name = "Call Messenger Bird"
-	desc = "Llama a tu pájaro mensajero."
+	desc = "Llama a tu pajaro mensajero."
 	button_icon_state = "zad"
 	sound = null
 
@@ -82,7 +82,7 @@
 	owned_bird = null
 
 /obj/item/reagent_containers/food/snacks/messenger_bird
-	name = "pájaro mensajero"
+	name = "pajaro mensajero"
 	desc = "A small bird, used by nobles to send messages beyond the borders of this city. It has a small pouch on its leg for carrying notes."
 	icon_state = "messenger"
 	icon = 'icons/roguetown/mob/monster/messenger.dmi'
@@ -180,7 +180,7 @@
 	if(istype(tool, /obj/item/paper) && spell.owner == user)
 		var/obj/item/paper/P = tool
 		if(!length(P.info))
-			to_chat(user, span_warning("¡La nota está en blanco!"))
+			to_chat(user, span_warning("¡La nota esta en blanco!"))
 			return ITEM_INTERACT_BLOCKING
 		to_chat(user, span_notice("You attach your note to the messenger bird."))
 		var/noble_info = "[user.key]/([user.real_name]) ([user.job])"
@@ -190,7 +190,7 @@
 			to_chat(user, span_notice("You decide not to send the bird anywhere."))
 			return
 
-		to_chat(user, span_notice("Le dices al pájaro que vaya a [spell.destinations[dest]]"))
+		to_chat(user, span_notice("Le dices al pajaro que vaya a [spell.destinations[dest]]"))
 		var/strip_info = STRIP_HTML_FULL(replacetext(P.info, "<br>", "\n"), MAX_MESSAGE_LEN)
 		log_game("LETTER SENT: from [key_name(user)] to [spell.destinations[dest]]:\n[strip_info]", LOG_GAME)
 		strip_info = replacetext(strip_info, "\n", "<br>")

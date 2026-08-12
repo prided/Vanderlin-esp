@@ -86,7 +86,7 @@
 		crosser.adjustFireLoss(-2, updating_health = FALSE)
 
 /datum/vine_mutation/toxicity
-	name = "tóxico"
+	name = "toxico"
 	hue = "#ff00ff"
 	severity = 10
 	quality = NEGATIVE
@@ -141,7 +141,7 @@
 		qdel(prey)
 
 /datum/vine_mutation/aggressive_spread  //very OP, but im out of other ideas currently
-	name = "propagación agresiva"
+	name = "propagacion agresiva"
 	hue = "#333333"
 	severity = 3
 	quality = NEGATIVE

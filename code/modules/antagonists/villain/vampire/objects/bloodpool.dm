@@ -234,7 +234,7 @@
 
 /datum/vampire_project/proc/show_details(mob/living/user)
 	to_chat(user, span_notice("Proyecto: [display_name]"))
-	to_chat(user, span_notice("Descripción: [description]"))
+	to_chat(user, span_notice("Descripcion: [description]"))
 	to_chat(user, span_notice("Progreso: [paid_amount]/[total_cost]"))
 	to_chat(user, span_notice("Contributors: [english_list(contributors)]"))
 
@@ -270,7 +270,7 @@
 	var/datum/antagonist/vampire/lord/lord = target?.mind?.has_antag_datum(/datum/antagonist/vampire/lord)
 	if(!lord || lord.ascension_level != ascension_requirement)
 		return
-	to_chat(target, span_greentext("Mi poder crece a través del sacrificio colectivo."))
+	to_chat(target, span_greentext("Mi poder crece a traves del sacrificio colectivo."))
 	var/mob/living/carbon/human/lord_body = target
 	lord_body.set_stat_modifier("[type]", list(
 		STAT_CONSTITUTION = 2,
@@ -302,7 +302,7 @@
 	next_phase = /datum/vampire_project/power_growth/fourth
 
 /datum/vampire_project/power_growth/fourth
-	display_name = "Rito de soberanía"
+	display_name = "Rito de soberania"
 	description = "The Lord is whole. Ancient power saturates every stone and vein, for the Land and its master are one."
 	total_cost = VAMPCOST_FOUR
 	ascension_requirement = 3
@@ -349,7 +349,7 @@
 	var/obj/item/clothing/neck/portalamulet/P = new(bloodpool.loc)
 	if(amulet_name)
 		P.name = amulet_name
-	creation_point.visible_message(span_notice("Un amuleto se materializa del crisol carmesí."))
+	creation_point.visible_message(span_notice("Un amuleto se materializa del crisol carmesi."))
 
 /datum/vampire_project/maille_crafting
 	display_name = "Ancient Maille"
@@ -370,7 +370,7 @@
 
 /datum/vampire_project/armor_crafting
 	display_name = "Ancient Plate"
-	description = "Crea un conjunto completo de armadura vampírica a partir de sangre cristalizada."
+	description = "Crea un conjunto completo de armadura vampirica a partir de sangre cristalizada."
 	total_cost = VAMPCOST_ONE
 	completion_sound = 'sound/misc/vcraft.ogg'
 

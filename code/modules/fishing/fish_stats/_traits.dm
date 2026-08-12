@@ -193,7 +193,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		.[MULTIPLICATIVE_FISHING_MOD] = 0
 
 /datum/fish_trait/vegan
-	name = "herbívoro"
+	name = "herbivoro"
 	catalog_description = "This fish can only be baited with fresh produce."
 	incompatible_traits = list(/datum/fish_trait/carnivore, /datum/fish_trait/predator)
 
@@ -306,7 +306,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		animate(source, alpha = init_alpha, time = 1.2 SECONDS, easing = CIRCULAR_EASING|EASE_OUT)
 
 /datum/fish_trait/prehistoric
-	name = "Fósil viviente"
+	name = "Fosil viviente"
 	catalog_description = "An ancient species thought extinct. Extremely rare and valuable."
 	inheritability = 60
 	added_difficulty = 25

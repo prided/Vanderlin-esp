@@ -5,7 +5,7 @@
 	abstract_type = /datum/supply_pack/instruments
 
 /datum/supply_pack/instruments/mbox
-	name = "Caja de música enana"
+	name = "Caja de musica enana"
 	cost = 80
 	contains = /obj/item/dmusicbox
 
@@ -50,6 +50,6 @@
 	contains = list(/obj/item/instrument/viola)
 
 /datum/supply_pack/instruments/vocals
-	name = "Talismán del vocalista"
+	name = "Talisman del vocalista"
 	cost = 25
 	contains = list(/obj/item/instrument/vocals)

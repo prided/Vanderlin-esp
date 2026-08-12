@@ -1,5 +1,5 @@
 /datum/round_event_control/malum_crafting
-	name = "Solicitud de elaboración"
+	name = "Solicitud de elaboracion"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/malum_crafting
 	weight = 7
@@ -50,7 +50,7 @@
 
 	bordered_message(chosen_one, list(
 		span_userdanger("¡ERES EL ELEGIDO DE MALUM!"),
-		span_notice("¡Malum exige una manifestación física de devoción! ¡Construye 2 cruces sagradas del panteón para ganarte el favor de Malum!"),
+		span_notice("¡Malum exige una manifestacion fisica de devocion! ¡Construye 2 cruces sagradas del panteon para ganarte el favor de Malum!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/magic/dwarf_chant01.ogg', 100)
 

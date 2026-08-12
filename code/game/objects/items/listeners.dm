@@ -105,7 +105,7 @@
 	if(!hidden)
 		alpha = 30
 		name = "thing"
-		desc = "¿Qué es esa cosa?..."
+		desc = "¿Que es esa cosa?..."
 		hidden = TRUE
 		return TRUE
 	alpha = 255
@@ -171,7 +171,7 @@
 
 /obj/item/listeningdevice/inq
 	name = "listener"
-	desc = "Un oído siempre atento..."
+	desc = "Un oido siempre atento..."
 	icon_state = "listenstone"
 
 /obj/item/listeningdevice/inq/examine(mob/user)
@@ -225,7 +225,7 @@
 
 /obj/item/speaker/agent
 	name = "whispering clam"
-	desc = "Siempre susurrando secretos en tus oídos..."
+	desc = "Siempre susurrando secretos en tus oidos..."
 	icon_state = "cosmic_clam"
 	slot_flags = ITEM_SLOT_HIP
 

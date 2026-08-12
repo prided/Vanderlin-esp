@@ -73,7 +73,7 @@
 			/// The Ten won't provide greater healing to centrist worshippers, they do not approve.
 			/// This is ignored if they're already a divine servant, like a Templar, as undivded can only become church roles from round start.
 			if(HAS_TRAIT(cast_on, TRAIT_DIVINE_CENTRIST) && !HAS_TRAIT(cast_on, TRAIT_DIVINE_SERVANT) && patron_restrictive)
-				cast_on.visible_message(span_danger("[cast_on] recoils in shame!"), span_userdanger("¡Los Diez rechazan mi indecisión!"))
+				cast_on.visible_message(span_danger("[cast_on] recoils in shame!"), span_userdanger("¡Los Diez rechazan mi indecision!"))
 				cast_on.cursed_freak_out()
 				return
 			if(((cast_on.real_name in GLOB.excommunicated_players) || (cast_on.real_name in GLOB.heretical_players)) && !HAS_TRAIT(cast_on, TRAIT_FANATICAL))
@@ -143,7 +143,7 @@
 						situational_bonus = 25
 
 			if(/datum/patron/divine/xylix)
-				cast_on.visible_message(span_info("A fugue seems to manifest briefly across [cast_on]!"), span_notice("¡Mis heridas desaparecen como si nunca hubieran estado allí! "))
+				cast_on.visible_message(span_info("A fugue seems to manifest briefly across [cast_on]!"), span_notice("¡Mis heridas desaparecen como si nunca hubieran estado alli! "))
 				// half of the time, heal a little (or a lot) more - flip the coin
 				if(prob(50))
 					conditional_buff = TRUE
@@ -234,13 +234,13 @@
 
 			else
 				if(istype(living_owner.patron, /datum/patron/godless))
-					cast_on.visible_message(span_info("Ningún dios responde a estas oraciones."), span_notice("Ningún dios responde a estas oraciones."))
+					cast_on.visible_message(span_info("Ningun dios responde a estas oraciones."), span_notice("Ningun dios responde a estas oraciones."))
 					return
 				cast_on.visible_message(span_info("A choral sound comes from above and [cast_on] is healed!"), span_notice("¡Estoy bañado en himnos corales curativos!"))
 	var/amount_healed = base_healing
 
 	if(conditional_buff)
-		to_chat(owner, span_greentext("¡Canalizar el poder de mi patrón es más fácil en estas condiciones!"))
+		to_chat(owner, span_greentext("¡Canalizar el poder de mi patron es mas facil en estas condiciones!"))
 		amount_healed += situational_bonus
 
 	if(vampire_disguise?.disguised) //vamps can pretend to be normal for a little bit

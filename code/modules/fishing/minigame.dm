@@ -783,7 +783,7 @@ GLOBAL_LIST_EMPTY(fishing_challenges_by_user)
 	else
 		completion -= completion_loss * seconds_per_tick
 		if(completion <= 0 && !(special_effects & FISHING_MINIGAME_RULE_NO_ESCAPE))
-			user.balloon_alert(user, "¡se escapó!")
+			user.balloon_alert(user, "¡se escapo!")
 			complete(FALSE)
 
 	completion = clamp(completion, 0, 100)

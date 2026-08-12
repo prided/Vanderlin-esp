@@ -1,5 +1,5 @@
 /obj/effect/abstract/liquid_turf
-	name = "líquido"
+	name = "liquido"
 	icon = 'icons/effects/liquids.dmi'
 	icon_state = "puddle"
 	anchored = TRUE

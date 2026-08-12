@@ -104,7 +104,7 @@ GLOBAL_LIST_INIT(required_whitelists, setup_whitelist_ids())
 		"granted_by" = ckey(user.ckey),
 		"granted_on" = world.realtime
 	))
-	var/msg = "[key_name_admin(user)] otorgó la lista blanca '[wl_id]' a [target_ckey]"
+	var/msg = "[key_name_admin(user)] otorgo la lista blanca '[wl_id]' a [target_ckey]"
 	message_admins(msg)
 	log_admin(msg)
 

@@ -117,7 +117,7 @@
 	item_weight = 400 GRAMS
 
 /obj/item/weapon/scabbard/cane
-	name = "bastón elegante"
+	name = "baston elegante"
 	desc = "A polished, dark wooden cane, decorated with gold and silver. Often carried by nobility, even those without a limp, simply to flaunt their wealth to the peasantry. This one contains a concealed blade!"
 	icon_state = "canesheath"
 	force = DAMAGE_MACE - 4
@@ -132,12 +132,12 @@
 	item_weight = 500 GRAMS
 
 /obj/item/weapon/scabbard/cane/courtphysician
-	name = "bastón elegante"
+	name = "baston elegante"
 	desc = "A decorated cane bearing the visage of a vulture."
 	icon_state = "doccanesheath"
 
 /obj/item/weapon/scabbard/cane/hand
-	name = "bastón elegante"
+	name = "baston elegante"
 	desc = "A decorated silver cane bearing a rontz at the top."
 	icon_state = "staffsheath"
 

@@ -131,7 +131,7 @@
 	output = /obj/item/weapon/mace/woodclub
 
 /datum/repeatable_crafting_recipe/survival/woodstaff
-	name = "bastón de madera"
+	name = "baston de madera"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
@@ -424,7 +424,7 @@
 	output = /obj/item/natural/raw_brick
 
 /datum/repeatable_crafting_recipe/survival/mushmound
-	name = "montículo de hongos"
+	name = "monticulo de hongos"
 	requirements = list(
 		/obj/item/natural/chaff = 2,
 		/obj/item/natural/poo = 2,

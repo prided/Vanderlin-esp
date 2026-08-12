@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/mend
-	name = "Reparación menor"
+	name = "Reparacion menor"
 	desc = "Repara daños menores en objetos simples."
 	button_icon_state = "mending"
 	cast_range = 1
@@ -42,7 +42,7 @@
 		var/initial_damage = user.getBruteLoss() + user.getFireLoss()
 		for(var/i = 1, i <= 20, i++)
 			if(user.getBruteLoss() + user.getFireLoss() > initial_damage + 10)
-				to_chat(user, span_warning("¡No puedo concentrarme así!"))
+				to_chat(user, span_warning("¡No puedo concentrarme asi!"))
 				return
 			if(do_after(user, 1.6 SECONDS, I))
 				repair_percent = initial(repair_percent)
@@ -60,7 +60,7 @@
 				break
 		return TRUE
 	else
-		to_chat(user, span_warning("¡Mi concentración se rompe! No pude reparar [I]."))
+		to_chat(user, span_warning("¡Mi concentracion se rompe! No pude reparar [I]."))
 	return FALSE
 
 /datum/action/cooldown/spell/essence/mend/spell

@@ -1,6 +1,6 @@
 /*	..................   Wizard Shenanigans   ................... */
 /obj/structure/circle_protection
-	name = "círculo de protección"
+	name = "circulo de proteccion"
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "circle"
 	alpha = 180
@@ -12,7 +12,7 @@
 	. = ..()
 	var/mob/living/carbon/human/H = user
 	if(depleted)
-		to_chat(user, "<span class='notice'>El círculo de sal ha sido dañado...</span>")
+		to_chat(user, "<span class='notice'>El circulo de sal ha sido dañado...</span>")
 		return
 	if(HAS_TRAIT(H, TRAIT_VIRGIN))
 		playsound(user, 'sound/magic/timestop.ogg', 100, TRUE, -1)
@@ -29,11 +29,11 @@
 		depleted = TRUE
 		alpha = 90
 	else
-		to_chat(user, "<span class='notice'>Las fuerzas mágicas están más allá de tu control.</span>")
+		to_chat(user, "<span class='notice'>Las fuerzas magicas estan mas alla de tu control.</span>")
 
 /obj/structure/circle_protection/attackby(obj/item/I, mob/user, list/modifiers)
 	if(istype(I, /obj/item/reagent_containers/powder/salt))
-		to_chat(user, "<span class='notice'>Restaurando las líneas de sal...</span>")
+		to_chat(user, "<span class='notice'>Restaurando las lineas de sal...</span>")
 		if(do_after(user, 10 SECONDS, src))
 			depleted = FALSE
 			alpha = 180

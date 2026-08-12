@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/aoe/on_turf/snap_freeze
 	name = "Snap Freeze"
-	desc = "Congela el aire en un área pequeña en un instante."
+	desc = "Congela el aire en un area pequeña en un instante."
 	button_icon_state = "snapfreeze"
 
 	required_form = FORM_ICE

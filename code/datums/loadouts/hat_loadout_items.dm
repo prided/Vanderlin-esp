@@ -69,7 +69,7 @@
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/calendula_flower_crown
-	name = "Corona de flores de caléndula"
+	name = "Corona de flores de calendula"
 	item_path = /obj/item/clothing/head/flowercrown/calendula
 	ui_category = "Sombreros"
 
@@ -160,7 +160,7 @@
 	triumph_cost_permanent = 50
 
 /datum/loadout_item/jesterhat
-	name = "Sombrero de bufón"
+	name = "Sombrero de bufon"
 	item_path = /obj/item/clothing/head/jester
 	ui_category = "Sombreros"
 

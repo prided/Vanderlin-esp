@@ -381,7 +381,7 @@
 	picker.equip_to_slot_or_del(head, ITEM_SLOT_HEAD, TRUE)
 
 /datum/job_pack/assassin/assassin_thief
-	name = "Ladrón"
+	name = "Ladron"
 
 	pack_contents = list(
 		/obj/item/clothing/shirt/undershirt/colored/black = ITEM_SLOT_SHIRT,

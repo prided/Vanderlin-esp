@@ -22,6 +22,6 @@
 	grudge_bitflags = CHURCHMEN | SERFS
 	aggressor_titles = list(/datum/job/priest::title, /datum/job/gmtemplar::title)
 	victim_titles = list(/datum/job/innkeep::title, /datum/job/blacksmith::title, /datum/job/tailor::title)
-	grudge_name = "Penitencia pública"
-	aggressor_text = "Los llamaste ante la congregación por un pecado que no era asunto de la iglesia."
+	grudge_name = "Penitencia publica"
+	aggressor_text = "Los llamaste ante la congregacion por un pecado que no era asunto de la iglesia."
 	victim_text = "They dragged your private failings before the whole congregation and revelled in your shame."

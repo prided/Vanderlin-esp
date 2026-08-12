@@ -50,7 +50,7 @@
 	s.start()
 	new ash_type(loc)
 	visible_message(span_warning("¡[src] explota!"),
-		span_hear("¡Escucho una explosión!"))
+		span_hear("¡Escucho una explosion!"))
 	playsound(src, 'sound/blank.ogg', 50, TRUE)
 	qdel(src)
 
@@ -69,7 +69,7 @@
 			pop_burst(2, 0)
 
 /obj/item/toy/snappop/phoenix
-	name = "paquete de polvo mágico"
+	name = "paquete de polvo magico"
 	desc = ""
 	ash_type = /obj/item/fertilizer/ash/snappop_phoenix
 
@@ -270,7 +270,7 @@
 				to_chat(usr, span_notice("I pick up the deck."))
 
 	else
-		to_chat(usr, span_warning("¡No puedo alcanzarlo desde aquí!"))
+		to_chat(usr, span_warning("¡No puedo alcanzarlo desde aqui!"))
 
 
 
@@ -335,7 +335,7 @@
 				qdel(src)
 				N.pickup(cardUser)
 				cardUser.put_in_hands(N)
-				to_chat(cardUser, span_notice("También tomo [currenthand[1]] y lo sostengo."))
+				to_chat(cardUser, span_notice("Tambien tomo [currenthand[1]] y lo sostengo."))
 				cardUser << browse(null, "window=cardhand")
 		return
 
@@ -410,7 +410,7 @@
 			name = cardname
 		else
 			icon_state = "sc_Ace of Spades_[deckstyle]"
-			name = "¿Qué tarjeta?"
+			name = "¿Que tarjeta?"
 		pixel_x = base_pixel_x + 5
 	else if(flipped)
 		flipped = 0

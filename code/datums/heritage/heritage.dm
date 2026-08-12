@@ -111,8 +111,8 @@
 	_stamp_inlaw_relations(mind1, mind2)
 	_stamp_inlaw_relations(mind2, mind1)
 
-	to_chat(person1.person, span_love("¡Ahora estás casado con [person2.person?.real_name]!"))
-	to_chat(person2.person, span_love("¡Ahora estás casado con [person1.person?.real_name]!"))
+	to_chat(person1.person, span_love("¡Ahora estas casado con [person2.person?.real_name]!"))
+	to_chat(person2.person, span_love("¡Ahora estas casado con [person1.person?.real_name]!"))
 	return TRUE
 
 // For every blood/adopted relation that `their_side` has, give `my_side` an in-law link to them.

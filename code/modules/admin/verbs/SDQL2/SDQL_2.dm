@@ -972,7 +972,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 				querys[querys_pos] = parsed_tree
 				querys_pos++
 			else //There was an error so don't run anything, and tell the user which query has errored.
-				to_chat(usr, "<span class='danger'>Error de análisis en la consulta [querys_pos]\th. No se ejecutó nada.</span>")
+				to_chat(usr, "<span class='danger'>Error de analisis en la consulta [querys_pos]\th. No se ejecuto nada.</span>")
 				return list()
 			query_tree = list()
 			do_parse = 0
@@ -1023,7 +1023,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 
 	else if(expression [start] == "{" && long)
 		if(LOWER_TEXT(copytext(expression[start + 1], 1, 3)) != "0x")
-			to_chat(usr, "<span class='danger'>Sintaxis de puntero no válida: [expression[start + 1]]</span>")
+			to_chat(usr, "<span class='danger'>Sintaxis de puntero no valida: [expression[start + 1]]</span>")
 			return null
 		v = locate("\[[expression[start + 1]]]")
 		if(!v)
@@ -1104,7 +1104,7 @@ GLOBAL_DATUM_INIT(sdql2_vv_statobj, /obj/effect/statclick/SDQL2_VV_all, new(null
 			var/list/L = v
 			var/index = query.SDQL_expression(source, expression[start + 2])
 			if(isnum(index) && (!ISINTEGER(index) || L.len < index))
-				to_chat(usr, "<span class='danger'>Índice de lista no válido: [index]</span>")
+				to_chat(usr, "<span class='danger'>Indice de lista no valido: [index]</span>")
 				return null
 			return L[index]
 	return v

@@ -25,7 +25,7 @@
 	icon_state = "inlight"
 
 /datum/action/cooldown/spell/undirected/touch/orison
-	name = "Oración"
+	name = "Oracion"
 	desc = "The basic precept of holy magic orients around the power of prayer and soliciting a Divine Patron for a tiny sliver of Their might."
 	button_icon_state = "thaumaturgy"
 	can_cast_on_self = TRUE
@@ -69,7 +69,7 @@
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/melee/touch_attack/orison
-	name = "\improper oración menor"
+	name = "\improper oracion menor"
 	desc = "The fundamental teachings of theology return to you:\n \
 		<b>Fill</b>: Beseech your Divine to create a small quantity of holy water in a container that you touch for some devotion.\n \
 		<b>Touch</b>: Direct a sliver of divine thaumaturgy into your being, causing your voice to become LOUD when you next speak. Can be used on light sources at range, and it will cause them flicker.\n \
@@ -79,7 +79,7 @@
 /datum/action/cooldown/spell/undirected/touch/orison/proc/create_water(atom/victim, mob/living/carbon/human/user)
 	if(victim.is_refillable())
 		if(victim.reagents.holder_full())
-			to_chat(user, span_warning("[victim] está lleno."))
+			to_chat(user, span_warning("[victim] esta lleno."))
 			return FALSE
 
 		user.visible_message(
@@ -120,7 +120,7 @@
 	if(victim == user)
 		if(user.has_status_effect(/datum/status_effect/thaumaturgy))
 			user.remove_status_effect((/datum/status_effect/thaumaturgy))
-			to_chat(user, span_notice("La sensación en mi garganta disminuye, hablaré normalmente."))
+			to_chat(user, span_notice("La sensacion en mi garganta disminuye, hablare normalmente."))
 			return FALSE
 		// give us a buff that makes our next spoken victim really loud and also cause any linked, un-muted scom to shriek out the phrase at a 15% chance
 		var/cast_time = 50 - (holy_skill * 5)
@@ -167,7 +167,7 @@
 
 			var/datum/status_effect/light_buff/light_buff_status = /datum/status_effect/light_buff
 			if (blessed_mob.has_status_effect(light_buff_status))
-				user.visible_message(span_notice("¡La luz sagrada que emana de [blessed_mob] se vuelve más brillante!"), span_notice("I feed further devotion into [blessed_mob]'s blessing of light."))
+				user.visible_message(span_notice("¡La luz sagrada que emana de [blessed_mob] se vuelve mas brillante!"), span_notice("I feed further devotion into [blessed_mob]'s blessing of light."))
 			else
 				user.visible_message(span_notice("A gentle illumination suddenly blossoms into being around [blessed_mob]!"), span_notice("I grant [blessed_mob] a blessing of light."))
 
@@ -192,7 +192,7 @@
 	return SECONDARY_ATTACK_CALL_NORMAL
 
 /obj/item/melee/touch_attack/orison/lesser
-	name = "\improper oración menor"
+	name = "\improper oracion menor"
 	desc = "The fundamental teachings of theology return to you:\n \
 		<b>Fill</b>: Beseech your Divine to create a small quantity of holy water in a container that you touch for some devotion."
 	possible_item_intents = list(ORISON_FILL)
@@ -229,7 +229,7 @@
 
 /datum/reagent/water/cursed
 	name = "agua maldita"
-	description = "Un regalo de Devoción. Cura muy ligeramente las heridas de los muertos y de los iluminados."
+	description = "Un regalo de Devocion. Cura muy ligeramente las heridas de los muertos y de los iluminados."
 
 /datum/reagent/water/cursed/on_mob_life(mob/living/carbon/M, efficiency)
 	. = ..()
@@ -254,7 +254,7 @@
 		M.adjust_stamina(0.5*REM * efficiency)
 
 /atom/movable/screen/alert/status_effect/thaumaturgy
-	name = "Voz taumatúrgica"
+	name = "Voz taumaturgica"
 	desc = "The power of my god will make the next thing I say much louder!"
 	icon_state = "stressvg"
 
@@ -280,7 +280,7 @@
 
 /atom/movable/screen/alert/status_effect/light_buff
 	name = "Luz milagrosa"
-	desc = "Una bendición de luz protege de la oscuridad que me rodea."
+	desc = "Una bendicion de luz protege de la oscuridad que me rodea."
 	icon_state = "stressvg"
 
 /datum/status_effect/light_buff

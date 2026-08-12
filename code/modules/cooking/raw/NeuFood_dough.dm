@@ -13,7 +13,7 @@
 /*	.................   Dough   ................... */
 /obj/item/reagent_containers/food/snacks/dough_base
 	name = "masa sin terminar"
-	desc = "Con un poco más de ambición conquistarás."
+	desc = "Con un poco mas de ambicion conquistaras."
 	icon_state = "dough_base"
 	w_class = WEIGHT_CLASS_NORMAL
 
@@ -119,7 +119,7 @@
 /*	.................   Butterdough   ................... */
 /obj/item/reagent_containers/food/snacks/butterdough
 	name = "butterdough"
-	desc = "¿Qué es un triunfo, para un legado?"
+	desc = "¿Que es un triunfo, para un legado?"
 	icon_state = "butterdough"
 	slices_num = 2
 	bitesize = 3
@@ -223,7 +223,7 @@
 /*	.................   Piedough   ................... */
 /obj/item/reagent_containers/food/snacks/piedough
 	name = "piedough"
-	desc = "El comienzo de cosas más grandes por venir."
+	desc = "El comienzo de cosas mas grandes por venir."
 	icon_state = "piedough"
 	dropshrink = 0.9
 	w_class = WEIGHT_CLASS_NORMAL
@@ -705,7 +705,7 @@
 
 /obj/item/reagent_containers/food/snacks/bookbreadslice/plum
 	name = "sliced plum bookbread"
-	desc = "Un sabor sutil, ideal para disfrutar de libros más sutiles. Se prefieren los misterios."
+	desc = "Un sabor sutil, ideal para disfrutar de libros mas sutiles. Se prefieren los misterios."
 	icon_state = "plum_bookbread_slice"
 
 	nutrition = BOOKBREADSLICE_NUTRITION + DRIEDFRUIT_NUTRITION
@@ -1082,7 +1082,7 @@
 	faretype++
 
 	if(istype(tool, /obj/item/reagent_containers/food/snacks/sugar))
-		name = "azúcar en polvo [name]"
+		name = "azucar en polvo [name]"
 		desc = "[desc] Its form holds the sugar excellently."
 		icon_state = "sugar_estrella"
 	else if(istype(tool, /obj/item/reagent_containers/food/snacks/chocolate/chunk))
@@ -1108,7 +1108,7 @@
 	item_weight = 150 GRAMS
 
 /obj/item/reagent_containers/food/snacks/foodbase/huskbunraw
-	name = "bollo de cáscara crudo"
+	name = "bollo de cascara crudo"
 	desc = "The husk helps cook it, and adds to the taste."
 	icon_state = "huskbun_raw"
 	nutrition = SMALLDOUGH_NUTRITION
@@ -1589,7 +1589,7 @@
 /*	.................   Bread bun   ................... */
 /obj/item/reagent_containers/food/snacks/bun
 	name = "bun"
-	desc = "Portátil, pintoresco y totalmente consumible."
+	desc = "Portatil, pintoresco y totalmente consumible."
 	icon_state = "bun"
 	base_icon_state = "bun"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -1634,7 +1634,7 @@
 /*	.................   Cheese bun   ................... */
 /obj/item/reagent_containers/food/snacks/foodbase/cheesebun_raw
 	name = "pan de queso crudo"
-	desc = "Portátil, pintoresco y totalmente consumible."
+	desc = "Portatil, pintoresco y totalmente consumible."
 	icon_state = "cheesebun_raw"
 	w_class = WEIGHT_CLASS_NORMAL
 
@@ -1943,7 +1943,7 @@
 
 /obj/item/reagent_containers/food/snacks/cheesecake_cooked
 	name = "cheesecake"
-	desc = "La creación favorita de la humanidad."
+	desc = "La creacion favorita de la humanidad."
 	icon_state = "cheesecake"
 	dropshrink = 0.8
 	slices_num = 6
@@ -2046,7 +2046,7 @@
 /*	.................   CRIMSON PINE CAKE   ................... */
 
 /obj/item/reagent_containers/food/snacks/crimsoncake
-	name = "base de pastel de pino carmesí"
+	name = "base de pastel de pino carmesi"
 	desc = "With this sweet thing, you shall make them sing. Lacking chocolate bits."
 	icon_state = "cake_filled"
 	dropshrink = 0.8
@@ -2059,7 +2059,7 @@
 	item_weight = 400 GRAMS
 
 /obj/item/reagent_containers/food/snacks/crimsoncake_ready
-	name = "pastel de pino carmesí sin hornear"
+	name = "pastel de pino carmesi sin hornear"
 	icon_state = "crimsonpinecakeraw"
 	slices_num = 0
 	w_class = WEIGHT_CLASS_NORMAL
@@ -2071,7 +2071,7 @@
 	item_weight = 600 GRAMS
 
 /obj/item/reagent_containers/food/snacks/crimsoncake_cooked
-	name = "pastel de pino carmesí"
+	name = "pastel de pino carmesi"
 	desc = "A fusion of Crimson Elf and Grenzelhoftian cuisines, the cake originates from the Valorian Republics. Rumor has it that one of the many casus belli in the Republics was based upon a disagreement on the cakes exact recipe."
 	icon_state = "crimsonpinecake"
 	slices_num = 6
@@ -2593,7 +2593,7 @@
 	item_weight = 60 GRAMS
 
 /obj/item/reagent_containers/food/snacks/dottart_lemon
-	name = "tarta de limón"
+	name = "tarta de limon"
 	desc = "A small lemon jam-filled pastry, for when a whole pie would be inapropriate for canapes."
 	bitesize = 2
 	icon_state = "lemon_dottart"

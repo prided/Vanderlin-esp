@@ -20,7 +20,7 @@
 	)
 
 /datum/job/advclass/combat/barbarian
-	title = "Bárbaro"
+	title = "Barbaro"
 	tutorial = "Wildmen and warriors all, Barbarians forego the intricacies of modern warfare in favour of raw strength and brutal cunning. Few of them can truly adjust to the civilized, docile lands of lords and ladies."
 	allowed_races = list(\
 		SPEC_ID_HUMEN,\

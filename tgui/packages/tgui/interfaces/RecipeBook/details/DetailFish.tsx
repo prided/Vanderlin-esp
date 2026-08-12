@@ -7,19 +7,19 @@ export const DetailFish = ({ r }: { r: Recipe }) => {
   return (
     <>
       {r.desc && <Box className="RecipeBook__desc" dangerouslySetInnerHTML={{ __html: r.desc }} />}
-      <SectionHead>Físico</SectionHead>
+      <SectionHead>Fisico</SectionHead>
       <Box className="RecipeBook__step-block">
         <Box className="RecipeBook__step-row">Tamaño: {r.avg_size}cm</Box>
         <Box className="RecipeBook__step-row">Peso: {r.avg_weight}g</Box>
       </Box>
       <SectionHead>Entorno</SectionHead>
       <Box className="RecipeBook__step-block">
-        <Box className="RecipeBook__step-row">Líquido: {r.fluid_type}</Box>
+        <Box className="RecipeBook__step-row">Liquido: {r.fluid_type}</Box>
         <Box className="RecipeBook__step-row">Temperatura: {r.temp_min}C – {r.temp_max}C</Box>
       </Box>
       <SectionHead>Pesca</SectionHead>
       <Box className="RecipeBook__step-block">
-        <Box className="RecipeBook__step-row">Encontró: {r.spots}</Box>
+        <Box className="RecipeBook__step-row">Encontro: {r.spots}</Box>
         <Box className="RecipeBook__step-row">
           Dificultad: <span style={{ color: diffColor }}>{r.difficulty}</span>
         </Box>

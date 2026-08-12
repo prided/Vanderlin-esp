@@ -302,7 +302,7 @@
 // ------------ DECENT BEDS ----------------------
 /obj/structure/bed/wool
 	name = "cama de lana"
-	desc = "Una cama cómoda, hecha de tela suave."
+	desc = "Una cama comoda, hecha de tela suave."
 	icon_state = "woolbed"
 	sleepy = 2
 
@@ -329,7 +329,7 @@
 // ------------ ACCEPTABLE BEDS ----------------------
 /obj/structure/bed/hay
 	name = "cama de heno"
-	desc = "Una cama acolchada con heno. Al menos no estás durmiendo en el suelo."
+	desc = "Una cama acolchada con heno. Al menos no estas durmiendo en el suelo."
 	icon_state = "haybed"
 	sleepy = 1
 	debris = list(/obj/item/grown/log/tree/small = 1)
@@ -348,7 +348,7 @@
 
 // ------------ UNCOMFORTABLE BEDS ----------------------
 /obj/structure/bed/shit
-	name = "cama incómoda"
+	name = "cama incomoda"
 	desc = "Slightly better than a patch of grass."
 	icon_state = "shitbed"
 	sleepy = 0.75
@@ -385,7 +385,7 @@
 
 /obj/item/sleepingbag
 	name = "rolled-up bedroll"
-	desc = "Una forma rápida y sencilla de crear un lugar de descanso en el suelo."
+	desc = "Una forma rapida y sencilla de crear un lugar de descanso en el suelo."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "sleepingcloth_rolled"
 	w_class = WEIGHT_CLASS_NORMAL

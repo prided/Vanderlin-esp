@@ -92,7 +92,7 @@
 	var/distance_traveled = get_dist(start_turf, end_turf)
 	if(distance_traveled < fling_distance)
 		victim.visible_message(
-			span_danger("¡[victim] choca contra un obstáculo!"),
+			span_danger("¡[victim] choca contra un obstaculo!"),
 			span_userdanger("You slam into something!")
 		)
 

@@ -24,7 +24,7 @@
 /obj/item/quicksilver/examine(mob/user)
 	. = ..()
 	if(miracle_use)
-		. += span_notice("Por alguna casualidad milagrosa, hay suficiente para un uso más.")
+		. += span_notice("Por alguna casualidad milagrosa, hay suficiente para un uso mas.")
 
 /obj/item/quicksilver/attack(mob/living/carbon/human/M, mob/living/carbon/human/user, list/modifiers)
 	if(!istype(M) || !istype(user))

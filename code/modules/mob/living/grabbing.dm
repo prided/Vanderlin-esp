@@ -16,7 +16,7 @@
 
 /atom/movable/screen/alert/status_effect/oiled
 	name = "Oiled"
-	desc = "¡Estoy cubierto de aceite, lo que me hace resbaladizo y más difícil de agarrar!"
+	desc = "¡Estoy cubierto de aceite, lo que me hace resbaladizo y mas dificil de agarrar!"
 	icon_state = "debuff"
 
 /datum/status_effect/buff/oiled/on_apply()
@@ -333,7 +333,7 @@
 						to_chat(U, span_warning("¡Primero debes estar en modo combate!"))
 						return
 					if(U.GetComponent(/datum/component/hostage))
-						to_chat(U, span_warning("¡Ya tienes a alguien como rehén!"))
+						to_chat(U, span_warning("¡Ya tienes a alguien como rehen!"))
 						return
 					var/obj/item/offhand_item = U.get_inactive_held_item()
 					if(!isitem(offhand_item) || !offhand_item.force)
@@ -685,7 +685,7 @@
 	icon_state = "inchoke"
 
 /datum/intent/grab/hostage
-	name = "rehén"
+	name = "rehen"
 	desc = ""
 	icon_state = "inhostage"
 

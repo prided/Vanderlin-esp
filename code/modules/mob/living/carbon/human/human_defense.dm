@@ -479,7 +479,7 @@
 				chest_clothes.acid_act(acidpwr, acid_volume)
 				update_inv_wear_suit()
 			else
-				to_chat(src, "<span class='notice'>¡Mi [chest_clothes.name] protege mi cuerpo del ácido!</span>")
+				to_chat(src, "<span class='notice'>¡Mi [chest_clothes.name] protege mi cuerpo del acido!</span>")
 		else
 			. = get_bodypart(BODY_ZONE_CHEST)
 			if(.)
@@ -503,7 +503,7 @@
 				update_inv_gloves()
 				update_inv_wear_suit()
 			else
-				to_chat(src, "<span class='notice'>¡Mi [arm_clothes.name] protege mis brazos y manos del ácido!</span>")
+				to_chat(src, "<span class='notice'>¡Mi [arm_clothes.name] protege mis brazos y manos del acido!</span>")
 		else
 			. = get_bodypart(BODY_ZONE_R_ARM)
 			if(.)
@@ -528,7 +528,7 @@
 				update_inv_shoes()
 				update_inv_wear_suit()
 			else
-				to_chat(src, "<span class='notice'>¡Mi [leg_clothes.name] protege mis piernas y pies del ácido!</span>")
+				to_chat(src, "<span class='notice'>¡Mi [leg_clothes.name] protege mis piernas y pies del acido!</span>")
 		else
 			. = get_bodypart(BODY_ZONE_R_LEG)
 			if(.)
@@ -678,7 +678,7 @@
 
 	if(additional)
 		examination += span_info(span_green("[getToxLoss()] TOXIN"))
-		examination += span_info(span_blue("[getOxyLoss()] OXÍGENO"))
+		examination += span_info(span_blue("[getOxyLoss()] OXIGENO"))
 	examination += "ø ------------ ø</span>"
 	if(!silent)
 		to_chat(user, examination.Join("\n"))

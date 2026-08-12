@@ -50,8 +50,8 @@
 				desc = "Esta persona es uno de tus cuñados."
 
 		if(FAMILY_MEMBER_SPOUSE)
-			name = "Cónyuge"
-			desc = "Estás casado con esta persona."
+			name = "Conyuge"
+			desc = "Estas casado con esta persona."
 		else
 			name = "Familia"
 			desc = "You share a family bond with this person."

@@ -14,6 +14,6 @@
 	victim_text = "Te hicieron una promesa y nunca la cumplieron."
 
 /datum/grudge_type/reputation_damage
-	grudge_name = "Daño a la reputación"
+	grudge_name = "Daño a la reputacion"
 	aggressor_text = "Rumours you may have spread came back to colour how others see them."
 	victim_text = "Rumours traced back to them have made your reputation worse than you deserve."

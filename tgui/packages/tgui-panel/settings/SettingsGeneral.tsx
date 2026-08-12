@@ -142,7 +142,7 @@ export function SettingsGeneral(props) {
               </Stack.Item>
             </Stack>
           </LabeledList.Item>
-          <LabeledList.Item label="altura de la línea">
+          <LabeledList.Item label="altura de la linea">
             <Slider
               width="100%"
               step={0.01}
@@ -162,14 +162,14 @@ export function SettingsGeneral(props) {
               <Stack.Item>
                 <Button.Checkbox
                   checked={settings.disableCombine}
-                  tooltip="Deshabilitar la combinación para mensajes duplicados"
+                  tooltip="Deshabilitar la combinacion para mensajes duplicados"
                   onClick={() =>
                     updateSettings({
                       disableCombine: !settings.disableCombine,
                     })
                   }
                 >
-                  Deshabilitar la combinación
+                  Deshabilitar la combinacion
                 </Button.Checkbox>
               </Stack.Item>
               <Stack.Item>
@@ -194,7 +194,7 @@ export function SettingsGeneral(props) {
           <Stack.Item mt={0.15}>
             <Button
               icon="compact-disc"
-              tooltip="Exportar configuración de chat"
+              tooltip="Exportar configuracion de chat"
               onClick={exportChatSettings}
             >
               Exportar
@@ -203,7 +203,7 @@ export function SettingsGeneral(props) {
           <Stack.Item mt={0.15}>
             <Button.File
               accept=".json"
-              tooltip="Importar configuración de chat"
+              tooltip="Importar configuracion de chat"
               icon="arrow-up-from-bracket"
               onSelectFiles={importChatSettings}
             >
@@ -216,7 +216,7 @@ export function SettingsGeneral(props) {
               tooltip="Importar configuraciones de la llave TG a la nueva"
               onClick={importTGSettings}
             >
-              Importar configuración anterior
+              Importar configuracion anterior
             </Button>
           </Stack.Item>
           <Stack.Item grow mt={0.15}>

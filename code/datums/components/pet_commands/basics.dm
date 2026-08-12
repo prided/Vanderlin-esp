@@ -346,7 +346,7 @@
 
 /datum/pet_command/go_home
 	command_name = "Go Home"
-	command_desc = "Envía a tu mascota a casa."
+	command_desc = "Envia a tu mascota a casa."
 	radial_icon = 'icons/roguetown/mob/cabbit.dmi'
 	radial_icon_state = "cabbit_dead"
 	speech_commands = list("go home") // Don't get too creative here, people talk about dying pretty often

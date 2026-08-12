@@ -183,7 +183,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/dome
-	name = "Cúpula"
+	name = "Cupula"
 	icon_state = "dome"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -301,7 +301,7 @@
 	specuse = list(SPEC_ID_HUMEN)
 
 /datum/sprite_accessory/hair/head/nomadic_humtief
-	name = "Nómada"
+	name = "Nomada"
 	icon_state = "nomadic"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_TIEFLING)
@@ -326,7 +326,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/romantic
-	name = "Romántico"
+	name = "Romantico"
 	icon_state = "romantic"
 	gender = MALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -464,7 +464,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/barbarian
-	name = "Bárbaro"
+	name = "Barbaro"
 	icon_state = "barbarian_f"
 	gender = FEMALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -687,7 +687,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/shrine
-	name = "Guardián del santuario"
+	name = "Guardian del santuario"
 	icon_state = "shrine_f"
 	gender = FEMALE
 	specuse = list(SPEC_ID_ELF, SPEC_ID_TIEFLING, SPEC_ID_HUMEN)
@@ -771,7 +771,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/singlebraid
-	name = "Trenza única"
+	name = "Trenza unica"
 	icon_state = "singlebraid"
 	gender = FEMALE
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -880,7 +880,7 @@
 // Hairs below ported from Azure
 
 /datum/sprite_accessory/hair/head/gloomy
-	name = "Sombrío"
+	name = "Sombrio"
 	icon_state = "gloomy"
 	gender = NEUTER
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -1054,7 +1054,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/cotton
-	name = "Algodón"
+	name = "Algodon"
 	icon_state = "cotton"
 	gender = NEUTER
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -1289,7 +1289,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/phoenix
-	name = "Fénix"
+	name = "Fenix"
 	icon_state = "phoenix"
 	gender = NEUTER
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -1373,7 +1373,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/viper
-	name = "Víbora"
+	name = "Vibora"
 	icon_state = "viper"
 	gender = NEUTER
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -1433,7 +1433,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/knots
-	name = "Nudos de tulipán"
+	name = "Nudos de tulipan"
 	icon_state = "knots"
 	gender = NEUTER
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -1457,7 +1457,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/farmday
-	name = "Día de la granja"
+	name = "Dia de la granja"
 	icon_state = "farmday"
 	gender = NEUTER
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
@@ -1523,7 +1523,7 @@
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)
 
 /datum/sprite_accessory/hair/head/thescientist
-	name = "El científico"
+	name = "El cientifico"
 	icon_state = "thescientist"
 	gender = NEUTER
 	specuse = list(SPEC_ID_HUMEN, SPEC_ID_DWARF, SPEC_ID_ELF, SPEC_ID_AASIMAR, SPEC_ID_TIEFLING, SPEC_ID_HALF_ORC)

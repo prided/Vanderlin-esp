@@ -17,7 +17,7 @@
 
 /datum/coven_power/celerity
 	name = "Nombre del poder de celeridad"
-	desc = "Descripción del poder de celeridad"
+	desc = "Descripcion del poder de celeridad"
 	violates_masquerade = TRUE
 	refresh_violations = TRUE
 	duration_length = 3 SECONDS
@@ -60,7 +60,7 @@
 
 /datum/coven_power/celerity/two
 	name = "Celeridad 2"
-	desc = "Mejora significativamente tu velocidad y tiempo de reacción."
+	desc = "Mejora significativamente tu velocidad y tiempo de reaccion."
 	level = 2
 	buff = /datum/status_effect/buff/celerity/two
 	vitae_cost = 30

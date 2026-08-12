@@ -1,10 +1,10 @@
 /client/proc/map_template_load()
-	set category = "Depuración.Mapeo personalizado"
+	set category = "Depuracion.Mapeo personalizado"
 	set name = "Plantilla de mapa - Lugar"
 
 	var/datum/map_template/template
 
-	var/map = tgui_input_list(src, "Elija una plantilla de mapa para colocar en su UBICACIÓN ACTUAL", "Place Map Template", sortList(SSmapping.map_templates))
+	var/map = tgui_input_list(src, "Elija una plantilla de mapa para colocar en su UBICACION ACTUAL", "Place Map Template", sortList(SSmapping.map_templates))
 	if(!map)
 		return
 	template = SSmapping.map_templates[map]
@@ -13,8 +13,8 @@
 	if(!T)
 		return
 
-	var/centered = alert(src, "¿Quieres que esto se cree desde el centro o desde la esquina inferior izquierda de tu mapa?", "Posición de aparición", "Centro", "Abajo a la izquierda") == "Centro" ? TRUE : FALSE
-	var/delete = alert(src, "Do you want to delete atoms in your load area?", "Eliminación de átomos", "Yes", "No") == "Yes" ? TRUE : FALSE
+	var/centered = alert(src, "¿Quieres que esto se cree desde el centro o desde la esquina inferior izquierda de tu mapa?", "Posicion de aparicion", "Centro", "Abajo a la izquierda") == "Centro" ? TRUE : FALSE
+	var/delete = alert(src, "Do you want to delete atoms in your load area?", "Eliminacion de atomos", "Yes", "No") == "Yes" ? TRUE : FALSE
 
 	var/list/preview = list()
 	for(var/S in template.get_affected_turfs(T, centered))
@@ -30,7 +30,7 @@
 	images -= preview
 
 /client/proc/map_template_upload()
-	set category = "Depuración.Mapeo personalizado"
+	set category = "Depuracion.Mapeo personalizado"
 	set name = "Map Template - Upload"
 
 	var/map = input(src, "Choose a Map Template to upload to template storage","Upload Map Template") as null|file
@@ -40,7 +40,7 @@
 		to_chat(src, "<span class='warning'>El nombre del archivo debe terminar en '.dmm': [map]</span>")
 		return
 	var/datum/map_template/M
-	switch(tgui_alert(src, "¿Qué tipo de mapa es este?", "Tipo de mapa", list("Normal", "Cancel")))
+	switch(tgui_alert(src, "¿Que tipo de mapa es este?", "Tipo de mapa", list("Normal", "Cancel")))
 		if("Normal")
 			M = new /datum/map_template(map, "[map]", TRUE)
 		else

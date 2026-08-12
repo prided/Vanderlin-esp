@@ -3,7 +3,7 @@
 	enchantment_name = "Lightning"
 	examine_text = "Small arcs of electricity dance across this weapon."
 	enchantment_color = "#FFFF00"
-	enchantment_end_message = "La energía eléctrica se disipa."
+	enchantment_end_message = "La energia electrica se disipa."
 	essence_recipe = list(
 		/datum/thaumaturgical_essence/energia = 45,
 		/datum/thaumaturgical_essence/air = 25,

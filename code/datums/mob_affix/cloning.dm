@@ -1,6 +1,6 @@
 /datum/mob_affix/mirror_images
-	name = "Clonación"
-	description = "Crea imágenes especulares de sí mismo cuando es golpeado en combate."
+	name = "Clonacion"
+	description = "Crea imagenes especulares de si mismo cuando es golpeado en combate."
 	color = "#E6E6FA"
 	intensity = 1.0
 	delve_level = 1

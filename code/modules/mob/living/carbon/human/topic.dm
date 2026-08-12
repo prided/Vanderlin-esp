@@ -99,7 +99,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 	if(href_list["item"]) //canUseTopic check for this is handled by mob/Topic()
 		var/slot = text2num(href_list["item"])
 		if(slot & check_obscured_slots(TRUE))
-			to_chat(usr, span_warning("¡No puedo alcanzar eso! Algo lo está cubriendo."))
+			to_chat(usr, span_warning("¡No puedo alcanzar eso! Algo lo esta cubriendo."))
 			return
 
 	if(href_list["remove_briar"])
@@ -111,7 +111,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 
 	if(href_list["undiesthing"]) //canUseTopic check for this is handled by mob/Topic()
 		if(!get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
-			to_chat(usr, span_warning("¡No puedo alcanzar eso! Algo lo está cubriendo."))
+			to_chat(usr, span_warning("¡No puedo alcanzar eso! Algo lo esta cubriendo."))
 			return
 		if(underwear == "Nude")
 			return
@@ -145,7 +145,7 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 	var/list/message = list()
 	if(stat >= DEAD)
 		if(HAS_TRAIT(user, TRAIT_SUICIDED))
-			message += span_suicide("[p_they(TRUE)] se suicidó... No se puede hacer nada...")
+			message += span_suicide("[p_they(TRUE)] se suicido... No se puede hacer nada...")
 		if(isobserver(user) || HAS_TRAIT(user, TRAIT_SOUL_EXAMINE))
 			if(!key && !get_ghost(TRUE))
 				message += span_suicide("[p_their(TRUE)] soul has departed for the Underworld.")

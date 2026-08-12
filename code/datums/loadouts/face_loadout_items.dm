@@ -1,5 +1,5 @@
 /datum/loadout_item/ragmask
-	name = "Media máscara"
+	name = "Media mascara"
 	item_path = /obj/item/clothing/face/shepherd/rag
 	ui_category = "Face"
 

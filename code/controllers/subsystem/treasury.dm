@@ -30,7 +30,7 @@
 * in which the steward sails.
 */
 SUBSYSTEM_DEF(treasury)
-	name = "Tesorería"
+	name = "Tesoreria"
 	wait = 1
 	init_order = INIT_ORDER_TREASURY
 	priority = FIRE_PRIORITY_WATER_LEVEL

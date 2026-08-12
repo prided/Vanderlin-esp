@@ -75,7 +75,7 @@
 	name = "light plate boots"
 	icon_state = "soldierboots"
 	item_state = "soldierboots"
-	desc = "Botas ligeramente blindadas hechas de hierro que ofrecen protección contra ataques cuerpo a cuerpo y a distancia."
+	desc = "Botas ligeramente blindadas hechas de hierro que ofrecen proteccion contra ataques cuerpo a cuerpo y a distancia."
 	armor_type = /datum/armor/boots/brigandine
 	max_integrity = INTEGRITY_STRONG + 50
 	armor_class = AC_MEDIUM

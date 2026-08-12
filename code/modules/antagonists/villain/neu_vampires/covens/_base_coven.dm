@@ -287,7 +287,7 @@
 			// Powers learned through research might have reduced costs
 			new_power.vitae_cost = max(1, round(new_power.vitae_cost * 0.9))
 			if(!silent && owner)
-				to_chat(owner, "<span class='boldnotice'>¡A través de un estudio cuidadoso, has dominado [new_power.name]!</span>")
+				to_chat(owner, "<span class='boldnotice'>¡A traves de un estudio cuidadoso, has dominado [new_power.name]!</span>")
 
 		if("discovery")
 			// Powers discovered through experimentation might have unique properties

@@ -45,7 +45,7 @@
 
 /obj/item/clothing/head/nun
 	name = "nun's habit"
-	desc = "Hábitos usados por las monjas de la fe del panteón."
+	desc = "Habitos usados por las monjas de la fe del panteon."
 	icon_state = "nun"
 	allowed_race = RACES_PLAYER_ALL
 	item_weight = 100 GRAMS
@@ -71,7 +71,7 @@
 	item_weight = 100 GRAMS
 
 /obj/item/clothing/head/jester
-	name = "sombrero de bufón"
+	name = "sombrero de bufon"
 	desc = "Just remember that the last laugh is on you."
 	icon_state = "jester"
 	item_weight = 155 GRAMS
@@ -140,7 +140,7 @@
 
 /obj/item/clothing/head/leather/inqhat
 	name = "sombrero inquisitorial"
-	desc = "Un sombrero de cuero de ala ancha, adornado con una pluma teñida de carmesí. La muerte ha llegado a tu pequeño pueblo."
+	desc = "Un sombrero de cuero de ala ancha, adornado con una pluma teñida de carmesi. La muerte ha llegado a tu pequeño pueblo."
 	icon_state = "inqhat"
 	item_state = "inqhat"
 	sewrepair = /datum/attribute/skill/craft/tanning/patching
@@ -159,7 +159,7 @@
 	item_weight = 112 GRAMS
 
 /obj/item/clothing/head/courtphysician
-	name = "boina del médico de la corte"
+	name = "boina del medico de la corte"
 	desc = "A head covering for elegance, and to hide the bald spot."
 	icon_state = "courthat"
 	item_state = "courthat"
@@ -168,7 +168,7 @@
 	item_weight = 112 GRAMS
 
 /obj/item/clothing/head/courtphysician/male
-	name = "sombrero sanguíneo"
+	name = "sombrero sanguineo"
 	desc = "Un sombrero para mantener la sangre salpicada fuera de tu cara, para cuando tu oficio sea necesario."
 	icon_state = "dochat1"
 	item_state = "dochat1"
@@ -177,7 +177,7 @@
 	uses_lord_coloring = LORD_PRIMARY
 
 /obj/item/clothing/head/courtphysician/female
-	name = "gorro sanguíneo"
+	name = "gorro sanguineo"
 	desc = "A cap for keeping the splattered blood out of your hair, for when your trade is required."
 	icon_state = "dochat2"
 	item_state = "dochat2"
@@ -207,7 +207,7 @@
 
 /obj/item/clothing/head/gnomecap
 	name = "sombrero alto enano"
-	desc = "Un sombrero alto y cálido, hecho para climas más fríos."
+	desc = "Un sombrero alto y calido, hecho para climas mas frios."
 	icon_state = "gnomecap"
 	item_state = "gnomecap"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/head.dmi'

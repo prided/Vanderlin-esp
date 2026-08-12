@@ -1,6 +1,6 @@
 
 /datum/action/cooldown/meatvine/personal/corrosion
-	name = "Ácido corrosivo"
+	name = "Acido corrosivo"
 	desc = "Drench an object in acid, destroying it over time."
 	button_icon_state = "alien_acid"
 	personal_resource_cost = 20

@@ -18,7 +18,7 @@
 
 // COPPER ARMOR
 /datum/anvil_recipe/armor/copper/cuirass
-	name = "Protector de corazón de cobre"
+	name = "Protector de corazon de cobre"
 	created_item = /obj/item/clothing/armor/cuirass/copperchest
 
 /datum/anvil_recipe/armor/copper/bracers
@@ -99,7 +99,7 @@
 
 
 /datum/anvil_recipe/armor/bronze/mask
-	name = "Máscara, Bronce (+1 Cuero Curado)"
+	name = "Mascara, Bronce (+1 Cuero Curado)"
 	additional_items = list(/obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/face/facemask/bronze
 
@@ -497,7 +497,7 @@
 	output_amount = 2
 
 /datum/anvil_recipe/armor/steel/platemask
-	name = "Máscara de acero"
+	name = "Mascara de acero"
 	created_item = /obj/item/clothing/face/facemask/steel
 	output_amount = 2
 
@@ -1357,7 +1357,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/owl_helmet
-	name = "casco de búho"
+	name = "casco de buho"
 	required_material = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/head/helmet/bascinet/owl
 	craftdiff = 3
@@ -1445,7 +1445,7 @@
 	abstract_type = /datum/anvil_recipe/armor/gold
 
 /datum/anvil_recipe/armor/gold/mask
-	name = "Máscara de oro"
+	name = "Mascara de oro"
 	created_item = /obj/item/clothing/face/facemask/goldmask
 
 /datum/anvil_recipe/armor/gold/armet

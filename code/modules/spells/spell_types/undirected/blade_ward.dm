@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/blade_ward
 	name = "Blade Ward"
-	desc = "Mejora la constitución por un breve período."
+	desc = "Mejora la constitucion por un breve periodo."
 	button_icon_state = "conjure_armor"
 
 	charge_required = FALSE
@@ -32,8 +32,8 @@
 	for(var/mob/living/extra_target in orange(FLOOR(spell_magnitude_modifier, 1), owner))
 		extra_target.apply_status_effect(status, initial(status.duration) + duration_increase)
 		extra_target.visible_message(
-			span_info("[extra_target] tiene un sello de protección que aparece sobre ellos."),
-			span_notice("Veo un sello de protección flotando sobre mí."),
+			span_info("[extra_target] tiene un sello de proteccion que aparece sobre ellos."),
+			span_notice("Veo un sello de proteccion flotando sobre mi."),
 		)
 
 /datum/status_effect/buff/bladeward

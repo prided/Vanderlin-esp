@@ -1,5 +1,5 @@
 /obj/item/clothing/face/lordmask
-	name = "media máscara dorada"
+	name = "media mascara dorada"
 	desc = "Half of your face turned gold."
 	icon_state = "lmask"
 	sellprice = 50
@@ -24,7 +24,7 @@
 	qdel(src)
 
 /obj/item/clothing/face/facemask
-	name = "máscara de hierro"
+	name = "mascara de hierro"
 	icon_state = "imask"
 	desc = "A heavy iron mask that both conceals and protects the face."
 	max_integrity = 100
@@ -133,7 +133,7 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/clothing/face/jademask
-	name = "máscara de joapstone "
+	name = "mascara de joapstone "
 	icon_state = "mask_jade"
 	desc = "A joapstone mask that both conceals and protects the face."
 	max_integrity = 85
@@ -196,7 +196,7 @@
 	item_weight = 1.9 KILOGRAMS
 
 /obj/item/clothing/face/shellmask
-	name = "máscara de concha "
+	name = "mascara de concha "
 	icon_state = "mask_shell"
 	desc = "A shell mask that both conceals and protects the face."
 	max_integrity = 85
@@ -301,7 +301,7 @@
 	item_weight = 1.8 KILOGRAMS
 
 /obj/item/clothing/face/shepherd/clothmask
-	name = "máscara de tela"
+	name = "mascara de tela"
 	icon_state = "clothm"
 	desc = "A simple cloth mask that suppresses bad odors, or offers minor protection when doing dirty work such as mining or gravedigging."
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
@@ -318,7 +318,7 @@
 
 /obj/item/clothing/face/facemask/prisoner/Initialize()
 	. = ..()
-	name = "máscara maldita"
+	name = "mascara maldita"
 	desc = "We are often criminals in the eyes of the earth, not only for having committed crimes, but because we know that crimes have been committed."
 	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 	flags_inv = HIDEFACIALHAIR //so prisoners can actually be identified
@@ -330,7 +330,7 @@
 	qdel(src)
 
 /obj/item/clothing/face/facemask/steel
-	name = "máscara de acero"
+	name = "mascara de acero"
 	icon_state = "smask"
 	armor_type = /datum/armor/mask/metal/steel
 	desc = "A knightly steel mask that both conceals and protects the face. Usually paired with a bascinet."
@@ -350,15 +350,15 @@
 	desc = "A steel mask shaped like a beast's face, worn by steppe riders to intimidate their enemies."
 
 /obj/item/clothing/face/facemask/steel/blackmeadow
-	name = "media máscara de soldado"
-	desc = "\"La primera lección de la guerra es que sería mejor vivir en paz.\""
+	name = "media mascara de soldado"
+	desc = "\"La primera leccion de la guerra es que seria mejor vivir en paz.\""
 	block2add = null
 	armor_type = /datum/armor/mask/metal // because it's only half
 	icon_state = "kazengunmouthguard"
 	item_state = "kazengunmouthguard"
 
 /obj/item/clothing/face/facemask/steel/blackmeadow/full
-	name = "máscara de ogro"
+	name = "mascara de ogro"
 	desc = "\"The second lesson: Rich men have dreams. Poor men die to make them come true.\""
 	icon_state = "kazengunfaceguard"
 	item_state = "kazengunfaceguard"
@@ -372,7 +372,7 @@
 	flags_inv = HIDEFACE
 
 /obj/item/clothing/face/facemask/bronze
-	name = "máscara de bronce"
+	name = "mascara de bronce"
 	desc = "Glimmering bronze, curved to veil its wearer's face from both judgement and harm."
 	armor_class = AC_LIGHT
 	icon_state = "bronzemask"
@@ -388,12 +388,12 @@
 	desc = "Glimmering bronze, meticuliusly shaped to mimic the guise of another. One of civilization's oldest superstitions is the belief that donning such masks would impart a sliver of the mimicked facebearer's power unto its wearer."
 
 /obj/item/clothing/face/facemask/silver
-	name = "máscara de plata"
+	name = "mascara de plata"
 	icon = 'icons/roguetown/clothing/special/adept.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/adept.dmi'
 	icon_state = "silvermask"
 	armor_type = /datum/armor/mask/metal/silver
-	desc = "Una máscara de penitencia de plata hecha a medida, creada especialmente para los Adeptos de la Logia Inquisitorial."
+	desc = "Una mascara de penitencia de plata hecha a medida, creada especialmente para los Adeptos de la Logia Inquisitorial."
 	max_integrity = 300
 	smeltresult = /obj/item/ingot/silver
 	melting_material = /datum/material/silver
@@ -432,7 +432,7 @@
 	item_weight =  290 GRAMS
 
 /obj/item/clothing/face/shepherd
-	name = "media máscara"
+	name = "media mascara"
 	icon_state = "shepherd"
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
 	body_parts_covered = NECK|MOUTH
@@ -471,7 +471,7 @@
 	icon_state = "ragmask"
 
 /obj/item/clothing/face/shepherd/shadowmask
-	name = "media máscara morada"
+	name = "media mascara morada"
 	icon_state = "shadowmask"
 	desc = "Tiny drops of white dye mark its front, not unlike teeth. A smile that leers from shadow."
 
@@ -504,7 +504,7 @@
 	item_weight = 356 GRAMS
 
 /obj/item/clothing/face/courtphysician
-	name = "máscara del médico de la corte"
+	name = "mascara del medico de la corte"
 	desc = "Similar to a feldsher's mask, this one is made with actual bone! Don't ask whose."
 	icon_state = "docmask"
 	item_state = "docmask"
@@ -525,7 +525,7 @@
 	clothing_flags = BLOCK_GAS_SMOKE_EFFECT
 
 /obj/item/clothing/face/facemask/copper
-	name = "máscara de cobre"
+	name = "mascara de cobre"
 	icon_state = "cmask"
 	desc = "A heavy copper mask that conceals and protects the face, though not very effectively."
 	max_integrity = 100
@@ -546,8 +546,8 @@
 
 //................ Druids Mask ............... //
 /obj/item/clothing/face/druid
-	name = "máscara de druidas"
-	desc = "Raíces de un viejo roble, moldeadas según los deseos del Padre Árbol."
+	name = "mascara de druidas"
+	desc = "Raices de un viejo roble, moldeadas segun los deseos del Padre Arbol."
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
 	icon_state = "dendormask"
@@ -563,7 +563,7 @@
 	item_weight = 356 GRAMS
 
 /obj/item/clothing/face/skullmask
-	name = "máscara de calavera"
+	name = "mascara de calavera"
 	icon_state = "skullmask"
 	max_integrity = 100
 	blocksound = PLATEHIT
@@ -582,7 +582,7 @@
 	item_weight = 240 GRAMS
 
 /obj/item/clothing/face/facemask/goldmask
-	name = "máscara de oro"
+	name = "mascara de oro"
 	icon_state = "goldmask"
 	max_integrity = 150
 	sellprice = 100
@@ -606,7 +606,7 @@
 	item_weight = 356 GRAMS
 
 /obj/item/clothing/face/xylixmask
-	name = "máscara de bufón"
+	name = "mascara de bufon"
 	item_state = "xylixmask"
 	icon_state = "xylixmask"
 	desc = "A ceramic mask, forever stuck with the joyful smile its patron god favors. While it will shatter easily from blows, its smug countenance shall taunt its foes."
@@ -620,7 +620,7 @@
 	sellprice = 0
 
 /obj/item/clothing/face/xylixmask/weathered
-	name = "máscara desgastada"
+	name = "mascara desgastada"
 	item_state = "xylix_weathered"
 	icon_state = "xylix_weathered"
 	desc = "An ancient ceramic face. It looks weathered, the sort molded by Xylixian worshippers of many yils past. Even when cast aside, it feels like the hardened clay has never left your hands. As if it always finds a way back into your palms."

@@ -12,7 +12,7 @@
 	alert_group = ALERT_DEBUFF
 
 /atom/movable/screen/alert/status_effect/stress
-	name = "Efecto base de estrés"
+	name = "Efecto base de estres"
 	desc = "If you see this status effect, please yell at your local coder."
 	icon_state = "debuff"
 	alert_group = ALERT_DEBUFF

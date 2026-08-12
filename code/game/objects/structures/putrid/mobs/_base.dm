@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/retaliate/meatvine
 	name = "criatura horrible"
 	abstract_type = /mob/living/simple_animal/hostile/retaliate/meatvine
-	desc = "¡¿Qué es eso?!"
+	desc = "¡¿Que es eso?!"
 	icon = 'icons/obj/cellular/meat.dmi'
 	icon_state = "bloodling_stage_1"
 	icon_living = "bloodling_stage_1"
@@ -158,7 +158,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/meatvine/proc/try_feed_to_papameat(atom/movable/food, obj/structure/meatvine/papameat/nearest_papa, mob/user)
 	if(!nearest_papa)
-		to_chat(user, span_warning("¡No hay carne de papá cerca para alimentar!"))
+		to_chat(user, span_warning("¡No hay carne de papa cerca para alimentar!"))
 		return FALSE
 
 	var/organic_value = calculate_organic_value(food)
@@ -246,7 +246,7 @@
 		to_chat(src, span_warning("This well is already being drained!"))
 		return FALSE
 	if(get_dist(src, well) > 1)
-		to_chat(src, span_warning("¡Debe estar adyacente al pozo de curación!"))
+		to_chat(src, span_warning("¡Debe estar adyacente al pozo de curacion!"))
 		return FALSE
 	is_draining_well = TRUE
 	draining_target = well

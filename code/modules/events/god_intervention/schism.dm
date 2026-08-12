@@ -115,7 +115,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 			if(supporter && supporter.patron == challenger)
 				for(var/datum/action/innate/choose_schism_side/choose in supporter.actions)
 					if(choose.chose_early)
-						to_chat(supporter, span_notice("¡El desafío de [challenger.name] tiene éxito! Tu fe persistente es recompensada con triunfos."))
+						to_chat(supporter, span_notice("¡El desafio de [challenger.name] tiene exito! Tu fe persistente es recompensada con triunfos."))
 						supporter.adjust_triumphs(2)
 					else
 						to_chat(supporter, span_notice("[challenger.name] succeeds, but your late support goes unrewarded."))
@@ -284,7 +284,7 @@ GLOBAL_LIST_EMPTY(tennite_schisms)
 		current_side = "neutral"
 
 	if(options[choice] == current_side)
-		to_chat(owner, span_notice("¡Ya estás apoyando a este lado!"))
+		to_chat(owner, span_notice("¡Ya estas apoyando a este lado!"))
 		return
 
 	uses_remaining--

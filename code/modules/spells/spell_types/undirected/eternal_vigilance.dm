@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/eternal_vigilance
 	name = "Vigilancia eterna"
-	desc = "Entra en una estasis sin sueños. Cierra los ojos para un trance más profundo."
+	desc = "Entra en una estasis sin sueños. Cierra los ojos para un trance mas profundo."
 	has_visual_effects = FALSE
 
 	//so we don't accidentally give them arcane exp...

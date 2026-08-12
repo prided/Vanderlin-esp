@@ -144,7 +144,7 @@
 		head = /obj/item/clothing/head/wizhat/witch
 
 /datum/migrant_wave/magic_school_expedition
-	name = "Expedición de la escuela de magia"
+	name = "Expedicion de la escuela de magia"
 	max_spawns = 1
 	shared_wave_type = /datum/migrant_wave/magic_school_expedition
 	downgrade_wave = /datum/migrant_wave/magic_school_expedition_down
@@ -156,7 +156,7 @@
 	greet_text = "A teacher in travel-worn robes takes a seat, a cluster of young apprentices following close behind. Their satchels clink faintly with glass and metal, and the smell of old parchment drifts from their packs."
 
 /datum/migrant_wave/magic_school_expedition_down
-	name = "Expedición de la escuela de magia"
+	name = "Expedicion de la escuela de magia"
 	shared_wave_type = /datum/migrant_wave/magic_school_expedition
 	downgrade_wave = /datum/migrant_wave/magic_school_expedition_two
 	can_roll = FALSE
@@ -167,7 +167,7 @@
 	greet_text = "The door opens to a weary teacher and a smaller band of pupils. Their robes are torn at the hems, and one student’s hands are wrapped in singed cloth."
 
 /datum/migrant_wave/magic_school_expedition_two
-	name = "Expedición de la escuela de magia"
+	name = "Expedicion de la escuela de magia"
 	shared_wave_type = /datum/migrant_wave/magic_school_expedition
 	can_roll = FALSE
 	roles = list(

@@ -31,7 +31,7 @@
 		target.ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(target.food_type))
 
 /datum/animal_gene/diet/strict_herbivore
-	name = "Herbívoro estricto"
+	name = "Herbivoro estricto"
 	desc = "Will only eat plant matter. Refuses meat entirely."
 	rarity = 5
 	removed_foods = list(
@@ -41,7 +41,7 @@
 	)
 
 /datum/animal_gene/diet/omnivore
-	name = "Omnívoro oportunista"
+	name = "Omnivoro oportunista"
 	desc = "Will eat almost anything, including meat and fish."
 	rarity = 4
 	added_foods = list(
@@ -51,8 +51,8 @@
 	)
 
 /datum/animal_gene/diet/carnivore_instinct
-	name = "Instinto carnívoro"
-	desc = "Un raro retroceso genético. Este animal anhela la carne por encima de todo."
+	name = "Instinto carnivoro"
+	desc = "Un raro retroceso genetico. Este animal anhela la carne por encima de todo."
 	rarity = 2
 	dominant = TRUE
 	added_foods = list(

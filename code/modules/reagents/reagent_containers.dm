@@ -276,7 +276,7 @@
 		return FALSE
 
 	if(!reagents?.total_volume)
-		to_chat(user, span_danger("¡[src] está vacío!"))
+		to_chat(user, span_danger("¡[src] esta vacio!"))
 		return TRUE
 
 	var/punctuation = ismob(target) ? "!" : "."
@@ -322,7 +322,7 @@
 		return FALSE
 
 	if(!reagents?.total_volume)
-		to_chat(user, span_danger("¡[src] está vacío!"))
+		to_chat(user, span_danger("¡[src] esta vacio!"))
 		return TRUE
 
 	if(!canconsume(target, user))
@@ -378,11 +378,11 @@
 		return FALSE
 
 	if(!reagents?.total_volume)
-		to_chat(user, span_danger("¡[src] está vacío!"))
+		to_chat(user, span_danger("¡[src] esta vacio!"))
 		return TRUE
 
 	if(to_pour.reagents.holder_full())
-		to_chat(user, span_danger("[to_pour] está lleno."))
+		to_chat(user, span_danger("[to_pour] esta lleno."))
 		return TRUE
 
 	var/stealthy = user.rogue_sneaking
@@ -418,11 +418,11 @@
 		return FALSE
 
 	if(!filling_from.reagents?.total_volume)
-		to_chat(user, span_danger("¡[filling_from] está vacío!"))
+		to_chat(user, span_danger("¡[filling_from] esta vacio!"))
 		return TRUE
 
 	if(reagents.holder_full())
-		to_chat(user, span_danger("[src] está lleno."))
+		to_chat(user, span_danger("[src] esta lleno."))
 		return TRUE
 
 	var/stealthy = user.rogue_sneaking
@@ -455,7 +455,7 @@
 		return FALSE
 
 	if(labelled)
-		to_chat(user, span_warning("\The [src] ya está etiquetado."))
+		to_chat(user, span_warning("\The [src] ya esta etiquetado."))
 		return FALSE
 
 	if(length(parchment.info))
@@ -463,7 +463,7 @@
 		return FALSE
 
 	if(!user.is_literate())
-		to_chat(user, span_warning("No sé escribir."))
+		to_chat(user, span_warning("No se escribir."))
 		return FALSE
 
 	var/other_hand = user.get_inactive_held_item()
@@ -475,7 +475,7 @@
 	if(QDELETED(src) || QDELETED(parchment))
 		return FALSE
 
-	var/label_desc = browser_input_text(user, "¿Escribir una descripción opcional?")
+	var/label_desc = browser_input_text(user, "¿Escribir una descripcion opcional?")
 	if(QDELETED(src) || QDELETED(parchment))
 		return FALSE
 
@@ -499,7 +499,7 @@
 		return
 	if(labelled)
 		if(user)
-			to_chat(user, span_warning("\The [src] ya está etiquetado."))
+			to_chat(user, span_warning("\The [src] ya esta etiquetado."))
 		return
 	if(user)
 		playsound(src, 'sound/foley/dropsound/paper_drop.ogg', 70)

@@ -59,6 +59,6 @@
 	cast_on.AddComponent(/datum/component/conjured_minion, owner, recoil_energy_floor, recoil_severity, recoil_stamina_only)
 
 	owner.visible_message(
-		span_greentext("[owner] calma a \the [cast_on] con la bendición de zizo."),
+		span_greentext("[owner] calma a \the [cast_on] con la bendicion de zizo."),
 		span_notice("The creacher now obeys me."),
 	)

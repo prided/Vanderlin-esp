@@ -47,14 +47,14 @@
 		if(/datum/attribute/skill/misc/reading)
 			title = "literatura"
 		if(/datum/attribute/skill/labor/mathematics)
-			title = "matemáticas"
+			title = "matematicas"
 		if(/datum/attribute/skill/craft/engineering)
 			title = "engineering"
 		if(/datum/attribute/skill/craft/alchemy)
 			title = "alchemy"
 		if(/datum/attribute/skill/misc/medicine)
 			title = "medicine"
-	name = "Guía de [skill_name] para [title]"
+	name = "Guia de [skill_name] para [title]"
 
 /obj/item/textbook/update_desc()
 	. = ..()
@@ -75,7 +75,7 @@
 	if(istype(I, /obj/item/natural/feather))
 		if(skilltoteach)
 			return
-		var/skill = input(user, "¿Qué tipo de libro de texto escribirás?", "NOC") as null|anything in teachable_skills
+		var/skill = input(user, "¿Que tipo de libro de texto escribiras?", "NOC") as null|anything in teachable_skills
 		if(!skill)
 			return
 		var/userskill = GET_MOB_SKILL_VALUE_OLD(user, teachable_skills[skill])

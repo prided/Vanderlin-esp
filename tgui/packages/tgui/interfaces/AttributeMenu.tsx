@@ -52,53 +52,53 @@ interface TutorialStep {
 const TUTORIAL_STEPS: TutorialStep[] = [
   {
     title: 'Bienvenido al libro de atributos',
-    body: "Este libro de contabilidad establece los sellos y el registro de habilidades de tu personaje. Déjame explicarte lo que contiene cada página.",
+    body: "Este libro de contabilidad establece los sellos y el registro de habilidades de tu personaje. Dejame explicarte lo que contiene cada pagina.",
     popupAnchor: 'center',
   },
   {
     title: 'Sellos de personajes',
-    body: 'La página de la izquierda muestra los sellos de los atributos principales dispuestos alrededor de su retrato: Fuerza, Velocidad, Resistencia, Inteligencia, Percepción, Constitución y Fortuna. Estos fundamentos gobiernan casi todo lo que haces.',
+    body: 'La pagina de la izquierda muestra los sellos de los atributos principales dispuestos alrededor de su retrato: Fuerza, Velocidad, Resistencia, Inteligencia, Percepcion, Constitucion y Fortuna. Estos fundamentos gobiernan casi todo lo que haces.',
     target: '.AttributeMenu__panel--seals',
     popupAnchor: 'right',
   },
   {
     title: 'Leyendo un sello',
-    body: 'Cada sello muestra su valor actual. El verde significa que una bendición lo ha elevado, el rojo significa que una maldición lo ha reducido y la tinta pálida significa que no está modificado.',
+    body: 'Cada sello muestra su valor actual. El verde significa que una bendicion lo ha elevado, el rojo significa que una maldicion lo ha reducido y la tinta palida significa que no esta modificado.',
     target: '.AttributeMenu__sealNodeValue',
     popupAnchor: 'right',
   },
   {
     title: 'Registro de habilidades',
-    body: 'La página del medio es el Libro de habilidades: tus habilidades, agrupadas por categoría. Cada entrada muestra su valor actual, coloreado de la misma manera que los sellos.',
+    body: 'La pagina del medio es el Libro de habilidades: tus habilidades, agrupadas por categoria. Cada entrada muestra su valor actual, coloreado de la misma manera que los sellos.',
     target: '.AttributeMenu__panel--register',
     popupAnchor: 'left',
   },
   {
     title: 'Selector de todas las habilidades',
-    body: 'De forma predeterminada, solo se muestran las habilidades entrenadas. Marque Todas las habilidades para revelar también las que no están entrenadas, para que pueda ver lo que queda por aprender.',
+    body: 'De forma predeterminada, solo se muestran las habilidades entrenadas. Marque Todas las habilidades para revelar tambien las que no estan entrenadas, para que pueda ver lo que queda por aprender.',
     target: '.AttributeMenu__toggle',
     popupAnchor: 'bottom',
   },
   {
     title: 'Buscar en el Registro',
-    body: 'Escriba aquí el nombre de una habilidad para filtrar el registro en tiempo real. La búsqueda revela automáticamente habilidades no entrenadas para que nada quede oculto.',
+    body: 'Escriba aqui el nombre de una habilidad para filtrar el registro en tiempo real. La busqueda revela automaticamente habilidades no entrenadas para que nada quede oculto.',
     target: '.AttributeMenu__search',
     popupAnchor: 'bottom',
   },
   {
     title: 'Notas marginales',
-    body: 'Haz clic en cualquier sello o habilidad y el escriba anotará aquí los detalles: descripción, dificultad, atributo rector, valores predeterminados y bendiciones o maldiciones activas. Presiona la x para cerrar la nota.',
+    body: 'Haz clic en cualquier sello o habilidad y el escriba anotara aqui los detalles: descripcion, dificultad, atributo rector, valores predeterminados y bendiciones o maldiciones activas. Presiona la x para cerrar la nota.',
     target: '.AttributeMenu__panel--notes',
     popupAnchor: 'left',
   },
   {
     title: 'Niveles de habilidad',
-    body: 'Los números reemplazan los nombres de niveles antiguos: Novato tenía 10-19, Aprendiz 20-29, Oficial 30-39, Experto 40-49, Maestro 50-59, Legendario 60 y superior.',
+    body: 'Los numeros reemplazan los nombres de niveles antiguos: Novato tenia 10-19, Aprendiz 20-29, Oficial 30-39, Experto 40-49, Maestro 50-59, Legendario 60 y superior.',
     popupAnchor: 'center',
   },
   {
     title: 'Eso es todo sobre el libro.',
-    body: 'Abre los sellos para inspeccionar sus estadísticas, explore el registro en busca de sus habilidades y lea las notas marginales cuando desee detalles. presiona el ? en cualquier momento para volver a visitar este tutorial.',
+    body: 'Abre los sellos para inspeccionar sus estadisticas, explore el registro en busca de sus habilidades y lea las notas marginales cuando desee detalles. presiona el ? en cualquier momento para volver a visitar este tutorial.',
     popupAnchor: 'center',
   },
 ];
@@ -538,7 +538,7 @@ const CoreAttributes = memo((props: {
           color="transparent"
           className="AttributeMenu__helpButton"
           onClick={onHelpClick}
-          tooltip="Cómo leer este libro mayor"
+          tooltip="Como leer este libro mayor"
         >
           ?
         </Button>
@@ -768,7 +768,7 @@ const InspectionPanel = memo((props: {
         title={
           <>
             <Box as="span" className="AttributeMenu__eyebrow">Notas marginales</Box>
-            <Box as="span" className="AttributeMenu__title">Inspección</Box>
+            <Box as="span" className="AttributeMenu__title">Inspeccion</Box>
           </>
         }
       >
@@ -776,7 +776,7 @@ const InspectionPanel = memo((props: {
         <Box className="AttributeMenu__placeholder">
           <Box className="AttributeMenu__placeholderMark">no inspeccionado</Box>
           <p>Selecciona un sello o una habilidad para leer las notas del escriba.</p>
-          <p>Aquí aparecerán los valores, valores predeterminados, modificadores y atributos rectores.</p>
+          <p>Aqui apareceran los valores, valores predeterminados, modificadores y atributos rectores.</p>
         </Box>
       </Section>
     );
@@ -840,7 +840,7 @@ const InspectionPanel = memo((props: {
 
         {!!attribute.defaults?.length && (
           <section className="AttributeMenu__noteBlock">
-            <h3>Valor predeterminado (se aplica el más alto, no combinado)</h3>
+            <h3>Valor predeterminado (se aplica el mas alto, no combinado)</h3>
             {attribute.defaults.map((def, index) => {
               const mod = def.default_value ?? 0;
               const tone = mod >= 0 ? 'is-buffed' : 'is-debuffed';

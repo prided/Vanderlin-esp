@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/conjure_item/smoke_bomb
 	name = "Bomba de humo"
-	desc = "Invoca una bomba de humo de algún lugar."
+	desc = "Invoca una bomba de humo de algun lugar."
 	button_icon_state = "darkvision"
 	sound = 'sound/magic/magicbottle.ogg'
 

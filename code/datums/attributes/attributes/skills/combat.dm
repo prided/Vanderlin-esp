@@ -3,7 +3,7 @@
 
 /datum/attribute/skill/combat/knives
 	name = "Knife-fighting"
-	desc = "Representa la habilidad de tu personaje para luchar con cuchillos y hojas cortas. Cuanto mayor sea tu habilidad con cuchillos, más preciso serás y mejor podrás parar ataques con ellos."
+	desc = "Representa la habilidad de tu personaje para luchar con cuchillos y hojas cortas. Cuanto mayor sea tu habilidad con cuchillos, mas preciso seras y mejor podras parar ataques con ellos."
 	governing_attribute = STAT_SPEED
 	default_attributes = list(
 		STAT_SPEED = -5,

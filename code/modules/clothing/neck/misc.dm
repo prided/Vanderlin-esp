@@ -470,7 +470,7 @@
 		collar_unlocked = TRUE
 		to_chat(user, "The red gem inset in \the [src] dims its glow, it seems to be safe to take off now!")
 	else
-		to_chat(user, "¡El collar ya está desbloqueado!")
+		to_chat(user, "¡El collar ya esta desbloqueado!")
 
 	return ITEM_INTERACT_SUCCESS
 
@@ -727,7 +727,7 @@
 	sellprice = 15
 
 /obj/item/clothing/neck/courtphysician
-	name = "collar del médico de la corte"
+	name = "collar del medico de la corte"
 	desc = "Fits snug."
 	icon_state = "courtcollar"
 	item_state = "courtcollar"

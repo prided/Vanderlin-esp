@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(essence_combos, init_essence_combos())
 
 /datum/essence_combo
 	abstract_type = /datum/essence_combo
-	var/name = "Combinación desconocida"
+	var/name = "Combinacion desconocida"
 	/// Essence type paths required to activate this combo.
 	/// All must be present unless required_count overrides this.
 	var/list/required_essences = list()

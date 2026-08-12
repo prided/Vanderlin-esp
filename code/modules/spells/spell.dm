@@ -675,7 +675,7 @@
 				var/mob/living/L = cast_on
 				L.visible_message(
 					span_danger("[L] recoils in disgust!"),
-					span_userdanger("¡¡Estos tontos están tratando de curarme con la religión!!")
+					span_userdanger("¡¡Estos tontos estan tratando de curarme con la religion!!")
 				)
 				L.cursed_freak_out()
 			return sig_return | SPELL_CANCEL_CAST
@@ -855,7 +855,7 @@
 		owner.balloon_alert(owner, charge_message)
 
 	if(spell_requirements & SPELL_REQUIRES_NO_MOVE)
-		owner.balloon_alert(owner, "quédate quieto mientras canalizas...")
+		owner.balloon_alert(owner, "quedate quieto mientras canalizas...")
 
 	if(owner?.mmb_intent)
 		owner.mmb_intent_change(null)
@@ -957,7 +957,7 @@
 		if(SPELL_MANA)
 			if(!caster.has_mana_available(used_cost))
 				if(feedback)
-					owner.balloon_alert(owner, "¡No hay suficiente maná para lanzar!")
+					owner.balloon_alert(owner, "¡No hay suficiente mana para lanzar!")
 				return FALSE
 
 			return TRUE
@@ -974,7 +974,7 @@
 			var/mob/living/carbon/human/H = caster
 			if(!istype(H) || !H.cleric?.check_devotion(spell_cost))
 				if(feedback)
-					owner.balloon_alert(owner, "¡La devoción es demasiado débil!")
+					owner.balloon_alert(owner, "¡La devocion es demasiado debil!")
 				return FALSE
 
 			return TRUE

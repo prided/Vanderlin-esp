@@ -88,7 +88,7 @@
 		if(istype(user.patron, /datum/patron/inhumen/graggar))
 			to_chat(user, "<span class='warning'>You finish the incantation and feel something well up inside you. Rage, excitement, the thirst you know so well. You snap back to reality, heart beating fast.</span>")
 		else
-			to_chat(user, "<span class='warning'>Terminas el hechizo, sin embargo después de unos momentos no sientes mucha diferencia, te deja frustrado y enojado.</span>")
+			to_chat(user, "<span class='warning'>Terminas el hechizo, sin embargo despues de unos momentos no sientes mucha diferencia, te deja frustrado y enojado.</span>")
 
 	if(istype(current_storyteller, /datum/storyteller/xylix))
 		if(istype(user.patron, /datum/patron/divine/xylix))
@@ -107,7 +107,7 @@
 				"<span class='warning'>As you finish the spell, you are met with a feeling. You can't quite put your thumb on it but, something does not feel right.</span>",
 				"<span class='warning'>You feel your eyes roll into the back of your head, and begin to question if this was really worth casting. Before you have a chance to focus it's all over, what a ripoff.</span>",
 				"<span class='warning'>Your stomach immediately churns, you aren't quite sure if it's guilt, or if it's too much drink. It feels horrible.</span>",
-				"<span class='warning'>Terminas el hechizo, sin embargo después de unos momentos no sientes mucha diferencia, te deja frustrado y enojado.</span>",
+				"<span class='warning'>Terminas el hechizo, sin embargo despues de unos momentos no sientes mucha diferencia, te deja frustrado y enojado.</span>",
 				"<span class='warning'>You finish the incantation of the spell, but nothing happens.</span>"
 			)
 			to_chat(user, pick(possible_messages))

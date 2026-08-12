@@ -105,7 +105,7 @@ Reel teleports the attached atom to the grabbed turf.
 			playsound(user, 'sound/misc/grapple_crank.ogg', 100, FALSE, 3)
 			if(do_after(user, 70 - stat, user, timed_action_flags = (IGNORE_USER_LOC_CHANGE|IGNORE_TARGET_LOC_CHANGE|IGNORE_HELD_ITEM|IGNORE_USER_DIR_CHANGE)))
 				playsound(src, 'sound/foley/trap_arm.ogg', 100, FALSE , 5)
-				to_chat(user, span_info("¡Está cargado!"))
+				to_chat(user, span_info("¡Esta cargado!"))
 				isloading = FALSE
 				is_loaded = TRUE
 				update_appearance(UPDATE_ICON_STATE)
@@ -119,7 +119,7 @@ Reel teleports the attached atom to the grabbed turf.
 				if(do_after(user, 10))
 					reel()
 			else
-				to_chat(user, span_info("¡[attached] está demasiado lejos!"))
+				to_chat(user, span_info("¡[attached] esta demasiado lejos!"))
 	else if(!is_loaded && in_use && grappled_turf && tile_effect)	//Reset option.
 		user.visible_message("[user] unhooks from the tile.")
 		reset_tile()
@@ -247,7 +247,7 @@ Reel teleports the attached atom to the grabbed turf.
 							attached = user
 							return
 						else
-							to_chat(user, span_info("¡El camino está bloqueado!"))
+							to_chat(user, span_info("¡El camino esta bloqueado!"))
 							return
 					else if(get_dist(user, T) > max_range_z)
 						reason = "It's too far."
@@ -264,7 +264,7 @@ Reel teleports the attached atom to the grabbed turf.
 							attached = user
 							return
 						else
-							to_chat(user, span_info("¡El camino está bloqueado!"))
+							to_chat(user, span_info("¡El camino esta bloqueado!"))
 							return
 			else
 				to_chat(user, span_info("Incorrect target! It needs a clear floor tile to grapple onto."))
@@ -297,7 +297,7 @@ Reel teleports the attached atom to the grabbed turf.
 				if(do_after(user, 10))
 					reel()
 			else
-				to_chat(user, span_info("¡[target] está demasiado lejos!"))
+				to_chat(user, span_info("¡[target] esta demasiado lejos!"))
 		else
 			to_chat(user, span_info("Necesito tener algo adjunto."))
 	. = ..()

@@ -39,7 +39,7 @@
 //................ Face ............... //
 
 /obj/item/clothing/face/facemask/steel/ancient
-	name = "máscara antigua"
+	name = "mascara antigua"
 	icon_state = "ancientmask"
 	desc = "An ancient mask that hides an ancient evil."
 	misc_flags = CRAFTING_TEST_EXCLUDE

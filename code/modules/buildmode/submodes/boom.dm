@@ -15,7 +15,7 @@
 	to_chat(c, "<span class='notice'>***********************************************************</span>")
 
 /datum/buildmode_mode/boom/change_settings(client/c)
-	devastation = input(c, "Rango de devastación total. -1 a ninguno", "Input") as num|null
+	devastation = input(c, "Rango de devastacion total. -1 a ninguno", "Input") as num|null
 	if(devastation == null)
 		devastation = -1
 	heavy = input(c, "Range of heavy impact. -1 to none", "Input") as num|null

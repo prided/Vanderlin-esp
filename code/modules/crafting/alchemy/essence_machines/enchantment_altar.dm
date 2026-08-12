@@ -1,6 +1,6 @@
 /obj/machinery/essence/enchantment_altar
 	name = "mesa encantadora"
-	desc = "Un foco de obsidiana para unir esencias alquímicas en un objeto."
+	desc = "Un foco de obsidiana para unir esencias alquimicas en un objeto."
 	icon = 'icons/roguetown/misc/altar.dmi'
 	icon_state = "altar"
 	network_priority = 4
@@ -75,7 +75,7 @@
 	opts["Browse All Recipes"] = "browse"
 	opts["Cancel"] = "cancel"
 
-	var/choice = input(user, "Menú del altar", "[src.name]") in opts
+	var/choice = input(user, "Menu del altar", "[src.name]") in opts
 	if(!choice || choice == "cancel") return
 	switch(opts[choice])
 		if("enchant") begin_enchantment(user)
@@ -211,7 +211,7 @@
 		to_chat(user, span_info("[placed_item] has been enchanted with [enchant_name]!"))
 		add_abstract_elastic_data(ELASCAT_ENCHANTING, "[enchant.enchantment_name]", 1)
 	else
-		to_chat(user, span_warning("¡El encantamiento falló!"))
+		to_chat(user, span_warning("¡El encantamiento fallo!"))
 
 	spawn_sparkles(8)
 	if(selected_recipe) qdel(selected_recipe)
@@ -263,7 +263,7 @@
 /obj/machinery/essence/enchantment_altar/get_mechanics_examine(mob/user)
 	. = ..()
 	if(placed_item)
-		. += span_notice("Artículo: [placed_item]")
+		. += span_notice("Articulo: [placed_item]")
 	if(selected_recipe)
 		. += span_notice("Enchantment: [selected_recipe.enchantment_name]")
 		for(var/datum/thaumaturgical_essence/etype as anything in selected_recipe.essence_recipe)

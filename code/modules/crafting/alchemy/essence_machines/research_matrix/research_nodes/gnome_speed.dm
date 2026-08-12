@@ -1,6 +1,6 @@
 
 /datum/thaumic_research_node/gnome_speed
-	name = "Incorporación de esencia mejorada"
+	name = "Incorporacion de esencia mejorada"
 	desc = "Improves the speed at which life essences coalesce to form life."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/machines/gnomes)
@@ -15,7 +15,7 @@
 	bonus_value = 0.33
 
 /datum/thaumic_research_node/gnome_speed/two
-	name = "Incorporación de esencia mejorada"
+	name = "Incorporacion de esencia mejorada"
 	desc = "Further improves the speed at which life essences coalesce into gnomes."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/gnome_speed)
@@ -30,7 +30,7 @@
 	bonus_value = 0.50
 
 /datum/thaumic_research_node/gnome_speed/three
-	name = "Incorporación de esencia perfeccionada"
+	name = "Incorporacion de esencia perfeccionada"
 	desc = "Maximizes the speed at which life essences coalesce."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/gnome_speed/two)

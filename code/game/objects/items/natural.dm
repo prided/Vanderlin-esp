@@ -58,7 +58,7 @@
 
 /obj/item/natural/bundle
 	name = "bundle"
-	desc = "No deberías estar viendo esto."
+	desc = "No deberias estar viendo esto."
 	possible_item_intents = list(/datum/intent/use)
 	force = 0
 	throwforce = 0

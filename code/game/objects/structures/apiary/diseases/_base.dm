@@ -1,7 +1,7 @@
 
 /datum/bee_disease
 	var/name = "Enfermedad desconocida"
-	var/description = "Una aflicción misteriosa"
+	var/description = "Una afliccion misteriosa"
 	var/progression_rate = 1.0
 	var/severity_threshold = DISEASE_CRITICAL_SEVERITY
 	var/infection_chance_base = DISEASE_BASE_INFECTION
@@ -15,8 +15,8 @@
 
 /datum/bee_disease/proc/get_severity_description(severity)
 	if(severity < 30)
-		return span_notice("La infección parece ser leve.")
+		return span_notice("La infeccion parece ser leve.")
 	else if(severity < 70)
-		return span_warning("La infección es moderadamente grave.")
+		return span_warning("La infeccion es moderadamente grave.")
 	else
 		return span_danger("The infection is very severe! The colony may collapse soon!")

@@ -38,7 +38,7 @@
 		return
 
 	if(stress_event && punishment >= PUNISHMENT_STRESS)
-		to_chat(mob, span_warning("Siento los ojos de [patron.name] sobre mí..."))
+		to_chat(mob, span_warning("Siento los ojos de [patron.name] sobre mi..."))
 		mob.add_stress(/datum/stress_event/divine_punishment)
 
 	if(sets_alight && punishment >= PUNISHMENT_BURN)

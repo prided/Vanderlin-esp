@@ -101,7 +101,7 @@
 	return "[mob_name] successfully cryo'd!"
 
 /obj/structure/train/carriage //A temporary subform of the train that is just a carriage	name = "train"
-	desc = "Un vagón de tren."
+	desc = "Un vagon de tren."
 	icon = 'icons/roguetown/items/train.dmi'
 	icon_state = "tren2"
 	layer = TABLE_LAYER

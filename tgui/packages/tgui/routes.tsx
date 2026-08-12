@@ -34,7 +34,7 @@ function RoutingErrorWindow(props: RoutingErrorProps) {
         )}
         {type === 'missingExport' && (
           <div>
-            Interfaz <b>{name}</b> le falta una exportación.
+            Interfaz <b>{name}</b> le falta una exportacion.
           </div>
         )}
         {type === 'unknown' && <div>Se ha producido un error desconocido.</div>}

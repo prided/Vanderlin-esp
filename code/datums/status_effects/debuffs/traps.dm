@@ -17,7 +17,7 @@
 	owner.add_overlay(cube)
 	var/mob/living/M = owner
 	if (M)
-		to_chat(M, span_warning("¡Estás atrapado en hielo sólido!"))
+		to_chat(M, span_warning("¡Estas atrapado en hielo solido!"))
 
 /datum/status_effect/frost_trap/proc/on_attacked(datum/source, damage,type,zone)
 	to_chat(owner, span_danger("The ice around me violently shatters; damaging me further!"))
@@ -38,5 +38,5 @@
 
 /atom/movable/screen/alert/status_effect/frozen_solid
 	name = "Frozen Solid"
-	desc = "¡Estás encerrado en hielo sólido y no puedes moverte!"
+	desc = "¡Estas encerrado en hielo solido y no puedes moverte!"
 	icon_state = "frozen"

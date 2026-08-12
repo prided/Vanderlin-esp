@@ -24,7 +24,7 @@
 	if(held_item)
 		. += span_info("[src] is holding \a [held_item.name].")
 		if(HAS_TRAIT(held_item, TRAIT_NEEDS_QUENCH))
-			. += span_warning("La punta está caliente al tacto.")
+			. += span_warning("La punta esta caliente al tacto.")
 
 /obj/item/weapon/tongs/Destroy()
 	place_item_to_atom(drop_location())
@@ -99,7 +99,7 @@
 		return FALSE
 
 	if(!isturf(A) && !istype(A, /obj/structure/table))
-		to_chat(user, "<span class='warning'>¡No se puede colocar [held_item] aquí!</span>")
+		to_chat(user, "<span class='warning'>¡No se puede colocar [held_item] aqui!</span>")
 		return FALSE
 
 	held_item.forceMove(get_turf(A))

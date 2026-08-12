@@ -4,7 +4,7 @@
 	severity = WOUND_SEVERITY_SEVERE
 	crit_message = list(
 		"¡El hueso se rompe!",
-		"¡El hueso está roto!",
+		"¡El hueso esta roto!",
 		"The %BODYPART is mauled!",
 		"The bone snaps through the skin!",
 	)
@@ -99,9 +99,9 @@
 	check_name = "<span class='bone'><B>SKULLCRACK</B></span>"
 	crit_message = list(
 		"The skull shatters in a gruesome way!",
-		"¡La cabeza está destrozada!",
-		"¡El cráneo está roto!",
-		"¡El cráneo se hunde!",
+		"¡La cabeza esta destrozada!",
+		"¡El craneo esta roto!",
+		"¡El craneo se hunde!",
 	)
 	sound_effect = "headcrush"
 	whp = 80
@@ -151,9 +151,9 @@
 	check_name = "<span class='bone'><B>CROWNCRACK</B></span>"
 	severity = WOUND_SEVERITY_FATAL
 	crit_message = list(
-		"¡El cráneo está fracturado!",
+		"¡El craneo esta fracturado!",
 		"The cranium is cracked!",
-		"¡El cráneo está destrozado!",
+		"¡El craneo esta destrozado!",
 	)
 	whp = 150
 	bleed_rate = 5	// Aooouuugh.. my brain..
@@ -171,7 +171,7 @@
 /datum/wound/fracture/head/eyes
 	name = "orbital fracture"
 	crit_message = list(
-		"¡El hueso orbital está fracturado!",
+		"¡El hueso orbital esta fracturado!",
 		"The orbital bone is cracked!",
 	)
 	viable_zones = list(BODY_ZONE_PRECISE_R_EYE, BODY_ZONE_PRECISE_L_EYE)
@@ -189,8 +189,8 @@
 	name = "fractura temporal deprimida"
 	severity = WOUND_SEVERITY_FATAL
 	crit_message = list(
-		"¡El hueso temporal está fracturado!",
-		"¡El hueso temporal está roto!",
+		"¡El hueso temporal esta fracturado!",
+		"¡El hueso temporal esta roto!",
 	)
 	paralysis = TRUE
 	knockout = 25 SECONDS
@@ -199,8 +199,8 @@
 /datum/wound/fracture/head/nose
 	name = "fractura nasal"
 	crit_message = list(
-		"¡El hueso nasal está fracturado!",
-		"¡El hueso nasal está destrozado!",
+		"¡El hueso nasal esta fracturado!",
+		"¡El hueso nasal esta destrozado!",
 	)
 	mortal = FALSE
 	knockout = 10 SECONDS
@@ -220,9 +220,9 @@
 	check_name = "<span class='bone'>JAW FRACTURE</span>"
 	crit_message = list(
 		"The mandible comes apart beautifully!",
-		"¡La mandíbula está destrozada!",
-		"¡La mandíbula está destrozada!",
-		"¡La mandíbula se hunde!",
+		"¡La mandibula esta destrozada!",
+		"¡La mandibula esta destrozada!",
+		"¡La mandibula se hunde!",
 	)
 	whp = 50
 
@@ -248,7 +248,7 @@
 		"The spine shatters in a spectacular way!",
 		"The spine snaps!",
 		"The spine cracks!",
-		"¡La columna está rota!",
+		"¡La columna esta rota!",
 	)
 	whp = 150
 	mortal = TRUE
@@ -280,8 +280,8 @@
 	check_name = "<span class='bone'><B>RIBS</B></span>"
 	crit_message = list(
 		"The ribs shatter in a splendid way!",
-		"¡Las costillas están destrozadas!",
-		"¡Las costillas están destrozadas!",
+		"¡Las costillas estan destrozadas!",
+		"¡Las costillas estan destrozadas!",
 		"The ribcage caves in!",
 	)
 	woundpain = 25
@@ -294,13 +294,13 @@
 	affected.Immobilize(15)
 
 /datum/wound/fracture/groin
-	name = "fractura pélvica"
+	name = "fractura pelvica"
 	check_name = "<span class='bone'><B>PELVIS</B></span>"
 	crit_message = list(
 		"The pelvis shatters in a magnificent way!",
-		"¡La pelvis está destrozada!",
-		"¡La pelvis está mutilada!",
-		"¡El suelo pélvico se hunde!",
+		"¡La pelvis esta destrozada!",
+		"¡La pelvis esta mutilada!",
+		"¡El suelo pelvico se hunde!",
 	)
 	whp = 50
 	gain_emote = "groin"

@@ -41,7 +41,7 @@
 
 	invocation_type = INVOCATION_EMOTE
 	invocation = span_userdanger("<b>%CASTER</b> belches acid!")
-	invocation_self_message = span_danger("¡Escupo ácido!")
+	invocation_self_message = span_danger("¡Escupo acido!")
 	spell_flags = NONE
 
 	charge_time = 2 SECONDS
@@ -72,7 +72,7 @@
 		return . | SPELL_CANCEL_CAST
 
 /obj/projectile/magic/acidsplash
-	name = "burbuja de ácido"
+	name = "burbuja de acido"
 	icon_state = "acid_splash"
 	damage = 10
 	damage_type = BURN

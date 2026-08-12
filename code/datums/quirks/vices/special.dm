@@ -79,7 +79,7 @@
 		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Pacifista..."))
 
 /datum/quirk/vice/chronic_migraine
-	name = "Migrañas crónicas"
+	name = "Migrañas cronicas"
 	desc = "You suffer from frequent, debilitating headaches that can strike without warning."
 	point_value = 3
 
@@ -247,7 +247,7 @@
 		return
 	RegisterSignal(owner, COMSIG_LIVING_DEATH, PROC_REF(on_death))
 	RegisterSignal(owner, COMSIG_LIVING_TRY_ENTER_AFTERLIFE, PROC_REF(on_death))
-	to_chat(owner, span_boldwarning("Has elegido el modo HARDCORE. Si mueres, te convertirás en una rata. No hay segundas oportunidades."))
+	to_chat(owner, span_boldwarning("Has elegido el modo HARDCORE. Si mueres, te convertiras en una rata. No hay segundas oportunidades."))
 	return ..()
 
 /datum/quirk/vice/hardcore/on_remove()
@@ -298,7 +298,7 @@
 	ADD_TRAIT(new_rat, TRAIT_NOFIRE, QUIRK_TRAIT)
 
 /datum/quirk/vice/weak_heart
-	name = "corazón débil"
+	name = "corazon debil"
 	desc = "You were born with a weak heart. You can't handle stressful situations for fear of your heart giving out (Half threshold for heart attacks and heart attack from being overly stressed)."
 	point_value = 6
 	incompatible_quirks = list(
@@ -308,7 +308,7 @@
 
 /datum/quirk/vice/weak_heart/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("De corazón débil..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("De corazon debil..."))
 
 /datum/quirk/vice/tremors
 	name = "Temblores"
@@ -431,7 +431,7 @@
 
 	if((customization_value == "Heretic") || (customization_value == "Both!"))
 		GLOB.excommunicated_players += H.real_name
-		to_chat(H, span_boldwarning("¡He sido denunciado por la iglesia por razones legítimas o no!"))
+		to_chat(H, span_boldwarning("¡He sido denunciado por la iglesia por razones legitimas o no!"))
 	if((customization_value == "Outlaw") || (customization_value == "Both!"))
 		GLOB.outlawed_players |= H.real_name
 		to_chat(H, span_boldwarning("Whether for crimes I did or was accused of, I have been declared an outlaw!"))
@@ -442,7 +442,7 @@
 	desc = "The inquisition suspects me of heresy, whether truthfully or not... Expect a harder experience, as some only require a suspicion to administer Psydon's Justice."
 	point_value = 1
 	customization_type = QUIRK_TEXT
-	customization_label = "¿Por qué sospechan de mí?"
+	customization_label = "¿Por que sospechan de mi?"
 	customization_placeholder = "Spotted eating organs."
 
 /datum/quirk/vice/suspicion/get_desc(datum/preferences/prefs)
@@ -460,5 +460,5 @@
 	var/mob/living/carbon/human/H = owner
 
 	GLOB.inquis_suspect_players += H.real_name
-	to_chat(H, span_boldwarning("Por razones legítimas o no, soy perseguido por la inquisición en esta tierra..."))
+	to_chat(H, span_boldwarning("Por razones legitimas o no, soy perseguido por la inquisicion en esta tierra..."))
 	return ..()

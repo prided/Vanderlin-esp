@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/conjure_item/vamp_sword
-	name = "Conjurar arma vampírica"
-	desc = "Invoca tu arma vampírica."
+	name = "Conjurar arma vampirica"
+	desc = "Invoca tu arma vampirica."
 	button_icon_state = "acidsplash"
 	sound = 'sound/magic/whiteflame.ogg'
 

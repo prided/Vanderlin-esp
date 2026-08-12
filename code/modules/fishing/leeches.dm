@@ -173,7 +173,7 @@
 		"Tan delicioso y lleno de sangre." = 3,
 		"¡Me encanta esta sanguijuela!" = 2,
 		"Es tan hermoso." = 2,
-		"Ojalá fuera una sanguijuela." = 1,
+		"Ojala fuera una sanguijuela." = 1,
 	)
 	var/list/possible_adjectives = all_adjectives.Copy()
 	var/list/possible_descs = all_descs.Copy()
@@ -216,7 +216,7 @@
 	return TRUE
 
 /obj/item/natural/worms/leech/parasite
-	name = "el parásito"
+	name = "el parasito"
 	desc = "A foul, wriggling creecher. Known to suck whole villages of their blood, these rare freeks have been domesticated for medical purposes."
 	icon_state = "parasite"
 	dropshrink = 0.9

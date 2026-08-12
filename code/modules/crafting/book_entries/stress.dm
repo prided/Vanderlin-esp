@@ -1,5 +1,5 @@
 /datum/book_entry/rotation_stress
-	name = "Estrés rotacional"
+	name = "Estres rotacional"
 
 
 /datum/book_entry/rotation_stress/inner_book_html(mob/user)

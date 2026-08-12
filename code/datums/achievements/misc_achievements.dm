@@ -42,7 +42,7 @@
 	database_id= MEDAL_MATERIALCRAFT
 
 /datum/award/achievement/misc/borbop_made_an_oopsie
-	name = "¡Borbop rompió algo!"
+	name = "¡Borbop rompio algo!"
 	desc = "You were in a round where Borbop tm'd something that broke"
 	icon = "oopsie"
 	database_id = "oopsie_borbop"

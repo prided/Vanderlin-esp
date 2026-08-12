@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(learnable_songs, list(
 
 /mob/living/carbon/human/proc/open_songbook()
 	set name = "Songbook"
-	set category = "Inspiración"
+	set category = "Inspiracion"
 
 	if(!mind)
 		return
@@ -264,7 +264,7 @@ GLOBAL_LIST_INIT(learnable_songs, list(
 			if(!owner?.mind || !owner.inspiration)
 				return TRUE
 			if(!can_unlearn())
-				to_chat(owner, span_warning("Necesito más tiempo antes de poder olvidar otro ritmo."))
+				to_chat(owner, span_warning("Necesito mas tiempo antes de poder olvidar otro ritmo."))
 				return TRUE
 			var/rhythm_path = text2path(params["type_path"])
 			if(!rhythm_path)

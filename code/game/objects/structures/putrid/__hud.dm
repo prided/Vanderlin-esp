@@ -48,7 +48,7 @@
 	if(!consumed.master)
 		return
 	to_chat(consumed, span_info("Recursos actuales - [consumed.master.consumed_resource_pool]"))
-	to_chat(consumed, span_info("Recursos máximos - [consumed.master.consumed_resource_max]"))
+	to_chat(consumed, span_info("Recursos maximos - [consumed.master.consumed_resource_max]"))
 
 /atom/movable/screen/putrid/bar/Initialize(mapload, datum/hud/hud_owner)
 	. = ..()
@@ -117,7 +117,7 @@
 
 /atom/movable/screen/putrid/personal/bar/info_blurb(mob/living/simple_animal/hostile/retaliate/meatvine/consumed)
 	to_chat(consumed, span_info("Recursos personales - [consumed.personal_resource_pool]"))
-	to_chat(consumed, span_info("Recursos personales máximos - [consumed.personal_resource_max]"))
+	to_chat(consumed, span_info("Recursos personales maximos - [consumed.personal_resource_max]"))
 
 /atom/movable/screen/putrid/personal/bar/Initialize(mapload, datum/hud/hud_owner)
 	. = ..()

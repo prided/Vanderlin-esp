@@ -13,13 +13,13 @@
 	output_amount = 8
 
 /datum/anvil_recipe/valuables/gold_mask
-	name = "Media máscara dorada"
+	name = "Media mascara dorada"
 	required_material = /obj/item/ingot/gold
 	created_item = /obj/item/clothing/face/lordmask
 	craftdiff = 2
 
 /datum/anvil_recipe/valuables/gold_mask_left
-	name = "Media máscara dorada (izquierda)"
+	name = "Media mascara dorada (izquierda)"
 	required_material = /obj/item/ingot/gold
 	created_item = /obj/item/clothing/face/lordmask/l
 	craftdiff = 2

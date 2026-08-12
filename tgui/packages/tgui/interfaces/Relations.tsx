@@ -131,7 +131,7 @@ export const Relations = () => {
           {visible.length === 0 && (
             <Stack.Item>
               <Box color="gray" italic>
-                Ninguna relación coincide.
+                Ninguna relacion coincide.
               </Box>
             </Stack.Item>
           )}

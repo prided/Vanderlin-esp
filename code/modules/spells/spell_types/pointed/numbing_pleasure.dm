@@ -7,7 +7,7 @@
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
 	associated_skill = /datum/attribute/skill/magic/holy
-	invocation = "Que encuentres la felicidad a través de tu dolor."
+	invocation = "Que encuentres la felicidad a traves de tu dolor."
 	invocation_type = INVOCATION_WHISPER
 
 	charge_required = FALSE

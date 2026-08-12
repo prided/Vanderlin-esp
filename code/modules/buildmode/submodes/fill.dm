@@ -21,7 +21,7 @@
 			return
 		else if(ispath(objholder, /area))
 			objholder = null
-			alert("Las rutas de área no son compatibles con este modo; utilice el modo de edición de área en su lugar.")
+			alert("Las rutas de area no son compatibles con este modo; utilice el modo de edicion de area en su lugar.")
 			return
 	deselect_region()
 

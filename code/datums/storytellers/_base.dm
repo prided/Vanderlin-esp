@@ -221,7 +221,7 @@
 	if(!bought_event.roundstart)
 		total_cost *= (1 + (rand(-cost_variance, cost_variance)/100)) //Apply cost variance if not roundstart event
 	mode.event_track_points[track] = max(mode.event_track_points[track] - total_cost, 0)
-	message_admins("El Narrador [mode.current_storyteller.name] compró y activó el evento [bought_event], en la pista [track], por el costo [total_cost].")
+	message_admins("El Narrador [mode.current_storyteller.name] compro y activo el evento [bought_event], en la pista [track], por el costo [total_cost].")
 	if(bought_event.roundstart)
 		SSgamemode.ran_roundstart = TRUE
 		SSgamemode.current_roundstart_event = bought_event

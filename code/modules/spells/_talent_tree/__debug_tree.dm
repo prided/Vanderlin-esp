@@ -4,14 +4,14 @@
 
 // Tier 1 - Starting nodes (no prerequisites)
 /datum/talent_node/debug/basic_power
-	name = "Poder Básico"
-	desc = "Aumenta tu poder básico en un 10%."
+	name = "Poder Basico"
+	desc = "Aumenta tu poder basico en un 10%."
 	icon_state = "spell_fireball"
 	talent_cost = 1
 
 /datum/talent_node/debug/quick_reflexes
-	name = "Reflejos rápidos"
-	desc = "Aumenta tu tiempo de reacción."
+	name = "Reflejos rapidos"
+	desc = "Aumenta tu tiempo de reaccion."
 	icon_state = "spell_haste"
 	talent_cost = 1
 
@@ -59,7 +59,7 @@
 	prerequisites = list(/datum/talent_node/debug/enhanced_power, /datum/talent_node/debug/combat_training)
 
 /datum/talent_node/debug/tactical_mind
-	name = "Mente táctica"
+	name = "Mente tactica"
 	desc = "Improves strategic thinking and planning"
 	icon_state = "spell_mindswap"
 	talent_cost = 2
@@ -74,7 +74,7 @@
 
 /datum/talent_node/debug/evasive_maneuvers
 	name = "Maniobras evasivas"
-	desc = "Maestro de la evasión y la movilidad."
+	desc = "Maestro de la evasion y la movilidad."
 	icon_state = "spell_smoke"
 	talent_cost = 2
 	prerequisites = list(/datum/talent_node/debug/agility_boost)
@@ -118,15 +118,15 @@
 
 // Side branches - Utility skills
 /datum/talent_node/debug/resource_management
-	name = "Gestión de recursos"
-	desc = "Mejor uso de consumibles y energía"
+	name = "Gestion de recursos"
+	desc = "Mejor uso de consumibles y energia"
 	icon_state = "spell_heal"
 	talent_cost = 2
 	prerequisites = list(/datum/talent_node/debug/tactical_mind)
 
 /datum/talent_node/debug/efficiency_expert
 	name = "Experto en eficiencia"
-	desc = "Todas las acciones cuestan menos energía"
+	desc = "Todas las acciones cuestan menos energia"
 	icon_state = "spell_haste"
 	talent_cost = 3
 	prerequisites = list(/datum/talent_node/debug/resource_management, /datum/talent_node/debug/evasive_maneuvers)
@@ -148,7 +148,7 @@
 	singular_requirement = TRUE // Can be unlocked if any defensive node is learned
 
 /datum/talent_tree/debug
-	name = "Árbol de talentos de depuración"
+	name = "Arbol de talentos de depuracion"
 	desc = "A comprehensive debug tree for testing talent systems"
 	tree_identifier = "debug"
 	max_talent_points = 75

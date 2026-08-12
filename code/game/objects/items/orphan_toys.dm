@@ -35,7 +35,7 @@
 	icon_state = "toy_goblin"
 
 /obj/item/orphan_toy/dragon
-	name = "dragón de juguete"
+	name = "dragon de juguete"
 	icon_state = "toy_dragon"
 
 /obj/item/orphan_toy/skeleton

@@ -78,7 +78,7 @@ export function SubsystemViews(props: Props) {
     <Section
       fill
       scrollable
-      title="Descripción general del subsistema"
+      title="Descripcion general del subsistema"
       buttons={
         <Stack align="center">
           <Stack.Item color="label">

@@ -1,6 +1,6 @@
 /obj/structure/heart_of_nature
-	name = "corazón del bosque"
-	desc = "Un árbol místico hogar de las hadas."
+	name = "corazon del bosque"
+	desc = "Un arbol mistico hogar de las hadas."
 
 	icon = 'icons/obj/structures/sakura_tree.dmi'
 	icon_state = "sakura_tree"
@@ -12,7 +12,7 @@
 	SET_BASE_PIXEL(-64, 0)
 
 /datum/building_datum/core
-	name = "Núcleo mundial"
+	name = "Nucleo mundial"
 	desc = "The heart of civilization. This mystical structure serves as the foundation for all development."
 	building_template = "core_template" // You'll need to create this template
 	build_time = 0 // Instant build

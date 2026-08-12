@@ -1,5 +1,5 @@
 /obj/effect/decal/cleanable/ritual_rune/arcyne/wall
-	name = "matriz de adhesión a la pared"
+	name = "matriz de adhesion a la pared"
 	desc = "Arcane symbols litter the ground — is that a wall of some sort?"
 	icon_state = "wall"
 	tier = 2

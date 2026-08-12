@@ -1,5 +1,5 @@
 /datum/world_trait/dendor_fertility
-	name = "La bendición de Dendor"
+	name = "La bendicion de Dendor"
 	desc = "Increases the fertility of crops, making them grow faster and heartier."
 
 /datum/world_trait/dendor_drought
@@ -8,7 +8,7 @@
 
 /datum/world_trait/pestra_mercy
 	name = "Pestra's Mercy"
-	desc = "Los cadáveres se pudren más lentamente."
+	desc = "Los cadaveres se pudren mas lentamente."
 
 /datum/world_trait/matthios_fingers
 	name = "Matthios' Fingers"
@@ -28,12 +28,12 @@
 
 /datum/world_trait/malum_diligence
 	name = "La diligencia de Malum"
-	desc = "Las rocas extraídas tienen rendimientos adicionales."
+	desc = "Las rocas extraidas tienen rendimientos adicionales."
 
 /datum/world_trait/noc_wisdom
-	name = "La sabiduría de Noc"
-	desc = "Todas las acciones mágicas cuestan menos maná."
+	name = "La sabiduria de Noc"
+	desc = "Todas las acciones magicas cuestan menos mana."
 
 /datum/world_trait/baotha_revelry
 	name = "La juerga de Baotha"
-	desc = "El alcohol dura más."
+	desc = "El alcohol dura mas."

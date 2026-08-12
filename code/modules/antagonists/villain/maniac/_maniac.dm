@@ -20,7 +20,7 @@
 
 /datum/antagonist/maniac
 	name = "Maniac"
-	roundend_category = "maníacos"
+	roundend_category = "maniacos"
 	antagpanel_category = "Maniac"
 	antag_memory = "<b>Recently I've been visited by a lot of VISIONS. They're all about another WORLD, ANOTHER life. I will do EVERYTHING to know the TRUTH, and return to the REAL world.</b>"
 	job_rank = ROLE_MANIAC
@@ -304,12 +304,12 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 		sleep(1.5 SECONDS)
 		var/static/list/slop_lore = list(
 			SPAN_GOD_GRAGGAZO("...Rockhill? ¿Vanderlin? No... No existen..."),
-			SPAN_GOD_GRAGGAZO("... Mi nombre es Trey. Trey Liam, supervisor científico..."),
+			SPAN_GOD_GRAGGAZO("... Mi nombre es Trey. Trey Liam, supervisor cientifico..."),
 			SPAN_GOD_GRAGGAZO("... I'm on the Aeon, a self sustaining ship, used to preserve what remains of humanity ..."),
 			SPAN_GOD_GRAGGAZO("... Lanzados a las estrellas, preservando sus recuerdos... Sus personalidades..."),
 			SPAN_GOD_GRAGGAZO("... Keeps them alive in vessels, oblivious to the catastrophe ..."),
 			SPAN_GOD_GRAGGAZO("... There is no hope left. Only the program lets me live through the avatars ..."),
-			SPAN_GOD_GRAGGAZO("... ¡¿Qué he hecho?! ..."),
+			SPAN_GOD_GRAGGAZO("... ¡¿Que he hecho?! ..."),
 		)
 		for(var/slop in slop_lore)
 			to_chat(trey_liam, slop)
@@ -361,9 +361,9 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 			REMOVE_TRAIT(C, TRAIT_SCHIZO_AMBIENCE, "/datum/antagonist/maniac")
 			C.log_message("was culled by the TRIUMPH of Maniac [key_name(victor)].", LOG_GAME)
 			sleep(1 SECONDS)
-			to_chat(C, SPAN_GOD_GRAGGAZO("¡¿Qué?! ¡No, no, esto no puede ser!"))
+			to_chat(C, SPAN_GOD_GRAGGAZO("¡¿Que?! ¡No, no, esto no puede ser!"))
 			sleep(2 SECONDS)
-			to_chat(C, SPAN_GOD_GRAGGAZO("¿Cómo puedo llegar DEMASIADO TARDE?"))
+			to_chat(C, SPAN_GOD_GRAGGAZO("¿Como puedo llegar DEMASIADO TARDE?"))
 			sleep(1 SECONDS)
 			INVOKE_ASYNC(src, GLOBAL_PROC_REF(cant_wake_up), C)
 			QDEL_LIST(competitor.wonders_made)
@@ -404,7 +404,7 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 
 /obj/structure/maniac_return_machine
 	name = "Vanderlin Program"
-	desc = "El Programa Vanderlin fue creado por ██████████ en el año ████, permitiendo a los humanos explorar mundos y entornos hostiles a través de cuerpos controlados remotamente sin peligro para la vida del usuario."
+	desc = "El Programa Vanderlin fue creado por ██████████ en el año ████, permitiendo a los humanos explorar mundos y entornos hostiles a traves de cuerpos controlados remotamente sin peligro para la vida del usuario."
 	icon_state = "pylon"
 	icon = 'icons/roguetown/misc/mana_pylon.dmi'
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF

@@ -51,7 +51,7 @@ export const RoleSettings = () => {
   const visible = settings.filter((s) => s.category === tab);
 
   return (
-    <Window width={450} height={600} title="Configuración de roles">
+    <Window width={450} height={600} title="Configuracion de roles">
       <Window.Content scrollable>
         <Tabs>
           {categories.map((cat) => (
@@ -102,7 +102,7 @@ const FreeTextSection = ({ setting, editing, setEditing, act }) => {
         {lines.length === 0 && (
           <Stack.Item>
             <Box color="gray" italic>
-              No hay líneas establecidas.
+              No hay lineas establecidas.
               {example_text && ` Example: ${example_text.split('\n')[0]}`}
             </Box>
           </Stack.Item>
@@ -237,7 +237,7 @@ const FreeTextSection = ({ setting, editing, setEditing, act }) => {
                 setEditing({ savefile_key, index: -1, value: '' })
               }
             >
-              Agregar línea
+              Agregar linea
             </Button>
           </Stack.Item>
         )}

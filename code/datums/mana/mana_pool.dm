@@ -481,7 +481,7 @@
 	if(ismob(parent))
 		switch(backlash_intensity)
 			if(1 to 10)
-				to_chat(parent, span_warning("Me siento mareado después de lanzar ese hechizo."))
+				to_chat(parent, span_warning("Me siento mareado despues de lanzar ese hechizo."))
 			if(10 to 30)
 				to_chat(parent, span_danger("¡Siento dolores agudos recorriendo mi cuerpo!"))
 				parent:adjust_blood_volume(-backlash_intensity)

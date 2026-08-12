@@ -6,7 +6,7 @@
 
 /datum/reagent/drug/space_drugs
 	name = "Drogas espaciales"
-	description = "Un compuesto químico ilegal utilizado como droga."
+	description = "Un compuesto quimico ilegal utilizado como droga."
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30
 
@@ -89,7 +89,7 @@
 	. = 1
 
 /datum/reagent/drug/hallucinogen
-	name = "Alucinógeno"
+	name = "Alucinogeno"
 	description = "A stronghallucinogenic drug."
 	color = "#E700E7" // rgb: 231, 0, 231
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
@@ -165,7 +165,7 @@
 		psychonaut.emote(pick("twitch","drool","moan"))
 
 /datum/reagent/drug/hallucinogen_concetrate
-	name = "Extracto de alucinógeno crudo"
+	name = "Extracto de alucinogeno crudo"
 	description = "A crude concentration of psychoactive compounds. Unstable and incompletely processed."
 	color = "#b000b0"
 	metabolization_rate = 0.15 * REAGENTS_METABOLISM

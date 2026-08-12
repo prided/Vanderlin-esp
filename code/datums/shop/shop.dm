@@ -490,7 +490,7 @@
 				to_chat(owner, span_warning("You cannot contribute after the round has ended!"))
 				return
 			if(tb.activated)
-				to_chat(owner, span_warning("¡El artículo ya está activo!"))
+				to_chat(owner, span_warning("¡El articulo ya esta activo!"))
 				return
 			if(istype(tb, /datum/triumph_buy/communal/preround) && SSticker.HasRoundStarted())
 				to_chat(owner, span_warning("This can only be contributed to before the round starts!"))

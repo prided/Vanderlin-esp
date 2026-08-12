@@ -37,7 +37,7 @@
 	)
 
 /datum/outfit/adventurer/heartfelthand
-	name = "Mano de corazón (aventurero)"
+	name = "Mano de corazon (aventurero)"
 	shirt = /obj/item/clothing/shirt/undershirt
 	belt = /obj/item/storage/belt/leather/black
 	shoes = /obj/item/clothing/shoes/nobleboot

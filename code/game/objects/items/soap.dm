@@ -56,7 +56,7 @@
 			if(0 to 0.15)
 				msg = "There's just a tiny bit left of what it used to be, you're not sure it'll last much longer."
 			if(0.15 to 0.30)
-				msg = "Se ha disuelto bastante, pero todavía tiene algo de vida."
+				msg = "Se ha disuelto bastante, pero todavia tiene algo de vida."
 			if(0.30 to 0.50)
 				msg = "It's past its prime, but it's definitely still good."
 			if(0.50 to 0.75)
@@ -130,7 +130,7 @@
 	var/turf/T = get_turf(target)
 	if(!istype(T, /turf/open/water))
 		if(istype(T, /turf/open/lava) && user == target) //shits and giggles
-			to_chat(user, span_warning("¿Por qué estoy haciendo esto...?"))
+			to_chat(user, span_warning("¿Por que estoy haciendo esto...?"))
 		else
 			to_chat(user, span_warning("¡Deben estar en agua!"))
 		return ITEM_INTERACT_BLOCKING
@@ -204,7 +204,7 @@
 	target.adjust_fire_stacks(-20)
 
 /obj/item/soap/bath
-	name = "jabón de hierbas"
+	name = "jabon de hierbas"
 	icon_state = "soapherbal"
 	desc = "A combination of ash and animal fats used for cleaning. Typically dissolved in water. This one smells pretty nice."
 	uses = 40

@@ -26,7 +26,7 @@
 
 	// Check if this door is already enchanted
 	if(target_door.GetComponent(/datum/component/overlord_door_enchantment))
-		to_chat(owner, span_warning("Esta puerta ya está encantada."))
+		to_chat(owner, span_warning("Esta puerta ya esta encantada."))
 		return FALSE
 
 	// Add enchantment component to existing door
@@ -98,7 +98,7 @@
 		return
 
 	if(!overlord_datum.overlord_controller)
-		to_chat(cast_on, span_warning("Aún no has establecido una guarida."))
+		to_chat(cast_on, span_warning("Aun no has establecido una guarida."))
 		return
 
 	if(overlord_datum.controlling_rts)
@@ -165,13 +165,13 @@
 
 	var/datum/component/overlord_door_enchantment/enchant = target_door.GetComponent(/datum/component/overlord_door_enchantment)
 	if(!enchant || enchant.linked_overlord != overlord_datum)
-		to_chat(owner, span_warning("Esta puerta no está encantada por ti."))
+		to_chat(owner, span_warning("Esta puerta no esta encantada por ti."))
 		return
 
 	overlord_datum.enchanted_doors -= target_door
 	qdel(enchant)
 
-	target_door.visible_message(span_danger("La energía oscura se desvanece de [target_door]."))
+	target_door.visible_message(span_danger("La energia oscura se desvanece de [target_door]."))
 	to_chat(owner, span_notice("Has eliminado el encantamiento de [target_door]."))
 
 /datum/action/cooldown/spell/undirected/summon_worker
@@ -194,7 +194,7 @@
 		return . | SPELL_CANCEL_CAST
 
 	if(!overlord_datum.overlord_controller)
-		to_chat(owner, span_warning("Aún no has establecido una guarida."))
+		to_chat(owner, span_warning("Aun no has establecido una guarida."))
 		return . | SPELL_CANCEL_CAST
 
 	if(length(overlord_datum.overlord_controller.worker_mobs))

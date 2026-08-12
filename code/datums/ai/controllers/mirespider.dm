@@ -238,7 +238,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/healing/spider_cocoon
 	name = "Spider loogies"
-	desc = "El tejido arácnido está cosiendo algunas de mis heridas lentamente."
+	desc = "El tejido aracnido esta cosiendo algunas de mis heridas lentamente."
 	icon_state = "buff"
 
 #define COCOON_FILTER "cocoon_glow"

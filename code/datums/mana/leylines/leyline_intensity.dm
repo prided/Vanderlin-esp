@@ -24,7 +24,7 @@ GLOBAL_LIST_INIT(leyline_intensities, list(
 
 /datum/leyline_variable/leyline_intensity/minimal
 	overall_mult = 0.1
-	name = "Mínimo"
+	name = "Minimo"
 	thickness = 0
 
 /datum/leyline_variable/leyline_intensity/extremely_low

@@ -340,7 +340,7 @@
 	if(stat == DEAD && ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(user.has_status_effect(/datum/status_effect/debuff/silver_bane))
-			to_chat(user, span_notice("¡Mi poder está debilitado, no puedo sanar!"))
+			to_chat(user, span_notice("¡Mi poder esta debilitado, no puedo sanar!"))
 			return TRUE
 		if(is_species(user, /datum/species/werewolf))
 			visible_message(span_danger("[user] ravenously consumes [src]!"), span_warning("Me alimento de carne suculenta. Me siento revitalizado."))

@@ -57,8 +57,8 @@
 	display_results(
 		surgeon,
 		limb.owner,
-		span_notice("¡Has amputado con éxito el [parse_zone(limb.body_zone)] de [limb.owner]!"),
-		span_notice("¡[surgeon] amputa con éxito el [parse_zone(limb.body_zone)] de [limb.owner]!"),
+		span_notice("¡Has amputado con exito el [parse_zone(limb.body_zone)] de [limb.owner]!"),
+		span_notice("¡[surgeon] amputa con exito el [parse_zone(limb.body_zone)] de [limb.owner]!"),
 		span_notice("[surgeon] finishes severing [limb.owner]'s [parse_zone(limb.body_zone)]."),
 	)
 	display_pain(limb.owner, "I can no longer feel my [parse_zone(limb.body_zone)]!")

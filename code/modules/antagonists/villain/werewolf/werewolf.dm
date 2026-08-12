@@ -8,7 +8,7 @@
 	antag_hud_type = ANTAG_HUD_WEREWOLF
 	antag_hud_name = "werewolf"
 	confess_lines = list(
-		"¡LA BESTIA DENTRO DE MÍ!",
+		"¡LA BESTIA DENTRO DE MI!",
 		"BEWARE THE BEAST!",
 		"MY LUPINE MARK!",
 	)
@@ -168,14 +168,14 @@
 	if(!istype(target))
 		return
 	if(src.has_status_effect(/datum/status_effect/debuff/silver_bane))
-		to_chat(src, span_notice("¡Mi poder está debilitado, no puedo sanar!"))
+		to_chat(src, span_notice("¡Mi poder esta debilitado, no puedo sanar!"))
 		return
 	if(target.mind)
 		if(IS_DEADITE(target))
-			to_chat(src, span_warning("No debería alimentarme de carne podrida."))
+			to_chat(src, span_warning("No deberia alimentarme de carne podrida."))
 			return
 		if(target.mind.has_antag_datum(/datum/antagonist/vampire))
-			to_chat(src, span_warning("No debería alimentarme de carne corrupta."))
+			to_chat(src, span_warning("No deberia alimentarme de carne corrupta."))
 			return
 		if(target.mind.has_antag_datum(/datum/antagonist/werewolf))
 			to_chat(src, span_warning("I should not feed on my kin's flesh."))

@@ -30,7 +30,7 @@
 
 /* 	.....STATS..... */
 /datum/artificer_recipe/augments/strength_servo
-	name = "Servo de fuerza hidráulica"
+	name = "Servo de fuerza hidraulica"
 	created_augment = /datum/augment/stats/strength_servo
 	additional_items = list(/obj/item/gear/metal/steel)
 
@@ -50,7 +50,7 @@
 	additional_items = list(/obj/item/ingot/steel)
 
 /datum/artificer_recipe/augments/pressure_tank
-	name = "Tanque de presión de capacidad extendida"
+	name = "Tanque de presion de capacidad extendida"
 	created_augment = /datum/augment/stats/pressure_tank
 	additional_items = list(/obj/item/ingot/bronze)
 
@@ -75,7 +75,7 @@
 	additional_items = list(/obj/item/ingot/tin)
 
 /datum/artificer_recipe/augments/efficiency_mode
-	name = "Modo de conservación de energía"
+	name = "Modo de conservacion de energia"
 	created_augment = /datum/augment/stats/efficiency_mode
 	additional_items = list(/obj/item/ingot/iron)
 
@@ -97,7 +97,7 @@
 /* 	.....SKILLS..... */
 
 /datum/artificer_recipe/augments/combat_matrix
-	name = "Matriz de análisis de combate"
+	name = "Matriz de analisis de combate"
 	created_augment = /datum/augment/skill/combat_matrix
 	additional_items = list(/obj/item/ingot/silver)
 
@@ -132,7 +132,7 @@
 	additional_items = list(/obj/item/ingot/silver)
 
 /datum/artificer_recipe/augments/cooking_guide
-	name = "Guía Culinaria"
+	name = "Guia Culinaria"
 	created_augment = /datum/augment/skill/cooking_guide
 	additional_items = list(/obj/item/ingot/bronze)
 
@@ -142,7 +142,7 @@
 	additional_items = list(/obj/item/ingot/iron)
 
 /datum/artificer_recipe/augments/weaponcraft_matrix
-	name = "Matriz de fabricación de armas"
+	name = "Matriz de fabricacion de armas"
 	created_augment = /datum/augment/skill/weaponcraft_matrix
 	additional_items = list(/obj/item/ingot/iron)
 
@@ -152,7 +152,7 @@
 	additional_items = list(/obj/item/ingot/iron)
 
 /datum/artificer_recipe/augments/carpentry_guide
-	name = "Sistema de guía de carpintería"
+	name = "Sistema de guia de carpinteria"
 	created_augment = /datum/augment/skill/carpentry_guide
 	additional_items = list(/obj/item/ingot/iron)
 
@@ -173,12 +173,12 @@
 
 // Skill augments - Labor skills
 /datum/artificer_recipe/augments/mining_efficiency
-	name = "Módulo de Eficiencia Minera"
+	name = "Modulo de Eficiencia Minera"
 	created_augment = /datum/augment/skill/mining_efficiency
 	additional_items = list(/obj/item/ingot/bronze)
 
 /datum/artificer_recipe/augments/farming_analyzer
-	name = "Sistema de Análisis Agrícola"
+	name = "Sistema de Analisis Agricola"
 	created_augment = /datum/augment/skill/farming_analyzer
 	additional_items = list(/obj/item/ingot/bronze)
 
@@ -193,7 +193,7 @@
 	additional_items = list(/obj/item/ingot/bronze)
 
 /datum/artificer_recipe/augments/medicine_database
-	name = "Base de datos de conocimientos médicos"
+	name = "Base de datos de conocimientos medicos"
 	created_augment = /datum/augment/skill/medicine_database
 	additional_items = list(/obj/item/ingot/bronze)
 
@@ -203,12 +203,12 @@
 	additional_items = list(/obj/item/ingot/bronze)
 
 /datum/artificer_recipe/augments/climbing_optimizer
-	name = "Módulo de optimización de escalada"
+	name = "Modulo de optimizacion de escalada"
 	created_augment = /datum/augment/skill/climbing_optimizer
 	additional_items = list(/obj/item/ingot/bronze)
 
 /datum/artificer_recipe/augments/stealth_dampener
-	name = "Sistema de amortiguación acústica"
+	name = "Sistema de amortiguacion acustica"
 	created_augment = /datum/augment/skill/stealth_dampener
 	additional_items = list(/obj/item/ingot/bronze)
 
@@ -232,7 +232,7 @@
 	additional_items = list(/obj/item/ingot/tin)
 
 /datum/artificer_recipe/augments/music_box
-	name = "Caja de música"
+	name = "Caja de musica"
 	created_augment = /datum/augment/music_player
 	additional_items = list(/obj/item/dmusicbox)
 

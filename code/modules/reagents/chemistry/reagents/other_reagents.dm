@@ -274,7 +274,7 @@
 
 /datum/reagent/mercury
 	name = "Mercurio"
-	description = "Un metal curioso que es líquido a temperatura ambiente. Neurodegenerativo y muy malo para la mente."
+	description = "Un metal curioso que es liquido a temperatura ambiente. Neurodegenerativo y muy malo para la mente."
 	color = "#484848" // rgb: 72, 72, 72A
 	taste_mult = 0 // apparently tasteless.
 
@@ -324,14 +324,14 @@
 	taste_description = "the bog"
 
 /datum/reagent/caveweep
-	name = "Psydonian Lágrimas"
+	name = "Psydonian Lagrimas"
 	description = "Tears from a caveweep. It has its uses in modern alchemy."
 	taste_description = "everything"
 	color = "#334274"
 	boiling_point = T0C + 150
 
 /datum/reagent/soap
-	name = "Jabón"
+	name = "Jabon"
 	description = "A combination of ash and animal fats used for cleaning."
 	color = "#cbb165"
 	alpha = 180

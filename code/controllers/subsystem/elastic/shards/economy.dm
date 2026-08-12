@@ -1,5 +1,5 @@
 /datum/elastic_shard/economy
-	name = "Economía"
+	name = "Economia"
 	upload_frequency = 4 MINUTES
 	shard_category = ELASCAT_ECONOMY
 

@@ -1,5 +1,5 @@
 /datum/work_order/cut_wood
-	name = "Cortar árbol"
+	name = "Cortar arbol"
 	work_time_left = 30 SECONDS
 	stamina_cost = 10
 

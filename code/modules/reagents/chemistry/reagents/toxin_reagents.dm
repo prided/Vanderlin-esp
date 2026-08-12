@@ -26,7 +26,7 @@
 
 /datum/reagent/toxin/plasma
 	name = "Purple Aetherium"
-	description = "Un líquido extraño, parece casi... vivo."
+	description = "Un liquido extraño, parece casi... vivo."
 	taste_description = "amargura"
 	specific_heat = SPECIFIC_HEAT_PLASMA
 	taste_mult = 1.5
@@ -47,15 +47,15 @@
 	toxpwr = 0.5
 
 /datum/reagent/toxin/teapowder
-	name = "Hojas de té molidas"
-	description = "Hojas de té finamente trituradas, utilizadas para preparar té."
+	name = "Hojas de te molidas"
+	description = "Hojas de te finamente trituradas, utilizadas para preparar te."
 	reagent_state = SOLID
 	color = "#7F8400" // rgb: 127, 132, 0
 	toxpwr = 0.1
-	taste_description = "té verde"
+	taste_description = "te verde"
 
 /datum/reagent/medicine/soporpot
-	name = "Veneno soporífero"
+	name = "Veneno soporifero"
 	description = "Weakens those it enters."
 	reagent_state = LIQUID
 	color = "#fcefa8"
@@ -150,8 +150,8 @@
 
 
 /datum/reagent/toxin/acid
-	name = "Ácido sulfúrico"
-	description = "Un ácido mineral fuerte con la fórmula molecular H2SO4."
+	name = "Acido sulfurico"
+	description = "Un acido mineral fuerte con la formula molecular H2SO4."
 	color = "#00FF32"
 	toxpwr = 1
 	var/acidpwr = 10 //the amount of protection removed from the armour
@@ -264,7 +264,7 @@
 
 /obj/item/reagent_containers/spidervenom_inert
 	list_reagents = list(/datum/reagent/toxin/spidervenom_inert = 10)
-	name = "Glándula de araña pálida"
+	name = "Glandula de araña palida"
 	desc = "A squishy pale gland, filled to the brim with venom of the deadly Aragn spider. Feels cold to the touch."
 	icon = 'icons/obj/webbing.dmi'
 	icon_state = "gland"
@@ -365,7 +365,7 @@
 	reagent_state = LIQUID
 	color = "#1C1C1C"
 	taste_description = "metal afilado"
-	scent_description = "ácido y óxido"
+	scent_description = "acido y oxido"
 	harmful = TRUE
 
 /datum/reagent/poison/ironblight/expose_mob(mob/living/exposed_mob, methods, reac_volume, show_message, touch_protection)
@@ -440,7 +440,7 @@
 	description = "Brewed from cursed blood and wychwood ash. It seeps into wounds on contact, rapidly delivering trauma as it inflames tissue and causes internal hemorrhage. Popular with assassins."
 	reagent_state = LIQUID
 	color = "#8B0000"
-	taste_description = "hierro y carbón"
+	taste_description = "hierro y carbon"
 	scent_description = "cobre quemado"
 	harmful = TRUE
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM
@@ -463,7 +463,7 @@
 	description = "Contaminated water drawn from a corpse-pit. Drinking it introduces rapidly multiplying bacteria into the bloodstream. It poisons slowly at first, then accelerates the infection compounds upon itself over time."
 	reagent_state = LIQUID
 	color = "#5D4037"
-	taste_description = "agua fétida"
+	taste_description = "agua fetida"
 	scent_description = "rot and swamp"
 	harmful = TRUE
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -504,7 +504,7 @@
 	reagent_state = LIQUID
 	color = "#4A235A"
 	taste_description = "musty sweetness"
-	scent_description = "cuevas húmedas"
+	scent_description = "cuevas humedas"
 	harmful = TRUE
 	metabolization_rate = 0.3 * REAGENTS_METABOLISM
 	boiling_point = T0C + 110
@@ -542,8 +542,8 @@
 	description = "A caustic secretion harvested from acid-slugs that nest near hot springs. On contact with flesh it erupts into suppurating blisters, causing severe burn damage. Internal ingestion causes intense toxic damage."
 	reagent_state = LIQUID
 	color = "#ADFF2F"
-	taste_description = "ácido ardiente"
-	scent_description = "podredumbre ácida"
+	taste_description = "acido ardiente"
+	scent_description = "podredumbre acida"
 	harmful = TRUE
 
 /datum/reagent/poison/blistergall/expose_mob(mob/living/exposed_mob, methods, reac_volume, show_message, touch_protection)

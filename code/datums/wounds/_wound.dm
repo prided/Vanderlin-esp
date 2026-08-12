@@ -206,14 +206,14 @@ GLOBAL_LIST_INIT(primordial_wounds, init_primordial_wounds())
 		final_message = replacetext(final_message, "%VICTIM", "[affected.name]")
 		final_message = replacetext(final_message, "%P_THEIR", "[affected.p_their()]")
 	else
-		final_message = replacetext(final_message, "%VICTIM", "víctima")
+		final_message = replacetext(final_message, "%VICTIM", "victima")
 		final_message = replacetext(final_message, "%P_THEIR", "their")
 	if(affected_bodypart)
 		final_message = replacetext(final_message, "%BODYPART", "[affected_bodypart.name]")
 	else
 		final_message = replacetext(final_message, "%BODYPART", parse_zone(BODY_ZONE_CHEST))
 	if(critical)
-		final_message = "<span class='crit'><b>¡Golpe crítico!</b> [final_message]</span>"
+		final_message = "<span class='crit'><b>¡Golpe critico!</b> [final_message]</span>"
 	return final_message
 
 /datum/wound/proc/get_crit_prob(bclass, dam, damage_dividend, mob/living/user, obj/item/bodypart/affected, list/modifiers)

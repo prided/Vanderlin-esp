@@ -25,7 +25,7 @@ CONFIGURATION:
 */
 
 /datum/loot_table
-	var/name = "tabla genérica"
+	var/name = "tabla generica"
 	///okay this is quite the different thing, essentially this works with 2 things, either a an assoc list of stat or skill
 	///to list of items with weights. Or Just raw list with weights, these then get added in with bonuses based on their skills based on a minimum
 	///you can set the minimum value in the second list or leave it default which is 0
@@ -512,7 +512,7 @@ CONFIGURATION:
 		loot_table_types += LT
 
 	if(!length(loot_table_types))
-		to_chat(user, "<span class='warning'>No se encontraron tablas de botín configuradas.</span>")
+		to_chat(user, "<span class='warning'>No se encontraron tablas de botin configuradas.</span>")
 		return
 
 	user.show_loot_table_menu(user, loot_table_types)

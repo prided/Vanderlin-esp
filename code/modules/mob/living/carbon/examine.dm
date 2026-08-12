@@ -188,14 +188,14 @@
 			. += span_smallgreen("A member of the Thieves' Guild.")
 		// Cabal
 		if(HAS_TRAIT(user, TRAIT_CABAL) && (istype(patron, /datum/patron/inhumen/zizo) || HAS_TRAIT(src, TRAIT_CABAL)))
-			. += span_purple("Un compañero buscador de Su ascensión.")
+			. += span_purple("Un compañero buscador de Su ascension.")
 		// Centrist
 		if(HAS_TRAIT(user, TRAIT_DIVINE_SERVANT) && (HAS_TRAIT(src, TRAIT_DIVINE_CENTRIST) && !HAS_TRAIT(src, TRAIT_DIVINE_SERVANT)))
 			. += SPAN_GOD_ASTRATA("An 'Enlightened Centrist'. Shame!")
 
 		// The disgusing inquistion section
 		if(HAS_MIND_TRAIT(user, TRAIT_INQUISITION) && (real_name in GLOB.inquis_suspect_players))
-			. += span_userdanger("SOSPECHOSO DE HEREJÍA...")
+			. += span_userdanger("SOSPECHOSO DE HEREJIA...")
 
 		var/they_pur = HAS_TRAIT(user, TRAIT_PURITAN)
 		var/they_inquis = HAS_TRAIT(user, TRAIT_INQUISITION)
@@ -232,7 +232,7 @@
 		var/stress_msg
 		switch(stress)
 			if(15 to INFINITY)
-				stress_msg = span_boldred("[P[THEYRE]] teniendo un ataque de pánico.")
+				stress_msg = span_boldred("[P[THEYRE]] teniendo un ataque de panico.")
 			if(STRESS_INSANE to 15)
 				stress_msg = span_red("[P[THEYRE]] twitching at the eyes.")
 			if(STRESS_VBAD to STRESS_INSANE)

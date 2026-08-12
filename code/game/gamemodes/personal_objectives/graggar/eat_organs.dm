@@ -1,5 +1,5 @@
 /datum/objective/personal/consume_organs
-	name = "Consumir órganos"
+	name = "Consumir organos"
 	category = "Graggar's Chosen"
 	triumph_count = 2
 	immediate_effects = list("Gained an ability to rip hearts out of corpses")

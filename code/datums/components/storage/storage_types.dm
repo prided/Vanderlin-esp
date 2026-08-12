@@ -178,10 +178,10 @@
 	for(var/obj/item/_I in real_location)
 		sum_w_class += _I.w_class //Adds up the combined w_classes which will be in the storage item if the item is added to it.
 	if(sum_w_class > max_combined_w_class)
-		to_chat(M, span_warning("¡El inodoro está demasiado lleno para que quepa [I]!"))
+		to_chat(M, span_warning("¡El inodoro esta demasiado lleno para que quepa [I]!"))
 		return FALSE
 	if(HAS_TRAIT(I, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
-		to_chat(M, span_warning("\the [I] está pegado a tu mano, ¡no puedes ponerlo en \the [host]!"))
+		to_chat(M, span_warning("\the [I] esta pegado a tu mano, ¡no puedes ponerlo en \the [host]!"))
 		return FALSE
 	return TRUE
 

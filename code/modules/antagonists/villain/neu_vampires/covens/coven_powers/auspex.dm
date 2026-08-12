@@ -1,6 +1,6 @@
 /datum/coven/auspex
 	name = "Auspex"
-	desc = "Permite ver entidades, auras y su salud a través de las paredes."
+	desc = "Permite ver entidades, auras y su salud a traves de las paredes."
 	icon_state = "auspex"
 	power_type = /datum/coven_power/auspex
 	max_level = 2
@@ -12,7 +12,7 @@
 //HEIGHTENED SENSES
 /datum/coven_power/auspex/heightened_senses
 	name = "Heightened Senses"
-	desc = "Mejora tus sentidos mucho más allá de las limitaciones humanas."
+	desc = "Mejora tus sentidos mucho mas alla de las limitaciones humanas."
 
 	level = 1
 	check_flags = COVEN_CHECK_CONSCIOUS
@@ -39,8 +39,8 @@
 
 //PSYCHIC PROJECTION
 /datum/coven_power/auspex/psychic_projection
-	name = "Proyección psíquica"
-	desc = "Deja tu cuerpo atrás y vuela por la tierra."
+	name = "Proyeccion psiquica"
+	desc = "Deja tu cuerpo atras y vuela por la tierra."
 
 	level = 2
 	check_flags = COVEN_CHECK_CONSCIOUS
@@ -240,13 +240,13 @@ GLOBAL_LIST_INIT(astral_projections, list())
 				. += span_notice("You check yourself to see how others would see you were you tangible:")
 				anchor.examine(user)
 			else if (user?.clan)
-				. += span_notice("Es una proyección astral.")
+				. += span_notice("Es una proyeccion astral.")
 			else
-				. += span_cult("Espera, algo no está bien aquí.")
+				. += span_cult("Espera, algo no esta bien aqui.")
 		else if (anchor)
 			. += anchor.examine(user)//examining the astral projection alone won't be enough to see through it, although the user might want to make sure they cannot be identified first.
 	else
-		. +=  span_cult("Espera, algo no está bien aquí.")
+		. +=  span_cult("Espera, algo no esta bien aqui.")
 
 //no pulling stuff around
 /mob/living/simple_animal/hostile/retaliate/astral_projection/start_pulling(atom/movable/AM, state, force = pull_force, suppress_message = FALSE, obj/item/item_override, accurate = FALSE)

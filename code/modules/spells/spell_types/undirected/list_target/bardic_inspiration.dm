@@ -32,7 +32,7 @@
 	var/message = initial(invocation)
 
 	if(!owner.cmode && ishuman(owner))
-		message = browser_input_text(owner, "¿Cómo inspiraré a este tipo?", "XYLIX")
+		message = browser_input_text(owner, "¿Como inspirare a este tipo?", "XYLIX")
 		if(QDELETED(src) || QDELETED(owner) || QDELETED(cast_on) || !can_cast_spell())
 			return . | SPELL_CANCEL_CAST
 

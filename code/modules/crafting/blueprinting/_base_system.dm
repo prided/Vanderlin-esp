@@ -159,7 +159,7 @@
 
 	dir_button.update_appearance()
 	create_preview_appearance(selected_recipe)
-	to_chat(holder.mob, "<span class='notice'>Dirección establecida en [dir2text(build_dir)].</span>")
+	to_chat(holder.mob, "<span class='notice'>Direccion establecida en [dir2text(build_dir)].</span>")
 
 /datum/blueprint_system/proc/on_mouse_moved_pre(datum/source, atom/atom, params)
 	if(istype(source, /atom/movable/blueprint_pixel_dummy))
@@ -679,21 +679,21 @@
 					// Set build direction to face the wall
 					build_dir = wall_dir
 				else
-					to_chat(user, "<span class='warning'>¡No hay espacio de piso válido adyacente a la pared!</span>")
+					to_chat(user, "<span class='warning'>¡No hay espacio de piso valido adyacente a la pared!</span>")
 					return
 			else
-				to_chat(user, "<span class='warning'>¡No se puede determinar la orientación de la pared!</span>")
+				to_chat(user, "<span class='warning'>¡No se puede determinar la orientacion de la pared!</span>")
 				return
 		// If we clicked on floor, check if there's an adjacent wall in the build direction
 		else if(!wall_turf.density)
 			var/turf/target_wall = get_step(wall_turf, build_dir)
 			if(!target_wall || (!target_wall.density && !istype(target_wall, /turf/closed)))
-				to_chat(user, "<span class='warning'>¡No se encontró ninguna pared adyacente en esa dirección!</span>")
+				to_chat(user, "<span class='warning'>¡No se encontro ninguna pared adyacente en esa direccion!</span>")
 				return
 			// final_location remains the clicked floor turf
 
 	if(!can_place_at(final_location))
-		to_chat(user, "<span class='warning'>¡No se puede colocar el plano aquí!</span>")
+		to_chat(user, "<span class='warning'>¡No se puede colocar el plano aqui!</span>")
 		return
 
 	var/obj/structure/blueprint/B = new(final_location)

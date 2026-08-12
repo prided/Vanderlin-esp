@@ -5,7 +5,7 @@
 	construct_tool = /obj/item/weapon/hammer
 
 /datum/blueprint_recipe/graggar/shrine
-	name = "Graggar Ídolo"
+	name = "Graggar Idolo"
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
 		/obj/item/natural/stone = 3

@@ -136,7 +136,7 @@ export function ByVarTable(props: { report: ListsReport }) {
                 desc={sort.desc}
                 onClick={() => toggle('assoc_nodes')}
               >
-                Asociación
+                Asociacion
               </SortCell>
               <SortCell
                 active={sort.key === 'bytes'}

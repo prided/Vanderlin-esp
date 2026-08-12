@@ -144,7 +144,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/psyvived
 	name = "Absolved"
-	desc = "Siento una extraña sensación de paz."
+	desc = "Siento una extraña sensacion de paz."
 	icon_state = "buff"
 
 #define PSYDON_REVIVED_FILTER "psydon_revival_glow"

@@ -48,7 +48,7 @@
 	if(!can_suicide())
 		return FALSE
 
-	var/confirm = tgui_alert(src, "¿Estás seguro de que quieres suicidarte?", "Confirmar suicidio", list("Yes", "No"))
+	var/confirm = tgui_alert(src, "¿Estas seguro de que quieres suicidarte?", "Confirmar suicidio", list("Yes", "No"))
 
 	// ensure our situation didn't change while we were sleeping waiting for the tgui_alert.
 	if(!can_suicide() || (ckey != oldkey))
@@ -68,7 +68,7 @@
 
 	var/area/checkable = get_area(src)
 	if(checkable.area_flags & BLOCK_SUICIDE)
-		to_chat(src, span_warning("¡No puedo suicidarme aquí!"))
+		to_chat(src, span_warning("¡No puedo suicidarme aqui!"))
 		return FALSE
 	switch(stat)
 		if(CONSCIOUS)

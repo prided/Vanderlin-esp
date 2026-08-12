@@ -4,7 +4,7 @@
 	category = "Dendor"
 
 /datum/repeatable_crafting_recipe/dendor/sacrifice_growing
-	name = "sacrificio verde a Dendor (único)"
+	name = "sacrificio verde a Dendor (unico)"
 	attacked_atom = /obj/structure/fluff/psycross/crafted/shrine/dendor_gote
 	starting_atom = /obj/item/natural/worms/grub_silk
 	requirements = list(/obj/item/natural/worms/grub_silk = 1,
@@ -14,7 +14,7 @@
 	crafting_sound = 'sound/foley/burning_sacrifice.ogg'
 
 /datum/repeatable_crafting_recipe/dendor/sacrifice_tending
-	name = "sacrificio viridiano a Dendor (único)"
+	name = "sacrificio viridiano a Dendor (unico)"
 	attacked_atom = /obj/structure/fluff/psycross/crafted/shrine/dendor_gote
 	starting_atom = /obj/item/alch/herb/euphorbia
 	requirements = list(/obj/item/alch/herb/euphorbia = 1,
@@ -24,7 +24,7 @@
 	crafting_sound = 'sound/foley/burning_sacrifice.ogg'
 
 /datum/repeatable_crafting_recipe/dendor/sacrifice_stinging
-	name = "sacrificio amarillo a Dendor (único)"
+	name = "sacrificio amarillo a Dendor (unico)"
 	attacked_atom = /obj/structure/fluff/psycross/crafted/shrine/dendor_saiga
 	starting_atom = /obj/item/reagent_containers/food/snacks/fish/eel
 	requirements = list(/obj/item/reagent_containers/food/snacks/fish/eel = 1,
@@ -44,7 +44,7 @@
 	crafting_sound = 'sound/foley/burning_sacrifice.ogg'
 
 /datum/repeatable_crafting_recipe/dendor/sacrifice_devouring
-	name = "sacrificio rojo a Dendor (único)"
+	name = "sacrificio rojo a Dendor (unico)"
 	attacked_atom = /obj/structure/fluff/psycross/crafted/shrine/dendor_volf
 	starting_atom = /obj/item/bait/bloody
 	requirements = list(/obj/item/bait/bloody = 2)
@@ -52,7 +52,7 @@
 	crafting_sound = 'sound/foley/burning_sacrifice.ogg'
 
 /datum/repeatable_crafting_recipe/dendor/sacrifice_falconing
-	name = "sacrificio carmesí a Dendor (único)"
+	name = "sacrificio carmesi a Dendor (unico)"
 	attacked_atom = /obj/structure/fluff/psycross/crafted/shrine/dendor_volf
 	starting_atom = /obj/item/reagent_containers/food/snacks/egg
 	requirements = list(/obj/item/reagent_containers/food/snacks/egg = 1,
@@ -78,7 +78,7 @@
 	crafting_sound = 'sound/foley/burning_sacrifice.ogg'
 
 /datum/repeatable_crafting_recipe/dendor/shillelagh
-	name = "Shillelagh (único)"
+	name = "Shillelagh (unico)"
 	output = /obj/item/weapon/mace/goden/shillelagh
 	attacked_atom = /obj/item/grown/log/tree/small
 	starting_atom = /obj/item/reagent_containers/food/snacks/fat

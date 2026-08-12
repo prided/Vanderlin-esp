@@ -10,7 +10,7 @@
 	desc = ""
 	scan_desc = ""
 	gain_text = span_warning("I forget how to speak!")
-	lose_text = span_notice("De repente recuerdo cómo hablar.")
+	lose_text = span_notice("De repente recuerdo como hablar.")
 
 /datum/brain_trauma/severe/mute/on_gain()
 	ADD_TRAIT(owner, TRAIT_MUTE, TRAUMA_TRAIT)
@@ -25,7 +25,7 @@
 	desc = ""
 	scan_desc = ""
 	gain_text = span_warning("Tengo problemas para formar palabras en mi cabeza...")
-	lose_text = span_notice("De repente recuerdo cómo funcionan los idiomas.")
+	lose_text = span_notice("De repente recuerdo como funcionan los idiomas.")
 	var/datum/language_holder/prev_language
 	var/datum/language_holder/mob_language
 
@@ -59,7 +59,7 @@
 	..()
 
 /datum/brain_trauma/severe/paralysis
-	name = "Parálisis"
+	name = "Paralisis"
 	desc = ""
 	scan_desc = ""
 	gain_text = ""
@@ -125,7 +125,7 @@
 	name = "Narcolepsia"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("Tengo una sensación constante de somnolencia...")
+	gain_text = span_warning("Tengo una sensacion constante de somnolencia...")
 	lose_text = span_notice("Me siento despierto y consciente de nuevo.")
 
 /datum/brain_trauma/severe/narcolepsy/on_life()
@@ -150,7 +150,7 @@
 	desc = ""
 	scan_desc = ""
 	gain_text = ""
-	lose_text = span_notice("Siento que podrías estar a salvo por mi cuenta.")
+	lose_text = span_notice("Siento que podrias estar a salvo por mi cuenta.")
 	var/stress = 0
 
 /datum/brain_trauma/severe/monophobia/on_gain()
@@ -218,7 +218,7 @@
 				if(prob(15) && ishuman(owner))
 					var/mob/living/carbon/human/H = owner
 					H.set_heartattack(TRUE)
-					to_chat(H, span_danger("¡Siento un dolor punzante en mi corazón!"))
+					to_chat(H, span_danger("¡Siento un dolor punzante en mi corazon!"))
 				else
 					to_chat(owner, span_danger("I feel my heart lurching in my chest..."))
 					owner.adjustOxyLoss(8)
@@ -241,7 +241,7 @@
 	..()
 
 /datum/brain_trauma/severe/pacifism
-	name = "No violencia traumática"
+	name = "No violencia traumatica"
 	desc = ""
 	scan_desc = ""
 	gain_text = span_notice("I feel oddly peaceful.")
@@ -256,7 +256,7 @@
 	..()
 
 /datum/brain_trauma/severe/hypnotic_stupor
-	name = "Estupor hipnótico"
+	name = "Estupor hipnotico"
 	desc = ""
 	scan_desc = ""
 	gain_text = span_warning("I feel somewhat dazed.")

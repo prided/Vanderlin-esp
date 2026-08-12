@@ -61,7 +61,7 @@
 
 /datum/body_marking/sock
 	icon = 'icons/mob/body_markings/sock_markings.dmi'
-	name = "Calcetín"
+	name = "Calcetin"
 	icon_state = "sock"
 	affected_bodyparts = HAND_LEFT | HAND_RIGHT | LEG_LEFT | LEG_RIGHT
 	default_color = DEFAULT_SECONDARY
@@ -216,13 +216,13 @@
 
 /datum/body_marking/small/sock
 	icon = 'icons/mob/body_markings/small_sock_markings.dmi'
-	name = "Calcetín (Volk)"
+	name = "Calcetin (Volk)"
 	icon_state = "sock_s"
 	affected_bodyparts = HAND_LEFT | HAND_RIGHT | LEG_LEFT | LEG_RIGHT
 	default_color = DEFAULT_SECONDARY
 
 /datum/body_marking/small/sock/tertiary
-	name = "Calcetín (Terciario) (Volk)"
+	name = "Calcetin (Terciario) (Volk)"
 	default_color = DEFAULT_TERTIARY
 
 /datum/body_marking/small/socklonger

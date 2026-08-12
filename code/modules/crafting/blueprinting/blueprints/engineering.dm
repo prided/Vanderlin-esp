@@ -20,7 +20,7 @@
 
 /datum/blueprint_recipe/engineering/lever
 	name = "lever"
-	desc = "Una palanca mecánica para operar maquinaria."
+	desc = "Una palanca mecanica para operar maquinaria."
 	result_type = /obj/structure/lever
 	required_materials = list(
 		/obj/item/gear/metal = 1,
@@ -31,7 +31,7 @@
 
 /datum/blueprint_recipe/engineering/trapdoor
 	name = "floorhatch"
-	desc = "Una trampilla mecánica para el acceso al suelo."
+	desc = "Una trampilla mecanica para el acceso al suelo."
 	result_type = /obj/structure/floordoor
 	required_materials = list(
 		/obj/item/gear/metal = 1,
@@ -41,7 +41,7 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/engineering/pressure_plate
-	name = "placa de presión"
+	name = "placa de presion"
 	desc = "A mechanical plate that activates when stepped on."
 	result_type = /obj/structure/pressure_plate
 	required_materials = list(
@@ -53,7 +53,7 @@
 
 /datum/blueprint_recipe/engineering/repeater
 	name = "repeater"
-	desc = "Un dispositivo para extender señales mecánicas."
+	desc = "Un dispositivo para extender señales mecanicas."
 	result_type = /obj/structure/repeater
 	required_materials = list(
 		/obj/item/gear/metal = 1,
@@ -77,7 +77,7 @@
 
 /datum/blueprint_recipe/engineering/passage
 	name = "passage"
-	desc = "Una puerta de paso mecánica."
+	desc = "Una puerta de paso mecanica."
 	result_type = /obj/structure/bars/passage
 	required_materials = list(
 		/obj/item/gear/metal = 1,
@@ -88,7 +88,7 @@
 
 /datum/blueprint_recipe/engineering/distiller
 	name = "destilador de cobre"
-	desc = "Un aparato de destilación de cobre."
+	desc = "Un aparato de destilacion de cobre."
 	result_type = /obj/structure/fermentation_keg/distiller
 	required_materials = list(
 		/obj/item/ingot/copper = 2,
@@ -114,7 +114,7 @@
 	craftdiff = 0
 
 /datum/blueprint_recipe/engineering/auto_anvil
-	name = "Yunque automático"
+	name = "Yunque automatico"
 	desc = "An automated anvil for mass production."
 	result_type = /obj/structure/orphan_smasher
 	required_materials = list(
@@ -125,7 +125,7 @@
 	craftdiff = 3
 
 /datum/blueprint_recipe/engineering/cannon
-	name = "Cañón"
+	name = "Cañon"
 	desc = "A powerful blackpowder weapon."
 	result_type = /obj/structure/cannon
 	required_materials = list(

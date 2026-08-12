@@ -406,7 +406,7 @@
 		old_key = href_list["oldkey"]
 		old_ip = href_list["oldip"]
 		old_cid = href_list["oldcid"]
-		page = href_list["página"]
+		page = href_list["pagina"]
 		admin_key = href_list["adminkey"]
 		if(player_key != old_key)
 			changes += list("Key" = "[old_key] to [player_key]")
@@ -476,7 +476,7 @@
 					qdel(query_create_ban_get_player)
 					return
 			else
-				if(tgui_alert(usr, "[player_key]/([player_ckey]) no se ha visto antes, ¿estás seguro de que quieres crear una prohibición para ellos?", "Clave desconocida", list("Yes", "No")) != "Yes")
+				if(tgui_alert(usr, "[player_key]/([player_ckey]) no se ha visto antes, ¿estas seguro de que quieres crear una prohibicion para ellos?", "Clave desconocida", list("Yes", "No")) != "Yes")
 					qdel(query_create_ban_get_player)
 					return
 		qdel(query_create_ban_get_player)
@@ -750,7 +750,7 @@
 		to_chat(usr, "<span class='danger'>Failed to establish database connection.</span>")
 		return
 	var/target = ban_target_string(player_key, player_ip, player_cid)
-	if(tgui_alert(usr, "Please confirm unban of [target] from [role].", "Confirmación de desban", list("Yes", "No")) == "No")
+	if(tgui_alert(usr, "Please confirm unban of [target] from [role].", "Confirmacion de desban", list("Yes", "No")) == "No")
 		return
 	var/kn = key_name(usr)
 	var/kna = key_name_admin(usr)
@@ -772,11 +772,11 @@
 	var/client/C = GLOB.directory[player_key]
 	if(C)
 		build_ban_cache(C)
-		to_chat(C, "<span class='boldannounce'>[usr.client.key] ha eliminado una prohibición de [role] para su clave.</span>")
+		to_chat(C, "<span class='boldannounce'>[usr.client.key] ha eliminado una prohibicion de [role] para su clave.</span>")
 	for(var/client/i in GLOB.clients - C)
 		if(i.address == player_ip || i.computer_id == player_cid)
 			build_ban_cache(i)
-			to_chat(i, "<span class='boldannounce'>[usr.client.key] ha eliminado una prohibición de [role] para su IP o CID.</span>")
+			to_chat(i, "<span class='boldannounce'>[usr.client.key] ha eliminado una prohibicion de [role] para su IP o CID.</span>")
 	unban_panel(player_key, admin_key, player_ip, player_cid, page)
 
 /datum/admins/proc/edit_ban(ban_id, player_key, ip_check, player_ip, cid_check, player_cid, use_last_connection, applies_to_admins, duration, interval, reason, mirror_edit, old_key, old_ip, old_cid, old_applies, admin_key, page, list/changes)
@@ -904,7 +904,7 @@
 	var/client/C = GLOB.directory[old_key]
 	if(C)
 		build_ban_cache(C)
-		to_chat(C, "<span class='boldannounce'>[usr.client.key] ha editado el [changes_keys_text] de una prohibición para su clave.</span>")
+		to_chat(C, "<span class='boldannounce'>[usr.client.key] ha editado el [changes_keys_text] de una prohibicion para su clave.</span>")
 	for(var/client/i in GLOB.clients - C)
 		if(i.address == old_ip || i.computer_id == old_cid)
 			build_ban_cache(i)

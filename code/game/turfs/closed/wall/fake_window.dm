@@ -1,7 +1,7 @@
 // A wall that looks like a glass window but isn't wow, so we can make fake rooms without failing linters
 /turf/closed/wall/window
 	name = "window"
-	desc = "Una ventana, pero parece que no puedes ver nada a través de ella..."
+	desc = "Una ventana, pero parece que no puedes ver nada a traves de ella..."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "window-solid"
 

@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/conjure/kneestingers
-	name = "Iluminación fúngica"
+	name = "Iluminacion fungica"
 	desc = "Conjure kneestingers to light the path."
 	button_icon_state = "kneestinger"
 	sound = 'sound/items/dig_shovel.ogg'

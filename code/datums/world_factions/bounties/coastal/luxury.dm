@@ -1,5 +1,5 @@
 /datum/bounty/coastal/glassware
-	name = "Envío de cristalería"
+	name = "Envio de cristaleria"
 	desc = "A merchant house wants fine glass panes for trade abroad."
 	required_path = /obj/item/natural/glass
 	required_count = 8
@@ -9,7 +9,7 @@
 	faction_generation_weights = list(/datum/world_faction/coastal_merchants = 30)
 
 /datum/bounty/coastal/instrument_commission
-	name = "Comisión del bardo"
+	name = "Comision del bardo"
 	desc = "Un bardo viajero necesita una buena guitarra antes de zarpar."
 	required_path = /obj/item/instrument/guitar
 	required_count = 1

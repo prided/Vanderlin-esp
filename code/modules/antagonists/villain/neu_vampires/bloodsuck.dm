@@ -22,7 +22,7 @@
 	var/datum/antagonist/vampire/VDrinker = mind?.has_antag_datum(/datum/antagonist/vampire)
 	var/datum/antagonist/vampire/VVictim = victim.mind?.has_antag_datum(/datum/antagonist/vampire)
 	if(ingest && reagents.total_volume >= reagents.maximum_volume)
-		to_chat(src, span_warning("No puedo beber más..."))
+		to_chat(src, span_warning("No puedo beber mas..."))
 		return 0
 
 	COOLDOWN_START(src, drinkblood_use, 1 SECONDS)
@@ -94,7 +94,7 @@
 		return
 
 	var/datum/clan/C = sire.clan
-	var/choice = tgui_alert(client_victim, "You have been offered the immortal blessing. Take it, or perish.", "LA MALDICIÓN DE KAIN", list("I ACCEPT", "TO NECRA"), timeout = 15 SECONDS)
+	var/choice = tgui_alert(client_victim, "You have been offered the immortal blessing. Take it, or perish.", "LA MALDICION DE KAIN", list("I ACCEPT", "TO NECRA"), timeout = 15 SECONDS)
 	if(QDELETED(src))
 		return
 	if(choice != "I ACCEPT")
@@ -103,7 +103,7 @@
 		B?.brain_death = TRUE
 		death()
 		if(!QDELETED(sire)) // sire coulda gibbed or some shit
-			to_chat(sire, span_warning("[src] ha rechazado tu bendición."))
+			to_chat(sire, span_warning("[src] ha rechazado tu bendicion."))
 		return
 	grab_ghost(TRUE, TRUE)
 	revive((HEAL_DAMAGE|HEAL_AFFLICTIONS|HEAL_LIMBS|HEAL_WOUNDS|HEAL_ORGANS), 500, TRUE)

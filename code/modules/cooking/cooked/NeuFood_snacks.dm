@@ -157,7 +157,7 @@
 
 /obj/item/reagent_containers/food/snacks/cooked/rib
 	name = "rib"
-	desc = "Una sola costilla, la carne se desprende fácilmente del hueso."
+	desc = "Una sola costilla, la carne se desprende facilmente del hueso."
 	icon_state = "ribs_slice"
 	eat_effect = null
 	dropshrink = 0.8
@@ -415,7 +415,7 @@
 	desc = "The height of decadence, a precious truffle pig, turned into an amusing meal, served on a bed of its beloved golden truffles."
 	icon_state = "royaltruffles"
 	base_icon_state = "royaltruffles"
-	tastes = list("jamón salado" = 1, "trufas divinas" = 1)
+	tastes = list("jamon salado" = 1, "trufas divinas" = 1)
 	biting = TRUE
 	filling_color = "#8a0000"
 	become_rot_type = /obj/item/reagent_containers/food/snacks/rotten/bacon
@@ -429,7 +429,7 @@
 /*	.............   Frything   ................ */
 /obj/item/reagent_containers/food/snacks/cooked/strange
 	name = "carne extraña frita"
-	desc = "Sea lo que sea, está asado."
+	desc = "Sea lo que sea, esta asado."
 	icon_state = "fried_strange"
 	base_icon_state = "fried_strange"
 	biting = TRUE
@@ -456,7 +456,7 @@
 
 /obj/item/reagent_containers/food/snacks/cooked/sausage_cabbage
 	name = "wiener on cabbage"
-	desc = "Una comida rica y pesada, ración perfecta para un soldado en marcha."
+	desc = "Una comida rica y pesada, racion perfecta para un soldado en marcha."
 	icon_state = "wienercabbage"
 	base_icon_state = "wienercabbage"
 	nutrition = COOKED_SAUSAGE_NUTRITION+COOKED_VEGGIE_NUTRITION

@@ -61,9 +61,9 @@
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_GRAVEROBBER)) // only people who are greenlit to dig out graves can tell if a coffin is consecrated.
 		if(consecrated)
-			. += span_rose("Este ataúd consagrado alberga un cuerpo.")
+			. += span_rose("Este ataud consagrado alberga un cuerpo.")
 		else if (sealed)
-			. += span_warning("Está sellado, pero no tiene cuerpo.")
+			. += span_warning("Esta sellado, pero no tiene cuerpo.")
 
 /obj/structure/closet/crate/coffin/attacked_by(obj/item/I, mob/living/user)
 	if(istype(I, /obj/item/inqarticles/tallowpot)) // consecrating and sealing a coffin with tallow.
@@ -80,7 +80,7 @@
 			to_chat(user, span_warning("The tallow is not warm enough."))
 			return
 
-		to_chat(user, span_info("Empiezo a sellar el ataúd con sebo."))
+		to_chat(user, span_info("Empiezo a sellar el ataud con sebo."))
 		if(!do_after(user, 5 SECONDS, src))
 			return
 		if(pacify_coffin(src, user))
@@ -97,9 +97,9 @@
 	if(user.used_intent.type == /datum/intent/dagger/cut && istype(I, /obj/item/weapon/knife)) // unsealing a coffin
 		if(!user.cmode)
 			if(!sealed)
-				to_chat(user, span_info("El ataúd no tiene ningún sello que quitar."))
+				to_chat(user, span_info("El ataud no tiene ningun sello que quitar."))
 			else
-				to_chat(user, span_info("Empiezo a abrir el ataúd."))
+				to_chat(user, span_info("Empiezo a abrir el ataud."))
 				if(!do_after(user, 5 SECONDS, src))
 					return
 				if(user.patron?.type != /datum/patron/divine/necra) // necrans don't add to the grave robber counts, though they can still get cursed.
@@ -123,7 +123,7 @@
 
 /obj/structure/closet/crate/coffin/vampire
 	name = "sleep casket"
-	desc = "Un ataúd elegante."
+	desc = "Un ataud elegante."
 	icon_state = "vcasket"
 	resistance_flags = FLAMMABLE
 	max_integrity = 70

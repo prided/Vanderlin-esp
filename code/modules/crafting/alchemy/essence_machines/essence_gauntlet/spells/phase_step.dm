@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/phase_step
 	name = "Paso de fase"
-	desc = "Permite un breve paso a través de objetos sólidos."
+	desc = "Permite un breve paso a traves de objetos solidos."
 	button_icon_state = "deathdoor"
 	cast_range = 0
 	essences = list(/datum/thaumaturgical_essence/motion)
@@ -8,7 +8,7 @@
 
 /datum/action/cooldown/spell/essence/phase_step/cast(atom/cast_on)
 	. = ..()
-	owner.visible_message(span_notice("[owner] se vuelve translúcido momentáneamente."))
+	owner.visible_message(span_notice("[owner] se vuelve translucido momentaneamente."))
 	var/mob/living/L = owner
 	L.apply_status_effect(/datum/status_effect/buff/phase_walking, 15 SECONDS)
 	new /obj/effect/temp_visual/snake/swarm(null, L)
@@ -32,7 +32,7 @@
 
 /atom/movable/screen/alert/status_effect/phase_walking
 	name = "Phase Walking"
-	desc = "Puedes atravesar objetos sólidos."
+	desc = "Puedes atravesar objetos solidos."
 	icon_state = "buff"
 
 /datum/action/cooldown/spell/essence/phase_step/spell

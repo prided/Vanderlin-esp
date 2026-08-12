@@ -27,7 +27,7 @@
 		return FALSE
 
 	if(enchant_item.GetComponent(/datum/component/martyr_weapon))
-		to_chat(owner, span_warning("¡No puedes imbuir un arma tan poderosa con más poder divino!"))
+		to_chat(owner, span_warning("¡No puedes imbuir un arma tan poderosa con mas poder divino!"))
 		return FALSE
 
 	return TRUE

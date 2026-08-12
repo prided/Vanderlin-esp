@@ -63,7 +63,7 @@
 		"Great axe" = /obj/item/weapon/polearm/halberd/bardiche/woodcutter,
 	)
 
-	var/weaponchoice = spawned.select_equippable(player_client, selectableweapon, message = "Elige tu especialización", title = "Fighter!")
+	var/weaponchoice = spawned.select_equippable(player_client, selectableweapon, message = "Elige tu especializacion", title = "Fighter!")
 	if(!weaponchoice)
 		return
 

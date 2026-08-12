@@ -20,7 +20,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 12
 	attack_verb_continuous = "metaphysically strikes"
-	attack_verb_simple = "golpear metafísicamente"
+	attack_verb_simple = "golpear metafisicamente"
 	speed = -1
 	del_on_death = TRUE
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, STAMINA = 0, OXY = 1)

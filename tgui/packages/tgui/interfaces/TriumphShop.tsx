@@ -308,7 +308,7 @@ const EquippedPanel = ({
 
         <Stack.Item>
           <Box mt={1} color="label" fontSize="0.8em">
-            Los objetos y colores se aplican en tu próxima aparición.
+            Los objetos y colores se aplican en tu proxima aparicion.
           </Box>
         </Stack.Item>
       </Stack>
@@ -561,7 +561,7 @@ const CollectionView = ({
   if (!items.length) {
     return (
       <NoticeBox>
-        Aún no has desbloqueado ningún elemento. ¡Explora las pestañas de la tienda para gastar triunfos!
+        Aun no has desbloqueado ningun elemento. ¡Explora las pestañas de la tienda para gastar triunfos!
       </NoticeBox>
     );
   }
@@ -855,18 +855,18 @@ const SpecialsTab = ({
             <Box as="span" bold>
               Beneficio de partidario de Patreon:
             </Box>{' '}
-            Las tiradas aleatorias son gratis para ti y los rasgos específicos cuestan 50 % menos.
+            Las tiradas aleatorias son gratis para ti y los rasgos especificos cuestan 50 % menos.
           </NoticeBox>
         ) : (
           <Box color="label" fontSize="0.8em" mb={0.5}>
             <Icon name="heart" mr={1} color="purple" />
-            Los seguidores de Patreon obtienen tiradas aleatorias gratis y un descuento del 50 % en rasgos específicos.
+            Los seguidores de Patreon obtienen tiradas aleatorias gratis y un descuento del 50 % en rasgos especificos.
           </Box>
         )}
       </Stack.Item>
 
       <Stack.Item>
-        <Section title="Especial de próxima ronda">
+        <Section title="Especial de proxima ronda">
           {showReel ? (
             <TraitReel
               specials={specials}
@@ -938,7 +938,7 @@ const SpecialsTab = ({
                 </Button>
               </Stack.Item>
               <Stack.Item color="label" fontSize="0.85em">
-                o elige un rasgo específico a continuación, el costo varía según la rareza
+                o elige un rasgo especifico a continuacion, el costo varia segun la rareza
               </Stack.Item>
             </Stack>
           )}

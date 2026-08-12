@@ -56,7 +56,7 @@
 	target_animal_name = chosen_name
 
 	var/auto_title = get_title()
-	var/custom_title = tgui_input_text(user, "Dale un título a esta misión (en blanco = automático):", "Título de la misión", "", 80)
+	var/custom_title = tgui_input_text(user, "Dale un titulo a esta mision (en blanco = automatico):", "Titulo de la mision", "", 80)
 	title = custom_title ? custom_title : auto_title
 
 	if(!fill_common_fields(user))

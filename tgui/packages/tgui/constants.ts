@@ -254,7 +254,7 @@ const GASES = [
     id: 'freon',
     path: '/datum/gas/freon',
     name: 'Freon',
-    label: 'freón',
+    label: 'freon',
     color: 'paleturquoise',
   },
   {
@@ -289,7 +289,7 @@ const GASES = [
     id: 'halon',
     path: '/datum/gas/halon',
     name: 'Halon',
-    label: 'halón',
+    label: 'halon',
     color: 'purple',
   },
   {

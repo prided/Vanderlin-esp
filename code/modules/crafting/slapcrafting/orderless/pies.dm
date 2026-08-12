@@ -157,7 +157,7 @@
 	output_item = /obj/item/reagent_containers/food/snacks/raw_tart/mango
 
 /datum/orderless_slapcraft/food/tart/mangosteen
-	name = "Tarta De Mangostán Sin Hornear"
+	name = "Tarta De Mangostan Sin Hornear"
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/fruit/mangosteen_opened = 3
 	)

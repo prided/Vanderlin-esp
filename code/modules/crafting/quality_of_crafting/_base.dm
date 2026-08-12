@@ -5,7 +5,7 @@
 /datum/repeatable_crafting_recipe
 	abstract_type = /datum/repeatable_crafting_recipe
 
-	var/name = "Receta genérica"
+	var/name = "Receta generica"
 	var/category
 	var/atom/output
 	var/output_amount = 1
@@ -441,7 +441,7 @@
 			if(!reagent_value)
 				continue
 
-			user.visible_message(span_info("[user] comienza a incorporar algo de líquido en \the [name]."),
+			user.visible_message(span_info("[user] comienza a incorporar algo de liquido en \the [name]."),
 								span_info("You start to pour some liquid into \the [name]."))
 
 			if(put_items_in_hand)
@@ -616,7 +616,7 @@
 	var/successful_crafts = 0
 
 	if(max_crafts > 1)
-		requested_crafts = input(user, "How many [name] do you want to craft?", "Opción de repetición", max_crafts) as null|num
+		requested_crafts = input(user, "How many [name] do you want to craft?", "Opcion de repeticion", max_crafts) as null|num
 
 	if(!requested_crafts)
 		return

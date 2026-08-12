@@ -18,7 +18,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/taste_description = ""
 	var/scent_description = ""
 	var/taste_mult = 1 //how this taste compares to others. Higher values means it is more noticable
-	var/glass_name = "vaso de... ¿qué?" // use for specialty drinks.
+	var/glass_name = "vaso de... ¿que?" // use for specialty drinks.
 	var/glass_desc = ""
 	var/glass_icon_state = null // Otherwise just sets the icon to a normal glass with the mixture of the reagents in the glass.
 	var/shot_glass_icon_state = null
@@ -213,7 +213,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	return
 
 /datum/reagent/proc/overdose_start(mob/living/M)
-	to_chat(M, "<span class='danger'>¡Siento que tomé demasiado de [name]!</span>")
+	to_chat(M, "<span class='danger'>¡Siento que tome demasiado de [name]!</span>")
 	M.add_stress(/datum/stress_event/overdose)
 
 /datum/reagent/proc/addiction_act_stage1(mob/living/M)

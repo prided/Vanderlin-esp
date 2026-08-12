@@ -12,7 +12,7 @@
 	var/mana_cost = 0
 
 /datum/arcyne_crafting_recipe/amethyst_transmutation
-	name = "transmutación de amatista"
+	name = "transmutacion de amatista"
 	ingredients = list(
 		/obj/item/natural/stone,
 	)
@@ -164,7 +164,7 @@
 	required_skill =  SKILL_LEVEL_APPRENTICE
 
 /datum/arcyne_crafting_recipe/t4_meld
-	name = "confluencia mágica"
+	name = "confluencia magica"
 	ingredients = list(
 		/obj/item/natural/abyssalflame,
 		/obj/item/natural/sylvanessence,
@@ -273,7 +273,7 @@
 	required_skill = SKILL_LEVEL_NOVICE
 
 /datum/arcyne_crafting_recipe/elemental_t3_to_t4
-	name = "síntesis de reliquias elementales"
+	name = "sintesis de reliquias elementales"
 	ingredients = list(
 		/obj/item/natural/elementalfragment,
 		/obj/item/natural/elementalfragment,

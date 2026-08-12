@@ -729,7 +729,7 @@
 * or unequipped of their clothing.
 */
 /obj/structure/mannequin/male/decorative
-	name = "exhibición decorativa"
+	name = "exhibicion decorativa"
 	desc = "Due to magic or fragile material the clothing on this one cannot be taken off."
 	unchangeable = TRUE
 

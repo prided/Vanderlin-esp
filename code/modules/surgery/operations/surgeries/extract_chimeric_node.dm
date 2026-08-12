@@ -45,7 +45,7 @@
 		surgeon,
 		patient,
 		span_notice("I begin to carefully extract chimeric tissue from [patient]'s organs..."),
-		span_warning("[surgeon] comienza a formar tejido quimérico a partir de las entrañas de [patient]."),
+		span_warning("[surgeon] comienza a formar tejido quimerico a partir de las entrañas de [patient]."),
 		span_warning("[surgeon] comienza a extraer algo de las entrañas de [patient]."),
 	)
 
@@ -54,7 +54,7 @@
 		surgeon,
 		patient,
 		span_notice("You successfully extract chimeric tissue from [patient], forming it into a node."),
-		span_warning("[surgeon] extrae tejido quimérico del cuerpo de [patient]."),
+		span_warning("[surgeon] extrae tejido quimerico del cuerpo de [patient]."),
 		span_warning("[surgeon] extrae algo grotesco del cuerpo de [patient]."),
 	)
 
@@ -75,7 +75,7 @@
 		surgeon,
 		patient,
 		span_warning("I botch the extraction, causing severe damage!"),
-		span_warning("¡[surgeon] comete un error durante la extracción!"),
+		span_warning("¡[surgeon] comete un error durante la extraccion!"),
 		span_warning("¡[surgeon] comete un error!")
 	)
 

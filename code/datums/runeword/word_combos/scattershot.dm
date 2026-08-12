@@ -1,5 +1,5 @@
 /datum/runeword/scattershot
-	name = "Dispersión"
+	name = "Dispersion"
 	runes = list("eld", "nef", "eth")
 	sockets_required = 3
 	allowed_items = list(/obj/item/gun)

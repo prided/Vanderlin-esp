@@ -26,7 +26,7 @@
 	var/obj/item/organ/eyes/eyes = C.getorgan(/obj/item/organ/eyes)
 	if(!eyes)
 		if(feedback)
-			to_chat(owner, span_warning("El padre árbol no puede restaurar mis ojos."))
+			to_chat(owner, span_warning("El padre arbol no puede restaurar mis ojos."))
 		return FALSE
 
 /datum/action/cooldown/spell/undirected/beast_sense/cast(atom/cast_on)
@@ -35,6 +35,6 @@
 
 /datum/action/cooldown/spell/undirected/beast_sense/proc/grant_status()
 	var/mob/living/carbon/C = owner
-	to_chat(C, span_greentext("Un cuervo pasa por encima... ¡tu oración fue escuchada!"))
+	to_chat(C, span_greentext("Un cuervo pasa por encima... ¡tu oracion fue escuchada!"))
 	playsound(C, 'sound/vo/mobs/bird/CROW_01.ogg', 60, TRUE, -1)
 	C.apply_status_effect(/datum/status_effect/buff/beastsense)

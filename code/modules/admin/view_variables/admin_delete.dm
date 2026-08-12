@@ -12,7 +12,7 @@
 		else
 			jmp_coords = coords = "in nullspace"
 
-	if (tgui_alert(usr, "¿Está seguro de que desea eliminar: \n[D]\n[coords]?", "Confirmación", list("Yes", "No")) == "Yes")
+	if (tgui_alert(usr, "¿Esta seguro de que desea eliminar: \n[D]\n[coords]?", "Confirmacion", list("Yes", "No")) == "Yes")
 		log_admin("[key_name(usr)] deleted [D] [coords]")
 		message_admins("[key_name_admin(usr)] deleted [D] [jmp_coords]")
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Delete")

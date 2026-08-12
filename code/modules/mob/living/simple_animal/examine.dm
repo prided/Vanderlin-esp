@@ -117,7 +117,7 @@
 		. += span_notice("Este animal lleva un bardo: ([bbarding.name]).")
 
 	if(genetics && length(genetics.genes))
-		. += span_notice("Rasgos genéticos: [english_list(genetics.get_gene_names())].")
+		. += span_notice("Rasgos geneticos: [english_list(genetics.get_gene_names())].")
 
 	. += "ᛉ ------------ ᛉ</span>"
 	SEND_SIGNAL(src, COMSIG_ATOM_EXAMINE, user, .)

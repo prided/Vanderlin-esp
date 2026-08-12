@@ -41,7 +41,7 @@
 /// Fully replaces the base mana_siphon click handler - this rune doesn't loop-process, it opens the warp sigil view once per activation.
 /obj/effect/decal/cleanable/ritual_rune/arcyne/mana_siphon/teleport/attack_hand(mob/living/user)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("No puedes invocar estos símbolos."))
+		to_chat(user, span_warning("No puedes invocar estos simbolos."))
 		return
 
 	if(siphon_active)

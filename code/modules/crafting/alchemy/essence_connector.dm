@@ -51,12 +51,12 @@
 
 	for(var/datum/essence_link/existing in from.links)
 		if(existing.source == from && existing.sink == target)
-			to_chat(user, span_warning("Estos dispositivos ya están vinculados en esa dirección."))
+			to_chat(user, span_warning("Estos dispositivos ya estan vinculados en esa direccion."))
 			return
 
 	var/datum/essence_link/link = essence_create_link(from, target)
 	if(!link)
-		to_chat(user, span_warning("No se pudo crear el enlace, verifique que ambas máquinas acepten conexiones en esa dirección."))
+		to_chat(user, span_warning("No se pudo crear el enlace, verifique que ambas maquinas acepten conexiones en esa direccion."))
 		return
 
 	to_chat(user, span_info("Linked [get_display_name(from)] → [get_display_name(target)]."))

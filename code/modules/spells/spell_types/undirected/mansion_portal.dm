@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/mansion_portal
-	name = "Portal de la mansión"
-	desc = "Crea un portal para regresar a MI mansión"
+	name = "Portal de la mansion"
+	desc = "Crea un portal para regresar a MI mansion"
 	has_visual_effects = FALSE
 
 	charge_required = TRUE

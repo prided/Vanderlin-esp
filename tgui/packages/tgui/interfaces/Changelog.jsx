@@ -187,15 +187,15 @@ export class Changelog extends Component {
         <h1>Vanderlin</h1>
         <p>
           <b>Gracias a: </b>
-          Baystation 12, /vg/station, NTstation, CDK Station devs, FacepunchStation, GoonStation devs, los desarrolladores originales de Space Station 13, Invisty por la imagen del título y muchos otros que han contribuido al juego, al rastreador de problemas o a la wiki a lo largo de los años.
+          Baystation 12, /vg/station, NTstation, CDK Station devs, FacepunchStation, GoonStation devs, los desarrolladores originales de Space Station 13, Invisty por la imagen del titulo y muchos otros que han contribuido al juego, al rastreador de problemas o a la wiki a lo largo de los años.
         </p>
         <p>
           {'The codebase can be found '}
-          <a href="https://github.com/monkestation/vanderlin">aquí</a>.
+          <a href="https://github.com/monkestation/vanderlin">aqui</a>.
         </p>
         <p>
           {'You can also join our discord '}
-          <a href="https://discord.gg/monkestation">aquí</a>.
+          <a href="https://discord.gg/monkestation">aqui</a>.
         </p>
         {dateDropdown}
       </Section>
@@ -218,18 +218,18 @@ export class Changelog extends Component {
         <p>
           Vanderlin agradece al equipo de desarrollo de GoonStation 13 por su trabajo en el juego hasta el
           {' r4407 release. The changelog for changes up to r4407 can be seen '}
-          <a href="https://wiki.ss13.co/Pre-2016_Changelog#April_2010">aquí</a>.
+          <a href="https://wiki.ss13.co/Pre-2016_Changelog#April_2010">aqui</a>.
         </p>
         <p>
           {'Except where otherwise noted, Goon Station 13 is licensed under a '}
           <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">
-            Licencia Creative Commons Atribución-No Comercial-Compartir Igual 3.0
+            Licencia Creative Commons Atribucion-No Comercial-Compartir Igual 3.0
           </a>
           {'. Rights are currently extended to '}
           <a href="http://forums.somethingawful.com/">Goons de Something Awful</a>
           {' only.'}
         </p>
-        <h3>Licencia de Juegos Tradicionales Estación Espacial 13</h3>
+        <h3>Licencia de Juegos Tradicionales Estacion Espacial 13</h3>
         <p>
           {'All code after '}
           <a
@@ -280,7 +280,7 @@ export class Changelog extends Component {
               'c28b351807bad950d2b323ada048190844bbda32'
             }
           >
-            Confirmación de la estación TG c28b351807bad950d2b323ada048190844bbda32
+            Confirmacion de la estacion TG c28b351807bad950d2b323ada048190844bbda32
           </a>
           {' on 2019/17/11.'}
         </p>
@@ -304,7 +304,7 @@ export class Changelog extends Component {
             <Box ml={3}>
               {Object.entries(authors).map(([name, changes]) => (
                 <Fragment key={name}>
-                  <h4>{name} cambió:</h4>
+                  <h4>{name} cambio:</h4>
                   <Box ml={3}>
                     <Table>
                       {changes.map((change) => {

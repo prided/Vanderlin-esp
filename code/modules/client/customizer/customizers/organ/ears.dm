@@ -166,7 +166,7 @@
 	allows_disabling = FALSE
 
 /datum/customizer_choice/organ/ears/harpy
-	name = "Orejas de arpía"
+	name = "Orejas de arpia"
 	organ_type = /obj/item/organ/ears
 	generic_random_pick = TRUE
 	sprite_accessories = list(

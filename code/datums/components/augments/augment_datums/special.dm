@@ -119,11 +119,11 @@
 		return
 
 	if(active)
-		to_chat(H, span_warning("¡La unidad CHRONOS ya está activa!"))
+		to_chat(H, span_warning("¡La unidad CHRONOS ya esta activa!"))
 		return
 
 	if(!COOLDOWN_FINISHED(src, in_the_zone))
-		to_chat(H, span_warning("El aumento se está recargando... ([DisplayTimeText(COOLDOWN_TIMELEFT(src, in_the_zone))] restante)"))
+		to_chat(H, span_warning("El aumento se esta recargando... ([DisplayTimeText(COOLDOWN_TIMELEFT(src, in_the_zone))] restante)"))
 		return
 
 	COOLDOWN_START(src, in_the_zone, cooldown_time)
@@ -157,5 +157,5 @@
 /datum/augment/special/sandevistan/get_examine_info()
 	var/list/info = ..()
 	info += span_info("Cooldown: [DisplayTimeText(cooldown_time)]")
-	info += span_info("Duración: [DisplayTimeText(active_time)]")
+	info += span_info("Duracion: [DisplayTimeText(active_time)]")
 	return info

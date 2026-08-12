@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(title)
-	name = "Pantalla de título"
+	name = "Pantalla de titulo"
 	flags = SS_NO_FIRE
 	init_order = INIT_ORDER_TITLE
 

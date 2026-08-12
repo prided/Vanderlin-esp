@@ -164,7 +164,7 @@
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/thirstyt3
-	name = "Deshidratación extrema"
+	name = "Deshidratacion extrema"
 	desc = "<span class='boldwarning'>I AM DYING OF THIRST!</span>\n"
 	icon_state = "thirst3"
 
@@ -522,7 +522,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/lux_drained
 	name = "Lux Drained"
-	desc = span_danger("No puedo sentir mi alma, ¡POR QUÉ NO PUEDO SENTIR MI ALMA!\n")
+	desc = span_danger("No puedo sentir mi alma, ¡POR QUE NO PUEDO SENTIR MI ALMA!\n")
 
 //charflaw variant of lux_drained, used when the flaw is selected
 /datum/status_effect/debuff/flaw_lux_taken
@@ -631,7 +631,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/electrified
 	name = "Electrified"
-	desc = "¡Tu cuerpo está cargado de electricidad inestable!"
+	desc = "¡Tu cuerpo esta cargado de electricidad inestable!"
 	icon_state = "dazed"
 
 /datum/status_effect/debuff/cursed_t1

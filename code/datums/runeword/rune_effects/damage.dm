@@ -72,7 +72,7 @@
 		to_chat(user, "<span class='notice'>[user.get_active_held_item()] deals [damage] additional holy damage!</span>")
 
 /datum/rune_effect/damage/necrotic
-	name = "daño necrótico"
+	name = "daño necrotico"
 
 /datum/rune_effect/damage/necrotic/apply_combat_effect(mob/living/target, mob/living/user, damage_dealt)
 	var/damage = get_bonus_damage(target, user)

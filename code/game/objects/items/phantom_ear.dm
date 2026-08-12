@@ -112,7 +112,7 @@
 	if(invisibility && !living_speaker.is_blind() && living_speaker != owner && perception > 13)
 		if(!prob(20 + ((perception - 14) * 5)))
 			return
-		to_chat(living_speaker, span_warning("No estamos solos, las paredes tienen oídos..."))
+		to_chat(living_speaker, span_warning("No estamos solos, las paredes tienen oidos..."))
 		name = "Aura fantasmal"
 		desc = "You feel a strange presence watching you..."
 		invisibility = NONE

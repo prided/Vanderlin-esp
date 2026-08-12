@@ -25,11 +25,11 @@
 		if(working_material.currecipe)
 			. += span_warning("It is currently being worked on to become \a [working_material.currecipe.name].")
 		if(HAS_TRAIT(working_material, TRAIT_NEEDS_QUENCH))
-			. += span_warning("[working_material] está demasiado caliente para tocarlo.")
+			. += span_warning("[working_material] esta demasiado caliente para tocarlo.")
 
 /obj/machinery/anvil/attack_hand(mob/living/user, list/modifiers)
 	if(smithing)
-		to_chat(user, span_warning("¡Actualmente se está trabajando en [src]!"))
+		to_chat(user, span_warning("¡Actualmente se esta trabajando en [src]!"))
 		return TRUE
 	if(working_material)
 		return working_material.attack_hand(user, modifiers)
@@ -42,7 +42,7 @@
 
 /obj/machinery/anvil/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(smithing)
-		to_chat(user, span_warning("¡Actualmente se está trabajando en [src]!"))
+		to_chat(user, span_warning("¡Actualmente se esta trabajando en [src]!"))
 		return ITEM_INTERACT_BLOCKING
 
 	var/obj/item/actual_attacking_item = tool
@@ -194,7 +194,7 @@
 		return
 
 	if(quality_score >= 80)
-		user.visible_message(span_greentext("¡[user] golpea hábilmente la barra!"))
+		user.visible_message(span_greentext("¡[user] golpea habilmente la barra!"))
 	else if(quality_score >= 40)
 		user.visible_message(span_info("[user] strikes the bar!"))
 	else

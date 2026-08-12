@@ -31,7 +31,7 @@
 				targets["[T.mob.real_name](as [T.mob.name]) - [T]"] = T
 		else
 			targets["(No Mob) - [T]"] = T
-	var/target = input(src,"¿A quién le enviaremos un mensaje?","Admin PM",null) as null|anything in sortList(targets)
+	var/target = input(src,"¿A quien le enviaremos un mensaje?","Admin PM",null) as null|anything in sortList(targets)
 	cmd_admin_pm(targets[target],null)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Admin PM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 

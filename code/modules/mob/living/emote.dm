@@ -37,7 +37,7 @@
 
 /datum/emote/living/pray/proc/async_pray(mob/living/carbon/follower, datum/patron/patron)
 
-	var/prayer = tgui_input_text(follower, "Susurra tu oración", "Oración", multiline = TRUE)
+	var/prayer = tgui_input_text(follower, "Susurra tu oracion", "Oracion", multiline = TRUE)
 	if(!prayer)
 		return
 
@@ -103,7 +103,7 @@
 
 	#ifdef USES_PQ
 	if(get_playerquality(user.client?.ckey) <= -10)
-		to_chat(user, span_boldwarning("Emoticón no reconocido."))
+		to_chat(user, span_boldwarning("Emoticon no reconocido."))
 		return
 		#endif
 
@@ -192,7 +192,7 @@
 
 /datum/emote/living/scream/agony
 	key = "agony"
-	message = "grita de agonía!"
+	message = "grita de agonia!"
 	emote_type = EMOTE_AUDIBLE
 	only_forced_audio = TRUE
 
@@ -492,7 +492,7 @@
 	key = "giggle"
 	key_third_person = "giggles"
 	message = "giggles."
-	message_mime = "¡Se ríe en silencio!"
+	message_mime = "¡Se rie en silencio!"
 	message_muffled = "makes a muffled laugh."
 	emote_type = EMOTE_AUDIBLE
 
@@ -515,7 +515,7 @@
 /datum/emote/living/grin
 	key = "grin"
 	key_third_person = "grins"
-	message = "sonríe."
+	message = "sonrie."
 	emote_type = EMOTE_VISIBLE
 
 /mob/living/carbon/human/verb/emote_grin()
@@ -789,7 +789,7 @@
 	key = "laugh"
 	key_third_person = "laughs"
 	message = "laughs."
-	message_mime = "¡Se ríe en silencio!"
+	message_mime = "¡Se rie en silencio!"
 	message_muffled = "makes a muffled laugh."
 	emote_type = EMOTE_AUDIBLE
 
@@ -850,7 +850,7 @@
 		INVOKE_ASYNC(src, PROC_REF(async_meditate), user)
 
 /datum/emote/living/meditate/proc/async_meditate(mob/user)
-	var/msg = input("Di tu meditación:", "Voces en tu cabeza") as text|null
+	var/msg = input("Di tu meditacion:", "Voces en tu cabeza") as text|null
 	if(msg)
 		user.schizohelp(msg)
 
@@ -962,7 +962,7 @@
 
 /datum/emote/living/scream/agony
 	key = "agony"
-	message = "grita de agonía!"
+	message = "grita de agonia!"
 	emote_type = EMOTE_AUDIBLE
 	only_forced_audio = TRUE
 
@@ -1287,7 +1287,7 @@
 /datum/emote/living/smile
 	key = "smile"
 	key_third_person = "smiles"
-	message = "sonríe."
+	message = "sonrie."
 	emote_type = EMOTE_VISIBLE
 /mob/living/carbon/human/verb/emote_smile()
 	set name = "Smile"
@@ -1362,7 +1362,7 @@
 /datum/emote/living/wsmile
 	key = "wsmile"
 	key_third_person = "wsmiles"
-	message = "sonríe débilmente."
+	message = "sonrie debilmente."
 
 // ............... Z ..................
 /datum/emote/living/zombiemoan

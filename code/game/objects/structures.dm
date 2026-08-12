@@ -91,7 +91,7 @@
 
 /obj/structure/pre_lock_interact(mob/living/user)
 	if(obj_broken)
-		to_chat(user, span_notice("[src] está roto, no puedo hacer esto."))
+		to_chat(user, span_notice("[src] esta roto, no puedo hacer esto."))
 		return FALSE
 	return ..()
 
@@ -182,7 +182,7 @@
 			if(25 to 50)
 				return "It appears heavily damaged."
 			if(1 to 25)
-				return span_warning("¡Se está desmoronando!")
+				return span_warning("¡Se esta desmoronando!")
 
 /obj/structure/onZImpact(turf/impacted_turf, levels, impact_flags)
 	. = ..()

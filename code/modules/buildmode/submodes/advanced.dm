@@ -12,8 +12,8 @@
 	to_chat(c, "<span class='notice'>Left Mouse Button on turf/obj          = Place objects</span>")
 	to_chat(c, "<span class='notice'>Right Mouse Button                     = Delete objects</span>")
 	to_chat(c, "")
-	to_chat(c, "<span class='notice'>Utilice el botón en la esquina superior izquierda para</span>")
-	to_chat(c, "<span class='notice'>cambiar la dirección de los objetos construidos.</span>")
+	to_chat(c, "<span class='notice'>Utilice el boton en la esquina superior izquierda para</span>")
+	to_chat(c, "<span class='notice'>cambiar la direccion de los objetos construidos.</span>")
 	to_chat(c, "<span class='notice'>***********************************************************</span>")
 
 /datum/buildmode_mode/advanced/change_settings(client/c)
@@ -26,7 +26,7 @@
 			return
 		else if(ispath(objholder, /area))
 			objholder = null
-			alert("Ese camino no está permitido.")
+			alert("Ese camino no esta permitido.")
 			return
 
 /datum/buildmode_mode/advanced/handle_click(client/c, list/modifiers, obj/object)

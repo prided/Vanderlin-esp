@@ -157,7 +157,7 @@
 		owner.balloon_alert(owner, "invalid placement!")
 		return FALSE
 	if(!schematic?.building_template)
-		owner.balloon_alert(owner, "¡El esquema está en blanco!")
+		owner.balloon_alert(owner, "¡El esquema esta en blanco!")
 		return FALSE
 	return TRUE
 

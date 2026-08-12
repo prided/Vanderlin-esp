@@ -50,7 +50,7 @@
 
 	bordered_message(chosen_one, list(
 		span_userdanger("¡ERES EL ELEGIDO DE NECRA!"),
-		span_notice("¡Necra exige ritos adecuados para los difuntos! ¡Dale un entierro adecuado a suficientes cadáveres para ganarte el favor de Necra!"),
+		span_notice("¡Necra exige ritos adecuados para los difuntos! ¡Dale un entierro adecuado a suficientes cadaveres para ganarte el favor de Necra!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/ambience/noises/genspooky (1).ogg', 100)
 

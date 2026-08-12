@@ -169,7 +169,7 @@
 	remarks = list("Ignis et oleum..", "Flammam continere ad momentum..", "Flammam iactare..", "Sit flamma constructum..")
 
 /obj/item/book/granter/spell/magick/lightning
-	name = "Pergamino de relámpago"
+	name = "Pergamino de relampago"
 	spell =  /datum/action/cooldown/spell/projectile/lightning
 	spellname = "lightning"
 	icon_state = "scrollyellow"
@@ -208,7 +208,7 @@
 /obj/item/book/granter/spell_points/on_reading_finished(mob/living/user)
 	var/arcaneskill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane)
 	if(arcaneskill >= SKILL_LEVEL_NOVICE) //Required arcane skill of NOVICE or higher to use the granter
-		to_chat(user, span_notice("¡Asimilo los conocimientos del pergamino y me siento más hábil en la hechicería!"))
+		to_chat(user, span_notice("¡Asimilo los conocimientos del pergamino y me siento mas habil en la hechiceria!"))
 		user.adjust_form_mastery_points(1)
 		onlearned(user)
 	else

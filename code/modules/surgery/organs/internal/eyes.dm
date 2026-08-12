@@ -23,7 +23,7 @@
 	now_failing = span_warning("Darkness envelops me, as my eyes goes blind!")
 	now_fixed = span_info("Color and shapes are once again perceivable.")
 	high_threshold_cleared = span_info("My vision functions passably once more.")
-	low_threshold_cleared = span_info("Mi visión está limpia de cualquier dolencia.")
+	low_threshold_cleared = span_info("Mi vision esta limpia de cualquier dolencia.")
 
 	pain_multiplier = 0.35 / 2
 	// remember that this is normally DOUBLED (2 eyes)

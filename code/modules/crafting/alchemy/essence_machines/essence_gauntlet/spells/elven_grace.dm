@@ -13,7 +13,7 @@
 
 /atom/movable/screen/alert/status_effect/elven_grace
 	name = "Elven Grace"
-	desc = "Te mueves con gracia y agilidad etéreas."
+	desc = "Te mueves con gracia y agilidad etereas."
 	icon_state = "buff"
 
 /datum/status_effect/buff/elven_grace/on_apply()

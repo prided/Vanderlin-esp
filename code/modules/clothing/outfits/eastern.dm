@@ -116,7 +116,7 @@
 
 
 /obj/item/clothing/armor/basiceast/captainrobe
-	name = "túnicas extranjeras"
+	name = "tunicas extranjeras"
 	desc = "Flower-styled robes."
 	icon_state = "eastsuit4"
 	item_state = "eastsuit4"
@@ -188,7 +188,7 @@
 
 /obj/item/clothing/head/mentorhat
 	name = "worn bamboo hat"
-	desc = "Un sombrero de bambú reforzado."
+	desc = "Un sombrero de bambu reforzado."
 	icon_state = "easthat"
 	item_state = "easthat"
 	armor_type = /datum/armor/head/padded/good
@@ -201,7 +201,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/face/facemask/yoruku_oni
-	name = "máscara de oni"
+	name = "mascara de oni"
 	desc = "A wood mask carved in the visage of demons said to stalk distant mountains."
 	icon_state = "oni"
 

@@ -439,14 +439,14 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	ignore_key(selection, displayed_choicename)
 
 /client/proc/show_previous_roundend_report()
-	set name = "Tu última ronda"
+	set name = "Tu ultima ronda"
 	set category = "OOC"
 	set desc = ""
 
 	SSticker.show_roundend_report(src, TRUE)
 
 /client/verb/fit_viewport()
-	set name = "Ajustar al área visible"
+	set name = "Ajustar al area visible"
 	set category = "OOC"
 	set desc = "Fit the width of the map window to match the viewport"
 
@@ -527,7 +527,7 @@ GLOBAL_LIST_INIT(oocpronouns_required, list(
 	INVOKE_ASYNC(src, VERB_REF(fit_viewport))
 
 /client/verb/policy()
-	set name = "Mostrar política"
+	set name = "Mostrar politica"
 	set desc = ""
 	set category = "Enlaces OOC"
 	set hidden = 1

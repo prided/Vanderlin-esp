@@ -50,7 +50,7 @@ function StatusBanner() {
       {!!last_error && <NoticeBox danger>{last_error}</NoticeBox>}
       {!!coverage && !coverage.complete && (
         <NoticeBox danger>
-          Cobertura parcial de tablas: {coverage.unavailable.join(', ')} no se pudo alcanzar en esta construcción, por lo que cada total en cada informe está corto por lo que vive en ellos. Consulte la pestaña Compatibilidad.
+          Cobertura parcial de tablas: {coverage.unavailable.join(', ')} no se pudo alcanzar en esta construccion, por lo que cada total en cada informe esta corto por lo que vive en ellos. Consulte la pestaña Compatibilidad.
         </NoticeBox>
       )}
     </>
@@ -67,7 +67,7 @@ export function MemoryProfiler() {
       <Window.Content>
         {!enabled ? (
           <NoticeBox danger>
-            byond_memprofile no está disponible: {error || 'unknown reason'}
+            byond_memprofile no esta disponible: {error || 'unknown reason'}
           </NoticeBox>
         ) : (
           <Stack fill vertical>
@@ -81,7 +81,7 @@ export function MemoryProfiler() {
                   selected={tab === TAB.Overview}
                   onClick={() => setTab(TAB.Overview)}
                 >
-                  Descripción general
+                  Descripcion general
                 </Tabs.Tab>
                 <Tabs.Tab
                   icon="sitemap"

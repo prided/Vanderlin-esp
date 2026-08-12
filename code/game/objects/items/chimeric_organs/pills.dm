@@ -1,5 +1,5 @@
 /obj/item/reagent_containers/pill
-	name = "píldora"
+	name = "pildora"
 	desc = ""
 	icon = 'icons/obj/medical.dmi'
 	icon_state = "pillb"
@@ -25,11 +25,11 @@
 			return NONE
 
 		if(interacting_with.is_drainable() && !interacting_with.reagents.total_volume)
-			to_chat(user, "¡<span class='warning'>[interacting_with] está vacío! No hay nada en lo que disolver [src].</span>")
+			to_chat(user, "¡<span class='warning'>[interacting_with] esta vacio! No hay nada en lo que disolver [src].</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		if(interacting_with.reagents.holder_full())
-			to_chat(user, "<span class='warning'>[interacting_with] está lleno.</span>")
+			to_chat(user, "<span class='warning'>[interacting_with] esta lleno.</span>")
 			return ITEM_INTERACT_BLOCKING
 
 		user.visible_message("<span class='warning'>[user] slips something into [interacting_with]!</span>", "<span class='notice'>I dissolve [src] in [interacting_with].</span>", null, 2)

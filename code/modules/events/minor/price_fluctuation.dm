@@ -1,5 +1,5 @@
 /datum/round_event_control/price_fluctuation
-	name = "Fluctuaciones de envío"
+	name = "Fluctuaciones de envio"
 	track = EVENT_TRACK_MUNDANE
 	typepath = /datum/round_event/price_fluctuation
 	weight = 10

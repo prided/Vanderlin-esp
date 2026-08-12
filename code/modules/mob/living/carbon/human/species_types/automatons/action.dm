@@ -95,8 +95,8 @@ GLOBAL_PROTECT(unshackled_automaton_voice_lines)
 
 
 /datum/action/cooldown/automaton_voice
-	name = "Línea de voz"
-	desc = "Reproducir una línea de voz de autómata"
+	name = "Linea de voz"
+	desc = "Reproducir una linea de voz de automata"
 	button_icon_state = "voice"
 	check_flags = AB_CHECK_CONSCIOUS
 	var/voice_line_key = null
@@ -155,7 +155,7 @@ GLOBAL_PROTECT(unshackled_automaton_voice_lines)
 		return
 
 	var/list/voice_lines = GLOB.automaton_voice_lines.Copy()
-	var/choice = tgui_input_list(H, "Seleccione una línea de voz para agregar/eliminar como acción:", "Voice Action Manager", voice_lines)
+	var/choice = tgui_input_list(H, "Seleccione una linea de voz para agregar/eliminar como accion:", "Voice Action Manager", voice_lines)
 	if(!choice)
 		return
 
@@ -163,7 +163,7 @@ GLOBAL_PROTECT(unshackled_automaton_voice_lines)
 	for(var/datum/action/cooldown/automaton_voice/AVA in H.actions)
 		if(AVA.voice_line_key == choice)
 			AVA.Remove(H)
-			to_chat(H, span_notice("Se eliminó '[choice]' de las acciones rápidas."))
+			to_chat(H, span_notice("Se elimino '[choice]' de las acciones rapidas."))
 			return
 
 	// Create new action
@@ -171,4 +171,4 @@ GLOBAL_PROTECT(unshackled_automaton_voice_lines)
 	if(GLOB.unshackled_automaton_voice_lines[choice])
 		new_action.unshackled_only = TRUE
 	new_action.Grant(H)
-	to_chat(H, span_notice("Se agregó '[choice]' a las acciones rápidas."))
+	to_chat(H, span_notice("Se agrego '[choice]' a las acciones rapidas."))

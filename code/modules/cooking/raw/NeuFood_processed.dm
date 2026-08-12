@@ -56,7 +56,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	long_cooktime = (90 - ((GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/cooking)) * 15))
-	to_chat(user, span_notice("Congelando el azúcar..."))
+	to_chat(user, span_notice("Congelando el azucar..."))
 	playsound(user, 'sound/foley/splishy.ogg', 100, TRUE, -1)
 	if(do_after(user, long_cooktime, src))
 		new /obj/item/reagent_containers/food/snacks/jellycake_base(loc)
@@ -115,7 +115,7 @@
 
 // -------------- TIEFLING SUGAR -----------------
 /obj/item/reagent_containers/food/snacks/tiefsugar
-	name = "Tiefling Azúcar"
+	name = "Tiefling Azucar"
 	desc ="Originating from subterra, Tiefling blood that has been expertly dried and mixed into a sugar base, sweetens when boiled."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "tsugar"
@@ -455,7 +455,7 @@
 			cheese = /obj/item/reagent_containers/food/snacks/cheese
 		if(milk)
 			if(tool.reagents.total_volume > 0)
-				to_chat(user, span_warning("El [tool.name] todavía está empapado de algo."))
+				to_chat(user, span_warning("El [tool.name] todavia esta empapado de algo."))
 			else
 				user.visible_message("<span class='info'>[user] strains fresh cheese...</span>")
 				playsound(src, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 100, FALSE)
@@ -589,7 +589,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(cheese_added >= 3)
-		to_chat(user, span_warning("¡El queso está madurando!"))
+		to_chat(user, span_warning("¡El queso esta madurando!"))
 		return ITEM_INTERACT_BLOCKING
 
 	playsound(user, 'sound/foley/dropsound/food_drop.ogg', 30, TRUE, -1)
@@ -629,7 +629,7 @@
 /obj/item/reagent_containers/food/snacks/foodbase/cheesewheel_start/update_desc(updates)
 	. = ..()
 	if(cheese_added == 3)
-		desc = desc = "Se solidifica lentamente, es mejor dejarlo solo un poco más."
+		desc = desc = "Se solidifica lentamente, es mejor dejarlo solo un poco mas."
 
 /obj/item/reagent_containers/food/snacks/cheese/gote
 	name = "fresh gote cheese"

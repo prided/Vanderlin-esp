@@ -1,7 +1,7 @@
 
 /datum/runerituals/summoning
 	abstract_type = /datum/runerituals/summoning
-	name = "ritual de invocación (padre)"
+	name = "ritual de invocacion (padre)"
 	desc = "Summoning parent — should not appear in player lists."
 	blacklisted = TRUE
 

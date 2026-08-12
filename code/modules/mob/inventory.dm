@@ -428,7 +428,7 @@
 
 
 /mob/verb/quick_equip()
-	set name = "equipar rápidamente"
+	set name = "equipar rapidamente"
 	set hidden = 1
 
 	DEFAULT_QUEUE_OR_CALL_VERB(VERB_CALLBACK(src, PROC_REF(execute_quick_equip)))

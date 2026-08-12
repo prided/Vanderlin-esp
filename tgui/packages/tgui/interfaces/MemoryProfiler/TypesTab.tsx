@@ -76,7 +76,7 @@ export function TypesTab() {
       {!census ? (
         <Stack.Item>
           <EmptyState>
-            Aún no se ha realizado ningún censo. Un censo recorre todo el montón y congela el servidor mientras se ejecuta.
+            Aun no se ha realizado ningun censo. Un censo recorre todo el monton y congela el servidor mientras se ejecuta.
           </EmptyState>
         </Stack.Item>
       ) : (
@@ -136,7 +136,7 @@ export function TypesTab() {
                         {row.typepath}
                       </Box>
                       {!row.costed && (
-                        <Tooltip content="No hay un tamaño base verificado para este tipo, por lo que sus bytes no se cargan aquí. Eso no es lo mismo que ser gratis.">
+                        <Tooltip content="No hay un tamaño base verificado para este tipo, por lo que sus bytes no se cargan aqui. Eso no es lo mismo que ser gratis.">
                           <Icon
                             name="triangle-exclamation"
                             ml={1}

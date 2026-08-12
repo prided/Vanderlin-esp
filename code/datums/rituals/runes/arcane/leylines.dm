@@ -25,7 +25,7 @@
 	else
 		user.mana_pool.set_intrinsic_recharge(MANA_ALL_LEYLINES)
 		playsound(user, 'sound/magic/blink.ogg', 80, FALSE)
-		to_chat(user, span_warning("¡Las líneas ley me llenan de poder!"))
+		to_chat(user, span_warning("¡Las lineas ley me llenan de poder!"))
 	if(ritual_result)
 		pickritual.cleanup_atoms(selected_atoms)
 	finish_invoke(invokers)

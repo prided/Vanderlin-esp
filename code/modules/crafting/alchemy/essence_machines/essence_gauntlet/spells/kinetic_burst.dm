@@ -10,7 +10,7 @@
 	var/turf/target_turf = get_turf(cast_on)
 	if(!target_turf)
 		return FALSE
-	owner.visible_message(span_notice("[owner] libera una explosión de energía cinética."))
+	owner.visible_message(span_notice("[owner] libera una explosion de energia cinetica."))
 
 	for(var/obj/item/I in range(1, target_turf))
 		if(I.w_class <= WEIGHT_CLASS_NORMAL)

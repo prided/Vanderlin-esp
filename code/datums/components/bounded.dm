@@ -11,7 +11,7 @@
 
 /datum/mechanic_tip/bound/New(datum/component/B)
 	tip_name = BOUNDS_TIP(B)
-	description = "Parece no permitir que [B.parent] se aleje demasiado de sí mismo."
+	description = "Parece no permitir que [B.parent] se aleje demasiado de si mismo."
 
 // A component you put on things you want to be bounded to other things.
 // Warning! Can only be bounded to one thing at once.

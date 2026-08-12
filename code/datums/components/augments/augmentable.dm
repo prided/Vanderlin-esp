@@ -72,7 +72,7 @@
 		return
 	shackle.on_remove(H)
 	H.visible_message(
-		span_danger("¡Todo el marco de [H] se estremece violentamente antes de explotar en una catastrófica lluvia de metal y vapor!"),
+		span_danger("¡Todo el marco de [H] se estremece violentamente antes de explotar en una catastrofica lluvia de metal y vapor!"),
 		span_userdanger("CRITICAL FAILURE! SHACKLE UNIT NON-RESPONSIVE!")
 	)
 	playsound(H, 'sound/vo/automaton/statuscritical.ogg', 100, TRUE)
@@ -123,7 +123,7 @@
 	A.parent = null
 	A.on_remove(H)
 
-	to_chat(user, span_notice("Se eliminó [A.name]."))
+	to_chat(user, span_notice("Se elimino [A.name]."))
 	return COMPONENT_AUGMENT_SUCCESS
 
 /datum/component/augmentable/proc/repair(datum/source, amount, mob/user)

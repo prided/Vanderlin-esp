@@ -736,7 +736,7 @@ SUBSYSTEM_DEF(ticker)
  */
 /datum/controller/subsystem/ticker/proc/cancel_reboot(mob/user)
 	if(!reboot_timer)
-		to_chat(user, span_warning("¡No hay ningún reinicio pendiente!"))
+		to_chat(user, span_warning("¡No hay ningun reinicio pendiente!"))
 		return FALSE
 	to_chat(world, span_boldannounce("Un administrador ha retrasado el final de la ronda."))
 	deltimer(reboot_timer)

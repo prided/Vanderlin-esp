@@ -1,5 +1,5 @@
 /datum/thaumic_research_node/combiner_speed
-	name = "Fusión rápida"
+	name = "Fusion rapida"
 	desc = "Accelerate the essence combination process through improved channeling techniques and optimized magical flow patterns."
 	prerequisites = list(/datum/thaumic_research_node/advanced_combiner_applications)
 	required_essences = list(
@@ -14,8 +14,8 @@
 	bonus_value = 0.35
 
 /datum/thaumic_research_node/combiner_speed/two
-	name = "Síntesis rápida"
-	desc = "Mayor aceleración de los procesos de combinación de esencias a través de circuitos mágicos avanzados y técnicas mejoradas de unión de esencias."
+	name = "Sintesis rapida"
+	desc = "Mayor aceleracion de los procesos de combinacion de esencias a traves de circuitos magicos avanzados y tecnicas mejoradas de union de esencias."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/combiner_speed)
 	required_essences = list(
@@ -29,7 +29,7 @@
 	bonus_value = 0.6
 
 /datum/thaumic_research_node/combiner_speed/three
-	name = "Fusión instantánea"
+	name = "Fusion instantanea"
 	desc = "Near-instantaneous essence combination achieved through mastery of temporal acceleration and perfected synthesis methods."
 	icon_state = "node"
 	prerequisites = list(/datum/thaumic_research_node/combiner_output/two)

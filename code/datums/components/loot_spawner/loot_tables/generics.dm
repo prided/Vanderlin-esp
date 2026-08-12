@@ -100,7 +100,7 @@
 	)
 
 /datum/loot_table/coin
-	name = "monedas genéricas"
+	name = "monedas genericas"
 	loot_table = list(
 		list(
 			/obj/item/coin/gold/pile = 5,
@@ -114,7 +114,7 @@
 	base_max = 3
 
 /datum/loot_table/coin/low
-	name = "monedas genéricas bajas"
+	name = "monedas genericas bajas"
 	loot_table = list(
 		list(
 			/obj/item/coin/copper/pile = 75,
@@ -141,7 +141,7 @@
 	)
 
 /datum/loot_table/coin/absurd
-	name = "monedas genéricas absurdas"
+	name = "monedas genericas absurdas"
 	loot_table = list(
 		list(
 			/obj/item/coin/gold/pile = 50,
@@ -150,7 +150,7 @@
 	)
 
 /datum/loot_table/weapon
-	name = "armas genéricas"
+	name = "armas genericas"
 	loot_table = list(
 		list(
 			/obj/item/weapon/mace/bludgeon/copper = 15,
@@ -211,7 +211,7 @@
 	)
 
 /datum/loot_table/armor
-	name = "armadura genérica"
+	name = "armadura generica"
 	loot_table = list(
 		list(
 			/obj/item/clothing/face/facemask/copper = 15,
@@ -245,7 +245,7 @@
 	)
 
 /datum/loot_table/food
-	name = "comida genérica"
+	name = "comida generica"
 	loot_table = list(
 		list(
 			/obj/item/reagent_containers/food/snacks/bread = 10,
@@ -267,7 +267,7 @@
 	)
 
 /datum/loot_table/potion_vitals
-	name = "pociones vitales genéricas"
+	name = "pociones vitales genericas"
 	loot_table = list(
 		list(
 			/obj/item/reagent_containers/glass/bottle/healthpot = 10,
@@ -280,7 +280,7 @@
 	)
 
 /datum/loot_table/potion_poisons
-	name = "venenos genéricos"
+	name = "venenos genericos"
 	loot_table = list(
 		list(
 			/obj/item/reagent_containers/glass/bottle/poison = 10,
@@ -307,7 +307,7 @@
 	..()
 
 /datum/loot_table/potion_ingredient/herb
-	name = "hierbas genéricas"
+	name = "hierbas genericas"
 	loot_table = list(
 		list(
 			/obj/item/alch/herb/atropa = 5,

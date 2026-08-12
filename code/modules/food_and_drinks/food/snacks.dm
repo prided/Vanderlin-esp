@@ -397,7 +397,7 @@ All foods are distributed among various categories. Use common sense.
 				switch (faretype)
 					if (FARE_IMPOVERISHED)
 						eater.add_stress(/datum/stress_event/noble_impoverished_food)
-						to_chat(eater, span_red("Esto es asqueroso... ¿cómo puede alguien comer esto?"))
+						to_chat(eater, span_red("Esto es asqueroso... ¿como puede alguien comer esto?"))
 						if (eater.nutrition >= NUTRITION_LEVEL_STARVING)
 							eater.taste(reagents)
 							return
@@ -416,7 +416,7 @@ All foods are distributed among various categories. Use common sense.
 						eater.remove_stress(/datum/stress_event/noble_bland_food)
 						eater.add_stress(/datum/stress_event/noble_lavish_food)
 						if (prob(25))
-							to_chat(eater, span_green("Ah, comida digna de mi título."))
+							to_chat(eater, span_green("Ah, comida digna de mi titulo."))
 
 			// yeomen and courtiers are also used to a better quality of life but are way less picky
 			if (human_eater.is_yeoman() || human_eater.is_courtier())

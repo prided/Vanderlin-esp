@@ -17,7 +17,7 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/dragon
-	name = "Juguete de dragón de madera"
+	name = "Juguete de dragon de madera"
 	output = /obj/item/orphan_toy/dragon
 
 /datum/repeatable_crafting_recipe/crafting/orphan_toy/knight

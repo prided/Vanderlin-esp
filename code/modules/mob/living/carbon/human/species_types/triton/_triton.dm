@@ -25,7 +25,7 @@
 	)
 
 /datum/species/triton
-	name = "Tritón"
+	name = "Triton"
 	id = SPEC_ID_TRITON
 	native_language = "Deepspeak"
 	changesource_flags = WABBAJACK

@@ -31,7 +31,7 @@
 	// Check if receiver can accept resources
 	var/can_receive = receiver.personal_resource_max - receiver.personal_resource_pool
 	if(can_receive < transfer_amount)
-		to_chat(giver, span_warning("¡[receiver] no puede aceptar la transferencia completa! Solo pueden aceptar [can_receive] más recursos."))
+		to_chat(giver, span_warning("¡[receiver] no puede aceptar la transferencia completa! Solo pueden aceptar [can_receive] mas recursos."))
 		// Still allow partial transfer
 		transfer_amount = can_receive
 		if(transfer_amount <= 0)

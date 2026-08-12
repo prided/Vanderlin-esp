@@ -1,5 +1,5 @@
 /datum/gem_cut/wisdom
-	name = "sabiduría"
+	name = "sabiduria"
 
 /datum/gem_cut/wisdom/setup_cut(multiplier)
 	weapon_effect_type = /datum/rune_effect/player_stat/intelligence

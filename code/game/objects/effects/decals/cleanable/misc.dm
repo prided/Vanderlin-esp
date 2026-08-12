@@ -24,7 +24,7 @@
 	turf_loc_check = FALSE
 
 /obj/effect/decal/cleanable/ash/large
-	name = "gran montón de cenizas"
+	name = "gran monton de cenizas"
 	icon_state = "big_ash"
 	beauty = -100
 
@@ -110,7 +110,7 @@
 	clean_type = CLEAN_TYPE_LIGHT_DECAL
 
 /obj/effect/decal/cleanable/vomit/old
-	name = "vómito seco"
+	name = "vomito seco"
 	desc = ""
 	clean_type = CLEAN_TYPE_HARD_DECAL
 

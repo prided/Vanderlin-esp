@@ -87,7 +87,7 @@ GLOBAL_LIST_EMPTY(explosions)
 	var/max_range = max(devastation_range, heavy_impact_range, light_impact_range, flame_range)
 
 	if(adminlog)
-		message_admins("Explosión con tamaño ([devastation_range], [heavy_impact_range], [light_impact_range], [hotspot_range], [flame_range]) en [ADMIN_VERBOSEJMP(epicenter)]")
+		message_admins("Explosion con tamaño ([devastation_range], [heavy_impact_range], [light_impact_range], [hotspot_range], [flame_range]) en [ADMIN_VERBOSEJMP(epicenter)]")
 		log_game("Explosion with size ([devastation_range], [heavy_impact_range], [light_impact_range], [hotspot_range], [flame_range]) in [loc_name(epicenter)]")
 
 	var/x0 = epicenter.x

@@ -1,6 +1,6 @@
 /datum/coven_research_node
-	var/name = "Nodo de investigación"
-	var/desc = "Una descripción del nodo de investigación."
+	var/name = "Nodo de investigacion"
+	var/desc = "Una descripcion del nodo de investigacion."
 	var/list/prerequisites = list()
 	var/research_cost = 10
 	var/required_level = 1
@@ -245,7 +245,7 @@
 		var/info_text = ""
 
 		if(node_id in parent_coven.unlocked_research)
-			info_text = "¡<span class='boldnotice'>[node.name] ya está desbloqueado!</span>"
+			info_text = "¡<span class='boldnotice'>[node.name] ya esta desbloqueado!</span>"
 		else if(parent_coven.level >= node.required_level)
 			// Check prerequisites
 			var/prereqs_met = TRUE

@@ -449,7 +449,7 @@ SUBSYSTEM_DEF(overwatch)
 		return
 
 	if(!SSdbcore.Connect())
-		to_chat(usr, span_notice("¡La base de datos no está conectada!"))
+		to_chat(usr, span_notice("¡La base de datos no esta conectada!"))
 		return
 
 	var/overwatch_status = SSoverwatch.Toggle()

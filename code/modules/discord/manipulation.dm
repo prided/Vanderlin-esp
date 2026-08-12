@@ -14,10 +14,10 @@
 		return
 
 	if(!SSdbcore.IsConnected())
-		to_chat(usr, "<span class='warning'>DB aún no está conectado.</span>")
+		to_chat(usr, "<span class='warning'>DB aun no esta conectado.</span>")
 		return
 
-	var/lookup_choice = tgui_alert(usr, "Do you wish to lookup account by ID or ckey?", "Tipo de búsqueda", list("ID", "Ckey", "Cancel"))
+	var/lookup_choice = tgui_alert(usr, "Do you wish to lookup account by ID or ckey?", "Tipo de busqueda", list("ID", "Ckey", "Cancel"))
 	switch(lookup_choice)
 		if("ID")
 			var/lookup_id = input(usr,"Enter Discord ID to lookup ckey") as text|null

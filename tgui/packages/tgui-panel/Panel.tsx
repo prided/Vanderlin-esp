@@ -45,7 +45,7 @@ export function Panel(props) {
                 <Button
                   selected={audioVisible}
                   icon="music"
-                  tooltip="Reproductor de música"
+                  tooltip="Reproductor de musica"
                   tooltipPosition="bottom-start"
                   onClick={() => setAudioVisible((v) => !v)}
                 />
@@ -82,12 +82,12 @@ export function Panel(props) {
             <Notifications>
               {game.connectionLostAt && (
                 <Notifications.Item rightSlot={<ReconnectButton />}>
-                  O estás AFK, experimentas un retraso o la conexión se ha cerrado.
+                  O estas AFK, experimentas un retraso o la conexion se ha cerrado.
                 </Notifications.Item>
               )}
               {game.roundRestartedAt && (
                 <Notifications.Item>
-                  La conexión se ha cerrado porque el servidor se está reiniciando. Espere mientras se vuelve a conectar automáticamente.
+                  La conexion se ha cerrado porque el servidor se esta reiniciando. Espere mientras se vuelve a conectar automaticamente.
                 </Notifications.Item>
               )}
             </Notifications>

@@ -40,7 +40,7 @@
 	if(!LAZYLEN(owner.mind?.relations))
 		to_chat(owner, span_warning("¡No conozco a nadie!"))
 		return . | SPELL_CANCEL_CAST
-	var/recipient = tgui_input_text(owner, "Who are you trying to contact?", "MÁS ALLÁ DEL VELO", encode=FALSE)
+	var/recipient = tgui_input_text(owner, "Who are you trying to contact?", "MAS ALLA DEL VELO", encode=FALSE)
 	if(QDELETED(src) || QDELETED(cast_on) || !can_cast_spell())
 		return . | SPELL_CANCEL_CAST
 	if(!recipient)
@@ -59,13 +59,13 @@
 	if(!recipient_ref)
 		to_chat(owner, span_warning("I seek a mental connection, but can't find [recipient]."))
 		return . | SPELL_CANCEL_CAST
-	message = tgui_input_text(owner, "You make a connecton, what are you trying to say?", "MÁS ALLÁ DEL VELO", max_length = 150)
+	message = tgui_input_text(owner, "You make a connecton, what are you trying to say?", "MAS ALLA DEL VELO", max_length = 150)
 	if(QDELETED(src) || QDELETED(cast_on) || !can_cast_spell())
 		return . | SPELL_CANCEL_CAST
 	if(!message)
 		reset_cooldown()
 		return . | SPELL_CANCEL_CAST
-	var/answer = tgui_alert(owner, "¿Enviar de forma anónima?", "MÁS ALLÁ DEL VELO", DEFAULT_INPUT_CHOICES)
+	var/answer = tgui_alert(owner, "¿Enviar de forma anonima?", "MAS ALLA DEL VELO", DEFAULT_INPUT_CHOICES)
 	if(QDELETED(src) || QDELETED(cast_on) || !can_cast_spell())
 		return . | SPELL_CANCEL_CAST
 	if(answer == CHOICE_CONFIRM)

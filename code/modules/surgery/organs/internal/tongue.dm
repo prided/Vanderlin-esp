@@ -5,7 +5,7 @@
 	zone = BODY_ZONE_PRECISE_MOUTH
 	slot = ORGAN_SLOT_TONGUE
 	organ_efficiency = list(ORGAN_SLOT_TONGUE = 100)
-	attack_verb = list("licked", "slobbered", "slapped", "francés", "tongued")
+	attack_verb = list("licked", "slobbered", "slapped", "frances", "tongued")
 
 	organ_volume = 0.5
 	max_blood_storage = 5
@@ -167,7 +167,7 @@
 	modifies_speech = FALSE
 
 /obj/item/organ/tongue/robot
-	name = "caja de voz robótica"
+	name = "caja de voz robotica"
 	desc = ""
 	organ_flags = ORGAN_ROBOTIC
 	icon_state = "tonguerobot"

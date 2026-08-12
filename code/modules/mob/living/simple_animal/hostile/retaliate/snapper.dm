@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/retaliate/snapper
 	name = "snapper"
-	desc = "Un horrible monstruo metálico, sus mandíbulas muerden como una trampa..."
+	desc = "Un horrible monstruo metalico, sus mandibulas muerden como una trampa..."
 	gender = NEUTER
 	icon = 'icons/roguetown/mob/monster/pets.dmi'
 	icon_state = "gg"

@@ -160,7 +160,7 @@
 	target.balloon_alert_to_viewers("golpe resonante - [zone_name]!")
 	target.visible_message(
 		span_danger("Rhythmic force reverberates through [target]!"),
-		span_userdanger("¡La fuerza rítmica resuena en mi cuerpo!"))
+		span_userdanger("¡La fuerza ritmica resuena en mi cuerpo!"))
 	playsound(target, 'sound/magic/blade_burst.ogg', 50, TRUE)
 	..()
 

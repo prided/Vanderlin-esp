@@ -298,7 +298,7 @@ SUBSYSTEM_DEF(questboard)
 	// Custom quests sit in the pool unclaimed until someone takes it
 	quest_pool[custom_quest.quest_difficulty] += custom_quest
 	log_quest(steward.ckey, steward.mind, steward, "Issue custom quest: [custom_quest.title]")
-	to_chat(steward, span_notice("Misión personalizada \"[custom_quest.title]\" publicada en el tablón de anuncios."))
+	to_chat(steward, span_notice("Mision personalizada \"[custom_quest.title]\" publicada en el tablon de anuncios."))
 	return TRUE
 
 /datum/controller/subsystem/questboard/proc/issue_custom_quest_funded(mob/steward, datum/quest/custom/CQ, amount)

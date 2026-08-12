@@ -1,6 +1,6 @@
 
 /datum/round_event_control/zizo_shrines
-	name = "Construcción profana"
+	name = "Construccion profana"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/zizo_shrines
 	weight = 7

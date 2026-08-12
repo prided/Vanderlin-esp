@@ -1,5 +1,5 @@
 /datum/round_event_control/noc_wisdom
-	name = "La sabiduría de Noc"
+	name = "La sabiduria de Noc"
 	track = EVENT_TRACK_INTERVENTION
 	typepath = /datum/round_event/noc_wisdom
 	weight = 8

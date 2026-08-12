@@ -83,7 +83,7 @@
 
 /obj/item/clothing/barding/honse
 	name = "padded barding"
-	desc = "Un conjunto de armadura acolchada para un Honse, diseñada para proteger los órganos vitales de tu montura."
+	desc = "Un conjunto de armadura acolchada para un Honse, diseñada para proteger los organos vitales de tu montura."
 	icon_state = "sewingkit"
 	barding_icon = 'icons/mob/monster/fogbeast.dmi'
 	barding_state = "barding"

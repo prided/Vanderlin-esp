@@ -96,7 +96,7 @@
 			return FALSE
 	else
 		if(!stockpile_ref.has_any_resources(resource_costs))
-			to_chat(user, span_warning("La reserva está completamente vacía de recursos útiles."))
+			to_chat(user, span_warning("La reserva esta completamente vacia de recursos utiles."))
 			return FALSE
 
 	return TRUE

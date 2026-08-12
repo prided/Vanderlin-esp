@@ -169,7 +169,7 @@
  */
 /obj/item/udder/proc/milk(obj/item/reagent_containers/milk_holder, mob/user)
 	if(milk_holder.reagents.total_volume >= milk_holder.volume)
-		to_chat(user, span_warning("[milk_holder] está lleno."))
+		to_chat(user, span_warning("[milk_holder] esta lleno."))
 		return
 	var/transfered = reagents.trans_to(milk_holder, rand(5,10))
 	if(transfered)
@@ -180,5 +180,5 @@
 			var/mob/living/living = user
 			living.Immobilize(0.9 SECONDS)
 	else
-		to_chat(user, span_warning("La ubre está seca. Espera un poco más..."))
+		to_chat(user, span_warning("La ubre esta seca. Espera un poco mas..."))
 	user.changeNext_move(1 SECONDS)

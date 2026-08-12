@@ -64,7 +64,7 @@
 	created_item = /obj/item/weapon/pick/copper
 
 /datum/anvil_recipe/tools/copper/lamptern
-	name = "Lámpara de cobre"
+	name = "Lampara de cobre"
 	created_item = /obj/item/flashlight/flare/torch/lantern/copper
 
 /datum/anvil_recipe/tools/copper/hammer
@@ -109,7 +109,7 @@
 ///////////////////////////////////////////////
 
 /datum/anvil_recipe/tools/iron/syringe
-	name = "Jeringa de infusión"
+	name = "Jeringa de infusion"
 	created_item = /obj/item/reagent_containers/syringe
 
 /datum/anvil_recipe/tools/iron/keyring
@@ -151,7 +151,7 @@
 	craftdiff = 0
 
 /datum/anvil_recipe/tools/iron/lamptern
-	name = "Lámpara de hierro"
+	name = "Lampara de hierro"
 	created_item = /obj/item/flashlight/flare/torch/lantern
 
 /datum/anvil_recipe/tools/iron/cogiron
@@ -211,7 +211,7 @@
 	created_item = /obj/item/weapon/tongs
 
 /datum/anvil_recipe/tools/iron/torch
-	name = "Antorchas de hierro (+carbón)"
+	name = "Antorchas de hierro (+carbon)"
 	additional_items = list(/obj/item/ore/coal)
 	created_item = /obj/item/flashlight/flare/torch/metal
 	output_amount = 5
@@ -379,7 +379,7 @@
 
 // --------- CASTING TOOLS -----------
 /datum/anvil_recipe/tools/casting
-	category = "Fundición"
+	category = "Fundicion"
 	craftdiff = SKILL_RANK_JOURNEYMAN
 	abstract_type = /datum/anvil_recipe/tools/casting
 

@@ -1,5 +1,5 @@
 /datum/award/achievement/progress
-	desc = "¡Sigue así!"
+	desc = "¡Sigue asi!"
 	/// How much progress is needed to unlock this achievement.
 	var/required_progress = 10
 	/// Whether to send incremental progress messages to the player.

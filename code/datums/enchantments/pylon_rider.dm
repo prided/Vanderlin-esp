@@ -30,4 +30,4 @@
 	if(active_item)
 		active_item = FALSE
 		REMOVE_TRAIT(user, TRAIT_PYLON_RIDER, "[REF(i)]")
-		to_chat(user, span_notice("Te sientes desconectado de las líneas ley."))
+		to_chat(user, span_notice("Te sientes desconectado de las lineas ley."))

@@ -9,7 +9,7 @@
 
 /datum/reagent/consumable
 	name = "Consumable"
-	taste_description = "comida genérica"
+	taste_description = "comida generica"
 	taste_mult = 4
 	metabolization_rate = REAGENTS_METABOLISM
 	var/nutriment_factor = 1
@@ -152,8 +152,8 @@
 		affected_mob.satiety += 15 * delta_time
 
 /datum/reagent/consumable/nutriment/bone_marrow
-	name = "Médula Ósea"
-	description = "Médula directamente de la fuente."
+	name = "Medula Osea"
+	description = "Medula directamente de la fuente."
 
 	brute_heal = 1
 	burn_heal = 1
@@ -167,7 +167,7 @@
 	L.remove_chem_effect(CE_BLOODRESTORE, "[type]")
 
 /datum/reagent/consumable/sugar
-	name = "Azúcar"
+	name = "Azucar"
 	description = "The organic compound commonly known as table sugar and sometimes called saccharose. This white, odorless, crystalline powder has a pleasing, sweet taste."
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 255, 255, 255
@@ -220,7 +220,7 @@
 	taste_description = "aceite picante"
 
 /datum/reagent/drug/mushroomhallucinogen
-	name = "Alucinógeno de hongos"
+	name = "Alucinogeno de hongos"
 	description = "A strong hallucinogenic drug derived from certain species of mushroom."
 	color = "#E700E7" // rgb: 231, 0, 231
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
@@ -251,7 +251,7 @@
 
 /datum/reagent/consumable/eggyolk
 	name = "Egg Yolk"
-	description = "Está lleno de proteínas."
+	description = "Esta lleno de proteinas."
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 	color = "#FFB500"
 	taste_description = "egg"

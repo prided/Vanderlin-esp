@@ -9,7 +9,7 @@
 					/obj/item/reagent_containers/food/snacks/fish/shrimp = 3)
 
 /obj/item/trash/mangosteenshell
-	name = "cáscara de mangostán"
+	name = "cascara de mangostan"
 	icon_state = "mangosteen_shell"
 	icon = 'icons/roguetown/items/produce.dmi'
 	baitpenalty = 5

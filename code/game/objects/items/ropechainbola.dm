@@ -71,7 +71,7 @@
 	if(user.aimheight >= 5)
 		if(!C.handcuffed)
 			if(C.num_hands)
-				C.visible_message(span_warning("¡[user] está intentando atar los brazos de [C] con [src.name]!"), \
+				C.visible_message(span_warning("¡[user] esta intentando atar los brazos de [C] con [src.name]!"), \
 									span_danger("[user] is trying to tie my arms with [src.name]!"))
 				if(do_after(user, 6 SECONDS * (surrender_mod), C) && C.num_hands)
 					apply_cuffs(C, user, leg = FALSE)
@@ -87,7 +87,7 @@
 	else
 		if(!C.legcuffed)
 			if(C.num_legs)
-				C.visible_message(span_warning("¡[user] está intentando atar las piernas de [C] con [src.name]!"), \
+				C.visible_message(span_warning("¡[user] esta intentando atar las piernas de [C] con [src.name]!"), \
 									span_danger("[user] is trying to tie my legs with [src.name]!"))
 				if(do_after(user, 6 SECONDS * (C.surrendering ? 0.5 : 1), C) && C.num_legs)
 					apply_cuffs(C, user, leg = TRUE)

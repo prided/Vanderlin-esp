@@ -147,7 +147,7 @@
 
 	target.visible_message(
 		"<font color='yellow'>[target]'s [targeteditem.name] glows brightly, searing their flesh!</font>",
-		"<font color='yellow'>Mi [targeteditem.name] brilla intensamente, ¡quemándome!</font>"
+		"<font color='yellow'>Mi [targeteditem.name] brilla intensamente, ¡quemandome!</font>"
 	)
 
 	target.emote("painscream")

@@ -1,5 +1,5 @@
 /datum/chimeric_node/output/clotting
-	name = "coagulación"
+	name = "coagulacion"
 	desc = "When activated clots and aids in the healing of wounds."
 
 /datum/chimeric_node/output/clotting/trigger_effect(multiplier)

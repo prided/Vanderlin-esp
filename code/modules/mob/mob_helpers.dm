@@ -431,7 +431,7 @@
  * Input the intent as a string such as "help" or use "right"/"left
  */
 /mob/verb/a_intent_change(input as text)
-	set name = "una intención"
+	set name = "una intencion"
 	set hidden = 1
 
 	if(!possible_a_intents || !possible_a_intents.len)
@@ -482,7 +482,7 @@
 		to_chat(src, "[result.Join()]")
 
 /mob/verb/rog_intent_change(numb as num,offhand as num)
-	set name = "cambio de intención"
+	set name = "cambio de intencion"
 	set hidden = 1
 	if(atkswinging)
 		stop_attack()
@@ -909,8 +909,8 @@
 		M.key = C.key
 		return TRUE
 	else
-		to_chat(M, "No había fantasmas dispuestos a tomar el control.")
-		message_admins("Ningún fantasma estaba dispuesto a tomar el control de [ADMIN_LOOKUPFLW(M)])")
+		to_chat(M, "No habia fantasmas dispuestos a tomar el control.")
+		message_admins("Ningun fantasma estaba dispuesto a tomar el control de [ADMIN_LOOKUPFLW(M)])")
 		return FALSE
 
 ///Clicks a random nearby mob with the source from this mob

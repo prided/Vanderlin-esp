@@ -40,7 +40,7 @@
 
 //................ Wooden Staff ............... //
 /obj/item/weapon/polearm/woodstaff
-	name = "bastón de madera"
+	name = "baston de madera"
 	desc = "The ultimate tool of travel for weary wanderers, support your weight or crack the heads that don't support you."
 	icon_state = "woodstaff"
 	force =  DAMAGE_STAFF
@@ -163,7 +163,7 @@
 
 /obj/item/weapon/polearm/spear/steel
 	name = "lanza de acero"
-	desc = "Una lanza con cabeza de acero, más duradera y eficaz que una simple lanza de hierro."
+	desc = "Una lanza con cabeza de acero, mas duradera y eficaz que una simple lanza de hierro."
 	icon_state = "spear_sk"
 	force = DAMAGE_SPEARPLUS + 2
 	force_wielded = DAMAGE_SPEAR_WIELD + 2
@@ -685,7 +685,7 @@
 	item_weight = 2.3 KILOGRAMS
 
 /obj/item/weapon/polearm/halberd/bardiche/captain
-	name = "\proper liberación"
+	name = "\proper liberacion"
 	desc = "A glaive decorated with gold forged for the Captain alongside their armor. To deliver justice with every wide swing."
 	sellprice = 200
 	icon_state = "capglaive"
@@ -706,7 +706,7 @@
 
 //................ Eagle Beak ............... //
 /obj/item/weapon/polearm/eaglebeak
-	name = "pico de águila"
+	name = "pico de aguila"
 	desc = "A reinforced pole affixed with an ornate steel eagle's head, of which it's beak is intended to pierce with great harm."
 	icon_state = "eaglebeak"
 	force = DAMAGE_SPEAR

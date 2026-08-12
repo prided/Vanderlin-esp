@@ -45,7 +45,7 @@ const EDITOR_TUTORIAL_STEPS: TutorialStep[] = [
   },
   {
     title: 'Variables globales',
-    body: 'La banda superior establece los límites de todo el sistema, el rango mínimo/máximo que pueden alcanzar los atributos y habilidades, sus valores predeterminados de respaldo y el modificador de tirada de dados.',
+    body: 'La banda superior establece los limites de todo el sistema, el rango minimo/maximo que pueden alcanzar los atributos y habilidades, sus valores predeterminados de respaldo y el modificador de tirada de dados.',
     highlight: { top: 4, left: 0, width: 100, height: 24 },
     popupAnchor: 'bottom',
   },
@@ -57,12 +57,12 @@ const EDITOR_TUTORIAL_STEPS: TutorialStep[] = [
   },
   {
     title: 'BONUS',
-    body: 'Escribe un número positivo o negativo. Se suma directamente a RAW. Establecer BONUS en -22 resta 22 al valor efectivo. NULL elimina por completo el bono; es un modificador independiente, por lo que no anulará otros efectos.',
+    body: 'Escribe un numero positivo o negativo. Se suma directamente a RAW. Establecer BONUS en -22 resta 22 al valor efectivo. NULL elimina por completo el bono; es un modificador independiente, por lo que no anulara otros efectos.',
     popupAnchor: 'center',
   },
   {
     title: 'RAW',
-    body: 'El valor base permanente almacenado en el personaje. Edítalo para aplicar cambios duraderos. NULL lo restablece al valor predeterminado del sistema.',
+    body: 'El valor base permanente almacenado en el personaje. Editalo para aplicar cambios duraderos. NULL lo restablece al valor predeterminado del sistema.',
     popupAnchor: 'center',
   },
   {
@@ -123,7 +123,7 @@ const EntryRow = (props: {
         verticalAlign: 'bottom',
         borderBottom: '1px solid rgba(90,76,76,0.2)',
       }}>
-        <Tooltip content="Quitar bono administrativo; el valor efectivo será igual a RAW" position="top">
+        <Tooltip content="Quitar bono administrativo; el valor efectivo sera igual a RAW" position="top">
           <Button color="transparent"
             onClick={() => act('null_attribute', { attribute_type: type })}
             style={{ border: `1px solid ${PP.border}`, color: PP.textMuted,
@@ -165,7 +165,7 @@ const EntryRow = (props: {
         verticalAlign: 'bottom',
         borderBottom: '1px solid rgba(90,76,76,0.2)',
       }}>
-        <Tooltip content="Establecer RAW en NULL; se aplicará el valor predeterminado del sistema" position="top">
+        <Tooltip content="Establecer RAW en NULL; se aplicara el valor predeterminado del sistema" position="top">
           <Button color="transparent"
             onClick={() => act('null_raw_attribute', { attribute_type: type })}
             style={{ border: `1px solid ${PP.border}`, color: PP.textMuted,

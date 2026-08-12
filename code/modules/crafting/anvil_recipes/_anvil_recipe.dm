@@ -54,7 +54,7 @@
 
 /datum/anvil_recipe/proc/can_advance(mob/user)
 	if(progress == 100)
-		to_chat(user, span_info("Está listo."))
+		to_chat(user, span_info("Esta listo."))
 		return FALSE
 
 	if(needed_item)
@@ -103,7 +103,7 @@
 			user.balloon_alert(user, "añadir \a [needed_item.name]!")
 			progress = 0
 		else
-			to_chat(user, span_info("Está listo."))
+			to_chat(user, span_info("Esta listo."))
 
 	return TRUE
 

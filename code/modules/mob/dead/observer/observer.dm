@@ -380,14 +380,14 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, "<span class='warning'>I cannot re-enter my body.</span>")
 		return
 	if(istype(src, /mob/dead/observer/profane))
-		to_chat(src, "<span class='warning'>¡Mi espíritu ha sido arrebatado por Graggar!</span>")
+		to_chat(src, "<span class='warning'>¡Mi espiritu ha sido arrebatado por Graggar!</span>")
 		return
 	if(is_antag_banned(ckey, ROLE_ZOMBIE))
 		if(IS_DEADITE(src))
 			to_chat(src, span_warning("I am banned from playing deadites."))
 			return
 	if(mind.current.key && copytext(mind.current.key,1,2)!="@")	//makes sure we don't accidentally kick any clients
-		to_chat(usr, "<span class='warning'>Otra conciencia está en tu cuerpo... te está resistiendo.</span>")
+		to_chat(usr, "<span class='warning'>Otra conciencia esta en tu cuerpo... te esta resistiendo.</span>")
 		return
 
 	remove_client_colour(/datum/client_colour/monochrome)
@@ -451,7 +451,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(usr, "<span class='warning'>You're already stuck out of your body!</span>")
 		return FALSE
 
-	var/response = tgui_alert(src, "Are you sure you want to prevent (almost) all means of resuscitation? This cannot be undone. ","Are you sure you want to stay dead?", list("DNR","Sálvame"))
+	var/response = tgui_alert(src, "Are you sure you want to prevent (almost) all means of resuscitation? This cannot be undone. ","Are you sure you want to stay dead?", list("DNR","Salvame"))
 	if(response != "DNR")
 		return
 
@@ -537,7 +537,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set hidden = 1
 
 	if(!isobserver(src))
-		to_chat(src, span_warning("¡No cuando no estás muerto!"))
+		to_chat(src, span_warning("¡No cuando no estas muerto!"))
 		return
 
 	var/area/thearea  = browser_input_list(src, "Area to jump to", "Where?", GLOB.areas)
@@ -550,7 +550,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		L += T
 
 	if(!length(L))
-		to_chat(src, span_warning("¡No hay ubicación disponible!"))
+		to_chat(src, span_warning("¡No hay ubicacion disponible!"))
 		return
 
 	forceMove(pick(L))
@@ -693,7 +693,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/dead/observer/verb/change_view_range()
 	set category = "Spirit"
 	set name = "Ver rango"
-	set desc = "Cambia tu rango de visión."
+	set desc = "Cambia tu rango de vision."
 
 	var/max_view = GHOST_MAX_VIEW_RANGE
 	if(client.view_size.getView() == client.view_size.default)
@@ -791,7 +791,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 	var/bt = world.time
 	SEND_SOUND(src, sound('sound/misc/notice (2).ogg'))
-	if(tgui_alert(src, "You have been summoned to destroy Vanderlin!", "Únete a la Horda", list("Yes", "No")) == "Yes")
+	if(tgui_alert(src, "You have been summoned to destroy Vanderlin!", "Unete a la Horda", list("Yes", "No")) == "Yes")
 		if(world.time > bt + 5 MINUTES)
 			to_chat(src, "<span class='warning'>Too late.</span>")
 			return FALSE

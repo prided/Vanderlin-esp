@@ -5,7 +5,7 @@
 	duration = 5 SECONDS
 
 /datum/quirk/vice/bad_sight
-	name = "Mala visión"
+	name = "Mala vision"
 	desc = "I need spectacles to see normally from my years spent reading books."
 	point_value = 2
 
@@ -32,7 +32,7 @@
 		user.apply_status_effect(/datum/status_effect/debuff/badvision)
 
 /datum/quirk/vice/cyclops_right
-	name = "Cíclope (R)"
+	name = "Ciclope (R)"
 	desc = "I lost my right eye long ago. But it made me great at noticing things."
 	point_value = 2
 	traits_to_add = list(TRAIT_CYCLOPS_RIGHT)
@@ -46,7 +46,7 @@
 	return ..()
 
 /datum/quirk/vice/cyclops_left
-	name = "Cíclope (L)"
+	name = "Ciclope (L)"
 	desc = "I lost my left eye long ago. But it made me great at noticing things."
 	point_value = 2
 	traits_to_add = list(TRAIT_CYCLOPS_LEFT)
@@ -83,7 +83,7 @@
 
 /datum/quirk/vice/wooden_arm_right
 	name = "Wooden Arm (R)"
-	desc = "Perdí mi brazo derecho hace mucho tiempo, pero el brazo de madera no sangra tanto."
+	desc = "Perdi mi brazo derecho hace mucho tiempo, pero el brazo de madera no sangra tanto."
 	point_value = 3
 
 /datum/quirk/vice/wooden_arm_right/on_spawn()
@@ -240,7 +240,7 @@
 
 /datum/quirk/vice/rough_start
 	name = "Rough Start"
-	desc = "Comienzas tu viaje borracho, drogado, golpeado, con las piernas rotas y apareces en algún lugar aleatorio del bosque."
+	desc = "Comienzas tu viaje borracho, drogado, golpeado, con las piernas rotas y apareces en algun lugar aleatorio del bosque."
 	point_value = 4
 	apply_order = 10000 ///this should always be first tbh
 	incompatible_quirks = list(
@@ -313,7 +313,7 @@
 	if(length(vagrant_spawns))
 		H.forceMove(pick(vagrant_spawns))
 
-	to_chat(H, span_warning("¿Dónde dejé mis llaves?"))
+	to_chat(H, span_warning("¿Donde deje mis llaves?"))
 	return ..()
 
 /datum/quirk/vice/lost_keys/after_job_spawn(datum/job/job)
@@ -387,7 +387,7 @@
 
 /datum/quirk/vice/fear_darkness
 	name = "Miedo a la oscuridad"
-	desc = "La oscuridad te aterroriza. Sin luz, entras en pánico y pierdes el control."
+	desc = "La oscuridad te aterroriza. Sin luz, entras en panico y pierdes el control."
 	point_value = 3
 	var/in_darkness = FALSE
 	var/next_panic = 0
@@ -477,7 +477,7 @@
 	)
 
 /datum/quirk/vice/frail
-	name = "Frágil"
+	name = "Fragil"
 	desc = "Due injury, genetics or just any other reason, you are frailer than other people. You get -1 to Constitution and -1 to Strength."
 	point_value = 1
 

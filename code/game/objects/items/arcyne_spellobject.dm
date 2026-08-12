@@ -187,7 +187,7 @@
 				active = FALSE
 			user.visible_message(
 				span_warning("[user]'s [name] dims — all spells exhausted."),
-				span_warning("El [name] ahora está vacío.")
+				span_warning("El [name] ahora esta vacio.")
 			)
 			if(spellobject_flags & SPELLOBJECT_CONSUMABLE)
 				qdel(src)
@@ -251,7 +251,7 @@
 
 /obj/item/arcyne_spellobject/proc/imbue_spell(mob/caster, datum/action/cooldown/spell/spell_type_path, spell_tier, charges = 1)
 	if(length(stored_spells) >= max_spells)
-		to_chat(caster, span_hierophant_warning("El [name] ya está lleno ([max_spells] hechizos)."))
+		to_chat(caster, span_hierophant_warning("El [name] ya esta lleno ([max_spells] hechizos)."))
 		return FALSE
 	if(spell_tier < min_spell_tier || spell_tier > max_spell_tier)
 		to_chat(caster, span_hierophant_warning("Este objeto no puede contener un hechizo de ese nivel."))

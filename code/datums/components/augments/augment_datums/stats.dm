@@ -18,7 +18,7 @@
 
 /datum/augment/stats/get_examine_info()
 	var/list/info = list()
-	info += span_info("Cambios de estadísticas:")
+	info += span_info("Cambios de estadisticas:")
 	for(var/stat in stat_changes)
 		var/change = stat_changes[stat]
 		info += span_info("  [stat]: [change > 0 ? "+" : ""][change]")
@@ -33,8 +33,8 @@
 	installation_time = 15 SECONDS
 
 /datum/augment/stats/perception_lens
-	name = "matriz óptica mejorada"
-	desc = "Mejora la agudeza visual y la adquisición de objetivos."
+	name = "matriz optica mejorada"
+	desc = "Mejora la agudeza visual y la adquisicion de objetivos."
 	stability_cost = -10
 	stat_changes = list(STAT_PERCEPTION = 2)
 	engineering_difficulty = SKILL_RANK_APPRENTICE
@@ -42,7 +42,7 @@
 
 /datum/augment/stats/processing_core
 	name = "overclocked logic engine"
-	desc = "Aumenta la velocidad de procesamiento y la capacidad analítica, forzando la matriz central."
+	desc = "Aumenta la velocidad de procesamiento y la capacidad analitica, forzando la matriz central."
 	stability_cost = -12
 	stat_changes = list(STAT_INTELLIGENCE = 3)
 	engineering_difficulty = SKILL_RANK_EXPERT
@@ -57,7 +57,7 @@
 	installation_time = 15 SECONDS
 
 /datum/augment/stats/pressure_tank
-	name = "tanque de presión de capacidad extendida"
+	name = "tanque de presion de capacidad extendida"
 	desc = "Allows for longer operational periods without rest."
 	stability_cost = -10
 	stat_changes = list(STAT_ENDURANCE = 2)
@@ -104,14 +104,14 @@
 
 /datum/augment/stats/lightweight_frame
 	name = "chasis ligero"
-	desc = "Reduce la integridad estructural para una mejor eficiencia energética."
+	desc = "Reduce la integridad estructural para una mejor eficiencia energetica."
 	stability_cost = 10
 	stat_changes = list(STAT_CONSTITUTION = -1)
 	engineering_difficulty = SKILL_RANK_NOVICE
 	installation_time = 8 SECONDS
 
 /datum/augment/stats/efficiency_mode
-	name = "modo de conservación de energía"
+	name = "modo de conservacion de energia"
 	desc = "Reduce la capacidad operativa para mejorar la estabilidad."
 	stability_cost = 8
 	stat_changes = list(STAT_ENDURANCE = -1)
@@ -128,15 +128,15 @@
 
 /datum/augment/stats/balanced_matrix
 	name = "matriz estabilizadora"
-	desc = "Un aumento cuidadosamente equilibrado que mejora múltiples atributos."
+	desc = "Un aumento cuidadosamente equilibrado que mejora multiples atributos."
 	stability_cost = -5
 	stat_changes = list(STAT_STRENGTH = 1, STAT_CONSTITUTION = 1)
 	engineering_difficulty = SKILL_RANK_EXPERT
 	installation_time = 20 SECONDS
 
 /datum/augment/stats/core_stabilizer
-	name = "matriz de estabilización central"
-	desc = "Mejora drásticamente la estabilidad del núcleo sin afectar el rendimiento."
+	name = "matriz de estabilizacion central"
+	desc = "Mejora drasticamente la estabilidad del nucleo sin afectar el rendimiento."
 	stability_cost = 25
 	stat_changes = list()
 	engineering_difficulty = SKILL_RANK_MASTER

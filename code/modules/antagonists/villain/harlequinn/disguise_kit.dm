@@ -80,7 +80,7 @@
 
 /obj/item/harlequin_disguise_kit/attack_self(mob/user, list/modifiers)
 	if(!ishuman(user))
-		to_chat(user, span_warning("No sabes cómo usar esto."))
+		to_chat(user, span_warning("No sabes como usar esto."))
 		return
 
 	if(user.GetComponent(/datum/component/disguise))
@@ -162,7 +162,7 @@
 		return
 
 	user.AddComponent(/datum/component/disguise, target)
-	to_chat(user, span_notice("Tu disfraz es convincente y debería engañar a la mayoría de los observadores."))
+	to_chat(user, span_notice("Tu disfraz es convincente y deberia engañar a la mayoria de los observadores."))
 
 /obj/item/harlequin_disguise_kit/proc/remove_disguise(mob/living/carbon/human/user)
 	if(!user.GetComponent(/datum/component/disguise))

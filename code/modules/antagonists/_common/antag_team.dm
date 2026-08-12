@@ -51,7 +51,7 @@ GLOBAL_LIST_EMPTY(antagonist_teams)
 	report += printplayerlist(members)
 
 	if(length(objectives))
-		report += span_header("Tenían los siguientes objetivos:")
+		report += span_header("Tenian los siguientes objetivos:")
 		var/win = TRUE
 		var/objective_count = 0
 		var/triumph_count = 0
@@ -70,7 +70,7 @@ GLOBAL_LIST_EMPTY(antagonist_teams)
 			result_sound = 'sound/misc/triumph.ogg'
 			roundend_success()
 		else
-			report += span_redtext("\The [name] ¡FALLÓ!")
+			report += span_redtext("\The [name] ¡FALLO!")
 			result_sound = 'sound/misc/fail.ogg'
 			roundend_failure()
 			triumph_count = 0

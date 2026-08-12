@@ -17,7 +17,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	if(GLOB.active_chimeric_surgeries?[src])
 		var/datum/chimeric_surgery_state/surgery = GLOB.active_chimeric_surgeries[src]
 		if(surgery.surgeon)
-			to_chat(surgery.surgeon, span_warning("¡La cirugía fue interrumpida!"))
+			to_chat(surgery.surgeon, span_warning("¡La cirugia fue interrumpida!"))
 		GLOB.active_chimeric_surgeries -= src
 		qdel(surgery)
 	return ..()
@@ -30,7 +30,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 		if(length(stored_node.forbidden_organ_slots))
 			. += span_warning("Este nodo no se puede instalar en: [english_list(stored_node.forbidden_organ_slots)]")
 		if(!length(stored_node.allowed_organ_slots) && !length(stored_node.forbidden_organ_slots))
-			. += span_blue("Este nodo es compatible con cualquier órgano.")
+			. += span_blue("Este nodo es compatible con cualquier organo.")
 		if(length(stored_node.compatible_blood_types) || length(stored_node.preferred_blood_types))
 			. += span_notice("This node can use these blood types:")
 			for(var/datum/blood_type/blood_type as anything in stored_node.preferred_blood_types)
@@ -104,7 +104,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 			surgery_step_seal(user)
 		return ITEM_INTERACT_SUCCESS
 
-	to_chat(user, span_warning("Esa herramienta no es útil en esta etapa de la cirugía."))
+	to_chat(user, span_warning("Esa herramienta no es util en esta etapa de la cirugia."))
 	return ITEM_INTERACT_BLOCKING
 
 /obj/item/chimeric_node/proc/start_node_surgery(mob/user)
@@ -210,7 +210,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	qdel(surgery)
 
 	user.visible_message(
-		span_notice("[user] completa la modificación de \the [src]."),
+		span_notice("[user] completa la modificacion de \the [src]."),
 		span_notice("You successfully transform the [old_name] into a [stored_node.name], preserving its essence!")
 	)
 

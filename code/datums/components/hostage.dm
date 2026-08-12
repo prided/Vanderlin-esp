@@ -36,7 +36,7 @@
 
 /atom/movable/screen/alert/status_effect/heldup
 	name = "Held Up"
-	desc = "¡Hacer cualquier movimiento repentino probablemente sería una mala idea!"
+	desc = "¡Hacer cualquier movimiento repentino probablemente seria una mala idea!"
 	icon_state = "aimed"
 
 /datum/component/hostage
@@ -69,7 +69,7 @@
 	captor.visible_message(span_danger("[captor] takes [target] hostage with [weapon]!"), \
 		span_danger("You take [target] hostage with [weapon]."), ignored_mobs = target, \
 		vision_distance = COMBAT_MESSAGE_RANGE)
-	to_chat(target, span_userdanger("¡[captor] te toma como rehén con [weapon]!"))
+	to_chat(target, span_userdanger("¡[captor] te toma como rehen con [weapon]!"))
 
 	captor.apply_status_effect(/datum/status_effect/holdup)
 	target.apply_status_effect(/datum/status_effect/grouped/heldup, REF(captor))

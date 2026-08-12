@@ -17,7 +17,7 @@
 	traits_to_add = list(TRAIT_LIGHT_STEP)
 
 /datum/quirk/boon/quick_learner
-	name = "Aprendizaje rápido"
+	name = "Aprendizaje rapido"
 	desc = "You pick up new skills faster than most. Your mind is sharp and eager to learn."
 	point_value = -5
 
@@ -29,7 +29,7 @@
 
 /datum/quirk/boon/composed
 	name = "Compuesto"
-	desc = "Manejas el estrés mejor que la mayoría. La presión no te afecta tan fácilmente."
+	desc = "Manejas el estres mejor que la mayoria. La presion no te afecta tan facilmente."
 	point_value = -3
 
 /datum/quirk/boon/composed/on_life(mob/living/user)
@@ -144,8 +144,8 @@
 	return ..()
 
 /datum/quirk/boon/folk_hero
-	name = "Héroe popular"
-	desc = "Eres una leyenda local que salvó a tu comunidad de un gran peligro. La gente te reconoce, incluso como extranjero."
+	name = "Heroe popular"
+	desc = "Eres una leyenda local que salvo a tu comunidad de un gran peligro. La gente te reconoce, incluso como extranjero."
 	point_value = -10
 	blocked_ages = list(
 		AGE_CHILD,
@@ -171,7 +171,7 @@
 		examiner.mind.learn_target_identity(source_mob.mind, source_mob.real_name)
 
 /datum/quirk/boon/quick_hands
-	name = "Manos rápidas"
+	name = "Manos rapidas"
 	desc = "You have great hand-eye coordination and know how to move your fingers fast. All crafts are 10% faster."
 	point_value = -4
 	traits_to_add = list(TRAIT_QUICK_HANDS)

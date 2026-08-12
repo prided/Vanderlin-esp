@@ -374,7 +374,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 		selecting_recipe = FALSE
 		return
 
-	var/choice = input(user,"¿Qué cerveza quieres hacer?", name) as null|anything in options
+	var/choice = input(user,"¿Que cerveza quieres hacer?", name) as null|anything in options
 
 	selecting_recipe = FALSE
 	if(!choice)
@@ -525,7 +525,7 @@ GLOBAL_LIST_EMPTY(custom_fermentation_recipes)
 
 	if(brewing)
 		if(user)
-			to_chat(user, span_notice("¡Este barril ya está preparando una mezcla!"))
+			to_chat(user, span_notice("¡Este barril ya esta preparando una mezcla!"))
 		return FALSE
 
 	var/ready = TRUE

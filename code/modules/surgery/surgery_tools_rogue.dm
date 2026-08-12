@@ -1,5 +1,5 @@
 /obj/item/weapon/surgery
-	name = "herramienta quirúrgica"
+	name = "herramienta quirurgica"
 	desc = "Something that will tear your guts apart."
 	icon = 'icons/roguetown/items/surgery.dmi'
 	item_state = "bone_dagger"
@@ -296,7 +296,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(target.reagents.holder_full())
-		to_chat(user, span_notice("[target] está lleno."))
+		to_chat(user, span_notice("[target] esta lleno."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(isliving(target))
@@ -335,7 +335,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(reagents.holder_full())
-		to_chat(user, span_notice("[src] está lleno."))
+		to_chat(user, span_notice("[src] esta lleno."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(isliving(target))
@@ -343,7 +343,7 @@
 		var/drawn_amount = reagents.maximum_volume - reagents.total_volume
 		if(target != user)
 			target.visible_message(
-				span_danger("¡[user] está intentando tomar una muestra de sangre de [target]!"),
+				span_danger("¡[user] esta intentando tomar una muestra de sangre de [target]!"),
 				span_userdanger("[user] is trying to take a blood sample from you!"),
 			)
 			if(!do_after(user, 4 SECONDS, target, extra_checks = CALLBACK(src, PROC_REF(try_syringe), living_target, user)))
@@ -357,7 +357,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 	if(!target.reagents.total_volume)
-		to_chat(user, span_warning("¡[target] está vacío!"))
+		to_chat(user, span_warning("¡[target] esta vacio!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!target.is_drawable(user))

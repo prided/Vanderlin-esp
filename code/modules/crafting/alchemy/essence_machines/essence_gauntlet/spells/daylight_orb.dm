@@ -12,7 +12,7 @@
 	orb.set_light(5, 5, 2, l_color = "#FFFFAA")
 
 /obj/effect/temp_visual/daylight_orb
-	name = "orbe de luz del día"
+	name = "orbe de luz del dia"
 	desc = "A brilliant orb of magical daylight."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "impact_laser"

@@ -7,7 +7,7 @@ import { capitalize } from 'tgui-core/string';
 export const DetailSurgery = ({ r, lookup, pickerMap, allRecipes, essenceIndex, nav }: NavProps) => {
   return (
     <>
-      {!!r.heretical && <WarnFlag color="#cc3333">INVESTIGACIÓN HERÉTICA</WarnFlag>}
+      {!!r.heretical && <WarnFlag color="#cc3333">INVESTIGACION HERETICA</WarnFlag>}
       {r.desc && <Box className="RecipeBook__desc" dangerouslySetInnerHTML={{ __html: r.desc }} />}
       <SectionHead>Procedimiento</SectionHead>
       <Box className="RecipeBook__surgery-step">
@@ -16,7 +16,7 @@ export const DetailSurgery = ({ r, lookup, pickerMap, allRecipes, essenceIndex, 
             <strong>Herramientas:</strong>
             {r.implements!.map((t, ti) => (
               <Box key={ti} className="RecipeBook__step-row">
-                <RecipeLink name={t.name.replace("_", " ")} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} /> {t.modifier}x tiempo de operación
+                <RecipeLink name={t.name.replace("_", " ")} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} /> {t.modifier}x tiempo de operacion
               </Box>
             ))}
           </Box>
@@ -25,7 +25,7 @@ export const DetailSurgery = ({ r, lookup, pickerMap, allRecipes, essenceIndex, 
           <Box className="RecipeBook__step-block">
             <strong>Habilidad {r.skill_name}:</strong>
             <Box>
-              Mínimo: <span dangerouslySetInnerHTML={{ __html: r.min_skill || 'None' }} /> / Óptimo: <span dangerouslySetInnerHTML={{ __html: r.median_skill || 'None' }} />
+              Minimo: <span dangerouslySetInnerHTML={{ __html: r.min_skill || 'None' }} /> / Optimo: <span dangerouslySetInnerHTML={{ __html: r.median_skill || 'None' }} />
             </Box>
           </Box>
         )}

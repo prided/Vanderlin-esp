@@ -6,7 +6,7 @@
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
 
-	invocation = "¡La presa no escapará!"
+	invocation = "¡La presa no escapara!"
 	invocation_type = INVOCATION_WHISPER
 
 	charge_time = 4 SECONDS

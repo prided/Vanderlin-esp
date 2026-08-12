@@ -1,7 +1,7 @@
 
 
 /client/verb/redeem_code()
-	set name = "Canjear código"
+	set name = "Canjear codigo"
 	set category = "Enlaces OOC"
 	set desc = "Redeem a code given to you."
 	var/code = browser_input_text(usr, "Please enter the code", "Code Redemption")
@@ -31,7 +31,7 @@
 
 		// Check expiry
 		if(metadata["expiry"] && world.time > metadata["expiry"])
-			tgui_alert(usr, "Lo sentimos, este código ha caducado.", "Code Redemption", list("Close"))
+			tgui_alert(usr, "Lo sentimos, este codigo ha caducado.", "Code Redemption", list("Close"))
 			remove_code(code) // Clean up expired code
 			return
 

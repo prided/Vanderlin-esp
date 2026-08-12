@@ -351,7 +351,7 @@ SUBSYSTEM_DEF(merchant)
 		return FALSE
 	if(chosen_faction == active_faction)
 		if(user)
-			to_chat(user, "<span class='warning'>[chosen_faction.faction_name] ya es la facción comercial activa.</span>")
+			to_chat(user, "<span class='warning'>[chosen_faction.faction_name] ya es la faccion comercial activa.</span>")
 		return FALSE
 	set_active_faction(chosen_faction, manual = TRUE)
 	if(user)

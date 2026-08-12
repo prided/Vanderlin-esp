@@ -71,7 +71,7 @@
 
 /datum/thaumaturgical_essence
 	var/name = "essence"
-	var/desc = "Una esencia mágica concentrada."
+	var/desc = "Una esencia magica concentrada."
 	var/tier = 0 // 0 = Basic, 1 = First Compound, 2 = Second Compound
 	var/color = "#FFFFFF"
 	var/icon_state = "essence_basic"
@@ -113,7 +113,7 @@
 
 /datum/thaumaturgical_essence/order
 	name = "Esencia del orden"
-	desc = "La esencia de la estructura y la armonía."
+	desc = "La esencia de la estructura y la armonia."
 	color = "#FFD700"
 	smells_like = "pureza y estancamiento"
 
@@ -138,7 +138,7 @@
 
 /datum/thaumaturgical_essence/light
 	name = "Esencia de luz"
-	desc = "La esencia de la iluminación."
+	desc = "La esencia de la iluminacion."
 	tier = 1
 	smells_like = "warm embrace"
 	attunement = /datum/attunement/light
@@ -153,22 +153,22 @@
 
 /datum/thaumaturgical_essence/cycle
 	name = "Cycle Essence"
-	desc = "La esencia de la renovación y el tiempo."
+	desc = "La esencia de la renovacion y el tiempo."
 	tier = 1
 	color = "#20B2AA"
 	smells_like = "changing seasons"
 
 /datum/thaumaturgical_essence/energia
-	name = "Esencia de energía"
-	desc = "La esencia de la energía cruda."
+	name = "Esencia de energia"
+	desc = "La esencia de la energia cruda."
 	tier = 1
 	color = "#FF1493"
 	smells_like = "crackling energy"
 	attunement = /datum/attunement/electric
 
 /datum/thaumaturgical_essence/void
-	name = "Esencia del Vacío"
-	desc = "La esencia del vacío."
+	name = "Esencia del Vacio"
+	desc = "La esencia del vacio."
 	tier = 1
 	color = "#2F2F2F"
 	smells_like = "el abismo"
@@ -179,7 +179,7 @@
 	desc = "La esencia de la toxicidad."
 	tier = 1
 	color = "#9ACD32"
-	smells_like = "humos tóxicos"
+	smells_like = "humos toxicos"
 	attunement = /datum/attunement/dark
 
 /datum/thaumaturgical_essence/life
@@ -202,7 +202,7 @@
 // =============================================================================
 
 /datum/thaumaturgical_essence/magic
-	name = "Esencia mágica"
+	name = "Esencia magica"
 	desc = "The essence of pure arcynic power."
 	tier = 2
 	color = "#9370DB"

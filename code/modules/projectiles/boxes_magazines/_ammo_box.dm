@@ -194,7 +194,7 @@
 			icon_state = "[initial(icon_state)]-[shells_left ? "[max_ammo]" : "0"]"
 
 /obj/item/ammo_box/magazine
-	name = "Una revista (¿qué?)"
+	name = "Una revista (¿que?)"
 	desc = "A magazine of rounds, they look like error signs... this should probably be reported somewhere."
 	abstract_type = /obj/item/ammo_box/magazine
 

@@ -4,7 +4,7 @@
 	button_icon_state = "bush_jaunt"
 	jaunt_type = /obj/effect/dummy/bush_disguise
 	sound = 'sound/magic/fleshtostone.ogg'
-	invocation = "Padre Árbol, oculta mi forma."
+	invocation = "Padre Arbol, oculta mi forma."
 	invocation_type = INVOCATION_WHISPER
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY

@@ -130,7 +130,7 @@ const ActiveQuestsPanel = (props: {
                   <Button
                     icon="undo"
                     color="bad"
-                    tooltip="Recuerda este pergamino: la misión vuelve al tablón de anuncios"
+                    tooltip="Recuerda este pergamino: la mision vuelve al tablon de anuncios"
                     onClick={() => onRevoke(q.ref)}
                   >
                     Recordar
@@ -152,7 +152,7 @@ const ActiveQuestsPanel = (props: {
                 <Stack.Item>
                   <Box>
                     <Box as="span" color="label">
-                      Región:{' '}
+                      Region:{' '}
                     </Box>
                     {q.region}
                   </Box>
@@ -206,7 +206,7 @@ const ValidatePanel = (props: {
   if (!customQuests.length) {
     return (
       <Box color="label" italic>
-        No hay misiones personalizadas pendientes de validación.
+        No hay misiones personalizadas pendientes de validacion.
       </Box>
     );
   }
@@ -298,7 +298,7 @@ export const QuestCounter = () => {
           </Stack>
         </Section>
 
-        <Section title="Presentación de contrato">
+        <Section title="Presentacion de contrato">
           <Stack>
             <Stack.Item grow>
               <Button
@@ -307,7 +307,7 @@ export const QuestCounter = () => {
                 color="good"
                 onClick={() => act('turnin')}
               >
-                Entregar misión
+                Entregar mision
               </Button>
             </Stack.Item>
             <Stack.Item grow>
@@ -317,12 +317,12 @@ export const QuestCounter = () => {
                 color="bad"
                 onClick={() => act('abandon')}
               >
-                Abandonar la misión
+                Abandonar la mision
               </Button>
             </Stack.Item>
           </Stack>
           <Box color="label" italic fontSize="0.85em" mt={1}>
-            Sostenga su pergamino en la mano o colóquelo en el área marcada frente al mostrador.
+            Sostenga su pergamino en la mano o coloquelo en el area marcada frente al mostrador.
           </Box>
         </Section>
 
@@ -337,7 +337,7 @@ export const QuestCounter = () => {
                     color="average"
                     onClick={() => act('deposit_fund')}
                   >
-                    Depósito ({steward_balance}m)
+                    Deposito ({steward_balance}m)
                   </Button>
                 </Stack.Item>
                 <Stack.Item>
@@ -346,7 +346,7 @@ export const QuestCounter = () => {
                     color="good"
                     onClick={() => act('issue_custom')}
                   >
-                    Emitir misión
+                    Emitir mision
                   </Button>
                 </Stack.Item>
               </Stack>

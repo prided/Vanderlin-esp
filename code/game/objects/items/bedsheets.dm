@@ -34,7 +34,7 @@ LINEN BINS
 /obj/item/bedsheet/examine(mob/user)
 	. = ..()
 	if(bed_tucked)
-		. += span_info("[src] está metido en la cama.")
+		. += span_info("[src] esta metido en la cama.")
 
 /obj/item/bedsheet/interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!isliving(interacting_with))

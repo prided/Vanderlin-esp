@@ -122,7 +122,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	to_chat(user, span_notice("A corrupted heart. When used on a non-enlightened mortal their heart shall ache and they will be immobilized and too stunned to speak. Perfect for getting new soon-to-be enlightened. Now, just don't use it at the combat ready."))
 
 /obj/item/corruptedheart
-	name = "corazón corrupto"
+	name = "corazon corrupto"
 	desc = "It sparkles with forbidden magic energy. It makes all the heart aches go away."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "heart-on"
@@ -134,7 +134,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 
 	if(istype(target.patron, /datum/patron/inhumen/zizo) && CAN_HAVE_BLOOD(target) && target.get_blood_volume() < BLOOD_VOLUME_NORMAL)
 		target.set_blood_volume(BLOOD_VOLUME_NORMAL)
-		to_chat(target, span_notice("Mi elixir de vida está estancado una vez más."))
+		to_chat(target, span_notice("Mi elixir de vida esta estancado una vez mas."))
 		qdel(src)
 		return
 
@@ -225,8 +225,8 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	to_chat(user, span_notice("The Criminal's Tool. Could be useful for hiding tracks or getting rid of sigils."))
 
 /obj/item/soap/cult
-	name = "jabón maldito"
-	desc = "Está pulsando."
+	name = "jabon maldito"
+	desc = "Esta pulsando."
 	clean_speed = 1
 	clean_effectiveness = 100
 	clean_strength = CLEAN_ALL
@@ -389,7 +389,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	if(!target)
 		return
 	ADD_TRAIT(target, TRAIT_ZJUMP, TRAIT_GENERIC)
-	to_chat(target, span_notice("Siento que mis piernas se han vuelto más fuertes."))
+	to_chat(target, span_notice("Siento que mis piernas se han vuelto mas fuertes."))
 
 
 /datum/ritual/fleshcrafting/fleshmend
@@ -544,7 +544,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	target.add_spell(/datum/action/cooldown/spell/undirected/regenerate)
 
 /datum/ritual/fleshcrafting/fleshform
-	name = "Forma más fuerte"
+	name = "Forma mas fuerte"
 	center_requirement = /mob/living/carbon/human
 
 	w_req = /obj/item/organ/guts
@@ -561,7 +561,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 		to_chat(target, span_danger("I'm not letting my strongest follower become a mindless brute."))
 		return
 	if(!target.mind)
-		to_chat(target, span_warning("Una bestia sin sentido no servirá a nuestra causa."))
+		to_chat(target, span_warning("Una bestia sin sentido no servira a nuestra causa."))
 		return
 	to_chat(target, span_warning("SOON I WILL BECOME A HIGHER FORM!"))
 	addtimer(CALLBACK(src, PROC_REF(flesh_convert), target, center), 5 SECONDS)
@@ -642,7 +642,7 @@ GLOBAL_LIST_INIT(ritualslist, build_zizo_rituals())
 	var/mob/living/trl = new /mob/living/simple_animal/hostile/retaliate/blood/ascended(center)
 	cultist.mind?.transfer_to(trl)
 	cultist.gib()
-	priority_announce("El cielo se oscurece, un día oscuro para Psydonia.", "Ascensión", 'sound/misc/gods/astrata_omen.ogg')
+	priority_announce("El cielo se oscurece, un dia oscuro para Psydonia.", "Ascension", 'sound/misc/gods/astrata_omen.ogg')
 	for(var/mob/living/carbon/human/V in GLOB.human_list)
 		if(V.mind in SSmapping.retainer.cultists)
 			V.add_stress(/datum/stress_event/lovezizo)

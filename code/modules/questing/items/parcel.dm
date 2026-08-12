@@ -114,7 +114,7 @@
 	if(!ispath(delivery_area, /area))
 		return
 
-	. += span_info("Este paquete está dirigido a [initial(delivery_area.name)].")
+	. += span_info("Este paquete esta dirigido a [initial(delivery_area.name)].")
 	. += (user.job_type in allowed_jobs) ? \
 		span_notice("As [user.job], you're authorized to open this.") : \
 		span_warning("It's sealed with an official guild mark - only authorized personnel should open this!")

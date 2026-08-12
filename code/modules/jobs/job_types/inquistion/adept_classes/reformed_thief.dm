@@ -48,7 +48,7 @@
 	GLOB.inquisition.add_member_to_school(spawned, "Order of the Venatari", -10, "Reformed Thief")
 
 /datum/outfit/adept/rthief
-	name = "Ladrón reformado (Adepto)"
+	name = "Ladron reformado (Adepto)"
 	belt = /obj/item/storage/belt/leather
 	armor = /obj/item/clothing/armor/leather/splint
 	head = /obj/item/clothing/head/roguehood/leather

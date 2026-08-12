@@ -4,8 +4,8 @@
 
 	new_role = "Garrison Recruit"
 	recruitment_faction = "Garrison"
-	recruitment_message = "¡Únete a la guarnición, %RECRUIT!"
-	accept_message = "¡Juro lealtad a la Corona y su guarnición!"
+	recruitment_message = "¡Unete a la guarnicion, %RECRUIT!"
+	accept_message = "¡Juro lealtad a la Corona y su guarnicion!"
 
 /datum/action/cooldown/spell/undirected/list_target/convert_role/guard/on_conversion(mob/living/cast_on)
 	. = ..()

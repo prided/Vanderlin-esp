@@ -1,6 +1,6 @@
 /datum/chimeric_node/input/stress
 	name = "estresado"
-	desc = "Se activa cuando estás estresado."
+	desc = "Se activa cuando estas estresado."
 	var/stress_needed = 1
 
 /datum/chimeric_node/input/stress/register_triggers(mob/living/carbon/target)

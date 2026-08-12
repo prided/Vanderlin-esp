@@ -61,7 +61,7 @@
 		return
 
 	if(cast_on.stat == DEAD)
-		to_chat(owner, span_warning("[cast_on] está muerto y no puede ser esclavizado."))
+		to_chat(owner, span_warning("[cast_on] esta muerto y no puede ser esclavizado."))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
@@ -75,7 +75,7 @@
 	var/mob/living/carbon/human/vampire = owner
 
 	to_chat(vampire, span_warning("You begin weaving dark magic around [cast_on.name]'s mind..."))
-	to_chat(cast_on, span_userdanger("¡Sientes una abrumadora presencia vampírica invadiendo tus pensamientos!"))
+	to_chat(cast_on, span_userdanger("¡Sientes una abrumadora presencia vampirica invadiendo tus pensamientos!"))
 
 	vampire.visible_message(
 		span_warning("[vampire] extends their hand toward [cast_on], dark energy swirling around them both."),
@@ -110,11 +110,11 @@
 		return FALSE
 
 	if(get_dist(owner, target) > cast_range)
-		to_chat(owner, span_warning("¡Tu objetivo se alejó demasiado durante el ritual!"))
+		to_chat(owner, span_warning("¡Tu objetivo se alejo demasiado durante el ritual!"))
 		return FALSE
 
 	if(target.clan)
-		to_chat(owner, span_warning("¡Tu objetivo se unió a un clan durante el ritual!"))
+		to_chat(owner, span_warning("¡Tu objetivo se unio a un clan durante el ritual!"))
 		return FALSE
 
 	return TRUE

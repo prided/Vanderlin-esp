@@ -1,5 +1,5 @@
 /obj/effect/landmark/ship_marker
-	name = "marcador de área de barco"
+	name = "marcador de area de barco"
 	desc = "Marks the bottom-left corner of a ship area. Click to dock/undock."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "x2"

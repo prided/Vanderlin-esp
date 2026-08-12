@@ -58,7 +58,7 @@
 
 /datum/action/item_action/organ_action/use/harpy_sing
 	name = "Harpy's song"
-	desc = "Proyecta tu voz a través de la canción."
+	desc = "Proyecta tu voz a traves de la cancion."
 	button_icon = 'icons/obj/surgery.dmi'
 	button_icon_state = "harpysong"
 

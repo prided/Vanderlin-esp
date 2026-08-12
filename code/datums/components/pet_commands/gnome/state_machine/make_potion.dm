@@ -156,12 +156,12 @@
 				return ACTION_STATE_CONTINUE
 
 			cauldron.reagents.trans_to(bottle, bottle.reagents.maximum_volume - bottle.reagents.total_volume)
-			pawn.visible_message(span_notice("[pawn] llena [bottle] con la poción terminada."))
+			pawn.visible_message(span_notice("[pawn] llena [bottle] con la pocion terminada."))
 
 			var/turf/bottle_storage = controller.blackboard[BB_GNOME_BOTTLE_STORAGE]
 			if(bottle_storage)
 				bottle.forceMove(bottle_storage)
-				pawn.visible_message(span_notice("[pawn] almacena la poción terminada."))
+				pawn.visible_message(span_notice("[pawn] almacena la pocion terminada."))
 			else
 				pawn.dropItemToGround(bottle)
 

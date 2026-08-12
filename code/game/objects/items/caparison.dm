@@ -59,7 +59,7 @@
 		return
 
 	if(chosen_design == "Symbol")
-		var/chosen_symbol = tgui_input_list(user, "Seleccione un símbolo.", "Caparison Design", symbol_types)
+		var/chosen_symbol = tgui_input_list(user, "Seleccione un simbolo.", "Caparison Design", symbol_types)
 		if(!chosen_symbol)
 			return
 		detail_state = symbol_types[chosen_symbol]
@@ -113,7 +113,7 @@
 	female_caparison_state = "eora_caparison-f"
 
 /obj/item/caparison/azure
-	name = "caparazón azul"
+	name = "caparazon azul"
 	desc = "A decorative piece of cloth meant to be used as a saddle decoration. It's adorned with ducal colours. This one fits on a Saiga."
 	caparison_state = "azure_caparison"
 	female_caparison_state = "azure_caparison-f"

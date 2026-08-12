@@ -9,8 +9,8 @@
 	confess_lines = list(
 		"MY CREED IS BLOOD!",
 		"THE DAGGER TOLD ME WHO TO CUT!",
-		"¡LA MUERTE ES MI DEVOCIÓN!",
-		"¡EL SOL OSCURO GUÍA MI MANO!",
+		"¡LA MUERTE ES MI DEVOCION!",
+		"¡EL SOL OSCURO GUIA MI MANO!",
 	)
 	antag_flags = FLAG_FAKE_ANTAG
 
@@ -41,7 +41,7 @@
 
 /mob/living/carbon/human/proc/who_targets() // Verb for the assassin to remember their targets.
 	set name = "Remember Targets"
-	set category = "RolÚnico"
+	set category = "RolUnico"
 	if(!mind)
 		return
 	mind.recall_targets(src)

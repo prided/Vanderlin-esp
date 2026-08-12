@@ -34,7 +34,7 @@
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	blacklisted_species = list(SPEC_ID_HALFLING)
 	is_recognized = TRUE
-	honorary = "Barón"
+	honorary = "Baron"
 	honorary_f = "Baronesa"
 
 
@@ -68,7 +68,7 @@
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/waterskin/purifier)
 
 /datum/migrant_role/heartfelt_lady
-	name = "Señora del corazón"
+	name = "Señora del corazon"
 	greet_text = "You are the Lady of Heartfelt, once a respected noblewoman now struggling to survive in a desolate landscape. With your home in ruins, you look to Vanderlin, hoping to find new purpose or refuge amidst the chaos."
 	migrant_job = /datum/job/migrant/heartfelt_lady
 
@@ -93,14 +93,14 @@
 	)
 
 /datum/job/migrant/heartfelt_lady
-	title = "Señora del corazón"
+	title = "Señora del corazon"
 	tutorial = "You are the Lady of Heartfelt, once a respected noblewoman now struggling to survive in a desolate landscape. With your home in ruins, you look to Vanderlin, hoping to find new purpose or refuge amidst the chaos."
 	outfit = /datum/outfit/heartfelt_lady
 	allowed_sexes = list(FEMALE)
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	blacklisted_species = list(SPEC_ID_HALFLING)
 	is_recognized = TRUE
-	honorary = "Barón"
+	honorary = "Baron"
 	honorary_f = "Baronesa"
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/heartfelt_lady

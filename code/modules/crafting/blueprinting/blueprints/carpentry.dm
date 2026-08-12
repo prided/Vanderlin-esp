@@ -2,7 +2,7 @@
 /datum/blueprint_recipe/carpentry
 	abstract_type = /datum/blueprint_recipe/carpentry
 	skillcraft = /datum/attribute/skill/craft/carpentry
-	category = "Carpintería"
+	category = "Carpinteria"
 	construct_tool = /obj/item/weapon/hammer
 	craftsound = 'sound/foley/Building-01.ogg'
 	verbage = "build"
@@ -18,7 +18,7 @@
 
 /datum/blueprint_recipe/carpentry/door
 	name = "puerta de madera"
-	desc = "Una puerta de madera básica."
+	desc = "Una puerta de madera basica."
 	result_type = /obj/structure/door
 	required_materials = list(/obj/item/grown/log/tree/small = 2)
 	supports_directions = TRUE
@@ -87,7 +87,7 @@
 
 /datum/blueprint_recipe/carpentry/chair
 	name = "silla de madera"
-	desc = "Una silla de madera básica."
+	desc = "Una silla de madera basica."
 	result_type = /obj/structure/chair/wood/alt/chair3/crafted
 	required_materials = list(/obj/item/grown/log/tree/small = 1)
 	supports_directions = TRUE
@@ -114,7 +114,7 @@
 
 /datum/blueprint_recipe/carpentry/stool/bar
 	name = "barstool"
-	desc = "Taburete con cojín de tela."
+	desc = "Taburete con cojin de tela."
 	result_type = /obj/structure/chair/stool/bar
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1,
@@ -249,7 +249,7 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/carpentry/coffin
-	name = "ataúd de madera"
+	name = "ataud de madera"
 	desc = "A wooden burial coffin."
 	result_type = /obj/structure/closet/crate/coffin
 	required_materials = list(/obj/item/natural/wood/plank = 3)
@@ -365,7 +365,7 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/carpentry/female_mannequin
-	name = "maniquí femenino"
+	name = "maniqui femenino"
 	desc = "A female display mannequin."
 	result_type = /obj/structure/mannequin/male/female
 	required_materials = list(
@@ -378,8 +378,8 @@
 	craftdiff = 2
 
 /datum/blueprint_recipe/carpentry/male_mannequin
-	name = "maniquí masculino"
-	desc = "Un maniquí masculino."
+	name = "maniqui masculino"
+	desc = "Un maniqui masculino."
 	result_type = /obj/structure/mannequin/male
 	required_materials = list(
 		/obj/item/natural/wood/plank = 1,
@@ -415,7 +415,7 @@
 
 /datum/blueprint_recipe/carpentry/pillory
 	name = "pillory"
-	desc = "Un dispositivo de restricción para el castigo."
+	desc = "Un dispositivo de restriccion para el castigo."
 	result_type = /obj/structure/pillory
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 2,
@@ -437,7 +437,7 @@
 
 /datum/blueprint_recipe/carpentry/operating_table
 	name = "mesa de operaciones"
-	desc = "Una mesa diseñada para procedimientos médicos."
+	desc = "Una mesa diseñada para procedimientos medicos."
 	result_type = /obj/structure/table/optable
 	required_materials = list(/obj/item/natural/wood/plank = 2)
 	supports_directions = TRUE

@@ -162,17 +162,17 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 /obj/structure/fake_machine/titan/proc/recognize_command(mob/living/carbon/human/user, message)
 	// message is already sanitized
 	if(findtext(message, "make announcement") && perform_check(user, FALSE))
-		say("Todos escucharán tu palabra.")
+		say("Todos escucharan tu palabra.")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_MAKE_ANNOUNCEMENT)
 		return
 	if(findtext(message, "make decree") && perform_check(user))
-		say("Habla y obedecerán.")
+		say("Habla y obedeceran.")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_MAKE_DECREE)
 		return
 	if(findtext(message, "make law") && perform_check(user))
-		say("Habla y obedecerán.")
+		say("Habla y obedeceran.")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		switch_mode(MODE_MAKE_LAW)
 		return
@@ -287,7 +287,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 	var/datum/antagonist/prebel/rebel_datum = user.mind?.has_antag_datum(/datum/antagonist/prebel)
 	if(rebel_datum)
 		if(rebel_datum.rev_team?.members.len < 3)
-			to_chat(user, "<span class='warning'>Necesito más gente de mi lado para declarar la victoria.</span>")
+			to_chat(user, "<span class='warning'>Necesito mas gente de mi lado para declarar la victoria.</span>")
 		else
 			for(var/datum/objective/prebel/obj in user.mind.get_all_objectives())
 				obj.completed = TRUE
@@ -307,7 +307,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 		say("¡Ese decreto no existe!")
 		reset_mode()
 		return FALSE
-	say("¡Ese decreto desaparecerá!")
+	say("¡Ese decreto desaparecera!")
 	playsound(src, 'sound/misc/machineyes.ogg', 100, FALSE, -1)
 	var/decree_text = GLOB.lord_decrees[decree_index]
 	GLOB.lord_decrees -= decree_text
@@ -331,7 +331,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 		say("¡Esa ley no existe!")
 		reset_mode()
 		return FALSE
-	say("¡Esa ley desaparecerá!")
+	say("¡Esa ley desaparecera!")
 	playsound(src, 'sound/misc/machineyes.ogg', 100, FALSE, -1)
 	var/law_text = GLOB.laws_of_the_land[law_index]
 	GLOB.laws_of_the_land -= law_text
@@ -341,10 +341,10 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 
 /// Removes all laws
 /obj/structure/fake_machine/titan/proc/purge_laws()
-	say("¡Todas las leyes serán purgadas!")
+	say("¡Todas las leyes seran purgadas!")
 	playsound(src, 'sound/misc/machineyes.ogg', 100, FALSE, -1)
 	GLOB.laws_of_the_land = list()
-	priority_announce("¡Todas las leyes del país han sido purgadas!", "LAWS PURGED", 'sound/misc/lawspurged.ogg', "Captain")
+	priority_announce("¡Todas las leyes del pais han sido purgadas!", "LAWS PURGED", 'sound/misc/lawspurged.ogg', "Captain")
 
 /// Declares someone an outlaw
 /obj/structure/fake_machine/titan/proc/declare_outlaw(mob/living/carbon/human/user, message)
@@ -435,7 +435,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 	if(get_turf(src) != get_turf(user))
 		return
 
-	say("Seleccione su nueva posición.")
+	say("Seleccione su nueva posicion.")
 	playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 	var/list/unfiltered_positions = list()
 	unfiltered_positions += GLOB.noble_positions
@@ -455,7 +455,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 		var/datum/job/pos = SSjob.GetJob(j_title)
 		if(pos.total_positions != 0 && pos.spawn_positions != 0)
 			possible_positions += j_title
-	var/new_pos = tgui_input_list(user, "Seleccione su nueva posición", src, possible_positions)
+	var/new_pos = tgui_input_list(user, "Seleccione su nueva posicion", src, possible_positions)
 	if(!new_pos)
 		return
 	if(QDELETED(victim) || QDELETED(user) || QDELETED(src))
@@ -500,7 +500,7 @@ GLOBAL_LIST_EMPTY(ex_court_agents)
 		playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 		say("No one around!")
 		return
-	var/mob/living/carbon/new_regent = input(user, "¿Quién gobernará cuando duermas?", src, null) as null|mob in possible_mobs - user
+	var/mob/living/carbon/new_regent = input(user, "¿Quien gobernara cuando duermas?", src, null) as null|mob in possible_mobs - user
 	if(isnull(new_regent) || !Adjacent(user))
 		return
 	priority_announce("[new_regent.real_name] ha sido nombrado regente.", "[user.real_name], The [user.get_role_title()] Decrees", 'sound/misc/alert.ogg', "Captain")

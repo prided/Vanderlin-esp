@@ -65,7 +65,7 @@
 
 // When players exit the round via boat, their items get transported here
 /obj/structure/closet/crate/chest/lostandfound
-	desc = "Un cofre increíblemente resistente; Después de todo, el Gremio puede permitirse los mejores materiales."
+	desc = "Un cofre increiblemente resistente; Despues de todo, el Gremio puede permitirse los mejores materiales."
 	anchored = 1
 	max_integrity = 2000
 

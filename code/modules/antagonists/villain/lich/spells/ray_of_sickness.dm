@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/projectile/sickness
 	name = "Rayo de enfermedad"
-	desc = "Dispara un proyectil tóxico a los vivos."
+	desc = "Dispara un proyectil toxico a los vivos."
 	button_icon_state = "raiseskele"
 	sound = 'sound/misc/portal_enter.ogg'
 

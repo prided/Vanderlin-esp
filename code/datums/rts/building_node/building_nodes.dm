@@ -1,6 +1,6 @@
 /obj/effect/building_node
-	name = "Nodo de construcción"
-	desc = "Un edificio genérico"
+	name = "Nodo de construccion"
+	desc = "Un edificio generico"
 	plane = STRATEGY_PLANE
 
 	///this is our template id

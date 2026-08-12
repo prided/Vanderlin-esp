@@ -11,7 +11,7 @@
 	distill_sound = "bubbles"
 
 /datum/distillation_recipe/concentrated_perception
-	name = "Percepción concentrada"
+	name = "Percepcion concentrada"
 	id = "concentrated_perception"
 	distilled_reagent = /datum/reagent/buff/perception
 	required_temp = T0C + 78
@@ -33,7 +33,7 @@
 	distill_sound = "bubbles"
 
 /datum/distillation_recipe/concentrated_constitution
-	name = "Constitución concentrada"
+	name = "Constitucion concentrada"
 	id = "concentrated_constitution"
 	distilled_reagent = /datum/reagent/buff/constitution
 	required_temp = T0C + 78

@@ -71,7 +71,7 @@ export function ListsTab() {
       {!lists_report ? (
         <Stack.Item>
           <EmptyState>
-            Este suele ser el que quieres. Cada lista recibe el nombre de la var de datos, la lista global o contenedora que la contiene, por lo que una lista inflada apunta directamente al código que la contiene.
+            Este suele ser el que quieres. Cada lista recibe el nombre de la var de datos, la lista global o contenedora que la contiene, por lo que una lista inflada apunta directamente al codigo que la contiene.
           </EmptyState>
         </Stack.Item>
       ) : (
@@ -84,12 +84,12 @@ export function ListsTab() {
                   {bytes(lists_report.list_bytes)}
                 </LabeledList.Item>
                 <LabeledList.Item
-                  label="Huérfanos"
+                  label="Huerfanos"
                   color={
                     exact(lists_report.orphan_lists) > 0 ? 'average' : undefined
                   }
                 >
-                  {count(lists_report.orphan_lists)} alcanzado por una raíz sin nombre, ya sea una fuga real o una clase de almacenamiento que esta caminata pasa por alto
+                  {count(lists_report.orphan_lists)} alcanzado por una raiz sin nombre, ya sea una fuga real o una clase de almacenamiento que esta caminata pasa por alto
                 </LabeledList.Item>
                 <SkipBreakdown skipped={lists_report.skipped} />
               </LabeledList>

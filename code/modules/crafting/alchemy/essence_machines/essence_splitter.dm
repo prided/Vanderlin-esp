@@ -61,7 +61,7 @@
 		return
 
 	if(!user.transferItemToLoc(I, src))
-		to_chat(user, span_warning("¡[I] está pegado a tu mano!"))
+		to_chat(user, span_warning("¡[I] esta pegado a tu mano!"))
 		return
 
 	current_items += I

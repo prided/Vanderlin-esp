@@ -35,7 +35,7 @@
 			update_appearance(UPDATE_OVERLAYS)
 			return
 		else
-			to_chat(user, span_warning("¡El estante ya está ocupado!"))
+			to_chat(user, span_warning("¡El estante ya esta ocupado!"))
 			return
 	if((user.used_intent.type == /datum/intent/dagger/cut || user.used_intent.type == /datum/intent/sword/cut || user.used_intent.type == /datum/intent/axe/cut) && stored_item)
 		if(anchored)

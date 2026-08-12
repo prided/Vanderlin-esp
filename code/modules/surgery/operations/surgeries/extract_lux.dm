@@ -49,9 +49,9 @@
 	display_results(
 		surgeon,
 		patient,
-		span_notice("Empiezo a raspar lux del corazón de [patient]..."),
-		span_notice("[surgeon] comienza a raspar lux del corazón de [patient]."),
-		span_notice("[surgeon] comienza a raspar lux del corazón de [patient]."),
+		span_notice("Empiezo a raspar lux del corazon de [patient]..."),
+		span_notice("[surgeon] comienza a raspar lux del corazon de [patient]."),
+		span_notice("[surgeon] comienza a raspar lux del corazon de [patient]."),
 	)
 
 /datum/surgery_operation/basic/extract_lux/on_success(mob/living/patient, mob/living/surgeon, tool, list/operation_args)

@@ -1,5 +1,5 @@
 /datum/round_event_control/fishing_malus
-	name = "Sequía del río"
+	name = "Sequia del rio"
 	track = EVENT_TRACK_MODERATE
 	typepath = /datum/round_event/fishing_malus
 	weight = 5

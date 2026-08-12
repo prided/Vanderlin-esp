@@ -20,9 +20,9 @@ const NodeList = ({ nodes, color }: { nodes?: NodeEntry[]; color: string }) => {
 
 export const DetailChimericTable = ({ r, lookup, pickerMap, allRecipes, essenceIndex, nav }: NavProps) => (
   <>
-    <SectionHead>Información del nodo</SectionHead>
+    <SectionHead>Informacion del nodo</SectionHead>
     <Box className="RecipeBook__step-block">
-      <Box className="RecipeBook__step-row">Nivel máximo: {r.node_tier}</Box>
+      <Box className="RecipeBook__step-row">Nivel maximo: {r.node_tier}</Box>
       <Box className="RecipeBook__step-row">
         Pureza: {r.purity_min}% – {r.purity_max}% (promedio {Math.round(((r.purity_min || 0) + (r.purity_max || 0)) / 2)}%)
       </Box>

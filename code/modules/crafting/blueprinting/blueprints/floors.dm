@@ -309,28 +309,28 @@
 	result_type = /turf/open/floor/tile/masonic/single
 
 /datum/blueprint_recipe/floor/masonic/inverted
-	name = "Azulejo masónico invertido"
+	name = "Azulejo masonico invertido"
 	result_type = /turf/open/floor/tile/masonic/inverted
 
 /datum/blueprint_recipe/floor/masonic/spiral
-	name = "Azulejo masónico en espiral"
+	name = "Azulejo masonico en espiral"
 	result_type = /turf/open/floor/tile/masonic/spiral
 	craftdiff = 3
 
 /datum/blueprint_recipe/floor/masonic/full
-	name = "Azulejo blanco masónico"
+	name = "Azulejo blanco masonico"
 	result_type = /turf/open/floor/tile/masonic/full
 
 /datum/blueprint_recipe/floor/masonic/full/inverted
-	name = "Azulejo negro masónico"
+	name = "Azulejo negro masonico"
 	result_type = /turf/open/floor/tile/masonic/full/inverted
 
 /datum/blueprint_recipe/floor/masonic/arrow
-	name = "Flecha masónica"
+	name = "Flecha masonica"
 	result_type = /turf/open/floor/tile/masonic/arrow
 
 /datum/blueprint_recipe/floor/masonic/arrow/inverted
-	name = "Flecha masónica invertida"
+	name = "Flecha masonica invertida"
 	result_type = /turf/open/floor/tile/masonic/arrow/inverted
 
 /datum/blueprint_recipe/floor/brick
@@ -348,7 +348,7 @@
 	craftdiff = 1
 
 /datum/blueprint_recipe/floor/brick/brown
-	name = "Ladrillo marrón"
+	name = "Ladrillo marron"
 	result_type = /turf/open/floor/tile/brownbrick
 
 
@@ -981,5 +981,5 @@
 	result_type = /turf/open/floor/metal/barograte
 
 /datum/blueprint_recipe/floor/metal/opengrate
-	name = "Rejilla Metálica (Abierta)"
+	name = "Rejilla Metalica (Abierta)"
 	result_type = /turf/open/floor/metal/barograte/open

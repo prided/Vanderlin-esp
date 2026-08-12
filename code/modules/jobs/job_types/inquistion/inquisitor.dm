@@ -63,7 +63,7 @@
 	spawned.hud_used?.initialize_bloodpool()
 	spawned.hud_used?.bloodpool.set_fill_color("#dcdddb")
 	spawned.hud_used?.bloodpool?.name = "Psydon's Grace: [spawned.bloodpool]"
-	spawned.hud_used?.bloodpool?.desc = "Devoción: [spawned.bloodpool]/[spawned.maxbloodpool]"
+	spawned.hud_used?.bloodpool?.desc = "Devocion: [spawned.bloodpool]/[spawned.maxbloodpool]"
 	spawned.maxbloodpool = 1000
 	spawned.AddComponent(/datum/component/bloodpool_regen, 0.5)
 
@@ -87,7 +87,7 @@
 
 /mob/living/carbon/human/proc/torture_victim()
 	set name = "Extract Confession"
-	set category = "RolÚnico.Inquisición"
+	set category = "RolUnico.Inquisicion"
 
 	var/obj/item/grabbing/I = get_active_held_item()
 	var/mob/living/carbon/human/H
@@ -95,7 +95,7 @@
 		return
 	H = I.grabbed
 	if(H == src)
-		to_chat(src, span_warning("¡No me torturaré!"))
+		to_chat(src, span_warning("¡No me torturare!"))
 		return
 	if(!HAS_TRAIT(H, TRAIT_RESTRAINED) && !H.buckled)
 		to_chat(src, span_warning("[H] needs to be restrained or buckled first!"))
@@ -110,7 +110,7 @@
 		return
 
 	if(H.getShockStage() < SHOCK_STAGE_4)
-		to_chat(src, span_warning("Aún no estoy listo para hablar."))
+		to_chat(src, span_warning("Aun no estoy listo para hablar."))
 		return
 	if(!do_after(src, 4 SECONDS, H))
 		return
@@ -141,7 +141,7 @@
 
 /mob/living/carbon/human/proc/faith_test()
 	set name = "Prueba de fe"
-	set category = "RolÚnico.Inquisición"
+	set category = "RolUnico.Inquisicion"
 
 	var/obj/item/grabbing/I = get_active_held_item()
 	var/mob/living/carbon/human/H
@@ -149,7 +149,7 @@
 		return
 	H = I.grabbed
 	if(H == src)
-		to_chat(src, span_warning("¡No me torturaré!"))
+		to_chat(src, span_warning("¡No me torturare!"))
 		return
 	if(!HAS_TRAIT(H, TRAIT_RESTRAINED) && !H.buckled)
 		to_chat(src, span_warning("[H] needs to be restrained or buckled first!"))
@@ -164,7 +164,7 @@
 		return
 
 	if(H.getShockStage() < SHOCK_STAGE_4)
-		to_chat(src, span_warning("Aún no estoy listo para hablar."))
+		to_chat(src, span_warning("Aun no estoy listo para hablar."))
 		return
 	if(!do_after(src, 4 SECONDS, H))
 		return
@@ -194,7 +194,7 @@
 /// Verb for Inquisitors to recall people with the vice `/datum/quirk/vice/suspicion`
 /mob/living/carbon/human/proc/suspect_heretics()
 	set name = "Recuerde a los sospechosos"
-	set category = "RolÚnico.Inquisición"
+	set category = "RolUnico.Inquisicion"
 	if(!mind)
 		return
 	mind.recall_targets(src, type="Ordos")

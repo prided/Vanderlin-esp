@@ -108,7 +108,7 @@
 					to_chat(spawned,span_info("I learned the tongue of the mountain dwellers."))
 				if("Elvish")
 					spawned.grant_language(/datum/language/elvish)
-					to_chat(spawned,span_info("Aprendí la lengua de las especies primordiales."))
+					to_chat(spawned,span_info("Aprendi la lengua de las especies primordiales."))
 				if("Hellspeak")
 					spawned.grant_language(/datum/language/hellspeak)
 					to_chat(spawned,span_info("I learned the tongue of the hellspawn."))

@@ -44,7 +44,7 @@
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/head/roguehood/rousman
-	name = "máscara de asesino rous"
+	name = "mascara de asesino rous"
 	icon_state = "assassin_mask"
 	item_state = "assassin_mask"
 	icon = 'icons/roguetown/mob/monster/rousman.dmi'

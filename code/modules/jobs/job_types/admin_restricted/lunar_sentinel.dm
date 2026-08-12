@@ -73,7 +73,7 @@
 		"Moonlight Khopesh" = /obj/item/weapon/sword/sabre/noc,
 		"Lunar Flail" = /obj/item/weapon/flail/silver/noc,
 	)
-	var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu especialización", title = "TEMPLAR")
+	var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu especializacion", title = "TEMPLAR")
 	if(!choice)
 		return
 	switch(choice)

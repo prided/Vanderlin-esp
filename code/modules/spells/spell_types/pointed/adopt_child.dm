@@ -35,7 +35,7 @@
 		return . | SPELL_CANCEL_CAST
 
 	if(cast_on.family_datum && cast_on.family_member_datum?.has_parents())
-		to_chat(owner, span_warning("¡Este niño no es huérfano!"))
+		to_chat(owner, span_warning("¡Este niño no es huerfano!"))
 		return . | SPELL_CANCEL_CAST
 
 /datum/action/cooldown/spell/adopt_child/cast(mob/living/carbon/human/cast_on)
@@ -44,19 +44,19 @@
 
 	owner.visible_message(
 		span_notice("[owner] begins a solemn adoption ritual."),
-		span_notice("Comienzas el ritual de adopción con la bendición de Eora...")
+		span_notice("Comienzas el ritual de adopcion con la bendicion de Eora...")
 	)
 
 	if(!do_after(owner, 5 SECONDS, cast_on))
 		to_chat(owner, span_warning("¡El ritual fue interrumpido!"))
 		return FALSE
 
-	var/choice = tgui_alert(cast_on, "Do you wish to be adopted by [owner.real_name] and become part of their family?", "Oferta de adopción", DEFAULT_INPUT_CHOICES)
+	var/choice = tgui_alert(cast_on, "Do you wish to be adopted by [owner.real_name] and become part of their family?", "Oferta de adopcion", DEFAULT_INPUT_CHOICES)
 	if(QDELETED(src) || QDELETED(owner) || QDELETED(cast_on) || !can_cast_spell())
 		return
 
 	if(choice != CHOICE_YES)
-		to_chat(owner, span_warning("¡[cast_on] ha rechazado tu oferta de adopción!"))
+		to_chat(owner, span_warning("¡[cast_on] ha rechazado tu oferta de adopcion!"))
 		return FALSE
 
 	var/datum/heritage/family = adopter.family_datum
@@ -79,7 +79,7 @@
 		to_chat(owner, span_warning("Something went wrong with the ritual; adoption failed."))
 		return FALSE
 
-	to_chat(owner, span_love("¡Has adoptado a [cast_on.real_name] como tu hijo con la bendición de Eora!"))
+	to_chat(owner, span_love("¡Has adoptado a [cast_on.real_name] como tu hijo con la bendicion de Eora!"))
 	to_chat(cast_on, span_love("¡Has sido adoptado por [owner.real_name]!"))
 
 	SEND_SIGNAL(owner, COMSIG_ORPHAN_ADOPTED, cast_on)

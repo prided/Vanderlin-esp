@@ -729,7 +729,7 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 
 /obj/structure/industrial_lift/debug
 	name = "plataforma de transporte"
-	desc = "Una plataforma ligera. Se mueve en cualquier dirección, excepto hacia arriba y hacia abajo."
+	desc = "Una plataforma ligera. Se mueve en cualquier direccion, excepto hacia arriba y hacia abajo."
 	color = "#5286b9ff"
 	lift_id = DEBUG_LIFT_ID
 	radial_travel = TRUE
@@ -775,7 +775,7 @@ GLOBAL_LIST_INIT(all_radial_directions, list(
 
 /obj/structure/industrial_lift/tram
 	name = "tram"
-	desc = "Un tranvía para recorrer la estación."
+	desc = "Un tranvia para recorrer la estacion."
 	obj_flags = BLOCK_Z_OUT_DOWN
 	//kind of a centerpiece of the station, so pretty tough to destroy
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF

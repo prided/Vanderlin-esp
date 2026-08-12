@@ -69,7 +69,7 @@ export function VarsTab() {
       {!vars_report ? (
         <Stack.Item>
           <EmptyState>
-            Una fila var existe solo cuando una var está alejada de su tipo predeterminado, en 16 bytes cada una. Una var en /atom configurada en cada átomo es algo concreto que se debe eliminar, y así es como se encuentra.
+            Una fila var existe solo cuando una var esta alejada de su tipo predeterminado, en 16 bytes cada una. Una var en /atom configurada en cada atomo es algo concreto que se debe eliminar, y asi es como se encuentra.
           </EmptyState>
         </Stack.Item>
       ) : (

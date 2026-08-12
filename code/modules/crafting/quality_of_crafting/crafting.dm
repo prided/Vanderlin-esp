@@ -78,7 +78,7 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/crafting/skull_mask
-	name = "máscara de calavera"
+	name = "mascara de calavera"
 	requirements = list(
 		/obj/item/alch/bone= 3,
 		/obj/item/natural/fibers = 1,
@@ -358,7 +358,7 @@
 	craftdiff = 0
 
 /datum/repeatable_crafting_recipe/crafting/cane
-	name = "bastón de madera"
+	name = "baston de madera"
 	requirements = list(
 		/obj/item/grown/log/tree= 1,
 	)
@@ -373,7 +373,7 @@
 	craft_time = 5 SECONDS
 
 /datum/repeatable_crafting_recipe/crafting/naturalcane
-	name = "bastón de madera natural"
+	name = "baston de madera natural"
 	requirements = list(
 		/obj/item/grown/log/tree/small= 1,
 	)
@@ -850,7 +850,7 @@
 
 //carveable glass? Sure why not
 /datum/repeatable_crafting_recipe/crafting/alchemical_vial
-	name = "Vial alquímico"
+	name = "Vial alquimico"
 	output = /obj/item/reagent_containers/glass/alchemical
 	requirements = list(
 		/obj/item/natural/glass = 1,
@@ -879,7 +879,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/crafting/zigbox
-	name = "Caja Zig Vacía"
+	name = "Caja Zig Vacia"
 	output = /obj/item/storage/fancy/cigarettes/zig/empty
 	requirements = list(
 		/obj/item/paper = 1,
@@ -1007,7 +1007,7 @@
 	starting_atom = /obj/item/weapon/knife
 
 /datum/repeatable_crafting_recipe/crafting/instrument_vocals
-	name = "Talismán del vocalista"
+	name = "Talisman del vocalista"
 	output = /obj/item/instrument/vocals
 	requirements = list(
 		/obj/item/natural/cloth = 2,

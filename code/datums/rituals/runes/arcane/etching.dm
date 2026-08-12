@@ -22,7 +22,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/focus_etch/attack_hand(mob/living/user)
 	if(animating)
-		to_chat(user, span_notice("El sello ya está funcionando..."))
+		to_chat(user, span_notice("El sello ya esta funcionando..."))
 		return
 	if(!user.get_active_held_item())
 		if(staged_focus)
@@ -36,12 +36,12 @@
 		return NONE
 
 	if(animating)
-		to_chat(user, span_notice("El sello ya está funcionando..."))
+		to_chat(user, span_notice("El sello ya esta funcionando..."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/obj/item/spell_focus/focus = tool
 	if(focus.stored_spell_type)
-		to_chat(user, span_warning("Ese enfoque ya está grabado con [focus.stored_spell_name]."))
+		to_chat(user, span_warning("Ese enfoque ya esta grabado con [focus.stored_spell_name]."))
 		return ITEM_INTERACT_BLOCKING
 	if(staged_focus)
 		to_chat(user, span_notice("A focus is already placed here."))
@@ -58,10 +58,10 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/focus_etch/proc/try_invoke(mob/living/user)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("No puedes invocar estos símbolos."))
+		to_chat(user, span_warning("No puedes invocar estos simbolos."))
 		return
 	if(rune_in_use)
-		to_chat(user, span_notice("El sello ya está activo."))
+		to_chat(user, span_notice("El sello ya esta activo."))
 		return
 
 	// Build eligible spell list, exclude essence and already-temporary spells
@@ -90,7 +90,7 @@
 	// Ask how many charges (1-3, capped by mana availability)
 	var/max_possible_charges = min(3, floor(user.mana_pool.amount / max(1, chosen.spell_cost * 2)))
 	if(max_possible_charges < 1)
-		to_chat(user, span_hierophant_warning("No tienes suficiente maná para grabar ni siquiera una carga de [chosen.name]."))
+		to_chat(user, span_hierophant_warning("No tienes suficiente mana para grabar ni siquiera una carga de [chosen.name]."))
 		return
 
 	var/charge_options = list()

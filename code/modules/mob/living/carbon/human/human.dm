@@ -94,7 +94,7 @@
 						to_chat(user, ("You polished the [shoes_check]."))
 					return
 				else if(istype(held_item, /obj/item/natural/cloth) && user?.used_intent?.type == INTENT_USE && shoes_check.polished == 1)
-					to_chat(user, span_notice("Los [shoes_check] ya están pulidos."))
+					to_chat(user, span_notice("Los [shoes_check] ya estan pulidos."))
 					return
 				if(istype(held_item, /obj/item/reagent_containers/food/snacks/fat) && user?.used_intent?.type == INTENT_USE && shoes_check.polished == 1)
 					to_chat(user, ("You start polishing the [shoes_check] with the animal"))
@@ -402,7 +402,7 @@
 						return FALSE
 
 				if(!looping)
-					visible_message(span_notice("¡[src] está intentando realizar compresiones torácicas en [target.name]!"), \
+					visible_message(span_notice("¡[src] esta intentando realizar compresiones toracicas en [target.name]!"), \
 					span_notice("I try to perform chest compressions on [target.name]... Hold still!"), \
 					vision_distance = COMBAT_MESSAGE_RANGE)
 
@@ -443,8 +443,8 @@
 						 */
 						they_heart.applyOrganDamage(15 * (NUM_E ** (-0.022 * medical_skill)), they_heart.high_threshold)
 				else
-					visible_message(span_notice("¡<b>[src]</b> realiza compresiones torácicas en <b>[target]</b>!"), \
-								span_notice("Realizo compresiones torácicas en <b>[target]</b>."), \
+					visible_message(span_notice("¡<b>[src]</b> realiza compresiones toracicas en <b>[target]</b>!"), \
+								span_notice("Realizo compresiones toracicas en <b>[target]</b>."), \
 								span_hear("I hear pushing."),
 								vision_distance = COMBAT_MESSAGE_RANGE, \
 								ignored_mobs = target)
@@ -679,7 +679,7 @@
 	if(blood && !CAN_HAVE_BLOOD(src) && !HAS_TRAIT(src, TRAIT_TOXINLOVER))
 		if(message)
 			visible_message("<span class='warning'>[src] arcadas secas!</span>", \
-							span_danger("¡Intento vomitar, pero no hay nada en tu estómago!"))
+							span_danger("¡Intento vomitar, pero no hay nada en tu estomago!"))
 		if(stun)
 			Immobilize(200)
 		return 1
@@ -713,7 +713,7 @@
 		if(is_lord_job(mind.assigned_role))
 			return
 
-		var/appointment_type = tgui_alert(usr, "¿Estás seguro de que quieres coronar a [src.real_name] como el nuevo Monarca?", "Confirmación", DEFAULT_INPUT_CHOICES)
+		var/appointment_type = tgui_alert(usr, "¿Estas seguro de que quieres coronar a [src.real_name] como el nuevo Monarca?", "Confirmacion", DEFAULT_INPUT_CHOICES)
 		if(appointment_type == CHOICE_NO)
 			return
 

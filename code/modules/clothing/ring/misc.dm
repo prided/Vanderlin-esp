@@ -127,7 +127,7 @@
 
 /obj/item/clothing/ring/active
 	var/active = FALSE
-	desc = "Desafortunadamente, como la mayoría de los anillos mágicos, debe usarse con moderación. (Haz clic derecho en mí para activar)"
+	desc = "Desafortunadamente, como la mayoria de los anillos magicos, debe usarse con moderacion. (Haz clic derecho en mi para activar)"
 	var/cooldowny
 	var/cdtime
 	var/activetime
@@ -191,13 +191,13 @@
 
 /obj/item/clothing/ring/active/nomag/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Haz clic derecho para activar la protección del anillo, que proporciona invulnerabilidad temporal contra todos los ataques mágicos directos durante treinta segundos.")
+	. += span_info("Haz clic derecho para activar la proteccion del anillo, que proporciona invulnerabilidad temporal contra todos los ataques magicos directos durante treinta segundos.")
 	. += span_info("Wearers with unholy ailments are also rendered invulnerable to being sundered by silver weaponry, for the ward's duration.")
 	. += span_info("Once the ring's ward is exhausted, it'll require ten minutes to recharge enough power for another activation.")
 
 // ................... Ring of Protection ....................... (rare treasure, not for purchase)
 /obj/item/clothing/ring/gold/protection
-	name = "anillo de protección"
+	name = "anillo de proteccion"
 	desc = "Old ring, inscribed with arcyne words. Once held magical powers, perhaps it does still?"
 	icon_state = "ring_protection"
 	var/antileechy
@@ -302,8 +302,8 @@
 	name = "anillo de sello"
 	icon_state = "signet"
 	icon_state = "signet"
-	desc = "Un gran anillo dorado grabado con el símbolo de Psydon."
-	desc = "Un gran anillo de sello dorado grabado con el símbolo de Psydon."
+	desc = "Un gran anillo dorado grabado con el simbolo de Psydon."
+	desc = "Un gran anillo de sello dorado grabado con el simbolo de Psydon."
 	sellprice = 135
 	sellprice = 135
 	var/tallowed = FALSE

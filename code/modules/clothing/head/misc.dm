@@ -435,7 +435,7 @@
 	icon_state = "archercap"
 
 /obj/item/clothing/head/fedora
-	name = "sombrero de arqueólogo"
+	name = "sombrero de arqueologo"
 	desc = "A strangely-shaped hat with dust caked onto its aged leather."
 	icon_state = "curator"
 	item_state = "curator"
@@ -450,7 +450,7 @@
 
 /obj/item/clothing/head/explorerhat
 	name = "sombrero de explorador"
-	desc = "¿Cuántos secretos puedo descubrir esta semana?"
+	desc = "¿Cuantos secretos puedo descubrir esta semana?"
 	icon_state = "explorerhat"
 	item_state = "explorerhat"
 	sewrepair = TRUE

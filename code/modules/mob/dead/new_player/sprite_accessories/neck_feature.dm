@@ -37,7 +37,7 @@
 	icon_state = "royal"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/gothic
-	name = "gótico"
+	name = "gotico"
 	icon_state = "gothic"
 
 /datum/sprite_accessory/neck_feature/moth_fluff/lovers

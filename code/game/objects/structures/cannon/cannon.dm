@@ -279,7 +279,7 @@
 	failure_chance = 10
 
 /atom/proc/debug_turn()
-	var/enter = input(usr, "Cuánto", "Meow", 180)
+	var/enter = input(usr, "Cuanto", "Meow", 180)
 	transform = transform.Turn(enter)
 
 #undef SOUND_EXTRA_RANGE_CANNON

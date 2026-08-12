@@ -65,7 +65,7 @@ export function DiffTab() {
   return (
     <Stack fill vertical>
       <Stack.Item>
-        <Section title="Línea base">
+        <Section title="Linea base">
           <Stack vertical>
             <Stack.Item>
               <Stack align="center">
@@ -75,7 +75,7 @@ export function DiffTab() {
                     disabled={!!busy}
                     onClick={() => act('set_baseline')}
                   >
-                    Establecer línea de base
+                    Establecer linea de base
                   </Button>
                 </Stack.Item>
                 <Stack.Item>
@@ -84,7 +84,7 @@ export function DiffTab() {
                     disabled={!!busy || !baseline_at}
                     onClick={() => act('capture_diff')}
                   >
-                    Diferencia con respecto a la línea de base
+                    Diferencia con respecto a la linea de base
                   </Button>
                 </Stack.Item>
                 <Stack.Item>
@@ -111,7 +111,7 @@ export function DiffTab() {
             </Stack.Item>
             <Stack.Item>
               <NoticeBox info>
-                El comienzo de la ronda contra el final de la ronda es lo que realmente encuentra una fuga; los números absolutos rara vez lo son. La extensión mantiene exactamente una línea de base y cada diferencia instala una nueva, por lo que cada medida es consecutiva a partir de la anterior. El verbo Censo de Memoria (Texto) comparte esa línea de base con este panel.
+                El comienzo de la ronda contra el final de la ronda es lo que realmente encuentra una fuga; los numeros absolutos rara vez lo son. La extension mantiene exactamente una linea de base y cada diferencia instala una nueva, por lo que cada medida es consecutiva a partir de la anterior. El verbo Censo de Memoria (Texto) comparte esa linea de base con este panel.
               </NoticeBox>
             </Stack.Item>
           </Stack>
@@ -120,13 +120,13 @@ export function DiffTab() {
       {!diff_report ? (
         <Stack.Item>
           <EmptyState>
-            Establezca una línea de base, deje que la ronda se ejecute y luego diferencie. Los tipos que no se movieron se descartan y lo que queda se clasifica por crecimiento.
+            Establezca una linea de base, deje que la ronda se ejecute y luego diferencie. Los tipos que no se movieron se descartan y lo que queda se clasifica por crecimiento.
           </EmptyState>
         </Stack.Item>
       ) : diff_report.no_baseline ? (
         <Stack.Item>
           <NoticeBox color="yellow">
-            Esa llamada solo registró una línea de base, por lo que no había nada con qué comparar. Vuelve a comparar para ver qué se ha movido desde entonces.
+            Esa llamada solo registro una linea de base, por lo que no habia nada con que comparar. Vuelve a comparar para ver que se ha movido desde entonces.
           </NoticeBox>
         </Stack.Item>
       ) : (

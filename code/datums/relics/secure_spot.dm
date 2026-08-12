@@ -77,7 +77,7 @@
 		else
 			// Hands are full! Force drop it at the user's feet instead
 			dropping.forceMove(user.drop_location())
-			to_chat(user, span_warning("¡Tienes las manos ocupadas, así que \the [dropping] cae al suelo!"))
+			to_chat(user, span_warning("¡Tienes las manos ocupadas, asi que \the [dropping] cae al suelo!"))
 	else
 		// If called without a user (e.g. blown up, or triggered by a machine), just eject it
 		UnregisterSignal(dropping, list(COMSIG_MOVABLE_MOVED, COMSIG_QDELETING))

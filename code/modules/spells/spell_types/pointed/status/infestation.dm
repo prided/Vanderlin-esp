@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/status/infestation
-	name = "Infestación"
+	name = "Infestacion"
 	desc = "Causes a swarm of bugs to surround your target, bites them and causes sickness."
 	button_icon_state = "infestation"
 	self_cast_possible = FALSE
@@ -49,7 +49,7 @@
 		"Flies are laying eggs in my open wounds!",
 		"Something crawled in my ear!",
 		"There are too many bugs to count!",
-		"¡Están tratando de meterse bajo mi piel!",
+		"¡Estan tratando de meterse bajo mi piel!",
 		"Make it stop!",
 		"Millipede legs tickle the back of my ear!",
 		"Fire ants bite at my feet!",
@@ -60,7 +60,7 @@
 		"¡Las pulgas me muerden los tobillos!",
 		"Gnats buzz around my face!",
 		"¡Los piojos me chupan la sangre!",
-		"¡Los grillos chirrían en mis oídos!",
+		"¡Los grillos chirrian en mis oidos!",
 		"Earwigs crawl into my ears!",
 	)
 	var/mob/living/L = owner
@@ -75,6 +75,6 @@
 		to_chat(C, span_warning(pick(messages)))
 
 /atom/movable/screen/alert/status_effect/debuff/infestation
-	name = "Infestación"
+	name = "Infestacion"
 	desc = "Pestilent vermin bite and chew at my skin."
 	icon_state = "debuff"

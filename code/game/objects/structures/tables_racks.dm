@@ -53,7 +53,7 @@
 		if(isliving(user.pulling))
 			var/mob/living/pushed_mob = user.pulling
 			if(pushed_mob.buckled)
-				to_chat(user, "¡<span class='warning'>[pushed_mob] está en [pushed_mob.buckled]!</span>")
+				to_chat(user, "¡<span class='warning'>[pushed_mob] esta en [pushed_mob.buckled]!</span>")
 				return
 			if(user.used_intent.type == INTENT_GRAB)
 				if(user.grab_state < GRAB_AGGRESSIVE)
@@ -295,7 +295,7 @@
 /obj/structure/table/map
 	icon = 'icons/roguetown/misc/tables.dmi'
 	icon_state = "map_blank"
-	desc = "Una mesa que probablemente debería tener un mapa cubriéndola."
+	desc = "Una mesa que probablemente deberia tener un mapa cubriendola."
 
 /obj/structure/table/map/enigma
 	icon = 'icons/roguetown/misc/tables.dmi'

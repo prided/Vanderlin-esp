@@ -102,7 +102,7 @@
 		</div>
 	"}
 /datum/book_entry/pestran_chimeric
-	name = "Técnicas de órganos quiméricos"
+	name = "Tecnicas de organos quimericos"
 /datum/book_entry/pestran_chimeric/inner_book_html(mob/user)
 	return {"
 		<div>

@@ -206,12 +206,12 @@ GLOBAL_LIST_EMPTY(secret_door_managers)
 /obj/structure/door/secret/examine(mob/user)
 	. = ..()
 	if(isobserver(user))
-		. += span_purple("Hay una puerta oculta aquí...")
+		. += span_purple("Hay una puerta oculta aqui...")
 		return
 	if(isliving(user))
 		var/mob/living/L = user
 		if(HAS_MIND_TRAIT(user, accessor_trait))
-			. += span_purple("Hay una puerta oculta aquí...")
+			. += span_purple("Hay una puerta oculta aqui...")
 		else
 			var/bonuses = (HAS_TRAIT(user, TRAIT_THIEVESGUILD) || HAS_TRAIT(user, TRAIT_ASSASSIN)) ? 2 : 0
 			if(GET_MOB_ATTRIBUTE_VALUE(L, STAT_PERCEPTION) + bonuses >= hidden_dc)

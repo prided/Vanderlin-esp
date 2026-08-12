@@ -207,7 +207,7 @@
 
 	var/mob/living/target = interacting_with
 	if(target.stat == DEAD)
-		target.visible_message(span_danger("[user] golpea el cadáver sin vida de [target] con [src]."))
+		target.visible_message(span_danger("[user] golpea el cadaver sin vida de [target] con [src]."))
 		playsound(src, "punch", 25, TRUE, -1)
 		return
 

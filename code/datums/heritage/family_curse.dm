@@ -47,7 +47,7 @@
 
 /atom/movable/screen/alert/status_effect/family_curse/misfortune
 	name = "Family Misfortune"
-	desc = "La maldición de tu familia trae mala suerte a tus pasos."
+	desc = "La maldicion de tu familia trae mala suerte a tus pasos."
 	icon_state = "debuff"
 
 	var/static/list/misfortune_tips = list(
@@ -81,5 +81,5 @@
 
 /atom/movable/screen/alert/status_effect/family_curse/hunger
 	name = "Apetito insaciable"
-	desc = "Tu familia está maldecida por un hambre que rara vez se sacia."
+	desc = "Tu familia esta maldecida por un hambre que rara vez se sacia."
 	icon_state = "debuff"

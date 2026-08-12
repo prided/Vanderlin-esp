@@ -113,7 +113,7 @@
 			var/method = vv_subtype_prompt(target.type)
 			targets_to_remove_from = get_all_of_type(target.type, method)
 
-			if(alert(usr, "¿Está seguro de que desea eliminar en masa [path] en [target.type]?", "Confirmación de eliminación masiva", "Yes", "No") == "No")
+			if(alert(usr, "¿Esta seguro de que desea eliminar en masa [path] en [target.type]?", "Confirmacion de eliminacion masiva", "Yes", "No") == "No")
 				return
 
 		for(var/datum/target_to_remove_from as anything in targets_to_remove_from)

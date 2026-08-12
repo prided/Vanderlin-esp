@@ -275,7 +275,7 @@
 	if(drained > 0)
 		src.visible_message("¡<span class='warning'><b>[src]</b> esquiva el ataque de [user]!</span>")
 	else
-		src.visible_message("¡<span class='warning'><b>[src]</b> esquiva fácilmente el ataque de [user]!</span>")
+		src.visible_message("¡<span class='warning'><b>[src]</b> esquiva facilmente el ataque de [user]!</span>")
 
 	dodgecd = FALSE
 

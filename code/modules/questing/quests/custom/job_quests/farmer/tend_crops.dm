@@ -14,7 +14,7 @@
 	return "Speak with [quest_giver_name ? quest_giver_name : "the farmer"] for instructions."
 
 /datum/quest/custom/job_quest/farmer/tend_crops/build_from_user(mob/user)
-	var/chosen_title = tgui_input_text(user, "Dale un título a esta misión.", "Título de la misión", "Tend the Fields", max_length = 64)
+	var/chosen_title = tgui_input_text(user, "Dale un titulo a esta mision.", "Titulo de la mision", "Tend the Fields", max_length = 64)
 	if(!chosen_title)
 		return FALSE
 	title = chosen_title

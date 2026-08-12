@@ -87,7 +87,7 @@
 			power.try_deactivate(direct = TRUE, alert = TRUE)
 			active = FALSE
 		else
-			to_chat(owner, span_warning("¡[power] ya está activo!"))
+			to_chat(owner, span_warning("¡[power] ya esta activo!"))
 	else //activate
 		if (power.target_type == NONE) //self activation
 			if(power.try_activate())

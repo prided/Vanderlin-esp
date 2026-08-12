@@ -215,8 +215,8 @@
 	alert_type = /atom/movable/screen/alert/status_effect/abyssal_chill
 
 /atom/movable/screen/alert/status_effect/abyssal_chill
-	name = "Frío abisal"
-	desc = "El frío de las profundidades ralentiza tus movimientos."
+	name = "Frio abisal"
+	desc = "El frio de las profundidades ralentiza tus movimientos."
 	icon = 'icons/mob/screen_alert.dmi'
 	icon_state = "frozen"
 
@@ -259,11 +259,11 @@
 			desc = "A crown made of living coral that seems to pulse with the rhythm of distant tides."
 			icon_state = "crown"
 		if("chalice")
-			name = "cáliz abisal"
+			name = "caliz abisal"
 			desc = "A chalice crafted from unknown deep-sea materials. Water placed within never spills."
 			icon_state = "chalice"
 		if("idol")
-			name = "un ídolo profundo"
+			name = "un idolo profundo"
 			desc = "A small statue depicting an ancient being. It feels uncomfortably damp no matter how much you dry it."
 			icon_state = "idol"
 		if("scale")

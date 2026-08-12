@@ -11,7 +11,7 @@
 	var/turf/caster_turf = get_turf(owner)
 	if(!target_turf)
 		return FALSE
-	owner.visible_message(span_notice("[owner] crea un puente de hielo sólido."))
+	owner.visible_message(span_notice("[owner] crea un puente de hielo solido."))
 
 	var/steps = 0
 	var/broken = FALSE
@@ -26,7 +26,7 @@
 
 /obj/structure/ice_bridge
 	name = "puente de hielo"
-	desc = "Un puente sólido hecho de hielo mágico."
+	desc = "Un puente solido hecho de hielo magico."
 	icon = 'icons/effects/freeze.dmi'
 	icon_state = "ice_bridge"
 	alpha = 255

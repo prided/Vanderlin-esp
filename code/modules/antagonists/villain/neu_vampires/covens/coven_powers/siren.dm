@@ -1,12 +1,12 @@
 /datum/coven/siren
-	name = "Bendición de sirena"
+	name = "Bendicion de sirena"
 	desc = "Typically found in vampires who frequent the seas of Enigma, they've developed the ability to adapt much like sirens."
 	icon_state = "melpominee"
 	power_type = /datum/coven_power/siren
 
 /datum/coven_power/siren
 	name = "Siren power name"
-	desc = "Descripción del poder de la sirena"
+	desc = "Descripcion del poder de la sirena"
 
 
 //THE MISSING VOICE
@@ -23,7 +23,7 @@
 
 /datum/coven_power/siren/the_missing_voice/activate(atom/movable/target)
 	. = ..()
-	var/new_say = input(owner, "¿Qué dirá [target]?") as null|text
+	var/new_say = input(owner, "¿Que dira [target]?") as null|text
 	if(!new_say)
 		return
 
@@ -74,11 +74,11 @@
 
 /datum/coven_power/siren/phantom_speaker/activate()
 	. = ..()
-	var/mob/living/target = input(owner, "¿A quién proyectarás tu voz?") as null|mob in (GLOB.player_list - owner)
+	var/mob/living/target = input(owner, "¿A quien proyectaras tu voz?") as null|mob in (GLOB.player_list - owner)
 	if(!target)
 		return
 
-	var/input_message = input(owner, "¿Qué mensaje les proyectarás?") as null|text
+	var/input_message = input(owner, "¿Que mensaje les proyectaras?") as null|text
 	if (!input_message)
 		return
 
@@ -93,7 +93,7 @@
 	var/message = owner.compose_message(owner, language, input_message, , list())
 	to_chat(target, "<span class='purple'><i>You hear someone's voice in your head...</i></span>")
 	target.Hear(message, target, language, input_message, , , )
-	to_chat(owner, span_notice("Proyectas tu voz a los oídos de [target]."))
+	to_chat(owner, span_notice("Proyectas tu voz a los oidos de [target]."))
 
 //MADRIGAL
 /datum/coven_power/siren/madrigal

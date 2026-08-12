@@ -92,7 +92,7 @@
 		return FALSE
 
 	if(member.inquisition_position)
-		to_chat(member, "<span class='warning'>Ya tienes un puesto en la jerarquía.</span>")
+		to_chat(member, "<span class='warning'>Ya tienes un puesto en la jerarquia.</span>")
 		return FALSE
 
 	var/datum/inquisition_hierarchy_node/new_position = create_position(
@@ -119,7 +119,7 @@
 		return FALSE
 
 	if(position.assigned_member)
-		to_chat(member, "<span class='warning'>Esta posición ya está ocupada por [position.assigned_member.real_name].</span>")
+		to_chat(member, "<span class='warning'>Esta posicion ya esta ocupada por [position.assigned_member.real_name].</span>")
 		return FALSE
 
 	if(member.inquisition_position)

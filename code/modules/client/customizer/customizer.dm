@@ -50,7 +50,7 @@
 
 /datum/customizer/organ
 	abstract_type = /datum/customizer/organ
-	name = "Órgano"
+	name = "Organo"
 
 /datum/customizer/bodypart_feature
 	abstract_type = /datum/customizer/bodypart_feature

@@ -1,6 +1,6 @@
 /obj/item/canvas
 	name = "canvas"
-	desc = "Un lugar perfecto para capturar Psydonia a través del arte."
+	desc = "Un lugar perfecto para capturar Psydonia a traves del arte."
 
 	icon = 'icons/paint_supplies/canvas_32.dmi'
 	icon_state = "canvas"

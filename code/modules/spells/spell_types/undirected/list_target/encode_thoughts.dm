@@ -32,10 +32,10 @@
 
 	to_chat(owner, "I pluck the strings of [cast_on]'s mind!")
 	cast_on.playsound_local(cast_on, sound, 100, TRUE)
-	to_chat(cast_on, "Tu mente piensa para sí misma: </span><font color=#7246ff>\"[message]...\"</font>")
+	to_chat(cast_on, "Tu mente piensa para si misma: </span><font color=#7246ff>\"[message]...\"</font>")
 
 /datum/action/cooldown/spell/undirected/list_target/encode_thoughts/vampire
-	name = "Manipulación vampírica"
+	name = "Manipulacion vampirica"
 	spell_type = SPELL_BLOOD
 	spell_flags = NONE
 	required_form = null

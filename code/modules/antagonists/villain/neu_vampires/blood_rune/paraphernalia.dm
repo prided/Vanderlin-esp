@@ -39,7 +39,7 @@
 				return
 
 			var/datum/rune_spell/spell = AT.spell_type
-			var/chosen_tome = input(user, "Choose a tome where to transfer this [initial(spell.name)] talisman.", "Transferir talismán", null) as null|anything in valid_tomes
+			var/chosen_tome = input(user, "Choose a tome where to transfer this [initial(spell.name)] talisman.", "Transferir talisman", null) as null|anything in valid_tomes
 			if (!chosen_tome)
 				qdel(src)
 				return
@@ -48,7 +48,7 @@
 			tool = AT
 
 			if (target.talismans.len >= MAX_TALISMAN_PER_TOME)
-				to_chat(activator, span_warning("Este tomo no puede contener más talismanes.") )
+				to_chat(activator, span_warning("Este tomo no puede contener mas talismanes.") )
 				abort(RITUALABORT_FULL)
 				return
 
@@ -171,5 +171,5 @@
 			var/mob/M = target.loc
 			M << browse(target.tome_text(), "window = arcanetome;size = 537x375")
 	else
-		to_chat(activator, span_warning("Este tomo no puede contener más talismanes.") )
+		to_chat(activator, span_warning("Este tomo no puede contener mas talismanes.") )
 	qdel(src)

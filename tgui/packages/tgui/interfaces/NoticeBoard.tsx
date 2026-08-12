@@ -136,7 +136,7 @@ const QuestDetail = (props: {
           )}
           <Stack.Item>
             <Button icon="arrow-left" onClick={onBack}>
-              Atrás
+              Atras
             </Button>
           </Stack.Item>
         </Stack>
@@ -157,14 +157,14 @@ const QuestDetail = (props: {
 
         {!!quest.location && (
           <Stack.Item>
-            <Box bold>Ubicación</Box>
+            <Box bold>Ubicacion</Box>
             <Box>{quest.location}</Box>
           </Stack.Item>
         )}
 
         {quest.region !== null && quest.region !== '' && (
           <Stack.Item>
-            <Box bold>Región</Box>
+            <Box bold>Region</Box>
             <Box>{quest.region}</Box>
           </Stack.Item>
         )}
@@ -195,7 +195,7 @@ const QuestDetail = (props: {
             icon="scroll"
             onClick={() => onClaim(quest.ref)}
           >
-            Acepta esta misión
+            Acepta esta mision
           </Button>
         </Stack.Item>
       </Stack>
@@ -213,7 +213,7 @@ const QuestPoolTab = (props: {
   if (!quests.length) {
     return (
       <Box color="label" italic mt={1}>
-        No {difficulty} Las misiones están publicadas ahora mismo. Vuelve a consultar más tarde.
+        No {difficulty} Las misiones estan publicadas ahora mismo. Vuelve a consultar mas tarde.
       </Box>
     );
   }
@@ -290,7 +290,7 @@ const ThreatPanel = (props: { threats: ThreatRegion[] }) => {
                 </Box>
                 {t.invasion === 1 && (
                   <Box as="span" color="bad" bold ml={1}>
-                    ⚠ RIESGO DE INVASIÓN
+                    ⚠ RIESGO DE INVASION
                   </Box>
                 )}
               </Box>
@@ -300,7 +300,7 @@ const ThreatPanel = (props: { threats: ThreatRegion[] }) => {
       ))}
       <Stack.Item>
         <Box italic color="label" mt={1}>
-          Financiar más misiones en áreas de alta amenaza reduce el peligro más rápidamente.
+          Financiar mas misiones en areas de alta amenaza reduce el peligro mas rapidamente.
         </Box>
       </Stack.Item>
     </Stack>
@@ -355,7 +355,7 @@ const ActiveQuestsPanel = (props: {
                   <Button
                     icon="undo"
                     color="bad"
-                    tooltip="Recuerda este pergamino: la misión vuelve al tablero"
+                    tooltip="Recuerda este pergamino: la mision vuelve al tablero"
                     onClick={() => onRevoke(q.ref)}
                   >
                     Recordar
@@ -374,7 +374,7 @@ const ActiveQuestsPanel = (props: {
               {!!q.region && (
                 <Stack.Item>
                   <Box>
-                    <Box as="span" color="label">Región: </Box>
+                    <Box as="span" color="label">Region: </Box>
                     {q.region}
                   </Box>
                 </Stack.Item>
@@ -418,7 +418,7 @@ const ValidatePanel = (props: {
   if (!customQuests.length) {
     return (
       <Box color="label" italic>
-        No tienes misiones personalizadas activas en espera de validación.
+        No tienes misiones personalizadas activas en espera de validacion.
       </Box>
     );
   }
@@ -483,7 +483,7 @@ export const NoticeBoard = () => {
   };
 
   return (
-    <Window width={560} height={isQuestGiver ? 660 : 520} title="Tablón de anuncios del gremio">
+    <Window width={560} height={isQuestGiver ? 660 : 520} title="Tablon de anuncios del gremio">
       <Window.Content scrollable>
 
         <Section>
@@ -493,7 +493,7 @@ export const NoticeBoard = () => {
             </Stack.Item>
             <Stack.Item grow>
               <Box fontSize="1.2em" bold>
-                Tablón de anuncios del gremio
+                Tablon de anuncios del gremio
               </Box>
               <Box color="label">
                 Fondo de misiones:{' '}
@@ -504,7 +504,7 @@ export const NoticeBoard = () => {
               <Box color="label">
                 Disponible:{' '}
                 <Box as="span" color="good">
-                  {easy_quests.length} Fácil
+                  {easy_quests.length} Facil
                 </Box>{' '}
                 /{' '}
                 <Box as="span" color="average">
@@ -520,7 +520,7 @@ export const NoticeBoard = () => {
         </Section>
 
         <Section
-          title="Tablón de misiones"
+          title="Tablon de misiones"
           buttons={
             <Stack>
               <Stack.Item>
@@ -591,7 +591,7 @@ export const NoticeBoard = () => {
                     color="average"
                     onClick={() => act('deposit_fund')}
                   >
-                    Depósito ({steward_balance} Mammons)
+                    Deposito ({steward_balance} Mammons)
                   </Button>
                 </Stack.Item>
                 <Stack.Item>
@@ -600,7 +600,7 @@ export const NoticeBoard = () => {
                     color="good"
                     onClick={() => act('issue_custom')}
                   >
-                    Emitir misión
+                    Emitir mision
                   </Button>
                 </Stack.Item>
               </Stack>

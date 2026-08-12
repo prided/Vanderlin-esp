@@ -24,7 +24,7 @@
 /datum/reagent/molten_metal/on_mob_life(mob/living/carbon/M, efficiency)
 	. = ..()
 	M.adjustFireLoss(5)
-	to_chat(M, span_danger("¡[src] se está quemando por dentro!"))
+	to_chat(M, span_danger("¡[src] se esta quemando por dentro!"))
 	for(var/datum/material_trait/trait as anything in initial(largest_metal.traits))
 		var/datum/material_trait/new_trait = GLOB.material_traits[trait]
 		new_trait.on_life(M)

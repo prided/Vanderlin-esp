@@ -49,7 +49,7 @@ const STORAGE_META: Record<string, StorageMeta> = {
     note: 'Four bytes per slot of every table this walk reaches, live or not. Counted once here rather than folded into the rows below.',
   },
   alist_records: { label: 'Registros alist', missing: 'sin recorrer' },
-  alist_trees: { label: 'Árboles alist', missing: 'sin recorrer' },
+  alist_trees: { label: 'Arboles alist', missing: 'sin recorrer' },
   turf_var_nodes: { label: 'Nodos var de turfs', missing: 'sin recorrer' },
   string_table: {
     label: 'tabla de cadenas',
@@ -75,7 +75,7 @@ function StorageTable(props: { rows?: StorageRow[] }) {
   if (!rows?.length) {
     return (
       <Box color="label">
-        Este censo no incluye un desglose del almacenamiento, por lo que se desconoce cuánto cobró la extensión más allá de instancias y listas.
+        Este censo no incluye un desglose del almacenamiento, por lo que se desconoce cuanto cobro la extension mas alla de instancias y listas.
       </Box>
     );
   }
@@ -129,33 +129,33 @@ export function Honesty(props: { footer: Footer }) {
   const { footer } = props;
 
   return (
-    <Section title="Lo que estos números omiten">
+    <Section title="Lo que estos numeros omiten">
       {!footer.bytes_available && (
         <NoticeBox danger>
-          Los informes de bytes no están disponibles en esta plataforma, por lo que cada recuento de bytes en cada informe se lee como cero. Los recuentos de instancias y elementos siguen siendo reales.
+          Los informes de bytes no estan disponibles en esta plataforma, por lo que cada recuento de bytes en cada informe se lee como cero. Los recuentos de instancias y elementos siguen siendo reales.
         </NoticeBox>
       )}
       <LabeledList>
         <LabeledList.Item label="No contado">
           {footer.exclusions}
         </LabeledList.Item>
-        <LabeledList.Item label="Fuentes huérfanas">
+        <LabeledList.Item label="Fuentes huerfanas">
           {footer.orphan_sources}
         </LabeledList.Item>
         <LabeledList.Item
           label="Sin costo"
           color={exact(footer.uncosted_instances) > 0 ? 'average' : undefined}
         >
-          {count(footer.uncosted_instances)} los casos se contaron sin un tamaño de base verificado para cobrar. Cada tipo al que llega esta caminata tiene uno, por lo que cualquier tipo distinto de cero es un tipo que se envió sin un tamaño rastreado.
+          {count(footer.uncosted_instances)} los casos se contaron sin un tamaño de base verificado para cobrar. Cada tipo al que llega esta caminata tiene uno, por lo que cualquier tipo distinto de cero es un tipo que se envio sin un tamaño rastreado.
         </LabeledList.Item>
-        <LabeledList.Item label="Esta ejecución">
+        <LabeledList.Item label="Esta ejecucion">
           <Flag set={footer.bytes_available}>bytes</Flag>
           <Flag set={footer.image_base_verified}>base de imagen</Flag>
           <Flag set={footer.turfs_walked}>turfs recorridos</Flag>
           <Flag set={footer.alists_walked}>alists recorridos</Flag>
         </LabeledList.Item>
       </LabeledList>
-      <Section title="El almacenamiento cargó esta ejecución">
+      <Section title="El almacenamiento cargo esta ejecucion">
         <StorageTable rows={footer.storage} />
       </Section>
     </Section>

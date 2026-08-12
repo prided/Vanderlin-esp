@@ -163,7 +163,7 @@
 	base_state = "stonelantern_standing"
 
 /obj/effect/lily_petal
-	name = "pétalos de lirio"
+	name = "petalos de lirio"
 	icon = 'icons/obj/structures/hotspring.dmi'
 	icon_state = "lilypetals1"
 

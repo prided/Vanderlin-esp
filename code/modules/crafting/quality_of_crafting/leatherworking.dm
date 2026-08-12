@@ -199,7 +199,7 @@
 	output = /obj/item/clothing/gloves/leather/feld
 
 /datum/repeatable_crafting_recipe/leather/gloves/phys_gloves
-	name = "guantes físicos"
+	name = "guantes fisicos"
 	requirements = list(
 		/obj/item/natural/hide/cured = 1,
 		/obj/item/natural/fibers/sinew = 1
@@ -239,7 +239,7 @@
 	output = /obj/item/clothing/pants/trou/apothecary
 
 /datum/repeatable_crafting_recipe/leather/gloves/artipants
-	name = "pantalones de artífice"
+	name = "pantalones de artifice"
 	requirements = list(
 		/obj/item/natural/hide/cured = 2,
 		/obj/item/natural/fibers = 1
@@ -444,7 +444,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/leather/jester_shirt
-	name = "túnica de bufón"
+	name = "tunica de bufon"
 	requirements = list(
 		/obj/item/natural/hide/cured = 2,
 	)
@@ -687,7 +687,7 @@
 	craftdiff = 5
 
 /datum/repeatable_crafting_recipe/leather/captaincloak
-	name = "capa de capitán"
+	name = "capa de capitan"
 	output = /obj/item/clothing/cloak/captain
 	requirements = list(/obj/item/natural/silk = 3,
 				/obj/item/natural/hide/cured = 2)
@@ -723,7 +723,7 @@
 	craftdiff = 1
 
 /datum/repeatable_crafting_recipe/leather/court_physician_hat
-	name = "sombrero de médico de la corte"
+	name = "sombrero de medico de la corte"
 	requirements = list(
 		/obj/item/natural/hide/cured = 1,
 	)
@@ -756,7 +756,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/leather/hardened_conical
-	name = "casco cónico endurecido"
+	name = "casco conico endurecido"
 	requirements = list(
 		/obj/item/natural/hide/cured = 2,
 		/obj/item/ingot/iron = 1,
@@ -876,7 +876,7 @@
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/leather/standalone/jester_hat
-	name = "sombrero de bufón"
+	name = "sombrero de bufon"
 	output = /obj/item/clothing/head/jester
 	requirements = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)
@@ -890,7 +890,7 @@
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/leather/standalone/jester_shoes
-	name = "zapatos de bufón"
+	name = "zapatos de bufon"
 	output = /obj/item/clothing/shoes/jester
 	requirements = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)
@@ -1253,7 +1253,7 @@
 	category = "Shoes"
 
 /datum/repeatable_crafting_recipe/leather/shaman_coat
-	name = "abrigo chamánico"
+	name = "abrigo chamanico"
 	output = /obj/item/clothing/armor/leather/shamancoat
 	requirements = list(
 		/obj/item/natural/hide/cured = 2,
@@ -1370,7 +1370,7 @@
 	category = "Guantes"
 
 /datum/repeatable_crafting_recipe/leather/sanguinesleeves
-	name = "mangas sanguíneas"
+	name = "mangas sanguineas"
 	requirements = list(
 		/obj/item/natural/hide/cured = 2,
 		/obj/item/natural/silk = 2,

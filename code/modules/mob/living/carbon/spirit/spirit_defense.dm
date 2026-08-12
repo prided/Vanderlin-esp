@@ -107,7 +107,7 @@
 			if(!(head.resistance_flags & UNACIDABLE))
 				head.acid_act(acidpwr, acid_volume)
 			else
-				to_chat(src, "<span class='warning'>Mi sombrero te protege del ácido.</span>")
+				to_chat(src, "<span class='warning'>Mi sombrero te protege del acido.</span>")
 			return
 	take_bodypart_damage(acidpwr * min(0.6, acid_volume*0.1))
 

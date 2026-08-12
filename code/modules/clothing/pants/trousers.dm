@@ -20,7 +20,7 @@
 
 /obj/item/clothing/pants/trou/leather
 	name = "pantalones de cuero"
-	desc = "Pantalones de cuero estándar para trabajadores resistentes."
+	desc = "Pantalones de cuero estandar para trabajadores resistentes."
 	icon_state = "leathertrou"
 	armor_type = /datum/armor/pants/leather
 	max_integrity = INTEGRITY_POOR
@@ -112,7 +112,7 @@
 	item_state = "apothpants"
 
 /obj/item/clothing/pants/trou/artipants
-	name = "pantalones de artífice"
+	name = "pantalones de artifice"
 	desc = "Thick leather trousers to protect from sparks or stray gear projectiles. Judging by the wear, it's had plenty of use."
 	icon_state = "artipants"
 	item_state = "artipants"
@@ -125,7 +125,7 @@
 
 /obj/item/clothing/pants/trou/beltpants
 	name = "belt-buckled trousers"
-	desc = "Pantalones de cuero oscuro adornados con demasiadas hebillas para ser pragmáticos."
+	desc = "Pantalones de cuero oscuro adornados con demasiadas hebillas para ser pragmaticos."
 	icon_state = "beltpants"
 	item_state = "beltpants"
 

@@ -177,7 +177,7 @@ export const Steward = (props) => {
           <Table>
             <Table.Row>
               <Table.Cell bold width="120px">
-                Tesorería:
+                Tesoreria:
               </Table.Cell>
               <Table.Cell>{treasury}m</Table.Cell>
               <Table.Cell bold width="100px">
@@ -592,7 +592,7 @@ const StockTab = ({
     }
   >
     {entries.length === 0 ? (
-      <Box color="label">No se encontró nada.</Box>
+      <Box color="label">No se encontro nada.</Box>
     ) : compact ? (
       <Table>
         <Table.Row header>
@@ -807,7 +807,7 @@ const CustomTab = ({
           </Stack.Item>
         </Stack>
         {availableItems.length === 0 && (
-          <NoticeBox mt={0.5}>Lleva un artículo para crear un stock personalizado para él.</NoticeBox>
+          <NoticeBox mt={0.5}>Lleva un articulo para crear un stock personalizado para el.</NoticeBox>
         )}
       </Box>
       {entries.length === 0 ? (

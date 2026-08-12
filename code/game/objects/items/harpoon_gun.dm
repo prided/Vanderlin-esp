@@ -131,7 +131,7 @@
 	if(href_list["pull_harpoon"])
 		if(leash_target != usr)
 			return
-		leash_target.visible_message(span_danger("¡[leash_target] comienza a quitar el arpón incrustado en ellos!"), span_danger("You start to remove the harpoon embedded in you!"))
+		leash_target.visible_message(span_danger("¡[leash_target] comienza a quitar el arpon incrustado en ellos!"), span_danger("You start to remove the harpoon embedded in you!"))
 		if(!do_after(leash_target, 5 SECONDS, src))
 			return
 		QDEL_NULL(leash)

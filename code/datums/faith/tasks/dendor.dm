@@ -28,7 +28,7 @@
 	return FALSE
 
 /datum/devotion_task/dendor_bless
-	name = "Proporciona la bendición de Dendor"
+	name = "Proporciona la bendicion de Dendor"
 	desc = "Spread dendors word to plants"
 	devotion_reward = 25
 	progression_reward = 12

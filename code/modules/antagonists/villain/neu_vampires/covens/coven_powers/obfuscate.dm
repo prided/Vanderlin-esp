@@ -297,7 +297,7 @@
 		viewer.flash_fullscreen("blackflash")
 		viewer.set_eyes_closed(TRUE)
 		found_ping(viewer, owner.client, "hidden", 10 SECONDS)
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), viewer, span_hypnophrase("Espera... ¿qué estaba haciendo?")), 3 SECONDS)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), viewer, span_hypnophrase("Espera... ¿que estaba haciendo?")), 3 SECONDS)
 
 /datum/coven_power/obfuscate/vanish_from_the_minds_eye/deactivate()
 	. = ..()

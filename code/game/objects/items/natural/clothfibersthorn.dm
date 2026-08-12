@@ -25,7 +25,7 @@
 	item_weight = 1 GRAMS
 
 /obj/item/natural/fibers/sinew
-	name = "fibra de tendón"
+	name = "fibra de tendon"
 	desc = "Sinew fiber. Made from butchered animals sinew, commonly used by hunters for leatherworking and bowcrafting."
 	icon_state = "fibers"
 	possible_item_intents = list(/datum/intent/use)

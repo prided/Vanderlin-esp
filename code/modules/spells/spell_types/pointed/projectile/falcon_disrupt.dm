@@ -23,7 +23,7 @@
 		var/obj/item/I = cast_on
 		if(istype(I, /obj/item/paper) || I.w_class == WEIGHT_CLASS_TINY || I.w_class == WEIGHT_CLASS_SMALL)
 			if(get_dist(owner, I) > 1)
-				to_chat(owner, span_warning("El halcón reacciona, pero estás demasiado lejos de [I.name]."))
+				to_chat(owner, span_warning("El halcon reacciona, pero estas demasiado lejos de [I.name]."))
 				reset_spell_cooldown()
 				return . | SPELL_CANCEL_CAST
 			send_item = I
@@ -39,14 +39,14 @@
 		return FALSE
 	var/mob/target
 	if(!owner.mind?.do_i_know(name = recipient))
-		to_chat(owner, span_warning("El halcón está confundido... No conoces a nadie con ese nombre."))
+		to_chat(owner, span_warning("El halcon esta confundido... No conoces a nadie con ese nombre."))
 		return FALSE
 	for(var/client/C in GLOB.clients)
 		if(C.mob?.real_name == recipient)
 			target = C.mob
 			break
 	if(!target)
-		to_chat(owner, span_warning("El halcón no puede encontrar [recipient]."))
+		to_chat(owner, span_warning("El halcon no puede encontrar [recipient]."))
 		return FALSE
 
 	var/turf/T = get_turf(target)
@@ -57,8 +57,8 @@
 	playsound(owner, 'sound/vo/mobs/bird/birdfly.ogg', 100, TRUE, -1)
 
 /obj/effect/falcon_messenger
-	name = "halcón mensajero"
-	desc = "Un halcón enviado para entregar un artículo."
+	name = "halcon mensajero"
+	desc = "Un halcon enviado para entregar un articulo."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "falconing"
 	layer = ABOVE_NORMAL_TURF_LAYER
@@ -123,7 +123,7 @@
 	qdel(src)
 
 /obj/effect/falcon_strike_fx
-	name = "ataque de halcón"
+	name = "ataque de halcon"
 	desc = "A falcon swoops in, raking with its claws."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "falconing"
@@ -211,7 +211,7 @@
 	return ..()
 
 /atom/movable/screen/alert/status_effect/falcon_strike
-	name = "Golpe de halcón"
+	name = "Golpe de halcon"
 	desc = ""
 	icon_state = "blind"
 

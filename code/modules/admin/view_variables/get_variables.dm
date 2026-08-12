@@ -95,7 +95,7 @@
 		if(extra_classes)
 			classes += extra_classes
 
-		.["class"] = input(src, "¿Qué tipo de datos?", "Tipo de variable", default_class) as null|anything in classes
+		.["class"] = input(src, "¿Que tipo de datos?", "Tipo de variable", default_class) as null|anything in classes
 		if(holder && holder.marked_datum && .["class"] == markstring)
 			.["class"] = VV_MARKED_DATUM
 
@@ -113,7 +113,7 @@
 
 
 		if(VV_NUM)
-			.["value"] = input("Ingrese un nuevo número:", "Num", current_value) as null|num
+			.["value"] = input("Ingrese un nuevo numero:", "Num", current_value) as null|num
 			if(.["value"] == null)
 				.["class"] = null
 				return

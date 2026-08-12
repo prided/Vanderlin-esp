@@ -1,5 +1,5 @@
 /obj/item/reagent_containers/glass/bottle/aflask
-	name = "matraz alquímico"
+	name = "matraz alquimico"
 	desc = "A small metal flask used for the secure storing of alchemical powders."
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "aflask"

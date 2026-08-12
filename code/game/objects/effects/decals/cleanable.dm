@@ -51,7 +51,7 @@
 				to_chat(user, "<span class='notice'>[src] isn't thick enough to scoop up!</span>")
 				return
 			if(W.reagents.total_volume >= W.reagents.maximum_volume)
-				to_chat(user, "¡<span class='notice'>[W] está lleno!</span>")
+				to_chat(user, "¡<span class='notice'>[W] esta lleno!</span>")
 				return
 			to_chat(user, "<span class='notice'>I scoop up [src] into [W]!</span>")
 			reagents.trans_to(W, reagents.total_volume, transfered_by = user)

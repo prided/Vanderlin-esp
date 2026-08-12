@@ -188,7 +188,7 @@
 	var/persistent_balance = get_persistent_balance(customer)
 
 	if(persistent_balance <= 0)
-		banker.say("No tienes fondos almacenados en tu bóveda persistente.")
+		banker.say("No tienes fondos almacenados en tu boveda persistente.")
 		return
 
 	var/withdraw_amount = input(customer, "Ingrese el monto a retirar (1-[persistent_balance]):", "Withdrawal Amount") as num|null
@@ -196,7 +196,7 @@
 		return
 
 	if(withdraw_amount > persistent_balance)
-		banker.say("¡No tienes tanto en tu bóveda persistente!")
+		banker.say("¡No tienes tanto en tu boveda persistente!")
 		return
 
 	withdraw_from_persistent_vault(customer, withdraw_amount)
@@ -266,7 +266,7 @@
 
 	if(loan_info["has_loan"])
 		balance_info += span_warning("Outstanding Loan: [loan_info["amount"]] mammons")
-		balance_info += span_notice("Tasa de interés: [loan_interest_rate]%")
+		balance_info += span_notice("Tasa de interes: [loan_interest_rate]%")
 
 	to_chat(customer, balance_info.Join("\n"))
 
@@ -372,7 +372,7 @@
 /datum/component/banker/proc/handle_loan_request(mob/customer)
 	var/mob/living/banker = parent
 
-	var/loan_amount = input(customer, "Ingrese el monto del préstamo (1-[max_loan_amount]):", "Solicitud de préstamo") as num|null
+	var/loan_amount = input(customer, "Ingrese el monto del prestamo (1-[max_loan_amount]):", "Solicitud de prestamo") as num|null
 	if(!loan_amount || loan_amount <= 0 || !can_bank(customer))
 		return
 
@@ -400,7 +400,7 @@
 	var/loan_info = get_loan_info(customer)
 
 	if(!loan_info["has_loan"])
-		banker.say("No tienes ningún préstamo pendiente.")
+		banker.say("No tienes ningun prestamo pendiente.")
 		return
 
 	var/coins_available = get_mammons_in_atom(customer)
@@ -530,10 +530,10 @@
 /datum/component/banker/proc/can_bank(mob/customer)
 	var/mob/living/banker = parent
 	if(banker.cmode)
-		to_chat(customer, "¡[banker] está en combate!")
+		to_chat(customer, "¡[banker] esta en combate!")
 		return FALSE
 	if(IS_DEAD_OR_INCAP(banker))
-		to_chat(customer, "¡[banker] está indispuesto!")
+		to_chat(customer, "¡[banker] esta indispuesto!")
 		return FALSE
 	return TRUE
 

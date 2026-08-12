@@ -18,7 +18,7 @@
 	name = "inquisitorial supply crate"
 
 /obj/structure/closet/crate/chest/inqcrate/articles/
-	name = "caja de artículos inquisitoriales"
+	name = "caja de articulos inquisitoriales"
 
 /obj/structure/closet/crate/chest/inqreliquary/relic/
 
@@ -104,7 +104,7 @@
 		new /obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew(src)
 
 /datum/inqports/supplies/bluepotions
-	name = "3 botellas de maná"
+	name = "3 botellas de mana"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/bluepots
 	marquescost = 8
 
@@ -113,7 +113,7 @@
 		new /obj/item/reagent_containers/glass/bottle/manapot(src)
 
 /datum/inqports/supplies/strongbluevials
-	name = "3 viales de maná fuerte"
+	name = "3 viales de mana fuerte"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sbluevials
 	maximum = 4
 	marquescost = 16
@@ -132,7 +132,7 @@
 		new /obj/item/smokebomb(src)
 
 /datum/inqports/supplies/canister_bomb
-	name = "4 granadas de fragmentación"
+	name = "4 granadas de fragmentacion"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/canister_bomb
 	maximum = 1
 	marquescost = 8
@@ -235,7 +235,7 @@
 	marquescost = 8
 
 /datum/inqports/articles/listener
-	name = "1 oído atento"
+	name = "1 oido atento"
 	item_type = /obj/item/listeningdevice/inq
 	marquescost = 4
 
@@ -417,7 +417,7 @@
 	new /obj/item/clothing/armor/leather/jacket/leathercoat/confessor(src)
 
 /datum/inqports/wardrobe/inspectorcoat
-	name = "Los mejores abrigos y sombreros de la Inquisición"
+	name = "Los mejores abrigos y sombreros de la Inquisicion"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspectorcoats
 	marquescost = 12
 
@@ -472,7 +472,7 @@
 
 
 /datum/inqports/wardrobe/standarddisguise //basic, cheap disguises for when you are outlawed roundstart.
-	name = "Conjunto de disfraz estándar: contiene capa."
+	name = "Conjunto de disfraz estandar: contiene capa."
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/standarddisguise
 	marquescost = 2
 

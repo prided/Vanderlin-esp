@@ -105,7 +105,7 @@
 	node_purity_max = 45
 
 /datum/chimeric_table/triton
-	name = "Tritón"
+	name = "Triton"
 	compatible_blood_types = list(
 		/datum/blood_type/human/triton,
 	)

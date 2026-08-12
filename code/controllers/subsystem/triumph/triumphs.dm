@@ -171,15 +171,15 @@ SUBSYSTEM_DEF(triumphs)
 		return FALSE
 
 	if(ref_datum.limited && triumph_buy_stocks[ref_datum.type] <= 0)
-		to_chat(C, span_warning("¡El artículo está agotado!"))
+		to_chat(C, span_warning("¡El articulo esta agotado!"))
 		return FALSE
 
 	if(get_triumphs(C.ckey) < ref_datum.triumph_cost)
-		to_chat(C, span_warning("¡No tienes suficientes triunfos para comprar este artículo!"))
+		to_chat(C, span_warning("¡No tienes suficientes triunfos para comprar este articulo!"))
 		return FALSE
 
 	if(!ref_datum.allow_multiple_buys && C.has_triumph_buy(ref_datum.triumph_buy_id))
-		to_chat(C, span_warning("¡Ya tienes este artículo!"))
+		to_chat(C, span_warning("¡Ya tienes este articulo!"))
 		return FALSE
 
 	if(C.has_triumph_buy(ref_datum.triumph_buy_id, TRUE))

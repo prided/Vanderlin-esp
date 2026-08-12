@@ -30,7 +30,7 @@
 				return BULLET_ACT_HIT
 			else
 				blocked = 100
-				target.visible_message(	span_danger("¡\The [src] fue desviado!"), span_danger("¡Mi armadura me protegió contra \the [src]!"))
+				target.visible_message(	span_danger("¡\The [src] fue desviado!"), span_danger("¡Mi armadura me protegio contra \the [src]!"))
 
 	..(target, blocked)
 	DISABLE_BITFIELD(reagents.flags, NO_REACT)

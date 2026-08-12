@@ -114,7 +114,7 @@
 		return
 
 	if(cast_on.is_dead())
-		to_chat(owner, span_danger("¡está muerto!"))
+		to_chat(owner, span_danger("¡esta muerto!"))
 		return
 
 	charmed_mobs += WEAKREF(cast_on)

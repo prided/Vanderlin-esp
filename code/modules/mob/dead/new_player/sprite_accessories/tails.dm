@@ -44,14 +44,14 @@
 	icon_state = "axolotl"
 
 /datum/sprite_accessory/tail/batl
-	name = "Murciélago (largo)"
+	name = "Murcielago (largo)"
 	icon_state = "batl"
 	color_keys = 2
 	color_key_names = list("Tail", "Tip")
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/bats
-	name = "Murciélago (corto)"
+	name = "Murcielago (corto)"
 	icon_state = "bats"
 	color_keys = 2
 	color_key_names = list("Tail", "Tip")
@@ -184,7 +184,7 @@
 	color_key_names = list("Tail", "Inner")
 
 /datum/sprite_accessory/tail/shark
-	name = "Tiburón"
+	name = "Tiburon"
 	icon_state = "shark"
 	can_wag = TRUE
 
@@ -326,7 +326,7 @@
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/tiefling/heart
-	name = "súcubo"
+	name = "sucubo"
 	icon = 'icons/mob/sprite_accessory/tails/tiefling.dmi'
 	icon_state = "hearttail"
 	color_key_defaults = list(KEY_SKIN_COLOR)

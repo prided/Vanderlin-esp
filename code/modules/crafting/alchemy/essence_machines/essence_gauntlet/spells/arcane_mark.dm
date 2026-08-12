@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/arcane_mark
 	name = "Arcane Mark"
-	desc = "Coloca una marca mágica invisible en un objeto para su identificación."
+	desc = "Coloca una marca magica invisible en un objeto para su identificacion."
 	button_icon_state = "arcane_mark"
 	cast_range = 1
 	essences = list(/datum/thaumaturgical_essence/magic)

@@ -333,7 +333,7 @@
 	return has_adjacent
 
 /datum/action/cooldown/meatvine/spread_wall_multi
-	name = "Línea de pared extendida (x3)"
+	name = "Linea de pared extendida (x3)"
 	desc = "Spread 3 meatvine walls in a line perpendicular to your facing direction. Cost: 75 resources."
 	button_icon_state = "wall"
 	resource_cost = 25
@@ -609,7 +609,7 @@
 		if(existing_spike.add_spike())
 			return TRUE
 		else
-			to_chat(owner, span_warning("¡Picos máximos alcanzados en [get_area_name(T)]!"))
+			to_chat(owner, span_warning("¡Picos maximos alcanzados en [get_area_name(T)]!"))
 			return FALSE
 
 	var/obj/structure/meatvine/tentacle_spike/new_spike = new spread_type(T)
@@ -635,13 +635,13 @@
 
 	// Check range
 	if(get_dist(user, target_turf) > spread_range)
-		to_chat(user, span_warning("¡El objetivo está demasiado lejos!"))
+		to_chat(user, span_warning("¡El objetivo esta demasiado lejos!"))
 		return FALSE
 
 	var/list/construct_turfs = get_build_turfs(target_turf)
 
 	if(!length(construct_turfs))
-		to_chat(user, span_warning("¡No hay ubicaciones de colocación válidas!"))
+		to_chat(user, span_warning("¡No hay ubicaciones de colocacion validas!"))
 		return FALSE
 
 	var/total_cost = resource_cost * length(construct_turfs)

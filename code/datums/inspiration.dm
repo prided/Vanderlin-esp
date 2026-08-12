@@ -46,7 +46,7 @@
 
 /mob/living/carbon/human/proc/clear_audience()
 	set name = "Audiencia clara"
-	set category = "Inspiración"
+	set category = "Inspiracion"
 	if(!inspiration)
 		return FALSE
 	if(src.has_status_effect(/datum/status_effect/buff/playing_melody) || src.has_status_effect(/datum/status_effect/buff/playing_dirge))
@@ -59,13 +59,13 @@
 	if(!inspiration)
 		return FALSE
 	if(src.has_status_effect(/datum/status_effect/buff/playing_melody) || src.has_status_effect(/datum/status_effect/buff/playing_dirge))
-		to_chat(src, span_warning("¡No puedo cambiar mi audiencia mientras actúo!"))
+		to_chat(src, span_warning("¡No puedo cambiar mi audiencia mientras actuo!"))
 		return FALSE
 	if(!target || target == src)
 		return FALSE
 	if(inspiration.check_in_audience(target))
 		inspiration.audience -= target
-		to_chat(src, span_notice("[target.real_name] ya no está en mi audiencia."))
+		to_chat(src, span_notice("[target.real_name] ya no esta en mi audiencia."))
 	else
 		var/audience_count = inspiration.audience.len - 1
 		if(audience_count >= inspiration.maxaudience)
@@ -77,7 +77,7 @@
 
 /mob/living/carbon/human/proc/checkaudience()
 	set name = "Check Audience"
-	set category = "Inspiración"
+	set category = "Inspiracion"
 
 	if(!inspiration)
 		return FALSE
@@ -95,7 +95,7 @@
 
 /mob/living/carbon/human/proc/explain_bard()
 	set name = "Explain Bardic Inspiration"
-	set category = "Inspiración"
+	set category = "Inspiracion"
 	if(!inspiration)
 		return FALSE
 	var/tier_name = inspiration.level == BARD_T2 ? "Full Bard" : "Lesser Bard"

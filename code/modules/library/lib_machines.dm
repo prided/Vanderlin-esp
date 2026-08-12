@@ -25,7 +25,7 @@
 	if(istype(O, /obj/item/canvas))
 		var/obj/item/canvas/M = O
 		if(!M.author || !M.title)
-			to_chat(user, span_notice("Este lienzo no está firmado."))
+			to_chat(user, span_notice("Este lienzo no esta firmado."))
 			return
 		// Prompt the user to upload the manuscript
 		var/choice = tgui_alert(user, "Do you want to add the painting to the archive?", "Confirmar", list("Yes", "No"))
@@ -95,7 +95,7 @@
 		return
 	else
 		// Default interaction or message
-		to_chat(user, span_warning("[src] está vacío."))
+		to_chat(user, span_warning("[src] esta vacio."))
 		return
 
 /obj/machinery/printingpress/attack_hand_secondary(mob/user, list/modifiers)
@@ -107,12 +107,12 @@
 		to_chat(user, span_warning("[src] is currently printing. Please wait."))
 		return
 	if(output_item)
-		to_chat(user, span_warning("Hay un producto terminado en [src]. Utilice una mano vacía para recuperarlo."))
+		to_chat(user, span_warning("Hay un producto terminado en [src]. Utilice una mano vacia para recuperarlo."))
 		return
 	if(!has_paper)
 		to_chat(user, span_warning("[src] requiere una hoja de papel en blanco para imprimir."))
 		return
-	var/choice = input(user, "Elija una opción para \the [src]") as null|anything in list("Print The Book", "Print a Tome of Justice", "Print from the Archive", "Profession Manuel")
+	var/choice = input(user, "Elija una opcion para \the [src]") as null|anything in list("Print The Book", "Print a Tome of Justice", "Print from the Archive", "Profession Manuel")
 	switch(choice)
 		if ("Print The Book")
 			start_printing(user, "bibble")
@@ -127,7 +127,7 @@
 						continue
 					manuel_name_to_path |= initial(book.name)
 					manuel_name_to_path[initial(book.name)] = book
-			choice = input(user, "Elija una opción para \the [src]") as null|anything in manuel_name_to_path
+			choice = input(user, "Elija una opcion para \the [src]") as null|anything in manuel_name_to_path
 			if(choice)
 				start_printing(user, manuel_name_to_path[choice])
 
@@ -186,9 +186,9 @@
 	output_item = new /obj/item/book/playerbook(src, null, null, null, id)
 
 /obj/machinery/printingpress/proc/choose_search_parameters(mob/user)
-	var/search_title = input(user, "Ingrese el título (opcional):") as text|null
+	var/search_title = input(user, "Ingrese el titulo (opcional):") as text|null
 	var/search_author = input(user, "Ingrese el autor (opcional):") as text|null
-	var/search_category = input(user, "Seleccione una categoría (opcional):") in list("Any", "Myths & Tales", "Legends & Accounts", "Thesis", "Eoratica") // Removed "Apocrypha & Grimoires"
+	var/search_category = input(user, "Seleccione una categoria (opcional):") in list("Any", "Myths & Tales", "Legends & Accounts", "Thesis", "Eoratica") // Removed "Apocrypha & Grimoires"
 	// Pass the selected parameters to search_manuscripts
 	search_manuscripts(user, search_title, search_author, search_category)
 

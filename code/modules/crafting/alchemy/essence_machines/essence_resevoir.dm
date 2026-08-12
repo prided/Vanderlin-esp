@@ -1,5 +1,5 @@
 /obj/machinery/essence/reservoir
-	name = "depósito de esencia"
+	name = "deposito de esencia"
 	desc = "A large glass sphere for storing massive quantities of alchemical essences."
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	icon_state = "essence_tank"
@@ -98,7 +98,7 @@
 	var/essence_type = vial.contained_essence.type
 
 	if(filter_mode && length(allowed_essence_types) && !(essence_type in allowed_essence_types))
-		to_chat(user, span_warning("El filtro de este depósito no permite [vial.contained_essence.name]."))
+		to_chat(user, span_warning("El filtro de este deposito no permite [vial.contained_essence.name]."))
 		return
 
 	var/moved = storage.add(essence_type, vial.essence_amount)
@@ -186,7 +186,7 @@
 	options["View Current Filters"] = "view"
 	options["Cancel"] = "cancel"
 
-	var/choice = input(user, "Configuración del filtro de esencia", "Menú de filtro") in options
+	var/choice = input(user, "Configuracion del filtro de esencia", "Menu de filtro") in options
 	if(!choice || choice == "cancel" || !Adjacent(user))
 		return
 

@@ -68,7 +68,7 @@
 	base_state = "churchfire"
 
 /obj/machinery/light/fueled/firebowl/church/magic
-	name = "hoguera mágica"
+	name = "hoguera magica"
 	color = "#6ab2ee"
 	bulb_colour = "#6ab2ee"
 	max_integrity = 30
@@ -215,7 +215,7 @@
 
 /*	.............   Candle lamp   ................ */
 /obj/machinery/light/fueled/wallfire/candle/lamp // cant get them to start unlit but they work as is
-	name = "lámpara de vela"
+	name = "lampara de vela"
 	icon_state = "candle"
 	base_state = "candle"
 	plane = GAME_PLANE_UPPER

@@ -848,15 +848,15 @@
 				if(affecting && affecting.receive_damage(0, 10))
 					H.update_damage_overlays()
 		if(3)
-			to_chat(H, span_notice("Las estrellas te sonríen."))
+			to_chat(H, span_notice("Las estrellas te sonrien."))
 		if(4)
 			to_chat(H, span_notice("Bendita lucha amarilla."))
 		if(5)
 			to_chat(H, span_notice("¡Ves una estrella!"))
 
 /obj/structure/fluff/stonecoffin
-	name = "ataúd de piedra"
-	desc = "Un ataúd de piedra dañado..."
+	name = "ataud de piedra"
+	desc = "Un ataud de piedra dañado..."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "stonecoffin"
 	density = TRUE
@@ -900,7 +900,7 @@
 	src.transform = M
 
 /obj/structure/fluff/statue/scare
-	name = "espantapájaros"
+	name = "espantapajaros"
 	desc = "An effigy made to drive away zad and other pesky birds from a farm."
 	icon_state = "td"
 
@@ -972,7 +972,7 @@
 \-------------------*/
 
 /obj/structure/fluff/statue/spider
-	name = "ídolo arácnido"
+	name = "idolo aracnido"
 	desc = "A stone idol of a spider with the head of a smirking elven woman. Her eyes seem to follow you."
 	icon_state = "spidercore"
 	var/goal = 5
@@ -1004,7 +1004,7 @@
 	..()
 
 /obj/structure/fluff/statue/evil
-	name = "Matthios Ídolo"
+	name = "Matthios Idolo"
 	desc = "A statue built to the robber-god, Matthios. The visage resembles nobody in particular. It is said that he grants the wishes of those pagan bandits (free folk) who feed him money."
 	icon_state = "evilidol"
 	icon = 'icons/roguetown/misc/structure.dmi'
@@ -1027,7 +1027,7 @@
 					B.contrib += W.get_real_price()
 					record_round_statistic(STATS_SHRINE_VALUE, W.get_real_price())
 			else
-				to_chat(user, span_warning("El ídolo no quiere tu basura."))
+				to_chat(user, span_warning("El idolo no quiere tu basura."))
 				return
 			if(B.contrib >= 80)
 				give_rewards(B, user)
@@ -1075,14 +1075,14 @@
 		playsound(src,'sound/items/matidol2.ogg', 50, TRUE)
 
 /obj/structure/fluff/statue/graggar
-	name = "Graggar Ídolo"
+	name = "Graggar Idolo"
 	desc = "An ugly and crude stone statue in imitation of Graggar, bestial God of murder and cannibalism. The empty eye sockets seem to follow you."
 	icon_state = "graggaraltar"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 
 
 /obj/structure/fluff/psycross
-	name = "cruz del panteón"
+	name = "cruz del panteon"
 	desc = "Un imponente monumento a los Diez. Los matrimonios se realizan bajo su sombra."
 	icon_state = "psycross"
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
@@ -1140,7 +1140,7 @@
 		return COMPONENT_ATOM_BLOCK_EXIT
 
 /obj/structure/fluff/psycross/copper	// the big nice on in the Temple, destroying it triggers Omens. Not so for the craftable ones.
-	name = "cruz del panteón"
+	name = "cruz del panteon"
 	icon_state = "psycrosschurch"
 	break_sound = null
 	attacked_sound = list("sound/combat/hits/onmetal/metalimpact (1).ogg", "sound/combat/hits/onmetal/metalimpact (2).ogg")
@@ -1244,7 +1244,7 @@
 	if(!real_patron)
 		return
 
-	var/confirm = tgui_alert(user, "Your new Patron is [real_patron]. Is this correct?", "Confirmar elección", list("Yes", "No"))
+	var/confirm = tgui_alert(user, "Your new Patron is [real_patron]. Is this correct?", "Confirmar eleccion", list("Yes", "No"))
 	if(confirm != "Yes")
 		return
 
@@ -1317,7 +1317,7 @@
 		to_chat(user, span_warning("[groom.real_name] absent in spirit!"))
 		return FALSE
 	if(groom.IsWedded())
-		to_chat(user, span_warning("¡[groom.real_name] ya está casado!"))
+		to_chat(user, span_warning("¡[groom.real_name] ya esta casado!"))
 		return FALSE
 
 	// Bride checks
@@ -1393,7 +1393,7 @@
 
 	if(!secret_marriage)
 		var/announcement_message = "Eora [groom.gender == bride.gender ? "begrudgingly accepts" : "proudly embraces"] the marriage between [groom.real_name] and [bride_first_name]!"
-		priority_announce(announcement_message, title = "¡Santa Unión!", sound = 'sound/misc/bell.ogg')
+		priority_announce(announcement_message, title = "¡Santa Union!", sound = 'sound/misc/bell.ogg')
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOBAL_MARRIAGE, groom, bride)
 	record_round_statistic(STATS_MARRIAGES)

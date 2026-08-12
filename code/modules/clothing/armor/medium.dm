@@ -40,7 +40,7 @@
 
 //................ Armored surcoat (Heartfelt) ............... //
 /obj/item/clothing/armor/medium/surcoat/heartfelt
-	desc = "Una protección señorial con los colores de Heartfelt. Una cota de placas elaborada con maestría para la alta nobleza."
+	desc = "Una proteccion señorial con los colores de Heartfelt. Una cota de placas elaborada con maestria para la alta nobleza."
 	color = CLOTHING_BLOOD_RED
 	sellprice = VALUE_SNOWFLAKE_STEEL+BONUS_VALUE_SMALL
 

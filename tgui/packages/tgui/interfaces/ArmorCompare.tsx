@@ -194,7 +194,7 @@ export const ArmorCompare = (props) => {
           title="Comparar"
           buttons={
             <Box color="label" fontSize="0.9em">
-              Haz clic en una armadura a continuación para agregarla aquí. Haz clic en un espacio lleno para eliminarlo.
+              Haz clic en una armadura a continuacion para agregarla aqui. Haz clic en un espacio lleno para eliminarlo.
             </Box>
           }
         >
@@ -219,7 +219,7 @@ export const ArmorCompare = (props) => {
                     />
                   ) : (
                     <Box color="label" italic>
-                      Ranura vacía
+                      Ranura vacia
                     </Box>
                   )}
                 </Table.Cell>
@@ -256,7 +256,7 @@ export const ArmorCompare = (props) => {
           >
             {viewingItems.length === 0 ? (
               <Box color="label" italic>
-                Ningún tipo de elemento está predeterminado directamente en esta armadura (solo se puede aplicar dinámicamente, por ejemplo, a través de set_armor).
+                Ningun tipo de elemento esta predeterminado directamente en esta armadura (solo se puede aplicar dinamicamente, por ejemplo, a traves de set_armor).
               </Box>
             ) : (
               <Box

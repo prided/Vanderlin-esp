@@ -10,7 +10,7 @@ import { SortType, type SubsystemData } from './types';
 
 export function ControllerOverview(props) {
   return (
-    <Window title="Descripción general del controlador" height={600} width={500}>
+    <Window title="Descripcion general del controlador" height={600} width={500}>
       <Window.Content>
         <ControllerContent />
       </Window.Content>
@@ -90,7 +90,7 @@ export function ControllerContent(props) {
                   </Button>
                   <Button
                     icon={state.inactive ? 'eye-slash' : 'eye'}
-                    tooltip="Ocultar sin conexión/en pausa"
+                    tooltip="Ocultar sin conexion/en pausa"
                     selected={state.inactive}
                     onClick={() =>
                       dispatch({

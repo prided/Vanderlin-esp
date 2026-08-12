@@ -6,7 +6,7 @@
 
 /datum/quirk/peculiarity/large_sized
 	name = "Large Build"
-	desc = "Eres más alto y más ancho que la mayoría. Esto te hace más imponente pero también más difícil de pasar desapercibido."
+	desc = "Eres mas alto y mas ancho que la mayoria. Esto te hace mas imponente pero tambien mas dificil de pasar desapercibido."
 
 /datum/quirk/peculiarity/large_sized/on_spawn()
 	if(!ishuman(owner))
@@ -131,7 +131,7 @@
 
 		to_chat(box_owner, span_notice("You remember that [keeper.real_name] knows how to open this box..."))
 	else
-		to_chat(box_owner, span_warning("No puedes recordar quién conoce el código de acceso..."))
+		to_chat(box_owner, span_warning("No puedes recordar quien conoce el codigo de acceso..."))
 
 	RegisterSignal(mystery_box, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine), TRUE)
 

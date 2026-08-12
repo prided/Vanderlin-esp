@@ -380,7 +380,7 @@
 			to_chat(src, "<span class='warning'>I can't fit anything in!</span>")
 		return
 	if(!equipped_belt.contents.len) // nothing to take out
-		to_chat(src, "<span class='warning'>¡No hay nada en tu cinturón para sacar!</span>")
+		to_chat(src, "<span class='warning'>¡No hay nada en tu cinturon para sacar!</span>")
 		return
 	var/obj/item/stored = equipped_belt.contents[equipped_belt.contents.len]
 	if(!stored || stored.on_found(src))

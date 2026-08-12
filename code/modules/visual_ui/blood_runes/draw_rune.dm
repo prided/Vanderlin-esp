@@ -70,7 +70,7 @@
 			to_chat(user, span_warning("You can feel the presence of a concealed rune here. You have to reveal it before you can add more words to it.") )
 			return
 		else if (rune.word1 && rune.word2 && rune.word3)
-			to_chat(user, span_warning("No puedes agregar más de 3 palabras a una runa.") )
+			to_chat(user, span_warning("No puedes agregar mas de 3 palabras a una runa.") )
 			return
 
 	var/datum/rune_word/word = GLOB.rune_words[word_to_draw]
@@ -79,11 +79,11 @@
 		return
 
 	if(rune)
-		user.visible_message(span_warning("\The [user] canta y pinta más símbolos en el suelo.") , \
+		user.visible_message(span_warning("\The [user] canta y pinta mas simbolos en el suelo.") , \
 				span_warning("You add another word to the rune.") , \
 				span_warning("You hear chanting.") )
 	else
-		user.visible_message(span_warning("\The [user] comienza a cantar y pintar símbolos en el suelo.") , \
+		user.visible_message(span_warning("\The [user] comienza a cantar y pintar simbolos en el suelo.") , \
 				span_warning("You begin drawing a rune on the floor.") , \
 				span_warning("You hear some chanting.") )
 
@@ -92,7 +92,7 @@
 
 	if(rune)
 		if(rune.word1 && rune.word2 && rune.word3)
-			to_chat(user, span_warning("No puedes agregar más de 3 palabras a una runa.") )
+			to_chat(user, span_warning("No puedes agregar mas de 3 palabras a una runa.") )
 			return
 	write_rune_word(get_turf(user), word, rune_blood_data["blood"], caster = user)
 
@@ -183,7 +183,7 @@
 			else if (rune.word2 && rune.word2.type != initial(queued_rune.word2))
 				to_chat(user, span_warning("La segunda palabra de esta runa entra en conflicto con la sintaxis de la runa [initial(queued_rune.name)].") )
 			else if (rune.word3)
-				to_chat(user, span_warning("No puedes agregar más de 3 palabras a una runa.") )
+				to_chat(user, span_warning("No puedes agregar mas de 3 palabras a una runa.") )
 
 //------------------------------------------------------------
 
@@ -254,7 +254,7 @@
 //------------------------------------------------------------
 
 /obj/abstract/visual_ui_element/hoverable/rune_word/rune_technology
-	name = "Tecnología"
+	name = "Tecnologia"
 	word = "technology"
 	offset_x = 61
 	offset_y = -19

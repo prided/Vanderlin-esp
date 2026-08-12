@@ -1,5 +1,5 @@
 /datum/animal_gene/frail
-	name = "Frágil"
+	name = "Fragil"
 	desc = "Delicate constitution. Lower max health."
 	rarity = 6
 	exclusion_group = GENE_GROUP_CONSTITUTION

@@ -110,7 +110,7 @@
 	icon_state = "short"
 
 /datum/sprite_accessory/frills/aquatic
-	name = "Acuático"
+	name = "Acuatico"
 	icon_state = "aqua"
 
 /datum/sprite_accessory/spines
@@ -160,11 +160,11 @@
 	icon_state = "longmeme"
 
 /datum/sprite_accessory/spines/aqautic
-	name = "Acuático"
+	name = "Acuatico"
 	icon_state = "aqua"
 
 /datum/sprite_accessory/spines_animated/aqautic
-	name = "Acuático"
+	name = "Acuatico"
 	icon_state = "aqua"
 
 

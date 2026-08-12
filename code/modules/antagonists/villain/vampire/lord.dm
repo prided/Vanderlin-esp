@@ -101,7 +101,7 @@
 // NEW VERBS
 /mob/living/carbon/human/proc/demand_submission()
 	set name = "Demand Submission"
-	set category = "RolÚnico.Vampiro"
+	set category = "RolUnico.Vampiro"
 	if(SSmapping.retainer.king_submitted)
 		to_chat(src, span_warning("I am already the Master of [SSmapping.config.map_name]."))
 		return
@@ -109,11 +109,11 @@
 	var/mob/living/carbon/ruler = SSticker.rulermob
 
 	if(!ruler || (get_dist(src, ruler) > 1))
-		to_chat(src, span_warning("El Maestro de [SSmapping.config.map_name] no está a mi lado."))
+		to_chat(src, span_warning("El Maestro de [SSmapping.config.map_name] no esta a mi lado."))
 		return
 
 	if(ruler.stat <= CONSCIOUS)
-		to_chat(src, span_warning("[ruler] todavía está consciente."))
+		to_chat(src, span_warning("[ruler] todavia esta consciente."))
 		return
 
 	switch(tgui_alert(ruler, "Submit and Pledge Allegiance to [name]?", "SUBMISSION", list("Yes", "No")))
@@ -125,7 +125,7 @@
 
 /mob/living/carbon/human/proc/punish_spawn()
 	set name = "Punish Minion"
-	set category = "RolÚnico.Vampiro"
+	set category = "RolUnico.Vampiro"
 
 	var/list/possible = list()
 	for(var/mob/living/carbon/human/member in clan?.clan_members)

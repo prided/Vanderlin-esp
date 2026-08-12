@@ -341,7 +341,7 @@
 
 
 /obj/item/organ/brain/automaton
-	name = "núcleo del alma"
+	name = "nucleo del alma"
 	desc = "A crystalline matrix containing a trapped soul, bound in service through dark artifice."
 	icon_state = "soul_core"
 	resistance_flags = FIRE_PROOF
@@ -358,7 +358,7 @@
 	food_type = null
 
 /obj/item/organ/eyes/automaton
-	name = "sensores ópticos"
+	name = "sensores opticos"
 	desc = "Glowing lenses that allow the automaton to perceive the world."
 	resistance_flags = FIRE_PROOF
 	organ_flags = ORGAN_ROBOTIC
@@ -368,7 +368,7 @@
 
 /obj/item/organ/ears/automaton
 	name = "interfaz de audio"
-	desc = "El procesador de audio para que los autómatas reciban órdenes."
+	desc = "El procesador de audio para que los automatas reciban ordenes."
 	resistance_flags = FIRE_PROOF
 	organ_flags = ORGAN_ROBOTIC
 	icon = 'icons/roguetown/misc/machines.dmi'

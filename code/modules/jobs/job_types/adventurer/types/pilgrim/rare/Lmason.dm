@@ -36,7 +36,7 @@
 	attribute_sheet = /datum/attribute_holder/sheet/job/pilgrim/grandmastermason
 
 /datum/outfit/pilgrim/grandmastermason
-	name = "Gran Maestro Masón (Peregrino)"
+	name = "Gran Maestro Mason (Peregrino)"
 	head = /obj/item/clothing/head/hatblu
 	armor = /obj/item/clothing/armor/leather/vest
 	cloak = /obj/item/clothing/cloak/apron/waist/colored/bar

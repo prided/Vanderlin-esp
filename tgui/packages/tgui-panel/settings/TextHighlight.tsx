@@ -36,7 +36,7 @@ export function TextHighlightSettings(props) {
               icon="plus"
               onClick={() => addHighlight()}
             >
-              Agregar configuración de resaltado
+              Agregar configuracion de resaltado
             </Button>
             {highlightSettings.length >= WARN_AFTER_HIGHLIGHT_AMT && (
               <Box inline fontSize="0.9em" ml={1} color="red">
@@ -90,7 +90,7 @@ function TextHighlightSetting(props) {
         <Stack.Item>
           <Button.Checkbox
             checked={highlightWholeMessage}
-            tooltip="Si se selecciona esta opción, todo el mensaje se resaltará en amarillo."
+            tooltip="Si se selecciona esta opcion, todo el mensaje se resaltara en amarillo."
             onClick={() =>
               updateHighlight({
                 id,
@@ -105,7 +105,7 @@ function TextHighlightSetting(props) {
           <Button.Checkbox
             checked={matchWord}
             tooltipPosition="bottom-start"
-            tooltip="Si se selecciona esta opción, solo se activarán coincidencias exactas (sin letras adicionales antes o después). No compatible con la puntuación. Se anula si se utiliza expresiones regulares."
+            tooltip="Si se selecciona esta opcion, solo se activaran coincidencias exactas (sin letras adicionales antes o despues). No compatible con la puntuacion. Se anula si se utiliza expresiones regulares."
             onClick={() =>
               updateHighlight({
                 id,
@@ -118,7 +118,7 @@ function TextHighlightSetting(props) {
         </Stack.Item>
         <Stack.Item>
           <Button.Checkbox
-            tooltip="Si se selecciona esta opción, el resaltado distinguirá entre mayúsculas y minúsculas."
+            tooltip="Si se selecciona esta opcion, el resaltado distinguira entre mayusculas y minusculas."
             checked={matchCase}
             onClick={() =>
               updateHighlight({
@@ -150,7 +150,7 @@ function TextHighlightSetting(props) {
         fluid
         height="3em"
         value={highlightText}
-        placeholder="Pon palabras a resaltar aquí. Separe los términos con comas, es decir (término1, término2, término3)"
+        placeholder="Pon palabras a resaltar aqui. Separe los terminos con comas, es decir (termino1, termino2, termino3)"
         onBlur={(value) =>
           updateHighlight({
             id: id,

@@ -143,7 +143,7 @@
 
 ///Called when someone steps ON and we're ready, make sure to call post_triggered()
 /obj/structure/trap/proc/trigger_step_on(mob/living/victim)
-	to_chat(victim, span_info("Siento un 'clic' debajo de mí..."))
+	to_chat(victim, span_info("Siento un 'clic' debajo de mi..."))
 	playsound(src, 'sound/misc/pressurepad_down.ogg', 65, extrarange = 2)
 	return
 
@@ -232,7 +232,7 @@
 
 /obj/structure/sawblade_trap
 	name = "hoja de sierra"
-	desc = "Una hoja de sierra que gira rápidamente, impulsada por algún mecanismo desconocido."
+	desc = "Una hoja de sierra que gira rapidamente, impulsada por algun mecanismo desconocido."
 	icon = 'icons/roguetown/misc/traps.dmi'
 	icon_state = "trap_saw"
 	density = FALSE

@@ -4,10 +4,10 @@
 
 #define GOREFEAST_UNWORTHY list(\
 	span_danger("Unworthy..."),\
-	span_danger("Eres demasiado débil para manejarme."),\
+	span_danger("Eres demasiado debil para manejarme."),\
 	span_danger("How did you get your hands on me?"),\
 	span_danger("Find the nearest orc, and hand me to them."),\
-	span_danger("No estás preparado."),\
+	span_danger("No estas preparado."),\
 )
 
 #define GOREFEAST_WORTHY list(\
@@ -55,7 +55,7 @@
 		user.playsound_local(user, pick('sound/misc/godweapons/gorefeast1.ogg', 'sound/misc/godweapons/gorefeast2.ogg', 'sound/misc/godweapons/gorefeast3.ogg'), 70)
 		message = pick(GOREFEAST_UNWORTHY)
 	else
-		to_chat(user, span_danger("Gorefeast comienza a golpear extasiado al tocar el eje óseo."))
+		to_chat(user, span_danger("Gorefeast comienza a golpear extasiado al tocar el eje oseo."))
 		user.playsound_local(user, pick('sound/misc/godweapons/gorefeast4.ogg', 'sound/misc/godweapons/gorefeast5.ogg', 'sound/misc/godweapons/gorefeast6.ogg'), 70)
 		message = pick(GOREFEAST_WORTHY)
 	addtimer(CALLBACK(src, PROC_REF(do_message), message), 2 SECONDS)
@@ -208,7 +208,7 @@
 	COOLDOWN_START(src, fire_projectile, 4 SECONDS)
 
 /obj/projectile/bullet/neant
-	name = "Evisceración profana"
+	name = "Evisceracion profana"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "neantprojectile"
 	hitsound = 'sound/combat/hits/hi_arrow2.ogg'

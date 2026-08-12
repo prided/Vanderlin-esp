@@ -6,7 +6,7 @@
 	icon_dead = "frog_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	speak = list("ribbit","croak")
-	emote_see = list("salta en círculo.", "shakes.")
+	emote_see = list("salta en circulo.", "shakes.")
 	speak_chance = 1
 	maxHealth = 15
 	health = 15

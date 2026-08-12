@@ -46,7 +46,7 @@
 		to_chat(user, span_boldnotice("The gnome homunculus has been released and tamed to you!"))
 		return
 	if(!GLOB.thaumic_research?.has_research(/datum/thaumic_research_node/machines/gnomes))
-		to_chat(user, span_warning("No tienes idea de cómo funciona esto."))
+		to_chat(user, span_warning("No tienes idea de como funciona esto."))
 		return
 	var/required = 100 * GLOB.thaumic_research.get_research_bonus(/datum/thaumic_research_node/gnome_efficency)
 	if(!storage.has(/datum/thaumaturgical_essence/life, required))
@@ -79,7 +79,7 @@
 		to_chat(user, span_warning("Insufficient life essence, the process fails!"))
 		return
 	storage.remove(/datum/thaumaturgical_essence/life, required)
-	visible_message(span_info("¡[src] brilla intensamente cuando el homúnculo alcanza la madurez!"))
+	visible_message(span_info("¡[src] brilla intensamente cuando el homunculo alcanza la madurez!"))
 	var/hat_chance = 1 - GLOB.thaumic_research.get_research_bonus(/datum/thaumic_research_node/gnome_hat_chance)
 	var/mob/living/simple_animal/hostile/gnome_homunculus/gnome = new(get_turf(src))
 	gnome.tamed(user)

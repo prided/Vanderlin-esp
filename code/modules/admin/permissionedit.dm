@@ -1,5 +1,5 @@
 /client/proc/edit_admin_permissions()
-	set category = "Admin.Gestión"
+	set category = "Admin.Gestion"
 	set name = "Panel de permisos"
 	set desc = "Editar permisos de administrador"
 	if(!check_rights(R_PERMISSIONS))
@@ -133,7 +133,7 @@
 
 /datum/admins/proc/edit_rights_topic(list/href_list)
 	if(!check_rights(R_PERMISSIONS))
-		message_admins("[key_name_admin(usr)] intentó editar los permisos de administrador sin derechos suficientes.")
+		message_admins("[key_name_admin(usr)] intento editar los permisos de administrador sin derechos suficientes.")
 		log_admin("[key_name(usr)] attempted to edit admin permissions without sufficient rights.")
 		return
 	if(IsAdminAdvancedProcCall())
@@ -152,11 +152,11 @@
 		skip = TRUE
 	if(!CONFIG_GET(flag/admin_legacy_system) && CONFIG_GET(flag/protect_legacy_admins) && task == "rank")
 		if(admin_ckey in GLOB.protected_admins)
-			to_chat(usr, "<span class='admin prefix'>La edición del rango de este administrador está bloqueada por la configuración del servidor.</span>")
+			to_chat(usr, "<span class='admin prefix'>La edicion del rango de este administrador esta bloqueada por la configuracion del servidor.</span>")
 			return
 	if(!CONFIG_GET(flag/admin_legacy_system) && CONFIG_GET(flag/protect_legacy_ranks) && task == "permissions")
 		if(D.rank in GLOB.protected_ranks)
-			to_chat(usr, "<span class='admin prefix'>La edición de las banderas de este rango está bloqueada por la configuración del servidor.</span>")
+			to_chat(usr, "<span class='admin prefix'>La edicion de las banderas de este rango esta bloqueada por la configuracion del servidor.</span>")
 			return
 	if(CONFIG_GET(flag/load_legacy_ranks_only) && (task == "add" || task == "rank" || task == "permissions"))
 		to_chat(usr, "<span class='admin prefix'>Database rank loading is disabled, only temporary changes can be made to a rank's permissions and permanently creating a new rank is blocked.</span>")
@@ -183,7 +183,7 @@
 		if(!D)
 			return
 		if((task != "sync") && !check_if_greater_rights_than_holder(D))
-			message_admins("[key_name_admin(usr)] intentó cambiar el rango de [admin_key] sin derechos suficientes.")
+			message_admins("[key_name_admin(usr)] intento cambiar el rango de [admin_key] sin derechos suficientes.")
 			log_admin("[key_name(usr)] attempted to change the rank of [admin_key] without sufficient rights.")
 			return
 	switch(task)
@@ -249,7 +249,7 @@
 		qdel(query_add_admin_log)
 
 /datum/admins/proc/remove_admin(admin_ckey, admin_key, use_db, datum/admins/D)
-	if(tgui_alert(usr, "Are you sure you want to remove [admin_ckey]?","Confirmar eliminación", list("Hazlo","Cancel")) == "Hazlo")
+	if(tgui_alert(usr, "Are you sure you want to remove [admin_ckey]?","Confirmar eliminacion", list("Hazlo","Cancel")) == "Hazlo")
 		GLOB.admin_datums -= admin_ckey
 		GLOB.deadmins -= admin_ckey
 		if(D)
@@ -494,7 +494,7 @@
 		to_chat(usr, "<span class='danger'>Error: Rank deletion attempted while rank still used; Tell a coder, this shouldn't happen.</span>")
 		return
 	qdel(query_admins_with_rank)
-	if(tgui_alert(usr, "¿Está seguro de que desea eliminar [admin_rank]?","Confirmar eliminación", list("Hazlo","Cancel")) == "Hazlo")
+	if(tgui_alert(usr, "¿Esta seguro de que desea eliminar [admin_rank]?","Confirmar eliminacion", list("Hazlo","Cancel")) == "Hazlo")
 		var/m1 = "[key_name_admin(usr)] removed rank [admin_rank] permanently"
 		var/m2 = "[key_name(usr)] removed rank [admin_rank] permanently"
 		var/datum/DBQuery/query_add_rank = SSdbcore.NewQuery(

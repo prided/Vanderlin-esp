@@ -98,7 +98,7 @@
 		if(istype(AM, /obj/item/rope/net))
 			var/obj/item/rope/net/N = AM
 			visible_message(span_warning("[src] tries to catch [N] but gets snared by it!"), \
-							span_danger("¿Por qué intenté atraparlo?")) // Hahaha dumbass!!!
+							span_danger("¿Por que intente atraparlo?")) // Hahaha dumbass!!!
 			throw_mode_off()
 			N.ensnare(src)
 			return
@@ -262,7 +262,7 @@
 
 	var/obj/item/bodypart/affecting = get_bodypart(check_zone(useder)) //precise attacks, on yourself or someone you are grabbing
 	if(!affecting) //missing limb
-		to_chat(user, span_warning("Desafortunadamente, no hay nada allí."))
+		to_chat(user, span_warning("Desafortunadamente, no hay nada alli."))
 		return FALSE
 
 	SEND_SIGNAL(I, COMSIG_ITEM_ATTACK_ZONE, src, user, affecting)

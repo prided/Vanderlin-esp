@@ -1,6 +1,6 @@
 
 /obj/structure/redstone/pressure_plate
-	name = "placa de presión de piedra roja"
+	name = "placa de presion de piedra roja"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "pressureplate"
 	redstone_role = REDSTONE_ROLE_SOURCE

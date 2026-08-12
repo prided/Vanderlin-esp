@@ -83,11 +83,11 @@
 	icon_state = "heir"
 
 /area/indoors/town/keep/heir/heir1
-	name = "Habitación del primer heredero"
+	name = "Habitacion del primer heredero"
 	icon_state = "heir1"
 
 /area/indoors/town/keep/heir/heir2
-	name = "Habitación del segundo heredero"
+	name = "Habitacion del segundo heredero"
 	icon_state = "heir2"
 
 /area/indoors/town/keep/knight
@@ -147,7 +147,7 @@
 	icon_state = "dungeoneer"
 
 /area/indoors/town/keep/jester
-	name = "Cuartos del bufón"
+	name = "Cuartos del bufon"
 	icon_state = "jester"
 
 /area/indoors/town/keep/guest
@@ -163,7 +163,7 @@
 	icon_state = "guest2"
 
 /area/indoors/town/keep/guest/guest3
-	name = "Mantenga la habitación de invitados 3"
+	name = "Mantenga la habitacion de invitados 3"
 	icon_state = "guest3"
 
 /area/indoors/town/keep/guest/meeting
@@ -268,11 +268,11 @@
 	icon_state = "noble_out"
 
 /area/indoors/town/noble_manor/blue
-	name = "Mansión Noble Azul"
+	name = "Mansion Noble Azul"
 	icon_state = "noble1"
 
 /area/outdoors/town/noble_manor/blue
-	first_time_text = "Mansión Noble Azul"
+	first_time_text = "Mansion Noble Azul"
 	icon_state = "noble1_out"
 
 /area/indoors/town/noble_manor/yellow

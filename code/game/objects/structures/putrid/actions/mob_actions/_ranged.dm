@@ -35,7 +35,7 @@
 		return
 
 	if(refund_cooldown)
-		to_chat(on_who, span_notice("Vacías tu glándula [projectile_name]."))
+		to_chat(on_who, span_notice("Vacias tu glandula [projectile_name]."))
 
 	button_icon_state = "[button_base_icon]_0"
 	build_all_button_icons()

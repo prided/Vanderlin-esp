@@ -59,14 +59,14 @@
 
 /obj/item/clothing/shirt/maniac
 	name = "camisa formal"
-	desc = "TNC es la empresa más justa que conozco, ¿al menos eso creo?."
+	desc = "TNC es la empresa mas justa que conozco, ¿al menos eso creo?."
 	icon = 'icons/roguetown/maniac/clothing.dmi'
 	mob_overlay_icon = 'icons/roguetown/maniac/clothing_mob.dmi'
 	icon_state = "shirt"
 
 /obj/item/clothing/pants/tights/maniac
 	name = "pantalones formales"
-	desc = "TNC es la empresa más justa que conozco, ¿al menos eso creo?."
+	desc = "TNC es la empresa mas justa que conozco, ¿al menos eso creo?."
 	gender = PLURAL
 	icon = 'icons/roguetown/maniac/clothing.dmi'
 	mob_overlay_icon = 'icons/roguetown/maniac/clothing_mob.dmi'
@@ -82,7 +82,7 @@
 	name = "trey"
 
 /obj/item/gun/ballistic/revolver/last_resort
-	name = "\proper último recurso"
+	name = "\proper ultimo recurso"
 	desc = "Siempre hay una salida."
 
 /obj/item/gun/ballistic/revolver/last_resort/Initialize(mapload)

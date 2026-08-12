@@ -4,8 +4,8 @@
 #define PRESTI_MOTE		/datum/intent/prestidigitation/mote
 
 /datum/action/cooldown/spell/undirected/touch/prestidigitation
-	name = "Prestidigitación"
-	desc = "Algunos trucos básicos que muchos aprendices utilizan para practicar la manipulación básica del arcyne."
+	name = "Prestidigitacion"
+	desc = "Algunos trucos basicos que muchos aprendices utilizan para practicar la manipulacion basica del arcyne."
 	button_icon_state = "prestidigitation"
 	can_cast_on_self = TRUE
 

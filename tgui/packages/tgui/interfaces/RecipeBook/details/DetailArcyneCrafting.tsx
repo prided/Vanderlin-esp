@@ -29,10 +29,10 @@ export const DetailArcyneCrafting = ({
     <SectionHead>Instrucciones</SectionHead>
     <Box className="RecipeBook__step-block">
       <Box className="RecipeBook__step-row">
-        Dibuja el <strong>Matriz de elaboración Arcyne</strong> runa con tiza Arcyne.
+        Dibuja el <strong>Matriz de elaboracion Arcyne</strong> runa con tiza Arcyne.
       </Box>
       <Box className="RecipeBook__step-row">
-        Coloca todos los ingredientes sobre la runa y luego invócala con las manos vacías.
+        Coloca todos los ingredientes sobre la runa y luego invocala con las manos vacias.
       </Box>
     </Box>
 

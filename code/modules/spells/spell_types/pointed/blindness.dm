@@ -24,7 +24,7 @@
 /datum/action/cooldown/spell/blindness/cast(mob/living/cast_on)
 	. = ..()
 	cast_on.adjust_temp_blindness(6 SECONDS)
-	cast_on.visible_message(span_warning("¡[owner] apunta a los ojos de [cast_on]!"), span_warning("¡Mis ojos están cubiertos de oscuridad!"))
+	cast_on.visible_message(span_warning("¡[owner] apunta a los ojos de [cast_on]!"), span_warning("¡Mis ojos estan cubiertos de oscuridad!"))
 
 /datum/action/cooldown/spell/blindness/miracle
 	name = "Noc's Blindness"

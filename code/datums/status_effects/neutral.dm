@@ -24,7 +24,7 @@
 /datum/status_effect/aasimar_stasis/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_IMMOBILIZED, "stasis")
-	to_chat(owner, span_notice("Es hora de servir una vez más."))
+	to_chat(owner, span_notice("Es hora de servir una vez mas."))
 
 /datum/status_effect/aasimar_stasis/deep
 	id = "aasimar_stasis_deep"
@@ -33,7 +33,7 @@
 
 /datum/status_effect/aasimar_stasis/deep/on_apply()
 	. = ..()
-	to_chat(owner, span_notice("Dejé que mi \"yo\" se hundiera profundamente."))
+	to_chat(owner, span_notice("Deje que mi \"yo\" se hundiera profundamente."))
 	ADD_TRAIT(owner, TRAIT_DEAF, "stasis")
 	owner.apply_status_effect(/datum/status_effect/grouped/blindness)
 

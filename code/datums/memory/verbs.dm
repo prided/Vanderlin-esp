@@ -22,7 +22,7 @@
 		to_chat(src, span_warning("byond_memprofile is unavailable: [MemProfiler.error || "unknown reason"]"), type = MESSAGE_TYPE_DEBUG)
 		return
 
-	if(tgui_alert(src, "Un censo recorre todo el montón. El servidor se congelará durante varios segundos. ¿Continuar?", "Censo de Memoria", list("Run it", "Cancel")) != "Run it")
+	if(tgui_alert(src, "Un censo recorre todo el monton. El servidor se congelara durante varios segundos. ¿Continuar?", "Censo de Memoria", list("Run it", "Cancel")) != "Run it")
 		return
 
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Memory Census (Text)")

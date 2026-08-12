@@ -1,6 +1,6 @@
 /datum/building_datum/stockpile
 	name = "Stockpile"
-	desc = "Un lugar para almacenar mercancías."
+	desc = "Un lugar para almacenar mercancias."
 
 	building_template = "stockpile"
 

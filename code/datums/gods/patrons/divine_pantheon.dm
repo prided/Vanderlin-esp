@@ -29,7 +29,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	desc = "Worshipping The Ten equally. Worship in such a manner is tolerated, but greatly disapproved of. The Ten rarely give their blessings to those who do not give single-minded adoration to a single diety."
 	flaws = "Discordante, Inflexible, Desinteresado."
 	worshippers = "Los mansos y los indecisos"
-	sins = "Tentación, ignorancia, negación"
+	sins = "Tentacion, ignorancia, negacion"
 	boons = "The Ten pull for your devotion."
 	added_traits = list(TRAIT_DIVINE_CENTRIST)
 	devotion_holder = /datum/devotion/divine/centrist
@@ -54,8 +54,8 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	domain = "Diosa del Orden, la Reina del Sol"
 	desc = "Crafted from the head of Psydon, twin of Noc. She gifted mankind the Sun, protecting Psydonia from all forces which may seek it harm: from both outside and within."
 	flaws = "Tyrannical, Ill-Tempered, Uncompromising"
-	worshippers = "Nobles, fanáticos, plebeyos"
-	sins = "Traición, Pereza, Brujería"
+	worshippers = "Nobles, fanaticos, plebeyos"
+	sins = "Traicion, Pereza, Brujeria"
 	boons = "Your stamina regeneration delay is lowered during daytime."
 	added_traits = list(TRAIT_APRICITY)
 	devotion_holder = /datum/devotion/divine/astrata
@@ -78,7 +78,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/noc
 	name = NOC
-	domain = "Dios del Conocimiento, el Príncipe de la Luna"
+	domain = "Dios del Conocimiento, el Principe de la Luna"
 	desc = "Crafted from the helmet of Psydon, twin of Astrata. He gifted mankind divine wisdom."
 	flaws = "Cynical, Isolationist, Unfiltered Honesty"
 	worshippers = "Practicantes de magia, eruditos, escribas"
@@ -106,7 +106,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	name = DENDOR
 	domain = "Dios de la naturaleza y las bestias."
 	desc = "Crafted from the bones of Psydon as the embodiment of the natural world. Driven mad with time."
-	flaws = "Locura, Rebeldía, Desorden"
+	flaws = "Locura, Rebeldia, Desorden"
 	worshippers = "Druidas, Bestias, Locos"
 	sins = "Deforestation, Overhunting, Disrespecting Nature"
 	boons = "You are immune to kneestingers."
@@ -158,7 +158,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	name = NECRA
 	domain = "Mother Goddess of Death and Time"
 	desc = "The Veiled Lady, once close partner to Psydon. She created the Nine others from his corpse, guiding them from the Underworld."
-	flaws = "Inmutable, apático, fácil de aburrir"
+	flaws = "Inmutable, apatico, facil de aburrir"
 	worshippers = "Orderlies, Gravetenders, Mourners"
 	sins = "Heretical Magic, Untimely Death, Disturbance of Rest"
 	boons = "You may see the presence of a soul in a body."
@@ -186,7 +186,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	desc = "Crafted from the blade of Psydon, a champion of all who seek righteousness for themselves and others."
 	flaws = "Carelessness, Aggression, Pride"
 	worshippers = "Guerreros, mercenarios, guardias."
-	sins = "Cobardía, crueldad, estancamiento"
+	sins = "Cobardia, crueldad, estancamiento"
 	boons = "Your used weapons dull slower."
 	added_traits = list(TRAIT_SHARPER_BLADES)
 	devotion_holder = /datum/devotion/divine/ravox
@@ -252,7 +252,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	confess_lines = list(
 		"PESTRA SOOTHES ALL ILLS!",
 		"DECAY IS A CONTINUATION OF LIFE!",
-		"¡MI AFLICCIÓN ES MI TESTAMENTO!",
+		"¡MI AFLICCION ES MI TESTAMENTO!",
 	)
 	storyteller = /datum/storyteller/pestra
 	associated_objects = alist(
@@ -275,7 +275,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 
 /datum/patron/divine/malum
 	name = MALUM
-	domain = "Dios del trabajo, la innovación y la creación"
+	domain = "Dios del trabajo, la innovacion y la creacion"
 	desc = "Crafted from the hands of Psydon. He would later use his own to construct wondrous inventions."
 	flaws = "Obsessive, Exacting, Overbearing"
 	worshippers = "Smiths, Miners, Sculptors"

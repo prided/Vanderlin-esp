@@ -148,7 +148,7 @@ export const ChemSeparator = (props) => {
               </LabeledList.Item>
             ) : (
               <LabeledList.Item label="Recipiente">
-                <NoticeBox my={0.7}>No se ha insertado ningún contenedor.</NoticeBox>
+                <NoticeBox my={0.7}>No se ha insertado ningun contenedor.</NoticeBox>
               </LabeledList.Item>
             )}
           </LabeledList>

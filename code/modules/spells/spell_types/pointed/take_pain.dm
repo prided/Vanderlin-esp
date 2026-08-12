@@ -103,7 +103,7 @@
 			new_wound.passive_healing = max(1, 3 - wound_severity_mod)
 
 			if(wound_severity_mod > 2.0)
-				new_wound.name = "agonía transferida"
+				new_wound.name = "agonia transferida"
 			else if(wound_severity_mod > 1.0)
 				new_wound.name = "transferred serious pain"
 			else

@@ -13,7 +13,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/song/resolute_refrain
 	name = "Resolute Refrain"
-	desc = "Esta melodía constante endurece mi resolución. Me siento más fuerte, más resistente."
+	desc = "Esta melodia constante endurece mi resolucion. Me siento mas fuerte, mas resistente."
 	icon_state = "buff"
 
 /datum/status_effect/buff/song/resolute_refrain

@@ -685,7 +685,7 @@ SUBSYSTEM_DEF(plexora)
 	qdel(client)
 
 	log_admin("Discord: [key_name(mockadmin)] has kicked [key_name(client)] from the server! Reason: [reason]")
-	message_admins("Discord: ¡[key_name_admin(mockadmin)] ha expulsado a [key_name_admin(client)] del servidor! Razón: [reason]")
+	message_admins("Discord: ¡[key_name_admin(mockadmin)] ha expulsado a [key_name_admin(client)] del servidor! Razon: [reason]")
 
 /datum/world_topic/plx_ticketaction
 	keyword = "PLX_ticketaction"
@@ -933,7 +933,7 @@ SUBSYSTEM_DEF(plexora)
 	return FALSE
 
 /datum/client_interface/proc/punish_log(whom, punishment)
-	var/msg = "[key_name_admin(src)] castigó a [key_name_admin(whom)] con [punishment]."
+	var/msg = "[key_name_admin(src)] castigo a [key_name_admin(whom)] con [punishment]."
 	message_admins(msg)
 	admin_ticket_log(whom, msg)
 	log_admin("[key_name(src)] punished [key_name(whom)] with [punishment].")

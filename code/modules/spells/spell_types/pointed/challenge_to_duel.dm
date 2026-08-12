@@ -18,15 +18,15 @@
 	. = ..()
 
 	var/challenge_message = "[owner] challenges you to an honor duel! Do you accept?"
-	owner.visible_message(span_notice("¡[owner] desafía a [duelist] a un duelo de honor!"), span_notice("You challenge [duelist] to a duel!"))
+	owner.visible_message(span_notice("¡[owner] desafia a [duelist] a un duelo de honor!"), span_notice("You challenge [duelist] to a duel!"))
 	var/answer = tgui_alert(duelist, challenge_message, "Duel Challenge", DEFAULT_INPUT_CHOICES)
 	if(QDELETED(src) || QDELETED(owner) || QDELETED(duelist))
 		return FALSE
 	if(answer != CHOICE_YES)
-		to_chat(owner, span_warning("¡[duelist] ha rechazado tu desafío!"))
+		to_chat(owner, span_warning("¡[duelist] ha rechazado tu desafio!"))
 		duelist.visible_message(
-			span_warning("[duelist] rechaza el desafío de duelo de [owner]."),
-			span_warning("Rechazas el desafío de [owner]."),
+			span_warning("[duelist] rechaza el desafio de duelo de [owner]."),
+			span_warning("Rechazas el desafio de [owner]."),
 		)
 		return FALSE
 

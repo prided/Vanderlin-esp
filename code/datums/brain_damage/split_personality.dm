@@ -84,7 +84,7 @@
 		return
 
 	current_backseat.log_message("assumed control of [key_name(owner)] due to [src]. (Original owner: [current_controller == OWNER ? owner.key : current_backseat.key])", LOG_GAME)
-	to_chat(owner, span_userdanger("Siento que me están quitando el control... ¡mi otra personalidad está a cargo ahora!"))
+	to_chat(owner, span_userdanger("Siento que me estan quitando el control... ¡mi otra personalidad esta a cargo ahora!"))
 	to_chat(current_backseat, span_userdanger("I manage to take control of my body!"))
 
 	//Body to backseat

@@ -91,7 +91,7 @@
 	if(chambered)
 		var/rammed_message = bullet_rammed ? "rammed down" : "loose in the barrel and can be removed"
 		. += span_info("\The [chambered] es [rammed_message].")
-		. += span_info("Si hay pólvora en el cañón, \the [chambered] la está cubriendo.")
+		. += span_info("Si hay polvora en el cañon, \the [chambered] la esta cubriendo.")
 		return
 
 	if(!reagents?.total_volume)
@@ -125,7 +125,7 @@
 			return ITEM_INTERACT_BLOCKING
 		var/obj/item/reagent_containers/container = tool
 		if(!container.reagents?.total_volume)
-			balloon_alert(user, "¡vacío!")
+			balloon_alert(user, "¡vacio!")
 			return ITEM_INTERACT_BLOCKING
 		var/transfer_amount = container.amount_per_transfer_from_this
 		// The unskilled can fill it but will over/under fill
@@ -180,7 +180,7 @@
 
 /obj/item/gun/ballistic/powder/attack_self(mob/living/user, list/modifiers)
 	if(bullet_rammed) // If you rammed it down you have to fire
-		balloon_alert(user, "¡está atascado!")
+		balloon_alert(user, "¡esta atascado!")
 		return
 
 	return ..()

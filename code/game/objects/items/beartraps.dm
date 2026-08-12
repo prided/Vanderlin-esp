@@ -136,7 +136,7 @@
 				to_chat(user, span_notice("I arm \the [src]."))
 			else
 				if(old)
-					user.visible_message(span_warning("¡El viejo [src.name] se rompe bajo tensión!"))
+					user.visible_message(span_warning("¡El viejo [src.name] se rompe bajo tension!"))
 					playsound(src, 'sound/foley/breaksound.ogg', 100, TRUE, -1)
 					qdel(src)
 				else

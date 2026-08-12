@@ -10,7 +10,7 @@
 	spawn_weight = 100
 
 /datum/island_feature_template/wishtree
-	name = "árbol de los deseos"
+	name = "arbol de los deseos"
 	template_path = /datum/map_template/world_feature/wishtree
 	width = 11
 	height = 12

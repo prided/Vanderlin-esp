@@ -26,7 +26,7 @@
 	item_weight = 75 GRAMS
 
 /obj/item/alch/coaldust
-	name = "polvo de carbón"
+	name = "polvo de carbon"
 	icon_state = "coaldust"
 	item_weight = 75 GRAMS
 
@@ -115,7 +115,7 @@
 
 /obj/item/alch/feaudust
 	name = "feau dust"
-	desc = "La combinación de oro y hierro da como resultado este polvo con propiedades alquímicas únicas."
+	desc = "La combinacion de oro y hierro da como resultado este polvo con propiedades alquimicas unicas."
 	icon_state = "feaudust"
 	item_weight = 75 GRAMS
 

@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/essence/fertile_soil
-	name = "Suelo fértil"
+	name = "Suelo fertil"
 	desc = "Enriquece el suelo para promover el crecimiento de las plantas."
 	button_icon_state = "blesscrop"
 	cast_range = 2

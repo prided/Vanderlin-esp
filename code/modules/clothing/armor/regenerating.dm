@@ -1,7 +1,7 @@
 
 /obj/item/clothing/armor/regenerating
 	name = "armadura regeneradora"
-	desc = "Padre abstracto. Póngase en contacto con el desarrollador si ve esto."
+	desc = "Padre abstracto. Pongase en contacto con el desarrollador si ve esto."
 	icon_state = null
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 
@@ -93,7 +93,7 @@
 
 
 /obj/item/clothing/armor/regenerating/skin/disciple
-	name = "piel de discípulo"
+	name = "piel de discipulo"
 	desc = "It's far more than just an oath. Mercurial circles of silver are etched into the skin of this person, engraved with fanatic zeal and faithful reverence. May it ward the darkness. It seems to be written in red ink."
 	armor_type = /datum/armor/skin/disciple
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT)

@@ -14,7 +14,7 @@
 /obj/item/paper/scroll/attackby(obj/item/P, mob/living/carbon/human/user, list/modifiers)
 	if(istype(P, /obj/item/natural/thorn) || istype(P, /obj/item/natural/feather))
 		if(!open)
-			to_chat(user, "<span class='warning'>ábreme.</span>")
+			to_chat(user, "<span class='warning'>abreme.</span>")
 			return
 	. = ..()
 
@@ -49,7 +49,7 @@
 
 /obj/item/paper/scroll/read(mob/user)
 	if(!open && !isobserver(user))
-		to_chat(user, "<span class='info'>ábreme.</span>")
+		to_chat(user, "<span class='info'>abreme.</span>")
 		return
 	. = ..()
 
@@ -125,7 +125,7 @@
 		name = initial(name)
 
 /obj/item/paper/scroll/cargo
-	name = "orden de envío"
+	name = "orden de envio"
 	icon_state = "contractunsigned"
 	open = TRUE
 	textper = 150
@@ -249,10 +249,10 @@
 		else if(signee)
 			to_chat(user, span_notice("This writ is intended to be signed by [signee.real_name]."))
 		else
-			to_chat(user, span_notice("Este escrito aún no ha sido firmado."))
+			to_chat(user, span_notice("Este escrito aun no ha sido firmado."))
 
 /obj/item/paper/inqslip/accusation
-	name = "acusación"
+	name = "acusacion"
 	desc = "A writ of religious suspicion, printed on Grenzelhoftian parchment: one signed not in ink, but blood. Press the accusation against your own bleeding wound in order to obtain a signature. Then pair it with an INDEXER full of the accused's blood. Once done, it is ready to be mailed back to the Oratorium. Fold and seal it, it's only proper."
 	marquevalue = 4
 	sliptype = 0
@@ -281,14 +281,14 @@
 		if(paired.subject != user)
 			to_chat(M, span_warning("Why am I trying to make them sign this with the wrong [paired] paired with it?"))
 			return
-		else if(forced_signing || (tgui_alert(user, "¿FIRMAR LA CONFESIÓN?", "CONFIRMAR O NEGAR", list("YES", "NO")) != "NO"))
+		else if(forced_signing || (tgui_alert(user, "¿FIRMAR LA CONFESION?", "CONFIRMAR O NEGAR", list("YES", "NO")) != "NO"))
 			signed = TRUE
 			signee = user
 			marquevalue += 2
 			REMOVE_TRAIT(user, TRAIT_HAS_CONFESSED, TRAIT_GENERIC)
 			update_appearance()
 
-	else if(tgui_alert(user, "¿FIRMAR LA CONFESIÓN?", "CONFIRMAR O NEGAR", list("YES", "NO")) != "NO")
+	else if(tgui_alert(user, "¿FIRMAR LA CONFESION?", "CONFIRMAR O NEGAR", list("YES", "NO")) != "NO")
 		signed = TRUE
 		signee = user
 		marquevalue += 2
@@ -438,16 +438,16 @@
 						update_appearance()
 					else
 						if(signed)
-							to_chat(user, span_warning("[Q] no contiene la sangre de quien firmó [src]."))
+							to_chat(user, span_warning("[Q] no contiene la sangre de quien firmo [src]."))
 						else
-							to_chat(user, span_warning("Debería obtener una firma antes de emparejar [Q] con [src]."))
+							to_chat(user, span_warning("Deberia obtener una firma antes de emparejar [Q] con [src]."))
 						return
 				else
 					paired = Q
 					user.transferItemToLoc(Q, src, TRUE)
 					update_appearance()
 			else
-				to_chat(user,  span_warning("[Q] no está completamente lleno."))
+				to_chat(user,  span_warning("[Q] no esta completamente lleno."))
 
 /obj/item/merctoken
 	name = "mercenary token"
@@ -473,7 +473,7 @@
 /obj/item/merctoken/attackby(obj/item/P, mob/living/carbon/human/user, list/modifiers)
 	if(istype(P, /obj/item/natural/thorn) || istype(P, /obj/item/natural/feather))
 		if(!user.can_read(src))
-			to_chat(user, span_warning("Incluso un lector encontraría estas palabras incomprensibles."))
+			to_chat(user, span_warning("Incluso un lector encontraria estas palabras incomprensibles."))
 			return
 		if(signee)
 			to_chat(user, span_warning("Este token ya ha sido firmado."))

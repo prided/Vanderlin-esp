@@ -88,7 +88,7 @@
 		if(torchy)
 			if(LR.on && !on)
 				if(torchy.fuel <= 0)
-					to_chat(user, "<span class='warning'>La linterna montada está quemada.</span>")
+					to_chat(user, "<span class='warning'>La linterna montada esta quemada.</span>")
 					return
 				else
 					torchy.spark_act()

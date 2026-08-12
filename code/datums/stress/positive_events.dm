@@ -6,7 +6,7 @@
 /datum/stress_event/miasmagasmaniac
 	timer = 10 SECONDS
 	stress_change = -1
-	desc = span_green("Aquí huele a muerte.")
+	desc = span_green("Aqui huele a muerte.")
 
 /datum/stress_event/viewdeathmaniac
 	timer = 30 SECONDS
@@ -31,7 +31,7 @@
 /datum/stress_event/psyprayer
 	timer = 30 MINUTES
 	stress_change = -2
-	desc = span_green("Los dioses me sonríen.")
+	desc = span_green("Los dioses me sonrien.")
 
 /datum/stress_event/lovezizo
 	timer = 99999 MINUTES
@@ -41,12 +41,12 @@
 /datum/stress_event/joke
 	timer = 1 MINUTES
 	stress_change = -2
-	desc = span_green("Escuché un buen chiste.")
+	desc = span_green("Escuche un buen chiste.")
 
 /datum/stress_event/tragedy
 	timer = 1 MINUTES
 	stress_change = -2
-	desc = span_green("La vida no es tan mala después de todo.")
+	desc = span_green("La vida no es tan mala despues de todo.")
 
 /datum/stress_event/blessed
 	timer = 60 MINUTES
@@ -96,7 +96,7 @@
 /datum/stress_event/prebel
 	timer = 5 MINUTES
 	stress_change = -5
-	desc = span_green("¡Abajo la tiranía!")
+	desc = span_green("¡Abajo la tirania!")
 
 
 //Grave buffs.
@@ -126,7 +126,7 @@
 /datum/stress_event/clean
 	timer = 20 MINUTES
 	stress_change = -1
-	desc = span_green("Me limpié recientemente.")
+	desc = span_green("Me limpie recientemente.")
 
 /datum/stress_event/clean_plus
 	timer = 30 MINUTES
@@ -142,27 +142,27 @@
 /datum/stress_event/music
 	timer = 30 SECONDS
 	stress_change = 0 // you suck at music
-	desc = span_green("Esta música es agradable.")
+	desc = span_green("Esta musica es agradable.")
 
 /datum/stress_event/music/two
 	stress_change = -1
-	desc = span_green("Esta música es relajante.")
+	desc = span_green("Esta musica es relajante.")
 
 /datum/stress_event/music/three
 	stress_change = -1
-	desc = span_green("Esta música es maravillosa.")
+	desc = span_green("Esta musica es maravillosa.")
 
 /datum/stress_event/music/four
 	stress_change = -2
-	desc = span_green("Esta música es excepcional.")
+	desc = span_green("Esta musica es excepcional.")
 
 /datum/stress_event/music/five
 	stress_change = -2
-	desc = span_green("Esta música es encantadora.")
+	desc = span_green("Esta musica es encantadora.")
 
 /datum/stress_event/music/six
 	stress_change = -3
-	desc = span_green("Esta música es divina.")
+	desc = span_green("Esta musica es divina.")
 
 /datum/stress_event/beautiful
 	timer = 1 MINUTES
@@ -209,7 +209,7 @@
 
 /datum/stress_event/ozium
 	stress_change = -99
-	desc = span_blue("Recibí un golpe y entré en un mundo sin dolor.")
+	desc = span_blue("Recibi un golpe y entre en un mundo sin dolor.")
 	timer = 999 MINUTES
 
 /datum/stress_event/moondust
@@ -242,7 +242,7 @@
 
 /datum/stress_event/apprentice_making_me_proud
 	stress_change = -3
-	desc = span_green("Mi aprendiz está mejorando, ¡todo gracias a mí!")
+	desc = span_green("Mi aprendiz esta mejorando, ¡todo gracias a mi!")
 	timer = 5 MINUTES
 
 /datum/stress_event/saw_old_party
@@ -262,7 +262,7 @@
 
 /datum/stress_event/abyssor_serenity
 	stress_change = -1
-	desc = span_blue("Abyssor está tranquilo y yo también.")
+	desc = span_blue("Abyssor esta tranquilo y yo tambien.")
 	timer = INFINITY
 
 /datum/stress_event/night_owl_night
@@ -424,12 +424,12 @@
 
 /datum/stress_event/extra_shiny_shoes
 	stress_change = -2
-	desc = span_green("Mis zapatos son TAN brillantes, ¡esto es increíble!")
+	desc = span_green("Mis zapatos son TAN brillantes, ¡esto es increible!")
 	timer = 15 MINUTES
 
 /datum/stress_event/noble_seen_servant_work
 	stress_change = -2
-	desc = span_green("Los sirvientes están trabajando bien como deberían... qué gran lugar.")
+	desc = span_green("Los sirvientes estan trabajando bien como deberian... que gran lugar.")
 	timer = 10 MINUTES
 
 /datum/stress_event/poohit_nice

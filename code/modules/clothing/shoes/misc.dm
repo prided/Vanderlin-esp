@@ -27,7 +27,7 @@
 /obj/item/clothing/shoes/shortboots
 	name = "shortboots"
 	color = "#d5c2aa"
-	desc = "Un formato más corto de botas que usa casi cualquier persona."
+	desc = "Un formato mas corto de botas que usa casi cualquier persona."
 	gender = PLURAL
 	icon_state = "shortboots"
 	item_state = "shortboots"
@@ -97,7 +97,7 @@
 
 /obj/item/clothing/shoes/sandals
 	name = "sandals"
-	desc = "Sandalias estándar."
+	desc = "Sandalias estandar."
 	gender = PLURAL
 	icon_state = "sandals"
 	item_state = "sandals"
@@ -160,7 +160,7 @@
 
 /obj/item/clothing/shoes/grenzel
 	name = "grenzelhoftian botas de cuero"
-	desc = "Botas de excelente artesanía, tus frágiles pies nunca antes se habían sentido tan protegidos y cómodos."
+	desc = "Botas de excelente artesania, tus fragiles pies nunca antes se habian sentido tan protegidos y comodos."
 	body_parts_covered = FEET
 	icon_state = "fencerboots"
 	item_state = "fencerboots"

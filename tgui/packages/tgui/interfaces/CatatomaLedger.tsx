@@ -210,7 +210,7 @@ export const CatatomaLedger = (props) => {
     <Window title="Catatoma" width={860} height={620}>
       <Window.Content scrollable>
         {/* FACTION OVERVIEW */}
-        <Section title="Autorización de facción">
+        <Section title="Autorizacion de faccion">
           <Table>
             <Table.Row>
               <Table.Cell bold width="150px">Entidad comercial activa:</Table.Cell>
@@ -226,7 +226,7 @@ export const CatatomaLedger = (props) => {
               </Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell bold>Reputación:</Table.Cell>
+              <Table.Cell bold>Reputacion:</Table.Cell>
               <Table.Cell colSpan={2}>
                 <Stack align="center">
                   <Stack.Item>Nivel {faction_reputation_tier}</Stack.Item>
@@ -282,7 +282,7 @@ export const CatatomaLedger = (props) => {
             selected={currentTab === 'catalog'}
             onClick={() => setCurrentTab('catalog')}
           >
-            Catálogo de provisiones
+            Catalogo de provisiones
           </Tabs.Tab>
           <Tabs.Tab
             icon="scroll"
@@ -333,7 +333,7 @@ export const CatatomaLedger = (props) => {
                           icon="times"
                           color="transparent"
                           onClick={() => setSearchQuery('')}
-                          tooltip="Borrar búsqueda"
+                          tooltip="Borrar busqueda"
                         />
                       </Stack.Item>
                     )}
@@ -421,12 +421,12 @@ export const CatatomaLedger = (props) => {
                 <Table.Cell width="25px" />
                 <Table.Cell>Especificaciones del contrato</Table.Cell>
                 <Table.Cell width="120px" align="center">Estado de progreso</Table.Cell>
-                <Table.Cell width="180px">Recompensas de compensación</Table.Cell>
+                <Table.Cell width="180px">Recompensas de compensacion</Table.Cell>
               </Table.Row>
               {active_bounties.length === 0 ? (
                 <Table.Row>
                   <Table.Cell colSpan={4} italic color="label">
-                    No hay asignaciones de contratos activos ni recompensas emitidas por esta facción.
+                    No hay asignaciones de contratos activos ni recompensas emitidas por esta faccion.
                   </Table.Cell>
                 </Table.Row>
               ) : (
@@ -467,7 +467,7 @@ export const CatatomaLedger = (props) => {
                         </Table.Cell>
                         <Table.Cell verticalAlign="middle">
                           <Box color="amber" bold>+{bounty.reward_currency} Mammons</Box>
-                          <Box color="teal">+{bounty.reward_reputation} Reputación de facción</Box>
+                          <Box color="teal">+{bounty.reward_reputation} Reputacion de faccion</Box>
                           <Button
                             fluid
                             mt={0.5}
@@ -494,7 +494,7 @@ export const CatatomaLedger = (props) => {
                             <Box p={1} style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', borderRadius: '4px' }}>
                               <Stack vertical >
                                 <Stack.Item>
-                                  <Box color="label" bold fontSize="0.9em">Material demandado específicamente:</Box>
+                                  <Box color="label" bold fontSize="0.9em">Material demandado especificamente:</Box>
                                   <Box pl={1} color="default" italic>
                                     {bounty.target_item} ({bounty.required_count} necesario)
                                   </Box>
@@ -537,11 +537,11 @@ export const CatatomaLedger = (props) => {
         {/* SHOPPING CART OVERVIEW */}
         <Section title="Factura pendiente del manifiesto">
           {cart.length === 0 ? (
-            <Box color="label">Detalles de la factura vacíos.</Box>
+            <Box color="label">Detalles de la factura vacios.</Box>
           ) : (
             <Table>
               <Table.Row header>
-                <Table.Cell>Manifiesto de artículo</Table.Cell>
+                <Table.Cell>Manifiesto de articulo</Table.Cell>
                 <Table.Cell>Cantidad</Table.Cell>
                 <Table.Cell>Valor de costo</Table.Cell>
                 <Table.Cell />

@@ -82,7 +82,7 @@
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/disciple/quarterstaff)
 
 /datum/outfit/disciple
-	name = "Discípulo (Sacrestantes)"
+	name = "Discipulo (Sacrestantes)"
 	shoes = /obj/item/clothing/shoes/psydonboots
 	armor = /obj/item/clothing/armor/regenerating/skin/disciple
 	backl = /obj/item/storage/backpack/satchel/grenzel

@@ -1,5 +1,5 @@
 /datum/mob_affix/vampiric
-	name = "vampírico"
+	name = "vampirico"
 	description = "Drains life from enemies"
 	color = "#CC0000"
 

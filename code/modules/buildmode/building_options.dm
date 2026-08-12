@@ -182,4 +182,4 @@
 /datum/buildmode/proc/clear_selection()
 	selected_item = null
 	clear_preview()
-	to_chat(holder.mob, "<span class='notice'>Selección borrada.</span>")
+	to_chat(holder.mob, "<span class='notice'>Seleccion borrada.</span>")

@@ -75,7 +75,7 @@
 //................  Canes, my beloved. ............... //
 
 /obj/item/weapon/mace/cane
-	name = "bastón de madera"
+	name = "baston de madera"
 	desc = "A simple wooden cane, whittled from wood. Good for supporting your weight."
 	icon = 'icons/roguetown/weapons/32/canes.dmi'
 	icon_state = "simple_cane"
@@ -89,7 +89,7 @@
 	melt_amount = 0
 
 /obj/item/weapon/mace/cane/noble
-	name = "bastón elegante"
+	name = "baston elegante"
 	desc = "A polished, dark wooden cane, decorated with gold and silver. Often carried by nobility, even those without a limp, simply to flaunt their wealth to the peasantry."
 	icon_state = "noble_cane"
 	force = DAMAGE_MACE - 3
@@ -115,7 +115,7 @@
 	item_weight = 500 GRAMS
 
 /obj/item/weapon/mace/cane/natural
-	name = "bastón de madera natural"
+	name = "baston de madera natural"
 	desc = "A primitive cane, crudely carved from a thick tree branch. It still has a leaf on it."
 	icon_state = "natural_cane"
 	force = DAMAGE_MACE - 5
@@ -124,7 +124,7 @@
 	item_weight = 350 GRAMS
 
 /obj/item/weapon/mace/cane/bronze
-	name = "bastón de bronce"
+	name = "baston de bronce"
 	desc = "A walking stick made from bronze and copper. The light on the top is entirely contained within, serving no functional purpose."
 	icon_state = "artificer_cane"
 	force = DAMAGE_MACE - 3
@@ -253,7 +253,7 @@
 
 //................ Spiked club ............... //
 /obj/item/weapon/mace/spiked
-	name = "maza con púas"
+	name = "maza con puas"
 	icon_state = "spikedmace"
 	force = DAMAGE_MACE + 1
 	force_wielded = DAMAGE_MACE_WIELD + 1
@@ -311,7 +311,7 @@
 //................ Club ............... //
 /obj/item/weapon/mace/woodclub
 	name = "club"
-	desc = "Un arma más antigua que el tiempo registrado."
+	desc = "Un arma mas antigua que el tiempo registrado."
 	icon_state = "club1"
 	force = DAMAGE_CLUB
 	force_wielded = DAMAGE_CLUB_WIELD
@@ -473,7 +473,7 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/weapon/mace/goden/deepduke //Boss loot
-	name = "bastón del duque profundo"
+	name = "baston del duque profundo"
 	desc = "A staff made of seaglass and sturdy but unusual metal, holding no power after its misled owner's death. More useful as a bashing tool than a magic focus."
 	icon = 'icons/roguetown/mob/monster/pufferboss.dmi'
 	icon_state = "pufferprod"

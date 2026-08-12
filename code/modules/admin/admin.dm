@@ -325,7 +325,7 @@
 	if(!check_rights())
 		return FALSE
 
-	var/category = input("Categoría") as null|anything in list("Ten", "Inhuman", "Special")
+	var/category = input("Categoria") as null|anything in list("Ten", "Inhuman", "Special")
 	if(!category)
 		return FALSE
 
@@ -515,14 +515,14 @@
 		return
 
 	if(SSticker.admin_delay_notice)
-		if(tgui_alert(usr, "Are you sure? An admin has already delayed the round end for the following reason: [SSticker.admin_delay_notice]", "Confirmación", list("Yes", "No")) != "Yes")
+		if(tgui_alert(usr, "Are you sure? An admin has already delayed the round end for the following reason: [SSticker.admin_delay_notice]", "Confirmacion", list("Yes", "No")) != "Yes")
 			return FALSE
 
 	var/list/options = list(REGULAR_RESTART, REGULAR_RESTART_DELAYED, HARD_RESTART, HARDEST_RESTART)
 	if(world.TgsAvailable())
 		options += TGS_RESTART
 
-	var/result = input(usr, "Seleccione el método de reinicio", "World Reboot", options[1]) as null|anything in options
+	var/result = input(usr, "Seleccione el metodo de reinicio", "World Reboot", options[1]) as null|anything in options
 	if(!result)
 		return
 
@@ -532,7 +532,7 @@
 		if(REGULAR_RESTART, REGULAR_RESTART_DELAYED)
 			var/delay = 1
 			if(result == REGULAR_RESTART_DELAYED)
-				delay = input("¿Qué retraso debe tener el reinicio (en segundos)?", "Restart Delay", 5) as num|null
+				delay = input("¿Que retraso debe tener el reinicio (en segundos)?", "Restart Delay", 5) as num|null
 				if(!delay)
 					return FALSE
 			SSplexora.restart_type = PLEXORA_SHUTDOWN_NORMAL
@@ -546,7 +546,7 @@
 		if(HARDEST_RESTART)
 			SSplexora.restart_type = PLEXORA_SHUTDOWN_HARDEST
 			SSplexora.restart_requester = usr
-			to_chat(world, "Reinicio del mundo difícil - [init_by]")
+			to_chat(world, "Reinicio del mundo dificil - [init_by]")
 			world.Reboot(fast_track = TRUE)
 		if(TGS_RESTART)
 			SSplexora.restart_type = PLEXORA_SHUTDOWN_KILLDD
@@ -632,7 +632,7 @@
 	set name="Toggle LOOC"
 	toggle_looc()
 	log_admin("[key_name(usr)] toggled LOOC.")
-	message_admins("[key_name_admin(usr)] activó LOOC.")
+	message_admins("[key_name_admin(usr)] activo LOOC.")
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle LOOC", "[GLOB.ooc_allowed ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleoocdead()
@@ -723,19 +723,19 @@
 			to_chat(world, "<b>The game start has been delayed.</b>")
 			log_admin("[key_name(usr)] delayed the round start.")
 		else
-			to_chat(world, "<b>El juego comenzará en [DisplayTimeText(newtime)].</b>")
+			to_chat(world, "<b>El juego comenzara en [DisplayTimeText(newtime)].</b>")
 			SEND_SOUND(world, sound('sound/blank.ogg'))
 			log_admin("[key_name(usr)] set the pre-game delay to [DisplayTimeText(newtime)].")
 		SSblackbox.record_feedback("tally", "admin_verb", 1, "Delay Game Start") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/accelerate_or_delay_round_end()
 	set category = "Server.Round Control"
-	set desc="Retrasar / Acelerar el final de la ronda o el tiempo de votación"
-	set name="Retrasar / Acelerar el final de la ronda o el tiempo de votación"
+	set desc="Retrasar / Acelerar el final de la ronda o el tiempo de votacion"
+	set name="Retrasar / Acelerar el final de la ronda o el tiempo de votacion"
 
 
 	if(SSticker.current_state != GAME_STATE_PLAYING)
-		return alert("Esto solo está disponible mientras el juego está en progreso.")
+		return alert("Esto solo esta disponible mientras el juego esta en progreso.")
 	var/list/choices = list("Time before the round end vote.", "Time until the game ends.")
 	var/choice = browser_input_list(src, "Choose what you want to adjust.", "Delay Tools", choices)
 	var/number
@@ -1009,7 +1009,7 @@
 		return
 	var/turf/epicenter = get_turf(mob)
 	epicenter.add_liquid(choice, volume, FALSE, 300)
-	message_admins("[ADMIN_LOOKUPFLW(usr)] generó líquido en [epicenter.loc] ([choice] - [volume]).")
+	message_admins("[ADMIN_LOOKUPFLW(usr)] genero liquido en [epicenter.loc] ([choice] - [volume]).")
 	log_admin("[key_name(usr)] spawned liquid at [epicenter.loc] ([choice] - [volume]).")
 
 /client/proc/remove_liquid()
@@ -1018,7 +1018,7 @@
 	set desc = "Fija el aire en un radio especificado."
 	var/turf/epicenter = get_turf(mob)
 
-	var/range = input(usr, "Enter range:", "Selección de rango", 2) as num
+	var/range = input(usr, "Enter range:", "Seleccion de rango", 2) as num
 
 	for(var/obj/effect/abstract/liquid_turf/liquid in range(range, epicenter))
 		liquid.liquid_group.remove_any(liquid, liquid.liquid_group.reagents_per_turf)
@@ -1044,12 +1044,12 @@
 	var/choice = input(usr, "What type of pollutant would you like to spawn?", "Spawn Pollution") as null|anything in singleton_list
 	if(!choice)
 		return
-	var/amount_choice = input(usr, "Cantidad de contaminación", "Spawn Pollution") as num|null
+	var/amount_choice = input(usr, "Cantidad de contaminacion", "Spawn Pollution") as num|null
 	if(!amount_choice)
 		return
 	var/turf/epicenter = get_turf(mob)
 	epicenter.pollute_turf(choice, amount_choice)
-	message_admins("[ADMIN_LOOKUPFLW(usr)] generó contaminación en [epicenter.loc] ([choice] - [amount_choice]).")
+	message_admins("[ADMIN_LOOKUPFLW(usr)] genero contaminacion en [epicenter.loc] ([choice] - [amount_choice]).")
 	log_admin("[key_name(usr)] spawned pollution at [epicenter.loc] ([choice] - [amount_choice]).")
 
 /datum/admins/proc/anoint_priest(mob/living/carbon/human/M in GLOB.human_list)
@@ -1065,7 +1065,7 @@
 		return
 	if(is_priest_job(M.mind.assigned_role))
 		return
-	var/appointment_type = tgui_alert(usr, "Are you sure you want to anoint [M.real_name] as the new Priest?", "Confirmación", DEFAULT_INPUT_CHOICES)
+	var/appointment_type = tgui_alert(usr, "Are you sure you want to anoint [M.real_name] as the new Priest?", "Confirmacion", DEFAULT_INPUT_CHOICES)
 	if(appointment_type == CHOICE_NO)
 		return
 
@@ -1137,7 +1137,7 @@
 	if(amount < 0)
 		return
 
-	var/reason = tgui_input_text(user, "Elige una razón", "Triumph Giver")
+	var/reason = tgui_input_text(user, "Elige una razon", "Triumph Giver")
 
 	for(var/client/client as anything in GLOB.clients)
 		client.mob.adjust_triumphs(amount, reason = reason, override_bonus = TRUE)

@@ -53,7 +53,7 @@
 			spawned.adjust_skill_level(/datum/attribute/skill/combat/axesmaces, 35)
 
 /datum/outfit/mercenary/blackoak
-	name = "Guardián de Black Oak (Mercenario)"
+	name = "Guardian de Black Oak (Mercenario)"
 	shoes = /obj/item/clothing/shoes/boots/leather
 	cloak = /obj/item/clothing/cloak/half/colored/red
 	head = /obj/item/clothing/head/helmet/sallet/elven

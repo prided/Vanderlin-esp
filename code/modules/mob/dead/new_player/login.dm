@@ -19,7 +19,7 @@
 		to_chat(src, span_info("Testmerges:\n \t [GLOB.current_tms]"))
 
 	if(GLOB.rogue_round_id)
-		to_chat(src, span_info("ROUND ID: [GLOB.rogue_round_id]"))
+		to_chat(src, span_info("ID DE RONDA: [GLOB.rogue_round_id]"))
 
 	if(GLOB.admin_notice)
 		to_chat(src, span_notice("<b>Admin Notice:</b>\n \t [GLOB.admin_notice]"))
@@ -35,13 +35,13 @@
 		var/tl = SSticker.GetTimeLeft()
 		var/postfix
 		if(tl > 0)
-			postfix = "in about [DisplayTimeText(tl)]"
+			postfix = "en aproximadamente [DisplayTimeText(tl)]"
 		else
-			postfix = "soon"
-		to_chat(src, "El juego comenzará [postfix].")
+			postfix = "pronto"
+		to_chat(src, "El juego comenzara [postfix].")
 		if(client)
 			var/usedkey = get_display_ckey(ckey)
-			var/list/thinz = list("takes [client.p_their()] seat.", "settles in.", "joins the session", "joins the table.", "becomes a player.")
+			var/list/thinz = list("toma asiento.", "se acomoda.", "se une a la sesion.", "se une a la mesa.", "entra a la partida.")
 			SEND_TEXT(world, "<span class='notice'>[usedkey] [pick(thinz)]</span>")
 
 	// client?.change_view(8)

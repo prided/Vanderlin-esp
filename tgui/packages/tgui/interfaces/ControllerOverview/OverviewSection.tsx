@@ -23,18 +23,18 @@ export function OverviewSection(props) {
   return (
     <Section
       fill
-      title="Descripción general del maestro"
+      title="Descripcion general del maestro"
       buttons={
         <>
           <Button
-            tooltip="Actualización rápida"
+            tooltip="Actualizacion rapida"
             icon={fast_update ? 'check-square-o' : 'square-o'}
             color={fast_update && 'average'}
             onClick={() => {
               act('toggle_fast_update');
             }}
           >
-            Rápido
+            Rapido
           </Button>
           <Button.Input
             buttonText={`Average: ${(rolling_length / 10).toFixed(2)} Second(s)`}

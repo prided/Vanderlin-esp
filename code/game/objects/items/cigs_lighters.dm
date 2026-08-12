@@ -96,7 +96,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return ..()
 
 	if(cig.lit)
-		to_chat(user, span_warning("¡[cig] ya está encendido!"))
+		to_chat(user, span_warning("¡[cig] ya esta encendido!"))
 	if(M == user)
 		cig.attackby(src, user)
 	else
@@ -311,7 +311,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	if(cig.lit)
-		to_chat(user, span_warning("¡[cig] ya está encendido!"))
+		to_chat(user, span_warning("¡[cig] ya esta encendido!"))
 	if(M == user)
 		cig.attackby(src, user)
 	else
@@ -592,7 +592,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 					prot = TRUE
 
 				if(prot || prob(75))
-					user.visible_message(span_notice("Después de algunos intentos, [user] logra encender [src]."), span_notice("Después de algunos intentos, logras encender [src]."))
+					user.visible_message(span_notice("Despues de algunos intentos, [user] logra encender [src]."), span_notice("Despues de algunos intentos, logras encender [src]."))
 				else
 					var/hitzone = user.held_index_to_dir(user.active_hand_index) == "r" ? BODY_ZONE_PRECISE_R_HAND : BODY_ZONE_PRECISE_L_HAND
 					user.apply_damage(5, BURN, hitzone)
@@ -621,7 +621,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return ..()
 
 	if(cig.lit)
-		to_chat(user, span_warning("¡[cig] ya está encendido!"))
+		to_chat(user, span_warning("¡[cig] ya esta encendido!"))
 	if(M == user)
 		cig.attackby(src, user)
 	else if(fancy)

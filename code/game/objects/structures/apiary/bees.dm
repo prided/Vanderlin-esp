@@ -1,6 +1,6 @@
 /obj/item/queen_bee
 	name = "abeja reina"
-	desc = "El corazón de una colonia de abejas."
+	desc = "El corazon de una colonia de abejas."
 	icon = 'icons/obj/structures/apiary.dmi'
 	icon_state = "queen_bee"
 

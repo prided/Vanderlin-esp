@@ -97,7 +97,7 @@
 	)
 	output = /obj/item/burial_shroud
 	craftdiff = 1
-	category = "Costura miscelánea"
+	category = "Costura miscelanea"
 
 /datum/repeatable_crafting_recipe/sewing/loincloth
 	name = "loincloth"
@@ -165,7 +165,7 @@
 	category = "Undershirt"
 
 /datum/repeatable_crafting_recipe/sewing/stripedtunic
-	name = "túnica a rayas"
+	name = "tunica a rayas"
 	output = /obj/item/clothing/armor/gambeson/light/striped
 	requirements = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
@@ -242,13 +242,13 @@
 	category = "Sombrero"
 
 /datum/repeatable_crafting_recipe/sewing/cmask
-	name = "máscara de tela"
+	name = "mascara de tela"
 	output = /obj/item/clothing/face/shepherd/clothmask
 	requirements = list(/obj/item/natural/fibers = 1, /obj/item/natural/cloth = 1)
 	category = "Mask"
 
 /datum/repeatable_crafting_recipe/sewing/cmask_rag
-	name = "máscara de trapo"
+	name = "mascara de trapo"
 	output = /obj/item/clothing/face/shepherd/rag
 	requirements = list(/obj/item/natural/fibers = 1, /obj/item/natural/cloth = 1)
 	category = "Mask"
@@ -270,7 +270,7 @@
 /*.............. recipes requiring skill 1 ..............*/
 
 /datum/repeatable_crafting_recipe/sewing/stripedtunic
-	name = "túnica a rayas"
+	name = "tunica a rayas"
 	output = /obj/item/clothing/armor/gambeson/light/striped
 	requirements = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
@@ -381,7 +381,7 @@
 	category = "Cuello"
 
 /datum/repeatable_crafting_recipe/sewing/courtphys_collar
-	name = "collar del médico de la corte"
+	name = "collar del medico de la corte"
 	requirements = list(/obj/item/natural/cloth = 3, /obj/item/natural/fibers = 2,)
 	output = /obj/item/clothing/neck/courtphysician
 	craftdiff = 1
@@ -416,7 +416,7 @@
 	category = "Sombrero"
 
 /datum/repeatable_crafting_recipe/sewing/fedora
-	name = "sombrero de arqueólogo"
+	name = "sombrero de arqueologo"
 	requirements = list(/obj/item/natural/cloth = 1, /obj/item/natural/fibers = 1,)
 	output = /obj/item/clothing/head/fedora
 	craftdiff = 2
@@ -474,7 +474,7 @@
 	requirements =  list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 1
-	category = "Costura miscelánea"
+	category = "Costura miscelanea"
 
 /datum/repeatable_crafting_recipe/sewing/armingcap
 	name = "arming cap"
@@ -619,7 +619,7 @@
 	requirements = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 2
-	category = "Costura miscelánea"
+	category = "Costura miscelanea"
 
 /datum/repeatable_crafting_recipe/sewing/undervestments
 	name = "ropa interior"
@@ -777,7 +777,7 @@
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/sewing/magusrobes
-	name = "túnica de mago"
+	name = "tunica de mago"
 	output = /obj/item/clothing/shirt/robe/magus
 	requirements = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/hide/cured = 4,
@@ -1220,7 +1220,7 @@
 	requirements = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
-	category = "Cinturón"
+	category = "Cinturon"
 
 
 /* .............. recipes requiring skill 4 ..............*/
@@ -1369,7 +1369,7 @@
 	category = "Vestido"
 
 /datum/repeatable_crafting_recipe/sewing/carpet
-	name = "alfombra marrón"
+	name = "alfombra marron"
 	output = /obj/item/natural/carpet_fibers
 	requirements = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 2,
@@ -1521,7 +1521,7 @@
 	category = "Armor"
 
 /datum/repeatable_crafting_recipe/sewing/captainrobe
-	name = "túnicas extranjeras"
+	name = "tunicas extranjeras"
 	output = /obj/item/clothing/armor/basiceast/captainrobe
 	requirements = list(
 		/obj/item/natural/cloth = 4,
@@ -1560,10 +1560,10 @@
 	)
 	craftdiff = 2
 	attacked_atom = /obj/item/natural/silk
-	category = "Cinturón"
+	category = "Cinturon"
 
 /datum/repeatable_crafting_recipe/sewing/exoticsilkbra
-	name = "camisa de seda exótica"
+	name = "camisa de seda exotica"
 	output = /obj/item/clothing/shirt/exoticsilkbra
 	requirements = list(
 		/obj/item/natural/silk = 1,
@@ -1574,7 +1574,7 @@
 	category = "Shirt"
 
 /datum/repeatable_crafting_recipe/sewing/exoticsilkmask
-	name = "máscara de seda exótica"
+	name = "mascara de seda exotica"
 	output = /obj/item/clothing/face/exoticsilkmask
 	requirements = list(
 		/obj/item/natural/silk = 1,
@@ -1595,7 +1595,7 @@
 	category = "Sombrero"
 
 /datum/repeatable_crafting_recipe/sewing/yoruku_oni //! IDK where to put these tbh
-	name = "máscara de oni"
+	name = "mascara de oni"
 	output = /obj/item/clothing/face/facemask/yoruku_oni
 	requirements = list(
 		/obj/item/grown/log/tree/small = 1,
@@ -1759,7 +1759,7 @@
 
 // Other Religious Cloaks
 /datum/repeatable_crafting_recipe/sewing/martyrcloak
-	name = "capa de mártir"
+	name = "capa de martir"
 	output = /obj/item/clothing/cloak/martyr
 	requirements = list(
 		/obj/item/natural/cloth = 2,
@@ -1905,7 +1905,7 @@
 	category = "Accesorios"
 
 /datum/repeatable_crafting_recipe/sewing/psy_sack
-	name = "psydonian máscara de saco"
+	name = "psydonian mascara de saco"
 	output = /obj/item/clothing/face/sack/psy
 	requirements = list(
 		/obj/item/natural/cloth = 4,

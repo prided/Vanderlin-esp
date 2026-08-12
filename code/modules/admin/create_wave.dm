@@ -214,7 +214,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 		if(!CW.can_be_roles(C))
 			return
 		if(length(CW.candidates) >= CW.max_pop)
-			to_chat(usr, span_notice("El [CW.name] ha alcanzado su capacidad máxima."))
+			to_chat(usr, span_notice("El [CW.name] ha alcanzado su capacidad maxima."))
 			return
 		if(!(C in CW.candidates))
 			CW.candidates += C
@@ -232,7 +232,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 		return
 
 	if(usr.client != admin_holder.owner || !check_rights(0))
-		message_admins("¡[usr.key] ha intentado anular el panel de administración!")
+		message_admins("¡[usr.key] ha intentado anular el panel de administracion!")
 		log_admin("[key_name_admin(usr)] tried to use the admin panel without authorization.")
 		return
 
@@ -317,7 +317,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 				var/id = href_list["chosen_job_edit"]
 				var/datum/job/custom_job/J =  GLOB.custom_jobs[id]
 				if(skill in J.skills)
-					to_chat(usr, span_warning("¡[S.name] ya está en la lista de habilidades de [J.title]!"))
+					to_chat(usr, span_warning("¡[S.name] ya esta en la lista de habilidades de [J.title]!"))
 					return
 				J.skills[skill] = level
 				to_chat(usr, span_notice("Added [S.name] at level [level] for the [J.title]."))
@@ -325,7 +325,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			else
 				update_temp_job_fields(href_list)
 				if(skill in pending_skills)
-					to_chat(usr, span_warning("¡[S.name] ya está en la lista de habilidades laborales!"))
+					to_chat(usr, span_warning("¡[S.name] ya esta en la lista de habilidades laborales!"))
 					return
 				pending_skills[skill] = level
 				to_chat(usr, span_notice("Added [S.name] at level [level]."))
@@ -347,13 +347,13 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 				return
 			if(skill_to_remove)
 				J.skills = skill_to_remove
-				to_chat(usr, span_notice("Se eliminó [S_R.name] de la lista de habilidades de [J.title]."))
+				to_chat(usr, span_notice("Se elimino [S_R.name] de la lista de habilidades de [J.title]."))
 				edit_job(usr, J)
 		else
 			update_temp_job_fields(href_list)
 			if(skill_to_remove in pending_skills)
 				pending_skills -= skill_to_remove
-				to_chat(usr, span_notice("Se eliminó [S_R.name] de la lista de habilidades."))
+				to_chat(usr, span_notice("Se elimino [S_R.name] de la lista de habilidades."))
 				create_job(usr)
 			else
 				to_chat(usr, span_warning("[S_R.name] not found in skill list."))
@@ -368,11 +368,11 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			var/id = href_list["chosen_job_edit"]
 			var/datum/job/custom_job/J =  GLOB.custom_jobs[id]
 			if(trait in J.traits)
-				to_chat(usr, span_warning("¡[trait] ya está en la lista de rasgos [J.title]!"))
+				to_chat(usr, span_warning("¡[trait] ya esta en la lista de rasgos [J.title]!"))
 				return
 			if(trait)
 				J.traits += trait
-				to_chat(usr, span_notice("Se agregó el rasgo: [trait] al [J.title]."))
+				to_chat(usr, span_notice("Se agrego el rasgo: [trait] al [J.title]."))
 				edit_job(usr, J)
 		else
 			update_temp_job_fields(href_list)
@@ -381,7 +381,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 				return
 			if(trait)
 				pending_traits += trait
-				to_chat(usr, span_notice("Se agregó el rasgo: [trait]."))
+				to_chat(usr, span_notice("Se agrego el rasgo: [trait]."))
 				create_job(usr, href_list)
 	else if(href_list["remove_trait"])
 		if(!check_rights(R_ADMIN))
@@ -400,7 +400,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			update_temp_job_fields(href_list)
 			if(trait_to_remove in pending_traits)
 				pending_traits -= trait_to_remove
-				to_chat(usr, span_notice("Se eliminó [trait_to_remove] de la lista de rasgos."))
+				to_chat(usr, span_notice("Se elimino [trait_to_remove] de la lista de rasgos."))
 				create_job(usr)
 			else
 				to_chat(usr, span_warning("[trait_to_remove] not found in trait list."))
@@ -422,11 +422,11 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 		else
 			update_temp_job_fields(href_list)
 			if(stat in pending_stats)
-				to_chat(usr, span_warning("¡[stat] ya está en la lista de estadísticas de trabajo!"))
+				to_chat(usr, span_warning("¡[stat] ya esta en la lista de estadisticas de trabajo!"))
 				return
 			if(stat)
 				pending_stats[stat] = text2num(modifier)
-				to_chat(usr, span_notice("Se agregó [stat] con un modificador de [modifier]."))
+				to_chat(usr, span_notice("Se agrego [stat] con un modificador de [modifier]."))
 				create_job(usr)
 	else if(href_list["remove_stat"])
 		if(!check_rights(R_ADMIN))
@@ -445,10 +445,10 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			update_temp_job_fields(href_list)
 			if(stat_to_remove in pending_stats)
 				pending_stats -= stat_to_remove
-				to_chat(usr, span_notice("Se eliminó [stat_to_remove] de la lista de estadísticas."))
+				to_chat(usr, span_notice("Se elimino [stat_to_remove] de la lista de estadisticas."))
 				create_job(usr)
 			else
-				to_chat(usr, span_warning("[stat_to_remove] no se encuentra en la lista de estadísticas."))
+				to_chat(usr, span_warning("[stat_to_remove] no se encuentra en la lista de estadisticas."))
 
 	// Export a single job as JSON
 	else if(href_list["export_job"])
@@ -635,7 +635,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			return
 		if(edit)
 			if(job in CW.wave_jobs)
-				to_chat(usr, span_warning("¡[J.title] ya está en la lista de trabajos [CW.name]!"))
+				to_chat(usr, span_warning("¡[J.title] ya esta en la lista de trabajos [CW.name]!"))
 				return
 			CW.wave_jobs[job] = slots
 			to_chat(usr, span_notice("Added [slots] slot(s) for [job] in the [CW.name]."))
@@ -647,7 +647,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 			edit_wave(usr, CW)
 		else
 			if(job in pending_jobs)
-				to_chat(usr, span_warning("¡[J.title] ya está en la lista de trabajos!"))
+				to_chat(usr, span_warning("¡[J.title] ya esta en la lista de trabajos!"))
 				return
 			pending_jobs[job] = slots
 			to_chat(usr, span_notice("Added [slots] slot(s) for [job]."))
@@ -670,7 +670,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 		if(edit)
 			if(job_to_remove in CW.wave_jobs)
 				CW.wave_jobs -= job_to_remove
-				to_chat(usr, span_notice("Se eliminó [job_to_remove] de la lista de trabajos [CW.name]."))
+				to_chat(usr, span_notice("Se elimino [job_to_remove] de la lista de trabajos [CW.name]."))
 				CW.max_pop = 0
 				for(var/job in CW.wave_jobs)
 					var/slots = CW.wave_jobs[job]
@@ -682,7 +682,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 		else
 			if(job_to_remove in pending_jobs)
 				pending_jobs -= job_to_remove
-				to_chat(usr, span_notice("Se eliminó [job_to_remove] de la lista de trabajos."))
+				to_chat(usr, span_notice("Se elimino [job_to_remove] de la lista de trabajos."))
 				create_wave(usr)
 			else
 				to_chat(usr, span_warning("[job_to_remove] no se encuentra en la lista de trabajos."))
@@ -1988,7 +1988,7 @@ GLOBAL_LIST_EMPTY(custom_outfits) //Admin created outfits
 		for(var/client/C in CW.candidates)
 			if(!C || !C.mob || !isdead(C.mob))
 				continue
-				to_chat(C, span_notice("La cantidad de jugadores no alcanzó la cantidad mínima necesaria para desplegar la ola."))
+				to_chat(C, span_notice("La cantidad de jugadores no alcanzo la cantidad minima necesaria para desplegar la ola."))
 		CW.candidates = list()
 		CW.spawn_landmark = null
 		return

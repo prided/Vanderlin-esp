@@ -163,7 +163,7 @@
 
 							var/choice
 							if(length(recipe_names) > 1)
-								choice = input(user, "Elige una receta para hacer:", "Selección de recetas") as null|anything in recipe_names
+								choice = input(user, "Elige una receta para hacer:", "Seleccion de recetas") as null|anything in recipe_names
 							else
 								choice = recipe_names[1]
 							if(!choice)

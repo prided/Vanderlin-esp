@@ -104,7 +104,7 @@
 	)
 	starting_atom = /obj/item/reagent_containers/food/snacks/cheese_wedge
 	output = /obj/item/reagent_containers/food/snacks/foodbase/huskbunraw/cheese
-	crafting_message = "agregar queso a la cáscara"
+	crafting_message = "agregar queso a la cascara"
 
 /*	.................   Saigaitas   ................... */
 

@@ -67,7 +67,7 @@
 				to_chat(user, ("You cleaned the [src]"))
 				return
 		else
-			to_chat(user, span_notice("Este plato ya está limpio."))
+			to_chat(user, span_notice("Este plato ya esta limpio."))
 			return
 	if(length(contents) && istype(I, /obj/item/natural/cloth) && user?.used_intent?.type == INTENT_USE)
 		to_chat(user, span_warning("You can't clean the [src] while it has food on it!."))
@@ -158,7 +158,7 @@
 	if(contents.len) // If the tray isn't empty
 		for(var/obj/item/scattered_item as anything in contents)
 			scattered_item.forceMove(drop_location())
-		user.visible_message(span_notice("[user] vacía [src] en el suelo."))
+		user.visible_message(span_notice("[user] vacia [src] en el suelo."))
 
 /obj/item/plate/examine(mob/user)
 	. = ..()

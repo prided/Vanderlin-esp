@@ -42,7 +42,7 @@
 		return
 
 	if(!uses_remaining)
-		to_chat(user, span_warning("\The [src] está vacío!"))
+		to_chat(user, span_warning("\The [src] esta vacio!"))
 		update_appearance(UPDATE_OVERLAYS)
 		return
 
@@ -143,7 +143,7 @@
 	fragrance_type = /datum/pollutant/fragrance/rose
 
 /obj/item/perfume/jasmine
-	name = "perfume de jazmín"
+	name = "perfume de jazmin"
 	fragrance_type = /datum/pollutant/fragrance/jasmine
 
 /obj/item/perfume/mint

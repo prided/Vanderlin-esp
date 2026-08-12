@@ -500,8 +500,8 @@ And it also helps for the character set panel
 	user.open_clan_menu()
 
 /datum/action/clan_menu
-	name = "Menú del clan"
-	desc = "Abre la interfaz de administración de energía de tu clan."
+	name = "Menu del clan"
+	desc = "Abre la interfaz de administracion de energia de tu clan."
 	background_icon_state = "spell"
 	button_icon_state = "coven"
 
@@ -524,7 +524,7 @@ And it also helps for the character set panel
 	status_type = STATUS_EFFECT_REFRESH
 
 /atom/movable/screen/alert/status_effect/debuff/blood_disgust
-	name = "Maldición sanguínea"
+	name = "Maldicion sanguinea"
 	desc = span_warning("This type of blood does not go down well.")
 	icon_state = "hunger2"
 
@@ -554,7 +554,7 @@ And it also helps for the character set panel
 	status_type = STATUS_EFFECT_REFRESH
 
 /atom/movable/screen/alert/status_effect/buff/blood_preference
-	name = "Euforia sanguínea"
+	name = "Euforia sanguinea"
 	desc = span_good("This type of blood goes down incredibly well.")
 	icon_state = "hunger2"
 
@@ -573,7 +573,7 @@ And it also helps for the character set panel
 	owner.remove_stress(/datum/stress_event/good_blood)
 
 /datum/stress_event/good_blood
-	desc = span_good("¡Esa sangre estaba eufórica!")
+	desc = span_good("¡Esa sangre estaba euforica!")
 	stress_change = 3
 	max_stacks = 10
 	stress_change_per_extra_stack = 3

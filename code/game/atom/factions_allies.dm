@@ -205,7 +205,7 @@
 		return FALSE
 
 	if (prompt == "Add")
-		var/faction_to_add = tgui_input_text(user, "Enter a faction name to add.", "Agregar facción", max_length = MAX_NAME_LEN)
+		var/faction_to_add = tgui_input_text(user, "Enter a faction name to add.", "Agregar faccion", max_length = MAX_NAME_LEN)
 		if(isnull(faction_to_add))
 			return FALSE
 
@@ -219,7 +219,7 @@
 
 		current_factions = sortList(current_factions, GLOBAL_PROC_REF(cmp_text_asc)) // sort alphabetically
 
-		var/faction_to_remove = tgui_input_list(user, "Select a faction to remove.", "Eliminar facción", current_factions)
+		var/faction_to_remove = tgui_input_list(user, "Select a faction to remove.", "Eliminar faccion", current_factions)
 		if(isnull(faction_to_remove))
 			return FALSE
 

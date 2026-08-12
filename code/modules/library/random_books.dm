@@ -99,7 +99,7 @@
 
 /obj/item/book/random_book/apocrypha
 	book_category = "Apocrypha & Grimoires"
-	name = "Libro (apócrifos y grimorios)"
+	name = "Libro (apocrifos y grimorios)"
 
 /obj/item/book/random_book/myths
 	book_category = "Myths & Tales"

@@ -478,7 +478,7 @@ SUBSYSTEM_DEF(housing)
 
 	// Check if already claimed/owned
 	if(SShousing.property_owners[linked_property.property_id] || SShousing.temporary_claims[linked_property.property_id])
-		to_chat(user, span_warning("¡Esta propiedad ya está reclamada!"))
+		to_chat(user, span_warning("¡Esta propiedad ya esta reclamada!"))
 		return
 
 	// Check if user already owns a property with this save_id
@@ -512,7 +512,7 @@ SUBSYSTEM_DEF(housing)
 
 	options["Cancel"] = null
 
-	var/choice = input(user, "Seleccione un espacio de diseño de propiedad:", "Reclamación de propiedad") as null|anything in options
+	var/choice = input(user, "Seleccione un espacio de diseño de propiedad:", "Reclamacion de propiedad") as null|anything in options
 	if(!choice || options[choice] == null)
 		return
 

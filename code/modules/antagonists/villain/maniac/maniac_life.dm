@@ -89,7 +89,7 @@
 /proc/handle_maniac_mob_hallucination(mob/living/target)
 	if(!target.client)
 		return
-	var/mob_message = pick("It's mom!", "I have to HURRY UP!", "¡Están CERCA!","¡Están CERCA!")
+	var/mob_message = pick("It's mom!", "I have to HURRY UP!", "¡Estan CERCA!","¡Estan CERCA!")
 	var/turf/spawning_turf
 	var/list/turf/spawning_turfs = list()
 	for(var/turf/turf in view(target))
@@ -138,7 +138,7 @@
 	if(caught_dreamer)
 		var/datum/antagonist/maniac/maniac = target.mind.has_antag_datum(/datum/antagonist/maniac)
 		target.Stun(rand(1, 1.5) SECONDS)
-		var/pain_message = pick("NO!", "¡ME TENÍAN!", "AGH!")
+		var/pain_message = pick("NO!", "¡ME TENIAN!", "AGH!")
 		to_chat(target, span_userdanger("[pain_message]"))
 		if(!maniac) //If they're a maniac, they don't freak out and get knocked down, they still get stunned.
 			target.freak_out()
@@ -215,7 +215,7 @@
 	var/ban_appeal = pick("your grave", "WAKE UP WAKE UP WAKE UP", "cry a river", "bed and wake up")
 	message = pick_list_replacements("maniac.json", "dreamer_ban")
 	to_chat(target, span_boldannounce("<BIG>You have been banned by [fakemin] from the server.\nReason: [message]</BIG>"))
-	to_chat(target, span_boldannounce("Esta es una prohibición permanente. El ID de la ronda es [GLOB.rogue_round_id]."))
+	to_chat(target, span_boldannounce("Esta es una prohibicion permanente. El ID de la ronda es [GLOB.rogue_round_id]."))
 	to_chat(target, span_boldannounce("To appeal this ban go to <span style='color: #0000EE;'>[ban_appeal].</span>"))
 	to_chat(target, "<div class='connectionClosed internal'>You are either AFK, experiencing lag or the connection has closed.</div>")
 	SEND_SOUND(target, sound(null))

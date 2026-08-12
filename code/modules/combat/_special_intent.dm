@@ -3,7 +3,7 @@
  */
 /datum/special_intent
 	abstract_type = /datum/special_intent
-	var/name = "intención especial"
+	var/name = "intencion especial"
 	var/desc = "malos codificadores"
 	var/icon = 'icons/effects/effects.dmi'
 
@@ -221,7 +221,7 @@
 		return
 
 	if(parent.loc != user)
-		user.balloon_alert(user, "¡arma caída!")
+		user.balloon_alert(user, "¡arma caida!")
 		return
 
 	if(starting_loc)

@@ -9,7 +9,7 @@ export const DetailChemicalReaction = ({
   <>
     {!!r.is_cold_recipe && (
       <WarnFlag color="#88ccff">
-        Receta fría: reacciona ABAJO {r.required_temp ? `${r.required_temp - 273.15}C` : 'required temp'}
+        Receta fria: reacciona ABAJO {r.required_temp ? `${r.required_temp - 273.15}C` : 'required temp'}
       </WarnFlag>
     )}
     {!r.is_cold_recipe && r.required_temp ? (
@@ -35,7 +35,7 @@ export const DetailChemicalReaction = ({
         <SectionHead>reactivos</SectionHead>
         {r.required_reagents.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} lígulas de{' '}
+            {rg.amount} ligulas de{' '}
             <RecipeLink
               name={rg.name}
               allRecipes={allRecipes}
@@ -54,7 +54,7 @@ export const DetailChemicalReaction = ({
         <SectionHead>Catalizadores (no consumidos)</SectionHead>
         {r.required_catalysts.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} lígulas de{' '}
+            {rg.amount} ligulas de{' '}
             <RecipeLink
               name={rg.name}
               allRecipes={allRecipes}
@@ -73,7 +73,7 @@ export const DetailChemicalReaction = ({
         <SectionHead>Reactivos de salida</SectionHead>
         {r.results.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} lígulas de <strong>{rg.name}</strong>
+            {rg.amount} ligulas de <strong>{rg.name}</strong>
           </Box>
         ))}
       </>

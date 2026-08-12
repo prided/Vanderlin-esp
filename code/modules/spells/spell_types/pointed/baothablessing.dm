@@ -30,7 +30,7 @@
 		playsound(cast_on, 'sound/magic/PSY.ogg', 100, FALSE, -1)
 		return
 	if(cast_on.has_status_effect(/datum/status_effect/buff/druqks/baotha))
-		to_chat(owner, span_warning("¡Ya están bendecidos por estos efectos!"))
+		to_chat(owner, span_warning("¡Ya estan bendecidos por estos efectos!"))
 		return
 	cast_on.apply_status_effect(/datum/status_effect/buff/druqks/baotha) //Gets the trait temorarily, basically will just stop any active/upcoming ODs.
 	cast_on.visible_message("<span class='info'>[cast_on]'s eyes appear to gloss over!</span>", "<span class='notice'>I feel.. at ease.</span>")

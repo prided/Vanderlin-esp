@@ -123,7 +123,7 @@ export function TruncatedNotice(props: TruncatedProps) {
 
   return (
     <NoticeBox color="yellow">
-      Mostrando {count(shown)} of {count(total)} {noun}. Vuelque a un archivo desde la pestaña Descripción general para ver el resto.
+      Mostrando {count(shown)} of {count(total)} {noun}. Vuelque a un archivo desde la pestaña Descripcion general para ver el resto.
     </NoticeBox>
   );
 }
@@ -149,7 +149,7 @@ export function SkipBreakdown(props: { skipped: SkipCounts }) {
 
   return (
     <>
-      <LabeledList.Item label="Vacío">
+      <LabeledList.Item label="Vacio">
         {count(skipped.empty)} las listas no contienen nada. Normal: se cuentan, pero no tienen contenido que atribuir.
       </LabeledList.Item>
       {LIST_FAILURES.filter((status) => exact(skipped[status]) > 0).map(

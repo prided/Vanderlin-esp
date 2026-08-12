@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		return ITEM_INTERACT_BLOCKING
 
 	if(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering) < 1)
-		to_chat(user, span_warning("¡No tengo idea de cómo usar [multitool]!"))
+		to_chat(user, span_warning("¡No tengo idea de como usar [multitool]!"))
 		return ITEM_INTERACT_BLOCKING
 
 	user.visible_message("[user] comienza a jugar con [src].", "You start tinkering with [src].")
@@ -131,7 +131,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 
 /obj/structure/lever/hidden
 	name = "hidden lever"
-	desc = "Si puedes ver esto... ¿cómo?"
+	desc = "Si puedes ver esto... ¿como?"
 	icon = null
 	//the perception DC to use this
 	var/hidden_dc = 10
@@ -147,7 +147,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		if(GET_MOB_ATTRIBUTE_VALUE(L, STAT_PERCEPTION) + bonuses < hidden_dc)
 			return // nothing here!
 	L.changeNext_move(CLICK_CD_MELEE)
-	user.visible_message(span_danger("[user] presiona un botón oculto."), span_notice("I push a hidden button."))
+	user.visible_message(span_danger("[user] presiona un boton oculto."), span_notice("I push a hidden button."))
 	user.log_message("pulled the lever with redstone id \"[redstone_id]\"", LOG_GAME)
 	for(var/obj/structure/structure in redstone_attached)
 		INVOKE_ASYNC(structure, PROC_REF(redstone_triggered), user)
@@ -203,7 +203,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 /obj/structure/repeater/attack_hand(mob/user)
 	. = ..()
 	if(GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/craft/engineering) < 1)
-		to_chat(user, span_warning("¡No tengo idea de cómo usar [src]!"))
+		to_chat(user, span_warning("¡No tengo idea de como usar [src]!"))
 		return
 	if(user.used_intent.type == INTENT_HARM)
 		playsound(src, 'sound/combat/hits/punch/punch (1).ogg', 100, FALSE, -1)
@@ -274,7 +274,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		sleep(5)
 
 /obj/structure/pressure_plate
-	name = "placa de presión"
+	name = "placa de presion"
 	desc = "Be careful. Stepping on this could either mean a bomb exploding or a door closing on you."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "pressureplate"
@@ -289,7 +289,7 @@ GLOBAL_LIST_EMPTY(redstone_objs)
 		return
 	if(isliving(AM))
 		var/mob/living/L = AM
-		to_chat(L, "<span class='info'>Siento que algo hace clic debajo de mí.</span>")
+		to_chat(L, "<span class='info'>Siento que algo hace clic debajo de mi.</span>")
 		AM.log_message("has activated a pressure plate", LOG_GAME)
 		playsound(src, 'sound/misc/pressurepad_down.ogg', 65, extrarange = 2)
 	if(isstructure(AM))

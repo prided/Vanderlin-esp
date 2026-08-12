@@ -24,7 +24,7 @@
 
 /datum/job/persistence/farmer
 	title = "Farmer"
-	tutorial = "Eres un granjero, asegúrate de que los colonos no mueran de hambre."
+	tutorial = "Eres un granjero, asegurate de que los colonos no mueran de hambre."
 	department_flag = PEASANTS
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	factions = list(FACTION_TOWN)

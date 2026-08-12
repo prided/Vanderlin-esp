@@ -26,11 +26,11 @@ export const DetailDistillation = ({
     {!!r.required_reagents?.length && (
       <>
         <SectionHead>
-          También requiere{r.consume_reagents ? ' (consumed)' : ' (not consumed)'}
+          Tambien requiere{r.consume_reagents ? ' (consumed)' : ' (not consumed)'}
         </SectionHead>
         {r.required_reagents.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} lígulas de{' '}
+            {rg.amount} ligulas de{' '}
             <RecipeLink
               name={rg.name}
               allRecipes={allRecipes}
@@ -46,10 +46,10 @@ export const DetailDistillation = ({
 
     {!!r.results?.length && (
       <>
-        <SectionHead>Producción (por unidad destilada)</SectionHead>
+        <SectionHead>Produccion (por unidad destilada)</SectionHead>
         {r.results.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} lígulas de{' '}
+            {rg.amount} ligulas de{' '}
             <RecipeLink
               name={rg.name}
               allRecipes={allRecipes}

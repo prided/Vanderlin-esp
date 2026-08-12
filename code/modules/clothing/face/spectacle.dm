@@ -51,7 +51,7 @@
 	var/total_sellprice = 0
 
 	if(isturf(interacting_with))
-		visible_message("[user] evalúa los elementos del [interacting_with] con su monóculo.")
+		visible_message("[user] evalua los elementos del [interacting_with] con su monoculo.")
 
 		for(var/obj/item/assessed_item in interacting_with)
 			total_sellprice += assessed_item.sellprice
@@ -63,7 +63,7 @@
 		return ITEM_INTERACT_SUCCESS
 
 	else if(istype(interacting_with, /obj/item))
-		visible_message("[user] evalúa el [interacting_with] con su monóculo.")
+		visible_message("[user] evalua el [interacting_with] con su monoculo.")
 
 		var/obj/item/assessed_item = interacting_with
 		total_sellprice += assessed_item.sellprice
@@ -172,7 +172,7 @@
 	icon_state = "surgsackmask"
 
 /obj/item/clothing/face/sack/psy
-	name = "psydonian máscara de saco"
+	name = "psydonian mascara de saco"
 	desc = "An ordinary brown sack. This one has eyeholes cut into it, bearing a crude chalk drawing of Psydon's cross upon its visage. Unsettling for most."
 	icon_state = "sackmask_psy"
 
@@ -195,7 +195,7 @@
 	dyeable = TRUE
 
 /obj/item/clothing/face/facemask/steel/confessor
-	name = "máscara extraña"
+	name = "mascara extraña"
 	desc = "It is said that the original version of this mask was used for obscure rituals in Grenzelhoft, and now it has been repurposed as a veil for the cunning hand of the Ordo Venatari. Others say it is a piece of heresy, a necessary evil, capable of keeping its user safe from vile magicks. You can taste copper whenever you draw breath."
 	icon_state = "confessormask"
 	max_integrity = 200

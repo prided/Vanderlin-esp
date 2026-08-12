@@ -1,6 +1,6 @@
 /atom/movable/screen/alert/status_effect/buff/healing
 	name = "Healing Miracle"
-	desc = "La intervención divina me alivia de mis dolencias."
+	desc = "La intervencion divina me alivia de mis dolencias."
 	icon_state = "buff"
 
 /obj/effect/temp_visual/heal_rogue //color is white by default, set to whatever is needed

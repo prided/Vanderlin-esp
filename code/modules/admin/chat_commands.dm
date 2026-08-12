@@ -54,7 +54,7 @@
 
 /datum/tgs_chat_command/namecheck
 	name = "namecheck"
-	help_text = "Devuelve información sobre el objetivo especificado."
+	help_text = "Devuelve informacion sobre el objetivo especificado."
 	admin_only = TRUE
 
 /datum/tgs_chat_command/namecheck/Run(datum/tgs_chat_user/sender, params)

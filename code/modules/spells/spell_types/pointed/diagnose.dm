@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/diagnose
-	name = "Diagnóstico secular"
+	name = "Diagnostico secular"
 	desc = "Revisa las heridas del objetivo."
 	button_icon_state = "diagnose"
 	sound = 'sound/magic/diagnose.ogg'
@@ -22,7 +22,7 @@
 	cast_on.check_for_injuries(owner, additional = TRUE)
 
 /datum/action/cooldown/spell/diagnose/holy
-	name = "Diagnóstico"
+	name = "Diagnostico"
 
 	cast_range = 4
 	spell_type = SPELL_MIRACLE

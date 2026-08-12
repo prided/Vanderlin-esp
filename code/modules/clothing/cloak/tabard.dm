@@ -31,7 +31,7 @@
 
 	if(design == "Symbol")
 		design = null
-		design = tgui_input_list(user, "Seleccione un símbolo.", "Diseño de tabardo", list("chalice", "psy", "peace", "z", "imp", "skull", "viuda", "arrow"))
+		design = tgui_input_list(user, "Seleccione un simbolo.", "Diseño de tabardo", list("chalice", "psy", "peace", "z", "imp", "skull", "viuda", "arrow"))
 		if(!design)
 			return
 		design = "_[design]"
@@ -160,7 +160,7 @@
 	picked = TRUE
 
 /obj/item/clothing/cloak/tabard/knight/guard
-	desc = "Un tabardo con los colores heráldicos del señor."
+	desc = "Un tabardo con los colores heraldicos del señor."
 	color = CLOTHING_BLOOD_RED
 	detail_tag = "_spl"
 	detail_color = CLOTHING_PLUM_PURPLE

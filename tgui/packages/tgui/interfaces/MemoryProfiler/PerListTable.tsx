@@ -143,7 +143,7 @@ export function PerListTable(props: { report: ListsReport }) {
             expensive
             query={search}
             onSearch={setSearch}
-            placeholder="Filtrar propietarios o escribir un sitio como huérfano..."
+            placeholder="Filtrar propietarios o escribir un sitio como huerfano..."
             style={{ width: '24rem' }}
           />
         }
@@ -188,7 +188,7 @@ export function PerListTable(props: { report: ListsReport }) {
               desc={sort.desc}
               onClick={() => toggle('assoc_nodes')}
             >
-              Asociación
+              Asociacion
             </SortCell>
             <SortCell
               active={sort.key === 'bytes'}
@@ -209,7 +209,7 @@ export function PerListTable(props: { report: ListsReport }) {
                   </Box>
                 </Tooltip>
                 {!row.capacity_sane && (
-                  <Tooltip content="La capacidad falló al guardia de cordura de la caminata, por lo que el tamaño asignado a esta fila no es confiable.">
+                  <Tooltip content="La capacidad fallo al guardia de cordura de la caminata, por lo que el tamaño asignado a esta fila no es confiable.">
                     <Icon name="ruler" ml={1} color="average" />
                   </Tooltip>
                 )}

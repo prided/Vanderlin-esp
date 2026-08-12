@@ -207,7 +207,7 @@
 	cooked_smell = /datum/pollutant/food/fried_meat
 
 /datum/container_craft/pan/ham
-	name = "Jamón"
+	name = "Jamon"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/meat/fatty = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/ham
 	cooked_smell = /datum/pollutant/food/bacon

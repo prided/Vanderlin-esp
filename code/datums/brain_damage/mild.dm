@@ -23,7 +23,7 @@
 	name = "Dumbness"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("Me siento más tonto.")
+	gain_text = span_warning("Me siento mas tonto.")
 	lose_text = span_notice("I feel smart again.")
 
 /datum/brain_trauma/mild/dumbness/on_gain()
@@ -48,7 +48,7 @@
 	desc = ""
 	scan_desc = ""
 	gain_text = span_danger("I can't seem to form any coherent thoughts!")
-	lose_text = span_danger("Mi mente se siente más clara.")
+	lose_text = span_danger("Mi mente se siente mas clara.")
 
 /datum/brain_trauma/mild/speech_impediment/on_gain()
 	ADD_TRAIT(owner, TRAIT_UNINTELLIGIBLE_SPEECH, TRAUMA_TRAIT)
@@ -59,11 +59,11 @@
 	..()
 
 /datum/brain_trauma/mild/concussion
-	name = "Conmoción cerebral"
+	name = "Conmocion cerebral"
 	desc = ""
 	scan_desc = ""
 	gain_text = span_warning("¡Me duele la cabeza!")
-	lose_text = span_notice("La presión dentro de mi cabeza comienza a desvanecerse.")
+	lose_text = span_notice("La presion dentro de mi cabeza comienza a desvanecerse.")
 
 /datum/brain_trauma/mild/concussion/on_life()
 	if(prob(5))
@@ -90,7 +90,7 @@
 	name = "Debilidad muscular"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("Mis músculos se sienten extrañamente débiles.")
+	gain_text = span_warning("Mis musculos se sienten extrañamente debiles.")
 	lose_text = span_notice("I feel in control of my muscles again.")
 
 /datum/brain_trauma/mild/muscle_weakness/on_life()
@@ -116,7 +116,7 @@
 	name = "Espasmos musculares"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("Mis músculos se sienten extrañamente débiles.")
+	gain_text = span_warning("Mis musculos se sienten extrañamente debiles.")
 	lose_text = span_notice("I feel in control of my muscles again.")
 
 /datum/brain_trauma/mild/muscle_spasms/on_gain()
@@ -191,7 +191,7 @@
 	name = "Mind Echo"
 	desc = ""
 	scan_desc = ""
-	gain_text = span_warning("Siento un débil eco de mis pensamientos...")
+	gain_text = span_warning("Siento un debil eco de mis pensamientos...")
 	lose_text = span_notice("The faint echo fades away.")
 	var/list/hear_dejavu = list()
 	var/list/speak_dejavu = list()

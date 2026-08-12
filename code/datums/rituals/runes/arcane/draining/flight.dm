@@ -21,7 +21,7 @@
 	. = ..()
 	passtable_off(owner, "[type]")
 	REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, "[type]")
-	to_chat(owner, span_cultsmall("La energía frenética te abandona."))
+	to_chat(owner, span_cultsmall("La energia frenetica te abandona."))
 
 /atom/movable/screen/alert/status_effect/mana_siphon_buff/flight
 	name = "Arcyne Vuelo"

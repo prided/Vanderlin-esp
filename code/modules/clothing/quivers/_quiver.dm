@@ -40,7 +40,7 @@
 /obj/item/ammo_holder/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(is_type_in_list(tool, ammo_type))
 		if(length(ammo_list) >= max_storage)
-			to_chat(user, span_warning("¡[src] está lleno!"))
+			to_chat(user, span_warning("¡[src] esta lleno!"))
 			return ITEM_INTERACT_BLOCKING
 		user.transferItemToLoc(tool, src)
 		ammo_list += tool

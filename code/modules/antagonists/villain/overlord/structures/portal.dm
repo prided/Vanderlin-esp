@@ -24,7 +24,7 @@ GLOBAL_VAR_INIT(lair_portal, null)
 
 /obj/structure/overlord_portal/attack_hand(mob/user)
 	if(!length(overlords))
-		to_chat(user, span_warning("El portal parpadea débilmente: no hay destinos disponibles."))
+		to_chat(user, span_warning("El portal parpadea debilmente: no hay destinos disponibles."))
 		return
 
 	var/obj/structure/door/exit_door
@@ -46,7 +46,7 @@ GLOBAL_VAR_INIT(lair_portal, null)
 				door_options["[door.name] in [area_name]"] = door
 
 		if(!length(door_options))
-			to_chat(user, span_warning("El portal parpadea débilmente: no hay destinos disponibles."))
+			to_chat(user, span_warning("El portal parpadea debilmente: no hay destinos disponibles."))
 			return
 
 		var/choice = input(user, "Choose your destination:", "Portal de las Sombras") as null|anything in door_options
@@ -61,7 +61,7 @@ GLOBAL_VAR_INIT(lair_portal, null)
 				valid_doors += door
 
 		if(!length(valid_doors))
-			to_chat(user, span_warning("El portal parpadea débilmente: no hay destinos disponibles."))
+			to_chat(user, span_warning("El portal parpadea debilmente: no hay destinos disponibles."))
 			return
 
 		exit_door = pick(valid_doors)

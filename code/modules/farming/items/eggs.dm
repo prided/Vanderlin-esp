@@ -1,7 +1,7 @@
 
 /obj/item/reagent_containers/food/snacks/egg
 	name = "egg"
-	desc = "También conocido como cackleberries entre los campesinos."
+	desc = "Tambien conocido como cackleberries entre los campesinos."
 	icon_state = "egg"
 	list_reagents = list(/datum/reagent/consumable/eggyolk = 5)
 	filling_color = "#F0E68C"

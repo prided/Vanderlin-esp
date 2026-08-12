@@ -10,7 +10,7 @@
 	required_chem_temp = 350 // Lower temp for gentle herbal brewing
 	pollute_amount = 200
 	wording_choice = "leaves of"
-	complete_message = "¡La infusión de hierbas huele relajante!"
+	complete_message = "¡La infusion de hierbas huele relajante!"
 	used_skill = /datum/attribute/skill/craft/alchemy
 	quality_modifier = 0.8
 
@@ -66,7 +66,7 @@
 	quality_modifier = 0.9
 
 /datum/container_craft/cooking/herbal_salve/calendula_salve
-	name = "Ungüento de caléndula"
+	name = "Ungüento de calendula"
 	created_reagent = /datum/reagent/medicine/herbal/calendula_salve
 	requirements = list(
 		/obj/item/alch/herb/calendula = 3
@@ -88,7 +88,7 @@
 
 // Mentha Tea Recipe
 /datum/container_craft/cooking/herbal_tea/mentha_tea
-	name = "Té de menta"
+	name = "Te de menta"
 	created_reagent = /datum/reagent/medicine/herbal/mentha_tea
 	requirements = list(
 		/obj/item/alch/herb/mentha = 2
@@ -98,7 +98,7 @@
 
 // Herbal Buff Teas
 /datum/container_craft/cooking/herbal_tea/salvia_wisdom
-	name = "Té de sabiduría de salvia"
+	name = "Te de sabiduria de salvia"
 	created_reagent = /datum/reagent/buff/herbal/salvia_wisdom
 	requirements = list(
 		/obj/item/alch/herb/salvia = 2
@@ -255,7 +255,7 @@
 	)
 	crafting_time = 12 SECONDS
 	finished_smell = /datum/pollutant/food/mint
-	complete_message = "¡El té brilla con claridad intelectual!"
+	complete_message = "¡El te brilla con claridad intelectual!"
 
 
 // Moonwater Elixir (magical enhancement)

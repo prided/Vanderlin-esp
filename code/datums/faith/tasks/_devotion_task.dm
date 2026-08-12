@@ -1,6 +1,6 @@
 /datum/devotion_task
 	var/name = "Tarea Divina"
-	var/desc = "Completa tareas para ganar devoción."
+	var/desc = "Completa tareas para ganar devocion."
 	var/devotion_reward = 5
 	var/progression_reward = 5
 	/// How often this task can be completed (in deciseconds, 0 = unlimited)

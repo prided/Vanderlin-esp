@@ -244,7 +244,7 @@ GLOBAL_LIST_EMPTY(antagonists)
 
 //Called when using admin tools to give antag status
 /datum/antagonist/proc/admin_add(datum/mind/new_owner,mob/admin)
-	message_admins("[key_name_admin(admin)] convirtió a [key_name_admin(new_owner)] en [name].")
+	message_admins("[key_name_admin(admin)] convirtio a [key_name_admin(new_owner)] en [name].")
 	log_admin("[key_name(admin)] made [key_name(new_owner)] into [name].")
 	new_owner.add_antag_datum(src)
 

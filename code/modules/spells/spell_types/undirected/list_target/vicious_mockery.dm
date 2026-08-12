@@ -55,7 +55,7 @@
 	if(ismob(target))
 		var/mob/living/M = target
 		if(HAS_TRAIT(M, TRAIT_DEAF))
-			visible_message(span_warning("¡El insulto cae en oídos sordos!"))
+			visible_message(span_warning("¡El insulto cae en oidos sordos!"))
 			qdel(src)
 			return BULLET_ACT_BLOCK
 		var/datum/status_effect/debuff/mockery_stack/existing = M.has_status_effect(/datum/status_effect/debuff/mockery_stack)

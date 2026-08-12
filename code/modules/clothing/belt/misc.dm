@@ -1,6 +1,6 @@
 /obj/item/storage/belt/leather
 	name = "belt"
-	desc = "Un cinturón de cuero."
+	desc = "Un cinturon de cuero."
 	icon_state = "leather"
 	item_state = "leather"
 	equip_sound = 'sound/blank.ogg'
@@ -79,11 +79,11 @@
 	)
 
 /obj/item/storage/belt/leather/mercenary/shalal
-	name = "cinturón shalal"
+	name = "cinturon shalal"
 	icon_state = "shalal"
 
 /obj/item/storage/belt/leather/mercenary/black
-	name = "cinturón negro"
+	name = "cinturon negro"
 	icon_state = "blackbelt"
 
 /obj/item/storage/belt/leather/plaquegold
@@ -93,12 +93,12 @@
 	sellprice = 50
 
 /obj/item/storage/belt/leather/shalal
-	name = "cinturón shalal"
+	name = "cinturon shalal"
 	icon_state = "shalal"
 	sellprice = 5
 
 /obj/item/storage/belt/leather/black
-	name = "cinturón negro"
+	name = "cinturon negro"
 	icon_state = "blackbelt"
 	sellprice = 10
 
@@ -120,13 +120,13 @@
 	enchant(/datum/enchantment/silver)
 
 /obj/item/storage/belt/leather/steel
-	name = "cinturón de acero"
-	desc = "Un cinturón con una placa de acero en su frente."
+	name = "cinturon de acero"
+	desc = "Un cinturon con una placa de acero en su frente."
 	icon_state = "steelplaque"
 	sellprice = 30
 
 /obj/item/storage/belt/leather/rope
-	name = "cinturón de cuerda"
+	name = "cinturon de cuerda"
 	desc = "A simple belt made of rope."
 	icon_state = "rope"
 	item_state = "rope"
@@ -420,7 +420,7 @@
 	//for those curious, yes the artibackpack preserves organs and food. Check _organ.dm and snacks.dm
 
 /obj/item/storage/backpack/backpack/artibackpack/porter
-	name = "monótono"
+	name = "monotono"
 	desc = "A absurdly oversized backpack with complex bronze pipework coursing through it. It hums and vibrates constantly."
 	sewrepair = /datum/attribute/skill/craft/tanning/patching
 	salvage_result = /obj/item/natural/hide/cured
@@ -429,7 +429,7 @@
 	component_type = /datum/component/storage/concrete/grid/porter
 
 /obj/item/storage/backpack/satchel/surgbag
-	name = "bolsa de cirugía"
+	name = "bolsa de cirugia"
 	desc = "Contains all the phreakish devices one needs to cut a person up."
 	item_state = "doctorbag"
 	icon_state = "doctorbag"
@@ -699,7 +699,7 @@
 	if(auto_pickup)
 		. += span_notice("You are ready to collect ores.")
 	else
-		. += span_notice("No estás listo para recolectar minerales.")
+		. += span_notice("No estas listo para recolectar minerales.")
 
 /obj/item/storage/hip/orebag/get_mechanics_examine(mob/user)
 	. = ..()

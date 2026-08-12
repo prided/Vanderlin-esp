@@ -1,5 +1,5 @@
 /datum/map_template/world_feature/wishtree
-	name = "árbol de deseos"
+	name = "arbol de deseos"
 	id = "feature_wishtree"
 	mappath = "_maps/kalypso/wishtree.dmm"
 

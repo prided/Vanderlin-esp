@@ -306,7 +306,7 @@
 	name = "bronze lamptern"
 	icon_state = "bronzelamp"
 	item_state = "bronzelamp"
-	desc = "Una maravilla de la ingeniería que emite un extraño brillo verde."
+	desc = "Una maravilla de la ingenieria que emite un extraño brillo verde."
 	light_outer_range = 9
 	light_power = 2
 	light_color ="#3fff8f"

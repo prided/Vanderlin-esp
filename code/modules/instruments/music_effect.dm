@@ -1,5 +1,5 @@
 /obj/effect/temp_visual/music_rogue //color is white by default, set to whatever is needed
-	name = "música"
+	name = "musica"
 	icon = 'icons/effects/music-note.dmi'
 	icon_state = "music_note"
 	duration = 15
@@ -60,7 +60,7 @@
 	icon_state = "bardsong_t3_base"
 
 /obj/effect/temp_visual/song_telltale
-	name = "música"
+	name = "musica"
 	icon = 'icons/effects/music-note.dmi'
 	icon_state = "music_note"
 	duration = 20
@@ -82,7 +82,7 @@
 	note_color = "#CC3333"
 
 /atom/movable/screen/alert/status_effect/buff/playing_music
-	name = "Reproducir música"
+	name = "Reproducir musica"
 	desc = "Deja que el mundo escuche mi oficio."
 	icon_state = "play_music"
 

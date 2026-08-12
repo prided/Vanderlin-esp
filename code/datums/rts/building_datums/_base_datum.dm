@@ -18,8 +18,8 @@ GLOBAL_LIST_INIT(cached_building_images, list())
 // Places a building map template. For a single atom, use /datum/building_datum/simple instead.
 /datum/building_datum
 	var/mob/camera/strategy_controller/master
-	var/name = "Nombre genérico"
-	var/desc = "Descripción genérica"
+	var/name = "Nombre generico"
+	var/desc = "Descripcion generica"
 	///this is our template id
 	var/building_template
 	var/obj/effect/building_outline/generated_MA

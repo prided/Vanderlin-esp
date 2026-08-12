@@ -5,7 +5,7 @@
 	construct_tool = null
 
 /datum/blueprint_recipe/dendor/shrine
-	name = "Santuario en crecimiento para Dendor (único)"
+	name = "Santuario en crecimiento para Dendor (unico)"
 	required_materials = list(/obj/item/grown/log/tree/small = 1,
 				/obj/item/natural/thorn = 3,
 				/obj/item/natural/head/gote = 1)

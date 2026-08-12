@@ -131,7 +131,7 @@
 	)
 
 /datum/job/advclass/heir/aristocrat
-	title = "Aristócrata protegido"
+	title = "Aristocrata protegido"
 	tutorial = "Life has been kind to you; you've an entire keep at your disposal, servants to wait on you, and a whole retinue of guards to guard you. You've nothing to prove; just live the good life and you'll be a lord someday, too. A lack of ambition translates into a lacking skillset beyond schooling, though, and your breaks from boredom consist of being a damsel or court gossip."
 	outfit = /datum/outfit/heir/aristocrat
 	category_tags = list(CTAG_HEIR)
@@ -144,7 +144,7 @@
 	)
 
 /datum/outfit/heir/aristocrat
-	name = "Aristócrata protegido (Príncipe)"
+	name = "Aristocrata protegido (Principe)"
 	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/key/heir
 	beltr = /obj/item/storage/belt/pouch/coins/rich

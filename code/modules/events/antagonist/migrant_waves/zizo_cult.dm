@@ -16,7 +16,7 @@
 	)
 
 /datum/migrant_wave/zizo_cultist
-	name = "El Camino a la Ascensión"
+	name = "El Camino a la Ascension"
 	max_spawns = 1
 	can_roll = FALSE
 	shared_wave_type = /datum/migrant_wave/zizo_cultist
@@ -28,7 +28,7 @@
 	greet_text = "This is the land that will witness your ascension."
 
 /datum/migrant_wave/zizo_cultist_down
-	name = "El Camino a la Ascensión"
+	name = "El Camino a la Ascension"
 	shared_wave_type = /datum/migrant_wave/zizo_cultist
 	can_roll = FALSE
 	roles = list(

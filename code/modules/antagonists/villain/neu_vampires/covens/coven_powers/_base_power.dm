@@ -174,7 +174,7 @@
 	//the power is currently active
 	if (active && !multi_activate)
 		if (alert)
-			to_chat(owner, span_warning("¡[src] ya está activo!"))
+			to_chat(owner, span_warning("¡[src] ya esta activo!"))
 		return FALSE
 
 	//a mutually exclusive power is already active or on cooldown
@@ -228,7 +228,7 @@
 
 	if ((check_flags & COVEN_CHECK_IMMOBILE) && HAS_TRAIT(owner, TRAIT_IMMOBILIZED))
 		if (alert)
-			to_chat(owner, span_warning("¡No puedes lanzar [src] mientras estás inmovilizado!"))
+			to_chat(owner, span_warning("¡No puedes lanzar [src] mientras estas inmovilizado!"))
 		return FALSE
 
 	if ((check_flags & COVEN_CHECK_LYING) && HAS_TRAIT(owner, TRAIT_FLOORED))
@@ -296,7 +296,7 @@
 	//check if distance is in range
 	if (get_dist(owner, target) > range)
 		if (alert)
-			to_chat(owner, span_warning("¡[target] está fuera de rango!"))
+			to_chat(owner, span_warning("¡[target] esta fuera de rango!"))
 		return FALSE
 
 	//handling for if a ranged Discipline is being used on its caster

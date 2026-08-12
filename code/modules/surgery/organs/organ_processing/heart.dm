@@ -199,7 +199,7 @@
 		if(owner.heartbeat_sound != BEAT_SLOW)
 			owner.heartbeat_sound = BEAT_SLOW
 			SEND_SOUND(owner, slowbeat)
-			to_chat(owner, span_notice("Siento que mi corazón se ralentiza..."))
+			to_chat(owner, span_notice("Siento que mi corazon se ralentiza..."))
 
 	else if(owner.health <= owner.hardcrit_threshold) // owner.stat == HARD_CRIT
 		if(owner.heartbeat_sound != BEAT_FAST && owner.has_status_effect(/datum/status_effect/jitter))

@@ -130,7 +130,7 @@
 		"Steel Katar" = /obj/item/weapon/katar,
 		"Bare Handed" = /obj/item/clothing/gloves/bandages/pugilist,
 	)
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu especialización", title = "COURT AGENT")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu especializacion", title = "COURT AGENT")
 	if(!weapon_choice)
 		return
 	switch(weapon_choice)
@@ -204,7 +204,7 @@
 		"Shortbow" = /obj/item/gun/ballistic/bow/short,
 		"Crossbow" = /obj/item/gun/ballistic/bow/cross,
 	)
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu especialización", title = "COURT AGENT")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu especializacion", title = "COURT AGENT")
 	if(!weapon_choice)
 		return
 	switch(weapon_choice)
@@ -374,7 +374,7 @@
 		"Flail" = /obj/item/weapon/flail,
 		"Whip" = /obj/item/weapon/whip,
 	)
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu especialización", title = "COURT AGENT")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Elige tu especializacion", title = "COURT AGENT")
 	if(!weapon_choice)
 		return
 	switch(weapon_choice)

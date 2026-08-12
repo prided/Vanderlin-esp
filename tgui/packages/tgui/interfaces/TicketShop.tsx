@@ -235,7 +235,7 @@ const BasketSummary = ({
         <Stack.Item grow basis="50%">
           <Box fontSize="0.75em" color="good" bold mb={0.5}>
             <Icon name="arrow-right" mr={0.5} />
-            Tú le das a {targetCkey || '…'}
+            Tu le das a {targetCkey || '…'}
           </Box>
           {hasOffer ? (
             <Box>
@@ -317,7 +317,7 @@ const IncomingTradeCard = ({
           {isCancelling && (
             <Box fontSize="0.75em" color="average" mt={0.25}>
               <Icon name="hourglass-half" mr={0.5} />
-              El remitente está cancelando
+              El remitente esta cancelando
             </Box>
           )}
         </Stack.Item>
@@ -477,7 +477,7 @@ const TradeComposerPanel = ({
     <Box>
       <Box mb={1}>
         <Box fontSize="0.8em" bold color="label" mb={0.5}>
-          ¿Con quién estás negociando?
+          ¿Con quien estas negociando?
         </Box>
         <Stack mb={0.5}>
           <Stack.Item>
@@ -490,7 +490,7 @@ const TradeComposerPanel = ({
                 setRequestIds(new Set());
               }}
             >
-              En línea
+              En linea
             </Button>
           </Stack.Item>
           <Stack.Item>
@@ -511,7 +511,7 @@ const TradeComposerPanel = ({
         {targetMode === 'online' ? (
           onlineCkeys.length === 0 ? (
             <Box color="label" fontSize="0.8em">
-              No hay otros jugadores en línea.
+              No hay otros jugadores en linea.
             </Box>
           ) : (
             <Stack wrap>
@@ -590,7 +590,7 @@ const TradeComposerPanel = ({
             mt={0.5}
             onClick={() => setOfferIds(new Set())}
           >
-            Borrar selección de oferta
+            Borrar seleccion de oferta
           </Button>
         )}
       </Box>
@@ -636,7 +636,7 @@ const TradeComposerPanel = ({
             mt={0.5}
             onClick={() => setRequestIds(new Set())}
           >
-            Borrar selección de solicitud
+            Borrar seleccion de solicitud
           </Button>
         )}
       </Box>
@@ -754,7 +754,7 @@ const HistoryView = ({ history }: { history: HistoryEntry[] }) => {
   if (!sorted.length) {
     return (
       <NoticeBox>
-        Aún no hay historial. Usa o intercambia un ticket para verlo aquí.
+        Aun no hay historial. Usa o intercambia un ticket para verlo aqui.
       </NoticeBox>
     );
   }

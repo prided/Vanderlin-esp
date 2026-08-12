@@ -39,7 +39,7 @@ export function Overview() {
             {!census ? (
               <Stack.Item>
                 <EmptyState>
-                  Nada capturado todavía. Un censo recorre todo el montón, lo que lleva unos segundos y congela el servidor para todos ellos. Es un diagnóstico que se ejecuta deliberadamente, no algo que se debe dejar en un cronómetro.
+                  Nada capturado todavia. Un censo recorre todo el monton, lo que lleva unos segundos y congela el servidor para todos ellos. Es un diagnostico que se ejecuta deliberadamente, no algo que se debe dejar en un cronometro.
                 </EmptyState>
               </Stack.Item>
             ) : (
@@ -57,12 +57,12 @@ export function Overview() {
                         {bytes(census.list_bytes)}
                       </LabeledList.Item>
                       <LabeledList.Item
-                        label="Huérfanos"
+                        label="Huerfanos"
                         color={
                           exact(census.orphan_lists) > 0 ? 'average' : undefined
                         }
                       >
-                        {count(census.orphan_lists)} no enumera ningún alcance raíz con nombre
+                        {count(census.orphan_lists)} no enumera ningun alcance raiz con nombre
                       </LabeledList.Item>
                       <SkipBreakdown skipped={census.skipped} />
                       <LabeledList.Item label="Filas var">
@@ -80,7 +80,7 @@ export function Overview() {
                   <Section title="Bytes de lista retenidos, atribuidos">
                     <LabeledList>
                       <LabeledList.Item label="Compartido">
-                        {bytes(census.retained.shared_bytes)} se mantiene más de una vez, por lo que la propiedad es genuinamente ambigua
+                        {bytes(census.retained.shared_bytes)} se mantiene mas de una vez, por lo que la propiedad es genuinamente ambigua
                       </LabeledList.Item>
                       <LabeledList.Item label="Globales">
                         {bytes(census.retained.global_bytes)}
@@ -88,14 +88,14 @@ export function Overview() {
                       <LabeledList.Item label="Alists">
                         {bytes(census.retained.alist_bytes)}
                       </LabeledList.Item>
-                      <LabeledList.Item label="Huérfanos">
+                      <LabeledList.Item label="Huerfanos">
                         {bytes(census.retained.orphan_bytes)}
                       </LabeledList.Item>
                       <LabeledList.Item label="demasiado profundo">
-                        {bytes(census.retained.deep_bytes)} en cadenas que superaron el límite de saltos
+                        {bytes(census.retained.deep_bytes)} en cadenas que superaron el limite de saltos
                       </LabeledList.Item>
                       <LabeledList.Item label="Sin atribuir">
-                        {bytes(census.retained.unattributed_bytes)}, resumieron los cinco anteriores. Esto es a lo que renuncia la aproximación del refcount; no es un árbol dominador.
+                        {bytes(census.retained.unattributed_bytes)}, resumieron los cinco anteriores. Esto es a lo que renuncia la aproximacion del refcount; no es un arbol dominador.
                       </LabeledList.Item>
                     </LabeledList>
                     <Table mt={1}>
@@ -127,9 +127,9 @@ export function Overview() {
               <Dumps />
             </Stack.Item>
             <Stack.Item>
-              <Section title="Cuánto cuesta una fila">
+              <Section title="Cuanto cuesta una fila">
                 <Box color="label" mb={1}>
-                  Tamaños base, cada uno rastreado hasta un punto de asignación en byondcore. A cada instancia se le suma esto y su bloque var; a cada lista, esto y su árbol asociativo. Por tanto, representan el mínimo de una fila, no su totalidad.
+                  Tamaños base, cada uno rastreado hasta un punto de asignacion en byondcore. A cada instancia se le suma esto y su bloque var; a cada lista, esto y su arbol asociativo. Por tanto, representan el minimo de una fila, no su totalidad.
                 </Box>
                 <LabeledList>
                   {base_sizes.map((entry) => (

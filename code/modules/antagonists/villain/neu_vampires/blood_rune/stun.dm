@@ -115,7 +115,7 @@
 
 /obj/effect/blood_ritual/stun/proc/do_stun()
 	playsound(src, 'sound/effects/vampire/stun_rune.ogg', 75, 0, 0)
-	visible_message(span_warning("¡La runa explota en un brillante destello de energías caóticas!") )
+	visible_message(span_warning("¡La runa explota en un brillante destello de energias caoticas!") )
 
 	for(var/mob/living/L in dview(7, get_turf(src)))
 		var/duration = stun_duration

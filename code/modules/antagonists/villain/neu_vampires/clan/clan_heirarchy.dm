@@ -1,6 +1,6 @@
 /datum/clan_hierarchy_node
-	var/name = "Posición"
-	var/desc = "Una posición dentro de la jerarquía del clan"
+	var/name = "Posicion"
+	var/desc = "Una posicion dentro de la jerarquia del clan"
 	var/mob/living/carbon/human/assigned_member
 	var/datum/clan_hierarchy_node/superior // Who this position reports to
 	var/list/datum/clan_hierarchy_node/subordinates = list() // Who reports to this position
@@ -168,20 +168,20 @@
 	var/mob/living/carbon/human/target = input(user, "Choose subordinate to command:", "Command Subordinate") as null|anything in valid_targets
 
 	if(!target || !target.clan_position || !user.clan_position.is_superior_to(target.clan_position))
-		to_chat(user, "<span class='warning'>Objetivo no válido!</span>")
+		to_chat(user, "<span class='warning'>Objetivo no valido!</span>")
 		return
 
 	var/command = browser_input_text(user, "What is your command?", "YOUR COMMAND", max_length = MAX_BROADCAST_LEN)
 
 	if(!command)
-		to_chat(user, "<span class='warning'>Comando no válido!</span>")
+		to_chat(user, "<span class='warning'>Comando no valido!</span>")
 		return
 
 	start_cooldown()
 
 	// Send the command
 	to_chat(user, "<span class='notice'>You telepathically command [target.real_name]: \"[command]\"</span>")
-	to_chat(target, "<span class='userdanger'><b>[user.real_name] te ordena telepáticamente:</b> \"[command]\"</span>")
+	to_chat(target, "<span class='userdanger'><b>[user.real_name] te ordena telepaticamente:</b> \"[command]\"</span>")
 
 	// Play sound to target
 	//playsound(target, 'sound/magic/whisper.ogg', 30, TRUE)
@@ -243,7 +243,7 @@
 	var/mob/living/carbon/human/target = input(user, "Choose subordinate to summon:", "Summon Subordinate") as null|anything in valid_targets
 
 	if(!target || !target.clan_position || !user.clan_position.is_superior_to(target.clan_position))
-		to_chat(user, "<span class='warning'>Objetivo no válido!</span>")
+		to_chat(user, "<span class='warning'>Objetivo no valido!</span>")
 		return
 
 	start_cooldown()
@@ -273,7 +273,7 @@
 // Mass Command Action
 /datum/action/clan_hierarchy/mass_command
 	name = "Mass Command"
-	desc = "Envía un mensaje telepático a todos tus subordinados."
+	desc = "Envia un mensaje telepatico a todos tus subordinados."
 	button_icon_state = "mass_command"
 	cooldown_time = 600
 
@@ -312,7 +312,7 @@
 	var/command = browser_input_text(user, "What is your mass command?", "YOUR COMMAND", max_length = MAX_BROADCAST_LEN)
 
 	if(!command)
-		to_chat(user, "<span class='warning'>Comando no válido!</span>")
+		to_chat(user, "<span class='warning'>Comando no valido!</span>")
 		return
 
 	start_cooldown()
@@ -327,7 +327,7 @@
 // Locate Subordinate Action
 /datum/action/clan_hierarchy/locate_subordinate
 	name = "Localizar subordinado"
-	desc = "Siente la ubicación de tus subordinados."
+	desc = "Siente la ubicacion de tus subordinados."
 	button_icon_state = "locate"
 	cooldown_time = 200
 

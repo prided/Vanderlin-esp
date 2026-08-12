@@ -51,7 +51,7 @@
 
 /datum/augment/armor/copper
 	name = "copper plating"
-	desc = "Menos duradero que el bronce, pero más resistente que el estaño."
+	desc = "Menos duradero que el bronce, pero mas resistente que el estaño."
 	engineering_difficulty = SKILL_RANK_NOVICE
 	armor_type = /datum/armor/maille/iron
 	finish = "B87A3D"
@@ -62,7 +62,7 @@
 
 /datum/augment/armor/bronze
 	name = "bronze plating"
-	desc = "El estándar probado y verdadero. Producido en masa y reducido en masa."
+	desc = "El estandar probado y verdadero. Producido en masa y reducido en masa."
 	engineering_difficulty = SKILL_RANK_APPRENTICE
 	armor_type = /datum/armor/maille
 	finish = "89713B"

@@ -98,7 +98,7 @@
 		for(var/obj/item/storage/crucible/crucible in contents)
 			crucible_count++
 		if(crucible_count >= max_crucible_amount)
-			to_chat(user, span_warning("¡[src] no puede contener más crisoles!"))
+			to_chat(user, span_warning("¡[src] no puede contener mas crisoles!"))
 			return FALSE
 		if(smelting_item.loc == user)
 			user.transferItemToLoc(smelting_item, src)
@@ -113,7 +113,7 @@
 		to_chat(user, span_warning("[smelting_item] no se puede fundir directamente."))
 		return FALSE
 	if(length(contained_items) >= max_contained_items)
-		to_chat(user, span_warning("¡[src] está lleno!"))
+		to_chat(user, span_warning("¡[src] esta lleno!"))
 		return FALSE
 
 	smelting_item.forceMove(src)

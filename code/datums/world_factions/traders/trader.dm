@@ -81,7 +81,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/trader/proc/return_to_boat()
 	returning_to_boat = TRUE
-	say(pick(list("Time to head back to the ship!", "¡El capitán llama!", "My voyage here is complete.")))
+	say(pick(list("Time to head back to the ship!", "¡El capitan llama!", "My voyage here is complete.")))
 	var/obj/effect/landmark/stall/stall = ai_controller.blackboard[BB_SHOP_SPOT]
 	if(istype(stall))
 		stall.claimed_by_trader = FALSE

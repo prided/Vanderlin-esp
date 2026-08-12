@@ -24,7 +24,7 @@
 
 	var/mob/living/living_target = target
 	if(living_target.stat == DEAD)
-		to_chat(owner, span_warning("¡Ese objetivo ya está muerto!"))
+		to_chat(owner, span_warning("¡Ese objetivo ya esta muerto!"))
 		return FALSE
 
 	if(consumed.faction_check_atom(living_target))
@@ -36,8 +36,8 @@
 
 	to_chat(owner, span_notice("You mark [living_target] for the hive!"))
 	living_target.visible_message(
-		span_danger("¡[consumed] marca a [living_target] con una energía extraña!"),
-		span_userdanger("¡[consumed] te marca con una energía extraña!")
+		span_danger("¡[consumed] marca a [living_target] con una energia extraña!"),
+		span_userdanger("¡[consumed] te marca con una energia extraña!")
 	)
 
 	return ..()

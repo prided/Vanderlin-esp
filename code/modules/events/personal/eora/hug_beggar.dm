@@ -1,5 +1,5 @@
 /datum/round_event_control/eora_compassion
-	name = "Compasión del mendigo"
+	name = "Compasion del mendigo"
 	track = EVENT_TRACK_PERSONAL
 	typepath = /datum/round_event/eora_compassion
 	weight = 10

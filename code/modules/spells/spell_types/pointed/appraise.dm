@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/appraise
-	name = "Valoración secular"
+	name = "Valoracion secular"
 	desc = "Check how much someone has."
 	button_icon_state = "appraise"
 	has_visual_effects = FALSE

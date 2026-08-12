@@ -100,11 +100,11 @@ const CommunalContributor = ({
       {entry.communal_activated ? (
         <Box color="good" fontSize="0.85em">
           <Icon name="check-circle" mr={1} />
-          ¡Esta meta comunitaria ya está activa!
+          ¡Esta meta comunitaria ya esta activa!
         </Box>
       ) : remaining === 0 && entry.communal_max > 0 ? (
         <Box color="average" fontSize="0.85em">
-          El fondo está completo.
+          El fondo esta completo.
         </Box>
       ) : (
         <Stack align="center">
@@ -145,7 +145,7 @@ const CommunalContributor = ({
                 tooltip={`Contribute all you can (${maxPossible})`}
                 onClick={() => setAmount(maxPossible)}
               >
-                máx.
+                max.
               </Button>
             </Stack.Item>
           )}

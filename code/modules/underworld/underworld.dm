@@ -37,7 +37,7 @@
 
 // shit that eventually will need moved elsewhere
 /obj/item/flashlight/flare/torch/lantern/shrunken
-	name = "lámpara encogida"
+	name = "lampara encogida"
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "shrunkenlamp"
 	item_state = "shrunkenlamp"
@@ -90,7 +90,7 @@
 		user << sound(pick('sound/misc/carriage1.ogg', 'sound/misc/carriage2.ogg', 'sound/misc/carriage3.ogg', 'sound/misc/carriage4.ogg'), 0, 0 ,0, 50)
 
 /obj/structure/underworld/barrier //Blocks sprite locations
-	name = "NO TE QUEDES AQUÍ"
+	name = "NO TE QUEDES AQUI"
 	desc = "The Undermaiden awaits."
 	icon = 'icons/roguetown/underworld/underworld.dmi'
 	icon_state = "spiritpart"
@@ -116,7 +116,7 @@
 
 /obj/structure/underworld/carriage/attack_hand(mob/living/carbon/spirit/user)
 	if(user.paid)
-		switch(tgui_alert(user, "¿Estás listo para ser juzgado?","Listo", list("Yes","No")))
+		switch(tgui_alert(user, "¿Estas listo para ser juzgado?","Listo", list("Yes","No")))
 			if("Yes")
 				playsound(user, 'sound/misc/deadbell.ogg', 50, TRUE, -2, ignore_walls = TRUE)
 				add_abstract_elastic_data(ELASCAT_MEDICAL, ELASDATA_COIN_REVIVES, 1)

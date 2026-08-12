@@ -639,7 +639,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	name = "Luxintenebre" // lux left w/ sugar in a darkened place for quite some time... U could say... Light in Darkness.....
 	description = "A fermented form of vitae, highly alcoholic, and with a particularly grim taste. Often sought out by the daring, foolhardy, and heretical..."
 	boozepwr = 80 // THE END OF THE FUCKING WORLD.
-	taste_description = "un entumecimiento verde, luego un vigor ardiente en el corazón" // heartburn (healing)
+	taste_description = "un entumecimiento verde, luego un vigor ardiente en el corazon" // heartburn (healing)
 	color = "#86cca3"
 	quality = DRINK_VERYGOOD // good stuff!
 	age_path = /datum/reagent/consumable/ethanol/luxwine/aged
@@ -689,7 +689,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	..()
 
 /datum/reagent/consumable/ethanol/whipwine // dont ask
-	name = "Vino de látigo mágico"
+	name = "Vino de latigo magico"
 	description = "A dubious recent recipe from abroad. Magickal Whip Wine is said to increase one's potence and stamina sevenfold."
 	boozepwr = 10 // it's a whip. it's an actual whip.
 	taste_description = "leather, bitter herbs, and regret" // what did you expect

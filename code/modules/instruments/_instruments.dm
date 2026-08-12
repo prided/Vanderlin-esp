@@ -187,7 +187,7 @@
 		if(I.playing)
 			return
 
-	var/curfile = input(user, "¿Qué canción quieres tocar?", "Elige una canción", name) as null|anything in song_list
+	var/curfile = input(user, "¿Que cancion quieres tocar?", "Elige una cancion", name) as null|anything in song_list
 	if(!curfile)
 		return
 	curfile = song_list[curfile]
@@ -373,7 +373,7 @@
 
 /obj/item/instrument/drum
 	name = "drum"
-	desc = "El instrumento adoptado de Aasimar, utilizado tanto para señalización como para marchas rítmicas."
+	desc = "El instrumento adoptado de Aasimar, utilizado tanto para señalizacion como para marchas ritmicas."
 	icon_state = "drum"
 	item_state = "drum"
 	song_list = list(
@@ -414,7 +414,7 @@
 	experimental_inhand = TRUE
 
 /obj/item/instrument/vocals
-	name = "talismán del vocalista"
+	name = "talisman del vocalista"
 	desc = "This talisman emanates a small shimmer of light. When held, it can amplify and even change one's voice."
 	icon_state = "vtalisman"
 	song_list = list("Harpy's Call (Feminine)" = 'sound/instruments/vocalsf (1).ogg',

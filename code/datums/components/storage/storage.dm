@@ -795,7 +795,7 @@
 			return FALSE
 	if(HAS_TRAIT(I, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
 		if(!stop_messages)
-			to_chat(M, span_warning("\the [I] está pegado a tu mano, ¡no puedes ponerlo en \the [host]!"))
+			to_chat(M, span_warning("\the [I] esta pegado a tu mano, ¡no puedes ponerlo en \the [host]!"))
 		return FALSE
 	var/datum/component/storage/concrete/master = master()
 	if(!istype(master))

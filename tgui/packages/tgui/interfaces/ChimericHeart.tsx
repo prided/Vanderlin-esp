@@ -5,35 +5,35 @@ import { TutorialOverlay } from '../interfaces/_common/TutorialOverlay';
 
 const TUTORIAL_STEPS = [
   {
-    title: 'Interfaz de órgano quimérico',
-    body: 'Este menú le permite inspeccionar y reconectar los nodos del humor unidos a este órgano quimérico. Los nodos deben estar emparejados y una entrada controla una salida.',
+    title: 'Interfaz de organo quimerico',
+    body: 'Este menu le permite inspeccionar y reconectar los nodos del humor unidos a este organo quimerico. Los nodos deben estar emparejados y una entrada controla una salida.',
     popupAnchor: 'center',
   },
   {
     title: 'Entradas y salidas',
-    body: 'La columna de la izquierda enumera los nodos de entrada y la derecha enumera los nodos de salida. Cada uno muestra su nivel y pureza. Los nodos no emparejados están inactivos.',
+    body: 'La columna de la izquierda enumera los nodos de entrada y la derecha enumera los nodos de salida. Cada uno muestra su nivel y pureza. Los nodos no emparejados estan inactivos.',
     highlight: { top: 10, left: 0, width: 35, height: 90 },
     popupAnchor: 'right',
   },
   {
     title: 'Emparejamiento de nodos',
-    body: 'Haz clic en una entrada para seleccionarla, luego haz clic en una salida compatible para emparejarlas. Los nodos deben estar dentro de la diferencia de nivel máxima. Los nodos incompatibles se atenuarán.',
+    body: 'Haz clic en una entrada para seleccionarla, luego haz clic en una salida compatible para emparejarlas. Los nodos deben estar dentro de la diferencia de nivel maxima. Los nodos incompatibles se atenuaran.',
     popupAnchor: 'center',
   },
   {
     title: 'Desconectando',
-    body: 'Haz clic en un nodo emparejado y luego usa el botón de desvincular para cortar la conexión. Ambos nodos vuelven al estado no emparejado.',
+    body: 'Haz clic en un nodo emparejado y luego usa el boton de desvincular para cortar la conexion. Ambos nodos vuelven al estado no emparejado.',
     popupAnchor: 'center',
   },
   {
     title: 'Requisitos de sangre',
-    body: 'El panel central muestra cuánta sangre almacenada requiere cada nodo. Si no se cumplen los requisitos, el órgano comenzará a fallar.',
+    body: 'El panel central muestra cuanta sangre almacenada requiere cada nodo. Si no se cumplen los requisitos, el organo comenzara a fallar.',
     highlight: { top: 10, left: 33, width: 34, height: 50 },
     popupAnchor: 'center',
   },
   {
     title: 'Estabilidad',
-    body: 'La barra de estabilidad muestra la salud del órgano. Al llegar a 0 %, el órgano falla y debe repararse antes de volver a funcionar.',
+    body: 'La barra de estabilidad muestra la salud del organo. Al llegar a 0 %, el organo falla y debe repararse antes de volver a funcionar.',
     highlight: { top: 0, left: 50, width: 50, height: 10 },
     popupAnchor: 'bottom',
   },
@@ -464,7 +464,7 @@ export const ChimericHeart = (props, context) => {
   const { act, data } = useBackend<ChimericHeartData>();
 
   return (
-    <Window title="órgano quimérico" width={700} height={480}>
+    <Window title="organo quimerico" width={700} height={480}>
       <Window.Content>
         <ChimericPanel data={data} act={act} />
       </Window.Content>

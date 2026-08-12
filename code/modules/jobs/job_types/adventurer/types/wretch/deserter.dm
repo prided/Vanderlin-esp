@@ -66,7 +66,7 @@
 		"Mace" = /obj/item/weapon/mace/goden/steel,
 	)
 
-	var/weaponchoice = spawned.select_equippable(player_client, selectableweapon, message = "Elige tu especialización", title = "CABALLERO DESGRACIADO")
+	var/weaponchoice = spawned.select_equippable(player_client, selectableweapon, message = "Elige tu especializacion", title = "CABALLERO DESGRACIADO")
 	if(!weaponchoice)
 		return
 

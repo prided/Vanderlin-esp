@@ -1,7 +1,7 @@
 
 /obj/structure/blueprint
 	name = "construction blueprint"
-	desc = "Un plano holográfico para la construcción."
+	desc = "Un plano holografico para la construccion."
 	icon = 'icons/effects/alphacolors.dmi'
 	icon_state = "white"
 	alpha = 0 // Keep parent invisible
@@ -170,7 +170,7 @@
 			difficulty_text = " (Dificultad: [recipe.craftdiff])"
 		desc_lines += span_notice("Habilidad requerida: [initial(recipe_skill.name)][difficulty_text]")
 
-	desc_lines += span_notice("Tiempo de construcción: [recipe.build_time * 0.1] segundos")
+	desc_lines += span_notice("Tiempo de construccion: [recipe.build_time * 0.1] segundos")
 
 	if(recipe.supports_directions)
 		desc_lines += "Can be rotated during construction"
@@ -377,7 +377,7 @@
 		qdel(src)
 		return TRUE
 
-	to_chat(user, "<span class='danger'>Después de muchos intentos, no puedo construir \the [recipe.name].</span>")
+	to_chat(user, "<span class='danger'>Despues de muchos intentos, no puedo construir \the [recipe.name].</span>")
 	return FALSE
 
 /obj/structure/blueprint/proc/get_materials_in_range(mob/user, range = 3)

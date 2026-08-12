@@ -52,7 +52,7 @@ export const DetailSnackProcessing = ({ r, lookup, pickerMap, allRecipes, essenc
         <SectionHead>Molienda</SectionHead>
         {r.grind_results!.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} lígulas de{' '}
+            {rg.amount} ligulas de{' '}
             <RecipeLink name={rg.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
         ))}
@@ -60,10 +60,10 @@ export const DetailSnackProcessing = ({ r, lookup, pickerMap, allRecipes, essenc
     )}
     {!!r.juice_results?.length && (
       <>
-        <SectionHead>Extracción de jugo</SectionHead>
+        <SectionHead>Extraccion de jugo</SectionHead>
         {r.juice_results!.map((rg, i) => (
           <Box key={i} className="RecipeBook__item-row">
-            {rg.amount} lígulas de{' '}
+            {rg.amount} ligulas de{' '}
             <RecipeLink name={rg.name} allRecipes={allRecipes} essenceIndex={essenceIndex} lookup={lookup} pickerMap={pickerMap} onNavigate={nav} />
           </Box>
         ))}

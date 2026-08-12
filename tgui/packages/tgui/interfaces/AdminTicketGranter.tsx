@@ -166,12 +166,12 @@ export const AdminTicketGranter = () => {
               <LabeledList.Item label="Nombre del ticket">
                 <Input
                   fluid
-                  placeholder="p.ej. Impulso de artífice"
+                  placeholder="p.ej. Impulso de artifice"
                   value={ticketName}
                   onChange={(val) => setTicketName(val)}
                 />
               </LabeledList.Item>
-              <LabeledList.Item label="Descripción">
+              <LabeledList.Item label="Descripcion">
                 <TextArea
                   fluid
                   height={3}
@@ -180,7 +180,7 @@ export const AdminTicketGranter = () => {
                   onChange={(val) => setTicketDesc(val)}
                 />
               </LabeledList.Item>
-              <LabeledList.Item label="Motivo de la concesión">
+              <LabeledList.Item label="Motivo de la concesion">
                 <Input
                   fluid
                   placeholder="Registrado en el historial del juego"

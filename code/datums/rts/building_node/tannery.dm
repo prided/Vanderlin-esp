@@ -1,5 +1,5 @@
 /obj/effect/building_node/tannery
-	name = "Curtiduría"
+	name = "Curtiduria"
 	work_template = "tannery"
 	icon = 'icons/roguetown/items/natural.dmi'
 	icon_state = "leather"

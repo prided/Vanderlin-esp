@@ -46,7 +46,7 @@
 	return info
 
 /datum/augment/skill/combat_matrix
-	name = "matriz de análisis de combate"
+	name = "matriz de analisis de combate"
 	desc = "Advanced combat prediction algorithms enhance melee capabilities."
 	skill_changes = list(/datum/attribute/skill/combat/wrestling = 20, /datum/attribute/skill/combat/unarmed = 20)
 	engineering_difficulty = SKILL_RANK_JOURNEYMAN
@@ -71,7 +71,7 @@
 
 /datum/augment/skill/polearm_stabilizer
 	name = "polearm stability enhancer"
-	desc = "Optimización del equilibrio para el combate con armas de asta."
+	desc = "Optimizacion del equilibrio para el combate con armas de asta."
 	skill_changes = list(/datum/attribute/skill/combat/polearms = 20)
 	engineering_difficulty = SKILL_RANK_EXPERT
 	installation_time = 18 SECONDS
@@ -79,14 +79,14 @@
 
 /datum/augment/skill/shield_actuator
 	name = "actuador de respuesta de escudo"
-	desc = "Sistemas de reacción rápida para mejorar la defensa del escudo."
+	desc = "Sistemas de reaccion rapida para mejorar la defensa del escudo."
 	skill_changes = list(/datum/attribute/skill/combat/shields = 20)
 	engineering_difficulty = SKILL_RANK_JOURNEYMAN
 	installation_time = 15 SECONDS
 	stability_cost = -10
 
 /datum/augment/skill/crossbow_targeting
-	name = "sistema de puntería para ballesta"
+	name = "sistema de punteria para ballesta"
 	desc = "Integrated rangefinding and trajectory calculation."
 	skill_changes = list(/datum/attribute/skill/combat/crossbows = 20)
 	engineering_difficulty = SKILL_RANK_EXPERT
@@ -95,14 +95,14 @@
 
 /datum/augment/skill/bow_stabilizer
 	name = "bow draw stabilizer"
-	desc = "Estabiliza el tiro y la liberación para mejorar el tiro con arco."
+	desc = "Estabiliza el tiro y la liberacion para mejorar el tiro con arco."
 	skill_changes = list(/datum/attribute/skill/combat/bows = 20)
 	engineering_difficulty = SKILL_RANK_EXPERT
 	installation_time = 20 SECONDS
 	stability_cost = -10
 
 /datum/augment/skill/cooking_guide
-	name = "guía culinaria"
+	name = "guia culinaria"
 	desc = "Adds a culinary reference to allow more advanced cooking capabilities."
 	skill_changes = list(/datum/attribute/skill/craft/cooking = 20)
 	engineering_difficulty = SKILL_RANK_JOURNEYMAN
@@ -118,7 +118,7 @@
 	stability_cost = -5
 
 /datum/augment/skill/weaponcraft_matrix
-	name = "matriz de fabricación de armas"
+	name = "matriz de fabricacion de armas"
 	desc = "Advanced weapon construction knowledge database."
 	skill_changes = list(/datum/attribute/skill/craft/weaponsmithing = 20)
 	engineering_difficulty = SKILL_RANK_EXPERT
@@ -126,7 +126,7 @@
 	stability_cost = -5
 
 /datum/augment/skill/armorcraft_matrix
-	name = "matriz de fabricación de armaduras"
+	name = "matriz de fabricacion de armaduras"
 	desc = "Armor construction optimization routines."
 	skill_changes = list(/datum/attribute/skill/craft/armorsmithing = 20)
 	engineering_difficulty = SKILL_RANK_EXPERT
@@ -135,7 +135,7 @@
 
 /datum/augment/skill/carpentry_guide
 	name = "carpentry guidance system"
-	desc = "Reconocimiento y optimización de patrones de carpintería."
+	desc = "Reconocimiento y optimizacion de patrones de carpinteria."
 	skill_changes = list(/datum/attribute/skill/craft/carpentry = 20)
 	engineering_difficulty = SKILL_RANK_JOURNEYMAN
 	installation_time = 15 SECONDS
@@ -143,23 +143,23 @@
 
 /datum/augment/skill/masonry_analyzer
 	name = "masonry structural analyzer"
-	desc = "Optimización del corte y colocación de piedras."
+	desc = "Optimizacion del corte y colocacion de piedras."
 	skill_changes = list(/datum/attribute/skill/craft/masonry = 20)
 	engineering_difficulty = SKILL_RANK_JOURNEYMAN
 	installation_time = 15 SECONDS
 	stability_cost = -5
 
 /datum/augment/skill/engineering_core
-	name = "núcleo de ingeniería avanzada"
-	desc = "Módulo de comprensión de sistemas mecánicos complejos."
+	name = "nucleo de ingenieria avanzada"
+	desc = "Modulo de comprension de sistemas mecanicos complejos."
 	skill_changes = list(/datum/attribute/skill/craft/engineering = 20)
 	engineering_difficulty = SKILL_RANK_MASTER
 	installation_time = 25 SECONDS
 	stability_cost = -5
 
 /datum/augment/skill/alchemy_database
-	name = "base de datos alquímica"
-	desc = "Fórmulas almacenadas y datos de interacción de reactivos."
+	name = "base de datos alquimica"
+	desc = "Formulas almacenadas y datos de interaccion de reactivos."
 	skill_changes = list(/datum/attribute/skill/craft/alchemy = 20)
 	engineering_difficulty = SKILL_RANK_EXPERT
 	installation_time = 20 SECONDS
@@ -167,15 +167,15 @@
 
 // Skill augments - Labor skills
 /datum/augment/skill/mining_efficiency
-	name = "módulo de eficiencia minera"
-	desc = "Detección de vetas de mineral y patrones de extracción óptimos."
+	name = "modulo de eficiencia minera"
+	desc = "Deteccion de vetas de mineral y patrones de extraccion optimos."
 	skill_changes = list(/datum/attribute/skill/labor/mining = 20)
 	engineering_difficulty = SKILL_RANK_JOURNEYMAN
 	installation_time = 15 SECONDS
 	stability_cost = -5
 
 /datum/augment/skill/farming_analyzer
-	name = "sistema de análisis agrícola"
+	name = "sistema de analisis agricola"
 	desc = "Soil composition and crop health monitoring."
 	skill_changes = list(/datum/attribute/skill/labor/farming = 20)
 	engineering_difficulty = SKILL_RANK_APPRENTICE
@@ -192,15 +192,15 @@
 
 /datum/augment/skill/lumberjack_optimizer
 	name = "lumber harvesting optimizer"
-	desc = "Análisis estructural de árboles y patrones de corte eficientes."
+	desc = "Analisis estructural de arboles y patrones de corte eficientes."
 	skill_changes = list(/datum/attribute/skill/labor/lumberjacking = 20)
 	engineering_difficulty = SKILL_RANK_JOURNEYMAN
 	installation_time = 15 SECONDS
 	stability_cost = -5
 
 /datum/augment/skill/medicine_database
-	name = "base de datos de conocimientos médicos"
-	desc = "Amplia biblioteca de procedimientos anatómicos y médicos."
+	name = "base de datos de conocimientos medicos"
+	desc = "Amplia biblioteca de procedimientos anatomicos y medicos."
 	skill_changes = list(/datum/attribute/skill/misc/medicine = 20)
 	engineering_difficulty = SKILL_RANK_EXPERT
 	installation_time = 20 SECONDS
@@ -215,7 +215,7 @@
 	stability_cost = -5
 
 /datum/augment/skill/climbing_optimizer
-	name = "módulo de optimización de escalada"
+	name = "modulo de optimizacion de escalada"
 	desc = "Grip strength distribution and path finding."
 	skill_changes = list(/datum/attribute/skill/misc/climbing = 20)
 	engineering_difficulty = SKILL_RANK_APPRENTICE
@@ -223,8 +223,8 @@
 	stability_cost = -5
 
 /datum/augment/skill/stealth_dampener
-	name = "sistema de amortiguación acústica"
-	desc = "Reducción de ruido y optimización del patrón de movimiento."
+	name = "sistema de amortiguacion acustica"
+	desc = "Reduccion de ruido y optimizacion del patron de movimiento."
 	skill_changes = list(/datum/attribute/skill/misc/sneaking = 20)
 	engineering_difficulty = SKILL_RANK_EXPERT
 	installation_time = 18 SECONDS

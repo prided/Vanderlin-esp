@@ -30,8 +30,8 @@
 	antag_hud_type = ANTAG_HUD_NECROMANCY
 	antag_hud_name = "necromancer"
 	confess_lines = list(
-		"¡VIVIRÉ ETERNO!",
-		"¡ESTOY DETRÁS DE SIETE FILACTERIAS!",
+		"¡VIVIRE ETERNO!",
+		"¡ESTOY DETRAS DE SIETE FILACTERIAS!",
 		"¡NO PUEDES MATARME!",
 	)
 	var/list/phylacteries = list()
@@ -253,7 +253,7 @@
 
 /obj/item/phylactery
 	name = "phylactery"
-	desc = "Parece que está lleno de un poder intenso."
+	desc = "Parece que esta lleno de un poder intenso."
 	icon = 'icons/roguetown/items/gems.dmi'
 	icon_state = "necro_crystal"
 	item_state = "electronic"

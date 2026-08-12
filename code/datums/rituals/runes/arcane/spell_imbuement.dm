@@ -20,7 +20,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/spellobject_imbue/attack_hand(mob/living/user)
 	if(animating)
-		to_chat(user, span_notice("El sello ya está funcionando..."))
+		to_chat(user, span_notice("El sello ya esta funcionando..."))
 		return
 	if(!user.get_active_held_item())
 		if(staged_object && staged_focus)
@@ -34,7 +34,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/spellobject_imbue/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(animating)
-		to_chat(user, span_notice("El sello ya está funcionando..."))
+		to_chat(user, span_notice("El sello ya esta funcionando..."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(istype(tool, /obj/item/arcyne_spellobject))
@@ -67,10 +67,10 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/spellobject_imbue/proc/try_invoke(mob/living/user)
 	if(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) <= SKILL_LEVEL_NONE)
-		to_chat(user, span_warning("No puedes invocar estos símbolos."))
+		to_chat(user, span_warning("No puedes invocar estos simbolos."))
 		return
 	if(rune_in_use)
-		to_chat(user, span_notice("El sello ya está activo."))
+		to_chat(user, span_notice("El sello ya esta activo."))
 		return
 	rune_in_use = TRUE
 	animating = TRUE

@@ -50,7 +50,7 @@
 	desc = ""
 	scan_desc = ""
 	gain_text = span_notice("Me doy cuenta de que la magia no puede ser real.")
-	lose_text = span_notice("Me doy cuenta de que la magia podría ser real.")
+	lose_text = span_notice("Me doy cuenta de que la magia podria ser real.")
 
 /datum/brain_trauma/magic/antimagic/on_gain()
 	ADD_TRAIT(owner, TRAIT_ANTIMAGIC, TRAUMA_TRAIT)

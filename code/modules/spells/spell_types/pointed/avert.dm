@@ -59,7 +59,7 @@
 	)
 
 	to_chat(owner, span_small("Debo permanecer quieto y al lado de [cast_on]..."))
-	to_chat(cast_on, span_warning("Una extraña sensación florece en mi pecho, fría y desconocida..."))
+	to_chat(cast_on, span_warning("Una extraña sensacion florece en mi pecho, fria y desconocida..."))
 
 	ADD_TRAIT(cast_on, TRAIT_NODEATH, "avert_spell")
 
@@ -74,7 +74,7 @@
 			to_chat(cast_on, span_small(pick(near_death_lines)))
 
 		if(!check_cost(10, feedback = FALSE))
-			to_chat(owner, span_warning("¡Mi devoción se seca, la intercesión se desvanece de mis labios!"))
+			to_chat(owner, span_warning("¡Mi devocion se seca, la intercesion se desvanece de mis labios!"))
 			break
 
 		invoke_cost(10, re_run = TRUE)

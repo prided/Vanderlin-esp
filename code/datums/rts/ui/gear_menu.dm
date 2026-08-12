@@ -147,7 +147,7 @@
 		add_overlay(MA)
 		name = "[gear_type]: [item.name]"
 	else
-		name = "[gear_type]: Vacío"
+		name = "[gear_type]: Vacio"
 
 /atom/movable/screen/gear_slot/Click(location, control, params)
 	. = ..()

@@ -79,7 +79,7 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if((H.real_name in bound_servants) && H.name == H.real_name)
-		to_chat(user, span_warning("[src] ya está vinculado a esta campana."))
+		to_chat(user, span_warning("[src] ya esta vinculado a esta campana."))
 	else if(H.is_dead())
 		to_chat(user, span_warning("What good is a dead servant?"))
 	else if(IS_DEADITE(H))

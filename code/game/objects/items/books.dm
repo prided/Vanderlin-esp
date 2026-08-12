@@ -136,7 +136,7 @@
 	if(special_book)
 		return
 	if(!open)
-		to_chat(user, "<span class='info'>Ábreme primero.</span>")
+		to_chat(user, "<span class='info'>Abreme primero.</span>")
 		return FALSE
 	user << browse_rsc('html/book.png')
 	if(!user.client || !user.hud_used)
@@ -151,7 +151,7 @@
 			if(!override_find_book)
 				pages = SSlibrarian.get_book(bookfile)
 		if(!pages.len)
-			to_chat(user, "<span class='warning'>Este libro está completamente en blanco.</span>")
+			to_chat(user, "<span class='warning'>Este libro esta completamente en blanco.</span>")
 		if(curpage > pages.len)
 			curpage = 1
 //		var/curdat = pages[curpage]
@@ -253,7 +253,7 @@
 	if(current_verse_range == "Random Verse")
 		. += span_notice("Estoy listo para leer un verso al azar.")
 	else
-		. += span_notice("Estoy listo para leer un verso de la sección [current_verse_range].")
+		. += span_notice("Estoy listo para leer un verso de la seccion [current_verse_range].")
 
 /obj/item/book/bibble/get_mechanics_examine(mob/user)
 	. = ..()
@@ -263,7 +263,7 @@
 
 /obj/item/book/bibble/read(mob/user)
 	if(!open)
-		to_chat(user, span_info("Ábreme primero."))
+		to_chat(user, span_info("Abreme primero."))
 		return FALSE
 	if(!user.client || !user.hud_used)
 		return
@@ -305,7 +305,7 @@
 
 	current_verse_range = choice
 
-	to_chat(user, span_notice("Leerás una sección de [choice]."))
+	to_chat(user, span_notice("Leeras una seccion de [choice]."))
 
 /obj/item/book/bibble/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(!isliving(interacting_with) || !is_priest_job(user.mind?.assigned_role))
@@ -396,7 +396,7 @@
 	bookfile = "tales2.json"
 
 /obj/item/book/tales3
-	name = "Mitos y leyendas de Rockhill y más allá Volumen I"
+	name = "Mitos y leyendas de Rockhill y mas alla Volumen I"
 	desc = "Arbalius el Joven"
 	icon_state ="book3_0"
 	base_icon_state = "book3"
@@ -417,7 +417,7 @@
 	bookfile = "tales4.json"
 
 /obj/item/book/cardgame
-	name = "Reglas básicas del tormento de Graystone"
+	name = "Reglas basicas del tormento de Graystone"
 	desc = "By Johnus of Doe"
 	icon_state ="basic_book_0"
 	base_icon_state = "basic_book"
@@ -459,14 +459,14 @@
 	bookfile = "tales10.json"
 
 /obj/item/book/fishing
-	name = "Guía avanzada de pesca de Fontaine"
+	name = "Guia avanzada de pesca de Fontaine"
 	desc = "Por Ford Fontaine"
 	icon_state ="book2_0"
 	base_icon_state = "book2"
 	bookfile = "tales11.json"
 
 /obj/item/book/sword
-	name = "Las seis locuras: cómo sobrevivir con la espada"
+	name = "Las seis locuras: como sobrevivir con la espada"
 	desc = "Por Theodore Spillguts"
 	icon_state ="book5_0"
 	base_icon_state = "book5"
@@ -494,7 +494,7 @@
 	bookfile = "tales15.json"
 
 /obj/item/book/playerbook
-	var/player_book_text = "La humedad en el aire o las fugas de agua han hecho que la caligrafía cuidadosamente escrita de este libro sea ilegible."
+	var/player_book_text = "La humedad en el aire o las fugas de agua han hecho que la caligrafia cuidadosamente escrita de este libro sea ilegible."
 	var/player_book_title = "unknown title"
 	var/player_book_author = "unknown author"
 	var/player_book_icon = "basic_book"
@@ -520,7 +520,7 @@
 
 /obj/item/book/playerbook/proc/get_player_input(mob/living/in_round_player_mob, text)
 	player_book_author_ckey = in_round_player_mob.ckey
-	player_book_title = dd_limittext(capitalize(SANITIZE_HEAR_MESSAGE(input(in_round_player_mob, "What title do you want to give the book? (max 42 characters)", "Título", "Unknown"))), MAX_NAME_LEN)
+	player_book_title = dd_limittext(capitalize(SANITIZE_HEAR_MESSAGE(input(in_round_player_mob, "What title do you want to give the book? (max 42 characters)", "Titulo", "Unknown"))), MAX_NAME_LEN)
 	player_book_author = "[dd_limittext(SANITIZE_HEAR_MESSAGE(input(in_round_player_mob, "Do you want to preface your author name with an author title? (max 42 characters)", "Author Title", "")), MAX_NAME_LEN)] [in_round_player_mob.real_name]"
 	player_book_icon = book_icons[input(in_round_player_mob, "Elige un estilo de libro", "Book Style") as anything in book_icons]
 	player_book_text = text
@@ -649,7 +649,7 @@
 
 	var/newtitle = SANITIZE_HEAR_MESSAGE(tgui_input_text(user, "Enter the title of the manuscript:", max_length = MAX_CHARTER_LEN))
 	var/newauthor = SANITIZE_HEAR_MESSAGE(tgui_input_text(user, "Introduzca el nombre del autor:", max_length = MAX_CHARTER_LEN))
-	var/newcategory = tgui_input_list(user, "Seleccione la categoría del manuscrito:", list("Apocrypha & Grimoires", "Myths & Tales", "Legends & Accounts", "Thesis", "Eoratica"))
+	var/newcategory = tgui_input_list(user, "Seleccione la categoria del manuscrito:", list("Apocrypha & Grimoires", "Myths & Tales", "Legends & Accounts", "Thesis", "Eoratica"))
 	var/selection = tgui_input_list(user, "Elige un estilo de libro", "Book Style", book_icons)
 	if(!selection)
 		return
@@ -663,7 +663,7 @@
 		select_icon = newicon
 		icon_state = "paperwrite"
 		to_chat(user, "<span class='notice'>You have successfully authored and titled the manuscript.</span>")
-		var/complete = tgui_alert(user, "¿Está terminado el manuscrito?", "PALABRAS DE NOC", DEFAULT_INPUT_CHOICES)
+		var/complete = tgui_alert(user, "¿Esta terminado el manuscrito?", "PALABRAS DE NOC", DEFAULT_INPUT_CHOICES)
 		SEND_SIGNAL(user, COMSIG_BOOK_WRITTEN)
 		if(complete == CHOICE_YES && compiled_pages)
 			written = TRUE
@@ -888,7 +888,7 @@ ____________End of Example*/
 
 /atom/movable/screen/alert/status_effect/buff/blessed
 	name = "Blessed"
-	desc = "El poder divino fluye a través de mí."
+	desc = "El poder divino fluye a traves de mi."
 	icon_state = "buff"
 
 /datum/status_effect/buff/blessed/on_apply()
@@ -905,6 +905,6 @@ ____________End of Example*/
 
 /obj/item/book/rogue/howtogaffer
 	name = "Dont be a gaff, the guild masters manual"
-	desc = "La página del autor se ha podrido con el tiempo."
+	desc = "La pagina del autor se ha podrido con el tiempo."
 	bookfile = "Gaff.json"
 	random_cover = TRUE

@@ -2,7 +2,7 @@
 /datum/curse
 	var/name = "Debug Curse"
 	/// Whats shown to the player upon being cursed
-	var/description = "Esta es una maldición de depuración."
+	var/description = "Esta es una maldicion de depuracion."
 	/// Trait given by this curse
 	var/trait
 
@@ -77,7 +77,7 @@
 
 /datum/curse/noc
 	name = "Noc's Curse"
-	description = "El conocimiento mágico ahora está más allá de mi alcance."
+	description = "El conocimiento magico ahora esta mas alla de mi alcance."
 	trait = TRAIT_NOC_CURSE
 
 /datum/curse/ravox
@@ -92,7 +92,7 @@
 
 /datum/curse/xylix
 	name = "Xylix's Curse"
-	description = "La fortuna ya no está de mi lado."
+	description = "La fortuna ya no esta de mi lado."
 	trait = TRAIT_XYLIX_CURSE
 
 /datum/curse/pestra
@@ -123,7 +123,7 @@
 
 /datum/curse/schizophrenic //zizo curse but without the jumpscares and meta hallucinations
 	name = "Schizophrenic"
-	description = "Puedo ver y oír cosas que otros no pueden."
+	description = "Puedo ver y oir cosas que otros no pueden."
 	trait = TRAIT_SCHIZO_FLAW
 	var/atom/movable/screen/fullscreen/maniac/hallucinations
 

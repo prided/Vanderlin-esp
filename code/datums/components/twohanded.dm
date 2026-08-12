@@ -181,7 +181,7 @@
 			to_chat(user, span_notice("[parent] is too cumbersome to carry in one hand!"))
 			user.dropItemToGround(parent, force=TRUE)
 		else
-			to_chat(user, span_warning("¡Necesito que mi otra mano esté vacía!"))
+			to_chat(user, span_warning("¡Necesito que mi otra mano este vacia!"))
 		return
 	if(user.usable_hands < 2)
 		if(require_twohands)

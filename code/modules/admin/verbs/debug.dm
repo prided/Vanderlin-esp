@@ -79,7 +79,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		else
 			var/mob/dead/observer/ghost = new/mob/dead/observer(M,1)
 			ghost.ckey = M.ckey
-	message_admins("<span class='adminnotice'>[key_name_admin(usr)] asumió el control directo de [M].</span>")
+	message_admins("<span class='adminnotice'>[key_name_admin(usr)] asumio el control directo de [M].</span>")
 	log_admin("[key_name(usr)] assumed direct control of [M].")
 	var/mob/adminmob = src.mob
 	M.ckey = src.ckey
@@ -107,7 +107,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Give Control To Player") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_areatest(on_station)
-	set category = "Depuración.Mapeo"
+	set category = "Depuracion.Mapeo"
 	set name = "Test Areas"
 
 	var/list/dat = list()
@@ -220,12 +220,12 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 
 /client/proc/cmd_admin_areatest_station()
-	set category = "Depuración.Mapeo"
-	set name = "Áreas de prueba (ESTACIÓN Z)"
+	set category = "Depuracion.Mapeo"
+	set name = "Areas de prueba (ESTACION Z)"
 	cmd_admin_areatest(TRUE)
 
 /client/proc/cmd_admin_areatest_all()
-	set category = "Depuración.Mapeo"
+	set category = "Depuracion.Mapeo"
 	set name = "Test Areas (ALL)"
 	cmd_admin_areatest(FALSE)
 
@@ -308,7 +308,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 	SSjob.EquipRank(dressed_human, selected, dressed_human.client)
 	log_admin("[key_name(src)] changed the job of [key_name(dressed_human)] to [selected].")
-	message_admins(span_adminnotice("[key_name_admin(src)] cambió el trabajo de [ADMIN_LOOKUPFLW(dressed_human)] a [selected]."))
+	message_admins(span_adminnotice("[key_name_admin(src)] cambio el trabajo de [ADMIN_LOOKUPFLW(dressed_human)] a [selected]."))
 
 
 
@@ -349,7 +349,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 	set name = "Debug Mob Lists"
 	set desc = ""
 
-	switch(input("¿Qué lista?") in list("Players","Admins","Mobs","Living Mobs","Dead Mobs","Clients","Joined Clients"))
+	switch(input("¿Que lista?") in list("Players","Admins","Mobs","Living Mobs","Dead Mobs","Clients","Joined Clients"))
 		if("Players")
 			to_chat(usr, jointext(GLOB.player_list,","))
 		if("Admins")
@@ -491,7 +491,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 	SSevents.scheduled = world.time
 
-	message_admins("<span class='adminnotice'>[key_name_admin(src)] generó un evento aleatorio.</span>")
+	message_admins("<span class='adminnotice'>[key_name_admin(src)] genero un evento aleatorio.</span>")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Pump Random Event")
 	log_admin("[key_name(src)] pumped a random event.")
 
@@ -527,7 +527,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 		"Total Time"	=	GLOBAL_PROC_REF(cmp_profile_time_dsc),
 		"Call Count"	=	GLOBAL_PROC_REF(cmp_profile_count_dsc)
 	)
-	var/sort = input(src, "¿Tipo de clasificación?", "Tipo de clasificación", "Avg time") as null|anything in sortlist
+	var/sort = input(src, "¿Tipo de clasificacion?", "Tipo de clasificacion", "Avg time") as null|anything in sortlist
 	if (!sort)
 		return
 	sort = sortlist[sort]
@@ -535,7 +535,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 
 /client/proc/reload_configuration()
 	set category = "Debug"
-	set name = "Recargar configuración"
+	set name = "Recargar configuracion"
 	set desc = ""
 	if(!check_rights(R_DEBUG))
 		return

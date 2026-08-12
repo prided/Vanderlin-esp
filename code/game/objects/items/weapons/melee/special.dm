@@ -371,7 +371,7 @@
 	AddComponent(/datum/component/psyblessed, TRUE, 5, FALSE, 100, 1, TRUE)
 
 /obj/item/weapon/katar/psydon/relic/alt
-	name = "\proper agonía"
+	name = "\proper agonia"
 	desc = "An exotic weapon unfamiliar to Grenzelhoft, but taken and given blessings to fit in the Armoury of Psydon. May the agony it inflicts upon your foes leave a mark, so that they never forget His name."
 
 /obj/item/weapon/katar/abyssor
@@ -467,7 +467,7 @@
 
 /obj/item/weapon/knuckles/eora
 	name = "close caress"
-	desc = "Algunas veces requieren un enfoque más íntimo."
+	desc = "Algunas veces requieren un enfoque mas intimo."
 	icon = 'icons/roguetown/weapons/32/patron.dmi'
 	icon_state = "eoraknuckle"
 	force = DAMAGE_KNUCKLES + 2

@@ -134,7 +134,7 @@
 
 /obj/item/fishing/lure/no_bait
 	name = "falta de cebo"
-	desc = "Un señuelo de pesca especial para circunstancias únicas."
+	desc = "Un señuelo de pesca especial para circunstancias unicas."
 	icon = 'icons/roguetown/items/fishing.dmi'
 	icon_state = "no_bait"
 	spin_frequency = list(2 SECONDS, 3 SECONDS)

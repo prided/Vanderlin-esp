@@ -403,7 +403,7 @@
 
 	if(!num_unloaded)
 		if(!forced)
-			balloon_alert(user, "¡está vacío!")
+			balloon_alert(user, "¡esta vacio!")
 		return
 
 	if(!forced)

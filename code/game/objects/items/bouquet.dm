@@ -72,7 +72,7 @@
 	icon_state = "matricaria_crown"
 
 /obj/item/clothing/head/flowercrown/calendula
-	name = "corona de caléndula"
+	name = "corona de calendula"
 	item_state = "calendula_crown"
 	icon_state = "calendula_crown"
 

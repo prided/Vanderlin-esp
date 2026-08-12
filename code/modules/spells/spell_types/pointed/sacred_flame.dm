@@ -24,7 +24,7 @@
 	if(!ismob(cast_on))
 		if(cast_on.fire_act())
 			owner.visible_message(
-				"¡<font color='yellow'>[owner] apunta a [cast_on], encendiéndolo con llamas sagradas!</font>",
+				"¡<font color='yellow'>[owner] apunta a [cast_on], encendiendolo con llamas sagradas!</font>",
 				"<font color='yellow'>I point at [cast_on], igniting it with sacred flames!</font>",
 			)
 		else

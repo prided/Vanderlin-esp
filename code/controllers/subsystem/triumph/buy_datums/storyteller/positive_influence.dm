@@ -1,5 +1,5 @@
 /datum/triumph_buy/storyteller_influence_bonus
-	name = "Bonificación de influencia del narrador"
+	name = "Bonificacion de influencia del narrador"
 	desc = "Buy an extra 25 influence for this god!"
 	triumph_cost = 2
 	category = TRIUMPH_CAT_STORYTELLER

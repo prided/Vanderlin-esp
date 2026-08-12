@@ -226,7 +226,7 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 		trader.say("I don't see any ores to smelt? Bring me back some ores if you'd like me to smelt.")
 		return
 
-	trader.say("Te costará [total_cost] [trader_data.currency_name] fundir todo esto. ¿Estás seguro de que quieres hacerlo?")
+	trader.say("Te costara [total_cost] [trader_data.currency_name] fundir todo esto. ¿Estas seguro de que quieres hacerlo?")
 	var/list/npc_options = list(
 		BLACKSMITH_OPTION_YES = radial_icons_cache[BLACKSMITH_RADIAL_YES],
 		BLACKSMITH_OPTION_NO = radial_icons_cache[BLACKSMITH_RADIAL_NO],

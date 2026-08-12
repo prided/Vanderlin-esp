@@ -1,10 +1,10 @@
 /client/proc/forcerandomrotate()
 	set category = "Server"
-	set name = "Activar rotación aleatoria del mapa"
+	set name = "Activar rotacion aleatoria del mapa"
 	var/rotate = tgui_alert(usr, "Force a random map rotation to trigger?", "¿Girar mapa?", list("Yes", "Cancel"))
 	if (rotate != "Yes")
 		return
-	message_admins("[key_name_admin(usr)] está forzando una rotación aleatoria del mapa.")
+	message_admins("[key_name_admin(usr)] esta forzando una rotacion aleatoria del mapa.")
 	log_admin("[key_name(usr)] is forcing a random map rotation.")
 	SSticker.maprotatechecked = 1
 	SSmapping.maprotate()
@@ -39,7 +39,7 @@
 
 	SSticker.maprotatechecked = 1
 	if(chosenmap == "Custom")
-		message_admins("[key_name_admin(usr)] está cambiando el mapa a un mapa personalizado")
+		message_admins("[key_name_admin(usr)] esta cambiando el mapa a un mapa personalizado")
 		log_admin("[key_name(usr)] is changing the map to a custom map")
 		var/datum/map_config/VM = new
 
@@ -65,7 +65,7 @@
 			return
 
 		if(!M.bounds)
-			to_chat(src, "<span class='warning'>El mapa '[map_file]' tiene límites inexistentes.</span>")
+			to_chat(src, "<span class='warning'>El mapa '[map_file]' tiene limites inexistentes.</span>")
 			qdel(M)
 			return
 
@@ -89,7 +89,7 @@
 			message_admins("[key_name_admin(usr)] ha cambiado el mapa a [VM.map_name]")
 	else
 		var/datum/map_config/VM = maprotatechoices[chosenmap]
-		message_admins("[key_name_admin(usr)] está cambiando el mapa a [VM.map_name]")
+		message_admins("[key_name_admin(usr)] esta cambiando el mapa a [VM.map_name]")
 		log_admin("[key_name(usr)] is changing the map to [VM.map_name]")
 		if (SSmapping.changemap(VM))
 			message_admins("[key_name_admin(usr)] ha cambiado el mapa a [VM.map_name]")

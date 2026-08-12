@@ -56,7 +56,7 @@
 			for(var/desc_type in choice.descriptors)
 				var/datum/mob_descriptor/descriptor = MOB_DESCRIPTOR(desc_type)
 				picklist[descriptor.name] = desc_type
-			var/picked_descriptor_name = browser_input_list(user, "DESCRIBA EL [uppertext(choice.name)] DE SU HÉROE", "THE SELF", picklist, FALSE)
+			var/picked_descriptor_name = browser_input_list(user, "DESCRIBA EL [uppertext(choice.name)] DE SU HEROE", "THE SELF", picklist, FALSE)
 
 			if(!picked_descriptor_name)
 				return

@@ -6,7 +6,7 @@
 	name = "Promedio"
 
 /datum/mob_descriptor/body/athletic
-	name = "Atlético"
+	name = "Atletico"
 
 /datum/mob_descriptor/body/barrel
 	name = "En forma de barril"
@@ -25,7 +25,7 @@
 	name = "Bow-legged"
 
 /datum/mob_descriptor/body/decrepit
-	name = "Decrépito"
+	name = "Decrepito"
 
 /datum/mob_descriptor/body/skeletal
 	name = "Emaciated"
@@ -43,7 +43,7 @@
 	name = "Muscular"
 
 /datum/mob_descriptor/body/herculean
-	name = "hercúleo"
+	name = "herculeo"
 
 /datum/mob_descriptor/body/lissome
 	name = "Lissome"

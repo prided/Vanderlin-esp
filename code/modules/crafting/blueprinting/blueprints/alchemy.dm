@@ -9,7 +9,7 @@
 
 /datum/blueprint_recipe/alchemy/essence_reservoir
 	name = "Essence Reservoir"
-	desc = "Un recipiente para almacenar esencias alquímicas."
+	desc = "Un recipiente para almacenar esencias alquimicas."
 	result_type = /obj/machinery/essence/reservoir
 	required_materials = list(
 		/obj/item/ingot/thaumic = 1,
@@ -20,7 +20,7 @@
 
 /datum/blueprint_recipe/alchemy/essence_combiner
 	name = "Combinador de esencias"
-	desc = "Un dispositivo para combinar diferentes esencias alquímicas."
+	desc = "Un dispositivo para combinar diferentes esencias alquimicas."
 	result_type = /obj/machinery/essence/combiner
 	required_materials = list(
 		/obj/item/ingot/thaumic = 2,
@@ -30,8 +30,8 @@
 	craftdiff = 3
 
 /datum/blueprint_recipe/alchemy/research_matrix
-	name = "Matriz de investigación"
-	desc = "Una matriz para investigar nuevas fórmulas alquímicas."
+	name = "Matriz de investigacion"
+	desc = "Una matriz para investigar nuevas formulas alquimicas."
 	result_type = /obj/machinery/essence/research_matrix
 	required_materials = list(
 		/obj/item/ingot/thaumic = 2,
@@ -40,7 +40,7 @@
 
 /datum/blueprint_recipe/alchemy/essence_infuser
 	name = "Infusor de esencia"
-	desc = "Un dispositivo para infundir elementos con esencia alquímica."
+	desc = "Un dispositivo para infundir elementos con esencia alquimica."
 	result_type = /obj/machinery/essence/infuser
 	required_materials = list(
 		/obj/item/natural/stone = 2,
@@ -51,7 +51,7 @@
 
 /datum/blueprint_recipe/alchemy/essence_splitter
 	name = "Divisor de esencia"
-	desc = "Un dispositivo para dividir esencias alquímicas."
+	desc = "Un dispositivo para dividir esencias alquimicas."
 	result_type = /obj/machinery/essence/splitter
 	required_materials = list(
 		/obj/item/ingot/thaumic = 2,
@@ -62,7 +62,7 @@
 
 /datum/blueprint_recipe/alchemy/enchantment_altar
 	name = "Altar de encantamiento"
-	desc = "Un altar para objetos encantadores con propiedades alquímicas."
+	desc = "Un altar para objetos encantadores con propiedades alquimicas."
 	result_type = /obj/machinery/essence/enchantment_altar
 	required_materials = list(
 		/obj/item/natural/stone = 2,
@@ -86,7 +86,7 @@
 
 /datum/blueprint_recipe/alchemy/separator
 	name = "Alembic"
-	desc = "Dispositivo para separar líquidos entre sí mediante destilación."
+	desc = "Dispositivo para separar liquidos entre si mediante destilacion."
 	result_type = /obj/structure/chem_separator
 	required_materials = list(
 		/obj/item/natural/wood/plank = 1,

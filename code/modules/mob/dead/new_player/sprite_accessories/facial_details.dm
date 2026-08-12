@@ -86,7 +86,7 @@
 	icon_state = "slashedeye_l"
 
 /datum/sprite_accessory/detail/mangled
-	name = "Mandíbula destrozada"
+	name = "Mandibula destrozada"
 	icon_state = "mangled"
 
 /datum/sprite_accessory/detail/warpaint_blue
@@ -102,7 +102,7 @@
 	icon_state = "warpaint_green"
 
 /datum/sprite_accessory/detail/warpaint_purple
-	name = "Pintura de guerra (púrpura)"
+	name = "Pintura de guerra (purpura)"
 	icon_state = "warpaint_purple"
 
 /datum/sprite_accessory/detail/warpaint_black
@@ -110,7 +110,7 @@
 	icon_state = "warpaint_black"
 
 /datum/sprite_accessory/detail/harlequin
-	name = "Arlequín"
+	name = "Arlequin"
 	icon_state = "harlequin"
 
 /datum/sprite_accessory/detail/tattoo_lips

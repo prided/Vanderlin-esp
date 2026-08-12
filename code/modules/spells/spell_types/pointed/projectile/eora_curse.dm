@@ -31,7 +31,7 @@
 	if(isliving(target))
 		var/mob/living/L = target
 		L.OffBalance(50)
-		L.visible_message(span_info("A purple haze shrouds [target]!"), span_notice("Me siento increíblemente borracho..."))
+		L.visible_message(span_info("A purple haze shrouds [target]!"), span_notice("Me siento increiblemente borracho..."))
 		L.reagents.add_reagent(/datum/reagent/berrypoison, 1)
 		L.apply_status_effect(/datum/status_effect/debuff/eoradrunk)
 		L.set_eye_blur_if_lower(40 SECONDS)
@@ -74,6 +74,6 @@
 		L.OffBalance(50)
 		L.reagents.add_reagent(/datum/reagent/berrypoison, 1)
 		L.apply_status_effect(/datum/status_effect/debuff/eoradrunk)
-		L.visible_message(span_info("A purple haze shrouds [L]!"), span_notice("Me siento increíblemente borracho..."))
+		L.visible_message(span_info("A purple haze shrouds [L]!"), span_notice("Me siento increiblemente borracho..."))
 		L.set_eye_blur_if_lower(40 SECONDS)
 	qdel(src)

@@ -1,6 +1,6 @@
 /datum/enchantment/shrinking
 	enchantment_name = "Shrinking"
-	examine_text = "Puedo sentirme cada vez más pequeño desde aquí."
+	examine_text = "Puedo sentirme cada vez mas pequeño desde aqui."
 
 	essence_recipe = list(
 		/datum/thaumaturgical_essence/motion = 30,
@@ -24,10 +24,10 @@
 	else
 		active_item = TRUE
 		ADD_TRAIT(user, TRAIT_TINY, "[REF(i)]")
-		to_chat(user, span_notice("Así es como se sienten los Kobolds."))
+		to_chat(user, span_notice("Asi es como se sienten los Kobolds."))
 
 /datum/enchantment/shrinking/proc/on_drop(obj/item/i, mob/living/user)
 	if(active_item)
 		active_item = FALSE
 		REMOVE_TRAIT(user, TRAIT_TINY, "[REF(i)]")
-		to_chat(user, span_notice("Me siento mundano una vez más."))
+		to_chat(user, span_notice("Me siento mundano una vez mas."))

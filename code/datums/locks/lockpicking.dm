@@ -16,7 +16,7 @@
 
 	var/datum/lock/key/KL = P.lock
 	if(!KL.locked)
-		to_chat(src, span_notice("\The [P] está desbloqueado."))
+		to_chat(src, span_notice("\The [P] esta desbloqueado."))
 		return FALSE
 
 	var/obj/item/the_wedge = get_inactive_held_item()

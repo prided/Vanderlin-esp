@@ -25,7 +25,7 @@
 		return FALSE
 
 	if(liquids.fire_state) //Use an extinguisher first
-		to_chat(user, span_danger("¡No puedes recoger nada mientras está en llamas!"))
+		to_chat(user, span_danger("¡No puedes recoger nada mientras esta en llamas!"))
 		return FALSE
 
 	if(liquids.liquid_group.expected_turf_height == 1)

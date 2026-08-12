@@ -14,7 +14,7 @@
 	)
 
 /datum/attribute/skill/craft/carpentry
-	name = "Carpintería"
+	name = "Carpinteria"
 	desc = "Represents your character's ability to craft wooden items. The higher your skill in Carpentry, the faster you can create wooden items and buildings."
 	governing_attribute = STAT_STRENGTH
 	default_attributes = list(
@@ -27,7 +27,7 @@
 	)
 
 /datum/attribute/skill/craft/masonry
-	name = "Albañilería"
+	name = "Albañileria"
 	desc = "Represents your character's ability to craft stone items. The higher your skill in Masonry, the faster you can make stone items and buildings."
 	governing_attribute = STAT_STRENGTH
 	default_attributes = list(
@@ -76,7 +76,7 @@
 		REMOVE_TRAIT(owner, TRAIT_LEGENDARY_ALCHEMIST, type)
 
 /datum/attribute/skill/craft/bombs
-	name = "Fabricación de bombas"
+	name = "Fabricacion de bombas"
 	desc = "Represents your character's ability to craft bombs. The higher your skill in Bombcrafting, the better the bombs you can create and the more you can make with your materials."
 	governing_attribute = STAT_INTELLIGENCE
 	default_attributes = list(

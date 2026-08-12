@@ -70,7 +70,7 @@
 
 /datum/quirk/vice/addiction/alcoholic
 	name = "Drunkard"
-	desc = "Beber alcohol es lo que más me gusta."
+	desc = "Beber alcohol es lo que mas me gusta."
 	point_value = 2
 	time = 30 MINUTES
 	debuff = /datum/status_effect/debuff/addiction/alcoholic
@@ -98,7 +98,7 @@
 	point_value = 3
 	time = 50 MINUTES
 	debuff = /datum/status_effect/debuff/addiction/junkie
-	needsate_text = "Es hora de alcanzar un nuevo máximo."
+	needsate_text = "Es hora de alcanzar un nuevo maximo."
 
 /datum/quirk/vice/addiction/junkie/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
@@ -122,7 +122,7 @@
 	point_value = 4
 	time = 30 MINUTES
 	debuff = /datum/status_effect/debuff/addiction/kleptomaniac
-	needsate_text = "¡Necesito ROBAR algo! ¡Moriré si no lo hago!"
+	needsate_text = "¡Necesito ROBAR algo! ¡Morire si no lo hago!"
 
 /datum/quirk/vice/addiction/kleptomaniac/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
@@ -152,14 +152,14 @@
 		owner.sate_addiction(src.type)
 
 /datum/quirk/vice/addiction/sadist
-	name = "Sádico"
+	name = "Sadico"
 	desc = "Those worms call me a monster... I just like seeing limbs fly and blood drip. Is there something so BAD about that?"
 	random_exempt = TRUE
 	time = 40 MINUTES
 	point_value = 2
 	debuff = /datum/status_effect/debuff/addiction/sadist
-	needsate_text = "¿Dónde está toda la sangre?"
+	needsate_text = "¿Donde esta toda la sangre?"
 
 /datum/quirk/vice/addiction/sadist/on_examined(mob/user, list/P, list/examine_contents)
 	if(HAS_TRAIT(user, TRAIT_RECOGNIZE_ADDICTS))
-		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Sádico..."))
+		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_PREGEAR, SPAN_GOD_BAOTHA("Sadico..."))

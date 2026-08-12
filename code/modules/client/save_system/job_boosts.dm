@@ -1,6 +1,6 @@
 /datum/job_priority_boost
 	var/name = "Job Priority Boost"
-	var/desc = "Aumenta la prioridad de asignación de trabajo"
+	var/desc = "Aumenta la prioridad de asignacion de trabajo"
 	var/boost_amount = 1 // How many "virtual" entries this creates in job selection
 	var/list/applicable_jobs = list() // Specific jobs this boost applies to. Empty = all jobs
 	var/expiry_time = 0 // World time when this boost expires. 0 = never expires
@@ -161,7 +161,7 @@
 			if(uses)
 				boost.uses_remaining = uses
 		else
-			to_chat(src, "<span class='warning'>Tipo de impulso no válido.</span>")
+			to_chat(src, "<span class='warning'>Tipo de impulso no valido.</span>")
 			return
 
 	if(!boost)
@@ -360,7 +360,7 @@
 				selected_uses = max(1, selected_uses - 1)
 
 		if("set_uses_custom")
-			var/val = input(user, "Ingrese el número de usos (-1 para ilimitado)", "Usos", selected_uses) as num|null
+			var/val = input(user, "Ingrese el numero de usos (-1 para ilimitado)", "Usos", selected_uses) as num|null
 			if(isnull(val))
 				return
 			selected_uses = round(val)
@@ -421,7 +421,7 @@
 				return
 			var/client/target_client = GLOB.directory[selected_ckey]
 			if(!target_client)
-				to_chat(user, span_boldwarning("[selected_ckey] debe estar en línea."))
+				to_chat(user, span_boldwarning("[selected_ckey] debe estar en linea."))
 				return
 
 			var/datum/job_priority_boost/boost

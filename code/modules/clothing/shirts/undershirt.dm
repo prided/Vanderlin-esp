@@ -67,7 +67,7 @@
 	icon_state = "lowcut"
 
 /obj/item/clothing/shirt/undershirt/fancy
-	name = "túnica elegante"
+	name = "tunica elegante"
 	desc = "A button-down shirt woven from fine silks with a decorated front and cuffs."
 	icon_state = "fancyshirt"
 	icon = 'icons/roguetown/clothing/special/hand.dmi'
@@ -137,7 +137,7 @@
 
 /obj/item/clothing/shirt/undershirt/formal
 	name = "camisa formal"
-	desc = "Una camisa de vestir cómoda pero funcional que suele usar el personal de una casa noble."
+	desc = "Una camisa de vestir comoda pero funcional que suele usar el personal de una casa noble."
 	icon_state = "butlershirt"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_maids.dmi'
 

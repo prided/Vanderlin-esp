@@ -299,7 +299,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	if(!is_content_unlocked())
 		alert("This setting is for accounts with BYOND premium only.")
 		return
-	var/new_orbit = input(src, "Gracias por apoyar BYOND - Elige tu órbita fantasmal:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_orbits
+	var/new_orbit = input(src, "Gracias por apoyar BYOND - Elige tu orbita fantasmal:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_orbits
 	if(new_orbit)
 		prefs.write_preference(/datum/preference/choiced/ghost_orbit, new_orbit)
 		prefs.save_preferences()
@@ -320,14 +320,14 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 		prefs.save_preferences()
 
 /client/verb/pick_ghost_customization()
-	set name = "Personalización de fantasmas"
+	set name = "Personalizacion de fantasmas"
 	set category = "Preferencias"
 	set desc = ""
 	set hidden = 1
 	if(!holder)
 		return
 	if(is_content_unlocked())
-		switch(tgui_alert(usr, "¿Qué configuración quieres cambiar?", "Which", list("Ghost Form","Ghost Orbit","Ghost Accessories")))
+		switch(tgui_alert(usr, "¿Que configuracion quieres cambiar?", "Which", list("Ghost Form","Ghost Orbit","Ghost Accessories")))
 			if("Ghost Form")
 				pick_form()
 			if("Ghost Orbit")
@@ -456,7 +456,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Prayer Visibility", "[prefs.preference_has_flag(/datum/preference/bitwise/chat_toggles, CHAT_PRAYER) ? "Enabled" : "Disabled"]")) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_prayer_sound()
-	set name = "Escuchar/Silenciar sonidos de oración"
+	set name = "Escuchar/Silenciar sonidos de oracion"
 	set category = "Preferencias.Admin"
 	set desc = ""
 	if(!holder)
@@ -523,7 +523,7 @@ GLOBAL_LIST_INIT(ghost_orbits, list(GHOST_ORBIT_CIRCLE,GHOST_ORBIT_TRIANGLE,GHOS
 	else
 		prefs.write_preference(/datum/preference/choiced/ui_theme, UI_PREFERENCE_LIGHT_MODE)
 
-	to_chat(src, span_notice("El tema de la interfaz de usuario cambió a [prefs.read_preference(/datum/preference/choiced/ui_theme)]"))
+	to_chat(src, span_notice("El tema de la interfaz de usuario cambio a [prefs.read_preference(/datum/preference/choiced/ui_theme)]"))
 
 /client/proc/set_personal_admin_ooc_color()
 	set name = "Establecer color OOC de administrador personal"

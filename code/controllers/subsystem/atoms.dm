@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(atoms)
-	name = "átomos"
+	name = "atomos"
 	init_order = INIT_ORDER_ATOMS
 	flags = SS_NO_FIRE
 

@@ -30,7 +30,7 @@
 
 /datum/reagent/drug/methamphetamine/on_mob_life(mob/living/carbon/affected_mob, efficiency)
 	. = ..()
-	var/high_message = pick("You feel hyper.", "Sientes que necesitas ir más rápido.", "Sientes que puedes gobernar el mundo.")
+	var/high_message = pick("You feel hyper.", "Sientes que necesitas ir mas rapido.", "Sientes que puedes gobernar el mundo.")
 	if(prob(2.5))
 		to_chat(affected_mob, span_notice("[high_message]"))
 	affected_mob.AdjustStun(-40 * REM * efficiency)
@@ -134,7 +134,7 @@
 	exposed_mob.petrify(reac_volume * reagent_to_time_conversion)
 
 /datum/reagent/cryzaline_suspension
-	name = "Suspensión cristalina"
+	name = "Suspension cristalina"
 	description = "A supercooled alchemical suspension that rapidly crystallizes moisture on contact. Each exposure deepens the frost, layering rime upon the body until it violently ruptures."
 	reagent_state = LIQUID
 	color = "#88BFFF"

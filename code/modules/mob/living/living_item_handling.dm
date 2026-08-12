@@ -24,7 +24,7 @@
 		if(offered_item_ref)
 			cancel_offering_item()
 			return
-		to_chat(src, span_warning("¡No puedo ofrecerme un artículo!"))
+		to_chat(src, span_warning("¡No puedo ofrecerme un articulo!"))
 		return
 
 	if(offered_item_ref)

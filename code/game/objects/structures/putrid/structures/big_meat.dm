@@ -31,7 +31,7 @@ GLOBAL_LIST_EMPTY(putrid_evolutions)
 	to_chat(evolving_mob, span_boldnotice("You begin burrowing into the papa meat..."))
 
 	if(!do_after(evolving_mob, 5 SECONDS, src))
-		to_chat(evolving_mob, span_warning("¡El proceso de evolución fue interrumpido!"))
+		to_chat(evolving_mob, span_warning("¡El proceso de evolucion fue interrumpido!"))
 		return FALSE
 
 	// Show evolution selection screen

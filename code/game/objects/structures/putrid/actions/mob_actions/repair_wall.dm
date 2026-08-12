@@ -49,7 +49,7 @@
 
 	mob.visible_message(
 		span_danger("[mob] pulses with energy, repairing nearby meatvine walls!"),
-		span_alertalien("Canalizas energía para reparar todas las paredes conectadas.")
+		span_alertalien("Canalizas energia para reparar todas las paredes conectadas.")
 	)
 
 	StartCooldown()

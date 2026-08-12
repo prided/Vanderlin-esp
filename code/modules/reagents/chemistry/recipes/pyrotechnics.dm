@@ -1,5 +1,5 @@
 /datum/chemical_reaction/reagent_explosion
-	name = "Explosivo genérico"
+	name = "Explosivo generico"
 	id = "reagent_explosion"
 	var/strengthdiv = 10
 	var/modifier = 0

@@ -12,7 +12,7 @@
 	return "+[total_increase] [name]"
 
 /datum/rune_effect/stat/force
-	name = "daño físico"
+	name = "daño fisico"
 
 /datum/rune_effect/stat/force/apply_stat_effect(datum/component/modifications/source, obj/item/item)
 	item.force += increase

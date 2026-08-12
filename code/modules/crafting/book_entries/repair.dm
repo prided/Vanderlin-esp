@@ -1,6 +1,6 @@
 /datum/book_entry/smithing_repair
 	name = "The Art of Metal Repair"
-	category = "herrería"
+	category = "herreria"
 /datum/book_entry/smithing_repair/inner_book_html(mob/user)
 	return {"
 		<div style="text-align: left;">
@@ -36,7 +36,7 @@
 
 /datum/book_entry/sewing_repair
 	name = "Mending and Melding, A Guide to Fabric Repair"
-	category = "Doméstico"
+	category = "Domestico"
 /datum/book_entry/sewing_repair/inner_book_html(mob/user)
 	return {"
 		<div style="text-align: left;">

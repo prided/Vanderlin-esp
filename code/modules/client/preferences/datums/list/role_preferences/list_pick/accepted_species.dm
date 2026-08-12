@@ -34,9 +34,9 @@
 	var/chosen = species_options[result]
 	if(chosen in current)
 		current -= chosen
-		to_chat(user, span_notice("Se eliminó [result] de las especies aceptadas."))
+		to_chat(user, span_notice("Se elimino [result] de las especies aceptadas."))
 	else
 		current += chosen
-		to_chat(user, span_notice("Se agregó [result] a las especies aceptadas."))
+		to_chat(user, span_notice("Se agrego [result] a las especies aceptadas."))
 
 	prefs.write_preference(/datum/preference/list_type/role_setting/picker/accepted_species, current)

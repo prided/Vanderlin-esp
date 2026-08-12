@@ -6,11 +6,11 @@ export const DetailPlantDef = ({ r }: { r: Recipe }) => (
   <>
     <SectionHead>Crecimiento</SectionHead>
     <Box className="RecipeBook__step-block">
-      <Box className="RecipeBook__step-row">Maduración: {r.maturation_min} min</Box>
-      <Box className="RecipeBook__step-row">Intervalo de producción: {r.produce_min} min</Box>
+      <Box className="RecipeBook__step-row">Maduracion: {r.maturation_min} min</Box>
+      <Box className="RecipeBook__step-row">Intervalo de produccion: {r.produce_min} min</Box>
       <Box className="RecipeBook__step-row">Rendimiento: {r.yield_min}–{r.yield_max}</Box>
       <Box className="RecipeBook__step-row">{r.perennial ? '♻ Perennial' : '1× Annual'}</Box>
-      <Box className="RecipeBook__step-row">Drenaje de agua: {r.water_drain} lígulas/min</Box>
+      <Box className="RecipeBook__step-row">Drenaje de agua: {r.water_drain} ligulas/min</Box>
       {!!r.weed_immune && <Box className="RecipeBook__step-row">inmune a las malas hierbas</Box>}
       {!!r.underground && <Box className="RecipeBook__step-row">Puede crecer bajo tierra</Box>}
       <Box className="RecipeBook__step-row">Familia: {r.family}</Box>

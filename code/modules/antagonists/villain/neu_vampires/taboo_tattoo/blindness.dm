@@ -3,7 +3,7 @@
 	colour = list(0.8,0,0,0, 0,0,0,0, 0,0,1,0, 0,0,0,1, 0,0,0,0)
 
 /datum/taboo_tattoo/bloodsight
-	name = "Restricción de la vista"
+	name = "Restriccion de la vista"
 	desc = "You've given your eyes to see the world for what it truly is."
 	tier = 1
 	feature = /datum/bodypart_feature/bloodsight_brand

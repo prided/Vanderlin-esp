@@ -12,7 +12,7 @@
 /* craftdif of 1 = NOVICE */
 
 /datum/repeatable_crafting_recipe/sewing/weaving/shepardmask
-	name = "media máscara"
+	name = "media mascara"
 	output = /obj/item/clothing/face/shepherd
 	requirements = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 1)
@@ -42,7 +42,7 @@
 	category = "Mask"
 
 /datum/repeatable_crafting_recipe/sewing/weaving/phys_mask
-	name = "máscara de físico"
+	name = "mascara de fisico"
 	output = /obj/item/clothing/face/phys
 	requirements = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
@@ -79,7 +79,7 @@
 	category = "Cloak"
 
 /datum/repeatable_crafting_recipe/sewing/weaving/pantheoncloak
-	name = "manto del panteón"
+	name = "manto del panteon"
 	output = /obj/item/clothing/cloak/pantheon
 	requirements = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 1)
@@ -103,7 +103,7 @@
 	category = "Sombrero"
 
 /datum/repeatable_crafting_recipe/sewing/weaving/courtphys_hat
-	name = "boina del médico de la corte"
+	name = "boina del medico de la corte"
 	output = /obj/item/clothing/head/courtphysician
 	requirements = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 2)
@@ -177,7 +177,7 @@
 	category = "Sombrero"
 
 /datum/repeatable_crafting_recipe/sewing/weaving/eoramask
-	name = "máscara (Eora)"
+	name = "mascara (Eora)"
 	output = /obj/item/clothing/face/operavisage
 	requirements = list(/obj/item/ingot/silver = 1,
 				/obj/item/natural/silk = 4)
@@ -230,7 +230,7 @@
 	category = "Sombrero"
 
 /datum/repeatable_crafting_recipe/sewing/weaving/nunrobe
-	name = "túnicas (monja)"
+	name = "tunicas (monja)"
 	output = /obj/item/clothing/shirt/robe/nun
 	requirements = list(/obj/item/natural/silk = 3)
 	craftdiff = 3
@@ -378,7 +378,7 @@
 	craftdiff = 4
 
 /datum/repeatable_crafting_recipe/sewing/weaving/fancy_tunic
-	name = "túnica elegante"
+	name = "tunica elegante"
 	output = /obj/item/clothing/shirt/undershirt/fancy
 	requirements = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 2)
@@ -401,7 +401,7 @@
 
 
 /datum/repeatable_crafting_recipe/sewing/weaving/artificer_jacket
-	name = "chaqueta de artífice"
+	name = "chaqueta de artifice"
 	output = /obj/item/clothing/armor/leather/jacket/artijacket
 	requirements = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 2)
@@ -730,7 +730,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/sewing/weaving/sanguinehat
-	name = "sombrero sanguíneo"
+	name = "sombrero sanguineo"
 	output = /obj/item/clothing/head/courtphysician/male
 	requirements = list(
 		/obj/item/natural/silk = 2
@@ -738,7 +738,7 @@
 	craftdiff = 3
 
 /datum/repeatable_crafting_recipe/sewing/weaving/sanguinecap
-	name = "gorro sanguíneo"
+	name = "gorro sanguineo"
 	output = /obj/item/clothing/head/courtphysician/female
 	requirements = list(
 		/obj/item/natural/silk = 2

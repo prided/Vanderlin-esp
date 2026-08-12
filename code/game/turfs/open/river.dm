@@ -60,7 +60,7 @@
 
 
 /obj/effect/landmark/river_waypoint
-	name = "punto de referencia del río"
+	name = "punto de referencia del rio"
 	var/connected = 0
 	invisibility = INVISIBILITY_ABSTRACT
 

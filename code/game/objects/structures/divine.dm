@@ -35,10 +35,10 @@
 	if(.)
 		return
 	if(last_process + time_between_uses > world.time)
-		to_chat(user, "<span class='notice'>La fuente parece estar vacía.</span>")
+		to_chat(user, "<span class='notice'>La fuente parece estar vacia.</span>")
 		return
 	last_process = world.time
-	to_chat(user, "<span class='notice'>La sangre se siente caliente al tocarla. La fuente se seca inmediatamente poco después.</span>")
+	to_chat(user, "<span class='notice'>La sangre se siente caliente al tocarla. La fuente se seca inmediatamente poco despues.</span>")
 	user.reagents.add_reagent(/datum/reagent/medicine/healthpot,40)
 	update_appearance(UPDATE_ICON_STATE)
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, update_appearance), UPDATE_ICON_STATE), time_between_uses)

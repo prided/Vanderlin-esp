@@ -140,7 +140,7 @@
 		/datum/reagent/water = 5
 	)
 	results = list(/datum/reagent/medicine/fever_oil = 12)
-	mix_message = "La mezcla se calienta rápidamente, liberando un aroma picante y ardiente."
+	mix_message = "La mezcla se calienta rapidamente, liberando un aroma picante y ardiente."
 
 /datum/chemical_reaction/witchknit_paste
 	name = "Witchknit Paste"

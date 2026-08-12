@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/undirected/touch/darkvision
 	name = "Darkvision"
-	desc = "Mejora la visión nocturna de un objetivo que tocas durante medio día."
+	desc = "Mejora la vision nocturna de un objetivo que tocas durante medio dia."
 	button_icon_state = "darkvision"
 	can_cast_on_self = TRUE
 

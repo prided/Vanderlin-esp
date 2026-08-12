@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/raise_undead
 	name = "Levantar muertos vivientes"
-	desc = "Levanta un nuevo esqueleto de los caídos."
+	desc = "Levanta un nuevo esqueleto de los caidos."
 	button_icon_state = "raiseskele"
 	sound = 'sound/magic/magnet.ogg'
 
@@ -58,7 +58,7 @@
 
 	var/obj/item/bodypart/cast_on_head = cast_on.get_bodypart(BODY_ZONE_HEAD)
 	if(!cast_on_head)
-		to_chat(owner, span_warning("Este cadáver no tiene cabeza."))
+		to_chat(owner, span_warning("Este cadaver no tiene cabeza."))
 		return . | SPELL_CANCEL_CAST
 
 /datum/action/cooldown/spell/raise_undead/cast(mob/living/carbon/human/cast_on)

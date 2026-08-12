@@ -1,6 +1,6 @@
 
 /obj/item/clothing/cloak/martyr
-	name = "capa de mártir"
+	name = "capa de martir"
 	desc = "An elegant cloak in the colors of Astrata. Looks like it can only fit Humen-sized people."
 	color = null
 	icon_state = "martyrcloak"
@@ -110,7 +110,7 @@
 	sellprice = 0
 
 /obj/item/clothing/face/exoticsilkmask
-	name = "máscara de seda exótica"
+	name = "mascara de seda exotica"
 	icon_state = "exoticsilkmask"
 	flags_inv = HIDEFACE|HIDEFACIALHAIR
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP

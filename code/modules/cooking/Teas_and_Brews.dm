@@ -1,6 +1,6 @@
 // basic tea, utilises adjusted soup code
 /datum/reagent/consumable/tea
-	name = "Té genérico"
+	name = "Te generico"
 	description = "If you see this, stop using moondust"
 	reagent_state = LIQUID
 	color = "#c38553"
@@ -21,7 +21,7 @@
 	L.remove_chem_effect(CE_BLOODRESTORE, "[type]")
 
 /datum/reagent/consumable/tea/taraxamint
-	name = "Té de Taraxacum-Mentha"
+	name = "Te de Taraxacum-Mentha"
 	description = "If you see this, stop using moondust"
 	color = "#acaf01"
 	nutriment_factor = 2
@@ -140,7 +140,7 @@
 	return ..()
 
 /datum/reagent/consumable/tea/manabloom
-	name = "Té de manabloom"
+	name = "Te de manabloom"
 	description = "If you see this, stop using moondust"
 	color = "#5986b1"
 	nutriment_factor = 2

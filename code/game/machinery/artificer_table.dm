@@ -21,7 +21,7 @@
 		. += span_notice("[buckled] is secured to the table.")
 		var/stability = SEND_SIGNAL(buckled, COMSIG_AUGMENT_GET_STABILITY)
 		if(stability)
-			. += span_info("Estabilidad del núcleo: [stability]%")
+			. += span_info("Estabilidad del nucleo: [stability]%")
 
 /obj/machinery/artificer_table/user_buckle_mob(mob/living/M, mob/user, check_loc = TRUE)
 	if(!M.CanReach(src))
@@ -129,7 +129,7 @@
 			appro_recipe -= R
 
 	if(appro_recipe.len)
-		var/datum/chosen_recipe = tgui_input_list(user, "Elige una creación", "Artificer", sortNames(appro_recipe.Copy()))
+		var/datum/chosen_recipe = tgui_input_list(user, "Elige una creacion", "Artificer", sortNames(appro_recipe.Copy()))
 		if(!material.artrecipe && chosen_recipe)
 			material.artrecipe = new chosen_recipe.type(material)
 			return TRUE

@@ -41,7 +41,7 @@
 	icon_state = "rib"
 
 /obj/structure/statue/bone/skull
-	name = "cráneo colosal"
+	name = "craneo colosal"
 	desc = ""
 	oreAmount = 12
 	icon = 'icons/obj/statuelarge.dmi'

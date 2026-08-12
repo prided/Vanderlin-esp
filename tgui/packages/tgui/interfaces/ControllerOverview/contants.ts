@@ -6,7 +6,7 @@ type SortType = {
 
 export const SORTING_TYPES: readonly SortType[] = [
   {
-    label: 'Alfabético',
+    label: 'Alfabetico',
     propName: 'name',
     inDeciseconds: false,
   },
@@ -21,12 +21,12 @@ export const SORTING_TYPES: readonly SortType[] = [
     inDeciseconds: false,
   },
   {
-    label: 'Última ejecución',
+    label: 'Ultima ejecucion',
     propName: 'last_fire',
     inDeciseconds: false,
   },
   {
-    label: 'Próxima ejecución',
+    label: 'Proxima ejecucion',
     propName: 'next_fire',
     inDeciseconds: false,
   },

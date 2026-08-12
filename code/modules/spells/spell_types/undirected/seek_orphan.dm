@@ -21,10 +21,10 @@
 		orphans += H
 
 	if(!length(orphans))
-		to_chat(owner, span_red("No hay huérfanos."))
+		to_chat(owner, span_red("No hay huerfanos."))
 		return
 
-	var/mob/orphan = tgui_input_list(owner, "¿Cuál?", "buscar huérfano", orphans)
+	var/mob/orphan = tgui_input_list(owner, "¿Cual?", "buscar huerfano", orphans)
 	if(QDELETED(src) || QDELETED(cast_on) || QDELETED(orphan) || !can_cast_spell())
 		return
 

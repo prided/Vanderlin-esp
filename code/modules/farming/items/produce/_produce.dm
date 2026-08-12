@@ -316,7 +316,7 @@
 /obj/item/reagent_containers/food/snacks/produce/swampweed
 	seed = /obj/item/neuFarm/seed/swampleaf
 	name = "swampweed"
-	desc = "Una hierba que se puede secar y fumar para inducir un estado de relajación."
+	desc = "Una hierba que se puede secar y fumar para inducir un estado de relajacion."
 	icon_state = "swampweed"
 	filling_color = "#008000"
 	bitesize_mod = 1
@@ -333,7 +333,7 @@
 /obj/item/reagent_containers/food/snacks/produce/swampweed_dried
 	seed = null
 	name = "swampweed"
-	desc = "Una hierba seca que se puede fumar para inducir un estado de relajación."
+	desc = "Una hierba seca que se puede fumar para inducir un estado de relajacion."
 	icon_state = "swampweedd"
 	dry = TRUE
 	nutrition = SNACK_WORST
@@ -636,7 +636,7 @@
 /*	..................   Turnip   ................... */ // only for veggie soup
 /obj/item/reagent_containers/food/snacks/produce/vegetable/turnip
 	name = "turnip"
-	desc = "Un escudo contra el hambre, nada más."
+	desc = "Un escudo contra el hambre, nada mas."
 	seed = /obj/item/neuFarm/seed/turnip
 	icon_state = "turnip"
 	tastes = list("dirt" = 1)

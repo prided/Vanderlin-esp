@@ -35,7 +35,7 @@
 
 	var/githuburl = CONFIG_GET(string/githuburl)
 	if(!githuburl)
-		to_chat(user_client, span_danger("La URL de Github no está configurada en la configuración del servidor."))
+		to_chat(user_client, span_danger("La URL de Github no esta configurada en la configuracion del servidor."))
 		return
 
 	var/issue_key = CONFIG_GET(string/issue_key)

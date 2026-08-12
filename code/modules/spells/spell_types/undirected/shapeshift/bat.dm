@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/shapeshift/bat
-	name = "Forma de murciélago"
+	name = "Forma de murcielago"
 	desc = "Transform into a lesser bat to fly into the nite."
 
 	charge_required = FALSE

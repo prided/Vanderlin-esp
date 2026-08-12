@@ -9,7 +9,7 @@
 		to_chat(src, span_warning("SStriumphs is not ready to end the season."))
 		return
 
-	if(tgui_alert(src, "Esto borrará TODOS los TRIUNFOS, ¿estás seguro?", "FIN DE TEMPORADA", DEFAULT_INPUT_CONFIRMATIONS) != CHOICE_CONFIRM)
+	if(tgui_alert(src, "Esto borrara TODOS los TRIUNFOS, ¿estas seguro?", "FIN DE TEMPORADA", DEFAULT_INPUT_CONFIRMATIONS) != CHOICE_CONFIRM)
 		return
 
 	if(tgui_alert(src, "Are you REALLY sure?", "FIN DE TEMPORADA", DEFAULT_INPUT_CONFIRMATIONS) != CHOICE_CONFIRM)

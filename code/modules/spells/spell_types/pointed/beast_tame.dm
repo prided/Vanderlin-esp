@@ -12,7 +12,7 @@
 	associated_skill = /datum/attribute/skill/magic/holy
 	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/dendor)
 
-	invocation = "Quédate quieto y tranquilo, hermano bestia."
+	invocation = "Quedate quieto y tranquilo, hermano bestia."
 	invocation_type = INVOCATION_WHISPER
 
 	charge_required = FALSE

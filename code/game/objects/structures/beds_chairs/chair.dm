@@ -163,7 +163,7 @@
 		return
 	for(var/obj/A in T)
 		if(istype(A, /obj/structure/chair))
-			to_chat(user, "<span class='warning'>¡Ya hay una silla aquí!</span>")
+			to_chat(user, "<span class='warning'>¡Ya hay una silla aqui!</span>")
 			return
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
 			to_chat(user, "<span class='warning'>There is already something here!</span>")

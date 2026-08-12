@@ -1,6 +1,6 @@
 /obj/structure/chem_separator
 	name = "alembic"
-	desc = "Dispositivo que realiza la separación de líquidos por destilación."
+	desc = "Dispositivo que realiza la separacion de liquidos por destilacion."
 	icon = 'icons/obj/medical/chemical.dmi'
 	icon_state = "separator"
 	light_power = 1

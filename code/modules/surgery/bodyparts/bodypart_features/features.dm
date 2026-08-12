@@ -89,7 +89,7 @@
 	body_zone = BODY_ZONE_HEAD
 
 /datum/bodypart_feature/vamprire_seal
-	name = "Sello vampírico"
+	name = "Sello vampirico"
 	feature_slot = BODYPART_FEATURE_BRAND
 	body_zone = BODY_ZONE_CHEST
 	accessory_colors = COLOR_RED

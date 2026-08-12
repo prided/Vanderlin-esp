@@ -71,7 +71,7 @@
 
 	if(tgui_alert(usr, "¿Desea ser reconocido como no extranjero?", "Foreigner", list("Yes", "No")) == "Yes")
 		REMOVE_TRAIT(spawned, TRAIT_FOREIGNER, TRAIT_GENERIC)
-		spawned.honorary = spawned.pronouns == SHE_HER ? "Princesa rechazada" : "Príncipe rechazado"
+		spawned.honorary = spawned.pronouns == SHE_HER ? "Princesa rechazada" : "Principe rechazado"
 
 /datum/outfit/wretch/reject
 	name = "Rejected Royal (Wretch)"

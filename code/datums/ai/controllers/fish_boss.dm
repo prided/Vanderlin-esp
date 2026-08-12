@@ -64,7 +64,7 @@
 /obj/effect/deep_water/Crossed(atom/movable/AM)
 	. = ..()
 	if(isliving(AM) && !("deepone" in AM:faction))
-		to_chat(AM, "<span class='warning'>¡El agua es sorprendentemente profunda y difícil de atravesar!</span>")
+		to_chat(AM, "<span class='warning'>¡El agua es sorprendentemente profunda y dificil de atravesar!</span>")
 
 /obj/effect/deep_water/Uncrossed(atom/movable/AM)
 	. = ..()

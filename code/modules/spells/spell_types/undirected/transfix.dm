@@ -86,7 +86,7 @@
 				var/extra = "!"
 				if(knowledgable)
 					extra = ", I sense the caster was [owner]!"
-				to_chat(target, "<font color='white'>La plata psycross brilla y me protege de la magia impía[extra]</font>")
+				to_chat(target, "<font color='white'>La plata psycross brilla y me protege de la magia impia[extra]</font>")
 				to_chat(owner, span_userdanger("[target] has my BANE! It causes me to fail to ensnare their mind!"))
 				return
 
@@ -101,7 +101,7 @@
 					log_combat(owner, target, "weakly transfixed")
 				if(101 SECONDS to 180 SECONDS)
 					to_chat(target, "Your eyelids force themselves shut as you feel intense lethargy.")
-					to_chat(owner, "[target] no podrá resistir mucho más.")
+					to_chat(owner, "[target] no podra resistir mucho mas.")
 					target.set_eyes_closed(TRUE)
 					target.Slowdown(50)
 					log_combat(owner, target, "transfixed")

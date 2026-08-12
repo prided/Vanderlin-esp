@@ -152,7 +152,7 @@
 	name = "Summon Tentacles"
 	button_icon = 'icons/effects/effects.dmi'
 	button_icon_state = "tentacle_icon"
-	desc = "Invoca tentáculos desde las profundidades para atacar a los enemigos."
+	desc = "Invoca tentaculos desde las profundidades para atacar a los enemigos."
 	cooldown_time = 15 SECONDS
 
 /datum/action/cooldown/mob_cooldown/kraken_summon_tentacles/Activate(atom/target)
@@ -295,13 +295,13 @@
 
 	new /obj/effect/temp_visual/tentacle_wrap(get_turf(victim))
 
-	to_chat(victim, span_userdanger("¡El tentáculo te aplasta!"))
+	to_chat(victim, span_userdanger("¡El tentaculo te aplasta!"))
 
 	StartCooldown()
 	return TRUE
 
 /mob/living/simple_animal/hostile/kraken_tentacle/spitter
-	name = "tentáculo escupidor"
+	name = "tentaculo escupidor"
 	desc = "This tentacle drips with corrosive venom. Keep your distance!"
 
 	health = 150
@@ -337,7 +337,7 @@
 	if(!start_turf)
 		return FALSE
 
-	owner.visible_message(span_boldwarning("¡[owner] escupe una bola de ácido a [target]!"))
+	owner.visible_message(span_boldwarning("¡[owner] escupe una bola de acido a [target]!"))
 
 	var/obj/projectile/tentacle_acid/proj = new projectile_type(start_turf)
 	proj.firer = owner

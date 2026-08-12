@@ -24,7 +24,7 @@
 
 /datum/emote/living/carbon/blink_r
 	key = "blink_r"
-	message = "parpadea rápidamente."
+	message = "parpadea rapidamente."
 
 /datum/emote/living/carbon/clap
 	key = "clap"

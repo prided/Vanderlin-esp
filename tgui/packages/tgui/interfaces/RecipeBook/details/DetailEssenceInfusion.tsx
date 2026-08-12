@@ -22,7 +22,7 @@ export const DetailEssenceInfusion = ({ r, lookup, pickerMap, allRecipes, essenc
       </>
     )}
     <Box className="RecipeBook__step-block">
-      <Box className="RecipeBook__step-row">⏱ Tiempo de infusión: {r.infusion_time}s</Box>
+      <Box className="RecipeBook__step-row">⏱ Tiempo de infusion: {r.infusion_time}s</Box>
     </Box>
     {r.result_name && (
       <OutputBanner

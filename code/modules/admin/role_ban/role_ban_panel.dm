@@ -307,7 +307,7 @@
 			selected_misc -= to_remove
 
 		if("add_curse")
-			var/selected_curse_thing = input(user, "Elige una maldición", "Maldiciones", null) as null|anything in GLOB.curse_names
+			var/selected_curse_thing = input(user, "Elige una maldicion", "Maldiciones", null) as null|anything in GLOB.curse_names
 			if(!selected_curse_thing)
 				return
 			selected_curses |= selected_curse_thing
@@ -326,7 +326,7 @@
 		if("remove_ckey_role_ban")
 			var/ckey = href_list["ckey"]
 			var/ban_index = text2num(href_list["ban_index"])
-			var/alert = tgui_alert(user, "¿Estás seguro de que quieres eliminar la prohibición?", "Remove Role Ban", list("Yes", "No"))
+			var/alert = tgui_alert(user, "¿Estas seguro de que quieres eliminar la prohibicion?", "Remove Role Ban", list("Yes", "No"))
 			if(alert != "Yes")
 				return
 			var/datum/role_bans/bans = get_role_bans_for_ckey(ckey)
@@ -383,7 +383,7 @@
 		to_chat(user, span_boldwarning("Missing reason"))
 		return
 	if(!selected_is_permanent && selected_duration == 0)
-		to_chat(user, span_boldwarning("Duración faltante"))
+		to_chat(user, span_boldwarning("Duracion faltante"))
 		return
 	var/datum/role_ban_instance/instance = new /datum/role_ban_instance()
 	instance.applied_by = ckey(user.ckey)

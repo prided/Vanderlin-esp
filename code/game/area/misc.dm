@@ -1,5 +1,5 @@
 /area/start //should be /area/misc/start
-	name = "área de inicio"
+	name = "area de inicio"
 	icon_state = "start"
 	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
 

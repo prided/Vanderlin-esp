@@ -422,7 +422,7 @@ GLOBAL_VAR_INIT(mobids, 1)
  * for why this isn't atom/verb/examine()
  */
 /mob/verb/examinate(atom/examinify as mob|obj|turf in view()) //It used to be oview(12), but I can't really say why
-	set name = "Examine"
+	set name = "Examinar"
 	set category = "IC"
 
 	DEFAULT_QUEUE_OR_CALL_VERB(VERB_CALLBACK(src, PROC_REF(run_examinate), examinify))
@@ -453,7 +453,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 		else if(isliving(examinify))
 			var/mob/living/examaniee = examinify
 			if(examaniee.peek_examine_check(src))
-				to_chat(src, span_info("Mi mirada pasó desapercibida."))
+				to_chat(src, span_info("Mi mirada paso desapercibida."))
 			else
 				to_chat(src, span_warning("[examaniee] noticed me peeking!"))
 
@@ -650,7 +650,7 @@ GLOBAL_VAR_INIT(mobids, 1)
  * Add a note to the mind datum
  */
 /mob/verb/add_memory(msg as message)
-	set name = "Add Memory"
+	set name = "Agregar recuerdo"
 	set category = "IC"
 	if(mind)
 		if (world.time < memory_throttle_time)
@@ -1208,7 +1208,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 
 ///Show the language menu for this mob
 /mob/verb/open_language_menu()
-	set name = "Abrir menú de idioma"
+	set name = "Abrir menu de idioma"
 	set category = "IC"
 	set hidden = 1
 

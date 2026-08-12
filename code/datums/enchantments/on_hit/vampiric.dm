@@ -1,8 +1,8 @@
 /datum/enchantment/on_hit/vampiric
-	enchantment_name = "vampírico"
+	enchantment_name = "vampirico"
 	examine_text = "This weapon has a dark, blood-red aura."
 	enchantment_color = "#8B0000"
-	enchantment_end_message = "El aura vampírica se desvanece."
+	enchantment_end_message = "El aura vampirica se desvanece."
 	essence_recipe = list(
 		/datum/thaumaturgical_essence/life = 35,
 		/datum/thaumaturgical_essence/void = 35,
@@ -18,4 +18,4 @@
 	var/heal_amount = (damage_dealt + actual_damage) / 2
 	attacker.heal_bodypart_damage(heal_amount, 0)
 	to_chat(attacker, span_green("You feel invigorated as your weapon drains life!"))
-	to_chat(attacked, span_warning("¡Sientes que tu fuerza vital se está agotando!"))
+	to_chat(attacked, span_warning("¡Sientes que tu fuerza vital se esta agotando!"))

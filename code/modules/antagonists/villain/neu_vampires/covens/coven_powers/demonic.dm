@@ -74,7 +74,7 @@
 
 //CONFLAGRATION
 /datum/coven_power/demonic/conflagration
-	name = "Conflagración"
+	name = "Conflagracion"
 	desc = "Turn your hands into deadly claws."
 
 	level = 3
@@ -125,7 +125,7 @@
 
 //CONDEMNTATION
 /datum/coven_power/demonic/condemnation
-	name = "Condenación"
+	name = "Condenacion"
 	desc = "Condemn a soul and their bloodline to suffering."
 	level = 5
 	check_flags = COVEN_CHECK_CONSCIOUS | COVEN_CHECK_CAPABLE | COVEN_CHECK_IMMOBILE

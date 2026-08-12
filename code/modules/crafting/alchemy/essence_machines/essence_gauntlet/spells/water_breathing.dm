@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/essence/water_breathing
-	name = "Respiración de agua"
-	desc = "Permite respirar bajo el agua por un corto período de tiempo."
+	name = "Respiracion de agua"
+	desc = "Permite respirar bajo el agua por un corto periodo de tiempo."
 	button_icon_state = "water_breathing"
 	cast_range = 1
 	essences = list(/datum/thaumaturgical_essence/water)
@@ -15,7 +15,7 @@
 	target.apply_status_effect(/datum/status_effect/buff/water_breathing, duration)
 
 /atom/movable/screen/alert/status_effect/water_breathing
-	name = "Respiración de agua"
+	name = "Respiracion de agua"
 	desc = "Puedes respirar bajo el agua."
 	icon_state = "buff"
 

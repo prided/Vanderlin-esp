@@ -1,5 +1,5 @@
 /datum/migrant_role/jestertroupe
-	name = "Bufón"
+	name = "Bufon"
 	greet_text = "You were once part of a glorious circus from Heartfelt. Long gone are the days of mirth. The tent having been set ablaze so many years ago, you and your lot have been wandering. Here is the perfect town to start the next act. The circus is in town!"
 	migrant_job = /datum/job/migrant/jestertroupe
 
@@ -24,7 +24,7 @@
 	)
 
 /datum/job/migrant/jestertroupe
-	title = "Bufón"
+	title = "Bufon"
 	tutorial =  "You were once part of a glorious circus from Heartfelt. Long gone are the days of mirth. The tent having been set ablaze so many years ago, you and your lot have been wandering. Here is the perfect town to start the next act. The circus is in town!"
 	outfit = /datum/outfit/jestertroupe
 	allowed_races = RACES_PLAYER_ALL

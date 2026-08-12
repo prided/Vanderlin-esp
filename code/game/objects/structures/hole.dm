@@ -73,7 +73,7 @@
 /obj/structure/closet/dirthole/examine(mob/user)
 	. = ..()
 	if(headstone?.inscription)
-		. += span_info("\A [headstone] está arriba y lee lo siguiente...")
+		. += span_info("\A [headstone] esta arriba y lee lo siguiente...")
 		. += headstone.inscription
 	if(is_consecrated)
 		switch(gravequality)
@@ -128,7 +128,7 @@
 	if(!grave_decorations)
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 	else if(length(grave_decorations) != 1)
-		item_to_remove = tgui_input_list(user, "¿Qué decoración quieres quitar?", "Grave Decor Removal", grave_decorations)
+		item_to_remove = tgui_input_list(user, "¿Que decoracion quieres quitar?", "Grave Decor Removal", grave_decorations)
 	else
 		item_to_remove = grave_decorations[1] // only one item
 
@@ -182,7 +182,7 @@
 	//In the future, an associated list can be made between any non-gravedecor items, and their associated decoration. We only have one such case, so that isnt necessary.
 	if(istype(tool, /obj/item/grown/log/tree/stick))
 		if(headstone)
-			to_chat(user, "<span class='warning'>Esta tumba ya tiene una lápida.</span>")
+			to_chat(user, "<span class='warning'>Esta tumba ya tiene una lapida.</span>")
 			return ITEM_INTERACT_BLOCKING
 		if(stage != DIRTHOLE_GRAVE)
 			to_chat(user, "<span class='warning'>I can't tie a grave marker on an open grave.</span>")
@@ -247,7 +247,7 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/structure/closet/dirthole/proc/inscribe(obj/item/sharp, mob/user)
-	var/new_message = tgui_input_text(user, "¿Qué te gustaría que estuviera inscrito en \the [headstone]?", "Inscripción personalizada", headstone.custom_message, 150, TRUE)
+	var/new_message = tgui_input_text(user, "¿Que te gustaria que estuviera inscrito en \the [headstone]?", "Inscripcion personalizada", headstone.custom_message, 150, TRUE)
 	if(!new_message || new_message == headstone.custom_message)
 		return ITEM_INTERACT_BLOCKING
 
@@ -264,7 +264,7 @@
 /obj/structure/closet/dirthole/proc/interaction_decor(obj/item/gravedecor/tool, mob/user)
 	if(istype(tool, /obj/item/gravedecor/headstone))
 		if(headstone)
-			to_chat(user, "<span class='warning'>Esta tumba ya tiene una lápida.</span>")
+			to_chat(user, "<span class='warning'>Esta tumba ya tiene una lapida.</span>")
 			return ITEM_INTERACT_BLOCKING
 		if(stage != DIRTHOLE_GRAVE)
 			to_chat(user, "<span class='warning'>I can't put a headstone on an open grave.</span>")

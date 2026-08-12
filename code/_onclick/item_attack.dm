@@ -23,7 +23,7 @@
 		return TRUE
 	if(!istype(src, /obj/item/grabbing))
 		if(HAS_TRAIT(user, TRAIT_CHUNKYFINGERS))
-			to_chat(user, span_warning("...¿Qué?"))
+			to_chat(user, span_warning("...¿Que?"))
 			return TRUE
 
 	var/is_right_clicking = LAZYACCESS(modifiers, RIGHT_CLICK)

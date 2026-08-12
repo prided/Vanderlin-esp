@@ -38,7 +38,7 @@
 	switch(chosen)
 		if(CHOICE_POISON)
 			owner.special_items["Poison"] = /obj/item/reagent_containers/glass/bottle/killersice
-			to_chat(owner, span_notice("Puedo recuperar mi artículo de una estatua, árbol o reloj haciendo clic derecho en él."))
+			to_chat(owner, span_notice("Puedo recuperar mi articulo de una estatua, arbol o reloj haciendo clic derecho en el."))
 
 		if(CHOICE_SKILL_SWORD)
 			aspirant_mob.clamped_adjust_skill_level(/datum/attribute/skill/combat/swords, 60, 60)
@@ -60,12 +60,12 @@
 			owner.special_items["Puffer Bullets"] = /obj/item/storage/belt/pouch/bullets
 			owner.special_items["Puffet Gunpowder"] = /obj/item/reagent_containers/glass/bottle/aflask
 			aspirant_mob.clamped_adjust_skill_level(/datum/attribute/skill/combat/firearms, 60, 60)
-			to_chat(owner, span_notice("Puedo recuperar mi artículo de una estatua, árbol o reloj haciendo clic derecho en él."))
+			to_chat(owner, span_notice("Puedo recuperar mi articulo de una estatua, arbol o reloj haciendo clic derecho en el."))
 
 		if(CHOICE_BOMB)
 			owner.special_items["Bomb"] = /obj/item/explosive/canister_bomb
 			aspirant_mob.clamped_adjust_skill_level(/datum/attribute/skill/craft/bombs, 60, 60)
-			to_chat(owner, span_notice("Puedo recuperar mi artículo de una estatua, árbol o reloj haciendo clic derecho en él."))
+			to_chat(owner, span_notice("Puedo recuperar mi articulo de una estatua, arbol o reloj haciendo clic derecho en el."))
 
 
 /datum/antagonist/aspirant/supporter
@@ -201,7 +201,7 @@
 				win = FALSE
 			objective_count++
 		if(win)
-			to_chat(world, span_greentext("¡El Aspirante ha ascendido! ¡ÉXITO!"))
+			to_chat(world, span_greentext("¡El Aspirante ha ascendido! ¡EXITO!"))
 		else
 			to_chat(world, span_redtext("The Aspirant was thwarted! FAIL!"))
 

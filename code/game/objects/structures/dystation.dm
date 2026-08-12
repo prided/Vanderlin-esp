@@ -156,7 +156,7 @@
 			user.visible_message( \
 				null, \
 				null, \
-				span_hear("Escucho algo moviéndose en el agua.") \
+				span_hear("Escucho algo moviendose en el agua.") \
 			)
 			if(do_after(user, 5 SECONDS, src))
 				if(href_list["type"] == "detail" && isitem(inserted))
@@ -212,7 +212,7 @@
 
 /obj/item/dye_pack/examine(mob/user)
 	. = ..()
-	. += span_info("Ponerlos en un contenedor de madera lo convertirá en un contenedor de tinte.")
+	. += span_info("Ponerlos en un contenedor de madera lo convertira en un contenedor de tinte.")
 	. += span_info("Putting these into an existing dye bin will add the colors into it.")
 	var/colors_ref = "byond://?src=[REF(src)];action=colors"
 	. += span_info(span_notice("I could look at the selection of <a href=[colors_ref]>colors</a>...")) //ew

@@ -115,7 +115,7 @@
 	first_time_text = "THE GRAVEYARD"
 
 /area/indoors/town/church/chapel
-	name = "sala de oración"
+	name = "sala de oracion"
 	icon_state = "chapel"
 	first_time_text = "LA CASA DE LOS DIEZ"
 
@@ -162,8 +162,8 @@
 	icon_state = "orphanage"
 
 /area/indoors/town/clinic_large
-	name = "La clínica"
-	first_time_text = "La clínica"
+	name = "La clinica"
+	first_time_text = "La clinica"
 	icon_state = "clinic_large"
 
 /area/indoors/town/clinic_large/apothecary
@@ -196,7 +196,7 @@
 	background_track_night = null
 
 /area/indoors/town/train_station
-	name = "Estación de tren"
+	name = "Estacion de tren"
 	first_time_text = "Vanderlin Train Station"
 	icon_state = "train_station"
 

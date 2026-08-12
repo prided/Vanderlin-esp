@@ -21,7 +21,7 @@
 
 /obj/item/clothing/neck/psycross/divine/astrata
 	name = "amuleto de madera de Astrata"
-	desc = "Bendito sea todo lo que toca la luz del sol, porque está protegido por Su gracia."
+	desc = "Bendito sea todo lo que toca la luz del sol, porque esta protegido por Su gracia."
 	icon_state = "astrata_wood"
 
 /obj/item/clothing/neck/psycross/divine/noc
@@ -185,7 +185,7 @@
 
 /obj/item/clothing/neck/psycross/silver/divine/astrata
 	name = "amuleto de Astrata"
-	desc = "Bendito sea todo lo que toca la luz del sol, porque está protegido por Su gracia."
+	desc = "Bendito sea todo lo que toca la luz del sol, porque esta protegido por Su gracia."
 	icon_state = "astrata"
 
 /obj/item/clothing/neck/psycross/silver/divine/noc
@@ -233,10 +233,10 @@
 		to_chat(user, span_warning("The love potion only works on living things, sicko!"))
 		return ..()
 	if(user == love_target)
-		to_chat(user, span_warning("No puedes beber la poción de amor. ¿Qué eres, un narcisista?"))
+		to_chat(user, span_warning("No puedes beber la pocion de amor. ¿Que eres, un narcisista?"))
 		return ..()
 	if(love_target.has_status_effect(/datum/status_effect/in_love))
-		to_chat(user, span_warning("¡[love_target] ya está enamorado!"))
+		to_chat(user, span_warning("¡[love_target] ya esta enamorado!"))
 		return ..()
 
 	love_target.visible_message(span_danger("[user] starts to feed [love_target] a love potion!"),

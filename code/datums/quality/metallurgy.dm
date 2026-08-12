@@ -23,14 +23,14 @@
 			"name_prefix" = list("high-grade", "superior"),
 			"description" = list(
 				"Brilla con una pureza excepcional.",
-				"La estructura metálica parece impecable.",
+				"La estructura metalica parece impecable.",
 				"It radiates quality craftsmanship."
 			),
 		),
 		SMELTERY_QUALITY_EXCELLENT = list(
 			"name_prefix" = list("pristine", "legendary"),
 			"description" = list(
-				"Representa el pináculo de la perfección metalúrgica.",
+				"Representa el pinaculo de la perfeccion metalurgica.",
 				"The metal seems to shine with inner light.",
 				"Esta es una obra maestra de refinamiento."
 			),

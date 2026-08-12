@@ -23,7 +23,7 @@ export const GossipPrefs = () => {
     <Window width={400} height={480} title="Chismes y rumores">
       <Window.Content scrollable>
         <Box color="gray" italic mb={1}>
-          Los rumores y chismes que usted escriba aquí se difundirán a otros personajes al comienzo de la ronda. Escríbelos como continuación de &quot;¿Escuchaste que [name]...&quot;?
+          Los rumores y chismes que usted escriba aqui se difundiran a otros personajes al comienzo de la ronda. Escribelos como continuacion de &quot;¿Escuchaste que [name]...&quot;?
         </Box>
         <Tabs>
           <Tabs.Tab selected={tab === 'rumors'} onClick={() => setTab('rumors')}>
@@ -43,7 +43,7 @@ export const GossipPrefs = () => {
             addAction="add_rumor"
             removeAction="remove_rumor"
             editAction="edit_rumor"
-            placeholder="robó pan de los puestos del mercado..."
+            placeholder="robo pan de los puestos del mercado..."
           />
         )}
         {tab === 'noble' && (
@@ -53,7 +53,7 @@ export const GossipPrefs = () => {
             addAction="add_noble_gossip"
             removeAction="remove_noble_gossip"
             editAction="edit_noble_gossip"
-            placeholder="fue visto reuniéndose con enviados extranjeros en secreto..."
+            placeholder="fue visto reuniendose con enviados extranjeros en secreto..."
           />
         )}
         {tab === 'rivals' && (
@@ -61,7 +61,7 @@ export const GossipPrefs = () => {
             <Stack vertical>
               <Stack.Item>
                 <Box color="gray" italic mb={1}>
-                  Número de rivales con los que comienza tu personaje al inicio de la ronda.
+                  Numero de rivales con los que comienza tu personaje al inicio de la ronda.
                 </Box>
               </Stack.Item>
               <Stack.Item>
@@ -110,7 +110,7 @@ const GossipList = ({
       {entries.length === 0 && (
         <Stack.Item>
           <Box color="gray" italic>
-            Aún no hay entradas.
+            Aun no hay entradas.
           </Box>
         </Stack.Item>
       )}
@@ -213,7 +213,7 @@ const GossipList = ({
       {atCap && (
         <Stack.Item>
           <Box color="average" italic>
-            Entradas máximas alcanzadas ({max}).
+            Entradas maximas alcanzadas ({max}).
           </Box>
         </Stack.Item>
       )}

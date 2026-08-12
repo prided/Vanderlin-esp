@@ -1,7 +1,7 @@
 // Note: tails only work in humans. They use human-specific parameters and rely on human code for displaying.
 /obj/item/organ/tail
 	name = "tail"
-	desc = "Una cola cortada. ¿De qué cortaste esto?"
+	desc = "Una cola cortada. ¿De que cortaste esto?"
 	icon_state = "tail-lizard"
 	visible_organ = TRUE
 	zone = BODY_ZONE_PRECISE_GROIN
@@ -77,5 +77,5 @@
 	accessory_type = /datum/sprite_accessory/tail/kobold/round
 
 /obj/item/organ/tail/triton
-	name = "campana de tritón"
+	name = "campana de triton"
 	accessory_type = /datum/sprite_accessory/tail/triton

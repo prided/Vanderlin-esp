@@ -4,7 +4,7 @@
 
 
 /obj/item/reagent_containers/glass/rag
-	name = "trapo húmedo"
+	name = "trapo humedo"
 	desc = ""
 	w_class = WEIGHT_CLASS_TINY
 	icon = 'icons/obj/toy.dmi'

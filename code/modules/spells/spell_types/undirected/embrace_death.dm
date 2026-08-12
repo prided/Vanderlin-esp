@@ -17,7 +17,7 @@
 	owner.say("NECRA, I AM READY!", forced = "necra_ritual")
 
 	owner.visible_message(
-		span_warning("¡[owner] comienza a cantar los últimos ritos de Necra!"), \
+		span_warning("¡[owner] comienza a cantar los ultimos ritos de Necra!"), \
 		span_warning("You feel Necra's presence as you start the ritual...")
 	)
 

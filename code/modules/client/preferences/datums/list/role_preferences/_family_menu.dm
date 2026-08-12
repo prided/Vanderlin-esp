@@ -112,7 +112,7 @@
 			var/new_name = tgui_input_text(
 				owner,
 				"Enter the exact character name of your designated spouse, or leave blank to clear.",
-				"Cónyuge designado",
+				"Conyuge designado",
 				prefs.read_preference(/datum/preference/text/setspouse),
 				MAX_NAME_LEN,
 			)

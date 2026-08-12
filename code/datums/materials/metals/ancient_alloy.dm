@@ -1,5 +1,5 @@
 /datum/material/ancient_alloy
-	name = "Aleación antigua"
+	name = "Aleacion antigua"
 	show_as_filling = TRUE
 	color = "#8b521c"
 	hardness = MAT_VALUE_FLEXIBLE + 5

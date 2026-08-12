@@ -96,7 +96,7 @@
 
 /*	.................   Base Blessing of Dendor   ................... */
 /obj/item/dendor_blessing
-	name = "bendición en blanco de Dendor"
+	name = "bendicion en blanco de Dendor"
 	icon = 'icons/roguetown/misc/magick.dmi'
 	icon_state = ""
 	layer = 4.2
@@ -132,7 +132,7 @@
 			return ITEM_INTERACT_BLOCKING
 
 	if(required_trait && !HAS_TRAIT(user, required_trait))
-		to_chat(user, span_warning("Todavía no estoy en sintonía con este camino..."))
+		to_chat(user, span_warning("Todavia no estoy en sintonia con este camino..."))
 		icon_state = initial(icon_state)
 		return ITEM_INTERACT_BLOCKING
 
@@ -169,7 +169,7 @@
 
 /*	.................   Green Blessings of Dendor   ................... */
 /obj/item/dendor_blessing/growing
-	name = "bendición creciente de Dendor"
+	name = "bendicion creciente de Dendor"
 	icon_state = "dendor_grow"
 	associated_shrine = /obj/structure/fluff/psycross/crafted/shrine/dendor_gote
 	path_trait = TRAIT_DENDOR_GROWING
@@ -196,7 +196,7 @@
 /obj/item/dendor_blessing/tending/give_blessing(mob/living/carbon/human/user)
 	playsound(user, 'sound/vo/smokedrag.ogg', 100, TRUE)
 	playsound(user, 'sound/misc/wind.ogg', 100, TRUE, -1)
-	to_chat(user, span_good("Encuentras semillas más fácilmente."))
+	to_chat(user, span_good("Encuentras semillas mas facilmente."))
 	user.emote("smile")
 	ADD_TRAIT(user, TRAIT_SEED_FINDER, TRAIT_GENERIC)
 	user.add_spell(/datum/action/cooldown/spell/conjure/garden_fae, source = user.cleric)
@@ -286,7 +286,7 @@
 /obj/item/dendor_blessing/falconing/give_blessing(mob/living/carbon/human/user)
 	playsound(user, 'sound/vo/mobs/bird/birdfly.ogg', 100, TRUE)
 	playsound(user, 'sound/misc/wind.ogg', 100, TRUE, -1)
-	to_chat(user, span_good("Sientes que seres alados te guían desde arriba."))
+	to_chat(user, span_good("Sientes que seres alados te guian desde arriba."))
 	user.emote("smile")
 	user.add_spell(/datum/action/cooldown/spell/projectile/falcon_disrupt, source = user.cleric)
 	user.apply_status_effect(/datum/status_effect/buff/calm)

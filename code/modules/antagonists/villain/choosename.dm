@@ -18,7 +18,7 @@
 
 		possible_new_name = capitalize(possible_new_name)
 		if(possible_new_name in GLOB.chosen_names)
-			to_chat(src, span_warning("Ese nombre está tomado."))
+			to_chat(src, span_warning("Ese nombre esta tomado."))
 			break
 		original_name = old_name
 		new_name = possible_new_name

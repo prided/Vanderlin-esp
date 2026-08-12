@@ -1,5 +1,5 @@
 /datum/action/cooldown/spell/undirected/locate_dead
-	name = "Localizar cadáver"
+	name = "Localizar cadaver"
 	desc = ""
 	button_icon_state = "necraeye"
 	sound = 'sound/magic/whiteflame.ogg'

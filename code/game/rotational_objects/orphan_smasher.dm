@@ -3,7 +3,7 @@
 #define STEP_BUTTON "push a button"
 
 /obj/structure/orphan_smasher
-	name = "yunque automático"
+	name = "yunque automatico"
 	desc = "A holy amalgamation of buttons and levers built purposely to fulfill Malum's will."
 
 	icon = 'icons/obj/autosmithy.dmi'
@@ -63,10 +63,10 @@
 	var/next_step
 	if(!working)
 		next_step = pre_start_list[length(step_list) + 1]
-		. += span_notice("[src] está actualmente APAGADO.")
+		. += span_notice("[src] esta actualmente APAGADO.")
 	else
 		next_step = post_start_list[length(step_list) + 1]
-		. += span_notice("[src] está actualmente ENCENDIDO.")
+		. += span_notice("[src] esta actualmente ENCENDIDO.")
 	switch(next_step)
 		if(STEP_FIDDLE)
 			. += span_notice("To toggle the machine, use RMB.")

@@ -128,7 +128,7 @@
 //BLOODHEAL 5
 /datum/coven_power/bloodheal/five
 	name = "Greater Bloodheal"
-	desc = "Regenerar lesiones y restaurar órganos dañados."
+	desc = "Regenerar lesiones y restaurar organos dañados."
 	level = 5
 	vitae_cost = 18
 	duration_length = 2 SECONDS
@@ -160,7 +160,7 @@
 //BLOODHEAL 9
 /datum/coven_power/bloodheal/nine
 	name = "Surpassing Bloodheal"
-	desc = "Restaura tu forma física casi instantáneamente."
+	desc = "Restaura tu forma fisica casi instantaneamente."
 	level = 9
 	vitae_cost = 32
 	duration_length = 1 SECONDS

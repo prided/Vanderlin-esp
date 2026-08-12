@@ -20,7 +20,7 @@
 /datum/action/cooldown/spell/undirected/list_target/PreActivate(atom/caster)
 	var/list/list_targets = get_list_targets(caster, target_radius)
 	if(!length(list_targets))
-		caster.balloon_alert(caster, "¡No hay objetivos válidos!")
+		caster.balloon_alert(caster, "¡No hay objetivos validos!")
 		return FALSE
 
 	var/atom/chosen = browser_input_list(caster, choose_target_message, name, sortList(list_targets))

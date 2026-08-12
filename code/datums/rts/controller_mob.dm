@@ -316,7 +316,7 @@
 			selected_structure.color = null
 			selected_structure = null
 		else
-			to_chat(src, span_warning("No se puede mover la estructura a esa ubicación."))
+			to_chat(src, span_warning("No se puede mover la estructura a esa ubicacion."))
 		return
 
 	// First click - select structure
@@ -325,7 +325,7 @@
 		if(is_structure_moveable(S))
 			selected_structure = S
 			S.color = "#ffff00"  // Yellow highlight
-			to_chat(src, span_notice("Seleccionado [S.name]. Haga clic en un césped de destino para moverlo allí."))
+			to_chat(src, span_notice("Seleccionado [S.name]. Haga clic en un cesped de destino para moverlo alli."))
 		else
 			to_chat(src, span_warning("[S.name] no se puede mover."))
 
@@ -446,7 +446,7 @@
 
 	var/datum/queued_workorder/new_queued = new /datum/queued_workorder(/datum/work_order/move_structure, src, S, dest_turf)
 	in_progress_workorders += new_queued
-	to_chat(src, span_notice("Orden de movimiento creada: [S.name] se moverá a [dest_turf.x], [dest_turf.y]."))
+	to_chat(src, span_notice("Orden de movimiento creada: [S.name] se movera a [dest_turf.x], [dest_turf.y]."))
 
 
 /mob/camera/strategy_controller/process()

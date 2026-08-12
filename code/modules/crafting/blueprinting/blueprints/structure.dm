@@ -40,7 +40,7 @@
 
 /datum/blueprint_recipe/structure/densefire
 	name = "Greater Campfire"
-	desc = "Una fogata más grande y más eficiente."
+	desc = "Una fogata mas grande y mas eficiente."
 	result_type = /obj/machinery/light/fueled/campfire/densefire
 	required_materials = list(
 		/obj/item/grown/log/tree/stick = 2,
@@ -64,7 +64,7 @@
 
 /datum/blueprint_recipe/structure/brazier
 	name = "Brasero"
-	desc = "Un brasero de madera con carbón para calentar."
+	desc = "Un brasero de madera con carbon para calentar."
 	result_type = /obj/machinery/light/fueled/firebowl/stump
 	required_materials = list(
 		/obj/item/grown/log/tree/small = 1,
@@ -175,7 +175,7 @@
 
 /datum/blueprint_recipe/structure/pottery_lathe
 	name = "Potter Lathe"
-	desc = "Un torno para crear cerámica."
+	desc = "Un torno para crear ceramica."
 	result_type = /obj/structure/pottery_lathe
 	required_materials = list(
 		/obj/item/natural/stone = 2,

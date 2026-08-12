@@ -48,7 +48,7 @@
 		return ..()
 
 	if(processing)
-		to_chat(user, span_warning("El extractor ya está procesando un artículo."))
+		to_chat(user, span_warning("El extractor ya esta procesando un articulo."))
 		return
 
 	if(current_item)
@@ -61,7 +61,7 @@
 		return
 
 	if(!user.transferItemToLoc(I, src))
-		to_chat(user, span_warning("¡[I] está pegado a tu mano!"))
+		to_chat(user, span_warning("¡[I] esta pegado a tu mano!"))
 		return
 
 	current_item = I
@@ -94,7 +94,7 @@
 /obj/machinery/essence/extractor/proc/begin_extraction(mob/user)
 	var/datum/natural_precursor/precursor = get_precursor_data(current_item)
 	if(!precursor)
-		to_chat(user, span_warning("Algo salió mal al leer los datos del artículo."))
+		to_chat(user, span_warning("Algo salio mal al leer los datos del articulo."))
 		return
 
 	var/efficiency_bonus = GLOB.thaumic_research.get_research_bonus(/datum/thaumic_research_node/splitter_efficiency)

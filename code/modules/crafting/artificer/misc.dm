@@ -8,7 +8,7 @@
 	category = "General"
 
 /datum/artificer_recipe/general/bronze_cast
-	name = "Fundición de bronce"
+	name = "Fundicion de bronce"
 	required_item = /obj/item/ingot/copper
 	additional_items = list(/obj/item/ingot/tin = 1)
 	created_item = /obj/item/ingot/bronze
@@ -106,7 +106,7 @@
 	category = "Tools"
 
 /datum/artificer_recipe/tools/lamptern
-	name = "Lámpara de bronce"
+	name = "Lampara de bronce"
 	required_item = /obj/item/ingot/bronze
 	created_item = /obj/item/flashlight/flare/torch/lantern/bronzelamptern
 	hammers_per_item = 9
@@ -122,7 +122,7 @@
 	craftdiff = 2
 
 /datum/artificer_recipe/tools/lockpickring
-	name = "Anillo de ganzúa"
+	name = "Anillo de ganzua"
 	required_item = /obj/item/ingot/iron
 	created_item = /obj/item/lockpickring
 	appro_skill = /datum/attribute/skill/craft/locksmithing
@@ -269,7 +269,7 @@
 	craftdiff = 5
 
 /datum/artificer_recipe/contraptions/dwarven_music_box
-	name = "Caja de música enana (+2 Bronce) (+2 Engranajes) (+1 Amatista)"
+	name = "Caja de musica enana (+2 Bronce) (+2 Engranajes) (+1 Amatista)"
 	required_item = /obj/item/ingot/bronze
 	created_item = /obj/item/dmusicbox
 	additional_items = list(/obj/item/gear/metal = 2, /obj/item/ingot/bronze = 2, /obj/item/gem/amethyst = 1)

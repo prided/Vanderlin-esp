@@ -213,8 +213,8 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 	)
 
 /datum/attunement/electric
-	name = "Eléctrico"
-	desc = "Un elemento típicamente asociado con el clima, a veces con la divinidad y, a menudo, con la tecnología."
+	name = "Electrico"
+	desc = "Un elemento tipicamente asociado con el clima, a veces con la divinidad y, a menudo, con la tecnologia."
 
 	alignments = list(
 		/datum/patron/divine/noc = 0.25,
@@ -223,7 +223,7 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 	)
 
 /datum/attunement/blood
-	name = "hidrosofía"
+	name = "hidrosofia"
 	desc = "The lifeblood of all organics, water is ubiquitous with any land, and is a core aspect of any town."
 
 	alignments = list(
@@ -256,7 +256,7 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 
 /datum/attunement/earth
 	name = "Tierra"
-	desc = "El mismo suelo en el que estás, un terremoto furioso o un camino pavimentado, la tierra lo abarca todo."
+	desc = "El mismo suelo en el que estas, un terremoto furioso o un camino pavimentado, la tierra lo abarca todo."
 
 	alignments = list(
 		/datum/patron/divine/dendor = 1.2,
@@ -300,7 +300,7 @@ GLOBAL_LIST_INIT(attunement_colors, list(
 
 /datum/attunement/aeromancy
 	name = "Aeromancia"
-	desc =  "Aire, respiración, movimiento y atmósfera. Todos estos son productos de la aeromancia."
+	desc =  "Aire, respiracion, movimiento y atmosfera. Todos estos son productos de la aeromancia."
 
 	alignments = list(
 		/datum/patron/divine/abyssor = 0.5

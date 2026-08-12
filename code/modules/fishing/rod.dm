@@ -27,7 +27,7 @@
 	/// Fishing minigame difficulty modifier (additive)
 	var/difficulty_modifier = 0
 	/// Explaination of rod functionality shown in the ui and the autowiki
-	var/ui_description = "Una caña de pescar clásica, sin cualidades especiales."
+	var/ui_description = "Una caña de pescar clasica, sin cualidades especiales."
 	/// More explaination shown in the wiki after ui_description
 	var/wiki_description = ""
 	/// Is this fishing rod shown in the wiki
@@ -134,7 +134,7 @@
 		else if(!baited)
 			tool.forceMove(src)
 			baited = tool
-			user.visible_message("<span class='notice'>[user] engancha algo a la línea.</span>", "<span class='notice'>I hook [tool] to my line.</span>")
+			user.visible_message("<span class='notice'>[user] engancha algo a la linea.</span>", "<span class='notice'>I hook [tool] to my line.</span>")
 			playsound(src, 'sound/foley/pierce.ogg', 50, FALSE)
 			return ITEM_INTERACT_SUCCESS
 

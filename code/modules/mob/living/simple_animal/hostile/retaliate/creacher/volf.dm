@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/retaliate/wolf
 	icon = 'icons/roguetown/mob/monster/vol.dmi'
 	name = "volf"
-	desc = "Por lo general, se contentan con dejar en paz a los hombres si están bien alimentados, pero algo en la naturaleza los vuelve hambrientos, persistentes y viciosos."
+	desc = "Por lo general, se contentan con dejar en paz a los hombres si estan bien alimentados, pero algo en la naturaleza los vuelve hambrientos, persistentes y viciosos."
 	icon_state = "vv"
 	icon_living = "vv"
 	icon_dead = "vvd"

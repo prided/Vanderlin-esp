@@ -171,7 +171,7 @@
 			gnome.Move(target)
 
 /datum/idle_behavior/gnome_enhanced_idle/proc/do_make_faces(mob/living/simple_animal/hostile/gnome_homunculus/gnome)
-	gnome.say(pick("*makes silly faces*", "*saca la lengua*", "*cruza los ojos cómicamente*", "*puffs out cheeks*"))
+	gnome.say(pick("*makes silly faces*", "*saca la lengua*", "*cruza los ojos comicamente*", "*puffs out cheeks*"))
 
 // Enhanced emotion-based talking
 /datum/idle_behavior/gnome_enhanced_idle/proc/emotion_talk(mob/living/simple_animal/hostile/gnome_homunculus/gnome)
@@ -277,7 +277,7 @@
 
 /datum/idle_behavior/gnome_enhanced_idle/proc/deliver_death_message(mob/living/simple_animal/hostile/gnome_homunculus/gnome, mob/living/friend, dead_gnome_name, message)
 	gnome.face_atom(friend)
-	gnome.say("[friend], [dead_gnome_name] quería que supieras... [dead_gnome_name] [message].")
+	gnome.say("[friend], [dead_gnome_name] queria que supieras... [dead_gnome_name] [message].")
 
 	addtimer(CALLBACK(src, PROC_REF(give_comfort_hug), gnome, friend), 2 SECONDS)
 

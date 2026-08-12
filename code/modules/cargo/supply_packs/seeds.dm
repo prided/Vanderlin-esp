@@ -72,7 +72,7 @@
 	contains = /obj/item/neuFarm/seed/plum
 
 /datum/supply_pack/seeds/lemon
-	name = "Limón"
+	name = "Limon"
 	cost = 10
 	contains = /obj/item/neuFarm/seed/lemon
 
@@ -102,7 +102,7 @@
 	contains = /obj/item/neuFarm/seed/raspberry
 
 /datum/supply_pack/seeds/sugarcane
-	name = "Caña de azúcar"
+	name = "Caña de azucar"
 	cost = 15
 	contains = /obj/item/neuFarm/seed/sugarcane
 
@@ -122,7 +122,7 @@
 	contains = /obj/item/neuFarm/seed/mango
 
 /datum/supply_pack/seeds/mangosteen
-	name = "mangostán"
+	name = "mangostan"
 	cost = 10
 	contains = /obj/item/neuFarm/seed/mangosteen
 

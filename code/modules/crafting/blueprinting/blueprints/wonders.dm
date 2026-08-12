@@ -12,7 +12,7 @@
 	construct_tool = null
 
 /datum/blueprint_recipe/structure/wonder/first
-	name = "primera maravilla (2 partes del cuerpo, 1 estómago)"
+	name = "primera maravilla (2 partes del cuerpo, 1 estomago)"
 	result_type = /obj/structure/wonder
 	required_materials = list(
 		/obj/item/bodypart = 2,
@@ -30,7 +30,7 @@
 	requires_learning = TRUE
 
 /datum/blueprint_recipe/structure/wonder/third
-	name = "tercera maravilla (2 partes del cuerpo, 3 cabezas, 2 estómagos)"
+	name = "tercera maravilla (2 partes del cuerpo, 3 cabezas, 2 estomagos)"
 	result_type = /obj/structure/wonder
 	required_materials = list(
 		/obj/item/bodypart/head = 3,
@@ -40,7 +40,7 @@
 	requires_learning = TRUE
 
 /datum/blueprint_recipe/structure/wonder/fourth
-	name = "cuarta maravilla (4 lenguas, 3 ojos, 4 hígados)"
+	name = "cuarta maravilla (4 lenguas, 3 ojos, 4 higados)"
 	result_type = /obj/structure/wonder
 	required_materials = list(
 		/obj/item/organ/tongue = 4,

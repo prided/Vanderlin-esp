@@ -47,7 +47,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/deep_blessing
 
 /atom/movable/screen/alert/status_effect/deep_blessing
-	name = "Bendición profunda"
+	name = "Bendicion profunda"
 	desc = "You've been blessed by the Duke of the Deep. Your power is increased."
 	icon = 'icons/effects/effects.dmi' // Replace with appropriate icon
 	icon_state = "blessing" // Replace with appropriate icon_state

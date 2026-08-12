@@ -42,5 +42,5 @@
 
 /atom/movable/screen/alert/status_effect/stress/good/stressvgood
 	name = "Nirvana"
-	desc = "Mi cuerpo es un templo y mi mente un jardín.\n"
+	desc = "Mi cuerpo es un templo y mi mente un jardin.\n"
 	icon_state = "stressvgood"

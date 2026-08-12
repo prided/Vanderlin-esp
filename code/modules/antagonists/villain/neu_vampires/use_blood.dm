@@ -171,7 +171,7 @@
 					if (blood_before > BLOOD_VOLUME_SAFE && blood_after < BLOOD_VOLUME_SAFE)
 						to_chat(user, span_cult("You start looking pale.") )
 					else if (blood_before > BLOOD_VOLUME_OKAY && blood_after < BLOOD_VOLUME_OKAY)
-						to_chat(user, span_cult("Estás a punto de desmayarte por la falta de sangre.") )
+						to_chat(user, span_cult("Estas a punto de desmayarte por la falta de sangre.") )
 					else if (blood_before > BLOOD_VOLUME_BAD && blood_after < BLOOD_VOLUME_BAD)
 						to_chat(user, span_cult("You have trouble focusing, things will go bad if you keep using your blood.") )
 					else if (blood_before > BLOOD_VOLUME_SURVIVE && blood_after < BLOOD_VOLUME_SURVIVE)

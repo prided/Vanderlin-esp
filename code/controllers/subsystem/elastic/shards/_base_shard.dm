@@ -1,6 +1,6 @@
 /datum/elastic_shard
 	/// Display name for debugging
-	var/name = "Fragmento genérico"
+	var/name = "Fragmento generico"
 	/// How often this shard fires, in real seconds
 	var/upload_frequency = 30 SECONDS
 	/// Elasticsearch index/category this shard posts to (can be a different endpoint suffix)

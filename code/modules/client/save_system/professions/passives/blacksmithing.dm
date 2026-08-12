@@ -1,11 +1,11 @@
 /datum/passive/sharpening
-	name = "Afilado básico"
+	name = "Afilado basico"
 	description = "Lets you sharpen a weapon up to 25% of its max sharpness"
 
 /datum/passive/smelting
-	name = "Fundición Básica"
+	name = "Fundicion Basica"
 	description = "Te permite fundir hasta cobre."
 
 /datum/passive/repair
-	name = "Reparación básica"
+	name = "Reparacion basica"
 	description = "Lets you repair an item up to 50% of its durability"

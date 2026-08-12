@@ -42,7 +42,7 @@
 
 /obj/item/reagent_containers/food/snacks/rotten
 	name = "comida podrida"
-	desc = "Un vil bocado en descomposición, su última esperanza es convertirse en alimento para el suelo."
+	desc = "Un vil bocado en descomposicion, su ultima esperanza es convertirse en alimento para el suelo."
 	color = "#6c6897"
 	eat_effect = /datum/status_effect/debuff/rotfood
 	list_reagents = list(/datum/reagent/yuck = 5)
@@ -218,7 +218,7 @@
 /obj/item/reagent_containers/glass/bowl/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(!reagents.total_volume && istype(tool, /obj/item/natural/cloth) && user?.used_intent?.type == INTENT_USE)
 		if(!dirty)
-			to_chat(user, span_notice("Este plato ya está limpio."))
+			to_chat(user, span_notice("Este plato ya esta limpio."))
 			return ITEM_INTERACT_SUCCESS
 
 		var/obj/item/natural/cloth/cloth_check = tool
@@ -268,7 +268,7 @@
 		return ..()
 
 	if(!reagents?.total_volume)
-		to_chat(user, span_warning("¡[src] está vacío!"))
+		to_chat(user, span_warning("¡[src] esta vacio!"))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!do_after(user, 1 SECONDS, src))
@@ -611,7 +611,7 @@
 // -------------- Flour -----------------
 /obj/item/reagent_containers/powder/flour
 	name = "flour"
-	desc = "Con esta ambición construimos un imperio."
+	desc = "Con esta ambicion construimos un imperio."
 	gender = PLURAL
 	icon_state = "flour"
 	list_reagents = list(/datum/reagent/flour = 1)
@@ -686,7 +686,7 @@
 // -------------- Sunreed Powder -----------------
 /obj/item/reagent_containers/powder/sunreed_flour
 	name = "sunreed powder"
-	desc = "La desesperación genera innovación."
+	desc = "La desesperacion genera innovacion."
 	gender = PLURAL
 	icon_state = "maize_flour"
 	list_reagents = list(/datum/reagent/flour = 1)

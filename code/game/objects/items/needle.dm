@@ -164,7 +164,7 @@
 		repair_percent *= skill_level
 
 	if((armor_value == 0 && skill_level < 10) || (armor_value > 0 && skill_level < 20))
-		to_chat(user, span_warning("Probablemente no debería estar haciendo esto..."))
+		to_chat(user, span_warning("Probablemente no deberia estar haciendo esto..."))
 
 	playsound(src, 'sound/foley/sewflesh.ogg', 100, TRUE, -2)
 	var/sewtime = (6 SECONDS - skill_level)

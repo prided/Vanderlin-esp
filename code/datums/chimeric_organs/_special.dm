@@ -1,7 +1,7 @@
 /datum/chimeric_node/special
 	abstract_type = /datum/chimeric_node/special
 	name = "Special Node"
-	desc = "Nodo especial genérico"
+	desc = "Nodo especial generico"
 	slot = SPECIAL_NODE
 
 	var/needs_attachment = FALSE

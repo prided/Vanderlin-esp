@@ -133,7 +133,7 @@
 
 	to_chat(user, "You cut [src] with a [cut_name] pattern!")
 	if(failed)
-		to_chat(user, "¡Te equivocaste al cortar [src] y cayó de [GLOB.gem_quality_names[original_quality]] a [GLOB.gem_quality_names[quality]]!")
+		to_chat(user, "¡Te equivocaste al cortar [src] y cayo de [GLOB.gem_quality_names[original_quality]] a [GLOB.gem_quality_names[quality]]!")
 	return TRUE
 
 /obj/item/gem/proc/create_gem_effect_with_cut(cut_type)
@@ -196,7 +196,7 @@
 
 /obj/item/gem/blue
 	name = "blortz"
-	desc = "Azul pálido, como una lágrima congelada."
+	desc = "Azul palido, como una lagrima congelada."
 	//color = "#1ca5aa8c"
 	icon_state = "quartz_cut"
 	sellprice = 88

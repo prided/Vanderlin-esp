@@ -68,7 +68,7 @@
 
 /datum/stock/stockpile/salt
 	name = "Sal"
-	desc = "Sal de roca útil para curar y cocinar."
+	desc = "Sal de roca util para curar y cocinar."
 	item_type = /obj/item/reagent_containers/powder/salt
 	held_items = 5
 	payout_price = 4
@@ -321,7 +321,7 @@
 
 /datum/stock/stockpile/swampweed
 	name = "Swampweed"
-	desc = "Una hierba que se puede secar y fumar para inducir un estado de relajación."
+	desc = "Una hierba que se puede secar y fumar para inducir un estado de relajacion."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/swampweed
 	held_items = 2
 	payout_price = 2
@@ -486,7 +486,7 @@
 
 /datum/stock/stockpile/fat
 	name = "Fat"
-	desc = "Las partes de un animal que se utilizan mejor para engrasar y freír."
+	desc = "Las partes de un animal que se utilizan mejor para engrasar y freir."
 	item_type = /obj/item/reagent_containers/food/snacks/fat
 	held_items = 2
 	payout_price = 2

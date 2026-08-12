@@ -51,7 +51,7 @@
 
 	var/list/colors = GLOB.peasant_dyes | GLOB.noble_dyes
 
-	var/color_selection = tgui_input_list(player_client, "¿De qué color era mi poncho?	", "El Poncho", colors, "Winestain Red")
+	var/color_selection = tgui_input_list(player_client, "¿De que color era mi poncho?	", "El Poncho", colors, "Winestain Red")
 	if(!color_selection)
 		return
 

@@ -105,7 +105,7 @@
 		"Sabre" = /obj/item/weapon/sword/sabre/dec,
 	)
 
-	var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu especialización", title = "KNIGHT")
+	var/choice = spawned.select_equippable(player_client, selectable, message = "Elige tu especializacion", title = "KNIGHT")
 	if(!choice)
 		return
 

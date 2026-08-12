@@ -1,5 +1,5 @@
 /datum/rmb_intent
-	var/name = "intención"
+	var/name = "intencion"
 	var/desc = ""
 	var/icon_state = ""
 	/// Bonus/Malus to parry and dodge
@@ -166,7 +166,7 @@
 	return TRUE
 
 /datum/rmb_intent/swift
-	name = "rápido"
+	name = "rapido"
 	desc = "Your attacks have less recovery time but are less accurate and have reduced strength."
 	icon_state = "rmbswift"
 
@@ -311,6 +311,6 @@
 	icon_state = "rmbguard"
 
 /datum/rmb_intent/weak
-	name = "débil"
+	name = "debil"
 	desc = "Your attacks have halved strength and will never critically-hit. Surgery steps can only be done with this intent. Useful for longer punishments, play-fighting, and bloodletting."
 	icon_state = "rmbweak"

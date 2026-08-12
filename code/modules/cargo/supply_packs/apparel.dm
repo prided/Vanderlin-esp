@@ -104,12 +104,12 @@
 	contains = /obj/item/clothing/face/spectacles
 
 /datum/supply_pack/apparel/engineering_goggles
-	name = "gafas de ingeniería"
+	name = "gafas de ingenieria"
 	cost = 30
 	contains = /obj/item/clothing/face/goggles
 
 /datum/supply_pack/apparel/shepherd
-	name = "Media máscara negra"
+	name = "Media mascara negra"
 	cost = 10
 	contains = /obj/item/clothing/face/shepherd
 
@@ -124,7 +124,7 @@
 	contains = /obj/item/clothing/face/facemask/yoruku_kitsune
 
 /datum/supply_pack/apparel/exoticsilkmask
-	name = "Máscara de seda exótica"
+	name = "Mascara de seda exotica"
 	cost = 50
 	contains = /obj/item/clothing/face/exoticsilkmask
 
@@ -168,7 +168,7 @@
 	contains = /obj/item/clothing/cloak/pegasusknight
 
 /datum/supply_pack/apparel/apron_brown
-	name = "Delantal marrón"
+	name = "Delantal marron"
 	cost = 10
 	contains = /obj/item/clothing/cloak/apron/brown
 
@@ -312,7 +312,7 @@
 	contains = /obj/item/clothing/shirt/dress/silkdress
 
 /datum/supply_pack/apparel/robe
-	name = "Túnica"
+	name = "Tunica"
 	cost = 15
 	contains = /obj/item/clothing/shirt/robe/colored/mage
 
@@ -413,7 +413,7 @@
 	contains = /obj/item/clothing/pants/trou/leather/eastpants2
 
 /datum/supply_pack/apparel/belt_trousers
-	name = "Pantalones con cinturón"
+	name = "Pantalones con cinturon"
 	cost = 25
 	contains = /obj/item/clothing/pants/trou/beltpants
 
@@ -549,7 +549,7 @@
 	contains = /obj/item/storage/belt/leather
 
 /datum/supply_pack/apparel/black_leather_belt
-	name = "Cinturón de cuero negro"
+	name = "Cinturon de cuero negro"
 	cost = 15
 	contains = /obj/item/storage/belt/leather/black
 

@@ -1,6 +1,6 @@
 /datum/animal_gene/aggressive
 	name = "Agresivo"
-	desc = "Territorial. Atacará a las criaturas cercanas sin provocación."
+	desc = "Territorial. Atacara a las criaturas cercanas sin provocacion."
 	rarity = 3
 	dominant = TRUE
 	exclusion_group = GENE_GROUP_HAPPINESS

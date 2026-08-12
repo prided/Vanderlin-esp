@@ -54,7 +54,7 @@
 			user.clamped_adjust_skill_level(/datum/attribute/skill/combat/swords, 40, 40, TRUE)		//Ditto.
 		if("Censer of Penitence")
 			choice = /obj/item/flashlight/flare/torch/lantern/psycenser
-	to_chat(user, span_info("He elegido la reliquia, que ÉL guíe mi mano."))
+	to_chat(user, span_info("He elegido la reliquia, que EL guie mi mano."))
 	var/obj/structure/closet/crate/chest/inqreliquary/realchest = new /obj/structure/closet/crate/chest/inqreliquary(get_turf(src))
 	realchest.populate_contents()
 	choice = new choice(realchest)
@@ -137,7 +137,7 @@
 /// Called by burial_rites, gives some fluff messages before deleting the box.
 /obj/item/psydonmusicbox/proc/free_souls(mob/living/savior)
 	var/list/soul_lines = list(
-		SPAN_GOD_ASTRATA("Su luz una vez más... gracias..."),
+		SPAN_GOD_ASTRATA("Su luz una vez mas... gracias..."),
 		SPAN_GOD_ASTRATA("Calor por fin..."),
 		SPAN_GOD_NOC("Puedo verlas... las estrellas..."),
 		SPAN_GOD_NECRA("Finalmente... paz..."),
@@ -225,7 +225,7 @@
 						H.add_stress(/datum/stress_event/soulchurner)
 						if(!H.has_status_effect(/datum/status_effect/buff/churnernegative))
 							H.apply_status_effect(/datum/status_effect/buff/churnernegative)
-					to_chat(H, (span_hypnophrase("Una voz te llama desde la canción...")))
+					to_chat(H, (span_hypnophrase("Una voz te llama desde la cancion...")))
 					to_chat(H, (span_cultsmall(pick(lines))))
 
 /atom/movable/screen/alert/status_effect/buff/censerbuff
@@ -588,7 +588,7 @@
 		full = TRUE
 		visible_message(span_warning("[src] finishes drawing blood!"))
 		active = FALSE
-		desc += span_notice(" ¡Está lleno!")
+		desc += span_notice(" ¡Esta lleno!")
 		if(cursedblood)
 			playsound(src, 'sound/items/indexer_cursed.ogg', 100, FALSE, 3)
 			possible_item_intents = list(/datum/intent/use)
@@ -640,15 +640,15 @@
 		return NONE
 
 	if(!HAS_TRAIT(user, TRAIT_INQUISITION))
-		to_chat(user, span_warning("No sé cómo usar esto."))
+		to_chat(user, span_warning("No se como usar esto."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(!active)
-		to_chat(user, span_warning("No está preparado."))
+		to_chat(user, span_warning("No esta preparado."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(full)
-		to_chat(user, span_warning("Está lleno."))
+		to_chat(user, span_warning("Esta lleno."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/mob/living/L = interacting_with
@@ -976,7 +976,7 @@
 
 	if(istype(user.used_intent, /datum/intent/garrote/choke))	// Get started.
 		if(!garrote_victim)
-			to_chat(user, span_warning("¿A quién estoy asfixiando? ¿Qué?"))
+			to_chat(user, span_warning("¿A quien estoy asfixiando? ¿Que?"))
 			return
 		if(!proximity_flag)
 			return
@@ -1241,7 +1241,7 @@
 		return
 
 	if(!opened)
-		to_chat(user, span_warning("No está abierto."))
+		to_chat(user, span_warning("No esta abierto."))
 		return
 
 	if(broken && bloody)
@@ -1253,7 +1253,7 @@
 	if(broken && !bloody)
 		to_chat(user, span_warning("The mirror has shattered, rendering it unusable. It's clean, at the very least."))
 		if(HAS_TRAIT(user, TRAIT_INQUISITION))
-			to_chat(user, span_notice("Ahora se puede devolver a través de HERMES. Debería recuperar dos Marques."))
+			to_chat(user, span_notice("Ahora se puede devolver a traves de HERMES. Deberia recuperar dos Marques."))
 		return
 
 	if(bloody)
@@ -1274,7 +1274,7 @@
 		if(!input || QDELETED(user) || QDELETED(src))
 			return
 		if(input == "FIXATION")
-			var/name = html_decode(browser_input_text(user, "¿A QUIÉN BUSCAS?", "THE PRICE IS PAID"))
+			var/name = html_decode(browser_input_text(user, "¿A QUIEN BUSCAS?", "THE PRICE IS PAID"))
 			if(!name)
 				return
 			for(var/mob/living/carbon/human/HL as anything in GLOB.player_list)
@@ -1343,11 +1343,11 @@
 		return ITEM_INTERACT_BLOCKING
 
 	if(broken)
-		to_chat(user, span_warning("Está roto."))
+		to_chat(user, span_warning("Esta roto."))
 		return ITEM_INTERACT_BLOCKING
 
 	if(bloody)
-		to_chat(user, span_warning("El espejo está empañado. Necesito limpiarlo con un paño antes de volver a usarlo."))
+		to_chat(user, span_warning("El espejo esta empañado. Necesito limpiarlo con un paño antes de volver a usarlo."))
 		return ITEM_INTERACT_BLOCKING
 
 	var/time_taken = 3 SECONDS
@@ -1428,7 +1428,7 @@
 
 /atom/movable/screen/alert/blackmirror
 	name = "BLACK EYE"
-	desc = "MÍRAME. TE VEO."
+	desc = "MIRAME. TE VEO."
 	icon_state = "blackeye"
 	var/obj/item/inqarticles/bmirror/source
 

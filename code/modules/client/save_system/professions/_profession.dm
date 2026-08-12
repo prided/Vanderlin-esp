@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY(profession_types)
 /datum/profession
 	var/name = "Unknown"
-	var/description = "Una profesión misteriosa"
+	var/description = "Una profesion misteriosa"
 	var/max_level = 99
 	var/xp_multiplier = 1.0
 	var/icon_state = "profession_unknown"

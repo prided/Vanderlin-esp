@@ -724,7 +724,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 /datum/preferences/proc/reset_patron(mob/user, silent = FALSE)
 	write_preference(/datum/preference/choiced/patron, /datum/patron/divine/astrata)
 	if(!silent)
-		to_chat(user, "<font color='red'>Restablecimiento de patrón.</font>")
+		to_chat(user, "<font color='red'>Restablecimiento de patron.</font>")
 
 /datum/preferences/proc/reset_culture(mob/user, silent = FALSE)
 	var/datum/culture/selected = GLOB.culture_singletons[read_preference(/datum/preference/choiced/culture)]

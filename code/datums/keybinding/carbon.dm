@@ -180,7 +180,7 @@
 /datum/keybinding/carbon/kick_intent
 	hotkey_keys = list("K")
 	name = "intent_kick"
-	full_name = "Seleccionar intención de patada"
+	full_name = "Seleccionar intencion de patada"
 	description = ""
 	category = CATEGORY_CARBON
 

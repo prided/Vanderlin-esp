@@ -28,7 +28,7 @@
 	craft_time = 1 SECONDS
 
 /datum/repeatable_crafting_recipe/projectile/pyro_arrow
-	name = "flecha piroclástica"
+	name = "flecha piroclastica"
 	requirements = list(
 		/obj/item/ammo_casing/caseless/arrow = 1,
 		/obj/item/reagent_containers/food/snacks/produce/fyritius = 1,

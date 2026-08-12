@@ -237,7 +237,7 @@
 	hotkey_keys = list()
 	name = "rest"
 	full_name = "Lay Down"
-	description = "Acuéstate en el suelo."
+	description = "Acuestate en el suelo."
 	var/lastrest = 0
 
 /datum/keybinding/living/rest/down(client/user, turf/target, mousepos_x, mousepos_y)

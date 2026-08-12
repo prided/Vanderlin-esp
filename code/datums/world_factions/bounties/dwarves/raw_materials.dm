@@ -10,7 +10,7 @@
 
 /datum/bounty/dwarf/coal_supply
 	name = "Combustible de forja"
-	desc = "Las forjas queman carbón día y noche."
+	desc = "Las forjas queman carbon dia y noche."
 	required_path = /obj/item/ore/coal
 	required_count = 10
 	reward_reputation = 20

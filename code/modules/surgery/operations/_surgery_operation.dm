@@ -374,7 +374,7 @@
 	var/overseer_bonus = get_overseer_bonus(surgeon)
 	if(overseer_bonus < 1)
 		requirement += (1 - overseer_bonus) * 4
-		to_chat(surgeon, span_notice("Te sientes más seguro con un ojo experimentado vigilándote."))
+		to_chat(surgeon, span_notice("Te sientes mas seguro con un ojo experimentado vigilandote."))
 
 	return FLOOR(clamp(requirement, dice_num, dice_num * dice_sides), 1)
 
@@ -755,7 +755,7 @@
 		surgeon,
 		patient,
 		span_notice("You succeed."),
-		span_notice("¡[surgeon] tiene éxito!"),
+		span_notice("¡[surgeon] tiene exito!"),
 		span_notice("[surgeon] finishes."),
 	)
 

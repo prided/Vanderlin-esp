@@ -1,5 +1,5 @@
 /datum/island_feature_template
-	var/name = "Característica genérica"
+	var/name = "Caracteristica generica"
 	var/datum/map_template/template_path
 	var/width = 5 // Template width
 	var/height = 5 // Template height

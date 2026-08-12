@@ -34,7 +34,7 @@
 		patient,
 		span_notice("I begin placing teeth into [patient]'s mouth..."),
 		span_notice("[surgeon] comienza a arreglar los dientes de [patient]."),
-		span_notice("[surgeon] comienza a realizar una cirugía en la boca de [patient]."),
+		span_notice("[surgeon] comienza a realizar una cirugia en la boca de [patient]."),
 	)
 
 /datum/surgery_operation/basic/insert_teeth/on_success(mob/living/patient, mob/living/surgeon, tool, list/operation_args)
@@ -43,7 +43,7 @@
 		patient,
 		span_notice("I successfully fix [patient]'s teeth."),
 		span_notice("[surgeon] successfully fixes [patient]'s teeth!"),
-		span_notice("[surgeon] completa la cirugía en la boca de [patient]."),
+		span_notice("[surgeon] completa la cirugia en la boca de [patient]."),
 	)
 
 	var/obj/item/bodypart/mouth/jaw = patient.get_bodypart(BODY_ZONE_PRECISE_MOUTH)

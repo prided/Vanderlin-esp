@@ -120,7 +120,7 @@
 	contains = /obj/item/reagent_containers/food/snacks/plum_dried
 
 /datum/supply_pack/food/roastedcoffee
-	name = "Café tostado"
+	name = "Cafe tostado"
 	cost = 12
 	contains = /obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted
 

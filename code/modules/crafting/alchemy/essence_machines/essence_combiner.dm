@@ -366,7 +366,7 @@
 	else
 		. += span_notice("  (empty)")
 	if(combining)
-		. += span_warning("Combinación en progreso...")
+		. += span_warning("Combinacion en progreso...")
 
 #undef COMBINER_MODE_GENERIC
 #undef COMBINER_MODE_MANUAL

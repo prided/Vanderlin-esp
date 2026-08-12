@@ -38,7 +38,7 @@
 	contains = /obj/item/reagent_containers/glass/bottle/beer/aurorian
 
 /datum/supply_pack/food/drinks/elfcab
-	name = "Hoja de fuego élfica"
+	name = "Hoja de fuego elfica"
 	cost = 35
 	contains = /obj/item/reagent_containers/glass/bottle/beer/fireleaf
 
@@ -78,7 +78,7 @@
 	contains = /obj/item/reagent_containers/glass/bottle/whitewine
 
 /datum/supply_pack/food/drinks/elfred
-	name = "Vino tinto élfico"
+	name = "Vino tinto elfico"
 	cost = 154
 	contains = /obj/item/reagent_containers/glass/bottle/elfred
 
@@ -128,6 +128,6 @@
 	contains = /obj/item/reagent_containers/glass/bottle/black/yaojiu
 
 /datum/supply_pack/food/drinks/tealeaves
-	name = "Hojas de té molidas"
+	name = "Hojas de te molidas"
 	cost = 10
 	contains = /obj/item/reagent_containers/food/snacks/produce/tealeaves_ground

@@ -41,7 +41,7 @@
 	beltl = /obj/item/weapon/knife/villager
 
 /datum/migrant_wave/deprived
-	name = "los desposeídos"
+	name = "los desposeidos"
 	max_spawns = 1
 	shared_wave_type = /datum/migrant_wave/deprived
 	weight = 8

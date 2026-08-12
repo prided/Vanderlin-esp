@@ -58,7 +58,7 @@
 	display_results(
 		surgeon,
 		limb.owner,
-		span_notice("Hago una incisión en el [parse_zone(limb.body_zone)] de [limb.owner]."),
+		span_notice("Hago una incision en el [parse_zone(limb.body_zone)] de [limb.owner]."),
 		span_notice("Blood pools around the incision in [limb.owner]'s [parse_zone(limb.body_zone)]."),
 		span_notice("Blood pools around the incision in [limb.owner]'s [parse_zone(limb.body_zone)]."),
 	)

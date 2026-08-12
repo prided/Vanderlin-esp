@@ -16,7 +16,7 @@
 	var/runesize = 0
 	var/invoker_name = "basic rune"
 	/// Shown to players with the appropriate magic skill when they examine the rune
-	var/invoker_desc = "una runa básica sin función."
+	var/invoker_desc = "una runa basica sin funcion."
 	/// Words spoken aloud by invokers when the rune fires
 	var/invocation = "Aiy ele-mayo!"
 	/// How many eligible invokers must be standing near the rune for it to fire
@@ -93,7 +93,7 @@
 		return
 
 	if(rune_in_use)
-		to_chat(user, span_notice("Alguien ya está usando esta runa."))
+		to_chat(user, span_notice("Alguien ya esta usando esta runa."))
 		return
 	if(.)
 		return
@@ -240,7 +240,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne
 	name = "arcane ritual rune"
-	desc = "Subtipo utilizado para rituales arcanos; no deberías ver esto."
+	desc = "Subtipo utilizado para rituales arcanos; no deberias ver esto."
 	magictype = /datum/attribute/skill/magic/arcane
 	can_be_scribed = FALSE
 

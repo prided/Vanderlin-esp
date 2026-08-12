@@ -66,7 +66,7 @@
 			root.AddComponent(/datum/component/vine_controller, event = src, potency = 0.1, muts = list(/datum/vine_mutation/light, /datum/vine_mutation/healing, /datum/vine_mutation/woodening))
 
 /datum/round_event_control/dendor_fertility
-	name = "La bendición de Dendor"
+	name = "La bendicion de Dendor"
 	track = EVENT_TRACK_INTERVENTION
 	typepath = /datum/round_event/dendor_fertility
 	weight = 2

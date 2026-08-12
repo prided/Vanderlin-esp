@@ -82,7 +82,7 @@
 	item_weight = 100 GRAMS
 
 /obj/item/reagent_containers/glass/cup/teacup/fancy
-	name = "taza de té elegante"
+	name = "taza de te elegante"
 	desc = "A fancy tea cup made out of ceramic, decorated with an ornate glaze. Used to serve tea."
 	icon_state = "teacup_fancy"
 	sellprice = 20
@@ -232,7 +232,7 @@
 	item_weight = 150 GRAMS
 
 /obj/item/reagent_containers/glass/cup/cocaudo_husk
-	name = "cáscara de cocaudo"
+	name = "cascara de cocaudo"
 	desc = "A hollowed out half of a cocaudo. It holds liquid."
 	icon_state = "cocaudo_empty"
 	dropshrink = 1

@@ -45,7 +45,7 @@
 	organ_owner.remove_stress(/datum/stress_event/disgust)
 
 /obj/item/organ/stomach/fly
-	name = "estómago insectoide"
+	name = "estomago insectoide"
 	icon_state = "stomach-x" //xenomorph liver? It's just a black liver so it fits.
 	desc = ""
 

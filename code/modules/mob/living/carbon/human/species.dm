@@ -1509,9 +1509,9 @@
 
 /datum/species/proc/disarm(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style)
 	if(target.check_block() || target.has_status_effect(/datum/status_effect/buff/malum_anvil))
-		target.visible_message("¡El empujón de <span class='warning'>[user] es bloqueado por [target]!</span>", \
+		target.visible_message("¡El empujon de <span class='warning'>[user] es bloqueado por [target]!</span>", \
 						"<span class='danger'>I block [user]'s shove!</span>", "<span class='hear'>I hear a swoosh!</span>", COMBAT_MESSAGE_RANGE, user)
-		to_chat(user, "<span class='warning'>¡Mi empujón a [target] fue bloqueado!</span>")
+		to_chat(user, "<span class='warning'>¡Mi empujon a [target] fue bloqueado!</span>")
 		return FALSE
 	if(attacker_style && attacker_style.disarm_act(user,target))
 		return TRUE
@@ -2230,7 +2230,7 @@
 	stress_change = 1
 
 /datum/stress_event/hot_moderate
-	desc = "<span class='red'>Este calor se está volviendo insoportable.</span>"
+	desc = "<span class='red'>Este calor se esta volviendo insoportable.</span>"
 	timer = 60 SECONDS
 	stress_change = 3
 

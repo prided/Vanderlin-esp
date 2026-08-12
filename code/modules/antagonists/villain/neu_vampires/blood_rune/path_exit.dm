@@ -98,7 +98,7 @@ GLOBAL_LIST_INIT(bloodcult_exitportals, list())
 		to_chat(activator, span_warning("There are currently no Paths through the veil.") )
 		qdel(src)
 		return
-	var/network = input(activator, "Choose an available Path.", "Talismán de camino") as null|anything in valid_choices
+	var/network = input(activator, "Choose an available Path.", "Talisman de camino") as null|anything in valid_choices
 	if (!network)
 		qdel(src)
 		return

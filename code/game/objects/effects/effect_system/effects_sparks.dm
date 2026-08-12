@@ -81,7 +81,7 @@
 	icon_state = "electricity"
 
 /obj/effect/particle_effect/sparks/quantum
-	name = "chispas cuánticas"
+	name = "chispas cuanticas"
 	icon_state = "quantum_sparks"
 
 /datum/effect_system/lightning_spread

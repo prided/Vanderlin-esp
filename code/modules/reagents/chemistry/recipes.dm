@@ -25,7 +25,7 @@
 	if(holder && holder.my_atom)
 		var/atom/A = holder.my_atom
 		var/turf/T = get_turf(A)
-		var/message = "Se ha producido una reacción [reaction_name] en [ADMIN_VERBOSEJMP(T)]"
+		var/message = "Se ha producido una reaccion [reaction_name] en [ADMIN_VERBOSEJMP(T)]"
 		message += " (<A href='byond://?_src_=vars;Vars=[REF(A)]'>VV</A>)"
 
 		var/mob/M = get(A, /mob)

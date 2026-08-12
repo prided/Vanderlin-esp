@@ -24,7 +24,7 @@
 
 /datum/admins/proc/check_teams()
 	if(!SSticker.HasRoundStarted())
-		alert("¡El juego aún no ha comenzado!")
+		alert("¡El juego aun no ha comenzado!")
 		return
 
 	var/datum/browser/popup = new(usr, "teams", "Team Listing", 500, 500)
@@ -38,7 +38,7 @@
 	var/datum/team/custom/T = new()
 	T.name = team_name
 
-	message_admins("[key_name_admin(usr)] creó un nuevo equipo antagonista [name].")
+	message_admins("[key_name_admin(usr)] creo un nuevo equipo antagonista [name].")
 	log_admin("[key_name(usr)] created new [name] antagonist team.")
 
 /datum/team/proc/admin_rename(mob/user)

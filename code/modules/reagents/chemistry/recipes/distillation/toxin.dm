@@ -26,10 +26,10 @@
 	consume_reagents = TRUE
 	results = list(/datum/reagent/poison/quietdeath = 2.0)
 	required_temp = T0C + 100
-	distill_message = "El agua se evapora, dejando un concentrado aún más potente."
+	distill_message = "El agua se evapora, dejando un concentrado aun mas potente."
 
 /datum/distillation_recipe/vitalroot_distilled
-	name = "Raíz vital destilada"
+	name = "Raiz vital destilada"
 	id = "vitalroot_distilled"
 	distilled_reagent = /datum/reagent/medicine/vitalroot_draught
 	required_reagents = list(/datum/reagent/medicine/rosawater = 5)

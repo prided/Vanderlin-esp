@@ -114,7 +114,7 @@
 		return ..()
 
 	if(tool.reagents?.holder_full())
-		balloon_alert(user, "¡el [tool] está lleno!")
+		balloon_alert(user, "¡el [tool] esta lleno!")
 		return ITEM_INTERACT_BLOCKING
 
 	balloon_alert(user, "llenando [tool].")

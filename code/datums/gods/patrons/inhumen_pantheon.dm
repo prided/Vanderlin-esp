@@ -111,7 +111,7 @@
 	name = BAOTHA
 	domain = "Goddess of Drugs, Self-Preservation, and Remorseless Joy"	//Bright-dyed hair falls within 'remorseless joy.' Joy for one's self at expense of the setting. Same for her music taste.
 	desc = "Ascended, formerly disgraced tiefling queen, notorious for having a mind elsewhere. Drove her kingdom into the ground through her demands and addictions. The first tiefling noble, last tiefling noble, and sole reason there are no more tiefling nobles. As she preaches to her followers, 'Joy at all costs!'"
-	flaws = "Manipulación, autodestrucción, disposición a sacrificar a otros"
+	flaws = "Manipulacion, autodestruccion, disposicion a sacrificar a otros"
 	worshippers = "Adictos, hedonistas, rameras de pelo rosa"
 	sins = "Sobriety, Self-Sacrifice, Faltering Willpower"
 	boons = "You will never overdose on drugs."
@@ -145,9 +145,9 @@
 	boons = "You are drawn to the flavour of other followers of Zizo, and may see them when you consume without worry."
 	added_traits = list(TRAIT_ORGAN_EATER, TRAIT_BLOODDRINKER, TRAIT_CABAL)
 	confess_lines = list(
-		"¡DÓNDE ESTOY!",
+		"¡DONDE ESTOY!",
 		"NONE OF THIS IS REAL!",
-		"¡¿A QUIÉN ESTOY ADORANDO?!"
+		"¡¿A QUIEN ESTOY ADORANDO?!"
 	)
 
 /datum/patron/inhumen/graggar_zizo/preference_accessible(datum/preferences/prefs)

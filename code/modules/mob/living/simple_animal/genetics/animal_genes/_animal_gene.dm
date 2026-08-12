@@ -1,6 +1,6 @@
 /datum/animal_gene
 	var/name = "Gen desconocido"
-	var/desc = "Un rasgo genético desconocido."
+	var/desc = "Un rasgo genetico desconocido."
 	var/rarity = 10
 	var/exclusion_group = null
 	var/dominant = TRUE

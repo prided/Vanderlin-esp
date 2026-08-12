@@ -14,7 +14,7 @@
 	granted_spells = list(/datum/action/cooldown/spell/essence/ice_bridge, /datum/action/cooldown/spell/essence/frozen_storage)
 
 /datum/essence_combo/spell/divine_order
-	name = "Transcripción ordenada"
+	name = "Transcripcion ordenada"
 	required_essences = list(/datum/thaumaturgical_essence/order, /datum/thaumaturgical_essence/light)
 	granted_spells = list(/datum/action/cooldown/spell/essence/transcribe)
 
@@ -34,7 +34,7 @@
 	granted_spells = list(/datum/action/cooldown/spell/essence/probability_warp)
 
 /datum/essence_combo/spell/toxic_cleanse
-	name = "Limpieza tóxica"
+	name = "Limpieza toxica"
 	required_essences = list(/datum/thaumaturgical_essence/poison, /datum/thaumaturgical_essence/water)
 	granted_spells = list(/datum/action/cooldown/spell/essence/toxic_cleanse)
 
@@ -49,7 +49,7 @@
 	granted_spells = list(/datum/action/cooldown/spell/essence/kinetic_burst, /datum/action/cooldown/spell/essence/momentum_transfer)
 
 /datum/essence_combo/spell/regeneration_cycle
-	name = "Ciclo de regeneración"
+	name = "Ciclo de regeneracion"
 	required_essences = list(/datum/thaumaturgical_essence/cycle, /datum/thaumaturgical_essence/life)
 	granted_spells = list(/datum/action/cooldown/spell/essence/regeneration_cycle, /datum/action/cooldown/spell/essence/growth_acceleration)
 

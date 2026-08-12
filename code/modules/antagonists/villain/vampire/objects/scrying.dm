@@ -67,10 +67,10 @@
 		to_chat(src, "¡Mi cuerpo ha sido destruido! ¡Estoy atrapado!")
 
 /mob/dead/observer/rogue/arcaneeye/proc/vampire_telepathy()
-	set name = "Telepatía"
+	set name = "Telepatia"
 	set category = "RoleUnique.Arcane Eye"
 
-	var/msg = input("Envía un mensaje.", "Command") as text|null
+	var/msg = input("Envia un mensaje.", "Command") as text|null
 	if(!msg)
 		return
 	for(var/datum/mind/V in SSmapping.retainer.vampires)
@@ -119,7 +119,7 @@
 		L += T
 
 	if(!length(L))
-		to_chat(src, span_warning("No hay área disponible."))
+		to_chat(src, span_warning("No hay area disponible."))
 		return
 
 	forceMove(pick(L))

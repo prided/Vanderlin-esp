@@ -57,7 +57,7 @@
 	display_results(
 		surgeon,
 		operating_on,
-		span_notice("Logré trasplantar el [parse_zone(operation_args[OPERATION_TARGET_ZONE])] de [operating_on]."),
+		span_notice("Logre trasplantar el [parse_zone(operation_args[OPERATION_TARGET_ZONE])] de [operating_on]."),
 		span_notice("[surgeon] successfully transplants [operating_on]'s [parse_zone(operation_args[OPERATION_TARGET_ZONE])] with [tool]!"),
 		span_notice("[surgeon] successfully transplants [operating_on]'s [parse_zone(operation_args[OPERATION_TARGET_ZONE])]!"),
 	)

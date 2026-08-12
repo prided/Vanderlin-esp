@@ -76,7 +76,7 @@
 	top_right = locate(bl.x + size - 1, bl.y + size - 1, z_level)
 
 SUBSYSTEM_DEF(terrain_generation)
-	name = "Generación de terreno"
+	name = "Generacion de terreno"
 	init_order = INIT_ORDER_TERRAIN
 	flags = SS_NO_FIRE
 

@@ -75,7 +75,7 @@
 			return ITEM_INTERACT_BLOCKING
 
 		if(!(loading_chamber))
-			to_chat(user, span_warning("¡La cámara de carga no está abierta!"))
+			to_chat(user, span_warning("¡La camara de carga no esta abierta!"))
 			return ITEM_INTERACT_BLOCKING
 
 		if(steam_lever)
@@ -86,7 +86,7 @@
 
 /obj/item/gun/ballistic/airgun/attack_self(mob/living/user, list/modifiers)
 	if(!loading_chamber)
-		to_chat(user, span_warning("¡La cámara no está abierta para descargar [src]!"))
+		to_chat(user, span_warning("¡La camara no esta abierta para descargar [src]!"))
 		return
 
 	if(steam_lever)
@@ -139,13 +139,13 @@
 			if(loading_chamber)
 				to_chat(user, span_info("I begin to close the loading chamber..."))
 				if(do_after(user, use_time SECONDS, src))
-					to_chat(user, span_info("Cierro la cámara de carga."))
+					to_chat(user, span_info("Cierro la camara de carga."))
 					playsound(src, 'sound/foley/industrial/toggle.ogg', 100, FALSE)
 					loading_chamber = FALSE
 			else
-				to_chat(user, span_info("Empiezo a abrir la cámara de carga..."))
+				to_chat(user, span_info("Empiezo a abrir la camara de carga..."))
 				if(do_after(user, use_time SECONDS, src))
-					to_chat(user, span_info("Abro la cámara de carga."))
+					to_chat(user, span_info("Abro la camara de carga."))
 					playsound(src, 'sound/foley/industrial/toggle.ogg', 100, FALSE)
 					loading_chamber = TRUE
 

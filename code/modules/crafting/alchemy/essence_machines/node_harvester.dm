@@ -55,7 +55,7 @@
 /obj/machinery/essence/harvester/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_notice("Harvest rate: [harvest_rate] units/tick")
-	. += span_notice("Bonificación de recarga de nodo: +[round((efficiency_bonus - 1) * 100)]%")
+	. += span_notice("Bonificacion de recarga de nodo: +[round((efficiency_bonus - 1) * 100)]%")
 	if(installed_node)
 		var/datum/thaumaturgical_essence/tmp = new installed_node.essence_type.type
 		var/label = HAS_TRAIT(user, TRAIT_LEGENDARY_ALCHEMIST) \
@@ -102,7 +102,7 @@
 		update_appearance(UPDATE_OVERLAYS)
 	else
 		if(!installed_node)
-			to_chat(user, span_warning("No hay ningún nodo que eliminar."))
+			to_chat(user, span_warning("No hay ningun nodo que eliminar."))
 			return
 		if(!do_after(user, 3 SECONDS))
 			return

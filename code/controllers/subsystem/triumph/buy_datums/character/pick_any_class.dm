@@ -49,7 +49,7 @@
 	for(var/datum/job/advclass/C in possible_classes)
 		class_titles[C.title] = C
 
-	var/chosen_title = tgui_input_list(spawned, "¿Cuál es mi clase?", "Aventura", class_titles)
+	var/chosen_title = tgui_input_list(spawned, "¿Cual es mi clase?", "Aventura", class_titles)
 	if(!chosen_title)
 		chosen_title = pick(class_titles)
 	var/datum/job/advclass/class = class_titles[chosen_title]

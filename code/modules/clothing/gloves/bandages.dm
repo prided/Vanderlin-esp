@@ -29,6 +29,6 @@
 	item_weight = 230 GRAMS
 
 /obj/item/clothing/gloves/bandages/pugilist
-	name = "vendajes pugilísticos"
+	name = "vendajes pugilisticos"
 	desc = "Thickly-woven bandages that've been wrapped around the hands, fitted with alloyed knuckleweights. It soaks up the sweat from your palm, strengthens your fists, and protects your knuckles from dislodged teeth."
 	unarmed_bonus = 1.3 //Non-craftable. Restricted to Monks who've specialized in unarmed combat, and nothing else.
